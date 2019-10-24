@@ -4,7 +4,7 @@
 * [Sample Scripts](https://github.com/HewlettPackard/POSH-HPOneView/wiki#sample-scripts)
 * [Additional Resources](https://github.com/HewlettPackard/POSH-HPOneView/wiki#additional-resources)
 * Command Reference
-  * [about_HPOneView.System.Object[]00](https://github.com/HewlettPackard/POSH-HPOneView/wiki/about_HPOneView.System.Object[]00)
+  * [about_HPOneView.500](https://github.com/HewlettPackard/POSH-HPOneView/wiki/about_HPOneView.500)
   * [about_HPOneView.420](https://github.com/HewlettPackard/POSH-HPOneView/wiki/about_HPOneView.420)
   * [about_HPOneView.410](https://github.com/HewlettPackard/POSH-HPOneView/wiki/about_HPOneView.410)
   * [about_Appliance_Connections](https://github.com/HewlettPackard/POSH-HPOneView/wiki/about_Appliance_Connections)
