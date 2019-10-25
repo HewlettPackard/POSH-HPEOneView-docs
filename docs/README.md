@@ -122,7 +122,7 @@ For more information about multiple appliance connection support, please review 
 
 The `New-HPOVResource`, `Set-HPOVRequest` and `Remove-HPOVResource` Cmdlets are mainly for callers to perform Create, Update and Delete operations where a native Cmdlet hasn't been developed. The following diagram is an example of flow, where `Send-HPOVRequest` is the main Cmdlet that directly communicates with the HPE OneView REST API.
 
- [![](https://raw.githubusercontent.com/wiki/HewlettPackard/POSH-HPOneView/images/library_interaction_diagram.png)](https://raw.githubusercontent.com/wiki/HewlettPackard/POSH-HPOneView/images/library_interaction_diagram.png)
+![PowerShell library architecture diagram and intercommunication flow.](.gitbook/assets/library_interaction_diagram.png)
 
 Once completed, you can either close out of your PowerShell console, or issue the `Disconnect-HPOVMgmt` CMDLET to terminate your session, and return you back to your PowerShell consoles prior state.
 
@@ -168,7 +168,7 @@ Introduced in the HPE OneView 4.10 library, the [`ConvertTo-HPOVPowerShellScript
 
 Here is an example of generating PowerShell script code from an HPE Synergy server profile created in the UI:
 
- [![](https://raw.githubusercontent.com/wiki/HewlettPackard/POSH-HPOneView/images/{8392C5DD-5303-4C61-82F3-F788C40DAB26}.png)](https://raw.githubusercontent.com/wiki/HewlettPackard/POSH-HPOneView/images/{8392C5DD-5303-4C61-82F3-F788C40DAB26}.png)
+![Server profile resource created by the HPE OneView graphical user interface \(GUI\).](.gitbook/assets/8392c5dd-5303-4c61-82f3-f788c40dab26.png)
 
 ```text
 # Get the profile and generate PowerShell script code
