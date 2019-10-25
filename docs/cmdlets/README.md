@@ -1,23 +1,22 @@
+---
+description: Main Cmdlet documentation.
+---
+
 # Cmdlets
 
-## Getting Super Powers
+## About
 
-Becoming a super hero is a fairly straight forward process:
+This chapter contains sections specific to Cmdlets that are broken down by type.
 
-```
-$ give me super-powers
-```
+| Section | Description |
+| :--- | :--- |
+| Appliance | Cmdlets that are specific to appliance management. |
+| Security | Cmdlets that are specific to security management \(users, groups, external security directories, SBAC, etc.\) |
+| Server | Cmdlets that are specific to server management, including hardware and profiles. |
+
+
 
 {% hint style="info" %}
- Super-powers are granted randomly so please submit an issue if you're not happy with yours.
+Documentation is a work in progress.
 {% endhint %}
-
-Once you're strong enough, save the world:
-
-```
-// Ain't no code for that yet, sorry
-echo 'You got to trust me on this, I saved the world'
-```
-
-
 

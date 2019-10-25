@@ -4,6 +4,8 @@
 * [Cmdlets](cmdlets/README.md)
   * [Appliance](cmdlets/appliance/README.md)
     * [Add-HPOVBaseline](cmdlets/appliance/add-hpovbaseline.md)
+  * [Security](cmdlets/security.md)
+  * [Servers](cmdlets/servers.md)
 * [Getting Help](getting-help.md)
 
 ## About

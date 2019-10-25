@@ -8,30 +8,64 @@ This library enables PowerShell developers, IT automation engineers, or devops t
 
 This PowerShell module requires the following minimum versions:
 
-**Table 1. Requirements**
+### **Table 1. Requirements**
 
-| Library | Components | Version |
-| :--- | :--- | :--- |
-| HPE OneView 4.10 | Windows Management Framework \(WMF\) | 4.0 |
-| HPE OneView 4.10 | .Net Client Framework | 4.6\*\* |
-| HPE OneView 4.10 | HPE OneView/HPE Synergy | 4.10 or newer |
-| HPE OneView 4.20 | Windows Management Framework \(WMF\) | 4.0 |
-| HPE OneView 4.20 | .Net Client Framework | 4.6\*\* |
-| HPE OneView 4.20 | HPE OneView/HPE Synergy | 4.20 or newer |
-| HPE OneView 5.00 | .NetStandard | 2.0_\*\*_ |
-| HPE OneView 5.00 | PowerShell | 5.1 or 6.0 |
-| HPE OneView 5.00 | PowerShellCore | 6.2 or newer |
-| HPE OneView 5.00 | HPE OneView/HPE Synergy | 5.00 or newer |
-| All | [FormatPX](https://github.com/KirkMunro/FormatPx/releases) | v1.1.2.12 or greater_\*_ |
-| All | [SnippetPX](https://github.com/KirkMunro/SnippetPX/releases) | v1.0.2.13 or greater_\*_ |
+{% tabs %}
+{% tab title="HPE OneView 5.00" %}
+| Component | Version |
+| :--- | :--- |
+| .NetStandard | 2.0 or newer |
+| PowerShell | 5.1 or 6.0 |
+| PowerShellCore | 6.2 or newer |
+| HPE OneView/HPE Synergy | 5.00 or newer |
 
-> **\*\*NOTE:** Windows Server 2008 R2 SP1 will be required to install the 4.6 .Net Client Framework.
->
-> _**\***_**NOTE:** Already included within the Signed Installer.
->
-> _**\*\***_**NOTE:** .NetStandard 2.0 supports both the [.NetFramework 4.7.2 Windows](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-7-2/) and [DotNetCore 2.0](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-0/) clients.
+{% hint style="info" %}
+.NetStandard 2.0 supports both the [.NetFramework 4.7.2 Windows](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-7-2/) and [DotNetCore 2.0](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-0/) clients.
+{% endhint %}
+{% endtab %}
 
-**Table 2. Deprecated releases**
+{% tab title="HPE OneView 4.20" %}
+| Component | Version |
+| :--- | :--- |
+| Windows Management Framework \(WMF\) | 4.0 |
+| .Net Client Framework | 4.6 |
+| HPE OneView/HPE Synergy | 4.20 or newer |
+| FormatPX | v1.1.2.12 or greater |
+| SnippetPX | v1.0.2.13 or greater |
+
+{% hint style="info" %}
+Windows Server 2008 R2 SP1 will be required to install the 4.6 .Net Client Framework.
+{% endhint %}
+
+{% hint style="info" %}
+FormatPX and SnippetPX are included with the EXE installer.  They can also be installed with the Install-Module Cmdlet from the PowerShell Gallery.
+{% endhint %}
+{% endtab %}
+
+{% tab title="HPE OneView 4.10" %}
+{% hint style="info" %}
+This library module is now in maintenance.  Only critical bug or security fixes will be considered. Otherwise, please look at upgrading your library to a newer version, along with your HPE OneView/Synergy Composer version.
+{% endhint %}
+
+| Component | Version |
+| :--- | :--- |
+| Windows Management Framework \(WMF\) | 4.0 |
+| .Net Client Framework | 4.6 |
+| HPE OneView/HPE Synergy | 4.10 or newer |
+| FormatPX | v1.1.2.12 or greater |
+| SnippetPX | v1.0.2.13 or greater |
+
+{% hint style="info" %}
+Windows Server 2008 R2 SP1 will be required to install the 4.6 .Net Client Framework.
+{% endhint %}
+
+{% hint style="info" %}
+FormatPX and SnippetPX are included with the EXE installer.  They can also be installed with the Install-Module Cmdlet from the PowerShell Gallery.
+{% endhint %}
+{% endtab %}
+{% endtabs %}
+
+### **Table 2. Deprecated releases**
 
 | Library | Components | Version |
 | :--- | :--- | :--- |
@@ -44,16 +78,14 @@ This PowerShell module requires the following minimum versions:
 | HPE OneView 3.00 | Windows Management Framework \(WMF\) | 4.0 |
 | HPE OneView 3.00 | .Net Client Framework | 4.6\*\* |
 | HPE OneView 3.00 | HPE OneView/HPE Synergy | 3.00 or newer |
+| HPE OneView 3.10 | Windows Management Framework \(WMF\) | 4.0 |
+| HPE OneView 3.10 | .Net Client Framework | 4.6\*\* |
+| HPE OneView 3.10 | HPE OneView/HPE Synergy | 3.10 or newer |
 | HPE OneView 4.00 | Windows Management Framework \(WMF\) | 4.0 |
 | HPE OneView 4.00 | .Net Client Framework | 4.6\*\* |
-| HPE OneView 4.00 | HPE OneView/HPE Synergy | 3.00 or newer |
-| HPE OneView 4.10\* | Windows Management Framework \(WMF\) | 4.0 |
-| HPE OneView 4.10\* | .Net Client Framework | 4.6\*\* |
-| HPE OneView 4.10\* | HPE OneView/HPE Synergy | 3.00 or newer |
+| HPE OneView 4.00 | HPE OneView/HPE Synergy | 4.00 or newer |
 
-> **\*NOTE:** These libraries are now in maintenance mode, and only critical fixes will be released.
-
-## Installer changes starting with HPE OneView 5.00 PowerShell library and newer
+## Installer changes
 
 Starting with the HPE OneView 5.00 PowerShell library, the provided EXE installer is no longer available. The library has been published to the Microsoft PowerShell Gallery since the release of the 3.10 library. To install the library on another system that might not have Internet access, please review the [`Save-Module`](https://go.microsoft.com/fwlink/?LinkId=531351) PowerShellGet Cmdlet.
 
@@ -84,7 +116,9 @@ There are 5 primary CMDLETs to interact with the HPE OneView appliance:
 
 New in the HPE OneView 2.00 library is the ability to connect to multiple appliances, which allows the user to execute various CMDLETs without requiring to disconnect and reconnect to other appliances within your PowerShell session. The `Connect-HPOVMgmt` CMDLET will authenticate you to the requested appliance. From there, a session object \(Type `[HPOneView.Appliance.Connection]`\) is created and added to a global variable `$ConnectedSessions` \(Type `[System.Collections.ArrayList]`\) in your PowerShell runtime environment that other CMDLETs will use. Within the `[HPOneView.Appliance.Connection]` object contains a number of properties, of which the connected appliance `hostname` value provided by `Connect-HPOVMgmt` is stored, along with the `SessionID` of your user session.
 
-> **NOTE:** For more information about multiple appliance connection support, please review `get-help about_Appliance_Connections` from your PowerShell console, or read the online wiki page for [about\_Appliance\_Connections](https://github.com/HewlettPackard/POSH-HPOneView/wiki/about_Appliance_Connections).
+{% hint style="info" %}
+For more information about multiple appliance connection support, please review `get-help about_Appliance_Connections` from your PowerShell console, or read the online wiki page for [about\_Appliance\_Connections](https://github.com/HewlettPackard/POSH-HPOneView/wiki/about_Appliance_Connections).
+{% endhint %}
 
 The `New-HPOVResource`, `Set-HPOVRequest` and `Remove-HPOVResource` Cmdlets are mainly for callers to perform Create, Update and Delete operations where a native Cmdlet hasn't been developed. The following diagram is an example of flow, where `Send-HPOVRequest` is the main Cmdlet that directly communicates with the HPE OneView REST API.
 
@@ -92,11 +126,11 @@ The `New-HPOVResource`, `Set-HPOVRequest` and `Remove-HPOVResource` Cmdlets are 
 
 Once completed, you can either close out of your PowerShell console, or issue the `Disconnect-HPOVMgmt` CMDLET to terminate your session, and return you back to your PowerShell consoles prior state.
 
-Top
-
 ### Sample Scripts
 
-> **NOTE:** Starting with the HPE OneView 3.00 library, the installation directory \(including where Samples are stored\) are no longer in either the Windows or Users directory. Instead, the 3.00 library is now within`$env:ProgramFiles\WindowsPowerShell\Modules\HPOneView.{VERSION}`.
+{% hint style="info" %}
+Starting with the HPE OneView 3.00 library, the installation directory \(including where Samples are stored\) are no longer in either the Windows or Users directory. Instead, the 3.00 library is now within`$env:ProgramFiles\WindowsPowerShell\Modules\HPOneView.{VERSION}`.
+{% endhint %}
 
 To ease the use of the HPE OneView PowerShell library, we have included a number of sample scripts administrators can use to quickly get familiar with the capabilities of the library. The sample scripts are part of the Source Code and installer. Depending on which installation selection you chose \(Just You, or For Everyone\), there is a Samples directory that contain all of the sample scripts. By no means are they exhaustive, but will help you get more familiar with the library.
 
@@ -209,11 +243,9 @@ Others have contributed example scripts to further automate management within th
 * [Configure iLO settings from OneView](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Creator-iLO)
 * [HPSIM to HPE OneView Tool](https://github.com/HewlettPackard/POSH-HPOneView/releases/tag/HPSIMtoOV)
 
-Top
-
 ### Additional Resources
 
-**HPE OneView Python Library**
+#### **HPE OneView Python Library**
 
 * [HPE OneView Python library source code, updates and issues tracker](https://github.com/HewlettPackard/python-hpOneView)
 
