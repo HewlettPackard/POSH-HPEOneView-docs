@@ -108,8 +108,8 @@ Import-Module HPOneView.500
 
 There are 5 primary CMDLETs to interact with the HPE OneView appliance:
 
-* [Connect-HPOVMgmt](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Connect-HPOVMgmt)
-* [Send-HPOVRequest](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Send-HPOVRequest)
+* [Connect-HPOVMgmt](cmdlets/library/connect-hpovmgmt.md)
+* [Send-HPOVRequest](cmdlets/library/untitled.md)
 * [New-HPOVResource](https://github.com/HewlettPackard/POSH-HPOneView/wiki/New-HPOVResource)
 * [Set-HPOVResource](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Set-HPOVResource)
 * [Remove-HPOVResource](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Remove-HPOVResource)
@@ -117,7 +117,7 @@ There are 5 primary CMDLETs to interact with the HPE OneView appliance:
 New in the HPE OneView 2.00 library is the ability to connect to multiple appliances, which allows the user to execute various CMDLETs without requiring to disconnect and reconnect to other appliances within your PowerShell session. The `Connect-HPOVMgmt` CMDLET will authenticate you to the requested appliance. From there, a session object \(Type `[HPOneView.Appliance.Connection]`\) is created and added to a global variable `$ConnectedSessions` \(Type `[System.Collections.ArrayList]`\) in your PowerShell runtime environment that other CMDLETs will use. Within the `[HPOneView.Appliance.Connection]` object contains a number of properties, of which the connected appliance `hostname` value provided by `Connect-HPOVMgmt` is stored, along with the `SessionID` of your user session.
 
 {% hint style="info" %}
-For more information about multiple appliance connection support, please review `get-help about_Appliance_Connections` from your PowerShell console, or read the online wiki page for [about\_Appliance\_Connections](https://github.com/HewlettPackard/POSH-HPOneView/wiki/about_Appliance_Connections).
+For more information about multiple appliance connection support, please review `get-help about_Appliance_Connections` from your PowerShell console, or read the online wiki page for [about\_Appliance\_Connections](about/about_appliance_connections.md).
 {% endhint %}
 
 The `New-HPOVResource`, `Set-HPOVRequest` and `Remove-HPOVResource` Cmdlets are mainly for callers to perform Create, Update and Delete operations where a native Cmdlet hasn't been developed. The following diagram is an example of flow, where `Send-HPOVRequest` is the main Cmdlet that directly communicates with the HPE OneView REST API.

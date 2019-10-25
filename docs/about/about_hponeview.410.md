@@ -1,9 +1,9 @@
-# about\_HPOneView.500
+# about\_HPOneView.410
 
 TOPIC
 
 ```text
-about_HPOneView.500
+about_HPOneView.410
 ```
 
 COPYRIGHT
@@ -37,35 +37,15 @@ THE SOFTWARE.
 SHORT DESCRIPTION
 
 ```text
-PowerShell library for HP OneView 5.00
+PowerShell library for HP OneView 4.10
 ```
 
 WHAT'S NEW
 
 ```text
-Release 5.00.2150.3666
+Release 4.10.1718.2245
 
- -- Initial 5.00 release.
- -- Transitioned library to .NetStandard 2.0 codebase, in order to support PowerShell 5.x,
-    PowerShell 6, and PowerShellCore with DotNet 4.8 Framework and DotNetCore for Linux and
-    Mac.
- -- Deprecated EXE installer.  Library is a published PowerShell Catelog resource.  In order to
-    install the library on another system without Internet access, use Save-Module from another
-    PC, and then manually copy the module contents to the isolated system.
- -- All -Username and -Password parameters are now obsolete and deprecated. Plase update your
-    scripts to use the -Credential parameter instead.
- -- Added Brocade FOS support to Add-HPOVSanManager
- -- Added Consistency Checking parameters to New-HPOVLogicalInterconnectGroup and New-HPOVUplinkSet.
- -- Added Network Set support to New-HPOVUplinkSet to either track network set resources,
-    or to copy networks from the provided Network Set(s) with the -CopyNetworksFromNetworkSet
-    parameter.
- -- Added unmanaged fibre channel connection to New-HPOVServerProfile and 
-    New-HPOVServerProfileConnection for supported servers.
- -- Added Get-HPOVServerOneTimeBoot and Set-HPOVServerOneTimeBoot to support server One
-    Time Boot settings.
- -- Added IPv6 address pool support to New-HPOVAddressPoolSubnet and New-HPOVAddressPoolRange.
- -- Added Gen10 ComSig firmware hotfix file support to Add-HPOVBaseline.
- -- Added ID assignment override to New-HPOVServerProfile when specifying a server profile template.
+ -- Initial 4.10 release.
 ```
 
 LONG DESCRIPTION
@@ -83,7 +63,7 @@ wrapper scripts.  The core cmdlets are:
 
 A set of sample scripts are also provided, that show how to fully configure an
 HP OneView appliance from the ground up.
-
+                                    
 For information regarding this project, to request features or report 
 issues, please see: https://github.com/HewlettPackard/POSH-HPOneView/issues
 ```
@@ -93,7 +73,7 @@ SEE ALSO
 ```text
 https://github.com/HewlettPackard/POSH-HPOneView
 http://hpe.com/info/oneviewcommunity
-Update-Help HPOneView.500
+Update-Help HPOneView.410
 Get-Help about_Appliance_Connections
 Get-Help about_Appliance_Connection_Permissions
 Get-Help about_Two_Factor_Authentication

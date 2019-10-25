@@ -10,9 +10,10 @@ This chapter contains sections specific to Cmdlets that are broken down by type.
 
 | Section | Description |
 | :--- | :--- |
-| Appliance | Cmdlets that are specific to appliance management. |
-| Security | Cmdlets that are specific to security management \(users, groups, external security directories, SBAC, etc.\) |
-| Server | Cmdlets that are specific to server management, including hardware and profiles. |
+| [Library](library/) | These Cmdlets are core library functions. |
+| [Appliance](appliance/) | Cmdlets that are specific to appliance management. |
+| [Security](security.md) | Cmdlets that are specific to security management \(users, groups, external security directories, SBAC, etc.\) |
+| [Servers](servers.md) | Cmdlets that are specific to server management, including hardware and profiles. |
 
 
 
