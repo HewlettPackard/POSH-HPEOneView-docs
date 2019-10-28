@@ -23,11 +23,9 @@ After upload the baseline ISO, any . \(period character\) within the filename wi
 
 ### Parameters
 
--ApplianceConnection &lt;Array&gt; Aliases \[-Appliance\]
+#### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more HPOneView.Appliance.Connection object\(s\) or Name property value\(s\).
-
-Default Value: ${Global:ConnectedSessions} \| ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -37,7 +35,9 @@ Default Value: ${Global:ConnectedSessions} \| ? Default
 | Accept pipeline input? | false |
 | Accept wildcard characters?    | False |
 
--Async &lt;SwitchParameter&gt; Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
+#### -Async &lt;SwitchParameter&gt; 
+
+Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
@@ -47,7 +47,9 @@ Default Value: ${Global:ConnectedSessions} \| ? Default
 | Accept pipeline input? | false |
 | Accept wildcard characters?    | False |
 
--CompSigFile &lt;String&gt; When adding a Gen10 hotfix component, the associated compsig file is required to validate the digital signature of the hotfix. Use this parameter to accompany the hotfix file upload to the repository.
+#### -CompSigFile &lt;String&gt; 
+
+When adding a Gen10 hotfix component, the associated compsig file is required to validate the digital signature of the hotfix. Use this parameter to accompany the hotfix file upload to the repository.
 
 | Aliases | None |
 | :--- | :--- |
@@ -57,7 +59,7 @@ Default Value: ${Global:ConnectedSessions} \| ? Default
 | Accept pipeline input? | false |
 | Accept wildcard characters?    | False |
 
--File &lt;String&gt; Aliases \[-sppFile\]
+#### -File &lt;String&gt; 
 
 The full path and file name of the SPP file. The function returns an error if the file path cannot be validated.
 
@@ -69,7 +71,9 @@ The full path and file name of the SPP file. The function returns an error if th
 | Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters?    | False |
 
--Scope &lt;HPOneView.Appliance.ScopeCollection&gt; Provide an HPOneView.Appliance.ScopeCollection resource object to initially associate with. Resource can also be added to scope using the Add-HPOVResourceToScope Cmdlet.
+#### -Scope &lt;HPOneView.Appliance.ScopeCollection&gt; 
+
+Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with. Resource can also be added to scope using the Add-HPOVResourceToScope Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -87,7 +91,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**System.IO.FileSystemInfo**_
 
-File System bject from Get-ChildItem
+File System object from Get-ChildItem
 
 ### Return Values
 
@@ -137,19 +141,15 @@ Add-HPOVBaseline [-File] <String> [[-CompSigFile] <String>]] [[-Scope] <HPOneVie
 
 ### Description
 
- This Cmdlet provides the ability to upload a new SPP Baseline into the appliance. It will return after the upload has completed but before the SPP file has been imported into the firmware repository.
+This Cmdlet provides the ability to upload a new SPP Baseline into the appliance. It will return after the upload has completed but before the SPP file has been imported into the firmware repository.
 
 After upload the baseline ISO, any . \(period character\) within the filename will be chaned to the \_ \(underscore character\) by the appliance. So, if a baseline ISo file name is "bp.2016.04.custom.ISo", the appliance will change the filename to "bp\_2016\_04\_custom.iso".
 
 ### Parameters
 
--ApplianceConnection &lt;Array&gt; 
+#### -ApplianceConnection &lt;Array&gt; 
 
-Aliases \[-Appliance\]
-
-Specify one or more HPOneView.Appliance.Connection object\(s\) or Name property value\(s\).
-
-Default Value: ${Global:ConnectedSessions} \| ? Default
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -159,7 +159,7 @@ Default Value: ${Global:ConnectedSessions} \| ? Default
 | Accept pipeline input? | false |
 | Accept wildcard characters?    | False |
 
--Async &lt;SwitchParameter&gt; 
+#### -Async &lt;SwitchParameter&gt; 
 
 Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
 
@@ -171,7 +171,7 @@ Use this parameter to immediately return the async task. By default, the Cmdlet 
 | Accept pipeline input? | false |
 | Accept wildcard characters?    | False |
 
--CompSigFile &lt;String&gt; 
+#### -CompSigFile &lt;String&gt; 
 
 When adding a Gen10 hotfix component, the associated compsig file is required to validate the digital signature of the hotfix. Use this parameter to accompany the hotfix file upload to the repository.
 
@@ -183,7 +183,7 @@ When adding a Gen10 hotfix component, the associated compsig file is required to
 | Accept pipeline input? | false |
 | Accept wildcard characters?    | False |
 
--File &lt;String&gt; Aliases \[-sppFile\]
+#### -File &lt;String&gt;
 
 The full path and file name of the SPP file. The function returns an error if the file path cannot be validated.
 
@@ -195,9 +195,9 @@ The full path and file name of the SPP file. The function returns an error if th
 | Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters?    | False |
 
--Scope &lt;HPOneView.Appliance.ScopeCollection&gt; 
+#### -Scope &lt;HPOneView.Appliance.ScopeCollection&gt; 
 
-Provide an HPOneView.Appliance.ScopeCollection resource object to initially associate with. Resource can also be added to scope using the Add-HPOVResourceToScope Cmdlet.
+Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with. Resource can also be added to scope using the Add-HPOVResourceToScope Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -215,7 +215,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**System.IO.FileSystemInfo**_
 
-File System bject from Get-ChildItem
+File System object from Get-ChildItem
 
 ### Return Values
 
@@ -271,11 +271,9 @@ After upload the baseline ISO, any . \(period character\) within the filename wi
 
 ### Parameters
 
--ApplianceConnection &lt;Array&gt; Aliases \[-Appliance\]
+#### -ApplianceConnection &lt;Array&gt; Aliases \[-Appliance\]
 
 Specify one or more HPOneView.Appliance.Connection object\(s\) or Name property value\(s\).
-
-Default Value: ${Global:ConnectedSessions} \| ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -285,7 +283,9 @@ Default Value: ${Global:ConnectedSessions} \| ? Default
 | Accept pipeline input? | false |
 | Accept wildcard characters?    | False |
 
--Async &lt;SwitchParameter&gt; Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
+#### -Async &lt;SwitchParameter&gt; 
+
+Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
@@ -295,7 +295,7 @@ Default Value: ${Global:ConnectedSessions} \| ? Default
 | Accept pipeline input? | false |
 | Accept wildcard characters?    | False |
 
--File &lt;String&gt; Aliases \[-sppFile\]
+#### -File &lt;String&gt; 
 
 The full path and file name of the SPP file. The function returns an error if the file path cannot be validated.
 
@@ -307,7 +307,9 @@ The full path and file name of the SPP file. The function returns an error if th
 | Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters?    | False |
 
--Scope &lt;HPOneView.Appliance.ScopeCollection&gt; Provide an HPOneView.Appliance.ScopeCollection resource object to initially associate with. Resource can also be added to scope using the Add-HPOVResourceToScope Cmdlet.
+#### -Scope &lt;HPOneView.Appliance.ScopeCollection&gt; 
+
+Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with. Resource can also be added to scope using the Add-HPOVResourceToScope Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -325,7 +327,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**System.IO.FileSystemInfo**_
 
-File System bject from Get-ChildItem
+File System object from Get-ChildItem
 
 ### Return Values
 
@@ -337,7 +339,7 @@ The progress of uploading the file to the appliance, and in-progress or completi
 
 ```
  -------------------------- EXAMPLE 1 -------------------------- 
- Add-HPOVBaseline "C:\Users\me\Documents\SPP2012060B.2012.0525.1.iso" 
+ Add-HPOVBaseline -File "C:\Users\me\Documents\SPP2012060B.2012.0525.1.iso" 
 ```
 
 #### Related Links
