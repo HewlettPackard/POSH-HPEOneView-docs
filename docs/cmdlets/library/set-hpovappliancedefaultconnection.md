@@ -92,6 +92,7 @@ Display the current appliance connections, then set the new default to "Applianc
 
 * [Connect-HPOVMgmt](connect-hpovmgmt.md)
 * [Disconnect-HPOVMgmt](disconnect-hpovmgmt.md)
+* [about\_Appliance\_Connection\_Permissions](../../about/about_appliance_connection_permissions.md)
 * \`\`[`${Global:ConnectedSessions}`](../../about/about_appliance_connections.md)
 
 ## HPE OneView 4.20 Library
@@ -180,6 +181,7 @@ Display the current appliance connections, then set the new default to "Applianc
 
 * [Connect-HPOVMgmt](connect-hpovmgmt.md)
 * [Disconnect-HPOVMgmt](disconnect-hpovmgmt.md)
+* [about\_Appliance\_Connection\_Permissions](../../about/about_appliance_connection_permissions.md)
 * \`\`[`${Global:ConnectedSessions}`](../../about/about_appliance_connections.md)
 
 ## HPE OneView 4.10 Library
@@ -268,5 +270,6 @@ Display the current appliance connections, then set the new default to "Applianc
 
 * [Connect-HPOVMgmt](connect-hpovmgmt.md)
 * [Disconnect-HPOVMgmt](disconnect-hpovmgmt.md)
+* [about\_Appliance\_Connection\_Permissions](../../about/about_appliance_connection_permissions.md)
 * \`\`[`${Global:ConnectedSessions}`](../../about/about_appliance_connections.md)
 

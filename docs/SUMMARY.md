@@ -16,7 +16,12 @@
     * [Disable-HPOVDebug](cmdlets/library/disable-hpovdebug.md)
   * [Appliance](cmdlets/appliance/README.md)
     * [Add-HPOVBaseline](cmdlets/appliance/add-hpovbaseline.md)
-  * [Security](cmdlets/security.md)
+    * [Add-HPOVResourceToScope](cmdlets/appliance/add-hpovresourcetoscope.md)
+  * [Cluster](cmdlets/cluster/README.md)
+    * [Add-HPOVClusterManager](cmdlets/cluster/add-hpovclustermanager.md)
+    * [Add-HPOVClusterNode](cmdlets/cluster/add-hpovclusternode.md)
+  * [Security](cmdlets/security/README.md)
+    * [Add-HPOVApplianceTrustedCertificate](cmdlets/security/add-hpovappliancetrustedcertificate.md)
   * [Servers](cmdlets/servers.md)
 * [Getting Help](getting-help.md)
 
