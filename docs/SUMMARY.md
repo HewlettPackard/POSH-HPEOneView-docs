@@ -20,9 +20,14 @@
   * [Cluster](cmdlets/cluster/README.md)
     * [Add-HPOVClusterManager](cmdlets/cluster/add-hpovclustermanager.md)
     * [Add-HPOVClusterNode](cmdlets/cluster/add-hpovclusternode.md)
+  * [Facilities](cmdlets/facilities.md)
+  * [Networking](cmdlets/networking/README.md)
+    * [Add-HPOVFabricManager](cmdlets/networking/add-hpovfabricmanager.md)
   * [Security](cmdlets/security/README.md)
     * [Add-HPOVApplianceTrustedCertificate](cmdlets/security/add-hpovappliancetrustedcertificate.md)
-  * [Servers](cmdlets/servers.md)
+    * [Add-HPOVLdapServer](cmdlets/security/add-hpovldapserver.md)
+  * [Servers](cmdlets/servers/README.md)
+    * [Add-HPOVEnclosure](cmdlets/servers/add-hpovenclosure.md)
 * [Getting Help](getting-help.md)
 
 ## About
