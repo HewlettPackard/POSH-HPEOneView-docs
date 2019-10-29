@@ -110,9 +110,9 @@ There are 5 primary CMDLETs to interact with the HPE OneView appliance:
 
 * [Connect-HPOVMgmt](cmdlets/library/connect-hpovmgmt.md)
 * [Send-HPOVRequest](cmdlets/library/untitled.md)
-* [New-HPOVResource](https://github.com/HewlettPackard/POSH-HPOneView/wiki/New-HPOVResource)
-* [Set-HPOVResource](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Set-HPOVResource)
-* [Remove-HPOVResource](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Remove-HPOVResource)
+* [New-HPOVResource](cmdlets/library/new-hpovresource.md)
+* [Set-HPOVResource](cmdlets/library/set-hpovresource.md)
+* [Remove-HPOVResource](cmdlets/library/remove-hpovresource.md)
 
 New in the HPE OneView 2.00 library is the ability to connect to multiple appliances, which allows the user to execute various CMDLETs without requiring to disconnect and reconnect to other appliances within your PowerShell session. The `Connect-HPOVMgmt` CMDLET will authenticate you to the requested appliance. From there, a session object \(Type `[HPOneView.Appliance.Connection]`\) is created and added to a global variable `$ConnectedSessions` \(Type `[System.Collections.ArrayList]`\) in your PowerShell runtime environment that other CMDLETs will use. Within the `[HPOneView.Appliance.Connection]` object contains a number of properties, of which the connected appliance `hostname` value provided by `Connect-HPOVMgmt` is stored, along with the `SessionID` of your user session.
 
@@ -120,11 +120,11 @@ New in the HPE OneView 2.00 library is the ability to connect to multiple applia
 For more information about multiple appliance connection support, please review `get-help about_Appliance_Connections` from your PowerShell console, or read the online wiki page for [about\_Appliance\_Connections](about/about_appliance_connections.md).
 {% endhint %}
 
-The `New-HPOVResource`, `Set-HPOVRequest` and `Remove-HPOVResource` Cmdlets are mainly for callers to perform Create, Update and Delete operations where a native Cmdlet hasn't been developed. The following diagram is an example of flow, where `Send-HPOVRequest` is the main Cmdlet that directly communicates with the HPE OneView REST API.
+The [`New-HPOVResource`](cmdlets/library/new-hpovresource.md), [`Set-HPOVRequest`](cmdlets/library/set-hpovresource.md) and [`Remove-HPOVResource`](cmdlets/library/remove-hpovresource.md) Cmdlets are mainly for callers to perform Create, Update and Delete operations where a native Cmdlet hasn't been developed. The following diagram is an example of flow, where [`Send-HPOVRequest`](cmdlets/library/untitled.md) is the main Cmdlet that directly communicates with the HPE OneView REST API.
 
 ![PowerShell library architecture diagram and intercommunication flow.](.gitbook/assets/library_interaction_diagram.png)
 
-Once completed, you can either close out of your PowerShell console, or issue the `Disconnect-HPOVMgmt` CMDLET to terminate your session, and return you back to your PowerShell consoles prior state.
+Once completed, you can either close out of your PowerShell console, or issue the [`Disconnect-HPOVMgmt`](cmdlets/library/disconnect-hpovmgmt.md) CMDLET to terminate your session, and return you back to your PowerShell consoles prior state.
 
 ### Sample Scripts
 
@@ -235,12 +235,11 @@ We have created a home for contributors to provide sample scripts or automation 
 
 Others have contributed example scripts to further automate management within the infrastructure. Please use the following links to see other examples not included within the library Samples directory.
 
-* [Rename-LANNetwork](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Rename-LANnetworks)
-* [Get-BladeSystemInventory](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Get-BladeSystemInventory)
-* [Import/Export-OVResources](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Import-Export-OVResources)
-* [Automate Appliance Backup](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Automate-Appliance-Backup)
-* [Create OV Resources](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Creator)
-* [Configure iLO settings from OneView](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Creator-iLO)
+* [HPE OneView PowerShell samples](https://github.com/HewlettPackard/oneview-powershell-samples/tree/master)
+* [Rename-LANNetwork](https://github.com/HewlettPackard/oneview-powershell-samples/tree/master/Networking/Rename-LANNetworks)
+* [Import/Export-OVResources](https://github.com/DungKHoang/Import-Export-OneView-Resources)
+* [Automate Appliance Backup](https://github.com/HewlettPackard/oneview-powershell-samples/tree/master/Appliance/Automate-Appliance-Backup)
+* [Configure iLO settings from OneView using iLO RedFish Cmdlets](https://github.com/HewlettPackard/oneview-powershell-samples/tree/master/Server%20Hardware/Creator-iLO)
 * [HPSIM to HPE OneView Tool](https://github.com/HewlettPackard/POSH-HPOneView/releases/tag/HPSIMtoOV)
 
 ### Additional Resources
