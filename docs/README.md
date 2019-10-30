@@ -122,7 +122,7 @@ For more information about multiple appliance connection support, please review 
 
 The [`New-HPOVResource`](cmdlets/library/new-hpovresource.md), [`Set-HPOVRequest`](cmdlets/library/set-hpovresource.md) and [`Remove-HPOVResource`](cmdlets/library/remove-hpovresource.md) Cmdlets are mainly for callers to perform Create, Update and Delete operations where a native Cmdlet hasn't been developed. The following diagram is an example of flow, where [`Send-HPOVRequest`](cmdlets/library/untitled.md) is the main Cmdlet that directly communicates with the HPE OneView REST API.
 
-![PowerShell library architecture diagram and intercommunication flow.](.gitbook/assets/library_interaction_diagram.png)
+![](.gitbook/assets/library_interaction_diagram.png)
 
 Once completed, you can either close out of your PowerShell console, or issue the [`Disconnect-HPOVMgmt`](cmdlets/library/disconnect-hpovmgmt.md) CMDLET to terminate your session, and return you back to your PowerShell consoles prior state.
 
