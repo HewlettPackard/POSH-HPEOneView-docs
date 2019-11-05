@@ -2,6 +2,7 @@
 
 * [Home](README.md)
 * [Cmdlets](cmdlets/README.md)
+  * [Verb mapping](cmdlets/verb-mapping.md)
   * [Library](cmdlets/library/README.md)
     * [Connect-HPOVMgmt](cmdlets/library/connect-hpovmgmt.md)
     * [Set-HPOVApplianceDefaultConnection](cmdlets/library/set-hpovappliancedefaultconnection.md)
@@ -31,6 +32,7 @@
     * [Add-HPOVLdapServer](cmdlets/security/add-hpovldapserver.md)
   * [Servers](cmdlets/servers/README.md)
     * [Add-HPOVEnclosure](cmdlets/servers/add-hpovenclosure.md)
+  * [Storage](cmdlets/storage.md)
 * [Getting Help](getting-help.md)
 
 ## About
