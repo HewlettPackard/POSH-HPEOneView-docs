@@ -8,7 +8,7 @@ description: Wait for a task to start.
 
 ### Syntax
 
-```text
+```
 Wait-HPOVTaskStart [-InputObject] <Object> [[-ResourceName] <String>] [[-Timeout] <TimeSpan>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
@@ -88,7 +88,7 @@ Task async object
 
 ### Examples
 
-```text
+```
  -------------------------- EXAMPLE 1 --------------------------
 $Task = Add-HPOVServer -Hostname MyiLO.domain.com -Username Administrator -Password password | Wait-HPOVTaskStart
 ```
@@ -104,7 +104,7 @@ Add a new Server Device to the appliance, wait for the asyncronous task to enter
 
 ### Syntax
 
-```text
+```
 Wait-HPOVTaskStart [-InputObject] <Object> [[-ResourceName] <String>] [[-Timeout] <TimeSpan>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
@@ -184,7 +184,7 @@ Task async object
 
 ### Examples
 
-```text
+```
  -------------------------- EXAMPLE 1 --------------------------
 $Task = Add-HPOVServer -Hostname MyiLO.domain.com -Username Administrator -Password password | Wait-HPOVTaskStart
 ```
@@ -200,7 +200,7 @@ Add a new Server Device to the appliance, wait for the asyncronous task to enter
 
 ### Syntax
 
-```text
+```
 Wait-HPOVTaskStart [-InputObject] <Object> [[-ResourceName] <String>] [[-Timeout] <TimeSpan>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
@@ -280,7 +280,7 @@ Task async object
 
 ### Examples
 
-```text
+```
  -------------------------- EXAMPLE 1 --------------------------
 $Task = Add-HPOVServer -Hostname MyiLO.domain.com -Username Administrator -Password password | Wait-HPOVTaskStart
 ```

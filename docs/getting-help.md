@@ -8,7 +8,7 @@ All Cmdlets support the `-Verbose` common parameter, and will display output rel
 
 For instance, the following output snippet contains information that might be sensitive to your corporate security policies:
 
-```text
+```
 **********************
 Windows PowerShell transcript start
 Start time: 20191028114038

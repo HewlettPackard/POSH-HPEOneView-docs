@@ -11,7 +11,7 @@ description: >-
 
 ### Syntax
 
-```text
+```
 Add-HPOVBaseline [-File] <String> [[-CompSigFile] <String>]] [[-Scope] <HPOneView.Appliance.ScopeCollection>] [[-ApplianceConnection] <Array>]] [[-Async] <SwitchParameter>]] [<CommonParameters>]
 ```
 
@@ -101,21 +101,21 @@ The progress of uploading the file to the appliance, and in-progress or completi
 
 ### Examples
 
-```text
+```
  -------------------------- EXAMPLE 1 --------------------------
 Add-HPOVBaseline -File "C:\Users\me\Documents\SPP2012060B.2012.0525.1.iso"
 ```
 
  Upload SPP ISO to all connected appliances.
 
-```text
+```
  -------------------------- EXAMPLE 2 --------------------------
 Add-HPOVBaseline -File (Get-ChildItem .\CP672214.exe)
 ```
 
  Upload the specified hotfix to all connected appliances.
 
-```text
+```
  -------------------------- EXAMPLE 3 --------------------------
 $HotFixFile = dir .\CP672214.exe
 $CompSigFile = dir .\CP672214.compsig
@@ -135,7 +135,7 @@ Add-HPOVBaseline -File $HotFixFile -CompSigFile $CompSigFile
 
 ### Syntax
 
-```text
+```
 Add-HPOVBaseline [-File] <String> [[-CompSigFile] <String>]] [[-Scope] <HPOneView.Appliance.ScopeCollection>] [[-ApplianceConnection] <Array>]] [[-Async] <SwitchParameter>]] [<CommonParameters>]
 ```
 
@@ -225,21 +225,21 @@ The progress of uploading the file to the appliance, and in-progress or completi
 
 ### Examples
 
-```text
+```
  -------------------------- EXAMPLE 1 --------------------------
 Add-HPOVBaseline -File "C:\Users\me\Documents\SPP2012060B.2012.0525.1.iso"
 ```
 
  Upload SPP ISO to all connected appliances.
 
-```text
+```
  -------------------------- EXAMPLE 2 --------------------------
 Add-HPOVBaseline -File (Get-ChildItem .\CP672214.exe)
 ```
 
  Upload the specified hotfix to all connected appliances.
 
-```text
+```
  -------------------------- EXAMPLE 3 --------------------------
 $HotFixFile = dir .\CP672214.exe
 $CompSigFile = dir .\CP672214.compsig
@@ -259,7 +259,7 @@ Add-HPOVBaseline -File $HotFixFile -CompSigFile $CompSigFile
 
 ### Syntax
 
-```text
+```
 Add-HPOVBaseline [-File] <String> [[-Scope] <HPOneView.Appliance.ScopeCollection>] [[-ApplianceConnection] <Array>] [[-Async] <SwitchParameter>]] [<CommonParameters>]
 ```
 

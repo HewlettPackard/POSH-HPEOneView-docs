@@ -2,19 +2,19 @@
 
 TOPIC
 
-```text
+```
 about_HPOneView.500
 ```
 
 COPYRIGHT
 
-```text
+```
 (C) Copyright 2013-2019 Hewlett Packard Enterprise Development LP 
 ```
 
 LICENSE
 
-```text
+```
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -36,13 +36,13 @@ THE SOFTWARE.
 
 SHORT DESCRIPTION
 
-```text
+```
 PowerShell library for HP OneView 5.00
 ```
 
 WHAT'S NEW
 
-```text
+```
 Release 5.00.2150.3666
 
  -- Initial 5.00 release.
@@ -70,7 +70,7 @@ Release 5.00.2150.3666
 
 LONG DESCRIPTION
 
-```text
+```
 This library provides HP OneView management capabilities for Windows PowerShell.
 The library can be used as either a CLI or using the core cmdlets to call from
 wrapper scripts.  The core cmdlets are:
@@ -90,7 +90,7 @@ issues, please see: https://github.com/HewlettPackard/POSH-HPOneView/issues
 
 SEE ALSO
 
-```text
+```
 https://github.com/HewlettPackard/POSH-HPOneView
 http://hpe.com/info/oneviewcommunity
 Update-Help HPOneView.500

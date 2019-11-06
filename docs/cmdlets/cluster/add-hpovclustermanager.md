@@ -8,7 +8,7 @@ description: Add new hypervisor cluster manager.
 
 ### Syntax
 
-```text
+```
 Add-HPOVClusterManager [-Hostname] <String> [-Credential] <PSCredential> [[-DisplayName] <String>] [[-Port] <int>] [[-TrustLeafCertificate] <SwitchParameter>] [[-Scope] <Object>] [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Array>] [<CommonParameters>]
 ```
 
@@ -134,7 +134,7 @@ Async Task resource to monitor progress.
 
 ### Examples
 
-```text
+```
  -------------------------- EXAMPLE 1 --------------------------
 Add-HPOVClusterManager -Hostname vcenter.domain.local -Credential (Get-Credential -Username administrator@vsphere.local -Message Password)
 ```
@@ -151,7 +151,7 @@ Add-HPOVClusterManager -Hostname vcenter.domain.local -Credential (Get-Credentia
 
 ### Syntax
 
-```text
+```
 Add-HPOVClusterManager [-Hostname] <String> [-Credential] <PSCredential> [[-DisplayName] <String>] [[-Port] <int>] [[-TrustLeafCertificate] <SwitchParameter>] [[-Scope] <Object>] [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Array>] [<CommonParameters>]
 ```
 
@@ -277,7 +277,7 @@ Async Task resource to monitor progress.
 
 ### Examples
 
-```text
+```
  -------------------------- EXAMPLE 1 --------------------------
 Add-HPOVClusterManager -Hostname vcenter.domain.local -Credential (Get-Credential -Username administrator@vsphere.local -Message Password)
 ```
@@ -294,7 +294,7 @@ Add-HPOVClusterManager -Hostname vcenter.domain.local -Credential (Get-Credentia
 
 ### Syntax
 
-```text
+```
 Add-HPOVClusterManager [-Hostname] <String> [-Credential] <PSCredential> [[-DisplayName] <String>] [[-Port] <int>] [[-TrustLeafCertificate] <SwitchParameter>] [[-Scope] <Object>] [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Array>] [<CommonParameters>]
 ```
 
@@ -420,7 +420,7 @@ Async Task resource to monitor progress.
 
 ### Examples
 
-```text
+```
  -------------------------- EXAMPLE 1 --------------------------
 Add-HPOVClusterManager -Hostname vcenter.domain.local -Credential (Get-Credential -Username administrator@vsphere.local -Message Password)
 ```

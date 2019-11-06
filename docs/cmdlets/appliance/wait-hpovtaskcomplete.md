@@ -8,7 +8,7 @@ description: Wait for a task to complete.
 
 ### Syntax
 
-```text
+```
 Wait-HPOVTaskComplete [-InputObject] <Object> [[-Timeout] <TimeSpan>] [-ApplianceConnection] <Object>[ [-ApplianceWillReboot] <SwitchParameter>] [<CommonParameters>]
 ```
 
@@ -92,7 +92,7 @@ The finished Task object that includes the task result
 
 ### Examples
 
-```text
+```
  -------------------------- EXAMPLE 1 --------------------------
 Wait-HPOVTaskComplete -InputObject $task -timeout (New-TimeSpan -minute 10)
 Waiting for task to complete...Task completed successfully!
@@ -101,7 +101,7 @@ Waiting for task to complete...Task completed successfully!
 
 Wait for task to complete, modifying the default timeout to 10 minutes.
 
-```text
+```
  -------------------------- EXAMPLE 2 --------------------------
 $svr = Get-HPOVServer -Name "ServerA"
 $taskResults = New-HPOVServerProfile -name "Profile 1" -server $svr | Wait-HPOVTaskComplete
@@ -119,7 +119,7 @@ Retrieve the server details for ServerA, create a Server Profile and pass via pi
 
 ### Syntax
 
-```text
+```
 Wait-HPOVTaskComplete [-InputObject] <Object> [[-Timeout] <TimeSpan>] [-ApplianceConnection] <Object>[ [-ApplianceWillReboot] <SwitchParameter>] [<CommonParameters>]
 ```
 
@@ -203,7 +203,7 @@ The finished Task object that includes the task result
 
 ### Examples
 
-```text
+```
  -------------------------- EXAMPLE 1 --------------------------
 Wait-HPOVTaskComplete /rest/tasks/F08EE040-DBA7-4806-BB62-993DD0CB4250
 Waiting for task to complete...Task completed successfully!
@@ -212,7 +212,7 @@ Waiting for task to complete...Task completed successfully!
 
  Wait for task to complete.
 
-```text
+```
  -------------------------- EXAMPLE 2 --------------------------
 Wait-HPOVTaskComplete -InputObject $task -timeout (New-TimeSpan -minute 10)
 Waiting for task to complete...Task completed successfully!
@@ -221,7 +221,7 @@ Waiting for task to complete...Task completed successfully!
 
  Wait for task to complete, modifying the default timeout to 10 minutes.
 
-```text
+```
  -------------------------- EXAMPLE 3 --------------------------
 $svr = Get-HPOVServer -Name "ServerA"
 $taskResults = New-HPOVServerProfile -name "Profile 1" -server $svr | Wait-HPOVTaskComplete
@@ -241,7 +241,7 @@ Retrieve the server details for ServerA, create a Server Profile and pass via pi
 
 ### Syntax
 
-```text
+```
 Wait-HPOVTaskComplete [-InputObject] <Object> [[-Timeout] <TimeSpan>] [-ApplianceConnection] <Object>[ [-ApplianceWillReboot] <SwitchParameter>] [<CommonParameters>]
 ```
 
@@ -325,7 +325,7 @@ The finished Task object that includes the task result
 
 ### Examples
 
-```text
+```
  -------------------------- EXAMPLE 1 --------------------------
 Wait-HPOVTaskComplete /rest/tasks/F08EE040-DBA7-4806-BB62-993DD0CB4250
 Waiting for task to complete...Task completed successfully!
@@ -334,7 +334,7 @@ Waiting for task to complete...Task completed successfully!
 
  Wait for task to complete.
 
-```text
+```
  -------------------------- EXAMPLE 2 --------------------------
 Wait-HPOVTaskComplete -InputObject $task -timeout (New-TimeSpan -minute 10)
 Waiting for task to complete...Task completed successfully!
@@ -343,7 +343,7 @@ Waiting for task to complete...Task completed successfully!
 
  Wait for task to complete, modifying the default timeout to 10 minutes.
 
-```text
+```
  -------------------------- EXAMPLE 3 --------------------------
 $svr = Get-HPOVServer -Name "ServerA"
 $taskResults = New-HPOVServerProfile -name "Profile 1" -server $svr | Wait-HPOVTaskComplete

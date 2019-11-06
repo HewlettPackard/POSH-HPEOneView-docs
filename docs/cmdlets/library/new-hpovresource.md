@@ -8,7 +8,7 @@ description: Create a new resource.
 
 ### Syntax
 
-```text
+```
 New-HPOVResource [-Uri] <String> [-InputObject] <Object> [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
@@ -72,7 +72,7 @@ The newly created resource, or async task.
 
 ### Examples
 
-```text
+```
  -------------------------- EXAMPLE 1 --------------------------
 New-HPOVResource /rest/ethernet-networks @{vlanId=2000; purpose="General"; name="VLAN 2000"; smartLink=$true; privateNetwork=$false; type="ethernet-networkV4"}
 ```
@@ -88,7 +88,7 @@ New-HPOVResource /rest/ethernet-networks @{vlanId=2000; purpose="General"; name=
 
 ### Syntax
 
-```text
+```
 New-HPOVResource [-Uri] <String> [-InputObject] <Object> [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
@@ -152,7 +152,7 @@ The newly created resource, or async task.
 
 ### Examples
 
-```text
+```
  -------------------------- EXAMPLE 1 --------------------------
 New-HPOVResource /rest/ethernet-networks @{vlanId=2000; purpose="General"; name="VLAN 2000"; smartLink=$true; privateNetwork=$false; type="ethernet-networkV4"}
 ```
@@ -168,7 +168,7 @@ New-HPOVResource /rest/ethernet-networks @{vlanId=2000; purpose="General"; name=
 
 ### Syntax
 
-```text
+```
 New-HPOVResource [-Uri] <String> [-InputObject] <Object> [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
@@ -232,7 +232,7 @@ The newly created resource, or async task.
 
 ### Examples
 
-```text
+```
  -------------------------- EXAMPLE 1 --------------------------
 New-HPOVResource /rest/ethernet-networks @{vlanId=2000; purpose="General"; name="VLAN 2000"; smartLink=$true; privateNetwork=$false; type="ethernet-networkV3"}
 ```

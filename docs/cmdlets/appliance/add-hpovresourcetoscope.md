@@ -8,7 +8,7 @@ description: Add supported resource(s) to a Scope.
 
 ### Syntax
 
-```text
+```
 Add-HPOVResourceToScope [-Scope] <HPOneView.Appliance.ScopeCollection> [-InputObject] <Object> [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
@@ -42,7 +42,9 @@ This Cmdlet will add supported resources to a specified Scope. All the resources
 Resources in other categories are considered to be included in all scopes, and they cannot be removed or modified.
 {% endhint %}
 
-Minimum required privileges: Infrastructure administrator
+{% hint style="info" %}
+Minimum required privileges: Infrastructure administrator, scope administrator, scope operator
+{% endhint %}
 
 ### Parameters
 
@@ -112,7 +114,7 @@ Asyncronous task resource that updates the Scope and associated resources.
 
 ### Examples
 
-```text
+```
  -------------------------- EXAMPLE 1 --------------------------
 $Resources += Get-HPOVNetwork -Name ProdVLan* 
 $Resources += Get-HPOVServer -Name Encl1* 
@@ -129,7 +131,7 @@ Get-HPOVScope -Name MyScope | Add-HPOVResourceToScope -InputObject $Resources
 
 ### Syntax
 
-```text
+```
 Add-HPOVResourceToScope [-Scope] <HPOneView.Appliance.ScopeCollection> [-InputObject] <Object> [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
@@ -163,7 +165,9 @@ This Cmdlet will add supported resources to a specified Scope. All the resources
 Resources in other categories are considered to be included in all scopes, and they cannot be removed or modified.
 {% endhint %}
 
-Minimum required privileges: Infrastructure administrator
+{% hint style="info" %}
+Minimum required privileges: Infrastructure administrator, scope administrator, scope operator
+{% endhint %}
 
 ### Parameters
 
@@ -233,7 +237,7 @@ Asyncronous task resource that updates the Scope and associated resources.
 
 ### Examples
 
-```text
+```
  -------------------------- EXAMPLE 1 --------------------------
 $Resources += Get-HPOVNetwork -Name ProdVLan* 
 $Resources += Get-HPOVServer -Name Encl1* 
@@ -250,7 +254,7 @@ Get-HPOVScope -Name MyScope | Add-HPOVResourceToScope -InputObject $Resources
 
 ### Syntax
 
-```text
+```
 Add-HPOVResourceToScope [-Scope] <HPOneView.Appliance.ScopeCollection> [-InputObject] <Object> [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
@@ -282,7 +286,9 @@ This Cmdlet will add supported resources to a specified Scope. All the resources
 Resources in other categories are considered to be included in all scopes, and they cannot be removed or modified.
 {% endhint %}
 
-Minimum required privileges: Infrastructure administrator
+{% hint style="info" %}
+Minimum required privileges: Infrastructure administrator, scope administrator, scope operator
+{% endhint %}
 
 ### Parameters
 
@@ -352,7 +358,7 @@ Asyncronous task resource that updates the Scope and associated resources.
 
 ### Examples
 
-```text
+```
  -------------------------- EXAMPLE 1 --------------------------
 $Resources += Get-HPOVNetwork -Name ProdVLan* 
 $Resources += Get-HPOVServer -Name Encl1* 

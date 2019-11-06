@@ -8,7 +8,7 @@ description: Sends a request to the management appliance.
 
 ### Syntax
 
-```text
+```
 Send-HPOVRequest [-Uri] <String> [[-Method] <String>] [[-Body] <Object>] [[-Start] <Int32>] [[-Count] <Int32>] [[-AddHeader] <Hashtable>] [[-OverrideContentType] <String>] [[-OverrideTimeout] <Int>] [[-Hostname] <Object>] [<CommonParameters>]
 ```
 
@@ -152,7 +152,7 @@ If collection of resources \(.i.e. GET /rest/ethernet-networks\)
 {% tab title="System.Management.Automation.PSCustomObject" %}
 Single object returned from appliance.
 
-```text
+```
  If Async task, a Hashtable is returned with the following contents:
 
      @{
@@ -168,7 +168,7 @@ Single object returned from appliance.
 {% tab title="System.Management.Automation.PSCustomObject" %}
 If no resources are found, a `[System.Management.Automation.PSCustomObject]` is returned that contains:
 
-```text
+```
      @{
          statusCode = [int]HTTP Status Code;
          statusMessage = [string]HTTP Status Message;
@@ -180,14 +180,14 @@ If no resources are found, a `[System.Management.Automation.PSCustomObject]` is 
 
 ### Examples
 
-```text
+```
  -------------------------- EXAMPLE 1 --------------------------
 Send-HPOVRequest "/rest/enclosures"
 ```
 
  Returns all the enclosure objects managed by the appliance.
 
-```text
+```
  -------------------------- EXAMPLE 2 --------------------------
 $e = Send-HPOVRequest "/rest/enclosures/SGH2X6J1" -Appliance MyAppliance.domain.com
 $e.name = "New Name"
@@ -201,7 +201,7 @@ Updates the name of the enclosure object specified by the uri and Appliance Conn
 
 ### Syntax
 
-```text
+```
 Send-HPOVRequest [-Uri] <String> [[-Method] <String>] [[-Body] <Object>] [[-Start] <Int32>] [[-Count] <Int32>] [[-AddHeader] <Hashtable>] [[-OverrideContentType] <String>] [[-OverrideTimeout] <Int>] [[-Hostname] <Object>] [<CommonParameters>]
 ```
 
@@ -345,7 +345,7 @@ If collection of resources \(.i.e. GET /rest/ethernet-networks\)
 {% tab title="System.Management.Automation.PSCustomObject" %}
 Single object returned from appliance.
 
-```text
+```
  If Async task, a Hashtable is returned with the following contents:
 
      @{
@@ -361,7 +361,7 @@ Single object returned from appliance.
 {% tab title="System.Management.Automation.PSCustomObject" %}
 If no resources are found, a `[System.Management.Automation.PSCustomObject]` is returned that contains:
 
-```text
+```
      @{
          statusCode = [int]HTTP Status Code;
          statusMessage = [string]HTTP Status Message;
@@ -373,14 +373,14 @@ If no resources are found, a `[System.Management.Automation.PSCustomObject]` is 
 
 ### Examples
 
-```text
+```
  -------------------------- EXAMPLE 1 --------------------------
 Send-HPOVRequest "/rest/enclosures"
 ```
 
  Returns all the enclosure objects managed by the appliance.
 
-```text
+```
  -------------------------- EXAMPLE 2 --------------------------
 $e = Send-HPOVRequest "/rest/enclosures/SGH2X6J1" -Appliance MyAppliance.domain.com
 $e.name = "New Name"
@@ -394,7 +394,7 @@ Updates the name of the enclosure object specified by the uri and Appliance Conn
 
 ### Syntax
 
-```text
+```
 Send-HPOVRequest [-Uri] <String> [[-Method] <String>] [[-Body] <Object>] [[-Start] <Int32>] [[-Count] <Int32>] [[-AddHeader] <Hashtable>] [[-OverrideContentType] <String>] [[-OverrideTimeout] <Int>] [[-Hostname] <Object>] [<CommonParameters>]
 ```
 
@@ -538,7 +538,7 @@ If collection of resources \(.i.e. GET /rest/ethernet-networks\)
 {% tab title="System.Management.Automation.PSCustomObject" %}
 Single object returned from appliance.
 
-```text
+```
  If Async task, a Hashtable is returned with the following contents:
 
      @{
@@ -554,7 +554,7 @@ Single object returned from appliance.
 {% tab title="System.Management.Automation.PSCustomObject" %}
 If no resources are found, a `[System.Management.Automation.PSCustomObject]` is returned that contains:
 
-```text
+```
      @{
          statusCode = [int]HTTP Status Code;
          statusMessage = [string]HTTP Status Message;
@@ -566,14 +566,14 @@ If no resources are found, a `[System.Management.Automation.PSCustomObject]` is 
 
 ### Examples
 
-```text
+```
  -------------------------- EXAMPLE 1 --------------------------
 Send-HPOVRequest "/rest/enclosures"
 ```
 
  Returns all the enclosure objects managed by the appliance.
 
-```text
+```
  -------------------------- EXAMPLE 2 --------------------------
 $e = Send-HPOVRequest "/rest/enclosures/SGH2X6J1" -Appliance MyAppliance.domain.com
 $e.name = "New Name"

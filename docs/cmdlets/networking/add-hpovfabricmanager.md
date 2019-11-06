@@ -8,7 +8,7 @@ description: Add an external fabric manager.
 
 ### Syntax
 
-```text
+```
 Add-HPOVFabricManager [-ManagementAddress] <String> [-Name] <String> [[-Credential] <PSCredential>] [[-SecondaryManagementAddress] <String>] [[-TertiearyManagementAddress] <String>] [[-TrustLeafCertificate] <SwitchParameter>] [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Array>] [<CommonParameters>]
 ```
 
@@ -26,6 +26,10 @@ The following conditions cause the fabric manager to be unable to synchronize wi
 * The two networks are shared across tenants 
 
 When a fabric manager is non compliant with APIC network policies, a software remediation enables a fabric manager to synchronize with network policies. A compliance report is generated immediately after adding a fabric manager and is updated again after remediation. The compliance report details actions that you can perform to remediate inconsistencies. There are indicators for compliant, noncompliant, and compliance-check progress for each resource. Every tenant has a list of consistent and inconsistent reports based on the compliance records generated for a tenant. An inconsistency appears in the form of an alert, which contains an action choice: auto-remediate or manual. If you choose to auto-remediate, an automatic update of the selected HPE OneView resource will initiate.
+
+{% hint style="info" %}
+Minimum required privileges: Infrastructure administrator or Network administrator.
+{% endhint %}
 
 ### Parameters
 
@@ -141,7 +145,7 @@ Async Task resource to monitor progress.
 
 ### Examples
 
-```text
+```
  -------------------------- EXAMPLE 1 --------------------------
 Add-HPOVFabricManager -Name ProdFabricManager -ManagementAddress fabricmgr1-vip.domain.local -SecondaryManagementAddress fabricmgr1-vip2.domain.local
 ```
@@ -157,7 +161,7 @@ Add-HPOVFabricManager -Name ProdFabricManager -ManagementAddress fabricmgr1-vip.
 
 ### Syntax
 
-```text
+```
 Add-HPOVFabricManager [-ManagementAddress] <String> [-Name] <String> [[-Credential] <PSCredential>] [[-SecondaryManagementAddress] <String>] [[-TertiearyManagementAddress] <String>] [[-TrustLeafCertificate] <SwitchParameter>] [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Array>] [<CommonParameters>]
 ```
 
@@ -290,7 +294,7 @@ Async Task resource to monitor progress.
 
 ### Examples
 
-```text
+```
  -------------------------- EXAMPLE 1 --------------------------
 Add-HPOVFabricManager -Name ProdFabricManager -ManagementAddress fabricmgr1-vip.domain.local -SecondaryManagementAddress fabricmgr1-vip2.domain.local
 ```
@@ -306,7 +310,7 @@ Add-HPOVFabricManager -Name ProdFabricManager -ManagementAddress fabricmgr1-vip.
 
 ### Syntax
 
-```text
+```
 Add-HPOVFabricManager [-ManagementAddress] <String> [-Name] <String> [[-Credential] <PSCredential>] [[-SecondaryManagementAddress] <String>] [[-TertiearyManagementAddress] <String>] [[-TrustLeafCertificate] <SwitchParameter>] [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Array>] [<CommonParameters>]
 ```
 
@@ -439,7 +443,7 @@ Async Task resource to monitor progress.
 
 ### Examples
 
-```text
+```
  -------------------------- EXAMPLE 1 --------------------------
 Add-HPOVFabricManager -Name ProdFabricManager -ManagementAddress fabricmgr1-vip.domain.local -SecondaryManagementAddress fabricmgr1-vip2.domain.local
 ```

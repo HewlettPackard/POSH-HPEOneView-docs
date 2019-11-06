@@ -1,6 +1,6 @@
 # about\_Appliance\_Connections
 
-```text
+```
 TOPIC
 
     about_Appliance_Connections

@@ -8,11 +8,11 @@ description: Retrieve Task resource(s).
 
 ### Syntax
 
-```text
+```
 Get-HPOVTask [[-Name] <String>] [[-InputObject] <Object>] [[-State] <String>] [[-Count] <Int32>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
-```text
+```
 Get-HPOVTask [[-Name] <String>] [[-ResourceCategory] <String>] [[-State] <String>] [[-Count] <Int32>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
@@ -146,21 +146,21 @@ _**The matching task resources.**_
 
 ### Examples
 
-```text
+```
  -------------------------- EXAMPLE 1 --------------------------
 $tasks = Get-HPOVTask -state Error
 ```
 
  Return all the tasks with a taskState="Error"
 
-```text
+```
  -------------------------- EXAMPLE 2 --------------------------
 Get-HPOVServerProfile -Name "Server 1" | Get-HPOVTask -State Completed
 ```
 
  Return completed \(successful\) tasks associated with the "Server 1" Server Profile.
 
-```text
+```
  -------------------------- EXAMPLE 3 --------------------------
 Get-HPOVTask -count 10
 ```
@@ -176,11 +176,11 @@ Get-HPOVTask -count 10
 
 ### Syntax
 
-```text
+```
 Get-HPOVTask [[-Name] <String>] [[-InputObject] <Object>] [[-State] <String>] [[-Count] <Int32>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
-```text
+```
 Get-HPOVTask [[-Name] <String>] [[-ResourceCategory] <String>] [[-State] <String>] [[-Count] <Int32>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
@@ -314,21 +314,21 @@ _**The matching task resources.**_
 
 ### Examples
 
-```text
+```
  -------------------------- EXAMPLE 1 --------------------------
 $tasks = Get-HPOVTask -state Error
 ```
 
  Return all the tasks with a taskState="Error"
 
-```text
+```
  -------------------------- EXAMPLE 2 --------------------------
 Get-HPOVServerProfile -Name "Server 1" | Get-HPOVTask -State Completed
 ```
 
  Return completed \(successful\) tasks associated with the "Server 1" Server Profile.
 
-```text
+```
  -------------------------- EXAMPLE 3 --------------------------
 Get-HPOVTask -count 10
 ```
@@ -344,11 +344,11 @@ Get-HPOVTask -count 10
 
 ### Syntax
 
-```text
+```
 Get-HPOVTask [[-Name] <String>] [[-InputObject] <Object>] [[-State] <String>] [[-Count] <Int32>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
-```text
+```
 Get-HPOVTask [[-Name] <String>] [[-ResourceCategory] <String>] [[-State] <String>] [[-Count] <Int32>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
@@ -482,21 +482,21 @@ _**The matching task resources.**_
 
 ### Examples
 
-```text
+```
  -------------------------- EXAMPLE 1 --------------------------
 $tasks = Get-HPOVTask -state Error
 ```
 
  Return all the tasks with a taskState="Error"
 
-```text
+```
  -------------------------- EXAMPLE 2 --------------------------
 Get-HPOVServerProfile -Name "Server 1" | Get-HPOVTask -State Completed
 ```
 
  Return completed \(successful\) tasks associated with the "Server 1" Server Profile.
 
-```text
+```
  -------------------------- EXAMPLE 3 --------------------------
 Get-HPOVTask -count 10
 ```
