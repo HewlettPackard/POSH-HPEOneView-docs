@@ -8,7 +8,7 @@ description: Add supported resource to rack.
 
 ### Syntax
 
-```
+```text
 Add-HPOVResourceToRack [-InputObject] <Object> [-Rack] <Object> [-ULocation] <Int32> [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
@@ -106,7 +106,7 @@ Updated rack object with the newly added resources in the contents property.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 $Rack = Get-HPOVRack -Name MyRack221 -ErrorAction Stop
 $Servers = Get-HPOVServers -Name Prod221* -ErrorAction Stop
@@ -119,7 +119,7 @@ ForEach ($Server in $Servers) {
 
 Add "Prod221" \(DL\) servers to "MyRack221" rack object, starting at Rack U 1, and increasing the location based on the form factor of the DL servers.
 
-```
+```text
  -------------------------- EXAMPLE 2 --------------------------
 $Rack = Get-HPOVRack -Name MyRack222 -ErrorAction Stop
 $Enclosures = Get-HPOVEnclosures -Name Encl-Prod* -ErrorAction Stop | ? rackName -eq $Rack.name
@@ -142,7 +142,7 @@ Add Enclosures which the Onboard Administrators report are in "MyRack222", and a
 
 ### Syntax
 
-```
+```text
 Add-HPOVResourceToRack [-InputObject] <Object> [-Rack] <Object> [-ULocation] <Int32> [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
@@ -240,7 +240,7 @@ Updated rack object with the newly added resources in the contents property.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 $Rack = Get-HPOVRack -Name MyRack221 -ErrorAction Stop
 $Servers = Get-HPOVServers -Name Prod221* -ErrorAction Stop
@@ -253,7 +253,7 @@ ForEach ($Server in $Servers) {
 
 Add "Prod221" \(DL\) servers to "MyRack221" rack object, starting at Rack U 1, and increasing the location based on the form factor of the DL servers.
 
-```
+```text
  -------------------------- EXAMPLE 2 --------------------------
 $Rack = Get-HPOVRack -Name MyRack222 -ErrorAction Stop
 $Enclosures = Get-HPOVEnclosures -Name Encl-Prod* -ErrorAction Stop | ? rackName -eq $Rack.name
@@ -276,7 +276,7 @@ Add Enclosures which the Onboard Administrators report are in "MyRack222", and a
 
 ### Syntax
 
-```
+```text
 Add-HPOVResourceToRack [-InputObject] <Object> [-Rack] <Object> [-ULocation] <Int32> [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
@@ -374,7 +374,7 @@ Updated rack object with the newly added resources in the contents property.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 $Rack = Get-HPOVRack -Name MyRack221 -ErrorAction Stop
 $Servers = Get-HPOVServers -Name Prod221* -ErrorAction Stop
@@ -387,7 +387,7 @@ ForEach ($Server in $Servers) {
 
 Add "Prod221" \(DL\) servers to "MyRack221" rack object, starting at Rack U 1, and increasing the location based on the form factor of the DL servers.
 
-```
+```text
  -------------------------- EXAMPLE 2 --------------------------
 $Rack = Get-HPOVRack -Name MyRack222 -ErrorAction Stop
 $Enclosures = Get-HPOVEnclosures -Name Encl-Prod* -ErrorAction Stop | ? rackName -eq $Rack.name

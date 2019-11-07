@@ -8,15 +8,15 @@ description: Add X.509 SSL certificates to appliance trusted store.
 
 ### Syntax
 
-```
+```text
 Add-HPOVApplianceTrustedCertificate [-Path] <System.IO.FileInfo> [[-AliasName] <String>] [[-Force] <SwitchParameter>] [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
-```
+```text
 Add-HPOVApplianceTrustedCertificate [-CertObject] <Object> [[-AliasName] <String>] [[-Force] <SwitchParameter>] [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
-```
+```text
 Add-HPOVApplianceTrustedCertificate [-ComputerName] <String> [[-Port] <Int>] [[-AliasName] <String>] [[-Force] <SwitchParameter>] [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
@@ -140,21 +140,21 @@ Asyncronous task resource to monitor.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 Get-ChildItem C:\Path\srv1-pub.cer | Add-HPOVApplianceTrustedCertificate
 ```
 
  Add the provided offline certificate to the appliance trust store.
 
-```
+```text
  -------------------------- EXAMPLE 2 --------------------------
 Add-HPOVApplianceTrustedCertificate -ComputerName $RemoteBackupHostname -Port 443 -AliasName backupserver -Async -Outvariable Task
 ```
 
  Use the Cmdlet to add the remote certificate to the appliance trust store without waiting for the task to complete.
 
-```
+```text
  -------------------------- EXAMPLE 3 --------------------------
 Add-HPOVApplianceTrustedCertificate -ComputerName server1-ilo.domain.com -AliasName server1iLo -force
 ```
@@ -170,15 +170,15 @@ Add-HPOVApplianceTrustedCertificate -ComputerName server1-ilo.domain.com -AliasN
 
 ### Syntax
 
-```
+```text
 Add-HPOVApplianceTrustedCertificate [-Path] <System.IO.FileInfo> [[-AliasName] <String>] [[-Force] <SwitchParameter>] [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
-```
+```text
 Add-HPOVApplianceTrustedCertificate [-CertObject] <Object> [[-AliasName] <String>] [[-Force] <SwitchParameter>] [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
-```
+```text
 Add-HPOVApplianceTrustedCertificate [-ComputerName] <String> [[-Port] <Int>] [[-AliasName] <String>] [[-Force] <SwitchParameter>] [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
@@ -302,21 +302,21 @@ Asyncronous task resource to monitor.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 Get-ChildItem C:\Path\srv1-pub.cer | Add-HPOVApplianceTrustedCertificate
 ```
 
  Add the provided offline certificate to the appliance trust store.
 
-```
+```text
  -------------------------- EXAMPLE 2 --------------------------
 Add-HPOVApplianceTrustedCertificate -ComputerName $RemoteBackupHostname -Port 443 -AliasName backupserver -Async -Outvariable Task
 ```
 
  Use the Cmdlet to add the remote certificate to the appliance trust store without waiting for the task to complete.
 
-```
+```text
  -------------------------- EXAMPLE 3 --------------------------
 Add-HPOVApplianceTrustedCertificate -ComputerName server1-ilo.domain.com -AliasName server1iLo -force
 ```
@@ -332,15 +332,15 @@ Add-HPOVApplianceTrustedCertificate -ComputerName server1-ilo.domain.com -AliasN
 
 ### Syntax
 
-```
+```text
 Add-HPOVApplianceTrustedCertificate [-Path] <System.IO.FileInfo> [[-AliasName] <String>] [[-Force] <SwitchParameter>] [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
-```
+```text
 Add-HPOVApplianceTrustedCertificate [-CertObject] <Object> [[-AliasName] <String>] [[-Force] <SwitchParameter>] [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
-```
+```text
 Add-HPOVApplianceTrustedCertificate [-ComputerName] <String> [[-Port] <Int>] [[-AliasName] <String>] [[-Force] <SwitchParameter>] [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
@@ -464,21 +464,21 @@ Asyncronous task resource to monitor.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 Get-ChildItem C:\Path\srv1-pub.cer | Add-HPOVApplianceTrustedCertificate
 ```
 
  Add the provided offline certificate to the appliance trust store.
 
-```
+```text
  -------------------------- EXAMPLE 2 --------------------------
 Add-HPOVApplianceTrustedCertificate -ComputerName $RemoteBackupHostname -Port 443 -AliasName backupserver -Async -Outvariable Task
 ```
 
  Use the Cmdlet to add the remote certificate to the appliance trust store without waiting for the task to complete.
 
-```
+```text
  -------------------------- EXAMPLE 3 --------------------------
 Add-HPOVApplianceTrustedCertificate -ComputerName server1-ilo.domain.com -AliasName server1iLo -force
 ```

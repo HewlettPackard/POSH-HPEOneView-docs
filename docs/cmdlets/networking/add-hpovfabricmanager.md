@@ -8,7 +8,7 @@ description: Add an external fabric manager.
 
 ### Syntax
 
-```
+```text
 Add-HPOVFabricManager [-ManagementAddress] <String> [-Name] <String> [[-Credential] <PSCredential>] [[-SecondaryManagementAddress] <String>] [[-TertiearyManagementAddress] <String>] [[-TrustLeafCertificate] <SwitchParameter>] [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Array>] [<CommonParameters>]
 ```
 
@@ -145,7 +145,7 @@ Async Task resource to monitor progress.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 Add-HPOVFabricManager -Name ProdFabricManager -ManagementAddress fabricmgr1-vip.domain.local -SecondaryManagementAddress fabricmgr1-vip2.domain.local
 ```
@@ -161,7 +161,7 @@ Add-HPOVFabricManager -Name ProdFabricManager -ManagementAddress fabricmgr1-vip.
 
 ### Syntax
 
-```
+```text
 Add-HPOVFabricManager [-ManagementAddress] <String> [-Name] <String> [[-Credential] <PSCredential>] [[-SecondaryManagementAddress] <String>] [[-TertiearyManagementAddress] <String>] [[-TrustLeafCertificate] <SwitchParameter>] [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Array>] [<CommonParameters>]
 ```
 
@@ -294,7 +294,7 @@ Async Task resource to monitor progress.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 Add-HPOVFabricManager -Name ProdFabricManager -ManagementAddress fabricmgr1-vip.domain.local -SecondaryManagementAddress fabricmgr1-vip2.domain.local
 ```
@@ -310,7 +310,7 @@ Add-HPOVFabricManager -Name ProdFabricManager -ManagementAddress fabricmgr1-vip.
 
 ### Syntax
 
-```
+```text
 Add-HPOVFabricManager [-ManagementAddress] <String> [-Name] <String> [[-Credential] <PSCredential>] [[-SecondaryManagementAddress] <String>] [[-TertiearyManagementAddress] <String>] [[-TrustLeafCertificate] <SwitchParameter>] [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Array>] [<CommonParameters>]
 ```
 
@@ -443,7 +443,7 @@ Async Task resource to monitor progress.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 Add-HPOVFabricManager -Name ProdFabricManager -ManagementAddress fabricmgr1-vip.domain.local -SecondaryManagementAddress fabricmgr1-vip2.domain.local
 ```

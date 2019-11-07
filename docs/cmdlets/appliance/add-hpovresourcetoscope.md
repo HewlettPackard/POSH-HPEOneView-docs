@@ -8,7 +8,7 @@ description: Add supported resource(s) to a Scope.
 
 ### Syntax
 
-```
+```text
 Add-HPOVResourceToScope [-Scope] <HPOneView.Appliance.ScopeCollection> [-InputObject] <Object> [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
@@ -114,7 +114,7 @@ Asyncronous task resource that updates the Scope and associated resources.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 $Resources += Get-HPOVNetwork -Name ProdVLan* 
 $Resources += Get-HPOVServer -Name Encl1* 
@@ -131,7 +131,7 @@ Get-HPOVScope -Name MyScope | Add-HPOVResourceToScope -InputObject $Resources
 
 ### Syntax
 
-```
+```text
 Add-HPOVResourceToScope [-Scope] <HPOneView.Appliance.ScopeCollection> [-InputObject] <Object> [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
@@ -237,7 +237,7 @@ Asyncronous task resource that updates the Scope and associated resources.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 $Resources += Get-HPOVNetwork -Name ProdVLan* 
 $Resources += Get-HPOVServer -Name Encl1* 
@@ -254,7 +254,7 @@ Get-HPOVScope -Name MyScope | Add-HPOVResourceToScope -InputObject $Resources
 
 ### Syntax
 
-```
+```text
 Add-HPOVResourceToScope [-Scope] <HPOneView.Appliance.ScopeCollection> [-InputObject] <Object> [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
@@ -358,7 +358,7 @@ Asyncronous task resource that updates the Scope and associated resources.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 $Resources += Get-HPOVNetwork -Name ProdVLan* 
 $Resources += Get-HPOVServer -Name Encl1* 

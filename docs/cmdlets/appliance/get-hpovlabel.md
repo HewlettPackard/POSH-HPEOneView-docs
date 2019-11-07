@@ -10,7 +10,7 @@
 
 ### Synatx
 
-```
+```text
 Get-HPOVLabel [[-Name] <String>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
@@ -60,7 +60,7 @@ Label resource.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 Get-HPOVLabel
 ```
@@ -119,7 +119,7 @@ Label resource.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 Get-HPOVLabel
 ```

@@ -100,7 +100,7 @@ The library can be installed in one of two ways:
 
 The library module name to import is always `HPOneView.{VERSION}`, where `{VERSION}` is the `Major` and `Minor` version concatenated together. For example, to load the HPE OneView 5.00 library, issue the following command within your PowerShell console:
 
-```
+```text
 Import-Module HPOneView.500
 ```
 
@@ -134,7 +134,7 @@ Starting with the HPE OneView 3.00 library, the installation directory \(includi
 
 To ease the use of the HPE OneView PowerShell library, we have included a number of sample scripts administrators can use to quickly get familiar with the capabilities of the library. The sample scripts are part of the Source Code and installer. Depending on which installation selection you chose \(Just You, or For Everyone\), there is a Samples directory that contain all of the sample scripts. By no means are they exhaustive, but will help you get more familiar with the library.
 
-```
+```text
 [PS] ...\Samples> dir               
     Directory: \POSH-HPOneView.500\Samples
 
@@ -170,7 +170,7 @@ Here is an example of generating PowerShell script code from an HPE Synergy serv
 
 ![Server profile resource created by the HPE OneView graphical user interface \(GUI\).](.gitbook/assets/8392c5dd-5303-4c61-82f3-f788c40dab26.png)
 
-```
+```text
 # Get the profile and generate PowerShell script code
 Get-HPOVServerProfile -Name prf1 | ConvertTo-HPOVPowerShellScript
 

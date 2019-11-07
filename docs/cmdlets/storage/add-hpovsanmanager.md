@@ -8,11 +8,11 @@ description: Add a supported SAN Manager
 
 ### Syntax
 
-```
+```text
 Add-HPOVSanManager [-Type] <String> [-Hostname] <String> [[-Port] <Int32>] [-Username] <String> [-Password] <Object> [[-Credential] <PSCredential>] [[-UseSsl] <SwitchParameter>] [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Array>] [<CommonParameters>]
 ```
 
-```
+```text
 Add-HPOVSanManager [-Type] <String> [-Hostname] <String> [-SnmpUserName] <String> [[-Port] <Int32>] [-SnmpAuthLevel] <String> [-SnmpAuthProtocol] <String> [-SnmpAuthPassword] <Object> [-SnmpPrivProtocol] <String> [-SnmpPrivPassword] <Object> [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Array>] [<CommonParameters>]
 ```
 
@@ -261,7 +261,7 @@ Asynchronous task resource to monitor.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 $task = Add-HPOVSanManager -type BNA -hostname BNA.contoso.com -Credential (Get-Credential) -usessl
 Wait-HPOVTaskComplete -InputObject $task
@@ -270,7 +270,7 @@ Wait-HPOVTaskComplete -InputObject $task
 
  Add a new Brocade Network Advisor SAN Manager. 
 
-```
+```text
 -------------------------- EXAMPLE 2 --------------------------
 # Define the SNMPv3 auth protocol and levels
 $CiscoSanManagerSnmpUserName = "ssh-user-SHA-AES128"
@@ -322,11 +322,11 @@ $Params | % { Add-HPOVSanManager @_ | Wait-HPOVTaskComplete }
 
 ### Syntax
 
-```
+```text
 Add-HPOVSanManager [-Type] <String> [-Hostname] <String> [[-Port] <Int32>] [-Username] <String> [-Password] <Object> [[-Credential] <PSCredential>] [[-UseSsl] <SwitchParameter>] [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Array>] [<CommonParameters>]
 ```
 
-```
+```text
 Add-HPOVSanManager [-Type] <String> [-Hostname] <String> [-SnmpUserName] <String> [[-Port] <Int32>] [-SnmpAuthLevel] <String> [-SnmpAuthProtocol] <String> [-SnmpAuthPassword] <Object> [-SnmpPrivProtocol] <String> [-SnmpPrivPassword] <Object> [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Array>] [<CommonParameters>]
 ```
 
@@ -570,7 +570,7 @@ Asynchronous task resource to monitor.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 $task = Add-HPOVSanManager -type BNA -hostname BNA.contoso.com -Credential (Get-Credential) -usessl
 Wait-HPOVTaskComplete -InputObject $task
@@ -579,7 +579,7 @@ Wait-HPOVTaskComplete -InputObject $task
 
  Add a new Brocade Network Advisor SAN Manager. 
 
-```
+```text
 -------------------------- EXAMPLE 2 --------------------------
 # Define the SNMPv3 auth protocol and levels
 $CiscoSanManagerSnmpUserName = "ssh-user-SHA-AES128"
@@ -631,11 +631,11 @@ $Params | % { Add-HPOVSanManager @_ | Wait-HPOVTaskComplete }
 
 ### Syntax
 
-```
+```text
 Add-HPOVSanManager [-Type] <String> [-Hostname] <String> [[-Port] <Int32>] [-Username] <String> [-Password] <Object> [[-Credential] <PSCredential>] [[-UseSsl] <SwitchParameter>] [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Array>] [<CommonParameters>]
 ```
 
-```
+```text
 Add-HPOVSanManager [-Type] <String> [-Hostname] <String> [-SnmpUserName] <String> [[-Port] <Int32>] [-SnmpAuthLevel] <String> [-SnmpAuthProtocol] <String> [-SnmpAuthPassword] <Object> [-SnmpPrivProtocol] <String> [-SnmpPrivPassword] <Object> [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Array>] [<CommonParameters>]
 ```
 
@@ -879,7 +879,7 @@ Asynchronous task resource to monitor.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 $task = Add-HPOVSanManager -type BNA -hostname BNA.contoso.com -Credential (Get-Credential) -usessl
 Wait-HPOVTaskComplete -InputObject $task
@@ -888,7 +888,7 @@ Wait-HPOVTaskComplete -InputObject $task
 
  Add a new Brocade Network Advisor SAN Manager. 
 
-```
+```text
 -------------------------- EXAMPLE 2 --------------------------
 # Define the SNMPv3 auth protocol and levels
 $CiscoSanManagerSnmpUserName = "ssh-user-SHA-AES128"

@@ -8,7 +8,7 @@ description: Add a new cluster member to an existing cluster.
 
 ### Syntax
 
-```
+```text
 Add-HPOVClusterNode [-ComputerName] <string> [-Credential] <PSCredential> [[-Scope] <Object>] [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
@@ -88,7 +88,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 Add-HPOVClusterNode
 ```
@@ -107,7 +107,7 @@ Add-HPOVClusterNode
 
 ### Syntax
 
-```
+```text
 Add-HPOVClusterNode [-ComputerName] <string> [[-Credential] <PSCredential>] [[-Scope] <Object>] [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
@@ -187,7 +187,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 Add-HPOVClusterNode
 ```

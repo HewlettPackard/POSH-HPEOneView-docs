@@ -8,7 +8,7 @@ description: Import a power device.
 
 ### Syntax
 
-```
+```text
 Add-HPOVPowerDevice [-Hostname] <String> [[-Username] <String>] [[-Password] <String>] [[-Credential] <PSCredential>] [[-ApplianceConnection] <Object>] [[-Async] <SwitchParameter>] [[-TrustLeafCertificate] <SwitchParameter>] [[-Force] <SwitchParameter>] [[-WhatIf] <SwitchParameter>] [[-Confirm] <SwitchParameter>] [<CommonParameters>]
 ```
 
@@ -164,7 +164,7 @@ Async Task resource to monitor progress.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 Add-HPOVPowerDevice -Hostname ipdu24.example.com -Credential (Get-Credential)
 ```
@@ -182,7 +182,7 @@ Add-HPOVPowerDevice -Hostname ipdu24.example.com -Credential (Get-Credential)
 
 ### Syntax
 
-```
+```text
 Add-HPOVPowerDevice [-Hostname] <String> [[-Username] <String>] [[-Password] <String>] [[-Credential] <PSCredential>] [[-ApplianceConnection] <Object>] [[-Async] <SwitchParameter>] [[-TrustLeafCertificate] <SwitchParameter>] [[-Force] <SwitchParameter>] [[-WhatIf] <SwitchParameter>] [[-Confirm] <SwitchParameter>] [<CommonParameters>]
 ```
 
@@ -338,7 +338,7 @@ Async Task resource to monitor progress.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 Add-HPOVPowerDevice -Hostname ipdu24.example.com -Credential (Get-Credential)
 ```
@@ -356,7 +356,7 @@ Add-HPOVPowerDevice -Hostname ipdu24.example.com -Credential (Get-Credential)
 
 ### Syntax
 
-```
+```text
 Add-HPOVPowerDevice [-Hostname] <String> [[-Username] <String>] [[-Password] <String>] [[-Credential] <PSCredential>] [[-ApplianceConnection] <Object>] [[-Async] <SwitchParameter>] [[-TrustLeafCertificate] <SwitchParameter>] [[-Force] <SwitchParameter>] [[-WhatIf] <SwitchParameter>] [[-Confirm] <SwitchParameter>] [<CommonParameters>]
 ```
 
@@ -512,7 +512,7 @@ Async Task resource to monitor progress.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 Add-HPOVPowerDevice -Hostname ipdu24.example.com -Username admin -Password Myadminpassowrd
 ```

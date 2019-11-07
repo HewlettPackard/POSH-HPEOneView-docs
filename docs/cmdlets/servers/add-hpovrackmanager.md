@@ -8,7 +8,7 @@ description: Add supported Rack Manager (HPE Superdome Flex) resource.
 
 ### Syntax
 
-```
+```text
 Add-HPOVRackManager [-ComputerName] <String> [-Credential] <PSCredential> [[-Scope] <Object>] [[-Async] <SwitchParameter>] [[-Force] <SwitchParameter>] [[-ApplianceConnection] <Array>] [<CommonParameters>]
 ```
 
@@ -128,7 +128,7 @@ Async task Resource object for configuring port monitoring on the requested logi
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 $Credential = Get-Credential -Username Administrator -Message "RackManager Password" 
 Add-HPOVRackManager -ComputerName rackmanger1.domain.com -Credential $Credential
@@ -146,7 +146,7 @@ Add-HPOVRackManager -ComputerName rackmanger1.domain.com -Credential $Credential
 
 ### Synatx
 
-```
+```text
 Add-HPOVRackManager [-ComputerName] <String> [-Credential] <PSCredential> [[-Scope] <Object>] [[-Async] <SwitchParameter>] [[-Force] <SwitchParameter>] [[-ApplianceConnection] <Array>] [<CommonParameters>]
 ```
 
@@ -266,7 +266,7 @@ Async task Resource object for configuring port monitoring on the requested logi
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 $Credential = Get-Credential -Username Administrator -Message "RackManager Password" 
 Add-HPOVRackManager -ComputerName rackmanger1.domain.com -Credential $Credential
@@ -286,7 +286,7 @@ Add-HPOVRackManager -ComputerName rackmanger1.domain.com -Credential $Credential
 
 ### Synatx
 
-```
+```text
 Add-HPOVRackManager [-ComputerName] <String> [-Credential] <PSCredential> [[-Scope] <Object>] [[-Async] <SwitchParameter>] [[-Force] <SwitchParameter>] [[-ApplianceConnection] <Array>] [<CommonParameters>]
 ```
 
@@ -406,7 +406,7 @@ Async task Resource object for configuring port monitoring on the requested logi
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 $Credential = Get-Credential -Username Administrator -Message "RackManager Password" 
 Add-HPOVRackManager -ComputerName rackmanger1.domain.com -Credential $Credential

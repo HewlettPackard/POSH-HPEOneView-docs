@@ -8,11 +8,11 @@ description: Initiate a connection to an HPE OneView appliance.
 
 ### Syntax
 
-```
+```text
 Connect-HPOVMgmt [-Hostname] <String> [-Credential] <PSCredential> [[-AuthLoginDomain] <String>] [[-LoginAcknowledge] <SwitchParameter>] [<CommonParameters>]
 ```
 
-```
+```text
 Connect-HPOVMgmt [-Hostname] <String> [[-Certificate] <Object>] [[-LoginAcknowledge] <SwitchParameter>] [<CommonParameters>]
 ```
 
@@ -132,7 +132,7 @@ When a valid connection is established with an appliance, this object is then ad
 
 The object returned will contain the following public properties:
 
-```
+```text
  ==============================================================================
  | Name                   | Type       | Value                                |
  |-----------------------------------------------------------------------------
@@ -164,7 +164,7 @@ On error, appliance response is returned as a terminating error.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 Connect-HPOVMgmt -appliance myappliance.domain.com
 ConnectionID Name                   UserName      AuthLoginDomain
@@ -175,14 +175,14 @@ ConnectionID Name                   UserName      AuthLoginDomain
 
  Connect to a specific appliance FQDN. The user will be prompted for authentication provider, user name and password.
 
-```
+```text
  -------------------------- EXAMPLE 2 --------------------------
 Connect-HPOVMgmt -appliance myappliance.domain.com:11223
 ```
 
  Connect to a specific appliance, where the target TCP port isn"t the default. The user will be prompted for authentication provider, user name and password.
 
-```
+```text
  -------------------------- EXAMPLE 3 --------------------------
 $MySmartCard = gci Cert:\CurrentUser\my | ? { $_.EnhancedKeyUsageList.FriendlyName -match "Smart Card Logon" }
 Connect-HPOVMgmt -appliance myappliance.domain.com -Certificate $MySmartCard
@@ -198,15 +198,15 @@ Connect-HPOVMgmt -appliance myappliance.domain.com -Certificate $MySmartCard
 
 ### Syntax
 
-```
+```text
 Connect-HPOVMgmt [-Hostname] <String> [-Username] <String> [-Password] <Object> [[-AuthLoginDomain] <String>] [[-LoginAcknowledge] <SwitchParameter>] [<CommonParameters>]
 ```
 
-```
+```text
 Connect-HPOVMgmt [-Hostname] <String> [-Credential] <PSCredential> [[-AuthLoginDomain] <String>] [[-LoginAcknowledge] <SwitchParameter>] [<CommonParameters>]
 ```
 
-```
+```text
 Connect-HPOVMgmt [-Hostname] <String> [[-Certificate] <Object>] [[-LoginAcknowledge] <SwitchParameter>] [<CommonParameters>]
 ```
 
@@ -328,7 +328,7 @@ When a valid connection is established with an appliance, this object is then ad
 
 The object returned will contain the following public properties:
 
-```
+```text
  ==============================================================================
  | Name                   | Type       | Value                                |
  |-----------------------------------------------------------------------------
@@ -360,7 +360,7 @@ On error, appliance response is returned as a terminating error.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 Connect-HPOVMgmt -appliance myappliance.domain.com
 ConnectionID Name                   UserName      AuthLoginDomain
@@ -371,14 +371,14 @@ ConnectionID Name                   UserName      AuthLoginDomain
 
 Connect to a specific appliance FQDN. The user will be prompted for authentication provider, user name and password.
 
-```
+```text
  -------------------------- EXAMPLE 2 --------------------------
 Connect-HPOVMgmt -appliance myappliance.domain.com:11223
 ```
 
 Connect to a specific appliance, where the target TCP port isn"t the default. The user will be prompted for authentication provider, user name and password.
 
-```
+```text
  -------------------------- EXAMPLE 3 --------------------------
 $MySmartCard = gci Cert:\CurrentUser\my | ? { $_.EnhancedKeyUsageList.FriendlyName -match "Smart Card Logon" }
 Connect-HPOVMgmt -appliance myappliance.domain.com -Certificate $MySmartCard
@@ -394,15 +394,15 @@ Connect to a specific appliance using a digital badge.
 
 ### Syntax
 
-```
+```text
 Connect-HPOVMgmt [-Hostname] <String> [-Username] <String> [-Password] <Object> [[-AuthLoginDomain] <String>] [[-LoginAcknowledge] <SwitchParameter>] [<CommonParameters>]
 ```
 
-```
+```text
 Connect-HPOVMgmt [-Hostname] <String> [-Credential] <PSCredential> [[-AuthLoginDomain] <String>] [[-LoginAcknowledge] <SwitchParameter>] [<CommonParameters>]
 ```
 
-```
+```text
 Connect-HPOVMgmt [-Hostname] <String> [[-Certificate] <Object>] [[-LoginAcknowledge] <SwitchParameter>] [<CommonParameters>]
 ```
 
@@ -524,7 +524,7 @@ When a valid connection is established with an appliance, this object is then ad
 
 The object returned will contain the following public properties:
 
-```
+```text
  ==============================================================================
  | Name                   | Type       | Value                                |
  |-----------------------------------------------------------------------------
@@ -556,7 +556,7 @@ On error, appliance response is returned as a terminating error.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 Connect-HPOVMgmt -appliance myappliance.domain.com
 
@@ -568,14 +568,14 @@ ConnectionID Name                   UserName      AuthLoginDomain
 
 Connect to a specific appliance FQDN. The user will be prompted for authentication provider, user name and password.
 
-```
+```text
  -------------------------- EXAMPLE 2 --------------------------
 Connect-HPOVMgmt -appliance myappliance.domain.com:11223
 ```
 
 Connect to a specific appliance, where the target TCP port isn"t the default. The user will be prompted for authentication provider, user name and password.
 
-```
+```text
  -------------------------- EXAMPLE 3 --------------------------
 $MySmartCard = gci Cert:\CurrentUser\my | ? { $_.EnhancedKeyUsageList.FriendlyName -match "Smart Card Logon" }
 Connect-HPOVMgmt -appliance myappliance.domain.com -Certificate $MySmartCard

@@ -8,7 +8,7 @@ description: Disconnect your user session from an appliance.
 
 ### Syntax
 
-```
+```text
 Disconnect-HPOVMgmt [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
@@ -46,7 +46,7 @@ _**None.**_
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 # Connect to an appliance, and be prompted for credentials.
 $Connection1 = Connect-HPOVMgmt MyAppliance.domain.com
@@ -57,14 +57,14 @@ Disconnect-HPOVMgmt -Hostname $Connection1
 
  Disconnect from the specific appliance session.
 
-```
+```text
  -------------------------- EXAMPLE 2 --------------------------
 Disconnect-HPOVMgmt -Hostname 1
 ```
 
  Disconnect ConnectionID 1 appliance session.
 
-```
+```text
  -------------------------- EXAMPLE 3 --------------------------
 $ConnectedSessions | Disconnect-HPOVMgmt
 ```
@@ -79,7 +79,7 @@ Disconnect all appliance sessions.
 
 ### Syntax
 
-```
+```text
 Disconnect-HPOVMgmt [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
@@ -117,7 +117,7 @@ _**None.**_
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 # Connect to an appliance, and be prompted for credentials.
 $Connection1 = Connect-HPOVMgmt MyAppliance.domain.com
@@ -128,14 +128,14 @@ Disconnect-HPOVMgmt -Hostname $Connection1
 
  Disconnect from the specific appliance session.
 
-```
+```text
  -------------------------- EXAMPLE 2 --------------------------
 Disconnect-HPOVMgmt -Hostname 1
 ```
 
  Disconnect ConnectionID 1 appliance session.
 
-```
+```text
  -------------------------- EXAMPLE 3 --------------------------
 $ConnectedSessions | Disconnect-HPOVMgmt
 ```
@@ -150,7 +150,7 @@ Disconnect all appliance sessions.
 
 ### **Syntax**
 
-```
+```text
 Disconnect-HPOVMgmt [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
@@ -188,7 +188,7 @@ _**None.**_
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 # Connect to an appliance, and be prompted for credentials.
 $Connection1 = Connect-HPOVMgmt MyAppliance.domain.com
@@ -199,14 +199,14 @@ Disconnect-HPOVMgmt -Hostname $Connection1
 
  Disconnect from the specific appliance session.
 
-```
+```text
  -------------------------- EXAMPLE 2 --------------------------
 Disconnect-HPOVMgmt -Hostname 1
 ```
 
  Disconnect ConnectionID 1 appliance session.
 
-```
+```text
  -------------------------- EXAMPLE 3 --------------------------
 $ConnectedSessions | Disconnect-HPOVMgmt
 ```

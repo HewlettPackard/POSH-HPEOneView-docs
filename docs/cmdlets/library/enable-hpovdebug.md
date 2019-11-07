@@ -10,7 +10,7 @@ description: >-
 
 Syntax
 
-```
+```text
 Enable-HPOVDebug [-Scope] <String> [-LoggerName] <String> [-Level] <String> [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
@@ -105,7 +105,7 @@ _**System.Management.Automation.PSCustomObject**_
 
 Syntax
 
-```
+```text
 Enable-HPOVDebug [-Scope] <String> [-LoggerName] <String> [-Level] <String> [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
@@ -202,7 +202,7 @@ _**System.Management.Automation.PSCustomObject**_
 
 Syntax
 
-```
+```text
 Enable-HPOVDebug [-Scope] <String> [-LoggerName] <String> [-Level] <String> [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 

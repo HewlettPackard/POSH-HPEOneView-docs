@@ -8,7 +8,7 @@ description: Add rack resource to DataCenter.
 
 ### Syntax
 
-```
+```text
 Add-HPOVRackToDataCenter [-InputObject] <Object> [-DataCenter] <Object> [[-X] <Int32>] [[-Y] <Int32>] [[-Millimeters] <SwitchParameter>] [[-Rotate] <Int>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
@@ -126,7 +126,7 @@ Updated DataCenter object with the newly added Rack resource in the contents pro
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 $DC = Get-HPOVDataCenter -Name Houston_DC1 -ErrorAction Stop
 $X = 10
@@ -146,7 +146,7 @@ Get-HPOVRack -Name MyRack -ErrorAction Stop | Add-HPOVRackToDataCenter -DataCent
 
 ### Syntax
 
-```
+```text
 Add-HPOVRackToDataCenter [-InputObject] <Object> [-DataCenter] <Object> [[-X] <Int32>] [[-Y] <Int32>] [[-Millimeters] <SwitchParameter>] [[-Rotate] <Int>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
@@ -264,7 +264,7 @@ Updated DataCenter object with the newly added Rack resource in the contents pro
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 $DC = Get-HPOVDataCenter -Name Houston_DC1 -ErrorAction Stop
 $X = 10
@@ -284,7 +284,7 @@ Get-HPOVRack -Name MyRack -ErrorAction Stop | Add-HPOVRackToDataCenter -DataCent
 
 ### Syntax
 
-```
+```text
 Add-HPOVRackToDataCenter [-InputObject] <Object> [-DataCenter] <Object> [[-X] <Int32>] [[-Y] <Int32>] [[-Millimeters] <SwitchParameter>] [[-Rotate] <Int>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
@@ -402,7 +402,7 @@ Updated DataCenter object with the newly added Rack resource in the contents pro
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 $DC = Get-HPOVDataCenter -Name Houston_DC1 -ErrorAction Stop
 $X = 10

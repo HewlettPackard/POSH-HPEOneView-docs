@@ -8,7 +8,7 @@ description: Remove existing resource.
 
 ### Syntax
 
-```
+```text
 Remove-HPOVResource [-InputObject] <Object> [[-ApplianceConnection] <Object>] [[-Force] <SwitchParameter>] [<CommonParameters>]
 ```
 
@@ -76,21 +76,21 @@ Removal async task
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 Remove-HPOVResource -Resource "/rest/resource/1234-5678-9123"
 ```
 
 Removes the resource specified by the URI.
 
-```
+```text
  -------------------------- EXAMPLE 2 --------------------------
 Remove-HPOVResource -nameOrUri "ServerProfile-A"
 ```
 
 Removes the resource named `ServerProfile-A`. If multiple resources exist with the name `ServerProfile-A`, an error is returned.
 
-```
+```text
  -------------------------- EXAMPLE 3 --------------------------
 $MyResourceObject = send-hpovrequest "/rest/resource/1234-5678-9123"
 Remove-HPOVResource -Resource $MyResourceObject
@@ -108,7 +108,7 @@ Remove-HPOVResource -Resource $MyResourceObject
 
 ### Syntax
 
-```
+```text
 Remove-HPOVResource [-InputObject] <Object> [[-ApplianceConnection] <Object>] [[-Force] <SwitchParameter>] [<CommonParameters>]
 ```
 
@@ -176,21 +176,21 @@ Removal async task
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 Remove-HPOVResource -Resource "/rest/resource/1234-5678-9123"
 ```
 
 Removes the resource specified by the URI.
 
-```
+```text
  -------------------------- EXAMPLE 2 --------------------------
 Remove-HPOVResource -nameOrUri "ServerProfile-A"
 ```
 
 Removes the resource named `ServerProfile-A`. If multiple resources exist with the name `ServerProfile-A`, an error is returned.
 
-```
+```text
  -------------------------- EXAMPLE 3 --------------------------
 $MyResourceObject = send-hpovrequest "/rest/resource/1234-5678-9123"
 Remove-HPOVResource -Resource $MyResourceObject
@@ -208,7 +208,7 @@ Remove-HPOVResource -Resource $MyResourceObject
 
 ### Syntax
 
-```
+```text
 Remove-HPOVResource [-InputObject] <Object> [[-ApplianceConnection] <Object>] [[-Force] <SwitchParameter>] [<CommonParameters>]
 ```
 
@@ -276,21 +276,21 @@ Removal async task
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 Remove-HPOVResource -Resource "/rest/resource/1234-5678-9123"
 ```
 
 Removes the resource specified by the URI.
 
-```
+```text
  -------------------------- EXAMPLE 2 --------------------------
 Remove-HPOVResource -nameOrUri "ServerProfile-A"
 ```
 
 Removes the resource named `ServerProfile-A`. If multiple resources exist with the name `ServerProfile-A`, an error is returned.
 
-```
+```text
  -------------------------- EXAMPLE 3 --------------------------
 $MyResourceObject = send-hpovrequest "/rest/resource/1234-5678-9123"
 Remove-HPOVResource -Resource $MyResourceObject

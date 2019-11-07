@@ -8,7 +8,7 @@ description: Create PowerShell script code from resource.
 
 ### Syntax
 
-```
+```text
 ConvertTo-HPOVPowerShellScript [-InputObject] <Object> [[-Export] <System.IO.FileInfo>] [[-Append] <SwitchParameter>] [<CommonParameters>]
 ```
 
@@ -97,7 +97,7 @@ String output of generated code.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 Get-HPOVServerProfile | ConvertTo-HPOVPowerShellScript
 ```
@@ -110,8 +110,8 @@ Get-HPOVServerProfile | ConvertTo-HPOVPowerShellScript
 
 ### Syntax
 
-```
-ConvertTo-HPOVPowerShellScript [-InputObject] <Object> [[-Export] <System.IO.FileInfo>] [[-App
+```text
+ConvertTo-HPOVPowerShellScript [-InputObject] <Object> [[-Export] <System.IO.FileInfo>] [[-Append] <SwitchParameter>] [<CommonParameters>]
 ```
 
 ### Description
@@ -199,7 +199,7 @@ String output of generated code.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 Get-HPOVServerProfile | ConvertTo-HPOVPowerShellScript
 ```
@@ -212,8 +212,8 @@ Generate PowerShell script code for the returned server profile objects.
 
 ### Syntax
 
-```
-ConvertTo-HPOVPowerShellScript [-InputObject] <Object> [[-Export] <System.IO.FileInfo>] [[-App
+```text
+ConvertTo-HPOVPowerShellScript [-InputObject] <Object> [[-Export] <System.IO.FileInfo>] [[-Append] <SwitchParameter>] [<CommonParameters>]
 ```
 
 ### Description
@@ -301,7 +301,7 @@ String output of generated code.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 Get-HPOVServerProfile | ConvertTo-HPOVPowerShellScript
 ```

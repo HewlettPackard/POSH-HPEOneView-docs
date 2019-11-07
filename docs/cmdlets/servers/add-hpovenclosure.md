@@ -8,19 +8,19 @@ description: Import a support HPE BladeSystem c-Class enclosure.
 
 ### Syntax
 
-```
+```text
 Add-HPOVEnclosure [-Hostname] <String> [-EnclosureGroup] <Object> [-Username] <String> [-Password] <Object> [-LicensingIntent] <String> [[-Baseline] <Object>]  [[-ForceInstallFirmware] <SwitchParameter>] [[-Scope] <Array>] [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Object>] [[-WhatIf] <SwitchParameter>] [[-Confirm] <SwitchParameter>] [<CommonParameters>]
 ```
 
-```
+```text
 Add-HPOVEnclosure [-Hostname] <String> [-EnclosureGroup] <Object> [-Credential] <PSCredential> [-LicensingIntent] <String> [[-Baseline] <Object>] [[-ForceInstallFirmware] <SwitchParameter>] [[-Scope] <Array>] [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Object>] [[-WhatIf] <SwitchParameter>] [[-Confirm] <SwitchParameter>] [<CommonParameters>]
 ```
 
-```
+```text
 Add-HPOVEnclosure [-Hostname] <String> [-Username] <String> [-Password] <Object> [-Monitored] <SwitchParameter> [[-Scope] <Array>] [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Object>] [[-WhatIf] <SwitchParameter>] [[-Confirm] <SwitchParameter>] [<CommonParameters>]
 ```
 
-```
+```text
 Add-HPOVEnclosure [-Hostname] <String> [-Credential] <PSCredential> [-Monitored] <SwitchParameter> [[-Scope] <Array>] [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Object>] [[-WhatIf] <SwitchParameter>] [[-Confirm] <SwitchParameter>] [<CommonParameters>]
 ```
 
@@ -236,14 +236,14 @@ Async task Resource object for monitoring the enclosure import process.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 Add-HPOVEnclosure -oa "192.168.1.1" -enclGroupName EG1 -user admin -pass hpinvent -license OneView
 ```
 
  Add a new enclosure to the appliance, using the EG1 Enclosure Group.
 
-```
+```text
  -------------------------- EXAMPLE 2 --------------------------
 Add-HPOVEnclosure -oa "192.168.1.1" -enclGroupName EG1 -user admin -pass hpinvent -license OneView -confirm:$false
 ```
@@ -254,7 +254,7 @@ Add a new enclosure to the appliance, using the EG1 Enclosure Group, and force a
 THIS IS A DESTRUCTIVE PROCESS IF AN EXISTING VC DOMAIN EXISTS.
 {% endhint %}
 
-```
+```text
  -------------------------- EXAMPLE 3 --------------------------
 Add-HPOVEnclosure -oa "192.168.1.1" -user admin -pass hpinvent -monitored
 ```
@@ -279,19 +279,19 @@ Add-HPOVEnclosure -oa "192.168.1.1" -user admin -pass hpinvent -monitored
 
 ### Syntax
 
-```
+```text
 Add-HPOVEnclosure [-Hostname] <String> [-EnclosureGroup] <Object> [-Username] <String> [-Password] <Object> [-LicensingIntent] <String> [[-Baseline] <Object>]  [[-ForceInstallFirmware] <SwitchParameter>] [[-Scope] <Array>] [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Object>] [[-WhatIf] <SwitchParameter>] [[-Confirm] <SwitchParameter>] [<CommonParameters>]
 ```
 
-```
+```text
 Add-HPOVEnclosure [-Hostname] <String> [-EnclosureGroup] <Object> [-Credential] <PSCredential> [-LicensingIntent] <String> [[-Baseline] <Object>] [[-ForceInstallFirmware] <SwitchParameter>] [[-Scope] <Array>] [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Object>] [[-WhatIf] <SwitchParameter>] [[-Confirm] <SwitchParameter>] [<CommonParameters>]
 ```
 
-```
+```text
 Add-HPOVEnclosure [-Hostname] <String> [-Username] <String> [-Password] <Object> [-Monitored] <SwitchParameter> [[-Scope] <Array>] [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Object>] [[-WhatIf] <SwitchParameter>] [[-Confirm] <SwitchParameter>] [<CommonParameters>]
 ```
 
-```
+```text
 Add-HPOVEnclosure [-Hostname] <String> [-Credential] <PSCredential> [-Monitored] <SwitchParameter> [[-Scope] <Array>] [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Object>] [[-WhatIf] <SwitchParameter>] [[-Confirm] <SwitchParameter>] [<CommonParameters>]
 ```
 
@@ -507,14 +507,14 @@ Async task Resource object for monitoring the enclosure import process.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 Add-HPOVEnclosure -oa "192.168.1.1" -enclGroupName EG1 -user admin -pass hpinvent -license OneView
 ```
 
  Add a new enclosure to the appliance, using the EG1 Enclosure Group.
 
-```
+```text
  -------------------------- EXAMPLE 2 --------------------------
 Add-HPOVEnclosure -oa "192.168.1.1" -enclGroupName EG1 -user admin -pass hpinvent -license OneView -confirm:$false
 ```
@@ -525,7 +525,7 @@ Add a new enclosure to the appliance, using the EG1 Enclosure Group, and force a
 THIS IS A DESTRUCTIVE PROCESS IF AN EXISTING VC DOMAIN EXISTS.
 {% endhint %}
 
-```
+```text
  -------------------------- EXAMPLE 3 --------------------------
 Add-HPOVEnclosure -oa "192.168.1.1" -user admin -pass hpinvent -monitored
 ```
@@ -550,19 +550,19 @@ Add-HPOVEnclosure -oa "192.168.1.1" -user admin -pass hpinvent -monitored
 
 ### Syntax
 
-```
+```text
 Add-HPOVEnclosure [-Hostname] <String> [-EnclosureGroup] <Object> [-Username] <String> [-Password] <Object> [-LicensingIntent] <String> [[-Baseline] <Object>]  [[-ForceInstallFirmware] <SwitchParameter>] [[-Scope] <Array>] [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Object>] [[-WhatIf] <SwitchParameter>] [[-Confirm] <SwitchParameter>] [<CommonParameters>]
 ```
 
-```
+```text
 Add-HPOVEnclosure [-Hostname] <String> [-EnclosureGroup] <Object> [-Credential] <PSCredential> [-LicensingIntent] <String> [[-Baseline] <Object>] [[-ForceInstallFirmware] <SwitchParameter>] [[-Scope] <Array>] [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Object>] [[-WhatIf] <SwitchParameter>] [[-Confirm] <SwitchParameter>] [<CommonParameters>]
 ```
 
-```
+```text
 Add-HPOVEnclosure [-Hostname] <String> [-Username] <String> [-Password] <Object> [-Monitored] <SwitchParameter> [[-Scope] <Array>] [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Object>] [[-WhatIf] <SwitchParameter>] [[-Confirm] <SwitchParameter>] [<CommonParameters>]
 ```
 
-```
+```text
 Add-HPOVEnclosure [-Hostname] <String> [-Credential] <PSCredential> [-Monitored] <SwitchParameter> [[-Scope] <Array>] [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Object>] [[-WhatIf] <SwitchParameter>] [[-Confirm] <SwitchParameter>] [<CommonParameters>]
 ```
 
@@ -778,14 +778,14 @@ Async task Resource object for monitoring the enclosure import process.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 Add-HPOVEnclosure -oa "192.168.1.1" -enclGroupName EG1 -user admin -pass hpinvent -license OneView
 ```
 
  Add a new enclosure to the appliance, using the EG1 Enclosure Group.
 
-```
+```text
  -------------------------- EXAMPLE 2 --------------------------
 Add-HPOVEnclosure -oa "192.168.1.1" -enclGroupName EG1 -user admin -pass hpinvent -license OneView -confirm:$false
 ```
@@ -796,7 +796,7 @@ Add a new enclosure to the appliance, using the EG1 Enclosure Group, and force a
 THIS IS A DESTRUCTIVE PROCESS IF AN EXISTING VC DOMAIN EXISTS.
 {% endhint %}
 
-```
+```text
  -------------------------- EXAMPLE 3 --------------------------
 Add-HPOVEnclosure -oa "192.168.1.1" -user admin -pass hpinvent -monitored
 ```

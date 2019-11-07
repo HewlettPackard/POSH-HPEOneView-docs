@@ -8,7 +8,7 @@ description: Add remote HPE Synergy Frame to Composer.
 
 ### Syntax
 
-```
+```text
 Add-HPOVRemoteFrame [-Hostname] <String> [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
@@ -76,7 +76,7 @@ Async task Resource object for monitoring.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 Add-HPOVRemoteFrame -Hostname fe80::c8f:fbcb:aa8a:97c8
 ```
@@ -91,7 +91,7 @@ Add-HPOVRemoteFrame -Hostname fe80::c8f:fbcb:aa8a:97c8
 
 ### Syntax
 
-```
+```text
 Add-HPOVRemoteFrame [-Hostname] <String> [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
@@ -159,7 +159,7 @@ Async task Resource object for monitoring.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 Add-HPOVRemoteFrame -Hostname fe80::c8f:fbcb:aa8a:97c8
 ```
@@ -174,7 +174,7 @@ Add-HPOVRemoteFrame -Hostname fe80::c8f:fbcb:aa8a:97c8
 
 ### Syntax
 
-```
+```text
 Add-HPOVRemoteFrame [-Hostname] <String> [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
@@ -242,7 +242,7 @@ Async task Resource object for monitoring.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 Add-HPOVRemoteFrame -Hostname fe80::c8f:fbcb:aa8a:97c8
 ```

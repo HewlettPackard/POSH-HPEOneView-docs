@@ -8,7 +8,7 @@ description: Update an existing resource.
 
 ### Syntax
 
-```
+```text
 Set-HPOVResource [-InputObject] <Object> [[-ApplianceConnection] <Object>] [[-Force] <SwitchParameter>] [<CommonParameters>]
 ```
 
@@ -72,7 +72,7 @@ The modified resource or async task depending on the resource being modified
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 $profile = Get-HPOVServerProfile -Name "Profile 1"
 $profile.name = "New Name"
@@ -91,7 +91,7 @@ Set-HPOVResource -InputObject $profile
 
 ### Syntax
 
-```
+```text
 Set-HPOVResource [-InputObject] <Object> [[-ApplianceConnection] <Object>] [[-Force] <SwitchParameter>] [<CommonParameters>]
 ```
 
@@ -157,7 +157,7 @@ The modified resource or async task depending on the resource being modified
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 $profile = Get-HPOVServerProfile -Name "Profile 1"
 $profile.name = "New Name"
@@ -176,7 +176,7 @@ Set-HPOVResource -InputObject $profile
 
 ### Syntax
 
-```
+```text
 Set-HPOVResource [-InputObject] <Object> [[-ApplianceConnection] <Object>] [[-Force] <SwitchParameter>] [<CommonParameters>]
 ```
 
@@ -242,7 +242,7 @@ The modified resource or async task depending on the resource being modified
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 $profile = Get-HPOVServerProfile -Name "Profile 1"
 $profile.name = "New Name"

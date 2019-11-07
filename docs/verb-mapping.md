@@ -9,6 +9,7 @@ The following table shows the available HPE OneView PowerShell Verbs and which m
 | HPE OneView Actions Verb | HPE OneView PowerShell Verb | Description |
 | :--- | :--- | :--- |
 | Add | Add | Use to add a physical resource external to HPE OneView. |
+| Copy | Copy | Copy or duplicate a resource. |
 | Create | New | Create or define a new resource.  This is typically a software based resource like Server Profile, Storage Volume, etc. |
 | Edit | Set | Modify a resource where it is allowed. |
 | Remove | Delete | Remove a resource, physical or software, from an appliance.  If software resource \(server profile, or even storage volume\) it is unrecoverable. |

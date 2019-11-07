@@ -10,7 +10,7 @@
 
 ### Synatx
 
-```
+```text
 Get-HPOVDataCenter [[-Name] <String>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
@@ -60,21 +60,21 @@ A DataCenter resource object.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 Get-HPOVDataCenter
 ```
 
  Retrieve all defined DataCenters on the appliance.
 
-```
+```text
  -------------------------- EXAMPLE 2 --------------------------
 Get-HPOVDataCenter -Name DC*
 ```
 
  Locate all DataCenter objects that begin with "DC".
 
-```
+```text
  -------------------------- EXAMPLE 3 --------------------------
 Get-HPOVDataCenter | Select -ExpandProperty RemoteSupportLocation
 ```
@@ -133,21 +133,21 @@ A DataCenter resource object.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 Get-HPOVDataCenter
 ```
 
  Retrieve all defined DataCenters on the appliance.
 
-```
+```text
  -------------------------- EXAMPLE 2 --------------------------
 Get-HPOVDataCenter -Name DC*
 ```
 
  Locate all DataCenter objects that begin with "DC".
 
-```
+```text
  -------------------------- EXAMPLE 3 --------------------------
 Get-HPOVDataCenter | Select -ExpandProperty RemoteSupportLocation
 ```

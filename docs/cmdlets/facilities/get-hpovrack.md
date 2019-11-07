@@ -10,7 +10,7 @@
 
 ### Synatx
 
-```
+```text
 Get-HPOVRack [[-Name] <String>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
@@ -64,14 +64,14 @@ A Rack resource object.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 Get-HPOVRack
 ```
 
  Retrieve all defined DataCenters on the appliance.
 
-```
+```text
  -------------------------- EXAMPLE 2 --------------------------
 Get-HPOVRack -Name Rack22*
 ```
@@ -134,14 +134,14 @@ A Rack resource object.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 Get-HPOVRack
 ```
 
  Retrieve all defined DataCenters on the appliance.
 
-```
+```text
  -------------------------- EXAMPLE 2 --------------------------
 Get-HPOVRack -Name Rack22*
 ```

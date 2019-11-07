@@ -8,11 +8,11 @@ description: Add a new LDAP Directory Server.
 
 ### Syntax
 
-```
+```text
 Add-HPOVLdapServer [-InputObject] <Object> [-Hostname] <String> [-Username] <String> [[-SSLPort] <Int32>] [[-Certificate] <Object>] [[-Password] <Object>] [[-TrustLeafCertificate] <SwitchParameter>] [<CommonParameters>]
 ```
 
-```
+```text
 Add-HPOVLdapServer [-InputObject] <Object> [-Hostname] <String> [-Credential] <PSCredential> [[-SSLPort] <Int32>] [[-Certificate] <Object>] [[-TrustLeafCertificate] <SwitchParameter>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
@@ -156,7 +156,7 @@ Updated Authentication Directory.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 Get-HPOVLdapDirectory -Name MyDirectory | Add-HPOVLdapServer -Name servera.domain.com -Username MyAdminName -Password (ConvertTo-SecureString "MyPAssword" -AsPlanText -Force)
 ```
@@ -172,11 +172,11 @@ Get-HPOVLdapDirectory -Name MyDirectory | Add-HPOVLdapServer -Name servera.domai
 
 ### Syntax
 
-```
+```text
 Add-HPOVLdapServer [-InputObject] <Object> [-Hostname] <String> [-Username] <String> [[-SSLPort] <Int32>] [[-Certificate] <Object>] [[-Password] <Object>] [[-TrustLeafCertificate] <SwitchParameter>] [<CommonParameters>]
 ```
 
-```
+```text
 Add-HPOVLdapServer [-InputObject] <Object> [-Hostname] <String> [-Credential] <PSCredential> [[-SSLPort] <Int32>] [[-Certificate] <Object>] [[-TrustLeafCertificate] <SwitchParameter>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
@@ -312,7 +312,7 @@ Updated Authentication Directory.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 Get-HPOVLdapDirectory -Name MyDirectory | Add-HPOVLdapServer -Name servera.domain.com -Username MyAdminName -Password (ConvertTo-SecureString "MyPAssword" -AsPlanText -Force)
 ```
@@ -332,11 +332,11 @@ Get-HPOVLdapDirectory -Name MyDirectory | Add-HPOVLdapServer -Name servera.domai
 
 ### Syntax
 
-```
+```text
 Add-HPOVLdapServer [-InputObject] <Object> [-Hostname] <String> [-Username] <String> [[-SSLPort] <Int32>] [[-Certificate] <Object>] [[-Password] <Object>] [[-TrustLeafCertificate] <SwitchParameter>] [<CommonParameters>]
 ```
 
-```
+```text
 Add-HPOVLdapServer [-InputObject] <Object> [-Hostname] <String> [-Credential] <PSCredential> [[-SSLPort] <Int32>] [[-Certificate] <Object>] [[-TrustLeafCertificate] <SwitchParameter>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
@@ -472,7 +472,7 @@ Updated Authentication Directory.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 Get-HPOVLdapDirectory -Name MyDirectory | Add-HPOVLdapServer -Name servera.domain.com -Username MyAdminName -Password (ConvertTo-SecureString "MyPAssword" -AsPlanText -Force)
 ```

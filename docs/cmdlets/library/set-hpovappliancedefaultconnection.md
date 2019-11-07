@@ -10,7 +10,7 @@ description: >-
 
 ###  Syntax
 
-```
+```text
 Set-HPOVApplianceDefaultConnection [-ApplianceConnection] <Object> [<CommonParameters>]
 ```
 
@@ -50,7 +50,7 @@ Updated collection of `[HPOneView.Appliance.Connection]` objects
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 $ConnectedSessions
 ConnectionID Name                    UserName      AuthLoginDomain Default Connection
@@ -69,7 +69,7 @@ ConnectionID Name                    UserName      AuthLoginDomain Default Conne
 
 Display the current appliance connections, then set the new default to "Appliance2" using the partial name value.
 
-```
+```text
  -------------------------- EXAMPLE 2 --------------------------
 $ConnectedSessions
 ConnectionID Name                    UserName      AuthLoginDomain Default Connection
@@ -99,7 +99,7 @@ Display the current appliance connections, then set the new default to "Applianc
 
 ###  Syntax
 
-```
+```text
 Set-HPOVApplianceDefaultConnection [-ApplianceConnection] <Object> [<CommonParameters>]
 ```
 
@@ -139,7 +139,7 @@ Updated collection of `[HPOneView.Appliance.Connection]` objects
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 $ConnectedSessions
 ConnectionID Name                    UserName      AuthLoginDomain Default Connection
@@ -158,7 +158,7 @@ ConnectionID Name                    UserName      AuthLoginDomain Default Conne
 
 Display the current appliance connections, then set the new default to "Appliance2" using the partial name value.
 
-```
+```text
  -------------------------- EXAMPLE 2 --------------------------
 $ConnectedSessions
 ConnectionID Name                    UserName      AuthLoginDomain Default Connection
@@ -188,7 +188,7 @@ Display the current appliance connections, then set the new default to "Applianc
 
 ###  Syntax
 
-```
+```text
 Set-HPOVApplianceDefaultConnection [-ApplianceConnection] <Object> [<CommonParameters>]
 ```
 
@@ -228,7 +228,7 @@ Updated collection of `[HPOneView.Appliance.Connection]` objects
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 $ConnectedSessions
 ConnectionID Name                    UserName      AuthLoginDomain Default Connection
@@ -247,7 +247,7 @@ ConnectionID Name                    UserName      AuthLoginDomain Default Conne
 
 Display the current appliance connections, then set the new default to "Appliance2" using the partial name value.
 
-```
+```text
  -------------------------- EXAMPLE 2 --------------------------
 $ConnectedSessions
 ConnectionID Name                    UserName      AuthLoginDomain Default Connection

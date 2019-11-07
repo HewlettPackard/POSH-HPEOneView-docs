@@ -8,7 +8,7 @@ description: Start a library trace for Cmdlet troubleshooting.
 
 ### Syntax
 
-```
+```text
 Get-HPOVCommandTrace [-ScriptBlock] <ScriptBlock> [-Location] <String> [<CommonParameters>]
 ```
 
@@ -22,7 +22,7 @@ Please know that this Cmdlet is currently not supported in the Windows PowerShel
 
 Do know that the verbose output will contain potentially personally identifiable information \(PII\) that you may wish to change.  For instance, the following output snippet contains information that might be sensitive to your corporate security policies:
 
-```
+```text
 **********************
 Windows PowerShell transcript start
 Start time: 20191028114038
@@ -78,7 +78,9 @@ Please remove or replace the PII data from the log file before submitting an iss
 
 Specify the directory where the output file will be created. A file with the following format will be created:
 
-    "{Date}_HPOV_transcript.log", where date is derived from `Get-Date -UFormat %y%m%d%H%M`
+```text
+"{Date}_HPOV_transcript.log", where date is derived from `Get-Date -UFormat %y%m%d%H%M`
+```
 
 | Aliases | None |
 | :--- | :--- |
@@ -118,7 +120,7 @@ FileInfo object where the "{Date}\_HPOV\_transcript.log" file is generated.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 Get-HPOVCommandTrace -ScriptBlock { Get-HPOVNetwork } -Location C:\Temp
 ```
@@ -133,7 +135,7 @@ Start a new library trace, which will create a file in the `C:\Temp` directory.
 
 ### Syntax
 
-```
+```text
 Get-HPOVCommandTrace [-ScriptBlock] <ScriptBlock> [-Location] <String> [<CommonParameters>]
 ```
 
@@ -147,7 +149,7 @@ Please know that this Cmdlet is currently not supported in the Windows PowerShel
 
 Do know that the verbose output will contain potentially personally identifiable information \(PII\) that you may wish to change.  For instance, the following output snippet contains information that might be sensitive to your corporate security policies:
 
-```
+```text
 **********************
 Windows PowerShell transcript start
 Start time: 20191028114038
@@ -203,7 +205,9 @@ Please remove or replace the PII data from the log file before submitting an iss
 
 Specify the directory where the output file will be created. A file with the following format will be created:
 
-    "{Date}_HPOV_transcript.log", where date is derived from `Get-Date -UFormat %y%m%d%H%M`
+```text
+"{Date}_HPOV_transcript.log", where date is derived from `Get-Date -UFormat %y%m%d%H%M`
+```
 
 | Aliases | None |
 | :--- | :--- |
@@ -243,7 +247,7 @@ FileInfo object where the "{Date}\_HPOV\_transcript.log" file is generated.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 Get-HPOVCommandTrace -ScriptBlock { Get-HPOVNetwork } -Location C:\Temp
 ```
@@ -258,7 +262,7 @@ Start a new library trace, which will create a file in the `C:\Temp` directory.
 
 ### Syntax
 
-```
+```text
 Get-HPOVCommandTrace [-ScriptBlock] <ScriptBlock> [-Location] <String> [<CommonParameters>]
 ```
 
@@ -272,7 +276,7 @@ Please know that this Cmdlet is currently not supported in the Windows PowerShel
 
 Do know that the verbose output will contain potentially personally identifiable information \(PII\) that you may wish to change.  For instance, the following output snippet contains information that might be sensitive to your corporate security policies:
 
-```
+```text
 **********************
 Windows PowerShell transcript start
 Start time: 20191028114038
@@ -328,7 +332,9 @@ Please remove or replace the PII data from the log file before submitting an iss
 
 Specify the directory where the output file will be created. A file with the following format will be created:
 
-    "{Date}_HPOV_transcript.log", where date is derived from `Get-Date -UFormat %y%m%d%H%M`
+```text
+"{Date}_HPOV_transcript.log", where date is derived from `Get-Date -UFormat %y%m%d%H%M`
+```
 
 | Aliases | None |
 | :--- | :--- |
@@ -368,7 +374,7 @@ FileInfo object where the "{Date}\_HPOV\_transcript.log" file is generated.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 Get-HPOVCommandTrace -ScriptBlock { Get-HPOVNetwork } -Location C:\Temp
 ```

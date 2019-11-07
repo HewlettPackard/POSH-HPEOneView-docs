@@ -1,6 +1,6 @@
 # about\_Two\_Factor\_Authentication
 
-```
+```text
 TOPIC
 
     about_Two_Factor_Authentication

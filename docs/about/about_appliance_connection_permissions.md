@@ -2,7 +2,7 @@
 
 
 
-```
+```text
 TOPIC
 
     about_Appliance_Connection_Permissions

@@ -8,7 +8,7 @@ description: Associate resource with new or existing Label.
 
 ### Syntax
 
-```
+```text
 Add-HPOVResourceToLabel [-Name] <String> [-InputObject] <Object> [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
@@ -80,7 +80,7 @@ The created or modified Label resource.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 $Resources = Get-HPOVNetwork -Name Finance* -ErrorAction Stop
 $Resources += Get-HPOVServerHardware -Name Finance*
@@ -97,7 +97,7 @@ Collect various resources for Finance, creating a new label called "Finance".
 
 ### Syntax
 
-```
+```text
 Add-HPOVResourceToLabel [-Name] <String> [-InputObject] <Object> [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
@@ -169,7 +169,7 @@ The created or modified Label resource.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 $Resources = Get-HPOVNetwork -Name Finance* -ErrorAction Stop
 $Resources += Get-HPOVServerHardware -Name Finance*
@@ -186,7 +186,7 @@ Collect various resources for Finance, creating a new label called "Finance".
 
 ### Syntax
 
-```
+```text
 Add-HPOVResourceToLabel [-Name] <String> [-InputObject] <Object> [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
@@ -258,7 +258,7 @@ The created or modified Label resource.
 
 ### Examples
 
-```
+```text
  -------------------------- EXAMPLE 1 --------------------------
 $Resources = Get-HPOVNetwork -Name Finance* -ErrorAction Stop
 $Resources += Get-HPOVServerHardware -Name Finance*
