@@ -7,7 +7,7 @@
     * [Connect-HPOVMgmt](cmdlets/library/connect-hpovmgmt.md)
     * [Set-HPOVApplianceDefaultConnection](cmdlets/library/set-hpovappliancedefaultconnection.md)
     * [Disconnect-HPOVMgmt](cmdlets/library/disconnect-hpovmgmt.md)
-    * [Send-HPOVRequest](cmdlets/library/untitled.md)
+    * [Send-HPOVRequest](cmdlets/library/send-hpovrequest.md)
     * [ConvertTo-HPOVPowerShellScript](cmdlets/library/convertto-hpovpowershellscript.md)
     * [New-HPOVResource](cmdlets/library/new-hpovresource.md)
     * [Set-HPOVResource](cmdlets/library/set-hpovresource.md)
@@ -61,8 +61,8 @@
     * [Add-HPOVSanManager](cmdlets/storage/add-hpovsanmanager.md)
     * [Add-HPOVStoragePool](cmdlets/storage/add-hpovstoragepool.md)
     * [Add-HPOVStorageSystem](cmdlets/storage/add-hpovstoragesystem.md)
-    * [Add-HPOVStorageVolume](cmdlets/storage/untitled.md)
-    * [ConvertTo-HPOVStorageVolume](cmdlets/storage/untitled-1.md)
+    * [Add-HPOVStorageVolume](cmdlets/storage/add-hpovstoragevolume.md)
+    * [ConvertTo-HPOVStorageVolume](cmdlets/storage/convertto-hpovstoragevolume.md)
 * [Getting Help](getting-help.md)
 
 ## About

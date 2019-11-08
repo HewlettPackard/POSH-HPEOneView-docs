@@ -109,7 +109,7 @@ Import-Module HPOneView.500
 There are 5 primary CMDLETs to interact with the HPE OneView appliance:
 
 * [Connect-HPOVMgmt](cmdlets/library/connect-hpovmgmt.md)
-* [Send-HPOVRequest](cmdlets/library/untitled.md)
+* [Send-HPOVRequest](cmdlets/library/send-hpovrequest.md)
 * [New-HPOVResource](cmdlets/library/new-hpovresource.md)
 * [Set-HPOVResource](cmdlets/library/set-hpovresource.md)
 * [Remove-HPOVResource](cmdlets/library/remove-hpovresource.md)
@@ -120,7 +120,7 @@ New in the HPE OneView 2.00 library is the ability to connect to multiple applia
 For more information about multiple appliance connection support, please review `get-help about_Appliance_Connections` from your PowerShell console, or read the online wiki page for [about\_Appliance\_Connections](about/about_appliance_connections.md).
 {% endhint %}
 
-The [`New-HPOVResource`](cmdlets/library/new-hpovresource.md), [`Set-HPOVRequest`](cmdlets/library/set-hpovresource.md) and [`Remove-HPOVResource`](cmdlets/library/remove-hpovresource.md) Cmdlets are mainly for callers to perform Create, Update and Delete operations where a native Cmdlet hasn't been developed. The following diagram is an example of flow, where [`Send-HPOVRequest`](cmdlets/library/untitled.md) is the main Cmdlet that directly communicates with the HPE OneView REST API.
+The [`New-HPOVResource`](cmdlets/library/new-hpovresource.md), [`Set-HPOVRequest`](cmdlets/library/set-hpovresource.md) and [`Remove-HPOVResource`](cmdlets/library/remove-hpovresource.md) Cmdlets are mainly for callers to perform Create, Update and Delete operations where a native Cmdlet hasn't been developed. The following diagram is an example of flow, where [`Send-HPOVRequest`](cmdlets/library/send-hpovrequest.md) is the main Cmdlet that directly communicates with the HPE OneView REST API.
 
 ![](.gitbook/assets/library_interaction_diagram.png)
 

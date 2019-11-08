@@ -14,7 +14,7 @@ Set-HPOVResource [-InputObject] <Object> [[-ApplianceConnection] <Object>] [[-Fo
 
 ### Description
 
-This Cmdlet will assist the user to update an existing resource. The resource should first be retrieved with a `Get-HPOV[resourcename]` Cmdlet, or using [`Send-HPOVRequest`](untitled.md). The PowerShell resource may then be modified within your PowerShell console, followed by this Cmdlet.
+This Cmdlet will assist the user to update an existing resource. The resource should first be retrieved with a `Get-HPOV[resourcename]` Cmdlet, or using [`Send-HPOVRequest`](send-hpovrequest.md). The PowerShell resource may then be modified within your PowerShell console, followed by this Cmdlet.
 
 ### Parameters
 
@@ -62,7 +62,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**System.Management.Automation.PSCustomObject**_
 
-Resource Object to modify by either using [`Send-HPOVRequest`](untitled.md) with the resource URI, or the resource GET Cmdlet.
+Resource Object to modify by either using [`Send-HPOVRequest`](send-hpovrequest.md) with the resource URI, or the resource GET Cmdlet.
 
 ### Return Values
 
@@ -97,7 +97,7 @@ Set-HPOVResource [-InputObject] <Object> [[-ApplianceConnection] <Object>] [[-Fo
 
 ### Description
 
-This Cmdlet will assist the user to update an existing resource. The resource should first be retrieved with a `Get-HPOV[resourcename]` Cmdlet, or using [`Send-HPOVRequest`](untitled.md). The PowerShell resource may then be modified within your PowerShell console, followed by this Cmdlet.
+This Cmdlet will assist the user to update an existing resource. The resource should first be retrieved with a `Get-HPOV[resourcename]` Cmdlet, or using [`Send-HPOVRequest`](send-hpovrequest.md). The PowerShell resource may then be modified within your PowerShell console, followed by this Cmdlet.
 
 ### Parameters
 
@@ -147,7 +147,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**System.Management.Automation.PSCustomObject**_
 
-Resource Object to modify by either using [`Send-HPOVRequest`](untitled.md) with the resource URI, or the resource GET Cmdlet.
+Resource Object to modify by either using [`Send-HPOVRequest`](send-hpovrequest.md) with the resource URI, or the resource GET Cmdlet.
 
 ### Return Values
 
@@ -182,7 +182,7 @@ Set-HPOVResource [-InputObject] <Object> [[-ApplianceConnection] <Object>] [[-Fo
 
 ### Description
 
-This Cmdlet will assist the user to update an existing resource. The resource should first be retrieved with a `Get-HPOV[resourcename]` Cmdlet, or using [`Send-HPOVRequest`](untitled.md). The PowerShell resource may then be modified within your PowerShell console, followed by this Cmdlet.
+This Cmdlet will assist the user to update an existing resource. The resource should first be retrieved with a `Get-HPOV[resourcename]` Cmdlet, or using [`Send-HPOVRequest`](send-hpovrequest.md). The PowerShell resource may then be modified within your PowerShell console, followed by this Cmdlet.
 
 ### Parameters
 
@@ -232,7 +232,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**System.Management.Automation.PSCustomObject**_
 
-Resource Object to modify by either using [`Send-HPOVRequest`](untitled.md) with the resource URI, or the resource GET Cmdlet.
+Resource Object to modify by either using [`Send-HPOVRequest`](send-hpovrequest.md) with the resource URI, or the resource GET Cmdlet.
 
 ### Return Values
 
