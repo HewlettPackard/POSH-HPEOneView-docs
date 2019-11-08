@@ -112,7 +112,7 @@ Directory Servers LDAP SSL Port.
 
 #### -TrustLeafCertificate &lt;SwitchParameter&gt; 
 
-When adding a new LDAP directory server, the certificate may not be trusted. Use this switch to force trust the certificate. Or, use the [`Add-HPOVApplianceTrustedCertificate`](add-hpovappliancetrustedcertificate.md) to add the enterprise issuing certificate authority"s certificate.
+When adding a new LDAP directory server, the certificate may not be trusted. Use this switch to force trust the certificate. Or, use the [`Add-HPOVApplianceTrustedCertificate`](../appliance/add-hpovappliancetrustedcertificate.md) to add the enterprise issuing certificate authority"s certificate.
 
 | Aliases | None |
 | :--- | :--- |
@@ -272,7 +272,7 @@ Directory Servers LDAP SSL Port.
 
 #### -TrustLeafCertificate &lt;SwitchParameter&gt; 
 
-When adding a new LDAP directory server, the certificate may not be trusted. Use this switch to force trust the certificate. Or, use the [`Add-HPOVApplianceTrustedCertificate`](add-hpovappliancetrustedcertificate.md) to add the enterprise issuing certificate authority"s certificate.
+When adding a new LDAP directory server, the certificate may not be trusted. Use this switch to force trust the certificate. Or, use the [`Add-HPOVApplianceTrustedCertificate`](../appliance/add-hpovappliancetrustedcertificate.md) to add the enterprise issuing certificate authority"s certificate.
 
 | Aliases | None |
 | :--- | :--- |
@@ -432,7 +432,7 @@ Directory Servers LDAP SSL Port.
 
 #### -TrustLeafCertificate &lt;SwitchParameter&gt; 
 
-When adding a new LDAP directory server, the certificate may not be trusted. Use this switch to force trust the certificate. Or, use the [`Add-HPOVApplianceTrustedCertificate`](add-hpovappliancetrustedcertificate.md) to add the enterprise issuing certificate authority"s certificate.
+When adding a new LDAP directory server, the certificate may not be trusted. Use this switch to force trust the certificate. Or, use the [`Add-HPOVApplianceTrustedCertificate`](../appliance/add-hpovappliancetrustedcertificate.md) to add the enterprise issuing certificate authority"s certificate.
 
 | Aliases | None |
 | :--- | :--- |
