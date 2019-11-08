@@ -13,7 +13,7 @@ Connect-HPOVMgmt [-Hostname] <String> [-Credential] <PSCredential> [[-AuthLoginD
 ```
 
 ```text
-Connect-HPOVMgmt [-Hostname] <String> [[-Certificate] <Object>] [[-LoginAcknowledge] <SwitchParameter>] [<CommonParameters>]
+Connect-HPOVMgmt [-Hostname] <String> [-Certificate] <Object> [[-LoginAcknowledge] <SwitchParameter>] [<CommonParameters>]
 ```
 
 ### Description
@@ -28,7 +28,7 @@ Appliance hostname or IP can include an alternate TCP port number. While the app
 
 The Directory Name for LDAP/Active Directory authentication, or LOCAL for appliance internal user accounts.
 
-Default is determined by connecting to the requested appliance and retrieving the default login directory. If not LOCAL, and you attempt to use an embedded user account, you must use -AuthLoginDomain parameter with the Local value..
+Default is determined by connecting to the requested appliance and retrieving the default login directory. If not LOCAL, and you attempt to use an embedded user account, you must use `-AuthLoginDomain` parameter with the Local value..
 
 | Aliases | authProvider |
 | :--- | :--- |
@@ -192,7 +192,7 @@ Connect-HPOVMgmt -appliance myappliance.domain.com -Certificate $MySmartCard
 
 ### Related Links 
 
-* [Disconnect-HPOVMgmt](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Disconnect-HPOVMgmt) 
+* [Disconnect-HPOVMgmt ](disconnect-hpovmgmt.md#hpe-oneview-5-00-library)
 
 ## HPE OneView 4.20 Library 
 
@@ -388,7 +388,7 @@ Connect to a specific appliance using a digital badge.
 
 ### Related Links 
 
-* [Disconnect-HPOVMgmt](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Disconnect-HPOVMgmt) 
+* [Disconnect-HPOVMgmt ](disconnect-hpovmgmt.md#hpe-oneview-4-20-library)
 
 ## HPE OneView 4.10 Library
 
@@ -585,5 +585,5 @@ Connect to a specific appliance using a digital badge.
 
 ### Related Links 
 
-* [Disconnect-HPOVMgmt](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Disconnect-HPOVMgmt) 
+* [Disconnect-HPOVMgmt ](disconnect-hpovmgmt.md#hpe-oneview-4-10-library)
 

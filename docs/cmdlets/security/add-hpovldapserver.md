@@ -16,9 +16,43 @@ Add-HPOVLdapServer [-InputObject] <Object> [-Hostname] <String> [-Username] <Str
 Add-HPOVLdapServer [-InputObject] <Object> [-Hostname] <String> [-Credential] <PSCredential> [[-SSLPort] <Int32>] [[-Certificate] <Object>] [[-TrustLeafCertificate] <SwitchParameter>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
-### Detailed Description
+### Description
 
- This Cmdlet will add a new LDAP Directory Server to an existing authentication directory.
+You can configure HPE OneView to use an external enterprise directory service for user authentication. HPE OneView supports the following enterprise directory services:
+
+* Active Directory
+* OpenLDAP
+
+When you use a directory service, directory users are granted HPE OneView permissions using their group membership in the directory. After defining a directory service, use the User and Groups screen to define permissions for directory groups.
+
+Directory groups are assigned one or more HPE OneView permissions. A directory user is assigned the HPE OneView permissions that represent the union of the permissions for all the directory groups that the user is a member of. Only after permissions are defined for directory groups, directory users are authenticated into the appliance.
+
+This Cmdlet will add a new LDAP Directory Server to an existing authentication directory.
+
+When a directory is configured on the appliance, you can specify one or more directory servers that can be accessed for the directory service. If more than one directory server is added for a directory, they are assumed to be replicated servers for high availability or disaster tolerance. If one directory server is not reachable, the other configured servers are accessed for authenticating the user.
+
+{% hint style="info" %}
+* If you use a cluster for your directory server configuration, the cluster hostname can be specified as the directory server. Hewlett Packard Enterprise recommends using a cluster for your directory server configuration instead of configuring replicated directory servers in the appliance.
+* Directory search operations can be time consuming depending on your directory configuration and network latency affecting login time. When using Active Directory with many domains, for optimal login performance, configure a global catalog for your directory server.
+{% endhint %}
+
+**User login formats used for authentication**
+
+To support user login with only the user name specified, the following formats are tried to authenticate with the directory service:
+
+If the user name is not an email address \(denoted by the presence of an `@` character\) or a `\` character \(to denote the domain`\`user name format\), logins are attempted in the following order:
+
+1. The user name is treated as the logon name, and directory-name gets prepended as directory-name\user-name, for example: example\jane.
+2. The user name is treated as a UID.
+3. The user name is treated as Common Name \(CN\).
+
+{% hint style="warning" %}
+If the Active Directory Server Service configured in HPE OneView has a user lock-out policy \(defined, for example, on `n` number of successive failed login attempts\), Hewlett Packard Enterprise recommends that you use the email or the domain\user name format to log into HPE OneView. If email or domain`\`user name format is not used \(instead, just the user name is used\), HPE OneView internally tries different login formats as described previously. This may result in locking out the user from the GUI on a single failed login attempt \(wrong password\). To minimize login attempts, configure the directory display name to be the same as the first component of the directories fully qualified domain name. For example, assign the HPE OneView name example for the directory example.com.
+{% endhint %}
+
+{% hint style="info" %}
+Minimum required privileges: Infrastructure administrator.
+{% endhint %}
 
 ### Parameters
 
@@ -180,9 +214,43 @@ Add-HPOVLdapServer [-InputObject] <Object> [-Hostname] <String> [-Username] <Str
 Add-HPOVLdapServer [-InputObject] <Object> [-Hostname] <String> [-Credential] <PSCredential> [[-SSLPort] <Int32>] [[-Certificate] <Object>] [[-TrustLeafCertificate] <SwitchParameter>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
-### Detailed Description
+### Description
 
- This Cmdlet will add a new LDAP Directory Server to an existing authentication directory.
+You can configure HPE OneView to use an external enterprise directory service for user authentication. HPE OneView supports the following enterprise directory services:
+
+* Active Directory
+* OpenLDAP
+
+When you use a directory service, directory users are granted HPE OneView permissions using their group membership in the directory. After defining a directory service, use the User and Groups screen to define permissions for directory groups.
+
+Directory groups are assigned one or more HPE OneView permissions. A directory user is assigned the HPE OneView permissions that represent the union of the permissions for all the directory groups that the user is a member of. Only after permissions are defined for directory groups, directory users are authenticated into the appliance.
+
+This Cmdlet will add a new LDAP Directory Server to an existing authentication directory.
+
+When a directory is configured on the appliance, you can specify one or more directory servers that can be accessed for the directory service. If more than one directory server is added for a directory, they are assumed to be replicated servers for high availability or disaster tolerance. If one directory server is not reachable, the other configured servers are accessed for authenticating the user.
+
+{% hint style="info" %}
+* If you use a cluster for your directory server configuration, the cluster hostname can be specified as the directory server. Hewlett Packard Enterprise recommends using a cluster for your directory server configuration instead of configuring replicated directory servers in the appliance.
+* Directory search operations can be time consuming depending on your directory configuration and network latency affecting login time. When using Active Directory with many domains, for optimal login performance, configure a global catalog for your directory server.
+{% endhint %}
+
+**User login formats used for authentication**
+
+To support user login with only the user name specified, the following formats are tried to authenticate with the directory service:
+
+If the user name is not an email address \(denoted by the presence of an `@` character\) or a `\` character \(to denote the domain`\`user name format\), logins are attempted in the following order:
+
+1. The user name is treated as the logon name, and directory-name gets prepended as directory-name\user-name, for example: example\jane.
+2. The user name is treated as a UID.
+3. The user name is treated as Common Name \(CN\).
+
+{% hint style="warning" %}
+If the Active Directory Server Service configured in HPE OneView has a user lock-out policy \(defined, for example, on `n` number of successive failed login attempts\), Hewlett Packard Enterprise recommends that you use the email or the domain\user name format to log into HPE OneView. If email or domain`\`user name format is not used \(instead, just the user name is used\), HPE OneView internally tries different login formats as described previously. This may result in locking out the user from the GUI on a single failed login attempt \(wrong password\). To minimize login attempts, configure the directory display name to be the same as the first component of the directories fully qualified domain name. For example, assign the HPE OneView name example for the directory example.com.
+{% endhint %}
+
+{% hint style="info" %}
+Minimum required privileges: Infrastructure administrator.
+{% endhint %}
 
 ### Parameters
 
@@ -324,10 +392,6 @@ Get-HPOVLdapDirectory -Name MyDirectory | Add-HPOVLdapServer -Name servera.domai
 * [New-HPOVLdapServer](https://github.com/HewlettPackard/POSH-HPOneView/wiki/New-HPOVLdapServer) 
 * [Remove-HPOVLdapServer](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Remove-HPOVLdapServer) 
 
-
-
-
-
 ## HPE OneView 4.10 Library
 
 ### Syntax
@@ -340,9 +404,43 @@ Add-HPOVLdapServer [-InputObject] <Object> [-Hostname] <String> [-Username] <Str
 Add-HPOVLdapServer [-InputObject] <Object> [-Hostname] <String> [-Credential] <PSCredential> [[-SSLPort] <Int32>] [[-Certificate] <Object>] [[-TrustLeafCertificate] <SwitchParameter>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
-### Detailed Description
+### Description
 
- This Cmdlet will add a new LDAP Directory Server to an existing authentication directory.
+You can configure HPE OneView to use an external enterprise directory service for user authentication. HPE OneView supports the following enterprise directory services:
+
+* Active Directory
+* OpenLDAP
+
+When you use a directory service, directory users are granted HPE OneView permissions using their group membership in the directory. After defining a directory service, use the User and Groups screen to define permissions for directory groups.
+
+Directory groups are assigned one or more HPE OneView permissions. A directory user is assigned the HPE OneView permissions that represent the union of the permissions for all the directory groups that the user is a member of. Only after permissions are defined for directory groups, directory users are authenticated into the appliance.
+
+This Cmdlet will add a new LDAP Directory Server to an existing authentication directory.
+
+When a directory is configured on the appliance, you can specify one or more directory servers that can be accessed for the directory service. If more than one directory server is added for a directory, they are assumed to be replicated servers for high availability or disaster tolerance. If one directory server is not reachable, the other configured servers are accessed for authenticating the user.
+
+{% hint style="info" %}
+* If you use a cluster for your directory server configuration, the cluster hostname can be specified as the directory server. Hewlett Packard Enterprise recommends using a cluster for your directory server configuration instead of configuring replicated directory servers in the appliance.
+* Directory search operations can be time consuming depending on your directory configuration and network latency affecting login time. When using Active Directory with many domains, for optimal login performance, configure a global catalog for your directory server.
+{% endhint %}
+
+**User login formats used for authentication**
+
+To support user login with only the user name specified, the following formats are tried to authenticate with the directory service:
+
+If the user name is not an email address \(denoted by the presence of an `@` character\) or a `\` character \(to denote the domain`\`user name format\), logins are attempted in the following order:
+
+1. The user name is treated as the logon name, and directory-name gets prepended as directory-name\user-name, for example: example\jane.
+2. The user name is treated as a UID.
+3. The user name is treated as Common Name \(CN\).
+
+{% hint style="warning" %}
+If the Active Directory Server Service configured in HPE OneView has a user lock-out policy \(defined, for example, on `n` number of successive failed login attempts\), Hewlett Packard Enterprise recommends that you use the email or the domain\user name format to log into HPE OneView. If email or domain`\`user name format is not used \(instead, just the user name is used\), HPE OneView internally tries different login formats as described previously. This may result in locking out the user from the GUI on a single failed login attempt \(wrong password\). To minimize login attempts, configure the directory display name to be the same as the first component of the directories fully qualified domain name. For example, assign the HPE OneView name example for the directory example.com.
+{% endhint %}
+
+{% hint style="info" %}
+Minimum required privileges: Infrastructure administrator.
+{% endhint %}
 
 ### Parameters
 
@@ -483,6 +581,4 @@ Get-HPOVLdapDirectory -Name MyDirectory | Add-HPOVLdapServer -Name servera.domai
 
 * [New-HPOVLdapServer](https://github.com/HewlettPackard/POSH-HPOneView/wiki/New-HPOVLdapServer) 
 * [Remove-HPOVLdapServer](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Remove-HPOVLdapServer)
-
-
 

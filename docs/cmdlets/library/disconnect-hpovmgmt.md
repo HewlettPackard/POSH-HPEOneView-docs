@@ -1,5 +1,5 @@
 ---
-description: Disconnect your user session from an appliance.
+description: Logoff from the appliance.
 ---
 
 # Disconnect-HPOVMgmt
@@ -14,7 +14,7 @@ Disconnect-HPOVMgmt [[-ApplianceConnection] <Object>] [<CommonParameters>]
 
 ### Description
 
-This cmdlet disconnects the specified or all HPE OneView appliance session\(s\).
+This Cmdlet will logoff the current user, which terminates the user session, on the specified HPE OneView appliance.
 
 ### Parameters
 
@@ -27,7 +27,7 @@ Default Value: ${Global:ConnectedSessions} \| ? Default
 | Aliases | Appliance, ApplianceSession, Hostname |
 | :--- | :--- |
 | Required? | False |
-| Position? | 0 |
+| Position? | named |
 | Default value | $ConnectedSessions \| Where-Object Default |
 | Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters?    | False |
@@ -73,7 +73,7 @@ Disconnect all appliance sessions.
 
 ### Related Links
 
-* [Connect-HPOVMgmt](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Connect-HPOVMgmt) 
+* [Connect-HPOVMgmt ](connect-hpovmgmt.md#hpe-oneview-5-00-library)
 
 ## HPE OneView 4.20 Library 
 
@@ -85,7 +85,7 @@ Disconnect-HPOVMgmt [[-ApplianceConnection] <Object>] [<CommonParameters>]
 
 ### Description
 
-This cmdlet disconnects the specified or all HPE OneView appliance session\(s\).
+This Cmdlet will logoff the current user, which terminates the user session, on the specified HPE OneView appliance.
 
 ### Parameters
 
@@ -98,7 +98,7 @@ Default Value: ${Global:ConnectedSessions} \| ? Default
 | Aliases | Appliance, ApplianceSession, Hostname |
 | :--- | :--- |
 | Required? | False |
-| Position? | 0 |
+| Position? | named |
 | Default value | $ConnectedSessions \| Where-Object Default |
 | Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters?    | False |
@@ -144,7 +144,7 @@ Disconnect all appliance sessions.
 
 ### Related Links
 
-* [Connect-HPOVMgmt](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Connect-HPOVMgmt) 
+* [Connect-HPOVMgmt ](disconnect-hpovmgmt.md#hpe-oneview-4-20-library)
 
 ## HPE OneView 4.10 Library 
 
@@ -156,7 +156,7 @@ Disconnect-HPOVMgmt [[-ApplianceConnection] <Object>] [<CommonParameters>]
 
 ### Description
 
- This cmdlet disconnects the specified or all HPE OneView appliance session\(s\).
+This Cmdlet will logoff the current user, which terminates the user session, on the specified HPE OneView appliance.
 
 ### Parameters
 
@@ -169,7 +169,7 @@ Default Value: ${Global:ConnectedSessions} \| ? Default
 | Aliases | Appliance, ApplianceSession, Hostname |
 | :--- | :--- |
 | Required? | False |
-| Position? | 0 |
+| Position? | named |
 | Default value | $ConnectedSessions \| Where-Object Default |
 | Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters?    | False |
@@ -215,5 +215,5 @@ Disconnect all appliance sessions.
 
 ### Related Links
 
-* [Connect-HPOVMgmt](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Connect-HPOVMgmt) 
+* [Connect-HPOVMgmt ](connect-hpovmgmt.md#hpe-oneview-4-10-library)
 
