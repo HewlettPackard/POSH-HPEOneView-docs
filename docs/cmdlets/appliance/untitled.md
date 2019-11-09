@@ -1,15 +1,15 @@
 ---
-description: Disable appliance TLS/SSL certificate validation.
+description: Enable appliance TLS/SSL certificate validation.
 ---
 
-# Disable-HPOVCertificateValidation
+# Enable-HPOVCertificateValidation
 
 ## HPE OneView 5.00 Library
 
 ### Syntax
 
 ```text
-Disable-HPOVCertificateValidation [[-ApplianceConnection] <Array>] [[-WhatIf] <SwitchParameter>] [[-Confirm] <SwitchParameter>] [<CommonParameters>]
+Enable-HPOVCertificateValidation [[-CheckForSelfSignedExpiry] <Bool>] [[-ApplianceConnection] <Array>] [[-WhatIf] <SwitchParameter>] [[-Confirm] <SwitchParameter>] [<CommonParameters>]
 ```
 
 ### Description
@@ -20,7 +20,9 @@ In production environments, Hewlett Packard Enterprise strongly recommends that 
 
 If certificate validation is disabled, any sensitive data such as credentials are transmitted insecurely. Make sure to use only local user accounts and not enterprise directory-based accounts to avoid transmitting enterprise login credentials over the network when certificate validation is disabled.
 
-NOTE: When upgrading from earlier releases, the certificates in use by the currently monitored or managed devices are imported into the HPE OneView trust store and alerts are generated for issues such as expired certificates. These automatically added certificates are either a device"s self-signed certificate or the leaf certificate for a certificate authority \(CA\) signed certificate. Using CA-signed certificates can simplify the device trust process.
+{% hint style="warning" %}
+When upgrading from earlier releases, the certificates in use by the currently monitored or managed devices are imported into the HPE OneView trust store and alerts are generated for issues such as expired certificates. These automatically added certificates are either a device"s self-signed certificate or the leaf certificate for a certificate authority \(CA\) signed certificate. Using CA-signed certificates can simplify the device trust process.
+{% endhint %}
 
 Certificate checking is enabled by default, but some of the stricter validation checks are relaxed to maintain communications with all devices, even those with certificate issues. The relaxed checking includes:
 
@@ -39,12 +41,8 @@ HPE OneView enables users to import a CA CRL file and to perform the appropriate
 Modifying the appliance setting will require the appliance to be rebooted.
 {% endhint %}
 
-{% hint style="warning" %}
-If 2-factor authentication is configured, this policy cannot be disabled.
-{% endhint %}
-
 {% hint style="info" %}
-Required privileges: Infrastructure administrator
+Required: Infrastructure administrator
 {% endhint %}
 
 ### Parameters
@@ -61,6 +59,18 @@ Default Value: ${Global:ConnectedSessions} \| ? Default
 | Position? | named |
 | Default value | \(${Global:ConnectedSessions} \| ? Default\) |
 | Accept pipeline input? | true \(ByPropertyName\) |
+| Accept wildcard characters?    | False |
+
+#### -CheckForSelfSignedExpiry &lt;Bool&gt; 
+
+Enable \($true\) or Disable \($false\) the option to check for expiration of self-signed certificates if you want to perform expiration checks for self-signed certificates. By default, self-signed certificate expiry is not enabled.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | false |
+| Position? | named |
+| Default value |  |
+| Accept pipeline input? | false |
 | Accept wildcard characters?    | False |
 
 #### -Confirm &lt;SwitchParameter&gt; 
@@ -103,21 +113,21 @@ Appliance global security settings.
 
 ```text
  -------------------------- EXAMPLE 1 --------------------------
-Disable-HPOVCertificateValidation
+Enable-HPOVCertificateValidation
 ```
 
- Disable certificate validation on the appliance. 
+Enable certificate validation setting on the appliance. 
 
 ### Related Links 
 
-* [Enable-HPOVCertificateValidation](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Enable-HPOVCertificateValidation) 
+* [Disable-HPOVCertificateValidation ](disable-hpovcertificatevalidation.md#hpe-oneview-5-00-library)
 
 ## HPE OneView 4.20 Library
 
 ### Syntax
 
 ```text
-Disable-HPOVCertificateValidation [[-ApplianceConnection] <Array>] [[-WhatIf] <SwitchParameter>] [[-Confirm] <SwitchParameter>] [<CommonParameters>]
+Enable-HPOVCertificateValidation [[-CheckForSelfSignedExpiry] <Bool>] [[-ApplianceConnection] <Array>] [[-WhatIf] <SwitchParameter>] [[-Confirm] <SwitchParameter>] [<CommonParameters>]
 ```
 
 ### Description
@@ -128,7 +138,9 @@ In production environments, Hewlett Packard Enterprise strongly recommends that 
 
 If certificate validation is disabled, any sensitive data such as credentials are transmitted insecurely. Make sure to use only local user accounts and not enterprise directory-based accounts to avoid transmitting enterprise login credentials over the network when certificate validation is disabled.
 
-NOTE: When upgrading from earlier releases, the certificates in use by the currently monitored or managed devices are imported into the HPE OneView trust store and alerts are generated for issues such as expired certificates. These automatically added certificates are either a device"s self-signed certificate or the leaf certificate for a certificate authority \(CA\) signed certificate. Using CA-signed certificates can simplify the device trust process.
+{% hint style="warning" %}
+When upgrading from earlier releases, the certificates in use by the currently monitored or managed devices are imported into the HPE OneView trust store and alerts are generated for issues such as expired certificates. These automatically added certificates are either a device"s self-signed certificate or the leaf certificate for a certificate authority \(CA\) signed certificate. Using CA-signed certificates can simplify the device trust process.
+{% endhint %}
 
 Certificate checking is enabled by default, but some of the stricter validation checks are relaxed to maintain communications with all devices, even those with certificate issues. The relaxed checking includes:
 
@@ -147,12 +159,8 @@ HPE OneView enables users to import a CA CRL file and to perform the appropriate
 Modifying the appliance setting will require the appliance to be rebooted.
 {% endhint %}
 
-{% hint style="warning" %}
-If 2-factor authentication is configured, this policy cannot be disabled.
-{% endhint %}
-
 {% hint style="info" %}
-Required privileges: Infrastructure administrator
+Required: Infrastructure administrator
 {% endhint %}
 
 ### Parameters
@@ -169,6 +177,18 @@ Default Value: ${Global:ConnectedSessions} \| ? Default
 | Position? | named |
 | Default value | \(${Global:ConnectedSessions} \| ? Default\) |
 | Accept pipeline input? | true \(ByPropertyName\) |
+| Accept wildcard characters?    | False |
+
+#### -CheckForSelfSignedExpiry &lt;Bool&gt; 
+
+Enable \($true\) or Disable \($false\) the option to check for expiration of self-signed certificates if you want to perform expiration checks for self-signed certificates. By default, self-signed certificate expiry is not enabled.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | false |
+| Position? | named |
+| Default value |  |
+| Accept pipeline input? | false |
 | Accept wildcard characters?    | False |
 
 #### -Confirm &lt;SwitchParameter&gt; 
@@ -211,21 +231,21 @@ Appliance global security settings.
 
 ```text
  -------------------------- EXAMPLE 1 --------------------------
-Disable-HPOVCertificateValidation
+Enable-HPOVCertificateValidation
 ```
 
- Disable certificate validation on the appliance. 
+Enable certificate validation setting on the appliance. 
 
 ### Related Links 
 
-* [Enable-HPOVCertificateValidation](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Enable-HPOVCertificateValidation) 
+* [Disable-HPOVCertificateValidation ](disable-hpovcertificatevalidation.md#hpe-oneview-4-20-library)
 
 ## HPE OneView 4.10 Library
 
 ### Syntax
 
 ```text
-Disable-HPOVCertificateValidation [[-ApplianceConnection] <Array>] [[-WhatIf] <SwitchParameter>] [[-Confirm] <SwitchParameter>] [<CommonParameters>]
+Enable-HPOVCertificateValidation [[-CheckForSelfSignedExpiry] <Bool>] [[-ApplianceConnection] <Array>] [[-WhatIf] <SwitchParameter>] [[-Confirm] <SwitchParameter>] [<CommonParameters>]
 ```
 
 ### Description
@@ -236,7 +256,9 @@ In production environments, Hewlett Packard Enterprise strongly recommends that 
 
 If certificate validation is disabled, any sensitive data such as credentials are transmitted insecurely. Make sure to use only local user accounts and not enterprise directory-based accounts to avoid transmitting enterprise login credentials over the network when certificate validation is disabled.
 
-NOTE: When upgrading from earlier releases, the certificates in use by the currently monitored or managed devices are imported into the HPE OneView trust store and alerts are generated for issues such as expired certificates. These automatically added certificates are either a device"s self-signed certificate or the leaf certificate for a certificate authority \(CA\) signed certificate. Using CA-signed certificates can simplify the device trust process.
+{% hint style="warning" %}
+When upgrading from earlier releases, the certificates in use by the currently monitored or managed devices are imported into the HPE OneView trust store and alerts are generated for issues such as expired certificates. These automatically added certificates are either a device"s self-signed certificate or the leaf certificate for a certificate authority \(CA\) signed certificate. Using CA-signed certificates can simplify the device trust process.
+{% endhint %}
 
 Certificate checking is enabled by default, but some of the stricter validation checks are relaxed to maintain communications with all devices, even those with certificate issues. The relaxed checking includes:
 
@@ -255,12 +277,8 @@ HPE OneView enables users to import a CA CRL file and to perform the appropriate
 Modifying the appliance setting will require the appliance to be rebooted.
 {% endhint %}
 
-{% hint style="warning" %}
-If 2-factor authentication is configured, this policy cannot be disabled.
-{% endhint %}
-
 {% hint style="info" %}
-Required privileges: Infrastructure administrator
+Required: Infrastructure administrator
 {% endhint %}
 
 ### Parameters
@@ -277,6 +295,18 @@ Default Value: ${Global:ConnectedSessions} \| ? Default
 | Position? | named |
 | Default value | \(${Global:ConnectedSessions} \| ? Default\) |
 | Accept pipeline input? | true \(ByPropertyName\) |
+| Accept wildcard characters?    | False |
+
+#### -CheckForSelfSignedExpiry &lt;Bool&gt; 
+
+Enable \($true\) or Disable \($false\) the option to check for expiration of self-signed certificates if you want to perform expiration checks for self-signed certificates. By default, self-signed certificate expiry is not enabled.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | false |
+| Position? | named |
+| Default value |  |
+| Accept pipeline input? | false |
 | Accept wildcard characters?    | False |
 
 #### -Confirm &lt;SwitchParameter&gt; 
@@ -319,14 +349,12 @@ Appliance global security settings.
 
 ```text
  -------------------------- EXAMPLE 1 --------------------------
-Disable-HPOVCertificateValidation
+Enable-HPOVCertificateValidation
 ```
 
- Disable certificate validation on the appliance. 
+Enable certificate validation setting on the appliance. 
 
 ### Related Links 
 
-* [Enable-HPOVCertificateValidation](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Enable-HPOVCertificateValidation) 
-
-
+* [Disable-HPOVCertificateValidation ](disable-hpovcertificatevalidation.md#hpe-oneview-4-10-library)
 
