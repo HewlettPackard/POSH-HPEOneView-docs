@@ -1,15 +1,15 @@
 ---
-description: Disable local authentication logins.
+description: Enable local authentication logins.
 ---
 
-# Disable-HPOVLdapLocalLogin
+# Enable-HPOVLdapLocalLogin
 
 ### HPE OneView 5.00 Library
 
-###  Syntax
+### Syntax
 
 ```text
-Disable-HPOVLdapLocalLogin [[-ApplianceConnection] <Object>] [[-WhatIf] <SwitchParameter>] [[-Confirm] <SwitchParameter>] [<CommonParameters>]
+Enable-HPOVLdapLocalLogin [[-ApplianceConnection] <Object>] [[-WhatIf] <SwitchParameter>] [[-Confirm] <SwitchParameter>] [<CommonParameters>]
 ```
 
 ### Description
@@ -22,10 +22,6 @@ You can configure HPE OneView to use an external enterprise directory service fo
 When you use a directory service, directory users are granted HPE OneView permissions using their group membership in the directory. After defining a directory service, use the User and Groups screen to define permissions for directory groups. Directory groups are assigned one or more HPE OneView permissions. A directory user is assigned the HPE OneView permissions that represent the union of the permissions for all the directory groups that the user is a member of. Only after permissions are defined for directory groups, directory users are authenticated into the appliance.
 
 If you want to authenticate all logins to the appliance through a directory service, you must disable local logins. Also, if a directory is inaccessible in some special cases, you can enable the emergency local login. To enable emergency local login, you must disable local logins.
-
-{% hint style="warning" %}
-Local logins cannot be disabled until you log in using an authentication directory service as an Infrastructure administrator. Verify that you can log in to the appliance as an Infrastructure administrator from the authentication directory service before continuing.
-{% endhint %}
 
 {% hint style="info" %}
 Minimum required privileges: Infrastructure administrator.
@@ -85,21 +81,21 @@ Appliance Authentication Directory setting.
 
 ```text
  -------------------------- EXAMPLE 1 --------------------------
-Disable-HPOVLdapLocalLogin
+Enable-HPOVLdapLocalLogin
 ```
 
- Disable local logins on the appliance. 
+Enable local logins on the appliance. 
 
 ### Related Links 
 
-* [Enable-HPOVLdapLocalLogin ](enable-hpovldaplocallogin.md#hpe-oneview-5-00-library)
+* [Disable-HPOVLdapLocalLogin](disable-hpovldaplocallogin.md#hpe-oneview-5-00-library)
 
 ## HPE OneView 4.20 Library
 
-###  Syntax
+### Syntax
 
 ```text
-Disable-HPOVLdapLocalLogin [[-ApplianceConnection] <Object>] [[-WhatIf] <SwitchParameter>] [[-Confirm] <SwitchParameter>] [<CommonParameters>]
+Enable-HPOVLdapLocalLogin [[-ApplianceConnection] <Object>] [[-WhatIf] <SwitchParameter>] [[-Confirm] <SwitchParameter>] [<CommonParameters>]
 ```
 
 ### Description
@@ -112,10 +108,6 @@ You can configure HPE OneView to use an external enterprise directory service fo
 When you use a directory service, directory users are granted HPE OneView permissions using their group membership in the directory. After defining a directory service, use the User and Groups screen to define permissions for directory groups. Directory groups are assigned one or more HPE OneView permissions. A directory user is assigned the HPE OneView permissions that represent the union of the permissions for all the directory groups that the user is a member of. Only after permissions are defined for directory groups, directory users are authenticated into the appliance.
 
 If you want to authenticate all logins to the appliance through a directory service, you must disable local logins. Also, if a directory is inaccessible in some special cases, you can enable the emergency local login. To enable emergency local login, you must disable local logins.
-
-{% hint style="warning" %}
-Local logins cannot be disabled until you log in using an authentication directory service as an Infrastructure administrator. Verify that you can log in to the appliance as an Infrastructure administrator from the authentication directory service before continuing.
-{% endhint %}
 
 {% hint style="info" %}
 Minimum required privileges: Infrastructure administrator.
@@ -175,21 +167,21 @@ Appliance Authentication Directory setting.
 
 ```text
  -------------------------- EXAMPLE 1 --------------------------
-Disable-HPOVLdapLocalLogin
+Enable-HPOVLdapLocalLogin
 ```
 
- Disable local logins on the appliance. 
+Enable local logins on the appliance. 
 
 ### Related Links 
 
-* [Enable-HPOVLdapLocalLogin ](enable-hpovldaplocallogin.md#hpe-oneview-4-20-library)
+* [Disable-HPOVLdapLocalLogin](disable-hpovldaplocallogin.md#hpe-oneview-4-20-library)
 
 ## HPE OneView 4.10 Library
 
-###  Syntax
+### Syntax
 
 ```text
-Disable-HPOVLdapLocalLogin [[-ApplianceConnection] <Object>] [[-WhatIf] <SwitchParameter>] [[-Confirm] <SwitchParameter>] [<CommonParameters>]
+Enable-HPOVLdapLocalLogin [[-ApplianceConnection] <Object>] [[-WhatIf] <SwitchParameter>] [[-Confirm] <SwitchParameter>] [<CommonParameters>]
 ```
 
 ### Description
@@ -202,10 +194,6 @@ You can configure HPE OneView to use an external enterprise directory service fo
 When you use a directory service, directory users are granted HPE OneView permissions using their group membership in the directory. After defining a directory service, use the User and Groups screen to define permissions for directory groups. Directory groups are assigned one or more HPE OneView permissions. A directory user is assigned the HPE OneView permissions that represent the union of the permissions for all the directory groups that the user is a member of. Only after permissions are defined for directory groups, directory users are authenticated into the appliance.
 
 If you want to authenticate all logins to the appliance through a directory service, you must disable local logins. Also, if a directory is inaccessible in some special cases, you can enable the emergency local login. To enable emergency local login, you must disable local logins.
-
-{% hint style="warning" %}
-Local logins cannot be disabled until you log in using an authentication directory service as an Infrastructure administrator. Verify that you can log in to the appliance as an Infrastructure administrator from the authentication directory service before continuing.
-{% endhint %}
 
 {% hint style="info" %}
 Minimum required privileges: Infrastructure administrator.
@@ -265,12 +253,12 @@ Appliance Authentication Directory setting.
 
 ```text
  -------------------------- EXAMPLE 1 --------------------------
-Disable-HPOVLdapLocalLogin
+Enable-HPOVLdapLocalLogin
 ```
 
- Disable local logins on the appliance. 
+Enable local logins on the appliance. 
 
 ### Related Links 
 
-* [Enable-HPOVLdapLocalLogin ](enable-hpovldaplocallogin.md#hpe-oneview-4-10-library)
+* [Disable-HPOVLdapLocalLogin](disable-hpovldaplocallogin.md#hpe-oneview-4-10-library)
 

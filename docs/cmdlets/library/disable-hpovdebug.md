@@ -31,7 +31,7 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If
 | Aliases | Appliance |
 | :--- | :--- |
 | Required? | false |
-| Position? | 1 |
+| Position? | named |
 | Default value | \(${Global:ConnectedSessions} \| ? Default\) |
 | Accept pipeline input? | true \(ByPropertyName\) |
 | Accept wildcard characters?    | False |
@@ -105,7 +105,7 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If
 | Aliases | Appliance |
 | :--- | :--- |
 | Required? | false |
-| Position? | 1 |
+| Position? | named |
 | Default value | \(${Global:ConnectedSessions} \| ? Default\) |
 | Accept pipeline input? | true \(ByPropertyName\) |
 | Accept wildcard characters?    | False |
@@ -179,7 +179,7 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If
 | Aliases | Appliance |
 | :--- | :--- |
 | Required? | false |
-| Position? | 1 |
+| Position? | named |
 | Default value | \(${Global:ConnectedSessions} \| ? Default\) |
 | Accept pipeline input? | true \(ByPropertyName\) |
 | Accept wildcard characters?    | False |
