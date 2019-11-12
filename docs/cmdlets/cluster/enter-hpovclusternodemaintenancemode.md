@@ -1,0 +1,335 @@
+---
+description: Request a cluster node member to enter maintenance mode.
+---
+
+# Enter-HPOVClusterNodeMaintenanceMode
+
+## HPE OneView 5.00 Library
+
+###  Syntax
+
+```text
+Enter-HPOVClusterNodeMaintenanceMode [-InputObject] <Object> [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Object>] [-WhatIf] <SwitchParameter> [-Confirm] <SwitchParameter> [<CommonParameters>]
+```
+
+### Description
+
+A cluster in an active state runs a shared workload, like virtual machines within a Hypervisor Cluster. When you place a cluster node into maintenance mode, the workload running on the cluster member is migrated to other available cluster member. While in maintenance state the server administrator can perform updates on the host software, server hardware, or both, preventing business downtime.
+
+After the maintenance operation on the cluster member completes, you must release it from maintenance mode to resume hosting the shared workload.
+
+{% hint style="info" %}
+Privileges: Infrastructure administrator, Server administrator, Server Profile administrator, Server Profile architect, or Server Profile operator
+{% endhint %}
+
+### Parameters
+
+#### -ApplianceConnection &lt;Object&gt; 
+
+Specify one or more \[HPOneView.Appliance.Connection\] object\(s\) or Name property value\(s\).
+
+Default Value: ${Global:ConnectedSessions} \| ? Default
+
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | named |
+| Default value | \(${Global:ConnectedSessions} \| ? Default\) |
+| Accept pipeline input? | true \(ByPropertyName\) |
+| Accept wildcard characters?    | False |
+
+#### -Async &lt;SwitchParameter&gt; 
+
+Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | named |
+| Default value | False |
+| Accept pipeline input? | false |
+| Accept wildcard characters?    | False |
+
+#### -Confirm &lt;SwitchParameter&gt; 
+
+Use to override the confirmation prompt.
+
+| Aliases | cf |
+| :--- | :--- |
+| Required? | True |
+| Position? | named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters?    | False |
+
+#### -InputObject &lt;Object&gt; 
+
+The cluster member from Get-HPOVClusterNode
+
+| Aliases | Name |
+| :--- | :--- |
+| Required? | True |
+| Position? | named |
+| Default value |  |
+| Accept pipeline input? | true \(ByValue\) |
+| Accept wildcard characters?    | False |
+
+-WhatIf &lt;SwitchParameter&gt;
+
+| Aliases | wi |
+| :--- | :--- |
+| Required? | True |
+| Position? | named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters?    | False |
+
+&lt;CommonParameters&gt;
+
+This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer, PipelineVariable, and OutVariable. For more information, see about\_CommonParameters \([http://go.microsoft.com/fwlink/?LinkID=113216](http://go.microsoft.com/fwlink/?LinkID=113216)\)
+
+### Input Types
+
+_**HPOneView.Cluster.ClusterNode \[System.Management.Automation.PSCustomObject\]**_
+
+Cluster node member from Get-HPOVClusterNode.
+
+### Return Values
+
+_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+
+Asyncronous task resource to monitor.
+
+### Examples
+
+```text
+ -------------------------- EXAMPLE 1 --------------------------
+Get-HPOVClusterNode -Name Cluster1-Node1 | Enter-HPOVClusterNodeMaintenanceMode
+```
+
+Request to put the specific node into maintenance mode. 
+
+### Related Links 
+
+* [Exit-HPOVClusterNodeMaintenanceMode](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Exit-HPOVClusterNodeMaintenanceMode) 
+
+## HPE OneView 4.20 Library
+
+###  Syntax
+
+```text
+Enter-HPOVClusterNodeMaintenanceMode [-InputObject] <Object> [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Object>] [-WhatIf] <SwitchParameter> [-Confirm] <SwitchParameter> [<CommonParameters>]
+```
+
+### Description
+
+A cluster in an active state runs a shared workload, like virtual machines within a Hypervisor Cluster. When you place a cluster node into maintenance mode, the workload running on the cluster member is migrated to other available cluster member. While in maintenance state the server administrator can perform updates on the host software, server hardware, or both, preventing business downtime.
+
+After the maintenance operation on the cluster member completes, you must release it from maintenance mode to resume hosting the shared workload.
+
+{% hint style="info" %}
+Privileges: Infrastructure administrator, Server administrator, Server Profile administrator, Server Profile architect, or Server Profile operator
+{% endhint %}
+
+### Parameters
+
+#### -ApplianceConnection &lt;Object&gt; 
+
+Specify one or more \[HPOneView.Appliance.Connection\] object\(s\) or Name property value\(s\).
+
+Default Value: ${Global:ConnectedSessions} \| ? Default
+
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | named |
+| Default value | \(${Global:ConnectedSessions} \| ? Default\) |
+| Accept pipeline input? | true \(ByPropertyName\) |
+| Accept wildcard characters?    | False |
+
+#### -Async &lt;SwitchParameter&gt; 
+
+Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | named |
+| Default value | False |
+| Accept pipeline input? | false |
+| Accept wildcard characters?    | False |
+
+#### -Confirm &lt;SwitchParameter&gt; 
+
+Use to override the confirmation prompt.
+
+| Aliases | cf |
+| :--- | :--- |
+| Required? | True |
+| Position? | named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters?    | False |
+
+#### -InputObject &lt;Object&gt; 
+
+The cluster member from Get-HPOVClusterNode
+
+| Aliases | Name |
+| :--- | :--- |
+| Required? | True |
+| Position? | named |
+| Default value |  |
+| Accept pipeline input? | true \(ByValue\) |
+| Accept wildcard characters?    | False |
+
+-WhatIf &lt;SwitchParameter&gt;
+
+| Aliases | wi |
+| :--- | :--- |
+| Required? | True |
+| Position? | named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters?    | False |
+
+&lt;CommonParameters&gt;
+
+This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer, PipelineVariable, and OutVariable. For more information, see about\_CommonParameters \([http://go.microsoft.com/fwlink/?LinkID=113216](http://go.microsoft.com/fwlink/?LinkID=113216)\)
+
+### Input Types
+
+_**HPOneView.Cluster.ClusterNode \[System.Management.Automation.PSCustomObject\]**_
+
+Cluster node member from Get-HPOVClusterNode.
+
+### Return Values
+
+_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+
+Asyncronous task resource to monitor.
+
+### Examples
+
+```text
+ -------------------------- EXAMPLE 1 --------------------------
+Get-HPOVClusterNode -Name Cluster1-Node1 | Enter-HPOVClusterNodeMaintenanceMode
+```
+
+Request to put the specific node into maintenance mode. 
+
+### Related Links 
+
+* [Exit-HPOVClusterNodeMaintenanceMode](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Exit-HPOVClusterNodeMaintenanceMode) 
+
+## HPE OneView 4.10 Library
+
+###  Syntax
+
+```text
+Enter-HPOVClusterNodeMaintenanceMode [-InputObject] <Object> [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Object>] [-WhatIf] <SwitchParameter> [-Confirm] <SwitchParameter> [<CommonParameters>]
+```
+
+### Description
+
+A cluster in an active state runs a shared workload, like virtual machines within a Hypervisor Cluster. When you place a cluster node into maintenance mode, the workload running on the cluster member is migrated to other available cluster member. While in maintenance state the server administrator can perform updates on the host software, server hardware, or both, preventing business downtime.
+
+After the maintenance operation on the cluster member completes, you must release it from maintenance mode to resume hosting the shared workload.
+
+{% hint style="info" %}
+Privileges: Infrastructure administrator, Server administrator, Server Profile administrator, Server Profile architect, or Server Profile operator
+{% endhint %}
+
+### Parameters
+
+#### -ApplianceConnection &lt;Object&gt; 
+
+Specify one or more \[HPOneView.Appliance.Connection\] object\(s\) or Name property value\(s\).
+
+Default Value: ${Global:ConnectedSessions} \| ? Default
+
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | named |
+| Default value | \(${Global:ConnectedSessions} \| ? Default\) |
+| Accept pipeline input? | true \(ByPropertyName\) |
+| Accept wildcard characters?    | False |
+
+#### -Async &lt;SwitchParameter&gt; 
+
+Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | named |
+| Default value | False |
+| Accept pipeline input? | false |
+| Accept wildcard characters?    | False |
+
+#### -Confirm &lt;SwitchParameter&gt; 
+
+Use to override the confirmation prompt.
+
+| Aliases | cf |
+| :--- | :--- |
+| Required? | True |
+| Position? | named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters?    | False |
+
+#### -InputObject &lt;Object&gt; 
+
+The cluster member from Get-HPOVClusterNode
+
+| Aliases | Name |
+| :--- | :--- |
+| Required? | True |
+| Position? | named |
+| Default value |  |
+| Accept pipeline input? | true \(ByValue\) |
+| Accept wildcard characters?    | False |
+
+-WhatIf &lt;SwitchParameter&gt;
+
+| Aliases | wi |
+| :--- | :--- |
+| Required? | True |
+| Position? | named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters?    | False |
+
+&lt;CommonParameters&gt;
+
+This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer, PipelineVariable, and OutVariable. For more information, see about\_CommonParameters \([http://go.microsoft.com/fwlink/?LinkID=113216](http://go.microsoft.com/fwlink/?LinkID=113216)\)
+
+### Input Types
+
+_**HPOneView.Cluster.ClusterNode \[System.Management.Automation.PSCustomObject\]**_
+
+Cluster node member from Get-HPOVClusterNode.
+
+### Return Values
+
+_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+
+Asyncronous task resource to monitor.
+
+### Examples
+
+```text
+ -------------------------- EXAMPLE 1 --------------------------
+Get-HPOVClusterNode -Name Cluster1-Node1 | Enter-HPOVClusterNodeMaintenanceMode
+```
+
+Request to put the specific node into maintenance mode. 
+
+### Related Links 
+
+* [Exit-HPOVClusterNodeMaintenanceMode](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Exit-HPOVClusterNodeMaintenanceMode) 
+
+
+

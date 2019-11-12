@@ -127,7 +127,7 @@ Enable port monitoring for the specific logical interconnect.
 ### Related Links
 
 * [Disable-HPOVLogicalInterconnectPortMonitoring ](disable-hpovlogicalinterconnectportmonitoring.md#hpe-oneview-5-00-library)
-* [Get-HPOVLogicalInterconnectPortMonitoring](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Get-HPOVLogicalInterconnectPortMonitoring) 
+* [Get-HPOVLogicalInterconnectPortMonitoring ](get-hpovlogicalinterconnectportmonitoring.md#hpe-oneview-5-00-library)
 
 ## HPE OneView 4.20 Library
 
@@ -251,8 +251,8 @@ Enable port monitoring for the specific logical interconnect.
 
 ### Related Links
 
-* [Disable-HPOVLogicalInterconnectPortMonitoring ](disable-hpovlogicalinterconnectportmonitoring.md#hpe-oneview-4-20-library)
-* [Get-HPOVLogicalInterconnectPortMonitoring](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Get-HPOVLogicalInterconnectPortMonitoring) 
+* [Disable-HPOVLogicalInterconnectPortMonitoring](disable-hpovlogicalinterconnectportmonitoring.md#hpe-oneview-4-20-library) 
+* [Get-HPOVLogicalInterconnectPortMonitoring ](get-hpovlogicalinterconnectportmonitoring.md#hpe-oneview-4-20-library)
 
 ## HPE OneView 4.10 Library
 
@@ -377,5 +377,5 @@ Enable port monitoring for the specific logical interconnect.
 ### Related Links
 
 * [Disable-HPOVLogicalInterconnectPortMonitoring ](disable-hpovlogicalinterconnectportmonitoring.md#hpe-oneview-4-10-library)
-* [Get-HPOVLogicalInterconnectPortMonitoring](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Get-HPOVLogicalInterconnectPortMonitoring) 
+* [Get-HPOVLogicalInterconnectPortMonitoring ](get-hpovlogicalinterconnectportmonitoring.md#hpe-oneview-4-10-library)
 
