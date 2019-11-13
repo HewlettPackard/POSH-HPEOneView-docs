@@ -1,15 +1,15 @@
 ---
-description: Request a cluster node member to enter maintenance mode.
+description: Request a cluster node member to exit maintenance mode.
 ---
 
-# Enter-HPOVClusterNodeMaintenanceMode
+# Exit-HPOVClusterNodeMaintenanceMode
 
 ## HPE OneView 5.00 Library
 
 ### Syntax
 
 ```text
-Enter-HPOVClusterNodeMaintenanceMode [-InputObject] <Object> [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Object>] [[-WhatIf] <SwitchParameter>] [[-Confirm] <SwitchParameter>] [<CommonParameters>]
+Exit-HPOVClusterNodeMaintenanceMode [-InputObject] <Object> [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Object>] [[-WhatIf] <SwitchParameter>] [[-Confirm] <SwitchParameter>] [<CommonParameters>]
 ```
 
 ### Description
@@ -56,7 +56,7 @@ Use to override the confirmation prompt.
 
 | Aliases | cf |
 | :--- | :--- |
-| Required? | False |
+| Required? | false |
 | Position? | named |
 | Default value |  |
 | Accept pipeline input? | false |
@@ -78,7 +78,7 @@ The cluster member from Get-HPOVClusterNode
 
 | Aliases | wi |
 | :--- | :--- |
-| Required? | False |
+| Required? | false |
 | Position? | named |
 | Default value |  |
 | Accept pipeline input? | false |
@@ -98,27 +98,27 @@ Cluster node member from Get-HPOVClusterNode.
 
 _**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
-Asyncronous task resource to monitor.
+Asynchronous task resource to monitor.
 
 ### Examples
 
 ```text
  -------------------------- EXAMPLE 1 --------------------------
-Get-HPOVClusterNode -Name Cluster1-Node1 | Enter-HPOVClusterNodeMaintenanceMode
+Get-HPOVClusterNode -Name Cluster1-Node1 | Exit-HPOVClusterNodeMaintenanceMode
 ```
 
-Request to put the specific node into maintenance mode. 
+Request to the specific node exit maintenance mode. \#
 
 ### Related Links 
 
-* [Exit-HPOVClusterNodeMaintenanceMode ](exit-hpovclusternodemaintenancemode.md#hpe-oneview-5-00-library)
+* [Enter-HPOVClusterNodeMaintenanceMode ](enter-hpovclusternodemaintenancemode.md#hpe-oneview-5-00-library)
 
 ## HPE OneView 4.20 Library
 
 ### Syntax
 
 ```text
-Enter-HPOVClusterNodeMaintenanceMode [-InputObject] <Object> [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Object>] [[-WhatIf] <SwitchParameter>] [[-Confirm] <SwitchParameter>] [<CommonParameters>]
+Exit-HPOVClusterNodeMaintenanceMode [-InputObject] <Object> [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Object>] [[-WhatIf] <SwitchParameter>] [[-Confirm] <SwitchParameter>] [<CommonParameters>]
 ```
 
 ### Description
@@ -165,7 +165,7 @@ Use to override the confirmation prompt.
 
 | Aliases | cf |
 | :--- | :--- |
-| Required? | False |
+| Required? | false |
 | Position? | named |
 | Default value |  |
 | Accept pipeline input? | false |
@@ -187,7 +187,7 @@ The cluster member from Get-HPOVClusterNode
 
 | Aliases | wi |
 | :--- | :--- |
-| Required? | False |
+| Required? | false |
 | Position? | named |
 | Default value |  |
 | Accept pipeline input? | false |
@@ -207,27 +207,27 @@ Cluster node member from Get-HPOVClusterNode.
 
 _**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
-Asyncronous task resource to monitor.
+Asynchronous task resource to monitor.
 
 ### Examples
 
 ```text
  -------------------------- EXAMPLE 1 --------------------------
-Get-HPOVClusterNode -Name Cluster1-Node1 | Enter-HPOVClusterNodeMaintenanceMode
+Get-HPOVClusterNode -Name Cluster1-Node1 | Exit-HPOVClusterNodeMaintenanceMode
 ```
 
-Request to put the specific node into maintenance mode. 
+Request to the specific node exit maintenance mode. \#
 
 ### Related Links 
 
-* [Exit-HPOVClusterNodeMaintenanceMode ](exit-hpovclusternodemaintenancemode.md#hpe-oneview-4-20-library)
+* [Enter-HPOVClusterNodeMaintenanceMode ](enter-hpovclusternodemaintenancemode.md#hpe-oneview-4-20-library)
 
 ## HPE OneView 4.10 Library
 
 ### Syntax
 
 ```text
-Enter-HPOVClusterNodeMaintenanceMode [-InputObject] <Object> [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Object>] [[-WhatIf] <SwitchParameter>] [[-Confirm] <SwitchParameter>] [<CommonParameters>]
+Exit-HPOVClusterNodeMaintenanceMode [-InputObject] <Object> [[-Async] <SwitchParameter>] [[-ApplianceConnection] <Object>] [[-WhatIf] <SwitchParameter>] [[-Confirm] <SwitchParameter>] [<CommonParameters>]
 ```
 
 ### Description
@@ -274,7 +274,7 @@ Use to override the confirmation prompt.
 
 | Aliases | cf |
 | :--- | :--- |
-| Required? | False |
+| Required? | false |
 | Position? | named |
 | Default value |  |
 | Accept pipeline input? | false |
@@ -296,7 +296,7 @@ The cluster member from Get-HPOVClusterNode
 
 | Aliases | wi |
 | :--- | :--- |
-| Required? | False |
+| Required? | false |
 | Position? | named |
 | Default value |  |
 | Accept pipeline input? | false |
@@ -316,18 +316,18 @@ Cluster node member from Get-HPOVClusterNode.
 
 _**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
-Asyncronous task resource to monitor.
+Asynchronous task resource to monitor.
 
 ### Examples
 
 ```text
  -------------------------- EXAMPLE 1 --------------------------
-Get-HPOVClusterNode -Name Cluster1-Node1 | Enter-HPOVClusterNodeMaintenanceMode
+Get-HPOVClusterNode -Name Cluster1-Node1 | Exit-HPOVClusterNodeMaintenanceMode
 ```
 
-Request to put the specific node into maintenance mode. 
+Request to the specific node exit maintenance mode. \#
 
 ### Related Links 
 
-* [Exit-HPOVClusterNodeMaintenanceMode ](exit-hpovclusternodemaintenancemode.md#hpe-oneview-4-10-library)
+* [Enter-HPOVClusterNodeMaintenanceMode ](enter-hpovclusternodemaintenancemode.md#hpe-oneview-4-10-library)
 
