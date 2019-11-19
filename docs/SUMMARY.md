@@ -44,7 +44,6 @@
     * [Get-HPOVAlert](cmdlets/appliance/get-hpovalert.md)
     * [Get-HPOVApplianceAuditLogForwarding](cmdlets/appliance/get-hpovapplianceauditlogforwarding.md)
     * [Get-HPOVApplianceAvailableSecurityMode](cmdlets/appliance/get-hpovapplianceavailablesecuritymode.md)
-    * [Get-HPOVApplianceAvailableSecurityMode](cmdlets/appliance/get-hpovapplianceavailablesecuritymode-1.md)
     * [Get-HPOVApplianceCertificateStatus](cmdlets/appliance/get-hpovappliancecertificatestatus.md)
     * [Get-HPOVApplianceCurrentSecurityMode](cmdlets/appliance/get-hpovappliancecurrentsecuritymode.md)
     * [Get-HPOVApplianceDateTime](cmdlets/appliance/get-hpovappliancedatetime.md)
