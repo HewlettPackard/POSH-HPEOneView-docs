@@ -46,6 +46,8 @@
     * [Get-HPOVApplianceSshAccess](cmdlets/appliance/get-hpovappliancesshaccess.md)
     * [Get-HPOVLabel](cmdlets/appliance/get-hpovlabel.md)
     * [Get-HPOVTask](cmdlets/appliance/get-hpovtask.md)
+    * [New-HPOVBackup](cmdlets/appliance/new-hpovbackup.md)
+    * [New-HPOVRestore](cmdlets/appliance/new-hpovrestore.md)
     * [Set-HPOVAlert](cmdlets/appliance/set-hpovalert.md)
     * [Wait-HPOVTaskComplete](cmdlets/appliance/wait-hpovtaskcomplete.md)
     * [Wait-HPOVTaskStart](cmdlets/appliance/wait-hpovtaskstart.md)
