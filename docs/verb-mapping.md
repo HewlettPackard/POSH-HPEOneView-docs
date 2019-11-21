@@ -18,5 +18,3 @@ The following table shows the available HPE OneView PowerShell Verbs and which m
 | PowerOn | Start | Change the power state of a powered off resource to on. |
 | PowerOff | Stop | Change the power state of a powered on resource to off. |
 
-
-

@@ -1,14 +1,12 @@
+---
+description: Get the current SSH console access state.
+---
+
 # Get-HPOVApplianceSshAccess
 
- [Library Version 5.00]() [Library Version 4.20]() [Library Version 4.10]() 
+## HPE OneView 5.00 Library
 
-### HPE OneView 5.00 Library
-
-## Get-HPOVApplianceSshAccess
-
- Get the current SSH console access state.
-
-### Synatx
+### Syntax
 
 ```text
 Get-HPOVApplianceSshAccess [[-ApplianceConnection] <Object>] [<CommonParameters>]
@@ -16,13 +14,19 @@ Get-HPOVApplianceSshAccess [[-ApplianceConnection] <Object>] [<CommonParameters>
 
 ### Description
 
- You can configure the appliance to allow or deny remote access to the HPE OneView appliance using SSH. This Cmdlet will return the current SSH console access state on the appliance.
+HPE OneView supports Secure Shell \(SSH\) to remotely access the appliance to perform maintenance and recovery operations. Without SSH access, you must access the virtual machine system console. To avoid requiring a console access, SSH access is enabled by default. However, remote access to maintenance and recovery operations is considered a security risk by some users. Therefore, HPE OneView provides the option to disable remote access to the appliance via SSH.
 
-Privileges: Infrastructure administrator
+Use this Cmdlet to enable appliance SSH access.
+
+{% hint style="info" %}
+Minimum required privileges: Read only
+{% endhint %}
 
 ### Parameters
 
--ApplianceConnection &lt;Object&gt; Specify one or more \[HPOneView.Appliance.Connection\] object\(s\) or Name property value\(s\).
+#### -ApplianceConnection &lt;Object&gt; 
+
+Specify one or more \[HPOneView.Appliance.Connection\] object\(s\) or Name property value\(s\).
 
 Default Value: ${Global:ConnectedSessions} \| ? Default
 
@@ -55,23 +59,36 @@ The configured state of the appliance SSH console.
 Get-HPOVApplianceSshAccess
 ```
 
- Get the current state of the appliance SSH console. \#\#\# Related Links \* \[Disable-HPOVApplianceSshAccess\]\(https://github.com/HewlettPackard/POSH-HPOneView/wiki/Disable-HPOVApplianceSshAccess\) \* \[Enable-HPOVApplianceSshAccess\]\(https://github.com/HewlettPackard/POSH-HPOneView/wiki/Enable-HPOVApplianceSshAccess\) \*\*\*[Top]() \#\#\# HPE OneView 4.20 Library \#\# Get-HPOVApplianceSshAccess
+Get the current state of the appliance SSH console. 
 
- Get the current SSH console access state. \#\#\# Synatx
+### Related Links 
 
-Get-HPOVApplianceSshAccess \[\[-ApplianceConnection\] &lt;Object&gt;\] \[&lt;CommonParameters&gt;\]
+* [Disable-HPOVApplianceSshAccess](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Disable-HPOVApplianceSshAccess) 
+* [Enable-HPOVApplianceSshAccess](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Enable-HPOVApplianceSshAccess) 
+
+## HPE OneView 4.20 Library
+
+### Syntax
+
+```text
+Get-HPOVApplianceSshAccess [[-ApplianceConnection] <Object>] [<CommonParameters>]
+```
 
 ### Description
 
- You can configure the appliance to allow or deny remote access to the HPE OneView appliance using SSH. This Cmdlet will return the current SSH console access state on the appliance.
+HPE OneView supports Secure Shell \(SSH\) to remotely access the appliance to perform maintenance and recovery operations. Without SSH access, you must access the virtual machine system console. To avoid requiring a console access, SSH access is enabled by default. However, remote access to maintenance and recovery operations is considered a security risk by some users. Therefore, HPE OneView provides the option to disable remote access to the appliance via SSH.
 
-Privileges: Infrastructure administrator
+Use this Cmdlet to enable appliance SSH access.
+
+{% hint style="info" %}
+Minimum required privileges: Read only
+{% endhint %}
 
 ### Parameters
 
--ApplianceConnection &lt;Object&gt; Aliases \[-Appliance\]
+#### -ApplianceConnection &lt;Object&gt; 
 
-Specify one or more HPOneView.Appliance.Connection object\(s\) or Name property value\(s\).
+Specify one or more \[HPOneView.Appliance.Connection\] object\(s\) or Name property value\(s\).
 
 Default Value: ${Global:ConnectedSessions} \| ? Default
 
@@ -104,23 +121,36 @@ The configured state of the appliance SSH console.
 Get-HPOVApplianceSshAccess
 ```
 
- Get the current state of the appliance SSH console. \#\#\# Related Links \* \[Disable-HPOVApplianceSshAccess\]\(https://github.com/HewlettPackard/POSH-HPOneView/wiki/Disable-HPOVApplianceSshAccess\) \* \[Enable-HPOVApplianceSshAccess\]\(https://github.com/HewlettPackard/POSH-HPOneView/wiki/Enable-HPOVApplianceSshAccess\) \*\*\*[Top]() \#\#\# HPE OneView 4.10 Library \#\# Get-HPOVApplianceSshAccess
+Get the current state of the appliance SSH console. 
 
- Get the current SSH console access state. \#\#\# Synatx
+### Related Links 
 
-Get-HPOVApplianceSshAccess \[\[-ApplianceConnection\] &lt;Object&gt;\] \[&lt;CommonParameters&gt;\]
+* [Disable-HPOVApplianceSshAccess](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Disable-HPOVApplianceSshAccess) 
+* [Enable-HPOVApplianceSshAccess](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Enable-HPOVApplianceSshAccess) 
+
+## HPE OneView 4.10 Library
+
+### Syntax
+
+```text
+Get-HPOVApplianceSshAccess [[-ApplianceConnection] <Object>] [<CommonParameters>]
+```
 
 ### Description
 
- You can configure the appliance to allow or deny remote access to the HPE OneView appliance using SSH. This Cmdlet will return the current SSH console access state on the appliance.
+HPE OneView supports Secure Shell \(SSH\) to remotely access the appliance to perform maintenance and recovery operations. Without SSH access, you must access the virtual machine system console. To avoid requiring a console access, SSH access is enabled by default. However, remote access to maintenance and recovery operations is considered a security risk by some users. Therefore, HPE OneView provides the option to disable remote access to the appliance via SSH.
 
-Privileges: Infrastructure administrator
+Use this Cmdlet to enable appliance SSH access.
+
+{% hint style="info" %}
+Minimum required privileges: Read only
+{% endhint %}
 
 ### Parameters
 
--ApplianceConnection &lt;Object&gt; Aliases \[-Appliance\]
+#### -ApplianceConnection &lt;Object&gt; 
 
-Specify one or more HPOneView.Appliance.Connection object\(s\) or Name property value\(s\).
+Specify one or more \[HPOneView.Appliance.Connection\] object\(s\) or Name property value\(s\).
 
 Default Value: ${Global:ConnectedSessions} \| ? Default
 
@@ -148,14 +178,17 @@ The configured state of the appliance SSH console.
 
 ### Examples
 
+```text
+ -------------------------- EXAMPLE 1 --------------------------
+Get-HPOVApplianceSshAccess
 ```
- -------------------------- EXAMPLE 1 -------------------------- Get-HPOVApplianceSshAccess 
-```
 
-### Related Links
+Get the current state of the appliance SSH console. 
 
-* [Disable-HPOVApplianceSshAccess](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Disable-HPOVApplianceSshAccess)
-* [Enable-HPOVApplianceSshAccess](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Enable-HPOVApplianceSshAccess)
+### Related Links 
 
-[Top]()
+* [Disable-HPOVApplianceSshAccess](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Disable-HPOVApplianceSshAccess) 
+* [Enable-HPOVApplianceSshAccess](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Enable-HPOVApplianceSshAccess) 
+
+
 
