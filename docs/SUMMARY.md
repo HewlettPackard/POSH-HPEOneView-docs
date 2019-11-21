@@ -57,6 +57,10 @@
     * [Get-HPOVApplianceTrapDestination](cmdlets/appliance/get-hpovappliancetrapdestination.md)
     * [Get-HPOVApplianceTrustedCertificate](cmdlets/appliance/get-hpovappliancetrustedcertificate.md)
     * [Get-HPOVApplianceTwoFactorAuthentication](cmdlets/appliance/get-hpovappliancetwofactorauthentication.md)
+    * [Get-HPOVAuditLog](cmdlets/appliance/get-hpovauditlog.md)
+    * [Get-HPOVAuditLogArchive](cmdlets/appliance/get-hpovauditlogarchive.md)
+    * [Get-HPOVAutomaticBackupConfig](cmdlets/appliance/get-hpovautomaticbackupconfig.md)
+    * [Get-HPOVBackup](cmdlets/appliance/get-hpovbackup.md)
     * [Get-HPOVLabel](cmdlets/appliance/get-hpovlabel.md)
     * [Get-HPOVTask](cmdlets/appliance/get-hpovtask.md)
     * [New-HPOVBackup](cmdlets/appliance/new-hpovbackup.md)
@@ -103,6 +107,7 @@
     * [Add-HPOVStorageSystem](cmdlets/storage/add-hpovstoragesystem.md)
     * [Add-HPOVStorageVolume](cmdlets/storage/add-hpovstoragevolume.md)
     * [ConvertTo-HPOVStorageVolume](cmdlets/storage/convertto-hpovstoragevolume.md)
+    * [Get-HPOVAvailableDriveType](cmdlets/storage/get-hpovavailabledrivetype.md)
 * [Getting Help](getting-help.md)
 
 ## About
