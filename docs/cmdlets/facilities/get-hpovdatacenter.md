@@ -1,14 +1,12 @@
+---
+description: Retrieve a defined DataCenter.
+---
+
 # Get-HPOVDataCenter
 
- [Library Version 5.00]() [Library Version 4.20]() [Library Version 4.10]() 
+## HPE OneView 5.00 Library
 
-### HPE OneView 5.00 Library
-
-## Get-HPOVDataCenter
-
- Retrieve a defined DataCenter.
-
-### Synatx
+###  Syntax
 
 ```text
 Get-HPOVDataCenter [[-Name] <String>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
@@ -16,13 +14,19 @@ Get-HPOVDataCenter [[-Name] <String>] [[-ApplianceConnection] <Object>] [<Common
 
 ### Description
 
- A data center represents a physically contiguous area in which racks containing IT equipment are located. For example, you have IT equipment in two rooms or on separate floors. You could create a data center for each of these areas. Each server, enclosure, or power distribution device in your data center can report its power requirements, but it can be difficult to understand the power and cooling requirements for your data center as a whole. The appliance enables you to bring power and cooling management of your servers, enclosures, and power delivery devices together in a single management system. When you initialize the appliance for the first time, it creates a data center named Datacenter 1. The appliance provides this data center as a place to visualize your racks. You can rename or edit this data center to match the values and layout of your data center, you can use it as the basis for a planned data center model, or you can delete this data center without adverse effects.
+A data center represents a physically contiguous area in which racks containing IT equipment are located. For example, you have IT equipment in two rooms or on separate floors. You could create a data center for each of these areas. Each server, enclosure, or power distribution device in your data center can report its power requirements, but it can be difficult to understand the power and cooling requirements for your data center as a whole. The appliance enables you to bring power and cooling management of your servers, enclosures, and power delivery devices together in a single management system. When you initialize the appliance for the first time, it creates a data center named Datacenter 1. The appliance provides this data center as a place to visualize your racks. You can rename or edit this data center to match the values and layout of your data center, you can use it as the basis for a planned data center model, or you can delete this data center without adverse effects.
 
 This Cmdlet will retrieve all or a specific DataCenter resource object. If Remote Support has been enabled on the appliance, the DataCenter object will contain a RemoteSupportLocation property that contains the site location \(if different from the Default DataCenter\), and both the Primary and Secondary contacts.
 
+{% hint style="info" %}
+Minimum required privileges: Read only
+{% endhint %}
+
 ### Parameters
 
--ApplianceConnection &lt;Object&gt; Specify one or more \[HPOneView.Appliance.Connection\] object\(s\) or Name property value\(s\).
+#### -ApplianceConnection &lt;Object&gt; 
+
+Specify one or more \[HPOneView.Appliance.Connection\] object\(s\) or Name property value\(s\).
 
 Default Value: ${Global:ConnectedSessions} \| ? Default
 
@@ -34,7 +38,9 @@ Default Value: ${Global:ConnectedSessions} \| ? Default
 | Accept pipeline input? | false |
 | Accept wildcard characters?    | False |
 
--Name &lt;String&gt; DataCenter name. Supports wildcard \(\*\) character.
+#### -Name &lt;String&gt; 
+
+DataCenter name. Supports wildcard \(\*\) character.
 
 | Aliases | None |
 | :--- | :--- |
@@ -65,37 +71,52 @@ A DataCenter resource object.
 Get-HPOVDataCenter
 ```
 
- Retrieve all defined DataCenters on the appliance.
+Retrieve all defined DataCenters on the appliance.
 
 ```text
  -------------------------- EXAMPLE 2 --------------------------
 Get-HPOVDataCenter -Name DC*
 ```
 
- Locate all DataCenter objects that begin with "DC".
+Locate all DataCenter objects that begin with "DC".
 
 ```text
  -------------------------- EXAMPLE 3 --------------------------
 Get-HPOVDataCenter | Select -ExpandProperty RemoteSupportLocation
 ```
 
- Retrieve the Remote Support Location property from the found DataCenter resource objects. \#\#\# Related Links \* \[New-HPOVDataCenter\]\(https://github.com/HewlettPackard/POSH-HPOneView/wiki/New-HPOVDataCenter\) \* \[Remove-HPOVDataCenter\]\(https://github.com/HewlettPackard/POSH-HPOneView/wiki/Remove-HPOVDataCenter\) \* \[Set-HPOVDataCenter\]\(https://github.com/HewlettPackard/POSH-HPOneView/wiki/Set-HPOVDataCenter\) \* \[Set-HPOVDataCenterRemoteSupport\]\(https://github.com/HewlettPackard/POSH-HPOneView/wiki/Set-HPOVDataCenterRemoteSupport\) \*\*\*[Top]() \#\#\# HPE OneView 4.20 Library \#\# Get-HPOVDataCenter
+Retrieve the Remote Support Location property from the found DataCenter resource objects. 
 
- Retreive a defined DataCenter. \#\#\# Synatx
+### Related Links 
 
-Get-HPOVDataCenter \[\[-Name\] &lt;String&gt;\] \[\[-ApplianceConnection\] &lt;Object&gt;\] \[&lt;CommonParameters&gt;\]
+* [New-HPOVDataCenter](https://github.com/HewlettPackard/POSH-HPOneView/wiki/New-HPOVDataCenter) 
+* [Remove-HPOVDataCenter](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Remove-HPOVDataCenter) 
+* [Set-HPOVDataCenter](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Set-HPOVDataCenter) 
+* [Set-HPOVDataCenterRemoteSupport](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Set-HPOVDataCenterRemoteSupport) 
+
+## HPE OneView 4.20 Library
+
+###  Syntax
+
+```text
+Get-HPOVDataCenter [[-Name] <String>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
+```
 
 ### Description
 
- A data center represents a physically contiguous area in which racks containing IT equipment are located. For example, you have IT equipment in two rooms or on separate floors. You could create a data center for each of these areas. Each server, enclosure, or power distribution device in your data center can report its power requirements, but it can be difficult to understand the power and cooling requirements for your data center as a whole. The appliance enables you to bring power and cooling management of your servers, enclosures, and power delivery devices together in a single management system. When you initialize the appliance for the first time, it creates a data center named Datacenter 1. The appliance provides this data center as a place to visualize your racks. You can rename or edit this data center to match the values and layout of your data center, you can use it as the basis for a planned data center model, or you can delete this data center without adverse effects.
+A data center represents a physically contiguous area in which racks containing IT equipment are located. For example, you have IT equipment in two rooms or on separate floors. You could create a data center for each of these areas. Each server, enclosure, or power distribution device in your data center can report its power requirements, but it can be difficult to understand the power and cooling requirements for your data center as a whole. The appliance enables you to bring power and cooling management of your servers, enclosures, and power delivery devices together in a single management system. When you initialize the appliance for the first time, it creates a data center named Datacenter 1. The appliance provides this data center as a place to visualize your racks. You can rename or edit this data center to match the values and layout of your data center, you can use it as the basis for a planned data center model, or you can delete this data center without adverse effects.
 
 This Cmdlet will retrieve all or a specific DataCenter resource object. If Remote Support has been enabled on the appliance, the DataCenter object will contain a RemoteSupportLocation property that contains the site location \(if different from the Default DataCenter\), and both the Primary and Secondary contacts.
 
+{% hint style="info" %}
+Minimum required privileges: Read only
+{% endhint %}
+
 ### Parameters
 
--ApplianceConnection &lt;Object&gt; Aliases \[-Appliance\]
+#### -ApplianceConnection &lt;Object&gt; 
 
-Specify one or more HPOneView.Appliance.Connection object\(s\) or Name property value\(s\).
+Specify one or more \[HPOneView.Appliance.Connection\] object\(s\) or Name property value\(s\).
 
 Default Value: ${Global:ConnectedSessions} \| ? Default
 
@@ -107,7 +128,9 @@ Default Value: ${Global:ConnectedSessions} \| ? Default
 | Accept pipeline input? | false |
 | Accept wildcard characters?    | False |
 
--Name &lt;String&gt; DataCenter name. Supports wildcard \(\*\) character.
+#### -Name &lt;String&gt; 
+
+DataCenter name. Supports wildcard \(\*\) character.
 
 | Aliases | None |
 | :--- | :--- |
@@ -138,37 +161,52 @@ A DataCenter resource object.
 Get-HPOVDataCenter
 ```
 
- Retrieve all defined DataCenters on the appliance.
+Retrieve all defined DataCenters on the appliance.
 
 ```text
  -------------------------- EXAMPLE 2 --------------------------
 Get-HPOVDataCenter -Name DC*
 ```
 
- Locate all DataCenter objects that begin with "DC".
+Locate all DataCenter objects that begin with "DC".
 
 ```text
  -------------------------- EXAMPLE 3 --------------------------
 Get-HPOVDataCenter | Select -ExpandProperty RemoteSupportLocation
 ```
 
- Retrieve the Remote Support Location property from the found DataCenter resource objects. \#\#\# Related Links \* \[New-HPOVDataCenter\]\(https://github.com/HewlettPackard/POSH-HPOneView/wiki/New-HPOVDataCenter\) \* \[Remove-HPOVDataCenter\]\(https://github.com/HewlettPackard/POSH-HPOneView/wiki/Remove-HPOVDataCenter\) \* \[Set-HPOVDataCenter\]\(https://github.com/HewlettPackard/POSH-HPOneView/wiki/Set-HPOVDataCenter\) \* \[Set-HPOVDataCenterRemoteSupport\]\(https://github.com/HewlettPackard/POSH-HPOneView/wiki/Set-HPOVDataCenterRemoteSupport\) \*\*\*[Top]() \#\#\# HPE OneView 4.10 Library \#\# Get-HPOVDataCenter
+Retrieve the Remote Support Location property from the found DataCenter resource objects. 
 
- Retreive a defined DataCenter. \#\#\# Synatx
+### Related Links 
 
-Get-HPOVDataCenter \[\[-Name\] &lt;String&gt;\] \[\[-ApplianceConnection\] &lt;Object&gt;\] \[&lt;CommonParameters&gt;\]
+* [New-HPOVDataCenter](https://github.com/HewlettPackard/POSH-HPOneView/wiki/New-HPOVDataCenter) 
+* [Remove-HPOVDataCenter](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Remove-HPOVDataCenter) 
+* [Set-HPOVDataCenter](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Set-HPOVDataCenter) 
+* [Set-HPOVDataCenterRemoteSupport](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Set-HPOVDataCenterRemoteSupport) 
+
+## HPE OneView 4.10 Library
+
+###  Syntax
+
+```text
+Get-HPOVDataCenter [[-Name] <String>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
+```
 
 ### Description
 
- A data center represents a physically contiguous area in which racks containing IT equipment are located. For example, you have IT equipment in two rooms or on separate floors. You could create a data center for each of these areas. Each server, enclosure, or power distribution device in your data center can report its power requirements, but it can be difficult to understand the power and cooling requirements for your data center as a whole. The appliance enables you to bring power and cooling management of your servers, enclosures, and power delivery devices together in a single management system. When you initialize the appliance for the first time, it creates a data center named Datacenter 1. The appliance provides this data center as a place to visualize your racks. You can rename or edit this data center to match the values and layout of your data center, you can use it as the basis for a planned data center model, or you can delete this data center without adverse effects.
+A data center represents a physically contiguous area in which racks containing IT equipment are located. For example, you have IT equipment in two rooms or on separate floors. You could create a data center for each of these areas. Each server, enclosure, or power distribution device in your data center can report its power requirements, but it can be difficult to understand the power and cooling requirements for your data center as a whole. The appliance enables you to bring power and cooling management of your servers, enclosures, and power delivery devices together in a single management system. When you initialize the appliance for the first time, it creates a data center named Datacenter 1. The appliance provides this data center as a place to visualize your racks. You can rename or edit this data center to match the values and layout of your data center, you can use it as the basis for a planned data center model, or you can delete this data center without adverse effects.
 
 This Cmdlet will retrieve all or a specific DataCenter resource object. If Remote Support has been enabled on the appliance, the DataCenter object will contain a RemoteSupportLocation property that contains the site location \(if different from the Default DataCenter\), and both the Primary and Secondary contacts.
 
+{% hint style="info" %}
+Minimum required privileges: Read only
+{% endhint %}
+
 ### Parameters
 
--ApplianceConnection &lt;Object&gt; Aliases \[-Appliance\]
+#### -ApplianceConnection &lt;Object&gt; 
 
-Specify one or more HPOneView.Appliance.Connection object\(s\) or Name property value\(s\).
+Specify one or more \[HPOneView.Appliance.Connection\] object\(s\) or Name property value\(s\).
 
 Default Value: ${Global:ConnectedSessions} \| ? Default
 
@@ -180,7 +218,9 @@ Default Value: ${Global:ConnectedSessions} \| ? Default
 | Accept pipeline input? | false |
 | Accept wildcard characters?    | False |
 
--Name &lt;String&gt; DataCenter name. Supports wildcard \(\*\) character.
+#### -Name &lt;String&gt; 
+
+DataCenter name. Supports wildcard \(\*\) character.
 
 | Aliases | None |
 | :--- | :--- |
@@ -206,18 +246,33 @@ A DataCenter resource object.
 
 ### Examples
 
+```text
+ -------------------------- EXAMPLE 1 --------------------------
+Get-HPOVDataCenter
 ```
- -------------------------- EXAMPLE 1 -------------------------- Get-HPOVDataCenter
- -------------------------- EXAMPLE 2 -------------------------- Get-HPOVDataCenter -Name DC*
- -------------------------- EXAMPLE 3 -------------------------- Get-HPOVDataCenter | Select -ExpandProperty RemoteSupportLocation
+
+Retrieve all defined DataCenters on the appliance.
+
+```text
+ -------------------------- EXAMPLE 2 --------------------------
+Get-HPOVDataCenter -Name DC*
 ```
 
-### Related Links
+Locate all DataCenter objects that begin with "DC".
 
-* [New-HPOVDataCenter](https://github.com/HewlettPackard/POSH-HPOneView/wiki/New-HPOVDataCenter)
-* [Remove-HPOVDataCenter](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Remove-HPOVDataCenter)
-* [Set-HPOVDataCenter](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Set-HPOVDataCenter)
-* [Set-HPOVDataCenterRemoteSupport](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Set-HPOVDataCenterRemoteSupport)
+```text
+ -------------------------- EXAMPLE 3 --------------------------
+Get-HPOVDataCenter | Select -ExpandProperty RemoteSupportLocation
+```
 
-[Top]()
+Retrieve the Remote Support Location property from the found DataCenter resource objects. 
+
+### Related Links 
+
+* [New-HPOVDataCenter](https://github.com/HewlettPackard/POSH-HPOneView/wiki/New-HPOVDataCenter) 
+* [Remove-HPOVDataCenter](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Remove-HPOVDataCenter) 
+* [Set-HPOVDataCenter](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Set-HPOVDataCenter) 
+* [Set-HPOVDataCenterRemoteSupport](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Set-HPOVDataCenterRemoteSupport) 
+
+
 

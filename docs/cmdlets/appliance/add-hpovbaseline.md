@@ -17,9 +17,23 @@ Add-HPOVBaseline [-File] <String> [[-CompSigFile] <String>]] [[-Scope] <HPOneVie
 
 ### Description
 
-This Cmdlet provides the ability to upload a new SPP Baseline into the appliance. It will return after the upload has completed but before the SPP file has been imported into the firmware repository.
+The appliance provides reliable and simplified firmware management across the data center. Using the firmware management features built in to the appliance, you can define firmware baselines and perform firmware updates across many resources. When you add a resource to the appliance, the appliance automatically updates the resource firmware to the minimum version required to be managed by the appliance or version defined to be a baseline.
 
-After upload the baseline ISO, any . \(period character\) within the filename will be chaned to the \_ \(underscore character\) by the appliance. So, if a baseline ISo file name is "bp.2016.04.custom.ISo", the appliance will change the filename to "bp\_2016\_04\_custom.iso".
+A firmware bundle, also known as an HPE Service Pack for ProLiant \(SPP\), is a comprehensive collection of firmware and system software components, all tested together as a single solution stack that includes drivers, agents, utilities, and firmware packages. Firmware bundles enable you to update firmware on HPE ProLiant servers, controllers, storage, servers, interconnects, and enclosures.
+
+{% hint style="warning" %}
+If you attempt to add a firmware bundle that does not contain the required firmware version and components, the firmware bundle is uploaded with a warning message in the appliance firmware repository. The warning message displays the missing components in the firmware bundle. All the components below the minimum required versions are considered as missing.
+{% endhint %}
+
+Retrieve the list of SPPs or hotfixes which have been uploaded to the appliance, and their detail. You can examine the included components and their versions reported by the baseline.
+
+Please note that any file name that contains the . \(period, CHAR46\) character will be replaced with \_ \(underscore, CHAR95\).
+
+Example: `My.Spp.To.Upload.201605.iso` will become `My_Spp_To_Upload_201605.iso`.
+
+{% hint style="info" %}
+Minimum required privileges: Infrastructure administrator, Network administrator, or Server administrator
+{% endhint %}
 
 ### Parameters
 
@@ -30,7 +44,7 @@ Specify one or more HPOneView.Appliance.Connection object\(s\) or Name property 
 | Aliases | Appliance |
 | :--- | :--- |
 | Required? | false |
-| Position? | 3 |
+| Position? | named |
 | Default value | \(${Global:ConnectedSessions} \| ? Default\) |
 | Accept pipeline input? | false |
 | Accept wildcard characters?    | False |
@@ -54,7 +68,7 @@ When adding a Gen10 hotfix component, the associated compsig file is required to
 | Aliases | None |
 | :--- | :--- |
 | Required? | false |
-| Position? | 1 |
+| Position? | named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters?    | False |
@@ -66,7 +80,7 @@ The full path and file name of the SPP file. The function returns an error if th
 | Aliases | sppFile |
 | :--- | :--- |
 | Required? | true |
-| Position? | 0 |
+| Position? | named |
 | Default value |  |
 | Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters?    | False |
@@ -78,7 +92,7 @@ Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
-| Position? | 2 |
+| Position? | named |
 | Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters?    | False |
@@ -141,9 +155,21 @@ Add-HPOVBaseline [-File] <String> [[-CompSigFile] <String>]] [[-Scope] <HPOneVie
 
 ### Description
 
-This Cmdlet provides the ability to upload a new SPP Baseline into the appliance. It will return after the upload has completed but before the SPP file has been imported into the firmware repository.
 
-After upload the baseline ISO, any . \(period character\) within the filename will be chaned to the \_ \(underscore character\) by the appliance. So, if a baseline ISo file name is "bp.2016.04.custom.ISo", the appliance will change the filename to "bp\_2016\_04\_custom.iso".
+
+The appliance provides reliable and simplified firmware management across the data center. Using the firmware management features built in to the appliance, you can define firmware baselines and perform firmware updates across many resources. When you add a resource to the appliance, the appliance automatically updates the resource firmware to the minimum version required to be managed by the appliance or version defined to be a baseline.
+
+A firmware bundle, also known as an HPE Service Pack for ProLiant \(SPP\), is a comprehensive collection of firmware and system software components, all tested together as a single solution stack that includes drivers, agents, utilities, and firmware packages. Firmware bundles enable you to update firmware on HPE ProLiant servers, controllers, storage, servers, interconnects, and enclosures.
+
+Retrieve the list of SPPs or hotfixes which have been uploaded to the appliance, and their detail. You can examine the included components and their versions reported by the baseline.
+
+Please note that any file name that contains the . \(period, CHAR46\) character will be replaced with \_ \(underscore, CHAR95\).
+
+Example: `My.Spp.To.Upload.201605.iso` will become `My_Spp_To_Upload_201605.iso`.
+
+{% hint style="info" %}
+Minimum required privileges: Infrastructure administrator, Network administrator, or Server administrator
+{% endhint %}
 
 ### Parameters
 
@@ -154,7 +180,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name prope
 | Aliases | Appliance |
 | :--- | :--- |
 | Required? | false |
-| Position? | 3 |
+| Position? | named |
 | Default value | \(${Global:ConnectedSessions} \| ? Default\) |
 | Accept pipeline input? | false |
 | Accept wildcard characters?    | False |
@@ -178,7 +204,7 @@ When adding a Gen10 hotfix component, the associated compsig file is required to
 | Aliases | None |
 | :--- | :--- |
 | Required? | false |
-| Position? | 1 |
+| Position? | named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters?    | False |
@@ -190,7 +216,7 @@ The full path and file name of the SPP file. The function returns an error if th
 | Aliases | sppFile |
 | :--- | :--- |
 | Required? | true |
-| Position? | 0 |
+| Position? | named |
 | Default value |  |
 | Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters?    | False |
@@ -202,7 +228,7 @@ Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
-| Position? | 2 |
+| Position? | named |
 | Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters?    | False |
@@ -263,22 +289,34 @@ Add-HPOVBaseline -File $HotFixFile -CompSigFile $CompSigFile
 Add-HPOVBaseline [-File] <String> [[-Scope] <HPOneView.Appliance.ScopeCollection>] [[-ApplianceConnection] <Array>] [[-Async] <SwitchParameter>]] [<CommonParameters>]
 ```
 
-### Detailed Description
+### Description
 
-This Cmdlet provides the ability to upload a new SPP Baseline into the appliance. It will return after the upload has completed but before the SPP file has been imported into the firmware repository.
 
-After upload the baseline ISO, any . \(period character\) within the filename will be chaned to the \_ \(underscore character\) by the appliance. So, if a baseline ISo file name is "bp.2016.04.custom.ISo", the appliance will change the filename to "bp\_2016\_04\_custom.iso".
+
+The appliance provides reliable and simplified firmware management across the data center. Using the firmware management features built in to the appliance, you can define firmware baselines and perform firmware updates across many resources. When you add a resource to the appliance, the appliance automatically updates the resource firmware to the minimum version required to be managed by the appliance or version defined to be a baseline.
+
+A firmware bundle, also known as an HPE Service Pack for ProLiant \(SPP\), is a comprehensive collection of firmware and system software components, all tested together as a single solution stack that includes drivers, agents, utilities, and firmware packages. Firmware bundles enable you to update firmware on HPE ProLiant servers, controllers, storage, servers, interconnects, and enclosures.
+
+Retrieve the list of SPPs or hotfixes which have been uploaded to the appliance, and their detail. You can examine the included components and their versions reported by the baseline.
+
+Please note that any file name that contains the . \(period, CHAR46\) character will be replaced with \_ \(underscore, CHAR95\).
+
+Example: `My.Spp.To.Upload.201605.iso` will become `My_Spp_To_Upload_201605.iso`.
+
+{% hint style="info" %}
+Minimum required privileges: Infrastructure administrator, Network administrator, or Server administrator
+{% endhint %}
 
 ### Parameters
 
-#### -ApplianceConnection &lt;Array&gt; Aliases \[-Appliance\]
+#### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more HPOneView.Appliance.Connection object\(s\) or Name property value\(s\).
 
 | Aliases | Appliance |
 | :--- | :--- |
 | Required? | false |
-| Position? | 2 |
+| Position? | named |
 | Default value | \(${Global:ConnectedSessions} \| ? Default\) |
 | Accept pipeline input? | false |
 | Accept wildcard characters?    | False |
@@ -302,7 +340,7 @@ The full path and file name of the SPP file. The function returns an error if th
 | Aliases | sppFile |
 | :--- | :--- |
 | Required? | true |
-| Position? | 0 |
+| Position? | named |
 | Default value |  |
 | Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters?    | False |
@@ -314,7 +352,7 @@ Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
-| Position? | 1 |
+| Position? | named |
 | Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters?    | False |

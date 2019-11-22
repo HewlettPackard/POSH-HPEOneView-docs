@@ -9,7 +9,7 @@ description: Start a library trace for Cmdlet troubleshooting.
 ### Syntax
 
 ```text
-Get-HPOVCommandTrace [-ScriptBlock] <ScriptBlock> [-Location] <String> [<CommonParameters>]
+Get-HPOVCommandTrace [-ScriptBlock] <ScriptBlock> [[-Location] <String>] [<CommonParameters>]
 ```
 
 ### Description
@@ -84,8 +84,8 @@ Specify the directory where the output file will be created. A file with the fol
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | true |
-| Position? | 1 |
+| Required? | false |
+| Position? | named |
 | Default value | \(pwd\).path |
 | Accept pipeline input? | false |
 | Accept wildcard characters?    | False |
@@ -97,7 +97,7 @@ The command within a `ScriptBlock` to execute. The Cmdlet will add the `-Verbose
 | Aliases | Command |
 | :--- | :--- |
 | Required? | True |
-| Position? | 0 |
+| Position? | named |
 | Default value |  |
 | Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters?    | False |
@@ -136,7 +136,7 @@ Start a new library trace, which will create a file in the `C:\Temp` directory.
 ### Syntax
 
 ```text
-Get-HPOVCommandTrace [-ScriptBlock] <ScriptBlock> [-Location] <String> [<CommonParameters>]
+Get-HPOVCommandTrace [-ScriptBlock] <ScriptBlock> [[-Location] <String>] [<CommonParameters>]
 ```
 
 ### Description
@@ -211,8 +211,8 @@ Specify the directory where the output file will be created. A file with the fol
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | true |
-| Position? | 1 |
+| Required? | false |
+| Position? | named |
 | Default value | \(pwd\).path |
 | Accept pipeline input? | false |
 | Accept wildcard characters?    | False |
@@ -224,7 +224,7 @@ The command within a `ScriptBlock` to execute. The Cmdlet will add the `-Verbose
 | Aliases | Command |
 | :--- | :--- |
 | Required? | True |
-| Position? | 0 |
+| Position? | named |
 | Default value |  |
 | Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters?    | False |
@@ -263,7 +263,7 @@ Start a new library trace, which will create a file in the `C:\Temp` directory.
 ### Syntax
 
 ```text
-Get-HPOVCommandTrace [-ScriptBlock] <ScriptBlock> [-Location] <String> [<CommonParameters>]
+Get-HPOVCommandTrace [-ScriptBlock] <ScriptBlock> [[-Location] <String>] [<CommonParameters>]
 ```
 
 ### Description
@@ -339,7 +339,7 @@ Specify the directory where the output file will be created. A file with the fol
 | Aliases | None |
 | :--- | :--- |
 | Required? | true |
-| Position? | 1 |
+| Position? | named |
 | Default value | \(pwd\).path |
 | Accept pipeline input? | false |
 | Accept wildcard characters?    | False |
@@ -351,7 +351,7 @@ The command within a `ScriptBlock` to execute. The Cmdlet will add the `-Verbose
 | Aliases | Command |
 | :--- | :--- |
 | Required? | True |
-| Position? | 0 |
+| Position? | named |
 | Default value |  |
 | Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters?    | False |

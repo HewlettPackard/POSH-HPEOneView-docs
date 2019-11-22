@@ -20,6 +20,10 @@ Get-HPOVTask [[-Name] <String>] [[-ResourceCategory] <String>] [[-State] <String
 
 Obtain a collection of task resources which have the specified name and/or state. The returned data will include the task name, owner, state and status.  If the task resource is in either `Waiting` or `Running` state, you can pass it to [Wait-HPOVTaskComplete](wait-hpovtaskcomplete.md) to monitor the progression and eventual final state.
 
+{% hint style="info" %}
+Minimum required privileges: Read only
+{% endhint %}
+
 ### Parameters
 
 #### -ApplianceConnection &lt;Object&gt;
@@ -188,6 +192,10 @@ Get-HPOVTask [[-Name] <String>] [[-ResourceCategory] <String>] [[-State] <String
 
 Obtain a collection of task resources which have the specified name and/or state. The returned data will include the task name, owner, state and status.  If the task resource is in either `Waiting` or `Running` state, you can pass it to [Wait-HPOVTaskComplete](wait-hpovtaskcomplete.md) to monitor the progression and eventual final state.
 
+{% hint style="info" %}
+Minimum required privileges: Read only
+{% endhint %}
+
 ### Parameters
 
 #### -ApplianceConnection &lt;Object&gt;
@@ -355,6 +363,10 @@ Get-HPOVTask [[-Name] <String>] [[-ResourceCategory] <String>] [[-State] <String
 ### Description
 
 Obtain a collection of task resources which have the specified name and/or state. The returned data will include the task name, owner, state and status.  If the task resource is in either `Waiting` or `Running` state, you can pass it to [Wait-HPOVTaskComplete](wait-hpovtaskcomplete.md) to monitor the progression and eventual final state.
+
+{% hint style="info" %}
+Minimum required privileges: Read only
+{% endhint %}
 
 ### Parameters
 
