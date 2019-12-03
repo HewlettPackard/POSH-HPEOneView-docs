@@ -104,6 +104,10 @@ The library module name to import is always `HPOneView.{VERSION}`, where `{VERSI
 Import-Module HPOneView.500
 ```
 
+{% hint style="info" %}
+You may need to include the `-AllowClobber` parameter when using `Install-Module`, when you intend to install more than 1 module on your system.
+{% endhint %}
+
 ### How to start using the library
 
 There are 5 primary CMDLETs to interact with the HPE OneView appliance:
