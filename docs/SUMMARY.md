@@ -88,6 +88,7 @@
     * [Add-HPOVFabricManager](cmdlets/networking/add-hpovfabricmanager.md)
     * [Disable-HPOVLogicalInterconnectPortMonitoring](cmdlets/networking/disable-hpovlogicalinterconnectportmonitoring.md)
     * [Enable-HPOVLogicalInterconnectPortMonitoring](cmdlets/networking/enable-hpovlogicalinterconnectportmonitoring.md)
+    * [Get-HPOVFabricManager](cmdlets/networking/get-hpovfabricmanager.md)
     * [Get-HPOVLogicalInterconnectPortMonitoring](cmdlets/networking/get-hpovlogicalinterconnectportmonitoring.md)
     * [Get-HPOVLogicalSwitch](cmdlets/networking/get-hpovlogicalswitch.md)
   * [Security](cmdlets/security/README.md)
