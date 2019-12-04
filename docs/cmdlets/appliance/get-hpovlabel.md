@@ -1,14 +1,12 @@
+---
+description: Return created label resources.
+---
+
 # Get-HPOVLabel
 
- [Library Version 5.00]() [Library Version 4.20]() [Library Version 4.10]() 
+## HPE OneView 5.00 Library
 
-### HPE OneView 5.00 Library
-
-## Get-HPOVLabel
-
- Return created label resources.
-
-### Synatx
+### Syntax
 
 ```text
 Get-HPOVLabel [[-Name] <String>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
@@ -16,30 +14,38 @@ Get-HPOVLabel [[-Name] <String>] [[-ApplianceConnection] <Object>] [<CommonParam
 
 ### Description
 
- Labels identify resources so you can organize them into groups. For example, you might want to identify the servers that are used primarily by the Finance team, or identify the storage systems assigned to the Asia/Pacific division.
+Labels identify resources so you can organize them into groups. For example, you might want to identify the servers that are used primarily by the Finance team, or identify the storage systems assigned to the Asia/Pacific division.
 
-This Cmdlet will return all of the created labels on the specifed appliance.
+This Cmdlet will return all of the created labels on the specified appliance.
+
+{% hint style="info" %}
+Minimum required privileges: Read only
+{% endhint %}
 
 ### Parameters
 
--ApplianceConnection &lt;Object&gt; Specify one or more \[HPOneView.Appliance.Connection\] object\(s\) or Name property value\(s\).
+#### -ApplianceConnection &lt;Object&gt; 
+
+Specify one or more \[HPOneView.Appliance.Connection\] object\(s\) or Name property value\(s\).
 
 Default Value: ${Global:ConnectedSessions} \| ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
 | Required? | false |
-| Position? | 1 |
+| Position? | named |
 | Default value | \(${Global:ConnectedSessions} \| ? Default\) |
 | Accept pipeline input? | false |
 | Accept wildcard characters?    | False |
 
--Name &lt;String&gt; The name of the Label to associate resources to. If Label does not exist, a new one will be created.
+#### -Name &lt;String&gt; 
+
+The name of the Label to associate resources to. If Label does not exist, a new one will be created.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | false |
-| Position? | 0 |
+| Position? | named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters?    | False |
@@ -65,40 +71,54 @@ Label resource.
 Get-HPOVLabel
 ```
 
- Return all labels from the appliance. \#\#\# Related Links \*\*\*[Top]() \#\#\# HPE OneView 4.20 Library \#\# Get-HPOVLabel
+Return all labels from the appliance. 
 
- Return created label resources. \#\#\# Synatx
+### Related Links 
 
-Get-HPOVLabel \[\[-Name\] &lt;String&gt;\] \[\[-ApplianceConnection\] &lt;Object&gt;\] \[&lt;CommonParameters&gt;\]
+* None
+
+## HPE OneView 4.20 Library
+
+### Syntax
+
+```text
+Get-HPOVLabel [[-Name] <String>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
+```
 
 ### Description
 
- Labels identify resources so you can organize them into groups. For example, you might want to identify the servers that are used primarily by the Finance team, or identify the storage systems assigned to the Asia/Pacific division.
+Labels identify resources so you can organize them into groups. For example, you might want to identify the servers that are used primarily by the Finance team, or identify the storage systems assigned to the Asia/Pacific division.
 
-This Cmdlet will return all of the created labels on the specifed appliance.
+This Cmdlet will return all of the created labels on the specified appliance.
+
+{% hint style="info" %}
+Minimum required privileges: Read only
+{% endhint %}
 
 ### Parameters
 
--ApplianceConnection &lt;Object&gt; Aliases \[-Appliance\]
+#### -ApplianceConnection &lt;Object&gt; 
 
-Specify one or more HPOneView.Appliance.Connection object\(s\) or Name property value\(s\).
+Specify one or more \[HPOneView.Appliance.Connection\] object\(s\) or Name property value\(s\).
 
 Default Value: ${Global:ConnectedSessions} \| ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
 | Required? | false |
-| Position? | 1 |
+| Position? | named |
 | Default value | \(${Global:ConnectedSessions} \| ? Default\) |
 | Accept pipeline input? | false |
 | Accept wildcard characters?    | False |
 
--Name &lt;String&gt; The name of the Label to associate resources to. If Label does not exist, a new one will be created.
+#### -Name &lt;String&gt; 
+
+The name of the Label to associate resources to. If Label does not exist, a new one will be created.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | false |
-| Position? | 0 |
+| Position? | named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters?    | False |
@@ -124,40 +144,54 @@ Label resource.
 Get-HPOVLabel
 ```
 
- Return all labels from the appliance. \#\#\# Related Links \*\*\*[Top]() \#\#\# HPE OneView 4.10 Library \#\# Get-HPOVLabel
+Return all labels from the appliance. 
 
- Return created label resources. \#\#\# Synatx
+### Related Links 
 
-Get-HPOVLabel \[\[-Name\] &lt;String&gt;\] \[\[-ApplianceConnection\] &lt;Object&gt;\] \[&lt;CommonParameters&gt;\]
+* None
+
+## HPE OneView 4.10 Library
+
+### Syntax
+
+```text
+Get-HPOVLabel [[-Name] <String>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
+```
 
 ### Description
 
- Labels identify resources so you can organize them into groups. For example, you might want to identify the servers that are used primarily by the Finance team, or identify the storage systems assigned to the Asia/Pacific division.
+Labels identify resources so you can organize them into groups. For example, you might want to identify the servers that are used primarily by the Finance team, or identify the storage systems assigned to the Asia/Pacific division.
 
-This Cmdlet will return all of the created labels on the specifed appliance.
+This Cmdlet will return all of the created labels on the specified appliance.
+
+{% hint style="info" %}
+Minimum required privileges: Read only
+{% endhint %}
 
 ### Parameters
 
--ApplianceConnection &lt;Object&gt; Aliases \[-Appliance\]
+#### -ApplianceConnection &lt;Object&gt; 
 
-Specify one or more HPOneView.Appliance.Connection object\(s\) or Name property value\(s\).
+Specify one or more \[HPOneView.Appliance.Connection\] object\(s\) or Name property value\(s\).
 
 Default Value: ${Global:ConnectedSessions} \| ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
 | Required? | false |
-| Position? | 1 |
+| Position? | named |
 | Default value | \(${Global:ConnectedSessions} \| ? Default\) |
 | Accept pipeline input? | false |
 | Accept wildcard characters?    | False |
 
--Name &lt;String&gt; The name of the Label to associate resources to. If Label does not exist, a new one will be created.
+#### -Name &lt;String&gt; 
+
+The name of the Label to associate resources to. If Label does not exist, a new one will be created.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | false |
-| Position? | 0 |
+| Position? | named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters?    | False |
@@ -178,11 +212,14 @@ Label resource.
 
 ### Examples
 
-```
- -------------------------- EXAMPLE 1 -------------------------- Get-HPOVLabel
+```text
+ -------------------------- EXAMPLE 1 --------------------------
+Get-HPOVLabel
 ```
 
-### Related Links
+Return all labels from the appliance. 
 
-[Top]()
+### Related Links 
+
+* None
 
