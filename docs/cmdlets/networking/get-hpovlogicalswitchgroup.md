@@ -1,22 +1,24 @@
 ---
-description: Retrieve Logical Switch resources.
+description: Retrieve Logical Switch Group resources.
 ---
 
-# Get-HPOVLogicalSwitch
+# Get-HPOVLogicalSwitchGroup
 
 ## HPE OneView 5.00 Library
 
 ### Syntax
 
 ```text
-Get-HPOVLogicalSwitch [[-Name] <String>] [[-Scope] <Object>] [[-Label] <String>] [[-ApplianceConnection] <Object>] [[-exportFile] <String>] [<CommonParameters>]
+Get-HPOVLogicalSwitchGroup [[-Name] <String>] [[-Scope] <Object>] [[-Label] <String>] [[-ApplianceConnection] <Object>] [[-exportFile] <SwitchParameter>] [<CommonParameters>]
 ```
 
 ```text
-Get-HPOVLogicalSwitch [-InputObject] <Object> [[-ApplianceConnection] <Object>] [<CommonParameters>]
+Get-HPOVLogicalSwitchGroup [-InputObject] <Object> [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
 ### Description
+
+The logical switch group is a template for creating logical switches. Logical switches are an aggregation of up to two physical top-of-rack switches. Once constructed from a logical switch group, a logical switch continues to be associated with its logical switch group. Any change in consistency between the logical switch group and its associated logical switches is monitored and made visible on the associated logical switch screen in HPE OneView.
 
 A logical switch is added into HPE OneView as a managed or monitored logical switch. The logical switch can consist of a maximum of two physical top-of-rack switches \(external to the HPE Synergy frame\) configured in a single stacking domain.
 
@@ -24,11 +26,11 @@ There is a connectivity limitation of one logical interconnect to one logical sw
 
 A logical switch is based on a logical switch group configuration. If the logical switch transitions to an Inconsistent with group state \(due to the changes in either the logical switch or the logical switch group\), update the logical switch configuration based on the logical switch group to return to a consistent state.
 
-#### About assigning Arista switches to a logical switch \(HPE Synergy only\)
+About assigning Arista switches to a logical switch \(HPE Synergy only\)
 
 You can create a logical switch with a maximum of two Arista switches. When there are two Arista switches in a logical switch, they must be in a multichassis link aggregation \(MLAG\) environment. MLAG must be configured on both the switches, and they must belong to the same MLAG domain.
 
-#### About assigning Cisco Nexus switches to a logical switch \(HPE BladeSystem only\)
+About assigning Cisco Nexus switches to a logical switch \(HPE BladeSystem only\)
 
 You can create a logical switch with a maximum of two Cisco Nexus switches. When there are two Cisco Nexus switches in a logical switch, they must be in a virtual PortChannel \(vPC\) environment. vPC must be configured on both the switches, and they must belong to the same vPC domain.
 
@@ -36,7 +38,7 @@ A virtual PortChannel \(vPC\) allows links that are physically connected to two 
 
 Stacking links can be set from the originating peer or the destination peer when two switches are participating in the vPC environment. Also, stacking links can be set to the destination end of the peer link between two vPC switches.
 
-#### About assigning rack connectivity modules to a logical switch
+About assigning rack connectivity modules to a logical switch
 
 You can create a logical switch that pairs two rack connectivity modules. You can assign rack servers and server profiles to the two rack connectivity modules that are associated with the logical switch.
 
@@ -51,13 +53,15 @@ If the cabling configuration is changed after the server profile assignment, ale
 
 Stacking links can be set from the originating peer or from the destination peer when two switches are participating in the MLAG environment.
 
+This Cmdlet retrieves a list of all Logical Switch Groups or just specific ones via a query if the name parameter is provided. The output can be sent to a file using the exportFile parameter.
+
 {% hint style="info" %}
-Required Privileges: Read-only
+Minimum required privileges: Read-only
 {% endhint %}
 
 ### Parameters
 
--ApplianceConnection &lt;Object&gt; 
+#### -ApplianceConnection &lt;Object&gt; 
 
 Specify one or more \[HPOneView.Appliance.Connection\] object\(s\) or Name property value\(s\). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
@@ -73,7 +77,7 @@ Default Value: ${Global:ConnectedSessions} \| ? Default
 
 #### -InputObject &lt;Object&gt; 
 
-Provide an HPOneView.Appliance.TaskResource object and the Cmdlet will return the associated Logical Switch resource created from the New-HPOVLogicalSwitch Cmdlet.
+The Async task object after a Logical Switch Group resource is created, the Cmdlet will return the associated object.
 
 | Aliases | None |
 | :--- | :--- |
@@ -97,7 +101,7 @@ Specify the label associated with resources.
 
 #### -Name &lt;String&gt; 
 
-Name of the Logical Switch resource. Supports wildcard \* character.
+The Logical Switch Group resource Name. Supports the \* wildcard character.
 
 | Aliases | None |
 | :--- | :--- |
@@ -105,7 +109,7 @@ Name of the Logical Switch resource. Supports wildcard \* character.
 | Position? | named |
 | Default value |  |
 | Accept pipeline input? | false |
-| Accept wildcard characters?    | true |
+| Accept wildcard characters?    | False |
 
 #### -Scope &lt;Object&gt; 
 
@@ -124,9 +128,9 @@ Filter resources based on provided Scope membership. By default, all resources f
 | Accept pipeline input? | false |
 | Accept wildcard characters?    | False |
 
-#### -exportFile &lt;String&gt; 
+#### -ExportFile &lt;SwitchParameter&gt; 
 
-Save the Logical Switch resource\(s\) to the specified JSON file.
+Export the Logical Switch Group resource\(s\) to the specified JSON file.
 
 | Aliases | x, export |
 | :--- | :--- |
@@ -144,52 +148,54 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
-Async Task resource object, from New-HPOVLogicalSwitch.
+Async task resource after a Logical Switch Group has been created.
 
 ### Return Values
 
-_**HPOneView.Networking.LogicalSwitch \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Networking.LogicalSwitchGroup \[System.Management.Automation.PSCustomObject\]**_
 
-Single Logical Switch resource.
+The async task resource object to monitor \(if -Async was used\) or results.
+
+_**System.Collections.ArrayList &lt;HPOneView.Networking.LogicalSwitchGroup&gt;**_
+
+Collection of Logical Switch Group resources.
 
 ### Examples
 
 ```text
  -------------------------- EXAMPLE 1 --------------------------
-Get-HPOVLogicalSwitch
+Get-HPOVLogicalSwitchGroup
 ```
 
-Retrieve all Logical Switch resources from the default appliance connection.
+Get all logical switch group resources found on the default appliance connection.
 
 ```text
  -------------------------- EXAMPLE 2 --------------------------
-Get-HPOVLogicalSwitch -Name MyLogicalSwitch1
+Get-HPOVLogicalSwitchGroup -Name "My Logical Switch Group Policy 1"
 ```
 
-Retrieve the specified "MyLogicalSwitch1" resource from the default appliance connection. 
+Get the "My Logical Switch Group Policy 1" resource. 
 
 ### Related Links 
 
-* [Get-HPOVLogicalSwitchGroup](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Get-HPOVLogicalSwitchGroup) 
-* [New-HPOVLogicalSwitch](https://github.com/HewlettPackard/POSH-HPOneView/wiki/New-HPOVLogicalSwitch) 
 * [New-HPOVLogicalSwitchGroup](https://github.com/HewlettPackard/POSH-HPOneView/wiki/New-HPOVLogicalSwitchGroup) 
-* [Remove-HPOVLogicalSwitch](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Remove-HPOVLogicalSwitch) 
-* [Remove-HPOVLogicalSwitchGroup](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Remove-HPOVLogicalSwitchGroup)
-* [Update-HPOVLogicalSwitch](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Update-HPOVLogicalSwitch) 
+* [Remove-HPOVLogicalSwitchGroup](https://github.com/HewlettPackard/POSH-OneView/wiki/Remove-HPOVLogicalSwitchGroup) 
 
 ## HPE OneView 4.20 Library
 
 ### Syntax
 
 ```text
-Get-HPOVLogicalSwitch [[-Name] <String>] [[-Scope] <Object>] [[-Label] <String>] [[-ApplianceConnection] <Object>] [[-exportFile] <String>] [<CommonParameters>]
+Get-HPOVLogicalSwitchGroup [[-Name] <String>] [[-Scope] <Object>] [[-Label] <String>] [[-ApplianceConnection] <Object>] [[-exportFile] <SwitchParameter>] [<CommonParameters>]
 ```
 
 ```text
-Get-HPOVLogicalSwitch [-InputObject] <Object> [[-ApplianceConnection] <Object>] [<CommonParameters>]
+Get-HPOVLogicalSwitchGroup [-InputObject] <Object> [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
 ### Description
+
+The logical switch group is a template for creating logical switches. Logical switches are an aggregation of up to two physical top-of-rack switches. Once constructed from a logical switch group, a logical switch continues to be associated with its logical switch group. Any change in consistency between the logical switch group and its associated logical switches is monitored and made visible on the associated logical switch screen in HPE OneView.
 
 A logical switch is added into HPE OneView as a managed or monitored logical switch. The logical switch can consist of a maximum of two physical top-of-rack switches \(external to the HPE Synergy frame\) configured in a single stacking domain.
 
@@ -197,11 +203,11 @@ There is a connectivity limitation of one logical interconnect to one logical sw
 
 A logical switch is based on a logical switch group configuration. If the logical switch transitions to an Inconsistent with group state \(due to the changes in either the logical switch or the logical switch group\), update the logical switch configuration based on the logical switch group to return to a consistent state.
 
-#### About assigning Arista switches to a logical switch \(HPE Synergy only\)
+About assigning Arista switches to a logical switch \(HPE Synergy only\)
 
 You can create a logical switch with a maximum of two Arista switches. When there are two Arista switches in a logical switch, they must be in a multichassis link aggregation \(MLAG\) environment. MLAG must be configured on both the switches, and they must belong to the same MLAG domain.
 
-#### About assigning Cisco Nexus switches to a logical switch \(HPE BladeSystem only\)
+About assigning Cisco Nexus switches to a logical switch \(HPE BladeSystem only\)
 
 You can create a logical switch with a maximum of two Cisco Nexus switches. When there are two Cisco Nexus switches in a logical switch, they must be in a virtual PortChannel \(vPC\) environment. vPC must be configured on both the switches, and they must belong to the same vPC domain.
 
@@ -209,7 +215,7 @@ A virtual PortChannel \(vPC\) allows links that are physically connected to two 
 
 Stacking links can be set from the originating peer or the destination peer when two switches are participating in the vPC environment. Also, stacking links can be set to the destination end of the peer link between two vPC switches.
 
-#### About assigning rack connectivity modules to a logical switch
+About assigning rack connectivity modules to a logical switch
 
 You can create a logical switch that pairs two rack connectivity modules. You can assign rack servers and server profiles to the two rack connectivity modules that are associated with the logical switch.
 
@@ -224,13 +230,15 @@ If the cabling configuration is changed after the server profile assignment, ale
 
 Stacking links can be set from the originating peer or from the destination peer when two switches are participating in the MLAG environment.
 
+This Cmdlet retrieves a list of all Logical Switch Groups or just specific ones via a query if the name parameter is provided. The output can be sent to a file using the exportFile parameter.
+
 {% hint style="info" %}
-Required Privileges: Infrastructure administrator or Network administrator
+Minimum required privileges: Read-only
 {% endhint %}
 
 ### Parameters
 
--ApplianceConnection &lt;Object&gt; 
+#### -ApplianceConnection &lt;Object&gt; 
 
 Specify one or more \[HPOneView.Appliance.Connection\] object\(s\) or Name property value\(s\). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
@@ -246,7 +254,7 @@ Default Value: ${Global:ConnectedSessions} \| ? Default
 
 #### -InputObject &lt;Object&gt; 
 
-Provide an HPOneView.Appliance.TaskResource object and the Cmdlet will return the associated Logical Switch resource created from the New-HPOVLogicalSwitch Cmdlet.
+The Async task object after a Logical Switch Group resource is created, the Cmdlet will return the associated object.
 
 | Aliases | None |
 | :--- | :--- |
@@ -270,7 +278,7 @@ Specify the label associated with resources.
 
 #### -Name &lt;String&gt; 
 
-Name of the Logical Switch resource. Supports wildcard \* character.
+The Logical Switch Group resource Name. Supports the \* wildcard character.
 
 | Aliases | None |
 | :--- | :--- |
@@ -278,7 +286,7 @@ Name of the Logical Switch resource. Supports wildcard \* character.
 | Position? | named |
 | Default value |  |
 | Accept pipeline input? | false |
-| Accept wildcard characters?    | true |
+| Accept wildcard characters?    | False |
 
 #### -Scope &lt;Object&gt; 
 
@@ -297,9 +305,9 @@ Filter resources based on provided Scope membership. By default, all resources f
 | Accept pipeline input? | false |
 | Accept wildcard characters?    | False |
 
-#### -exportFile &lt;String&gt; 
+#### -ExportFile &lt;SwitchParameter&gt; 
 
-Save the Logical Switch resource\(s\) to the specified JSON file.
+Export the Logical Switch Group resource\(s\) to the specified JSON file.
 
 | Aliases | x, export |
 | :--- | :--- |
@@ -317,52 +325,54 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
-Async Task resource object, from New-HPOVLogicalSwitch.
+Async task resource after a Logical Switch Group has been created.
 
 ### Return Values
 
-_**HPOneView.Networking.LogicalSwitch \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Networking.LogicalSwitchGroup \[System.Management.Automation.PSCustomObject\]**_
 
-Single Logical Switch resource.
+The async task resource object to monitor \(if -Async was used\) or results.
+
+_**System.Collections.ArrayList &lt;HPOneView.Networking.LogicalSwitchGroup&gt;**_
+
+Collection of Logical Switch Group resources.
 
 ### Examples
 
 ```text
  -------------------------- EXAMPLE 1 --------------------------
-Get-HPOVLogicalSwitch
+Get-HPOVLogicalSwitchGroup
 ```
 
-Retrieve all Logical Switch resources from the default appliance connection.
+Get all logical switch group resources found on the default appliance connection.
 
 ```text
  -------------------------- EXAMPLE 2 --------------------------
-Get-HPOVLogicalSwitch -Name MyLogicalSwitch1
+Get-HPOVLogicalSwitchGroup -Name "My Logical Switch Group Policy 1"
 ```
 
-Retrieve the specified "MyLogicalSwitch1" resource from the default appliance connection. 
+Get the "My Logical Switch Group Policy 1" resource. 
 
 ### Related Links 
 
-* [Get-HPOVLogicalSwitchGroup](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Get-HPOVLogicalSwitchGroup) 
-* [New-HPOVLogicalSwitch](https://github.com/HewlettPackard/POSH-HPOneView/wiki/New-HPOVLogicalSwitch) 
 * [New-HPOVLogicalSwitchGroup](https://github.com/HewlettPackard/POSH-HPOneView/wiki/New-HPOVLogicalSwitchGroup) 
-* [Remove-HPOVLogicalSwitch](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Remove-HPOVLogicalSwitch) 
-* [Remove-HPOVLogicalSwitchGroup](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Remove-HPOVLogicalSwitchGroup)
-* [Update-HPOVLogicalSwitch](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Update-HPOVLogicalSwitch) 
+* [Remove-HPOVLogicalSwitchGroup](https://github.com/HewlettPackard/POSH-OneView/wiki/Remove-HPOVLogicalSwitchGroup) 
 
 ## HPE OneView 4.10 Library
 
 ### Syntax
 
 ```text
-Get-HPOVLogicalSwitch [[-Name] <String>] [[-Scope] <Object>] [[-Label] <String>] [[-ApplianceConnection] <Object>] [[-exportFile] <String>] [<CommonParameters>]
+Get-HPOVLogicalSwitchGroup [[-Name] <String>] [[-Scope] <Object>] [[-Label] <String>] [[-ApplianceConnection] <Object>] [[-exportFile] <SwitchParameter>] [<CommonParameters>]
 ```
 
 ```text
-Get-HPOVLogicalSwitch [-InputObject] <Object> [[-ApplianceConnection] <Object>] [<CommonParameters>]
+Get-HPOVLogicalSwitchGroup [-InputObject] <Object> [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
 ### Description
+
+The logical switch group is a template for creating logical switches. Logical switches are an aggregation of up to two physical top-of-rack switches. Once constructed from a logical switch group, a logical switch continues to be associated with its logical switch group. Any change in consistency between the logical switch group and its associated logical switches is monitored and made visible on the associated logical switch screen in HPE OneView.
 
 A logical switch is added into HPE OneView as a managed or monitored logical switch. The logical switch can consist of a maximum of two physical top-of-rack switches \(external to the HPE Synergy frame\) configured in a single stacking domain.
 
@@ -370,11 +380,11 @@ There is a connectivity limitation of one logical interconnect to one logical sw
 
 A logical switch is based on a logical switch group configuration. If the logical switch transitions to an Inconsistent with group state \(due to the changes in either the logical switch or the logical switch group\), update the logical switch configuration based on the logical switch group to return to a consistent state.
 
-#### About assigning Arista switches to a logical switch \(HPE Synergy only\)
+About assigning Arista switches to a logical switch \(HPE Synergy only\)
 
 You can create a logical switch with a maximum of two Arista switches. When there are two Arista switches in a logical switch, they must be in a multichassis link aggregation \(MLAG\) environment. MLAG must be configured on both the switches, and they must belong to the same MLAG domain.
 
-#### About assigning Cisco Nexus switches to a logical switch \(HPE BladeSystem only\)
+About assigning Cisco Nexus switches to a logical switch \(HPE BladeSystem only\)
 
 You can create a logical switch with a maximum of two Cisco Nexus switches. When there are two Cisco Nexus switches in a logical switch, they must be in a virtual PortChannel \(vPC\) environment. vPC must be configured on both the switches, and they must belong to the same vPC domain.
 
@@ -382,7 +392,7 @@ A virtual PortChannel \(vPC\) allows links that are physically connected to two 
 
 Stacking links can be set from the originating peer or the destination peer when two switches are participating in the vPC environment. Also, stacking links can be set to the destination end of the peer link between two vPC switches.
 
-#### About assigning rack connectivity modules to a logical switch
+About assigning rack connectivity modules to a logical switch
 
 You can create a logical switch that pairs two rack connectivity modules. You can assign rack servers and server profiles to the two rack connectivity modules that are associated with the logical switch.
 
@@ -397,13 +407,15 @@ If the cabling configuration is changed after the server profile assignment, ale
 
 Stacking links can be set from the originating peer or from the destination peer when two switches are participating in the MLAG environment.
 
+This Cmdlet retrieves a list of all Logical Switch Groups or just specific ones via a query if the name parameter is provided. The output can be sent to a file using the exportFile parameter.
+
 {% hint style="info" %}
-Required Privileges: Infrastructure administrator or Network administrator
+Minimum required privileges: Read-only
 {% endhint %}
 
 ### Parameters
 
--ApplianceConnection &lt;Object&gt; 
+#### -ApplianceConnection &lt;Object&gt; 
 
 Specify one or more \[HPOneView.Appliance.Connection\] object\(s\) or Name property value\(s\). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
@@ -419,7 +431,7 @@ Default Value: ${Global:ConnectedSessions} \| ? Default
 
 #### -InputObject &lt;Object&gt; 
 
-Provide an HPOneView.Appliance.TaskResource object and the Cmdlet will return the associated Logical Switch resource created from the New-HPOVLogicalSwitch Cmdlet.
+The Async task object after a Logical Switch Group resource is created, the Cmdlet will return the associated object.
 
 | Aliases | None |
 | :--- | :--- |
@@ -443,7 +455,7 @@ Specify the label associated with resources.
 
 #### -Name &lt;String&gt; 
 
-Name of the Logical Switch resource. Supports wildcard \* character.
+The Logical Switch Group resource Name. Supports the \* wildcard character.
 
 | Aliases | None |
 | :--- | :--- |
@@ -451,7 +463,7 @@ Name of the Logical Switch resource. Supports wildcard \* character.
 | Position? | named |
 | Default value |  |
 | Accept pipeline input? | false |
-| Accept wildcard characters?    | true |
+| Accept wildcard characters?    | False |
 
 #### -Scope &lt;Object&gt; 
 
@@ -470,9 +482,9 @@ Filter resources based on provided Scope membership. By default, all resources f
 | Accept pipeline input? | false |
 | Accept wildcard characters?    | False |
 
-#### -exportFile &lt;String&gt; 
+#### -ExportFile &lt;SwitchParameter&gt; 
 
-Save the Logical Switch resource\(s\) to the specified JSON file.
+Export the Logical Switch Group resource\(s\) to the specified JSON file.
 
 | Aliases | x, export |
 | :--- | :--- |
@@ -490,38 +502,38 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
-Async Task resource object, from New-HPOVLogicalSwitch.
+Async task resource after a Logical Switch Group has been created.
 
 ### Return Values
 
-_**HPOneView.Networking.LogicalSwitch \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Networking.LogicalSwitchGroup \[System.Management.Automation.PSCustomObject\]**_
 
-Single Logical Switch resource.
+The async task resource object to monitor \(if -Async was used\) or results.
+
+_**System.Collections.ArrayList &lt;HPOneView.Networking.LogicalSwitchGroup&gt;**_
+
+Collection of Logical Switch Group resources.
 
 ### Examples
 
 ```text
  -------------------------- EXAMPLE 1 --------------------------
-Get-HPOVLogicalSwitch
+Get-HPOVLogicalSwitchGroup
 ```
 
-Retrieve all Logical Switch resources from the default appliance connection.
+Get all logical switch group resources found on the default appliance connection.
 
 ```text
  -------------------------- EXAMPLE 2 --------------------------
-Get-HPOVLogicalSwitch -Name MyLogicalSwitch1
+Get-HPOVLogicalSwitchGroup -Name "My Logical Switch Group Policy 1"
 ```
 
-Retrieve the specified "MyLogicalSwitch1" resource from the default appliance connection. 
+Get the "My Logical Switch Group Policy 1" resource. 
 
 ### Related Links 
 
-* [Get-HPOVLogicalSwitchGroup](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Get-HPOVLogicalSwitchGroup) 
-* [New-HPOVLogicalSwitch](https://github.com/HewlettPackard/POSH-HPOneView/wiki/New-HPOVLogicalSwitch) 
 * [New-HPOVLogicalSwitchGroup](https://github.com/HewlettPackard/POSH-HPOneView/wiki/New-HPOVLogicalSwitchGroup) 
-* [Remove-HPOVLogicalSwitch](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Remove-HPOVLogicalSwitch) 
-* [Remove-HPOVLogicalSwitchGroup](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Remove-HPOVLogicalSwitchGroup)
-* [Update-HPOVLogicalSwitch](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Update-HPOVLogicalSwitch) 
+* [Remove-HPOVLogicalSwitchGroup](https://github.com/HewlettPackard/POSH-OneView/wiki/Remove-HPOVLogicalSwitchGroup) 
 
 
 

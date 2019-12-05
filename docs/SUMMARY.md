@@ -68,6 +68,7 @@
     * [Get-HPOVHealthStatus](cmdlets/appliance/get-hpovhealthstatus.md)
     * [Get-HPOVLabel](cmdlets/appliance/get-hpovlabel.md)
     * [Get-HPOVLicense](cmdlets/appliance/get-hpovlicense.md)
+    * [Get-HPOVLoginMessage](cmdlets/appliance/get-hpovloginmessage.md)
     * [Get-HPOVTask](cmdlets/appliance/get-hpovtask.md)
     * [New-HPOVBackup](cmdlets/appliance/new-hpovbackup.md)
     * [New-HPOVRestore](cmdlets/appliance/new-hpovrestore.md)
@@ -95,8 +96,12 @@
     * [Get-HPOVInterconnect](cmdlets/networking/get-hpovinterconnect.md)
     * [Get-HPOVInterconnectType](cmdlets/networking/get-hpovinterconnecttype.md)
     * [Get-HPOVLogicalInterconnect](cmdlets/networking/get-hpovlogicalinterconnect.md)
+    * [Get-HPOVLogicalInterconnectGroup](cmdlets/networking/get-hpovlogicalinterconnectgroup.md)
     * [Get-HPOVLogicalInterconnectPortMonitoring](cmdlets/networking/get-hpovlogicalinterconnectportmonitoring.md)
     * [Get-HPOVLogicalSwitch](cmdlets/networking/get-hpovlogicalswitch.md)
+    * [Get-HPOVLogicalSwitchGroup](cmdlets/networking/get-hpovlogicalswitchgroup.md)
+    * [Get-HPOVNetwork](cmdlets/networking/get-hpovnetwork.md)
+    * [Get-HPOVNetworkSet](cmdlets/networking/get-hpovnetworkset.md)
   * [Security](cmdlets/security/README.md)
     * [Add-HPOVLdapServer](cmdlets/security/add-hpovldapserver.md)
     * [Disable-HPOVLdapLocalLogin](cmdlets/security/disable-hpovldaplocallogin.md)
@@ -130,6 +135,7 @@
     * [ConvertTo-HPOVStorageVolume](cmdlets/storage/convertto-hpovstoragevolume.md)
     * [Get-HPOVAvailableDriveType](cmdlets/storage/get-hpovavailabledrivetype.md)
     * [Get-HPOVDriveEnclosure](cmdlets/storage/get-hpovdriveenclosure.md)
+    * [Get-HPOVManagedSan](cmdlets/storage/get-hpovmanagedsan.md)
 * [Getting Help](getting-help.md)
 
 ## About
