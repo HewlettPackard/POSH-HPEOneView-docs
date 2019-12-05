@@ -65,7 +65,7 @@
     * [Get-HPOVBaselineRepository](cmdlets/appliance/get-hpovbaselinerepository.md)
     * [Get-HPOVEulaStatus](cmdlets/appliance/get-hpoveulastatus.md)
     * [Get-HPOVFixMeInstallationLog](cmdlets/appliance/get-hpovfixmeinstallationlog.md)
-    * [Get-HPOVHealthStatus](cmdlets/appliance/untitled.md)
+    * [Get-HPOVHealthStatus](cmdlets/appliance/get-hpovhealthstatus.md)
     * [Get-HPOVLabel](cmdlets/appliance/get-hpovlabel.md)
     * [Get-HPOVLicense](cmdlets/appliance/get-hpovlicense.md)
     * [Get-HPOVTask](cmdlets/appliance/get-hpovtask.md)
