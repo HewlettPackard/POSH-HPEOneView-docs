@@ -2,7 +2,7 @@
 
 * [Home](README.md)
 * [Verb mapping](verb-mapping.md)
-* [Cmdlets](cmdlets/README.md)
+* [Command Reference](cmdlets/README.md)
   * [Library](cmdlets/library/README.md)
     * [Connect-HPOVMgmt](cmdlets/library/connect-hpovmgmt.md)
     * [ConvertTo-HPOVPowerShellScript](cmdlets/library/convertto-hpovpowershellscript.md)
@@ -127,6 +127,7 @@
     * [Get-HPOVIloSso](cmdlets/servers/get-hpovilosso.md)
     * [Get-HPOVImageStreamerAppliance](cmdlets/servers/get-hpovimagestreamerappliance.md)
     * [Get-HPOVLogicalEnclosure](cmdlets/servers/get-hpovlogicalenclosure.md)
+    * [Get-HPOVOSDeploymentPlan](cmdlets/servers/untitled.md)
   * [Storage](cmdlets/storage/README.md)
     * [Add-HPOVSanManager](cmdlets/storage/add-hpovsanmanager.md)
     * [Add-HPOVStoragePool](cmdlets/storage/add-hpovstoragepool.md)

@@ -2,7 +2,7 @@
 description: Main Cmdlet documentation.
 ---
 
-# Cmdlets
+# Command Reference
 
 ## About
 
