@@ -71,6 +71,7 @@
     * [Get-HPOVLoginMessage](cmdlets/appliance/get-hpovloginmessage.md)
     * [Get-HPOVPendingUpdate](cmdlets/appliance/get-hpovpendingupdate.md)
     * [Get-HPOVRemoteSupport](cmdlets/appliance/get-hpovremotesupport.md)
+    * [Get-HPOVRemoteSupportContact](cmdlets/appliance/get-hpovremotesupportcontact.md)
     * [Get-HPOVTask](cmdlets/appliance/get-hpovtask.md)
     * [New-HPOVBackup](cmdlets/appliance/new-hpovbackup.md)
     * [New-HPOVRestore](cmdlets/appliance/new-hpovrestore.md)
