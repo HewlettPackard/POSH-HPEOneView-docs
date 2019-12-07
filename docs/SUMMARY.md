@@ -72,6 +72,12 @@
     * [Get-HPOVPendingUpdate](cmdlets/appliance/get-hpovpendingupdate.md)
     * [Get-HPOVRemoteSupport](cmdlets/appliance/get-hpovremotesupport.md)
     * [Get-HPOVRemoteSupportContact](cmdlets/appliance/get-hpovremotesupportcontact.md)
+    * [Get-HPOVRemoteSupportDataCollectionSchedule](cmdlets/appliance/get-hpovremotesupportdatacollectionschedule.md)
+    * [Get-HPOVRemoteSupportDefaultSite](cmdlets/appliance/get-hpovremotesupportdefaultsite.md)
+    * [Get-HPOVRemoteSupportEntitlementStatus](cmdlets/appliance/get-hpovremotesupportentitlementstatus.md)
+    * [Get-HPOVRemoteSupportPartner](cmdlets/appliance/get-hpovremotesupportpartner.md)
+    * [Get-HPOVRemoteSupportSetting](cmdlets/appliance/get-hpovremotesupportsetting.md)
+    * [Get-HPOVRemoteSyslog](cmdlets/appliance/get-hpovremotesyslog.md)
     * [Get-HPOVTask](cmdlets/appliance/get-hpovtask.md)
     * [New-HPOVBackup](cmdlets/appliance/new-hpovbackup.md)
     * [New-HPOVRestore](cmdlets/appliance/new-hpovrestore.md)
@@ -108,6 +114,7 @@
     * [Get-HPOVLogicalSwitchGroup](cmdlets/networking/get-hpovlogicalswitchgroup.md)
     * [Get-HPOVNetwork](cmdlets/networking/get-hpovnetwork.md)
     * [Get-HPOVNetworkSet](cmdlets/networking/get-hpovnetworkset.md)
+    * [Get-HPOVReservedVlanRange](cmdlets/networking/get-hpovreservedvlanrange.md)
   * [Security](cmdlets/security/README.md)
     * [Add-HPOVLdapServer](cmdlets/security/add-hpovldapserver.md)
     * [Disable-HPOVLdapLocalLogin](cmdlets/security/disable-hpovldaplocallogin.md)
@@ -146,6 +153,7 @@
     * [Get-HPOVAvailableDriveType](cmdlets/storage/get-hpovavailabledrivetype.md)
     * [Get-HPOVDriveEnclosure](cmdlets/storage/get-hpovdriveenclosure.md)
     * [Get-HPOVManagedSan](cmdlets/storage/get-hpovmanagedsan.md)
+    * [Get-HPOVSanManager](cmdlets/storage/get-hpovsanmanager.md)
 * [Getting Help](getting-help.md)
 
 ## About

@@ -23,7 +23,7 @@ Enabling Remote Support configures your devices being remotely supported to secu
 This Cmdlet will disable Remote Support for a compute or enclosure resource. If Remote Support has been disabled globally on the appliance, this Cmdlet is unnecessary.
 
 {% hint style="info" %}
-Privileges: Infrastructure administrator, Server administrator, or Server firmware operator
+Privileges: Infrastructure administrator, Server administrator
 {% endhint %}
 
 ### Parameters
@@ -144,7 +144,7 @@ Enabling Remote Support configures your devices being remotely supported to secu
 This Cmdlet will disable Remote Support for a compute or enclosure resource. If Remote Support has been disabled globally on the appliance, this Cmdlet is unnecessary.
 
 {% hint style="info" %}
-Privileges: Infrastructure administrator, Server administrator, or Server firmware operator
+Privileges: Infrastructure administrator, Server administrator
 {% endhint %}
 
 ### Parameters
@@ -265,7 +265,7 @@ Enabling Remote Support configures your devices being remotely supported to secu
 This Cmdlet will disable Remote Support for a compute or enclosure resource. If Remote Support has been disabled globally on the appliance, this Cmdlet is unnecessary.
 
 {% hint style="info" %}
-Privileges: Infrastructure administrator, Server administrator, or Server firmware operator
+Privileges: Infrastructure administrator, Server administrator
 {% endhint %}
 
 ### Parameters
