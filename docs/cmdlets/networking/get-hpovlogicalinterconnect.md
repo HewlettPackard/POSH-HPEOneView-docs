@@ -14,7 +14,7 @@ Get-HPOVLogicalInterconnect [[-Name] <String>] [[-NonCompliant] <SwitchParameter
 
 ### Description
 
- A logical interconnect is a single administrative entity that consists of the configuration for a set of interconnects in a single enclosure or an HPE Synergy frame link topology, and includes:
+A logical interconnect is a single administrative entity that consists of the configuration for a set of interconnects in a single enclosure or an HPE Synergy frame link topology, and includes:
 
 * The uplink sets, which connect to data center networks.
 * The mapping of networks to physical uplink ports, which is defined by the uplink sets for a logical interconnect.
@@ -188,7 +188,7 @@ Get-HPOVLogicalInterconnect [[-Name] <String>] [[-NonCompliant] <SwitchParameter
 
 ### Description
 
- A logical interconnect is a single administrative entity that consists of the configuration for a set of interconnects in a single enclosure or an HPE Synergy frame link topology, and includes:
+A logical interconnect is a single administrative entity that consists of the configuration for a set of interconnects in a single enclosure or an HPE Synergy frame link topology, and includes:
 
 * The uplink sets, which connect to data center networks.
 * The mapping of networks to physical uplink ports, which is defined by the uplink sets for a logical interconnect.
@@ -362,7 +362,7 @@ Get-HPOVLogicalInterconnect [[-Name] <String>] [[-NonCompliant] <SwitchParameter
 
 ### Description
 
- A logical interconnect is a single administrative entity that consists of the configuration for a set of interconnects in a single enclosure or an HPE Synergy frame link topology, and includes:
+A logical interconnect is a single administrative entity that consists of the configuration for a set of interconnects in a single enclosure or an HPE Synergy frame link topology, and includes:
 
 * The uplink sets, which connect to data center networks.
 * The mapping of networks to physical uplink ports, which is defined by the uplink sets for a logical interconnect.

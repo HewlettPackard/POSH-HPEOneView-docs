@@ -115,6 +115,7 @@
     * [Get-HPOVNetwork](cmdlets/networking/get-hpovnetwork.md)
     * [Get-HPOVNetworkSet](cmdlets/networking/get-hpovnetworkset.md)
     * [Get-HPOVReservedVlanRange](cmdlets/networking/get-hpovreservedvlanrange.md)
+    * [Get-HPOVSasLogicalInterconnect](cmdlets/networking/get-hpovsaslogicalinterconnect.md)
   * [Security](cmdlets/security/README.md)
     * [Add-HPOVLdapServer](cmdlets/security/add-hpovldapserver.md)
     * [Disable-HPOVLdapLocalLogin](cmdlets/security/disable-hpovldaplocallogin.md)
@@ -154,6 +155,7 @@
     * [Get-HPOVDriveEnclosure](cmdlets/storage/get-hpovdriveenclosure.md)
     * [Get-HPOVManagedSan](cmdlets/storage/get-hpovmanagedsan.md)
     * [Get-HPOVSanManager](cmdlets/storage/get-hpovsanmanager.md)
+    * [Get-HPOVSanZone](cmdlets/storage/get-hpovsanzone.md)
 * [Getting Help](getting-help.md)
 
 ## About
