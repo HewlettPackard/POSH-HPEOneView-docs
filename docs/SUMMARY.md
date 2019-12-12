@@ -116,6 +116,7 @@
     * [Get-HPOVNetworkSet](cmdlets/networking/get-hpovnetworkset.md)
     * [Get-HPOVReservedVlanRange](cmdlets/networking/get-hpovreservedvlanrange.md)
     * [Get-HPOVSasLogicalInterconnect](cmdlets/networking/get-hpovsaslogicalinterconnect.md)
+    * [Reset-HPOVInterconnectNetOpPassword](cmdlets/networking/reset-hpovinterconnectnetoppassword.md)
   * [Security](cmdlets/security/README.md)
     * [Add-HPOVLdapServer](cmdlets/security/add-hpovldapserver.md)
     * [Disable-HPOVLdapLocalLogin](cmdlets/security/disable-hpovldaplocallogin.md)
