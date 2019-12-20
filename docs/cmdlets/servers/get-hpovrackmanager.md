@@ -14,7 +14,7 @@ Get-HPOVRackManager [[-Name] <String>] [[-Label] <String>] [[-Scope] <Object>] [
 
 ### Description
 
- A rack manager platform is a multinode system. The nodes are housed within a rack or across racks, and are centrally managed by a management controller. The Rack Managers screen enables you to manage and visualize the physical location of rack manager platforms within a rack. A rack manager platform consists of the following:
+A rack manager platform is a multi-node system. The nodes are housed within a rack or across racks, and are centrally managed by a management controller. The Rack Managers screen enables you to manage and visualize the physical location of rack manager platforms within a rack. A rack manager platform consists of the following:
 
 * One or more chassis - The chassis are individual nodes that are used to build logical components such as systems or partitions. Each chassis is a physical container for system components like the compute, storage, or network nodes.
 
@@ -139,7 +139,7 @@ Get-HPOVRackManager [[-Name] <String>] [[-Label] <String>] [[-Scope] <Object>] [
 
 ### Description
 
- A rack manager platform is a multinode system. The nodes are housed within a rack or across racks, and are centrally managed by a management controller. The Rack Managers screen enables you to manage and visualize the physical location of rack manager platforms within a rack. A rack manager platform consists of the following:
+A rack manager platform is a multi-node system. The nodes are housed within a rack or across racks, and are centrally managed by a management controller. The Rack Managers screen enables you to manage and visualize the physical location of rack manager platforms within a rack. A rack manager platform consists of the following:
 
 * One or more chassis - The chassis are individual nodes that are used to build logical components such as systems or partitions. Each chassis is a physical container for system components like the compute, storage, or network nodes.
 
@@ -264,7 +264,7 @@ Get-HPOVRackManager [[-Name] <String>] [[-Label] <String>] [[-Scope] <Object>] [
 
 ### Description
 
- A rack manager platform is a multinode system. The nodes are housed within a rack or across racks, and are centrally managed by a management controller. The Rack Managers screen enables you to manage and visualize the physical location of rack manager platforms within a rack. A rack manager platform consists of the following:
+A rack manager platform is a multi-node system. The nodes are housed within a rack or across racks, and are centrally managed by a management controller. The Rack Managers screen enables you to manage and visualize the physical location of rack manager platforms within a rack. A rack manager platform consists of the following:
 
 * One or more chassis - The chassis are individual nodes that are used to build logical components such as systems or partitions. Each chassis is a physical container for system components like the compute, storage, or network nodes.
 

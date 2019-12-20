@@ -1,26 +1,26 @@
 ---
-description: Retrieve Interconnect Type resource(s).
+description: Retrieve SAS Interconnect Type resource(s).
 ---
 
-# Get-HPOVInterconnectType
+# Get-HPOVSasInterconnectType
 
 ## HPE OneView 5.00 Library
 
 ### Syntax
 
 ```text
-Get-HPOVInterconnectType [[-Name] <String>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
+Get-HPOVSasInterconnectType [[-Name] <String>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
 ```text
-Get-HPOVInterconnectType [[-PartNumber] <String>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
+Get-HPOVSasInterconnectType [[-PartNumber] <String>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
 ### Description
 
 Interconnects enable communication between the server hardware in the enclosure and the data center networks. Interconnects and their configuration are derived from either a Logical Switch Group or Logical Interconnect Group. When configuring either resource, you will need to specify an interconnect type that is supported by the appliance.
 
-This Cmdlet will retrieve a list of all supported interconnect types \(Ethernet, FC, Converged Network\) or specific ones via a query if the name parameter is provided. 
+This Cmdlet will retrieve a list of supported SAS interconnect type or specific ones via a query if the name parameter is provided. 
 
 {% hint style="info" %}
 Minimum required privileges: Read-only
@@ -72,62 +72,57 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ### Input Types
 
-_**None. You cannot pipe objects to this cmdlet.**_
+_**None. You cannot pipe objects to this Cmdlet.**_
 
 ### Return Values
 
-_**HPOneView.Networking.InterconnectType \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Networking.SasInterconnectType \[System.Management.Automation.PSCustomObject\]**_
 
-Single Interconnect Type resource.
+Single SAS Interconnect Type resource
 
-_**System.Collections.ArrayList &lt;HPOneView.Networking.InterconnectType&gt;**_
+_**System.Collections.ArrayList &lt;HPOneView.Networking.SasInterconnectType&gt;**_
 
-Multiple Interconnect Type resources or formatted table dispalying basic Interconnect Type information.
+Multiple SAS Interconnect Type resources or formatted table dispalying basic Interconnect Type information
 
-_**An Interconnect Type or collection of Interconnect Types.**_
+_**A SAS Interconnect Type or collection of SAS Interconnect Types.**_
 
 ### Examples
 
 ```text
  -------------------------- EXAMPLE 1 --------------------------
-Get-HPOVInterconnectType
+Get-HPOVSasInterconnectType
 ```
 
-Returns all Interconnect Types available from all connected appliances to standard output.
+Returns all SAS Interconnect Types available from all connected appliances to standard output.
 
 ```text
  -------------------------- EXAMPLE 2 --------------------------
-Get-HPOVInterconnect -Name "HP VC FlexFabric 10Gb/24-Port Module"
+Get-HPOVSasInterconnectType -Name "Synergy 12Gb SAS Connection Module"
 ```
 
-Returns just the "HP VC FlexFabric 10Gb/24-Port Module" Interconnect Type object to standard output.
+Returns just the "Synergy 12Gb SAS Connection Module" SAS Interconnect Type object to standard output.
 
-```text
- -------------------------- EXAMPLE 3 --------------------------
-Get-HPOVInterconnect -Partnumber "571956-B21"
-```
+### Related Links
 
-Returns just the partnumber "571956-B21" Interconnect Type object to standard output. 
-
-### Related Links 
+* [Get-HPOVInterconnectType](get-hpovinterconnecttype.md#hpe-oneview-5-00-library)
 
 ## HPE OneView 4.20 Library
 
 ### Syntax
 
 ```text
-Get-HPOVInterconnectType [[-Name] <String>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
+Get-HPOVSasInterconnectType [[-Name] <String>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
 ```text
-Get-HPOVInterconnectType [[-PartNumber] <String>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
+Get-HPOVSasInterconnectType [[-PartNumber] <String>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
 ### Description
 
 Interconnects enable communication between the server hardware in the enclosure and the data center networks. Interconnects and their configuration are derived from either a Logical Switch Group or Logical Interconnect Group. When configuring either resource, you will need to specify an interconnect type that is supported by the appliance.
 
-This Cmdlet will retrieve a list of all supported interconnect types \(Ethernet, FC, Converged Network\) or specific ones via a query if the name parameter is provided. 
+This Cmdlet will retrieve a list of supported SAS interconnect type or specific ones via a query if the name parameter is provided. 
 
 {% hint style="info" %}
 Minimum required privileges: Read-only
@@ -179,62 +174,57 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ### Input Types
 
-_**None. You cannot pipe objects to this cmdlet.**_
+_**None. You cannot pipe objects to this Cmdlet.**_
 
 ### Return Values
 
-_**HPOneView.Networking.InterconnectType \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Networking.SasInterconnectType \[System.Management.Automation.PSCustomObject\]**_
 
-Single Interconnect Type resource.
+Single SAS Interconnect Type resource
 
-_**System.Collections.ArrayList &lt;HPOneView.Networking.InterconnectType&gt;**_
+_**System.Collections.ArrayList &lt;HPOneView.Networking.SasInterconnectType&gt;**_
 
-Multiple Interconnect Type resources or formatted table dispalying basic Interconnect Type information.
+Multiple SAS Interconnect Type resources or formatted table dispalying basic Interconnect Type information
 
-_**An Interconnect Type or collection of Interconnect Types.**_
+_**A SAS Interconnect Type or collection of SAS Interconnect Types.**_
 
 ### Examples
 
 ```text
  -------------------------- EXAMPLE 1 --------------------------
-Get-HPOVInterconnectType
+Get-HPOVSasInterconnectType
 ```
 
-Returns all Interconnect Types available from all connected appliances to standard output.
+Returns all SAS Interconnect Types available from all connected appliances to standard output.
 
 ```text
  -------------------------- EXAMPLE 2 --------------------------
-Get-HPOVInterconnect -Name "HP VC FlexFabric 10Gb/24-Port Module"
+Get-HPOVSasInterconnectType -Name "Synergy 12Gb SAS Connection Module"
 ```
 
-Returns just the "HP VC FlexFabric 10Gb/24-Port Module" Interconnect Type object to standard output.
+Returns just the "Synergy 12Gb SAS Connection Module" SAS Interconnect Type object to standard output.
 
-```text
- -------------------------- EXAMPLE 3 --------------------------
-Get-HPOVInterconnect -Partnumber "571956-B21"
-```
+### Related Links
 
-Returns just the partnumber "571956-B21" Interconnect Type object to standard output. 
-
-### Related Links 
+* [Get-HPOVInterconnectType](get-hpovinterconnecttype.md#hpe-oneview-4-20-library)
 
 ## HPE OneView 4.10 Library
 
 ### Syntax
 
 ```text
-Get-HPOVInterconnectType [[-Name] <String>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
+Get-HPOVSasInterconnectType [[-Name] <String>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
 ```text
-Get-HPOVInterconnectType [[-PartNumber] <String>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
+Get-HPOVSasInterconnectType [[-PartNumber] <String>] [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
 ### Description
 
 Interconnects enable communication between the server hardware in the enclosure and the data center networks. Interconnects and their configuration are derived from either a Logical Switch Group or Logical Interconnect Group. When configuring either resource, you will need to specify an interconnect type that is supported by the appliance.
 
-This Cmdlet will retrieve a list of all supported interconnect types \(Ethernet, FC, Converged Network\) or specific ones via a query if the name parameter is provided. 
+This Cmdlet will retrieve a list of supported SAS interconnect type or specific ones via a query if the name parameter is provided. 
 
 {% hint style="info" %}
 Minimum required privileges: Read-only
@@ -286,44 +276,39 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ### Input Types
 
-_**None. You cannot pipe objects to this cmdlet.**_
+_**None. You cannot pipe objects to this Cmdlet.**_
 
 ### Return Values
 
-_**HPOneView.Networking.InterconnectType \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Networking.SasInterconnectType \[System.Management.Automation.PSCustomObject\]**_
 
-Single Interconnect Type resource.
+Single SAS Interconnect Type resource
 
-_**System.Collections.ArrayList &lt;HPOneView.Networking.InterconnectType&gt;**_
+_**System.Collections.ArrayList &lt;HPOneView.Networking.SasInterconnectType&gt;**_
 
-Multiple Interconnect Type resources or formatted table dispalying basic Interconnect Type information.
+Multiple SAS Interconnect Type resources or formatted table dispalying basic Interconnect Type information
 
-_**An Interconnect Type or collection of Interconnect Types.**_
+_**A SAS Interconnect Type or collection of SAS Interconnect Types.**_
 
 ### Examples
 
 ```text
  -------------------------- EXAMPLE 1 --------------------------
-Get-HPOVInterconnectType
+Get-HPOVSasInterconnectType
 ```
 
-Returns all Interconnect Types available from all connected appliances to standard output.
+Returns all SAS Interconnect Types available from all connected appliances to standard output.
 
 ```text
  -------------------------- EXAMPLE 2 --------------------------
-Get-HPOVInterconnect -Name "HP VC FlexFabric 10Gb/24-Port Module"
+Get-HPOVSasInterconnectType -Name "Synergy 12Gb SAS Connection Module"
 ```
 
-Returns just the "HP VC FlexFabric 10Gb/24-Port Module" Interconnect Type object to standard output.
+Returns just the "Synergy 12Gb SAS Connection Module" SAS Interconnect Type object to standard output.
 
-```text
- -------------------------- EXAMPLE 3 --------------------------
-Get-HPOVInterconnect -Partnumber "571956-B21"
-```
+### Related Links
 
-Returns just the partnumber "571956-B21" Interconnect Type object to standard output. 
-
-### Related Links 
+* [Get-HPOVInterconnectType](get-hpovinterconnecttype.md#hpe-oneview-4-10-library)
 
 
 

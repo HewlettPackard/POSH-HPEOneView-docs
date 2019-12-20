@@ -20,7 +20,9 @@ In production environments, Hewlett Packard Enterprise strongly recommends that 
 
 If certificate validation is disabled, any sensitive data such as credentials are transmitted insecurely. Make sure to use only local user accounts and not enterprise directory-based accounts to avoid transmitting enterprise login credentials over the network when certificate validation is disabled.
 
-NOTE: When upgrading from earlier releases, the certificates in use by the currently monitored or managed devices are imported into the HPE OneView trust store and alerts are generated for issues such as expired certificates. These automatically added certificates are either a device"s self-signed certificate or the leaf certificate for a certificate authority \(CA\) signed certificate. Using CA-signed certificates can simplify the device trust process.
+{% hint style="info" %}
+When upgrading from earlier releases, the certificates in use by the currently monitored or managed devices are imported into the HPE OneView trust store and alerts are generated for issues such as expired certificates. These automatically added certificates are either a device"s self-signed certificate or the leaf certificate for a certificate authority \(CA\) signed certificate. Using CA-signed certificates can simplify the device trust process.
+{% endhint %}
 
 Certificate checking is enabled by default, but some of the stricter validation checks are relaxed to maintain communications with all devices, even those with certificate issues. The relaxed checking includes:
 

@@ -26,7 +26,7 @@ Complex passwords must contain the following:
 * No whitespace
 
 {% hint style="info" %}
-Privileges: Infrastructure administrator
+Minimum Required Privileges: Infrastructure administrator
 {% endhint %}
 
 ### Parameters
@@ -94,7 +94,7 @@ Complex passwords must contain the following:
 * No whitespace
 
 {% hint style="info" %}
-Privileges: Infrastructure administrator
+Minimum Required Privileges: Infrastructure administrator
 {% endhint %}
 
 ### Parameters
@@ -162,7 +162,7 @@ Complex passwords must contain the following:
 * No whitespace
 
 {% hint style="info" %}
-Privileges: Infrastructure administrator
+Minimum Required Privileges: Infrastructure administrator
 {% endhint %}
 
 ### Parameters
