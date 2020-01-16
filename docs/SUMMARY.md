@@ -5,7 +5,7 @@
 * [Command Reference](cmdlets/README.md)
   * [v5.00](cmdlets/v5.00/README.md)
     * [Library](cmdlets/v5.00/library/README.md)
-      * [Connect-HPOVMgmt](cmdletsv5.00//library/connect-hpovmgmt.md)
+      * [Connect-HPOVMgmt](cmdlets/v5.00/library/connect-hpovmgmt.md)
       * [ConvertTo-HPOVPowerShellScript](cmdlets/v5.00/library/convertto-hpovpowershellscript.md)
       * [Disable-HPOVDebug](cmdlets/v5.00/library/disable-hpovdebug.md)
       * [Disable-HPOVMSDSC](cmdlets/v5.00/library/disable-hpovmsdsc.md)
