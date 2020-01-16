@@ -1,5 +1,3 @@
-# v5.00
-
 ---
 description: Main Cmdlet documentation.
 ---
