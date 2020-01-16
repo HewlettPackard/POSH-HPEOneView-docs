@@ -2,11 +2,7 @@
 description: Initiate a connection to an HPE OneView appliance.
 ---
 
-# Connect-HPOVMgmt
-
-## HPE OneView 5.00 Library
-
-### Syntax
+## Syntax
 
 ```text
 Connect-HPOVMgmt [-Hostname] <String> [-Credential] <PSCredential> [[-AuthLoginDomain] <String>] [[-LoginAcknowledge] <SwitchParameter>] [<CommonParameters>]
@@ -16,15 +12,15 @@ Connect-HPOVMgmt [-Hostname] <String> [-Credential] <PSCredential> [[-AuthLoginD
 Connect-HPOVMgmt [-Hostname] <String> [-Certificate] <Object> [[-LoginAcknowledge] <SwitchParameter>] [<CommonParameters>]
 ```
 
-### Description
+## Description
 
 Establish a connection with the specified HPE OneView appliance. Logs the user into the appliance and establishes a session for use with subsequent requests. Prompts will be displayed for any omitted values.
 
 Appliance hostname or IP can include an alternate TCP port number. While the appliance does not allow the default TCP port 443 to be changed, the appliance could reside behind a firewall, which is redirecting an alternate TCP port number.
 
-### Parameters
+## Parameters
 
-#### -AuthLoginDomain &lt;String&gt;
+### -AuthLoginDomain &lt;String&gt;
 
 The Directory Name for LDAP/Active Directory authentication, or LOCAL for appliance internal user accounts.
 
@@ -38,7 +34,7 @@ Default is determined by connecting to the requested appliance and retrieving th
 | Accept pipeline input? | false |
 | Accept wildcard characters?    | False |
 
-#### -Certificate &lt;Object&gt;
+### -Certificate &lt;Object&gt;
 
 Provide the X.509 certificate/SmartCard digital badge in order to authenticate to a supported appliance. Two-factor authentication must be configured on the appliance in order to provide a X.509 certificate.
 
@@ -50,7 +46,7 @@ Provide the X.509 certificate/SmartCard digital badge in order to authenticate t
 | Accept pipeline input? | false |
 | Accept wildcard characters?    | False |
 
-#### -Credential &lt;PSCredential&gt;
+### -Credential &lt;PSCredential&gt;
 
 Use this parameter if you want to provide a PSCredential object instead.
 
@@ -62,7 +58,7 @@ Use this parameter if you want to provide a PSCredential object instead.
 | Accept pipeline input? | false |
 | Accept wildcard characters?    | False |
 
-#### -Hostname &lt;String&gt;
+### -Hostname &lt;String&gt;
 
 Aliases \[-Appliance, -Computername\]
 
@@ -76,7 +72,7 @@ The hostname or IP address of the appliance.
 | Accept pipeline input? | false |
 | Accept wildcard characters?    | False |
 
-#### -LoginAcknowledge &lt;SwitchParameter&gt;
+### -LoginAcknowledge &lt;SwitchParameter&gt;
 
 When a Login Message has been configured and acknowledgement is Required, use this parameter to acknowledge it during the initial call. Otherwise, if omitted, and a Login Banner acknowledgement is required, the caller will be prompted. This prompt does not support the -Confirm parameter.
 
@@ -88,7 +84,7 @@ When a Login Message has been configured and acknowledgement is Required, use th
 | Accept pipeline input? | false |
 | Accept wildcard characters?    | False |
 
-#### -Password &lt;Object&gt;
+### -Password &lt;Object&gt;
 
 {% hint style="info" %}
 This parameter is obsolete and should not be used.
@@ -104,7 +100,7 @@ Password to log into the appliance. Can be either `[System.String]` or  \[`Secur
 | Accept pipeline input? | false |
 | Accept wildcard characters?    | False |
 
-#### -UserName &lt;String&gt;
+### -UserName &lt;String&gt;
 
 User name to authenticate.
 
@@ -116,15 +112,15 @@ User name to authenticate.
 | Accept pipeline input? | false |
 | Accept wildcard characters?    | False |
 
-#### &lt;CommonParameters&gt;
+### &lt;CommonParameters&gt;
 
 This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer, PipelineVariable, and OutVariable. For more information, see about\_CommonParameters \([http://go.microsoft.com/fwlink/?LinkID=113216](http://go.microsoft.com/fwlink/?LinkID=113216)\)
 
-### Input Types
+## Input Types
 
 _**None. You cannot pipe objects to this cmdlet.**_
 
-### Return Values
+## Return Values
 
 _**HPOneView.Appliance.Connection**_
 
@@ -162,7 +158,7 @@ _**System.Management.Automation.ErrorRecord**_
 
 On error, appliance response is returned as a terminating error.
 
-### Examples
+## Examples
 
 ```text
  -------------------------- EXAMPLE 1 --------------------------
@@ -190,6 +186,6 @@ Connect-HPOVMgmt -appliance myappliance.domain.com -Certificate $MySmartCard
 
  Connect to a specific appliance using a digital badge.
 
-### Related Links
+## Related Links
 
 * [Disconnect-HPOVMgmt ](disconnect-hpovmgmt.md#hpe-oneview-5-00-library)
