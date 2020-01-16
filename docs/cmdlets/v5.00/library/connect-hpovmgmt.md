@@ -1,5 +1,5 @@
 ---
-description: Initiate a connection to an HPE OneView appliance.
+description: Initiate a connection to an HPE OneView appliance. (v5.00)
 ---
 
 # Connect-HPOVMgmt
