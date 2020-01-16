@@ -2,6 +2,8 @@
 description: Initiate a connection to an HPE OneView appliance.
 ---
 
+# Connect-HPOVMgmt
+
 ## Syntax
 
 ```text

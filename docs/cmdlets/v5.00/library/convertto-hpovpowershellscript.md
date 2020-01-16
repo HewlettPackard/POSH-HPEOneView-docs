@@ -4,8 +4,6 @@ description: Create PowerShell script code from resource.
 
 # ConvertTo-HPOVPowerShellScript
 
-### HPE OneView 5.00 Library
-
 ### Syntax
 
 ```text
