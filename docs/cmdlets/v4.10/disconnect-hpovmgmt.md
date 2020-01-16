@@ -4,21 +4,21 @@ description: Logoff from the appliance.
 
 # Disconnect-HPOVMgmt
 
-### HPE OneView 5.00 Library
+## HPE OneView 5.00 Library
 
-### Syntax
+## Syntax
 
 ```text
 Disconnect-HPOVMgmt [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
-### Description
+## Description
 
 This Cmdlet will logoff the current user, which terminates the user session, on the specified HPE OneView appliance.
 
-### Parameters
+## Parameters
 
-#### -ApplianceConnection &lt;Object&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more HPOneView.Appliance.Connection object\(s\) or Name property value\(s\).
 
@@ -30,21 +30,21 @@ Default Value: ${Global:ConnectedSessions} \| ? Default
 | Position? | named |
 | Default value | $ConnectedSessions \| Where-Object Default |
 | Accept pipeline input? | true \(ByValue\) |
-| Accept wildcard characters?    | False |
+| Accept wildcard characters? | False |
 
 &lt;CommonParameters&gt;
 
 This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer, PipelineVariable, and OutVariable. For more information, see about\_CommonParameters \([http://go.microsoft.com/fwlink/?LinkID=113216](http://go.microsoft.com/fwlink/?LinkID=113216)\)
 
-### Input Types
+## Input Types
 
 _**None. You cannot pipe objects to this cmdlet.**_
 
-### Return Values
+## Return Values
 
 _**None.**_
 
-### Examples
+## Examples
 
 ```text
  -------------------------- EXAMPLE 1 --------------------------
@@ -55,14 +55,14 @@ $Connection1 = Connect-HPOVMgmt MyAppliance.domain.com
 Disconnect-HPOVMgmt -Hostname $Connection1
 ```
 
- Disconnect from the specific appliance session.
+Disconnect from the specific appliance session.
 
 ```text
  -------------------------- EXAMPLE 2 --------------------------
 Disconnect-HPOVMgmt -Hostname 1
 ```
 
- Disconnect ConnectionID 1 appliance session.
+Disconnect ConnectionID 1 appliance session.
 
 ```text
  -------------------------- EXAMPLE 3 --------------------------
@@ -71,6 +71,7 @@ $ConnectedSessions | Disconnect-HPOVMgmt
 
 Disconnect all appliance sessions.
 
-### Related Links
+## Related Links
 
-* [Connect-HPOVMgmt ](connect-hpovmgmt.md#hpe-oneview-5-00-library)
+* [Connect-HPOVMgmt ](library/connect-hpovmgmt.md#hpe-oneview-5-00-library)
+

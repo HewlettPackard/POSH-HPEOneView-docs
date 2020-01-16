@@ -4,13 +4,13 @@ description: Create PowerShell script code from resource.
 
 # ConvertTo-HPOVPowerShellScript
 
-### Syntax
+## Syntax
 
 ```text
 ConvertTo-HPOVPowerShellScript [-InputObject] <Object> [[-Export] <System.IO.FileInfo>] [[-Append] <SwitchParameter>] [<CommonParameters>]
 ```
 
-### Description
+## Description
 
 This Cmdlet will assist administrators or scripters to help generate script code from specific resources. The code generated is a starting point to be used for repeating similar tasks performed by the UI, or to incorporate into scripts or workflows.
 
@@ -41,9 +41,9 @@ The following resources are supported by this Cmdlet:
 * Server Profile Template \(Get-HPOVServerProfileTemplate\)
 * Server Profile \(Get-HPOVServerProfile\)
 
-### Parameters
+## Parameters
 
-#### -Append &lt;SwitchParameter&gt;
+### -Append &lt;SwitchParameter&gt;
 
 Indicate if the export file should be appended. By default, a new file will be created with new content.
 
@@ -53,9 +53,9 @@ Indicate if the export file should be appended. By default, a new file will be c
 | Position? | named |
 | Default value |  |
 | Accept pipeline input? | false |
-| Accept wildcard characters?    | False |
+| Accept wildcard characters? | False |
 
-#### -Export &lt;System.IO.FileInfo&gt;
+### -Export &lt;System.IO.FileInfo&gt;
 
 Location where to write UTF-8 file.
 
@@ -65,9 +65,9 @@ Location where to write UTF-8 file.
 | Position? | named |
 | Default value |  |
 | Accept pipeline input? | false |
-| Accept wildcard characters?    | False |
+| Accept wildcard characters? | False |
 
-#### -InputObject &lt;Object&gt;
+### -InputObject &lt;Object&gt;
 
 Resource object from supported Cmdlets.
 
@@ -77,29 +77,30 @@ Resource object from supported Cmdlets.
 | Position? | named |
 | Default value |  |
 | Accept pipeline input? | true \(ByValue\) |
-| Accept wildcard characters?    | False |
+| Accept wildcard characters? | False |
 
 &lt;CommonParameters&gt;
 
 This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer, PipelineVariable, and OutVariable. For more information, see about\_CommonParameters \([http://go.microsoft.com/fwlink/?LinkID=113216](http://go.microsoft.com/fwlink/?LinkID=113216)\)
 
-### Input Types
+## Input Types
 
 _**Various objects are supported.**_
 
-### Return Values
+## Return Values
 
 _**System.String**_
 
 String output of generated code.
 
-### Examples
+## Examples
 
 ```text
  -------------------------- EXAMPLE 1 --------------------------
 Get-HPOVServerProfile | ConvertTo-HPOVPowerShellScript
 ```
 
- Generate PowerShell script code for the returned server profile objects.
+Generate PowerShell script code for the returned server profile objects.
 
-### Related Links
+## Related Links
+

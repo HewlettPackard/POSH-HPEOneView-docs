@@ -6,21 +6,21 @@ description: >-
 
 # Set-HPOVApplianceDefaultConnection
 
-### HPE OneView 5.00 Library
+## HPE OneView 5.00 Library
 
-###  Syntax
+## Syntax
 
 ```text
 Set-HPOVApplianceDefaultConnection [-ApplianceConnection] <Object> [<CommonParameters>]
 ```
 
-### Description
+## Description
 
 When establishing multiple Appliance Connections, this Cmdlet will help set one of the appliance connections stored in the `${Global:ConnectedSessions}` variable to the default connection. All Cmdlets that require a specific Appliance Connection will use the new default.
 
-### Parameters
+## Parameters
 
-#### -ApplianceConnection &lt;Object&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Either the `[HPOneView.Appliance.Connection]` object, full or partial value of the connection objects Name property.
 
@@ -30,25 +30,25 @@ Either the `[HPOneView.Appliance.Connection]` object, full or partial value of t
 | Position? | 0 |
 | Default value |  |
 | Accept pipeline input? | true \(ByValue\) |
-| Accept wildcard characters?    | False |
+| Accept wildcard characters? | False |
 
 &lt;CommonParameters&gt;
 
 This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer, PipelineVariable, and OutVariable. For more information, see about\_CommonParameters \([http://go.microsoft.com/fwlink/?LinkID=113216](http://go.microsoft.com/fwlink/?LinkID=113216)\)
 
-### Input Types
+## Input Types
 
 _**HPOneView.Appliance.Connection**_
 
 The Appliance Connection object either provided from the [`Connect-HPOVMgmt`](connect-hpovmgmt.md) return or `${Global:ConnectedSessions}` variable
 
-### Return Values
+## Return Values
 
 _**System.Collections.ArrayList &lt;HPOneView.Appliance.Connection&gt;**_
 
 Updated collection of `[HPOneView.Appliance.Connection]` objects
 
-### Examples
+## Examples
 
 ```text
  -------------------------- EXAMPLE 1 --------------------------
@@ -64,7 +64,6 @@ ConnectionID Name                    UserName      AuthLoginDomain Default Conne
 ------------ ----                    --------      --------------- ------------------
 1            Appliance1.domain.local administrator LOCAL           False
 2            Appliance2.domain.local administrator LOCAL           True
-
 ```
 
 Display the current appliance connections, then set the new default to "Appliance2" using the partial name value.
@@ -83,14 +82,14 @@ ConnectionID Name                    UserName      AuthLoginDomain Default Conne
 ------------ ----                    --------      --------------- ------------------
 1            Appliance1.domain.local administrator LOCAL           False
 2            Appliance2.domain.local administrator LOCAL           True
-
 ```
 
 Display the current appliance connections, then set the new default to "Appliance2" using the pipeline by passing the `[HPOneView.Appliance.Connection]` object.
 
-### Related Links
+## Related Links
 
 * [Connect-HPOVMgmt](connect-hpovmgmt.md)
 * [Disconnect-HPOVMgmt](disconnect-hpovmgmt.md)
-* [about\_Appliance\_Connection\_Permissions](../../../about/about_appliance_connection_permissions.md)
-* \`\`[`${Global:ConnectedSessions}`](../../../about/about_appliance_connections.md)
+* [about\_Appliance\_Connection\_Permissions](../../about/about_appliance_connection_permissions.md)
+* \`\`[`${Global:ConnectedSessions}`](../../about/about_appliance_connections.md)
+

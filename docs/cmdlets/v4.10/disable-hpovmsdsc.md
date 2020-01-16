@@ -1,22 +1,22 @@
 ---
-description: Enable Microsoft DSC Support
+description: Disable Microsoft DSC Support
 ---
 
-# Enable-HPOVMSDSC
+# Disable-HPOVMSDSC
 
 ## HPE OneView 5.00 Library
 
 ### Syntax
 
 ```text
-Enable-HPOVMSDSC [<CommonParameters>]
+Disable-HPOVMSDSC [<CommonParameters>]
 ```
 
 ### Description
 
-Using this cmdlet will create and/or modify UseMSDSC \(REG\_DWORD\) located at `HKCU:\Software\Hewlett-Packard\HPOneView`, to `1 (True)`. By enabling support, the module will overload Write-Host, and instead issue Write-Verbose commands.
+Using this cmdlet will create and/or modify UseMSDSC \(REG\_DWORD\) located at `HKCU:\Software\Hewlett-Packard\HPOneView`, to `0 (False)`. By disabling support, the module will no longer overload Write-Host.
 
-Use Disable-HPOVMsDSC to disable support.
+Use Enable-HPOVMsDSC to enable support.
 
 ### Parameters
 
@@ -36,11 +36,12 @@ _**None.**_
 
 ```text
  -------------------------- EXAMPLE 1 --------------------------
-Enable-HPOVMSDSC
+Disable-HPOVMSDSC
 ```
 
-Configures Registry value to overload Write-Host, which then uses Write-Verbose.
+Configures Registry value to no longer overload Write-Host.
 
 ### Related Links
 
-* [Disable-HPOVMSDSC](disable-hpovmsdsc.md#hpe-oneview-5-00-library)
+* [Enable-HPOVMSDSC](enable-hpovmsdsc.md#hpe-oneview-5-00-library)
+

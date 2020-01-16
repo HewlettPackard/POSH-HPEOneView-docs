@@ -28,7 +28,7 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If
 | Position? | 1 |
 | Default value | \(${Global:ConnectedSessions} \| ? Default\) |
 | Accept pipeline input? | true \(ByPropertyName\) |
-| Accept wildcard characters?    | False |
+| Accept wildcard characters? | False |
 
 #### -Force &lt;SwitchParameter&gt;
 
@@ -40,7 +40,7 @@ Use to force-update the resource. Not all resources support force-update.
 | Position? | named |
 | Default value | False |
 | Accept pipeline input? | false |
-| Accept wildcard characters?    | False |
+| Accept wildcard characters? | False |
 
 #### -InputObject &lt;Object&gt;
 
@@ -52,7 +52,7 @@ The modified resource that is to be updated.
 | Position? | 0 |
 | Default value |  |
 | Accept pipeline input? | true \(ByValue\) |
-| Accept wildcard characters?    | False |
+| Accept wildcard characters? | False |
 
 &lt;CommonParameters&gt;
 
@@ -77,12 +77,12 @@ The modified resource or async task depending on the resource being modified
 $profile = Get-HPOVServerProfile -Name "Profile 1"
 $profile.name = "New Name"
 Set-HPOVResource -InputObject $profile
-
 ```
 
- Updates the name of the Server Profile resource.
+Updates the name of the Server Profile resource.
 
 ### Related Links
 
 * [New-HPOVResource](new-hpovresource.md)
 * [Remove-HPOVResource](remove-hpovresource.md)
+

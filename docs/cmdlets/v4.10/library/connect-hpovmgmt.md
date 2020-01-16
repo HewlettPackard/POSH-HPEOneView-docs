@@ -34,7 +34,7 @@ Default is determined by connecting to the requested appliance and retrieving th
 | Position? | named |
 | Default value | LOCAL |
 | Accept pipeline input? | false |
-| Accept wildcard characters?    | False |
+| Accept wildcard characters? | False |
 
 ### -Certificate &lt;Object&gt;
 
@@ -46,7 +46,7 @@ Provide the X.509 certificate/SmartCard digital badge in order to authenticate t
 | Position? | named |
 | Default value |  |
 | Accept pipeline input? | false |
-| Accept wildcard characters?    | False |
+| Accept wildcard characters? | False |
 
 ### -Credential &lt;PSCredential&gt;
 
@@ -58,7 +58,7 @@ Use this parameter if you want to provide a PSCredential object instead.
 | Position? | named |
 | Default value |  |
 | Accept pipeline input? | false |
-| Accept wildcard characters?    | False |
+| Accept wildcard characters? | False |
 
 ### -Hostname &lt;String&gt;
 
@@ -72,7 +72,7 @@ The hostname or IP address of the appliance.
 | Position? | named |
 | Default value |  |
 | Accept pipeline input? | false |
-| Accept wildcard characters?    | False |
+| Accept wildcard characters? | False |
 
 ### -LoginAcknowledge &lt;SwitchParameter&gt;
 
@@ -84,7 +84,7 @@ When a Login Message has been configured and acknowledgement is Required, use th
 | Position? | named |
 | Default value | False |
 | Accept pipeline input? | false |
-| Accept wildcard characters?    | False |
+| Accept wildcard characters? | False |
 
 ### -Password &lt;Object&gt;
 
@@ -92,7 +92,7 @@ When a Login Message has been configured and acknowledgement is Required, use th
 This parameter is obsolete and should not be used.
 {% endhint %}
 
-Password to log into the appliance. Can be either `[System.String]` or  \[`SecureString]` value.
+Password to log into the appliance. Can be either `[System.String]` or \[`SecureString]` value.
 
 | Aliases | p |
 | :--- | :--- |
@@ -100,7 +100,7 @@ Password to log into the appliance. Can be either `[System.String]` or  \[`Secur
 | Position? | named |
 | Default value |  |
 | Accept pipeline input? | false |
-| Accept wildcard characters?    | False |
+| Accept wildcard characters? | False |
 
 ### -UserName &lt;String&gt;
 
@@ -112,7 +112,7 @@ User name to authenticate.
 | Position? | named |
 | Default value |  |
 | Accept pipeline input? | false |
-| Accept wildcard characters?    | False |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -168,17 +168,16 @@ Connect-HPOVMgmt -appliance myappliance.domain.com
 ConnectionID Name                   UserName      AuthLoginDomain
 ------------ ----                   --------      ---------------
 1            myappliance.domain.com Administrator LOCAL
-
 ```
 
- Connect to a specific appliance FQDN. The user will be prompted for authentication provider, user name and password.
+Connect to a specific appliance FQDN. The user will be prompted for authentication provider, user name and password.
 
 ```text
  -------------------------- EXAMPLE 2 --------------------------
 Connect-HPOVMgmt -appliance myappliance.domain.com:11223
 ```
 
- Connect to a specific appliance, where the target TCP port isn"t the default. The user will be prompted for authentication provider, user name and password.
+Connect to a specific appliance, where the target TCP port isn"t the default. The user will be prompted for authentication provider, user name and password.
 
 ```text
  -------------------------- EXAMPLE 3 --------------------------
@@ -186,8 +185,9 @@ $MySmartCard = gci Cert:\CurrentUser\my | ? { $_.EnhancedKeyUsageList.FriendlyNa
 Connect-HPOVMgmt -appliance myappliance.domain.com -Certificate $MySmartCard
 ```
 
- Connect to a specific appliance using a digital badge.
+Connect to a specific appliance using a digital badge.
 
 ## Related Links
 
-* [Disconnect-HPOVMgmt ](disconnect-hpovmgmt.md#hpe-oneview-5-00-library)
+* [Disconnect-HPOVMgmt ](../disconnect-hpovmgmt.md#hpe-oneview-5-00-library)
+

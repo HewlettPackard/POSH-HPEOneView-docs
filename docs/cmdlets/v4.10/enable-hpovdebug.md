@@ -1,42 +1,59 @@
 ---
 description: >-
-  Disable specific appliance-level component debug logging.  FOR HPE SUPPORT USE
+  Enable specific appliance-level component debug logging.  FOR HPE SUPPORT USE
   ONLY.
 ---
 
-# Disable-HPOVDebug
+# Enable-HPOVDebug
 
-### HPE OneView 5.00 Library
+## HPE OneView 5.00 Library
 
-###  Syntax
+Syntax
 
 ```text
-Disable-HPOVDebug [-Scope] <String> [-LoggerName] <String> [[-ApplianceConnection] <Object>] [<CommonParameters>]
+Enable-HPOVDebug [-Scope] <String> [-LoggerName] <String> [-Level] <String> [[-ApplianceConnection] <Object>] [<CommonParameters>]
 ```
 
-### Description
+## Description
 
 {% hint style="warning" %}
 FOR HPE SUPPORT USE ONLY.
 {% endhint %}
 
-This Cmdlet will disable appliance level component debug logging for during issue triage, by setting the Level to INFO. Do not use this Cmdlet unless otherwise instructed by HPE Support.
+This Cmdlet will enable appliance level component debug logging for during issue triage. Do not use this Cmdlet unless otherwise instructed by HPE Support.
 
-### Parameters
+## Parameters
 
-#### -ApplianceConnection &lt;Object&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the `ApplianceConnection` property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
 | Required? | false |
-| Position? | named |
+| Position? | 1 |
 | Default value | \(${Global:ConnectedSessions} \| ? Default\) |
 | Accept pipeline input? | true \(ByPropertyName\) |
-| Accept wildcard characters?    | False |
+| Accept wildcard characters? | False |
 
-#### -LoggerName &lt;String&gt;
+### -Level &lt;String&gt;
+
+The verbose level to enable. Allowed values are:
+
+* ERROR
+* WARN
+* DEBUG
+* TRACE
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | true |
+| Position? | named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -LoggerName &lt;String&gt;
 
 The internal component name.
 
@@ -46,11 +63,15 @@ The internal component name.
 | Position? | named |
 | Default value |  |
 | Accept pipeline input? | false |
-| Accept wildcard characters?    | False |
+| Accept wildcard characters? | False |
 
-#### -Scope &lt;String&gt;
+### -Scope &lt;String&gt;
 
-The Scope of the LoggerName.
+The Scope of the `LoggerName`.
+
+{% hint style="warning" %}
+This is not an appliance Scope resource used for collections.
+{% endhint %}
 
 | Aliases | None |
 | :--- | :--- |
@@ -58,24 +79,25 @@ The Scope of the LoggerName.
 | Position? | named |
 | Default value |  |
 | Accept pipeline input? | false |
-| Accept wildcard characters?    | False |
+| Accept wildcard characters? | False |
 
 &lt;CommonParameters&gt;
 
 This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer, PipelineVariable, and OutVariable. For more information, see about\_CommonParameters \([http://go.microsoft.com/fwlink/?LinkID=113216](http://go.microsoft.com/fwlink/?LinkID=113216)\)
 
-### Input Types
+## Input Types
 
 _**HPOneView.Appliance.Connection**_
 
 HPE OneView Appliance Connection object.
 
-### Return Values
+## Return Values
 
 _**System.Management.Automation.PSCustomObject**_
 
-### Examples
+## Examples
 
-### Related Links
+## Related Links
 
-* [Enable-HPOVDebug](enable-hpovdebug.md)
+* [Disable-HPOVDebug](disable-hpovdebug.md)
+
