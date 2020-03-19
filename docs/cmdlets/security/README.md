@@ -1,6 +1,0 @@
----
-description: 'Appliance security,'
----
-
-# Security
-
