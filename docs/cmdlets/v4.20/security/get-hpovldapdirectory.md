@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Get configured Authentication Directories
 ---
 
 # Get-HPOVLdapDirectory
@@ -23,6 +23,7 @@ Get-HPOVLdapDirectory
 ## Description
 
 This cmdlet will retrieve the configured authentication directory(ies) configured on the appliance.
+
 ## Examples
 
 ###  Example 1 
@@ -35,8 +36,6 @@ MyAppliance1 domain1 AD   dc=domain1,dc=com ou=Admins,ou=domain1... {dc1.domain1
 MyAppliance1 domain2 AD   dc=domain2,dc=com ou=Admins,ou=domain2... {dc1.domain2.com:636, 10.1.2.1:636}
 MyAppliance2 domain1 AD   dc=domain1,dc=com ou=Admins,ou=domain1... {dc1.domain1.com:636, dc2.domain1.com:636}
 MyAppliance2 domain2 AD   dc=domain2,dc=com ou=Admins,ou=domain2... {dc1.domain2.com:636, 10.1.2.1:636}
-
-
 ```
 
 View the configured authentication directories, for all connected appliances.
@@ -66,7 +65,6 @@ The specific authentication directory name.
 
 ### -Export &lt;String&gt;
 
-Aliases [-x]
 Export the configured directories to individual files.
 
 | Aliases | x |
@@ -78,8 +76,6 @@ Export the configured directories to individual files.
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
-
-Aliases [-Appliance]
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -100,8 +96,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this cmdlet.**_
-
-
 
 ## Return Values
 

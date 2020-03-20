@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Remove configured hypervisor managers. 
 ---
 
 # Remove-HPOVClusterManager
@@ -21,6 +21,7 @@ You can register a hypervisor manager with HPE OneView by providing hostname and
 A valid hypervisor manager certificate must be added to HPE OneView trust store to be able to successfully communicate with a hypervisor manager.
 
 The user must have an infrastructure administrator privilege to register or update the hypervisor manager resource in HPE OneView.
+
 ## Examples
 
 ###  Example 1 
@@ -35,11 +36,7 @@ Remove the specified hypervisor manager.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -112,7 +109,6 @@ The hypervisor manager object from [`Get-HPOVClusterManager`](get-hpovclusterman
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Asyncronous task resource to monitor.
-
 
 ## Related Links
 

@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Change the initial password of the Administrator user account.
 ---
 
 # Set-HPOVInitialPassword
@@ -17,6 +17,7 @@ Set-HPOVInitialPassword
 ## Description
 
 Changes the initial default password of the Administrator local appliance account to the supplied new password during first time setup (FTS.)
+
 ## Examples
 
 ###  Example 1 
@@ -73,9 +74,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this cmdlet.**_
-
-
- None.  You cannot pipe objects to this cmdlet 
 
 ## Return Values
 

@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Remove X.509 SSL certificates from the appliace trusted store.
 ---
 
 # Remove-HPOVApplianceTrustedCertificate
@@ -8,12 +8,16 @@ description:
 
 ```text
 Remove-HPOVApplianceTrustedCertificate
+    [-InputObject <String>]
+    [-ApplianceConnection <Object>]
+    [-Async]
     [<CommonParameters>]
 ```
 
 ## Description
 
 This Cmdlet will allow the Infrastructure Administrator to remove X.509 compliant SSL certificates on the appliance within its trusted store.
+
 ## Examples
 
 ###  Example 1 
@@ -43,11 +47,7 @@ The Alias Name of the certificate.  Please know that wildcard is not supported.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` objects or Name property values.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -77,7 +77,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Appliance.TrustedCertificate**_
 
-A trusted certificate from Get-HPOVApplinaceTrustedCertificate.
+A trusted certificate from [`Get-HPOVApplianceTrustedCertificate`](get-hpovappliancetrustedcertificate.md).
 
 ## Return Values
 

@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Enable appliance SSH access.
 ---
 
 # Enable-HPOVApplianceSshAccess
@@ -20,6 +20,7 @@ HPE OneView supports Secure Shell (SSH) to remotely access the appliance to perf
 Use this Cmdlet to enable appliance SSH access.
 
 Privileges: Infrastructure administrator
+
 ## Examples
 
 ###  Example 1 
@@ -35,11 +36,7 @@ Enable appliance SSH access.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -68,8 +65,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this cmdlet.**_
-
-
 
 ## Return Values
 

@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Remove a SAN Manager.
 ---
 
 # Remove-HPOVSanManager
@@ -8,12 +8,15 @@ description:
 
 ```text
 Remove-HPOVSanManager
+    [-InputObject] <Object>
+    [-ApplianceConnection] <Array>
     [<CommonParameters>]
 ```
 
 ## Description
 
 This cmdlet is used to remove the specified SAN Manager from the appliance.  Before removing a SAN Manager, the Managed SAN resource must be removed from any configured FC or FCoE Network resources.
+
 ## Examples
 
 ###  Example 1 
@@ -38,8 +41,6 @@ Remove all SAN Managers from all connected appliances.
 
 ### -InputObject &lt;Object&gt;
 
-Aliases [-Name, `-SanManager`]
-
 Managed SAN resource object or name to remove.
 
 | Aliases | Name, SanManager |
@@ -52,11 +53,7 @@ Managed SAN resource object or name to remove.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -99,7 +96,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 _**HPOneView.Storage.SanManager [System.Management.Automation.PSCustomObject]**_
 
 SAN Manager resource object(s)
-
 
 ## Return Values
 

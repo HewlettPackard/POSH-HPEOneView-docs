@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Get appliance audit log entries.
 ---
 
 # Get-HPOVAuditLog
@@ -24,6 +24,7 @@ Get-HPOVAuditLog
 ## Description
 
 Using this CMDLET will retrive the appliance Audit Log enteries and display them to the console.
+
 ## Examples
 
 ###  Example 1 
@@ -46,7 +47,7 @@ Action    : LOGIN
 Result    : SUCCESS
 Severity  : INFO
 Details   : Authentication SUCCESS. User "Administrator" logged in successfully from client "172.20.253.1" and
-			directory "LOCAL" on server "". [logID:LTY4ODgyMTcyMTMz]
+            directory "LOCAL" on server "". [logID:LTY4ODgyMTcyMTMz]
 Source IP : 172.20.253.1
 
 Appliance : hpov.mydomain.com
@@ -56,7 +57,6 @@ Action    : ADD
 Result    : SUCCESS
 Severity  : INFO
 Details   : Add firmware bundle /rest/firmware-drivers/CP026527
-
 ```
 
 Return the audit logs from the appliance.
@@ -121,11 +121,7 @@ Specify the End datetime object to begin the serach.  Should be combined with St
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -143,19 +139,15 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Appliance.AuditLogEntry [System.Management.Automation.PSCustomObject]**_
 
 Single Appliance Audit Log Entry
 
-
 _**System.Collections.ArrayList**_
 
 Multiple  Appliance Audit Log Entries
-
 
 ## Related Links
 

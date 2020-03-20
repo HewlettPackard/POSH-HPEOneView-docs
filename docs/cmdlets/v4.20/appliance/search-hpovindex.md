@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Search the resource index.
 ---
 
 # Search-HPOVIndex
@@ -8,12 +8,18 @@ description:
 
 ```text
 Search-HPOVIndex
+    [-Search] <String>
+    [-Category] <String>
+    [-Count] <Int32>
+    [-Start] <Int32>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ## Description
 
 Search the resource index for any objects that match the specified search string or category
+
 ## Examples
 
 ###  Example 1 
@@ -52,24 +58,24 @@ The search query, text to be found in the index.
 
 The resource category to be matched, if specified.  Valid resource categories are:
 
-	* domains
-	* users
-	* racks
-	* `enclosure-groups`
-	* enclosures
-	* `uplink-sets`
-	* `logical-interconnect`-groups
-	* `logical-interconnects`
-	* `interconnect-types`
-	* interconnects
-	* networks
-	* `firmware-drivers`
-	* `server-hardware`-types
-	* `server-hardware`
-	* `server-profiles`
-	* alerts
-	* `storage-volumes`
-	* `storage-systems`
+    * domains
+    * users
+    * racks
+    * `enclosure-groups`
+    * enclosures
+    * `uplink-sets`
+    * `logical-interconnect`-groups
+    * `logical-interconnects`
+    * `interconnect-types`
+    * interconnects
+    * networks
+    * `firmware-drivers`
+    * `server-hardware`-types
+    * `server-hardware`
+    * `server-profiles`
+    * alerts
+    * `storage-volumes`
+    * `storage-systems`
 
 | Aliases | None |
 | :--- | :--- |
@@ -105,11 +111,7 @@ The index of the first resource index to be returned, defaults to 0.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -126,8 +128,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this cmdlet.**_
-
-None.  You cannot pipe objects to this cmdlet
 
 ## Return Values
 

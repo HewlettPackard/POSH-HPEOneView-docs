@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Upload appliance backup file to restore its configuration.
 ---
 
 # New-HPOVRestore
@@ -19,17 +19,18 @@ Using this cmdlet will initiate a restore of the appliance to the backup file sp
 
 Restoring from a backup is a disruptive action:
 
-	* The appliance restarts and users cannot log in to the appliance during the restore process. All users are
+    * The appliance restarts and users cannot log in to the appliance during the restore process. All users are
   logged out and their work is lost.
-	* To prevent duplicate identifiers on the network, server hardware configurations are cleared if an associated
+    * To prevent duplicate identifiers on the network, server hardware configurations are cleared if an associated
   server profile is not in the backup.
-	* Server profiles that have been modified since the backup was taken are flagged with this message: "Server
+    * Server profiles that have been modified since the backup was taken are flagged with this message: "Server
   profile settings conflict with the server hardware configuration". To reapply the server profile
   configuration and restore network connectivity, you must unassign all flagged server profiles and then
   individually reassign the server profiles to the server hardware.
-	* To prevent unintentional assignment of duplicate addresses or identifiers, all address and identifier ranges
+    * To prevent unintentional assignment of duplicate addresses or identifiers, all address and identifier ranges
   are disabled after the `post-restore` process completes. The appliance automatically `re-creates` replacement
   address and identifier ranges.
+
 ## Examples
 
 ###  Example 1 
@@ -45,8 +46,6 @@ Upload a backup file to restore in the appliance.
 
 ### -FileName &lt;String&gt;
 
-Aliases [-File]
-
 The full path and file name of the appliance configuration backup file.
 
 | Aliases | File |
@@ -59,11 +58,7 @@ The full path and file name of the appliance configuration backup file.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -104,8 +99,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this cmdlet.**_
-
-
 
 ## Return Values
 

@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Enable Remote Support for a supported resource.
 ---
 
 # Enable-HPOVRemoteSupport
@@ -17,6 +17,7 @@ Enable-HPOVRemoteSupport
 ## Description
 
 This Cmdlet will enable Remote Support for a compute or enclosure resource.  If remote support has not been globally enabled and configured on the appliance, this Cmdlet will fail.
+
 ## Examples
 
 ###  Example 1 
@@ -66,11 +67,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -99,7 +96,6 @@ A Gen8 or newer generation server hardware resource object from [`Get-HPOVServer
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task Resource object for monitoring.
-
 
 ## Related Links
 

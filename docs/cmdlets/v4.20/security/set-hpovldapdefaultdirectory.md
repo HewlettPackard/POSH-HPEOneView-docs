@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Configure Authentication Directory default directory.
 ---
 
 # Set-HPOVLdapDefaultDirectory
@@ -8,12 +8,16 @@ description:
 
 ```text
 Set-HPOVLdapDefaultDirectory
+    [-InputObject] <Object>
+    [-ApplianceConnection] <Object>
+    [-DisableLocalLogin]
     [<CommonParameters>]
 ```
 
 ## Description
 
 Use this cmdlet to set the default Authentication Directory on the appliance.  Use `Get-HPOVLdapDirectory` to pass in the directory to configure as the default.  Once the Default Directory is set, the CMDLET will configure a Registry Key (HKCU:\Software\Hewlett-Packard\HPOneView) called "AuthProvider#{ApplianceConnectionName}".  The Library will read this value upon load and use it as the default value for the -AuthDirectory parameter in `Connect-HPOVMgmt`.
+
 ## Examples
 
 ###  Example 1 
@@ -22,8 +26,6 @@ Use this cmdlet to set the default Authentication Directory on the appliance.  U
 Set-HPOVLdapDefaultDirectory -InputObject "Domain1"
 # CMDLET will create:
 # HKCU:\Software\Hewlett-Packard\HPOneView\AuthProvider#MyAppliance.domain.com REG_SZ, value = "Domain1"
-
-
 ```
 
 Set "Domain1" as the default authentication directory for the appliance.  Then, the CMDLET will create the REG_SZ "AuthProvider#MyAppliance.domain.com" with a value of "Domain1".
@@ -57,11 +59,7 @@ Use to disable appliance local login accounts.  You cannot use this parameter if
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

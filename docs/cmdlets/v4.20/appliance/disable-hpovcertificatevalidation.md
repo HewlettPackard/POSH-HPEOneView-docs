@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Disable appliance TLS/SSL certificate validation.
 ---
 
 # Disable-HPOVCertificateValidation
@@ -27,8 +27,8 @@ When upgrading from earlier releases,
 
 Certificate checking is enabled by default, but some of the stricter validation checks are relaxed to maintain communications with all devices, even those with certificate issues. The relaxed checking includes: 
 
-	* Not performing expiration checks for `self-signed` certificates 
-	* For certificate authority (CA) signed certificates, relaxed certificate revocation list (CRL) checking. 
+    * Not performing expiration checks for `self-signed` certificates 
+    * For certificate authority (CA) signed certificates, relaxed certificate revocation list (CRL) checking. 
 
 The relaxed checking gives the administrator time to address any expired certificates, to upload trusted CA root and intermediate certificates, and upload the appropriate CRLs. 
 
@@ -38,11 +38,18 @@ HPE OneView supports devices using `self-signed` certificates and devices using 
 
 HPE OneView enables users to import a CA CRL file and to perform the appropriate revocation checking on existing certificates in the trust store and for certificates received during communication with a managed device or external server.
 
-WARNING: Modifying the appliance setting will require the appliance to be rebooted.
+{% hint style="warning" %}
+Modifying the appliance setting will require the appliance to be rebooted.
+{% endhint %}
 
-WARNING: If `2-factor` authentication is configured, this policy cannot be disabled.
+
+{% hint style="warning" %}
+If `2-factor` authentication is configured, this policy cannot be disabled.
+{% endhint %}
+
 
 Required: Infrastructure administrator
+
 ## Examples
 
 ###  Example 1 
@@ -58,11 +65,7 @@ Disable certificate validation on the appliance.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -104,14 +107,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**System.Management.Automation.PSCustomObject**_
 
 Appliance global security settings.
-
 
 ## Related Links
 

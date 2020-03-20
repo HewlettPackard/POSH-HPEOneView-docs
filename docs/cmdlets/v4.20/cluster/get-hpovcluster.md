@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Default content
 ---
 
 # Get-HPOVCluster
@@ -9,13 +9,13 @@ description:
 ## Description
 
 Default content
+
 ## Examples
 
 ###  Example 1 
 
 ```text
 Get-HPOVCluster
-
 ```
 
 Default example
@@ -24,11 +24,7 @@ Default example
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases |  |
 | :--- | :--- |

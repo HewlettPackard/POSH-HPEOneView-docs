@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: [DEPRECATED] Set the power state of a server.
 ---
 
 # Set-HPOVServerPower
@@ -8,19 +8,22 @@ description:
 
 ```text
 Set-HPOVServerPower
+    [-Server] <Object>
+    [-State] <String>
+    [-powerControl] <String>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ## Description
 
 This Cmdlet is now deprecated.  Please use the `Start-HPOVServer`, `Stop-HPOVServer` or `Restart-HPOVServer` Cmdlets.
+
 ## Examples
 
 ## Parameters
 
 ### -Server &lt;Object&gt;
-
-Aliases [-name, `-uri`, `-serverUri`]
 
 The server object, URI or Name, or can be a Server Profile object.
 
@@ -58,7 +61,6 @@ Optional setting to control the virtual power button.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-appliance]
 The name of the appliance or list of appliances to execute the command against.
 
 | Aliases | Appliance |
@@ -111,7 +113,6 @@ _**None**_
 
 
  None
-
 
 ## Related Links
 

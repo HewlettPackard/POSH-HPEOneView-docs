@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Create a new resource.
 ---
 
 # New-HPOVResource
@@ -8,12 +8,16 @@ description:
 
 ```text
 New-HPOVResource
+    [-Uri] <String>
+    [-InputObject] <Object>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ## Description
 
 Create a new resource by passing the URI and the resource details in the form of a PowerShell hashtable.
+
 ## Examples
 
 ###  Example 1 
@@ -53,11 +57,7 @@ The new resource that is to be created
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

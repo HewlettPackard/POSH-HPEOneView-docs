@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Configure automatic appliance backup.
 ---
 
 # Set-HPOVAutomaticBackupConfig
@@ -35,6 +35,7 @@ Set-HPOVAutomaticBackupConfig
 Introduced in HPE OneView 3.0, an automatic appliance backup schedule can be configured.  The automatic backup process will generate the backup file, then transfer it to a host that supports SCP or SFTP.  The hosts public SSH key will be needed in order to successfuly configure.
 
 During the configuration process, a test file will be created and stored on the host.  This file can be safely deleted once the async task has successfully completed.
+
 ## Examples
 
 ###  Example 1 
@@ -42,8 +43,6 @@ During the configuration process, a test file will be created and stored on the 
 ```text
 $HostSSHKey = Get-Content C:\host.key
 Set-HPOVAutomaticBackupConfig -Hostname scphost.domain.com -Username backupadmin -Password (ConvertTo-SecureString password -AsPlainText -Force) -HostSSHKey $HostSSHKey -Protocol SCP -Interval Weekly -Days "MON","WED","FRI" -Time 18:00
-
-
 ```
 
 This command will configure automatic appliance backup, based on a weekly Monday, Wednesday and Friday schedule to execute at 18:00 (6:00PM).
@@ -54,8 +53,6 @@ This command will configure automatic appliance backup, based on a weekly Monday
 $HostSSHKey = Get-Content C:\host.key
 Set-HPOVAutomaticBackupConfig -Hostname scphost.domain.com -Username backupadmin -Password (ConvertTo-SecureString password -AsPlainText -Force) -HostSSHKey $HostSSHKey -Protocol SCP -Interval Weekly -Days "MON","WED","FRI" -Time 18:00
 New-HPOVBackup
-
-
 ```
 
 This command will configure automatic appliance backup, based on a weekly Monday, Wednesday and Friday schedule to execute at 18:00 (6:00PM).  Then, a call to `New-HPOVBackup` will be made, which will generate and copy the backup file to the remote location configured.
@@ -128,8 +125,8 @@ The SCP/SFTP hosts public key, in OpenSSH String format.
 
 The protocol to connect to the remote host with.  Supported values are:
 
-	* SCP
-	* SFTP
+    * SCP
+    * SFTP
 
 Default: SCP
 
@@ -145,8 +142,8 @@ Default: SCP
 
 The frequency the backup will be generated.  Supported values are:
 
-	* Daily
-	* Weekly
+    * Daily
+    * Weekly
 
 | Aliases | None |
 | :--- | :--- |
@@ -160,13 +157,13 @@ The frequency the backup will be generated.  Supported values are:
 
 If specifying a Weekly backup, provide the days in an Array.  Accepted values are:
 
-	* SU or SUN or Sunday
-	* MO or MON or Monday
-	* TU or TUE or Tuesday
-	* WE or WED or Wednesday
-	* TH or THUR or Thursday
-	* FR or FRI or Friday
-	* SA or SAT or Saturday
+    * SU or SUN or Sunday
+    * MO or MON or Monday
+    * TU or TUE or Tuesday
+    * WE or WED or Wednesday
+    * TH or THUR or Thursday
+    * FR or FRI or Friday
+    * SA or SAT or Saturday
 
 | Aliases | None |
 | :--- | :--- |
@@ -214,11 +211,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -259,8 +252,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this cmdlet.**_
-
-
 
 ## Return Values
 

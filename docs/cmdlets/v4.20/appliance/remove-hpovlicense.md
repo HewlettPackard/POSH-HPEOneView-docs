@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: REmove installed licenses on the appliance.
 ---
 
 # Remove-HPOVLicense
@@ -16,6 +16,7 @@ Remove-HPOVLicense
 ## Description
 
 This Cmdlet will remove licenses installed on the appliance.  Removing installed licenses is only support via Windows PowerShell, Python or the HPE OneView REST API.  However, if a license key is currently assigned to a resource, the license key cannot be removed.
+
 ## Examples
 
 ###  Example 1 
@@ -23,8 +24,6 @@ This Cmdlet will remove licenses installed on the appliance.  Removing installed
 ```text
 $LicenseKeys = Get-HPOVlicense
 Remove-HPOVLicense -InputObject $LicenseKeys[0]
-
-
 ```
 
 Get all installed licenses saving them to $LicenseKeys, then calling `Remove-HPOVLicense` to remove the first key in the variable.
@@ -42,8 +41,6 @@ Get all installed licenses and remove them.
 
 ### -InputObject &lt;HPOneView.Appliance.License&gt;
 
-Aliases [-uri, `-name`, `-License`]
-
 Provide the License URI or object to remove.
 
 | Aliases | uri, name, license, Resource |
@@ -56,11 +53,7 @@ Provide the License URI or object to remove.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -112,7 +105,7 @@ Success message
 
 _**System.Management.Automation.ErrorRecord**_
 
-Error message of in-use license key
+Error message of in use license key
 
 ## Related Links
 

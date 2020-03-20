@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Update or Refresh a Logical Enclosure.
 ---
 
 # Update-HPOVLogicalEnclosure
@@ -29,6 +29,7 @@ Update-HPOVLogicalEnclosure
 This cmdlet will update or refresh a Logical Enclosure.  A Refresh will instruct HPE OneView to go inventory the enclosure and update any missing management configurations. An Update will perform Logical Enclosure compliance remediation with the parent Enclosure Group.
 
 Use the -Refresh switch for scenarios where adding an enclosure results in a warning or critical error when a BL server cannot be managed due to an existing _HPOneViewAdmin account that cannot be reset or too many HP SSO Certificates are configured (iLO supports no more than 5) and you have manually cleared the HP SSO list and/or removed the _HPOneViewAdmin account.
+
 ## Examples
 
 ###  Example 1 
@@ -86,8 +87,6 @@ Refresh "LogicalEnclosure1" Logical Enclosure.
 
 ### -InputObject &lt;Object&gt;
 
-Aliases [-le, `-LogicalEnclosure`]
-
 Provide the Logical Enclosure name, URI or Object, or `[System.Collections.ArrayList` ] of names, URIs or Objects to refresh/update.
 
 | Aliases | le, LogicalEnclosure |
@@ -100,11 +99,7 @@ Provide the Logical Enclosure name, URI or Object, or `[System.Collections.Array
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -115,8 +110,6 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 | Accept wildcard characters? | False |
 
 ### -Update &lt;SwitchParameter&gt;
-
-Aliases [-UpdateFromEG]
 
 Useing this switch will update the Logical Enclosure to be compliant with the Parent Enclosure Group.  Can be combined with the `-WhatIf` parameter to perform a Compare with group and return object with differences.
 
@@ -194,21 +187,20 @@ _**HPOneView.Library.CompareObject**_
 
 The Cmdlet will return a compare object with the Parent and Child object and settings that are different.  Otherwise, no object is returned.
 
-	Property Name | Description
-	==========================================================
-	InputObject   | Compared Object Property or Setting Value
-	----------------------------------------------------------
-	ParentSetting | Name of Property or Setting
-	----------------------------------------------------------
-	ChildSetting  | Name of Property or Setting
-	----------------------------------------------------------
-	Parent        | Name of Parent Object
-	----------------------------------------------------------
-	Child         | Name of Child Object
-	----------------------------------------------------------
-	Description   | Description Name of difference
-	----------------------------------------------------------
-
+    Property Name | Description
+    ==========================================================
+    InputObject   | Compared Object Property or Setting Value
+    ----------------------------------------------------------
+    ParentSetting | Name of Property or Setting
+    ----------------------------------------------------------
+    ChildSetting  | Name of Property or Setting
+    ----------------------------------------------------------
+    Parent        | Name of Parent Object
+    ----------------------------------------------------------
+    Child         | Name of Child Object
+    ----------------------------------------------------------
+    Description   | Description Name of difference
+    ----------------------------------------------------------
 
 ## Return Values
 

@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Generate firmware report
 ---
 
 # Show-HPOVFirmwareReport
@@ -8,12 +8,18 @@ description:
 
 ```text
 Show-HPOVFirmwareReport
+    [-InputObject] <Object>
+    [-Baseline] <Object>
+    [-Location] <String>
+    [-ApplianceConnection] <Object>
+    [-Export]
     [<CommonParameters>]
 ```
 
 ## Description
 
 Generate firmware report
+
 ## Examples
 
 ###  Example 1 
@@ -39,10 +45,10 @@ Display a firmware report of the "Production EG" resource, and components (serve
 
 The managed resource object to generate the report for.  Allowed resource object types are:
 
-	* EG (Enclosure Group)
-	* Enclosure
-	* Server
-	* Interconnect
+    * EG (Enclosure Group)
+    * Enclosure
+    * Server
+    * Interconnect
 
 By specifying an Enclosure Group, all associated Enclosures will be included in the report.
 
@@ -94,11 +100,7 @@ Default: Current Working Directory
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -117,7 +119,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 _**HPOneView.EnclosureGroup or HPOneView.Enclosure or HPOneView.ServerHardware or HPOneView.Networking.Interconnect**_
 
 HPE OneView Managed Resource object
-
 
 ## Return Values
 

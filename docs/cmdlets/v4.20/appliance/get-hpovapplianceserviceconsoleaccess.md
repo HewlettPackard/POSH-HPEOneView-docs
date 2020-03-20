@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Get the appliance service console access configuration.
 ---
 
 # Get-HPOVApplianceServiceConsoleAccess
@@ -26,7 +26,6 @@ Minimum required privileges: Infrastructure administrator
 
 ```text
 Get-HPOVApplianceServiceConsoleAccess
-
 ```
 
 Get the service console access status.
@@ -35,11 +34,7 @@ Get the service console access status.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -57,14 +52,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Appliance.ServiceConsoleAccess**_
 
 The current service console configuration status.
-
 
 ## Related Links
 

@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Set appliancce Login Message.
 ---
 
 # Set-HPOVLoginMessage
@@ -24,6 +24,7 @@ Set-HPOVLoginMessage
 ## Description
 
 Configure the Login Message for the connected appliance(s).  You can also set the Acknowledgement to be required.
+
 ## Examples
 
 ###  Example 1 
@@ -35,8 +36,6 @@ Set-HPOVLoginMessage -Message "************************************
 >> Updated Message: This management appliance is a company owned asset and provided for the exclusive use of authorized personnel. Unauthorized use or
 >> abuse of this system may lead to corrective action including termination, civil and/or criminal penalties."
 >> -Acknowledgement $true
-
-
 ```
 
 Set the Login Message from all connected appliances.
@@ -51,8 +50,6 @@ $Message = "************************************
 >> abuse of this system may lead to corrective action including termination, civil and/or criminal penalties."
 >>
 Set-HPOVLoginMessage -Message $Message -Acknowledgment $true 
-
-
 ```
 
 Set the Login Message from the specified appliance connection.
@@ -85,11 +82,7 @@ Set to True if the login message should be acknowledged before authentication co
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -106,9 +99,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None. You cannot pipe objects to this Cmdlet.**_
-
-
- None. You cannot pipe objects to this Cmdlet 
 
 ## Return Values
 

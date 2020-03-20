@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Remove a Logical Enclosure.
 ---
 
 # Remove-HPOVLogicalEnclosure
@@ -17,6 +17,7 @@ Remove-HPOVLogicalEnclosure
 ## Description
 
 This cmdlet willRemove a Logical Enclosure.  Removing a Logical Enclosure is only supported with Synergy.  If a C7000 Enclosure needs to be removed, use the `Remove-HPOVEnclosure` Cmdlet.
+
 ## Examples
 
 ###  Example 1 
@@ -32,8 +33,6 @@ Remove "LogicalEnclosure1" Logical Enclosure resource.
 
 ### -InputObject &lt;Object&gt;
 
-Aliases [-uri, `-name`-, le]
-
 Provide the Logical Enclosure name, URI or Object, or `[System.Collections.ArrayList` ] of names, URIs or Objects to remove.
 
 | Aliases | uri, name, le, Resource |
@@ -46,11 +45,7 @@ Provide the Logical Enclosure name, URI or Object, or `[System.Collections.Array
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

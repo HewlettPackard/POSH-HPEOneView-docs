@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: (Reserved for future use) Update appliance global settings.
 ---
 
 # Set-HPOVApplianceGlobalSetting
@@ -25,6 +25,7 @@ Set-HPOVApplianceGlobalSetting
 ## Description
 
 (Reserved for future use) Updates the value for an existing global parameter.
+
 ## Examples
 
 ###  Example 1 
@@ -78,11 +79,7 @@ The updated value for the global parameter.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Refresh or reconnect a rack manager resource.
 ---
 
 # Update-HPOVRackManager
@@ -35,7 +35,8 @@ Update-HPOVRackManager
 
 A rack manager platform is a multinode system. The nodes are housed within a rack or across racks, and are centrally managed by a management controller. The Rack Managers screen enables you to manage and visualize the physical location of rack manager platforms within a rack.
  This Cmdlet will perform a refresh of the claimed rack manager.  If there is a communication issue, the -Hostname and -Crednetial parameters will need to be provided, which will then `re-establish` communication to the rack manager.
- Minimum required privileges: Infrastructure administrator or Server administrator.
+ Minimum required privileges: Infrastructure administrator or Server administrator. 
+
 ## Examples
 
 ###  Example 1 
@@ -49,9 +50,9 @@ Refresh the specified rack manager resource.
 ###  Example 2 
 
 ```text
-$RackManager = Get-HPOVRackManager -Name rackmanager1.domain.com -ErrorAction Stop $Credential = Get-Credential Administrator -Message "Password" 	$RefreshParams = @{ InputObject = $RackManager} 
-# Check the rack manager for its state and refresh state reason if ($RackManager.State -eq 'Unmanaged' -and $RackManager.RefreshState -eq 'RefreshFailed') { 	# Add the "Credential" parameter to the Hashtable splat 	$RackManager.Add("Credential", $Credential) 
-	# Add the Hostname to the Hashtable splat 	$RackManager.Add("Hostname", $RackManager.SubResources.Managers[0].Hostname) } Update-HPOVRackManager @RefreshParams
+$RackManager = Get-HPOVRackManager -Name rackmanager1.domain.com -ErrorAction Stop $Credential = Get-Credential Administrator -Message "Password"     $RefreshParams = @{ InputObject = $RackManager} 
+# Check the rack manager for its state and refresh state reason if ($RackManager.State -eq 'Unmanaged' -and $RackManager.RefreshState -eq 'RefreshFailed') {     # Add the "Credential" parameter to the Hashtable splat     $RackManager.Add("Credential", $Credential) 
+    # Add the Hostname to the Hashtable splat     $RackManager.Add("Hostname", $RackManager.SubResources.Managers[0].Hostname) } Update-HPOVRackManager @RefreshParams
 ```
 
 Refresh the specified rack manager resource, and provide the credentials to restablish.
@@ -60,11 +61,7 @@ Refresh the specified rack manager resource, and provide the credentials to rest
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -152,7 +149,6 @@ The rack manager resource from [`Get-HPOVRackManager`](get-hpovrackmanager.md).
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task Resource object for configuring port monitoring on the requested logical intercinnect.
-
 
 ## Related Links
 

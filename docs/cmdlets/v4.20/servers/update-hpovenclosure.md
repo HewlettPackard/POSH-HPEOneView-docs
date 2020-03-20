@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Update or Refresh an enclosure.
 ---
 
 # Update-HPOVEnclosure
@@ -33,6 +33,7 @@ Update-HPOVEnclosure
 This cmdlet will update or refresh an enclosure.  An Enclosure Refresh will instruct HPE OneView to go inventory the enclosure and update any missing management configurations.
 
 Use the -Refresh switch for scenarios where adding an enclosure results in a warning or critical error when a BL server cannot be managed due to an existing _HPOneViewAdmin account that cannot be reset or too many HP SSO Certificates are configured (iLO supports no more than 5) and you have manually cleared the HP SSO list and/or removed the _HPOneViewAdmin account.
+
 ## Examples
 
 ###  Example 1 
@@ -79,11 +80,7 @@ Provide the Enclosure name or Object, or `[System.Collections.ArrayList]` of nam
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

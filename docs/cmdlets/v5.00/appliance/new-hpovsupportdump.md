@@ -37,31 +37,31 @@ The Appliance Support Dump contains important log files about the appliance, but
 ###  Example 1 
 
 ```text
-New-HPOVSupportDump c:	emp appliance
+New-HPOVSupportDump c:\temp appliance
 ```
 
-This command will save the Appliance support dump to C:	emp, for `[Myappliance.domain.com]` Appliance Connection.
+This command will save the Appliance support dump to c:\temp, for `[Myappliance.domain.com]` Appliance Connection.
 
 ###  Example 2 
 
 ```text
-New-HPOVSupportDump c:	emp appliance
+New-HPOVSupportDump c:\temp appliance
 ```
 
-This command will save the Appliance support dump to C:	emp, for all Appliance Connections.
+This command will save the Appliance support dump to c:\temp, for all Appliance Connections.
 
 ###  Example 3 
 
 ```text
-New-HPOVSupportDump c:	emp li ENC1-LI
+New-HPOVSupportDump c:\temp li ENC1-LI
 ```
 
-This command will save the Logical Interconnect `ENC1-LI` to C:	emp.
+This command will save the Logical Interconnect `ENC1-LI` to c:\temp.
 
 ###  Example 4 
 
 ```text
-Get-HPOVlogicalinterconnect ENC1-LI | New-HPOVSupportDump c:	emp
+Get-HPOVlogicalinterconnect ENC1-LI | New-HPOVSupportDump c:\temp
 ```
 
 Accepting the response from `Get-HPOVLogicalInterconnect` Cmdlet.
@@ -69,7 +69,7 @@ Accepting the response from `Get-HPOVLogicalInterconnect` Cmdlet.
 ###  Example 5 
 
 ```text
-Get-HPOVlogicalinterconnect | New-HPOVSupportDump c:	emp
+Get-HPOVlogicalinterconnect | New-HPOVSupportDump c:\temp
 ```
 
 Accepting the response from `Get-HPOVLogicalInterconnect` Cmdlet for all Logical Interconnects and creating support dumps for all.

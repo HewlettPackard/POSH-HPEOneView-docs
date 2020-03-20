@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Retrieve Storage Volume Template (SVT) resource(s).
 ---
 
 # Get-HPOVStorageVolumeTemplate
@@ -8,12 +8,17 @@ description:
 
 ```text
 Get-HPOVStorageVolumeTemplate
+    [-Name <String>]
+    [-Label <String>]
+    [-Scope <Object>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ## Description
 
 Retrieve configured Storage Volume Template(s) from the appliance.
+
 ## Examples
 
 ###  Example 1 
@@ -38,7 +43,6 @@ Get the "R5SVT-1" template.
 
 ### -Name &lt;String&gt;
 
-Aliases [-templateName]
 The Storage Volume Template name.
 
 | Aliases | TemplateName |
@@ -63,8 +67,6 @@ Specify the label associated with resources.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 Default Value: ${Global:ConnectSessions}
@@ -81,10 +83,10 @@ Default Value: ${Global:ConnectSessions}
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-	* AllResources
-	* AllResourcesInScope
-	* `[HPOneView.Appliance.ScopeCollection]`
-	* `[HPOneView.Appliance.ConnectionPermission]`
+    * AllResources
+    * AllResourcesInScope
+    * `[HPOneView.Appliance.ScopeCollection]`
+    * `[HPOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
@@ -102,19 +104,15 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Storage.VolumeTemplate [System.Management.Automation.PSCustomObject]**_
 
 Single Storage Volume Template
 
-
 _**System.COllections.ArrayList <HPOneView.Storage.VolumeTemplate>**_
 
 Multiple Storage Volume Template
-
 
 _**The matching Storage Volume Template resource(s).**_
 

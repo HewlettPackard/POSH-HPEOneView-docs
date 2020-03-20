@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: View Managed SAN FC Endpoints.
 ---
 
 # Show-HPOVSanEndpoint
@@ -23,6 +23,7 @@ Show-HPOVSanEndpoint
 ## Description
 
 This Cmdlet will dispay the Managed SAN endpoints, or FC addresses, their node information, and Zone Name.  By default, all SAN endpoints will be returned.  You can filter the results based on Managed SAN resource or WWN address.
+
 ## Examples
 
 ###  Example 1 
@@ -46,8 +47,6 @@ hpov-tot2 00:00:4A:2B:21:E0:00:0D N_Port    True   SAN1_1
 hpov-tot2 20:00:00:02:AC:00:09:00 N_Port    True   SAN1_1
 hpov-tot2 20:00:00:02:AC:00:08:FF N_Port    True   SAN1_0
 hpov-tot2 00:00:4A:2B:21:E0:00:06 N_Port    True   SAN1_0
-
-
 ```
 
 Return all SAN Endpoints from the appliance.
@@ -65,8 +64,6 @@ hpov-tot2 00:00:4A:2B:21:E0:00:1B N_Port    True   SAN1_1
 hpov-tot2 20:00:00:02:AC:00:09:04 N_Port    True   SAN1_1
 hpov-tot2 00:00:4A:2B:21:E0:00:0D N_Port    True   SAN1_1
 hpov-tot2 20:00:00:02:AC:00:09:00 N_Port    True   SAN1_1
-
-
 ```
 
 Return all SAN Endpoints for the specified Managed SAN resource from the appliance.
@@ -78,8 +75,6 @@ Show-HPOVSanEndpoint -WWN 10:00:F6:9F:5F:70:00:02
 Appliance WWN                     Port Type Online SAN Name Zone Name
 --------- ---                     --------- ------ -------- ---------
 hpov-tot2 10:00:F6:9F:5F:70:00:02 N_Port    False  SAN1_1   Node_1_8
-
-
 ```
 
 Return the specific SAN Endpoint from the appliance.
@@ -112,11 +107,7 @@ The WWN of the node you are looking for.  Cannot be combined with the SAN parame
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -135,7 +126,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 _**HPOneview.Storage.ManagedSan**_
 
 Managed SAN resource from [`Get-HPOVManagedSan`](get-hpovmanagedsan.md)
-
 
 ## Return Values
 

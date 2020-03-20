@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Create a new SNMPv3 user from appliance or Logical Interconnect/Switch resoure.
 ---
 
 # New-HPOVSnmpV3User
@@ -44,6 +44,7 @@ To configure SNMP trap forwarding for network devices (
 interconnects and switches), use the `New-HPOVSnmpV3User` and include it within the `New-HPOVSnmpSettings` Cmdlet.
 
 Privileges: Infrastructure administrator
+
 ## Examples
 
 ###  Example 1 
@@ -60,11 +61,7 @@ Create a new SNMPv3 user for the appliance.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -102,13 +99,13 @@ SNMpv3 Authentication password in SecureString format.
 
 SNMPv3 Authentication protocol.  Supported values:
 
-	* None
-	* MD5
-	* SHA
-	* SHA1
-	* SHA256
-	* SHA384
-	* SHA512
+    * None
+    * MD5
+    * SHA
+    * SHA1
+    * SHA256
+    * SHA384
+    * SHA512
 
 
 | Aliases | None |
@@ -135,12 +132,12 @@ SNMpv3 Privacy password in SecureString format.
 
 SNMPv3 Privacy protocol.  Supported values:
 
-	* none
-	* des56
-	* 3des
-	* aes128
-	* aes192
-	* aes256"
+    * none
+    * des56
+    * 3des
+    * aes128
+    * aes192
+    * aes256"
 
 | Aliases | None |
 | :--- | :--- |
@@ -153,9 +150,9 @@ SNMPv3 Privacy protocol.  Supported values:
 ### -SecurityLevel &lt;String&gt;
 
 Specify the type of SNMPv3 security policy.  Supported values: 
-	* None
-	* AuthOnly
-	* AuthAndPriv
+    * None
+    * AuthOnly
+    * AuthAndPriv
 
 
 | Aliases | None |
@@ -186,19 +183,15 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Appliance.SnmpV3User**_
 
 Appliance SNMPv3 user account created on the appliance.
 
-
 _**HPOneView.Networking.SnmpV3User**_
 
 SNMPv3 user account for a networking resource.
-
 
 ## Related Links
 

@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Update current user account password.
 ---
 
 # Set-HPOVUserPassword
@@ -8,12 +8,16 @@ description:
 
 ```text
 Set-HPOVUserPassword
+    [-Current] <String>
+    [-New] <String>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ## Description
 
 This cmdlet provides the ability to update the current user account password.  Only HPE OneView appliance local account passwords will be changed.  This cmdlet does not assist with modifying or updating an LDAP or Active Directory user account"s password.
+
 ## Examples
 
 ###  Example 1 
@@ -29,8 +33,6 @@ Update your HPE OneView account password to the new value on all connected appli
 
 ### -Current &lt;String&gt;
 
-Aliases [-CurrentPassword]
-
 The current password of the user account. If omitted, the cmdlet will prompt for the users password as a secure string.
 
 | Aliases | CurrentPassword |
@@ -42,8 +44,6 @@ The current password of the user account. If omitted, the cmdlet will prompt for
 | Accept wildcard characters? | False |
 
 ### -New &lt;String&gt;
-
-Aliases [-NewPassword]
 
 The new password to be set for the user account. If omitted, the cmdlet will prompt for the users password as a secure string.
 
@@ -57,10 +57,9 @@ The new password to be set for the user account. If omitted, the cmdlet will pro
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-	
+    
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-	
+    
 Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |

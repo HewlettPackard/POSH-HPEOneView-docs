@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Unassign or Reassign an existing Server Profile.
 ---
 
 # New-HPOVServerProfileAssign
@@ -29,6 +29,7 @@ New-HPOVServerProfileAssign
 ## Description
 
 This cmdlet is used to unassign or reassign an existing HPE OneView Server Profile.  The destination Server and its Server Hardware Type does not need to match the original Server Hardware Type defined in the Server Profile.  The Server Profile will be updated accordingly.
+
 ## Examples
 
 ###  Example 1 
@@ -52,8 +53,6 @@ Get "Profile 1" Server Profile and unassign it, then wait for the async task to 
 ## Parameters
 
 ### -ServerProfile &lt;Object&gt;
-
-Aliases [-Profile]
 
 The name or object of the server profile resource to modify assignment.
 
@@ -91,11 +90,7 @@ Siwtch parameter to unassign a Server Profile.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

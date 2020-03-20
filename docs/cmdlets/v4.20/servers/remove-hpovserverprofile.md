@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Delete Server Profile Resource(s).
 ---
 
 # Remove-HPOVServerProfile
@@ -17,6 +17,7 @@ Remove-HPOVServerProfile
 ## Description
 
 This cmdlet will remove Server Profile resources from one or more appliance connections.  Server Profile objects or names are supported.  Server Profile resources can only be removed when the BladeSystem (BL) Server Hardware device is powered off.
+
 ## Examples
 
 ###  Example 1 
@@ -53,7 +54,6 @@ Search for all profiles and remove them from appliance.
 
 ### -ServerProfile &lt;Object&gt;
 
-Aliases [-profile, `-uri`, `-name`]
 The server profile object(s), name(s) or URI(s) to be removed.
 
 | Aliases | uri, name, profile |
@@ -66,11 +66,7 @@ The server profile object(s), name(s) or URI(s) to be removed.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

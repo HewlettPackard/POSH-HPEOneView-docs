@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Retrieve appliance Remote Support configuration.
 ---
 
 # Get-HPOVRemoteSupport
@@ -24,7 +24,8 @@ Servers must be at iLO 2.
 Remote support enables Proactive Care services including Proactive Scan reports and Firmware/Software Analysis reports with recommendations that are based on collected configuration data.
 Remote support is secure. No business data is collected, only `device-specific` configuration and fault data. All communications are outbound only and use industry standard TLS encryption ensuring confidentiality and integrity of the information.
  Once the appliance is configured, it cannot be unauthorized or disabled.
- Use this Cmdlet to get the appliance"s current Remote Support configuration.  This Cmdlet does not return device collection data or schedules.
+ Use this Cmdlet to get the appliance"s current Remote Support configuration.  This Cmdlet does not return device collection data or schedules. 
+
 ## Examples
 
 ###  Example 1 
@@ -42,11 +43,7 @@ Returns the existing Remote Support configuration of the appliance.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -63,8 +60,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this cmdlet.**_
-
-
 
 ## Return Values
 

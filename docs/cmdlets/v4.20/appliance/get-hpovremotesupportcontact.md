@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Retrieve configured Remote Support contacts.
 ---
 
 # Get-HPOVRemoteSupportContact
@@ -15,7 +15,8 @@ Get-HPOVRemoteSupportContact
 
 ## Description
 
-Use this Cmdlet to get the configured Remote Support contacts defined on the appliance.
+Use this Cmdlet to get the configured Remote Support contacts defined on the appliance. 
+
 ## Examples
 
 ###  Example 1 
@@ -52,11 +53,7 @@ Full ("Bob Smith") or partial ("Bob*") name of the contact.  When using partial 
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -74,14 +71,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**System.Management.Automation.PSCustomObject**_
 
 The configured Remote Support Contact.
-
 
 ## Related Links
 

@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Retreive an HPE Synergy Image Streamer OS Deployment Plan.
 ---
 
 # Get-HPOVOSDeploymentPlan
@@ -17,6 +17,7 @@ Get-HPOVOSDeploymentPlan
 ## Description
 
 Use this Cmdlet to return defined OS Deployment Plans on an HPE Synergy Image Streamer appliance.  The OS Deployment Plan will define the delivery of the stateless OS.  The resource object will also provide the custom attributes allowed.  Use the `Get-HPOVOSDeploymentAttribute` to return the collection object of attributes.
+
 ## Examples
 
 ###  Example 1 
@@ -51,11 +52,7 @@ OS Deployment Plan name.  Supports wildcard (*) character.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -69,10 +66,10 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-	* AllResources
-	* AllResourcesInScope
-	* `[HPOneView.Appliance.ScopeCollection]`
-	* `[HPOneView.Appliance.ConnectionPermission]`
+    * AllResources
+    * AllResourcesInScope
+    * `[HPOneView.Appliance.ScopeCollection]`
+    * `[HPOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
@@ -90,19 +87,15 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Appliance.OSDeploymentPlan**_
 
 An HPE Synergy Image Streamer OS Deployment plan object.
 
-
 _**System.Collections.ArrayList<HPOneView.Appliance.OSDeploymentPlan>**_
 
 A collection or HPE Synergy Image Streamer OS Deployment plan objects.
-
 
 ## Related Links
 

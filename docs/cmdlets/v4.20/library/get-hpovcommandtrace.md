@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Start an HPOV Library Verbose Trace.
 ---
 
 # Get-HPOVCommandTrace
@@ -8,6 +8,8 @@ description:
 
 ```text
 Get-HPOVCommandTrace
+    [-ScriptBlock] <ScriptBlock>
+    [-Location <String>]
     [<CommonParameters>]
 ```
 
@@ -18,16 +20,16 @@ This Cmdlet will assist the user in setting up the PowerShell environment to gen
 Cmdlet output will be captured using the `built-in` Microsoft PowerShell `Start-Transcript` provider.  A transcript trace file will be saved in either the current working directory, or specified using the `-Location` parameter.
 
 Please know that this Cmdlet is currently not supported in the Windows PowerShell ISE, unless using PowerShell v5 or newer.
+
 ## Examples
 
 ###  Example 1 
 
 ```text
-Get-HPOVCommandTrace C:	emp
-
+Get-HPOVCommandTrace -Location C:\Temp
 ```
 
-Start a new library trace, which will create a file in the `C:	emp` directory.
+Start a new library trace, which will create a file in the 'C:\Temp' directory.
 
 ## Parameters
 
@@ -47,13 +49,13 @@ The command within a ScriptBlock to execute.  The Cmdlet will add the `-Verbose`
 
 Specify the directory where the output file will be created.  A file with the following format will be created:
 
-	"{Date}_HPOV_transcript.log", where date is derived from `Get-Date `-UFormat` %y%m%d%H%M`
+    "{Date}_HPOV_transcript.log", where date is derived from `Get-Date `-UFormat` %y%m%d%H%M`
 
 Default Value: (PWD).Path
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | True |
+| Required? | False |
 | Position? | Named |
 | Default value | (pwd).path |
 | Accept pipeline input? | false |

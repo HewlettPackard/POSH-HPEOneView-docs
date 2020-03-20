@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Create Server Profile Logical Disk object.
 ---
 
 # New-HPOVServerProfileLogicalDisk
@@ -37,6 +37,7 @@ New-HPOVServerProfileLogicalDisk
 ## Description
 
 This helper CMDLET will create a Logical Disk object to then be assigned to a Server Profile Template or Server Profile using the -LogicalDisk parameter.  The LogicalDisk configuration is supported with the embedded (or Slot 0) HPE SmartArray controller for DL and BL class systems only.
+
 ## Examples
 
 ###  Example 1 
@@ -129,20 +130,23 @@ The number of physical drives to be used to build the logical drive. The provide
 
 Defines the interface type for drives that will be used to build the logical drive. Supported values depend on the local storage capabilities of the selected server hardware type.  Allowed value:
 
-	* SAS
-	*SATA
-	*SASSSD
-	*SATASSD
-	*Auto
-NOTE: Auto is not supported when attempting to create an HPE Synergy D3940 Logical or JBOD disk.  You must specify a disk technology type unless `-DriveSelectionBy` is changed to DriveType and `-AvailableDriveType` is used.  Allowed values are:
+    * SAS
+    *SATA
+    *SASSSD
+    *SATASSD
+    *Auto
+{% hint style="info" %}
+Auto is not supported when attempting to create an HPE Synergy D3940 Logical or JBOD disk.
+{% endhint %}
+  You must specify a disk technology type unless `-DriveSelectionBy` is changed to DriveType and `-AvailableDriveType` is used.  Allowed values are:
 
-	* SAS
-	* SATA
-	* SASSSD
-	* SATASSD
-	* NVMeSas
-	* NVMeSata
-	* Auto
+    * SAS
+    * SATA
+    * SASSSD
+    * SATASSD
+    * NVMeSas
+    * NVMeSata
+    * Auto
 
 
 | Aliases | None |
@@ -157,8 +161,8 @@ NOTE: Auto is not supported when attempting to create an HPE Synergy D3940 Logic
 
 Use to specify how the drive selection will be used.  Allowed values:
 
-	* DriveType - Use `Get-HPOVAvailableDriveType` to locate available drive types, quantity to which SAS Logical Interconnect or Drive Enclosure.
-	* SizeAndTechnology - Use to define the attributes of the drive based on technology and min/max drive size.  The `-DriveType` and `-MinDriveSize` parameters are required.
+    * DriveType - Use `Get-HPOVAvailableDriveType` to locate available drive types, quantity to which SAS Logical Interconnect or Drive Enclosure.
+    * SizeAndTechnology - Use to define the attributes of the drive based on technology and min/max drive size.  The `-DriveType` and `-MinDriveSize` parameters are required.
 
 Default: SizeAndTechnology
 

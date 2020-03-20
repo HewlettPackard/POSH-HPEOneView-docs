@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Refresh the state of a server resource.
 ---
 
 # Update-HPOVServer
@@ -33,6 +33,7 @@ Update-HPOVServer
 ## Description
 
 By using this cmdlet, you can manually refresh the connection between the appliance and server hardware by using the Refresh option on the Actions menu. You must refresh server hardware if it has lost connectivity or if it is not synchronized with the appliance. Connectivity loss can occur during normal appliance operation. A device can become unsynchronized if you make changes to it outside of the appliance
+
 ## Examples
 
 ###  Example 1 
@@ -57,7 +58,6 @@ Refresh the state of the server hardware device assigned to the Server Profile o
 
 ### -InputObject &lt;Object&gt;
 
-Aliases [-Name, `-Server`]
 The Server object or Name, or can be a Server Profile object.
 
 | Aliases | name, Server |
@@ -82,11 +82,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -142,16 +138,13 @@ _**System.String**_
 
 Server Hardware Name
 
-
 _**System.Management.Automation.PSCustomObject**_
 
 Server Hardware Resource
 
-
 _**System.Management.Automation.PSCustomObject**_
 
 Server Profile Resource
-
 
 ## Return Values
 

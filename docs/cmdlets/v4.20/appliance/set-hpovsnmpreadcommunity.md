@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Set SNMP Read Community.
 ---
 
 # Set-HPOVSnmpReadCommunity
@@ -8,12 +8,15 @@ description:
 
 ```text
 Set-HPOVSnmpReadCommunity
+    [-Name] <String>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ## Description
 
 Set a new SNMP Read Community value on the appliance.  Updating this value will cause the appliance to refresh the managed devices with the updated `Read-Only` SNMP Community string.  This does not update the SNMP trap destination(s) for Logical Interconnects or Logical Interconnect Groups.
+
 ## Examples
 
 ###  Example 1 
@@ -41,11 +44,7 @@ The name of the new SNMP `Read-Only` Community.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -62,9 +61,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this cmdlet.**_
-
-
- None.  You cannot pipe objects to this cmdlet 
 
 ## Return Values
 

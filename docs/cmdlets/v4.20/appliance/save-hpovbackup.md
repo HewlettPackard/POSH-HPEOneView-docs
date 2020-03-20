@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Save existing backups on an appliance.
 ---
 
 # Save-HPOVBackup
@@ -27,6 +27,7 @@ HPE OneView provides the ability to save your configuration settings and managem
 The backup process involves creating a backup file and then downloading that file so that you can store it to a safe and secure (off-appliance) location for future use. You can schedule automatic backup operations and designate a remote location for the backup file.
 
 Use this cmdlet to save the created appliance backup files.  Use the -SaveRemoteOnly parameter to save the backup file(s) to the remote location if configured on the appliance.
+
 ## Examples
 
 ###  Example 1 
@@ -51,11 +52,7 @@ Save the found backup file to the specified location.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -109,19 +106,15 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async Task resource to monitor progress of the backup file saved to the remote location.
 
-
 _**System.IO.FileInfo**_
 
 The saved backup file located on the PC.
-
 
 ## Related Links
 

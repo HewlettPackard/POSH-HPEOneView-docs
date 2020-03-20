@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Get appliance SNMPv3 Engine ID.
 ---
 
 # Get-HPOVApplianceSnmpV3EngineId
@@ -8,19 +8,20 @@ description:
 
 ```text
 Get-HPOVApplianceSnmpV3EngineId
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
 ## Description
 
 Use this Cmdlet to get the appliance SNMPv3 Engine ID.
+
 ## Examples
 
 ###  Example 1 
 
 ```text
 Get-HPOVApplianceSnmpV3EngineId
-
 ```
 
 Get the SNMPv3 Engine ID of the connected appliance.
@@ -29,11 +30,7 @@ Get the SNMPv3 Engine ID of the connected appliance.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -51,14 +48,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Appliance.SnmpV3EngineId**_
 
 Appliance SNMPv3 Engine ID.
-
 
 ## Related Links
 

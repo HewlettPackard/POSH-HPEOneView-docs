@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: List alerts logged.
 ---
 
 # Get-HPOVAlert
@@ -24,6 +24,7 @@ Get-HPOVAlert
 ## Description
 
 Obtain all the alerts for the specified resource and/or with the specified severity.
+
 ## Examples
 
 ###  Example 1 
@@ -111,7 +112,6 @@ Return all alerts Starting at `2016-12`-01 to `2016-12`-09.
 
 ### -InputObject &lt;Object&gt;
 
-Aliases [-resourceUri]
 Alerts for the specified resource will be returned.
 
 | Aliases | resourceUri, Resource |
@@ -247,11 +247,7 @@ Return alerts that were created on the specified date.  Hour, Min and Seconds wi
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -271,11 +267,9 @@ _**System.String**_
 
 Resource URI.
 
-
 _**System.Management.Automation.PSCustomObject**_
 
 Resource object (i.e. [`Get-HPOVServer`](../servers/get-hpovserver.md)).
-
 
 ## Return Values
 
@@ -283,11 +277,9 @@ _**HPOneView.Alert [System.Management.Automation.PSCustomObject]**_
 
 Singel HPE OneView Alert.
 
-
 _**System.Collections.ArrayList**_
 
 Collection of HPE OneView Alerts.
-
 
 ## Related Links
 

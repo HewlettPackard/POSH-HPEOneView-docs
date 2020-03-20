@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Import a physical server.
 ---
 
 # Add-HPOVServer
@@ -35,6 +35,7 @@ Add-HPOVServer
 ## Description
 
 Import a physical server.  This cmdlet is not used to add a Blade Server to the appliance, only supported DL Gen 8/9 servers.  A BL server will automatically be discovered once it inserted into an enclosure being managed by the appliance.
+
 ## Examples
 
 ###  Example 1 
@@ -136,11 +137,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | None |
 | :--- | :--- |
@@ -194,14 +191,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Returns an async task resource to monitor.
-
 
 ## Related Links
 

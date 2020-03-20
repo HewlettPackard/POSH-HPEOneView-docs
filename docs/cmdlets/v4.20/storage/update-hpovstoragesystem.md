@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Update/Refresh available Storage Systems
 ---
 
 # Update-HPOVStorageSystem
@@ -16,6 +16,7 @@ Update-HPOVStorageSystem
 ## Description
 
 This cmdlet will update or refresh the specific storage system(s) configured on the HPE OneView appliance.  Refreshing the storage system will cause HPE OneView to validate connectivity, the addition of any new CPG"s, and any Storage System Host Port configuration changes.
+
 ## Examples
 
 ###  Example 1 
@@ -40,8 +41,6 @@ Get the "MyStorageSystem" managed Storage Systems and refresh it.
 
 ### -InputObject &lt;Object&gt;
 
-Aliases [-StorageSystem]
-
 The Storage System resource object to update/refresh.
 
 | Aliases | Name, StorageSystem |
@@ -54,11 +53,7 @@ The Storage System resource object to update/refresh.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -78,11 +73,9 @@ _**HPOneView.Storage.System [System.Management.Automation.PSCustomObject]**_
 
 Single Storage System
 
-
 _**System.Collections.ArrayList <HPOneView.Storage.System>**_
 
 Multiple Storage Systems
-
 
 ## Return Values
 

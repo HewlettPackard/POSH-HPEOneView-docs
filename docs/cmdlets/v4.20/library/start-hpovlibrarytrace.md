@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Start HPOV Library Verbose Trace.
 ---
 
 # Start-HPOVLibraryTrace
@@ -8,12 +8,14 @@ description:
 
 ```text
 Start-HPOVLibraryTrace
+    [-Location <String>]
     [<CommonParameters>]
 ```
 
 ## Description
 
 This Cmdlet is deprecated.  Please use `Get-HPOVCommandTrace`.
+
 ## Examples
 
 ###  Example 1 
@@ -46,8 +48,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this Cmdlet.**_
-
-
 
 ## Return Values
 

@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Retrieve Logical Interconnect Group resource(s).
 ---
 
 # Get-HPOVLogicalInterconnectGroup
@@ -27,6 +27,7 @@ Get-HPOVLogicalInterconnectGroup
 ## Description
 
 Retrieves a list of all Logical Interconnect Groups or just specific ones via a query if the name parameter is provided.  The output can be sent to a file using the exportFile parameter.
+
 ## Examples
 
 ###  Example 1 
@@ -66,8 +67,6 @@ $CreatedLig
 Name            Enclosure Groups
 ----            ----------------
 VC FF Virt Prod
-
-
 ```
 
 Create a new Logical Interconnect Group resource, wait for the task to complete, then retrieve the created resource.
@@ -123,10 +122,10 @@ Provide the type of Logical Interconnect Group to return.  Omit to return all Lo
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-	* AllResources
-	* AllResourcesInScope
-	* `[HPOneView.Appliance.ScopeCollection]`
-	* `[HPOneView.Appliance.ConnectionPermission]`
+    * AllResources
+    * AllResourcesInScope
+    * `[HPOneView.Appliance.ScopeCollection]`
+    * `[HPOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
@@ -150,11 +149,7 @@ Specify the label associated with resources.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -166,7 +161,6 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 
 ### -exportFile &lt;String&gt;
 
-Aliases [-x, `-export`]
 The full path and file name to export the contents retrieved from the call to `Get-HPOVLogicalInterconnectGroup`.
 
 | Aliases | x, export |

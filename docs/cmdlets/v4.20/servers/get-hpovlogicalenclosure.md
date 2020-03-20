@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Retrieve Logical Enclosure resource(s).
 ---
 
 # Get-HPOVLogicalEnclosure
@@ -19,6 +19,7 @@ Get-HPOVLogicalEnclosure
 ## Description
 
 Obtain a collection of Logical Enclosure resources, or a single Logical Enclosure with the specified name.
+
 ## Examples
 
 ###  Example 1 
@@ -55,11 +56,7 @@ The name of the Logical Enclosure resource to be returned.  All Logical Enclosur
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -73,10 +70,10 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-	* AllResources
-	* AllResourcesInScope
-	* `[HPOneView.Appliance.ScopeCollection]`
-	* `[HPOneView.Appliance.ConnectionPermission]`
+    * AllResources
+    * AllResourcesInScope
+    * `[HPOneView.Appliance.ScopeCollection]`
+    * `[HPOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
@@ -118,14 +115,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.EnclosureGroup [System.Management.Automation.PSCustomObject]**_
 
 Single Enclosure Group
-
 
 _**System.Collections.ArrayList**_
 

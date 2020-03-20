@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Power reset Enclosure component.
 ---
 
 # Set-HPOVEnclosureActiveFLM
@@ -10,12 +10,14 @@ description:
 Set-HPOVEnclosureActiveFLM
     [-Enclosure] <Object>
     [-BayID] <Int32>
+    [-Force]
     [<CommonParameters>]
 ```
 
 ## Description
 
 Obtain a collection of enclosure hardware resources which have the specified name.
+
 ## Examples
 
 ###  Example 1 
@@ -115,14 +117,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**System.Object**_
 
 Enclosure Report
-
 
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 

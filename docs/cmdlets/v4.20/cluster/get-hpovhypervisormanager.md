@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Get configured hypervisor managers.
 ---
 
 # Get-HPOVHypervisorManager
@@ -13,6 +13,7 @@ You can register a hypervisor manager with HPE OneView by providing hostname and
 A valid hypervisor manager certificate must be added to HPE OneView trust store to be able to successfully communicate with a hypervisor manager.
 
 The user must have an infrastructure administrator privilege to register or update the hypervisor manager resource in HPE OneView. You can assign scopes to the hypervisor manager resource in HPE OneView.
+
 ## Examples
 
 ###  Example 1 
@@ -111,8 +112,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this cmdlet.**_
-
-
 
 ## Return Values
 

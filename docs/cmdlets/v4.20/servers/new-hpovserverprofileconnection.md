@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Create network connection for a server profile.
 ---
 
 # New-HPOVServerProfileConnection
@@ -101,6 +101,7 @@ New-HPOVServerProfileConnection
 ## Description
 
 A helper function to assist with connections when creating (New-HPOVServerProfile) or editing (Set-HPOVProfile) a server profile.
+
 ## Examples
 
 ###  Example 1 
@@ -182,13 +183,13 @@ Create a Network Connection ID 3, that is assigned to a FibreChannel network, wi
 ```text
 $ISCSINetwork = Get-HPOVNetwork -Name "ImageStreamer Boot Network" -ErrorAction Stop
 $IscsiParams = @{
-	ConnectionID                  = 1;
-	Name                          = "ImageStreamer Connection 1";
-	ConnectionType                = "Ethernet";
-	Network                       = $ISCSINetwork;
-	Bootable                      = $true;
-	Priority                      = "Primary";
-	IscsiIPv4AddressSource    = "SubnetPool"
+    ConnectionID                  = 1;
+    Name                          = "ImageStreamer Connection 1";
+    ConnectionType                = "Ethernet";
+    Network                       = $ISCSINetwork;
+    Bootable                      = $true;
+    Priority                      = "Primary";
+    IscsiIPv4AddressSource    = "SubnetPool"
 }
 $ImageStreamerBootConnection1 = New-HPOVServerProfileConnection @IscsiParams
 ```
@@ -199,7 +200,6 @@ Create an HPE Synergy Image Streamer compliant connection.
 
 ### -ConnectionID &lt;Int32&gt;
 
-Aliases [-id]
 The numeric identifier for this connection.  Connections are normally numbered sequentially from 1 within each profile.
 
 | Aliases | id |
@@ -212,7 +212,6 @@ The numeric identifier for this connection.  Connections are normally numbered s
 
 ### -ConnectionType &lt;String&gt;
 
-Aliases [-type]
 Deprecated parameter.  Connection type is now derived from the provided Network resource object.
 
 | Aliases | type |
@@ -355,7 +354,7 @@ Specify the number of Virtual Functions to enable on an Ethernet Connection.  Mu
 
 Specify to configure bootable settings.  If omitted, then the connection is not bootable, and `-priority` is set to NotBootable.
 
-	Default: False
+    Default: False
 
 | Aliases | None |
 | :--- | :--- |
@@ -369,9 +368,9 @@ Specify to configure bootable settings.  If omitted, then the connection is not 
 
 Specify how the Boot Volume Source will be set.  Allowed values are:
 
-	* AdapterBIOS   - Boot from adapter BIOS volume parameters. 
-	* ManagedVolume - Boot from a managed volume defined in SAN Storage section. 
-	* UserDefined   - Boot from user defined volume parameters.
+    * AdapterBIOS   - Boot from adapter BIOS volume parameters. 
+    * ManagedVolume - Boot from a managed volume defined in SAN Storage section. 
+    * UserDefined   - Boot from user defined volume parameters.
 
 Default: AdapterBIOS
 
@@ -387,17 +386,17 @@ Default: AdapterBIOS
 
 Optional boot option for this connection, but Required if `-bootable` is specified.  Allowed values:
 
-	* NotBootable
-	* UseBIOS
+    * NotBootable
+    * UseBIOS
 
-	* Primary
-	* Secondary
-	* IscsiPrimary
-	* IscsiSecondary
+    * Primary
+    * Secondary
+    * IscsiPrimary
+    * IscsiSecondary
 
 When the Connection Type is Ethernet, this affects PXE boot.  If the Connection Type is FibreChannel, this enables BfS settings. 
 
-	Default: NotBootable
+    Default: NotBootable
 
 | Aliases | None |
 | :--- | :--- |
@@ -408,8 +407,6 @@ When the Connection Type is Ethernet, this affects PXE boot.  If the Connection 
 | Accept wildcard characters? | False |
 
 ### -TargetWwpn &lt;String&gt;
-
-Aliases [-ArrayWwpn]
 
 Target FC array WWPN.
 
@@ -451,9 +448,9 @@ If configuring a Connection for a Server Profile Template, the value will be ign
 
 Specify the IPv4 Address Source for the connection.  Allowed values are:
 
-	* DHCP
-	* UserDefined
-	* SubnetPool
+    * DHCP
+    * UserDefined
+    * SubnetPool
 
 
 | Aliases | None |
@@ -634,11 +631,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -655,8 +648,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this cmdlet.**_
-
-
 
 ## Return Values
 

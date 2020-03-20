@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Create storage volume template.
 ---
 
 # New-HPOVStorageVolumeTemplate
@@ -90,6 +90,7 @@ New-HPOVStorageVolumeTemplate
 ## Description
 
 This cmdlet supports creating Storage Volume Templates, which are then used to provision Storage Volumes.
+
 ## Examples
 
 ###  Example 1 
@@ -115,8 +116,6 @@ Create a new Storage Volume Template, setting the max size to 250GB, Thin Provis
 ```text
 $storagePool = Get-HPOVStoragePool R5-CPG12
 $storageVolTemplate = New-HPOVStorageVolumeTemplate -templateName vmware-shared-svt -storagePool $storagePool -capacity 250 -shared
-
-
 ```
 
 Use the `Get-HPOVStoragePool` cmdlet to get the "R5-CPG12" pool, and create a new Storage Volume Template, setting the max size to 250GB, Thin Provisioning and Shareable.
@@ -133,8 +132,6 @@ Use the `Get-HPOVStoragePool` cmdlet to get the "R5-CPG12" pool, and create a ne
 ## Parameters
 
 ### -Name &lt;String&gt;
-
-Aliases [-TemplateName]
 
 Storage Volume Template name
 
@@ -196,7 +193,6 @@ If there are multiple Storage Pool resources with the same name, use this parame
 
 ### -Capacity &lt;Int64&gt;
 
-Aliases [-size]
 Max volume capacity in GB.  `[e.g]`. 20 to specify 20GB.
 
 | Aliases | size |
@@ -209,7 +205,10 @@ Max volume capacity in GB.  `[e.g]`. 20 to specify 20GB.
 
 ### -Full &lt;SwitchParameter&gt;
 
-NOTE: This parameter is being deprecated for the `-ProvisionType` parameter. Please update your scripts.
+{% hint style="info" %}
+This parameter is being deprecated for the `
+{% endhint %}
+-ProvisionType` parameter. Please update your scripts.
 
 Include this switch to enable Thick volume provisioning.  Omit to specify Thin storage provisioning.
 Default: Thin
@@ -238,12 +237,12 @@ Include this switch to mark the Storage Volume Template as a Shareable resource 
 
 Specify the StoreVirtual protection level (aka Network RAID) for the volume.  Allowed values are:
 
-	* NetworkRaid0None
-	* NetworkRaid5SingleParity
-	* NetworkRaid10Mirror2Way
-	* NetworkRaid10Mirror3Way
-	* NetworkRaid10Mirror4Way
-	* NetworkRaid6DualParity
+    * NetworkRaid0None
+    * NetworkRaid5SingleParity
+    * NetworkRaid10Mirror2Way
+    * NetworkRaid10Mirror3Way
+    * NetworkRaid10Mirror4Way
+    * NetworkRaid6DualParity
 
 
 | Aliases | None |
@@ -294,9 +293,9 @@ Specify to lock the EnableAdaptiveOptimization value in the template.
 
 Specify the type of volume to provision.  Allowed values are:
 
-	* Thin
-	* Full
-	* TPDD (Thin Provision Dedup) - Only available for HPE StoreServ storage systems with SSD storage pools (aka CPG"s).
+    * Thin
+    * Full
+    * TPDD (Thin Provision Dedup) - Only available for HPE StoreServ storage systems with SSD storage pools (aka CPG"s).
 
 | Aliases | ProvisionType |
 | :--- | :--- |
@@ -368,11 +367,7 @@ Specify to lock the Provision Mode (Shared or Private) value in the template.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -510,7 +505,7 @@ Specify the Nimble folder where the volume should be created.  To get availabe f
 
 Example:
 
-	 (Get-HPOVStoragePool `-name` default).DeviceSpecificAttributes.Folders
+     (Get-HPOVStoragePool `-name` default).DeviceSpecificAttributes.Folders
 
 ID                                         Name
 --                                         ----
@@ -542,7 +537,7 @@ A Nimble Performance Policy is associated with a storage system.  Using the `Sho
 
 Example:
 
-	`Get-HPOVStorageSystem` `-Name` MyNimbleSys | `Show-HPOVStorageSystemPerformancePolicy`
+    `Get-HPOVStorageSystem` `-Name` MyNimbleSys | `Show-HPOVStorageSystemPerformancePolicy`
 
 | Aliases | None |
 | :--- | :--- |

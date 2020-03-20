@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Enable port monitoring for a logical interconnect.
 ---
 
 # Enable-HPOVLogicalInterconnectPortMonitoring
@@ -22,14 +22,15 @@ Port monitoring enables you to send a copy of every Ethernet or Fibre Channel fr
 
 {% hint style="info" %}
 
-	*
+    *
 {% endhint %}
   You cannot use Virtual Connect to forward captured traffic to a server. For more information, see the HPE Virtual Connect for `c-Class` BladeSystem User Guide in the Hewlett Packard Enterprise Information Library. 
-	*  You can configure one network analyzer port (the uplink port) for up to 16 downlink server ports within a logical interconnect. 
-	*  The HPE Virtual Connect 16Gb `24-Port` Fibre Channel Module monitors 1 downlink server port. 
-	*  HPE Virtual Connect 16Gb `24-Port` Fibre Channel Module firmware must be 4.00 or later 
+    *  You can configure one network analyzer port (the uplink port) for up to 16 downlink server ports within a logical interconnect. 
+    *  The HPE Virtual Connect 16Gb `24-Port` Fibre Channel Module monitors 1 downlink server port. 
+    *  HPE Virtual Connect 16Gb `24-Port` Fibre Channel Module firmware must be 4.00 or later 
 
 Required Privileges: Network administrator
+
 ## Examples
 
 ###  Example 1 
@@ -68,11 +69,7 @@ Allowed string value:  "Bay1:X6" or "Enclosure1:Bay6:Q1.1"
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -104,9 +101,9 @@ The "Port" property format must be "BayID:ServerDownlinkPortID".  For HPE Synerg
 
 The "Direction" property value must be one of the following:
 
-	* ToServer
-	* FromServer
-	* Both
+    * ToServer
+    * FromServer
+    * Both
 
 | Aliases | None |
 | :--- | :--- |
@@ -126,13 +123,11 @@ _**HPoneView.Networking.LogicalInterconnect [System.Management.Automation.PSCust
 
 Logical Interconnect resource object from [`Get-HPOVLogicalInterconnect`](get-hpovlogicalinterconnect.md)
 
-
 ## Return Values
 
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task Resource object for configuring port monitoring on the requested logical intercinnect.
-
 
 ## Related Links
 

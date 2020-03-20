@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Update SAN Manager configuration
 ---
 
 # Set-HPOVSanManager
@@ -41,6 +41,7 @@ Set-HPOVSanManager
 ## Description
 
 Updates an existing SAN Manager configuration.  Can update the hostname/IP Address and credentials.  At least one optional parameter must be provided.
+
 ## Examples
 
 ###  Example 1 
@@ -74,7 +75,6 @@ Update the existing Brocade Network Advisor SAN Manager"s username and password.
 
 ### -InputObject &lt;Object&gt;
 
-Aliases [-name]
 Resource Object (from `Get-HPOVSanManager`) or Name of the SAN Manager to update.  If specifying a resource Name, the ApplianceConnection parameter is required.
 
 | Aliases | name, Resource |
@@ -149,9 +149,9 @@ The SNMPv3 Community User Name.
 
 The SNMPv3 Authentication Level.  Allowed values are:
 
-	* None - No Security is required, only the SNMPv3 UserName is provided.
-	* AuthOnly - SNMPv3 Authentication Encryption Security Level only. Must also provide `-SnmpAuthProtocol` and `-SnmpAuthPassword` parameters.
-	* AuthAndPriv - SNMPv3 Authentication Encryption Security and Privacy Levels. Must also provide `-SnmpAuthProtocol`, `-SnmpAuthPassword`, `-SnmpPrivProtocol` and `-SnmpPrivPassword` parameters.
+    * None - No Security is required, only the SNMPv3 UserName is provided.
+    * AuthOnly - SNMPv3 Authentication Encryption Security Level only. Must also provide `-SnmpAuthProtocol` and `-SnmpAuthPassword` parameters.
+    * AuthAndPriv - SNMPv3 Authentication Encryption Security and Privacy Levels. Must also provide `-SnmpAuthProtocol`, `-SnmpAuthPassword`, `-SnmpPrivProtocol` and `-SnmpPrivPassword` parameters.
 
 | Aliases | None |
 | :--- | :--- |
@@ -165,8 +165,8 @@ The SNMPv3 Authentication Level.  Allowed values are:
 
 SNMPv3 Password Encryption Protocol. Allowed values are:
 
-	* SHA
-	* MD5
+    * SHA
+    * MD5
 
 | Aliases | None |
 | :--- | :--- |
@@ -192,8 +192,8 @@ SNMPv3 UserName Password.  Can either be a String or SecureString value.
 
 SNMPv3 Privacy Protocol.  Allowed values are:
 
-	* AES
-	* DES
+    * AES
+    * DES
 
 | Aliases | None |
 | :--- | :--- |
@@ -252,8 +252,6 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
-
-Aliases [-Appliance]
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 

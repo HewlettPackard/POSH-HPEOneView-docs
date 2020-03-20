@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Change appliance connection active permissions.
 ---
 
 # Push-HPOVAppliancePermission
@@ -9,12 +9,14 @@ description:
 ```text
 Push-HPOVAppliancePermission
     [-SetActivePermissions] <Object>
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
 ## Description
 
 Upon successful login, the caller can change their active permissions, and operate in a less priviledge mode at anytime.  The `Push-HPOVAppliancePermission` Cmdlet will accept a single or collection of [HPOneView.Appliance.ConnectionPermission] objects.  A new SessionID token will be stored within the ApplianceConnection, and the ConnectionPermissions within the ActivePermissions property that were not provided will have their State set to "false".
+
 ## Examples
 
 ###  Example 1 
@@ -66,11 +68,7 @@ One or more `[HPOneView.Appliance.ConnectionPermission]` objects from an `[HPOne
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -87,8 +85,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this cmdlet.**_
-
-
 
 ## Return Values
 

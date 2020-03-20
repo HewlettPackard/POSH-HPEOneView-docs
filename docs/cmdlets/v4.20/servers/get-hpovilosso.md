@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Generate iLO SSO Token.
 ---
 
 # Get-HPOVIloSso
@@ -26,6 +26,7 @@ Get-HPOVIloSso
 ## Description
 
 Obtain an iLO SSO Token URL to authenticate to an iLO.  If the server hardware is unsupported, the resulting URL will not use SSO and the iLO web interface will prompt for credentials. Note, this is not supported on G7 or earlier servers.
+
 ## Examples
 
 ###  Example 1 
@@ -108,8 +109,6 @@ Aliases [-Appliance]
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-Default Value: ${Global:ConnectedSessions} | ? Default
-
 | Aliases | Appliance |
 | :--- | :--- |
 | Required? | False |
@@ -128,11 +127,9 @@ _**HPOneView.ServerHardware [System.Management.Automation.PSCustomObject]**_
 
 Server Hardware resource object.
 
-
 _**HPOneView.ServerProfile [System.Management.Automation.PSCustomObject]**_
 
 Server Profile resource object.
-
 
 ## Return Values
 
@@ -140,11 +137,9 @@ _**System.Management.Automation.PSCustomObject**_
 
 SSO Url Object
 
-
 _**System.Array**_
 
 Multiple SSO URL objects.
-
 
 ## Related Links
 

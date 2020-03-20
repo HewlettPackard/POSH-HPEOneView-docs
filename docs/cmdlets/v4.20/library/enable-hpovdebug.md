@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Enable specific appliance-level component debug logging.
 ---
 
 # Enable-HPOVDebug
@@ -18,6 +18,7 @@ Enable-HPOVDebug
 ## Description
 
 FOR HP SUPPORT USE ONLY.  This cmdlet will enable appliance level component debug logging for during issue triage.  Do not use this cmdlet unless otherwise instructed by HP Support.
+
 ## Examples
 
 ## Parameters
@@ -50,10 +51,10 @@ The internal component name.
 
 The verbose level to enable.  Allowed values are:
 
-	* ERROR
-	* WARN
-	* DEBUG
-	* TRACE
+    * ERROR
+    * WARN
+    * DEBUG
+    * TRACE
 
 | Aliases | None |
 | :--- | :--- |
@@ -65,11 +66,7 @@ The verbose level to enable.  Allowed values are:
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -88,7 +85,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 _**HPOneView.Appliance.Connection**_
 
 HPE OneView Appliance Connection object.
-
 
 ## Return Values
 

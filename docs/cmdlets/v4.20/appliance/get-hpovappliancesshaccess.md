@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Get the current SSH console access state.
 ---
 
 # Get-HPOVApplianceSshAccess
@@ -17,13 +17,13 @@ Get-HPOVApplianceSshAccess
 You can configure the appliance to allow or deny remote access to the HPE OneView appliance using SSH.  This Cmdlet will return the current SSH console access state on the appliance.
 
 Privileges: Infrastructure administrator
+
 ## Examples
 
 ###  Example 1 
 
 ```text
 Get-HPOVApplianceSshAccess
-
 ```
 
 Get the current state of the appliance SSH console.
@@ -32,11 +32,7 @@ Get the current state of the appliance SSH console.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -54,14 +50,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Appliance.SshAccess**_
 
 The configured state of the appliance SSH console.
-
 
 ## Related Links
 

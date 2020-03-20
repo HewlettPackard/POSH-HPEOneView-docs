@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Install or stage an appliance update.
 ---
 
 # Install-HPOVUpdate
@@ -43,13 +43,13 @@ Install-HPOVUpdate
 ## Description
 
 The `Install-HPOVUpdate` installs an appliance update package to upgrade the platform to the specified version.  Use the -Stage switch to stage an update on the appliance.
+
 ## Examples
 
 ###  Example 1 
 
 ```text
 Install-HPOVUpdate -file C:\Path\update.bin
-
 ```
 
 Install the `[Update.bin]` package to the appliance.  User will be prompted to accept the upgrade EULA, and if a reboot is required also be prompted to confirm.
@@ -58,7 +58,6 @@ Install the `[Update.bin]` package to the appliance.  User will be prompted to a
 
 ```text
 Install-HPOVUpdate -file C:\Path\update.bin -Stage -DisplayReleaseNotes
-
 ```
 
 Stage the update on the appliance, and display the Release Notes to the PowerShell console.
@@ -68,8 +67,6 @@ Stage the update on the appliance, and display the Release Notes to the PowerShe
 ```text
 Install-HPOVUpdate -file C:\Path\update.bin -Stage
 Install-HPOVUpdate -EULA Accept -InstallNow
-
-
 ```
 
 Stage the `[Update.bin]` package to the appliance. After update has been staged, install the update now on specified appliance.
@@ -78,7 +75,6 @@ Stage the `[Update.bin]` package to the appliance. After update has been staged,
 
 ```text
 Install-HPOVUpdate -ListPending -DisplayReleaseNotes
-
 ```
 
 List a pending, staged updates on the appliance, then display the Release Notes to the PowerShell console.
@@ -87,7 +83,6 @@ List a pending, staged updates on the appliance, then display the Release Notes 
 
 ### -File &lt;String&gt;
 
-Aliases [-f]
 Appliance Update file to install.
 
 | Aliases | f |
@@ -148,7 +143,6 @@ Install pending update that was previously staged.
 
 ### -ListPending &lt;SwitchParameter&gt;
 
-Aliases [-list]
 List any pending updates on the appliance that might have been staged.
 
 | Aliases | list |
@@ -161,11 +155,7 @@ List any pending updates on the appliance that might have been staged.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -206,8 +196,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this cmdlet.**_
-
-
 
 ## Return Values
 

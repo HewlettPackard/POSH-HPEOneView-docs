@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: List Directory Groups from the configured LDAP Directory.
 ---
 
 # Show-HPOVLdapGroups
@@ -28,6 +28,7 @@ Show-HPOVLdapGroups
 ## Description
 
 This cmdlet will display the available Authentication Directory security groups.  The displayed Directory Groups can then be used to define new Directory Group Role assignment on the appliance with the `New-HPOVLdapGroup` cmdlet.
+
 ## Examples
 
 ###  Example 1 
@@ -45,8 +46,6 @@ Get list of Directory Groups from Domain1 and prompt for password.
 $password = convertto-SecureString -asplaintext "password123890" -force
 $Directory = Get-HPOVLdapDirectory "Domain99"
 Show-HPOVLdapGroups -u "Sarah Peterson" -p $password -d $Directory
-
-
 ```
 
 Automate list of Directory Groups from Domain99 with the provided password.
@@ -57,8 +56,6 @@ Automate list of Directory Groups from Domain99 with the provided password.
 $password = convertto-SecureString -asplaintext "password123890" -force
 $Directory = Get-HPOVLdapDirectory "Domain99"
 Show-HPOVLdapGroups -u "Sarah Peterson" -p $password -d $Directory -GroupName "Admins"
-
-
 ```
 
 Automate list of Directory Groups from Domain99 with the provided password, searching for group names that contain "Admins".
@@ -66,8 +63,6 @@ Automate list of Directory Groups from Domain99 with the provided password, sear
 ## Parameters
 
 ### -UserName &lt;String&gt;
-
-Aliases [-u]
 
 Username to authenticate with
 
@@ -81,8 +76,6 @@ Username to authenticate with
 
 ### -Password &lt;SecureString&gt;
 
-Aliases [-p]
-
 User account password
 
 | Aliases | p |
@@ -94,8 +87,6 @@ User account password
 | Accept wildcard characters? | False |
 
 ### -Directory &lt;Object&gt;
-
-Aliases [-d, `-domain`, `-AuthProvider`]
 
 The configured LDAP Directory object on the appliance.
 
@@ -121,11 +112,7 @@ Provide the name of the Directory Group to search for.  If omitted, all found Di
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -162,7 +149,6 @@ Directory User Account password
 _**HPOneView.Appliance.AuthDirectoryGroup [System.Management.Automation.PSCustomObject]**_
 
 Authentication Directory Group
-
 
 _**System.Collections.ArrayList<HPOneView.Appliance.AuthDirectoryGroup>**_
 

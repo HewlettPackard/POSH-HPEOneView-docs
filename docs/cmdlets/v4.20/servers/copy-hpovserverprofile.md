@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Copy Server Profile
 ---
 
 # Copy-HPOVServerProfile
@@ -8,6 +8,10 @@ description:
 
 ```text
 Copy-HPOVServerProfile
+    [-InputObject] <Object>
+    [-DestinationName <String>]
+    [-Assign <Object>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -15,6 +19,7 @@ Copy-HPOVServerProfile
 
 This cmdlet will copy a source Server Profile to a new instance  You can assign the copy to an existing Server Device, or 
 specify "unassigned".
+
 ## Examples
 
 ###  Example 1 
@@ -66,7 +71,6 @@ Copy 5 Server Profiles from "Profile Template" that will be assigned to bays 11 
 
 ### -InputObject &lt;Object&gt;
 
-Aliases [-sname, `-src`, `-SourceName`]
 The Name or Resource Object of the source server profile to be copied.
 
 | Aliases | sname, src, SourceName |
@@ -79,7 +83,6 @@ The Name or Resource Object of the source server profile to be copied.
 
 ### -DestinationName &lt;String&gt;
 
-Aliases [-dname]
 The name of the destination server profile that will be created.  If omitted, the new name will have "Copy of " 
 prefixed to the source name.
 
@@ -105,11 +108,7 @@ The name, URI, or object of the target server to assign the new profile to.  If 
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -129,13 +128,11 @@ _**System.Management.Automation.PSCustomObject**_
 
 Server Profile resource object
 
-
 ## Return Values
 
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Profile Create async task
-
 
 ## Related Links
 

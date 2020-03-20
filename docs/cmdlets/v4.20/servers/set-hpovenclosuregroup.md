@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Modify an existing enclosure group policy.
 ---
 
 # Set-HPOVEnclosureGroup
@@ -21,13 +21,13 @@ Set-HPOVEnclosureGroup
 An enclosure group is a logical resource that defines a standard configuration for member logical enclosures. Use this Cmdlet to update the configuration policy for a specific enclosure group resource.
 
 Required permissions: Server administrator or Infrastructure administrator
+
 ## Examples
 
 ###  Example 1 
 
 ```text
 $EnclosureGroup = Get-HPOVEnclosureGroup -Name ProdEG1 -ErrorAction Stop Set-HPOVEnclosureGroup -InputObject $EnclosureGroup -Name VirtProdEG1
-
 ```
 
 Change the name of the provided enclosure group resource.
@@ -45,22 +45,21 @@ ENABLE USER "ops"
 hponcfg all >> end_marker
 <RIBCL VERSION="2.0">
 <LOGIN USER_LOGIN="ops" PASSWORD="passthrough">
-	<USER_INFO MODE="write">
-		<ADD_USER
-		USER_NAME="ops"
-		USER_LOGIN="ops"
-		PASSWORD="Supersecretpassword">
-			<ADMIN_PRIV value ="N"/>
-			<REMOTE_CONS_PRIV value ="Y"/>
-			<RESET_SERVER_PRIV value ="N"/>
-			<VIRTUAL_MEDIA_PRIV value ="N"/>    
-			<CONFIG_ILO_PRIV value="Yes"/>
-		</ADD_USER>
-	</USER_INFO>
+    <USER_INFO MODE="write">
+        <ADD_USER
+        USER_NAME="ops"
+        USER_LOGIN="ops"
+        PASSWORD="Supersecretpassword">
+            <ADMIN_PRIV value ="N"/>
+            <REMOTE_CONS_PRIV value ="Y"/>
+            <RESET_SERVER_PRIV value ="N"/>
+            <VIRTUAL_MEDIA_PRIV value ="N"/>    
+            <CONFIG_ILO_PRIV value="Yes"/>
+        </ADD_USER>
+    </USER_INFO>
 </LOGIN>
 </RIBCL>
 end_marker' Get-HPOVEnclosureGroup -Name EG1 -ErrorAction Stop | Set-HPOVEnclosureGroup -ConfigurationScript $UpdatedConfigScript
-
 ```
 
 Update the configuration script of the provided enclosure group.
@@ -69,11 +68,7 @@ Update the configuration script of the provided enclosure group.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -125,8 +120,8 @@ The Power Redundancy Mode to set when an Enclosure is added to the appliance.
 
 Allowed Values:
 
-	* RedundantPowerFeed - Provides N+N Power Redundancy Configuration
-	* RedundantPowerSupply - Provided N+1 Power Redundancy Configuration
+    * RedundantPowerFeed - Provides N+N Power Redundancy Configuration
+    * RedundantPowerSupply - Provided N+1 Power Redundancy Configuration
 
 | Aliases | None |
 | :--- | :--- |

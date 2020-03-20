@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Retreive Uplink Set resource(s).
 ---
 
 # Get-HPOVUplinkSet
@@ -29,13 +29,13 @@ Get-HPOVUplinkSet
 ## Description
 
 This cmdlet will retrieve the list of all Uplink Sets or specific by the name.  The cmdlet will only display provisioned Uplink Sets that are members of a Logical Interconnect resource.  To view Uplink Sets of a Logical Interconnect Group, use the `Get-HPOVLogicalInterconnectGroup` CMDLET.
+
 ## Examples
 
 ###  Example 1 
 
 ```text
 $UplinkSets = Get-HPOVUplinkSet
-
 ```
 
 Get list of all Uplink Sets.
@@ -44,7 +44,6 @@ Get list of all Uplink Sets.
 
 ```text
 Get-HPOVUplinkSet -name "Production Networks"
-
 ```
 
 Get the "Production Networks" Uplink Set(s).
@@ -53,7 +52,6 @@ Get the "Production Networks" Uplink Set(s).
 
 ```text
 Get-HPOVUplinkSet -name "Production Networks" -report
-
 ```
 
 Get the "Production Networks" Uplink Set(s), and generate a report.
@@ -62,7 +60,6 @@ Get the "Production Networks" Uplink Set(s), and generate a report.
 
 ```text
 Get-HPOVUplinkSet -name "Production Networks" -liname "Encl1-LI" -report
-
 ```
 
 Get the "Production Networks" Uplink Set that is associated with "Encl1-LI" Logical Interconnect and generate a report.
@@ -83,7 +80,6 @@ Name of Uplink Set
 
 ### -LogicalInterconnect &lt;Object&gt;
 
-Aliases [-LiName]
 Name of the Logical Interconnect to show associated Uplink Set.
 
 | Aliases | liname |
@@ -98,8 +94,8 @@ Name of the Logical Interconnect to show associated Uplink Set.
 
 Specify the Uplink Set Type to display.  Will display all Uplink Sets of the type provided.  Allowed values:
 
-	* Ethernet
-	* FibreChannel
+    * Ethernet
+    * FibreChannel
 
 | Aliases | None |
 | :--- | :--- |
@@ -123,11 +119,7 @@ Generate a report of the defined Uplink Sets.  Includes Uplink Set type, network
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -156,8 +148,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this cmdlet.**_
-
-
 
 ## Return Values
 

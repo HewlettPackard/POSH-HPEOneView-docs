@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Remove a user account.
 ---
 
 # Remove-HPOVUser
@@ -16,6 +16,7 @@ Remove-HPOVUser
 ## Description
 
 Remove a specific local user account from the management appliance
+
 ## Examples
 
 ###  Example 1 
@@ -43,11 +44,7 @@ The user account object to be removed.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

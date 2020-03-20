@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Get the appliance remote Syslog audit log forwarding configuration.
 ---
 
 # Get-HPOVApplianceAuditLogForwarding
@@ -8,6 +8,7 @@ description:
 
 ```text
 Get-HPOVApplianceAuditLogForwarding
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -16,6 +17,7 @@ Get-HPOVApplianceAuditLogForwarding
 HPE OneView can forward the internal audit log entries to a remote syslog server, in standard Syslog format.  This cmdlet will return the current status, remote Syslog destination and port currently configured on the appliance.
 
 Required permissions: Infrastructure administrator
+
 ## Examples
 
 ###  Example 1 
@@ -31,11 +33,7 @@ Get the appliance audit log configuration.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -53,14 +51,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Appliance.AuditLogForwardingConfig**_
 
 The appliance audit log forwarding configuration.
-
 
 ## Related Links
 

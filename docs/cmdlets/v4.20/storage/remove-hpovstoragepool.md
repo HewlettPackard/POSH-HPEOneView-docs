@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Delete storage pool resource(s).
 ---
 
 # Remove-HPOVStoragePool
@@ -26,6 +26,7 @@ Remove-HPOVStoragePool
 ## Description
 
 Delete one or more storage pools from the appliance configuration.
+
 ## Examples
 
 ###  Example 1 
@@ -42,8 +43,6 @@ Remove the storage pool specifed by name.  Wait for remove to complete.
 ```text
 $pool = Get-HPOVStoragePool -name "yellow"
 Remove-HPOVStoragePool -storagePool $pool -confirm:$false
-
-
 ```
 
 Remove the network specifed by $pool, and do not prompt for confirmation.
@@ -61,7 +60,6 @@ Search for all storage pools and remove them from appliance.
 
 ### -InputObject &lt;Object&gt;
 
-Aliases [-name, `-StoragePool`]
 The network object(s) or name(s) to be removed on the appliance.
 
 | Aliases | uri, name, StoragePool |
@@ -74,7 +72,6 @@ The network object(s) or name(s) to be removed on the appliance.
 
 ### -StorageSystem &lt;Object&gt;
 
-Aliases [-storage]
 Provide the Storage System Name, URI or Object when the StoragePool name is not unique.
 
 | Aliases | storage |
@@ -99,11 +96,7 @@ If specified, the Storage Pool resource will forceablly removed despite any prob
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

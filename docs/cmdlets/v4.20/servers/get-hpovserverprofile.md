@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Retrieve Server Profile resource(s).
 ---
 
 # Get-HPOVServerProfile
@@ -46,6 +46,7 @@ Get-HPOVServerProfile
 This cmdlet will obtain a collection of Server Profile resources, or a specific Server Profile the specified name. It returns all aspects of the Server Profile.
     
 This will also provide the ability to export Server Profile objects to their own JSON encoded file.  All appliance unique properties (minus the Server Hardware Type, Enclosure Group, and Connection Network assignment) are removed.  Connection layout, assigned addresses, networks, bandwidth, BIOS, Boot Order, Firmware settings will all be retained.  Assigned Address types will change from Virtual to UserDefined in order to retain their assignment.
+
 ## Examples
 
 ###  Example 1 
@@ -147,7 +148,6 @@ Profile a Server Hardware or Server Profile Template resource, and the associate
 
 ### -Name &lt;String&gt;
 
-Aliases [-profile]
 The name of the server profile resource to be returned.  All server profile resources will be returned if omitted.  Supports * wildcard character.
 
 | Aliases | profile |
@@ -198,10 +198,10 @@ Optional parameter that can be included with the List switch parameter to only d
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-	* AllResources
-	* AllResourcesInScope
-	* `[HPOneView.Appliance.ScopeCollection]`
-	* `[HPOneView.Appliance.ConnectionPermission]`
+    * AllResources
+    * AllResourcesInScope
+    * `[HPOneView.Appliance.ScopeCollection]`
+    * `[HPOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
@@ -225,11 +225,7 @@ Specify the label associated with resources.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -241,7 +237,6 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 
 ### -export &lt;SwitchParameter&gt;
 
-Aliases [-x]
 Switch used to export Server Profile object to JSON encoded file.
 
 | Aliases | x |
@@ -254,7 +249,6 @@ Switch used to export Server Profile object to JSON encoded file.
 
 ### -location &lt;String&gt;
 
-Aliases [-save]
 Location where to save the Server Profile
 
 | Aliases | save |
@@ -272,8 +266,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this cmdlet.**_
-
-
 
 ## Return Values
 

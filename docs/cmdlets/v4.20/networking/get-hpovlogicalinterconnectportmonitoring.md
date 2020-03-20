@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Get port monitoring configuration from provided logical interconnect.
 ---
 
 # Get-HPOVLogicalInterconnectPortMonitoring
@@ -20,6 +20,7 @@ Port monitoring enables you to send a copy of every Ethernet or Fibre Channel fr
 This Cmdlet will return the port monitoring configuration for the provided logical interconnect.
 
 Required Privileges: Network administrator
+
 ## Examples
 
 ###  Example 1 
@@ -35,11 +36,7 @@ Get the port monitoring configuration from the specified Logical Interconnect.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -71,13 +68,11 @@ _**HPoneView.Networking.LogicalInterconnect [System.Management.Automation.PSCust
 
 Logical Interconnect resource object from [`Get-HPOVLogicalInterconnect`](get-hpovlogicalinterconnect.md)
 
-
 ## Return Values
 
 _**HPOneView.Networking.LogicalInterconnect+PortMonitoringConfig**_
 
 The current port monitor configuration of the provided logical interconnect(s).
-
 
 ## Related Links
 

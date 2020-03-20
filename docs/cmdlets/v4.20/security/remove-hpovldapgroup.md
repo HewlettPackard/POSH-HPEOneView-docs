@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Remove Directory Group.
 ---
 
 # Remove-HPOVLdapGroup
@@ -16,6 +16,7 @@ Remove-HPOVLdapGroup
 ## Description
 
 Remove Directory Group(s) from the appliance. Can provide Group Name or Object for removal.
+
 ## Examples
 
 ###  Example 1 
@@ -40,8 +41,6 @@ Get all groups and remove them from all connected appliances.
 
 ### -InputObject &lt;Object&gt;
 
-Aliases [-g, `-Group`, `-Name`]
-
 Configured Directory Group Name.
 
 | Aliases | g, Group, Name |
@@ -54,11 +53,7 @@ Configured Directory Group Name.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

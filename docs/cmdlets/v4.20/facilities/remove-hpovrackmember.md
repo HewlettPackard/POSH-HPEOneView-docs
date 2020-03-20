@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Remove a member resource from a rack.
 ---
 
 # Remove-HPOVRackMember
@@ -19,7 +19,8 @@ A rack is a physical structure that contains IT equipment such as enclosures, se
  When you add an enclosure to the appliance, it automatically creates a rack and places the enclosure in it. The appliance places into the rack all enclosures connected by management link cables. When enclosures are added, the appliance places them in the rack from top to bottom. When an enclosure is placed in an Intelligent Series Rack, the enclosure slots are automatically detected. For other racks, to accurately depict the layout of your enclosures within the rack you must edit the rack to place the enclosure in the proper slots.
  You can use the appliance to view and manage your rack configuration and power delivery topology. You can specify the physical dimensions of the rack (width, height, and depth), the number of U slots, and the location of each piece of equipment in the rack. You can specify the rack PDUs that provide power to the rack, and their physical position in the rack or on either side. You can also describe how the devices in the rack are connected to those PDUs.
  The appliance automatically discovers the rack height and rack model for a ProLiant server with Location Discovery Services and updates the physical locations of devices when they are relocated within and between racks for c7000 enclosures.
- This Cmdlet will remove a member from an existing Rack resource.  Removing a rack member resource will not delete or remove the resource from the appliance, just the association with the rack.
+ This Cmdlet will remove a member from an existing Rack resource.  Removing a rack member resource will not delete or remove the resource from the appliance, just the association with the rack. 
+
 ## Examples
 
 ###  Example 1 
@@ -47,11 +48,7 @@ Rack object, from `Get-HPOVRack`.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -71,13 +68,11 @@ _**HPOneView.Facilities.RackMember**_
 
 Rack member resource from [`Get-HPOVRackMember`](get-hpovrackmember.md).
 
-
 ## Return Values
 
 _**HPOneView.Appliance.TaskResource**_
 
 Async task object of updating the associated rack.
-
 
 ## Related Links
 

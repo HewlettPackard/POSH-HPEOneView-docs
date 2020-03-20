@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Get X.509 SSL certificates from the appliace trusted store.
 ---
 
 # Get-HPOVApplianceTrustedCertificate
@@ -24,6 +24,7 @@ Get-HPOVApplianceTrustedCertificate
 ## Description
 
 This Cmdlet will allow the Infrastructure Administrator to retrieve X.509 compliant SSL certificates on the appliance within its trusted store.
+
 ## Examples
 
 ###  Example 1 
@@ -60,11 +61,7 @@ The Alias Name of the certificate.  Please know that wildcard is not supported.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` objects or Name property values.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

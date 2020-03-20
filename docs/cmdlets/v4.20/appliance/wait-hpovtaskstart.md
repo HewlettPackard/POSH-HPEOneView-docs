@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Wait for a task to start.
 ---
 
 # Wait-HPOVTaskStart
@@ -8,12 +8,17 @@ description:
 
 ```text
 Wait-HPOVTaskStart
+    [-InputObject] <Object>
+    [-resourceName] <String>
+    [-Timeout] <TimeSpan>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ## Description
 
 Wait for the given task to "start" (get beyond validation phase) or timeout.
+
 ## Examples
 
 ###  Example 1 
@@ -29,7 +34,6 @@ Add a new Server Device to the appliance, wait for the asyncronous task to enter
 
 ### -InputObject &lt;Object&gt;
 
-Aliases [-taskuri, `-task`]
 The uri or object of the task resource to wait for.
 
 | Aliases | taskuri, task |
@@ -66,11 +70,7 @@ The time or object to wait for the task to start.  Default is to wait for 20 min
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

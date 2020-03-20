@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Remove a new Logical Switch Group resource.
 ---
 
 # Remove-HPOVLogicalSwitchGroup
@@ -17,7 +17,8 @@ Remove-HPOVLogicalSwitchGroup
 ## Description
 
 This Cmdlet will remove the configured Logical Switch Group from the requested appliance(s).  You cannot delete a logical switch group while it is being used by one or more logical switches. To delete the logical switch group, first delete the logical switches using the logical switch group.
- Required privileges: Infrastructure administrator or Network administrator
+ Required privileges: Infrastructure administrator or Network administrator 
+
 ## Examples
 
 ###  Example 1 
@@ -76,11 +77,7 @@ Force remove resource, even if there are communication problems.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

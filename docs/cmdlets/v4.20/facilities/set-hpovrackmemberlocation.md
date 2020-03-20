@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Modify an existing rack member U location.
 ---
 
 # Set-HPOVRackMemberLocation
@@ -23,7 +23,8 @@ You can use the appliance to view and manage your rack configuration and power d
 
 The appliance automatically discovers the rack height and rack model for a ProLiant server with Location Discovery Services and updates the physical locations of devices when they are relocated within and between racks for c7000 enclosures.
 
-This Cmdlet will modify an existing rack member U Location within the rack it is located.
+This Cmdlet will modify an existing rack member U Location within the rack it is located. 
+
 ## Examples
 
 ###  Example 1 
@@ -63,11 +64,7 @@ The new Rack Unit location where the resource is located.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -92,7 +89,6 @@ DataCenter facility object from [`Get-HPOVDataCenter`](get-hpovdatacenter.md).
 _**HPOneView.Facilities.RackMember**_
 
 Modified rack member object with the updated Rack Unit location.
-
 
 ## Related Links
 

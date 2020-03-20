@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Retrieve Managed SAN resource(s).
 ---
 
 # Get-HPOVManagedSan
@@ -8,12 +8,16 @@ description:
 
 ```text
 Get-HPOVManagedSan
+    [-Name] <String>
+    [-Label <String>]
+    [-ApplianceConnection] <Array>
     [<CommonParameters>]
 ```
 
 ## Description
 
 This cmdlet is used to display or list the available Managed SAN resources in the appliance.
+
 ## Examples
 
 ###  Example 1 
@@ -41,7 +45,6 @@ Show the "Fabric A" Managed SAN resource object.
 
 ### -Name &lt;String&gt;
 
-Aliases [-Fabric]
 Managed SAN Name to retrieve.
 
 | Aliases | Fabric |
@@ -66,11 +69,7 @@ Specify the label associated with resources.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -88,19 +87,15 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Storage.ManagedSan [System.Management.Automation.PSCustomObject]**_
 
 Single Resource
 
-
 _**System.Collections.ArrayList**_
 
 Multiple Resources
-
 
 ## Related Links
 

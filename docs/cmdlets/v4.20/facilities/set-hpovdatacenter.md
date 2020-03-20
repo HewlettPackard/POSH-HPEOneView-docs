@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Modify an existing Datacenter resource.
 ---
 
 # Set-HPOVDataCenter
@@ -31,7 +31,8 @@ For example, you have IT equipment in two rooms or on separate floors. You could
 Each server, enclosure, or power distribution device in your data center can report its power requirements, but it can be difficult to understand the power and cooling requirements for your data center as a whole. The appliance enables you to bring power and cooling management of your servers, enclosures, and power delivery devices together in a single management system.
 When you initialize the appliance for the first time, it creates a data center named Datacenter 1. The appliance provides this data center as a place to visualize your racks. You can rename or edit this data center to match the values and layout of your data center, you can use it as the basis for a planned data center model, or you can delete this data center without adverse effects.
 
-This Cmdlet will create a new datacenter.  You will need to specify the Name and dimensions.  Optionally, you can override the default Electrical Derating, default voltage, local currency (which will aid in power calculation costs) and power cooling capacity.  Remote Support settings can only be set when Remote Support has been enabled and configured on the appliance.  If omitting Remote Support location settings, then the datacenter will default to the default location set.
+This Cmdlet will create a new datacenter.  You will need to specify the Name and dimensions.  Optionally, you can override the default Electrical Derating, default voltage, local currency (which will aid in power calculation costs) and power cooling capacity.  Remote Support settings can only be set when Remote Support has been enabled and configured on the appliance.  If omitting Remote Support location settings, then the datacenter will default to the default location set. 
+
 ## Examples
 
 ###  Example 1 
@@ -60,21 +61,21 @@ Create new "LA DC 12" datacenter.
 $NewDCParams = @{
 
 Name             = "Houston DC1";
-	Width            = 10668;
-	Depth            = 13716;
-	Millimeters      = $True;
-	DefaultVoltage   = 240e;
-	PowerCosts       = 0.10;
-	CoolingCapacity  = 350;
-	Address1         = "123 Main Place";
-	Address2         = "Suite 400";
-	City             = "Houston;
-	State            = "TX";
-	Country          = "US";
-	PostCode         = "77002";
-	TimeZone         = "US/Central";
-	PrimaryContact   = (Get-HPOVRemoteSupportContact -Name "Joe Ellis" -EA Stop)
-	SecondaryContact = (Get-HPOVRemoteSupportContact -Name "Brandon Pear" -EA Stop)
+    Width            = 10668;
+    Depth            = 13716;
+    Millimeters      = $True;
+    DefaultVoltage   = 240e;
+    PowerCosts       = 0.10;
+    CoolingCapacity  = 350;
+    Address1         = "123 Main Place";
+    Address2         = "Suite 400";
+    City             = "Houston;
+    State            = "TX";
+    Country          = "US";
+    PostCode         = "77002";
+    TimeZone         = "US/Central";
+    PrimaryContact   = (Get-HPOVRemoteSupportContact -Name "Joe Ellis" -EA Stop)
+    SecondaryContact = (Get-HPOVRemoteSupportContact -Name "Brandon Pear" -EA Stop)
 
 }
 New-HPOVDataCenter @NewDC2Params
@@ -350,11 +351,7 @@ Time Zone of residence for the datacenter.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -372,14 +369,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Facilities.DataCenter**_
 
 Newly created datacenter.
-
 
 ## Related Links
 

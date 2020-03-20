@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Remove storage volume snapshot resource(s).
 ---
 
 # Remove-HPOVStorageVolumeSnapshot
@@ -8,12 +8,16 @@ description:
 
 ```text
 Remove-HPOVStorageVolumeSnapshot
+    [-InputObject] <Object>
+    [-ApplianceConnection] <Object>
+    [-Async]
     [<CommonParameters>]
 ```
 
 ## Description
 
 This Cmdlet will remove a storage volume snapshot from a storage volume resource object.  Removal of a snapshot is a destructive operation of the snapshot only.
+
 ## Examples
 
 ###  Example 1 
@@ -21,8 +25,6 @@ This Cmdlet will remove a storage volume snapshot from a storage volume resource
 ```text
 $Snapshots = Get-HPOVStorageVolume -Name "Volume 1" -ErrorAction Stop | Get-HPOVStorageVolumeSnapshot
 $Snapshots | ? { ((get-date) - (Get-Date $_.created)).days -ge 5 } | Remove-HPOVStorageVolumeSnapshot
-
-
 ```
 
 Get all of the available storage volume snapshots for "Volume 1", then remove any snapshots as old or older than 5 days.
@@ -39,8 +41,6 @@ Remove all Storage Volume Snapshots managed by HPE OneView.
 ## Parameters
 
 ### -InputObject &lt;Object&gt;
-
-Aliases [-Snapshot]
 
 Provide the snapshot resource object to remove from the appliance.
 
@@ -65,8 +65,6 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
-
-Aliases [-Appliance]
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
@@ -119,7 +117,6 @@ Storage Volume Snapshot resource
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async create task resource
-
 
 _**System.Collections.ArrayList <HPOneView.Appliance.TaskResource>**_
 

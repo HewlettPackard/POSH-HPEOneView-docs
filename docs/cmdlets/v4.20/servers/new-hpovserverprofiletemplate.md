@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Create a Server Profile Template
 ---
 
 # New-HPOVServerProfileTemplate
@@ -106,14 +106,14 @@ A Server Profile Template is the parent configuration for a Server Profile insta
 
 A Server Profile Template includes:
 
-	* Basic server identification information
-	* Connectivity settings for Ethernet networks, network sets, and Fibre Channel networks
-	* Firmware versions
-	* Local storage settings
-	* SAN storage settings
-	* BIOS settings
-	* Boot order
-	* Physical or virtual UUIDs, MAC addresses, and WWN addresses
+    * Basic server identification information
+    * Connectivity settings for Ethernet networks, network sets, and Fibre Channel networks
+    * Firmware versions
+    * Local storage settings
+    * SAN storage settings
+    * BIOS settings
+    * Boot order
+    * Physical or virtual UUIDs, MAC addresses, and WWN addresses
 
 When you create a server profile template, it is designated for a server hardware type and enclosure group (for server blades).
     
@@ -126,6 +126,7 @@ The "biosSettings" Array property will be available (only with supported Server 
 $biosSettings = $bl460cgen9sht.biosSettings | ? { $_.name -match "power" }
     
 The code example above will return all matching BIOS Settings where the name contains "power".  The found BIOS settings object(s) are then saved into $biosSettings.  Update the "value" property accordingly, and you can then pass $biosSettings variable to the -biosSettings parameter.
+
 ## Examples
 
 ###  Example 1 
@@ -331,7 +332,6 @@ Default: No connections
 
 ### -EnclosureGroup &lt;Object&gt;
 
-Aliases [-eg]
 The Enclosure Group resource the Server Profile Template will be bound to.  When assigning to an Enclosure Group, OneView will then determine what farbic connectivity and storage devices are available.
 
 | Aliases | eg |
@@ -344,7 +344,6 @@ The Enclosure Group resource the Server Profile Template will be bound to.  When
 
 ### -ServerHardwareType &lt;Object&gt;
 
-Aliases [-sht]
 The Server Hardware Type reource the Server Profile Template will be bound to.
 
 | Aliases | sht |
@@ -381,13 +380,11 @@ Firmware baseline to assign.  Can be either Baseline Name or URI.
 
 ### -FirmwareInstallMode &lt;String&gt;
 
-Aliases [-FirmwareMode]
-
 Specify the Firmware Baseline Policy mode.  Avialable options are:
 
-	* FirmwareOnly - Updates the system firmware without powering down the server hardware using using HP Smart Update Tools. 
-	* FirmwareAndSoftware - Updates the firmware and OS drivers without powering down the server hardware using HP Smart Update Tools.
-	* FirmwareOffline - Manages the firmware through HPE OneView. Selecting this option requires the server hardware to be powered down.
+    * FirmwareOnly - Updates the system firmware without powering down the server hardware using using HP Smart Update Tools. 
+    * FirmwareAndSoftware - Updates the firmware and OS drivers without powering down the server hardware using HP Smart Update Tools.
+    * FirmwareOffline - Manages the firmware through HPE OneView. Selecting this option requires the server hardware to be powered down.
 
 | Aliases | FirmwareMode |
 | :--- | :--- |
@@ -413,9 +410,9 @@ Using this parameter will force the bundled firmware components to install when 
 
 Specify the firmware activation policy.  Avialable options are:
 
-	* Immediate - Immediately activate (aka reboot the host) firmware if needed.  Requires HPSUT to be installed in the Host OS or Proxy VM (for VMware only)
-	* Scheduled - Specify a future time to activate (aka reboot the host) firmware if needed.  You will need to specify the FirmwareActivateDateTime parameter.  Requires HPSUT to be installed in the Host OS or Proxy VM (for VMware only)
-	* NotScheduled - Scheduled firmware update is cancelled when you choose this option.
+    * Immediate - Immediately activate (aka reboot the host) firmware if needed.  Requires HPSUT to be installed in the Host OS or Proxy VM (for VMware only)
+    * Scheduled - Specify a future time to activate (aka reboot the host) firmware if needed.  You will need to specify the FirmwareActivateDateTime parameter.  Requires HPSUT to be installed in the Host OS or Proxy VM (for VMware only)
+    * NotScheduled - Scheduled firmware update is cancelled when you choose this option.
 
 | Aliases | None |
 | :--- | :--- |
@@ -456,18 +453,18 @@ Specify the Gen9 Boot Envrionment.
 
 Sets the boot mode as one of the following:
 
-	* UEFI
-	* UEFIOptimized
-	* BIOS
-	* Unmanaged
+    * UEFI
+    * UEFIOptimized
+    * BIOS
+    * Unmanaged
 
 If you select UEFI or UEFI optimized for an HP ProLiant DL Gen9 rack mount server, the remaining boot setting available is the PXE boot policy.
 
 For the UEFI or UEFI optimized boot mode options, the boot mode choice should be based on the expected OS and required boot features for the server hardware. UEFI optimized boot mode reduces the time the system spends in POST (Video driver initialization). In order to select the appropriate boot mode, consider the following:
-	
-	* If a secure boot is required, the boot mode must be set to UEFI or UEFI optimized .
-	* For operating systems that do not support UEFI (such as DOS, or older versions of Windows and Linux), the boot mode must be set to BIOS.
-	* When booting in UEFI mode, Windows 7, Server 2008, or 2008 R2 should not be set to UEFIOptimized.
+    
+    * If a secure boot is required, the boot mode must be set to UEFI or UEFI optimized .
+    * For operating systems that do not support UEFI (such as DOS, or older versions of Windows and Linux), the boot mode must be set to BIOS.
+    * When booting in UEFI mode, Windows 7, Server 2008, or 2008 R2 should not be set to UEFIOptimized.
 
 Default: BIOS
 
@@ -497,11 +494,11 @@ Controls the ordering of the network modes available to the Flexible LOM (FLB); 
 
 Select from the following policies:
 
-	* Auto
-	* IPv4 only
-	* IPv6 only
-	* IPv4 then IPv6
-	* IPv6 then IPv4
+    * Auto
+    * IPv4 only
+    * IPv6 only
+    * IPv4 then IPv6
+    * IPv6 then IPv4
 
 Setting the policy to Auto means the order of the existing network boot targets in the UEFI Boot Order list will not be modified, and any new network boot targets will be added to the end of the list using the System ROM"s default policy.
 
@@ -516,8 +513,6 @@ Default: Auto
 | Accept wildcard characters? | False |
 
 ### -ManageBoot &lt;SwitchParameter&gt;
-
-Aliases [-boot]
 
 Enable Boot Order Management.  Also required for Connection boot enablement.  If this is disabled ($False), then PXE or FC BfS settings are disabled within the entire Server Profile.
 
@@ -635,35 +630,33 @@ Optional.  Enable SAN Storage Management within the Server Profile.
 
 ### -HostOStype &lt;String&gt;
 
-Aliases [-OS]
-
 Optional. Specify the Host OS type, which will set the Host OS value when HPE OneView created the Host object on the Storage System.  Accepted values:
 
-	* CitrixXen = "Citrix Xen Server 5.x/6.x"
-	* AIX       = "AIX"
-	* IBMVIO    = "IBM VIO Server"
-	* RHEL4     = "RHE Linux (Pre RHEL 5)"
-	* RHEL3     = "RHE Linux (Pre RHEL 5)"
-	* RHEL      = "RHE Linux (5.x, 6.x)"
-	* RHEV      = "RHE Virtualization (5.x, 6.x)"
-	* VMware    = "ESX 4.x/5.x"
-	* Win2k3    = "Windows 2003"
-	* Win2k8    = "Windows 2008/2008 R2"
-	* Win2k12   = "Windows 2012 / WS2012 R2"
-	* OpenVMS   = "OpenVMS"
-	* Egenera   = "Egenera"
-	* Exanet    = "Exanet"
-	* Solaris9  = "Solaris 9/10"
-	* Solaris10 = "Solaris 9/10"
-	* Solaris11 = "Solaris 11"
-	* ONTAP     = "NetApp/ONTAP"
-	* OEL       = "OE Linux UEK (5.x, 6.x)"
-	* HPUX11iv1 = "HP-UX (11i v1, 11i v2)"
-	* HPUX11iv2 = "HP-UX (11i v1, 11i v2)"
-	* HPUX11iv3 = "HP-UX (11i v3)"
-	* SUSE      = "SuSE (10.x, 11.x)"
-	* SUSE9     = "SuSE Linux (Pre SLES 10)"
-	* Inform    = "InForm"
+    * CitrixXen = "Citrix Xen Server 5.x/6.x"
+    * AIX       = "AIX"
+    * IBMVIO    = "IBM VIO Server"
+    * RHEL4     = "RHE Linux (Pre RHEL 5)"
+    * RHEL3     = "RHE Linux (Pre RHEL 5)"
+    * RHEL      = "RHE Linux (5.x, 6.x)"
+    * RHEV      = "RHE Virtualization (5.x, 6.x)"
+    * VMware    = "ESX 4.x/5.x"
+    * Win2k3    = "Windows 2003"
+    * Win2k8    = "Windows 2008/2008 R2"
+    * Win2k12   = "Windows 2012 / WS2012 R2"
+    * OpenVMS   = "OpenVMS"
+    * Egenera   = "Egenera"
+    * Exanet    = "Exanet"
+    * Solaris9  = "Solaris 9/10"
+    * Solaris10 = "Solaris 9/10"
+    * Solaris11 = "Solaris 11"
+    * ONTAP     = "NetApp/ONTAP"
+    * OEL       = "OE Linux UEK (5.x, 6.x)"
+    * HPUX11iv1 = "HP-UX (11i v1, 11i v2)"
+    * HPUX11iv2 = "HP-UX (11i v1, 11i v2)"
+    * HPUX11iv3 = "HP-UX (11i v3)"
+    * SUSE      = "SuSE (10.x, 11.x)"
+    * SUSE9     = "SuSE Linux (Pre SLES 10)"
+    * Inform    = "InForm"
 
 | Aliases | OS |
 | :--- | :--- |
@@ -707,8 +700,6 @@ The format of the Storage Volume resource should be a PsCustomObject PowerShell 
 
 ### -EvenPathDisabled &lt;SwitchParameter&gt;
 
-Aliases [-even]
-
 Enable to disable even paths in the attached storage volume(s).
 
 | Aliases | Even |
@@ -720,8 +711,6 @@ Enable to disable even paths in the attached storage volume(s).
 | Accept wildcard characters? | False |
 
 ### -OddPathDisabled &lt;SwitchParameter&gt;
-
-Aliases [-odd]
 
 Enable to disable odd paths in the attached storage volume(s).
 
@@ -821,7 +810,6 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-appliance]
 The name of the appliance or list of appliances to execute the command against.
 
 | Aliases | Appliance |
@@ -846,7 +834,7 @@ Use this parameter to return the modified Server Profile Template object.  In or
 
 ### -IscsiInitiatorNameAssignmet &lt;string&gt;
 
-Specify if the iSCSI initiator name should be automatically managed and assigned, or a custom value  should be used.  Allowed values: 	* Virtual 	* UserDefined 
+Specify if the iSCSI initiator name should be automatically managed and assigned, or a custom value  should be used.  Allowed values:     * Virtual     * UserDefined 
 Default Value: Virtual
 
 | Aliases | None |
@@ -861,8 +849,8 @@ Default Value: Virtual
 
 Use to override the consistency checking for the policy.  Allowed values:
 
-	* Exact
-	* None
+    * Exact
+    * None
 
 | Aliases | None |
 | :--- | :--- |
@@ -876,8 +864,8 @@ Use to override the consistency checking for the policy.  Allowed values:
 
 Use to override the consistency checking for the policy.  Allowed values:
 
-	* Exact
-	* None
+    * Exact
+    * None
 
 | Aliases | None |
 | :--- | :--- |
@@ -891,9 +879,9 @@ Use to override the consistency checking for the policy.  Allowed values:
 
 Use to override the consistency checking for the policy.  Allowed values:
 
-	* Exact
-	* Minimum
-	* None
+    * Exact
+    * Minimum
+    * None
 
 | Aliases | None |
 | :--- | :--- |
@@ -907,8 +895,8 @@ Use to override the consistency checking for the policy.  Allowed values:
 
 Use to override the consistency checking for the policy.  Allowed values:
 
-	* Exact
-	* None
+    * Exact
+    * None
 
 | Aliases | None |
 | :--- | :--- |
@@ -922,8 +910,8 @@ Use to override the consistency checking for the policy.  Allowed values:
 
 Use to override the consistency checking for the policy.  Allowed values:
 
-	* Exact
-	* None
+    * Exact
+    * None
 
 | Aliases | None |
 | :--- | :--- |
@@ -937,8 +925,8 @@ Use to override the consistency checking for the policy.  Allowed values:
 
 Use to override the consistency checking for the policy.  Allowed values:
 
-	* Exact
-	* None
+    * Exact
+    * None
 
 | Aliases | None |
 | :--- | :--- |
@@ -952,9 +940,9 @@ Use to override the consistency checking for the policy.  Allowed values:
 
 Use to override the consistency checking for the policy.  Allowed values:
 
-	* Exact
-	* Minimum
-	* None
+    * Exact
+    * Minimum
+    * None
 
 | Aliases | None |
 | :--- | :--- |
@@ -983,7 +971,6 @@ If successful returns a task resource which may be polled to follow the progress
 _**HPOneVIew.ServerProfileTemplate [System.Management.Automation.PSCustomObject]**_
 
 When using the `-PassThru` parameter, the created server profile template object is returned.
-
 
 ## Related Links
 

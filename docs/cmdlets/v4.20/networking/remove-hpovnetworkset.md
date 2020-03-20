@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Remove a network set.
 ---
 
 # Remove-HPOVNetworkSet
@@ -9,12 +9,14 @@ description:
 ```text
 Remove-HPOVNetworkSet
     [-NetworkSet] <Object>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ## Description
 
 Delete a network set and its corresponding default connection type.
+
 ## Examples
 
 ###  Example 1 
@@ -22,8 +24,6 @@ Delete a network set and its corresponding default connection type.
 ```text
 $task = Remove-HPOVNetworkSet -networkSet "MyNetSet"
 Wait-HPOVTaskComplete $task
-
-
 ```
 
 Remove the network set specifed by name.  Wait for remove to complete.
@@ -50,7 +50,6 @@ Search for all network sets and remove them from appliance.
 
 ### -NetworkSet &lt;Object&gt;
 
-Aliases [-name, `-uri`]
 The network set object(s), name(s) or uri(s) to be deleted.  If providing a URI, you must specify an Applinace Connection.
 
 | Aliases | uri, name |
@@ -63,11 +62,7 @@ The network set object(s), name(s) or uri(s) to be deleted.  If providing a URI,
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -110,7 +105,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 _**HPOneView.Networking.NetworkSet [System.Management.Automation.PSCustomObject]**_
 
 Network Set resource object
-
 
 ## Return Values
 

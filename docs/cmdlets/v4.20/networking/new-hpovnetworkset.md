@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Create a new Network Set.
 ---
 
 # New-HPOVNetworkSet
@@ -8,12 +8,19 @@ description:
 
 ```text
 New-HPOVNetworkSet
+    [-Name] <String>
+    [-Networks] <Object>
+    [-UntaggedNetwork] <Object>
+    [-TypicalBandwidth] <Int32>
+    [-MaximumBandwidth] <Int32>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ## Description
 
 Create a new Network Set and connection type resource.
+
 ## Examples
 
 ###  Example 1 
@@ -30,8 +37,6 @@ Create a new Network Set called "Production Networks", adding Ethernet Networks 
 ```text
 $networks = "blue","green","yellow" | % { Get-HPOVNetwork $_ -type Ethernet }
 New-HPOVNetworkSet -name "Production Networks" -Networks $networks -UntaggedNetwork $networks[1]
-
-
 ```
 
 Get Ethernet Networks "blue", "green", and "yellow", then create a new Network Set, with "Green" as the UntaggedNetowrk for the specified appliance connection.
@@ -61,7 +66,6 @@ The name of the new Network Set resource to be created.
 
 ### -Networks &lt;Object&gt;
 
-Aliases [-networkUris]
 Ethernet Network Name(s), URI(")s or Resource Object(s).
 
 | Aliases | networkUris |
@@ -74,7 +78,6 @@ Ethernet Network Name(s), URI(")s or Resource Object(s).
 
 ### -UntaggedNetwork &lt;Object&gt;
 
-Aliases [-untagged, `-native`, `-untaggedNetworkUri`]
 Network (from the above list) to be considered the "native" network in this set.  Traffic on this network will leave the Virtual Connect downlink port untagged.  When untagged traffic is received on this port, it will be mapped to this network.
 
 | Aliases | untagged, native, untaggedNetworkUri |
@@ -111,11 +114,7 @@ Optional maximum amount of bandwidth to assign, specified in Mbps.  Default valu
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -132,8 +131,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this cmdlet.**_
-
-
 
 ## Return Values
 

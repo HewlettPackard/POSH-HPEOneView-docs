@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Test appliance Email Alerting configuration.
 ---
 
 # Test-HPOVEmailAlert
@@ -8,12 +8,17 @@ description:
 
 ```text
 Test-HPOVEmailAlert
+    [-Recipients] <Array>
+    [-Subject <String>]
+    [-Body <String>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ## Description
 
 This cmdlet will generate a test email message. 
+
 ## Examples
 
 ###  Example 1 
@@ -62,23 +67,19 @@ Provide a custom subject for the email message.
 
 ### -Body &lt;String&gt;
 
-Provide a custom subject for the email message.
+Provide a custom message body.  Can be either a plan text or HTML message.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | This is a test message. |
+| Default value | Test email message from HPE OneView appliance. |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -95,8 +96,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None. You cannot pipe objects to this cmdlet.**_
-
-None. You cannot pipe objects to this cmdlet
 
 ## Return Values
 

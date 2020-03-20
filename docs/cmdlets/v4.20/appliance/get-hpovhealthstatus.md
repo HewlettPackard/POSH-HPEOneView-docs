@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Display appliance health.
 ---
 
 # Get-HPOVHealthStatus
@@ -8,12 +8,14 @@ description:
 
 ```text
 Get-HPOVHealthStatus
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ## Description
 
 Display the HPE OneView appliance health status.  This includes CPU, Memory and Disk Space.
+
 ## Examples
 
 ###  Example 1 
@@ -29,11 +31,7 @@ Get the HPE OneView appliance health.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | appliance |
 | :--- | :--- |
@@ -51,14 +49,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Appliance.HealthStatus [System.Management.Automation.PSCustomObject]**_
 
 Appliance health report in table format.
-
 
 ## Related Links
 

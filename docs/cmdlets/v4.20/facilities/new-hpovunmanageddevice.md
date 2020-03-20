@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Create an Unmanaged Device.
 ---
 
 # New-HPOVUnmanagedDevice
@@ -22,6 +22,7 @@ New-HPOVUnmanagedDevice
 ## Description
 
 HPE OneView provides administrators with the capability to define unmanaged devices to them place within Racks, in order to provide a more realistic and complete data center layout.  Creating a device does not provide the ability to manage it from HPE OneView.  The administrator will need to specify static characteristics of the device being added.  The unmanaged device can then be assigned into the appropriate rack manually.
+
 ## Examples
 
 ###  Example 1 
@@ -130,11 +131,7 @@ Provide the IPv6 Address value of the management interface.  This value does not
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -151,8 +148,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this cmdlet.**_
-
-None.  You cannot pipe objects to this cmdlet
 
 ## Return Values
 

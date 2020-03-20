@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Updates a Logical Interconnect.
 ---
 
 # Update-HPOVLogicalInterconnect
@@ -32,6 +32,7 @@ Update-HPOVLogicalInterconnect
 ## Description
 
 When a Logical Interconnect is inconsistent with its parent Logical Interconnect Group, it can be made consistent with this CMDLET.  Updating the Logical Interconnect with its parent could cause an network outage depending on the changes about to be applied.
+
 ## Examples
 
 ###  Example 1 
@@ -39,7 +40,7 @@ When a Logical Interconnect is inconsistent with its parent Logical Interconnect
 ```text
 $task = Update-HPOVLogicalInterconnect -name Encl1-LI
 Wait-HPOVTaskComplete $task
-		            
+                    
 
 ```
 
@@ -91,7 +92,6 @@ Refresh "LogicalEnclosure1" Logical Enclosure.
 
 ### -InputObject &lt;Object&gt;
 
-Aliases [-li, `-uri`, `-name`]
 The Logical Interconnect object(s), name(s) or uris(s) to be updated.
 
 | Aliases | uri, li, name, Resource |
@@ -104,11 +104,7 @@ The Logical Interconnect object(s), name(s) or uris(s) to be updated.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -176,11 +172,9 @@ _**HPOneView.Networking.LogicalInterconnect [System.Management.Automation.PSCust
 
 Single Logical Interconnect resource object
 
-
 _**System.Collections.ArrayList <HPOneView.Networking.LogicalInterconnect>**_
 
 Collection of Logical Interconnect Names, URIs or System.Management.Automation.PSCustomObject
-
 
 ## Return Values
 
@@ -196,21 +190,20 @@ _**HPOneView.Library.CompareObject**_
 
 The Cmdlet will return a compare object with the Parent and Child object and settings that are different.  Otherwise, no object is returned.
 
-	Property Name | Description
-	==========================================================
-	InputObject   | Compared Object Property or Setting Value
-	----------------------------------------------------------
-	ParentSetting | Name of Property or Setting
-	----------------------------------------------------------
-	ChildSetting  | Name of Property or Setting
-	----------------------------------------------------------
-	Parent        | Name of Parent Object
-	----------------------------------------------------------
-	Child         | Name of Child Object
-	----------------------------------------------------------
-	Description   | Description Name of difference
-	----------------------------------------------------------
-
+    Property Name | Description
+    ==========================================================
+    InputObject   | Compared Object Property or Setting Value
+    ----------------------------------------------------------
+    ParentSetting | Name of Property or Setting
+    ----------------------------------------------------------
+    ChildSetting  | Name of Property or Setting
+    ----------------------------------------------------------
+    Parent        | Name of Parent Object
+    ----------------------------------------------------------
+    Child         | Name of Child Object
+    ----------------------------------------------------------
+    Description   | Description Name of difference
+    ----------------------------------------------------------
 
 ## Related Links
 

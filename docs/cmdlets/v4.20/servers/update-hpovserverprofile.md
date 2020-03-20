@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Update Server Profile from Template
 ---
 
 # Update-HPOVServerProfile
@@ -33,6 +33,7 @@ Update-HPOVServerProfile
 ## Description
 
 This Cmdlet will perform the "Update from Server Profile Template" operation on 1 or more Server Profile resources.  If a Server Profile is already in a "Compliant" state, then no action will be taken.
+
 ## Examples
 
 ###  Example 1 
@@ -57,7 +58,6 @@ Get all Server Profile resources and perform the Update from Server Profile Temp
 
 ### -InputObject &lt;Object&gt;
 
-Aliases [-Profile, `-ServerProfile`]
 The Name or Resource Object of the specific Server Profile to update.
 
 | Aliases | profile, ServerProfile |
@@ -70,11 +70,7 @@ The Name or Resource Object of the specific Server Profile to update.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -226,11 +222,9 @@ _**HPOneView.ServerProfile [System.Management.Automation.PSCustomObject]**_
 
 Single Server Profile
 
-
 _**System.CollectionsArrayList <HPOneView.ServerProfile>**_
 
 Multiple Server Profiles
-
 
 ## Return Values
 

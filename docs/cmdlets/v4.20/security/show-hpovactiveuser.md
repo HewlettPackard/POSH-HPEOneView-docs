@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Display active and connected users.
 ---
 
 # Show-HPOVActiveUser
@@ -14,7 +14,8 @@ Show-HPOVActiveUser
 
 ## Description
 
-Use this Cmdlet to display active and connected users to an HPE OneView or Synergy management appliance.  Infrastructure administrator or Security administrator role is required in order to view all connected users.
+Use this Cmdlet to display active and connected users to an HPE OneView or Synergy management appliance.  Infrastructure administrator or Security administrator role is required in order to view all connected users. 
+
 ## Examples
 
 ###  Example 1 
@@ -29,11 +30,7 @@ Display connected active users to the appliance.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -51,14 +48,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Appliance.ActiveUserSession**_
 
 Connected user session and its details.
-
 
 ## Related Links
 

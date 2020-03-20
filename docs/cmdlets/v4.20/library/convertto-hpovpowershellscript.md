@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Create PowerShell script from resource.
 ---
 
 # ConvertTo-HPOVPowerShellScript
@@ -20,30 +20,31 @@ This Cmdlet will assist administrators or scripters to help generate script code
 
 The following resources are supported by this Cmdlet:
 
-	* Baselines (Get-HPOVBaseline)
-	* Appliance Address Pool Ranges (Get-HPOVAddressPoolRange)
-	* Appliance Address Pool Subnets (Get-HPOVAddressPoolSubnet)
-	* Appliance Date Time and Locale (Get-HPOVApplianceDateTime)
-	* Appliance LDAP Directory (Get-HPOVLdapDirectory)
-	* Appliance LDAP Directory Group (Get-HPOVLdapGroup)
-	* Appliance SNMP configuration (Get-HPOVSnmpReadCommunity)
-	* Appliance SNMPv3 Users (Get-HPOVSnmpV3User)
-	* Appliance Email Notifications (Get-HPOVApplianceProxy)
-	* Appliance Proxy (Get-HPOVApplianceProxy)
-	* Appliance User (Get-HPOVUser)
-	* Scopes (Get-HPOVScope)
-	* Network (Get-HPOVNetwork)
-	* Network Set (Get-HPOVNetworkSet)
-	* SAN Manager (Get-HPOVSanNanager)
-	* Storage System (Get-HPOVStorageSystem)
-	* Storage Pool (Get-HPOVStoragePool)
-	* Storage Volume Template (Get-HPOVStorageVolumeTemplate)
-	* Storage Volume (Get-HPOVStorageVolume)
-	* Logical Interconnect Group (Get-HPOVLogicalInterconnectGroup)
-	* Logical Enclosure Group (Get-HPOVLogicalEnclosureGroup)
-	* Logical Enclosure (Get-HPOVLogicalEnclosure)
-	* Server Profile Template (Get-HPOVServerProfileTemplate)
-	* Server Profile (Get-HPOVServerProfile)
+    * Baselines (Get-HPOVBaseline)
+    * Appliance Address Pool Ranges (Get-HPOVAddressPoolRange)
+    * Appliance Address Pool Subnets (Get-HPOVAddressPoolSubnet)
+    * Appliance Date Time and Locale (Get-HPOVApplianceDateTime)
+    * Appliance LDAP Directory (Get-HPOVLdapDirectory)
+    * Appliance LDAP Directory Group (Get-HPOVLdapGroup)
+    * Appliance SNMP configuration (Get-HPOVSnmpReadCommunity)
+    * Appliance SNMPv3 Users (Get-HPOVSnmpV3User)
+    * Appliance Email Notifications (Get-HPOVApplianceProxy)
+    * Appliance Proxy (Get-HPOVApplianceProxy)
+    * Appliance User (Get-HPOVUser)
+    * Scopes (Get-HPOVScope)
+    * Network (Get-HPOVNetwork)
+    * Network Set (Get-HPOVNetworkSet)
+    * SAN Manager (Get-HPOVSanNanager)
+    * Storage System (Get-HPOVStorageSystem)
+    * Storage Pool (Get-HPOVStoragePool)
+    * Storage Volume Template (Get-HPOVStorageVolumeTemplate)
+    * Storage Volume (Get-HPOVStorageVolume)
+    * Logical Interconnect Group (Get-HPOVLogicalInterconnectGroup)
+    * Logical Enclosure Group (Get-HPOVLogicalEnclosureGroup)
+    * Logical Enclosure (Get-HPOVLogicalEnclosure)
+    * Server Profile Template (Get-HPOVServerProfileTemplate)
+    * Server Profile (Get-HPOVServerProfile)
+
 
 ## Examples
 
@@ -109,7 +110,6 @@ _**Various objects are supported.**_
 _**System.String**_
 
 String output of generated code.
-
 
 ## Related Links
 

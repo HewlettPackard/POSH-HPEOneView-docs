@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Retrieve Interconnect resource(s).
 ---
 
 # Get-HPOVInterconnect
@@ -8,12 +8,18 @@ description:
 
 ```text
 Get-HPOVInterconnect
+    [-Name <String>]
+    [-Scope <Object>]
+    [-Label <String>]
+    [-ApplianceConnection <Object>]
+    [-Export <String>]
     [<CommonParameters>]
 ```
 
 ## Description
 
 Retrieves a list of all Interconnects (Ethernet, FC, Converged Network, and/or SAS) or just specific ones via a query if the name parameter is provided.  The output can be sent to a file using the Export parameter.
+
 ## Examples
 
 ###  Example 1 
@@ -70,10 +76,10 @@ The name of the interconnect to retrieve.
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-	* AllResources
-	* AllResourcesInScope
-	* `[HPOneView.Appliance.ScopeCollection]`
-	* `[HPOneView.Appliance.ConnectionPermission]`
+    * AllResources
+    * AllResourcesInScope
+    * `[HPOneView.Appliance.ScopeCollection]`
+    * `[HPOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
@@ -97,11 +103,7 @@ Specify the label associated with resources.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -113,7 +115,6 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 
 ### -Export &lt;String&gt;
 
-Aliases [-x, `-exportFile`]
 The full path and file name to export the contents retrieved from the call to `Get-HPOVInterconnect`.
 
 | Aliases | x, exportFile |
@@ -132,24 +133,19 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Networking.Interconnect [System.Management.Automation.PSCustomObject]**_
 
 Single Interconnect object.
 
-
 _**HPOneView.Networking.SasInterconnect [System.Management.Automation.PSCustomObject]**_
 
 Single SAS Interconnect object.
 
-
 _**System.Collections.ArrayList**_
 
 Multiple Interconnect objects.
-
 
 _**An Interconnect or collection of Interconnects**_
 

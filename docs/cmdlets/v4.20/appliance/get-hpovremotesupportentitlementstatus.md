@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Disable Remote Support for a supported resource.
 ---
 
 # Get-HPOVRemoteSupportEntitlementStatus
@@ -16,6 +16,7 @@ Get-HPOVRemoteSupportEntitlementStatus
 ## Description
 
 This Cmdlet will return the Remote Support entitlement status for a compute or enclosure resource.  If remote support has not been globally enabled and configured on the appliance, this Cmdlet will fail.
+
 ## Examples
 
 ###  Example 1 
@@ -65,11 +66,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -98,7 +95,6 @@ A Gen8 or newer generation server hardware resource object from [`Get-HPOVServer
 _**HPOneView.RemoteSupport.ContractAndWarrantyStatus**_
 
 The object with the current contract and warranty status.
-
 
 ## Related Links
 

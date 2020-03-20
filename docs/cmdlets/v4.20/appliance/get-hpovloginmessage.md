@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Get appliancce Login Message.
 ---
 
 # Get-HPOVLoginMessage
@@ -15,6 +15,7 @@ Get-HPOVLoginMessage
 ## Description
 
 Retreive the current Login Message for the connected appliance(s).
+
 ## Examples
 
 ###  Example 1 
@@ -29,7 +30,7 @@ Message     : ************************************
               abuse of this system may lead to corrective action including termination, civil and/or criminal penalties.
 Acknowledge : True
 
-	
+    
 Appliance   : hpov2.domain.com
 Message     : ************************************
               *****        WARNING        ********
@@ -37,8 +38,6 @@ Message     : ************************************
               This management appliance is a company owned asset and provided for the exclusive use of authorized personnel. Unauthorized use or
               abuse of this system may lead to corrective action including termination, civil and/or criminal penalties.
 Acknowledge : False
-
-
 
 ```
 
@@ -48,11 +47,7 @@ Get the Login Message from all connected appliances.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -69,8 +64,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None. You cannot pipe objects to this Cmdlet.**_
-
-
 
 ## Return Values
 

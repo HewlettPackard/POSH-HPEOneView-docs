@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Sends a request to the management appliance
 ---
 
 # Send-HPOVRequest
@@ -8,6 +8,15 @@ description:
 
 ```text
 Send-HPOVRequest
+    [-uri] <String>
+    [-method] <String>
+    [-body] <Object>
+    [-start] <Int32>
+    [-count] <Int32>
+    [-AddHeader] <Hashtable>
+    [-OverrideContentType <String>]
+    [-OverrideTimeout <Int>]
+    [-Hostname] <Object>
     [<CommonParameters>]
 ```
 
@@ -16,6 +25,7 @@ Send-HPOVRequest
 Receives the request input, properly constructs and formats the request header and body and sends the request to the management appliance.  This is the main cmdlet that interacts with the appliance.
 
 The message body can contain valid JSON data, with the correct URI and accepted HTTP method accepted by the target resource manager.  Please see the `on-appliance` Resource Model for more information (https://[appliance_IP]/help/cic/en/content/images/api/.)
+
 ## Examples
 
 ###  Example 1 
@@ -33,8 +43,6 @@ Returns all the enclosure objects managed by the appliance.
 $e = Send-HPOVRequest "/rest/enclosures/SGH2X6J1" -Appliance MyAppliance.domain.com
 $e.name = "New Name"
 Send-HPOVRequest $e.uri "PUT" $e -Appliance MyAppliance.domain.com
-
-
 ```
 
 Updates the name of the enclosure object specified by the uri and Appliance Connection name.
@@ -57,11 +65,11 @@ The uri that identifies the required resource on the appliance.
 
 The request HTTP Method.
 
-	* "GET" (default) to get a resource from the appliance (read)
-	* "POST" to create a new resource
-	* "PUT" to modify a resource (write)
-	* "PATCH" to modify a resource (write), with specific attributes set to values, other attributes should be set to $null.
-	* "DELETE" to delete a resource
+    * "GET" (default) to get a resource from the appliance (read)
+    * "POST" to create a new resource
+    * "PUT" to modify a resource (write)
+    * "PATCH" to modify a resource (write), with specific attributes set to values, other attributes should be set to $null.
+    * "DELETE" to delete a resource
 
 | Aliases | None |
 | :--- | :--- |
@@ -167,14 +175,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None. You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**System.Collections.ArrayList**_
 
 If collection of resources (.i.e. GET /rest/ethernet-networks)
-
 
 _**System.Management.Automation.PSCustomObject**_
 
@@ -190,7 +195,6 @@ Single object returned from appliance
              resource = @{};
          }
 
-
 _**System.Management.Automation.PSCustomObject**_
 
 If no resources are found, a PsCustomObject is returned that contains:
@@ -200,7 +204,6 @@ If no resources are found, a PsCustomObject is returned that contains:
              statusMessage = [string]HTTP Status Message;
              lastCall = [string]URI;
          }
-
 
 ## Related Links
 

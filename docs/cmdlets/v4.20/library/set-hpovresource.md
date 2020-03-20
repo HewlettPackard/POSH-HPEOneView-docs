@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Update existing resource(s).
 ---
 
 # Set-HPOVResource
@@ -8,12 +8,16 @@ description:
 
 ```text
 Set-HPOVResource
+    [-InputObject] <Object>
+    [-ApplianceConnection] <Object>
+    [-Force] <String>
     [<CommonParameters>]
 ```
 
 ## Description
 
 This CMDLET will assist the user to update an existing resource.  The resource should first be retrieved with a "Get-HPOV[resourcename]" CMDLET.  The PowerShell resource may then be modified, followed by this "Set-HPOVResource" cmdlet.
+
 ## Examples
 
 ###  Example 1 
@@ -22,8 +26,6 @@ This CMDLET will assist the user to update an existing resource.  The resource s
 $profile = Get-HPOVServerProfile "Profile 1"
 $profile.name = "New Name"
 Set-HPOVResource $profile
-
-
 ```
 
 Updates the name of the Server Profile resource.
@@ -56,11 +58,7 @@ Set to $true to `force-update` the resource.  Not all resources support `force-u
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

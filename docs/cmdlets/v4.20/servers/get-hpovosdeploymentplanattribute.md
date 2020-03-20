@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Get HPE Synergy Image Streamer deployment plan parameters.
 ---
 
 # Get-HPOVOSDeploymentPlanAttribute
@@ -15,7 +15,8 @@ Get-HPOVOSDeploymentPlanAttribute
 
 ## Description
 
-HPE Synergy Image Streamer allows administrators to rapidly provision stateless operating systems along with bare metal provisioning.  An OS Deployment Plan dicates the characteristics of the OS, including vendor, version, boot disk size, and OS personalization parameters.  This Cmdlet will return OS Deployment Plan available and editable parameters.
+HPE Synergy Image Streamer allows administrators to rapidly provision stateless operating systems along with bare metal provisioning.  An OS Deployment Plan dicates the characteristics of the OS, including vendor, version, boot disk size, and OS personalization parameters.  This Cmdlet will return OS Deployment Plan available and editable parameters. 
+
 ## Examples
 
 ###  Example 1 
@@ -59,11 +60,7 @@ The OS Deployment Plan from `Get-HPOVOSDeploymentPlan`.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -83,13 +80,11 @@ _**HPOneView.Appliance.OSDeploymentPlan [System.Management.Automation.PSCustomOb
 
 The OS Deployment Plan from [`Get-HPOVOSDeploymentPlan`](get-hpovosdeploymentplan.md).
 
-
 ## Return Values
 
 _**HPOneView.ServerProfile.OSDeployment.OSDeploymentParameter**_
 
 The object containined the Name of the parameter, and its default Value.
-
 
 ## Related Links
 

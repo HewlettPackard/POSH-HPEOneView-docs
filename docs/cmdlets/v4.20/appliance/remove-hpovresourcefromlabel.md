@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Remove association of resource with existing Label.
 ---
 
 # Remove-HPOVResourceFromLabel
@@ -26,7 +26,8 @@ Remove-HPOVResourceFromLabel
 
 Labels identify resources so you can organize them into groups. For example, you might want to identify the servers that are used primarily by the Finance team, or identify the storage systems assigned to the Asia/Pacific division.
 
-This Cmdlet will remove the specified resource from the requested label.  To remove the resource from all labels, use the -RemoveAllLabelsFromResource switch parameter.  If there are no more associated resources with a label, the appliance will automatically delete the label.
+This Cmdlet will remove the specified resource from the requested label.  To remove the resource from all labels, use the -RemoveAllLabelsFromResource switch parameter.  If there are no more associated resources with a label, the appliance will automatically delete the label. 
+
 ## Examples
 
 ###  Example 1 
@@ -85,11 +86,7 @@ Use to remove all associated labels with the provide resource.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -109,13 +106,11 @@ _**System.Management.Automation.PSCustomObject**_
 
 Resource to remove label association.
 
-
 ## Return Values
 
 _**System.Management.Automation.PSCustomObject**_
 
 The created or modified Label resource.
-
 
 ## Related Links
 

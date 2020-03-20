@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Remove rack manager from appliance.
 ---
 
 # Remove-HPOVRackManager
@@ -8,6 +8,9 @@ description:
 
 ```text
 Remove-HPOVRackManager
+    [-InputObject] <HPOneView.Servers.RackManager>
+    [-ApplianceConnection <Array>]
+    [-Force]
     [<CommonParameters>]
 ```
 
@@ -15,7 +18,8 @@ Remove-HPOVRackManager
 
 A rack manager platform is a multinode system. The nodes are housed within a rack or across racks, and are centrally managed by a management controller. The Rack Managers screen enables you to manage and visualize the physical location of rack manager platforms within a rack.
  This Cmdlet will remove a claimed rack manager resource from the appliance.
- Minimum required privileges: Infrastructure administrator or Server administrator.
+ Minimum required privileges: Infrastructure administrator or Server administrator. 
+
 ## Examples
 
 ###  Example 1 
@@ -30,11 +34,7 @@ Remove the provided rack manager resource from the appliance.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -83,7 +83,6 @@ An HPOneView.Servers.RackManager resource from [`Get-HPOVRackManager`](get-hpovr
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task Resource object for configuring port monitoring on the requested logical intercinnect.
-
 
 ## Related Links
 

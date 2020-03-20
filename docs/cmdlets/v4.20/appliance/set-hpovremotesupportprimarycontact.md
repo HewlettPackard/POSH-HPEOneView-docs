@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Set HPE OneView Remote Support default primary contact.
 ---
 
 # Set-HPOVRemoteSupportPrimaryContact
@@ -20,6 +20,7 @@ Register with Hewlett Packard Enterprise to allow automatic case creation for ha
 Use this Cmdlet to change or update the HPE OneView Remote Support primary Contact.
 
 Required permissions: Infrastructure administrator
+
 ## Examples
 
 ###  Example 1 
@@ -36,11 +37,7 @@ Set a new HPE OneView Remote Support primary contact on the appliance.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Modify an existing external baseline repository.
 ---
 
 # Set-HPOVExternalRepository
@@ -39,8 +39,8 @@ A firmware repository enables you to store firmware bundles and deploy them acro
 
 The recommended types of external web servers to use with the repository follow:
 
-	* Apache
-	* Internet Information Services (IIS)
+    * Apache
+    * Internet Information Services (IIS)
 
 {% hint style="info" %}
 Only one external repository can be added.
@@ -48,6 +48,7 @@ Only one external repository can be added.
 
 
 This Cmdlet supports modifying an existing external repository.  Use this Cmdlet to modify the Name, authentication credentials and/or HTTP SSL certificate.
+
 ## Examples
 
 ###  Example 1 
@@ -166,11 +167,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

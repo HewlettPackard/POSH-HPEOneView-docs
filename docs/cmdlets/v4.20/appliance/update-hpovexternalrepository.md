@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Refresh an existing external baseline repository.
 ---
 
 # Update-HPOVExternalRepository
@@ -25,8 +25,8 @@ A firmware repository enables you to store firmware bundles and deploy them acro
 
 The recommended types of external web servers to use with the repository follow:
 
-	* Apache
-	* Internet Information Services (IIS)
+    * Apache
+    * Internet Information Services (IIS)
 
 {% hint style="info" %}
 Only one external repository can be added.
@@ -34,6 +34,7 @@ Only one external repository can be added.
 
 
 This Cmdlet supports refreshing an existing external repository.  Use this Cmdlet to refresh the details(advertized repo size) and contents of an external repository.
+
 ## Examples
 
 ###  Example 1 
@@ -73,11 +74,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

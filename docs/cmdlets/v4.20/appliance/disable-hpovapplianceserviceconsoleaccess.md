@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Disable appliance service console access.
 ---
 
 # Disable-HPOVApplianceServiceConsoleAccess
@@ -19,6 +19,7 @@ HPE OneView contains a technical feature that will allow an `on-site` Authorized
 Use this Cmdlet to disable service console access.
 
 Required: Infrastructure administrator
+
 ## Examples
 
 ###  Example 1 
@@ -34,11 +35,7 @@ Disable service console access on the appliance.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -79,8 +76,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this cmdlet.**_
-
-
 
 ## Return Values
 

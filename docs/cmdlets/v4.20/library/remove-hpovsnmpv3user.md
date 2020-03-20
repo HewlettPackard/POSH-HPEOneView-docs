@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Remove SNMPv3 user from appliance.
 ---
 
 # Remove-HPOVSnmpV3User
@@ -27,6 +27,7 @@ To configure SNMP trap forwarding for network devices (
 interconnects and switches), use the `New-HPOVSnmpV3User` and include it within the `New-HPOVSnmpSettings` Cmdlet.
 
 Privileges: Infrastructure administrator
+
 ## Examples
 
 ###  Example 1 
@@ -42,11 +43,7 @@ Remove the specific SNMPv3 user account on the appliance.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -102,13 +99,11 @@ _**HPOneView.Appliance.SnmpV3User**_
 
 Appliance SNMPv3 user account from [`Get-HPOVSnmpV3User`](../appliance/get-hpovsnmpv3user.md).
 
-
 ## Return Values
 
 _**System.Management.Automation.PSCustomObject**_
 
 Success message of deleted resource.
-
 
 ## Related Links
 

@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Retrieve available baseline repository information.
 ---
 
 # Get-HPOVBaselineRepository
@@ -8,19 +8,22 @@ description:
 
 ```text
 Get-HPOVBaselineRepository
+    [-Name <String>]
+    [-Type <String>]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
 ## Description
 
 This Cmdlet will return all configured baseline repositoryies by default.  Only a single External Repository can be defined per appliance.
+
 ## Examples
 
 ###  Example 1 
 
 ```text
 $Repositories = Get-HPOVBaselineRepository
-
 ```
 
 Retrieves all repository objects from the appliance.
@@ -29,7 +32,6 @@ Retrieves all repository objects from the appliance.
 
 ```text
 Get-HPOVBaselineRepository -Type External
-
 ```
 
 Retrieves only the configured external repository on the appliance.
@@ -62,11 +64,7 @@ Specify "Internal" or "External" to filter the repository type.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -83,8 +81,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this Cmdlet.**_
-
-
 
 ## Return Values
 

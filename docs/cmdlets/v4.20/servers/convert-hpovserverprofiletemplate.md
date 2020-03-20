@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Migrate Server Profile Template.
 ---
 
 # Convert-HPOVServerProfileTemplate
@@ -20,16 +20,17 @@ Convert-HPOVServerProfileTemplate
 
 Use this Cmdlet to change the Server Hardware Type and/or Enclosure Group set within the Server Profile Template.  Changing to a different server hardware type may change the capabilities available to the server profile. Changing the enclosure group may change the connections which are available for the profile.
 
-	* The server hardware field will be set to "unassigned", requiring `re-seletion` of server hardware.
-	* It may also cause incompatibilities with the current configuration.
-	* All deployed connections will have their port assignment set to "Auto".
-	* Any incompatibilities will be flagged when the server profile is committed.
-	* If the new server hardware type does not support the local storage configuration, some storage may be lost.
-	* If the enclosure group is changed, mezzanine storage for HPE Synergy is lost and the disk drives are released.
-	* To prevent data loss, cancel this operation and backup data before applying the profile.
-	* Any change in the server hardware type will lead to the associated volume loss.
+    * The server hardware field will be set to "unassigned", requiring `re-seletion` of server hardware.
+    * It may also cause incompatibilities with the current configuration.
+    * All deployed connections will have their port assignment set to "Auto".
+    * Any incompatibilities will be flagged when the server profile is committed.
+    * If the new server hardware type does not support the local storage configuration, some storage may be lost.
+    * If the enclosure group is changed, mezzanine storage for HPE Synergy is lost and the disk drives are released.
+    * To prevent data loss, cancel this operation and backup data before applying the profile.
+    * Any change in the server hardware type will lead to the associated volume loss.
 
 Required Permissions: Infrastructure administrator or Server administrator.
+
 ## Examples
 
 ###  Example 1 
@@ -70,11 +71,7 @@ Transform the specified server profile template object to a different enclosure 
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -171,7 +168,6 @@ The Server Profile Template resource object to transform.
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async Task resource to monitor progress of the Server Profile transformation.
-
 
 ## Related Links
 

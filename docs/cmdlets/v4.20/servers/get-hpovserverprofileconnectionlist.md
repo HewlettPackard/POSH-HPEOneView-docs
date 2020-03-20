@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Retrieve Server Profile Connections
 ---
 
 # Get-HPOVServerProfileConnectionList
@@ -8,12 +8,15 @@ description:
 
 ```text
 Get-HPOVServerProfileConnectionList
+    [-Name] <String>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ## Description
 
 Obtain a formatted list of server profile connection IDs, include hardware address, device mapping, and boot settings.
+
 ## Examples
 
 ###  Example 1 
@@ -45,11 +48,7 @@ The name of the server profile resource to be returned.  All server profile reso
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -66,8 +65,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this cmdlet.**_
-
-
 
 ## Return Values
 

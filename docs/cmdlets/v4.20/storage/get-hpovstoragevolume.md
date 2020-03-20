@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Retrieve Storage Volume resource(s).
 ---
 
 # Get-HPOVStorageVolume
@@ -27,6 +27,7 @@ Get-HPOVStorageVolume
 ## Description
 
 This cmdlet will display all or a specific storage volume(s) created on the HPE OneView appliance.  A specific storage volume can be searched for by using the Name.  Use the List switch to display a report of the requested volume(s), including any assignments to Server Profiles.
+
 ## Examples
 
 ###  Example 1 
@@ -54,7 +55,6 @@ Provide a Server Profile object and all associated Storage Volumes will be retur
 
 ### -Name &lt;String&gt;
 
-Aliases [-VolumeName]
  Specify the name of the Storage Volume to display.
 
 | Aliases | VolumeName |
@@ -91,11 +91,7 @@ Specify the label associated with resources.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -109,10 +105,10 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-	* AllResources
-	* AllResourcesInScope
-	* `[HPOneView.Appliance.ScopeCollection]`
-	* `[HPOneView.Appliance.ConnectionPermission]`
+    * AllResources
+    * AllResourcesInScope
+    * `[HPOneView.Appliance.ScopeCollection]`
+    * `[HPOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
@@ -142,19 +138,15 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**System.Collections.ArrayList <HPOneView.Storage.Volume>**_
 
 Multiple storage volume resources
 
-
 _**HPOneView.Storage.Volume [System.Management.Automation.PSCustomObject]**_
 
 Formatted table view of storage volume resources
-
 
 ## Related Links
 

@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Get a deployed cluster profile.
 ---
 
 # Get-HPOVClusterProfile
@@ -30,13 +30,13 @@ A cluster profile can manage VMware `ESXi-based` hypervisor clusters by leveragi
 Use this Cmdlet to create a new cluster profile within OneView.  Any new created clusters within OneView cannot be removed from OneView withour destroying the cluster within the cluster manager.
 
 Privileges: Infrastructure administrator, Server administrator, Server profile architect, or Server profile administrator.
+
 ## Examples
 
 ###  Example 1 
 
 ```text
 Get-HPOVClusterProfile
-
 ```
 
 Default example
@@ -45,11 +45,7 @@ Default example
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -91,14 +87,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Cluster.ClusterProfile [System.Management.Automation.PSCustomObject]**_
 
 The returned cluster profile resource.
-
 
 ## Related Links
 

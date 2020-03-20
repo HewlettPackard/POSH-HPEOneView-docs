@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Refresh a new Logical Switch resource.
 ---
 
 # Update-HPOVLogicalSwitch
@@ -17,7 +17,8 @@ Update-HPOVLogicalSwitch
 ## Description
 
 A logical switch is based on a logical switch group configuration. If the logical switch transitions to an "Inconsistent with group state", due to changes in either the logical switch or the logical switch group, this Cmdlet will update (or refresh) the logical switch configuration based on the logical switch group and return to a consistent state.
- Required privileges: Infrastructure administrator or Network administrator
+ Required privileges: Infrastructure administrator or Network administrator 
+
 ## Examples
 
 ###  Example 1 
@@ -76,11 +77,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

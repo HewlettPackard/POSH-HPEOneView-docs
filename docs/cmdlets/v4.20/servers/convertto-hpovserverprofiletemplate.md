@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Create a Server Profile Template from Server Profile.
 ---
 
 # ConvertTo-HPOVServerProfileTemplate
@@ -8,6 +8,11 @@ description:
 
 ```text
 ConvertTo-HPOVServerProfileTemplate
+    [-InputObject] <Object>
+    [-Name] <String>
+    [-Description] <String>
+    [-ApplianceConnection] <Object>
+    [-Async]
     [<CommonParameters>]
 ```
 
@@ -15,12 +20,13 @@ ConvertTo-HPOVServerProfileTemplate
 
 This CMDLET will allow the user to "clone" or create a Server Profile Template from an existing Server Profile object.  Not all Server Profile features will be converted to a Server Profile Template.  For instance, the following features are not supported with a Server Profile Template:
 
-	* Import existing local Smart Array Logical Disk configuration
-	* Attach SAN Storage Volumes must be assigned a unique LUN ID
+    * Import existing local Smart Array Logical Disk configuration
+    * Attach SAN Storage Volumes must be assigned a unique LUN ID
 
 If the source Server Profile has the "Import existing logical drives" enabled, this setting will be disabled, and the Local Disk Configuration policy will be set to "disabled".
 
 If any SAN Storage Volume attachments contain an "Auto" LUN value, it will be set to "Manual", with the LUN ID set to a unique value based on the Array Index value.
+
 ## Examples
 
 ###  Example 1 
@@ -35,8 +41,6 @@ Use `Get-HPOVServerProfile` to retrieve the "MyProfile" object, and pipe it to `
 ## Parameters
 
 ### -InputObject &lt;Object&gt;
-
-Aliases [-source, `-name`, `-ServerProfile`]
 
 A source Server Profile Object or Resource Name.
 
@@ -86,11 +90,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -110,18 +110,15 @@ _**HPOneView.ServerProfile [System.Management.Automation.PSCustomObject]**_
 
 A Server Profile resource object from [`Get-HPOVServerProfile`](get-hpovserverprofile.md).
 
-
 _**System.Collections.ArrayList**_
 
 Multiple HPOneView.ServerProfile [System.Management.Automation.PSCustomObject] objects.
-
 
 ## Return Values
 
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject] objects.**_
 
 Asyncronous task of the Server Profile Template creation request.
-
 
 ## Related Links
 

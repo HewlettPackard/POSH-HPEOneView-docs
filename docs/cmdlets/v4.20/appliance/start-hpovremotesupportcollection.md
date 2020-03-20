@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Begin Remote Support collection from endpoints.
 ---
 
 # Start-HPOVRemoteSupportCollection
@@ -8,12 +8,17 @@ description:
 
 ```text
 Start-HPOVRemoteSupportCollection
+    [-InputObject] <Object>
+    [-Type] <Object>
+    [-ApplianceConnection <Object>]
+    [-Async]
     [<CommonParameters>]
 ```
 
 ## Description
 
 Use this Cmdlet to initiate colleciton of remote support data.  This will help send collection reports back to HPE that are in between the default scheduled task.
+
 ## Examples
 
 ###  Example 1 
@@ -50,8 +55,8 @@ A supported Gen8 or newer compute, HPE BladeSystem enclosure, or HPE Synergy fra
 
 Used to specify the type of remote support collection to start.  Allowed values are:
 
-	* AHS - Active Health Service collection
-	* Basic - Basic server configuration collection
+    * AHS - Active Health Service collection
+    * Basic - Basic server configuration collection
 
 
 | Aliases | None |
@@ -76,11 +81,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Retreive Storage Volume Template Global Policy.
 ---
 
 # Get-HPOVStorageVolumeTemplatePolicy
@@ -8,12 +8,14 @@ description:
 
 ```text
 Get-HPOVStorageVolumeTemplatePolicy
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
 ## Description
 
 By default, Storage Volumes can be created without reference to a Storage Volume Template.  This cmdlet will display the global policy setting.  Use `Set-HPOVStorageVolumeTemplatePolicy` to modify the global policy setting.
+
 ## Examples
 
 ###  Example 1 
@@ -24,8 +26,6 @@ Appliance               Name                          Value
 ---------               ----                          -----
 MyAppliance.domain.com  StorageVolumeTemplateRequired true
 MyAppliance2.domain.com StorageVolumeTemplateRequired false
-
-
 ```
 
 Get the Storage Volume Template Global Policy setting from all connected appliances.
@@ -34,11 +34,7 @@ Get the Storage Volume Template Global Policy setting from all connected applian
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -55,8 +51,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this cmdlet.**_
-
-
 
 ## Return Values
 

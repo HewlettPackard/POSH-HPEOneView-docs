@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Stop an HPE OneView appliance.
 ---
 
 # Stop-HPOVAppliance
@@ -8,6 +8,7 @@ description:
 
 ```text
 Stop-HPOVAppliance
+    [-ApplianceConnection] <Array>
     [<CommonParameters>]
 ```
 
@@ -16,6 +17,7 @@ Stop-HPOVAppliance
 This cmdlet will allow the administrator to stop/shutdown the appliance.  Shutdown of the appliance will cause all users to be disconnected and all ongoing tasks to be interrupted.
 
 Only the Infrastructure (Full) Administrator may restart the appliance.
+
 ## Examples
 
 ###  Example 1 
@@ -23,8 +25,6 @@ Only the Infrastructure (Full) Administrator may restart the appliance.
 ```text
 Connect-HPOVMgmt appliance.contoso.com Administrator P@ssw0rd
 Stop-HPOVAppliance
-
-
 ```
 
 Shutdown the appliance.
@@ -41,8 +41,6 @@ Shutdown all connected appliances, disable confirmation.
 ## Parameters
 
 ### -ApplianceConnection &lt;Array&gt;
-
-Aliases [-Appliance]
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -100,11 +98,9 @@ _**System.String**_
 
 Warning message the appliance is stopping
 
-
 _**Management.Automation.ErrorRecord**_
 
 Generated error message
-
 
 ## Related Links
 

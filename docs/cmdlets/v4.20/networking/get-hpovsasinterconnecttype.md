@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Retrieve SAS Interconnect Type resource(s).
 ---
 
 # Get-HPOVSasInterconnectType
@@ -23,6 +23,7 @@ Get-HPOVSasInterconnectType
 ## Description
 
 Retrieves a list of all Interconnect Types or just specific ones via a query if the name or partnumber parameters are provided.
+
 ## Examples
 
 ###  Example 1 
@@ -71,11 +72,7 @@ The Part Number of an Interconnect Type to search for.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -92,8 +89,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this cmdlet.**_
-
-
 
 ## Return Values
 

@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Delete Server Profile Template Resource(s).
 ---
 
 # Remove-HPOVServerProfileTemplate
@@ -17,6 +17,7 @@ Remove-HPOVServerProfileTemplate
 ## Description
 
 Delete one or multiple Server Profile Template resource(s).  A Server Profile Template cannot be removed if there are linked Server Profiles.
+
 ## Examples
 
 ###  Example 1 
@@ -53,7 +54,6 @@ Search for all profile template resources and remove them from appliance.
 
 ### -ServerProfileTemplate &lt;Object&gt;
 
-Aliases [-spt, `-name`]
 The server profile template object(s) or name(s) to be removed.
 
 | Aliases | spt, name |
@@ -66,11 +66,7 @@ The server profile template object(s) or name(s) to be removed.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

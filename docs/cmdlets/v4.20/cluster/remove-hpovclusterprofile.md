@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Remove a cluster profile resource.
 ---
 
 # Remove-HPOVClusterProfile
@@ -30,6 +30,7 @@ A cluster profile can manage VMware `ESXi-based` hypervisor clusters by leveragi
 Use this Cmdlet to remove a cluster profile within OneView.  Removing a cluster within OneView will also destroy the cluster within the cluster manager.
 
 Privileges: Infrastructure administrator, Server administrator, Server profile architect, or Server profile administrator.
+
 ## Examples
 
 ###  Example 1 
@@ -45,11 +46,7 @@ Remove the specified cluster profile.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -124,7 +121,6 @@ Cluster profile resource from [`Get-HPOVClusterProfile`](get-hpovclusterprofile.
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Asyncronous task resource to monitor.
-
 
 ## Related Links
 

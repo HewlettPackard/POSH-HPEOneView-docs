@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Remove authentication Directory.
 ---
 
 # Remove-HPOVLdapDirectory
@@ -17,6 +17,7 @@ Remove-HPOVLdapDirectory
 ## Description
 
 Remove authentication Directory from the appliance. Can provide Directory Name or Object for removal.
+
 ## Examples
 
 ###  Example 1 
@@ -41,7 +42,6 @@ Get all Directories and remove them from the default connected appliance.
 
 ### -InputObject &lt;Object&gt;
 
-Aliases [-d, `-Directory`]
 Configured authentication Directory Name or Object.
 
 | Aliases | d, Directory |
@@ -54,11 +54,7 @@ Configured authentication Directory Name or Object.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -114,18 +110,15 @@ _**System.Collections.ArrayList**_
 
 Collection of Directories
 
-
 _**System.Management.Automation.PSCustomObject**_
 
 Single Directory object
-
 
 ## Return Values
 
 _**System.Management.Automation.PSCustomObject**_
 
 Resource Removed Status
-
 
 ## Related Links
 

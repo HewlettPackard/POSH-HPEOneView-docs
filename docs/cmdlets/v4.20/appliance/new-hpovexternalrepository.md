@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Create a new external baseline repository.
 ---
 
 # New-HPOVExternalRepository
@@ -39,12 +39,13 @@ A firmware repository enables you to store firmware bundles and deploy them acro
 
 The recommended types of external web servers to use with the repository follow:
 
-	* Apache
-	* Internet Information Services (IIS)
+    * Apache
+    * Internet Information Services (IIS)
 
 {% hint style="info" %}
 Only one external repository can be added.
 {% endhint %}
+
 
 ## Examples
 
@@ -53,15 +54,14 @@ Only one external repository can be added.
 ```text
 $Params = @{
 
-	Name        = "MyRepoName";
-	Hostname    = "webserver.domain.local";
-	Directory   = "OneViewRepo";
-	Credential  = (Get-PSCredential -Username "DomainName\MyUser");
-	Certificate = (Get-Content -Path C:\Directory\Base64.cer -Raw)
+    Name        = "MyRepoName";
+    Hostname    = "webserver.domain.local";
+    Directory   = "OneViewRepo";
+    Credential  = (Get-PSCredential -Username "DomainName\MyUser");
+    Certificate = (Get-Content -Path C:\Directory\Base64.cer -Raw)
 
 }
 New-HPOVExternalRepository @Params
-
 ```
 
 Create an external repository using a PSCredential object.
@@ -70,7 +70,6 @@ Create an external repository using a PSCredential object.
 
 ```text
 New-HPOVExternalRepository -Name MyRepoName -Hostname webserver.domain.local -Directory OneViewRepo -Http
-
 ```
 
 Configure an external repository using anonymous authentication, and HTTP protocol.
@@ -187,11 +186,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -208,8 +203,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this Cmdlet.**_
-
-
 
 ## Return Values
 

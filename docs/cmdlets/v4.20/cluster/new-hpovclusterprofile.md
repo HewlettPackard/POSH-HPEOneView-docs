@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Create a new cluster profile resource.
 ---
 
 # New-HPOVClusterProfile
@@ -100,13 +100,14 @@ A cluster profile can manage VMware `ESXi-based` hypervisor clusters by leveragi
 Use this Cmdlet to create a new cluster profile within OneView.  Any new created clusters within OneView cannot be removed from OneView withour destroying the cluster within the cluster manager.
 
 Privileges: Infrastructure administrator, Server administrator, Server profile architect, or Server profile administrator.
+
 ## Examples
 
 ###  Example 1 
 
 ```text
 # Get the specific Cluster Manager
-$ClusterManager = Get-HPOVHypervisorManager -Name ClusterManager1
+$ClusterManager = Get-HPOVClusterManager -Name ClusterManager1
 
 # Display the allowed locations to place the cluster
 $ClusterManager.Locations
@@ -134,7 +135,7 @@ Create a new cluster profile.
 
 ```text
 # Get the specific Cluster Manager
-$ClusterManager = Get-HPOVHypervisorManager -Name ClusterManager1
+$ClusterManager = Get-HPOVClusterManager -Name ClusterManager1
 
 # Display the allowed distributed switch versions supported by the cluster manager
 $ClusterManager.AvailableDvsVersions
@@ -165,11 +166,7 @@ Create a new cluster profile, overriding clsuter manager settings.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -255,8 +252,8 @@ Provide a description of the cluster.
 
 If overriding the distributed virtual switch configuring set by the cluster manager, specify the switch usage.  Allowed values:
 
-	* Standard
-	* Distributed
+    * Standard
+    * Distributed
 
 | Aliases | None |
 | :--- | :--- |
@@ -366,8 +363,8 @@ Use to configure the cluster profile to not manage host networking.
 
 Use to indicate which vSiwtch type to configure when overriding cluster manager networking settings.  Allowed values are:
 
-	* Standard
-	* Distributed
+    * Standard
+    * Distributed
 
 | Aliases | None |
 | :--- | :--- |
@@ -477,7 +474,7 @@ Use to indicate if network naming will be overridden.
 
 Use to specify what the PortGroup name override should be.  By default, PortGroup names will be automatically assigned based on the network name, removing unique character strings.  Specify an Array of Hashtable with the following format:
 
-	@{ "NetworkName" = "OverrideName" }
+    @{ "NetworkName" = "OverrideName" }
 
  Where "NetworkName" is the name of the Ethernet Network assigned to the connection.
 
@@ -529,8 +526,8 @@ One or more server resource objects from `New-HPOVClusterProfileMember`.  Value 
 
 Specify if the storage volume(s) in the StorageVolume parameter should be formatted with a specific filesystem.  Allowed values:
 
-	* VMFS
-	* Unmanaged
+    * VMFS
+    * Unmanaged
 
 | Aliases | None |
 | :--- | :--- |
@@ -568,7 +565,7 @@ Optional - When deploying a new cluster profile with HPE Synergy and Image Strea
 
 Use to specify what the vSwitch name override should be.  By default, vSwitch names will be automatically assigned based on the network name, removing unique character strings.  Specify an Array of Hashtable with the following format:
 
-	@{ "NetworkName" = "OverrideName" }
+    @{ "NetworkName" = "OverrideName" }
 
  Where "NetworkName" is the name of the Ethernet Network assigned to the connection.
 
@@ -600,14 +597,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Asyncronous task resource to monitor.
-
 
 ## Related Links
 

@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Remove an enclosure group.
 ---
 
 # Remove-HPOVEnclosureGroup
@@ -18,6 +18,7 @@ Remove-HPOVEnclosureGroup
 
 Deletes an enclosure group from the appliance.
 An enclosure group cannot be deleted if any enclosures are currently part of that enclosure group.
+
 ## Examples
 
 ###  Example 1 
@@ -34,8 +35,6 @@ Force-remove the enclosure group specifed by name.
 ```text
 $eg = Get-HPOVEnclosureGroup -name "My-EG"
 Remove-HPOVEnclosureGroup $enclosureGroup -confirm:$false
-
-
 ```
 
 Remove the enclosure group specifed by $eg. Disable confirmation prompt.
@@ -53,8 +52,6 @@ Search for all enclosure groups and remove them from appliance.
 
 ### -InputObject &lt;Object&gt;
 
-Aliases [-EnclosureGroup, `-uri`, `-name`]
-
 The Enclosure Group object(s), name(s) or uri(s) to be removed from management.
 
 | Aliases | uri, name, EnclosureGroup, Resource |
@@ -67,11 +64,7 @@ The Enclosure Group object(s), name(s) or uri(s) to be removed from management.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -126,7 +119,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 _**System.Collections.ArrayList**_
 
 Collection of Enclousre Resource Objects
-
 
 _**HPOneView.EnclosureGroup [System.Management.Automation.PSCustomObject]**_
 

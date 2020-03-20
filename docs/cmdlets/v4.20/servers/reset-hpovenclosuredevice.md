@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Power reset or EFuse HPS Synergy Frame component.
 ---
 
 # Reset-HPOVEnclosureDevice
@@ -32,8 +32,9 @@ Reset-HPOVEnclosureDevice
 
 This Cmdlet will assist Server Administrators in performing various power operations with enclosure resources.  The following resources are supported with their supported operation:
 
-	* HPE Synergy Appliance Bay - EFuse
-	* HPE Synergy Frame Link Module - EFuse or Resetn	* Device Bay - EFuse or Resetn	* HPE Synergy Fabric Module Device - EFuse
+    * HPE Synergy Appliance Bay - EFuse
+    * HPE Synergy Frame Link Module - EFuse or Resetn    * Device Bay - EFuse or Resetn    * HPE Synergy Fabric Module Device - EFuse
+
 
 ## Examples
 
@@ -136,8 +137,6 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
-
-Aliases [-Appliance]
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

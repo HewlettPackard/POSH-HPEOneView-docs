@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Configure appliance two-factor authentication settings.
 ---
 
 # Set-HPOVApplianceTwoFactorAuthentication
@@ -29,6 +29,7 @@ When `two-factor` authentication is enabled, HPE OneView uses a Microsoft Active
 Use this Cmdlet to configure two factor authentication state of the connected appliance.  An Active Directory authentication directoyr must be configured, with a Service Account, and the root or issuing certificate authority Base64 certificate must be uploaded to appliance.
 
 Required: Infrastructure administrator
+
 ## Examples
 
 ###  Example 1 
@@ -44,11 +45,7 @@ Configured `two-factory` authentication using default validation OIDs.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -96,10 +93,10 @@ Configure HPE OneView to look in multiple certificate locations for domain infor
 
 The Directory domain control allows you to specify which domain or directory to use when searching for the user in an enterprise directory. The domain name must match the Base DN of at least one of the directories added to HPE OneView. The options include:
 
-	* Subject
-	* Subject Alternative Name
-	* Issuer
-	* Manually specify
+    * Subject
+    * Subject Alternative Name
+    * Issuer
+    * Manually specify
 
 After you select which certificate field HPE OneView must use to extract the domain name, the name is extracted from the DC attributes specified therein. The DC=(.*) configuration extracts the first domain component from the field. The administrator can only specify DC=(.*) here.
 
@@ -155,33 +152,36 @@ Use to enforce smart card authentication only.  Enabling Smart card only login d
 By default, the attribute entry associated with the "Subject Alternative Name" item, within the "Certificate owner" entry, contains `[OtherName.UPN]`=(.*). This tells HPE OneView to extract the user name from the "OtherName.UPN" attribute within the Subject Alternative Name field of the certificate on the smart card. This is the user name that HPE OneView uses to query the enterprise directory.
 
 You can edit the value to enable HPE OneView to search for the user name within other additional attributes within Subject Alternative Name. The options include: 
-	* `[OtherName.UPN]`=(.*) 
-	The Microsoft certificate viewer displays "OtherName.UPN" underSubject Alternative Name as: 
-		Other Name:
-			Principal Name=John.Doe@test.com
+    * `[OtherName.UPN]`=(.*) 
+    The Microsoft certificate viewer displays "OtherName.UPN" underSubject Alternative Name as: 
+        Other Name:
+            Principal Name=John.Doe@test.com
 
-	* `[OtherName.RFC]`822Name=(.*) 
-	The Microsoft certificate viewer displays `[OtherName.RFC]`822Name as:
- 		Other Name:
-			RFC822 Name=John.Doe@test.com
+    * `[OtherName.RFC]`822Name=(.*) 
+    The Microsoft certificate viewer displays `[OtherName.RFC]`822Name as:
+         Other Name:
+            RFC822 Name=John.Doe@test.com
 
-	* RFC822Name=(.*) 
-	The Microsoft certificate viewer displays RFC822Name as: 
-		RFC822 Name=John.Doe@test.com
+    * RFC822Name=(.*) 
+    The Microsoft certificate viewer displays RFC822Name as: 
+        RFC822 Name=John.Doe@test.com
 
-	* DirName=(.*) 
-	 The Microsoft certificate viewer displays "DirName" under Subject Alternative Name as: 
-		Directory Address:
-			CN=John Doe
-			OU=Test Group
-			O=Test Org
-			C=US
-			DC=test
-			DC=com
+    * DirName=(.*) 
+     The Microsoft certificate viewer displays "DirName" under Subject Alternative Name as: 
+        Directory Address:
+            CN=John Doe
+            OU=Test Group
+            O=Test Org
+            C=US
+            DC=test
+            DC=com
 
 Use a `comma-separated` list to include multiple values in the entry field, allowing HPE OneView to search multiple Subject Alternative Name attributes for a valid user name.
 
-NOTE: You can instruct HPE OneView to search for the user name within the attributes of the "Subject" field of the smart card certificate (either in addition to, or instead of, searching within "Subject Alternative Name" attributes). See subject entry in the "Certificate owner" field for details.
+{% hint style="info" %}
+You can instruct HPE OneView to search for the user name within the attributes of the "
+{% endhint %}
+Subject" field of the smart card certificate (either in addition to, or instead of, searching within "Subject Alternative Name" attributes). See subject entry in the "Certificate owner" field for details.
 
 Subject Alternative Name multiple attribute entry example
 `[OtherName.UPN]`=(.*),OtherName.RFC822Name=(.*),RFC822Name=(.*),DirName=(.*)
@@ -200,25 +200,31 @@ Subject Alternative Name multiple attribute entry example
 By default, the attribute entry box associated with the "Subject" entry, within the "Certificate owner" field, contains CN=(.*). With this value, HPE OneView extracts the first user name it encounters within a "CN" attribute within the "Subject" field in the smart card certificate. You can edit the regular expression for the "CN" attribute using regular expressions to refine the list of acceptable values.
 You can edit the value if you need HPE OneView to search for the user name within other additional attributes within the certificate "Subject" field. The choices include: 
 
-	* CN=(.*) 
-	* E=(.*) 
-	* UID=(.*) 
-	* DN=(.*) 
+    * CN=(.*) 
+    * E=(.*) 
+    * UID=(.*) 
+    * DN=(.*) 
 Microsoft Active Directory users must note that the DN is extracted as an aggregate of the subject attributes from the certificate. This should match the DN value configured for the user in the Active Directory. If this is not an exact match, the login operation fails. 
 
 Use a comma separated list to include multiple values in the entry field, allowing HPE OneView to search multiple Subject attributes for a valid user name. 
 
-NOTE: You can instruct HPE OneView to search for the user name within the attributes of the "Subject" field of the smart card certificate (either in addition to, or instead of, searching within "Subject Alternative Name" attributes). 
+{% hint style="info" %}
+You can instruct HPE OneView to search for the user name within the attributes of the "
+{% endhint %}
+Subject" field of the smart card certificate (either in addition to, or instead of, searching within "Subject Alternative Name" attributes). 
 
 Subject multiple attribute entry example
-	* CN=(.*),E=(.*),UID=(.*),DN=(.*) 
+    * CN=(.*),E=(.*),UID=(.*),DN=(.*) 
 
 Variations for the CN attribute: examples
-	To match only user names starting with "J_" use CN=(^J_.*$) 
-	To match names in "LastName, FirstName" format use CN=(^[a-zA-Z]*, [a-zA-Z]+$) 
-	To match user names containing only numbers CN=(^[0-9]+$) 
+    To match only user names starting with "J_" use CN=(^J_.*$) 
+    To match names in "LastName, FirstName" format use CN=(^[a-zA-Z]*, [a-zA-Z]+$) 
+    To match user names containing only numbers CN=(^[0-9]+$) 
 
-NOTE: This is applicable when there are multiple CN attributes configured in a certificate and the user wants to specify a specific attribute rather than the first available in the CN attribute. It is recommended to use patterns that begin with "^" and ends with "$" so that the system can perform an exact match. 
+{% hint style="info" %}
+This is applicable when there are multiple CN attributes configured in a certificate and the user wants to specify a specific attribute rather than the first available in the CN attribute.
+{% endhint %}
+ It is recommended to use patterns that begin with "^" and ends with "$" so that the system can perform an exact match. 
 
 
 | Aliases | None |
@@ -235,7 +241,10 @@ This parameter allows you to configure who can access HPE OneView by specifying 
 
 By default, one combination is configured, containing the OID combination Smart Card Logon (1.3.6.1.4.1.311.20.2.2), Client Authentication (1.3.6.1.5.5.7.3.2). This combination requires the certificate on the smart card to be configured to allow the certificate to be used for smart card logon and for client authentication. It should work for most installations. You can edit this field to opt for a different combination of OIDs, or to add additional OIDs. A maximum of ten OIDs can be configured in a single string.
 
-NOTE: If you specify multiple OID combinations and one is a `super-set` of another, configure the more restrictive combination first.
+{% hint style="info" %}
+If you specify multiple OID combinations and one is a `
+{% endhint %}
+super-set` of another, configure the more restrictive combination first.
 
 
 | Aliases | None |
@@ -266,14 +275,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**System.Management.Automation.PSCustomObject**_
 
 Appliance global security settings.
-
 
 ## Related Links
 

@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: List Global Authentication Directory settings.
 ---
 
 # Get-HPOVLdap
@@ -23,6 +23,7 @@ Get-HPOVLdap
 ## Description
 
 This cmdlet will display the global authentication directory settings configured on the appliance.  It will show if local logins are enabled, default authentication directory name, and configured authentication directory names.
+
 ## Examples
 
 ###  Example 1 
@@ -33,8 +34,6 @@ Allow Local Login Default Directory Configured Directories
 ----------------- ----------------- ----------------------
 True              domain1           {domain1, domain2}
 True              domain2           {domain1, domain2}
-
-
 ```
 
 View the Global Authentication Directory configuration for all connected appliances.
@@ -52,7 +51,6 @@ Export the Global Authentication Directory configuration settings.
 
 ### -Export &lt;SwitchParameter&gt;
 
-Aliases [-x]
 Export the configured directories to individual files.
 
 | Aliases | x |
@@ -65,7 +63,6 @@ Export the configured directories to individual files.
 
 ### -Save &lt;String&gt;
 
-Aliases [-location]
 Directory where the exported configured directories will be saved to.  A filename of "{appliance_name}_globalSettings.json" will be created.
 
 | Aliases | location |
@@ -78,11 +75,7 @@ Directory where the exported configured directories will be saved to.  A filenam
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -99,8 +92,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this cmdlet.**_
-
-
 
 ## Return Values
 

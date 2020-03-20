@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Validate IP Connectivity to resources.
 ---
 
 # Ping-HPOVAddress
@@ -8,12 +8,17 @@ description:
 
 ```text
 Ping-HPOVAddress
+    [-Address] <String>
+    [-Packets] <Int32>
+    [-ApplianceConnection] <Object>
+    [-Async]
     [<CommonParameters>]
 ```
 
 ## Description
 
 This CMDLET provides the administrator the capability to PING (ICMP "echo request") to a resource the appliance is or is not managing, to help validate L2 and/or L3 connectivity from the appliance.
+
 ## Examples
 
 ###  Example 1 
@@ -73,11 +78,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

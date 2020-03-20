@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Add X.509 SSL certificates to appliance trusted store.
 ---
 
 # Add-HPOVApplianceTrustedCertificate
@@ -22,6 +22,7 @@ Add-HPOVApplianceTrustedCertificate
 ## Description
 
 This Cmdlet will allow the Infrastructure Administrator to add X.509 compliant SSL certificates to the appliance trusted store.
+
 ## Examples
 
 ###  Example 1 
@@ -67,11 +68,7 @@ The filesystem object of the X.509 public SSL certificate to add.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` objects or Name property values.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

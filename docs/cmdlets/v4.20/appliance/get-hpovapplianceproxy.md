@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Get appliance configured HTTP proxy.
 ---
 
 # Get-HPOVApplianceProxy
@@ -17,13 +17,13 @@ Get-HPOVApplianceProxy
 The setting an appliance proxy allows you to set the HTTP/HTTPS proxy, port number for client connections, and whether authentication requires a username and a password.
 
 Required permissions: Infrastructure administrator
+
 ## Examples
 
 ###  Example 1 
 
 ```text
 Get-HPOVApplianceProxy
-
 ```
 
 Get the appliance configured HTTP/HTTPS proxy configuration.
@@ -32,11 +32,7 @@ Get the appliance configured HTTP/HTTPS proxy configuration.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -54,14 +50,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Appliance.ProxyServer**_
 
 Appliance proxy server settings.
-
 
 ## Related Links
 

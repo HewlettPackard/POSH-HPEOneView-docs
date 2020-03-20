@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Get appliance two-factor configuration.
 ---
 
 # Get-HPOVApplianceTwoFactorAuthentication
@@ -19,13 +19,13 @@ Enabling `two-factor` authentication allows you to use smart cards ï¿½ for ex
 When `two-factor` authentication is enabled, HPE OneView uses a Microsoft Active Directory service account set up and owned by the user to access an Active Directory entry for the user, rather than using an account associated with the user name received during first time login.
 
 Use this Cmdlet to get two factor authentication state of the connected appliance.  Infrastructure administrator role is required.
+
 ## Examples
 
 ###  Example 1 
 
 ```text
 Get-HPOVApplianceTwoFactorAuthentication
-
 ```
 
 Get the appliance `two-factor` authentication configuration.
@@ -34,11 +34,7 @@ Get the appliance `two-factor` authentication configuration.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -56,14 +52,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Appliance.Security.TwoFactorAuthConfiguration**_
 
 Appliance two-factor security settings.
-
 
 ## Related Links
 

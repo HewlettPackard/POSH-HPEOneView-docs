@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Configure appliance SMTP Reporting settings.
 ---
 
 # Set-HPOVSMTPConfig
@@ -10,11 +10,9 @@ description:
 Set-HPOVSMTPConfig
     [-SenderEmailAddress <String>]
     [-Server <String>]
-        [-Server <String>]
-
+    [-Port <Int32>]
     [-ConnectionSecurity <>]
-        [-ConnectionSecurity <>]
-
+    [-Password <String>]
     [-AlertEmailEnabled]
     [-Async]
     [-ApplianceConnection <Object>]
@@ -34,6 +32,7 @@ Set-HPOVSMTPConfig
 This cmdlet configures the SMTP settings for the appliance.  SMTP settings include deining the Sender EMAIL Address, SMTP relay server address, SMTP relay server TCP port, optional password, and if SMTP alerting is enabled or disabled.
 
 Currently, HPE OneView does not support Secure SMTP, even though the TCP Port can be modified.  Using the SmtpPort parameter is to specify an alternate TCP Port than the default TCP/25.
+
 ## Examples
 
 ###  Example 1 
@@ -79,7 +78,6 @@ Specify the Sender Email Address for the appliance.
 
 ### -Server &lt;String&gt;
 
-Aliases [-SmtpServer]
 Specify the SMTP Relay Server if DNS does not contain a valid DNS MX record for the sender email address domain name.
 
 | Aliases | SmtpServer |
@@ -92,23 +90,21 @@ Specify the SMTP Relay Server if DNS does not contain a valid DNS MX record for 
 
 ### -Port &lt;Int32&gt;
 
-Aliases [-SmtpServer]
-Specify the SMTP Relay Server if DNS does not contain a valid DNS MX record for the sender email address domain name.
+Provide an alternate TCP port number than the default SMTP port value 25/TCP.
 
-| Aliases | SmtpServer |
+| Aliases | SmtpPort |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | 25 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Password &lt;String&gt;
 
-Aliases [-SmtpServer]
-Specify the SMTP Relay Server if DNS does not contain a valid DNS MX record for the sender email address domain name.
+Provide an SMTP Password to authenticate to the SMTP Server.  This password will be sent in clear text to the SMTP server.
 
-| Aliases | SmtpServer |
+| Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
@@ -154,11 +150,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -172,9 +164,9 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 
 Use to specify if the target SMTP server requires TLS security/authentication.  Supported values:
 
-	* None
-	* TLS
-	* StartTls
+    * None
+    * TLS
+    * StartTls
 
 | Aliases | None |
 | :--- | :--- |
@@ -191,8 +183,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None. You cannot pipe objects to this cmdlet.**_
-
-
 
 ## Return Values
 

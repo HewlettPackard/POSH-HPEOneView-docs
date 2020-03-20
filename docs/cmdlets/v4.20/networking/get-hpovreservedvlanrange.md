@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Get the reserved VLAN range for HPE Synergy.
 ---
 
 # Get-HPOVReservedVlanRange
@@ -15,6 +15,7 @@ Get-HPOVReservedVlanRange
 ## Description
 
 By default, HPE Synergy reserves a sepcific VLAN range for Tunnel, untagged and FC networks for HPE Synergy Virtual Connect.  This default range is `3967-4095`.  The range can be modified using `Set-HPOVReservedVlanRange` if none of the specified network resources have been created.
+
 ## Examples
 
 ###  Example 1 
@@ -30,11 +31,7 @@ Get the defined reserved VLAN range on the connected HPE Synergy appliance.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -52,14 +49,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Networking.ReservedVlanRange**_
 
 The reserved VLAN range object
-
 
 ## Related Links
 

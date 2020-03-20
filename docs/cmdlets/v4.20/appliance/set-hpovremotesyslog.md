@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Configure remote syslog.
 ---
 
 # Set-HPOVRemoteSyslog
@@ -19,6 +19,7 @@ Set-HPOVRemoteSyslog
 ## Description
 
 The remoteSyslog API provides the ability to configure remote logging on devices managed by OneView.  This Cmdlet handles setting or updating the remote syslog configuration.  Only a single destination can be set.  When configured, the HPE OneView appliance will deploy the SysLog settings to managed resources automatically.
+
 ## Examples
 
 ###  Example 1 
@@ -84,11 +85,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -105,8 +102,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None. You cannot pipe objects to this Cmdlet.**_
-
-None. You cannot pipe objects to this Cmdlet
 
 ## Return Values
 

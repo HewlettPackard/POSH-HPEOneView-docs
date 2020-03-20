@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Remove Scope from appliance
 ---
 
 # Remove-HPOVScope
@@ -48,11 +48,7 @@ The Scope resource to add the resource(s) to.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

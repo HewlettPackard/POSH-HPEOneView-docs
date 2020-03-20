@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Delete storage volume template(s) from appliance configuration.
 ---
 
 # Remove-HPOVStorageVolumeTemplate
@@ -9,8 +9,7 @@ description:
 ```text
 Remove-HPOVStorageVolumeTemplate
     [-InputObject] <Object>
-        [-InputObject] <Object>
-
+    [-ApplianceConnection] <Array>
     [-Force]
     [<CommonParameters>]
 ```
@@ -18,6 +17,7 @@ Remove-HPOVStorageVolumeTemplate
 ## Description
 
 Delete one or more storage volume templates from the appliance configuration.
+
 ## Examples
 
 ###  Example 1 
@@ -34,8 +34,6 @@ Remove the storage volume template specifed by name.  Wait for remove to complet
 ```text
 $svt = Get-HPOVStorageVolumeTemplate -name "yellow"
 Remove-HPOVStorageVolumeTemplate -name $svt -confirm:$false
-
-
 ```
 
 Remove the network specifed by $svt, and do not prompt for confirmation.
@@ -53,7 +51,6 @@ Search for all storage volume templates and remove them from appliance.
 
 ### -InputObject &lt;Object&gt;
 
-Aliases [-name, `-uri`, `-TemplateName`., `-Template`]
 The Storage Volume Template object(s), name(s) or URI(s) to be deleted.
 
 | Aliases | uri, name, templateName, Template |
@@ -65,8 +62,6 @@ The Storage Volume Template object(s), name(s) or URI(s) to be deleted.
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Array&gt;
-
-Aliases [-Appliance]
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
@@ -118,22 +113,6 @@ When the request is accepted by the appliance, it does not return an Async Task 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;Array&gt;
-
-Aliases [-Appliance]
-
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
-
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | (${Global:ConnectedSessions} | ? Default) |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
-
 ### &lt;CommonParameters&gt;
 
 This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer, PipelineVariable, and OutVariable. For more information, see about\_CommonParameters \([http://go.microsoft.com/fwlink/?LinkID=113216](http://go.microsoft.com/fwlink/?LinkID=113216)\)
@@ -144,11 +123,9 @@ _**System.Management.Automation.PSCustomObject**_
 
 Storage Volume Template resource object
 
-
 _**System.Collections.ArrayList**_
 
 Multiple Storage Volume Template resources
-
 
 ## Return Values
 

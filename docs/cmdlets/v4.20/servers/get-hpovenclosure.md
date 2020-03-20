@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Retrieve Enclosure resource(s).
 ---
 
 # Get-HPOVEnclosure
@@ -38,6 +38,7 @@ Get-HPOVEnclosure
 ## Description
 
 Obtain a collection of enclosure hardware resources which have the specified name.
+
 ## Examples
 
 ###  Example 1 
@@ -66,8 +67,6 @@ Enclosure Name Serial Number Enclosure Model                Rack Name State     
 -------------- ------------- ---------------                --------- -----      --          --------------
 Encl1          SGH100X6J1    BladeSystem c7000 Enclosure G2 Rack-173  Monitored  Default EG1 16/16
 Encl2          SGH102X6J1    BladeSystem c7000 Enclosure G2 Rack-173  Monitored  Default EG1 9/16
-
-
 ```
 
 Display a brief list of the enclosures managed or monitored by the appliance.
@@ -140,10 +139,10 @@ The name of the enclosure hardware resource to be returned.  All enclosure hardw
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-	* AllResources
-	* AllResourcesInScope
-	* `[HPOneView.Appliance.ScopeCollection]`
-	* `[HPOneView.Appliance.ConnectionPermission]`
+    * AllResources
+    * AllResourcesInScope
+    * `[HPOneView.Appliance.ScopeCollection]`
+    * `[HPOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
@@ -167,11 +166,7 @@ Specify the label associated with resources.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -183,7 +178,6 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 
 ### -exportFile &lt;String&gt;
 
-Aliases [-x, `-export`]
 Full path and file name to save the output of `Get-HPOVEnclosure`.
 
 | Aliases | x, export |
@@ -213,8 +207,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this cmdlet.**_
-
-
 
 ## Return Values
 

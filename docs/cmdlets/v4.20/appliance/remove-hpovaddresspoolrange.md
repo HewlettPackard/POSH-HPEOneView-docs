@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Delete Address Pool Range from an appliance.
 ---
 
 # Remove-HPOVAddressPoolRange
@@ -16,6 +16,7 @@ Remove-HPOVAddressPoolRange
 ## Description
 
 This Cmdlet provides the ability to remove one or more IPv4 Subnet Pools and associated Address Pool Ranges from one or more appliances.
+
 ## Examples
 
 ###  Example 1 
@@ -40,7 +41,6 @@ Remove "192.168.20.0" IPv4 Subnet Address Pool from `[MyAppliance.domain.com]`.
 
 ### -InputObject &lt;Object&gt;
 
-Aliases [-AddressPool]
 The Address Pool Range resource Object.  Can be accepted via pipeline input.
 
 | Aliases | AddressPool |
@@ -53,11 +53,7 @@ The Address Pool Range resource Object.  Can be accepted via pipeline input.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -101,7 +97,6 @@ _**HPOneView.Appliance.AddressPoolRange [System.Management.Automation.PSCustomOb
 **_
 
 Address Pool Range from [`Get-HPOVAddressPoolRange`](get-hpovaddresspoolrange.md)
-
 
 ## Return Values
 

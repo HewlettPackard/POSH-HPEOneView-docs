@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Remove a rackmount server from the appliance.
 ---
 
 # Remove-HPOVServer
@@ -8,6 +8,9 @@ description:
 
 ```text
 Remove-HPOVServer
+    [-InputObject] <Object>
+    [-ApplianceConnection] <Object>
+    [-Force]
     [<CommonParameters>]
 ```
 
@@ -18,6 +21,7 @@ Removes a physical server object from appliance management.
 The server object can be specified by its name or its full URI on the appliance by using the -Server parameter. It can also be supplied as an object by using the -resource parameter the object variable can be piped to `Remove-HPOVServer`.
     
 Blade servers can only be removed by removing the enclosure (Remove-HPOVEnclosure), or phyhsically removing the blade from the enclosure.
+
 ## Examples
 
 ###  Example 1 
@@ -64,7 +68,6 @@ Search for all rackmount servers and remove them from appliance.
 
 ### -InputObject &lt;Object&gt;
 
-Aliases [-uri, `-name`, `-Server`]
 The Server object(s), name(s) or uri(s) to be removed from management.
 
 | Aliases | uri, name, Server |
@@ -91,11 +94,7 @@ When the request is accepted by the appliance, it does not return an Async Task 
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

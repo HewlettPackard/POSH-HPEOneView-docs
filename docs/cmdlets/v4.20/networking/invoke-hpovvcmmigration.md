@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Migrate Virtual Connect Manager to HPE OneView.
 ---
 
 # Invoke-HPOVVcmMigration
@@ -74,6 +74,7 @@ VCEM 7.4.1 or greater users do not require the patch to be installed, as the API
 It is important to also have a Virtual Connect Domain Backup prior to migration.  You may also want to gather the output from the "show config -includepoolinfo" VCM CLI command to review or verify resources were migrated successfully.
     
 Please read "Chapter 9 Planning for enclosure migration from VCM into HPE OneView" in the HPE OneView 1.20 User Guide for more information about migration and other planning resources.
+
 ## Examples
 
 ###  Example 1 
@@ -88,7 +89,6 @@ Generate Virtual Connect Manager configuration migration report for the specifie
 
 ```text
 $OACreds = Get-Credential -Username Administrator -Message "Password" $VCMCreds = Get-Credential -Username Administrator -Message "Password" Invoke-HPOVVcmMigration -OAIPAddress 192.168.19.40 -OACredential $OACreds -VCMCredential $VCMCreds -LicensingIntent OneView
-
 ```
 
 Migration will occur and create a new Enclosure Group and new Logical Interconnect Group based on the enclosure serial number.
@@ -104,9 +104,7 @@ Migration will occur and import the target enclosure into an existing Enclosure 
 ###  Example 4 
 
 ```text
-Invoke-HPOVVcmMigration -OAIPAddress 192.168.19.40 -OAUserName Administrator -OAPassword hpinvent -VCMUserName Administrator -VCMPassword hpinvent -licensingIntent OneView -Report -Path "c:\VCM-MigrationReports"
-". 
-
+Invoke-HPOVVcmMigration -OAIPAddress 192.168.19.40 -OAUserName Administrator -OAPassword hpinvent -VCMUserName Administrator -VCMPassword hpinvent -licensingIntent OneView -Report -Path c:\VCM-MigrationReports
 ```
 
 Migration will not be attempted.  The migration report will be executed and the result saved to the file "c:\VCM-MigrationReports\{enclosureName}_{date}.report".
@@ -123,7 +121,6 @@ Perform a migration of a VCEM managed enclosure to HPE OneView.
 
 ### -OAIPAddress &lt;String&gt;
 
-Aliases [-oaip]
 REQUIRED. IP address or FQDN of the Primary Onboard Administrator in the target enclosure.
 
 | Aliases | oip |
@@ -136,7 +133,6 @@ REQUIRED. IP address or FQDN of the Primary Onboard Administrator in the target 
 
 ### -OAUserName &lt;String&gt;
 
-Aliases [-ou]
 Parameter is being deprecated. Please transition to using `-OACredential`. Administrator account of the target OA.
 
 | Aliases | ou |
@@ -149,7 +145,6 @@ Parameter is being deprecated. Please transition to using `-OACredential`. Admin
 
 ### -OAPassword &lt;String&gt;
 
-Aliases [-op]
 Parameter is being deprecated. Please transition to using `-OACredential`. Password for the Administrator account of the target OA.
 
 | Aliases | op |
@@ -162,7 +157,6 @@ Parameter is being deprecated. Please transition to using `-OACredential`. Passw
 
 ### -VCMUserName &lt;String&gt;
 
-Aliases [-vu]
 Parameter is being deprecated. Please transition to using `-VCMCredential`.
 Username for the administrator account for Virtual Connect Manager.
 
@@ -176,7 +170,6 @@ Username for the administrator account for Virtual Connect Manager.
 
 ### -VCMPassword &lt;String&gt;
 
-Aliases [-vp]
 Parameter is being deprecated. Please transition to using `-VCMCredential`. Password for the Administrator account of Virtual Connect Manager.
 
 | Aliases | vp |
@@ -189,7 +182,6 @@ Parameter is being deprecated. Please transition to using `-VCMCredential`. Pass
 
 ### -EnclosureGroup &lt;Object&gt;
 
-Aliases [-eg]
 OPTIONAL. The Name, URI or Object of an existing Enclosure Group.  If the Enclosure Group Name does not exist, a new resource with the String value provided will be created.  If omitted, a new Enclosure Group will be created based on the Serial Number of the Enclosure (Example: "EG_USE1234567A").
 
 | Aliases | eg |
@@ -202,7 +194,6 @@ OPTIONAL. The Name, URI or Object of an existing Enclosure Group.  If the Enclos
 
 ### -LogicalInterconnectGroup &lt;Object&gt;
 
-Aliases [-lig]
 OPTIONAL. The Name, URI or Object of an existing Logical Interconnect Group.  If the Logical Interconnect Group Name does not exist, a new resource with the String value provided will be created.  If omitted, a new Logical Interconnect Group will be created based on the Serial Number of the Enclosure (Example: "LIG_USE1234567A").
 
 | Aliases | lig |
@@ -215,13 +206,12 @@ OPTIONAL. The Name, URI or Object of an existing Logical Interconnect Group.  If
 
 ### -LicensingIntent &lt;String&gt;
 
-Aliases [-license, `-l`]
 REQUIRED. Specifies whether the intent is to apply either OneView or OneView w/o iLO licenses to the servers in the enclosure being imported.
 
 Accepted values are
                     
-	* OneView
-	* OneViewNoiLO
+    * OneView
+    * OneViewNoiLO
 
 | Aliases | license, l |
 | :--- | :--- |
@@ -299,7 +289,7 @@ OPTIONAL. Execute the migration report only. Do not execute the migration proces
 
 The directory path in which to save the report output to a file.
 
-	* Filename will be created in the format: [path]\{enclsoureName}_{date}.report
+    * Filename will be created in the format: [path]\{enclsoureName}_{date}.report
 
 | Aliases | Export |
 | :--- | :--- |
@@ -311,11 +301,7 @@ The directory path in which to save the report output to a file.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

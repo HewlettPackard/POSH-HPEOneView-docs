@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Retrieve Server Hardware Type resource(s).
 ---
 
 # Get-HPOVServerHardwareType
@@ -18,6 +18,7 @@ Get-HPOVServerHardwareType
 ## Description
 
 Obtain a collection of server hardware types.  This includes information about the type of server, adapter layout and features, and possible server BIOS settings.  This cmdlet is also used with the `New-HPOVServerProfile` cmdlet to retrieve the list of BIOS settings and adapters to configure.
+
 ## Examples
 
 ###  Example 1 
@@ -66,8 +67,6 @@ Filter based on Model name.  Supports wildcard search.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 Default Value: ${Global:ConnectSessions}
@@ -81,8 +80,6 @@ Default Value: ${Global:ConnectSessions}
 | Accept wildcard characters? | False |
 
 ### -ExportFile &lt;String&gt;
-
-Aliases [-x, `-export`]
 
 The path where the resource will be exported to, in JSON text format.
 
@@ -102,14 +99,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.ServerHardwareType [System.Management.Automation.PSCustomObject]**_
 
 Single Server Hardware type
-
 
 _**System.Collections.ArrayList**_
 

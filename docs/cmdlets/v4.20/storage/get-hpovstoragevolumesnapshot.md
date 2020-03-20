@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Retrieve Storage Volume Snapshot resource(s).
 ---
 
 # Get-HPOVStorageVolumeSnapShot
@@ -8,12 +8,15 @@ description:
 
 ```text
 Get-HPOVStorageVolumeSnapShot
+    [-InputObject] <Object>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ## Description
 
 This Cmdlet will display all of the avialable snapshots for a given Storage Volume or multiple Storage Volumes.
+
 ## Examples
 
 ###  Example 1 
@@ -28,8 +31,6 @@ hpov.domain.com Vol1_20160224235716                        Vol1                 
 hpov.domain.com Shared 1_20160224232717                    Shared 1                    Configured (None) 1,000.00 GB
 hpov.domain.com Shared 1_20160224235621                    Shared 1                    Configured (None) 1,000.00 GB
 hpov.domain.com Shared 1 Snapshot Converted_20160225214317 Shared 1 Snapshot Converted Configured (None) 1,000.00 GB
-
-
 ```
 
 Return all storage volume snapshot resource objects from all available storage volume resources.
@@ -61,8 +62,6 @@ Provide the Storage Volume resource object.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 Default Value: ${Global:ConnectSessions} | ? Default
@@ -91,11 +90,9 @@ _**System.Collections.ArrayList <HPOneView.Storage.VolumeSnapshot>**_
 
 Multiple storage volume snapshot resources
 
-
 _**HPOneView.Storage.VolumeSnapshot [System.Management.Automation.PSCustomObject]**_
 
 Formatted table view of storage volume snapshot resources
-
 
 ## Related Links
 

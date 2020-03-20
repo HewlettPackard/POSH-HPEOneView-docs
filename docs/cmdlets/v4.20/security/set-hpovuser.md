@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Modify an existing user account.
 ---
 
 # Set-HPOVUser
@@ -41,6 +41,7 @@ Set-HPOVUser
 ## Description
 
 Modify or update an existing local user account on the management appliance.  This cmdlet will not update the password or roles of the currently logged in user account.  To update your HPE OneView appliance local account"s password, please use the `Set-HPOVUserPassword` cmdlet.
+
 ## Examples
 
 ###  Example 1 
@@ -123,7 +124,6 @@ Updated Full Name of the User Account.
 
 ### -Roles &lt;Array&gt;
 
-Aliases [-r, `-role`]
 The role(s) to assign to the Directroy Group, in `[System.Collections.ArrayList]` format.  Accepted values are noted within the ApplianceRoles property of the `[HPOneView.Appliance.Connection]` object stored in the $Global:ConnectedSessions variable.
 
 Example: $roles = "Server administrator","Network administrator"
@@ -198,11 +198,7 @@ Disable the local user account.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

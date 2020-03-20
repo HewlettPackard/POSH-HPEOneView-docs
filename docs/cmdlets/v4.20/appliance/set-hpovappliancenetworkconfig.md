@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Updates the configuration parameters for the primary network interface on the appliance.
 ---
 
 # Set-HPOVApplianceNetworkConfig
@@ -63,6 +63,7 @@ Set-HPOVApplianceNetworkConfig
 ## Description
 
 Updates any or all configuration parameters for the primary network interface on the appliance. All parameters are  Current settings will be retained for any parameters NOT specified.
+
 ## Examples
 
 ###  Example 1 
@@ -243,7 +244,6 @@ Reserved for Synergy.
 
 ### -OverrideIPv4DhcpDns &lt;SwitchParameter&gt;
 
-Aliases [-overrideDhcpDns]
 Switch to override DHCP provided DNS Servers
 
 | Aliases | overrideDhcpDns |
@@ -292,7 +292,6 @@ Array of DNS search domains: "my.com", "other.com"
 
 ### -IPv4NameServers &lt;Array&gt;
 
-Aliases [-nameServers]
 Array of DNS servers: "www.xxx.yyy.zzz", "sss.ttt.uuu.vvv"
 
 | Aliases | nameServers |
@@ -329,7 +328,6 @@ Deprecated parameter.  NTP Server configuration is now controlled in the `Set-HP
 
 ### -importFile &lt;Object&gt;
 
-Aliases [-i, `-import`]
  File containing JSON formatted input values for the appliance network configuration parameters.
 
 | Aliases | i, import |
@@ -342,11 +340,7 @@ Aliases [-i, `-import`]
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | None |
 | :--- | :--- |
@@ -363,8 +357,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this cmdlet.**_
-
-
 
 ## Return Values
 

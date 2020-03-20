@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Retreive a defined Rack.
 ---
 
 # Get-HPOVRack
@@ -22,7 +22,8 @@ You can use the appliance to view and manage your rack configuration and power d
 
 The appliance automatically discovers the rack height and rack model for a ProLiant server with Location Discovery Services and updates the physical locations of devices when they are relocated within and between racks for c7000 enclosures.
 
-This Cmdlet will retrieve all or a specific Rack resource object.
+This Cmdlet will retrieve all or a specific Rack resource object. 
+
 ## Examples
 
 ###  Example 1 
@@ -57,11 +58,7 @@ Rack name.  Supports wildcard (*) character.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -79,14 +76,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Facilities.Rack**_
 
 A Rack resource object.
-
 
 ## Related Links
 

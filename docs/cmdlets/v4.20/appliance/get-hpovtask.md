@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Retrieve Task resource(s).
 ---
 
 # Get-HPOVTask
@@ -29,13 +29,13 @@ Get-HPOVTask
 ## Description
 
 Obtain a collection of task resources which have the specified name and/or state.  The returned data will include the task name, owner, state and status.
+
 ## Examples
 
 ###  Example 1 
 
 ```text
 $tasks = Get-HPOVTask -state Error
-
 ```
 
 Return all the tasks with a taskState="Error"
@@ -44,7 +44,6 @@ Return all the tasks with a taskState="Error"
 
 ```text
 Get-HPOVServerProfile -Name "Server 1" | Get-HPOVTask -State Completed
-
 ```
 
 Return completed (successful) tasks associated with the "Server 1" Server Profile.
@@ -53,7 +52,6 @@ Return completed (successful) tasks associated with the "Server 1" Server Profil
 
 ```text
 Get-HPOVTask -count 10
-
 ```
 
 Display the 10 most recent tasks from the specified appliance connection.
@@ -62,7 +60,6 @@ Display the 10 most recent tasks from the specified appliance connection.
 
 ### -Name &lt;String&gt;
 
-Aliases [-TaskName]
 The name of the task resource to be returned.  All names will match if omitted.
 
 | Aliases | TaskName |
@@ -87,24 +84,23 @@ Related resource Name or Object to the task. To be used for filtering tasks spec
 
 ### -ResourceCategory &lt;String&gt;
 
-Aliases [-Category]
 Specify the Resource Category to filter task results to.  Cannot be combined with Resource parameter.
 
 Some examples are:
 
-	* `ethernet-networks`
-	* `fc-networks`
-	* `power-devices`
-	* `unmanaged-devices`
-	* `server-profiles`
-	* `server-hardware`
-	* enclosures
-	* `enclosure-groups`
-	* interconnects
-	* `logical-interconnects`
-	* `logical-interconnect`-groups
-	* appliance
-	* `firmware-drivers`
+    * `ethernet-networks`
+    * `fc-networks`
+    * `power-devices`
+    * `unmanaged-devices`
+    * `server-profiles`
+    * `server-hardware`
+    * enclosures
+    * `enclosure-groups`
+    * interconnects
+    * `logical-interconnects`
+    * `logical-interconnect`-groups
+    * appliance
+    * `firmware-drivers`
 
 | Aliases | Category |
 | :--- | :--- |
@@ -118,16 +114,16 @@ Some examples are:
 
 The state of the task resource a to be returned. May be one of the following strings:
             
-	* Unknown
-	* New
-	* Running
-	* Suspended
-	* Terminated
-	* Killed
-	* Completed
-	* Error
-	* Warning
-	
+    * Unknown
+    * New
+    * Running
+    * Suspended
+    * Terminated
+    * Killed
+    * Completed
+    * Error
+    * Warning
+    
 All states will match if omitted.  All tasks will be returned if both names and state are omitted.
 
 | Aliases | None |
@@ -152,11 +148,7 @@ Specify the maximum amount of task objects to return.  0 will return all found t
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Disable Remote Support for a supported resource.
 ---
 
 # Disable-HPOVRemoteSupport
@@ -17,6 +17,7 @@ Disable-HPOVRemoteSupport
 ## Description
 
 This Cmdlet will disable Remote Support for a compute or enclosure resource.  If Remote Support has been disabled globally on the appliance, this Cmdlet is uncessary.
+
 ## Examples
 
 ###  Example 1 
@@ -66,11 +67,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -99,7 +96,6 @@ A Gen8 or newer generation server hardware resource object from [`Get-HPOVServer
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task Resource object for monitoring.
-
 
 ## Related Links
 

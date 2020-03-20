@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Not implemented.
 ---
 
 # Show-HPOVUtilization
@@ -9,6 +9,7 @@ description:
 ## Description
 
 Not implemented.
+
 ## Examples
 
 ###  Example 1 
@@ -24,11 +25,7 @@ Default example
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases |  |
 | :--- | :--- |

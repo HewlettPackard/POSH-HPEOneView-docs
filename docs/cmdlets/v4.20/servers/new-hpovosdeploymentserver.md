@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Create a new HPE Synergy OS Deployment Server.
 ---
 
 # New-HPOVOSDeploymentServer
@@ -22,7 +22,8 @@ New-HPOVOSDeploymentServer
 An OS deployment server is a resource that enables you to deploy (install and configure) operating systems for use by servers. HPE OneView connects to an OS deployment server and configures it for deploying operating systems.
 HPE OneView manages the OS deployment server after it is configured and displays the list of attributes, management settings, the OS deployment plans, and the server profiles that reference the available OS deployment plans.
 
-To create an OS Deployment Server, HPE Synergy Image Streamer appliances must be installed into managed or monitored Synergy Frames, a Management Network created with an association to an IPv4 Address Pool Subnet, and available IP Addresses within the pool.
+To create an OS Deployment Server, HPE Synergy Image Streamer appliances must be installed into managed or monitored Synergy Frames, a Management Network created with an association to an IPv4 Address Pool Subnet, and available IP Addresses within the pool. 
+
 ## Examples
 
 ###  Example 1 
@@ -98,11 +99,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -127,7 +124,6 @@ HPE Synergy Image Streamer Appliance object from [`Get-HPOVImageStreamerApplianc
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task Resource object for modifying the Remote Support Collection schedules.
-
 
 ## Related Links
 

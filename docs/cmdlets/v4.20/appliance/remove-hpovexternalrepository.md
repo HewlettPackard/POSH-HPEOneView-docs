@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Remove an existing external baseline repository.
 ---
 
 # Remove-HPOVExternalRepository
@@ -21,8 +21,8 @@ A firmware repository enables you to store firmware bundles and deploy them acro
 
 The recommended types of external web servers to use with the repository follow:
 
-	* Apache
-	* Internet Information Services (IIS)
+    * Apache
+    * Internet Information Services (IIS)
 
 {% hint style="info" %}
 Only one external repository can be added.
@@ -30,6 +30,7 @@ Only one external repository can be added.
 
 
 This Cmdlet supports removing an existing external repository.  Removing an external baseline will cause any assigned baselines in Server Profiles or Server Profile Templates to report the baseline as "removed".  Any server profile that is configured to use a firmware bundle residing in the external repository must not be in "staging" state.
+
 ## Examples
 
 ###  Example 1 
@@ -81,11 +82,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

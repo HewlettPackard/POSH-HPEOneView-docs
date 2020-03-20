@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Get role of user.
 ---
 
 # Get-HPOVRole
@@ -14,6 +14,7 @@ Get-HPOVRole
 ## Description
 
 Deprecated cmdlet as of v2.0.  Please use the `Get-HPOVUser` CMDLET to retrieve User Roles.
+
 ## Examples
 
 ## Parameters
@@ -25,8 +26,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.**_
-
-
 
 ## Return Values
 

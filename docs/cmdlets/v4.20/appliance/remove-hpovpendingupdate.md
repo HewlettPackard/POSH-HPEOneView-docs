@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Remove pending or staged appliance update.
 ---
 
 # Remove-HPOVPendingUpdate
@@ -15,6 +15,7 @@ Remove-HPOVPendingUpdate
 ## Description
 
 Remove a pending or staged appliance update that prevents the appliance from operating normally or the administrator would like to update the appliance with a different update file.
+
 ## Examples
 
 ###  Example 1 
@@ -39,11 +40,7 @@ Remove any found pending update specified appliance connection.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -84,9 +81,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this cmdlet.**_
-
-
- None.  You cannot pipe objects to this cmdlet 
 
 ## Return Values
 

@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Update Appliance Date/Time Configuration.
 ---
 
 # Set-HPOVApplianceDateTime
@@ -28,6 +28,7 @@ Set-HPOVApplianceDateTime
 Update the appliance Date and Time configuration, including Locale, NTP Servers, and NTP Polling.
 
 Using the -SyncWithHost parameter will set the NTPServers property to null.
+
 ## Examples
 
 ###  Example 1 
@@ -90,9 +91,9 @@ The polling interval in seconds the NTP client will use to verify time drift.
 
 Specify the language local for the appliance
 
-	* en_US - US English
-	* zh_CN - Simplified Chinese
-	* ja_JP - Japanese
+    * en_US - US English
+    * zh_CN - Simplified Chinese
+    * ja_JP - Japanese
 
 | Aliases | None |
 | :--- | :--- |
@@ -103,8 +104,6 @@ Specify the language local for the appliance
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
-
-Aliases [-Appliance]
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -125,8 +124,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this cmdlet.**_
-
-
 
 ## Return Values
 

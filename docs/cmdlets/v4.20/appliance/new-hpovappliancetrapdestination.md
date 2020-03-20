@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Create a new appliance SNMP trap destiation.
 ---
 
 # New-HPOVApplianceTrapDestination
@@ -35,13 +35,13 @@ Appliance SNMP settings allow you to add destinations to which the traps need to
 Additionally, if you have Gen6 or Gen7 servers being monitored by HPE OneView in your environment, you can configure the read community string that HPE OneView uses for monitoring these servers with SNMPv1. 
 
 Privileges: Infrastructure administrator
+
 ## Examples
 
 ###  Example 1 
 
 ```text
 New-HPOVApplianceTrapDestination -Destination $SnmpV1TrapDestinationAddress -Type SNMPv1 -Port $SnmpV1TrapDestinationPort -CommunityString $SnmpV1Community
-
 ```
 
 Create a new SNMPv1 trap destination on the appliance.
@@ -60,11 +60,7 @@ Define a new SNMPv3 user, and associate it with the new SNMPv3 trap destination 
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -126,8 +122,8 @@ The defined SNMPv3 user created on the appliance with `Get-HPOVSnmpV3User`.
 
 SNMP version type.  Allowed values:
 
-	* SNMPv1
-	* SNMPv3
+    * SNMPv1
+    * SNMPv3
 
 | Aliases | None |
 | :--- | :--- |
@@ -144,8 +140,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this cmdlet.**_
-
-
 
 ## Return Values
 

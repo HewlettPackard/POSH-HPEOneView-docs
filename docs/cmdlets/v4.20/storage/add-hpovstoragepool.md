@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Add managed Storage Pools.
 ---
 
 # Add-HPOVStoragePool
@@ -8,12 +8,16 @@ description:
 
 ```text
 Add-HPOVStoragePool
+    [-StorageSystem] <Object>
+    [-Pool] <Array>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ## Description
 
 Add new Storage Pools (i.e. HP 3PAR Common Provisioning Group [CPG]) for volumes to be provisioned from.  The Storage System must be imported prior to adding Storage Pools.
+
 ## Examples
 
 ###  Example 1 
@@ -30,8 +34,6 @@ Add the "HP_CPG1" Stroage Pool that is mananaged in the HP3PAR_1 Storage System.
 ```text
 $myPools = "cpg1","cpg2"
 Add-HPOVStoragePool "HP3PAR_1" $myPools
-
-
 ```
 
 Add the "HP_CPG1" Stroage Pool that is mananaged in the HP3PAR_1 Storage System.
@@ -68,11 +70,7 @@ Example: $pools = "cpg1","cpg2"
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -92,18 +90,15 @@ _**HPOneView.Storage.System [System.Management.Automation.PSCustomObject]**_
 
 Storage System resource object from [`Get-HPOVStorageSystem`](get-hpovstoragesystem.md).
 
-
 ## Return Values
 
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task resource.
 
-
 _**System.Collections.ArrayList <HPOneView.Appliance.TaskResource>**_
 
 Multiple async task resources.
-
 
 _**Async Task(s) to monitor storage pool import.**_
 

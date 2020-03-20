@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Remove a Logical Interconnect Group.
 ---
 
 # Remove-HPOVLogicalInterconnectGroup
@@ -17,6 +17,7 @@ Remove-HPOVLogicalInterconnectGroup
 ## Description
 
 Removes a Logical Interconnect Group from appliance management
+
 ## Examples
 
 ###  Example 1 
@@ -24,8 +25,6 @@ Removes a Logical Interconnect Group from appliance management
 ```text
 $lig = Get-HPOVLogicalInterconnectGroup -Name "My-LIG"
 Remove-HPOVLogicalInterconnectGroup $lig -confirm:$false
-
-
 ```
 
 Remove the logical interconnect group specifed by $lig. Disable confirmation prompt.
@@ -43,7 +42,6 @@ Search for all logical interconnect groups and remove them from all connected ap
 
 ### -InputObject &lt;Object&gt;
 
-Aliases [-name, `-uri`, `-Lig`]
 The logical interconnect group object(s), name(s) or uris(s) to be removed from management.
 
 | Aliases | uri, name, Lig, Resource |
@@ -56,11 +54,7 @@ The logical interconnect group object(s), name(s) or uris(s) to be removed from 
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -116,11 +110,9 @@ _**System.String**_
 
 Logical Interconnect Group Name or URI
 
-
 _**System.Management.Automation.PSCustomObject**_
 
 Logical Interconnect Group resource object
-
 
 ## Return Values
 

@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Update an IPv4 Subnet Pool configuration.
 ---
 
 # Set-HPOVAddressPoolSubnet
@@ -20,6 +20,7 @@ Set-HPOVAddressPoolSubnet
 ## Description
 
 This cmdlet will assist with updating an existing IPv4 Address Pool.  When updating an IPv4 Address Subnet, you must provide the Subnet Object or Name to modify. Only the Gateway, Domain Name, and DNS Servers can be updated once an IPv4 Subnet has been assigned to a resoruce.
+
 ## Examples
 
 ###  Example 1 
@@ -34,8 +35,6 @@ Update the IPv4 Subnet Address Pool"s default gateway to the new address.
 ## Parameters
 
 ### -InputObject &lt;Object&gt;
-
-Aliases [-Subnet, `-IPv4Subnet`]
 
 The IPv4 Subnet resource object to update.
 
@@ -97,11 +96,7 @@ An array of DNS Server IPv4 Addresses.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

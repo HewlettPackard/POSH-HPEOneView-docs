@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Remove a Remote Support contact.
 ---
 
 # Remove-HPOVRemoteSupportContact
@@ -15,7 +15,8 @@ Remove-HPOVRemoteSupportContact
 
 ## Description
 
-Use this Cmdlet to remove an existing Remote Support Contact.  The Default contact cannot be removed, and at least 1 contact must be configured before attempting to register the appliance with HPE support using the `Set-HPOVRemoteSupport` Cmdlet.
+Use this Cmdlet to remove an existing Remote Support Contact.  The Default contact cannot be removed, and at least 1 contact must be configured before attempting to register the appliance with HPE support using the `Set-HPOVRemoteSupport` Cmdlet. 
+
 ## Examples
 
 ###  Example 1 
@@ -31,7 +32,6 @@ Configure a new user who is the default contact.
 
 ### -InputObject &lt;Object&gt;
 
-Aliases [-Contact]
 The contacts first or given name.
 
 | Aliases | Contact |
@@ -44,11 +44,7 @@ The contacts first or given name.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -73,7 +69,6 @@ A Remote Support Contact from [`Get-HPOVRemoteSupportContact`](get-hpovremotesup
 _**System.Management.Automation.PSCustomObject**_
 
 Resource deleted response.
-
 
 ## Related Links
 

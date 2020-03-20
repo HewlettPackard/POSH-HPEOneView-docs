@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Remove configured appliance SNMP trap destinations.
 ---
 
 # Remove-HPOVApplianceTrapDestination
@@ -18,12 +18,13 @@ Remove-HPOVApplianceTrapDestination
 Use this Cmdlet to remove configured SNMPv1 and/or SNMPv3 trap destinations.
 
 Required permissions: Infrastructure administrator
+
 ## Examples
 
 ###  Example 1 
 
 ```text
-Get-HPOVHPOVApplianceTrapDestination -Destination 10.45.110.76 -ErrorAction Stop | Remove-HPOVApplianceTrapDestination
+Get-HPOVApplianceTrapDestination -Destination 10.45.110.76 -ErrorAction Stop | Remove-HPOVApplianceTrapDestination
 
 ```
 
@@ -32,7 +33,7 @@ Remove the specified trap destination.
 ###  Example 2 
 
 ```text
-Get-HPOVHPOVApplianceTrapDestination -Type SNMPv3 | Remove-HPOVApplianceTrapDestination
+Get-HPOVApplianceTrapDestination -Type SNMPv3 | Remove-HPOVApplianceTrapDestination
 
 ```
 
@@ -42,11 +43,7 @@ Remove all of the SNMPv3 trap destinations.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -100,20 +97,17 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Appliance.SnmpV1TrapDestination**_
 
-Appliance SNMPv1 trap destination from Get-HPOVHPOVApplianceTrapDestination.
-
+Appliance SNMPv1 trap destination from [`Get-HPOVApplianceTrapDestination`](get-hpovappliancetrapdestination.md).
 
 _**HPOneView.Appliance.SnmpV3TrapDestination**_
 
-Appliance SNMPv3 trap destination from Get-HPOVHPOVApplianceTrapDestination.
-
+Appliance SNMPv3 trap destination from [`Get-HPOVApplianceTrapDestination`](get-hpovappliancetrapdestination.md).
 
 ## Return Values
 
 _**System.Management.Automation.PSCustomObject**_
 
 Success message of deleted resource.
-
 
 ## Related Links
 

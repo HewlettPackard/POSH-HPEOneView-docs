@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Default content
 ---
 
 # Update-HPOVClusterProfile
@@ -17,6 +17,7 @@ Update-HPOVClusterProfile
 ## Description
 
 Default content
+
 ## Examples
 
 ###  Example 1 
@@ -32,11 +33,7 @@ Default example
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

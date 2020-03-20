@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Generate report of HPE OneView Remote Support service events.
 ---
 
 # Get-HPOVServiceAlert
@@ -21,6 +21,7 @@ Get-HPOVServiceAlert
 ## Description
 
 HPE OneView automatically checks if your hardware has a valid entitlement to Hewlett Packard Enterprise support. A valid entitlement is a Hewlett Packard Enterprise warranty or an active contract. If a valid entitlement to support is found, HPE OneView Remote Support opens a support case for a hardware failure. This Cmdlet allows administrators to display and/or export service events logged by the HPE OneView appliance.
+
 ## Examples
 
 ###  Example 1 
@@ -73,11 +74,7 @@ Get the Service Alerts within the specified date range for the specified server 
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -139,12 +136,12 @@ DateTime object of the start date and time to being query.
 
 Specify the state of the Service Alert.  The state is not correlated to the associated Alert.
 
-	* Closed - The state of Service event when the service call is closed.
-	* Error - The Service request has some error None This is a default state.
-	* Open - The state of Service event when the service call is open.
-	* Pending - The state of Service event when the service call is pending.
-	* Received - The state of Service event when the service call is received.
-	* Submitted - The state of Service event when the service call is submitted.
+    * Closed - The state of Service event when the service call is closed.
+    * Error - The Service request has some error None This is a default state.
+    * Open - The state of Service event when the service call is open.
+    * Pending - The state of Service event when the service call is pending.
+    * Received - The state of Service event when the service call is received.
+    * Submitted - The state of Service event when the service call is submitted.
 
 | Aliases | None |
 | :--- | :--- |

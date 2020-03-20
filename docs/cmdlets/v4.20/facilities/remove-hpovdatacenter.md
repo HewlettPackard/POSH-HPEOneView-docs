@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Remove a datacenter resource.
 ---
 
 # Remove-HPOVDataCenter
@@ -21,6 +21,7 @@ Each server, enclosure, or power distribution device in your data center can rep
 When you initialize the appliance for the first time, it creates a data center named Datacenter 1. The appliance provides this data center as a place to visualize your racks. You can rename or edit this data center to match the values and layout of your data center, you can use it as the basis for a planned data center model, or you can delete this data center without adverse effects.
 
 This Cmdlet will remove 1 or more datacenter resources from an appliance.  Removing a datacenter resource will not delete or remove associated resources, like Racks.
+
 ## Examples
 
 ###  Example 1 
@@ -55,11 +56,7 @@ Datacenter object, from `Get-HPOVDataCenter`.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -79,13 +76,11 @@ _**HPOneView.Facilities.DataCenter**_
 
 Datacenter resource from [`Get-HPOVDataCenter`](get-hpovdatacenter.md).
 
-
 ## Return Values
 
 _**System.Management.Automation.PSCustomObject**_
 
 Object with status confirmation the resource was deleted.
-
 
 ## Related Links
 

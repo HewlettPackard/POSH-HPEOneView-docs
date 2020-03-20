@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Define the Remote Support Default Site.
 ---
 
 # Set-HPOVRemoteSupportDefaultSite
@@ -21,7 +21,8 @@ Set-HPOVRemoteSupportDefaultSite
 
 ## Description
 
-Use this Cmdlet to set the default data center site used for Remote Support.  All resources defined will use this data center site.
+Use this Cmdlet to set the default data center site used for Remote Support.  All resources defined will use this data center site. 
+
 ## Examples
 
 ###  Example 1 
@@ -124,11 +125,7 @@ Timezone of the data center, in `ISO-3166` location format (e.g. US/Central).
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -146,14 +143,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**System.Management.Automation.PSCustomObject**_
 
 Configured Remote Support default site.
-
 
 ## Related Links
 

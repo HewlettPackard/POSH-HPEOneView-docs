@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Promote Standby Composer node to Active.
 ---
 
 # Enable-HPOVComposerHANode
@@ -8,12 +8,15 @@ description:
 
 ```text
 Enable-HPOVComposerHANode
+    [-ApplianceConnection] <Object>
+    [-Async]
     [<CommonParameters>]
 ```
 
 ## Description
 
 This Cmdlet will help transition the Standby Composer node to the Active Role.  Use this Cmdlet in order to perform maintenance on the Active node, or to remove the Active node from the Synergy management ring.
+
 ## Examples
 
 ###  Example 1 
@@ -50,11 +53,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -96,19 +95,15 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 The Async task resource of the role transition request
 
-
 _**System.Collections.ArrayList <HPOneView.Appliance.TaskResource>**_
 
 Multiple Async task resources.
-
 
 ## Related Links
 

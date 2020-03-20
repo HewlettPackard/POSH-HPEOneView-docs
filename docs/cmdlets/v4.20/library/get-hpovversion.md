@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Display library component versions.
 ---
 
 # Get-HPOVVersion
@@ -23,13 +23,13 @@ Get-HPOVVersion
 ## Description
 
 Display either the HPE OneView PowerShell library or appliance version.  Displaying the Appliance version will provide the Major, Minor, full version, and `X-API` Version information.
+
 ## Examples
 
 ###  Example 1 
 
 ```text
 Get-HPOVVersion
-
 ```
 
 Get the HPE OneView PowerShell library version
@@ -44,8 +44,6 @@ Appliance Major Version    : 1
 Appliance Minor Version    : 20
 Appliance Version Info     : 1.20.05-0201918
 Appliance X-API Version    : 120
-
-
 ```
 
 Get the HPE OneView PowerShell library, Appliance and `X-API` version information
@@ -63,8 +61,6 @@ You currently have v1.20.166.0 installed.  The HPE OneView PowerShell Library v1
 you want to download the current version of the HPE OneView POSH Library (will open your web browser for you to
 download)?
 [Y] Yes  [N] No  [?] Help (default is "Y"):
-
-
 ```
 
 Display the installed library version, and check for availability of an updated version online. If an updated version is found, the CMDLET will prompt if the user would like to download it now. If so, browser window will be opened to current version to download.
@@ -97,11 +93,7 @@ Check the GitHub repository for an updated version of the library.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | appliance |
 | :--- | :--- |
@@ -118,8 +110,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this cmdlet.**_
-
-
 
 ## Return Values
 

@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Retrieve Logical Switch resources.
 ---
 
 # Get-HPOVLogicalSwitch
@@ -26,6 +26,7 @@ Get-HPOVLogicalSwitch
 ## Description
 
 This cmdlet will retrieve one or more Logical Switch resources configured on the appliance.
+
 ## Examples
 
 ###  Example 1 
@@ -76,10 +77,10 @@ Provide an `[HPOneView.Appliance.TaskResource]` object and the Cmdlet will retur
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-	* AllResources
-	* AllResourcesInScope
-	* `[HPOneView.Appliance.ScopeCollection]`
-	* `[HPOneView.Appliance.ConnectionPermission]`
+    * AllResources
+    * AllResourcesInScope
+    * `[HPOneView.Appliance.ScopeCollection]`
+    * `[HPOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
@@ -115,11 +116,7 @@ Save the Logical Switch resource(s) to the specified JSON file.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

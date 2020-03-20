@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Import a supported Storage System
 ---
 
 # Add-HPOVStorageSystem
@@ -9,8 +9,7 @@ description:
 ```text
 Add-HPOVStorageSystem
     [-Hostname] <String>
-        [-Hostname] <String>
-
+    [-Credential <PSCredential>]
     [-Username <String>]
     [-Password <Object>]
     [-Family <String>]
@@ -26,8 +25,7 @@ Add-HPOVStorageSystem
 Add-HPOVStorageSystem
     [-Hostname] <String>
     [-VIPS] <Hashtable>
-        [-VIPS] <Hashtable>
-
+    [-Credential <PSCredential>]
     [-Username <String>]
     [-Password <Object>]
     [-Family <String>]
@@ -41,6 +39,7 @@ Add-HPOVStorageSystem
 This cmdlet will assist with importing a supported Storage System. In order for the Storage Ports to be mapped to Expected Networks, either a Supported SAN Manager will need to be configured, or 3PAR Direct Attach networks will have to exist.
 
 When adding supported HP 3PAR storage systems, please make sure "startwsapi" has been executed from the HP 3PAR CLI, which enables the HP 3PAR REST API that is required by HPE OneView.
+
 ## Examples
 
 ###  Example 1 
@@ -48,8 +47,6 @@ When adding supported HP 3PAR storage systems, please make sure "startwsapi" has
 ```text
 $task = Add-HPOVStorageSystem -hostname "3par-array.consoto.com" -username 3paradm -password 3pardata -Async
 Wait-HPOVTaskComplete $task
-
-
 ```
 
 Add the Storage System using default settings, and let the appliance detect the connected Storage System Ports.  (A supported SAN Manager must first be added, and Managed SANs mapped to the specific FC Network resources.)
@@ -92,8 +89,6 @@ IP Address of FQDN of the storage systems.
 
 ### -Family &lt;String&gt;
 
-Aliases [-Type]
-
 Specify the type of Storage System to add: StorageVirtual or StoreServ.
 
 | Aliases | None |
@@ -101,18 +96,6 @@ Specify the type of Storage System to add: StorageVirtual or StoreServ.
 | Required? | False |
 | Position? | Named |
 | Default value | StoreServ |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
-### -Credential &lt;PSCredential&gt;
-
-Use this parameter if you want to provide a PSCredential object instead.
-
-| Aliases | None |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -155,7 +138,7 @@ Specify the HP 3PAR Virtual Domain name.  Default is "NO DOMAIN". The value prov
 ### -Ports &lt;Object&gt;
 
 Specify the Host Ports and Expected Network in an Array of PSCustomObject entries. 
-	
+    
 Example: @{"1:1:1"="Fabric A";"2:2:2"="Fabric B"}
 
 | Aliases | None |
@@ -169,7 +152,7 @@ Example: @{"1:1:1"="Fabric A";"2:2:2"="Fabric B"}
 ### -PortGroups &lt;Hashtable&gt;
 
 Specify the Host Ports to group together. 
-	
+    
 Example: @{"1:1:1" = "PG1"; "2:2:2" = "PG2"}
 
 | Aliases | None |
@@ -183,14 +166,14 @@ Example: @{"1:1:1" = "PG1"; "2:2:2" = "PG2"}
 ### -VIPS &lt;Hashtable&gt;
 
 Specify the StoreVirtual VIP(s) and associated Ethernet Network. 
-	
+    
 Example:
 
-	@{"10.158.11.42" = $EthernetNetwork}
+    @{"10.158.11.42" = $EthernetNetwork}
 
 or
 
-	@{"10.158.11.42" = $EthernetNetwork1; "10.158.12.42" = $EthernetNetwork2;}
+    @{"10.158.11.42" = $EthernetNetwork1; "10.158.12.42" = $EthernetNetwork2;}
 
 | Aliases | None |
 | :--- | :--- |
@@ -202,11 +185,7 @@ or
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -248,14 +227,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Add Storage System Async Task.
-
 
 ## Related Links
 

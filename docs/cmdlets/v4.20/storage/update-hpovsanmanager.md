@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Refresh SAN Manager and it"s configuration.
 ---
 
 # Update-HPOVSanManager
@@ -8,12 +8,15 @@ description:
 
 ```text
 Update-HPOVSanManager
+    [-InputObject] <Object>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ## Description
 
 This cmdlet is used to refresh a SAN Managers configuration.  You can provide the Name or Object of a single or multiple SAN Managers.
+
 ## Examples
 
 ###  Example 1 
@@ -38,7 +41,6 @@ Refreshes all SAN Managers on the appliance.
 
 ### -InputObject &lt;Object&gt;
 
-Aliases [-SanManager]
 Managed SAN Object to update.
 
 | Aliases | Name, SANManager |
@@ -50,8 +52,6 @@ Managed SAN Object to update.
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
-
-Aliases [-Appliance]
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
@@ -83,11 +83,9 @@ _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject
 
 Async Task to update SAN Manager
 
-
 _**System.Collections.ArrayList <HPOneView.Appliance.TaskResource>**_
 
 Single or Multiple Resources
-
 
 ## Related Links
 

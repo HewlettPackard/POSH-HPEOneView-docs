@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Enable appliance complex password policy.
 ---
 
 # Enable-HPOVApplianceComplexPasswords
@@ -18,12 +18,13 @@ Enables whether users are required to have complex passwords.  This option does 
 
 Complex passwords must contain the following:
 
-	* Minimum of 14 characters
-	* Minimum of one uppercase character
-	* Minimum of one lowercase character
-	* Minimum one number
-	* Minimum of one special character. For example: !@#$^*_-=+,.?
-	* No whitespace
+    * Minimum of 14 characters
+    * Minimum of one uppercase character
+    * Minimum of one lowercase character
+    * Minimum one number
+    * Minimum of one special character. For example: !@#$^*_-=+,.?
+    * No whitespace
+
 
 ## Examples
 
@@ -40,11 +41,7 @@ Enable appliance complex password policy.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -62,14 +59,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**System.Management.Automation.PSCustomObject**_
 
 Appliance global security settings.
-
 
 ## Related Links
 

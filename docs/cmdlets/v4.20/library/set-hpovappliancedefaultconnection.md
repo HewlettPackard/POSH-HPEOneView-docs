@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Set the Default Appliance Connection.
 ---
 
 # Set-HPOVApplianceDefaultConnection
@@ -8,12 +8,14 @@ description:
 
 ```text
 Set-HPOVApplianceDefaultConnection
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ## Description
 
 When establishing multiple Appliance Connections, this Cmdlet will help set one of the appliance connections stored in the ${Global:ConnectedSessions} variable to the default connection.  All Cmdlets that require a specific Appliance Connection will use the default.
+
 ## Examples
 
 ###  Example 1 
@@ -31,8 +33,6 @@ ConnectionID Name                    UserName      AuthLoginDomain Default Conne
 ------------ ----                    --------      --------------- ------------------
 1            Appliance1.domain.local administrator LOCAL           False
 2            Appliance2.domain.local administrator LOCAL           True
-
-
 ```
 
 Display the current appliance connections, then set the new default to "Appliance2" using the parital name value.
@@ -52,8 +52,6 @@ ConnectionID Name                    UserName      AuthLoginDomain Default Conne
 ------------ ----                    --------      --------------- ------------------
 1            Appliance1.domain.local administrator LOCAL           False
 2            Appliance2.domain.local administrator LOCAL           True
-
-
 ```
 
 Display the current appliance connections, then set the new default to "Appliance2" using the pipline by passing the `[HPOneView.Appliance.Connection]` object.

@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Configure Remote Support and authorize appliance.
 ---
 
 # Set-HPOVRemoteSupport
@@ -55,7 +55,8 @@ Servers must be at iLO 2.
 Hewlett Packard Enterprise will contact you to ship a replacement part or send an engineer for devices that are under warranty or support contract.
 Remote support enables Proactive Care services including Proactive Scan reports and Firmware/Software Analysis reports with recommendations that are based on collected configuration data.
 Remote support is secure. No business data is collected, only `device-specific` configuration and fault data. All communications are outbound only and use industry standard TLS encryption ensuring confidentiality and integrity of the information.
- Once the appliance is configured, it cannot be unauthorized or disabled.
+ Once the appliance is configured, it cannot be unauthorized or disabled. 
+
 ## Examples
 
 ###  Example 1 
@@ -182,11 +183,7 @@ Use this parameter to disable remote support globally on the appliance.  Use the
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -215,8 +212,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this cmdlet.**_
-
-
 
 ## Return Values
 

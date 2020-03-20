@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Remove an existing LDAP Directory Server.
 ---
 
 # Remove-HPOVLdapServer
@@ -28,6 +28,7 @@ Remove-HPOVLdapServer
 ## Description
 
 This Cmdlet will remove an existing LDAP Directory Server resource from an existing LDAP Directory.
+
 ## Examples
 
 ###  Example 1 
@@ -55,7 +56,6 @@ The LDAP Directory Object from `Get-HPOVLdapDirectory`.
 
 ### -DirectoryServerName &lt;String&gt;
 
-Aliases [-Name]
 Directory server name.
 
 | Aliases | Name |
@@ -68,7 +68,6 @@ Directory server name.
 
 ### -Username &lt;String&gt;
 
-Aliases [-u]
 Directory Username to authenticate with in order to validate LDAP configuration.
 
 | Aliases | u, user |
@@ -81,7 +80,6 @@ Directory Username to authenticate with in order to validate LDAP configuration.
 
 ### -Password &lt;Object&gt;
 
-Aliases [-p]
 Directory User account password in order to validate LDAP configuration.  Can be `[System.String]` or SecureString object.
 
 | Aliases | p, pass |
@@ -94,11 +92,7 @@ Directory User account password in order to validate LDAP configuration.  Can be
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Import an existing Storage Volume resource.
 ---
 
 # Add-HPOVStorageVolume
@@ -22,6 +22,7 @@ Add-HPOVStorageVolume
 ## Description
 
 This cmdlet will help add an existing storage volume that was provisioned on the Storage System.  The volume should not be exported or assigned to a server or groups of servers.  The Storage Volume also must reside in the Managed Domain of the Stroage System that the appliance managed.  The Storage Volume"s WWN will be needed.
+
 ## Examples
 
 ###  Example 1 
@@ -67,7 +68,6 @@ The Storage System where the volume will be imported from.  Volume to be importe
 
 ### -VolumeID &lt;String&gt;
 
-Aliases [-volid, `-id`, `-wwn`]
 The 128bit WWN FC address of the volume to be imported.  Address must be in the following format: AA:BB:CC:DD:EE:AA:BB:CC:DD:EE:AA:BB:CC:DD:EE:AA
 
 | Aliases | volid, id, wwn |
@@ -92,7 +92,6 @@ The Storage Systems" Device Name of the volume.  This can be found in either the
 
 ### -VolumeName &lt;String&gt;
 
-Aliases [-name]
 Specify the Storage Volume Name.
 
 | Aliases | Name |
@@ -130,11 +129,7 @@ Default: Private
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -166,13 +161,11 @@ _**HPOneView.Storage.System [System.Management.Automation.PSCustomObject]**_
 
 Storage Pool resource object
 
-
 ## Return Values
 
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async create task
-
 
 ## Related Links
 

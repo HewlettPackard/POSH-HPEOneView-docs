@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Retreive a defined DataCenter.
 ---
 
 # Get-HPOVDataCenter
@@ -20,7 +20,8 @@ For example, you have IT equipment in two rooms or on separate floors. You could
 Each server, enclosure, or power distribution device in your data center can report its power requirements, but it can be difficult to understand the power and cooling requirements for your data center as a whole. The appliance enables you to bring power and cooling management of your servers, enclosures, and power delivery devices together in a single management system.
 When you initialize the appliance for the first time, it creates a data center named Datacenter 1. The appliance provides this data center as a place to visualize your racks. You can rename or edit this data center to match the values and layout of your data center, you can use it as the basis for a planned data center model, or you can delete this data center without adverse effects.
 
-This Cmdlet will retrieve all or a specific DataCenter resource object.  If Remote Support has been enabled on the appliance, the DataCenter object will contain a RemoteSupportLocation property that contains the site location (if different from the Default DataCenter), and both the Primary and Secondary contacts.
+This Cmdlet will retrieve all or a specific DataCenter resource object.  If Remote Support has been enabled on the appliance, the DataCenter object will contain a RemoteSupportLocation property that contains the site location (if different from the Default DataCenter), and both the Primary and Secondary contacts. 
+
 ## Examples
 
 ###  Example 1 
@@ -63,11 +64,7 @@ DataCenter name.  Supports wildcard (*) character.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -85,14 +82,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Facilities.DataCenter**_
 
 A DataCenter resource object.
-
 
 ## Related Links
 

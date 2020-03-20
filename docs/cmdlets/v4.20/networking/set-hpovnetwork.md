@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Modify an existing network.
 ---
 
 # Set-HPOVNetwork
@@ -40,6 +40,7 @@ Set-HPOVNetwork
 ## Description
 
 Modify a network and it"s attributes information.  Use this cmdlet to change the Network Name, Purpose, Enable or Disable Smartlink, Enable or Disable Private Network, and adjust the allocated bandwidth.
+
 ## Examples
 
 ###  Example 1 
@@ -75,7 +76,6 @@ Get all Ethernet networks, and add a Suffix to their names.
 
 ### -InputObject &lt;Object&gt;
 
-Aliases [-net, `-Network`]
 The Name or Resource object of the network to be modified.
 
 | Aliases | net, Network |
@@ -126,10 +126,10 @@ Use this parameter to add a new suffix to the name.  Will not change the origina
 
 A description of the network"s role within the logical interconnect.  Accepted values in string format are:
 
-	* General
-	* Management
-	* VMMigration
-	* FaultTolerance
+    * General
+    * Management
+    * VMMigration
+    * FaultTolerance
 
 | Aliases | None |
 | :--- | :--- |
@@ -189,7 +189,6 @@ The maximum bandwidth of a network connection, that will be allowed and reflecte
 
 ### -LinkStabilityTime &lt;Int32&gt;
 
-Aliases [-lst]
 The time in seconds the appliance waits before reconnecting to a link that was previously offline (Login redistribution). This interval prevents connection loss due to reconnecting to a link that is unstable (going online and offline repeatedly).  Parameter is only supported with FibreChannel network resources.
 
 Minimum Value: 1
@@ -205,7 +204,6 @@ Maximum Value: 1800
 
 ### -AutoLoginRedistribution &lt;Boolean&gt;
 
-Aliases [-ald]
 Used for login balancing when logins are not distributed evenly over the Fibre Channel links (for example, when an uplink that was down becomes available).  Parameter is only supported with FibreChannel network resources.
 
 True: Login redistribution is initiated automatically when the link stability time expires.
@@ -245,11 +243,7 @@ Associate with IPv4Subnet.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

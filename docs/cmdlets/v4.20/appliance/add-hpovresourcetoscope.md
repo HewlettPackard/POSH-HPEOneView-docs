@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Add supported resource to Scope.
 ---
 
 # Add-HPOVResourceToScope
@@ -19,16 +19,16 @@ Add-HPOVResourceToScope
 
 This Cmdlet will add supported resources to a specified Scope..  All the resources in these categories can be added to or removed from a scope:
 
-	* Enclosures
-	* Server Hardware
-	* Networks (Ethernet, FC, and FCoE)
-	* Network Sets
-	* Interconnects, excluding SAS resources
-	* Logical Interconnects, excluding SAS resources
-	* Logical Interconnect Groups, excluding SAS resources
-	* Switches
-	* Logical Switches
-	* Logical Switch Groups
+    * Enclosures
+    * Server Hardware
+    * Networks (Ethernet, FC, and FCoE)
+    * Network Sets
+    * Interconnects, excluding SAS resources
+    * Logical Interconnects, excluding SAS resources
+    * Logical Interconnect Groups, excluding SAS resources
+    * Switches
+    * Logical Switches
+    * Logical Switch Groups
 
 {% hint style="info" %}
 Resources in other categories are considered to be included in all scopes,
@@ -92,11 +92,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

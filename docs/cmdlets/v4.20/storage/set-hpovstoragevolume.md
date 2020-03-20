@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Modify an existing Storage Volume resource.
 ---
 
 # Set-HPOVStorageVolume
@@ -23,6 +23,7 @@ Set-HPOVStorageVolume
 ## Description
 
 This cmdlet will help modify an existing Storage Volume resource.  Only the Volume Name, Description, Capcity, volume shared state and permenance can be modified.
+
 ## Examples
 
 ###  Example 1 
@@ -38,7 +39,6 @@ Update "ProdVol1" volume size to 160GB.
 
 ### -InputObject &lt;Object&gt;
 
-Aliases [-SourceVolume]
 Source Storage Volume resource object.
 
 | Aliases | SourceVolume |
@@ -50,8 +50,6 @@ Source Storage Volume resource object.
 | Accept wildcard characters? | False |
 
 ### -Name &lt;String&gt;
-
-Aliases [-VolumeName]
 
 Updated Storage Volume Name.
 
@@ -77,7 +75,6 @@ Updated description for the volume.
 
 ### -Capacity &lt;Int64&gt;
 
-Aliases [-size]
 New Max volume capacity in GB.  Volume capacity can be increased to maximum of 16 TiB. Decreasing the capacity of volume is not supported. 
 
 Before increasing the capacity of fully provisioned volumes, ensure that the storage pool has enough capacity to support the operation. The update operation might fail if there is not enough space available in the storage pool.
@@ -121,12 +118,12 @@ Default: Private
 
 Specify the new StoreVirtual data protection level (aka Network RAID).  Allowed values:
 
-	* NetworkRaid0None
-	* NetworkRaid5SingleParity
-	* NetworkRaid10Mirror2Way
-	* NetworkRaid10Mirror3Way
-	* NetworkRaid10Mirror4Way
-	* NetworkRaid6DualParity
+    * NetworkRaid0None
+    * NetworkRaid5SingleParity
+    * NetworkRaid10Mirror2Way
+    * NetworkRaid10Mirror3Way
+    * NetworkRaid10Mirror4Way
+    * NetworkRaid6DualParity
 
 | Aliases | None |
 | :--- | :--- |
@@ -151,11 +148,7 @@ Default: Private
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -175,13 +168,11 @@ _**HPOneView.Storage.Volume [System.Management.Automation.PSCustomObject]**_
 
 Storage Volume resource object
 
-
 ## Return Values
 
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async create task
-
 
 ## Related Links
 

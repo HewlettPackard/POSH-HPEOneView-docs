@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Download appliance audit log.
 ---
 
 # Get-HPOVAuditLogArchive
@@ -16,16 +16,16 @@ Get-HPOVAuditLogArchive
 ## Description
 
 Use this Cmdlet to download the on appliance audit log.
+
 ## Examples
 
 ###  Example 1 
 
 ```text
-Get-HPOVAuditLogArchive c:	emp
-
+Get-HPOVAuditLogArchive c:\Temp
 ```
 
-Save the Appliance audit log archive to C:	emp
+Save the Appliance audit log archive to C:\Temp
 
 ## Parameters
 
@@ -60,8 +60,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this Cmdlet.**_
-
-
 
 ## Return Values
 

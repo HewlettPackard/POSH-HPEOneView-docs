@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Remove a Storage System
 ---
 
 # Remove-HPOVStorageSystem
@@ -9,6 +9,7 @@ description:
 ```text
 Remove-HPOVStorageSystem
     [-InputObject] <Object>
+    [-force]
     [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
@@ -16,6 +17,7 @@ Remove-HPOVStorageSystem
 ## Description
 
 This cmdlet will assist with removing a discovered and managed storage system from the appliance.
+
 ## Examples
 
 ###  Example 1 
@@ -31,7 +33,6 @@ Remove "HP3PAR_2" storage system from the appliance.
 
 ### -InputObject &lt;Object&gt;
 
-Aliases [-StorageSystem, `-Name`]
 Name or URI of the managed storage system.
 
 | Aliases | uri, name, StorageSystem |
@@ -55,8 +56,6 @@ Switch to force removal of a storage system the appliance can no longer communic
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
-
-Aliases [-Appliance]
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
@@ -102,18 +101,15 @@ _**HPOneView.Storage.System [System.Management.Automation.PSCustomObject]**_
 
 Storage System resource object
 
-
 _**System.Collections.ArrayList <HPOneView.Storage.System>**_
 
 Collections of Storage System resource objects
-
 
 ## Return Values
 
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Returns an async task resource to monitor.
-
 
 ## Related Links
 

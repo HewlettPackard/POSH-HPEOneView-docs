@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Show available Nimble Performance Policies.
 ---
 
 # Show-HPOVStorageSystemPerformancePolicy
@@ -9,12 +9,14 @@ description:
 ```text
 Show-HPOVStorageSystemPerformancePolicy
     [-InputObject] <Object>
+    [-Name <string>]
     [<CommonParameters>]
 ```
 
 ## Description
 
 Use this Cmdlet to show available Nimble Performance Policies in order to set a desired perforamnce policy value when provisioning a new volume or creating a new volume template.
+
 ## Examples
 
 ###  Example 1 
@@ -67,7 +69,6 @@ _**HPOneView.Storage.System [System.Management.Automation.PSCustomObject]**_
 _**HPOneView.Storage.PerformancePolicy**_
 
 One or more available storage system performance policy objects.
-
 
 ## Related Links
 

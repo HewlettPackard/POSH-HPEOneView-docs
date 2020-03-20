@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Create new Logical Interconnect Group.
 ---
 
 # New-HPOVLogicalInterconnectGroup
@@ -68,6 +68,7 @@ New-HPOVLogicalInterconnectGroup
 ## Description
 
 This cmdlet provides the ability to create a Logical Interconnect Group.  Bays 1 and 2 are required, and need to be identical.
+
 ## Examples
 
 ###  Example 1 
@@ -78,8 +79,6 @@ $Dest2 = New-HPOVSnmpTrapDestination 10.44.120.9 MyR3adcommun1ty SNMPv1 critical
 $SnmpConfig = New-HPOVSnmpConfiguration -ReadCommunity MyR3adC0mmun1ty -AccessList "10.44.120.9/32","172.20.148.0/22" -TrapDestinations $Dest1,$Dest2
 $Bays = @{1 = "FlexFabric";2 = "FlexFabric"}
 New-HPOVLogicalInterconnectGroup "FlexFabric Production 1" -bays $Bays -snmp $SnmpConfig
-
-
 ```
 
 Create a Logical Interconnect Group with VC FlexFabric modules in Bays 1 and 2, and SNMP Settings
@@ -89,7 +88,6 @@ Create a Logical Interconnect Group with VC FlexFabric modules in Bays 1 and 2, 
 ```text
 $InternalNetworks = Get-HPOVNetwork -Name "My Internal VLANs*"
 New-HPOVLogicalInterconnectGroup -Name "Synergy VC Prod" -FrameCount 3 -InterconnectBaySet 3 -FabricModuleType "SEVC40F8" -Bays @{Frame1 = @{Bay3 = "SEVC40f8" ; Bay6 = "SE20ILM"};Frame2 = @{Bay3 = "SE20ILM"; Bay6 = "SEVC40f8" };Frame3 = @{Bay3 = "SE20ILM"; Bay6 = "SE20ILM"}} -FabricRedundancy "HighlyAvailable" -InternalNetworks $InternalNetworks
-
 ```
 
 Create a Synergy Virtual Connect `multi-Frame` Logical Interconnect Group resource, using Bay Set 3 and Synergy 20Gb Satellite modules.
@@ -98,7 +96,6 @@ Create a Synergy Virtual Connect `multi-Frame` Logical Interconnect Group resour
 
 ```text
 New-HPOVLogicalInterconnectGroup -LIGName "Flex10/10D and FlexFabric Production 1" -bays @{1 = "Flex1010D";2 = "Flex1010D";3 = "FlexFabric";4 = "FlexFabric"} -enableIgmpSnooping $True -igmpIdleTimeoutInterval 300 -LoopProtect $True
-
 ```
 
 Create a Logical Interconnect Group with VC Flex10/10D in Bays 1 and 2, FlexFabric modules in Bays 3 and 4, Enable IGMP Snooping, IGMP Idle timeout and LoopProtect
@@ -107,7 +104,6 @@ Create a Logical Interconnect Group with VC Flex10/10D in Bays 1 and 2, FlexFabr
 
 ```text
 New-HPOVLogicalInterconnectGroup -Name "Synergy SAS Prod" -FrameCount 1 -InterconnectBaySet 1 -FabricModuleType "SAS" -Bays @{Frame1 = @{Bay1 = "SE12SAS" ; Bay4 = "SE12SAS"}}
-
 ```
 
 Create a Synergy SAS Logical Interconnect Group resource.
@@ -116,7 +112,6 @@ Create a Synergy SAS Logical Interconnect Group resource.
 
 ```text
 New-HPOVLogicalInterconnectGroup -Name "Synergy VC FC Prod" -FrameCount 1 -InterconnectBaySet 2 -FabricModuleType "SEVCFC" -Bays @{Frame1 = @{Bay2 = "SEVC16GbFC" ; Bay5 = "SEVC16GbFC"}}
-
 ```
 
 Create a Synergy Virtual Connect Fibre Channel Logical Interconnect Group resource.
@@ -125,7 +120,6 @@ Create a Synergy Virtual Connect Fibre Channel Logical Interconnect Group resour
 
 ```text
 New-HPOVLogicalInterconnectGroup -import c:\dir\mylig.json
-
 ```
 
 Create a Logical Interconnect Group by using a JSON formatted input file.
@@ -133,8 +127,6 @@ Create a Logical Interconnect Group by using a JSON formatted input file.
 ## Parameters
 
 ### -Name &lt;String&gt;
-
-Aliases [-LIGName]
 
 The Logical Interconnect Group Name
 
@@ -162,9 +154,9 @@ The number of Synergy Frames to participate in the Logical Stack.
 
 Which Synergy Interconnect Bay Set ID will the interconnects be populated in.  Allowed value:
 
-	* 1 - Interconnect Bay set 1 & 4
-	* 2 - Interconnect Bay set 2 & 5
-	* 3 - Interconnect Bay set 3 & 6
+    * 1 - Interconnect Bay set 1 & 4
+    * 2 - Interconnect Bay set 2 & 5
+    * 3 - Interconnect Bay set 3 & 6
 
 | Aliases | None |
 | :--- | :--- |
@@ -178,9 +170,9 @@ Which Synergy Interconnect Bay Set ID will the interconnects be populated in.  A
 
 Specify the Synergy Fabric Module type the Logical Interconnect Group will be modeled for.  Allowed value:
 
-	*  SEVC40F8 - Virtual Connect SE 40Gb F8 Module for Synergy
-	* SEVCFC - Virtual Connect SE 16Gb FC Module for Synergy
-	* SAS - Synergy 12Gb SAS Connection Module
+    *  SEVC40F8 - Virtual Connect SE 40Gb F8 Module for Synergy
+    * SEVCFC - Virtual Connect SE 16Gb FC Module for Synergy
+    * SAS - Synergy 12Gb SAS Connection Module
 
 | Aliases | None |
 | :--- | :--- |
@@ -194,27 +186,30 @@ Specify the Synergy Fabric Module type the Logical Interconnect Group will be mo
 
 HPE BladeSystem C7000 Support - A `[System.Collections.Hashtable]` object of each Interconnect Bay.  Accepted values are:
 
-	* FlexFabric - HP VC FlexFabric 10Gb/24-Port Module
-	* Flex10     - HP VC `Flex-10` Enet Module
-	* Flex1010D  - HP VC `Flex-10`/10D Module
-	* Flex2040f8 - HP VC `FlexFabric-20`/40 F8 Module
-	* VCFC20     - HP VC 8Gb `20-Port` FC Module
-	* VCFC24     - HP VC 8Gb `24-Port` FC Module
-	* FEX        - Cisco Fabric Extender for HP BladeSystem
-		
+    * FlexFabric - HP VC FlexFabric 10Gb/24-Port Module
+    * Flex10     - HP VC `Flex-10` Enet Module
+    * Flex1010D  - HP VC `Flex-10`/10D Module
+    * Flex2040f8 - HP VC `FlexFabric-20`/40 F8 Module
+    * VCFC20     - HP VC 8Gb `20-Port` FC Module
+    * VCFC24     - HP VC 8Gb `24-Port` FC Module
+    * FEX        - Cisco Fabric Extender for HP BladeSystem
+        
 `[E.g]`. @{1 = "Flex10";2 = "Flex10";3 = "FlexFabric";4 = "Flexfabric";5 = "";6 = "";7 = "";8 = "";}   
 
 HPE Synergy Support - A `[System.Collection.Hashtable]` object, with Frame and Fabric Bay definitions.  Accepted values are:
 
-	* SEVC40f8   - Virtual Connect SE 40Gb F8 Module for Synergy
-	* SEVC16GbFC - Virtual Connect SE 16Gb FC Module for Synergy
-	* SE20ILM    - Synergy 20Gb Interconnect Link Module
-	* SE10ILM    - Synergy 10Gb Interconnect Link Module
-	* SE12SAS    - Synergy 12Gb SAS Connection Module
+    * SEVC40f8   - Virtual Connect SE 40Gb F8 Module for Synergy
+    * SEVC16GbFC - Virtual Connect SE 16Gb FC Module for Synergy
+    * SE20ILM    - Synergy 20Gb Interconnect Link Module
+    * SE10ILM    - Synergy 10Gb Interconnect Link Module
+    * SE12SAS    - Synergy 12Gb SAS Connection Module
 
 $Bays = @{ Frame1 = @{Bay3 = "SEVC40f8"; Bay6 = "SE20ILM"}; Frame2 = @{Bay3 = "SE20ILM"; Bay6 = "SEVC40f8"} }
 
-Note: When configuring Synergy SAS Connection Module, no other device bays can be specified, and only a Single Frame can be configured.
+{% hint style="info" %}
+When configuring Synergy SAS Connection Module,
+{% endhint %}
+ no other device bays can be specified, and only a Single Frame can be configured.
 
 | Aliases | None |
 | :--- | :--- |
@@ -228,10 +223,10 @@ Note: When configuring Synergy SAS Connection Module, no other device bays can b
 
 Define the expected Synergy Fabric Interconnect Redundancy type.  Allowed value:
 
-	* HighlyAvailable
-	* Redundant
-	* ASide
-	* BSide
+    * HighlyAvailable
+    * Redundant
+    * ASide
+    * BSide
 
 | Aliases | None |
 | :--- | :--- |
@@ -244,7 +239,7 @@ Define the expected Synergy Fabric Interconnect Redundancy type.  Allowed value:
 ### -EnableIgmpSnooping &lt;Boolean&gt;
 
 The IGMP snooping feature allows interconnects to monitor the IGMP IP multicast membership activities and configure hardware Layer 2 switching behavior of multicast traffic to optimize network resource usage. Currently, only IGMP v1 and v2 (RFC 2236) are supported.
-		
+        
 Default value: Disabled
 
 | Aliases | IGMPSnoop |
@@ -259,7 +254,7 @@ Default value: Disabled
 
 The Group Membership Interval value, as specified by the IGMP v2 specification (RFC 2236).
 For optimum network resource usage, set the timeout interval to match your network"s multicast router settings.
-		
+        
 Data type:  Numeric; unit of measure is seconds
 Default value:  260
 Required: Yes, if IGMP snooping is enabled
@@ -289,7 +284,7 @@ Default value:  Enabled
 ### -MacRefreshInterval &lt;Int32&gt;
 
 The time interval at which MAC caches are refreshed
-		
+        
 Data type:  Numeric; unit of measure is seconds
 Default value: 5
 
@@ -303,7 +298,6 @@ Default value: 5
 
 ### -EnableNetworkLoopProtection &lt;Boolean&gt;
 
-Aliases [-LoopProtect]
 Enables or disables network loop protection.
 
 Network loop protection:
@@ -332,7 +326,6 @@ Default value: Enabled
 
 ### -EnablePauseFloodProtection &lt;Boolean&gt;
 
-Aliases [-PauseProtect]
 Enables or disables pause flood protection.
 
 Pause flood protection:
@@ -391,9 +384,9 @@ This parameter is only available for 2.00.07 or newer appliances.
 
 Specify the IP address format type to support.  Allowed values:
 
-	* IPv4
-	* IPv6
-	* IPv4AndIPv6
+    * IPv4
+    * IPv6
+    * IPv4AndIPv6
 
 | Aliases | None |
 | :--- | :--- |
@@ -429,7 +422,6 @@ An Array collection of Networks that will be marked as Internal only.
 
 ### -QosConfiguration &lt;Object&gt;
 
-Aliases [-qos, `-QosConfig`]
 A collection of QOS configurations that are created using the `New-HPOVQosConfig` helper CMDLET.
 
 | Aliases | qos, QosConfig |
@@ -442,11 +434,7 @@ A collection of QOS configurations that are created using the `New-HPOVQosConfig
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -543,7 +531,6 @@ Hashtable containing Interconnect Bay layout and associated interconnect module
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Logical Interconnect Group creation async task
-
 
 ## Related Links
 

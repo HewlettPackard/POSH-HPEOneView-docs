@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Remove Standby Composer node.
 ---
 
 # Remove-HPOVStandbyComposerNode
@@ -8,12 +8,15 @@ description:
 
 ```text
 Remove-HPOVStandbyComposerNode
+    [-ApplianceConnection] <Object>
+    [-Async]
     [<CommonParameters>]
 ```
 
 ## Description
 
 This Cmdlet will help remove the Standby Composer node from the Synergy management ring.  In order to remove the Active node from the Synergy management ring, you first must use the `Enable-HPOVComposerHANode` Cmdlet to transition the Standby node to the Active role.
+
 ## Examples
 
 ###  Example 1 
@@ -41,11 +44,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -86,9 +85,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this cmdlet.**_
-
-
- None.  You cannot pipe objects to this cmdlet 
 
 ## Return Values
 

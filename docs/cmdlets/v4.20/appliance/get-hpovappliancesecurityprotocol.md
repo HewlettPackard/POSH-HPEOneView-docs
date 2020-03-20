@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Get appliance supported security protocols and cyphers.
 ---
 
 # Get-HPOVApplianceSecurityProtocol
@@ -17,13 +17,13 @@ Get-HPOVApplianceSecurityProtocol
 ## Description
 
 Get the appliance available security protocols, and their active state. By default the appliance current security mode will return the available security protocols and their configuration state. Use the -SecurityMode parameter to specify one or more modes. Use the -TlsVersion to specifify one or more security protocols to return.
+
 ## Examples
 
 ###  Example 1 
 
 ```text
 Get-HPOVApplianceSecurityProtocol
-
 ```
 
 Get the appliance FIPS security mode and associated security protocols.
@@ -32,7 +32,6 @@ Get the appliance FIPS security mode and associated security protocols.
 
 ```text
 Get-HPOVApplianceSecurityProtocol -SecurityMode FIPS, CNSA -TlsVersion TLSv1.1, TLSv1.2
-
 ```
 
 Get the appliance FIPS security mode and TLSv1.1 and TLSv1.2 security protocols.
@@ -41,11 +40,7 @@ Get the appliance FIPS security mode and TLSv1.1 and TLSv1.2 security protocols.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -59,9 +54,9 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 
 Specify the Security Mode to return supported security protocols and encryption cyphers. By default, will return the current appliance security mode. Allowed values:
 
-	* Legacy
-	* FIPS
-	*CNSA
+    * Legacy
+    * FIPS
+    *CNSA
 
 | Aliases | None |
 | :--- | :--- |
@@ -75,9 +70,9 @@ Specify the Security Mode to return supported security protocols and encryption 
 
 Filter for specific TLS version(s). By default, will return all TLS Versions. Allowed values:
 
-	* TLSv1
-	 TLSv1.1
-	TLSv1.2
+    * TLSv1
+     TLSv1.1
+    TLSv1.2
 
 | Aliases | None |
 | :--- | :--- |
@@ -94,8 +89,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this cmdlet.**_
-
-
 
 ## Return Values
 

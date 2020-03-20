@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Retrieve Address Pool information.
 ---
 
 # Get-HPOVAddressPool
@@ -17,12 +17,13 @@ Get-HPOVAddressPool
 
 This cmdlet will get the avilable and configured Address Pools, and their associated Ranges from the appliance.  Currently, the appliance supports the following Address Pools:
     
-	* VMAC
-	* VWWN
-	* VSN
-	* IPv4
+    * VMAC
+    * VWWN
+    * VSN
+    * IPv4
     
 You can specify one, some or all of the Pool types.  A Range switch is provided to include the associated Range objects.  A report switch is provided to display a report of each Address Pool type.
+
 ## Examples
 
 ###  Example 1 
@@ -59,11 +60,7 @@ The Address Pool type.  Accepted values are VMAC, VWWN, VSN, IPv4, or All.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -81,19 +78,15 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Appliance.AddressPool [System.Management.Automation.PSCustomObject]**_
 
 Single Address Pool and its contents.
 
-
 _**System.Collections.ArrayList <HPOneView.Appliance.AddressPool>**_
 
 Collection of Address Pools and their contents.
-
 
 ## Related Links
 

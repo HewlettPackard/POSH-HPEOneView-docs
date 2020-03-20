@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Modify storage pool managed state.
 ---
 
 # Set-HPOVStoragePool
@@ -19,7 +19,8 @@ Set-HPOVStoragePool
 A storage pool is an aggregation of physical storage resources (disks) in a storage system. Storage systems contain information about the storage ports through which they can be accessed. You can provision logical storage spaces, known as volumes, from storage pools.
  You cannot create or delete storage pools from the appliance, you can only add or remove them from management. Using this Cmdlet will change the managed state of a storage pool.  Its management state cannot be changed when volumes are currently provisioned from it and managed by HPE OneView, or a storage volume template specify the storage pool.
  If you remove a storage system from the appliance, all storage pools in it are removed automatically.
- Minimum required privileges: Infrastructure administrator or Storage administrator. 
+ Minimum required privileges: Infrastructure administrator or Storage administrator.  
+
 ## Examples
 
 ###  Example 1 
@@ -42,11 +43,7 @@ Change the managed state to "unmanaged" of the specified storage pools.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -95,7 +92,6 @@ Storage pool resource(s) from [`Get-HPOVStoragePool`](get-hpovstoragepool.md).
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task Resource object for configuring port monitoring on the requested logical intercinnect.
-
 
 ## Related Links
 

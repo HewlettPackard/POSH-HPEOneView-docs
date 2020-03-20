@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Add a supported SAN Manager
 ---
 
 # Add-HPOVSanManager
@@ -41,13 +41,14 @@ Add a new SAN Manager to the appliance.  SAN Managers are hardware or software s
 
 Supported SAN Managers are:
 
-	* Brocade SAN Network Advisor
-	* HPE Networking 5900CP  (FC or FCoE)
-	* HPE Networking 5900AF (FC-only)
-	* Cisco Nexus (FC or FCoE)
-	* Cisco MDS (FC-only)
-	
+    * Brocade SAN Network Advisor
+    * HPE Networking 5900CP  (FC or FCoE)
+    * HPE Networking 5900AF (FC-only)
+    * Cisco Nexus (FC or FCoE)
+    * Cisco MDS (FC-only)
+    
 Please see the HPE OneView Support Matrix for supported versions.
+
 ## Examples
 
 ###  Example 1 
@@ -67,9 +68,9 @@ Add a new Brocade Network Advisor SAN Manager.
 
 SAN Manager type to add.  Accepted values are:
 
-	* bna or Brocade Network Advisor
-	* HP (HPN 5900CP or HPN 5900AF)
-	* Cisco
+    * bna or Brocade Network Advisor
+    * HP (HPN 5900CP or HPN 5900AF)
+    * Cisco
 
 | Aliases | None |
 | :--- | :--- |
@@ -143,9 +144,9 @@ The SNMPv3 Community User Name.
 
 The SNMPv3 Authentication Level.  Allowed values are:
 
-	* None - No Security is required, only the SNMPv3 UserName is provided.
-	* AuthOnly - SNMPv3 Authentication Encryption Security Level only. Must also provide `-SnmpAuthProtocol` and `-SnmpAuthPassword` parameters.
-	* AuthAndPriv - SNMPv3 Authentication Encryption Security and Privacy Levels. Must also provide `-SnmpAuthProtocol`, `-SnmpAuthPassword`, `-SnmpPrivProtocol` and `-SnmpPrivPassword` parameters.
+    * None - No Security is required, only the SNMPv3 UserName is provided.
+    * AuthOnly - SNMPv3 Authentication Encryption Security Level only. Must also provide `-SnmpAuthProtocol` and `-SnmpAuthPassword` parameters.
+    * AuthAndPriv - SNMPv3 Authentication Encryption Security and Privacy Levels. Must also provide `-SnmpAuthProtocol`, `-SnmpAuthPassword`, `-SnmpPrivProtocol` and `-SnmpPrivPassword` parameters.
 
 | Aliases | None |
 | :--- | :--- |
@@ -159,8 +160,8 @@ The SNMPv3 Authentication Level.  Allowed values are:
 
 SNMPv3 Password Encryption Protocol. Allowed values are:
 
-	* SHA
-	* MD5
+    * SHA
+    * MD5
 
 | Aliases | None |
 | :--- | :--- |
@@ -186,8 +187,8 @@ SNMPv3 UserName Password.  Can be either String or `[System.Security.SecureStrin
 
 SNMPv3 Privacy Protocol.  Allowed values are:
 
-	* AES
-	* DES
+    * AES
+    * DES
 
 | Aliases | None |
 | :--- | :--- |
@@ -235,11 +236,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -257,14 +254,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task.
-
 
 ## Related Links
 

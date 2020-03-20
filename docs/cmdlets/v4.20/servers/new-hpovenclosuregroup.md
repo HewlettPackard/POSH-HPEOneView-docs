@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Create an Enclosure Group.
 ---
 
 # New-HPOVEnclosureGroup
@@ -61,11 +61,12 @@ An enclosure group is a logical resource that defines a standard configuration f
 
 Enclosure groups and logical interconnect groups
 
-	* A logical interconnect group that is assigned to a bay within an enclosure group must have that bay populated within the logical interconnect group.
-	* All populated bays in a logical interconnect group must be assigned to the enclosure group. For example, a logical interconnect group that has bays 1 and 2 populated must be assigned to bays 1 and 2 of the enclosure group in order for the enclosure group to be created.
-	* An enclosure group can contain logical interconnect groups that are highly available, redundant, `A-side` only, or `A-side` and `B-side`. See About interconnect bay sets.
-	* Synergy `multiple-enclosure` logical interconnect groups must have the proper bays populated in all enclosures in the interconnect link topology.
-	* Synergy `single-enclosure` logical interconnect groups, such as a Serial Attached SCSI (SAS) logical interconnect group, can be applied to individual bays in individual enclosures in the interconnect link topology.
+    * A logical interconnect group that is assigned to a bay within an enclosure group must have that bay populated within the logical interconnect group.
+    * All populated bays in a logical interconnect group must be assigned to the enclosure group. For example, a logical interconnect group that has bays 1 and 2 populated must be assigned to bays 1 and 2 of the enclosure group in order for the enclosure group to be created.
+    * An enclosure group can contain logical interconnect groups that are highly available, redundant, `A-side` only, or `A-side` and `B-side`. See About interconnect bay sets.
+    * Synergy `multiple-enclosure` logical interconnect groups must have the proper bays populated in all enclosures in the interconnect link topology.
+    * Synergy `single-enclosure` logical interconnect groups, such as a Serial Attached SCSI (SAS) logical interconnect group, can be applied to individual bays in individual enclosures in the interconnect link topology.
+
 ## Examples
 
 ###  Example 1 
@@ -73,8 +74,6 @@ Enclosure groups and logical interconnect groups
 ```text
 $mylig = Get-HPOVLogicalInterconnectGroup -name "myLogicalInterconnectGroup"
 New-HPOVEnclosureGroup -name "MyGroup" -logicalInterConnectGroup $mylig
-
-
 ```
 
 Get the "myLogicalInterconnectGroup" object and pass it to create the "MyGroup" Enclosure Group.
@@ -87,8 +86,6 @@ $DMZlig = Get-HPOVLogicalInterconnectGroup -name "DMZ LIG"
 $ConfigurationScript = "#Configure Insight Remote Support CentralConnect
 >>  ENABLE REMOTE_SUPPORT IRS 80.80.1.14 7906"
 New-HPOVEnclosureGroup -name "Production Enclosure Group 1" -LogicalInterconnectGroupMapping @{1 = $Prodlig; 2 = $Prodlig; 5 = $DMZlig; 6 = $DMZlig} -ConfigurationScript $ConfigurationScript
-
-
 ```
 
 Get two different Logical Interconnect Groups, define an OA Configuration Script, then assign the LIGs to the specific Interconnect Bays for appliance "MyAppliance1.domain.com".
@@ -97,7 +94,6 @@ Get two different Logical Interconnect Groups, define an OA Configuration Script
 
 ```text
 New-HPOVEnclosureGroup -name "MyGroup" -DiscoverFromEnclosure -OAAddress MyOAIP.domain.com -Username Administrator -Password MyPassword
-
 ```
 
 Connect to the provided Onboard Administrator, detect the Interconnect Bay population to then create both a Logical Interconnect Group and associate it with the Enclosure Group being requested.
@@ -106,7 +102,6 @@ Connect to the provided Onboard Administrator, detect the Interconnect Bay popul
 
 ```text
 New-HPOVEnclosureGroup -name "MyGroup" -DiscoverFromEnclosure -OAAddress MyOAIP.domain.com -Username Administrator -Password MyPassword -LigPrefix "My LIG Policy"
-
 ```
 
 Connect to the provided Onboard Administrator, detect the Interconnect Bay population to then create both a Logical Interconnect Group ("My LIG Policy") and associate it with the Enclosure Group being requested.
@@ -116,7 +111,6 @@ Connect to the provided Onboard Administrator, detect the Interconnect Bay popul
 ```text
 $MySynergyLig1 = Get-HPOVLogicalInterconnectGroup -Name MySynergyLig1
 New-HPOVEnclosureGroup -name "My Synergy Enclosure Group 1" -LogicalInterconnectGroupMapping $MySynergyLig1 -EnclosureCount 3 -IPv4AddressType DHCP
-
 ```
 
 Create a `3-Frame` Synergy Enclosure Group using a single Logical Interconnect Group.
@@ -126,7 +120,6 @@ Create a `3-Frame` Synergy Enclosure Group using a single Logical Interconnect G
 ```text
 $MySynergyLig1 = Get-HPOVLogicalInterconnectGroup -Name MySynergyLig1
 New-HPOVEnclosureGroup -name "My Synergy Enclosure Group 1" -LogicalInterconnectGroupMapping @{Frame1 = $3FrameVCLIG,$SasLIG; Frame2 = $3FrameVCLIG,$SasLIG; Frame3 = $3FrameVCLIG } -EnclosureCount 3 -IPv4AddressType DHCP
-
 ```
 
 Create a `3-Frame` Synergy Enclosure Group using multiple Logical Interconnect Groups specific to each Frame.
@@ -137,7 +130,6 @@ Create a `3-Frame` Synergy Enclosure Group using multiple Logical Interconnect G
 $AddressPool = Get-HPOVAddressPoolSubnet -NetworkId "10.140.51.0" -ErrorAction Stop | Get-HPOVAddressPoolRange
 $MySynergyLig1 = Get-HPOVLogicalInterconnectGroup -Name MySynergyLig1
 New-HPOVEnclosureGroup -name "My Synergy Enclosure Group 1" -LogicalInterconnectGroupMapping @{Frame1 = $3FrameVCLIG,$SasLIG; Frame2 = $3FrameVCLIG,$SasLIG; Frame3 = $3FrameVCLIG } -EnclosureCount 3 -IPv4AddressType AddressPool -AddressPool $AddressPool -DeploymentNetworkType Internal
-
 ```
 
 Create a `3-Frame` Synergy Enclosure Group using multiple Logical Interconnect Groups specific to each Frame, with ImageStreamer support using a LIG with an ImageStreamer Uplink Set (aka Internal)..
@@ -149,7 +141,6 @@ $AddressPool = Get-HPOVAddressPoolSubnet -NetworkId "10.140.51.0" -ErrorAction S
 $DeploymentNetwork = Get-HPOVNetwork -Name "Deployment Network" -ErrorAction Stop
 $MySynergyLig1 = Get-HPOVLogicalInterconnectGroup -Name MySynergyLig1
 New-HPOVEnclosureGroup -name "My Synergy Enclosure Group 1" -LogicalInterconnectGroupMapping @{Frame1 = $3FrameVCLIG,$SasLIG; Frame2 = $3FrameVCLIG,$SasLIG; Frame3 = $3FrameVCLIG } -EnclosureCount 3 -IPv4AddressType AddressPool -AddressPool $AddressPool -DeploymentNetworkType External -DeploymentNetwork $DeploymentNetwork
-
 ```
 
 Create a `3-Frame` Synergy Enclosure Group using multiple Logical Interconnect Groups specific to each Frame, with ImageStreamer support using a LIG without an ImageStreamer Uplink Set and specifying which Ethernet Network object is the deployment network (aka External).
@@ -181,8 +172,6 @@ Specify the number of Synergy Frames will participate within the Enclosure Group
 | Accept wildcard characters? | False |
 
 ### -LogicalInterconnectGroupMapping &lt;Object&gt;
-
-Aliases [-logicalInterconnectGroupUri, `-logicalInterConnectGroup`]
 
 An Enclosure Group can reference multiple Logical Interconnect Groups, once per Interconnect Bay.  If a Single Logical Interconnect Group object is provided (either via parameter variable or via Pipeline), the Logical Interconnect Group objects Logical Interconnect Bay configuration will be used.
 
@@ -226,8 +215,8 @@ The Power Redundancy Mode to set when an Enclosure is added to the appliance.
 
 Allowed Values:
 
-	* RedundantPowerFeed - Provides N+N Power Redundancy Configuration
-	* RedundantPowerSupply - Provided N+1 Power Redundancy Configuration
+    * RedundantPowerFeed - Provides N+N Power Redundancy Configuration
+    * RedundantPowerSupply - Provided N+1 Power Redundancy Configuration
 
 | Aliases | None |
 | :--- | :--- |
@@ -253,9 +242,9 @@ An Onboard Administrator CLI Script. Only applicable for HPE BladeSystem `C-Clas
 
 Use to specify how the IPv4 Addresses will be assigned to Synergy resources management interface(s).  Allowed values:
 
-	* External -  The IPv4 address is managed externally, static assignment. 
-	* DHCP -  The IPv4 address is assigned using DHCP. 
-	* AddressPool - The IPv4 address is assigned from a pool of IP addresses specified by the AddressPool parameter, similar to HPE BladeSystem `C-Class` "Enclosure Bay IP Addressing" (aka EBIPA). 
+    * External -  The IPv4 address is managed externally, static assignment. 
+    * DHCP -  The IPv4 address is assigned using DHCP. 
+    * AddressPool - The IPv4 address is assigned from a pool of IP addresses specified by the AddressPool parameter, similar to HPE BladeSystem `C-Class` "Enclosure Bay IP Addressing" (aka EBIPA). 
 
 Default: DHCP
 
@@ -283,9 +272,9 @@ The IPv4 Address Pool object from `Get-HPOVAddressPoolRange`.
 
 Specify the Synergy Image Stream deployment network type.  Allowed values:
 
-	* Internal - Deployment network is an internal, managed by the Frame links, which Logical Intercoonect Group must have an ImageStreamer Uplink Set.
-	* External - Deployment network is connected to an External management switch.
-	* None - No deployment network will be configured.
+    * Internal - Deployment network is an internal, managed by the Frame links, which Logical Intercoonect Group must have an ImageStreamer Uplink Set.
+    * External - Deployment network is connected to an External management switch.
+    * None - No deployment network will be configured.
 
 Default: None
 
@@ -373,8 +362,6 @@ If specified, the Logical Interconnect Group that is created will be used in the
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 Default Value: ${Global:ConnectSessions} | ? Default
@@ -426,7 +413,6 @@ Single Logical Interconnect Group resource object
 _**HPOneView.EnclosureGroup [System.Management.Automation.PSCustomObject]**_
 
 The newly created enclosure group resource
-
 
 ## Related Links
 

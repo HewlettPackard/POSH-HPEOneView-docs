@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Upload new SPP Baseline or hotfix to appliance firmware repository.
 ---
 
 # Add-HPOVBaseline
@@ -8,6 +8,11 @@ description:
 
 ```text
 Add-HPOVBaseline
+    [-File] <String>
+    [-CompSigFile <String>]
+    [-Scope <HPOneView.Appliance.ScopeCollection>]
+    [-ApplianceConnection <Array>]
+    [-Async]
     [<CommonParameters>]
 ```
 
@@ -16,6 +21,7 @@ Add-HPOVBaseline
 This Cmdlet provides the ability to upload a new SPP Baseline into the appliance.  It will return after the upload has completed but before the SPP file has been imported into the firmware repository.
 
 After upload the baseline ISO, any . (period character) within the filename will be chaned to the _ (underscore character) by the appliance.  So, if a baseline ISo file name is "bp.2016.04.custom.ISo", the appliance will change the filename to "bp_2016_04_custom.iso".
+
 ## Examples
 
 ###  Example 1 
@@ -50,8 +56,6 @@ Upload the specified Gen10 hotfix and its associated compsig file to all connect
 ## Parameters
 
 ### -File &lt;String&gt;
-
-Aliases [-sppFile]
 
 The full path and file name of the SPP file.  The function returns an error if the file path cannot be validated.
 
@@ -89,11 +93,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -130,7 +130,6 @@ File System bject from Get-ChildItem
 _**System.Management.Automation.PSCustomObject**_
 
 The progress of uploading the file to the appliance, and in-progress or completion result.
-
 
 ## Related Links
 

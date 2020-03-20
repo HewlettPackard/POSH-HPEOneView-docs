@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Remove power device (iPDU)
 ---
 
 # Remove-HPOVPowerDevice
@@ -18,6 +18,7 @@ Remove-HPOVPowerDevice
 ## Description
 
 Removes a power device (iPDU) from appliance management.
+
 ## Examples
 
 ###  Example 1 
@@ -34,8 +35,6 @@ Remove the power device specifed by name. Wait for remove to complete.
 ```text
 $ipdu = Get-HPOVPowerDevice -name "iPDU24"
 Remove-HPOVPowerDevice -PowerDevice $ipdu -force -confirm:$false
-
-
 ```
 
 Force-Remove the profile specifed by $ipdu. Disable confirmation prompt.
@@ -91,11 +90,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

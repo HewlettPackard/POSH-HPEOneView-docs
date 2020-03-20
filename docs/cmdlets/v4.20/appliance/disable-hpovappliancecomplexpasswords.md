@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Disable appliance complex password policy.
 ---
 
 # Disable-HPOVApplianceComplexPasswords
@@ -15,6 +15,7 @@ Disable-HPOVApplianceComplexPasswords
 ## Description
 
 Disables whether users are required to have complex passwords.  This option does not force existing users to change their passwords, nor has any impact on directory accounts.  By default, the appliance does not enforce complex passwords during creating or modifying internal user account passwords.  Use this Cmdlet to disable the policy.
+
 ## Examples
 
 ###  Example 1 
@@ -30,11 +31,7 @@ Disable complex password policy on the appliance.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -76,14 +73,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**System.Management.Automation.PSCustomObject**_
 
 Appliance global security settings.
-
 
 ## Related Links
 

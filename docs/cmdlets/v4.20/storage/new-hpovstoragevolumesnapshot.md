@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Create new Storage Volume Snapshot resource.
 ---
 
 # New-HPOVStorageVolumeSnapshot
@@ -8,12 +8,17 @@ description:
 
 ```text
 New-HPOVStorageVolumeSnapshot
+    [-InputObject] <Object>
+    [-Name] <String>
+    [-Description] <String>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ## Description
 
 This Cmdlet will help create a Storage Volume Snapshot from an existing Storage Volume resource.  If a Snapshot Storage Pool has not been configured for the Storage Volume, the Snapshot cannot be created.
+
 ## Examples
 
 ###  Example 1 
@@ -28,8 +33,6 @@ Create a new storage volume snapshot using the default values.
 ## Parameters
 
 ### -InputObject &lt;Object&gt;
-
-Aliases [-Volume]
 
 Specify the Storage Volume object to create a snapshot for.
 
@@ -67,8 +70,6 @@ The description for the Storage Volume Snapshot.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 Default Value: ${Global:ConnectSessions} | ? Default
@@ -100,7 +101,6 @@ Async task to create storage volume snapshot
 _**System.Collections.ArrayList <HPOneView.Applinace.TaskResource>**_
 
 Multiple async tasks
-
 
 ## Related Links
 

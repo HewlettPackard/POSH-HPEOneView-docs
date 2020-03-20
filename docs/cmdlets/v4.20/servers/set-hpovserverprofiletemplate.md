@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Not implemented.
 ---
 
 # Set-HPOVServerProfileTemplate
@@ -14,6 +14,7 @@ Set-HPOVServerProfileTemplate
 ## Description
 
 Not implemented.
+
 ## Examples
 
 ###  Example 1 

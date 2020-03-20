@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Retrieve Enclosure Group resource(s).
 ---
 
 # Get-HPOVEnclosureGroup
@@ -8,12 +8,16 @@ description:
 
 ```text
 Get-HPOVEnclosureGroup
+    [-Name <String>]
+    [-ApplianceConnection <Array>]
+    [-exportFile <String>]
     [<CommonParameters>]
 ```
 
 ## Description
 
 Obtain a collection of Enclosure Group resources, or a single Enclosure Group with the specified name.
+
 ## Examples
 
 ###  Example 1 
@@ -62,11 +66,7 @@ Specify the label associated with resources.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -78,7 +78,6 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 
 ### -exportFile &lt;String&gt;
 
-Aliases [-x, `-export`]
 Full path and file name to save the output of `Get-HPOVEnclosureGroup`
 
 | Aliases | x, export |
@@ -96,8 +95,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this cmdlet.**_
-
-
 
 ## Return Values
 

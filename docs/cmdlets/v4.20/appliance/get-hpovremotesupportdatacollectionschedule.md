@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Retrieve Remote Support Schedule settings on an appliance.
 ---
 
 # Get-HPOVRemoteSupportDataCollectionSchedule
@@ -20,7 +20,8 @@ Get-HPOVRemoteSupportDataCollectionSchedule
 
 ## Description
 
-Use this Cmdlet to retrieve configured schedules to collect Remote Support logs.  There are two defined schedules: Active Health scheduled on a weekly basis, and Server Basic Configuration scheduled on a monthly basis.
+Use this Cmdlet to retrieve configured schedules to collect Remote Support logs.  There are two defined schedules: Active Health scheduled on a weekly basis, and Server Basic Configuration scheduled on a monthly basis. 
+
 ## Examples
 
 ###  Example 1 
@@ -37,8 +38,8 @@ Get the Remote Support data collection schedules.
 ### -Type &lt;String&gt;
 
 Specify the schedule type to modify.  Allowed value is:
-	* AHS
-	*Basic
+    * AHS
+    *Basic
 If no value is provided, both schedules will be returned.
 
 | Aliases | None |
@@ -51,11 +52,7 @@ If no value is provided, both schedules will be returned.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -73,14 +70,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Appliance.RemtoeSupport.Schedule [System.Management.Automation.PSCustomObject]**_
 
 The configured Remote Support data collection schedule.
-
 
 ## Related Links
 

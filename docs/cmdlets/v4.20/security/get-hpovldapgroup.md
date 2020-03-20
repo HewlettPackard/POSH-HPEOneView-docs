@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: List Directory Group role assignment.
 ---
 
 # Get-HPOVLdapGroup
@@ -23,6 +23,7 @@ Get-HPOVLdapGroup
 ## Description
 
 This cmdlet will display the configured directory groups on the appliance, and display their assigned role(s).  The default display will include the URI of each configured group. Use the Report switch to display only the Directory Group Name, Login Domain and assigned role(s).
+
 ## Examples
 
 ###  Example 1 
@@ -33,8 +34,6 @@ Name                              Directory                               Roles
 ----                              ---------                               -----
 My Directory Group1               domain1                                 {Storage administrator}
 My Directory Group2               domain1                                 {Network administrator} 
-
-
 ```
 
 Get list of configured Directory Groups.
@@ -46,8 +45,6 @@ Get-HPOVLdapGroup -Group "My Directory Group1"
 Name                              Directory                               Roles
 ----                              ---------                               -----
 My Directory Group1               domain1                                 {Storage administrator}
-
-
 ```
 
 Display My Directroy Group1 and the assigned roles
@@ -65,7 +62,6 @@ Export configured Directory Groups to c:\dir\directorygroups.json
 
 ### -Name &lt;String&gt;
 
-Aliases [-group, `-GroupName`]
 Configured Directory Group Name. If omitted, all configured Directory Groups will be displayed.
 
 | Aliases | group, GroupName |
@@ -90,11 +86,7 @@ Export JSON content to file
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -111,8 +103,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this cmdlet.**_
-
-
 
 ## Return Values
 

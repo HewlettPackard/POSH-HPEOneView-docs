@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Create QoS Traffic Classifier Object
 ---
 
 # New-HPOVQosTrafficClass
@@ -24,6 +24,7 @@ New-HPOVQosTrafficClass
 This helper CMDLET provides the capability to create a new QoS Traffic Classifier Object, which can then be added to either a Logical Interconnect Group, or Logica Interconnect resource.
 
 Only `non-FCoE` Traffic Classifiers are allowed to be created.  When creating the "Best effort" Traffic Classifier, only the MaxBandwidth parameter is allowed to be modified.
+
 ## Examples
 
 ###  Example 1 
@@ -32,8 +33,6 @@ Only `non-FCoE` Traffic Classifiers are allowed to be created.  When creating th
 $Class1 = New-HPOVQosTrafficClass -Name Class1 -MaxBandwidth 50 -BandwidthShare 20 -ExgressDot1pValue 2 -IngressDot1pClassMapping 5,6 -EgressDscpClassMapping "DSCP 0, CS0","DSCP 10, AF11","DSCP 12, AF12","DSCP 14, AF13"  -Enabled
 $Class2 = New-HPOVQosTrafficClass -Name Class2 -MaxBandwidth 10 -BandwidthShare 10 -ExgressDot1pValue 3 -IngressDot1pClassMapping 1 -EgressDscpClassMapping "DSCP 30, AF33","SCP 32, CS4" -Enabled
 $TrafficClasses = $Class1,$Class2
-
-
 ```
 
 Create new traffic class objects "Class1" and "Class2", creating a new collection $TrafficClasses.
@@ -42,7 +41,6 @@ Create new traffic class objects "Class1" and "Class2", creating a new collectio
 
 ### -Name &lt;String&gt;
 
-Aliases [-ClassName]
 Name of the QoS Classifier.  Value cannot be "FCoE lossless".  If value is "Best effort", only the MaxBandwidth Parameter is allowed to be modified.
 
 | Aliases | ClassName |
@@ -70,7 +68,7 @@ Value between 1 and 100
 ### -BandwidthShare &lt;String&gt;
 
 Minimum guaranteed bandwidth for the traffic class.  The % share and the max share for a real time class must be equal and not exceed 50%.
-	 
+     
 Value between 1 and 100
 
 | Aliases | None |
@@ -97,15 +95,15 @@ Specifies the dot1p priority value to remark for the egressing packets. This pro
 
 Specify an array of ingress Dot1p values, and to which traffic class it is currently mapped.  Allowed values:
 
-	* 0
-	* 1
-	* 2
-	* 3
-	* 4
-	* 5
-	* 5
-	* 6
-	* 7
+    * 0
+    * 1
+    * 2
+    * 3
+    * 4
+    * 5
+    * 5
+    * 6
+    * 7
 
 | Aliases | None |
 | :--- | :--- |
@@ -119,27 +117,27 @@ Specify an array of ingress Dot1p values, and to which traffic class it is curre
 
 Specify an array of DSCP class mappings, per RFC 2475.  Allowed values:
 
-	* DSCP 0, CS0
-	* DSCP 10, AF11 
-	* DSCP 12, AF12 
-	* DSCP 14, AF13 
-	* DSCP 8, CS1
-	* DSCP 18, AF21
-	* DSCP 20, AF22
-	* DSCP 22, AF23
-	* DSCP 26, AF31
-	* DSCP 28, AF32
-	* DSCP 30, AF33
-	* DSCP 34, AF41
-	* DSCP 36, AF42
-	* DSCP 38, AF43
-	* DSCP 16, CS2 
-	* DSCP 24, CS3 
-	* DSCP 32, CS4 
-	* DSCP 46, EF
-	* DSCP 40, CS5 
-	* DSCP 48, CS6 
-	* DSCP 56, CS7
+    * DSCP 0, CS0
+    * DSCP 10, AF11 
+    * DSCP 12, AF12 
+    * DSCP 14, AF13 
+    * DSCP 8, CS1
+    * DSCP 18, AF21
+    * DSCP 20, AF22
+    * DSCP 22, AF23
+    * DSCP 26, AF31
+    * DSCP 28, AF32
+    * DSCP 30, AF33
+    * DSCP 34, AF41
+    * DSCP 36, AF42
+    * DSCP 38, AF43
+    * DSCP 16, CS2 
+    * DSCP 24, CS3 
+    * DSCP 32, CS4 
+    * DSCP 46, EF
+    * DSCP 40, CS5 
+    * DSCP 48, CS6 
+    * DSCP 56, CS7
 
 | Aliases | None |
 | :--- | :--- |
@@ -181,8 +179,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Networking.QosTrafficClassifier [System.Management.Automation.PSCustomObject]**_
@@ -190,26 +186,25 @@ _**HPOneView.Networking.QosTrafficClassifier [System.Management.Automation.PSCus
 QoS Traffic Classifier Object
  
  @{ 
- 	qosTrafficClass = [PSCustomObject]@{
+     qosTrafficClass = [PSCustomObject]@{
  
- 		maxBandwidth     = 100;
- 		bandwidthShare   = "0";
- 		egressDot1pValue = 0;
- 		realTime         = $false;
- 		className        = "Class";
- 		enabled          = $false;
+         maxBandwidth     = 100;
+         bandwidthShare   = "0";
+         egressDot1pValue = 0;
+         realTime         = $false;
+         className        = "Class";
+         enabled          = $false;
  
      };
- 					
- 	qosClassificationMapping = [PSCustomObject]@{
- 			
- 		dot1pClassMapping = @();
- 		dscpClassMapping  = @()
- 			
- 	}
+                     
+     qosClassificationMapping = [PSCustomObject]@{
+             
+         dot1pClassMapping = @();
+         dscpClassMapping  = @()
+             
+     }
  
  }
-
 
 ## Related Links
 

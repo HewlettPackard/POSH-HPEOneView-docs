@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: (Reserved for future use) Retrieve appliance global settings.
 ---
 
 # Get-HPOVApplianceGlobalSetting
@@ -8,12 +8,15 @@ description:
 
 ```text
 Get-HPOVApplianceGlobalSetting
+    [-Name] <String>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ## Description
 
 (Reserved for future use) Retrives the list of global settings or a specific global setting by name.
+
 ## Examples
 
 ###  Example 1 
@@ -41,8 +44,6 @@ Name of the global setting to be retrieved.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 Default Value: ${Global:ConnectSessions}
@@ -63,14 +64,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**System.Collections.ArrayList**_
 
 Name, value, description, and uri for the global setting(s)
-
 
 ## Related Links
 

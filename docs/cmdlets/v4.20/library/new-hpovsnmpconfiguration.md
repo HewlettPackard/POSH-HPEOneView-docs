@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Create SNMP LIG Configuration Object
 ---
 
 # New-HPOVSnmpConfiguration
@@ -32,13 +32,13 @@ New-HPOVSnmpConfiguration
 ## Description
 
 This helper Cmdlet provides the capability to create a new SNMP Configuration object for a Logical Interconnect Group or Logical Interconnect resources.
+
 ## Examples
 
 ###  Example 1 
 
 ```text
 $SnmpConfig = New-HPOVSnmpConfiguration -ReadCommunity MyR3adC0mmun1ty -AccessList "10.44.120.9/32","172.20.148.0/22 New-HPOVLogicalInterconnectGroup -LIGName "Flex10/10D and FlexFabric Production 1" -bays @{1 = "Flex1010D";2 = "Flex1010D";3 = "FlexFabric";4 = "FlexFabric"} -enableIgmpSnooping $True -igmpIdleTimeoutInterval 300 -LoopProtect $True -QosConfig $QosConfig
-
 ```
 
 Create a new QOS Configuration object,and use the created object to add to a new Logical Interconnect Group.
@@ -136,8 +136,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this Cmdlet.**_
-
-
 
 ## Return Values
 

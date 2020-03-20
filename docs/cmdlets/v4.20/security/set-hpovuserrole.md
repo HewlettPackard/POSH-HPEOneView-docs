@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: (Deprecated) Assign or change roles for an existing user.
 ---
 
 # Set-HPOVUserRole
@@ -8,12 +8,16 @@ description:
 
 ```text
 Set-HPOVUserRole
+    [-Name] <Object>
+    [-Roles] <Array>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ## Description
 
 This CMDLET is now deprecated. Please use the `Set-HPOVUser` CMDLET to modify user accounts and associated roles/permissions
+
 ## Examples
 
 ###  Example 1 
@@ -29,7 +33,6 @@ Set the Server Administrator role for Sally"s user account.
 
 ### -Name &lt;Object&gt;
 
-Aliases [-user, `-username`]
 The name of the user account to have a role assigned.
 
 | Aliases | user, userName |
@@ -42,7 +45,6 @@ The name of the user account to have a role assigned.
 
 ### -Roles &lt;Array&gt;
 
-Aliases [-r, `-role`]
 The role(s) to assign to the Directroy Group, in `[System.Collections.ArrayList]` format.  Accepted values are noted within the ApplianceRoles property of the `[HPOneView.Appliance.Connection]` object stored in the $Global:ConnectedSessions variable.
 
 Example: $roles = "Server administrator","Network administrator"
@@ -57,11 +59,7 @@ Example: $roles = "Server administrator","Network administrator"
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Default content
 ---
 
 # Get-HPOVClusterNode
@@ -18,13 +18,13 @@ Get-HPOVClusterNode
 ## Description
 
 Default content
+
 ## Examples
 
 ###  Example 1 
 
 ```text
 Get-HPOVClusterNode
-
 ```
 
 Default example
@@ -33,11 +33,7 @@ Default example
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -73,7 +69,12 @@ Specify the label associated with resources.
 
 ### -Scope &lt;Object&gt;
 
-Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:\r\n\r\n\t* AllResources\r\n\t*AllResourcesInScope\r\n\t* `[HPOneView.Appliance.ScopeCollection]`\r\n\t* `[HPOneView.Appliance.ConnectionPermission]`
+Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
+
+    * AllResources
+    * AllResourcesInScope
+    * `[HPOneView.Appliance.ScopeCollection]`
+    * `[HPOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |

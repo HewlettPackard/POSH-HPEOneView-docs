@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Add remote HPE Synergy Frame to Composer.
 ---
 
 # Add-HPOVRemoteFrame
@@ -16,7 +16,8 @@ Add-HPOVRemoteFrame
 
 ## Description
 
-HPE Synergy Frames are automatically discovered after the initital Hardware Setup task has been completed.  Remote frames outside of the HPE Synergy management ring must be added manually.  Use this Cmdlet to specify the IPv6 Link Local address of the remote frame to add.
+HPE Synergy Frames are automatically discovered after the initital Hardware Setup task has been completed.  Remote frames outside of the HPE Synergy management ring must be added manually.  Use this Cmdlet to specify the IPv6 Link Local address of the remote frame to add. 
+
 ## Examples
 
 ###  Example 1 
@@ -55,11 +56,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | None |
 | :--- | :--- |
@@ -77,14 +74,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task Resource object for monitoring.
-
 
 ## Related Links
 

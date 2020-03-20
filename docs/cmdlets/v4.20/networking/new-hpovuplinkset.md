@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Create a new Uplink Set.
 ---
 
 # New-HPOVUplinkSet
@@ -41,6 +41,7 @@ New-HPOVUplinkSet
 Interconnect uplinks are grouped into an uplink set and managed as a unit, with an assigned set of one or more networks. The traffic carried over the uplinks is determined by the network assignment of the uplink set. Uplink sets can support either Ethernet or Fibre Channel networks. Depending on the type of the assigned networks, uplink sets can support both an automatic and a selective failover or distribution strategy. The uplink port state is monitored, which contributes to the overall reachability status of the assigned networks. For each port belonging to the uplink set, the assigned port speed can be monitored.
 Uplink Sets can be created for Logical Interconnect Groups or Logical Interconnects.  When creating a new Uplink Set, either the Logical Interconnect Group or Logical Interconnect must exist.
 Please know that the UplinkPorts parameter syntax is different between HPE BladeSystem and HPE Synergy Virtual Connect.
+
 ## Examples
 
 ###  Example 1 
@@ -57,8 +58,6 @@ To Create an Ethernet Uplink Template
 ```text
 $ethNets = "Net1","Net2","Net3" | Get-HPOVNetwork -Type Ethernet
 Get-HPOVLogicalInterconnectGroup -Name "LIG Prod" | New-HPOVUplinkSet -Name "Uplink Set 1" -Type Ethernet -Networks $ethNets -NativeEthNetwork $ethNets[0] -UplinkPorts "BAY1:X5","BAY1:X6","BAY2:X5","BAY2:X6" -EthMode "Auto"
-
-
 ```
 
 Get the network resource objects, and define a new Uplink Set template that will be assigned to the Logical Interconnect Group resource.
@@ -68,8 +67,6 @@ Get the network resource objects, and define a new Uplink Set template that will
 ```text
 $LIGProd = Get-HPOVLogicalInterconnectGroup -Name "LIG Prod"
 New-HPOVUplinkSet -Resource $LIGProd -Name "Fabric A" -Type FibreChannel -Networks "FABRIC_A" -UplinkPorts "BAY1:X1","BAY1:X2"
-
-
 ```
 
 To Create a Fibre Channel Uplink Template for `c-Class` or HPE Synergy VC FlexFabric modules.
@@ -88,8 +85,6 @@ Add a new Uplink Set to an existing Logical Interconnect resource.
 ```text
 $MlagNetworks = Get-HPOVNetwork -Type Ethernet -Name "My MLAG Network*"
 Get-HPOVLogicalInterconnectGroup -Name "My Synergy Prod LIG" | New-HPOVUplinkSet -Name "MLAG UplinkSet" -Type Ethernet -Networks $MlagNetworks -NativeEthNetwork ($MlagNetworks | ? vlanid -eq 144) -UplinkPorts "Enclosure1:BAY3:Q1","Enclosure1:BAY3:Q2","Enclosure2:BAY6:Q1","Enclosure2:BAY6:Q2" -EthMode "Auto"
-
-
 ```
 
 Create a Synergy MLAG Uplink Set using 40Gb capable ports.
@@ -99,8 +94,6 @@ Create a Synergy MLAG Uplink Set using 40Gb capable ports.
 ```text
 $MlagNetworks = Get-HPOVNetwork -Type Ethernet -Name "My MLAG Network*"
 Get-HPOVLogicalInterconnectGroup -Name "My Synergy Prod LIG" | New-HPOVUplinkSet -Name "MLAG UplinkSet" -Type Ethernet -Networks $MlagNetworks -NativeEthNetwork ($MlagNetworks | ? vlanid -eq 144) -UplinkPorts "Enclosure1:BAY3:Q1.1","Enclosure1:BAY3:Q2.1","Enclosure2:BAY6:Q1.1","Enclosure2:BAY6:Q2.1" -EthMode "Auto"
-
-
 ```
 
 Create a Synergy MLAG Uplink Set using 10Gb subports of QSFP transceiver slots.
@@ -118,7 +111,6 @@ Create a Synergy ImageStreamer Uplink Set.
 
 ### -InputObject &lt;Object&gt;
 
-Aliases [-li, `-lig`]
 Either a Logical Interconnect Group (Get-HPOVLogicalInterconnectGroup) or Logical Interconnect (Get-HPOVLogicalInterconnect) resource object.
 
 | Aliases | li, lig, ligName, Resource |
@@ -131,7 +123,6 @@ Either a Logical Interconnect Group (Get-HPOVLogicalInterconnectGroup) or Logica
 
 ### -Name &lt;String&gt;
 
-Aliases [-usName]
 Logical Uplink set Name
 
 | Aliases | usName |
@@ -144,14 +135,13 @@ Logical Uplink set Name
 
 ### -Type &lt;String&gt;
 
-Aliases [-usType]
 Uplink set Type.  Accepted values are 
 
-	* Ethernet (Default)
-	* FibreChannel
-	* Tunnel
-	* Untagged
-	* ImageStreamer
+    * Ethernet (Default)
+    * FibreChannel
+    * Tunnel
+    * Untagged
+    * ImageStreamer
 
 ImageStreamer is only supported with Synergy infrastructure.  When assigning an Ethernet Network to an ImageStreamer Uplink Set, the network resource must be a Tagged Ethernet Network.
 
@@ -165,7 +155,6 @@ ImageStreamer is only supported with Synergy infrastructure.  When assigning an 
 
 ### -Networks &lt;Array&gt;
 
-Aliases [-usNetworks]
 Array of Ethernet Network Names
 
 | Aliases | usNetworks |
@@ -178,7 +167,6 @@ Array of Ethernet Network Names
 
 ### -NativeEthNetwork &lt;Object&gt;
 
-Aliases [-usNativeEthNetwork, `-Native`, `-PVID`]
 The valid name of the Native Ethernet Network that is a member of the usNetworks parameter.
 
 | Aliases | usNativeEthNetwork, Native, PVID |
@@ -191,7 +179,6 @@ The valid name of the Native Ethernet Network that is a member of the usNetworks
 
 ### -UplinkPorts &lt;Array&gt;
 
-Aliases [-usUplinkPorts]
 Array of uplink ports with "BAYID:FacePlatePortID".  When configuring a Synergy infrastructure, the Uplink Port format needs to be "EnclosureID:BayID:FacePlatePortID".
 
 FlexFabric `[e.g]`. @("BAY1:X1","BAY1:X2") or "BAY1:X5","BAY2:X5"
@@ -211,11 +198,10 @@ Synergy VC FC `Sub-Interface` `[e.g]`. "Bay2:Q1.1","Bay2:Q2.1" or "Bay5:Q1.2","B
 
 ### -EthMode &lt;String&gt;
 
-Aliases [-usEthMode]
 Sets the LACP mode on the uplink ports. Valid for ETHERNET Uplinks only. Accepted Values:
 
-	* Auto (Default)
-	* Failover
+    * Auto (Default)
+    * Failover
 
 | Aliases | usEthMode |
 | :--- | :--- |
@@ -229,8 +215,8 @@ Sets the LACP mode on the uplink ports. Valid for ETHERNET Uplinks only. Accepte
 
 Set the LACP Timer value, which sets the lacpdu frequecy to the LACP peer.  Accepted values:
 
-	* Long 
-	* Short (Default)
+    * Long 
+    * Short (Default)
 
 | Aliases | None |
 | :--- | :--- |
@@ -258,10 +244,10 @@ Example: "Bay1:X1"
 
 Specify the Fibre Channel Uplink Port speed.  Accepted values:
 
-	* Auto (Default)
-	* 2
-	* 4
-	* 8
+    * Auto (Default)
+    * 2
+    * 4
+    * 8
 
 | Aliases | None |
 | :--- | :--- |
@@ -297,11 +283,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -321,11 +303,9 @@ _**HPOneView.Networking.LogicalInterconnect [System.Management.Automation.PSCust
 
 Logical Interconnect Resource from [`Get-HPOVLogicalInterconnect`](get-hpovlogicalinterconnect.md)
 
-
 _**HPOneView.Networking.LogicalInterconnectGroup [System.Management.Automation.PSCustomObject]**_
 
 Logical Interconnect Group Resource from [`Get-HPOVLogicalInterconnectGroup`](get-hpovlogicalinterconnectgroup.md)
-
 
 ## Return Values
 

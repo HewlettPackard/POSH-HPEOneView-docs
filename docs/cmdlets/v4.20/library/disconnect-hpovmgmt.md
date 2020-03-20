@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Disconnect from the appliance.
 ---
 
 # Disconnect-HPOVMgmt
@@ -8,12 +8,14 @@ description:
 
 ```text
 Disconnect-HPOVMgmt
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ## Description
 
 This cmdlet disconnects the specified or all HPE OneView appliance session(s).
+
 ## Examples
 
 ###  Example 1 
@@ -21,8 +23,6 @@ This cmdlet disconnects the specified or all HPE OneView appliance session(s).
 ```text
 $Connection1 = Connect-HPOVMgmt MyAppliance.domain.com
 Disconnect-HPOVMgmt -Hostname $Connection1
-
-
 ```
 
 Disconnect from the specific appliance session.
@@ -49,11 +49,7 @@ Disconnect all appliance sessions.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance, ApplianceSession, Hostname |
 | :--- | :--- |
@@ -70,8 +66,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None. You cannot pipe objects to this cmdlet.**_
-
-
 
 ## Return Values
 

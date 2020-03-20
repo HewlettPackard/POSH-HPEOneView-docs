@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Retrieve Interconnect Type resource(s).
 ---
 
 # Get-HPOVInterconnectType
@@ -23,13 +23,13 @@ Get-HPOVInterconnectType
 ## Description
 
 Retrieves a list of all Interconnect Types or just specific ones via a query if the name or partnumber parameters are provided.
+
 ## Examples
 
 ###  Example 1 
 
 ```text
 Get-HPOVInterconnectType
-
 ```
 
 Returns all Interconnect Types available from all connected appliances to standard output.
@@ -38,7 +38,6 @@ Returns all Interconnect Types available from all connected appliances to standa
 
 ```text
 Get-HPOVInterconnect -name "HP VC FlexFabric 10Gb/24-Port Module"
-
 ```
 
 Returns just the "HP VC FlexFabric 10Gb/24-Port Module" Interconnect Type object to standard output.
@@ -47,7 +46,6 @@ Returns just the "HP VC FlexFabric 10Gb/24-Port Module" Interconnect Type object
 
 ```text
 Get-HPOVInterconnect -name "571956-B21"
-
 ```
 
 Returns just the partnumber "571956-B21" Interconnect Type object to standard output.
@@ -80,11 +78,7 @@ The Part Number of an Interconnect Type to search for.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -102,19 +96,15 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Networking.InterconnectType [System.Management.Automation.PSCustomObject]**_
 
 Single Interconnect Type resource.
 
-
 _**System.Collections.ArrayList <HPOneView.Networking.InterconnectType>**_
 
 Multiple Interconnect Type resources or formatted table dispalying basic Interconnect Type information.
-
 
 _**An Interconnect Type or collection of Interconnect Types.**_
 

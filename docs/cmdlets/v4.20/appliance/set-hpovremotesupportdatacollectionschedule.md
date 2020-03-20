@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Modify Remote Support Schedule settings on an appliance.
 ---
 
 # Set-HPOVRemoteSupportDataCollectionSchedule
@@ -19,7 +19,8 @@ Set-HPOVRemoteSupportDataCollectionSchedule
 
 Use this Cmdlet to set a new schedule to collect Remote Support logs.  There are two defined schedules: Active Health scheduled on a weekly basis, and Server Basic Configuration scheduled on a monthly basis.  Either scheduled collection task can be modified, to set the Day of Week, Day of Month, Hour and Minute.
 When supplying a DateTime value, the Day will be converted to the Day of Month, and Day of the Week respectively.  For instance, if "Oct 30, 2016 13:00" is provided, Day of Month will be every "30th" day, and Day of Week will be every "Sunday" (which Oct 30th 2016 is a Sunday).
-To schedule different Day of the Month and Day of the Week, use the -Type paramter to specify AHS or Basic.  The -DateTime paramter value will only be applied to that schedule.
+To schedule different Day of the Month and Day of the Week, use the -Type paramter to specify AHS or Basic.  The -DateTime paramter value will only be applied to that schedule. 
+
 ## Examples
 
 ###  Example 1 
@@ -45,8 +46,8 @@ Set a new schedule to collect AHS logs every Monday of every week, at 20:00 (8:0
 ### -Type &lt;String&gt;
 
 Specify the schedule type to modify.  Allowed value is:
-	* AHS
-	*Basic
+    * AHS
+    *Basic
 If no value is provided, both schedules will be modified.
 
 | Aliases | None |
@@ -83,11 +84,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -105,14 +102,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task Resource object for modifying the Remote Support Collection schedules.
-
 
 ## Related Links
 

@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Return a collection of available D3940 disks.
 ---
 
 # Get-HPOVAvailableDriveType
@@ -16,6 +16,7 @@ Get-HPOVAvailableDriveType
 ## Description
 
 This helper CMDLET will return a collection of available disk drives from a specified SAS Logical Interconnect or Drive Enclosure.  The object can then be used to define the drive selection criteria for `New-HPOVServerProfileLogicalDisk` using the -AvailableDriveType parameter.
+
 ## Examples
 
 ###  Example 1 
@@ -61,7 +62,6 @@ A SAS Logical Interconnect or D3940 Drive Enclosure resource.  If providing a SA
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-appliance]
 The name of the appliance or list of appliances to execute the command against.
 
 | Aliases | Appliance |

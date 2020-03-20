@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Search the association index.
 ---
 
 # Search-HPOVAssociations
@@ -8,12 +8,19 @@ description:
 
 ```text
 Search-HPOVAssociations
+    [-AssociationName] <String>
+    [-Parent] <Object>
+    [-Child] <Object>
+    [-Count] <Int32>
+    [-Start] <Int32>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ## Description
 
 Search the association index for any associations that match the specified name or uri.
+
 ## Examples
 
 ###  Example 1 
@@ -31,22 +38,22 @@ Return any BLADE_TO_PROFILE associations that have an end object with the specif
 
 The association name to be matched, if specified.  Valid association names are 
 
-	* BLADE_TO_PROFILE
-	* PROFILE_TO_SERVER_HARDWARE_TYPE
-	* RACK_TO_PHYSICAL_DEVICE
-	* BLADE_TO_INTERCONNECT
-	* ENCLOSURE_GROUP_TO_ENCLOSURE
-	* ENCLOSURE_GROUP_TO_LOGICAL_INTERCONNECT_GROUP
-	* ENCLOSURE_TO_BLADE
-	* ENCLOSURE_TO_SWITCH
-	* LOGICAL_SWITCH_TO_LOGICAL_UPLINK
-	* SWITCH_TO_LOGICAL_SWITCH
-	* SERVER_PROFILES_TO_FC_NETWORKS
-	* SERVER_PROFILES_TO_NETWORKS
-	* STORAGE_SYSTEM_TO_STORAGE_POOL
-	* FC_NETWORK_TO_STORAGE_SYSTEM
-	* STORAGE_POOL_TO_VOLUME
-	* STORAGE_POOL_TO_VOLUME_TEMPLATE
+    * BLADE_TO_PROFILE
+    * PROFILE_TO_SERVER_HARDWARE_TYPE
+    * RACK_TO_PHYSICAL_DEVICE
+    * BLADE_TO_INTERCONNECT
+    * ENCLOSURE_GROUP_TO_ENCLOSURE
+    * ENCLOSURE_GROUP_TO_LOGICAL_INTERCONNECT_GROUP
+    * ENCLOSURE_TO_BLADE
+    * ENCLOSURE_TO_SWITCH
+    * LOGICAL_SWITCH_TO_LOGICAL_UPLINK
+    * SWITCH_TO_LOGICAL_SWITCH
+    * SERVER_PROFILES_TO_FC_NETWORKS
+    * SERVER_PROFILES_TO_NETWORKS
+    * STORAGE_SYSTEM_TO_STORAGE_POOL
+    * FC_NETWORK_TO_STORAGE_SYSTEM
+    * STORAGE_POOL_TO_VOLUME
+    * STORAGE_POOL_TO_VOLUME_TEMPLATE
 
 | Aliases | None |
 | :--- | :--- |
@@ -57,8 +64,6 @@ The association name to be matched, if specified.  Valid association names are
 | Accept wildcard characters? | False |
 
 ### -Parent &lt;Object&gt;
-
-Aliases [-StartObjUri]
 
 The uri of an object which is the start of an association
 
@@ -71,8 +76,6 @@ The uri of an object which is the start of an association
 | Accept wildcard characters? | False |
 
 ### -Child &lt;Object&gt;
-
-Aliases [-EndObjUri]
 
 The uri of an object which is the end of an association
 
@@ -110,11 +113,7 @@ The index of the first association index to be returned, defaults to 0.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -144,7 +143,6 @@ _**System.Collections.ArrayList**_
 
 Multiple association index entries 
  The matching index entries
-
 
 ## Related Links
 

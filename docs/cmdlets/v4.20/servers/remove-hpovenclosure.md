@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Removes an enclosure and associated devices.
 ---
 
 # Remove-HPOVEnclosure
@@ -17,6 +17,7 @@ Remove-HPOVEnclosure
 ## Description
 
 Removes an enclosure, its servers, and interconnects from appliance management
+
 ## Examples
 
 ###  Example 1 
@@ -35,8 +36,6 @@ Force-remove the enclosure specifed by name. Wait for remove to complete.
 ```text
 $enclosure = Get-HPOVEnclosure -name "Enclosure1"
 Remove-HPOVEnclosure $enclosure -confirm:$false
-
-
 ```
 
 Remove the enclosure specifed by $enclosure. Disable confirmation prompt.
@@ -54,7 +53,6 @@ Search for all enclosures and remove them from appliance.
 
 ### -InputObject &lt;Object&gt;
 
-Aliases [-name, `-enclosure`]
 The Enclosure object(s) or name(s) to be removed from management.
 
 | Aliases | uri, name, Enclosure, Resource |
@@ -67,11 +65,7 @@ The Enclosure object(s) or name(s) to be removed from management.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Modify an existing network set.
 ---
 
 # Set-HPOVNetworkSet
@@ -8,12 +8,22 @@ description:
 
 ```text
 Set-HPOVNetworkSet
+    [-InputObject] <Object>
+    [-Name <String>]
+    [-Networks <Object[]>]
+    [-AddNetwork <Object[]>]
+    [-RemoveNetwork <Object>]
+    [-UntaggedNetwork <Object>]
+    [-TypicalBandwidth <Int32>]
+    [-MaximumBandwidth <Int32>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ## Description
 
 Modify a network set and/or its connection information.
+
 ## Examples
 
 ###  Example 1 
@@ -23,8 +33,6 @@ $netset = Get-HPOVNetworkSet -Name "Set-1"
 $netset.maximumBandwidth = 5000
 $netset.typicalBandwidth = 3000
 Set-HPOVNetworkSet $netset
-
-
 ```
 
 Modify "Set-1" to be maximum bandwidth of 5000.
@@ -62,7 +70,6 @@ Remove the specified networks from the existing network set.
 
 ### -InputObject &lt;Object&gt;
 
-Aliases [-NetworkSet, `-netSet`]
 The Network Set resource object or name to be modified.
 
 | Aliases | NetSet, NetworkSet |
@@ -123,7 +130,6 @@ Specify 1 or more network resources to remove from the specified network set.
 
 ### -UntaggedNetwork &lt;Object&gt;
 
-Aliases [-untagged, `-native`, `-untaggedNetworkUri`]
 The Name or URI of the Untaggged, or Native Network for the Network Set.
 
 | Aliases | untagged, native, untaggedNetworkUri |
@@ -160,11 +166,7 @@ The updated MAximum bandwidth, in Mbps.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -183,7 +185,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 _**HPOneView.Networking.NetworkSet [System.Management.Automation.PSCustomObject]**_
 
 Single Network Set resource
-
 
 ## Return Values
 

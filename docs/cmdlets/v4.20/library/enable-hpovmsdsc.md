@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Enable Microsoft DSC Support
 ---
 
 # Enable-HPOVMSDSC
@@ -16,6 +16,7 @@ Enable-HPOVMSDSC
 Using this cmdlet will create and/or modify UseMSDSC (REG_DWORD) located at HKCU:\Software\Hewlett-Packard\HPOneView, to 1 (True).  By enabling support, the module will overload `Write-Host`, and instead issue `Write-Verbose` commands.
 
 Use `Disable-HPOVMsDSC` to disable support.
+
 ## Examples
 
 ###  Example 1 
@@ -36,8 +37,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None. You cannot pipe objects to this cmdlet.**_
-
-
 
 ## Return Values
 

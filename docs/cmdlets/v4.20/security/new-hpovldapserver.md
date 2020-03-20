@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Define LDAP Directory Server object.
 ---
 
 # New-HPOVLdapServer
@@ -18,13 +18,13 @@ New-HPOVLdapServer
 ## Description
 
 A helper cmdlet that will define an LDAP Directory Server object to be used with the `New-HPOVLdapDirectory` cmdlet.
+
 ## Examples
 
 ###  Example 1 
 
 ```text
 $ServerA = New-HPOVLdapServer -Name servera.domain.com -Certificate C:\dir\servera.cer
-
 ```
 
 Define a new Directory Server, ServerA, specifying the Base64 Public Certificate and using the default LDAP SSL port 636.
@@ -33,7 +33,6 @@ Define a new Directory Server, ServerA, specifying the Base64 Public Certificate
 
 ```text
 $ServerA = New-HPOVLdapServer -Name servera.domain.com -Port 2636 -Certificate C:\dir\servera.cer
-
 ```
 
 Define a new Directory Server, ServerA, specifying the Base64 Public Certificate, using a custom LDAP SSL port.
@@ -42,7 +41,6 @@ Define a new Directory Server, ServerA, specifying the Base64 Public Certificate
 
 ```text
 $dc1,$dc2 = "dc1.mydomain.com","dc2.mydomain.com" | New-HPOVLdapServer
-
 ```
 
 Create two new authentication directory servers, with the CMDLET retrieving the certificate directly from the auth servers.
@@ -51,7 +49,6 @@ Create two new authentication directory servers, with the CMDLET retrieving the 
 
 ### -Hostname &lt;String&gt;
 
-Aliases [-Name]
 Directory server name or IP Address to add.
 
 | Aliases | Name |
@@ -64,7 +61,6 @@ Directory server name or IP Address to add.
 
 ### -SSLPort &lt;Int32&gt;
 
-Aliases [-port]
 Directory Server"s LDAP SSL Port.
 
 | Aliases | port |
@@ -77,7 +73,6 @@ Directory Server"s LDAP SSL Port.
 
 ### -Certificate &lt;Object&gt;
 
-Aliases [-cert]
 Directory Server SSL Certificate, either location to Base64 Cert or `multi-line` string value.  If omitted, the CMDLET will attempt to retrieve the Directory Servers Secure LDAP Certiciate.
 
 | Aliases | cert |
@@ -102,11 +97,7 @@ Use this parameter if you want to provide a PSCredential object instead.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases |  |
 | :--- | :--- |
@@ -138,7 +129,6 @@ _**System.String**_
 
 Directory Server Name or IP Address
 
-
 _**System.Collections.ArrayList**_
 
 Mutlple Directory Server Name or IP Address System.String values
@@ -147,7 +137,7 @@ Mutlple Directory Server Name or IP Address System.String values
 
 _**HPOneView.Appliance.AuthDirectoryServer [System.Management.Automation.PSCustomObject]**_
 
-New LDAP Server Resource Object to be used with New-HPOVLdap CMDLET
+New LDAP Server Resource Object to be used with [`New-HPOVLdapDirectory`](new-hpovldapdirectory.md) CMDLET
 
 ## Related Links
 

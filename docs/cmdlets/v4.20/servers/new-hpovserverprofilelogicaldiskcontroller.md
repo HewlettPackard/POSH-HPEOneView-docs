@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Create Server Profile disk controller policy object.
 ---
 
 # New-HPOVServerProfileLogicalDiskController
@@ -29,6 +29,7 @@ New-HPOVServerProfileLogicalDiskController
 ## Description
 
 This helper CMDLET will create a Logical Disk controller object to then be assigned to a Server Profile Template or Server Profile using the -LogicalDisk parameter.
+
 ## Examples
 
 ###  Example 1 
@@ -87,10 +88,10 @@ Create a RAID5 Logical Disk for a Server Profile using D3940 storage, and a spec
 ### -ControllerID &lt;Object&gt;
 
 Specify the Controller ID location.  Supported options for this parameter are
-	 * Embedded
-	 * Mezz 1
-	 * Mezz 2
-	 * Mezz 3
+     * Embedded
+     * Mezz 1
+     * Mezz 2
+     * Mezz 3
 Please note that Mezz 1, Mezz 2 and Mezz 3 are only supported with HPE Synergy Compute nodes connected to the HPE Synergy D3940 disk shelf.
 
 | Aliases | None |
@@ -105,8 +106,8 @@ Please note that Mezz 1, Mezz 2 and Mezz 3 are only supported with HPE Synergy C
 
 The mode to configure the Smart Array Controller as.  Accepted values are:
 
-	* HBA
-	* RAID
+    * HBA
+    * RAID
 
 When specifying HBA, you cannot attach a RAID Logical Disk to this policy.
 
@@ -158,9 +159,9 @@ A collection of Logical Disk objects from the `New-HPOVServerProfileLogicalDisk`
 
 For Gen10 controllers, to enable, disable or unmanage controller write cache policy.  Allowed values:
 
-	* Enabled
-	* Disabled
-	* Unmanaged
+    * Enabled
+    * Disabled
+    * Unmanaged
 
 Default value: Unmanaged
 

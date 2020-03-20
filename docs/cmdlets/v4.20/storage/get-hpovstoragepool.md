@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Retrieve Storage Pool resource(s).
 ---
 
 # Get-HPOVStoragePool
@@ -8,12 +8,20 @@ description:
 
 ```text
 Get-HPOVStoragePool
+    [-Name <String>]
+    [-StorageSystem <Object>]
+    [-Label <Object>]
+    [-Scope <Object>]
+    [-ApplianceConnection <Array>]
+    [-Managed]
+    [-Unmanaged]
     [<CommonParameters>]
 ```
 
 ## Description
 
 Obtain a collection of storage pools (i.e. CPG"s) from discovered and managed storage systems.
+
 ## Examples
 
 ###  Example 1 
@@ -24,8 +32,6 @@ Status Name     Storage System    Storage Domain Drive Type RAID  Total         
 ------ ----     --------------    -------------- ---------- ----  --------       ----------- -------        
 OK     FC_NO_DN ThreePAR7200-5706 NoDomain       FC         RAID5 1,048,576.00GB 22.13GB     1,048,553.88GB 
 OK     FC_NO_DN ThreePAR7200-2870 NoDomain       FC         RAID5 1,048,576.00GB 22.13GB     1,048,553.88GB 
-
-
 ```
 
 Get all available storage pools.
@@ -57,9 +63,6 @@ Allocated        : 22.13 GB
 Free             : 1,048,553.88 GB
 Volumes          : 0
 Volume Templates : 0
-
-
-
 ```
 
 Get all available storage pools, display using `Format-List` to see extended information.
@@ -103,8 +106,6 @@ Returns the storage pool resource "HP_CPG1" on the storage system "HP_3PAR_1"
 ## Parameters
 
 ### -Name &lt;String&gt;
-
-Aliases [-PoolName, `-Pool`]
 
 The name of the specific storage pool resource to be returned.  All storage pool resources will be returned if omitted.
 
@@ -166,11 +167,7 @@ Specify the Label to filter on.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -184,10 +181,10 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-	* AllResources
-	* AllResourcesInScope
-	* `[HPOneView.Appliance.ScopeCollection]`
-	* `[HPOneView.Appliance.ConnectionPermission]`
+    * AllResources
+    * AllResourcesInScope
+    * `[HPOneView.Appliance.ScopeCollection]`
+    * `[HPOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
@@ -213,11 +210,9 @@ _**HPOneView.Storage.Pool [System.Management.Automation.PSCustomObject]**_
 
 Single Storage Pool resource
 
-
 _**System.Collections.ArrayList**_
 
 Multiple Storage Pool resources
-
 
 _**The matching storage pool resources.**_
 

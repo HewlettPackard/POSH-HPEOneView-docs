@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Get Unmanaged Devices.
 ---
 
 # Get-HPOVUnmanagedDevice
@@ -10,6 +10,7 @@ description:
 Get-HPOVUnmanagedDevice
     [-Name] <String>
     [-List]
+    [-Label <String>]
     [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
@@ -17,13 +18,13 @@ Get-HPOVUnmanagedDevice
 ## Description
 
 HPE OneView provides administrators with the capability to define unmanaged devices to them place within Racks, in order to provide a more realistic and complete data center layout.  This cmdlet will retrieve all or a specified Unmanaged Device.  A report switch is provided to display the output in an easier to read format.
+
 ## Examples
 
 ###  Example 1 
 
 ```text
 Get-HPOVUnmanagedDevice
-
 ```
 
 Get all unmanaged devices.
@@ -68,11 +69,7 @@ Specify the label associated with resources.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -89,8 +86,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this cmdlet.**_
-
-
 
 ## Return Values
 

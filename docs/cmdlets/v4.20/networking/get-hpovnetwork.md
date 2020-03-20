@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Retrieve Network resource(s).
 ---
 
 # Get-HPOVNetwork
@@ -21,6 +21,7 @@ Get-HPOVNetwork
 ## Description
 
 Obtain a collection of network resources which have the specified type and/or name.  The default connection information is included in the returned network resources.
+
 ## Examples
 
 ###  Example 1 
@@ -128,7 +129,7 @@ Name              Status Type         Typical Bandwidth Max Bandwidth Auto Login
 3PAR SAN Fabric A OK     FabricAttach 4000              8000          True                      30
 3PAR SAN Fabric B OK     FabricAttach 4000              8000          True                      30
 
-	
+    
     Type: FCoE
 
 
@@ -138,8 +139,6 @@ fcoe1  OK     134    2500              20000
 FCOE3  OK     11     2500              10000
 FCOE2  OK     10     2500              10000
 FCOE12 OK     12     2500              10000
-
-
 ```
 
 Get all available networks.
@@ -176,13 +175,13 @@ Specify the Ethernet Purpose value to filter on.
 
 Supported Values:
 
-	* General
-	* Management
-	* VMMigration
-	* FaultTolerance
-	* ISCSI
+    * General
+    * Management
+    * VMMigration
+    * FaultTolerance
+    * ISCSI
 
-	Note: When using this parameter, only Ethernet networks will be returned.
+    Note: When using this parameter, only Ethernet networks will be returned.
 
 | Aliases | None |
 | :--- | :--- |
@@ -196,10 +195,10 @@ Supported Values:
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-	* AllResources
-	* AllResourcesInScope
-	* `[HPOneView.Appliance.ScopeCollection]`
-	* `[HPOneView.Appliance.ConnectionPermission]`
+    * AllResources
+    * AllResourcesInScope
+    * `[HPOneView.Appliance.ScopeCollection]`
+    * `[HPOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
@@ -223,11 +222,7 @@ Specify the label name the network resource is associated with.  Cannot be combi
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -277,7 +272,6 @@ Single FCoE Network resource
 _**System.Collections.ArrayList**_
 
 Multiple Network Object resources
-
 
 ## Related Links
 

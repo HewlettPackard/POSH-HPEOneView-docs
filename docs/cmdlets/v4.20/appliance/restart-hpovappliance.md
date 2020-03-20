@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Restart an HPE OneView appliance.
 ---
 
 # Restart-HPOVAppliance
@@ -8,6 +8,7 @@ description:
 
 ```text
 Restart-HPOVAppliance
+    [-ApplianceConnection] <Array>
     [<CommonParameters>]
 ```
 
@@ -16,6 +17,7 @@ Restart-HPOVAppliance
 This cmdlet will allow the administrator to restart/reboot the appliance.  Restarting the appliance will cause all users to be disconnected and all ongoing tasks to be interrupted.
 
 Only the Infrastructure (Full) Administrator may restart the appliance.
+
 ## Examples
 
 ###  Example 1 
@@ -23,8 +25,6 @@ Only the Infrastructure (Full) Administrator may restart the appliance.
 ```text
 Connect-HPOVMgmt appliance.contoso.com Administrator P@ssw0rd
 Restart-HPOVAppliance
-
-
 ```
 
 Restart the appliance
@@ -42,11 +42,7 @@ Restart all connected appliances without confirmation.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -100,11 +96,9 @@ _**System.String**_
 
 Warning message the appliance is stopping
 
-
 _**Management.Automation.ErrorRecord**_
 
 Generated error message
-
 
 ## Related Links
 

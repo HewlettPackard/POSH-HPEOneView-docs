@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Assign or change roles for LDAP Groups.
 ---
 
 # Set-HPOVLdapGroupRole
@@ -43,6 +43,7 @@ Set-HPOVLdapGroupRole
 ## Description
 
 Changes current roles of an LDAP Group with a given set of roles.  You must provide the list of all roles the LDAP Group should be set to, and not a subset of roles.
+
 ## Examples
 
 ###  Example 1 
@@ -92,8 +93,6 @@ Change the Scope permissions for the specified authentication directory group by
 
 ### -AuthProvider &lt;String&gt;
 
-Aliases [-d, `-domain`, `-directory`]
-
 LDAP/Active Directory Domain Name
 
 | Aliases |  |
@@ -105,8 +104,6 @@ LDAP/Active Directory Domain Name
 | Accept wildcard characters? | False |
 
 ### -InputObject &lt;Object&gt;
-
-Aliases [-g, `-GroupName`, `-Group`]
 
 Directroy Group to add.
 
@@ -120,7 +117,6 @@ Directroy Group to add.
 
 ### -Roles &lt;Array&gt;
 
-Aliases [-r, `-role`]
 The role(s) to assign to the Directroy Group, in `[System.Collections.ArrayList]` format.  Accepted values are noted within the ApplianceRoles property of the `[HPOneView.Appliance.Connection]` object stored in the $Global:ConnectedSessions variable.
 
 Example: $roles = "Server administrator","Network administrator"
@@ -135,8 +131,6 @@ Example: $roles = "Server administrator","Network administrator"
 
 ### -UserName &lt;String&gt;
 
-Aliases [-u]
-
 Directory Username to authenticate with
 
 | Aliases | u |
@@ -148,8 +142,6 @@ Directory Username to authenticate with
 | Accept wildcard characters? | False |
 
 ### -Password &lt;SecureString&gt;
-
-Aliases [-p]
 
 Directory User account password
 
@@ -163,11 +155,7 @@ Directory User account password
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -212,7 +200,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 _**System.SecureString**_
 
 Directory User Account password
-
 
 ## Return Values
 

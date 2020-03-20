@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Remove State Change Message Bus certificate from appliance.
 ---
 
 # Remove-HPOVScmbCertificate
@@ -20,6 +20,7 @@ Remove-HPOVScmbCertificate
 ## Description
 
 Remove the State Change Message Bus (SCMB) and Metric Streaming Message Bug (MSMB) read only account (rabbitmq_readonly) certificate key pair from an appliance.
+
 ## Examples
 
 ###  Example 1 
@@ -35,11 +36,7 @@ Remove the SCMB (rabbitmq_readonly) certificate key pair from an appliance.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -57,14 +54,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**System.Management.Automation.PSCustomObject**_
 
 Resource deleted response.
-
 
 ## Related Links
 

@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Display Interconnect Port Statistics.
 ---
 
 # Show-HPOVPortStatistics
@@ -24,6 +24,7 @@ Show-HPOVPortStatistics
 ## Description
 
 This cmdlet will display the utilization (Format-Table view) or error (Format-List) statistics of a given Interconnect or Interconnect Port.  The default view is `Format-Table`.  Piping output to `Format-List` will display error statistics.
+
 ## Examples
 
 ###  Example 1 
@@ -35,8 +36,6 @@ Port Type: Ethernet
 Name Rx Kb/s      Tx Kb/s      Rx Packets  Tx Packets  Rx Non-Unicast PPS Tx Non-Unicast PPS
 ---- -------      -------      ----------  ----------  ------------------ ------------------
 X1   5Kbps (1min) 0Kbps (1min) 6pps (1min) 0pps (1min) 6pps (1min)        0pps (1min)
-
-
 ```
 
 Displays the interface throughput statistics for X1 in a `Format-Table` display.
@@ -58,8 +57,6 @@ Out Errors                  :
 CRC Errors Rx/Tx            :
 MTU Exceeded Discards Rx/Tx :
 Giants Rx/Tx                :
-
-
 ```
 
 Displays the interface error statistics for X1 in a `Format-List` display.
@@ -113,8 +110,6 @@ Name Rx Throughput Tx Throughput Rx Frames (Total) Tx Frames (Total) Rx Bytes (T
 X1   0 MB/s        0 MB/s        56868             85074             84809592         146546884
 X2   0 MB/s        0 MB/s        7999              7999              579644           622152
 X3   0 MB/s        0 MB/s        0                 0                 0                0
-
-
 ```
 
 Display all available ports of the provided Interconnect, using the Interconnect Name.
@@ -124,8 +119,6 @@ Display all available ports of the provided Interconnect, using the Interconnect
 ```text
 $Interconnect = Get-HPOVInterconnect "Encl1, Interconnect 1"
 Show-HPOVPortStatistics $Interconnect
-
-
 ```
 
 Display all available ports of the provided Interconnect, using an Interconnect PowerShell object.
@@ -158,11 +151,7 @@ The Interconnect resource the Port ID is a member of.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

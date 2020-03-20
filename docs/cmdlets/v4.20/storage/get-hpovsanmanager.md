@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Retrieve SAN Manager resource(s).
 ---
 
 # Get-HPOVSanManager
@@ -8,12 +8,15 @@ description:
 
 ```text
 Get-HPOVSanManager
+    [-Name <String>]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
 ## Description
 
 This cmdlet will return the configured SAN Manager(s).
+
 ## Examples
 
 ###  Example 1 
@@ -33,7 +36,6 @@ Display all SAN Managers.
 
 ### -Name &lt;String&gt;
 
-Aliases [-SanManager]
 Provide the name of the SAN Manager to display.
 
 | Aliases | SanManager |
@@ -58,11 +60,7 @@ Specify the label associated with resources.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -80,19 +78,15 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Storage.SanManager [System.Management.Automation.PSCustomObject]**_
 
 Single SAN Manager resource
 
-
 _**System.Collections.ArrayList <HPOneView.Storage.SanManager>**_
 
 Multiple SAN Manager resources
-
 
 ## Related Links
 

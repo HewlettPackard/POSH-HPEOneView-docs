@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Get the configured remote syslog settings.
 ---
 
 # Get-HPOVRemoteSyslog
@@ -15,6 +15,7 @@ Get-HPOVRemoteSyslog
 ## Description
 
 The remoteSyslog API provides the ability to configure remote logging on devices managed by OneView.  This Cmdlet handles retrieving the remote syslog configuration.
+
 ## Examples
 
 ###  Example 1 
@@ -25,8 +26,6 @@ Appliance             Destination Port Enabled
 ---------             ----------- ---- -------
 appliance1.domain.com                  False
 appliance2.domain.com 10.150.20.1 514  True
-
-
 ```
 
 Get the current configuration from all connected appliances.
@@ -38,8 +37,6 @@ Get-HPOVRemoteSyslog -ApplianceConnection appliance1.domain.com
 Appliance             Destination Port Enabled
 ---------             ----------- ---- -------
 appliance1.domain.com                  False
-
-
 ```
 
 Get the current configuration from specified connected appliance.
@@ -48,11 +45,7 @@ Get the current configuration from specified connected appliance.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -69,8 +62,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None. You cannot pipe objects to this Cmdlet.**_
-
-
 
 ## Return Values
 

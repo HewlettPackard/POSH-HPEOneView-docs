@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Remove Remote Support support and reseller partners.
 ---
 
 # Remove-HPOVRemoteSupportPartner
@@ -15,7 +15,8 @@ Remove-HPOVRemoteSupportPartner
 
 ## Description
 
-Use this Cmdlet to remove defined Remote Support partner from a specified or all appliances.
+Use this Cmdlet to remove defined Remote Support partner from a specified or all appliances. 
+
 ## Examples
 
 ###  Example 1 
@@ -42,11 +43,7 @@ Remote Suport partner resource object, from `Get-HPOVRemoteSupportPartner`.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -66,13 +63,11 @@ _**HPOneView.Appliance.RemoteSupport.Partner [System.Management.Automation.PSCus
 
 Remote Suport partner resource from [`Get-HPOVRemoteSupportPartner`](get-hpovremotesupportpartner.md).
 
-
 ## Return Values
 
 _**System.Management.Automation.PSCustomObject**_
 
 Object with status confirmation the resource was deleted.
-
 
 ## Related Links
 

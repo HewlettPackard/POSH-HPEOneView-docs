@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Accept the EULA and set support access for the specified appliance.
 ---
 
 # Set-HPOVEulaStatus
@@ -8,12 +8,15 @@ description:
 
 ```text
 Set-HPOVEulaStatus
+    [-Appliance] <Object>
+    [-SupportAccess] <String>
     [<CommonParameters>]
 ```
 
 ## Description
 
 Accept the EULA and set support access for the specified appliance.
+
 ## Examples
 
 ###  Example 1 
@@ -58,8 +61,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this cmdlet.**_
-
-
 
 ## Return Values
 

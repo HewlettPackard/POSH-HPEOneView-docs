@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Default content
 ---
 
 # Add-HPOVClusterNodeToCluster
@@ -9,6 +9,7 @@ description:
 ## Description
 
 Default content
+
 ## Examples
 
 ###  Example 1 

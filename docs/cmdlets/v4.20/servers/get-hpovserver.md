@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Retrieve Server Hardware resource(s).
 ---
 
 # Get-HPOVServer
@@ -24,14 +24,15 @@ Get-HPOVServer
 
 Obtain a collection of server hardware resources, a specific server with the specified name, or server hardware resources without an assigned Server Profile.  Returned resources will display:
 
-	* Device Name
-	* Serial Number
-	* Model
-	* System ROM
-	* iLO and its firmware
-	* Server Profile
-	* Status
-	* Licensing
+    * Device Name
+    * Serial Number
+    * Model
+    * System ROM
+    * iLO and its firmware
+    * Server Profile
+    * Status
+    * Licensing
+
 ## Examples
 
 ###  Example 1 
@@ -72,8 +73,6 @@ Encl2, bay 5   Disabled Off     SGH108X8RN     BL460c Gen8 I31 08/02/2014 iLO4 2
 Encl2, bay 6   Disabled Off     SGH109X8RN     BL460c Gen8 I31 08/02/2014 iLO4 2.03 No Profile       OneView
 Encl2, bay 7   Disabled Off     SGH110X8RN     BL460c Gen8 I31 08/02/2014 iLO4 2.03 No Profile       OneView
 Encl2, bay 8   Disabled Off     SGH111X8RN     BL460c Gen8 I31 08/02/2014 iLO4 2.03 No Profile       OneView
-
-
 ```
 
 Return all the server hardware managed by this appliance.
@@ -119,8 +118,6 @@ Encl2, bay 5   Disabled Off     SGH108X8RN     BL460c Gen8 I31 08/02/2014 iLO4 2
 Encl2, bay 6   Disabled Off     SGH109X8RN     BL460c Gen8 I31 08/02/2014 iLO4 2.03 No Profile     OneView
 Encl2, bay 7   Disabled Off     SGH110X8RN     BL460c Gen8 I31 08/02/2014 iLO4 2.03 No Profile     OneView
 Encl2, bay 8   Disabled Off     SGH111X8RN     BL460c Gen8 I31 08/02/2014 iLO4 2.03 No Profile     OneView
-
-
 ```
 
 Display all server hardware resources without an assigned Server Profile.
@@ -183,10 +180,10 @@ Specify the Server OS Name that is reported by the iLO.
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-	* AllResources
-	* AllResourcesInScope
-	* `[HPOneView.Appliance.ScopeCollection]`
-	* `[HPOneView.Appliance.ConnectionPermission]`
+    * AllResources
+    * AllResourcesInScope
+    * `[HPOneView.Appliance.ScopeCollection]`
+    * `[HPOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
@@ -235,11 +232,7 @@ Provide the Server Hardware Type or Server Profile Template Object to filter for
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -265,11 +258,11 @@ Return no more than the provided value.  Combining other parameters to filter ma
 
 Filter resources based on their current status.  Allowed values:
 
-	* Ok
-	* Warning
-	* Critical
-	* Unknown
-	* Disabled
+    * Ok
+    * Warning
+    * Critical
+    * Unknown
+    * Disabled
 
 | Aliases | None |
 | :--- | :--- |

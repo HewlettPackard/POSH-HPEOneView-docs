@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Save the contents of a Server Profile Template to the appliance.
 ---
 
 # Save-HPOVServerProfileTemplate
@@ -17,6 +17,7 @@ Save-HPOVServerProfileTemplate
 ## Description
 
 This Cmdlet allows administrators to save the modified Server Profile Template object within the current PowerShell session to the target appliance.
+
 ## Examples
 
 ###  Example 1 
@@ -34,11 +35,7 @@ Get a Server Profile Template, update its name, then save.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -87,7 +84,6 @@ A Server Profile Template resource object from [`Get-HPOVServerProfileTemplate`]
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task Resource object for monitoring the enclosure import process.
-
 
 ## Related Links
 

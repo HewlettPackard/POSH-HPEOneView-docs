@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Reset HPE Synergy Virtual Connect NetOp account password.
 ---
 
 # Reset-HPOVInterconnectNetOpPassword
@@ -22,6 +22,7 @@ Reset-HPOVInterconnectNetOpPassword
 This Cmdlet will reset the HPE Synergy Virtual Connect NetOp account password to the specified value.
 
 Required permissions: Infrastructure administrator, Network administrator
+
 ## Examples
 
 ###  Example 1 
@@ -39,11 +40,7 @@ Set the NetOp password to the new value, for the specific Logical Interconnect.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -104,7 +101,6 @@ Logical interconnect resource from [`Get-HPOVLogicalInterconnect`](get-hpovlogic
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task that tracks the power state change
-
 
 ## Related Links
 

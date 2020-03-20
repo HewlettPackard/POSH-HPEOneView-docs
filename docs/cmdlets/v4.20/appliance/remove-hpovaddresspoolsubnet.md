@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Delete an IPv4 Subnet Pool from an appliance.
 ---
 
 # Remove-HPOVAddressPoolSubnet
@@ -16,6 +16,7 @@ Remove-HPOVAddressPoolSubnet
 ## Description
 
 This Cmdlet provides the ability to remove one or more IPv4 Subnet Pools and associated Address Pool Ranges from one or more appliances.
+
 ## Examples
 
 ###  Example 1 
@@ -40,7 +41,6 @@ Remove "192.168.20.0" IPv4 Subnet Address Pool from `[MyAppliance.domain.com]`.
 
 ### -IPv4Subnet &lt;Object&gt;
 
-Aliases [-Subnet]
 The IPv4 Subnet Pool resource Object.  Can be accepted via pipeline input.
 
 | Aliases |  |
@@ -53,11 +53,7 @@ The IPv4 Subnet Pool resource Object.  Can be accepted via pipeline input.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -112,7 +108,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 _**HPOneView.Appliance.IPv4AddressSubnet [System.Management.Automation.PSCustomObject]**_
 
 IPv4 Subnet Pool from [`Get-HPOVAddressPoolSubnet`](get-hpovaddresspoolsubnet.md)
-
 
 ## Return Values
 

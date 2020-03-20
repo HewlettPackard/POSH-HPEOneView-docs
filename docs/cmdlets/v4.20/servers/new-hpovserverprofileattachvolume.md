@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Create volume attachment for a server profile.
 ---
 
 # New-HPOVServerProfileAttachVolume
@@ -72,6 +72,7 @@ New-HPOVServerProfileAttachVolume
 ## Description
 
 This Cmdlet will assist with creating a Storage Volume object to then attach to a new Server Profile being created (New-HPOVServerProfile), and attach either an existing Storage Volume (Get-HPOVStorageVolume) or new Ephemeral Volume to an existing Server Profile (Get-HPOVServerProfile).  If attempting to attach to an existing Server Profile, the HostOSType parameter is required, and will enable SAN Management within the Server Profile, if the Server Hardware resource supports the feature.
+
 ## Examples
 
 ###  Example 1 
@@ -107,8 +108,6 @@ Get the "Volume1" Storage Volume via the `Get-HPOVStorageVolume` Cmdlet, and pip
 $volume1 = Get-HPOVStorageVolume -Name Volume1 | New-HPOVServerProfileAttachVolume -volumeid 1
 $volume2 = Get-HPOVStorageVolume SharedVolume1 | New-HPOVServerProfileAttachVolume -volumeid 2
 $attachVolumes = @($volume1,$volume2)
-
-
 ```
 
 Get the "Volume1" and "SharedVolume1" Storage Volumes via the `Get-HPOVStorageVolume` Cmdlet, and pipe the resource objects to the `Get-HPOVServerProfileAttachVolume` Cmdlet, saving to $attachVolumes array.
@@ -119,8 +118,6 @@ Get the "Volume1" and "SharedVolume1" Storage Volumes via the `Get-HPOVStorageVo
 $storagepool = Get-HPOVStoragePool R1_FC
 $sp = Get-HPOVServerProfile "chef-web01"
 New-HPOVServerProfileAttachVolume -ServerProfile $sp -Name "Chef Web01 Vol 2" -StoragePool $storagepool  | Wait-HPOVTaskComplete
-
-
 ```
 
 Attach a new 10Gb Ephemeral Volume to an existing Server Profile.
@@ -130,8 +127,6 @@ Attach a new 10Gb Ephemeral Volume to an existing Server Profile.
 ```text
 $sp = Get-HPOVServerProfile "chef-web01"
 Get-HPOVStorageVolume "My New Volume 3" | New-HPOVServerProfileAttachVolume -ServerProfile $sp  | Wait-HPOVTaskComplete
-
-
 ```
 
 Attach an existing Storage Volume to a Server Profile.
@@ -142,8 +137,6 @@ Attach an existing Storage Volume to a Server Profile.
 $storagepool = Get-HPOVStoragePool R1_FC
 $sp = Get-HPOVServerProfile "My Server Profile"
 New-HPOVServerProfileAttachVolume -Name "My Server Profile Boot Vol" -ServerProfile $sp -StoragePool $storagepool -Bootable  | Wait-HPOVTaskComplete
-
-
 ```
 
 Add a bootable volume to an existing Server Profile.
@@ -174,7 +167,6 @@ An existing Server Profile resource object from `Get-HPOVServerProfile` Cmdlet.
 
 ### -VolumeID &lt;Int32&gt;
 
-Aliases [-id]
 The numeric identifier for this volume.  Does not pertain to exported LUN ID value on array.
 
 | Aliases | id |
@@ -249,12 +241,12 @@ The requested Ephemeral Volume storage capacity in GB.  `[e.g]`. 20 to specify 2
 
 Specify the StoreVirtual protection level (aka Network RAID) for the volume.  Allowed values are:
 
-	* NetworkRaid0None
-	* NetworkRaid5SingleParity
-	* NetworkRaid10Mirror2Way
-	* NetworkRaid10Mirror3Way
-	* NetworkRaid10Mirror4Way
-	* NetworkRaid6DualParity
+    * NetworkRaid0None
+    * NetworkRaid5SingleParity
+    * NetworkRaid10Mirror2Way
+    * NetworkRaid10Mirror3Way
+    * NetworkRaid10Mirror4Way
+    * NetworkRaid6DualParity
 
 
 | Aliases | None |
@@ -293,7 +285,6 @@ Specify if the Ephemeral Volume should be permanent.
 
 ### -LunIdType &lt;String&gt;
 
-Aliases [-type]
  Specify Auto or Manual for the LUN ID assignment type.  If Manual, use the `-LunID` parameter and provide a numerical value.
 
 | Aliases | type |
@@ -318,37 +309,35 @@ The Host LUN ID numerical value that will be configured in the Volume export on 
 
 ### -HostOStype &lt;String&gt;
 
-Aliases [-OS]
-
 Specify the Host OS type, which will set the Host OS value when HPE OneView creates the Host object on the Storage System.  This parameter is only necessary if the Server Profile object does not have SAN Management enabled.
-	
+    
 Accepted values:
 
-	* CitrixXen = "Citrix Xen Server 5.x/6.x"
-	* AIX       = "AIX"
-	* IBMVIO    = "IBM VIO Server"
-	* RHEL4     = "RHE Linux (Pre RHEL 5)"
-	* RHEL3     = "RHE Linux (Pre RHEL 5)"
-	* RHEL      = "RHE Linux (5.x, 6.x)"
-	* RHEV      = "RHE Virtualization (5.x, 6.x)"
-	* VMware    = "ESX 4.x/5.x"
-	* Win2k3    = "Windows 2003"
-	* Win2k8    = "Windows 2008/2008 R2"
-	* Win2k12   = "Windows 2012 / WS2012 R2"
-	* OpenVMS   = "OpenVMS"
-	* Egenera   = "Egenera"
-	* Exanet    = "Exanet"
-	* Solaris9  = "Solaris 9/10"
-	* Solaris10 = "Solaris 9/10"
-	* Solaris11 = "Solaris 11"
-	* ONTAP     = "NetApp/ONTAP"
-	* OEL       = "OE Linux UEK (5.x, 6.x)"
-	* HPUX11iv1 = "HP-UX (11i v1, 11i v2)"
-	* HPUX11iv2 = "HP-UX (11i v1, 11i v2)"
-	* HPUX11iv3 = "HP-UX (11i v3)"
-	* SUSE      = "SuSE (10.x, 11.x)"
-	* SUSE9     = "SuSE Linux (Pre SLES 10)"
-	* Inform    = "InForm"
+    * CitrixXen = "Citrix Xen Server 5.x/6.x"
+    * AIX       = "AIX"
+    * IBMVIO    = "IBM VIO Server"
+    * RHEL4     = "RHE Linux (Pre RHEL 5)"
+    * RHEL3     = "RHE Linux (Pre RHEL 5)"
+    * RHEL      = "RHE Linux (5.x, 6.x)"
+    * RHEV      = "RHE Virtualization (5.x, 6.x)"
+    * VMware    = "ESX 4.x/5.x"
+    * Win2k3    = "Windows 2003"
+    * Win2k8    = "Windows 2008/2008 R2"
+    * Win2k12   = "Windows 2012 / WS2012 R2"
+    * OpenVMS   = "OpenVMS"
+    * Egenera   = "Egenera"
+    * Exanet    = "Exanet"
+    * Solaris9  = "Solaris 9/10"
+    * Solaris10 = "Solaris 9/10"
+    * Solaris11 = "Solaris 11"
+    * ONTAP     = "NetApp/ONTAP"
+    * OEL       = "OE Linux UEK (5.x, 6.x)"
+    * HPUX11iv1 = "HP-UX (11i v1, 11i v2)"
+    * HPUX11iv2 = "HP-UX (11i v1, 11i v2)"
+    * HPUX11iv3 = "HP-UX (11i v3)"
+    * SUSE      = "SuSE (10.x, 11.x)"
+    * SUSE9     = "SuSE Linux (Pre SLES 10)"
+    * Inform    = "InForm"
 
 | Aliases | OS |
 | :--- | :--- |
@@ -360,10 +349,8 @@ Accepted values:
 
 ### -BootVolume &lt;SwitchParameter&gt;
 
-Aliases [-Bootable]
-
 Use to indicate this volume is a bootable device.  When using this parameter, the Server Profile"s FC Connection(s) BootVolumeSource parameter set to "ManagedVolume".  
-	
+    
 This parameter is only applicable with Private volumes.
 
 | Aliases | Bootable |
@@ -376,11 +363,7 @@ This parameter is only applicable with Private volumes.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -454,9 +437,9 @@ For Ephemeral (private) volumes that should be provisioned from Storage Volume T
 
 Specify the volume provisioning type. Supported values:
 
-	* Thin
-	* Full
-	* ThinDeduplication (only supported with HPE StoreServe)
+    * Thin
+    * Full
+    * ThinDeduplication (only supported with HPE StoreServe)
 
 | Aliases | None |
 | :--- | :--- |
@@ -570,7 +553,7 @@ Specify the Nimble folder where the volume should be created.  To get availabe f
 
 Example:
 
-	 (Get-HPOVStoragePool `-name` default).DeviceSpecificAttributes.Folders
+     (Get-HPOVStoragePool `-name` default).DeviceSpecificAttributes.Folders
 
 ID                                         Name
 --                                         ----
@@ -602,7 +585,7 @@ A Nimble Performance Policy is associated with a storage system.  Using the `Sho
 
 Example:
 
-	`Get-HPOVStorageSystem` `-Name` MyNimbleSys | `Show-HPOVStorageSystemPerformancePolicy`
+    `Get-HPOVStorageSystem` `-Name` MyNimbleSys | `Show-HPOVStorageSystemPerformancePolicy`
 
 | Aliases | None |
 | :--- | :--- |
@@ -633,7 +616,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 _**HPOneView.Storage.Volume [System.Management.Automation.PSCustomObject]**_
 
 Storage Volume Resource object
-
 
 ## Return Values
 

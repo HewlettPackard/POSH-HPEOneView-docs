@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Get appliance available security modes.
 ---
 
 # Get-HPOVApplianceAvailableSecurityMode
@@ -16,6 +16,7 @@ Get-HPOVApplianceAvailableSecurityMode
 ## Description
 
 Use this Cmdlet to get the appliances available security modes and the current mode. Security Modes adjust the allowed security protocols (TLS) and their associated cyphers.
+
 ## Examples
 
 ###  Example 1 
@@ -40,11 +41,7 @@ Return the CNSA available security mode on the appliance.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -58,9 +55,9 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 
 The name of the mode to return. Allowed values:
 
-	* Legacy
-	* FIPS
-	* CNSA
+    * Legacy
+    * FIPS
+    * CNSA
 
 Default: Return all available security modes.
 
@@ -80,14 +77,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Appliance.SecurityMode**_
 
 The available appliance security mode, including which mode is set as the current value.
-
 
 ## Related Links
 

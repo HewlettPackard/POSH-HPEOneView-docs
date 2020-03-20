@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Rename or set a description to a Server Hardware Type resource.
 ---
 
 # Set-HPOVServerHardwareType
@@ -8,6 +8,10 @@ description:
 
 ```text
 Set-HPOVServerHardwareType
+    [-InputObject] <Object>
+    [-Name] <String>
+    [-Description <String>]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -16,6 +20,7 @@ Set-HPOVServerHardwareType
 Use this Cmdlet to rename or set a description to one or more Server Hardware Type resource(s).
 
 Required permissions: Server administrator
+
 ## Examples
 
 ###  Example 1 
@@ -31,11 +36,7 @@ Rename the default "BL460c Gen9 1" server hardware type resource to a new name.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

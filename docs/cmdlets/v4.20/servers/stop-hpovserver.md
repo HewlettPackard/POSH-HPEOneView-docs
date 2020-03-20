@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Power off Server Resource.
 ---
 
 # Stop-HPOVServer
@@ -26,6 +26,7 @@ Stop-HPOVServer
 ## Description
 
 Stop the power state of the server using the virtual power button.  By default, the Cmdlet will request a "Momentary Press" request to initiate a server to shutdown.
+
 ## Examples
 
 ###  Example 1 
@@ -58,8 +59,6 @@ Power off the specific server device by passing the Server Object via pipeline, 
 ## Parameters
 
 ### -InputObject &lt;Object&gt;
-
-Aliases [-Server]
 
 A Server hardware or Server Profile resource object.
 
@@ -97,11 +96,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -145,18 +140,15 @@ _**HPOneView.ServerHardware [System.Management.Automation.PSCustomObject]**_
 
 Server Hardware Resource
 
-
 _**HPOneView.ServerProfile [System.Management.Automation.PSCustomObject]**_
 
 Server Profile Resource
-
 
 ## Return Values
 
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task that tracks the power state change
-
 
 _**System.Collections.ArrayList <HPOneView.Appliance.TaskResource>**_
 

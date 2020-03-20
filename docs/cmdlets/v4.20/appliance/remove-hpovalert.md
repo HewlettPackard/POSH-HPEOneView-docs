@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Delete alerts.
 ---
 
 # Remove-HPOVAlert
@@ -19,6 +19,7 @@ Remove-HPOVAlert
 This Cmdlet allows the administrator to remove one or more alerts.  Alerts can be in one of two administratively controlled states: Active or Cleared.    Only alerts that are no longer active (in a Cleared state) can be removed.
 
 In order for an administrator to remove an Alert, the administrator must be assigned to the respective resource role (Network, Server, Storage, or Infrastructure.)
+
 ## Examples
 
 ###  Example 1 
@@ -58,11 +59,7 @@ Force remove the resource.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

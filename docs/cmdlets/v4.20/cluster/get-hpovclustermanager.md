@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Get configured hypervisor managers.
 ---
 
 # Get-HPOVClusterManager
@@ -25,13 +25,13 @@ A valid hypervisor manager certificate must be added to HPE OneView trust store 
 The user must have an infrastructure administrator privilege to register or update the hypervisor manager resource in HPE OneView. You can assign scopes to the hypervisor manager resource in HPE OneView.
 
 Privileges: Infrastructure administrator, Server administrator, Server profile architect, or Server profile administrator.
+
 ## Examples
 
 ###  Example 1 
 
 ```text
 Get-HPOVClusterManager -Name vcenter.domain.com
-
 ```
 
 Get the specified hypervisor manager by resource name.
@@ -40,7 +40,6 @@ Get the specified hypervisor manager by resource name.
 
 ```text
 Get-HPOVClusterManager -Version 5.5.0
-
 ```
 
 Get all of the configured hypervisor managers that are vSphere 5.5.0.
@@ -49,11 +48,7 @@ Get all of the configured hypervisor managers that are vSphere 5.5.0.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -91,10 +86,10 @@ Filter for vCenter name.
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-	* AllResources
-	*AllResourcesInScope
-	* `[HPOneView.Appliance.ScopeCollection]`
-	* `[HPOneView.Appliance.ConnectionPermission]`
+    * AllResources
+    *AllResourcesInScope
+    * `[HPOneView.Appliance.ScopeCollection]`
+    * `[HPOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
@@ -124,14 +119,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Cluster.HypervisorManager**_
 
 The configured hypervisor cluster manager and its properties
-
 
 ## Related Links
 

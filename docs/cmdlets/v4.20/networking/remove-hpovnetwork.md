@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Delete network from appliance configuration.
 ---
 
 # Remove-HPOVNetwork
@@ -17,6 +17,7 @@ Remove-HPOVNetwork
 ## Description
 
 Delete a network and its corresponding default connection type.
+
 ## Examples
 
 ###  Example 1 
@@ -24,8 +25,6 @@ Delete a network and its corresponding default connection type.
 ```text
 $task = Remove-HPOVNetwork -network "yellow"
 Wait-HPOVTaskComplete $task
-
-
 ```
 
 Remove the network specifed by name.  Wait for remove to complete.
@@ -35,8 +34,6 @@ Remove the network specifed by name.  Wait for remove to complete.
 ```text
 $Net = Get-HPOVNetwork -name "yellow"
 Remove-HPOVNetwork -network $net -confirm:$false
-
-
 ```
 
 Remove the network specifed by $net, and do not prompt for confirmation.
@@ -54,8 +51,6 @@ Search for all networks and remove them from appliance.
 
 ### -InputObject &lt;Object&gt;
 
-Aliases [-name, `-Network`]
-
 The network object(s) or name(s) to be deleted.
 
 | Aliases | uri, name, network, Resource |
@@ -68,11 +63,7 @@ The network object(s) or name(s) to be deleted.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -128,11 +119,9 @@ _**System.String**_
 
 Network Name or URI
 
-
 _**System.Management.Automation.PSCustomObject**_
 
 Network Resource Object
-
 
 ## Return Values
 

@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Retrieve Power Device (mPDU/Rack PDU) Potentail Connections
 ---
 
 # Get-HPOVPowerPotentialDeviceConnection
@@ -16,6 +16,7 @@ Get-HPOVPowerPotentialDeviceConnection
 ## Description
 
 Obtain a collection of potential managed and unmanaged device power connections for the provided power device resoruce.  The returned value(s) will include the potential power connections that can be manually associated when not using iPDU devices.
+
 ## Examples
 
 ###  Example 1 
@@ -40,7 +41,6 @@ Return the potential power device connections for the "iPDU_A" power delivery de
 
 ### -PowerDevice &lt;Object&gt;
 
-Aliases [-uri, `-name`]
 The name of the power device resource.  Can provide Name, URI or Object.
 
 | Aliases | uri, name |
@@ -53,11 +53,7 @@ The name of the power device resource.  Can provide Name, URI or Object.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

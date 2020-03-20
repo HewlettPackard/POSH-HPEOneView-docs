@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Retrieve user account resource(s).
 ---
 
 # Get-HPOVUser
@@ -8,19 +8,21 @@ description:
 
 ```text
 Get-HPOVUser
+    [-Name] <String>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ## Description
 
 Get a local user account on the management appliance, and display it"s properties.  The account password will not be displayed.
+
 ## Examples
 
 ###  Example 1 
 
 ```text
 Get-HPOVUser
-
 ```
 
 List all user accounts from all connected appliances.
@@ -29,7 +31,6 @@ List all user accounts from all connected appliances.
 
 ```text
 Get-HPOVUser "Sally"
-
 ```
 
 List Sally"s user account from `[MyAppliance.domain.com]`.
@@ -50,11 +51,7 @@ The name of the new user account to display.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -71,8 +68,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this cmdlet.**_
-
-
 
 ## Return Values
 

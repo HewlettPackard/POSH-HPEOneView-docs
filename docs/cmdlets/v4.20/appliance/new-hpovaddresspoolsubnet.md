@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Create an IPv4 Subnet Pool.
 ---
 
 # New-HPOVAddressPoolSubnet
@@ -20,15 +20,15 @@ New-HPOVAddressPoolSubnet
 ## Description
 
 This cmdlet will assist with creating a new IPv4 Address Pool.  When creating a new IPv4 Address Subnet, you must provide the Network ID, Subnet Mask (CIDR [e.g. 24] or IPv4 Address Value [e.g. 255.255.255.0]), Gateway and Domain Name.  DNS Servers are optional.
-	
+    
 To add IPv4 Address Ranges to a Subnet after creating it, please use the `New-HPOVAddressPoolRange` CMDLET.
+
 ## Examples
 
 ###  Example 1 
 
 ```text
 PS C:> New-HPOVAddressPoolSubnet -NetworkID 192.168.10.0 -Subnetmask 24 -Gateway 192.168.10.254 -Domain vlan10.domain.com -DNSServers 10.250.33.12,10.250.34.80
-
 ```
 
 Create a new IPv4 Address Pool with the specified values.
@@ -97,11 +97,7 @@ An array of DNS Server IPv4 Addresses.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -118,8 +114,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this cmdlet.**_
-
-
 
 ## Return Values
 

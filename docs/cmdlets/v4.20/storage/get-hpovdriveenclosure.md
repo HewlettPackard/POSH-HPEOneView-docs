@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: List Synergy DAS Enclosures.
 ---
 
 # Get-HPOVDriveEnclosure
@@ -16,6 +16,7 @@ Get-HPOVDriveEnclosure
 ## Description
 
 This Cmdlet will help display the avialable Synergy DAS Enclosures, and their associated inventory data.
+
 ## Examples
 
 ###  Example 1 
@@ -27,8 +28,6 @@ Appliance Name              State Status    Serial Number Drive Bays I/O Adapter
 appliance 0000A66101, bay 1 On    Monitored SN123100      40/40      2
 appliance 0000A66102, bay 1 On    Monitored SN123101      40/40      2
 appliance 0000A66103, bay 1 On    Monitored SN123102      40/40      2
-
-
 ```
 
 Get all available Synergy Drive Enclosures.
@@ -61,11 +60,7 @@ Specify the label associated with resources.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -82,8 +77,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this cmdlet.**_
-
-
 
 ## Return Values
 

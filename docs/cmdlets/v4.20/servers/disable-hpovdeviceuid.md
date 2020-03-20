@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Disable UID of a device.
 ---
 
 # Disable-HPOVDeviceUid
@@ -16,6 +16,7 @@ Disable-HPOVDeviceUid
 ## Description
 
 This Cmdlet will disable the UID of a managed or monitored resource, and only supports objects.  Use `Get-HPOVServer` or `Get-HPOVEnclosure` to retrieve the required resource(s), which can be passed via the pipeline.
+
 ## Examples
 
 ###  Example 1 
@@ -43,11 +44,7 @@ Resource object to turn off the UID.  Supported resources are Server Hardware an
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -73,11 +70,9 @@ _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject
 
 If successful, returns Appliance Async Task object to monitor.
 
-
 _**System.Collections.ArrayList <HPOneView.Appliance.TaskResource>**_
 
 Collection of Appliance Async Task objects to monitor.
-
 
 ## Related Links
 

@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Configure appliance SMTP Reporting settings.
 ---
 
 # Get-HPOVSMTPConfig
@@ -8,12 +8,14 @@ description:
 
 ```text
 Get-HPOVSMTPConfig
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ## Description
 
 This cmdlet will retrieve the SMTP settings for the appliance.
+
 ## Examples
 
 ###  Example 1 
@@ -29,11 +31,7 @@ Get SMTP Email Alert configuration from the default appliance connection.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -50,8 +48,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None. You cannot pipe objects to this cmdlet.**_
-
-None. You cannot pipe objects to this cmdlet
 
 ## Return Values
 

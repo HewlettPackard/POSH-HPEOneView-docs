@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Refresh a storage pool.
 ---
 
 # Update-HPOVStoragePool
@@ -16,6 +16,7 @@ Update-HPOVStoragePool
 ## Description
 
 Use this Cmdlet to refresh a storage pool when it's associated policies have been updated within the storage system external management console.  Can be used to collect new Nimble Volume Sets.
+
 ## Examples
 
 ###  Example 1 
@@ -31,11 +32,7 @@ Update the Nimble storage pool 'default' to refresh available policies.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -72,7 +69,6 @@ One or more storage pool resources from [`Get-HPOVStoragePool`](get-hpovstoragep
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Asyncronous task resource to monitor.
-
 
 ## Related Links
 

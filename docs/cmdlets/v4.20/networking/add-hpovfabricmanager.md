@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Add an external fabric manager.
 ---
 
 # Add-HPOVFabricManager
@@ -29,10 +29,11 @@ Remediation of networks, network sets, and logical interconnects Remediation is 
 
 The following conditions cause the fabric manager to be unable to synchronize with network policies:
 
-	*  One or more networks connected across uplink sets in a logical interconnect within HPE Synergy have the same VLAN tag
-	*  The two networks are shared across tenants 
+    *  One or more networks connected across uplink sets in a logical interconnect within HPE Synergy have the same VLAN tag
+    *  The two networks are shared across tenants 
 
 When a fabric manager is non compliant with APIC network policies, a software remediation enables a fabric manager to synchronize with network policies. A compliance report is generated immediately after adding a fabric manager and is updated again after remediation. The compliance report details actions that you can perform to remediate inconsistencies. There are indicators for compliant, noncompliant, and `compliance-check` progress for each resource. Every tenant has a list of consistent and inconsistent reports based on the compliance records generated for a tenant. An inconsistency appears in the form of an alert, which contains an action choice: `auto-remediate` or manual. If you choose to `auto-remediate`, an automatic update of the selected HPE OneView resource will initiate.
+
 ## Examples
 
 ###  Example 1 
@@ -48,11 +49,7 @@ Add the specified farbic manager with a redundant address.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -166,14 +163,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async Task resource to monitor progress.
-
 
 ## Related Links
 

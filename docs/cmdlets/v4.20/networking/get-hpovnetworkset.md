@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Retrieve Network Set resource(s).
 ---
 
 # Get-HPOVNetworkSet
@@ -28,6 +28,7 @@ Get-HPOVNetworkSet
 ## Description
 
 Retrieves a list of all Network Sets or just specific Networks Sets via a query if the name parameter is provided.  The Network Set output can be sent to a file using the exportFile parameter.
+
 ## Examples
 
 ###  Example 1 
@@ -84,10 +85,10 @@ The name of the Network Set to retrieve.
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-	* AllResources
-	* AllResourcesInScope
-	* `[HPOneView.Appliance.ScopeCollection]`
-	* `[HPOneView.Appliance.ConnectionPermission]`
+    * AllResources
+    * AllResourcesInScope
+    * `[HPOneView.Appliance.ScopeCollection]`
+    * `[HPOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
@@ -111,11 +112,7 @@ Specify the label associated with resources.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -126,8 +123,6 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 | Accept wildcard characters? | False |
 
 ### -exportFile &lt;String&gt;
-
-Aliases [-x, `-export`]
 
 The full path and file name to export the contents retrieved from the call to `Get-HPOVNetworkSet`.
 
@@ -147,19 +142,15 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Networking.NetworkSet [System.Management.Automation.PSCustomObject]**_
 
 Single Network Set
 
-
 _**System.Collections.ArrayList <HPOneView.Networking.NetworkSet>**_
 
 Multiple Network Sets
-
 
 ## Related Links
 

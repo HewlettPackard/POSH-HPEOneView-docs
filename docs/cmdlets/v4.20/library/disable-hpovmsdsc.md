@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Disable Microsoft DSC Support
 ---
 
 # Disable-HPOVMSDSC
@@ -16,6 +16,7 @@ Disable-HPOVMSDSC
 Using this cmdlet will create and/or modify UseMSDSC (REG_DWORD) located at HKCU:\Software\Hewlett-Packard\HPOneView, to 0 (False).  By disabling support, the module will no longer overload `Write-Host`.
 
 Use `Enable-HPOVMsDSC` to enable support.
+
 ## Examples
 
 ###  Example 1 
@@ -36,8 +37,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None. You cannot pipe objects to this cmdlet.**_
-
-
 
 ## Return Values
 

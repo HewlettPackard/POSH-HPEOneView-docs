@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Configure appliance web proxy.
 ---
 
 # Set-HPOVApplianceProxy
@@ -30,7 +30,8 @@ Set-HPOVApplianceProxy
 
 ## Description
 
-When configuring Remote Support, a Web Proxy may be required.  This Cmdlet will assist in defining an HTTPS web proxy for Remote Support outbound connectivity.  Proxy configuration does not support SOCKS.
+When configuring Remote Support, a Web Proxy may be required.  This Cmdlet will assist in defining an HTTPS web proxy for Remote Support outbound connectivity.  Proxy configuration does not support SOCKS. 
+
 ## Examples
 
 ###  Example 1 
@@ -115,11 +116,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -149,14 +146,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task Resource object for monitoring.
-
 
 ## Related Links
 

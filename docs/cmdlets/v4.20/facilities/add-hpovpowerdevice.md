@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Import a power device.
 ---
 
 # Add-HPOVPowerDevice
@@ -8,12 +8,21 @@ description:
 
 ```text
 Add-HPOVPowerDevice
+    [-Hostname] <String>
+    [-Username <String>]
+    [-Password <String>]
+    [-Credential <PSCredential>]
+    [-ApplianceConnection <Object>]
+    [-Async]
+    [-TrustLeafCertificate]
+    [-Force]
     [<CommonParameters>]
 ```
 
 ## Description
 
 Import a power device (iPDU) to be managed by an HPE OneView appliance.
+
 ## Examples
 
 ###  Example 1 
@@ -41,7 +50,10 @@ Hostname of the iPDU, either IP Address or FQDN.
 
 ### -Username &lt;String&gt;
 
-Warning: This parameter is being deprecated. Please transition to the `-Credential` parameter.
+{% hint style="warning" %}
+This parameter is being deprecated. Please transition to the `-Credential` parameter.
+{% endhint %}
+
 
 Administrator account of the target iPDU.
 
@@ -55,7 +67,10 @@ Administrator account of the target iPDU.
 
 ### -Password &lt;String&gt;
 
-Warning: This parameter is being deprecated. Please transition to the `-Credential` parameter.
+{% hint style="warning" %}
+This parameter is being deprecated. Please transition to the `-Credential` parameter.
+{% endhint %}
+
 
 Account password of the iPDU specified.
 
@@ -129,11 +144,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -175,14 +186,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async Task resource to monitor progress.
-
 
 ## Related Links
 

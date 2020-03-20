@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Rename Synergy Frame Name or Rack Name.
 ---
 
 # Set-HPOVEnclosure
@@ -18,6 +18,7 @@ Set-HPOVEnclosure
 ## Description
 
 This Cmdlet provides the ability to set a Synergy Frame/Enclosure Name and/or the Synergy Rack Name to provided values.  Each requires a seperate async task to complete.
+
 ## Examples
 
 ###  Example 1 
@@ -41,8 +42,6 @@ Set the provided Synergy Frame resource Name and RackName to a new value.
 ## Parameters
 
 ### -InputObject &lt;Object&gt;
-
-Aliases [-Encl, `-Enclosure`]
 
 A Syngery Frame/Enclosure Object.
 
@@ -80,11 +79,7 @@ The new name of ta Synergy Rack.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

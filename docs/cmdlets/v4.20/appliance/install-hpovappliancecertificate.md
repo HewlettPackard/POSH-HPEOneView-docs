@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Install signed private key.
 ---
 
 # Install-HPOVApplianceCertificate
@@ -17,14 +17,13 @@ Install-HPOVApplianceCertificate
 ## Description
 
 After using `New-HPOVApplianceCSR` to generate a Certificate Signing Request (CSR), this CMDLET will install the CA signed and approved SSL private key to the appliance.
+
 ## Examples
 
 ###  Example 1 
 
 ```text
 $Task = C:\dir\hpov.cer | Install-HPOVApplianceCertificate
-
-
 ```
 
 Read the signed SSL certificate private key and install it on the appliance, and wait for the task to complete.
@@ -35,7 +34,6 @@ Read the signed SSL certificate private key and install it on the appliance, and
 $cert = Get-ChildItem C:\dir\hpov.cer 
 $TaskToMonitor = Install-HPOVApplianceCertificate -Path $Cert -Async
 C:\> $TaskToMonitor | Wait-HPOVTaskComplete
-
 ```
 
 Read the signed SSL certificate private key and install it on the appliance, and wait for the task to complete.
@@ -44,7 +42,6 @@ Read the signed SSL certificate private key and install it on the appliance, and
 
 ### -Path &lt;System.IO.FileInfo&gt;
 
-Aliases [-PrivateKey, `-Certificate`]
 The private key certificate for the appliance. The source CER file can be passed to the cmdlet via pipeline or this parameter.
 
 | Aliases | PrivateKey, Certificate |
@@ -68,8 +65,6 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
-
-Aliases [-Appliance]
 
 Specify the `[HPOneView.Appliance.Connection]` object or Name property value.
 

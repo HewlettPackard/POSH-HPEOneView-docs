@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Get fixme installation log
 ---
 
 # Get-HPOVFixMeInstallationLog
@@ -16,6 +16,7 @@ Get-HPOVFixMeInstallationLog
 ## Description
 
 This Cmdlet will retreive any fixme patch installation log files needed by HPE Support to analyze for installation completion or errors.
+
 ## Examples
 
 ###  Example 1 
@@ -31,11 +32,7 @@ Get the fixme installation logs for the connected appliance.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -65,14 +62,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**System.IO.FileInfo**_
 
 The downloaded log file.
-
 
 ## Related Links
 

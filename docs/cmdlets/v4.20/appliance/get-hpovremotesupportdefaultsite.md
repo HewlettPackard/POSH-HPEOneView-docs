@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Retrieve Remote Support Default Site.
 ---
 
 # Get-HPOVRemoteSupportDefaultSite
@@ -8,12 +8,14 @@ description:
 
 ```text
 Get-HPOVRemoteSupportDefaultSite
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ## Description
 
-Use this Cmdlet to retrieve the configured default site.
+Use this Cmdlet to retrieve the configured default site. 
+
 ## Examples
 
 ###  Example 1 
@@ -29,11 +31,7 @@ Get the configured Remote Support default site.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -51,14 +49,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**System.Management.Automation.PSCustomObject**_
 
 Configured Remote Support default site.
-
 
 ## Related Links
 

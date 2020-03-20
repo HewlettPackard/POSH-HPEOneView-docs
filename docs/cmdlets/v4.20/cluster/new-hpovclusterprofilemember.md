@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Helper Cmdlet to create proper add host request for New-HPOVClusterProfile.
 ---
 
 # New-HPOVClusterProfileMember
@@ -19,6 +19,7 @@ New-HPOVClusterProfileMember
 This is a helper Cmdlet to create a valid resourc object `New-HPOVClusterProfile` will then use for the -Servers parameter.
 
 Privileges: Infrastructure administrator, Server administrator, Server profile architect, or Server profile administrator.
+
 ## Examples
 
 ###  Example 1 
@@ -26,7 +27,6 @@ Privileges: Infrastructure administrator, Server administrator, Server profile a
 ```text
 $Server = Get-HPOVServer -Name "Encl1, Bay 1"
 New-HPOVClusterProfileMember -InputObject $Server
-
 ```
 
 Create a basic add host object for `New-HPOVClusterProfile`.
@@ -36,7 +36,6 @@ Create a basic add host object for `New-HPOVClusterProfile`.
 ```text
 $Server = Get-HPOVServer -Name "Encl1, Bay 1"
 New-HPOVClusterProfileMember -InputObject $Server -IPAddress 192.168.10.1
-
 ```
 
 Create anadd host object for `New-HPOVClusterProfile` and specify its managmenet IP Address if the associated Server Profile Template management network is not associated with an IP Address Pool.
@@ -49,7 +48,6 @@ $OSDeploymentAttributes = Get-HPOVOSDeploymentPlanAttributes -InputObject $MyDep
 ($OSDeploymentAttributes | Where-Object name -eq "CustomAttribute1").value = "MySpecialValue"
 $Server = Get-HPOVServer -Name "Encl1, Bay 1"
 New-HPOVClusterProfileMember -InputObject $Server -IPAddress 192.168.10.1 -OSDeploymentParameter $OSDeploymentAttributes
-
 ```
 
 Create a basic add host object for `New-HPOVClusterProfile`.
@@ -107,7 +105,6 @@ An available server hardware resource.
 _**HPOneView.Cluster.AddHostRequest**_
 
 Properly formatted object for [`New-HPOVClusterProfile`](new-hpovclusterprofile.md).
-
 
 ## Related Links
 

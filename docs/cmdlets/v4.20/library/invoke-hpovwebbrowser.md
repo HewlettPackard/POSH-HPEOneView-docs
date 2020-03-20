@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Start default web browser opened to appliance dashboard.
 ---
 
 # Invoke-HPOVWebBrowser
@@ -8,12 +8,15 @@ description:
 
 ```text
 Invoke-HPOVWebBrowser
+    [-Resource <String>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ## Description
 
-This Cmdlet will open the default web browser to the specified appliance, logged in with the same credentials as the PowerShell library connection is authenticated with.  To open multiple browser windows to each appliance connection, use the global $ConnectedSessions variable to override the -ApplianceConnection parameter.
+This Cmdlet will open the default web browser to the specified appliance, logged in with the same credentials as the PowerShell library connection is authenticated with.  To open multiple browser windows to each appliance connection, use the global $ConnectedSessions variable to override the -ApplianceConnection parameter. 
+
 ## Examples
 
 ###  Example 1 
@@ -31,20 +34,20 @@ Connect to the appliance, then launch default web browser to the appliance dashb
 
 Use to quickly jump to the specific UI section of the connected appliance.  Allowed values:
 
-	* Dashboard
-	* Enclosures
-	* LogicaInterconnectGroups
-	* LogicalEnclosures
-	* LogicalInterconnects
-	* Networks
-	* RackManagers
-	* ServerHardware
-	* ServerProfiles
-	* ServerProfileTemplates
-	* Settings
-	* StoragePools
-	* StorageSystems
-	* StorageVolumes
+    * Dashboard
+    * Enclosures
+    * LogicaInterconnectGroups
+    * LogicalEnclosures
+    * LogicalInterconnects
+    * Networks
+    * RackManagers
+    * ServerHardware
+    * ServerProfiles
+    * ServerProfileTemplates
+    * Settings
+    * StoragePools
+    * StorageSystems
+    * StorageVolumes
 
 By default, the Cmdlet will open your default web browser to the appliance dashboard.
 
@@ -58,11 +61,7 @@ By default, the Cmdlet will open your default web browser to the appliance dashb
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -79,8 +78,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this cmdlet.**_
-
-
 
 ## Return Values
 

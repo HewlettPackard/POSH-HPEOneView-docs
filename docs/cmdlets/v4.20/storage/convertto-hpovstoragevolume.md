@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Convert an existing Storage Volume Snapshot to a Storage Volume.
 ---
 
 # ConvertTo-HPOVStorageVolume
@@ -8,12 +8,19 @@ description:
 
 ```text
 ConvertTo-HPOVStorageVolume
+    [-InputObject] <Object>
+    [-Name] <String>
+    [-Description] <String>
+    [-SharingMode] <String>
+    [-ApplianceConnection] <Object>
+    [-Async]
     [<CommonParameters>]
 ```
 
 ## Description
 
 Storage Volume Snapshots can be converted to assignable and managed Storage Volume resources.  When converting a Snapshot to a Storag Volume, it will lose its parent/child relationship.
+
 ## Examples
 
 ###  Example 1 
@@ -30,8 +37,6 @@ Return all storage volume resource objects.
 ```text
 $Snapshots = Get-HPOVStorageVolume "Volume 1" | Get-HPOVStorageVolumeSnapshot
 $Snapshots | ? { ((Get-Date $_.created -Format d) -eq (Get-Date 02/23/2016 -format d)} | ConvertTo-HPOVStorageVolume -Name "Copy of Volume 1" | Wait-HPOVTaskComplete
-
-
 ```
 
 Get all of the available storage volume snapshots for "Volume 1", then convert the snapshot created on the specified date to a storage volume resource.
@@ -102,8 +107,6 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 Default Value: ${Global:ConnectSessions} | ? Default
@@ -126,18 +129,15 @@ _**HPOneView.Storage.VolumeSnapshot [System.Management.Automation.PSCustomObject
 
 Storage Volume Snapshot resource object.
 
-
 ## Return Values
 
 _**System.Collections.ArrayList <HPOneView.Appliance.TaskResource>**_
 
 Multiple resources
 
-
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Create Storage Volume async task.
-
 
 ## Related Links
 

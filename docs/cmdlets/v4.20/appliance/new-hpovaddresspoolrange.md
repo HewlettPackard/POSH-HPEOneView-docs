@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Create an Address Range.
 ---
 
 # New-HPOVAddressPoolRange
@@ -10,7 +10,7 @@ description:
 New-HPOVAddressPoolRange
     [-PoolType] <String>
     [-RangeType] <String>
-    [-ApplianceConnection] <Object>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -20,7 +20,7 @@ New-HPOVAddressPoolRange
     [-Name] <String>
     [-Start] <String>
     [-End] <String>
-    [-ApplianceConnection] <Object>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -30,7 +30,7 @@ New-HPOVAddressPoolRange
     [-RangeType] <String>
     [-Start] <String>
     [-End] <String>
-    [-ApplianceConnection] <Object>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -44,26 +44,26 @@ If you specify a Custom Range Type, you must specify a range of addresses no sma
 
 Custom Address Ranges must adhere to the following format rules:
 
-	* The MAC Address must be IEEE Compliant, and the format must be XH:XX:XX:XX:XX:XX, where H must be 0, 2, 4, 6, 8, A, C or E.
+    * The MAC Address must be IEEE Compliant, and the format must be XH:XX:XX:XX:XX:XX, where H must be 0, 2, 4, 6, 8, A, C or E.
 
     Example:  12:22:33:44:55:00
 
-	* The WWN Address must be IEEE compliant, and the format must be 10:00:XH:XX:XX:XX:XX:XX, where H must be 0, 2, 4, 6, 8, A, C or E.
+    * The WWN Address must be IEEE compliant, and the format must be 10:00:XH:XX:XX:XX:XX:XX, where H must be 0, 2, 4, 6, 8, A, C or E.
 
     Example:  10:00:6C:9F:06:B0:00:00
 
-	* The Serial Number addresses must start with VCU, and cannot contain more than 10 characters total.
+    * The Serial Number addresses must start with VCU, and cannot contain more than 10 characters total.
 
     Example:  VCU1234567
 
 IPv4 Address Subnets do not support Auto Generated, as the RangeType parameter is not required.  When creating a new IPv4 Address Subnet, you must provide a unique Name, Subnet Mask (CIDR [e.g. 24] or IPv4 Address Value [e.g. 255.255.255.0]), Start and End IPv4 Address, Gateway and Domain Name.  DNS Servers are optional.  To add more Address Ranges to a Subnet after creating it, please use the `Add-HPOVAddressRange` CMDLET.
+
 ## Examples
 
 ###  Example 1 
 
 ```text
 PS C:> New-HPOVAddressPoolRange -PoolType vmac -RangeType Generated
-
 ```
 
 Create a new Appliance generated VMAC Pool Range.
@@ -72,7 +72,6 @@ Create a new Appliance generated VMAC Pool Range.
 
 ```text
 PS C:> New-HPOVAddressPoolRange -PoolType vwwn -RangeType Custom -Start 10:00:6C:9F:06:B0:00:00 -End 10:00:6C:9F:06:BF:FF:FF
-
 ```
 
 Create a new VWWN Address Pool Range with the custom addresses, for the MyAppliance1.domain.com appliance connection.
@@ -81,7 +80,6 @@ Create a new VWWN Address Pool Range with the custom addresses, for the MyApplia
 
 ```text
 PS C:> Get-HPOVAddressPoolSubnet -NetworkId 192.168.20.0 | New-HPOVAddressPoolRange -Name "VLAN20 Mgmt" -Start 192.168.20.100 -end 192.168.20.200
-
 ```
 
 Create a new IPv4 Address Pool Range, for the MyAppliance1.domain.com appliance connection.
@@ -104,9 +102,9 @@ The IPv4 Subnet that the new IPv4 Range will be assigned to.  Start and End valu
 
 Specify the Pool Type the new Range will be assinged to.  Accepted values are:
 
-	* VMAC
-	* VWWN
-	* VSN
+    * VMAC
+    * VWWN
+    * VSN
 
 | Aliases | None |
 | :--- | :--- |
@@ -120,8 +118,8 @@ Specify the Pool Type the new Range will be assinged to.  Accepted values are:
 
 The type of Address Range to create (not applicable for IPv4 Address Pools/Subnets).  Accepted values are:
 
-	* Generated
-	* Custom
+    * Generated
+    * Custom
 
 | Aliases | None |
 | :--- | :--- |
@@ -169,17 +167,13 @@ The ending address in the range.  Cannot overlap with other address ranges, and 
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). 
 
 When attempting to create a new IPv4 Address Pool/Subnet, only a single `[HPOneView.Appliance.Connection]` object or Name property value is allowed.  If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-Default Value: ${Global:ConnectedSessions} | ? Default
-
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | True |
+| Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} | ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |

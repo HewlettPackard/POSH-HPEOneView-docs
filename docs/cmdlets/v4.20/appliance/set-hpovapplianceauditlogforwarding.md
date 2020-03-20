@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Modify remote Syslog audit log forwarding.
 ---
 
 # Set-HPOVApplianceAuditLogForwarding
@@ -28,6 +28,7 @@ Set-HPOVApplianceAuditLogForwarding
 HPE OneView can forward the internal audit log entries to a remote syslog server, in standard Syslog format.  This cmdlet will chnage the current status, remote Syslog destination and port to be configured on the appliance.
 
 Required permissions: Infrastructure administrator
+
 ## Examples
 
 ###  Example 1 
@@ -70,11 +71,7 @@ Disable remote Syslog audit log forwarding configuration.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -152,14 +149,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Appliance.AuditLogForwardingConfig**_
 
 The appliance audit log forwarding configuration.
-
 
 ## Related Links
 

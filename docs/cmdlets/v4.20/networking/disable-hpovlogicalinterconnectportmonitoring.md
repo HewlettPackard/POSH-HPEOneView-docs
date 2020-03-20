@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Disable port monitoring for a logical interconnect.
 ---
 
 # Disable-HPOVLogicalInterconnectPortMonitoring
@@ -20,14 +20,15 @@ Port monitoring enables you to send a copy of every Ethernet or Fibre Channel fr
 
 {% hint style="info" %}
 
-	*
+    *
 {% endhint %}
   You cannot use Virtual Connect to forward captured traffic to a server. For more information, see the HPE Virtual Connect for `c-Class` BladeSystem User Guide in the Hewlett Packard Enterprise Information Library. 
-	*  You can configure one network analyzer port (the uplink port) for up to 16 downlink server ports within a logical interconnect. 
-	*  The HPE Virtual Connect 16Gb `24-Port` Fibre Channel Module monitors 1 downlink server port. 
-	*  HPE Virtual Connect 16Gb `24-Port` Fibre Channel Module firmware must be 4.00 or later 
+    *  You can configure one network analyzer port (the uplink port) for up to 16 downlink server ports within a logical interconnect. 
+    *  The HPE Virtual Connect 16Gb `24-Port` Fibre Channel Module monitors 1 downlink server port. 
+    *  HPE Virtual Connect 16Gb `24-Port` Fibre Channel Module firmware must be 4.00 or later 
 
 Required Privileges: Network administrator
+
 ## Examples
 
 ###  Example 1 
@@ -43,11 +44,7 @@ Disable port monitoring for the specified logical interconnect resource.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -79,13 +76,11 @@ _**HPoneView.Networking.LogicalInterconnect [System.Management.Automation.PSCust
 
 Logical Interconnect resource object from [`Get-HPOVLogicalInterconnect`](get-hpovlogicalinterconnect.md)
 
-
 ## Return Values
 
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task Resource object for configuring port monitoring on the requested logical intercinnect.
-
 
 ## Related Links
 

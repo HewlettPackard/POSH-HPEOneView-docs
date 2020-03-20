@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Associate resource with new or existing Label.
 ---
 
 # Add-HPOVResourceToLabel
@@ -8,6 +8,9 @@ description:
 
 ```text
 Add-HPOVResourceToLabel
+    [-Name] <String>
+    [-InputObject] <Object>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -15,7 +18,8 @@ Add-HPOVResourceToLabel
 
 Labels identify resources so you can organize them into groups. For example, you might want to identify the servers that are used primarily by the Finance team, or identify the storage systems assigned to the Asia/Pacific division.
 
-This Cmdlet will allow you to add resources to a new label.  If the Label does not exist, a new one will be created.
+This Cmdlet will allow you to add resources to a new label.  If the Label does not exist, a new one will be created. 
+
 ## Examples
 
 ###  Example 1 
@@ -56,11 +60,7 @@ The collection of resources to associate the label with.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -80,13 +80,11 @@ _**System.Array**_
 
 Collection of resources to associate with the label.
 
-
 ## Return Values
 
 _**System.Management.Automation.PSCustomObject**_
 
 The created or modified Label resource.
-
 
 ## Related Links
 

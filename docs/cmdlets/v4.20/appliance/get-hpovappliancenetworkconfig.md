@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Retrieves the configuration of the primary NIC of the appliance
 ---
 
 # Get-HPOVApplianceNetworkConfig
@@ -8,12 +8,15 @@ description:
 
 ```text
 Get-HPOVApplianceNetworkConfig
+    [-Location <String>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ## Description
 
 Retrieves the configuration parameters of the primary network interface on the appliance, which can be captured into a customer object for further operation, or captured to a text file in json format.
+
 ## Examples
 
 ###  Example 1 
@@ -24,8 +27,6 @@ Hostname         IPv4Type IPv4Address    IPv4DNS                      IPv6Type  
 --------         -------- -----------    -------                      --------    ----------- -------
 hpov1.domain.com STATIC   172.20.51.4\24 {172.20.10.41, 172.20.10.42} UNCONFIGURE             {}
 hpov2.domain.com STATIC   172.20.52.4\24 {172.20.10.41, 172.20.10.42} UNCONFIGURE             {}
-
-
 ```
 
 Outputs the configuration of the primary network interface to standard output.
@@ -45,8 +46,6 @@ IPv6Address :
 IPv6Mask    :
 IPv6Gateway :
 IPv6DNS     : {}
-
-
 ```
 
 Outputs the configuration of the primary network interface and pipe to `Format-List` for more information about the network configuration.
@@ -87,11 +86,7 @@ Exported file name will be "{$ApplianceConnection.Name}_ApplianceNetConf.json".
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -109,24 +104,19 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Appliance.ApplianceServerConfiguration [System.Management.Automation.PSCustomObject]**_
 
 A collection object containing the properties and values of the primary network interface of the appliance.
 
-
 _**HPOneView.Appliance.ApplianceServerConfiguration.ApplianceNetworks [System.Management.Automation.PSCustomObject]**_
 
 The applianceNetworks property will display the appliance Networking in either a Format-Table (default) or Format-List view.
 
-
 _**System.IO.FileSystemInfo**_
 
 If exporting the appliance network configuration, the file object created will be returned.
-
 
 ## Related Links
 

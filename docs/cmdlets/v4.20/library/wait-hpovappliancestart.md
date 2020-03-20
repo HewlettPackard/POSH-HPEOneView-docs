@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Wait for Appliance services to start.
 ---
 
 # Wait-HPOVApplianceStart
@@ -8,6 +8,7 @@ description:
 
 ```text
 Wait-HPOVApplianceStart
+    [-Hostname] <String>
     [<CommonParameters>]
 ```
 
@@ -21,6 +22,7 @@ Internal module helper function to wait for the appliance services to start.  Th
 If any service fails to startup, this function will cause a terminating error, informing the caller to go visit the appliance kiosk console to get more information about the startup error.
 
 When the appliance successfully starts, this function will return.
+
 ## Examples
 
 ###  Example 1 
@@ -35,8 +37,6 @@ Wait for the appliance to start, and specify the appliance name.
 ## Parameters
 
 ### -Hostname &lt;String&gt;
-
-Aliases [-Appliance]
 
 Specify the appliance FQDN or IP Address without a valid connection created by using `Connect-HPOVMgmt`.
 
@@ -55,9 +55,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this cmdlet.**_
-
-
- None.  You cannot pipe objects to this cmdlet 
 
 ## Return Values
 

@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Return created label resources.
 ---
 
 # Get-HPOVLabel
@@ -8,6 +8,8 @@ description:
 
 ```text
 Get-HPOVLabel
+    [-Name <String>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -15,7 +17,8 @@ Get-HPOVLabel
 
 Labels identify resources so you can organize them into groups. For example, you might want to identify the servers that are used primarily by the Finance team, or identify the storage systems assigned to the Asia/Pacific division.
 
-This Cmdlet will return all of the created labels on the specifed appliance.
+This Cmdlet will return all of the created labels on the specifed appliance. 
+
 ## Examples
 
 ###  Example 1 
@@ -42,11 +45,7 @@ The name of the Label to associate resources to.  If Label does not exist, a new
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -64,14 +63,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Appliance.Label**_
 
 Label resource.
-
 
 ## Related Links
 

@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Disable appliance two-factor authentication settings.
 ---
 
 # Disable-HPOVApplianceTwoFactorAuthentication
@@ -23,6 +23,7 @@ When `two-factor` authentication is enabled, HPE OneView uses a Microsoft Active
 Use this Cmdlet to configure two factor authentication state of the connected appliance.  An Active Directory authentication directoyr must be configured, with a Service Account, and the root or issuing certificate authority Base64 certificate must be uploaded to appliance.
 
 Required: Infrastructure administrator
+
 ## Examples
 
 ###  Example 1 
@@ -38,11 +39,7 @@ Disable `two-factor` authentication on the connected appliance.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -84,14 +81,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**System.Management.Automation.PSCustomObject**_
 
 Appliance global security settings.
-
 
 ## Related Links
 

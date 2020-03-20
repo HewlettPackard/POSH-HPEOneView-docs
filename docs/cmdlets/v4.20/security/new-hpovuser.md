@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Create a new user account.
 ---
 
 # New-HPOVUser
@@ -24,6 +24,7 @@ New-HPOVUser
 ## Description
 
 Create a new local user account on the management appliance
+
 ## Examples
 
 ###  Example 1 
@@ -76,7 +77,6 @@ Full name for the user.
 
 ### -Roles &lt;Array&gt;
 
-Aliases [-r, `-role`]
 The role(s) to assign to the Directroy Group, in `[System.Collections.ArrayList]` format.  Accepted values are noted within the ApplianceRoles property of the `[HPOneView.Appliance.Connection]` object stored in the $Global:ConnectedSessions variable.
 
 Example: $roles = "Server administrator","Network administrator"
@@ -139,8 +139,6 @@ Deprecated parameter.  By default, all new user accounts will be enabled.  In or
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 Default Value: ${Global:ConnectSessions}
@@ -174,8 +172,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None. You cannot pipe objects to this cmdlet.**_
-
-
 
 ## Return Values
 

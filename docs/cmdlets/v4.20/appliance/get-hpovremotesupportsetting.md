@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Get supported resource Remote Support settings.
 ---
 
 # Get-HPOVRemoteSupportSetting
@@ -15,28 +15,25 @@ Get-HPOVRemoteSupportSetting
 
 ## Description
 
-Use this Cmdlet to retrieve a supported resources Remote Support settings, defined Parimary and Secondary contact, and authorized reseller or support partners.
+Use this Cmdlet to retrieve a supported resources Remote Support settings, defined Parimary and Secondary contact, and authorized reseller or support partners. 
+
 ## Examples
 
 ###  Example 1 
 
 ```text
 Get-HPOVEnclosure -Name Encl1 | Get-HPOVRemoteSupportSetting Appliance              ResourceName SalesChannelPartner        SupportChannelPartner      PrimaryContact SecondaryContact ---------              ------------ -------------------        ---------------------      -------------- ---------------- MyAppliance.domain.com Encl1        Hewlett Packard Enterprise Hewlett Packard Enterprise Mark Jones
-
 ```
 
 Get the configured Remote Support collection settings for "Encl1" Enclosure resource.
-
 
 ###  Example 2 
 
 ```text
 Get-HPOVServer -Name PROD* | Get-HPOVRemoteSupportSetting | ? supportEnabled -eq $false
-
 ```
 
 Return all PROD servers, and return only those where remote support is not enabled.
-
 
 ## Parameters
 
@@ -54,11 +51,7 @@ Either a Server Hardware or Enclosure resource to get the configured Remote Supp
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -87,7 +80,6 @@ Enclosure resource object.
 _**HPOneView.Appliance.RemoteSupport.ResourceSetting [System.Management.Automation.PSCustomObject]**_
 
 Remote Support Settings object.
-
 
 ## Related Links
 

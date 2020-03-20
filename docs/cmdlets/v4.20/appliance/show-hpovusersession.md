@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Display user logon sessions.
 ---
 
 # Show-HPOVUserSession
@@ -14,6 +14,7 @@ Show-HPOVUserSession
 ## Description
 
 This cmdlet is decprecated as of v2.0.  Please use the $ConnectedSessions Global variable for appliance session information.
+
 ## Examples
 
 ## Parameters
@@ -25,9 +26,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.**_
-
-
- None 
 
 ## Return Values
 

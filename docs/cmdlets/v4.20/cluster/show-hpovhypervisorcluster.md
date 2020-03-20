@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Default content
 ---
 
 # Show-HPOVHypervisorCluster
@@ -8,12 +8,15 @@ description:
 
 ```text
 Show-HPOVHypervisorCluster
+    [-Name] <string>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ## Description
 
 Default content
+
 ## Examples
 
 ###  Example 1 
@@ -29,11 +32,7 @@ Default example
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

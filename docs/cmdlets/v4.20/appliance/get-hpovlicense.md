@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Gets the installed licenses on the appliance.
 ---
 
 # Get-HPOVLicense
@@ -19,6 +19,7 @@ Get-HPOVLicense
 ## Description
 
 This Cmdlet will retrieve licenses installed on the appliance.  You can use this to get an inventory of what"s installed and what licenses are consumed.
+
 ## Examples
 
 ###  Example 1 
@@ -32,8 +33,6 @@ Capacity  : 64
 Allocated : 30
 Available : 34
 Nodes     : {Encl2, bay 7, Encl2, bay 4, Encl2, bay 13, Encl1, bay 8...}
-
-
 ```
 
 Retrieve all installed license objects on the connected appliance(s).
@@ -92,11 +91,7 @@ Generate a report of installed or required licenses, their type and assigned Nod
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -114,14 +109,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this Cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Appliance.License**_
 
 HPE OneView License
-
 
 ## Related Links
 

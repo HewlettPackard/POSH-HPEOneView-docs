@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Get defined SNMPv3 user from appliance.
 ---
 
 # Get-HPOVSnmpV3User
@@ -27,6 +27,7 @@ To configure SNMP trap forwarding for network devices (
 interconnects and switches), use the `New-HPOVSnmpV3User` and include it within the `New-HPOVSnmpSettings` Cmdlet.
 
 Privileges: Infrastructure administrator
+
 ## Examples
 
 ###  Example 1 
@@ -42,11 +43,7 @@ Get the defined SNMPv3 users on the appliance.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -76,14 +73,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Appliance.SnmpV3User**_
 
 Appliance SNMPv3 user object.
-
 
 ## Related Links
 

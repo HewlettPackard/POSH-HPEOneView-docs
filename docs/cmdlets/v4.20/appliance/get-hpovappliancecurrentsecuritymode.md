@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Get the appliance current security mode.
 ---
 
 # Get-HPOVApplianceCurrentSecurityMode
@@ -15,6 +15,7 @@ Get-HPOVApplianceCurrentSecurityMode
 ## Description
 
 Return the current security mode of the appliance.
+
 ## Examples
 
 ###  Example 1 
@@ -30,11 +31,7 @@ Get the appliances current security mode.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -52,14 +49,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Appliance.SecurityMode**_
 
 The current appliance security mode.
-
 
 ## Related Links
 

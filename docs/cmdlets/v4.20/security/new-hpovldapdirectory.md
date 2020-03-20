@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Add a new Directory for Authentication
 ---
 
 # New-HPOVLdapDirectory
@@ -39,6 +39,7 @@ New-HPOVLdapDirectory
 ## Description
 
 This cmdlet will create a new Directory for appliance authentication.  HPE OneView currently supports either Active Directory or LDAP (e.g. OpenLDAP) for user authentication.  The `New-HPOVLdapServer` cmdlet is used to assist defining directory servers address, public SSL certificate and LDAP over SSL TCP port.
+
 ## Examples
 
 ###  Example 1 
@@ -46,8 +47,6 @@ This cmdlet will create a new Directory for appliance authentication.  HPE OneVi
 ```text
 $ServerA,$ServerB = servera.domain.com,serverb.domain.com | New-HPOVLdapServer
 New-HPOVLdapDirectory -name Domain1 -AD -basedn "dc=domain,dc=com" -servers $ServerA,$ServerB -Username MyAdminAccount@domain.com
-
-
 ```
 
 Add a new directory with two directory servers, and be prompted for your directory account password.
@@ -57,8 +56,6 @@ Add a new directory with two directory servers, and be prompted for your directo
 ```text
 $ServerA = New-HPOVLdapServer -Name contoso.com
 New-HPOVLdapDirectory -name Domain1 -AD -basedn "dc=domain,dc=com" -servers $ServerA -Username MyAdminAccount@domain.com -ServiceAccount
-
-
 ```
 
 Add a new Active Directory authentication directory, using SRV domain name, and specify to use the account as a service account.
@@ -91,8 +88,6 @@ Using Active Directory, which sets the authProtocol to AD and userNameField to C
 
 ### -OpenLDAP &lt;SwitchParameter&gt;
 
-Aliases [-LDAP]
-
 Using LDAP (i.e. OpenLDAP), which sets the authProtocol to LDAP and userNameField to UID
 
 | Aliases | LDAP |
@@ -104,8 +99,6 @@ Using LDAP (i.e. OpenLDAP), which sets the authProtocol to LDAP and userNameFiel
 | Accept wildcard characters? | False |
 
 ### -BaseDN &lt;String&gt;
-
-Aliases [-Root, `-RootDN`]
 
 Directory Base DN (E.g. dc=domian,dc=local)
 
@@ -146,9 +139,9 @@ OpenLDAP OU"s to begin search for Directory Group and User Account authenticatio
 
 Array of Directory Servers and their settings.  Must include the following:
 
-	* Server Name (FQDN or IP)
-	* Public SSL Certificate
-	* SSL Port, if not default 636
+    * Server Name (FQDN or IP)
+    * Public SSL Certificate
+    * SSL Port, if not default 636
 
 | Aliases | None |
 | :--- | :--- |
@@ -160,7 +153,6 @@ Array of Directory Servers and their settings.  Must include the following:
 
 ### -Username &lt;String&gt;
 
-Aliases [-u, `-user`]
 Directory Username to authenticate with.
 
 | Aliases | u, user |
@@ -173,7 +165,6 @@ Directory Username to authenticate with.
 
 ### -Password &lt;SecureString&gt;
 
-Aliases [-p, `-pass`]
 Directory Username password.
 
 | Aliases | p, pass |
@@ -186,11 +177,7 @@ Directory Username password.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -226,7 +213,7 @@ Use to indicate the provided credential is a Service Account.  Required for when
 
 ### -UserNamingAttribute &lt;string&gt;
 
-Specify the naming attribute for OpenLDAP directories.  Allowed values: 	* CN 	* UID 
+Specify the naming attribute for OpenLDAP directories.  Allowed values:     * CN     * UID 
 Default Value: CN
 
 | Aliases | None |
@@ -253,11 +240,9 @@ _**System.Management.Automation.PSCustomObject**_
 
 Configured Authentication Directory
 
-
 _**System.Collections.ArrayList**_
 
 Multiple configured Authentication Directories
-
 
 ## Related Links
 

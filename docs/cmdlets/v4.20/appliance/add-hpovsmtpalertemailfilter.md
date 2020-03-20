@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Add SMPT Email Alert Filter
 ---
 
 # Add-HPOVSmtpAlertEmailFilter
@@ -29,6 +29,7 @@ Add-HPOVSmtpAlertEmailFilter
 ## Description
 
 SMTP Email Filters can be created using this CMDLET.
+
 ## Examples
 
 ###  Example 1 
@@ -65,10 +66,8 @@ Name of the Filter you are creating.
 
 ### -Filter &lt;String&gt;
 
-Aliases [-query]
-
 REST API filter specifying the resource category, URI, name, and severity.  
-	
+    
 Example:  CPU status:"warning" or status:"critical"
 
 | Aliases | query |
@@ -129,11 +128,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -170,7 +165,6 @@ Array of email address recipient(s).
 _**HPOneView.Appliance.TaskResource {System.Management.Automation.PSCustomObject}**_
 
 Returns an async task resource to monitor.
-
 
 ## Related Links
 

@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Remove an Unmanaged Device.
 ---
 
 # Remove-HPOVUnmanagedDevice
@@ -17,6 +17,7 @@ Remove-HPOVUnmanagedDevice
 ## Description
 
 Use this Cmdlet to remove an Unmanaged Device from the appliance.
+
 ## Examples
 
 ###  Example 1 
@@ -78,11 +79,7 @@ When the request is accepted by the appliance, it does not return an Async Task 
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

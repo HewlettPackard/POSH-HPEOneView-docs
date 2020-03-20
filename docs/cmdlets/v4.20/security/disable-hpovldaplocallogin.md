@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Disable local authentication logins.
 ---
 
 # Disable-HPOVLdapLocalLogin
@@ -8,12 +8,14 @@ description:
 
 ```text
 Disable-HPOVLdapLocalLogin
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ## Description
 
 Use this cmdlet to set disable appliance local logins.  An existing authentication directory must be configured in order to use this CMDLET.
+
 ## Examples
 
 ###  Example 1 
@@ -29,11 +31,7 @@ Disable local logins on the appliance.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -75,14 +73,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**System.Management.Automation.PSCustomObject**_
 
 Appliance Authentication Directory setting.
-
 
 ## Related Links
 

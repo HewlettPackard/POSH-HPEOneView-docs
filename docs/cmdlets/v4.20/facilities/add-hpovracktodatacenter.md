@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Add rack resource to DataCenter.
 ---
 
 # Add-HPOVRackToDataCenter
@@ -21,6 +21,7 @@ Add-HPOVRackToDataCenter
 ## Description
 
 Add a rack resource to a defined DataCenter object.
+
 ## Examples
 
 ###  Example 1 
@@ -111,11 +112,7 @@ If X and/or Y are in Millimeters, you must include this parameter.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -134,7 +131,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 _**HPOneView.Facilities.Rack [System.Management.Automation.PSCustomObject]**_
 
 Rack resource object from [`Get-HPOVRack`](get-hpovrack.md).
-
 
 ## Return Values
 

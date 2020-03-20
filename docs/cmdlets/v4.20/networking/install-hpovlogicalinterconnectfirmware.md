@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Install Logical Interconnect Firmware.
 ---
 
 # Install-HPOVLogicalInterconnectFirmware
@@ -26,6 +26,7 @@ Install-HPOVLogicalInterconnectFirmware
 Use this cmdlet to install/update the Logical Interconnect (i.e. Virtual Connect) firmware.  You can provide the Logical Interconnect Name, URI or Object and must specify a valid SPP Baseline present on the appliance.
 
 This cmdlet will default to performing an Update (Stage + Activate), which will cause an outage.  If you wish to avoid an outage, first stage the update usind -method stage, then -method activate.  Interconnect activation can be controlled with the -ActivateOrder parameter, which defaults to Odd interconnects.  Once the specified interconnect activation is complete, you must then call the cmdlet again with the alternate ActivateOrder value (i.e. even.)
+
 ## Examples
 
 ###  Example 1 
@@ -37,8 +38,6 @@ $task = Install-HPOVLogicalInterconnectFirmware Stage $li $spp
 Wait-HPOVTaskComplete $task
 $task = Install-HPOVLogicalInterconnectFirmware Activate $li 
 Wait-HPOVTaskComplete $task
-
-
 ```
 
 Perform a firmware update of the `Encl1-LI` Logical Interconnect by first staging the firmware. Then Acitate the firmware using the default OddEven Interconnect Bay order.
@@ -47,7 +46,6 @@ Perform a firmware update of the `Encl1-LI` Logical Interconnect by first stagin
 
 ```text
 Get-HPOVLogicalInterconnect Encl1-LI  | Install-HPOVLogicalInterconnectFirmware -method Update -baseline "HP Service Pack for ProLiant" -confirm:$false | Wait-HPOVTaskComplete
-
 ```
 
 Perform a firmware update of the `Encl1-LI` Logical Interconnect, do not prompt for confirmation, then wait for the task to complete.
@@ -56,7 +54,6 @@ Perform a firmware update of the `Encl1-LI` Logical Interconnect, do not prompt 
 
 ### -LogicalInterconnect &lt;Object&gt;
 
-Aliases [-li, `-uri`, `-name`]
 The Logical Interconnect object(s), name(s) or uris(s) to be updated.
 
 | Aliases | name, uri, li |
@@ -71,9 +68,9 @@ The Logical Interconnect object(s), name(s) or uris(s) to be updated.
 
 Upgrade method to perform.  Accepted values are:
 
-	* UPDATE (Default)
-	* STAGE
-	* ACTIVATE
+    * UPDATE (Default)
+    * STAGE
+    * ACTIVATE
 
 | Aliases | None |
 | :--- | :--- |
@@ -85,12 +82,11 @@ Upgrade method to perform.  Accepted values are:
 
 ### -EthernetActivateOrder &lt;String&gt;
 
-Aliases [-order, `-ActivateOrder`]
 Specify the Ethernet module firmware activation order.  Accepted values are:
 
-	* OddEven (Default)
-	* Parallel
-	* Serial
+    * OddEven (Default)
+    * Parallel
+    * Serial
 
 | Aliases | Order, ActivateOrder |
 | :--- | :--- |
@@ -118,9 +114,9 @@ Default is 5 seconds.
 
 Specify the Fibre Channel module firmware activation order.  Accepted values are:
 
-	* OddEven
-	* Parallel
-	* Serial (Default)
+    * OddEven
+    * Parallel
+    * Serial (Default)
 
 | Aliases | None |
 | :--- | :--- |
@@ -182,11 +178,7 @@ Force the firmware update if the update version matches what is already installe
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -230,13 +222,11 @@ _**HPOneView.Networking.LogicalInterconnect [System.Management.Automation.PSCust
 
 Logical Interconnect Resource Object
 
-
 ## Return Values
 
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Returns an async task resource to monitor.
-
 
 ## Related Links
 

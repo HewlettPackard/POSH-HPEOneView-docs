@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Configure supported resource Remote Support settings.
 ---
 
 # Set-HPOVRemoteSupportSetting
@@ -34,7 +34,8 @@ Set-HPOVRemoteSupportSetting
 
 ## Description
 
-Use this Cmdlet to configure a supported resources Remote Support collection settings.
+Use this Cmdlet to configure a supported resources Remote Support collection settings. 
+
 ## Examples
 
 ###  Example 1 
@@ -133,8 +134,8 @@ Authorized HPE reseller partner object from `Get-HPOVRemoteSupportPartner`.
 
 Use to override the contract type.  If specifying a different contract type, you must supply the SupportID.  Allowed values are:
 
-	* SupportAgreement
-	* PackagedSupport.
+    * SupportAgreement
+    * PackagedSupport.
 
 | Aliases | None |
 | :--- | :--- |
@@ -194,11 +195,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

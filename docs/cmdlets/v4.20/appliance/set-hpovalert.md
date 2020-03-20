@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Change status of an alert.
 ---
 
 # Set-HPOVAlert
@@ -36,6 +36,7 @@ Set-HPOVAlert
 Alerts can be in one of two administratively controlled states: Active or Cleared.  This Cmdlet allows the administrator to change the status of an alert to either Active or Cleared.
 
 In order for an Administrator to change the status of an Alert, the Administrator must be assigned to the respective resource role (Network, Server, Storage, or Infrastructure.)
+
 ## Examples
 
 ###  Example 1 
@@ -120,11 +121,7 @@ Change the alert to "Active" status.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

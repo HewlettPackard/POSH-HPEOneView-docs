@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: View appliance basline repository size.
 ---
 
 # Show-HPOVBaselineRepositorySize
@@ -9,6 +9,7 @@ description:
 ## Description
 
 This Cmdlet will display the applinace baseline repository size
+
 ## Examples
 
 ###  Example 1 
@@ -24,11 +25,7 @@ Show the appliance baseline repository size.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases |  |
 | :--- | :--- |
@@ -45,8 +42,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None. You cannot pipe objects to this cmdlet.**_
-
-
 
 ## Return Values
 

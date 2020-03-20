@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Get State Change Message Bus certificates.
 ---
 
 # Get-HPOVScmbCertificates
@@ -27,6 +27,7 @@ Get-HPOVScmbCertificates
 ## Description
 
 Retrieve and store the certificates necessary to register with the State Change Message Bus.  The SCMB only supports a single `read-only` "account".
+
 ## Examples
 
 ###  Example 1 
@@ -51,7 +52,6 @@ Prompt for secure password input and pipe the value to `Get-HPOVScmbCertificates
 
 ### -Location &lt;String&gt;
 
-Aliases [-Save]
 Directory to store the SSL certificates.  If the directory doesn"t exist, it will be created.
 
 | Aliases | save |
@@ -64,7 +64,7 @@ Directory to store the SSL certificates.  If the directory doesn"t exist, it wil
 
 ### -ConvertToPFx &lt;SwitchParameter&gt;
 
-Aliases [-pfx]		
+Aliases [-pfx]        
 Convert rabbitmq_readonly client certificate to PFX format for .Net consumption.
 
 | Aliases | pfx |
@@ -101,11 +101,7 @@ hoose to install the appliance root certificate to the current users Trusted Roo
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -125,7 +121,6 @@ _**SecureString**_
 
 Password for PFX file
 
-
 ## Return Values
 
 _**3 files will be created:**_
@@ -134,7 +129,6 @@ _**3 files will be created:**_
  * {ApplianceConnection_Name}_ca.cer - Appliance internal Root Certificate Authority
  * {ApplianceConnection_Name}_cert.cer - Appliance managed rabbitmq_readonly user Public Key
  * {ApplianceConnection_Name}_privateKey.key - Appliance managed rabbitmq_readonly user Client Certificate
-
 
 _**Pkcs12/PFX certificate file**_
 

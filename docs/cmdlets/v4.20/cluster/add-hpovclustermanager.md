@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Add new hypervisor manager.
 ---
 
 # Add-HPOVClusterManager
@@ -26,6 +26,7 @@ You can register a new hypervisor manager with HPE OneView by providing the host
 A valid hypervisor manager certificate must be added to HPE OneView trust store to be able to successfully communicate with a hypervisor manager.
 
 The user must have an infrastructure administrator privilege to register or update the hypervisor manager resource in HPE OneView. You can assign scopes to the hypervisor manager resource in HPE OneView.
+
 ## Examples
 
 ###  Example 1 
@@ -41,11 +42,7 @@ Add hypervisor manager by providing prompted PSCredential.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -147,14 +144,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Appliance.TaskResource [Other]**_
 
 Async Task resource to monitor progress.
-
 
 ## Related Links
 

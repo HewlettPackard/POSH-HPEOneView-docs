@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Display Server Profile alert messages.
 ---
 
 # Get-HPOVServerProfileMessage
@@ -16,6 +16,7 @@ Get-HPOVServerProfileMessage
 ## Description
 
 Use this Cmdlet to display alert or other activity messages that are not tracked as Alerts or Tasks.  For instance, failed Connection will be reported as a Server Profile Message.  Firmware update status (using HPSUT) wil be displayed as messages.
+
 ## Examples
 
 ###  Example 1 
@@ -43,11 +44,7 @@ The Server Profile resource object.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Modify an existing Datacenter Remote Support setting.
 ---
 
 # Set-HPOVDataCenterRemoteSupport
@@ -30,7 +30,8 @@ For example, you have IT equipment in two rooms or on separate floors. You could
 Each server, enclosure, or power distribution device in your data center can report its power requirements, but it can be difficult to understand the power and cooling requirements for your data center as a whole. The appliance enables you to bring power and cooling management of your servers, enclosures, and power delivery devices together in a single management system.
 When you initialize the appliance for the first time, it creates a data center named Datacenter 1. The appliance provides this data center as a place to visualize your racks. You can rename or edit this data center to match the values and layout of your data center, you can use it as the basis for a planned data center model, or you can delete this data center without adverse effects.
 
-This Cmdlet will help modify an existing DataCenters Remote Support location and contacts.  In order to set a DataCenter Remote Support location, the appliance must be configured and regsitered with Remote Support.
+This Cmdlet will help modify an existing DataCenters Remote Support location and contacts.  In order to set a DataCenter Remote Support location, the appliance must be configured and regsitered with Remote Support. 
+
 ## Examples
 
 ###  Example 1 
@@ -178,11 +179,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -207,7 +204,6 @@ DataCenter facility object from [`Get-HPOVDataCenter`](../facilities/get-hpovdat
 _**HPOneView.Appliance.AyncTask**_
 
 Modified datacenter Remote Support location asyncronous task.
-
 
 ## Related Links
 

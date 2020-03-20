@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Create Custom Baseline from Hotfixes and Source Baseline.
 ---
 
 # New-HPOVCustomBaseline
@@ -8,12 +8,19 @@ description:
 
 ```text
 New-HPOVCustomBaseline
+    [-SourceBaseline] <Object>
+    [-Hotfixes] <Array>
+    [-BaselineName] <String>
+    [-Scope <HPOneView.Appliance.ScopeCollection>]
+    [-ApplianceConnection <Object>]
+    [-Async]
     [<CommonParameters>]
 ```
 
 ## Description
 
 HPE ProLiant Hotfixes are released out of the main SPP release cycle.  Administrators can use HPSUM external to HPE OneView to create a custom baseline, but then need to upload to the appliance.  Hotfixes can be directly uploaded to an HPE OneView 2.0 Appliance, with the ability to create a Custom Baseline by using a source Baseline (which must exist in the Baseline Repository) and specified Hotfix(s).
+
 ## Examples
 
 ###  Example 1 
@@ -21,8 +28,6 @@ HPE ProLiant Hotfixes are released out of the main SPP release cycle.  Administr
 ```text
 cp111111.exe,cp222222.scexe,cp333333.exe,cp444444.scexe | % { Add-HPOVBaseline $_ }
 Get-HPOVBaseline -BaselineName "MyBaseline" | New-HPOVCustomBaseline -Hotfixes cp111111.exe,cp222222.scexe,cp333333.exe,cp444444.scexe -BaselineName "MyNewBaseline_20160222"
-
-
 ```
 
 Upload hotfixes to appliance, then create a new custom baseline from the "MyBaseline" baseline.
@@ -44,7 +49,7 @@ An existing Baseline within the HPE OneView Baseline Repository.
 ### -Hotfixes &lt;Array&gt;
 
 Array of Hotfix filenames, or Component name.  
-	
+    
 Example: @(cp111111.exe,cp222222.scexe,cp333333.exe,cp444444.scexe)
 
 | Aliases | None |
@@ -83,11 +88,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -118,7 +119,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 _**HPOneView.Appliance.Baseline [System.Management.Automation.PSCustomObject]**_
 
 Source HPE OneView Baseline from [`Get-HPOVBaseline`](get-hpovbaseline.md)
-
 
 ## Return Values
 

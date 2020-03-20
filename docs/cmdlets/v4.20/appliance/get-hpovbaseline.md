@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Retrieve available SPP Baseline information.
 ---
 
 # Get-HPOVBaseline
@@ -38,13 +38,13 @@ Retrieves the list of SPPs that have been uploaded to the appliance, and their d
 Please note that any file name that contains the . (period, CHAR46) character will be replaced with _ (underscore, CHAR95).
 
 Example: My.Spp.To.Upload.201605.iso will become My_Spp_To_Upload_201605.iso.
+
 ## Examples
 
 ###  Example 1 
 
 ```text
 $sppCollection = Get-HPOVBaseline
-
 ```
 
 Retrieves all SPP objects from the appliance and stores them in the sppCollection object
@@ -53,7 +53,6 @@ Retrieves all SPP objects from the appliance and stores them in the sppCollectio
 
 ```text
 $sppObject = Get-HPOVBaseline -Filename SPP2012060B.2012_0525.1.iso
-
 ```
 
 Retrieves an SPP object with the filename SPP2012060B.2012_0525.1.iso
@@ -62,7 +61,6 @@ Retrieves an SPP object with the filename SPP2012060B.2012_0525.1.iso
 
 ```text
 $sppObject = Get-HPOVBaseline -SppName "HP Service Pack for ProLiant"
-
 ```
 
 Retrieves an SPP object with the SPP Name "HP Service Pack for ProLiant"
@@ -70,8 +68,6 @@ Retrieves an SPP object with the SPP Name "HP Service Pack for ProLiant"
 ## Parameters
 
 ### -File &lt;String&gt;
-
-Aliases [-isoFileName, `-FileName`]
 
 The ISO file name of an SPP.
 
@@ -121,11 +117,7 @@ Display only the available Hotfixes present with in the repository.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -139,10 +131,10 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-	* AllResources
-	* AllResourcesInScope
-	* `[HPOneView.Appliance.ScopeCollection]`
-	* `[HPOneView.Appliance.ConnectionPermission]`
+    * AllResources
+    * AllResourcesInScope
+    * `[HPOneView.Appliance.ScopeCollection]`
+    * `[HPOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
@@ -159,8 +151,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this Cmdlet.**_
-
-
 
 ## Return Values
 

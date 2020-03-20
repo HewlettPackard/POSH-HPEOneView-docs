@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Retrieve Server Profile Template resource(s).
 ---
 
 # Get-HPOVServerProfileTemplate
@@ -45,6 +45,7 @@ This cmdlet will obtain a collection of Server Profile Template resources, or a 
 returns all aspects of the Server Profile Template.
     
 This will also provide the ability to export Server Profile Template objects to their own JSON encoded file.  All appliance unique properties (minus the Server Hardware Type, Enclosure Group, and Connection Network assignment) are removed.  Connection layout, assigned addresses, networks, bandwidth, BIOS, Boot Order, Firmware settings will all be retained.  Assigned Address types will change from Virtual to UserDefined in order to retain their assignment.
+
 ## Examples
 
 ###  Example 1 
@@ -148,10 +149,10 @@ Provide the Server Hardware Type resource object or name to return Server Profil
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-	* AllResources
-	* AllResourcesInScope
-	* `[HPOneView.Appliance.ScopeCollection]`
-	* `[HPOneView.Appliance.ConnectionPermission]`
+    * AllResources
+    * AllResourcesInScope
+    * `[HPOneView.Appliance.ScopeCollection]`
+    * `[HPOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
@@ -187,11 +188,7 @@ Displays detailed information about the Server Profile Template in tabular forma
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -203,7 +200,6 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 
 ### -Export &lt;SwitchParameter&gt;
 
-Aliases [-x]
 Switch used to export Server Profile Template object to JSON encoded file.
 
 | Aliases | x |
@@ -216,7 +212,6 @@ Switch used to export Server Profile Template object to JSON encoded file.
 
 ### -Location &lt;String&gt;
 
-Aliases [-save]
 Location where to save the Server Profile Template file.
 
 | Aliases | save |

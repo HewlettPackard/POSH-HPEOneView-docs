@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Remove a rack resource.
 ---
 
 # Remove-HPOVRack
@@ -23,6 +23,7 @@ You can use the appliance to view and manage your rack configuration and power d
 The appliance automatically discovers the rack height and rack model for a ProLiant server with Location Discovery Services and updates the physical locations of devices when they are relocated within and between racks for c7000 enclosures.
 
 This Cmdlet will remove an existing Rack resource.  Removing a rack resource will not remove the associated rack members.
+
 ## Examples
 
 ###  Example 1 
@@ -57,11 +58,7 @@ Rack object, from `Get-HPOVRack`.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -81,13 +78,11 @@ _**HPOneView.Facilities.Rack**_
 
 Rack resource from [`Get-HPOVRack`](get-hpovrack.md).
 
-
 ## Return Values
 
 _**System.Management.Automation.PSCustomObject**_
 
 Object with status confirmation the resource was deleted.
-
 
 ## Related Links
 

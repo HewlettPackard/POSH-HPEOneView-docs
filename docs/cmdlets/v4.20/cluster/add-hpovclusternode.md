@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Add a new cluster member to an existing cluster.
 ---
 
 # Add-HPOVClusterNode
@@ -19,6 +19,7 @@ Add-HPOVClusterNode
 ## Description
 
 Use this Cmdlet to add a new cluster member to an existing cluster.
+
 ## Examples
 
 ###  Example 1 
@@ -34,11 +35,7 @@ Default example
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

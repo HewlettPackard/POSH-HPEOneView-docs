@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Generate test audit log forward message.
 ---
 
 # Test-HPOVApplianceAuditLogForwarding
@@ -8,6 +8,7 @@ description:
 
 ```text
 Test-HPOVApplianceAuditLogForwarding
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -16,6 +17,7 @@ Test-HPOVApplianceAuditLogForwarding
 This Cmdlet will generate a syslog message to test connectivity to the appliance configured remote Syslog server.
 
 Required permissions: Infrastructure administrator
+
 ## Examples
 
 ###  Example 1 
@@ -31,11 +33,7 @@ Generate audit log test message.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -52,8 +50,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None. You cannot pipe objects to this cmdlet.**_
-
-None. You cannot pipe objects to this cmdlet
 
 ## Return Values
 

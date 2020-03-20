@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Disable specific appliance-level component debug logging.
 ---
 
 # Disable-HPOVDebug
@@ -17,6 +17,7 @@ Disable-HPOVDebug
 ## Description
 
 FOR HP SUPPORT USE ONLY.  This cmdlet will disable appliance level component debug logging for during issue triage, by setting the Level to INFO.  Do not use this cmdlet unless otherwise instructed by HP Support.
+
 ## Examples
 
 ## Parameters
@@ -47,8 +48,6 @@ The internal component name.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 
 | Aliases | None |
@@ -68,7 +67,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 _**HPOneView.Appliance.Connection**_
 
 HPE OneView Appliance Connection object.
-
 
 ## Return Values
 

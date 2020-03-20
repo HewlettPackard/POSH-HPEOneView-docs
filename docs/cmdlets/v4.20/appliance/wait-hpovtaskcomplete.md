@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Wait for a task to complete.
 ---
 
 # Wait-HPOVTaskComplete
@@ -8,6 +8,10 @@ description:
 
 ```text
 Wait-HPOVTaskComplete
+    [-InputObject] <Object>
+    [-Timeout] <TimeSpan>
+    [-ApplianceConnection] <Object>
+    [-ApplianceWillReboot]
     [<CommonParameters>]
 ```
 
@@ -18,6 +22,7 @@ HPE OneView utilizes a task subsystem for operations that will take longer than 
 This blocking cmdlet assists a caller with monitoring a specific task resource, and will wait for the given task to "complete" (get to a terminal state, including error) or timeout.  The cmdlet accepts either the task URI or resource object via pipeline.  
 
 Once the task is no longer in a running state, the cmlet will return the task resource object.  The caller should examine the taskState property/key for the final task status.
+
 ## Examples
 
 ###  Example 1 
@@ -25,8 +30,6 @@ Once the task is no longer in a running state, the cmlet will return the task re
 ```text
 Wait-HPOVTaskComplete /rest/tasks/F08EE040-DBA7-4806-BB62-993DD0CB4250
 Waiting for task to complete...Task completed successfully!
-
-
 ```
 
 Wait for task to complete.
@@ -36,8 +39,6 @@ Wait for task to complete.
 ```text
 Wait-HPOVTaskComplete $task -timeout (New-TimeSpan -minute 10)
 Waiting for task to complete...Task completed successfully!
-
-
 ```
 
 Wait for task to complete, modifying the default timeout to 10 minutes.
@@ -47,8 +48,6 @@ Wait for task to complete, modifying the default timeout to 10 minutes.
 ```text
 $svr = Get-HPOVServer "ServerA"
 $taskResults = New-HPOVServerProfile -name "Profile 1" -server $svr | Wait-HPOVTaskComplete
-
-
 ```
 
 Retreive the server details for ServerA, create a Server Profile and pass via pipeline the task resource object.
@@ -57,7 +56,6 @@ Retreive the server details for ServerA, create a Server Profile and pass via pi
 
 ### -InputObject &lt;Object&gt;
 
-Aliases [-TaskUri, `-Task`]
 The uri of the task resource to wait for.
 
 | Aliases | TaskUri, Task |
@@ -94,11 +92,7 @@ Internal use t indicate if a task will cause appliance to reboot.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -117,7 +111,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 _**System.String**_
 
 Task URI
-
 
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 

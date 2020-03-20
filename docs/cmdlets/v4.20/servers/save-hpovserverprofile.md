@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Save the contents of a Server Profile to the appliance.
 ---
 
 # Save-HPOVServerProfile
@@ -17,6 +17,7 @@ Save-HPOVServerProfile
 ## Description
 
 This Cmdlet allows administrators to save the modified Server Profile object within the current PowerShell session to the target appliance.
+
 ## Examples
 
 ###  Example 1 
@@ -34,11 +35,7 @@ Get a Server Profile, update its name, then save.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -80,14 +77,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.ServerProfile**_
 
-A Server Profile resource object from Get-ServerProfile that was modified and needs to be saved.
+A Server Profile resource object from [`Get-HPOVServerProfile`](get-hpovserverprofile.md) that was modified and needs to be saved.
 
 ## Return Values
 
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task Resource object for monitoring the enclosure import process.
-
 
 ## Related Links
 

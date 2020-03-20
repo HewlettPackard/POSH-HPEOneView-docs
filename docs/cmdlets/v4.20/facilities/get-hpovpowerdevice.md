@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Retrieve Power Device (iPDU) resource(s).
 ---
 
 # Get-HPOVPowerDevice
@@ -8,12 +8,16 @@ description:
 
 ```text
 Get-HPOVPowerDevice
+    [-Name <String>]
+    [-Type <String>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ## Description
 
 Obtain a collection of power device resources which have the specified name, and display the information about the power device.
+
 ## Examples
 
 ###  Example 1 
@@ -52,11 +56,11 @@ The name of the power device resource to be returned.  All power device resource
 
 Filter the Power Delivery Device type.  Allowed values:
 
-	* HPIpduCore
-	* HPIpduAcModule
-	* LoadSegment
-	* HPIpduOutletBar
-	* HPIpduOutlet.
+    * HPIpduCore
+    * HPIpduAcModule
+    * LoadSegment
+    * HPIpduOutletBar
+    * HPIpduOutlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -68,11 +72,7 @@ Filter the Power Delivery Device type.  Allowed values:
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -89,8 +89,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this cmdlet.**_
-
-
 
 ## Return Values
 

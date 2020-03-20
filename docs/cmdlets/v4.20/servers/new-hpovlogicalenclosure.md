@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Create a Logical Enclosure.
 ---
 
 # New-HPOVLogicalEnclosure
@@ -26,6 +26,7 @@ A logical enclosure represents a logical view of a single enclosure with an encl
 A logical enclosure is automatically created when a c7000 enclosure is added.
 
 Use this Cmdlet to define a new Logical Enclosure that will include multiple Synergy Frames that share the same Virtual Connect Fabric Domain.
+
 ## Examples
 
 ###  Example 1 
@@ -33,8 +34,6 @@ Use this Cmdlet to define a new Logical Enclosure that will include multiple Syn
 ```text
 $EG = Get-HPOVEnclosureGroup -Name "Prod Synergy EG 1"
 Get-HPOVEnclosure -Name 0000A66101 | New-HPOVLogicalEnclosure "My Synergy LE 1" -EnclosureGroup $EG
-
-
 ```
 
 Create a new Logical Enclosure, "My Synergy LE 1", using the specified Enclosure Group and a specific Synergy Frame.
@@ -115,11 +114,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

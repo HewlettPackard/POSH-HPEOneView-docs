@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Retrieve EULA status.
 ---
 
 # Get-HPOVEulaStatus
@@ -8,6 +8,7 @@ description:
 
 ```text
 Get-HPOVEulaStatus
+    [-Appliance] <Object>
     [<CommonParameters>]
 ```
 
@@ -16,6 +17,7 @@ Get-HPOVEulaStatus
 Determine if the EULA for the specified appliance needs to be accepted.  This is typically called during First Time Setup of the appliance.
 
 This Cmdlet supports an unauthenticated request.  If attempting to get the EULA status of an appliance not yet configured, provide the IP Address or FQDN of the appliance.  A temporary ApplianceConnection will be created then removed in the ${Global:ConnectedSessions} tracker.
+
 ## Examples
 
 ###  Example 1 
@@ -64,8 +66,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this cmdlet.**_
-
-
 
 ## Return Values
 

@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Create a Storage Volume resource.
 ---
 
 # New-HPOVStorageVolume
@@ -70,6 +70,7 @@ New-HPOVStorageVolume
 This cmdlet will help create a Storage Volume resource on a managed Storage System.  The volume can be created by specifying the Storage Pool or an existing Storage Volume Template.  When the Storage Pool name is not unique, you can either use the -StorageSystem parameter, or pass via the pipeline the Storage Pool from `Get-HPOVStoragePool`.
 
 If the Storage Volume Template Global Policy is enabled, a valid Storage Volume Template must be provided.
+
 ## Examples
 
 ###  Example 1 
@@ -113,8 +114,6 @@ Create a 60GB private, thin provisioned volume named "TestVol1" from the "PoolR1
 ```text
 $svt = Get-HPOVStorageVolumeTemplate SVT_120GB_R5
 $New-HPOVStorageVolume testvol3 -volumetemplate $svt -capacity 90 | Wait-HPOVTaskComplete
-
-
 ```
 
 Create a 90GB volume named "TestVol1", using the "SVT_120GB_R5" Storage Volume Template, then wait for volume to be provisioned.
@@ -123,7 +122,6 @@ Create a 90GB volume named "TestVol1", using the "SVT_120GB_R5" Storage Volume T
 
 ### -Name &lt;String&gt;
 
-Aliases [-VolumeName]
 Storage Volume Name. Device Volume created on the storage system will be this name without spaces.
 
 | Aliases | VolumeName |
@@ -148,7 +146,6 @@ Provide a description for the volume.
 
 ### -StoragePool &lt;Object&gt;
 
-Aliases [-pool, `-PoolName`]
 Storage Pool URI, name or resource object.
 
 | Aliases | pool, poolName |
@@ -161,7 +158,6 @@ Storage Pool URI, name or resource object.
 
 ### -SnapshotStoragePool &lt;Object&gt;
 
-Aliases [-pool, `-PoolName`]
 Storage Pool URI, name or resource object.
 
 | Aliases | None |
@@ -186,7 +182,6 @@ When the Storage Pool name is not unique, specify the Storage System name the po
 
 ### -VolumeTemplate &lt;Object&gt;
 
-Aliases [-template, `-svt`]
 Specify the Storage Volume Template Name, URI or Resource.
 
 | Aliases | template, svt |
@@ -199,7 +194,6 @@ Specify the Storage Volume Template Name, URI or Resource.
 
 ### -Capacity &lt;Int64&gt;
 
-Aliases [-size]
 Max volume capacity in GB.  `[e.g]`. 20 to specify 20GB.
 
 | Aliases | size |
@@ -212,7 +206,10 @@ Max volume capacity in GB.  `[e.g]`. 20 to specify 20GB.
 
 ### -Full &lt;SwitchParameter&gt;
 
-NOTE: This parameter is being deprecated for the `-ProvisionType` parameter. Please update your scripts.
+{% hint style="info" %}
+This parameter is being deprecated for the `
+{% endhint %}
+-ProvisionType` parameter. Please update your scripts.
 
 Include this switch to enable Thick volume provisioning.  Omit to specify Thin storage provisioning.
 Default: Thin
@@ -229,12 +226,12 @@ Default: Thin
 
 Specify the StoreVirtual protection level (aka Network RAID) for the volume.  Allowed values are:
 
-	* NetworkRaid0None
-	* NetworkRaid5SingleParity
-	* NetworkRaid10Mirror2Way
-	* NetworkRaid10Mirror3Way
-	* NetworkRaid10Mirror4Way
-	* NetworkRaid6DualParity
+    * NetworkRaid0None
+    * NetworkRaid5SingleParity
+    * NetworkRaid10Mirror2Way
+    * NetworkRaid10Mirror3Way
+    * NetworkRaid10Mirror4Way
+    * NetworkRaid6DualParity
 
 
 | Aliases | None |
@@ -261,9 +258,9 @@ Whether or not Adaptive Optimization is enabled on the storage volume.  Only sup
 
 Specify the type of volume to provision.  Allowed values are:
 
-	* Thin
-	* Full
-	* TPDD (Thin Provision Dedup) - Only available for HPE StoreServ storage systems with SSD storage pools (aka CPG"s).
+    * Thin
+    * Full
+    * TPDD (Thin Provision Dedup) - Only available for HPE StoreServ storage systems with SSD storage pools (aka CPG"s).
 
 | Aliases | ProvisionType |
 | :--- | :--- |
@@ -300,11 +297,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | None |
 | :--- | :--- |
@@ -418,7 +411,7 @@ Specify the Nimble folder where the volume should be created.  To get availabe f
 
 Example:
 
-	 (Get-HPOVStoragePool `-name` default).DeviceSpecificAttributes.Folders
+     (Get-HPOVStoragePool `-name` default).DeviceSpecificAttributes.Folders
 
 ID                                         Name
 --                                         ----
@@ -450,7 +443,7 @@ A Nimble Performance Policy is associated with a storage system.  Using the `Sho
 
 Example:
 
-	`Get-HPOVStorageSystem` `-Name` MyNimbleSys | `Show-HPOVStorageSystemPerformancePolicy`
+    `Get-HPOVStorageSystem` `-Name` MyNimbleSys | `Show-HPOVStorageSystemPerformancePolicy`
 
 | Aliases | None |
 | :--- | :--- |
@@ -482,13 +475,11 @@ _**HPOneView.Storage.Pool [System.Management.Automation.PSCustomObject]**_
 
 Storage Pool resource object
 
-
 ## Return Values
 
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async create task
-
 
 ## Related Links
 

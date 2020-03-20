@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Delete a baseline or hotfix from an appliance repository.
 ---
 
 # Remove-HPOVBaseline
@@ -8,12 +8,16 @@ description:
 
 ```text
 Remove-HPOVBaseline
+    [-InputObject] <Object>
+    [-ApplianceConnection <Object>]
+    [-Force]
     [<CommonParameters>]
 ```
 
 ## Description
 
 This Cmdlet provides the ability to remove one or more SPP Baselines from one or more appliances.
+
 ## Examples
 
 ###  Example 1 
@@ -38,7 +42,6 @@ Remove the specified "My Custom Baseline" baseline.
 
 ### -InputObject &lt;Object&gt;
 
-Aliases [-b, `-Baseline`]
 The SPP Baseline or hotfix resource object.  Can be accepted via pipeline input.
 
 | Aliases | b, Baseline |
@@ -63,11 +66,7 @@ Force remove the resource.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -110,7 +109,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 _**HPOneView.Appliance.Baseline [System.Management.Automation.PSCustomObject]**_
 
 Source HPE OneView Baseline from [`Get-HPOVBaseline`](get-hpovbaseline.md)
-
 
 ## Return Values
 

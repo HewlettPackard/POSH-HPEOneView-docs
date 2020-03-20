@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Enable or Disable Automated SAN Zoning.
 ---
 
 # Set-HPOVManagedSan
@@ -45,6 +45,7 @@ Set-HPOVManagedSan
 ## Description
 
 This cmdlet is used to Enable or Disable a Managed SAN resource on the appliance.  Disabling a Managed SAN will prevent the appliance from configuring FC Zones.
+
 ## Examples
 
 ###  Example 1 
@@ -78,8 +79,6 @@ Enable Automated SAN Zoning for all managed SAN Fabrics
 
 ### -InputObject &lt;Object&gt;
 
-Aliases [-Fabric, `-Name`, `-ManagedSan`]
-
 Managed SAN Name or Object.
 
 | Aliases | Fabric, Name, ManagedSan, Resource |
@@ -92,7 +91,12 @@ Managed SAN Name or Object.
 
 ### -EnableAutomatedZoning &lt;SwitchParameter&gt;
 
-(DEPRICATED - Please use `-ZoningPolicy` parameter.) Enable Automated Zoning for the specified Managed SAN.  When used, the default Zone Policy "SingleInitiatorAllTargets" is set.
+{% hint style="warning" %}
+This parameter is now deprecated. Please use `-ZoningPolicy` parameter.
+{% endhint %}
+
+
+Enable Automated Zoning for the specified Managed SAN.  When used, the default Zone Policy "SingleInitiatorAllTargets" is set.
 
 | Aliases | ZoningEnable, Enable |
 | :--- | :--- |
@@ -104,7 +108,12 @@ Managed SAN Name or Object.
 
 ### -DisableAutomatedZoning &lt;SwitchParameter&gt;
 
-(DEPRICATED - Please use `-ZoningPolicy` parameter.) Disable Automated Zoning for the specified Managed SAN.
+{% hint style="warning" %}
+This parameter is now deprecated. Please use `-ZoningPolicy` parameter.
+{% endhint %}
+
+
+Disable Automated Zoning for the specified Managed SAN.
 
 | Aliases | ZoningDisable, Disable |
 | :--- | :--- |
@@ -118,9 +127,9 @@ Managed SAN Name or Object.
 
 Policy setting that affects the way that zones are created. Allowed values:
 
-	* NoZoning - Disable all automated zoning on the SAN and ignore policy settings related to zoning.
-	* SingleInitiatorAllTargets - Create one zone per initiator containing all targets connected to that initiator.
-	* SingleInitiatorSingleStorageSystem - Similar to SingleInitiatorAllTargets except that separate zones are created for targets that reside on different storage systems.
+    * NoZoning - Disable all automated zoning on the SAN and ignore policy settings related to zoning.
+    * SingleInitiatorAllTargets - Create one zone per initiator containing all targets connected to that initiator.
+    * SingleInitiatorSingleStorageSystem - Similar to SingleInitiatorAllTargets except that separate zones are created for targets that reside on different storage systems.
 
 | Aliases | None |
 | :--- | :--- |
@@ -254,8 +263,6 @@ Example: "{initiatorWwn}_{initiatorName}"
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 Default Value: ${Global:ConnectSessions} | ? Default
@@ -278,11 +285,9 @@ _**HPOneView.Storage.ManagedSan [System.Management.Automation.PSCustomObject]**_
 
 Single Resource
 
-
 _**System.Collection.ArrayList <HPOneView.Storage.ManagedSan>**_
 
 Multiple Resources
-
 
 ## Return Values
 
@@ -290,11 +295,9 @@ _**System.Management.Automation.PSCustomObject**_
 
 Single Resource
 
-
 _**System.Collections.ArrayList**_
 
 Multiple Resources
-
 
 ## Related Links
 

@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Generate appliance CSR
 ---
 
 # New-HPOVApplianceCsr
@@ -31,13 +31,14 @@ New-HPOVApplianceCsr
 ## Description
 
 This cmdlet will create the CSR for an given appliance, to then be submitted to a CA.
+
 ## Examples
 
 ###  Example 1 
 
 ```text
 $CSR = @{
->> 	Country = "US";
+>>     Country = "US";
 >>  State = "California";
 >>  City = "Palo Alto";
 >>  Organization = "Hewlett-Packard";
@@ -47,8 +48,6 @@ $CSR = @{
 >>
 $request = New-HPOVApplianceCsr @CSR -ApplianceConnection Appliance.domain.com
 Set-Content -path C:\dir\hpov.csr -value $request.base64Data -Force
-
-
 ```
 
 Create a CSR request to submit to CA.
@@ -57,7 +56,6 @@ Create a CSR request to submit to CA.
 
 ### -Country &lt;String&gt;
 
-Aliases [-C]
 The country code in either Full English or `ISO3166-2` `two-character` format, is a required entry and must contain only two letters.
 
 | Aliases | C |
@@ -70,7 +68,6 @@ The country code in either Full English or `ISO3166-2` `two-character` format, i
 
 ### -State &lt;String&gt;
 
-Aliases [-ST, `-Province`]
 The state or province is a required entry, can contain up to 128 characters.
 
 | Aliases | ST, Province |
@@ -83,7 +80,6 @@ The state or province is a required entry, can contain up to 128 characters.
 
 ### -City &lt;String&gt;
 
-Aliases [-L, `-Locality`]
 The city or locality is a required entry, can contain up to 128 characters.
 
 | Aliases | L, Locality |
@@ -96,7 +92,6 @@ The city or locality is a required entry, can contain up to 128 characters.
 
 ### -Organization &lt;String&gt;
 
-Aliases [-O]
 The organization name is a required entry, can contain up to 64 characters.
 
 | Aliases | O |
@@ -109,7 +104,6 @@ The organization name is a required entry, can contain up to 64 characters.
 
 ### -CommonName &lt;String&gt;
 
-Aliases [-CN]
 The common name is a required entry, and can be FQDN/hostname or IPv4/IPv6 address. 
 
 Example: "hpov.example.com"
@@ -124,7 +118,6 @@ Example: "hpov.example.com"
 
 ### -OrganizationalUnit &lt;String&gt;
 
-Aliases [-OU]
 The entry for the organizational unit name, may not exceed 64 characters.
 
 | Aliases | OU |
@@ -137,7 +130,6 @@ The entry for the organizational unit name, may not exceed 64 characters.
 
 ### -AlternativeName &lt;String&gt;
 
-Aliases [-SAN]
 An optional entry containing additional names that apply to the owner of the certificate, possibly including additional `e-mail` addresses, DNS names, IP addresses and other identifiers. 
 
 Example: "hpov.example.com,hpov,192.168.1.1"
@@ -152,7 +144,6 @@ Example: "hpov.example.com,hpov,192.168.1.1"
 
 ### -ContactName &lt;String&gt;
 
-Aliases [-Contact]
 The name of the contact person, may not exceed 64 characters.
 
 | Aliases | Contact |
@@ -177,7 +168,6 @@ The contact person"s email address, which may not exceed 128 characters and is o
 
 ### -Surname &lt;String&gt;
 
-Aliases [-Sur]
 The contact person"s family name, which may not exceed 64 characters.
 
 | Aliases | Sur |
@@ -190,7 +180,6 @@ The contact person"s family name, which may not exceed 64 characters.
 
 ### -GivenName &lt;String&gt;
 
-Aliases [-Giv]
 The contact person"s first name, which may not exceed 64 characters.
 
 | Aliases | Giv |
@@ -239,7 +228,6 @@ The challenge password is a required entry and must contain a minimum of 8 chara
 
 ### -UnstructuredName &lt;String&gt;
 
-Aliases [-UN]
 Defined by the certificate authority, and may contain up to 64 characters.  Consult the certificate authority"s administrator or documentation for more information.
 
 | Aliases | UN |
@@ -264,11 +252,7 @@ Specify to create a CNSA compliant certificate request.  By default the certific
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -285,8 +269,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 _**None.  You cannot pipe objects to this cmdlet.**_
-
-
 
 ## Return Values
 

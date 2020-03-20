@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Retrieve SAS Logical Interconnect resource(s).
 ---
 
 # Get-HPOVSasLogicalInterconnect
@@ -18,6 +18,7 @@ Get-HPOVSasLogicalInterconnect
 ## Description
 
 Retrieves a list of all SAS Logical Interconnect or just specific ones via a query if the name parameter is provided.  The output can be sent to a file using the exportFile parameter.
+
 ## Examples
 
 ###  Example 1 
@@ -56,10 +57,10 @@ The name of the SAS Logical Interconnect to retrieve.
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-	* AllResources
-	* AllResourcesInScope
-	* `[HPOneView.Appliance.ScopeCollection]`
-	* `[HPOneView.Appliance.ConnectionPermission]`
+    * AllResources
+    * AllResourcesInScope
+    * `[HPOneView.Appliance.ScopeCollection]`
+    * `[HPOneView.Appliance.ConnectionPermission]`
 
 | Aliases |  |
 | :--- | :--- |
@@ -83,11 +84,7 @@ Specify the label associated with resources.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -99,7 +96,6 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 
 ### -Export &lt;String&gt;
 
-Aliases [-x, `-export`]
 The full path and file name to export the contents retrieved from the call to `Get-HPOVLogicalInterconnect`.
 
 | Aliases | x, ExportFile |
@@ -118,19 +114,15 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPoneView.Storage.SasLogicalInterconnect [System.Management.Automation.PSCustomObject]**_
 
 Logical Interconnect resource object from [`Get-HPOVLogicalInterconnect`](get-hpovlogicalinterconnect.md)
 
-
-_**System.Collections.ArrayList <HPoneView.Storage.SasLogicalInterconnect>	**_
+_**System.Collections.ArrayList <HPoneView.Storage.SasLogicalInterconnect>    **_
 
 Multiple Logical Interconnects
-
 
 _**A SAS Logical Interconnect or collection of SAS Logical Interconnects**_
 

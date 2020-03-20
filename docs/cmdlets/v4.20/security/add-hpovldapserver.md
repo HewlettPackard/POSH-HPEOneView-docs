@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Add a new LDAP Directory Server.
 ---
 
 # Add-HPOVLdapServer
@@ -39,6 +39,7 @@ Add-HPOVLdapServer
 ## Description
 
 This Cmdlet will add a new LDAP Directory Server to an existing authentication directory.
+
 ## Examples
 
 ###  Example 1 
@@ -66,7 +67,6 @@ The LDAP Directory Object from `Get-HPOVLdapDirectory`.
 
 ### -Hostname &lt;String&gt;
 
-Aliases [-Name]
 Directory server name or IP Address to add.
 
 | Aliases | Name |
@@ -79,7 +79,6 @@ Directory server name or IP Address to add.
 
 ### -SSLPort &lt;Int32&gt;
 
-Aliases [-port]
 Directory Server"s LDAP SSL Port.
 
 | Aliases | port |
@@ -92,7 +91,6 @@ Directory Server"s LDAP SSL Port.
 
 ### -Certificate &lt;Object&gt;
 
-Aliases [-cert]
 Directory Server SSL Certificate, either location to Base64 Cert or `multi-line` string value.  If omitted, the CMDLET will attempt to retrieve the Directory Servers Secure LDAP Certiciate.
 
 | Aliases | cert |
@@ -105,7 +103,6 @@ Directory Server SSL Certificate, either location to Base64 Cert or `multi-line`
 
 ### -Username &lt;String&gt;
 
-Aliases [-u]
 Directory Username to authenticate with in order to validate LDAP configuration.
 
 | Aliases | u, user |
@@ -118,7 +115,6 @@ Directory Username to authenticate with in order to validate LDAP configuration.
 
 ### -Password &lt;Object&gt;
 
-Aliases [-p]
 Directory User account password in order to validate LDAP configuration.  Can be `[System.String]` or SecureString object.
 
 | Aliases | p, pass |
@@ -131,11 +127,7 @@ Directory User account password in order to validate LDAP configuration.  Can be
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

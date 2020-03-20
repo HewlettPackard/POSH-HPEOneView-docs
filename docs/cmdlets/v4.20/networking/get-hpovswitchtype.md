@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Retrieve Switch Type resource(s).
 ---
 
 # Get-HPOVSwitchType
@@ -22,14 +22,14 @@ Get-HPOVSwitchType
 
 ## Description
 
-Retrieves a list of all supported Switch Types or just specific ones via a query if the name or partnumber parameters are provided. 
+Retrieves a list of all supported Switch Types or just specific ones via a query if the name or partnumber parameters are provided.  
+
 ## Examples
 
 ###  Example 1 
 
 ```text
 Get-HPOVSwitchType
-
 ```
 
 Returns all Switch Types available from all connected appliances to standard output.
@@ -38,7 +38,6 @@ Returns all Switch Types available from all connected appliances to standard out
 
 ```text
 Get-HPOVSwitchType -Name "Cisco Nexus 55xx"
-
 ```
 
 Returns just the "Cisco Nexus 55xx" Switch Type object to standard output.
@@ -47,7 +46,6 @@ Returns just the "Cisco Nexus 55xx" Switch Type object to standard output.
 
 ```text
 Get-HPOVSwitchType -Partnumber "DCS-7060X-SERIES"
-
 ```
 
 Returns just the partnumber "DCS-7060X-SERIES" Switch Type object to standard output.
@@ -80,11 +78,7 @@ The Part Number of an switch type to search for.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -102,14 +96,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None.  You cannot pipe objects to this cmdlet.**_
 
-
-
 ## Return Values
 
 _**HPOneView.Networking.SwitchType**_
 
 Single Switch Type resource.
-
 
 ## Related Links
 

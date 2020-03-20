@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Request a cluster node member to exit maintenance mode.
 ---
 
 # Exit-HPOVClusterNodeMaintenanceMode
@@ -21,6 +21,7 @@ A cluster in an active state runs a shared workload, like virtual machines withi
 After the maintenance operation on the cluster member completes, you must release it from maintenance mode to resume hosting the shared workload.
 
 Privileges: Infrastructure administrator, Server administrator, Server Profile administrator, Server Profile architect, or Server Profile operator
+
 ## Examples
 
 ###  Example 1 
@@ -36,11 +37,7 @@ Request to the specific node exit maintenance mode.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -113,7 +110,6 @@ Cluster node member from [`Get-HPOVClusterNode`](get-hpovclusternode.md).
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Asyncronous task resource to monitor.
-
 
 ## Related Links
 

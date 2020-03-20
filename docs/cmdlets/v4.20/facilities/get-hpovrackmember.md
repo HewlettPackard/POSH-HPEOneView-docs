@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Get a member device from a defined Rack.
 ---
 
 # Get-HPOVRackMember
@@ -23,7 +23,8 @@ You can use the appliance to view and manage your rack configuration and power d
 
 The appliance automatically discovers the rack height and rack model for a ProLiant server with Location Discovery Services and updates the physical locations of devices when they are relocated within and between racks for c7000 enclosures.
 
-This Cmdlet will retrieve all or a specific Rack resource object.
+This Cmdlet will retrieve all or a specific Rack resource object. 
+
 ## Examples
 
 ###  Example 1 
@@ -71,11 +72,7 @@ Name of a member within the Rack.  Supports (*) wildcard character.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -95,13 +92,11 @@ _**HPOneView.Facilities.Rack**_
 
 Rack resource object from [`Get-HPOVRack`](get-hpovrack.md).
 
-
 ## Return Values
 
 _**HPOneView.Facilities.RackMember**_
 
 The individual rack member resource object.
-
 
 ## Related Links
 

@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Enable UID of a device.
 ---
 
 # Enable-HPOVDeviceUid
@@ -16,6 +16,7 @@ Enable-HPOVDeviceUid
 ## Description
 
 This Cmdlet will enable the UID of a managed or monitored resource, and only supports objects.  Use `Get-HPOVServer` or `Get-HPOVEnclosure` to retrieve the required resource(s), which can be passed via the pipeline.
+
 ## Examples
 
 ###  Example 1 
@@ -31,7 +32,6 @@ Enable the UID for "MyEncl, Bay 1" server.
 
 ### -InputObject &lt;Object&gt;
 
-Aliases [-Server, `-Enclosure`, `-Frame`]
 Resource object to turn on the UID.  Supported resources are Server Hardware and Enclosures.
 
 | Aliases | Server, Enclosure, Frame, Resource |
@@ -44,11 +44,7 @@ Resource object to turn on the UID.  Supported resources are Server Hardware and
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |

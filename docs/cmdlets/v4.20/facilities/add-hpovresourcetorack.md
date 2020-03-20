@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Add supported resource to rack.
 ---
 
 # Add-HPOVResourceToRack
@@ -18,6 +18,7 @@ Add-HPOVResourceToRack
 ## Description
 
 Add a supported resource to a rack resource object.
+
 ## Examples
 
 ###  Example 1 
@@ -27,8 +28,8 @@ $Rack = Get-HPOVRack -Name MyRack221 -ErrorAction Stop
 $Servers = Get-HPOVServers -Name Prod221* -ErrorAction Stop
 $_U = 1
 ForEach ($Server in $Servers) {
-	Add-HPOVResourceToRack -InputObject $Server -Rack $Rack -ULocation $_U
-	$_U += $Server.formFactor.Replace("U",$null)
+    Add-HPOVResourceToRack -InputObject $Server -Rack $Rack -ULocation $_U
+    $_U += $Server.formFactor.Replace("U",$null)
 }
 ```
 
@@ -41,8 +42,8 @@ $Rack = Get-HPOVRack -Name MyRack222 -ErrorAction Stop
 $Enclosures = Get-HPOVEnclosures -Name Encl-Prod* -ErrorAction Stop | ? rackName -eq $Rack.name
 $_U = 1
 ForEach ($Enclosure in $Enclosures) {
-	Add-HPOVResourceToRack -InputObject $Enclosure -Rack $Rack -ULocation $_U
-	$_U += 10
+    Add-HPOVResourceToRack -InputObject $Enclosure -Rack $Rack -ULocation $_U
+    $_U += 10
 }
 ```
 
@@ -54,9 +55,9 @@ Add Enclosures which the Onboard Administrators report are in "MyRack222", and a
 
 The suppported resource object from.
 Supported resource objects are:
-	*Enclosures
-	*Servers
-	*Unmanaged Devices
+    *Enclosures
+    *Servers
+    *Unmanaged Devices
 
 | Aliases | None |
 | :--- | :--- |
@@ -92,11 +93,7 @@ The rack unit location where the resource is located.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -115,7 +112,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 _**HPOneView.Facilities.Rack [System.Management.Automation.PSCustomObject]**_
 
 Rack resource object from [`Get-HPOVRack`](get-hpovrack.md).
-
 
 ## Return Values
 

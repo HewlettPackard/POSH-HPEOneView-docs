@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Remove a Storage Volume
 ---
 
 # Remove-HPOVStorageVolume
@@ -10,6 +10,7 @@ description:
 Remove-HPOVStorageVolume
     [-InputObject] <Object>
     [-ExportOnly]
+    [-Async]
     [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
@@ -17,6 +18,7 @@ Remove-HPOVStorageVolume
 ## Description
 
 This cmdlet will remove storage volumes from the HPE OneView appliance.  Volumes must first be removed from attached Server Profiles prior to deleting the Storage Volume.
+
 ## Examples
 
 ###  Example 1 
@@ -42,7 +44,6 @@ Remove export of volume named "TestVol1" only, which leaves the volume still pro
 
 ### -InputObject &lt;Object&gt;
 
-Aliases [-StorageVolume, `-Name`, `-URI`]
 Storage Volume Name, URI or Object.
 
 | Aliases | uri, name, StorageVolume |
@@ -80,11 +81,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -128,13 +125,11 @@ _**HPOneView.Storage.System.Volume [System.Management.Automation.PSCustomObject]
 
 Storage Volume resource object
 
-
 ## Return Values
 
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async removal task
-
 
 ## Related Links
 

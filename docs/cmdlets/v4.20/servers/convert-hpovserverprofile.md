@@ -1,5 +1,5 @@
 ﻿---
-description: 
+description: Migrate Server Profile.
 ---
 
 # Convert-HPOVServerProfile
@@ -20,17 +20,18 @@ Convert-HPOVServerProfile
 
 Use this Cmdlet to change the Server Hardware Type and/or Enclosure Group set within the Server Profile.  Changing to a different server hardware type may change the capabilities available to the server profile. Changing the enclosure group may change the connections which are available for the profile.
 
-	* The server hardware field will be set to "unassigned", requiring `re-seletion` of server hardware.
-	* It may also cause incompatibilities with the current configuration.
-	* All deployed connections will have their port assignment set to "Auto".
-	* Any incompatibilities will be flagged when the server profile is committed.
-	* If the new server hardware type does not support the local storage configuration, some storage may be lost.
-	* If the enclosure group is changed, mezzanine storage is lost and the disk drives are released.
-	* To prevent data loss, cancel this operation and backup data before applying the profile.
-	* Any change in the server hardware type will lead to the associated volume loss.
-	* If the server profile is associated with a server profile template, the server profile will become inconsistent with the template.  The server profile should be unassociated with the template before or after the migration.
+    * The server hardware field will be set to "unassigned", requiring `re-seletion` of server hardware.
+    * It may also cause incompatibilities with the current configuration.
+    * All deployed connections will have their port assignment set to "Auto".
+    * Any incompatibilities will be flagged when the server profile is committed.
+    * If the new server hardware type does not support the local storage configuration, some storage may be lost.
+    * If the enclosure group is changed, mezzanine storage is lost and the disk drives are released.
+    * To prevent data loss, cancel this operation and backup data before applying the profile.
+    * Any change in the server hardware type will lead to the associated volume loss.
+    * If the server profile is associated with a server profile template, the server profile will become inconsistent with the template.  The server profile should be unassociated with the template before or after the migration.
 
 Required Permissions: Infrastructure administrator or Server administrator.
+
 ## Examples
 
 ###  Example 1 
@@ -71,11 +72,7 @@ Transform the specified server profile object to a different enclosure group and
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -160,7 +157,6 @@ The Server Profile resource object to transform.
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async Task resource to monitor progress of the Server Profile transformation.
-
 
 ## Related Links
 
