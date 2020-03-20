@@ -1,4 +1,4 @@
-﻿---
+---
 description: Configure appliance web proxy.
 ---
 
@@ -30,11 +30,11 @@ Set-HPOVApplianceProxy
 
 ## Description
 
-When configuring Remote Support, a Web Proxy may be required.  This Cmdlet will assist in defining an HTTPS web proxy for Remote Support outbound connectivity.  Proxy configuration does not support SOCKS. 
+When configuring Remote Support, a Web Proxy may be required. This Cmdlet will assist in defining an HTTPS web proxy for Remote Support outbound connectivity. Proxy configuration does not support SOCKS.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Set-HPOVApplianceProxy -Hostname MyProxy.domain.com -Port 8080
@@ -42,7 +42,7 @@ Set-HPOVApplianceProxy -Hostname MyProxy.domain.com -Port 8080
 
 Configure the appliance proxy server by providing the required Hostname and Port values.
 
-###  Example 2 
+### Example 2
 
 ```text
 Set-HPOVApplianceProxy -Hostname MyProxy.domain.com -Port 8080 -Username MyUserAccount -Password (ConvertTo-SecureString -String MyPassword -AsPlainText -Force)
@@ -102,7 +102,7 @@ The proxy server account password.
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
@@ -114,19 +114,19 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | (${Global:ConnectedSessions} | ? Default) |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \(${Global:ConnectedSessions} | ? Default\) |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### -Https &lt;SwitchParameter&gt;
 
-Specify if target proxy server requires HTTPS.  The target SSL/TSL certificate must be added to the appliance using the `Add-HPOVApplianceTrustedCertificate` Cmdlet.
+Specify if target proxy server requires HTTPS. The target SSL/TSL certificate must be added to the appliance using the `Add-HPOVApplianceTrustedCertificate` Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -142,11 +142,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this Cmdlet.**_
+_**None. You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
 Async task Resource object for monitoring.
 
@@ -154,3 +154,4 @@ Async task Resource object for monitoring.
 
 * [Get-HPOVApplianceProxy](get-hpovapplianceproxy.md)
 * [Remove-HPOVApplianceProxy](remove-hpovapplianceproxy.md)
+

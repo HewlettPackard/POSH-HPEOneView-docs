@@ -1,4 +1,4 @@
-﻿---
+---
 description: Stop HPOV Library Verbose Trace.
 ---
 
@@ -13,17 +13,17 @@ Stop-HPOVLibraryTrace
 
 ## Description
 
-This Cmdlet is deprecated.  Please use Get-HPOVCommandTrace.
+This Cmdlet is deprecated. Please use Get-HPOVCommandTrace.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Stop-HPOVLibraryTrace
 ```
 
-Transcript stopped, output file is C:\Users\Administrator\1604251128_HPOV_transcript.trace
+Transcript stopped, output file is C:\Users\Administrator\1604251128\_HPOV\_transcript.trace
 
 ## Parameters
 
@@ -33,7 +33,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this Cmdlet.**_
+_**None. You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
@@ -44,3 +44,4 @@ _**System.IO.File**_
 ## Related Links
 
 * [Start-HPOVLibraryTrace](start-hpovlibrarytrace.md)
+

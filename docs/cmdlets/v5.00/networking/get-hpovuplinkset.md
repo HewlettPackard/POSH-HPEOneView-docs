@@ -1,4 +1,4 @@
-﻿---
+---
 description: Retrieve Uplink Set resource(s).
 ---
 
@@ -28,11 +28,11 @@ Get-HPOVUplinkSet
 
 ## Description
 
-This Cmdlet will retrieve the list of all Uplink Sets or specific by the name.  The Cmdlet will only display provisioned Uplink Sets that are members of a Logical Interconnect resource.  To view Uplink Sets of a Logical Interconnect Group, use the Get-HPOVLogicalInterconnectGroup Cmdlet.
+This Cmdlet will retrieve the list of all Uplink Sets or specific by the name. The Cmdlet will only display provisioned Uplink Sets that are members of a Logical Interconnect resource. To view Uplink Sets of a Logical Interconnect Group, use the Get-HPOVLogicalInterconnectGroup Cmdlet.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 $UplinkSets = Get-HPOVUplinkSet
@@ -40,23 +40,23 @@ $UplinkSets = Get-HPOVUplinkSet
 
 Get list of all Uplink Sets.
 
-###  Example 2 
+### Example 2
 
 ```text
 Get-HPOVUplinkSet -name "Production Networks"
 ```
 
-Get the "Production Networks" Uplink Set(s).
+Get the "Production Networks" Uplink Set\(s\).
 
-###  Example 3 
+### Example 3
 
 ```text
 Get-HPOVUplinkSet -name "Production Networks" -report
 ```
 
-Get the "Production Networks" Uplink Set(s), and generate a report.
+Get the "Production Networks" Uplink Set\(s\), and generate a report.
 
-###  Example 4 
+### Example 4
 
 ```text
 Get-HPOVUplinkSet -name "Production Networks" -liname "Encl1-LI" -report
@@ -87,15 +87,15 @@ Name of the Logical Interconnect to show associated Uplink Set.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### -type &lt;String&gt;
 
-Specify the Uplink Set Type to display.  Will display all Uplink Sets of the type provided.  Allowed values:
+Specify the Uplink Set Type to display. Will display all Uplink Sets of the type provided. Allowed values:
 
-	* Ethernet
-	* FibreChannel
+* Ethernet
+* FibreChannel
 
 | Aliases | None |
 | :--- | :--- |
@@ -107,7 +107,7 @@ Specify the Uplink Set Type to display.  Will display all Uplink Sets of the typ
 
 ### -report &lt;SwitchParameter&gt;
 
-Generate a report of the defined Uplink Sets.  Includes Uplink Set type, networks, redundancy report, and assigned uplink ports.
+Generate a report of the defined Uplink Sets. Includes Uplink Set type, networks, redundancy report, and assigned uplink ports.
 
 | Aliases | None |
 | :--- | :--- |
@@ -119,15 +119,15 @@ Generate a report of the defined Uplink Sets.  Includes Uplink Set type, network
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value | (${Global:ConnectedSessions} | ? Default) |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | True |  |
+| Position? | Named |  |
+| Default value | \(${Global:ConnectedSessions} | ? Default\) |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### -exportFile &lt;String&gt;
 
@@ -147,7 +147,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this Cmdlet.**_
+_**None. You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
@@ -161,8 +161,7 @@ Multiple Uplink Sets
 
 _**Collection of Uplink Sets**_
 
-
-
 ## Related Links
 
 * [New-HPOVUplinkSet](new-hpovuplinkset.md)
+

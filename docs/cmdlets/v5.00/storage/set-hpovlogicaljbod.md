@@ -1,4 +1,4 @@
-﻿---
+---
 description: Modify a logical JBOD resource.
 ---
 
@@ -20,37 +20,37 @@ Set-HPOVLogicalJBOD
 
 A logical JBOD is a group of physical drives that are dynamically defined as virtual drives. Logical JBOD uses the drives from the drive enclosures that are installed in the device bays of the enclosure and are associated with a SAS logical interconnect. You can assign or unassign a logical JBOD to a server hardware through the server profile.
 
-This Cmdlet will allow you to change the erase on delete option to False if the logical JBOD was created with the feature enabled (true).  Data can also be erased on the logial drive by clearing the metadata.  The number of assigned drives or type cannot be modified once the logical JBOD has been created.
+This Cmdlet will allow you to change the erase on delete option to False if the logical JBOD was created with the feature enabled \(true\). Data can also be erased on the logial drive by clearing the metadata. The number of assigned drives or type cannot be modified once the logical JBOD has been created.
 
 Privileges: Infrastructure administrator, server administrator, server profile architect, server profile administrator
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Set-HPOVLogicalJBOD -InputObject $MyLogicalJBOD -DisableEraseData
 ```
 
-Disable erase data on delete policy for the specific logical JBOD.  This cannot be undone or reverted back.
+Disable erase data on delete policy for the specific logical JBOD. This cannot be undone or reverted back.
 
 ## Parameters
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | (${Global:ConnectedSessions} | ? Default) |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \(${Global:ConnectedSessions} | ? Default\) |
+| Accept pipeline input? | true \(ByPropertyName\) |  |
+| Accept wildcard characters? | False |  |
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
@@ -62,7 +62,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ClearMetadata &lt;SwitchParameter&gt;
 
-Clear metadata on the associated drives, effectively wiping the data on the drive.  This is not a secure erase, and data recovery could be possible.
+Clear metadata on the associated drives, effectively wiping the data on the drive. This is not a secure erase, and data recovery could be possible.
 
 | Aliases | None |
 | :--- | :--- |
@@ -84,7 +84,7 @@ Can only be used if the logical JBOD was created with EraseDataOnDelete paramete
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -InputObject &lt;HPOneView.Storage.LogicalJBOD[]&gt;
+### -InputObject &lt;HPOneView.Storage.LogicalJBOD\[\]&gt;
 
 The logical JBOD resource from `Get-HPOVLogicalJBOD`.
 
@@ -93,7 +93,7 @@ The logical JBOD resource from `Get-HPOVLogicalJBOD`.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
@@ -108,7 +108,7 @@ A logical JBOD resource from [`Get-HPOVLogicalJBOD`](get-hpovlogicaljbod.md).
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
 Asynchronous task resource to monitor.
 
@@ -119,3 +119,4 @@ Asynchronous task resource to monitor.
 * [Get-HPOVLogicalJBOD](get-hpovlogicaljbod.md)
 * [New-HPOVLogicalJBOD](new-hpovlogicaljbod.md)
 * [Remove-HPOVLogicalJBOD](remove-hpovlogicaljbod.md)
+

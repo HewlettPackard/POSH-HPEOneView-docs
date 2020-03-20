@@ -1,4 +1,4 @@
-﻿---
+---
 description: Remove pending or staged appliance update.
 ---
 
@@ -18,20 +18,18 @@ Remove a pending or staged appliance update that prevents the appliance from ope
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Remove-HPOVPendingUpdate
-
 ```
 
 Remove any found pending update any connectioned appliances.
 
-###  Example 2 
+### Example 2
 
 ```text
 Remove-HPOVPendingUpdate
-
 ```
 
 Remove any found pending update specified appliance connection.
@@ -40,19 +38,17 @@ Remove any found pending update specified appliance connection.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value | (${Global:ConnectedSessions} | ? Default) |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | True |  |
+| Position? | Named |  |
+| Default value | \(${Global:ConnectedSessions} | ? Default\) |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### -WhatIf &lt;SwitchParameter&gt;
-
-
 
 | Aliases | wi |
 | :--- | :--- |
@@ -63,8 +59,6 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
-
-
 
 | Aliases | cf |
 | :--- | :--- |
@@ -80,15 +74,15 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this cmdlet.**_
+_**None. You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
 _**None.**_
 
-
- None
+None
 
 ## Related Links
 
 * [Get-HPOVPendingUpdate](get-hpovpendingupdate.md)
+

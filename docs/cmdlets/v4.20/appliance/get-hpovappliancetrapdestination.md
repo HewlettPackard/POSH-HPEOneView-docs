@@ -1,4 +1,4 @@
-﻿---
+---
 description: Get configured appliance SNMP trap destinations.
 ---
 
@@ -22,7 +22,7 @@ Required permissions: Infrastructure administrator
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Get-HPOVApplianceTrapDestination
@@ -34,19 +34,19 @@ Default example
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | (${Global:ConnectedSessions} | ? Default) |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \(${Global:ConnectedSessions} | ? Default\) |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### -Destination &lt;String&gt;
 
-Filter trap destinations by the destination value.  Supports wildcard.
+Filter trap destinations by the destination value. Supports wildcard.
 
 | Aliases | None |
 | :--- | :--- |
@@ -58,10 +58,11 @@ Filter trap destinations by the destination value.  Supports wildcard.
 
 ### -Type &lt;Array&gt;
 
-Filter based on SNMP version.  Supported values:
+Filter based on SNMP version. Supported values:
 
-    * SNMPv1
-    *SNMPv3
+* SNMPv1
+
+  \*SNMPv3
 
 | Aliases | None |
 | :--- | :--- |
@@ -77,7 +78,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this cmdlet.**_
+_**None. You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
@@ -93,3 +94,4 @@ Appliance SNMPv3 trap destination, including type, SNMPv3 user and target.
 
 * [New-HPOVApplianceTrapDestination](new-hpovappliancetrapdestination.md)
 * [Remove-HPOVApplianceTrapDestination](remove-hpovappliancetrapdestination.md)
+

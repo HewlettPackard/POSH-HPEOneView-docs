@@ -1,4 +1,4 @@
-﻿---
+---
 description: Reset HPE Synergy Virtual Connect NetOp account password.
 ---
 
@@ -17,7 +17,7 @@ Reset-HPOVInterconnectNetOpPassword
 
 ## Description
 
-*** THIS CMDLET SHOULD NOT BE EXECUTED WITHOUT GUIDANCE FROM HPE CUSTOMER SUPPORT CENTER ***
+ _**THIS CMDLET SHOULD NOT BE EXECUTED WITHOUT GUIDANCE FROM HPE CUSTOMER SUPPORT CENTER**_ 
 
 This Cmdlet will reset the HPE Synergy Virtual Connect NetOp account password to the specified value.
 
@@ -25,13 +25,12 @@ Required permissions: Infrastructure administrator, Network administrator
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 $NetOpPassword = Read-Host -Message "New password: " -AsSecureString
 $LiObject = Get-HPOVLogicalInterconnect -Name MyEncl1-Ethernet-LIG1
 Reset-HPOVInterconnectNetOpPassword -InputObject $LiObject -Password $NetOpPassword
-
 ```
 
 Set the NetOp password to the new value, for the specific Logical Interconnect.
@@ -40,19 +39,19 @@ Set the NetOp password to the new value, for the specific Logical Interconnect.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | (${Global:ConnectedSessions} | ? Default) |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \(${Global:ConnectedSessions} | ? Default\) |
+| Accept pipeline input? | true \(ByPropertyName\) |  |
+| Accept wildcard characters? | False |  |
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
@@ -71,7 +70,7 @@ The Logical Interconnect from `Get-HPOVLogicalInterconnect` Cmdlet.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### -Password &lt;System.Security.SecureString&gt;
@@ -92,13 +91,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Networking.LogicalInterconnect [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Networking.LogicalInterconnect \[System.Management.Automation.PSCustomObject\]**_
 
 Logical interconnect resource from [`Get-HPOVLogicalInterconnect`](get-hpovlogicalinterconnect.md).
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
 Async task that tracks the power state change
 

@@ -1,4 +1,4 @@
-﻿---
+---
 description: Not implemented.
 ---
 
@@ -12,11 +12,10 @@ Not implemented.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Show-HPOVUtilization
-
 ```
 
 Default example
@@ -25,15 +24,15 @@ Default example
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases |  |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | (${Global:ConnectedSessions} | ? Default) |
-| Accept pipeline input? |  |
-| Accept wildcard characters? |  |
+| Aliases |  |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \(${Global:ConnectedSessions} | ? Default\) |
+| Accept pipeline input? |  |  |
+| Accept wildcard characters? |  |  |
 
 ### -InputObject &lt;Object&gt;
 

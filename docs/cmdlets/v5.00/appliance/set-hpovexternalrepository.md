@@ -1,4 +1,4 @@
-﻿---
+---
 description: Modify an existing external baseline repository.
 ---
 
@@ -35,23 +35,22 @@ Set-HPOVExternalRepository
 
 ## Description
 
-A firmware repository enables you to store firmware bundles and deploy them across your environment.  An externally managed HTTP/HTTPS web server can be added to the appliance as a repository. It is a user-maintained HTTP/HTTPS web server. You can upload firmware bundles in a specific directory and then register the HTTP/HTTPS server with HPE OneView. This functionality is supported for Linux and Windows systems.
+A firmware repository enables you to store firmware bundles and deploy them across your environment. An externally managed HTTP/HTTPS web server can be added to the appliance as a repository. It is a user-maintained HTTP/HTTPS web server. You can upload firmware bundles in a specific directory and then register the HTTP/HTTPS server with HPE OneView. This functionality is supported for Linux and Windows systems.
 
 The recommended types of external web servers to use with the repository follow:
 
-	* Apache
-	* Internet Information Services (IIS)
+* Apache
+* Internet Information Services \(IIS\)
 
 {% hint style="info" %}
 Only one external repository can be added.
 {% endhint %}
 
-
-This Cmdlet supports modifying an existing external repository.  Use this Cmdlet to modify the Name, authentication credentials and/or HTTP SSL certificate.
+This Cmdlet supports modifying an existing external repository. Use this Cmdlet to modify the Name, authentication credentials and/or HTTP SSL certificate.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Get-HPOVBaselineRepository -Name MyRepoName -ErrorAction Stop | Set-HPOVExternalRepository -Name UpdatedRepoName
@@ -59,7 +58,7 @@ Get-HPOVBaselineRepository -Name MyRepoName -ErrorAction Stop | Set-HPOVExternal
 
 Modify an existing external repository with a new name.
 
-###  Example 2 
+### Example 2
 
 ```text
 Get-HPOVBaselineRepository -Name MyRepoName MyRepoName -ErrorAction Stop | Set-HPOVExternalRepository -Credential (Get-PSCredential -Username "Domain\MyUpdatedAccountName")
@@ -67,7 +66,7 @@ Get-HPOVBaselineRepository -Name MyRepoName MyRepoName -ErrorAction Stop | Set-H
 
 Modify an existing repository with new credentials.
 
-###  Example 3 
+### Example 3
 
 ```text
 $UpdatedSslCertificate = Get-Content C:\Dir\UpdatedCert.cer -raw
@@ -87,7 +86,7 @@ Provide the external repository object to modify.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### -Name &lt;String&gt;
@@ -104,7 +103,7 @@ Update the configured repository with the new name.
 
 ### -Credential &lt;String&gt;
 
-Provide a PSCredential object if the target web server requires authentication.  By default, HTTPS will be used and basic authentication is used to communicate with the target web server.
+Provide a PSCredential object if the target web server requires authentication. By default, HTTPS will be used and basic authentication is used to communicate with the target web server.
 
 | Aliases | None |
 | :--- | :--- |
@@ -140,7 +139,7 @@ Provide the password of the username using a `[System.Security.SecureString]`.
 
 ### -Certificate &lt;String&gt;
 
-The Base64 Certificate of the target web server.  Must be specified if the `-HTTP` parameter is not used.
+The Base64 Certificate of the target web server. Must be specified if the `-HTTP` parameter is not used.
 
 | Aliases | None |
 | :--- | :--- |
@@ -152,7 +151,7 @@ The Base64 Certificate of the target web server.  Must be specified if the `-HTT
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
@@ -164,15 +163,15 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | (${Global:ConnectedSessions} | ? Default) |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \(${Global:ConnectedSessions} | ? Default\) |
+| Accept pipeline input? | true \(ByPropertyName\) |  |
+| Accept wildcard characters? | False |  |
 
 ### &lt;CommonParameters&gt;
 
@@ -180,17 +179,17 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Appliance.BaselineRepository [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.BaselineRepository \[System.Management.Automation.PSCustomObject\]**_
 
 The external repository object from [`Get-HPOVBaselineRepository`](get-hpovbaselinerepository.md)
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
 The async task for the caller to monitor.
 
-_**System.Collections.ArrayList <HPOneView.Appliance.TaskResource>**_
+_**System.Collections.ArrayList**_ 
 
 Multiple async task resource objects.
 
@@ -199,3 +198,4 @@ Multiple async task resource objects.
 * [New-HPOVExternalRepository](new-hpovexternalrepository.md)
 * [Remove-HPOVExternalRepository](remove-hpovexternalrepository.md)
 * [Update-HPOVExternalRepository](update-hpovexternalrepository.md)
+

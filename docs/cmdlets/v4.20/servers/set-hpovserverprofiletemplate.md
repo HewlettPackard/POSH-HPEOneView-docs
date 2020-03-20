@@ -1,4 +1,4 @@
-﻿---
+---
 description: Not implemented.
 ---
 
@@ -17,11 +17,10 @@ Not implemented.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Set-HPOVServerProfileTemplate
-
 ```
 
 Default example
@@ -44,3 +43,4 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 * [New-HPOVServerProfileTemplate](new-hpovserverprofiletemplate.md)
 * [Remove-HPOVServerProfileTemplate](remove-hpovserverprofiletemplate.md)
 * [Save-HPOVServerProfileTemplate](save-hpovserverprofiletemplate.md)
+

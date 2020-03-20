@@ -189,5 +189,5 @@ Connect to a specific appliance using a digital badge.
 
 ## Related Links
 
-* [Disconnect-HPOVMgmt ](../disconnect-hpovmgmt.md#hpe-oneview-5-00-library)
+* [Disconnect-HPOVMgmt ](disconnect-hpovmgmt.md#hpe-oneview-5-00-library)
 

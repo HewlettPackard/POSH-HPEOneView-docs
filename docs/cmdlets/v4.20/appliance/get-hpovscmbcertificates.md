@@ -1,4 +1,4 @@
-﻿---
+---
 description: Get State Change Message Bus certificates.
 ---
 
@@ -26,24 +26,22 @@ Get-HPOVScmbCertificates
 
 ## Description
 
-Retrieve and store the certificates necessary to register with the State Change Message Bus.  The SCMB only supports a single `read-only` "account".
+Retrieve and store the certificates necessary to register with the State Change Message Bus. The SCMB only supports a single `read-only` "account".
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Get-HPOVScmbCertificates
-
 ```
 
 Get the HPE OneView appliance SCMB SSL certificates, and save them in the current directory.
 
-###  Example 2 
+### Example 2
 
 ```text
 read-host "Password" -AsSecureString | Get-HPOVScmbCertificates -Location C:\scmbcerts -ExportToPfx
-
 ```
 
 Prompt for secure password input and pipe the value to `Get-HPOVScmbCertificates` to convert the `[cert.pem]` to PFX format with the pipeline secure password.
@@ -52,20 +50,20 @@ Prompt for secure password input and pipe the value to `Get-HPOVScmbCertificates
 
 ### -Location &lt;String&gt;
 
-Directory to store the SSL certificates.  If the directory doesn"t exist, it will be created.
+Directory to store the SSL certificates. If the directory doesn"t exist, it will be created.
 
 | Aliases | save |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | ($pwd).path |
+| Default value | \($pwd\).path |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ConvertToPFx &lt;SwitchParameter&gt;
 
-Aliases [-pfx]        
-Convert rabbitmq_readonly client certificate to PFX format for .Net consumption.
+Aliases \[-pfx\]  
+Convert rabbitmq\_readonly client certificate to PFX format for .Net consumption.
 
 | Aliases | pfx |
 | :--- | :--- |
@@ -84,7 +82,7 @@ Password that will be used to encrypt the PFX client certificate.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### -InstallApplianceRootCA &lt;SwitchParameter&gt;
@@ -101,15 +99,15 @@ hoose to install the appliance root certificate to the current users Trusted Roo
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value | (${Global:ConnectedSessions} | ? Default) |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | True |  |
+| Position? | Named |  |
+| Default value | \(${Global:ConnectedSessions} | ? Default\) |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### &lt;CommonParameters&gt;
 
@@ -125,14 +123,13 @@ Password for PFX file
 
 _**3 files will be created:**_
 
-
- * {ApplianceConnection_Name}_ca.cer - Appliance internal Root Certificate Authority
- * {ApplianceConnection_Name}_cert.cer - Appliance managed rabbitmq_readonly user Public Key
- * {ApplianceConnection_Name}_privateKey.key - Appliance managed rabbitmq_readonly user Client Certificate
+* {ApplianceConnection\_Name}\_ca.cer - Appliance internal Root Certificate Authority
+* {ApplianceConnection\_Name}\_cert.cer - Appliance managed rabbitmq\_readonly user Public Key
+* {ApplianceConnection\_Name}\_privateKey.key - Appliance managed rabbitmq\_readonly user Client Certificate
 
 _**Pkcs12/PFX certificate file**_
 
-If ConvertToPfX is used, the Pkcs12/PFX compliant certificate file is created, {ApplianceConnection_Name}_privateKey.pfx
+If ConvertToPfX is used, the Pkcs12/PFX compliant certificate file is created, {ApplianceConnection\_Name}\_privateKey.pfx
 
 ## Related Links
 

@@ -1,4 +1,4 @@
-﻿---
+---
 description: Promote Standby Composer node to Active.
 ---
 
@@ -15,24 +15,22 @@ Enable-HPOVComposerHANode
 
 ## Description
 
-This Cmdlet will help transition the Standby Composer node to the Active Role.  Use this Cmdlet in order to perform maintenance on the Active node, or to remove the Active node from the Synergy management ring.
+This Cmdlet will help transition the Standby Composer node to the Active Role. Use this Cmdlet in order to perform maintenance on the Active node, or to remove the Active node from the Synergy management ring.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Enable-HPOVComposerHANode
-
 ```
 
 Transition the Standby Composer node in the default Appliance Connection.
 
-###  Example 2 
+### Example 2
 
 ```text
 Enable-HPOVComposerHANode
-
 ```
 
 Transition the Standby Composer node in the specific Appliance Connection.
@@ -41,7 +39,7 @@ Transition the Standby Composer node in the specific Appliance Connection.
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
@@ -55,17 +53,15 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value | (${Global:ConnectedSessions} | ? Default) |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | True |  |
+| Position? | Named |  |
+| Default value | \(${Global:ConnectedSessions} | ? Default\) |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### -WhatIf &lt;SwitchParameter&gt;
-
-
 
 | Aliases | wi |
 | :--- | :--- |
@@ -76,8 +72,6 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
-
-
 
 | Aliases | cf |
 | :--- | :--- |
@@ -93,15 +87,15 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this cmdlet.**_
+_**None. You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
 The Async task resource of the role transition request
 
-_**System.Collections.ArrayList <HPOneView.Appliance.TaskResource>**_
+_**System.Collections.ArrayList**_ 
 
 Multiple Async task resources.
 

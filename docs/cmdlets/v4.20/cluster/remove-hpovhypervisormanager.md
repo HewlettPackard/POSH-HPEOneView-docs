@@ -1,5 +1,5 @@
-﻿---
-description: 
+---
+description: null
 ---
 
 # Remove-HPOVHypervisorManager
@@ -13,9 +13,10 @@ You can register a hypervisor manager with HPE OneView by providing hostname and
 A valid hypervisor manager certificate must be added to HPE OneView trust store to be able to successfully communicate with a hypervisor manager.
 
 The user must have an infrastructure administrator privilege to register or update the hypervisor manager resource in HPE OneView.
+
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Get-HPOVHypervisorManager -Name vcenter1.domain.com -ErrorAction Stop | Remove-HPOVHypervisorManager
@@ -27,23 +28,21 @@ Remove the specified hypervisor manager.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
+Aliases \[-Appliance\]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-Default Value: ${Global:ConnectedSessions} | ? Default
+Default Value: ${Global:ConnectedSessions} \| ? Default
 
-| Aliases |  |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | (${Global:ConnectedSessions} | ? Default) |
-| Accept pipeline input? |  |
-| Accept wildcard characters? |  |
+| Aliases |  |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \(${Global:ConnectedSessions} | ? Default\) |
+| Accept pipeline input? |  |  |
+| Accept wildcard characters? |  |  |
 
 ### -Confirm &lt;SwitchParameter&gt;
-
-
 
 | Aliases |  |
 | :--- | :--- |
@@ -79,8 +78,6 @@ The `[HPOneView.ClusterProfile.HypervisorManager]` resource to remove from `Get-
 
 ### -WhatIf &lt;SwitchParameter&gt;
 
-
-
 | Aliases |  |
 | :--- | :--- |
 | Required? | False |
@@ -101,13 +98,13 @@ The hypervisor manager object from [`Get-HPOVHypervisorManager`](get-hpovhypervi
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
 Async task Resource object for configuring port monitoring on the requested logical intercinnect.
 
-
 ## Related Links
 
-* [Add-HPOVHypervisorManager](get-hpovfabricmanager.md)
+* [Add-HPOVHypervisorManager](https://github.com/HewlettPackard/POSH-HPOneView-docs/tree/0023fd1e4eede66169d7daee5073181dfb99ae48/docs/cmdlets/v4.20/cluster/get-hpovfabricmanager.md)
 * [Get-HPOVHypervisorManager](get-hpovhypervisormanager.md)
 * [Set-HPOVHypervisorManager](set-hpovhypervisormanager.md)
+

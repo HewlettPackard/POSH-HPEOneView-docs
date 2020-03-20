@@ -1,4 +1,4 @@
-﻿---
+---
 description: List Global Authentication Directory settings.
 ---
 
@@ -24,8 +24,8 @@ Get-HPOVLdap
 
 You can configure HPE OneView to use an external enterprise directory service for user authentication. HPE OneView supports the following enterprise directory services:
 
-    * Active Directory
-    * OpenLDAP
+* Active Directory
+* OpenLDAP
 
 When you use a directory service, directory users are granted HPE OneView permissions using their group membership in the directory. After defining a directory service, use the User and Groups screen to define permissions for directory groups. Directory groups are assigned one or more HPE OneView permissions. A directory user is assigned the HPE OneView permissions that represent the union of the permissions for all the directory groups that the user is a member of. Only after permissions are defined for directory groups, directory users are authenticated into the appliance.
 
@@ -34,10 +34,12 @@ This Cmdlet will display the global authentication directory settings configured
 {% hint style="info" %}
 Minimum required privileges: Read-
 {% endhint %}
+
 only
+
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Get-HPOVLdap
@@ -49,7 +51,7 @@ True              domain2           {domain1, domain2}
 
 View the Global Authentication Directory configuration for all connected appliances.
 
-###  Example 2 
+### Example 2
 
 ```text
 Get-HPOVLdap -export -save c:\directory
@@ -73,7 +75,7 @@ Export the configured directories to individual files.
 
 ### -Save &lt;String&gt;
 
-Directory where the exported configured directories will be saved to.  A filename of "{appliance_name}_globalSettings.json" will be created.
+Directory where the exported configured directories will be saved to. A filename of "{appliance\_name}\_globalSettings.json" will be created.
 
 | Aliases | location |
 | :--- | :--- |
@@ -85,15 +87,15 @@ Directory where the exported configured directories will be saved to.  A filenam
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | (${Global:ConnectedSessions} | ? Default) |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \(${Global:ConnectedSessions} | ? Default\) |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### &lt;CommonParameters&gt;
 
@@ -101,11 +103,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this Cmdlet.**_
+_**None. You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.AuthGlobalDirectoryConfiguration [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.AuthGlobalDirectoryConfiguration \[System.Management.Automation.PSCustomObject\]**_
 
 Global Authentication Settings object
 
@@ -125,3 +127,4 @@ Global Authentication Settings object
 * [Set-HPOVLdapDefaultDirectory](set-hpovldapdefaultdirectory.md)
 * [Set-HPOVLdapGroupRole](set-hpovldapgrouprole.md)
 * [Show-HPOVLdapGroups](show-hpovldapgroups.md)
+

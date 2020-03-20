@@ -1,4 +1,4 @@
-﻿---
+---
 description: Create a new appliance self signed Certificate.
 ---
 
@@ -31,11 +31,11 @@ Use thid Cmdlet to create or recreate a self signed Certificate for the applianc
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 $CSR = @{
->> 	Country = "US";
+>>     Country = "US";
 >>  State = "California";
 >>  City = "Palo Alto";
 >>  Organization = "Hewlett-Packard";
@@ -100,7 +100,7 @@ The organization name is a required entry, can contain up to 64 characters.
 
 ### -CommonName &lt;String&gt;
 
-The common name is a required entry, and can be FQDN/hostname or IPv4/IPv6 address. 
+The common name is a required entry, and can be FQDN/hostname or IPv4/IPv6 address.
 
 Example: "hpov.example.com"
 
@@ -126,7 +126,7 @@ The entry for the organizational unit name, may not exceed 64 characters.
 
 ### -AlternativeName &lt;String&gt;
 
-An optional entry containing additional names that apply to the owner of the certificate, possibly including additional `e-mail` addresses, DNS names, IP addresses and other identifiers. 
+An optional entry containing additional names that apply to the owner of the certificate, possibly including additional `e-mail` addresses, DNS names, IP addresses and other identifiers.
 
 Example: "hpov.example.com,hpov,192.168.1.1"
 
@@ -214,13 +214,13 @@ The distinguished name qualifier, which further identifies the certificate recip
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value | (${Global:ConnectedSessions} | ? Default) |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | True |  |
+| Position? | Named |  |
+| Default value | \(${Global:ConnectedSessions} | ? Default\) |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### &lt;CommonParameters&gt;
 
@@ -228,7 +228,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this Cmdlet.**_
+_**None. You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 

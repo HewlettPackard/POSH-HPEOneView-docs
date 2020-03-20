@@ -1,4 +1,4 @@
-﻿---
+---
 description: Refresh the state of a server resource.
 ---
 
@@ -36,20 +36,18 @@ By using this cmdlet, you can manually refresh the connection between the applia
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Get-HPOVServer "Encl1, Bay 1" | Update-HPOVServer | Wait-HPOVTaskComplete
-
 ```
 
 Refresh the state of the provided server hardware device.
 
-###  Example 2 
+### Example 2
 
 ```text
 $task = Get-HPOVServerProfile "Profile1" | Update-HPOVServer
-
 ```
 
 Refresh the state of the server hardware device assigned to the Server Profile object.
@@ -65,12 +63,12 @@ The Server object or Name, or can be a Server Profile object.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
@@ -84,13 +82,13 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value | (${Global:ConnectedSessions} | ? Default) |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | True |  |
+| Position? | Named |  |
+| Default value | \(${Global:ConnectedSessions} | ? Default\) |
+| Accept pipeline input? | true \(ByPropertyName\) |  |
+| Accept wildcard characters? | False |  |
 
 ### -Hostname &lt;String&gt;
 
@@ -148,7 +146,7 @@ Server Profile Resource
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
 Async task that tracks the server refresh request
 
@@ -165,7 +163,7 @@ Async task that tracks the server refresh request
 * [Get-HPOVServerProfileConnectionList](get-hpovserverprofileconnectionlist.md)
 * [Get-HPOVServerProfileMessage](get-hpovserverprofilemessage.md)
 * [Get-HPOVServerProfileTemplate](get-hpovserverprofiletemplate.md)
-* [Join-HPOVServerProfileToTemplate](join-hpovserverprofiletotemplate.md)
+* [Join-HPOVServerProfileToTemplate]()
 * [New-HPOVServerProfile](new-hpovserverprofile.md)
 * [New-HPOVServerProfileAssign](new-hpovserverprofileassign.md)
 * [New-HPOVServerProfileAttachVolume](new-hpovserverprofileattachvolume.md)
@@ -185,5 +183,6 @@ Async task that tracks the server refresh request
 * [Set-HPOVServerProfileTemplate](set-hpovserverprofiletemplate.md)
 * [Start-HPOVServer](start-hpovserver.md)
 * [Stop-HPOVServer](stop-hpovserver.md)
-* [Update-HPOVServerHardwareLicenseIntent](update-hpovserverhardwarelicenseintent.md)
+* [Update-HPOVServerHardwareLicenseIntent]()
 * [Update-HPOVServerProfile](update-hpovserverprofile.md)
+

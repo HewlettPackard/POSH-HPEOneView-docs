@@ -1,4 +1,4 @@
-﻿---
+---
 description: Import a supported Storage System
 ---
 
@@ -42,27 +42,26 @@ When adding supported HP 3PAR storage systems, please make sure "startwsapi" has
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 $task = Add-HPOVStorageSystem -hostname "3par-array.consoto.com" -username 3paradm -password 3pardata -Async
 Wait-HPOVTaskComplete $task
 ```
 
-Add the Storage System using default settings, and let the appliance detect the connected Storage System Ports.  (A supported SAN Manager must first be added, and Managed SANs mapped to the specific FC Network resources.)
+Add the Storage System using default settings, and let the appliance detect the connected Storage System Ports. \(A supported SAN Manager must first be added, and Managed SANs mapped to the specific FC Network resources.\)
 
-###  Example 2 
+### Example 2
 
 ```text
 $StorageSystemPorts = @{"1:1:1" = "Fabric A"; "2:1:1" = "Fabric A"; "1:1:2" = "Fabric B"; "2:1:2" = "Fabric B"}
 $StoragePortGroups = @{"1:1:1"= "PG1";  "2:1:1" = "PG1"; "1:1:2" = "PG2"; "2:1:2" = "PG2"}
 Add-HPOVStorageSystem -hostname "3par-array.consoto.com" -username 3paradm -password 3pardata -Domain VirtaulDomain1 -Ports $StorageSystemPorts -PortGroups $StoragePortGroups | Wait-HPOVTaskComplete
-
 ```
 
 Add the Storage System using default settings, and specify the Storage System Ports that will be assigned to the Expected Networks.
 
-###  Example 3 
+### Example 3
 
 ```text
 $IscsiNetwork = Get-HPOVNetwork -Name "IscsiNetwork" -ErrorAction Stop
@@ -113,7 +112,7 @@ Administrator account of the target storage system.
 
 ### -Password &lt;Object&gt;
 
-Password of administrator account password.  Can either be String or `[System.Security.SecureString]`.
+Password of administrator account password. Can either be String or `[System.Security.SecureString]`.
 
 | Aliases | None |
 | :--- | :--- |
@@ -125,7 +124,7 @@ Password of administrator account password.  Can either be String or `[System.Se
 
 ### -Domain &lt;String&gt;
 
-Specify the HP 3PAR Virtual Domain name.  Default is "NO DOMAIN". The value provided is CAsesEnSItive.
+Specify the HP 3PAR Virtual Domain name. Default is "NO DOMAIN". The value provided is CAsesEnSItive.
 
 | Aliases | None |
 | :--- | :--- |
@@ -137,8 +136,8 @@ Specify the HP 3PAR Virtual Domain name.  Default is "NO DOMAIN". The value prov
 
 ### -Ports &lt;Object&gt;
 
-Specify the Host Ports and Expected Network in an Array of PSCustomObject entries. 
-    
+Specify the Host Ports and Expected Network in an Array of PSCustomObject entries.
+
 Example: @{"1:1:1"="Fabric A";"2:2:2"="Fabric B"}
 
 | Aliases | None |
@@ -151,8 +150,8 @@ Example: @{"1:1:1"="Fabric A";"2:2:2"="Fabric B"}
 
 ### -PortGroups &lt;Hashtable&gt;
 
-Specify the Host Ports to group together. 
-    
+Specify the Host Ports to group together.
+
 Example: @{"1:1:1" = "PG1"; "2:2:2" = "PG2"}
 
 | Aliases | None |
@@ -165,15 +164,19 @@ Example: @{"1:1:1" = "PG1"; "2:2:2" = "PG2"}
 
 ### -VIPS &lt;Hashtable&gt;
 
-Specify the StoreVirtual VIP(s) and associated Ethernet Network. 
-    
+Specify the StoreVirtual VIP\(s\) and associated Ethernet Network.
+
 Example:
 
-    @{"10.158.11.42" = $EthernetNetwork}
+```text
+@{"10.158.11.42" = $EthernetNetwork}
+```
 
 or
 
-    @{"10.158.11.42" = $EthernetNetwork1; "10.158.12.42" = $EthernetNetwork2;}
+```text
+@{"10.158.11.42" = $EthernetNetwork1; "10.158.12.42" = $EthernetNetwork2;}
+```
 
 | Aliases | None |
 | :--- | :--- |
@@ -185,15 +188,15 @@ or
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | (${Global:ConnectedSessions} | ? Default) |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \(${Global:ConnectedSessions} | ? Default\) |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### -Credential &lt;PSCredential&gt;
 
@@ -209,7 +212,7 @@ Use this parameter if you want to provide a PSCredential object instead.
 
 ### -ShowSystemDetails &lt;SwitchParameter&gt;
 
-By default, the Cmdlet will no longer display the details about the Storage System.  Use this parameter to display information about the storage system when adding to the appliance.
+By default, the Cmdlet will no longer display the details about the Storage System. Use this parameter to display information about the storage system when adding to the appliance.
 
 | Aliases | None |
 | :--- | :--- |
@@ -225,11 +228,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this cmdlet.**_
+_**None. You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
 Add Storage System Async Task.
 
@@ -239,3 +242,4 @@ Add Storage System Async Task.
 * [Remove-HPOVStorageSystem](remove-hpovstoragesystem.md)
 * [Show-HPOVStorageSystemPerformancePolicy](show-hpovstoragesystemperformancepolicy.md)
 * [Update-HPOVStorageSystem](update-hpovstoragesystem.md)
+

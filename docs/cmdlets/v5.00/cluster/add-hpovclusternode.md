@@ -1,4 +1,4 @@
-﻿---
+---
 description: Add a new cluster member to an existing cluster.
 ---
 
@@ -24,13 +24,13 @@ A hypervisor cluster profile and the associated server profile template are used
 
 You can import additional hypervisors into the hypervisor cluster profile by adding existing hypervisors. Use this option if you are deploying the hypervisor OS on the server nodes outside of HPE OneView. This option helps you to deploy and manage hypervisor clusters using the hypervisor OS deployment tool of your choice.
 
-To add a node to an existing cluster, a server profile must be assigned to a server resource, created from the same server profile template the cluster was created from.  The hypervisor OS must be installed and host added to the hypervisor manager using its management interface.
+To add a node to an existing cluster, a server profile must be assigned to a server resource, created from the same server profile template the cluster was created from. The hypervisor OS must be installed and host added to the hypervisor manager using its management interface.
 
 Minimum required privilegesPrivileges: Infrastructure administrator, Server administrator, Server profile architect, or Server profile administrator.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Add-HPOVClusterNode
@@ -42,19 +42,19 @@ Default example
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | (${Global:ConnectedSessions} | ? Default) |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \(${Global:ConnectedSessions} | ? Default\) |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
@@ -90,7 +90,7 @@ Use this parameter to provide the hypervisor manager credentials.
 
 ### -Scope &lt;Object&gt;
 
-Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
+Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with. Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -115,3 +115,4 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 * [Exit-HPOVClusterNodeMaintenanceMode](exit-hpovclusternodemaintenancemode.md)
 * [Get-HPOVClusterNode](get-hpovclusternode.md)
 * [Update-HPOVClusterNode](update-hpovclusternode.md)
+

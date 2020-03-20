@@ -1,4 +1,4 @@
-﻿---
+---
 description: Create a new cluster profile resource.
 ---
 
@@ -86,24 +86,23 @@ New-HPOVClusterProfile
 
 ## Description
 
-A cluster profile enables you to deploy and manage a cluster of servers (nodes) managed by HPE OneView and orchestrates consistent configuration on cluster of server nodes to share the same workload.  A cluster profile and the associated server profile template are used to define a consistent configuration from server nodes to members in the cluster. The associated server profiles define physical server configurations for server nodes in the cluster, which are derived from parent cluster profile and its associated server profile template. 
+A cluster profile enables you to deploy and manage a cluster of servers \(nodes\) managed by HPE OneView and orchestrates consistent configuration on cluster of server nodes to share the same workload. A cluster profile and the associated server profile template are used to define a consistent configuration from server nodes to members in the cluster. The associated server profiles define physical server configurations for server nodes in the cluster, which are derived from parent cluster profile and its associated server profile template.
 
 {% hint style="info" %}
 The server profile template must have a configured connection to the hypervisor management network for the template to be valid for use by a hypervisor cluster profile.
 {% endhint %}
 
-
 The cluster profile helps you manage life cycle operations, such as growing or shrinking the cluster, modifying configurations based on needs, consistency checks, and nondisruptive firmware updates on the member nodes. For example, you can grow or shrink a cluster by adding or removing members from the cluster profile. Any change in the configuration of the cluster profile will be reported as an inconsistency. When inconsistencies are remediated, the changed configurations can be applied on cluster and member nodes.
 
 A cluster profile can manage VMware `ESXi-based` hypervisor clusters by leveraging VMware vCenter server. A hypervisor cluster must be managed by one instance of HPE OneView to avoid inconsistencies.
 
-Use this Cmdlet to create a new cluster profile within OneView.  Any new created clusters within OneView cannot be removed from OneView withour destroying the cluster within the cluster manager.
+Use this Cmdlet to create a new cluster profile within OneView. Any new created clusters within OneView cannot be removed from OneView withour destroying the cluster within the cluster manager.
 
 Privileges: Infrastructure administrator, Server administrator, Server profile architect, or Server profile administrator.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 # Get the specific Cluster Manager
@@ -131,7 +130,7 @@ New-HPOVClusterProfile -Name ProdCluster1 -ClusterPrefix ProdClusterNode- -Clust
 
 Create a new cluster profile.
 
-###  Example 2 
+### Example 2
 
 ```text
 # Get the specific Cluster Manager
@@ -157,7 +156,7 @@ $ServerProfileTemplate = Get-HPOVServerProfileTemplate -Name "Hypervisor Cluster
 $Servers = Get-HPOVServer -NoProfile -InputObject $ServerProfileTemplate -Count 4
 
 # Create new cluster profile overriding the cluster manager settings
-New-HPOVClusterProfile -Name ProdCluster1 -ClusterPrefix ProdClusterNode- -ClusterManager $ClusterManager -ClusterManagerLocation "DC2" -ServerProfileTemplate $ServerProfileTemplate -ClusterPassword $ClusterPassword -Servers $Servers -OverrideClusterManagerConfig -VirtualSwitchType Distributed -DistributedSwitchUsage AllNetworks -DistributedSwitchVersion 6.0 -HAEnabled $true -DRSEnabled $false 
+New-HPOVClusterProfile -Name ProdCluster1 -ClusterPrefix ProdClusterNode- -ClusterManager $ClusterManager -ClusterManagerLocation "DC2" -ServerProfileTemplate $ServerProfileTemplate -ClusterPassword $ClusterPassword -Servers $Servers -OverrideClusterManagerConfig -VirtualSwitchType Distributed -DistributedSwitchUsage AllNetworks -DistributedSwitchVersion 6.0 -HAEnabled $true -DRSEnabled $false
 ```
 
 Create a new cluster profile, overriding clsuter manager settings.
@@ -166,19 +165,19 @@ Create a new cluster profile, overriding clsuter manager settings.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | (${Global:ConnectedSessions} | ? Default) |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \(${Global:ConnectedSessions} | ? Default\) |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
@@ -214,7 +213,7 @@ Specify the location where the cluster will be created within the cluster manage
 
 ### -ClusterPrefix &lt;String&gt;
 
-Specify the cluster member hostname prefix that will be used.  A unique numerical value will be appended to the end.  If omitted, the clsuter name will be used as the prefix.
+Specify the cluster member hostname prefix that will be used. A unique numerical value will be appended to the end. If omitted, the clsuter name will be used as the prefix.
 
 | Aliases | None |
 | :--- | :--- |
@@ -226,7 +225,7 @@ Specify the cluster member hostname prefix that will be used.  A unique numerica
 
 ### -DRSEnabled &lt;Bool&gt;
 
-Specify if DRS (if supported) should be enabled ($True) or disabled ($false).
+Specify if DRS \(if supported\) should be enabled \($True\) or disabled \($false\).
 
 | Aliases | None |
 | :--- | :--- |
@@ -250,10 +249,10 @@ Provide a description of the cluster.
 
 ### -DistributedSwitchUsage &lt;String&gt;
 
-If overriding the distributed virtual switch configuring set by the cluster manager, specify the switch usage.  Allowed values:
+If overriding the distributed virtual switch configuring set by the cluster manager, specify the switch usage. Allowed values:
 
-    * Standard
-    * Distributed
+* Standard
+* Distributed
 
 | Aliases | None |
 | :--- | :--- |
@@ -265,7 +264,7 @@ If overriding the distributed virtual switch configuring set by the cluster mana
 
 ### -DistributedSwitchVersion &lt;String&gt;
 
-If overriding the distributed virtual switch configuring set by the cluster manager, specify the version.  To identify the supported versions, look at the AvailableDvsVersions property of the returned cluster manager from `Get-HPOVClusterManager`.
+If overriding the distributed virtual switch configuring set by the cluster manager, specify the version. To identify the supported versions, look at the AvailableDvsVersions property of the returned cluster manager from `Get-HPOVClusterManager`.
 
 | Aliases | None |
 | :--- | :--- |
@@ -277,7 +276,7 @@ If overriding the distributed virtual switch configuring set by the cluster mana
 
 ### -HAEnabled &lt;Bool&gt;
 
-Specify if VMware HA (if supported) should be enabled ($True) or disabled ($false).
+Specify if VMware HA \(if supported\) should be enabled \($True\) or disabled \($false\).
 
 | Aliases | None |
 | :--- | :--- |
@@ -289,7 +288,7 @@ Specify if VMware HA (if supported) should be enabled ($True) or disabled ($fals
 
 ### -MultiNicVMotionEnabled &lt;bool&gt;
 
-Specify if `multi-NIC` VMotion (if supported) should be enabled ($True) or disabled ($false).
+Specify if `multi-NIC` VMotion \(if supported\) should be enabled \($True\) or disabled \($false\).
 
 | Aliases | None |
 | :--- | :--- |
@@ -301,7 +300,7 @@ Specify if `multi-NIC` VMotion (if supported) should be enabled ($True) or disab
 
 ### -Name &lt;string&gt;
 
-Provide the cluster profile name.  If `-Prefix` is omitted, this value will become the cluster node prefix value.
+Provide the cluster profile name. If `-Prefix` is omitted, this value will become the cluster node prefix value.
 
 | Aliases | None |
 | :--- | :--- |
@@ -313,7 +312,7 @@ Provide the cluster profile name.  If `-Prefix` is omitted, this value will beco
 
 ### -Scope &lt;Object&gt;
 
-Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
+Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with. Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -361,10 +360,10 @@ Use to configure the cluster profile to not manage host networking.
 
 ### -VirtualSwitchType &lt;string&gt;
 
-Use to indicate which vSiwtch type to configure when overriding cluster manager networking settings.  Allowed values are:
+Use to indicate which vSiwtch type to configure when overriding cluster manager networking settings. Allowed values are:
 
-    * Standard
-    * Distributed
+* Standard
+* Distributed
 
 | Aliases | None |
 | :--- | :--- |
@@ -424,7 +423,7 @@ When deploying a new cluster profile with HPE Synergy and Image Streamer, specif
 
 ### -LeaveHostsInMaintenanceMode &lt;bool&gt;
 
-Specify if the host should be left in maintenance mode (if applicable) before servicing the cluster.
+Specify if the host should be left in maintenance mode \(if applicable\) before servicing the cluster.
 
 | Aliases | None |
 | :--- | :--- |
@@ -448,7 +447,7 @@ Use to indicate the desire to override the cluster manager default settings.
 
 ### -OverrideManagementAddressAssignmet &lt;SwitchParameter&gt;
 
-Use to indicate address assignment.  If the server profile template boot connections are set to require static addresses, the IPAddress value must be used in the `New-HPOVClusterProfileMember` Cmdlet.
+Use to indicate address assignment. If the server profile template boot connections are set to require static addresses, the IPAddress value must be used in the `New-HPOVClusterProfileMember` Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -472,11 +471,13 @@ Use to indicate if network naming will be overridden.
 
 ### -PortGroupNameOverride &lt;Hashtable&gt;
 
-Use to specify what the PortGroup name override should be.  By default, PortGroup names will be automatically assigned based on the network name, removing unique character strings.  Specify an Array of Hashtable with the following format:
+Use to specify what the PortGroup name override should be. By default, PortGroup names will be automatically assigned based on the network name, removing unique character strings. Specify an Array of Hashtable with the following format:
 
-    @{ "NetworkName" = "OverrideName" }
+```text
+@{ "NetworkName" = "OverrideName" }
+```
 
- Where "NetworkName" is the name of the Ethernet Network assigned to the connection.
+Where "NetworkName" is the name of the Ethernet Network assigned to the connection.
 
 | Aliases | None |
 | :--- | :--- |
@@ -510,9 +511,9 @@ Optional - When deploying a new cluster profile with HPE Synergy and Image Strea
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Servers &lt;HPOneView.Cluster.AddHostRequest[]&gt;
+### -Servers &lt;HPOneView.Cluster.AddHostRequest\[\]&gt;
 
-One or more server resource objects from `New-HPOVClusterProfileMember`.  Value can be empty to create an empty cluster, if the target cluster manager supports that type of configuration, like VMware vSphere.
+One or more server resource objects from `New-HPOVClusterProfileMember`. Value can be empty to create an empty cluster, if the target cluster manager supports that type of configuration, like VMware vSphere.
 
 | Aliases | None |
 | :--- | :--- |
@@ -524,10 +525,10 @@ One or more server resource objects from `New-HPOVClusterProfileMember`.  Value 
 
 ### -StorageVolumeFileSystem &lt;String&gt;
 
-Specify if the storage volume(s) in the StorageVolume parameter should be formatted with a specific filesystem.  Allowed values:
+Specify if the storage volume\(s\) in the StorageVolume parameter should be formatted with a specific filesystem. Allowed values:
 
-    * VMFS
-    * Unmanaged
+* VMFS
+* Unmanaged
 
 | Aliases | None |
 | :--- | :--- |
@@ -563,11 +564,13 @@ Optional - When deploying a new cluster profile with HPE Synergy and Image Strea
 
 ### -VSwitchNameOverride &lt;hashtable&gt;
 
-Use to specify what the vSwitch name override should be.  By default, vSwitch names will be automatically assigned based on the network name, removing unique character strings.  Specify an Array of Hashtable with the following format:
+Use to specify what the vSwitch name override should be. By default, vSwitch names will be automatically assigned based on the network name, removing unique character strings. Specify an Array of Hashtable with the following format:
 
-    @{ "NetworkName" = "OverrideName" }
+```text
+@{ "NetworkName" = "OverrideName" }
+```
 
- Where "NetworkName" is the name of the Ethernet Network assigned to the connection.
+Where "NetworkName" is the name of the Ethernet Network assigned to the connection.
 
 | Aliases | None |
 | :--- | :--- |
@@ -595,11 +598,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this cmdlet.**_
+_**None. You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
 Asyncronous task resource to monitor.
 
@@ -609,3 +612,4 @@ Asyncronous task resource to monitor.
 * [New-HPOVClusterProfileMember](new-hpovclusterprofilemember.md)
 * [Remove-HPOVClusterProfile](remove-hpovclusterprofile.md)
 * [Update-HPOVClusterProfile](update-hpovclusterprofile.md)
+

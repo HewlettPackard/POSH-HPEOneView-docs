@@ -1,4 +1,4 @@
-﻿---
+---
 description: Enable UID of a device.
 ---
 
@@ -15,15 +15,14 @@ Enable-HPOVDeviceUid
 
 ## Description
 
-This Cmdlet will enable the UID of a managed or monitored resource, and only supports objects.  Use `Get-HPOVServer` or `Get-HPOVEnclosure` to retrieve the required resource(s), which can be passed via the pipeline.
+This Cmdlet will enable the UID of a managed or monitored resource, and only supports objects. Use `Get-HPOVServer` or `Get-HPOVEnclosure` to retrieve the required resource\(s\), which can be passed via the pipeline.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Get-HPOVServer "MyEncl, Bay 1" | Enable-HPOVDeviceUid | Wait-HPOVTaskComplete
-
 ```
 
 Enable the UID for "MyEncl, Bay 1" server.
@@ -32,27 +31,27 @@ Enable the UID for "MyEncl, Bay 1" server.
 
 ### -InputObject &lt;Object&gt;
 
-Resource object to turn on the UID.  Supported resources are Server Hardware and Enclosures.
+Resource object to turn on the UID. Supported resources are Server Hardware and Enclosures.
 
 | Aliases | Server, Enclosure, Frame, Resource |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value | (${Global:ConnectedSessions} | ? Default) |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | True |  |
+| Position? | Named |  |
+| Default value | \(${Global:ConnectedSessions} | ? Default\) |
+| Accept pipeline input? | true \(ByPropertyName\) |  |
+| Accept wildcard characters? | False |  |
 
 ### &lt;CommonParameters&gt;
 
@@ -60,20 +59,21 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.ServerHardware [System.Management.Automation.PSCustomObject] or HPOneView.Enclosure [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.ServerHardware \[System.Management.Automation.PSCustomObject\] or HPOneView.Enclosure \[System.Management.Automation.PSCustomObject\]**_
 
 Server Hardware or Enclosure resource.
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
 If successful, returns Appliance Async Task object to monitor.
 
-_**System.Collections.ArrayList <HPOneView.Appliance.TaskResource>**_
+_**System.Collections.ArrayList**_ 
 
 Collection of Appliance Async Task objects to monitor.
 
 ## Related Links
 
 * [Disable-HPOVDeviceUid](disable-hpovdeviceuid.md)
+

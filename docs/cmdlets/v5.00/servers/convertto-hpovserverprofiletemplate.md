@@ -1,4 +1,4 @@
-﻿---
+---
 description: Create a Server Profile Template from Server Profile.
 ---
 
@@ -18,10 +18,10 @@ ConvertTo-HPOVServerProfileTemplate
 
 ## Description
 
-This Cmdlet will allow the user to "clone" or create a Server Profile Template from an existing Server Profile object.  Not all Server Profile features will be converted to a Server Profile Template.  For instance, the following features are not supported with a Server Profile Template:
+This Cmdlet will allow the user to "clone" or create a Server Profile Template from an existing Server Profile object. Not all Server Profile features will be converted to a Server Profile Template. For instance, the following features are not supported with a Server Profile Template:
 
-	* Import existing local Smart Array Logical Disk configuration
-	* Attach SAN Storage Volumes must be assigned a unique LUN ID
+* Import existing local Smart Array Logical Disk configuration
+* Attach SAN Storage Volumes must be assigned a unique LUN ID
 
 If the source Server Profile has the "Import existing logical drives" enabled, this setting will be disabled, and the Local Disk Configuration policy will be set to "disabled".
 
@@ -31,7 +31,7 @@ Minimum required Permissions: Infrastructure administrator or Server administrat
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Get-HPOVServerProfile -Name MyProfile | ConvertTo-HPOVServerProfileTemplate -Name "Hypervisor Gold Template 1"
@@ -50,12 +50,12 @@ A source Server Profile Object or Resource Name.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### -Name &lt;String&gt;
 
-The Server Profile Template Name to assign.  If omitted, then a new name of "Copy of - {Original_Name}" will be defined.
+The Server Profile Template Name to assign. If omitted, then a new name of "Copy of - {Original\_Name}" will be defined.
 
 | Aliases | None |
 | :--- | :--- |
@@ -79,7 +79,7 @@ The Server Profile description.
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
@@ -93,13 +93,13 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | (${Global:ConnectedSessions} | ? Default) |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \(${Global:ConnectedSessions} | ? Default\) |
+| Accept pipeline input? | true \(ByPropertyName\) |  |
+| Accept wildcard characters? | False |  |
 
 ### &lt;CommonParameters&gt;
 
@@ -107,17 +107,17 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.ServerProfile [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.ServerProfile \[System.Management.Automation.PSCustomObject\]**_
 
 A Server Profile resource object from [`Get-HPOVServerProfile`](get-hpovserverprofile.md).
 
 _**System.Collections.ArrayList**_
 
-Multiple HPOneView.ServerProfile [System.Management.Automation.PSCustomObject] objects.
+Multiple HPOneView.ServerProfile \[System.Management.Automation.PSCustomObject\] objects.
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject] objects.**_
+_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\] objects.**_
 
 Asynchronous task of the Server Profile Template creation request.
 
@@ -129,3 +129,4 @@ Asynchronous task of the Server Profile Template creation request.
 * [Remove-HPOVServerProfileTemplate](remove-hpovserverprofiletemplate.md)
 * [Save-HPOVServerProfileTemplate](save-hpovserverprofiletemplate.md)
 * [Set-HPOVServerProfileTemplate](set-hpovserverprofiletemplate.md)
+

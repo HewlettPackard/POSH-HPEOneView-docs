@@ -1,4 +1,4 @@
-﻿---
+---
 description: Disable appliance service console access.
 ---
 
@@ -22,11 +22,10 @@ Required: Infrastructure administrator
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Disable-HPOVApplianceServiceConsoleAccess
-
 ```
 
 Disable service console access on the appliance.
@@ -35,15 +34,15 @@ Disable service console access on the appliance.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | (${Global:ConnectedSessions} | ? Default) |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \(${Global:ConnectedSessions} | ? Default\) |
+| Accept pipeline input? | true \(ByPropertyName\) |  |
+| Accept wildcard characters? | False |  |
 
 ### -Confirm &lt;SwitchParameter&gt;
 
@@ -59,8 +58,6 @@ Override prompt.
 
 ### -WhatIf &lt;SwitchParameter&gt;
 
-
-
 | Aliases | wi |
 | :--- | :--- |
 | Required? | False |
@@ -75,11 +72,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this cmdlet.**_
+_**None. You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
 Asyncronous task resource to monitor
 
@@ -87,3 +84,4 @@ Asyncronous task resource to monitor
 
 * [Enable-HPOVApplianceServiceConsoleAccess](enable-hpovapplianceserviceconsoleaccess.md)
 * [Get-HPOVApplianceServiceConsoleAccess](get-hpovapplianceserviceconsoleaccess.md)
+

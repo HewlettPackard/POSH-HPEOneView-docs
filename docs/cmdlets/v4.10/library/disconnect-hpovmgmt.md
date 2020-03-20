@@ -73,5 +73,5 @@ Disconnect all appliance sessions.
 
 ## Related Links
 
-* [Connect-HPOVMgmt ](library/connect-hpovmgmt.md#hpe-oneview-5-00-library)
+* [Connect-HPOVMgmt ](connect-hpovmgmt.md#hpe-oneview-5-00-library)
 

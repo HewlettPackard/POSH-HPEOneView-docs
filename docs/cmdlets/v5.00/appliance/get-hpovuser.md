@@ -1,4 +1,4 @@
-﻿---
+---
 description: Retrieve user account resource(s).
 ---
 
@@ -15,11 +15,11 @@ Get-HPOVUser
 
 ## Description
 
-Get a local user account on the management appliance, and display it"s properties.  The account password will not be displayed.
+Get a local user account on the management appliance, and display it"s properties. The account password will not be displayed.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Get-HPOVUser
@@ -27,7 +27,7 @@ Get-HPOVUser
 
 List all user accounts from all connected appliances.
 
-###  Example 2 
+### Example 2
 
 ```text
 Get-HPOVUser "Sally"
@@ -51,15 +51,15 @@ The name of the new user account to display.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value | (${Global:ConnectedSessions} | ? Default) |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | True |  |
+| Position? | Named |  |
+| Default value | \(${Global:ConnectedSessions} | ? Default\) |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### &lt;CommonParameters&gt;
 
@@ -67,7 +67,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this Cmdlet.**_
+_**None. You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
@@ -81,8 +81,6 @@ Multiple User resourses, or formatted table displaying a report of user accounts
 
 _**User Account Information**_
 
-
-
 ## Related Links
 
 * [New-HPOVUser](../security/new-hpovuser.md)
@@ -91,3 +89,4 @@ _**User Account Information**_
 * [Set-HPOVUserPassword](../security/set-hpovuserpassword.md)
 * [Set-HPOVUserRole](../security/set-hpovuserrole.md)
 * [Show-HPOVUserSession](show-hpovusersession.md)
+

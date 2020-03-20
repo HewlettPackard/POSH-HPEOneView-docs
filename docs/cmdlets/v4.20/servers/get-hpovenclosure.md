@@ -1,4 +1,4 @@
-﻿---
+---
 description: Retrieve Enclosure resource(s).
 ---
 
@@ -41,25 +41,23 @@ Obtain a collection of enclosure hardware resources which have the specified nam
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 $enclosures = Get-HPOVEnclosure
-
 ```
 
 Return all the enclosure hardware managed by this appliance.
 
-###  Example 2 
+### Example 2
 
 ```text
 $enclosure = Get-HPOVEnclosure -Name "A"
-
 ```
 
 Return the enclosure hardware resource with name "A".
 
-###  Example 3 
+### Example 3
 
 ```text
 Get-HPOVEnclosure
@@ -71,7 +69,7 @@ Encl2          SGH102X6J1    BladeSystem c7000 Enclosure G2 Rack-173  Monitored 
 
 Display a brief list of the enclosures managed or monitored by the appliance.
 
-###  Example 4 
+### Example 4
 
 ```text
 Get-HPOVEnclosure -Name Encl1 -report
@@ -114,9 +112,6 @@ Encl1, interconnect 2 HP VC FlexFabric 10Gb/24-Port Module WECFSED101    4.10
 ----- -----------------     -------------------- -----      ------ -----------------
         Encl1, interconnect 1 Encl1-LI             Configured OK     Consistent
         Encl1, interconnect 2 Encl1-LI             Configured OK     Consistent
-        
-        
-
 ```
 
 Generate a report of Encl1.
@@ -125,7 +120,7 @@ Generate a report of Encl1.
 
 ### -Name &lt;String&gt;
 
-The name of the enclosure hardware resource to be returned.  All enclosure hardware resources will be returned if omitted.
+The name of the enclosure hardware resource to be returned. All enclosure hardware resources will be returned if omitted.
 
 | Aliases | None |
 | :--- | :--- |
@@ -137,12 +132,12 @@ The name of the enclosure hardware resource to be returned.  All enclosure hardw
 
 ### -Scope &lt;Object&gt;
 
-Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
+Filter resources based on provided Scope membership. By default, all resources for the accounts Active Permissions will be displayed. Allowed values:
 
-    * AllResources
-    * AllResourcesInScope
-    * `[HPOneView.Appliance.ScopeCollection]`
-    * `[HPOneView.Appliance.ConnectionPermission]`
+* AllResources
+* AllResourcesInScope
+* `[HPOneView.Appliance.ScopeCollection]`
+* `[HPOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
@@ -166,15 +161,15 @@ Specify the label associated with resources.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | (${Global:ConnectedSessions} | ? Default) |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \(${Global:ConnectedSessions} | ? Default\) |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### -exportFile &lt;String&gt;
 
@@ -206,7 +201,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this cmdlet.**_
+_**None. You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
@@ -214,7 +209,7 @@ _**System.Object**_
 
 Enclosure Report
 
-_**HPOneView.Enclosure [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Enclosure \[System.Management.Automation.PSCustomObject\]**_
 
 The matching enclosure hardware resources.
 
@@ -230,3 +225,4 @@ The matching enclosure hardware resources.
 * [Set-HPOVEnclosureActiveFLM](set-hpovenclosureactiveflm.md)
 * [Set-HPOVEnclosureGroup](set-hpovenclosuregroup.md)
 * [Update-HPOVEnclosure](update-hpovenclosure.md)
+

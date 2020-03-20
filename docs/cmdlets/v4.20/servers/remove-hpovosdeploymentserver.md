@@ -1,4 +1,4 @@
-﻿---
+---
 description: Remove an HPE Synergy Image Streamer OS Deployment server.
 ---
 
@@ -19,11 +19,11 @@ Remove-HPOVOSDeploymentServer
 
 Deleting an Image Streamer OS deployment server removes the management and storage networking configurations of all the Image Streamer appliances configured in HPE OneView. In addition, the Image Streamer appliances are reset to factory defaults, removing all OS deployment artifacts and all OS volumes.
 
-In order to successfully remove an OS Deployment Server, all associated Logical Enclosures must first be removed.  If a Logical Enclosure does not contain an HPE Synergy Image Streamer appliance, then it does not need to be removed.
+In order to successfully remove an OS Deployment Server, all associated Logical Enclosures must first be removed. If a Logical Enclosure does not contain an HPE Synergy Image Streamer appliance, then it does not need to be removed.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Get-HPOVOSDeploymentServer | Remove-HPOVOSDeploymentServer
@@ -42,7 +42,7 @@ OS Deployment Server object, from `Get-HPOVOSDeploymentServer`.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### -Force &lt;SwitchParameter&gt;
@@ -59,7 +59,7 @@ Forceably remove an OS Deployment Server.
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
@@ -71,15 +71,15 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | (${Global:ConnectedSessions} | ? Default) |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \(${Global:ConnectedSessions} | ? Default\) |
+| Accept pipeline input? | true \(ByPropertyName\) |  |
+| Accept wildcard characters? | False |  |
 
 ### &lt;CommonParameters&gt;
 
@@ -93,7 +93,7 @@ HPE Synergy Image Streamer OS Deployment Server from [`Get-HPOVOSDeploymentServe
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
 Resource removal async task.
 
@@ -101,3 +101,4 @@ Resource removal async task.
 
 * [Get-HPOVOSDeploymentServer](get-hpovosdeploymentserver.md)
 * [New-HPOVOSDeploymentServer](new-hpovosdeploymentserver.md)
+

@@ -1,4 +1,4 @@
-﻿---
+---
 description: Default content
 ---
 
@@ -12,7 +12,7 @@ Default content
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Get-HPOVCluster
@@ -24,15 +24,15 @@ Default example
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases |  |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | (${Global:ConnectedSessions} | ? Default) |
-| Accept pipeline input? |  |
-| Accept wildcard characters? |  |
+| Aliases |  |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \(${Global:ConnectedSessions} | ? Default\) |
+| Accept pipeline input? |  |  |
+| Accept wildcard characters? |  |  |
 
 ### -Name &lt;String&gt;
 

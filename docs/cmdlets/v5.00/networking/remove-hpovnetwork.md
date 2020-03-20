@@ -1,4 +1,4 @@
-﻿---
+---
 description: Delete network from appliance configuration.
 ---
 
@@ -20,16 +20,16 @@ Delete a network and its corresponding default connection type.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 $task = Remove-HPOVNetwork -network "yellow"
 Wait-HPOVTaskComplete $task
 ```
 
-Remove the network specifed by name.  Wait for remove to complete.
+Remove the network specifed by name. Wait for remove to complete.
 
-###  Example 2 
+### Example 2
 
 ```text
 $Net = Get-HPOVNetwork -name "yellow"
@@ -38,7 +38,7 @@ Remove-HPOVNetwork -network $net -confirm:$false
 
 Remove the network specifed by $net, and do not prompt for confirmation.
 
-###  Example 3 
+### Example 3
 
 ```text
 Get-HPOVNetwork | Remove-HPOVNetwork
@@ -50,27 +50,27 @@ Search for all networks and remove them from appliance.
 
 ### -InputObject &lt;Object&gt;
 
-The network object(s) or name(s) to be deleted.
+The network object\(s\) or name\(s\) to be deleted.
 
 | Aliases | uri, name, network, Resource |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value | (${Global:ConnectedSessions} | ? Default) |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | True |  |
+| Position? | Named |  |
+| Default value | \(${Global:ConnectedSessions} | ? Default\) |
+| Accept pipeline input? | true \(ByPropertyName\) |  |
+| Accept wildcard characters? | False |  |
 
 ### -Force &lt;SwitchParameter&gt;
 
@@ -86,8 +86,6 @@ Forcefully remove the network object.
 
 ### -WhatIf &lt;SwitchParameter&gt;
 
-
-
 | Aliases | wi |
 | :--- | :--- |
 | Required? | False |
@@ -97,8 +95,6 @@ Forcefully remove the network object.
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
-
-
 
 | Aliases | cf |
 | :--- | :--- |
@@ -124,7 +120,7 @@ Network Resource Object
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
 Async Removal task
 
@@ -137,3 +133,4 @@ Async Removal task
 * [Remove-HPOVNetworkSet](remove-hpovnetworkset.md)
 * [Set-HPOVNetwork](set-hpovnetwork.md)
 * [Set-HPOVNetworkSet](set-hpovnetworkset.md)
+

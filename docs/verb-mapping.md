@@ -2,7 +2,7 @@
 description: The HPE OneView PowerShell library verb mapping to OneView Actions verbs.
 ---
 
-# Verb mapping
+# Verb Mapping
 
 The following table shows the available HPE OneView PowerShell Verbs and which map to the HPE OneView actions.
 

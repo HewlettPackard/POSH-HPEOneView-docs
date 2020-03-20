@@ -1,4 +1,4 @@
-﻿---
+---
 description: Retrieve Remote Support Default Site.
 ---
 
@@ -18,24 +18,22 @@ New-HPOVRemoteSupportPartner
 
 ## Description
 
-Use this Cmdlet to retrieve the configured default site. 
+Use this Cmdlet to retrieve the configured default site.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 New-HPOVRemoteSupportPartner -Name "My Authorized Partner" -Type Reseller -PartnerId 123456
-
 ```
 
 Define a new authorized HPE Reseller partner.
 
-###  Example 2 
+### Example 2
 
 ```text
 New-HPOVRemoteSupportPartner -Name "My Authorized Partner" -Type Support -PartnerId 123456 -Default
-
 ```
 
 Define a new authorized HPE Support partner, and make it the default appliance Support partner.
@@ -68,7 +66,7 @@ The HPE Authorized Support and/or Reseller Partner ID.
 
 ### -Type &lt;String&gt;
 
-Specify if the authorized partner is a Reseller or Support.  If requiring a partner that is both Support and a Reseller, create it twice.
+Specify if the authorized partner is a Reseller or Support. If requiring a partner that is both Support and a Reseller, create it twice.
 
 | Aliases | None |
 | :--- | :--- |
@@ -80,7 +78,7 @@ Specify if the authorized partner is a Reseller or Support.  If requiring a part
 
 ### -Default &lt;SwitchParameter&gt;
 
-Use to specify if the partner should be the default Support or Reseller partner.  All supproted monitored resources by default will inherit from the appliance.
+Use to specify if the partner should be the default Support or Reseller partner. All supproted monitored resources by default will inherit from the appliance.
 
 | Aliases | None |
 | :--- | :--- |
@@ -92,15 +90,15 @@ Use to specify if the partner should be the default Support or Reseller partner.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | (${Global:ConnectedSessions} | ? Default) |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \(${Global:ConnectedSessions} | ? Default\) |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### &lt;CommonParameters&gt;
 
@@ -108,15 +106,16 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this cmdlet.**_
+_**None. You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.RemoteSupport.Partner [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.RemoteSupport.Partner \[System.Management.Automation.PSCustomObject\]**_
 
 Newly created Remote Support Partner.
 
 ## Related Links
 
 * [Get-HPOVRemoteSupportPartner](get-hpovremotesupportpartner.md)
-* [Remove-HPOVRemoteSupportPartner](remove-hpovremotesupportpartner.md)
+* [Remove-HPOVRemoteSupportPartner]()
+

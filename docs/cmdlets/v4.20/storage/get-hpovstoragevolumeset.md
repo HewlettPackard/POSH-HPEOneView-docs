@@ -1,4 +1,4 @@
-﻿---
+---
 description: Get available storage volume sets.
 ---
 
@@ -17,26 +17,24 @@ Get-HPOVStorageVolumeSet
 
 ## Description
 
-A collection of volumes is referred to as volume set in HPE OneView. Volume sets are used to govern `data-protection` policies, such as snapshot and replication schedules. For HPE Nimble storage, the corresponding terminology for "volume sets" is "data protection volume collections".  Volumes that hold multiple components of an application, such as databases and transaction logs, can be grouped into a volume set.
+A collection of volumes is referred to as volume set in HPE OneView. Volume sets are used to govern `data-protection` policies, such as snapshot and replication schedules. For HPE Nimble storage, the corresponding terminology for "volume sets" is "data protection volume collections". Volumes that hold multiple components of an application, such as databases and transaction logs, can be grouped into a volume set.
 
-This Cmdlet will return the available volume sets from the available storage systems.  Volume sets are created on the storage system.
+This Cmdlet will return the available volume sets from the available storage systems. Volume sets are created on the storage system.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Get-HPOVStorageVolumeSet
-
 ```
 
 Get all available storage sets.
 
-###  Example 2 
+### Example 2
 
 ```text
 Get-HPOVStorageVolumeSet -Name VolumeSets
-
 ```
 
 Get the specified "VolumeSets" storage sets.
@@ -45,15 +43,15 @@ Get the specified "VolumeSets" storage sets.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | (${Global:ConnectedSessions} | ? Default) |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \(${Global:ConnectedSessions} | ? Default\) |
+| Accept pipeline input? | true \(ByPropertyName\) |  |
+| Accept wildcard characters? | False |  |
 
 ### -Label &lt;String&gt;
 
@@ -81,11 +79,12 @@ Filter for the resource name.
 
 ### -Scope &lt;Object&gt;
 
-Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
-    * AllResources
-    * AllResourcesInScope
-    * `[HPOneView.Appliance.ScopeCollection]`
-    * `[HPOneView.Appliance.ConnectionPermission]`
+Filter resources based on provided Scope membership. By default, all resources for the accounts Active Permissions will be displayed. Allowed values:
+
+* AllResources
+* AllResourcesInScope
+* `[HPOneView.Appliance.ScopeCollection]`
+* `[HPOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
@@ -101,7 +100,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this cmdlet.**_
+_**None. You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 

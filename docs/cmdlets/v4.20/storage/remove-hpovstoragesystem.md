@@ -1,4 +1,4 @@
-﻿---
+---
 description: Remove a Storage System
 ---
 
@@ -20,14 +20,13 @@ This cmdlet will assist with removing a discovered and managed storage system fr
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Remove-HPOVStorageSystem HP3PAR_2
-
 ```
 
-Remove "HP3PAR_2" storage system from the appliance.
+Remove "HP3PAR\_2" storage system from the appliance.
 
 ## Parameters
 
@@ -40,7 +39,7 @@ Name or URI of the managed storage system.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### -Force &lt;SwitchParameter&gt;
@@ -57,19 +56,17 @@ Switch to force removal of a storage system the appliance can no longer communic
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value | (${Global:ConnectedSessions} | ? Default) |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | True |  |
+| Position? | Named |  |
+| Default value | \(${Global:ConnectedSessions} | ? Default\) |
+| Accept pipeline input? | true \(ByPropertyName\) |  |
+| Accept wildcard characters? | False |  |
 
 ### -WhatIf &lt;SwitchParameter&gt;
-
-
 
 | Aliases | wi |
 | :--- | :--- |
@@ -80,8 +77,6 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
-
-
 
 | Aliases | cf |
 | :--- | :--- |
@@ -97,17 +92,17 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Storage.System [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Storage.System \[System.Management.Automation.PSCustomObject\]**_
 
 Storage System resource object
 
-_**System.Collections.ArrayList <HPOneView.Storage.System>**_
+_**System.Collections.ArrayList**_ 
 
 Collections of Storage System resource objects
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
 Returns an async task resource to monitor.
 
@@ -117,3 +112,4 @@ Returns an async task resource to monitor.
 * [Get-HPOVStorageSystem](get-hpovstoragesystem.md)
 * [Show-HPOVStorageSystemPerformancePolicy](show-hpovstoragesystemperformancepolicy.md)
 * [Update-HPOVStorageSystem](update-hpovstoragesystem.md)
+

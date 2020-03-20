@@ -1,4 +1,4 @@
-﻿---
+---
 description: Configure new Remote Support contact.
 ---
 
@@ -23,11 +23,11 @@ New-HPOVRemoteSupportContact
 
 ## Description
 
-Use this Cmdlet to create a new Remote Support Contact.  The Remote Support Contact is used to identify authorized users HPE Support can contact for service events.  Only a single contact can be defined as the Default.  The Default contact cannot be removed, and at least 1 contact must be configured before attempting to register the appliance with HPE support using the Set-HPOVRemoteSupport Cmdlet. 
+Use this Cmdlet to create a new Remote Support Contact. The Remote Support Contact is used to identify authorized users HPE Support can contact for service events. Only a single contact can be defined as the Default. The Default contact cannot be removed, and at least 1 contact must be configured before attempting to register the appliance with HPE support using the Set-HPOVRemoteSupport Cmdlet.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 New-HPOVRemoteSupportContact -Firstname Rebert -Lastname Jones -Email robert.jones@domain.local -PrimaryPhone 123-111-2222 -AlternatePhone 111-333-4444 -Language en -Default
@@ -135,15 +135,15 @@ Use to specify if this contact is the Default.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | (${Global:ConnectedSessions} | ? Default) |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \(${Global:ConnectedSessions} | ? Default\) |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### -DefaultSecondary &lt;SwitchParameter&gt;
 
@@ -163,11 +163,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this Cmdlet.**_
+_**None. You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.RemoteSupport.Contact [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.RemoteSupport.Contact \[System.Management.Automation.PSCustomObject\]**_
 
 The created Remote Support Contact.
 
@@ -175,3 +175,4 @@ The created Remote Support Contact.
 
 * [Get-HPOVRemoteSupportContact](get-hpovremotesupportcontact.md)
 * [Remove-HPOVRemoteSupportContact](remove-hpovremotesupportcontact.md)
+

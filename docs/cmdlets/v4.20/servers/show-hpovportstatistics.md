@@ -1,4 +1,4 @@
-﻿---
+---
 description: Display Interconnect Port Statistics.
 ---
 
@@ -23,11 +23,11 @@ Show-HPOVPortStatistics
 
 ## Description
 
-This cmdlet will display the utilization (Format-Table view) or error (Format-List) statistics of a given Interconnect or Interconnect Port.  The default view is `Format-Table`.  Piping output to `Format-List` will display error statistics.
+This cmdlet will display the utilization \(Format-Table view\) or error \(Format-List\) statistics of a given Interconnect or Interconnect Port. The default view is `Format-Table`. Piping output to `Format-List` will display error statistics.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Show-HPOVPortStatistics -interconnect "Encl1, Interconnect 1" -port X1
@@ -40,7 +40,7 @@ X1   5Kbps (1min) 0Kbps (1min) 6pps (1min) 0pps (1min) 6pps (1min)        0pps (
 
 Displays the interface throughput statistics for X1 in a `Format-Table` display.
 
-###  Example 2 
+### Example 2
 
 ```text
 Show-HPOVPortStatistics -interconnect "Encl1, Interconnect 1" -port X1 | FL
@@ -61,16 +61,15 @@ Giants Rx/Tx                :
 
 Displays the interface error statistics for X1 in a `Format-List` display.
 
-###  Example 3 
+### Example 3
 
 ```text
 (Get-HPOVInterconnect "Encl1, Interconnect 1").ports | ? name -eq X1 | Show-HPOVPortStatistics
-
 ```
 
 Pipe an Interconnect Port object to `Show-HPOVPortStatistics` and show the interface throughput statistics.
 
-###  Example 4 
+### Example 4
 
 ```text
 Show-HPOVPortStatistics -interconnect "Encl1, Interconnect 1"
@@ -114,7 +113,7 @@ X3   0 MB/s        0 MB/s        0                 0                 0          
 
 Display all available ports of the provided Interconnect, using the Interconnect Name.
 
-###  Example 5 
+### Example 5
 
 ```text
 $Interconnect = Get-HPOVInterconnect "Encl1, Interconnect 1"
@@ -127,7 +126,7 @@ Display all available ports of the provided Interconnect, using an Interconnect 
 
 ### -Port &lt;Object&gt;
 
-The name of the Interconnect Port ID (i.e. X1 or D5) to retrieve.  If no Port ID is provided, all Ports of the Interconnect will be returned.
+The name of the Interconnect Port ID \(i.e. X1 or D5\) to retrieve. If no Port ID is provided, all Ports of the Interconnect will be returned.
 
 | Aliases | None |
 | :--- | :--- |
@@ -153,13 +152,13 @@ The Interconnect resource the Port ID is a member of.
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value | (${Global:ConnectedSessions} | ? Default) |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | True |  |
+| Position? | Named |  |
+| Default value | \(${Global:ConnectedSessions} | ? Default\) |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### &lt;CommonParameters&gt;
 
@@ -167,17 +166,17 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Netwroking.Interconnect.Port [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Netwroking.Interconnect.Port \[System.Management.Automation.PSCustomObject\]**_
 
 An Interconnect Port object
 
 ## Return Values
 
-_**HPOneView.Networking.PortStatistics.Ethernet [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Networking.PortStatistics.Ethernet \[System.Management.Automation.PSCustomObject\]**_
 
 Ethernet Uplink Port statistics
 
-_**HPOneView.Networking.PortStatistics.FibreChannel [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Networking.PortStatistics.FibreChannel \[System.Management.Automation.PSCustomObject\]**_
 
 Ethernet Uplink Port statistics
 

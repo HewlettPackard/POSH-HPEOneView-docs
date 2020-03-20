@@ -1,4 +1,4 @@
-﻿---
+---
 description: Retrieve Network resource(s).
 ---
 
@@ -20,65 +20,59 @@ Get-HPOVNetwork
 
 ## Description
 
-Obtain a collection of network resources which have the specified type and/or name.  The default connection information is included in the returned network resources.
+Obtain a collection of network resources which have the specified type and/or name. The default connection information is included in the returned network resources.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 $net41 = Get-HPOVNetwork -name "Net-41"
-
 ```
 
 Return the network resource with the name "Net-41"
 
-###  Example 2 
+### Example 2
 
 ```text
 $ethNets = Get-HPOVNetwork -type Ethernet
-
 ```
 
 Return all the Ethernet network resources
 
-###  Example 3 
+### Example 3
 
 ```text
 $ethNets = Get-HPOVNetwork -Name VLAN_19*
-
 ```
 
-Return all Ethernet Networks that match "VLAN_19*".
+Return all Ethernet Networks that match "VLAN\_19\*".
 
-###  Example 4 
+### Example 4
 
 ```text
 $ethNets = "Net1","Net2","Net3" | Get-HPOVNetwork -Type Ethernet
-
 ```
 
 Return Net1, Net2, and Net3 Ethernet Networks from the specified appliance connection.
 
-###  Example 5 
+### Example 5
 
 ```text
 Get-HPOVNetwork -exportFile "c:\myApplianceConfig\myNets.json"
-
 ```
 
 Exports all networks to the file `[myNets.json]` in JSON format.
 
-###  Example 6 
+### Example 6
 
 ```text
 Get-HPOVNetwork -x "c:\myApplianceConfig\myNets.json" -type Ethernet
-
 ```
 
 Exports only the ethernet networks to the file `[myNets.json]`.
 
-###  Example 7 
+### Example 7
 
 ```text
 Get-HPOVNetwork
@@ -129,7 +123,7 @@ Name              Status Type         Typical Bandwidth Max Bandwidth Auto Login
 3PAR SAN Fabric A OK     FabricAttach 4000              8000          True                      30
 3PAR SAN Fabric B OK     FabricAttach 4000              8000          True                      30
 
-    
+
     Type: FCoE
 
 
@@ -147,19 +141,19 @@ Get all available networks.
 
 ### -Name &lt;String&gt;
 
-The name of the network resource to be returned.  All network resources will be returned if omitted.  Supports "*" wildcard character.
+The name of the network resource to be returned. All network resources will be returned if omitted. Supports "\*" wildcard character.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### -Type &lt;String&gt;
 
-The type of the network resource to be returned.  Valid types are "Ethernet" for Ethernet networks, "FC" or "FibreChannel" for Fibre Channel networks.  All network resources will be returned if omitted.
+The type of the network resource to be returned. Valid types are "Ethernet" for Ethernet networks, "FC" or "FibreChannel" for Fibre Channel networks. All network resources will be returned if omitted.
 
 | Aliases | None |
 | :--- | :--- |
@@ -175,13 +169,13 @@ Specify the Ethernet Purpose value to filter on.
 
 Supported Values:
 
-    * General
-    * Management
-    * VMMigration
-    * FaultTolerance
-    * ISCSI
+* General
+* Management
+* VMMigration
+* FaultTolerance
+* ISCSI
 
-    Note: When using this parameter, only Ethernet networks will be returned.
+  Note: When using this parameter, only Ethernet networks will be returned.
 
 | Aliases | None |
 | :--- | :--- |
@@ -193,12 +187,12 @@ Supported Values:
 
 ### -Scope &lt;Object&gt;
 
-Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
+Filter resources based on provided Scope membership. By default, all resources for the accounts Active Permissions will be displayed. Allowed values:
 
-    * AllResources
-    * AllResourcesInScope
-    * `[HPOneView.Appliance.ScopeCollection]`
-    * `[HPOneView.Appliance.ConnectionPermission]`
+* AllResources
+* AllResourcesInScope
+* `[HPOneView.Appliance.ScopeCollection]`
+* `[HPOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
@@ -210,7 +204,7 @@ Filter resources based on provided Scope membership.  By default, all resources 
 
 ### -Label &lt;String&gt;
 
-Specify the label name the network resource is associated with.  Cannot be combined with Name.
+Specify the label name the network resource is associated with. Cannot be combined with Name.
 
 | Aliases | None |
 | :--- | :--- |
@@ -222,20 +216,19 @@ Specify the label name the network resource is associated with.  Cannot be combi
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value | (${Global:ConnectedSessions} | ? Default) |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | True |  |
+| Position? | Named |  |
+| Default value | \(${Global:ConnectedSessions} | ? Default\) |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### -exportFile &lt;String&gt;
 
-Aliases  [-x, `-export`]
-The full path and file name to export the JSON formatted definition of the networks to a file. The directory for the file is validated prior to execution and the function returns an error is the directory does not exist.
+Aliases \[-x, `-export`\] The full path and file name to export the JSON formatted definition of the networks to a file. The directory for the file is validated prior to execution and the function returns an error is the directory does not exist.
 
 | Aliases | x, export |
 | :--- | :--- |
@@ -253,7 +246,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**System.String**_
 
-Network Resource Name(s)
+Network Resource Name\(s\)
 
 ## Return Values
 
@@ -282,3 +275,4 @@ Multiple Network Object resources
 * [Remove-HPOVNetworkSet](remove-hpovnetworkset.md)
 * [Set-HPOVNetwork](set-hpovnetwork.md)
 * [Set-HPOVNetworkSet](set-hpovnetworkset.md)
+

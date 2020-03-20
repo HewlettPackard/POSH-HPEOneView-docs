@@ -1,4 +1,4 @@
-﻿---
+---
 description: Get appliance audit log entries.
 ---
 
@@ -29,60 +29,60 @@ Each user has a unique logging ID per session, enabling you to follow a user?s t
 
 A breakdown of an audit entry follows:
 
-    * Date/time - The date and time of the event
-    * Internal component ID - The unique identifier of an internal component
-    * Reserved - The organization ID. Reserved for internal use
-    * User domain - The login domain name of the user
-    * User name/ID - The user name
-    * Session ID - The user session ID associated with the message
-    * Task ID - The URI of the task resource associated with the message
-    * Client host/IP - The client (browser) IP address identifies the client machine that initiated the request
-    * Result - The result of the action, which can be one of the following values:
-        * SUCCESS
-        * FAILURE
-        * SOME_FAILURES
-        * CANCELED
-        * KILLED
-    * Action - A description of the action, which can be one of the following values:
-        * ADD
-        * MODIFY
-        * DELETE
-        * ACCESS
-        * RUN
-        * LIST
-        * ENABLE
-        * DISABLE
-        * SAVE
-        * SETUP
-        * UNSETUP
-        * DEPLOY
-        * START
-        * DONE
-        * KILLED
-        * CANCELED
-        * LOGIN
-        * LOGOUT
-        * DOWNLOAD_START
-    * Severity - A description of the severity of the event, which can be one of the following values, listed in descending order of importance:
-        * INFO
-        * NOTICE
-        * WARNING
-        * ERROR
-        * ALERT
-        * CRITICAL
-    * Resource category - For REST API category information, see the HPE OneView API Reference.
-    * Resource URI/name - The resource URI/name associated with the task
-    * Message - The output message that appears in the audit log
+* Date/time - The date and time of the event
+* Internal component ID - The unique identifier of an internal component
+* Reserved - The organization ID. Reserved for internal use
+* User domain - The login domain name of the user
+* User name/ID - The user name
+* Session ID - The user session ID associated with the message
+* Task ID - The URI of the task resource associated with the message
+* Client host/IP - The client \(browser\) IP address identifies the client machine that initiated the request
+* Result - The result of the action, which can be one of the following values:
+  * SUCCESS
+  * FAILURE
+  * SOME\_FAILURES
+  * CANCELED
+  * KILLED
+* Action - A description of the action, which can be one of the following values:
+  * ADD
+  * MODIFY
+  * DELETE
+  * ACCESS
+  * RUN
+  * LIST
+  * ENABLE
+  * DISABLE
+  * SAVE
+  * SETUP
+  * UNSETUP
+  * DEPLOY
+  * START
+  * DONE
+  * KILLED
+  * CANCELED
+  * LOGIN
+  * LOGOUT
+  * DOWNLOAD\_START
+* Severity - A description of the severity of the event, which can be one of the following values, listed in descending order of importance:
+  * INFO
+  * NOTICE
+  * WARNING
+  * ERROR
+  * ALERT
+  * CRITICAL
+* Resource category - For REST API category information, see the HPE OneView API Reference.
+* Resource URI/name - The resource URI/name associated with the task
+* Message - The output message that appears in the audit log
 
 The audit log includes entries for all Maintenance console events except for viewing.
 
-Use this Cmdlet to retrieve appliance audit log entries.  Audit log entries can be filtered based on number of entries to return, and a date range.
+Use this Cmdlet to retrieve appliance audit log entries. Audit log entries can be filtered based on number of entries to return, and a date range.
 
-Minimum required permissions:  Infrastructure administrator
+Minimum required permissions: Infrastructure administrator
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Get-HPOVAuditLog
@@ -102,7 +102,7 @@ Action    : LOGIN
 Result    : SUCCESS
 Severity  : INFO
 Details   : Authentication SUCCESS. User "Administrator" logged in successfully from client "172.20.253.1" and
-			directory "LOCAL" on server "". [logID:LTY4ODgyMTcyMTMz]
+            directory "LOCAL" on server "". [logID:LTY4ODgyMTcyMTMz]
 Source IP : 172.20.253.1
 
 Appliance : hpov.mydomain.com
@@ -116,7 +116,7 @@ Details   : Add firmware bundle /rest/firmware-drivers/CP026527
 
 Return the audit logs from the appliance.
 
-###  Example 2 
+### Example 2
 
 ```text
 Get-HPOVAuditLog -Start ([DateTime]::Now).AddDays("-5")
@@ -140,7 +140,7 @@ Specify the number of audit log entries to return.
 
 ### -Timespan &lt;Timespan&gt;
 
-Specify the time span of to filter results on.  Cannot be combined with Start or End.
+Specify the time span of to filter results on. Cannot be combined with Start or End.
 
 | Aliases | None |
 | :--- | :--- |
@@ -152,7 +152,7 @@ Specify the time span of to filter results on.  Cannot be combined with Start or
 
 ### -Start &lt;DateTime&gt;
 
-Specify the Start datetime object to begin the search.  Can be combined with End parameter.
+Specify the Start datetime object to begin the search. Can be combined with End parameter.
 
 | Aliases | None |
 | :--- | :--- |
@@ -164,27 +164,27 @@ Specify the Start datetime object to begin the search.  Can be combined with End
 
 ### -End &lt;DateTime&gt;
 
-Specify the End datetime object to begin the search.  Should be combined with Start parameter.
+Specify the End datetime object to begin the search. Should be combined with Start parameter.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | [DateTime]::Now |
+| Default value | \[DateTime\]::Now |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | (${Global:ConnectedSessions} | ? Default) |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \(${Global:ConnectedSessions} | ? Default\) |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### &lt;CommonParameters&gt;
 
@@ -192,18 +192,19 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this Cmdlet.**_
+_**None. You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.AuditLogEntry [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.AuditLogEntry \[System.Management.Automation.PSCustomObject\]**_
 
 Single Appliance Audit Log Entry
 
 _**System.Collections.ArrayList**_
 
-Multiple  Appliance Audit Log Entries
+Multiple Appliance Audit Log Entries
 
 ## Related Links
 
 * [Get-HPOVAuditLogArchive](get-hpovauditlogarchive.md)
+

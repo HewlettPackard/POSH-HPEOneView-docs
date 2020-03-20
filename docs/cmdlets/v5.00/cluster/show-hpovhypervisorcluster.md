@@ -1,4 +1,4 @@
-﻿---
+---
 description: Default content
 ---
 
@@ -19,7 +19,7 @@ Default content
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Show-HPOVHypervisorCluster
@@ -31,19 +31,17 @@ Default example
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | (${Global:ConnectedSessions} | ? Default) |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \(${Global:ConnectedSessions} | ? Default\) |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### -Name &lt;string&gt;
-
-
 
 | Aliases | None |
 | :--- | :--- |

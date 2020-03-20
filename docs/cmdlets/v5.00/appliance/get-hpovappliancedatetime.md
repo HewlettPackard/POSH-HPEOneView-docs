@@ -1,4 +1,4 @@
-﻿---
+---
 description: Get Appliance Date/Time Configuration.
 ---
 
@@ -23,10 +23,12 @@ When querying a Synergy Composer appliance and the NTPServersproperty or field i
 {% hint style="info" %}
 Minimum required privileges: Read-
 {% endhint %}
+
 only
+
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Get-HPOVApplianceDateTime
@@ -42,17 +44,17 @@ This example passes in updated values to set for the appliance networking config
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-Default Value: ${Global:ConnectSessions} | ? Default
+Default Value: ${Global:ConnectSessions} \| ? Default
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value | (${Global:ConnectedSessions} | ? Default) |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | True |  |
+| Position? | Named |  |
+| Default value | \(${Global:ConnectedSessions} | ? Default\) |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### &lt;CommonParameters&gt;
 
@@ -60,14 +62,15 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this Cmdlet.**_
+_**None. You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.ApplianceServerDateTime [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.ApplianceServerDateTime \[System.Management.Automation.PSCustomObject\]**_
 
 Date/Time object.
 
 ## Related Links
 
 * [Set-HPOVApplianceDateTime](set-hpovappliancedatetime.md)
+

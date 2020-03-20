@@ -1,4 +1,4 @@
-﻿---
+---
 description: Import an existing Storage Volume resource.
 ---
 
@@ -21,33 +21,30 @@ Add-HPOVStorageVolume
 
 ## Description
 
-This cmdlet will help add an existing storage volume that was provisioned on the Storage System.  The volume should not be exported or assigned to a server or groups of servers.  The Storage Volume also must reside in the Managed Domain of the Stroage System that the appliance managed.  The Storage Volume"s WWN will be needed.
+This cmdlet will help add an existing storage volume that was provisioned on the Storage System. The volume should not be exported or assigned to a server or groups of servers. The Storage Volume also must reside in the Managed Domain of the Stroage System that the appliance managed. The Storage Volume"s WWN will be needed.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Add-HPOVStorageVolume -StorageSystem 3ParSys1 -VolumeID 50:00:2A:C0:03:1E:15:2C -VolumeName "MyStorageVol1"
-
 ```
 
 Import the volume "50:00:2A:C0:03:1E:15:2C" from the "3ParSys1" Storage System.
 
-###  Example 2 
+### Example 2
 
 ```text
 Get-HPOVStorageSystem 3ParSys1 | Add-HPOVStorageVolume -VolumeID 50:00:2A:C0:03:1E:15:2C -VolumeName "MyStorageVol1"
-
 ```
 
 Import the volume "50:00:2A:C0:03:1E:15:2C" from the "3ParSys1" Storage System.
 
-###  Example 3 
+### Example 3
 
 ```text
 Get-HPOVStorageSystem 3ParSys1 | Add-HPOVStorageVolume -StorageDeviceName "MyStorageVolName1" -VolumeName "MyStorageVol1"
-
 ```
 
 Import a volume using the storage device name "MyStorageVolName1" on the "3ParSys1" Storage System.
@@ -56,19 +53,19 @@ Import a volume using the storage device name "MyStorageVolName1" on the "3ParSy
 
 ### -StorageSystem &lt;Object&gt;
 
-The Storage System where the volume will be imported from.  Volume to be imported must be provisioned to the same Managed Domain as the Storage System.
+The Storage System where the volume will be imported from. Volume to be imported must be provisioned to the same Managed Domain as the Storage System.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### -VolumeID &lt;String&gt;
 
-The 128bit WWN FC address of the volume to be imported.  Address must be in the following format: AA:BB:CC:DD:EE:AA:BB:CC:DD:EE:AA:BB:CC:DD:EE:AA
+The 128bit WWN FC address of the volume to be imported. Address must be in the following format: AA:BB:CC:DD:EE:AA:BB:CC:DD:EE:AA:BB:CC:DD:EE:AA
 
 | Aliases | volid, id, wwn |
 | :--- | :--- |
@@ -80,7 +77,7 @@ The 128bit WWN FC address of the volume to be imported.  Address must be in the 
 
 ### -StorageDeviceName &lt;String&gt;
 
-The Storage Systems" Device Name of the volume.  This can be found in either the 3PAR IMC, CLI or HPE SSMC by looking at the provisionined volume and copying the "Name" property.
+The Storage Systems" Device Name of the volume. This can be found in either the 3PAR IMC, CLI or HPE SSMC by looking at the provisionined volume and copying the "Name" property.
 
 | Aliases | None |
 | :--- | :--- |
@@ -116,8 +113,7 @@ Provide a description for the volume.
 
 ### -Shared &lt;SwitchParameter&gt;
 
-Include this switch to mark the Storage Volume as a Shareable resource for shared volume access.
-Default: Private
+Include this switch to mark the Storage Volume as a Shareable resource for shared volume access. Default: Private
 
 | Aliases | None |
 | :--- | :--- |
@@ -131,17 +127,17 @@ Default: Private
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value | (${Global:ConnectedSessions} | ? Default) |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | True |  |
+| Position? | Named |  |
+| Default value | \(${Global:ConnectedSessions} | ? Default\) |
+| Accept pipeline input? | true \(ByPropertyName\) |  |
+| Accept wildcard characters? | False |  |
 
 ### -Scope &lt;HPOneView.Appliance.ScopeCollection&gt;
 
-Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
+Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with. Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -157,13 +153,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Storage.System [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Storage.System \[System.Management.Automation.PSCustomObject\]**_
 
 Storage Pool resource object
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
 Async create task
 
@@ -184,3 +180,4 @@ Async create task
 * [Set-HPOVStorageVolume](set-hpovstoragevolume.md)
 * [Set-HPOVStorageVolumeTemplate](set-hpovstoragevolumetemplate.md)
 * [Set-HPOVStorageVolumeTemplatePolicy](set-hpovstoragevolumetemplatepolicy.md)
+

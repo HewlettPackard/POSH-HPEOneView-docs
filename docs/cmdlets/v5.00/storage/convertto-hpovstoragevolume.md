@@ -1,4 +1,4 @@
-﻿---
+---
 description: Convert an existing Storage Volume Snapshot to a Storage Volume.
 ---
 
@@ -19,18 +19,17 @@ ConvertTo-HPOVStorageVolume
 
 ## Description
 
-Storage volume snapshots can be converted to assignable and managed storage volume resources. You can create a full copy of a volume based on the data in the snapshot. For large volumes, this can take a long time, depending on storage system resources available for the copy action.  When converting a snapshot to a storage volume, it will lose its parent/child relationship.
+Storage volume snapshots can be converted to assignable and managed storage volume resources. You can create a full copy of a volume based on the data in the snapshot. For large volumes, this can take a long time, depending on storage system resources available for the copy action. When converting a snapshot to a storage volume, it will lose its parent/child relationship.
 
 {% hint style="info" %}
- You cannot create a volume from an HPE Nimble storage system snapshot from HPE OneView.
+You cannot create a volume from an HPE Nimble storage system snapshot from HPE OneView.
 {% endhint %}
-
 
 Minimum required Permissions: Infrastructure administrator or Storage administrator.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 $Volume = Get-HPOVStorageVolume -Name PrivVolume1 | Get-HPOVStorageVolumeSnapshot | Select-Object -Last 1
@@ -39,7 +38,7 @@ ConvertTo-HPOVStorageVolume -Name "Copy of PrivVolume1"
 
 Get the most recent snapshot of PrivVolume1 and convert it to a volume.
 
-###  Example 2 
+### Example 2
 
 ```text
 $Snapshots = Get-HPOVStorageVolume "Volume 1" | Get-HPOVStorageVolumeSnapshot
@@ -59,7 +58,7 @@ Provide the snapshot resource object to convert managed by the appliance.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### -Name &lt;String&gt;
@@ -100,7 +99,7 @@ Specify if the new storage volume should be Private or Shared.
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
@@ -114,15 +113,15 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-Default Value: ${Global:ConnectSessions} | ? Default
+Default Value: ${Global:ConnectSessions} \| ? Default
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | (${Global:ConnectedSessions} | ? Default) |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \(${Global:ConnectedSessions} | ? Default\) |
+| Accept pipeline input? | true \(ByPropertyName\) |  |
+| Accept wildcard characters? | False |  |
 
 ### &lt;CommonParameters&gt;
 
@@ -130,17 +129,17 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Storage.VolumeSnapshot [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Storage.VolumeSnapshot \[System.Management.Automation.PSCustomObject\]**_
 
 Storage Volume Snapshot resource object.
 
 ## Return Values
 
-_**System.Collections.ArrayList <HPOneView.Appliance.TaskResource>**_
+_**System.Collections.ArrayList**_ 
 
 Multiple resources
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
 Create Storage Volume async task.
 
@@ -161,3 +160,4 @@ Create Storage Volume async task.
 * [Set-HPOVStorageVolume](set-hpovstoragevolume.md)
 * [Set-HPOVStorageVolumeTemplate](set-hpovstoragevolumetemplate.md)
 * [Set-HPOVStorageVolumeTemplatePolicy](set-hpovstoragevolumetemplatepolicy.md)
+

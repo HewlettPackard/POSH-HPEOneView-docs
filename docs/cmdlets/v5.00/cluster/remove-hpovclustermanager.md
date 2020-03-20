@@ -1,5 +1,5 @@
-﻿---
-description: Remove configured hypervisor managers. 
+---
+description: Remove configured hypervisor managers.
 ---
 
 # Remove-HPOVClusterManager
@@ -24,7 +24,7 @@ The user must have an infrastructure administrator privilege to register or upda
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Get-HPOVClusterManager -Name vcenter1.domain.com -ErrorAction Stop | Remove-HPOVClusterManager
@@ -36,19 +36,17 @@ Remove the specified hypervisor manager.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | (${Global:ConnectedSessions} | ? Default) |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \(${Global:ConnectedSessions} | ? Default\) |
+| Accept pipeline input? | true \(ByPropertyName\) |  |
+| Accept wildcard characters? | False |  |
 
 ### -Confirm &lt;SwitchParameter&gt;
-
-
 
 | Aliases | cf |
 | :--- | :--- |
@@ -79,12 +77,10 @@ The `[HPOneView.ClusterProfile.HypervisorManager]` resource to remove from `Get-
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### -WhatIf &lt;SwitchParameter&gt;
-
-
 
 | Aliases | wi |
 | :--- | :--- |
@@ -106,7 +102,7 @@ The hypervisor manager object from [`Get-HPOVClusterManager`](get-hpovclusterman
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
 Asynchronous task resource to monitor.
 
@@ -115,3 +111,4 @@ Asynchronous task resource to monitor.
 * [Add-HPOVClusterManager](add-hpovclustermanager.md)
 * [Get-HPOVClusterManager](get-hpovclustermanager.md)
 * [Set-HPOVClusterManager](set-hpovclustermanager.md)
+

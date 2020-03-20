@@ -40,7 +40,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Appliance.Connection**_
 
-The Appliance Connection object either provided from the [`Connect-HPOVMgmt`](library/connect-hpovmgmt.md) return or `${Global:ConnectedSessions}` variable
+The Appliance Connection object either provided from the [`Connect-HPOVMgmt`](connect-hpovmgmt.md) return or `${Global:ConnectedSessions}` variable
 
 ## Return Values
 
@@ -88,8 +88,8 @@ Display the current appliance connections, then set the new default to "Applianc
 
 ## Related Links
 
-* [Connect-HPOVMgmt](library/connect-hpovmgmt.md)
+* [Connect-HPOVMgmt](connect-hpovmgmt.md)
 * [Disconnect-HPOVMgmt](disconnect-hpovmgmt.md)
-* [about\_Appliance\_Connection\_Permissions](../../about/about_appliance_connection_permissions.md)
-* \`\`[`${Global:ConnectedSessions}`](../../about/about_appliance_connections.md)
+* [about\_Appliance\_Connection\_Permissions](../../../about/about_appliance_connection_permissions.md)
+* \`\`[`${Global:ConnectedSessions}`](../../../about/about_appliance_connections.md)
 

@@ -1,4 +1,4 @@
-﻿---
+---
 description: Modify the reserved VLAN range for HPE Synergy.
 ---
 
@@ -16,17 +16,16 @@ Set-HPOVReservedVlanRange
 
 ## Description
 
-By default, HPE Synergy reserves VLANs `3967-4095`.  In order to modify the default range, Tunnel, untagged and FC networks must not exist.  The -Length parameter must not exceed 128.  The reserved VLAN range is concurrent.
+By default, HPE Synergy reserves VLANs `3967-4095`. In order to modify the default range, Tunnel, untagged and FC networks must not exist. The -Length parameter must not exceed 128. The reserved VLAN range is concurrent.
 
-Required permissions:  Network administrator, Infrastructure administrator
+Required permissions: Network administrator, Infrastructure administrator
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Set-HPOVReservedVlanRange -Start 2700 -Length 128
-
 ```
 
 Change the reserved VLAN range to start at 2700, and end at 2828.
@@ -35,15 +34,15 @@ Change the reserved VLAN range to start at 2700, and end at 2828.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | (${Global:ConnectedSessions} | ? Default) |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \(${Global:ConnectedSessions} | ? Default\) |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### -Length &lt;int&gt;
 
@@ -75,14 +74,15 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this cmdlet.**_
+_**None. You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
 Async task Resource object for configuring port monitoring on the requested logical intercinnect.
 
 ## Related Links
 
 * [Get-HPOVReservedVlanRange](../networking/get-hpovreservedvlanrange.md)
+

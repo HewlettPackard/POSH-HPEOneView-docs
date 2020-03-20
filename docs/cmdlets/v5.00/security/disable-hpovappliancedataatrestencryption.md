@@ -1,4 +1,4 @@
-﻿---
+---
 description: Turn off HPE Synergy Composer data at rest encryption.
 ---
 
@@ -14,11 +14,11 @@ Disable-HPOVApplianceDataAtRestEncryption
 
 ## Description
 
-HPE OneView encrypts sensitive data, such as managed device credentials, when it is stored on-disk in the appliance. The HPE OneView appliance encryption key (AEK) is used internally to encrypt the credentials for managed devices (such as, iLO, onboard administrator, frame link module). By default, the AEK is stored on the HPE Synergy Composer disk and also included in the appliance backup. This could pose a security risk in case the disk is stolen.
+HPE OneView encrypts sensitive data, such as managed device credentials, when it is stored on-disk in the appliance. The HPE OneView appliance encryption key \(AEK\) is used internally to encrypt the credentials for managed devices \(such as, iLO, onboard administrator, frame link module\). By default, the AEK is stored on the HPE Synergy Composer disk and also included in the appliance backup. This could pose a security risk in case the disk is stolen.
 
-The secure data-at-rest option, when enabled, stores the AEK off-disk in Composer NVRAM, and does not include the key in the appliance backup. Enabling this option requires the administrator to save a copy of the AEK (recovery AEK) for use in the following circumstances:
+The secure data-at-rest option, when enabled, stores the AEK off-disk in Composer NVRAM, and does not include the key in the appliance backup. Enabling this option requires the administrator to save a copy of the AEK \(recovery AEK\) for use in the following circumstances:
 
-*  When restoring a backup taken when a different AEK was in effect.
+* When restoring a backup taken when a different AEK was in effect.
 * To successfully boot the system in the unlikely event that the system copy of the key is corrupted.
 * A backup is being restored to a different new Composer or to the same Composer that has been factory reset.
 
@@ -30,7 +30,7 @@ Using this Cmdlet will disable data at rest encryption on configured and support
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Disable-HPOVApplianceDataAtRestEncryption
@@ -42,19 +42,17 @@ Disable appliance data at rest encryption.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | (${Global:ConnectedSessions} | ? Default) |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \(${Global:ConnectedSessions} | ? Default\) |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### -Confirm &lt;SwitchParameter&gt;
-
-
 
 | Aliases | cf |
 | :--- | :--- |
@@ -65,8 +63,6 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept wildcard characters? | False |
 
 ### -WhatIf &lt;SwitchParameter&gt;
-
-
 
 | Aliases | wi |
 | :--- | :--- |
@@ -82,11 +78,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this Cmdlet.**_
+_**None. You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
 Asynchronous task resource to monitor.
 
@@ -96,3 +92,4 @@ Asynchronous task resource to monitor.
 * [Get-HPOVApplianceDataAtRestEncryption](get-hpovappliancedataatrestencryption.md)
 * [New-HPOVApplianceDataAtRestEncryptionKey](new-hpovappliancedataatrestencryptionkey.md)
 * [Save-HPOVApplianceDataAtRestEncryptionKey](save-hpovappliancedataatrestencryptionkey.md)
+
