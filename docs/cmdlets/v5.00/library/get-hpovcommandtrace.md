@@ -17,7 +17,7 @@ Get-HPOVCommandTrace
 
 This Cmdlet will assist the user in setting up the PowerShell environment to generate and capture Verbose output from HPOV Library Cmdlets.  Once this Cmdlet has been executed, the prior HPOV Cmdlets can be executed, without the need of using the `-Cerbose` switch.
 
-Cmdlet output will be captured using the `built-in` Microsoft PowerShell `Start-Transcript` provider.  A transcript trace file will be saved in either the current working directory, or specified using the `-Location` parameter.
+Cmdlet output will be captured using the built-in Microsoft PowerShell Start-Transcript provider.  A transcript trace file will be saved in either the current working directory, or specified using the `-Location` parameter.
 
 Please know that this Cmdlet is currently not supported in the Windows PowerShell ISE, unless using PowerShell v5 or newer.
 

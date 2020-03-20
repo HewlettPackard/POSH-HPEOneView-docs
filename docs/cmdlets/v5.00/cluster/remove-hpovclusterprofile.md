@@ -25,7 +25,7 @@ The server profile template must have a configured connection to the hypervisor 
 
 The cluster profile helps you manage life cycle operations, such as growing or shrinking the cluster, modifying configurations based on needs, consistency checks, and nondisruptive firmware updates on the member nodes. For example, you can grow or shrink a cluster by adding or removing members from the cluster profile. Any change in the configuration of the cluster profile will be reported as an inconsistency. When inconsistencies are remediated, the changed configurations can be applied on cluster and member nodes.
 
-A cluster profile can manage VMware `ESXi-based` hypervisor clusters by leveraging VMware vCenter server. A hypervisor cluster must be managed by one instance of HPE OneView to avoid inconsistencies.
+A cluster profile can manage VMware ESXi-based hypervisor clusters by leveraging VMware vCenter server. A hypervisor cluster must be managed by one instance of HPE OneView to avoid inconsistencies.
 
 Use this Cmdlet to remove a cluster profile within OneView.  Removing a cluster within OneView will also destroy the cluster within the cluster manager.
 

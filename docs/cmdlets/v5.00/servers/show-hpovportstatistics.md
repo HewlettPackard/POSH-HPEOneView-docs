@@ -23,7 +23,7 @@ Show-HPOVPortStatistics
 
 ## Description
 
-This Cmdlet will display the utilization (Format-Table view) or error (Format-List) statistics of a given Interconnect or Interconnect Port.  The default view is `Format-Table`.  Piping output to `Format-List` will display error statistics.
+This Cmdlet will display the utilization (Format-Table view) or error (Format-List) statistics of a given Interconnect or Interconnect Port.  The default view is Format-Table.  Piping output to Format-List will display error statistics.
 
 ## Examples
 

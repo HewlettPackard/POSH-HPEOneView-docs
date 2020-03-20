@@ -37,7 +37,7 @@ Get-HPOVEnclosure
 
 ## Description
 
-An enclosure (HPE `c-Class` BladeSystem enclosure or Synergy frame) is a physical structure with device bays supporting compute, networking, and storage building blocks. These building blocks share the enclosure's common power, cooling, and management infrastructure.
+An enclosure (HPE c-Class BladeSystem enclosure or Synergy frame) is a physical structure with device bays supporting compute, networking, and storage building blocks. These building blocks share the enclosure's common power, cooling, and management infrastructure.
 
 This Cmdlet will get the managed and/or monitored enclosure resources from an appliance.  This can include HPE BladeSystem c7000, HPE Synergy or HPE Superdome X enclosure resources.
 

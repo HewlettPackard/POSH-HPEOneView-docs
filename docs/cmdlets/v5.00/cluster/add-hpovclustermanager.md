@@ -21,6 +21,8 @@ Add-HPOVClusterManager
 
 ## Description
 
+Hypervisor Manager is software for managing virtualized environments. Through the HPE OneView Hypervisor Manager resource, you can create, import, configure, and manage hypervisors and hypervisor clusters. A hypervisor manager provides the hostname and credentials to register with HPE OneView. HPE OneView uses these details to communicate with a hypervisor manager to perform tasks such as add, edit, and remove hypervisors or hypervisor clusters.
+
 You can register a new hypervisor cluster manager with HPE OneView by providing the hostname and credentials. The registered hypervisor manager contains preferences, which are used as default hypervisor or cluster settings during hypervisor cluster profile creation. You can modify the hypervisor manager preferences using the edit operation. You can override these values in a hypervisor cluster profile. 
 
 A valid hypervisor manager certificate must be added to HPE OneView trust store to be able to successfully communicate with a hypervisor manager.

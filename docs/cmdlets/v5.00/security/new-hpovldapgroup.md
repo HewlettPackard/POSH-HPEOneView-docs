@@ -32,7 +32,7 @@ New-HPOVLdapGroup
 
 ## Description
 
-This Cmdlet provides the ability to add a new Directory Group to the appliance.  You can use the `Show-HPOVLdapGroups` to retrieve a list of avialable Directory Groups from the specified Directory.
+This Cmdlet provides the ability to add a new Directory Group to the appliance.  You can use the Show-HPOVLdapGroups to retrieve a list of avialable Directory Groups from the specified Directory.
 
 ## Examples
 

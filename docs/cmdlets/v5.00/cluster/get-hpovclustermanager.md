@@ -22,7 +22,7 @@ A hypervisor is software deployed on a server node that creates and runs virtual
 
 A hypervisor cluster profile and the associated server profile template are used to define a consistent configuration from server nodes to hypervisors in the cluster. The server profiles define physical server configurations for server nodes in the cluster, which are derived from hypervisor cluster profile and the associated server profile template. The hypervisor profiles define network and storage configurations for hypervisors in the cluster, which are derived from hypervisor cluster profile. Hypervisor network and storage configurations in the hypervisor cluster profile are defined based on physical server configuration to ensure consistent configuration from server node to hypervisor.
 
-You can register a hypervisor manager with HPE OneView by using `Add-HPOVClusterManager`. The registered hypervisor manager contains preferences, which are used as default hypervisor or cluster settings during hypervisor cluster profile creation. You can modify the hypervisor manager preferences when adding, or using `Set-HPOVClusterManager`. You can override these values when creating a hypervisor cluster profile.
+You can register a hypervisor manager with HPE OneView by using Add-HPOVClusterManager. The registered hypervisor manager contains preferences, which are used as default hypervisor or cluster settings during hypervisor cluster profile creation. You can modify the hypervisor manager preferences when adding, or using Set-HPOVClusterManager. You can override these values when creating a hypervisor cluster profile.
 
 This Cmdlet will get the configured hypervisor cluster manager on the appliance.
 

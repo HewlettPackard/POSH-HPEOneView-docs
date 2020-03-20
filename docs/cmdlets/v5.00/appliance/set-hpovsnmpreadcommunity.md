@@ -15,7 +15,7 @@ Set-HPOVSnmpReadCommunity
 
 ## Description
 
-Set a new SNMP Read Community value on the appliance.  Updating this value will cause the appliance to refresh the managed devices with the updated `Read-Only` SNMP Community string.  This does not update the SNMP trap destination(s) for Logical Interconnects or Logical Interconnect Groups.
+Set a new SNMP Read Community value on the appliance.  Updating this value will cause the appliance to refresh the managed devices with the updated Read-Only SNMP Community string.  This does not update the SNMP trap destination(s) for Logical Interconnects or Logical Interconnect Groups.
 
 ## Examples
 

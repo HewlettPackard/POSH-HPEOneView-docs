@@ -17,7 +17,7 @@ Set-HPOVServerPower
 
 ## Description
 
-This Cmdlet is now deprecated.  Please use the `Start-HPOVServer`, `Stop-HPOVServer` or `Restart-HPOVServer` Cmdlets.
+This Cmdlet is now deprecated.  Please use the Start-HPOVServer, Stop-HPOVServer or Restart-HPOVServer Cmdlets.
 
 ## Examples
 

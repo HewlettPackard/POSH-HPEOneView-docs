@@ -14,7 +14,7 @@ Start-HPOVLibraryTrace
 
 ## Description
 
-This Cmdlet is deprecated.  Please use `Get-HPOVCommandTrace`.
+This Cmdlet is deprecated.  Please use Get-HPOVCommandTrace.
 
 ## Examples
 

@@ -16,7 +16,7 @@ Set-HPOVLdapDefaultDirectory
 
 ## Description
 
-Use this Cmdlet to set the default Authentication Directory on the appliance.  Use `Get-HPOVLdapDirectory` to pass in the directory to configure as the default.  Once the Default Directory is set, the Cmdlet will configure a Registry Key (HKCU:\Software\Hewlett-Packard\HPOneView) called "AuthProvider#{ApplianceConnectionName}".  The Library will read this value upon load and use it as the default value for the -AuthDirectory parameter in `Connect-HPOVMgmt`.
+Use this Cmdlet to set the default Authentication Directory on the appliance.  Use Get-HPOVLdapDirectory to pass in the directory to configure as the default.  Once the Default Directory is set, the Cmdlet will configure a Registry Key (HKCU:\Software\Hewlett-Packard\HPOneView) called "AuthProvider#{ApplianceConnectionName}".  The Library will read this value upon load and use it as the default value for the -AuthDirectory parameter in Connect-HPOVMgmt.
 
 ## Examples
 

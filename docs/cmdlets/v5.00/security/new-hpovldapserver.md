@@ -17,7 +17,7 @@ New-HPOVLdapServer
 
 ## Description
 
-A helper Cmdlet that will define an LDAP Directory Server object to be used with the `New-HPOVLdapDirectory` Cmdlet.
+A helper Cmdlet that will define an LDAP Directory Server object to be used with the New-HPOVLdapDirectory Cmdlet.
 
 ## Examples
 

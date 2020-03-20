@@ -42,7 +42,7 @@ Install-HPOVUpdate
 
 ## Description
 
-The `Install-HPOVUpdate` installs an appliance update package to upgrade the platform to the specified version.  Use the -Stage switch to stage an update on the appliance.
+The Install-HPOVUpdate installs an appliance update package to upgrade the platform to the specified version.  Use the -Stage switch to stage an update on the appliance.
 
 ## Examples
 

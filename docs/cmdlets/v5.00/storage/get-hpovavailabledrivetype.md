@@ -15,7 +15,7 @@ Get-HPOVAvailableDriveType
 
 ## Description
 
-This helper Cmdlet will return a collection of available disk drives from a specified SAS Logical Interconnect or Drive Enclosure. The returned value will contain available quantity of drives based on interface, media type and capacity, organized by SAS Logical Interconnect.  The object can then be used to define the drive selection criteria for `New-HPOVServerProfileLogicalDisk` using the -AvailableDriveType parameter.
+This helper Cmdlet will return a collection of available disk drives from a specified SAS Logical Interconnect or Drive Enclosure. The returned value will contain available quantity of drives based on interface, media type and capacity, organized by SAS Logical Interconnect.  The object can then be used to define the drive selection criteria for New-HPOVServerProfileLogicalDisk using the -AvailableDriveType parameter.
 
 Minimum required permissions: Read only
 

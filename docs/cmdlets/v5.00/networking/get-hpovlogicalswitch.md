@@ -25,7 +25,7 @@ Get-HPOVLogicalSwitch
 
 ## Description
 
-A logical switch is added into HPE OneView as a managed or monitored logical switch. The logical switch can consist of a maximum of two physical `top-of`-rack switches (external to the HPE Synergy frame) configured in a single stacking domain.
+A logical switch is added into HPE OneView as a managed or monitored logical switch. The logical switch can consist of a maximum of two physical top-of-rack switches (external to the HPE Synergy frame) configured in a single stacking domain.
 
 There is a connectivity limitation of one logical interconnect to one logical switch. Interconnects within a logical interconnect cannot be connected to more than one logical switch.
 
@@ -58,7 +58,7 @@ If the cabling configuration is changed after the server profile assignment, ale
 
 Stacking links can be set from the originating peer or from the destination peer when two switches are participating in the MLAG environment.
 
-Required Privileges: `Read-only`
+Required Privileges: Read-only
 
 ## Examples
 

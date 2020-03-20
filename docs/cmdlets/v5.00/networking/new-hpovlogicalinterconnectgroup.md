@@ -225,9 +225,9 @@ HPE Synergy Support - A `[System.Collection.Hashtable]` object, with Frame and F
 $Bays = @{ Frame1 = @{Bay3 = "SEVC40f8"; Bay6 = "SE20ILM"}; Frame2 = @{Bay3 = "SE20ILM"; Bay6 = "SEVC40f8"} }
 
 {% hint style="info" %}
-When configuring Synergy SAS Connection Module,
+When configuring Synergy SAS Connection Module, no other device bays can be specified, and only a Single Frame can be configured.
 {% endhint %}
- no other device bays can be specified, and only a Single Frame can be configured.
+
 
 | Aliases | None |
 | :--- | :--- |

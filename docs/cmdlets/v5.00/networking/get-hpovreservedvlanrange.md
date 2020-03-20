@@ -14,14 +14,14 @@ Get-HPOVReservedVlanRange
 
 ## Description
 
-A reserved VLAN pool is a range of VLANs used for allocation of `non-tagged` networks:
+A reserved VLAN pool is a range of VLANs used for allocation of non-tagged networks:
 
     * Tunnel
     * Untagged
 
 Tagged networks and FCoE networks use VLANs outside of the reserved pool. You cannot use a reserved VLAN for tagged or FCoE networks.
 
-The VLAN pool allows the number of available VLANs to be segregated between tagged and `non-tagged` networks. Because `non-tagged` networks use VLANs for internal translation resources, a reserved VLAN pool can provide a sufficient number of VLANs available for allocation of those internal VLANs. In addition, the reserved pool range removes the need for translation resources to be used on tagged networks.
+The VLAN pool allows the number of available VLANs to be segregated between tagged and non-tagged networks. Because non-tagged networks use VLANs for internal translation resources, a reserved VLAN pool can provide a sufficient number of VLANs available for allocation of those internal VLANs. In addition, the reserved pool range removes the need for translation resources to be used on tagged networks.
 
 For the maximum number of VLANs per physical downlink port, see the HPE OneView Support Matrix for HPE Synergy (https://www.hpe.com/info/synergy-docs).
 

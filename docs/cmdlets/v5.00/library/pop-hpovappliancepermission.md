@@ -14,7 +14,7 @@ Pop-HPOVAppliancePermission
 
 ## Description
 
-Upon successful login, the caller can change their active permissions, and operate in a less priviledge mode at anytime by using the `Push-HPOVAppliancePermission`.  Use this Cmdlet to reset the appliance connection active permissions.  A new SessionID token will be stored within the ApplianceConnection, and the ConnectionPermissions within the ActivePermissions property that were not provided will have their State set to "true".
+Upon successful login, the caller can change their active permissions, and operate in a less priviledge mode at anytime by using the Push-HPOVAppliancePermission.  Use this Cmdlet to reset the appliance connection active permissions.  A new SessionID token will be stored within the ApplianceConnection, and the ConnectionPermissions within the ActivePermissions property that were not provided will have their State set to "true".
 
 ## Examples
 

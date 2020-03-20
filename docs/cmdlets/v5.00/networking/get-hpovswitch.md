@@ -24,7 +24,7 @@ Get-HPOVSwitch
 
 ## Description
 
-Retrieve a Switch that is managed by HPE OneView.  Currently, HPE OneView can Manage or Monitor Cisco `Nexus-family` of switches. This Cmdlet will retrieve the specified or all Logical Switch Group resources. 
+Retrieve a Switch that is managed by HPE OneView.  Currently, HPE OneView can Manage or Monitor Cisco Nexus-family of switches. This Cmdlet will retrieve the specified or all Logical Switch Group resources. 
 
 ## Examples
 

@@ -119,7 +119,7 @@ When you create a server profile template, it is designated for a server hardwar
     
 To figure out BIOS Settings to override or set within the Server Profile, you will need to get the Server Hardware Type resource that your are modeling the Server Profile for.  When retrieving the resource:
     
-$bl460cgen9sht = `Get-HPOVServerHardwareType` "BL460c Gen9 1"
+$bl460cgen9sht = Get-HPOVServerHardwareType "BL460c Gen9 1"
     
 The "biosSettings" Array property will be available (only with supported Server Hardware Types; i.e. BL460c Gen8 or newer).  To locate potential BIOS Settings, you can use the following code as an example:
     

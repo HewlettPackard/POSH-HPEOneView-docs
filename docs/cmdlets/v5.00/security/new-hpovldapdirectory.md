@@ -38,7 +38,7 @@ New-HPOVLdapDirectory
 
 ## Description
 
-This Cmdlet will create a new Directory for appliance authentication.  HPE OneView currently supports either Active Directory or LDAP (e.g. OpenLDAP) for user authentication.  The `New-HPOVLdapServer` Cmdlet is used to assist defining directory servers address, public SSL certificate and LDAP over SSL TCP port.
+This Cmdlet will create a new Directory for appliance authentication.  HPE OneView currently supports either Active Directory or LDAP (e.g. OpenLDAP) for user authentication.  The New-HPOVLdapServer Cmdlet is used to assist defining directory servers address, public SSL certificate and LDAP over SSL TCP port.
 
 ## Examples
 

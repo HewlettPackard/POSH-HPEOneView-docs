@@ -15,7 +15,7 @@ Push-HPOVAppliancePermission
 
 ## Description
 
-Upon successful login, the caller can change their active permissions, and operate in a less priviledge mode at anytime.  The `Push-HPOVAppliancePermission` Cmdlet will accept a single or collection of [HPOneView.Appliance.ConnectionPermission] objects.  A new SessionID token will be stored within the ApplianceConnection, and the ConnectionPermissions within the ActivePermissions property that were not provided will have their State set to "false".
+Upon successful login, the caller can change their active permissions, and operate in a less priviledge mode at anytime.  The Push-HPOVAppliancePermission Cmdlet will accept a single or collection of [HPOneView.Appliance.ConnectionPermission] objects.  A new SessionID token will be stored within the ApplianceConnection, and the ConnectionPermissions within the ActivePermissions property that were not provided will have their State set to "false".
 
 ## Examples
 

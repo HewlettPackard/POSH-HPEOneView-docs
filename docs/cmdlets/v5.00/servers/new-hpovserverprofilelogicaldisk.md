@@ -131,9 +131,9 @@ Defines the interface type for drives that will be used to build the logical dri
 	*SATASSD
 	*Auto
 {% hint style="info" %}
-Auto is not supported when attempting to create an HPE Synergy D3940 Logical or JBOD disk.
+Auto is not supported when attempting to create an HPE Synergy D3940 Logical or JBOD disk.  You must specify a disk technology type unless `-DriveSelectionBy` is changed to DriveType and `-AvailableDriveType` is used.  Allowed values are:
 {% endhint %}
-  You must specify a disk technology type unless `-DriveSelectionBy` is changed to DriveType and `-AvailableDriveType` is used.  Allowed values are:
+
 
 	* SAS
 	* SATA

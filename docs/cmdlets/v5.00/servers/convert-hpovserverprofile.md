@@ -20,7 +20,7 @@ Convert-HPOVServerProfile
 
 Use this Cmdlet to change the Server Hardware Type and/or Enclosure Group set within the Server Profile.  Changing to a different server hardware type may change the capabilities available to the server profile. Changing the enclosure group may change the connections which are available for the profile.
 
-	* The server hardware field will be set to "unassigned", requiring `re-seletion` of server hardware.
+	* The server hardware field will be set to "unassigned", requiring re-seletion of server hardware.
 	* It may also cause incompatibilities with the current configuration.
 	* All deployed connections will have their port assignment set to "Auto".
 	* Any incompatibilities will be flagged when the server profile is committed.

@@ -18,7 +18,7 @@ HPE OneView provides the ability to save your configuration settings and managem
 
 The backup process involves creating a backup file and then downloading that file so that you can store it to a safe and secure (off-appliance) location for future use. You can schedule automatic backup operations and designate a remote location for the backup file.
 
-This Cmdlet will get the automatic backup configuration from the connected appliance(s). Use `Set-HPOVAutomaticBackupConfig` to set a new automatic backup policy for the appliance(s).
+This Cmdlet will get the automatic backup configuration from the connected appliance(s). Use Set-HPOVAutomaticBackupConfig to set a new automatic backup policy for the appliance(s).
 
 Minimum required permissions: Read only
 

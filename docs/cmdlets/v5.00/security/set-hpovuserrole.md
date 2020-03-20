@@ -16,7 +16,7 @@ Set-HPOVUserRole
 
 ## Description
 
-This Cmdlet is now deprecated. Please use the `Set-HPOVUser` Cmdlet to modify user accounts and associated roles/permissions
+This Cmdlet is now deprecated. Please use the Set-HPOVUser Cmdlet to modify user accounts and associated roles/permissions
 
 ## Examples
 

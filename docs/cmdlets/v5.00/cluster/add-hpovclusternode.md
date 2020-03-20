@@ -26,7 +26,7 @@ You can import additional hypervisors into the hypervisor cluster profile by add
 
 To add a node to an existing cluster, a server profile must be assigned to a server resource, created from the same server profile template the cluster was created from.  The hypervisor OS must be installed and host added to the hypervisor manager using its management interface.
 
-Privileges: Infrastructure administrator, Server administrator, Server profile architect, or Server profile administrator.
+Minimum required privilegesPrivileges: Infrastructure administrator, Server administrator, Server profile architect, or Server profile administrator.
 
 ## Examples
 

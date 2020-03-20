@@ -21,7 +21,7 @@ When you are considering switching the cryptography mode for your appliance, Hew
 	*  Determine the impact of the mode switch on various resources, such as, the appliance certificates, external servers and managed devices. 
 	*  Understand the actions recommended to be taken before switching the cryptography mode of the appliance. Examples: 
 
-		*  `Re-importing` a higher strength certificate signed by your certificate authority (CA).
+		*  Re-importing a higher strength certificate signed by your certificate authority (CA).
 		*  Configuring the managed device or external server to be compliant with the cryptography mode of HPE OneView.
 
 	*  Determine the devices or class of devices that cannot be managed by HPE OneView in the target mode. Running this Cmdlet will generate a new compatibility report if one does not exist. Use the -UpdateReport switch to generate a new report. 

@@ -17,7 +17,7 @@ Get-HPOVStorageVolumeSet
 
 ## Description
 
-A collection of volumes is referred to as volume set in HPE OneView. Volume sets are used to govern `data-protection` policies, such as snapshot and replication schedules. For HPE Nimble storage, the corresponding terminology for "volume sets" is "data protection volume collections".  Volumes that hold multiple components of an application, such as databases and transaction logs, can be grouped into a volume set.
+A collection of volumes is referred to as volume set in HPE OneView. Volume sets are used to govern data-protection policies, such as snapshot and replication schedules. For HPE Nimble storage, the corresponding terminology for "volume sets" is "data protection volume collections".  Volumes that hold multiple components of an application, such as databases and transaction logs, can be grouped into a volume set.
 
 This Cmdlet will return the available volume sets from the available storage systems.  Volume sets are created on the storage system.
 

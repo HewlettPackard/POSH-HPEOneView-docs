@@ -15,7 +15,7 @@ Get-HPOVAuditLogArchive
 
 ## Description
 
-The audit log contains a record of actions performed on the appliance, which you can use for individual accountability. Because the logs are rolled over periodically to prevent them from getting too large, Hewlett Packard Enterprise recommends downloading the audit logs to monitor the actions being performed. You can also download the audit logs periodically to maintain a `long-term` audit history.
+The audit log contains a record of actions performed on the appliance, which you can use for individual accountability. Because the logs are rolled over periodically to prevent them from getting too large, Hewlett Packard Enterprise recommends downloading the audit logs to monitor the actions being performed. You can also download the audit logs periodically to maintain a long-term audit history.
 
 Each user has a unique logging ID per session, enabling you to follow a user?s trail in the audit log. Some actions are performed by the appliance and might not have a logging ID.
 

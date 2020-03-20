@@ -36,9 +36,9 @@ The resources are arranged by categories. All the resources in these categories 
 	* Logical Switch Groups
 
 {% hint style="info" %}
-Resources in other categories are considered to be included in all scopes,
+Resources in other categories are considered to be included in all scopes, and they cannot be removed.
 {% endhint %}
- and they cannot be removed.
+
 
 When scopes are defined and resources assigned to them, you can:
 

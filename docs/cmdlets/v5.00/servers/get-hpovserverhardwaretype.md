@@ -17,7 +17,7 @@ Get-HPOVServerHardwareType
 
 ## Description
 
-Obtain a collection of server hardware types.  This includes information about the type of server, adapter layout and features, and possible server BIOS settings.  This Cmdlet is also used with the `New-HPOVServerProfile` Cmdlet to retrieve the list of BIOS settings and adapters to configure.
+Obtain a collection of server hardware types.  This includes information about the type of server, adapter layout and features, and possible server BIOS settings.  This Cmdlet is also used with the New-HPOVServerProfile Cmdlet to retrieve the list of BIOS settings and adapters to configure.
 
 ## Examples
 

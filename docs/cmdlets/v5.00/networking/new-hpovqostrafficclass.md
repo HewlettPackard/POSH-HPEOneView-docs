@@ -23,7 +23,7 @@ New-HPOVQosTrafficClass
 
 This helper Cmdlet provides the capability to create a new QoS Traffic Classifier Object, which can then be added to either a Logical Interconnect Group, or Logica Interconnect resource.
 
-Only `non-FCoE` Traffic Classifiers are allowed to be created.  When creating the "Best effort" Traffic Classifier, only the MaxBandwidth parameter is allowed to be modified.
+Only non-FCoE Traffic Classifiers are allowed to be created.  When creating the "Best effort" Traffic Classifier, only the MaxBandwidth parameter is allowed to be modified.
 
 ## Examples
 

@@ -28,7 +28,7 @@ Hewlett Packard Enterprise will contact you to ship a replacement part or send a
 
 Remote support enables Proactive Care services including Proactive Scan reports and Firmware/Software Analysis reports with recommendations that are based on collected configuration data.
 
-Remote support is secure. No business data is collected, only `device-specific` configuration and fault data. All communications are outbound only and use industry standard TLS encryption ensuring confidentiality and integrity of the information.
+Remote support is secure. No business data is collected, only device-specific configuration and fault data. All communications are outbound only and use industry standard TLS encryption ensuring confidentiality and integrity of the information.
 
 Once the appliance is configured, it cannot be unauthorized or disabled.
 

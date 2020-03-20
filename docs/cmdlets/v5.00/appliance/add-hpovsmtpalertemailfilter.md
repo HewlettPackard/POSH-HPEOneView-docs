@@ -36,7 +36,7 @@ Email alerting feature notifies specified recipients when a certain alert occurs
 
 You can enable or disable this email notification feature, or you can enable or disable individual filter notifications, as required.
 
-The appliance provides for as many as 100 recipient and filter combinations, and allows as many as 50 recipients in a single email message. This flexibility lets you `fine-tune` which alert messages are sent and to whom. For example, you can configure the appliance to send Warning alerts to one recipient and Critical alerts to another.
+The appliance provides for as many as 100 recipient and filter combinations, and allows as many as 50 recipients in a single email message. This flexibility lets you fine-tune which alert messages are sent and to whom. For example, you can configure the appliance to send Warning alerts to one recipient and Critical alerts to another.
 
 This Cmdlet will help create an advanced alert to the specified recipient(s).  You can also use the Cmdlet to add default OneView Remote Support alerting to specified recipient(s) using the -RemoteSupportFilter parameter.  Appliance Email notification must be configured.
 

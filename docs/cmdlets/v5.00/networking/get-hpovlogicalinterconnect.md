@@ -23,7 +23,7 @@ A logical interconnect is a single administrative entity that consists of the co
 
     * The uplink sets, which connect to data center networks.
     * The mapping of networks to physical uplink ports, which is defined by the uplink sets for a logical interconnect.
-    * The internal networks, which are used for `server-to`-server communications without traffic egressing any uplinks.
+    * The internal networks, which are used for server-to-server communications without traffic egressing any uplinks.
     * The downlink ports, which connect through the enclosure midplane to the servers in the enclosure.
     * The connections between interconnects, which are called stacking links.
     * Stacking links can be internal cables (through the enclosure) or external cables between the external ports of interconnects.

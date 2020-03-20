@@ -15,7 +15,7 @@ Set-HPOVApplianceSecurityProtocol
 
 ## Description
 
-Use this Cmdlet to change the enabled security protocol(s) on the appliance. Before modifying the security protocols, a compatibility report should be run using the `Show-HPOVApplianceSecurityModeCompatibilityReport`.
+Use this Cmdlet to change the enabled security protocol(s) on the appliance. Before modifying the security protocols, a compatibility report should be run using the Show-HPOVApplianceSecurityModeCompatibilityReport.
 
  ****NOTE**** When changing active security protocols will require an immediate appliance reboot. ****NOTE**** 
 

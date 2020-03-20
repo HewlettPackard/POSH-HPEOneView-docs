@@ -36,7 +36,7 @@ New-HPOVSnmpTrapDestination
 
 ## Description
 
-This helper Cmdlet provides the capability to create a new SNMP Trap Destination object.  The object can then be used with `New-HPOVSnmpConfiguration` to create a new SNMP Configuration for a Logical Interconnect Group or Logical Interconnect resource.
+This helper Cmdlet provides the capability to create a new SNMP Trap Destination object.  The object can then be used with New-HPOVSnmpConfiguration to create a new SNMP Configuration for a Logical Interconnect Group or Logical Interconnect resource.
 
 ## Examples
 

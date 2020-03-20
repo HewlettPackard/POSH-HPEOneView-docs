@@ -16,7 +16,7 @@ Remove-HPOVResource
 
 ## Description
 
-Removes a resource identified by either the resource uri or a resource object.  `Remove-HPOVResource` can be called with either -nameOrUri or -resource.  
+Removes a resource identified by either the resource uri or a resource object.  Remove-HPOVResource can be called with either -nameOrUri or -resource.  
 
 	*** This Cmdlet will not prompt for delete confirmation. Please use with caution. ***
 

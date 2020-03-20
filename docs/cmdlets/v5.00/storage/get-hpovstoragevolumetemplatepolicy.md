@@ -14,7 +14,7 @@ Get-HPOVStorageVolumeTemplatePolicy
 
 ## Description
 
-By default, Storage Volumes can be created without reference to a Storage Volume Template.  This Cmdlet will display the global policy setting.  Use `Set-HPOVStorageVolumeTemplatePolicy` to modify the global policy setting.
+By default, Storage Volumes can be created without reference to a Storage Volume Template.  This Cmdlet will display the global policy setting.  Use Set-HPOVStorageVolumeTemplatePolicy to modify the global policy setting.
 
 ## Examples
 

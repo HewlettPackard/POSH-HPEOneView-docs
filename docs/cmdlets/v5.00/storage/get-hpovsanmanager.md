@@ -15,7 +15,7 @@ Get-HPOVSanManager
 
 ## Description
 
-SAN managers are a resource in HPE OneView that represent a connection to an external entity through which SANs are discovered and managed. The external entity can be `vendor-specific` management software or a physical switch.
+SAN managers are a resource in HPE OneView that represent a connection to an external entity through which SANs are discovered and managed. The external entity can be vendor-specific management software or a physical switch.
 
 SANs are created outside of HPE OneView in the SAN manager vendor?s management interface. Once created, SANs can be discovered and managed in HPE OneView using the SAN Manager resource.
 

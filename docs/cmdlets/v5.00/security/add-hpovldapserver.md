@@ -57,14 +57,14 @@ To support user login with only the user name specified, the following formats a
 
 If the user name is not an email address (denoted by the presence of an @ character) or a \ character (to denote the domain\user name format), logins are attempted in the following order:
 
-    * The user name is treated as the logon name, and `directory-name` gets prepended as `directory-name`\user-name, for example: example\jane.
+    * The user name is treated as the logon name, and directory-name gets prepended as directory-name\user-name, for example: example\jane.
     * The user name is treated as a UID.
     * The user name is treated as Common Name (CN).
 
 {% hint style="info" %}
-If the Active Directory Server Service configured in HPE OneView has a user `
+If the Active Directory Server Service configured in HPE OneView has a user lock-out policy (defined, for example, on n number of successive failed login attempts), Hewlett Packard Enterprise recommends that you use the email or the domain\user name format to log into HPE OneView. If email or domain\user name format is not used (instead, just the user name is used), HPE OneView internally tries different login formats as described previously. This may result in locking out the user from the GUI on a single failed login attempt (wrong password). To minimize login attempts, configure the directory display name to be the same as the first component of the directories fully qualified domain name. For example, assign the HPE OneView name example for the directory example.com.
 {% endhint %}
-lock-out` policy (defined, for example, on n number of successive failed login attempts), Hewlett Packard Enterprise recommends that you use the email or the domain\user name format to log into HPE OneView. If email or domain\user name format is not used (instead, just the user name is used), HPE OneView internally tries different login formats as described previously. This may result in locking out the user from the GUI on a single failed login attempt (wrong password). To minimize login attempts, configure the directory display name to be the same as the first component of the directories fully qualified domain name. For example, assign the HPE OneView name example for the directory example.com.
+
 
 {% hint style="info" %}
 Minimum required privileges: Infrastructure administrator.

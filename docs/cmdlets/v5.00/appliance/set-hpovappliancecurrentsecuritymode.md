@@ -15,7 +15,7 @@ Set-HPOVApplianceCurrentSecurityMode
 
 ## Description
 
-Use this Cmdlet to change the current security mode (Legacy, FIPS or CNSA) of the appliance. Before modifying the appliance security mode, a compatibility report should be run using the `Show-HPOVApplianceSecurityModeCompatibilityReport`. When changing active security mode will require an immediate appliance reboot.
+Use this Cmdlet to change the current security mode (Legacy, FIPS or CNSA) of the appliance. Before modifying the appliance security mode, a compatibility report should be run using the Show-HPOVApplianceSecurityModeCompatibilityReport. When changing active security mode will require an immediate appliance reboot.
 
 ## Examples
 

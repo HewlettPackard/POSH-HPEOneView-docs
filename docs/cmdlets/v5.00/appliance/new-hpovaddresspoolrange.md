@@ -56,7 +56,7 @@ Custom Address Ranges must adhere to the following format rules:
 
     Example:  VCU1234567
 
-IPv4 Address Subnets do not support Auto Generated, as the RangeType parameter is not required.  When creating a new IPv4 Address Subnet, you must provide a unique Name, Subnet Mask (CIDR [e.g. 24] or IPv4 Address Value [e.g. 255.255.255.0]), Start and End IPv4 Address, Gateway and Domain Name.  DNS Servers are optional.  To add more Address Ranges to a Subnet after creating it, please use the `Add-HPOVAddressRange` Cmdlet.
+IPv4 Address Subnets do not support Auto Generated, as the RangeType parameter is not required.  When creating a new IPv4 Address Subnet, you must provide a unique Name, Subnet Mask (CIDR [e.g. 24] or IPv4 Address Value [e.g. 255.255.255.0]), Start and End IPv4 Address, Gateway and Domain Name.  DNS Servers are optional.  To add more Address Ranges to a Subnet after creating it, please use the Add-HPOVAddressRange Cmdlet.
 
 ## Examples
 

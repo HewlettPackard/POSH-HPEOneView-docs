@@ -25,11 +25,11 @@ Get-HPOVLogicalSwitchGroup
 
 ## Description
 
-The logical switch group is a template for creating logical switches. Logical switches are an aggregation of up to two physical `top-of`-rack switches.
+The logical switch group is a template for creating logical switches. Logical switches are an aggregation of up to two physical top-of-rack switches.
 
 Once constructed from a logical switch group, a logical switch continues to be associated with its logical switch group. Any change in consistency between the logical switch group and its associated logical switches is monitored and made visible on the associated logical switch screen in HPE OneView.
 
-A logical switch is added into HPE OneView as a managed or monitored logical switch. The logical switch can consist of a maximum of two physical `top-of`-rack switches (external to the HPE Synergy frame) configured in a single stacking domain.
+A logical switch is added into HPE OneView as a managed or monitored logical switch. The logical switch can consist of a maximum of two physical top-of-rack switches (external to the HPE Synergy frame) configured in a single stacking domain.
 
 There is a connectivity limitation of one logical interconnect to one logical switch. Interconnects within a logical interconnect cannot be connected to more than one logical switch.
 

@@ -24,7 +24,7 @@ Two types of repositories are supported:
 
     NOTE: You cannot add, edit, or remove the internal repository.
 
-    * External Repository: An additional externally managed HTTP/HTTPS web server can be added to the appliance as a repository. It is a `user-maintained` HTTP/HTTPS web server. You can upload firmware file in a specific directory and then register the HTTP/HTTPS server with HPE OneView. This functionality is supported for Linux and Windows systems.
+    * External Repository: An additional externally managed HTTP/HTTPS web server can be added to the appliance as a repository. It is a user-maintained HTTP/HTTPS web server. You can upload firmware file in a specific directory and then register the HTTP/HTTPS server with HPE OneView. This functionality is supported for Linux and Windows systems.
 
 The Cmdlet will get the appliance repositories.
 

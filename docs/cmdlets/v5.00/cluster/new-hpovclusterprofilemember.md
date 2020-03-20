@@ -16,7 +16,7 @@ New-HPOVClusterProfileMember
 
 ## Description
 
-This is a helper Cmdlet to create a valid resourc object `New-HPOVClusterProfile` will then use for the -Servers parameter.
+This is a helper Cmdlet to create a valid resourc object New-HPOVClusterProfile will then use for the -Servers parameter.
 
 Privileges: Infrastructure administrator, Server administrator, Server profile architect, or Server profile administrator.
 

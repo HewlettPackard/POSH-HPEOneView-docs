@@ -35,9 +35,9 @@ Zoning policy
 A SAN zone enables communication between devices connected to the SAN. SAN zoning policies determine how zoning should be configured on a SAN. SAN zoning policies define whether or not zoning is automated as well as the naming format of zones and aliases. In HPE OneView, you can specify the name format of the zones and aliases that will be created when you associate a storage volume to a server profile via a volume attachment. By specifying zone name and alias formats using text strings and server profile objects, you can create names that are meaningful and conform with your naming conventions.
 
 {% hint style="info" %}
-HPE OneView performs zoning only when you add a connection to a server profile and attach a SAN storage volume to it.
+HPE OneView performs zoning only when you add a connection to a server profile and attach a SAN storage volume to it. When you do this, HPE OneView will determine if the current zoning allows connectivity. If current zoning does not allow connectivity, HPE OneView will create the necessary zoning based on the specified zoning policy.
 {% endhint %}
- When you do this, HPE OneView will determine if the current zoning allows connectivity. If current zoning does not allow connectivity, HPE OneView will create the necessary zoning based on the specified zoning policy.
+
 
 Automate zoning
 

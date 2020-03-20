@@ -16,7 +16,7 @@ Install-HPOVApplianceCertificate
 
 ## Description
 
-After using `New-HPOVApplianceCSR` to generate a Certificate Signing Request (CSR), this Cmdlet will install the CA signed and approved SSL private key to the appliance.
+After using New-HPOVApplianceCSR to generate a Certificate Signing Request (CSR), this Cmdlet will install the CA signed and approved SSL private key to the appliance.
 
 ## Examples
 

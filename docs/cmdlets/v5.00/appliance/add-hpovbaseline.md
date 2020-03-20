@@ -23,9 +23,9 @@ The appliance provides reliable and simplified firmware management across the da
 A firmware bundle, also known as an HPE Service Pack for ProLiant (SPP), is a comprehensive collection of firmware and system software components, all tested together as a single solution stack that includes drivers, agents, utilities, and firmware packages. Firmware bundles enable you to update firmware on HPE ProLiant servers, controllers, storage, servers, interconnects, and enclosures.
 
 {% hint style="info" %}
-If you attempt to add a firmware bundle that does not contain the required firmware version and components,
+If you attempt to add a firmware bundle that does not contain the required firmware version and components, the firmware bundle is uploaded with a warning message in the appliance firmware repository. The warning message displays the missing components in the firmware bundle. All the components below the minimum required versions are considered as missing.
 {% endhint %}
- the firmware bundle is uploaded with a warning message in the appliance firmware repository. The warning message displays the missing components in the firmware bundle. All the components below the minimum required versions are considered as missing.
+
 
 Retrieve the list of SPPs or hotfixes which have been uploaded to the appliance, and their detail. You can examine the included components and their versions reported by the baseline.
 

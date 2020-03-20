@@ -22,9 +22,9 @@ Set-HPOVApplianceTwoFactorAuthentication
 
 ## Description
 
-Enabling `two-factor` authentication allows you to use smart cards ï¿½ for example, Common Access Cards (CAC), or Personal Identity Verification (PIV) cards ï¿½ to authenticate within HPE OneView. The client certificate embedded in the smart card is presented to HPE OneView by the library. The client certificate must be signed by a root or intermediate Certificate Authority (CA) that has been previously imported into the HPE OneView appliance. The appliance authenticates the client certificate to validate that the user name specified in the certificate is that of a valid user recognized by the directory server configuration in HPE OneView.
+Enabling two-factor authentication allows you to use smart cards ï¿½ for example, Common Access Cards (CAC), or Personal Identity Verification (PIV) cards ï¿½ to authenticate within HPE OneView. The client certificate embedded in the smart card is presented to HPE OneView by the library. The client certificate must be signed by a root or intermediate Certificate Authority (CA) that has been previously imported into the HPE OneView appliance. The appliance authenticates the client certificate to validate that the user name specified in the certificate is that of a valid user recognized by the directory server configuration in HPE OneView.
 
-When `two-factor` authentication is enabled, HPE OneView uses a Microsoft Active Directory service account set up and owned by the user to access an Active Directory entry for the user, rather than using an account associated with the user name received during first time login.
+When two-factor authentication is enabled, HPE OneView uses a Microsoft Active Directory service account set up and owned by the user to access an Active Directory entry for the user, rather than using an account associated with the user name received during first time login.
 
 Use this Cmdlet to configure two factor authentication state of the connected appliance.  An Active Directory authentication directory must be configured, with a Service Account, and the root or issuing certificate authority Base64 certificate must be uploaded to appliance.
 
@@ -177,9 +177,9 @@ You can edit the value to enable HPE OneView to search for the user name within 
 Use a `comma-separated` list to include multiple values in the entry field, allowing HPE OneView to search multiple Subject Alternative Name attributes for a valid user name.
 
 {% hint style="info" %}
-You can instruct HPE OneView to search for the user name within the attributes of the "
+You can instruct HPE OneView to search for the user name within the attributes of the "Subject" field of the smart card certificate (either in addition to, or instead of, searching within "Subject Alternative Name" attributes). See subject entry in the "Certificate owner" field for details.
 {% endhint %}
-Subject" field of the smart card certificate (either in addition to, or instead of, searching within "Subject Alternative Name" attributes). See subject entry in the "Certificate owner" field for details.
+
 
 Subject Alternative Name multiple attribute entry example
 `[OtherName.UPN]`=(.*),OtherName.RFC822Name=(.*),RFC822Name=(.*),DirName=(.*)
@@ -206,9 +206,9 @@ Microsoft Active Directory users must note that the DN is extracted as an aggreg
 Use a comma separated list to include multiple values in the entry field, allowing HPE OneView to search multiple Subject attributes for a valid user name. 
 
 {% hint style="info" %}
-You can instruct HPE OneView to search for the user name within the attributes of the "
+You can instruct HPE OneView to search for the user name within the attributes of the "Subject" field of the smart card certificate (either in addition to, or instead of, searching within "Subject Alternative Name" attributes). 
 {% endhint %}
-Subject" field of the smart card certificate (either in addition to, or instead of, searching within "Subject Alternative Name" attributes). 
+
 
 Subject multiple attribute entry example
 	* CN=(.*),E=(.*),UID=(.*),DN=(.*) 
@@ -219,9 +219,9 @@ Variations for the CN attribute: examples
 	To match user names containing only numbers CN=(^[0-9]+$) 
 
 {% hint style="info" %}
-This is applicable when there are multiple CN attributes configured in a certificate and the user wants to specify a specific attribute rather than the first available in the CN attribute.
+This is applicable when there are multiple CN attributes configured in a certificate and the user wants to specify a specific attribute rather than the first available in the CN attribute. It is recommended to use patterns that begin with "^" and ends with "$" so that the system can perform an exact match. 
 {% endhint %}
- It is recommended to use patterns that begin with "^" and ends with "$" so that the system can perform an exact match. 
+
 
 | Aliases | None |
 | :--- | :--- |
@@ -238,9 +238,9 @@ This parameter allows you to configure who can access HPE OneView by specifying 
 By default, one combination is configured, containing the OID combination Smart Card Logon (1.3.6.1.4.1.311.20.2.2), Client Authentication (1.3.6.1.5.5.7.3.2). This combination requires the certificate on the smart card to be configured to allow the certificate to be used for smart card logon and for client authentication. It should work for most installations. You can edit this field to opt for a different combination of OIDs, or to add additional OIDs. A maximum of ten OIDs can be configured in a single string.
 
 {% hint style="info" %}
-If you specify multiple OID combinations and one is a `
+If you specify multiple OID combinations and one is a `super-set` of another, configure the more restrictive combination first.
 {% endhint %}
-super-set` of another, configure the more restrictive combination first.
+
 
 | Aliases | None |
 | :--- | :--- |

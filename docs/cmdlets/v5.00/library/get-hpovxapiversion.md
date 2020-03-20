@@ -14,7 +14,7 @@ Get-HPOVXApiVersion
 
 ## Description
 
-Returns the API versions supported by the appliance.  You do not need to authenticate, or call `Connect-HPOVMgmt`, to an appliance in order to retrieve the supported REST API Versions by the appliance.
+Returns the API versions supported by the appliance.  You do not need to authenticate, or call Connect-HPOVMgmt, to an appliance in order to retrieve the supported REST API Versions by the appliance.
 
 ## Examples
 

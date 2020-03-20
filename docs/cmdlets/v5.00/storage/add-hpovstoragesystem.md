@@ -117,9 +117,9 @@ Provide the credentials to authenticate to the storage system.
 ### -Username &lt;String&gt;
 
 {% hint style="info" %}
-This parameter is now deprecated.
+This parameter is now deprecated.  Please update to the `-Credential` parameter.
 {% endhint %}
-  Please update to the `-Credential` parameter.
+
 
 Administrator account of the target storage system.
 
@@ -134,9 +134,9 @@ Administrator account of the target storage system.
 ### -Password &lt;Object&gt;
 
 {% hint style="info" %}
-This parameter is now deprecated.
+This parameter is now deprecated.  Please update to the `-Credential` parameter.
 {% endhint %}
-  Please update to the `-Credential` parameter.
+
 
 Password of administrator account password.  Can either be String or `[System.Security.SecureString]`.
 

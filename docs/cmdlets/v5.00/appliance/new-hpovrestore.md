@@ -29,7 +29,7 @@ Restoring from a backup is a disruptive action:
   configuration and restore network connectivity, you must unassign all flagged server profiles and then
   individually reassign the server profiles to the server hardware.
 	* To prevent unintentional assignment of duplicate addresses or identifiers, all address and identifier ranges
-  are disabled after the `post-restore` process completes. The appliance automatically `re-creates` replacement
+  are disabled after the post-restore process completes. The appliance automatically re-creates replacement
   address and identifier ranges.
 
 Required permissions: Infrastructure administrator, Software administrator

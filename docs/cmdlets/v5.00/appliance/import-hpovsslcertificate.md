@@ -14,7 +14,7 @@ Import-HPOVSslCertificate
 
 ## Description
 
-By default, the HPE OneView appliance creates a self signed SSL Certificate for its WebUI.  There might be a desire to trust the certificate, in case the `SHA-1` hash becomes invalid (either due to a certificate change or `man-in`-the-middle attack) and the caller would like to be notified.  This Cmdlet will assist in retrieving and storing the appliance `self-generated` SSL Certificate into the current users Trusted Root Certification Authorities store.
+By default, the HPE OneView appliance creates a self signed SSL Certificate for its WebUI.  There might be a desire to trust the certificate, in case the SHA-1 hash becomes invalid (either due to a certificate change or man-in-the-middle attack) and the caller would like to be notified.  This Cmdlet will assist in retrieving and storing the appliance self-generated SSL Certificate into the current users Trusted Root Certification Authorities store.
 
 Please note that the Subject Alternate Name (SAN) must match that of the Appliance hostname you use to connect to your appliance.  If it does not, an SSL conenction failure will occur.  When creating a CSR on the appliance, make sure to include the additional FQDN and IP address(es) in the Alternative Name field.
 

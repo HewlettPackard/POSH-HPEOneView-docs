@@ -17,7 +17,7 @@ Get-HPOVApplianceNetworkConfig
 
 This Cmdlet will return the appliance network settings configuration parameters of the primary network interface on the appliance, which can be captured into a customer object for further operation, or captured to a text file in JSON format.
 
-IMPORTANT: Any time the IP address or hostname of the appliance changes, any `CA-signed` appliance certificate associated with the appliance is erased, and a new self signed appliance certificate is generated. In this case, you must generate a new Certificate Signing Request (CSR), have it signed by a CA, and import it into the appliance.
+IMPORTANT: Any time the IP address or hostname of the appliance changes, any CA-signed appliance certificate associated with the appliance is erased, and a new self signed appliance certificate is generated. In this case, you must generate a new Certificate Signing Request (CSR), have it signed by a CA, and import it into the appliance.
 
 {% hint style="info" %}
 Minimum required privileges: Read-

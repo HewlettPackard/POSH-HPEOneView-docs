@@ -31,9 +31,9 @@ This Cmdlet will add supported resources to a specified Scope.  All the resource
 	* Logical Switch Groups
 
 {% hint style="info" %}
-Resources in other categories are considered to be included in all scopes,
+Resources in other categories are considered to be included in all scopes, and they cannot be removed.
 {% endhint %}
- and they cannot be removed.
+
 
 {% hint style="info" %}
 Minimum required privileges: Infrastructure administrator

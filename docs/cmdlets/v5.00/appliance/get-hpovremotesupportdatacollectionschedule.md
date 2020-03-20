@@ -19,7 +19,7 @@ Remote support collects hardware diagnostic and system configuration information
 
 Basic collection sends configuration information to Hewlett Packard Enterprise for analysis and proactive services in accordance with your warranty and service agreements. This data is transmitted every 30 days.
 
-Active health sends information about the server?s health, configuration, and `run-time` telemetry to Hewlett Packard Enterprise. This information is used to troubleshoot issues and `closed-loop` quality analysis. This data is transmitted every 7 days.
+Active health sends information about the server?s health, configuration, and run-time telemetry to Hewlett Packard Enterprise. This information is used to troubleshoot issues and closed-loop quality analysis. This data is transmitted every 7 days.
 
 To perform basic device monitoring, configuration and diagnostic collections, and to maintain the health of the remote support solution, on a periodic and event driven basis remote support sends certain information to Hewlett Packard Enterprise. This information is used in accordance with the Software License Documents (https://www.hpe.com/us/en/software/licensing) and the HPE Online Privacy Statement (https://www.hpe.com/us/en/privacy/ww-privacy-statement.html).
 

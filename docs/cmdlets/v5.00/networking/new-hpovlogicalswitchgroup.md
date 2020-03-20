@@ -18,7 +18,7 @@ New-HPOVLogicalSwitchGroup
 
 ## Description
 
-The logical switch group is a template for creating logical switches. Logical switches are an aggregation of up to two physical `top-of`-rack switches. Once constructed from a logical switch group, a logical switch continues to be associated with its logical switch group. Any change in consistency between the logical switch group and its associated logical switches is monitored and made visible on the associated logical switch screen in HPE OneView. This Cmdlet will help create a Logical Switch Group resources.  Use `Get-HPOVSwitchType` to identify which switch family and models are supported. Please refer to either `Get-HPOVSwitchType` values, or the HPE OneView Support Matrix for which specific models are supported. Required privileges: Infrastructure administrator or Network administrator 
+The logical switch group is a template for creating logical switches. Logical switches are an aggregation of up to two physical top-of-rack switches. Once constructed from a logical switch group, a logical switch continues to be associated with its logical switch group. Any change in consistency between the logical switch group and its associated logical switches is monitored and made visible on the associated logical switch screen in HPE OneView. This Cmdlet will help create a Logical Switch Group resources.  Use Get-HPOVSwitchType to identify which switch family and models are supported. Please refer to either Get-HPOVSwitchType values, or the HPE OneView Support Matrix for which specific models are supported. Required privileges: Infrastructure administrator or Network administrator 
 
 ## Examples
 

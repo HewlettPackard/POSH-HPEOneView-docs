@@ -33,7 +33,7 @@ Update-HPOVRackManager
 
 ## Description
 
-A rack manager platform is a multinode system. The nodes are housed within a rack or across racks, and are centrally managed by a management controller. The Rack Managers screen enables you to manage and visualize the physical location of rack manager platforms within a rack. This Cmdlet will perform a refresh of the claimed rack manager.  If there is a communication issue, the -Hostname and -Crednetial parameters will need to be provided, which will then `re-establish` communication to the rack manager. Minimum required privileges: Infrastructure administrator or Server administrator. 
+A rack manager platform is a multinode system. The nodes are housed within a rack or across racks, and are centrally managed by a management controller. The Rack Managers screen enables you to manage and visualize the physical location of rack manager platforms within a rack. This Cmdlet will perform a refresh of the claimed rack manager.  If there is a communication issue, the -Hostname and -Crednetial parameters will need to be provided, which will then re-establish communication to the rack manager. Minimum required privileges: Infrastructure administrator or Server administrator. 
 
 ## Examples
 

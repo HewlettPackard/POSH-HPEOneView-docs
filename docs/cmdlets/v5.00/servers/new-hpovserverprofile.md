@@ -162,13 +162,13 @@ A server profile includes:
 	* Boot order
 	* Physical or virtual UUIDs, MAC addresses, and WWN addresses
             
-You can create an unassigned server profile that serves as a template. Typically, you capture `best-practice` configurations in a server profile template, and then copy and deploy instances as individual server profiles. Similar to virtual machine (VM) templates, profiles enable you to create a provisioning baseline for server hardware types in an enclosure.
+You can create an unassigned server profile that serves as a template. Typically, you capture best-practice configurations in a server profile template, and then copy and deploy instances as individual server profiles. Similar to virtual machine (VM) templates, profiles enable you to create a provisioning baseline for server hardware types in an enclosure.
             
 When you create a server profile, it is designated for a server hardware type and enclosure group (for server blades), whether the profile is assigned or unassigned.
     
 To figure out BIOS Settings to override or set within the Server Profile, you will need to get the Server Hardware Type resource that your are modeling the Server Profile for.  When retrieving the resource:
     
-$bl460cgen9sht = `Get-HPOVServerHardwareType` "BL460c Gen9 1"
+$bl460cgen9sht = Get-HPOVServerHardwareType "BL460c Gen9 1"
     
 The "biosSettings" Array property will be available (only with supported Server Hardware Types; i.e. BL460c Gen8 or newer).  To locate potential BIOS Settings, you can use the following code as an example:
     

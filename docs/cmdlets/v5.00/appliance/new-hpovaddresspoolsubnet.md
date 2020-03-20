@@ -21,7 +21,7 @@ New-HPOVAddressPoolSubnet
 
 This Cmdlet will assist with creating a new IPv4 address pool.  When creating a new IPv4 Address Subnet, you must provide the Network ID, Subnet Mask (CIDR [e.g. 24] or IPv4 Address Value [e.g. 255.255.255.0]), Gateway and Domain Name.  DNS Servers are optional.
 	
-To add IPv4 Address Ranges to a Subnet after creating it, please use the `New-HPOVAddressPoolRange` Cmdlet.
+To add IPv4 Address Ranges to a Subnet after creating it, please use the New-HPOVAddressPoolRange Cmdlet.
 
 ## Examples
 

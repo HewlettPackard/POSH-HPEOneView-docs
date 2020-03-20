@@ -67,7 +67,7 @@ New-HPOVStorageVolume
 
 ## Description
 
-This Cmdlet will help create a Storage Volume resource on a managed Storage System.  The volume can be created by specifying the Storage Pool or an existing Storage Volume Template.  When the Storage Pool name is not unique, you can either use the -StorageSystem parameter, or pass via the pipeline the Storage Pool from `Get-HPOVStoragePool`.
+This Cmdlet will help create a Storage Volume resource on a managed Storage System.  The volume can be created by specifying the Storage Pool or an existing Storage Volume Template.  When the Storage Pool name is not unique, you can either use the -StorageSystem parameter, or pass via the pipeline the Storage Pool from Get-HPOVStoragePool.
 
 If the Storage Volume Template Global Policy is enabled, a valid Storage Volume Template must be provided.
 
@@ -203,9 +203,9 @@ Max volume capacity in GB.  `[e.g]`. 20 to specify 20GB.
 ### -Full &lt;SwitchParameter&gt;
 
 {% hint style="info" %}
-This parameter is being deprecated for the `
+This parameter is being deprecated for the `-ProvisionType` parameter. Please update your scripts.
 {% endhint %}
--ProvisionType` parameter. Please update your scripts.
+
 
 Include this switch to enable Thick volume provisioning.  Omit to specify Thin storage provisioning.
 Default: Thin

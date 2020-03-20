@@ -17,18 +17,18 @@ Add-HPOVStoragePool
 ## Description
 
 {% hint style="info" %}
-This Cmdlet has been replaced by `
+This Cmdlet has been replaced by Set-HPOVStoragePool.  This Cmdlet only exists for backwards compatibility.
 {% endhint %}
-Set-HPOVStoragePool`.  This Cmdlet only exists for backwards compatibility.
+
 
 A storage pool is an aggregation of physical storage resources (disks) in a storage system. Storage systems contain information about the storage ports through which they can be accessed. You can provision logical storage spaces, known as volumes, from storage pools.
 
 You can select one or more storage pools for management when adding a storage system to the appliance. Storage pools are created on a storage system using the management software for that system.
 
 {% hint style="info" %}
-For HPE Nimble storage,
+For HPE Nimble storage, you can define folders within pools in the Nimble administrative user interface.
 {% endhint %}
- you can define folders within pools in the Nimble administrative user interface.
+
 You cannot create or delete storage pools from the appliance. Storage pools are automatically discovered during the storage system add or refresh. After you elect to manage storage pools, you can provision volumes on them.
 
 All storage pools that are usable in HPE OneView are visible on the Storage Pools screen. Pools refreshed into HPE OneView are initially designated as discovered, and must be explicitly set to managed by editing the pool in HPE OneView using the Edit action on the storage pool screen.

@@ -18,7 +18,7 @@ Remove-HPOVServer
 
 Removes a physical server object from appliance management.
     
-The server object can be specified by its name or its full URI on the appliance by using the -Server parameter. It can also be supplied as an object by using the -resource parameter the object variable can be piped to `Remove-HPOVServer`.
+The server object can be specified by its name or its full URI on the appliance by using the -Server parameter. It can also be supplied as an object by using the -resource parameter the object variable can be piped to Remove-HPOVServer.
     
 Blade servers can only be removed by removing the enclosure (Remove-HPOVEnclosure), or phyhsically removing the blade from the enclosure.
 

@@ -16,7 +16,7 @@ Restore-HPOVCustomBaseline
 
 This Cmdlet provides the ability to restore custom SPP Baselines that were created with component hotfixes on the appliance after a backup file restore procedure has completed.  It will search for any custom Baseline resources that are in the "Removed" state, and rebuild the baseline with the associated hotfixes.
 
-The source baseline and associated hotfixes must be present within the Baseline repository.  Use the `Add-HPOVBaseline` to upload the starting Baseline and hotfixes after restoring the Appliance Backup file, then use this Cmdlet to rebuild the Custom Baseline.
+The source baseline and associated hotfixes must be present within the Baseline repository.  Use the Add-HPOVBaseline to upload the starting Baseline and hotfixes after restoring the Appliance Backup file, then use this Cmdlet to rebuild the Custom Baseline.
 
 ## Examples
 

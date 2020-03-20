@@ -197,9 +197,9 @@ Default: Private
 ### -Thin &lt;SwitchParameter&gt;
 
 {% hint style="info" %}
-This parameter is being deprecated for the `
+This parameter is being deprecated for the `-ProvisionType` parameter. Please update your scripts.
 {% endhint %}
--ProvisionType` parameter. Please update your scripts.
+
 
 Include to change the provisioned type to Thin.
 
@@ -214,9 +214,9 @@ Include to change the provisioned type to Thin.
 ### -Full &lt;SwitchParameter&gt;
 
 {% hint style="info" %}
-This parameter is being deprecated for the `
+This parameter is being deprecated for the `-ProvisionType` parameter. Please update your scripts.
 {% endhint %}
--ProvisionType` parameter. Please update your scripts.
+
 
 Include to change the provisioned type to Full.
 

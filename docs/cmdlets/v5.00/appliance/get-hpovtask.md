@@ -28,7 +28,7 @@ Get-HPOVTask
 
 ## Description
 
-Obtain a collection of task resources which have the specified name and/or state. The returned data will include the task name, owner, state and status.  If the task resource is in either Waiting or Running state, you can pass it to `Wait-HPOVTaskComplete` to monitor the progression and eventual final state.
+Obtain a collection of task resources which have the specified name and/or state. The returned data will include the task name, owner, state and status.  If the task resource is in either Waiting or Running state, you can pass it to Wait-HPOVTaskComplete to monitor the progression and eventual final state.
 
 ## Examples
 

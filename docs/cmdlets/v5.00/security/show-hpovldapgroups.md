@@ -27,7 +27,7 @@ Show-HPOVLdapGroups
 
 ## Description
 
-This Cmdlet will display the available Authentication Directory security groups.  The displayed Directory Groups can then be used to define new Directory Group Role assignment on the appliance with the `New-HPOVLdapGroup` Cmdlet.
+This Cmdlet will display the available Authentication Directory security groups.  The displayed Directory Groups can then be used to define new Directory Group Role assignment on the appliance with the New-HPOVLdapGroup Cmdlet.
 
 ## Examples
 

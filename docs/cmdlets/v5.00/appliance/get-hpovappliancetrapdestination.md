@@ -16,7 +16,7 @@ Get-HPOVApplianceTrapDestination
 
 ## Description
 
-HPE OneView can be used as a proxy to forward device traps from servers, enclosures, and Synergy compute modules to other `SNMP-enabled` applications on the network. HPE OneView can forward traps, as SNMPv3 or SNMPv1 traps, to configured destinations. Additionally, HPE OneView will also send alerts received from a Synergy Frame Link Module (FLM) as SNMPv1 or SNMPv3 traps to the configured destinations.
+HPE OneView can be used as a proxy to forward device traps from servers, enclosures, and Synergy compute modules to other SNMP-enabled applications on the network. HPE OneView can forward traps, as SNMPv3 or SNMPv1 traps, to configured destinations. Additionally, HPE OneView will also send alerts received from a Synergy Frame Link Module (FLM) as SNMPv1 or SNMPv3 traps to the configured destinations.
 
 Use this Cmdlet to retrieve configured SNMPv1 and/or SNMPv3 appliance trap destinations, configured by an Infrastructure Administrator.
 

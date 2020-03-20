@@ -23,7 +23,7 @@ New-HPOVQosConfig
 
 ## Description
 
-This helper Cmdlet provides the capability to create a new Logical Interconnect Group or Logical Interconnect QoS Configuration object.  TrafficClassifiers are created using the `New-HPOVQosTrafficClass` helper Cmdlet.
+This helper Cmdlet provides the capability to create a new Logical Interconnect Group or Logical Interconnect QoS Configuration object.  TrafficClassifiers are created using the New-HPOVQosTrafficClass helper Cmdlet.
 
 ## Examples
 

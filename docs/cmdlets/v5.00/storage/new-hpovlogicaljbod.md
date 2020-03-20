@@ -65,7 +65,7 @@ Considerations when configuring logical JBODs:
 * You can choose the drive enclosures that belong to the same SAS logical interconnect to create the logical JBOD.
 * You can create a logical JBOD using homogenous drives like SAS SSD, SAS HDD, SATA SSD, or SATA HDD. You cannot mix different types of drives in a logical JBOD.
 * You cannot add or remove drives to a logical JBOD after it is created.
-* You can choose to either erase or retain the drive data when you delete the logical JBOD by setting using the -EraseDataOnDelete parameter during the creation of a logical JBOD. You can change the Erase on delete settings later, using the `Set-HPOVLogicalJBOD` Cmdlet, only if you set -EraseDataOnDelete to True during creation.
+* You can choose to either erase or retain the drive data when you delete the logical JBOD by setting using the -EraseDataOnDelete parameter during the creation of a logical JBOD. You can change the Erase on delete settings later, using the Set-HPOVLogicalJBOD Cmdlet, only if you set -EraseDataOnDelete to True during creation.
 
 Privileges: Infrastructure administrator, server administrator, server profile architect, server profile administrator
 
@@ -175,9 +175,9 @@ When attempting to create a logical JBOD, specify the interface type for drives 
     * Auto
     
 {% hint style="info" %}
-Auto is not supported when attempting to create an HPE Synergy D3940 Logical or JBOD disk.
+Auto is not supported when attempting to create an HPE Synergy D3940 Logical or JBOD disk.  You must specify a disk technology type with `-DriveType` or `-AvailableDriveType` is used.
 {% endhint %}
-  You must specify a disk technology type with `-DriveType` or `-AvailableDriveType` is used.
+
 
 | Aliases | None |
 | :--- | :--- |

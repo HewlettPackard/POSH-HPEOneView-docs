@@ -13,7 +13,7 @@ Clear-HPOVAlert
 
 ## Description
 
-DEPRECATED as of 2.0.  Please use `Set-HPOVAlert`
+DEPRECATED as of 2.0.  Please use Set-HPOVAlert
 
 ## Examples
 

@@ -25,7 +25,7 @@ Update-HPOVApplianceTrustedAuthorityCrl
 
 ## Description
 
-HPE OneView enables users to import a CA CRL file and to perform the appropriate revocation checking on existing certificates in the trust store and for certificates received during communication with a managed device or external server.  Certificate revocation checks are enabled by default. However, if a matching CRL has not been imported for a `CA-issued` certificate, or if a CRL has expired, the appliance bypasses the revocation check for the associated certificate when performing an HTTPS connection. If you want to restrict (or relax) revocation checking, use the options below on the edit screen.
+HPE OneView enables users to import a CA CRL file and to perform the appropriate revocation checking on existing certificates in the trust store and for certificates received during communication with a managed device or external server.  Certificate revocation checks are enabled by default. However, if a matching CRL has not been imported for a CA-issued certificate, or if a CRL has expired, the appliance bypasses the revocation check for the associated certificate when performing an HTTPS connection. If you want to restrict (or relax) revocation checking, use the options below on the edit screen.
 
 The Cmdlet will attempt to download the CRL from the HTTP location specified within the TrustedCertificateAuthority object.  You can manually download the updated CRL and use the -Path paramter to specify the offline CRL.
 

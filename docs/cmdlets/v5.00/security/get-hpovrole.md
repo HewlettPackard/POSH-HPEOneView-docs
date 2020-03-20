@@ -13,7 +13,7 @@ Get-HPOVRole
 
 ## Description
 
-Deprecated Cmdlet as of v2.0.  Please use the `Get-HPOVUser` Cmdlet to retrieve User Roles.
+Deprecated Cmdlet as of v2.0.  Please use the Get-HPOVUser Cmdlet to retrieve User Roles.
 
 ## Examples
 

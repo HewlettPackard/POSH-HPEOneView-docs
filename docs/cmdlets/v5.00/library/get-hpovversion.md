@@ -22,7 +22,7 @@ Get-HPOVVersion
 
 ## Description
 
-Display either the HPE OneView PowerShell library or appliance version.  Displaying the Appliance version will provide the Major, Minor, full version, and `X-API` Version information.
+Display either the HPE OneView PowerShell library or appliance version.  Displaying the Appliance version will provide the Major, Minor, full version, and X-API Version information.
 
 ## Examples
 

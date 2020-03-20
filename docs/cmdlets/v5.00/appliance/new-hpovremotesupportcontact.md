@@ -23,7 +23,7 @@ New-HPOVRemoteSupportContact
 
 ## Description
 
-Use this Cmdlet to create a new Remote Support Contact.  The Remote Support Contact is used to identify authorized users HPE Support can contact for service events.  Only a single contact can be defined as the Default.  The Default contact cannot be removed, and at least 1 contact must be configured before attempting to register the appliance with HPE support using the `Set-HPOVRemoteSupport` Cmdlet. 
+Use this Cmdlet to create a new Remote Support Contact.  The Remote Support Contact is used to identify authorized users HPE Support can contact for service events.  Only a single contact can be defined as the Default.  The Default contact cannot be removed, and at least 1 contact must be configured before attempting to register the appliance with HPE support using the Set-HPOVRemoteSupport Cmdlet. 
 
 ## Examples
 

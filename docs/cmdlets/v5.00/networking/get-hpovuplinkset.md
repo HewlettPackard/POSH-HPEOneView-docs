@@ -28,7 +28,7 @@ Get-HPOVUplinkSet
 
 ## Description
 
-This Cmdlet will retrieve the list of all Uplink Sets or specific by the name.  The Cmdlet will only display provisioned Uplink Sets that are members of a Logical Interconnect resource.  To view Uplink Sets of a Logical Interconnect Group, use the `Get-HPOVLogicalInterconnectGroup` Cmdlet.
+This Cmdlet will retrieve the list of all Uplink Sets or specific by the name.  The Cmdlet will only display provisioned Uplink Sets that are members of a Logical Interconnect resource.  To view Uplink Sets of a Logical Interconnect Group, use the Get-HPOVLogicalInterconnectGroup Cmdlet.
 
 ## Examples
 

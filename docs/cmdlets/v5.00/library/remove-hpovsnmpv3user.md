@@ -15,16 +15,16 @@ Remove-HPOVSnmpV3User
 
 ## Description
 
-HPE OneView can be used as a proxy to forward device traps from servers and enclosures (OA) to other `SNMP-enabled` applications on the network. HPE OneView can forward traps, as SNMPv3 or SNMPv1 traps, to configured destinations.
+HPE OneView can be used as a proxy to forward device traps from servers and enclosures (OA) to other SNMP-enabled applications on the network. HPE OneView can forward traps, as SNMPv3 or SNMPv1 traps, to configured destinations.
 
 Appliance SNMP settings allow you to add destinations to which the traps need to be forwarded. You can configure each destination as an SNMPv1 or SNMPv3 destination, depending on whether the traps are sent in SNMPv1 or SNMPv3 formats. 
 
 Additionally, if you have Gen6 or Gen7 servers being monitored by HPE OneView in your environment, you can configure the read community string that HPE OneView uses for monitoring these servers with SNMPv1. 
 
 {% hint style="info" %}
-To configure SNMP trap forwarding for network devices (
+To configure SNMP trap forwarding for network devices (interconnects and switches), use the New-HPOVSnmpV3User and include it within the New-HPOVSnmpSettings Cmdlet.
 {% endhint %}
-interconnects and switches), use the `New-HPOVSnmpV3User` and include it within the `New-HPOVSnmpSettings` Cmdlet.
+
 
 Privileges: Infrastructure administrator
 

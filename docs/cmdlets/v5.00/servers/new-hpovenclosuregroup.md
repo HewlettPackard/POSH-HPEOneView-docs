@@ -59,15 +59,15 @@ New-HPOVEnclosureGroup
 
 ## Description
 
-An enclosure group is a logical resource that defines a standard configuration for member logical enclosures. The network connectivity for an enclosure group is defined by the logical interconnect groups associated with the enclosure group. When configuring an HPE Synergy enclosure group, it may contain up to five enclosures.  When configuring an HPE BladeSystem `C-Class` enclosure group, it will only contain a single enclosure.
+An enclosure group is a logical resource that defines a standard configuration for member logical enclosures. The network connectivity for an enclosure group is defined by the logical interconnect groups associated with the enclosure group. When configuring an HPE Synergy enclosure group, it may contain up to five enclosures.  When configuring an HPE BladeSystem C-Class enclosure group, it will only contain a single enclosure.
 
 Enclosure groups and logical interconnect groups
 
 	* A logical interconnect group that is assigned to a bay within an enclosure group must have that bay populated within the logical interconnect group.
 	* All populated bays in a logical interconnect group must be assigned to the enclosure group. For example, a logical interconnect group that has bays 1 and 2 populated must be assigned to bays 1 and 2 of the enclosure group in order for the enclosure group to be created.
-	* An enclosure group can contain logical interconnect groups that are highly available, redundant, `A-side` only, or `A-side` and `B-side`. See About interconnect bay sets.
-	* Synergy `multiple-enclosure` logical interconnect groups must have the proper bays populated in all enclosures in the interconnect link topology.
-	* Synergy `single-enclosure` logical interconnect groups, such as a Serial Attached SCSI (SAS) logical interconnect group, can be applied to individual bays in individual enclosures in the interconnect link topology.
+	* An enclosure group can contain logical interconnect groups that are highly available, redundant, A-side only, or A-side and B-side. See About interconnect bay sets.
+	* Synergy multiple-enclosure logical interconnect groups must have the proper bays populated in all enclosures in the interconnect link topology.
+	* Synergy single-enclosure logical interconnect groups, such as a Serial Attached SCSI (SAS) logical interconnect group, can be applied to individual bays in individual enclosures in the interconnect link topology.
 
 ## Examples
 

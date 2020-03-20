@@ -40,7 +40,7 @@ Set-HPOVUser
 
 ## Description
 
-Modify or update an existing local user account on the management appliance.  This Cmdlet will not update the password or roles of the currently logged in user account.  To update your HPE OneView appliance local account"s password, please use the `Set-HPOVUserPassword` Cmdlet.
+Modify or update an existing local user account on the management appliance.  This Cmdlet will not update the password or roles of the currently logged in user account.  To update your HPE OneView appliance local account"s password, please use the Set-HPOVUserPassword Cmdlet.
 
 ## Examples
 

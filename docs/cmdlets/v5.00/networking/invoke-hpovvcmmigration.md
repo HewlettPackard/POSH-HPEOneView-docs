@@ -63,7 +63,7 @@ Invoke-HPOVVcmMigration
 
 ## Description
 
-This function is used to migrate an existing Virtual Connect Manager configuration to HPE OneView.  If an enclosure was added to an HPE OneView appliance as `Monitor-Only`, then you must first remove the enclosure from the appliance, and then use this Cmdlet to migrate the enclosure.
+This function is used to migrate an existing Virtual Connect Manager configuration to HPE OneView.  If an enclosure was added to an HPE OneView appliance as Monitor-Only, then you must first remove the enclosure from the appliance, and then use this Cmdlet to migrate the enclosure.
     
 Using the -VCEMCMS, -VCEMUser and -VCEMPassword parameters, the targeted Virtual Connect Domain can be removed from a Virual Connect Enterprise Manager Domain Group first before initiating the VC Migration tool within the HPE OneView appliance.
     

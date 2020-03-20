@@ -32,9 +32,9 @@ The appliance monitors the connectivity status of iPDUs. If the appliance loses 
 The appliance also monitors iPDU to remain synchronized with changes to hardware and power connections. However, some changes to devices made outside of the control of the appliance (from iLO or the OA, for example) may cause them to become out of synchronization with the appliance. You may have to manually refresh devices that lose synchronization with the appliance.
 
 {% hint style="info" %}
- Hewlett Packard Enterprise recommends that you do not use iLO or the OA to make changes to a device.
+ Hewlett Packard Enterprise recommends that you do not use iLO or the OA to make changes to a device. Making changes to a device from its iLO or OA could cause it to lose synchronization with the appliance.
 {% endhint %}
- Making changes to a device from its iLO or OA could cause it to lose synchronization with the appliance.
+
 
 {% hint style="info" %}
 Minimum required privileges: Read-

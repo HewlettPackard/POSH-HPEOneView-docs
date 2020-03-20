@@ -16,7 +16,7 @@ Remove-HPOVLogicalEnclosure
 
 ## Description
 
-This Cmdlet willRemove a Logical Enclosure.  Removing a Logical Enclosure is only supported with Synergy.  If a C7000 Enclosure needs to be removed, use the `Remove-HPOVEnclosure` Cmdlet.
+This Cmdlet willRemove a Logical Enclosure.  Removing a Logical Enclosure is only supported with Synergy.  If a C7000 Enclosure needs to be removed, use the Remove-HPOVEnclosure Cmdlet.
 
 ## Examples
 

@@ -15,7 +15,7 @@ Remove-HPOVStandbyComposerNode
 
 ## Description
 
-This Cmdlet will help remove the Standby Composer node from the Synergy management ring.  In order to remove the Active node from the Synergy management ring, you first must use the `Enable-HPOVComposerHANode` Cmdlet to transition the Standby node to the Active role.
+This Cmdlet will help remove the Standby Composer node from the Synergy management ring.  In order to remove the Active node from the Synergy management ring, you first must use the Enable-HPOVComposerHANode Cmdlet to transition the Standby node to the Active role.
 
 ## Examples
 

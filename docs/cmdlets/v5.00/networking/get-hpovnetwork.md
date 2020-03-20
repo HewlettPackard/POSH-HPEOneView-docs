@@ -22,7 +22,7 @@ Get-HPOVNetwork
 
 A virtual connect interconnect in an enclosure supports the following types of data center networks:
 
-    * Fibre Channel for storage networks, including `fabric-attach` (SAN) Fibre Channel (FC) connections and `direct-attach` (Flat SAN) Fibre Channel connections.
+    * Fibre Channel for storage networks, including fabric-attach (SAN) Fibre Channel (FC) connections and direct-attach (Flat SAN) Fibre Channel connections.
     * Ethernet for data networks, including tagged, untagged, or tunnel networks.
     * Fibre Channel over Ethernet (FCoE) for storage networks where storage traffic is carried over a dedicated Ethernet VLAN.
 

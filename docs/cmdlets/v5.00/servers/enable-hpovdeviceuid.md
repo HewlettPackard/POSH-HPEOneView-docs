@@ -15,16 +15,16 @@ Enable-HPOVDeviceUid
 
 ## Description
 
-Authorized users can control the unit identification (UID) light on an HPE Synergy frame and its servers, interconnects, and frame link modules through the UI. Illuminating the UID light on the front of a device helps an `on-site` technician to locate the hardware in the data center.
+Authorized users can control the unit identification (UID) light on an HPE Synergy frame and its servers, interconnects, and frame link modules through the UI. Illuminating the UID light on the front of a device helps an on-site technician to locate the hardware in the data center.
 
 A UID icon is displayed on the Enclosures screen, the Server Hardware screen, and the Interconnects screen. On the Enclosures screen, the enclosure overview displays the UID icon on its frame link modules, servers, and interconnects.
 
 Use this Cmdlet to enable the UID light on a resource.
 
 {% hint style="info" %}
-The UID light blinks automatically to indicate that a critical operation is underway,
+The UID light blinks automatically to indicate that a critical operation is underway, such as Remote Console access for server hardware or a firmware update. Do not remove power from a device when its UID light is blinking.
 {% endhint %}
- such as Remote Console access for server hardware or a firmware update. Do not remove power from a device when its UID light is blinking.
+
 
 {% hint style="info" %}
 Minimum required privileges: Infrastructure administrator,

@@ -21,7 +21,7 @@ HPE OneView utilizes a task subsystem for operations that will take longer than 
 
 This blocking Cmdlet assists a caller with waiting for the given task to "start" (get beyond validation phase) or timeout.
 
-Once the task enters the running state, the Cmdlet will return the task resource object. The caller could then use `Wait-HPOVTaskComplete` to further monitor the task progression.
+Once the task enters the running state, the Cmdlet will return the task resource object. The caller could then use Wait-HPOVTaskComplete to further monitor the task progression.
 
 ## Examples
 

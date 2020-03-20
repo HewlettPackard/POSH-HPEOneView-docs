@@ -14,7 +14,7 @@ Get-HPOVComposerNode
 
 ## Description
 
-The Composer is an appliance that runs HPE OneView and manages the group of Synergy frames cabled together. You select the initial, active Composer during hardware setup by connecting the Synergy monitor port to a frame link module in the same bay number as the Composer you want to configure. A second Composer is automatically selected to create a `high-availability` (HA) cluster for managing the Synergy frame in a standby role. If the active Composer fails, the standby Composer automatically becomes the active Composer.
+The Composer is an appliance that runs HPE OneView and manages the group of Synergy frames cabled together. You select the initial, active Composer during hardware setup by connecting the Synergy monitor port to a frame link module in the same bay number as the Composer you want to configure. A second Composer is automatically selected to create a high-availability (HA) cluster for managing the Synergy frame in a standby role. If the active Composer fails, the standby Composer automatically becomes the active Composer.
 
 This Cmdlet will report the installed and configured Synergy Composer nodes. This includes status, state, model, firmware version, and role.
 

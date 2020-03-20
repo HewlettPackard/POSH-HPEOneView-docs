@@ -15,7 +15,7 @@ Remove-HPOVRemoteSupportContact
 
 ## Description
 
-Use this Cmdlet to remove an existing Remote Support Contact.  The Default contact cannot be removed, and at least 1 contact must be configured before attempting to register the appliance with HPE support using the `Set-HPOVRemoteSupport` Cmdlet. 
+Use this Cmdlet to remove an existing Remote Support Contact.  The Default contact cannot be removed, and at least 1 contact must be configured before attempting to register the appliance with HPE support using the Set-HPOVRemoteSupport Cmdlet. 
 
 ## Examples
 
