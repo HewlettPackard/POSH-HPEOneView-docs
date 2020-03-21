@@ -1,8 +1,8 @@
-[//]: # (This is a test comment to see if Gitbook.io does or does not render this text.)
-
 ---
 description: Initiate a connection to an HPE OneView appliance.
 ---
+
+[//]: # (This is a test comment to see if Gitbook.io does or does not render this text.)
 
 # Connect-HPOVMgmt
 
