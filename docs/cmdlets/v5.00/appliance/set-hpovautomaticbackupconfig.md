@@ -1,4 +1,4 @@
----
+﻿---
 description: Configure automatic appliance backup.
 ---
 
@@ -32,22 +32,22 @@ Set-HPOVAutomaticBackupConfig
 
 ## Description
 
-Introduced in HPE OneView 3.0, an automatic appliance backup schedule can be configured. The automatic backup process will generate the backup file, then transfer it to a host that supports SCP or SFTP. The hosts public SSH key will be needed in order to successfuly configure.
+Introduced in HPE OneView 3.0, an automatic appliance backup schedule can be configured.  The automatic backup process will generate the backup file, then transfer it to a host that supports SCP or SFTP.  The hosts public SSH key will be needed in order to successfuly configure.
 
-During the configuration process, a test file will be created and stored on the host. This file can be safely deleted once the async task has successfully completed.
+During the configuration process, a test file will be created and stored on the host.  This file can be safely deleted once the async task has successfully completed.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 $HostSSHKey = Get-Content C:\host.key
 Set-HPOVAutomaticBackupConfig -Hostname scphost.domain.com -Username backupadmin -Password (ConvertTo-SecureString password -AsPlainText -Force) -HostSSHKey $HostSSHKey -Protocol SCP -Interval Weekly -Days "MON","WED","FRI" -Time 18:00
 ```
 
-This command will configure automatic appliance backup, based on a weekly Monday, Wednesday and Friday schedule to execute at 18:00 \(6:00PM\).
+This command will configure automatic appliance backup, based on a weekly Monday, Wednesday and Friday schedule to execute at 18:00 (6:00PM).
 
-### Example 2
+###  Example 2 
 
 ```text
 $HostSSHKey = Get-Content C:\host.key
@@ -55,7 +55,7 @@ Set-HPOVAutomaticBackupConfig -Hostname scphost.domain.com -Username backupadmin
 New-HPOVBackup
 ```
 
-This command will configure automatic appliance backup, based on a weekly Monday, Wednesday and Friday schedule to execute at 18:00 \(6:00PM\). Then, a call to `New-HPOVBackup` will be made, which will generate and copy the backup file to the remote location configured.
+This command will configure automatic appliance backup, based on a weekly Monday, Wednesday and Friday schedule to execute at 18:00 (6:00PM).  Then, a call to `New-HPOVBackup` will be made, which will generate and copy the backup file to the remote location configured.
 
 ## Parameters
 
@@ -73,7 +73,7 @@ The IP Address or FQDN of the target SCP or SFTP host.
 
 ### -Directory &lt;String&gt;
 
-The remote directory on the host where the file will be saved to. Omit to sepcify the root or default directory the user account is associated with.
+The remote directory on the host where the file will be saved to.  Omit to sepcify the root or default directory the user account is associated with.
 
 | Aliases | None |
 | :--- | :--- |
@@ -123,10 +123,10 @@ The SCP/SFTP hosts public key, in OpenSSH String format.
 
 ### -Protocol &lt;String&gt;
 
-The protocol to connect to the remote host with. Supported values are:
+The protocol to connect to the remote host with.  Supported values are:
 
-* SCP
-* SFTP
+    * SCP
+    * SFTP
 
 Default: SCP
 
@@ -134,16 +134,16 @@ Default: SCP
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | SCP |
+| Default value | `SCP` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Interval &lt;String&gt;
 
-The frequency the backup will be generated. Supported values are:
+The frequency the backup will be generated.  Supported values are:
 
-* Daily
-* Weekly
+    * Daily
+    * Weekly
 
 | Aliases | None |
 | :--- | :--- |
@@ -155,15 +155,15 @@ The frequency the backup will be generated. Supported values are:
 
 ### -Days &lt;Array&gt;
 
-If specifying a Weekly backup, provide the days in an Array. Accepted values are:
+If specifying a Weekly backup, provide the days in an Array.  Accepted values are:
 
-* SU or SUN or Sunday
-* MO or MON or Monday
-* TU or TUE or Tuesday
-* WE or WED or Wednesday
-* TH or THUR or Thursday
-* FR or FRI or Friday
-* SA or SAT or Saturday
+    * SU or SUN or Sunday
+    * MO or MON or Monday
+    * TU or TUE or Tuesday
+    * WE or WED or Wednesday
+    * TH or THUR or Thursday
+    * FR or FRI or Friday
+    * SA or SAT or Saturday
 
 | Aliases | None |
 | :--- | :--- |
@@ -193,35 +193,37 @@ Disable the automatic backup schedule.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
+| Default value | `False` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
+| Default value | `False` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### -WhatIf &lt;SwitchParameter&gt;
+
+
 
 | Aliases | wi |
 | :--- | :--- |
@@ -232,6 +234,8 @@ Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name prope
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
+
+
 
 | Aliases | cf |
 | :--- | :--- |
@@ -247,19 +251,18 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this Cmdlet.**_
+_**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Appliance async task to monitor
 
-_**System.Collections.Arraylist**_ 
+_**System.Collections.Arraylist <HPOneView.Appliance.TaskResource>**_
 
 Multiple appliance async task to monitor
 
 ## Related Links
 
 * [Get-HPOVAutomaticBackupConfig](get-hpovautomaticbackupconfig.md)
-

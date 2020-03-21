@@ -1,4 +1,4 @@
----
+﻿---
 description: Retrieve Logical Switch resources.
 ---
 
@@ -25,21 +25,21 @@ Get-HPOVLogicalSwitch
 
 ## Description
 
-A logical switch is added into HPE OneView as a managed or monitored logical switch. The logical switch can consist of a maximum of two physical top-of-rack switches \(external to the HPE Synergy frame\) configured in a single stacking domain.
+A logical switch is added into HPE OneView as a managed or monitored logical switch. The logical switch can consist of a maximum of two physical top-of-rack switches (external to the HPE Synergy frame) configured in a single stacking domain.
 
 There is a connectivity limitation of one logical interconnect to one logical switch. Interconnects within a logical interconnect cannot be connected to more than one logical switch.
 
-A logical switch is based on a logical switch group configuration. If the logical switch transitions to an Inconsistent with group state \(due to the changes in either the logical switch or the logical switch group\), update the logical switch configuration based on the logical switch group to return to a consistent state.
+A logical switch is based on a logical switch group configuration. If the logical switch transitions to an Inconsistent with group state (due to the changes in either the logical switch or the logical switch group), update the logical switch configuration based on the logical switch group to return to a consistent state.
 
-About assigning Arista switches to a logical switch \(HPE Synergy only\)
+About assigning Arista switches to a logical switch (HPE Synergy only)
 
-You can create a logical switch with a maximum of two Arista switches. When there are two Arista switches in a logical switch, they must be in a multichassis link aggregation \(MLAG\) environment. MLAG must be configured on both the switches, and they must belong to the same MLAG domain.
+You can create a logical switch with a maximum of two Arista switches. When there are two Arista switches in a logical switch, they must be in a multichassis link aggregation (MLAG) environment. MLAG must be configured on both the switches, and they must belong to the same MLAG domain.
 
-About assigning Cisco Nexus switches to a logical switch \(HPE BladeSystem only\)
+About assigning Cisco Nexus switches to a logical switch (HPE BladeSystem only)
 
-You can create a logical switch with a maximum of two Cisco Nexus switches. When there are two Cisco Nexus switches in a logical switch, they must be in a virtual PortChannel \(vPC\) environment. vPC must be configured on both the switches, and they must belong to the same vPC domain.
+You can create a logical switch with a maximum of two Cisco Nexus switches. When there are two Cisco Nexus switches in a logical switch, they must be in a virtual PortChannel (vPC) environment. vPC must be configured on both the switches, and they must belong to the same vPC domain.
 
-A virtual PortChannel \(vPC\) allows links that are physically connected to two different switches to appear as a single port channel to a third switch. vPC domain ID, vPC primary MAC address, vPC member ID, vPC role in a vPC domain can be configured for Cisco Nexus switches.
+A virtual PortChannel (vPC) allows links that are physically connected to two different switches to appear as a single port channel to a third switch. vPC domain ID, vPC primary MAC address, vPC member ID, vPC role in a vPC domain can be configured for Cisco Nexus switches.
 
 Stacking links can be set from the originating peer or the destination peer when two switches are participating in the vPC environment. Also, stacking links can be set to the destination end of the peer link between two vPC switches.
 
@@ -49,8 +49,8 @@ You can create a logical switch that pairs two rack connectivity modules. You ca
 
 When rack servers are assigned to the rack connectivity modules that are associated with the logical switch, the following configurations are checked:
 
-* The rack servers are consistently connected with the two rack connectivity modules.
-* The rack server is connected to the same port on both rack connectivity modules.
+    * The rack servers are consistently connected with the two rack connectivity modules.
+    * The rack server is connected to the same port on both rack connectivity modules.
 
 If there are issues during the initial server profile assignment, validation errors are displayed during server profile creation.
 
@@ -62,7 +62,7 @@ Required Privileges: Read-only
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVLogicalSwitch
@@ -70,7 +70,7 @@ Get-HPOVLogicalSwitch
 
 Retrieve all Logical Switch resources from the default appliance connection.
 
-### Example 2
+###  Example 2 
 
 ```text
 Get-HPOVLogicalSwitch -Name MyLogicalSwitch1
@@ -82,7 +82,7 @@ Retrieve the specified MyLogicalSwitch1 resource from the default appliance conn
 
 ### -Name &lt;String&gt;
 
-Name of the Logical Switch resource. Supports wildcard \* character.
+Name of the Logical Switch resource.  Supports wildcard * character.
 
 | Aliases | None |
 | :--- | :--- |
@@ -101,23 +101,23 @@ Provide an `[HPOneView.Appliance.TaskResource]` object and the Cmdlet will retur
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -Scope &lt;Object&gt;
 
-Filter resources based on provided Scope membership. By default, all resources for the accounts Active Permissions will be displayed. Allowed values:
+Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-* AllResources
-* AllResourcesInScope
-* `[HPOneView.Appliance.ScopeCollection]`
-* `[HPOneView.Appliance.ConnectionPermission]`
+    * AllResources
+    * AllResourcesInScope
+    * `[HPOneView.Appliance.ScopeCollection]`
+    * `[HPOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | AllResourcesInScope |
+| Default value | `AllResourcesInScope` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -129,13 +129,13 @@ Specify the label associated with resources.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
+| Default value | `False` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ExportFile &lt;String&gt;
 
-Save the Logical Switch resource\(s\) to the specified JSON file.
+Save the Logical Switch resource(s) to the specified JSON file.
 
 | Aliases | x, export |
 | :--- | :--- |
@@ -147,15 +147,15 @@ Save the Logical Switch resource\(s\) to the specified JSON file.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -163,13 +163,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async Task resource object, from [`New-HPOVLogicalSwitch`](new-hpovlogicalswitch.md).
 
 ## Return Values
 
-_**HPOneView.Networking.LogicalSwitch \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Networking.LogicalSwitch [System.Management.Automation.PSCustomObject]**_
 
 Single Logical Switch resource.
 
@@ -181,4 +181,3 @@ Single Logical Switch resource.
 * [Remove-HPOVLogicalSwitch](remove-hpovlogicalswitch.md)
 * [Remove-HPOVLogicalSwitchGroup](remove-hpovlogicalswitchgroup.md)
 * [Update-HPOVLogicalSwitch](update-hpovlogicalswitch.md)
-

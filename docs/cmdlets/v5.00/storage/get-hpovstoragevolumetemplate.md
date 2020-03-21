@@ -1,4 +1,4 @@
----
+﻿---
 description: Retrieve Storage Volume Template (SVT) resource(s).
 ---
 
@@ -17,11 +17,11 @@ Get-HPOVStorageVolumeTemplate
 
 ## Description
 
-Retrieve configured Storage Volume Template\(s\) from the appliance.
+Retrieve configured Storage Volume Template(s) from the appliance.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVStorageVolumeTemplate
@@ -29,7 +29,7 @@ Get-HPOVStorageVolumeTemplate
 
 Get all available Storage Volume Templates.
 
-### Example 2
+###  Example 2 
 
 ```text
 Get-HPOVStorageVolumeTemplate -templateName R5SVT-1
@@ -59,13 +59,13 @@ Specify the label associated with resources.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
+| Default value | `False` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 Default Value: ${Global:ConnectSessions}
 
@@ -73,24 +73,24 @@ Default Value: ${Global:ConnectSessions}
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | ${Global:ConnectedSessions} |
+| Default value | `${Global:ConnectedSessions}` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Scope &lt;Object&gt;
 
-Filter resources based on provided Scope membership. By default, all resources for the accounts Active Permissions will be displayed. Allowed values:
+Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-* AllResources
-* AllResourcesInScope
-* `[HPOneView.Appliance.ScopeCollection]`
-* `[HPOneView.Appliance.ConnectionPermission]`
+    * AllResources
+    * AllResourcesInScope
+    * `[HPOneView.Appliance.ScopeCollection]`
+    * `[HPOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | AllResourcesInScope |
+| Default value | `AllResourcesInScope` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -100,19 +100,21 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this Cmdlet.**_
+_**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Storage.VolumeTemplate \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Storage.VolumeTemplate [System.Management.Automation.PSCustomObject]**_
 
 Single Storage Volume Template
 
-_**System.COllections.ArrayList**_ 
+_**System.COllections.ArrayList <HPOneView.Storage.VolumeTemplate>**_
 
 Multiple Storage Volume Template
 
-_**The matching Storage Volume Template resource\(s\).**_
+_**The matching Storage Volume Template resource(s).**_
+
+
 
 ## Related Links
 
@@ -121,4 +123,3 @@ _**The matching Storage Volume Template resource\(s\).**_
 * [Remove-HPOVStorageVolumeTemplate](remove-hpovstoragevolumetemplate.md)
 * [Set-HPOVStorageVolumeTemplate](set-hpovstoragevolumetemplate.md)
 * [Set-HPOVStorageVolumeTemplatePolicy](set-hpovstoragevolumetemplatepolicy.md)
-

@@ -1,4 +1,4 @@
----
+﻿---
 description: Remove an existing LDAP Directory Server.
 ---
 
@@ -31,13 +31,13 @@ This Cmdlet will remove an existing LDAP Directory Server resource from an exist
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVLdapDirectory -Name MyDirectory | Remove-HPOVLdapServer -DirectoryServerName servera.domain.com -Username MyAdminName -Password (ConvertTo-SecureString "MyPAssword" -AsPlanText -Force)
 ```
 
-Remove the specified LDAP Directory server from "MyDirectory". Will be prompted for confirmation.
+Remove the specified LDAP Directory server from "MyDirectory".  Will be prompted for confirmation.
 
 ## Parameters
 
@@ -50,7 +50,7 @@ The LDAP Directory Object from `Get-HPOVLdapDirectory`.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -DirectoryServerName &lt;String&gt;
@@ -79,7 +79,7 @@ Directory Username to authenticate with in order to validate LDAP configuration.
 
 ### -Password &lt;Object&gt;
 
-Directory User account password in order to validate LDAP configuration. Can be `[System.String]` or `[System.Security.SecureString]` object.
+Directory User account password in order to validate LDAP configuration.  Can be `[System.String]` or `[System.Security.SecureString]` object.
 
 | Aliases | p, pass |
 | :--- | :--- |
@@ -93,13 +93,13 @@ Directory User account password in order to validate LDAP configuration. Can be 
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### -Credential &lt;PSCredential&gt;
 
@@ -119,13 +119,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Appliance.AuthDirectory \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.AuthDirectory [System.Management.Automation.PSCustomObject]**_
 
 Authentication Directory object that will have the LDAP Server added to.
 
 ## Return Values
 
-_**HPOneView.Appliance.AuthDirectory \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.AuthDirectory [System.Management.Automation.PSCustomObject]**_
 
 Updated Authentication Directory.
 
@@ -133,4 +133,3 @@ Updated Authentication Directory.
 
 * [Add-HPOVLdapServer](add-hpovldapserver.md)
 * [New-HPOVLdapServer](new-hpovldapserver.md)
-

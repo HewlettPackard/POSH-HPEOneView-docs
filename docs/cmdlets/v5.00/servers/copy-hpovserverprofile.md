@@ -1,4 +1,4 @@
----
+﻿---
 description: Copy or clone a server profile.
 ---
 
@@ -17,7 +17,7 @@ Copy-HPOVServerProfile
 
 ## Description
 
-You can copy a server profile to server hardware of the same server hardware type and in the same enclosure group \(for servers\). If you are deploying multiple servers of the same type into the same enclosure, you can create a server profile template to streamline server provisioning.
+You can copy a server profile to server hardware of the same server hardware type and in the same enclosure group (for servers). If you are deploying multiple servers of the same type into the same enclosure, you can create a server profile template to streamline server provisioning.
 
 This Cmdlet will copy a source Server Profile to a new instance You can assign the copy to an existing Server Device, or specify "unassigned".
 
@@ -25,7 +25,7 @@ Privileges: Infrastructure administrator or Server administrator
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVServerProfile -Name "Profile 1" | Copy-HPOVServerProfile
@@ -33,7 +33,7 @@ Get-HPOVServerProfile -Name "Profile 1" | Copy-HPOVServerProfile
 
 Copy "Profile 1" to a new Server Profile that is unassigned and named "Copy of Profile 1".
 
-### Example 2
+###  Example 2 
 
 ```text
 Copy-HPOVServerProfile -InputObject (Get-HPOVServerProfile -Name "Profile 1") -DestinationName "Profile 2"
@@ -41,7 +41,7 @@ Copy-HPOVServerProfile -InputObject (Get-HPOVServerProfile -Name "Profile 1") -D
 
 Copy "Profile 1" to a new Server Profile that is unassigned and named "Profile 2".
 
-### Example 3
+###  Example 3 
 
 ```text
 $ServerProfile = Get-HPOVServerProfile -Name "Profile 1"
@@ -51,7 +51,7 @@ Copy-HPOVServerProfile -InputObject $ServerProfile -DestinationName "Profile 2" 
 
 Copy "Profile 1" to a new Server Profile that is assigned to "Encl1, Bay 9" named "Profile 2".
 
-### Example 4
+###  Example 4 
 
 ```text
 $ServerProfile = Get-HPOVServerProfile -Name "Profile Template"
@@ -71,12 +71,13 @@ The object of the source server profile to be copied.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -DestinationName &lt;String&gt;
 
-The name of the destination server profile that will be created. If omitted, the new name will have "Copy of " prefixed to the source name.
+The name of the destination server profile that will be created.  If omitted, the new name will have "Copy of " 
+prefixed to the source name.
 
 | Aliases | dname, dst |
 | :--- | :--- |
@@ -88,13 +89,13 @@ The name of the destination server profile that will be created. If omitted, the
 
 ### -Assign &lt;Object&gt;
 
-The object of the target server to assign the new profile to. If omitted, profile will be "unassigned"
+The object of the target server to assign the new profile to.  If omitted, profile will be "unassigned"
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | unassigned |
+| Default value | `unassigned` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -102,13 +103,13 @@ The object of the target server to assign the new profile to. If omitted, profil
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -122,7 +123,7 @@ Server Profile resource object
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Profile Create async task
 
@@ -150,4 +151,3 @@ Profile Create async task
 * [Set-HPOVServerProfile](set-hpovserverprofile.md)
 * [Set-HPOVServerProfileTemplate](set-hpovserverprofiletemplate.md)
 * [Update-HPOVServerProfile](update-hpovserverprofile.md)
-

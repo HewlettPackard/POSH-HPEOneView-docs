@@ -1,4 +1,4 @@
----
+﻿---
 description: Turn on HPE Synergy Composer data at rest encryption.
 ---
 
@@ -15,9 +15,10 @@ Enable-HPOVApplianceDataAtRestEncryption
 
 ## Description
 
-HPE OneView encrypts sensitive data, such as managed device credentials, when it is stored on-disk in the appliance. The HPE OneView appliance encryption key \(AEK\) is used internally to encrypt the credentials for managed devices \(such as, iLO, onboard administrator, frame link module\). By default, the AEK is stored on the HPE Synergy Composer disk and also included in the appliance backup. This could pose a security risk in case the disk is stolen.
+HPE OneView encrypts sensitive data, such as managed device credentials, when it is stored on-disk in the appliance. The HPE OneView appliance encryption key (AEK) is used internally to encrypt the credentials for managed devices (such as, iLO, onboard administrator, frame link module). By default, the AEK is stored on the HPE Synergy Composer disk and also included in the appliance backup. This could pose a security risk in case the disk is stolen.
 
-The secure data-at-rest option, when enabled, stores the AEK off-disk in Composer NVRAM, and does not include the key in the appliance backup. Enabling this option requires the administrator to save a copy of the AEK \(recovery AEK\) for use in the following circumstances: When restoring a backup taken when a different AEK was in effect.
+The secure data-at-rest option, when enabled, stores the AEK off-disk in Composer NVRAM, and does not include the key in the appliance backup. Enabling this option requires the administrator to save a copy of the AEK (recovery AEK) for use in the following circumstances:
+When restoring a backup taken when a different AEK was in effect.
 
 To successfully boot the system in the unlikely event that the system copy of the key is corrupted.
 
@@ -27,11 +28,11 @@ The administrator must store the recovery AEK in a secure location, where it can
 
 If the downloaded recovery key and the AEK stored in the Composer NVRAM are both lost, the appliance data cannot be recovered.
 
-Using this Cmdlet will enable data at rest encryption for supported HPE Synergy composers. The appliance encryption key \(AEK\) will automatically be downloaded and saved to the value of the -Location parameter. By default, this will be the working directory where the Cmdlet is executed in.
+Using this Cmdlet will enable data at rest encryption for supported HPE Synergy composers.  The appliance encryption key (AEK) will automatically be downloaded and saved to the value of the -Location parameter.  By default, this will be the working directory where the Cmdlet is executed in.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Enable-HPOVApplianceDataAtRestEncryption
@@ -43,17 +44,19 @@ Enable data at rest encryption, where the AEK is saved to the working directory.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
+
+
 
 | Aliases | cf |
 | :--- | :--- |
@@ -65,17 +68,19 @@ Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name prope
 
 ### -Location &lt;string&gt;
 
-The file location where to save the appliance encription key \(AEK\). The AEK should be stored in a secure location.
+The file location where to save the appliance encription key (AEK).  The AEK should be stored in a secure location.
 
 | Aliases | save |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | \(get-location\).Path |
+| Default value | `(get-location).Path` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -WhatIf &lt;SwitchParameter&gt;
+
+
 
 | Aliases | wi |
 | :--- | :--- |
@@ -91,11 +96,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this Cmdlet.**_
+_**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Asynchronous task resource to monitor.
 
@@ -105,4 +110,3 @@ Asynchronous task resource to monitor.
 * [Get-HPOVApplianceDataAtRestEncryption](get-hpovappliancedataatrestencryption.md)
 * [New-HPOVApplianceDataAtRestEncryptionKey](new-hpovappliancedataatrestencryptionkey.md)
 * [Save-HPOVApplianceDataAtRestEncryptionKey](save-hpovappliancedataatrestencryptionkey.md)
-

@@ -1,4 +1,4 @@
----
+﻿---
 description: Install or stage an appliance update.
 ---
 
@@ -42,19 +42,19 @@ Install-HPOVUpdate
 
 ## Description
 
-The Install-HPOVUpdate installs an appliance update package to upgrade the platform to the specified version. Use the -Stage switch to stage an update on the appliance.
+The Install-HPOVUpdate installs an appliance update package to upgrade the platform to the specified version.  Use the -Stage switch to stage an update on the appliance.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Install-HPOVUpdate -file C:\Path\update.bin
 ```
 
-Install the `[Update.bin]` package to the appliance. User will be prompted to accept the upgrade EULA, and if a reboot is required also be prompted to confirm.
+Install the `[Update.bin]` package to the appliance.  User will be prompted to accept the upgrade EULA, and if a reboot is required also be prompted to confirm.
 
-### Example 2
+###  Example 2 
 
 ```text
 Install-HPOVUpdate -file C:\Path\update.bin -Stage -DisplayReleaseNotes
@@ -62,7 +62,7 @@ Install-HPOVUpdate -file C:\Path\update.bin -Stage -DisplayReleaseNotes
 
 Stage the update on the appliance, and display the Release Notes to the PowerShell console.
 
-### Example 3
+###  Example 3 
 
 ```text
 Install-HPOVUpdate -file C:\Path\update.bin -Stage
@@ -71,7 +71,7 @@ Install-HPOVUpdate -EULA Accept -InstallNow
 
 Stage the `[Update.bin]` package to the appliance. After update has been staged, install the update now on specified appliance.
 
-### Example 4
+###  Example 4 
 
 ```text
 Install-HPOVUpdate -ListPending -DisplayReleaseNotes
@@ -90,12 +90,12 @@ Appliance Update file to install.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -Eula &lt;String&gt;
 
-Will display EULA if no value is provided. Pass "accept" to accept and not display EULA.
+Will display EULA if no value is provided.  Pass "accept" to accept and not display EULA.
 
 | Aliases | None |
 | :--- | :--- |
@@ -113,7 +113,7 @@ Display Release Notes of Update
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
+| Default value | `False` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -125,7 +125,7 @@ Used to upload update to appliance and not apply update.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
+| Default value | `False` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -137,7 +137,7 @@ Install pending update that was previously staged.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
+| Default value | `False` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -149,23 +149,25 @@ List any pending updates on the appliance that might have been staged.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
+| Default value | `False` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### -WhatIf &lt;SwitchParameter&gt;
+
+
 
 | Aliases | wi |
 | :--- | :--- |
@@ -176,6 +178,8 @@ Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name prope
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
+
+
 
 | Aliases | cf |
 | :--- | :--- |
@@ -191,7 +195,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this Cmdlet.**_
+_**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
@@ -199,9 +203,9 @@ _**Write-Progress**_
 
 Will display a progress bar indicating the Appliance Update status
 
-_**System.Collections.ArrayList \(System.Management.Automation.PSCustomObject\)**_
+_**System.Collections.ArrayList  (System.Management.Automation.PSCustomObject)**_
 
-When performing stage and install \(no switch options provided\), the return will include the uploaded patch information from the appliance, and the completed upgrade message
+When performing stage and install (no switch options provided), the return will include the uploaded patch information from the appliance, and the completed upgrade message
 
 ## Related Links
 

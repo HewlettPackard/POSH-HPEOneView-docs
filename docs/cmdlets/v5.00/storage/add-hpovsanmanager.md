@@ -1,4 +1,4 @@
----
+﻿---
 description: Add a supported SAN Manager
 ---
 
@@ -38,17 +38,20 @@ Add-HPOVSanManager
 
 ## Description
 
-Add a new SAN Manager to the appliance. SAN Managers are hardware or software systems that manage SANs. The SAN Managers resource enables you to bring SAN management systems and the SANs they manage under management of the appliance. You can associate the managed SANs to Fibre Channel networks on the appliance when creating a \(New-HPOVNetwork\) or updating an existing \(Set-HPOVNetwork\) Fibre Channel Network Resource. This enables the appliance to automate zoning to make the SANs visible to server profiles. Zoning defines connections between Fibre Channel endpoints. Zones are a group of endpoints that can communicate with each other. Open SANs allow communication between all endpoints.
+SAN managers are a resource in HPE OneView that represent a connection to an external entity through which SANs are discovered and managed. The external entity can be vendor-specific management software or a physical switch.
 
-Supported SAN Managers are:
+SANs are created outside of HPE OneView in the SAN manager vendor?s management interface. Once created, SANs can be discovered and managed in HPE OneView using the SAN Manager resource.
 
-* Brocade SAN Network Advisor
-* HPE Networking 5900CP  \(FC or FCoE\)
-* HPE Networking 5900AF \(FC-only\)
-* Cisco Nexus \(FC or FCoE\)
-* Cisco MDS \(FC-only\)
+When managing SAN managers, HPE OneView does not permit a SAN to be managed through more than one SAN manager. When associating an HPE OneView network to the SAN, the choice of which SAN to associate determines which SAN manager will be used to manage the SAN. Any subsequent change to a new SAN manager application requires to go through a phased migration process.
 
-Please see the HPE OneView Support Matrix for supported versions.
+HPE OneView supports SAN managers from different vendors.  Supported SAN Managers are:
+
+    * Brocade SAN Network Advisor
+    * Brocade FOS capable switches. Not all Brocade FC switches support FOS REST API.  Please refer to Brocade/Brocade FC switch documentation for more information.
+    * HPE Networking 5900CP  (FC or FCoE)
+    * HPE Networking 5900AF (FC-only)
+    * Cisco Nexus (FC or FCoE)
+    * Cisco MDS (FC-only)
 
 {% hint style="info" %}
 Minimum required privileges: Infrastructure administrator or Storage administrator.
@@ -56,7 +59,7 @@ Minimum required privileges: Infrastructure administrator or Storage administrat
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 $task = Add-HPOVSanManager -type BNA -hostname BNA.contoso.com -Credential (Get-Credential) -usessl
@@ -65,7 +68,7 @@ Wait-HPOVTaskComplete -InputObject $task
 
 Add a new Brocade Network Advisor SAN Manager.
 
-### Example 2
+###  Example 2 
 
 ```text
 # Define the SNMPv3 auth protocol and levels
@@ -111,16 +114,16 @@ Add two Cisco FC SAN switches as SAN Managers.
 
 ### -Type &lt;String&gt;
 
-SAN Manager type to add. Accepted values are:
+SAN Manager type to add.  Accepted values are:
 
-* Brocade
-* BNA
-* Brocade Network Advisor
-* BrocadeFOS
-* FOS
-* HP
-* HPE
-* Cisco
+    * Brocade
+    * BNA
+    * Brocade Network Advisor
+    * BrocadeFOS
+    * FOS
+    * HP
+    * HPE
+    * Cisco
 
 | Aliases | None |
 | :--- | :--- |
@@ -144,19 +147,19 @@ FQDN or IP Address of the SAN Manager
 
 ### -Port &lt;Int32&gt;
 
-TCP Port of the SAN Manager. The default port for Brocade Network Advisor is "5989". The default port for HPN 5900CP is "161".
+TCP Port of the SAN Manager.  The default port for Brocade Network Advisor is "5989".  The default port for HPN 5900CP is "161".
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | 0 |
+| Default value | `0` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Username &lt;String&gt;
 
-Username used to authenticate and manage the SAN Manager. This is only applicable for BNA SAN Manager.
+Username used to authenticate and manage the SAN Manager.  This is only applicable for BNA SAN Manager.
 
 | Aliases | None |
 | :--- | :--- |
@@ -168,7 +171,7 @@ Username used to authenticate and manage the SAN Manager. This is only applicabl
 
 ### -Password &lt;Object&gt;
 
-Password used to authenticate and manage the SAN Manager. This is only applicable for BNA SAN Manager. Can be either String or `[System.Security.SecureString]` type.
+Password used to authenticate and manage the SAN Manager.  This is only applicable for BNA SAN Manager.  Can be either String or `[System.Security.SecureString]` type.
 
 | Aliases | None |
 | :--- | :--- |
@@ -192,17 +195,17 @@ The SNMPv3 Community User Name.
 
 ### -SnmpAuthLevel &lt;String&gt;
 
-The SNMPv3 Authentication Level. Allowed values are:
+The SNMPv3 Authentication Level.  Allowed values are:
 
-* None - No Security is required, only the SNMPv3 UserName is provided.
-* AuthOnly - SNMPv3 Authentication Encryption Security Level only. Must also provide `-SnmpAuthProtocol` and `-SnmpAuthPassword` parameters.
-* AuthAndPriv - SNMPv3 Authentication Encryption Security and Privacy Levels. Must also provide `-SnmpAuthProtocol`, `-SnmpAuthPassword`, `-SnmpPrivProtocol` and `-SnmpPrivPassword` parameters.
+    * None - No Security is required, only the SNMPv3 UserName is provided.
+    * AuthOnly - SNMPv3 Authentication Encryption Security Level only. Must also provide `-SnmpAuthProtocol` and `-SnmpAuthPassword` parameters.
+    * AuthAndPriv - SNMPv3 Authentication Encryption Security and Privacy Levels. Must also provide `-SnmpAuthProtocol`, `-SnmpAuthPassword`, `-SnmpPrivProtocol` and `-SnmpPrivPassword` parameters.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | None |
+| Default value | `None` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -210,8 +213,8 @@ The SNMPv3 Authentication Level. Allowed values are:
 
 SNMPv3 Password Encryption Protocol. Allowed values are:
 
-* SHA
-* MD5
+    * SHA
+    * MD5
 
 | Aliases | None |
 | :--- | :--- |
@@ -223,7 +226,7 @@ SNMPv3 Password Encryption Protocol. Allowed values are:
 
 ### -SnmpAuthPassword &lt;Object&gt;
 
-SNMPv3 UserName Password. Can be either `[System.String]` or `[System.Security.SecureString]` type.
+SNMPv3 UserName Password.  Can be either `[System.String]` or `[System.Security.SecureString]` type.
 
 | Aliases | None |
 | :--- | :--- |
@@ -235,10 +238,10 @@ SNMPv3 UserName Password. Can be either `[System.String]` or `[System.Security.S
 
 ### -SnmpPrivProtocol &lt;String&gt;
 
-SNMPv3 Privacy Protocol. Allowed values are:
+SNMPv3 Privacy Protocol.  Allowed values are:
 
-* AES
-* DES
+    * AES
+    * DES
 
 | Aliases | None |
 | :--- | :--- |
@@ -250,7 +253,7 @@ SNMPv3 Privacy Protocol. Allowed values are:
 
 ### -SnmpPrivPassword &lt;Object&gt;
 
-SNMPv3 Privacy Encryption Password. Can be either String or `[System.Security.SecureString]` type.
+SNMPv3 Privacy Encryption Password.  Can be either String or `[System.Security.SecureString]` type.
 
 | Aliases | None |
 | :--- | :--- |
@@ -262,39 +265,39 @@ SNMPv3 Privacy Encryption Password. Can be either String or `[System.Security.Se
 
 ### -UseSsl &lt;SwitchParameter&gt;
 
-Use to enable SSL communication with the SAN Manager \(specifically for the Brocade Network Advisor or BrocadeFOS SAN Manager type
+Use to enable SSL communication with the SAN Manager (specifically for the Brocade Network Advisor or BrocadeFOS SAN Manager type
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
+| Default value | `False` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
+| Default value | `False` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### -Credential &lt;PSCredential&gt;
 
@@ -314,11 +317,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this Cmdlet.**_
+_**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Asynchronous task resource to monitor.
 
@@ -328,4 +331,3 @@ Asynchronous task resource to monitor.
 * [Remove-HPOVSanManager](remove-hpovsanmanager.md)
 * [Set-HPOVSanManager](set-hpovsanmanager.md)
 * [Update-HPOVSanManager](update-hpovsanmanager.md)
-

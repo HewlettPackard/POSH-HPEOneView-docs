@@ -1,4 +1,4 @@
----
+﻿---
 description: Remove configured appliance SNMP trap destinations.
 ---
 
@@ -21,7 +21,7 @@ Required permissions: Infrastructure administrator
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVApplianceTrapDestination -Destination 10.45.110.76 -ErrorAction Stop | Remove-HPOVApplianceTrapDestination
@@ -29,7 +29,7 @@ Get-HPOVApplianceTrapDestination -Destination 10.45.110.76 -ErrorAction Stop | R
 
 Remove the specified trap destination.
 
-### Example 2
+###  Example 2 
 
 ```text
 Get-HPOVApplianceTrapDestination -Type SNMPv3 | Remove-HPOVApplianceTrapDestination
@@ -41,15 +41,15 @@ Remove all of the SNMPv3 trap destinations.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
 
@@ -72,10 +72,12 @@ The `[HPOneView.Appliance.SnmpV]`1TrapDestination or `[HPOneView.Appliance.SnmpV
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -WhatIf &lt;SwitchParameter&gt;
+
+
 
 | Aliases | wi |
 | :--- | :--- |
@@ -109,4 +111,3 @@ Success message of deleted resource.
 
 * [Get-HPOVApplianceTrapDestination](get-hpovappliancetrapdestination.md)
 * [New-HPOVApplianceTrapDestination](new-hpovappliancetrapdestination.md)
-

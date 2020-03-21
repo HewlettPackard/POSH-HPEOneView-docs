@@ -1,4 +1,4 @@
----
+﻿---
 description: Wait for a task to complete.
 ---
 
@@ -17,15 +17,15 @@ Wait-HPOVTaskComplete
 
 ## Description
 
-HPE OneView utilizes a task subsystem for operations that will take longer than 200ms, and will execute them Asyncrounously. An async task resource object is created and returned to the caller once the request has passed validation.
+HPE OneView utilizes a task subsystem for operations that will take longer than 200ms, and will execute them Asyncrounously.  An async task resource object is created and returned to the caller once the request has passed validation.
 
-This blocking Cmdlet assists a caller with monitoring a specific task resource, and will wait for the given task to "complete" \(get to a terminal state, including error\) or timeout. The Cmdlet accepts either the task URI or resource object via pipeline.
+This blocking Cmdlet assists a caller with monitoring a specific task resource, and will wait for the given task to "complete" (get to a terminal state, including error) or timeout.  The Cmdlet accepts either the task URI or resource object via pipeline.  
 
-Once the task is no longer in a running state, the cmlet will return the task resource object. The caller should examine the taskState property/key for the final task status.
+Once the task is no longer in a running state, the cmlet will return the task resource object.  The caller should examine the taskState property/key for the final task status.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Wait-HPOVTaskComplete -InputObject $task -timeout (New-TimeSpan -minute 10)
@@ -34,7 +34,7 @@ Waiting for task to complete..Task completed successfully!
 
 Wait for task to complete, modifying the default timeout to 10 minutes.
 
-### Example 2
+###  Example 2 
 
 ```text
 $svr = Get-HPOVServer -Name "ServerA"
@@ -54,18 +54,18 @@ The uri of the task resource to wait for.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -Timeout &lt;TimeSpan&gt;
 
-The timespan to wait for the task to complete. Default is to wait for 20 minutes.
+The timespan to wait for the task to complete.  Default is to wait for 20 minutes.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | $DefaultTimeout |
+| Default value | `$DefaultTimeout` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -85,13 +85,13 @@ Internal use: to indicate if a task will cause appliance to reboot.
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -103,13 +103,13 @@ _**System.String**_
 
 Task URI
 
-_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Task resource object
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 The finished Task object that includes the task result
 
@@ -117,4 +117,3 @@ The finished Task object that includes the task result
 
 * [Get-HPOVTask](get-hpovtask.md)
 * [Wait-HPOVTaskStart](wait-hpovtaskstart.md)
-

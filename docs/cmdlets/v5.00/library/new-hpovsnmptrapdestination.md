@@ -1,4 +1,4 @@
----
+﻿---
 description: Create SNMP Trap Destination Object
 ---
 
@@ -36,11 +36,11 @@ New-HPOVSnmpTrapDestination
 
 ## Description
 
-This helper Cmdlet provides the capability to create a new SNMP Trap Destination object. The object can then be used with New-HPOVSnmpConfiguration to create a new SNMP Configuration for a Logical Interconnect Group or Logical Interconnect resource.
+This helper Cmdlet provides the capability to create a new SNMP Trap Destination object.  The object can then be used with New-HPOVSnmpConfiguration to create a new SNMP Configuration for a Logical Interconnect Group or Logical Interconnect resource.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 $Dest1 = New-HPOVSnmpTrapDestination -Destination mysnmpserver.domain.local -Community MyR3adcommun1ty -SnmpFormat SNMPv1 -TrapSeverities critical,warning $Dest2 = New-HPOVSnmpTrapDestination 10.44.120.9 MyR3adcommun1ty SNMPv1 critical,warning legacy "Other","PortStatus","PortThresholds" "Other","PortStatus" $SnmpConfig = New-HPOVSnmpConfiguration -ReadCommunity MyR3adC0mmun1ty -AccessList "10.44.120.9/32","172.20.148.0/22 -TrapDestinations $Dest1,$Dest2 New-HPOVLogicalInterconnectGroup -LIGName "Flex10/10D and FlexFabric Production 1" -bays @{1 = "Flex1010D";2 = "Flex1010D";3 = "FlexFabric";4 = "FlexFabric"} -SNMP $SnmpConfig
@@ -48,7 +48,7 @@ $Dest1 = New-HPOVSnmpTrapDestination -Destination mysnmpserver.domain.local -Com
 
 Create a new SNMP Configuration object, with the specified Trap Destinations, and use the created object to add to a new Logical Interconnect Group.
 
-### Example 2
+###  Example 2 
 
 ```text
 # Create SNMPv3 user account for appliance. $SNMPv3User = New-HPOVSnmpv3User -Username snmpv3user -SecurityLevel None -ApplianceSnmpUser $Dest1 = New-HPOVSnmpTrapDestination -Destination mysnmpserver.domain.local -Community MyR3adcommun1ty -SnmpFormat SNMPv1 -TrapSeverities critical,warning $Dest2 = New-HPOVSnmpTrapDestination 10.44.120.9 MyR3adcommun1ty SNMPv1 critical,warning legacy "Other","PortStatus","PortThresholds" "Other","PortStatus" $SnmpConfig = New-HPOVSnmpConfiguration -ReadCommunity MyR3adC0mmun1ty -AccessList "10.44.120.9/32","172.20.148.0/22 -TrapDestinations $Dest1,$Dest2 New-HPOVLogicalInterconnectGroup -LIGName "Flex10/10D and FlexFabric Production 1" -bays @{1 = "Flex1010D";2 = "Flex1010D";3 = "FlexFabric";4 = "FlexFabric"} -SNMP $SnmpConfig
@@ -78,37 +78,37 @@ The SNMP Trap Community String to set.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | public |
+| Default value | `public` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SnmpFormat &lt;String&gt;
 
-SNMP Format type. Allowed values:
+SNMP Format type.  Allowed values:
 
-* SNMPv1
-* SNMPv2
-* SNMPv3
+    * SNMPv1
+    * SNMPv2
+    * SNMPv3
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | SNMPv1 |
+| Default value | `SNMPv1` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -TrapSeverities &lt;Array&gt;
 
-A collection `[System.Collections.ArrayList` \] of SNMP Trap Severities to generate Traps for. Allowed values:
+A collection `[System.Collections.ArrayList` ] of SNMP Trap Severities to generate Traps for.  Allowed values:
 
-* Critical
-* Info
-* Major
-* Minor
-* Normal
-* Unknown
-* Warning
+    * Critical
+    * Info
+    * Major
+    * Minor
+    * Normal
+    * Unknown
+    * Warning
 
 | Aliases | None |
 | :--- | :--- |
@@ -120,9 +120,9 @@ A collection `[System.Collections.ArrayList` \] of SNMP Trap Severities to gener
 
 ### -VCMTrapCategories &lt;Array&gt;
 
-A collection `[System.Collections.ArrayList` \] of VCM Trap Categories. Allowed values:
+A collection `[System.Collections.ArrayList` ] of VCM Trap Categories.  Allowed values:
 
-* Legacy
+    * Legacy
 
 | Aliases | None |
 | :--- | :--- |
@@ -134,11 +134,11 @@ A collection `[System.Collections.ArrayList` \] of VCM Trap Categories. Allowed 
 
 ### -EnetTrapCategories &lt;Array&gt;
 
-A collection `[System.Collections.ArrayList` \] of SNMP Trap Severities to generate Traps for. Allowed values:
+A collection `[System.Collections.ArrayList` ] of SNMP Trap Severities to generate Traps for.  Allowed values:
 
-* Other
-* PortStatus
-* PortThresholds
+    * Other
+    * PortStatus
+    * PortThresholds
 
 | Aliases | None |
 | :--- | :--- |
@@ -150,10 +150,10 @@ A collection `[System.Collections.ArrayList` \] of SNMP Trap Severities to gener
 
 ### -FCTrapCategories &lt;Array&gt;
 
-A collection `[System.Collections.ArrayList` \] of SNMP Trap Severities to generate Traps for. Allowed values:
+A collection `[System.Collections.ArrayList` ] of SNMP Trap Severities to generate Traps for.  Allowed values:
 
-* Other
-* PortStatus
+    * Other
+    * PortStatus
 
 | Aliases | None |
 | :--- | :--- |
@@ -165,27 +165,27 @@ A collection `[System.Collections.ArrayList` \] of SNMP Trap Severities to gener
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
 | Aliases |  |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
+| Default value | `False` |
 | Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases |  |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? |  |  |
-| Accept wildcard characters? | False |  |
+| Aliases |  |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? |  |
+| Accept wildcard characters? | False |
 
 ### -Port &lt;Int&gt;
 
@@ -213,7 +213,7 @@ A valid SNMPv3 user from `New-HPOVSnmpV3User`.
 
 ### -EngineID &lt;String&gt;
 
-The EngineId of remote SNMPv3 user. Only applicable when configuring an SNMPv3 object for the appliance, not logical interconnect groups or logical interconnects.
+The EngineId of remote SNMPv3 user.  Only applicable when configuring an SNMPv3 object for the appliance, not logical interconnect groups or logical interconnects.
 
 | Aliases | None |
 | :--- | :--- |
@@ -225,16 +225,16 @@ The EngineId of remote SNMPv3 user. Only applicable when configuring an SNMPv3 o
 
 ### -NotificationType &lt;String&gt;
 
-Indicates whether the trap should be inform message or not. Allowed values:
+Indicates whether the trap should be inform message or not.  Allowed values:
 
-* Inform
-* Trap
+    * Inform
+    * Trap
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | Trap |
+| Default value | `Trap` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -244,11 +244,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this Cmdlet.**_
+_**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Networking.SnmpTrapDestination \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Networking.SnmpTrapDestination [System.Management.Automation.PSCustomObject]**_
 
 SNMP Trap desitnation object for an SNMP Configuration Object
 

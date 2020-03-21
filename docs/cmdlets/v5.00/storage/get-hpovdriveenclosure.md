@@ -1,4 +1,4 @@
----
+﻿---
 description: List Synergy DAS Enclosures.
 ---
 
@@ -15,11 +15,11 @@ Get-HPOVDriveEnclosure
 
 ## Description
 
-Drive enclosures are hardware devices that contain a set of drive bays. A drive enclosure is installed in a device bay of an enclosure, and provides composable storage to servers. Composable storage is a group of physical drives that you can dynamically define as virtual drives. These virtual drives are called logical JBODs. A JBOD \(just a bunch of disks\) is a group of physical disk drives that are assigned to server hardware. Unlike a RAID configuration, a JBOD is a not redundant configuration. You can specify a RAID configuration when you create a logical JBOD.
+Drive enclosures are hardware devices that contain a set of drive bays. A drive enclosure is installed in a device bay of an enclosure, and provides composable storage to servers. Composable storage is a group of physical drives that you can dynamically define as virtual drives. These virtual drives are called logical JBODs. A JBOD (just a bunch of disks) is a group of physical disk drives that are assigned to server hardware. Unlike a RAID configuration, a JBOD is a not redundant configuration. You can specify a RAID configuration when you create a logical JBOD.
 
 Logical JBODs are created and assigned to server hardware from server profiles or server profile templates.
 
-This Cmdlet will help display the available Synergy DAS Enclosures, and their associated inventory data.
+This Cmdlet will help display the available  Synergy DAS Enclosures, and their associated inventory data.
 
 {% hint style="info" %}
 Minimum required privileges: Read only
@@ -27,7 +27,7 @@ Minimum required privileges: Read only
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVDriveEnclosure
@@ -44,7 +44,7 @@ Get all available Synergy Drive Enclosures.
 
 ### -Name &lt;String&gt;
 
-The name of the Synergy DAS enclosure. Omit to return all devices.
+The name of the Synergy DAS enclosure.  Omit to return all devices.
 
 | Aliases | None |
 | :--- | :--- |
@@ -62,21 +62,21 @@ Specify the label associated with resources.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
+| Default value | `False` |
 | Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -84,11 +84,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this Cmdlet.**_
+_**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Storage.DriveEnclosure \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Storage.DriveEnclosure [System.Management.Automation.PSCustomObject]**_
 
 DAS enclosure resource object.
 
@@ -98,4 +98,3 @@ DAS enclosure resource object.
 * [Get-HPOVDriveEnclosureInventory](get-hpovdriveenclosureinventory.md)
 * [Get-HPOVEnclosure](../servers/get-hpovenclosure.md)
 * [Get-HPOVLogicalJBOD](get-hpovlogicaljbod.md)
-

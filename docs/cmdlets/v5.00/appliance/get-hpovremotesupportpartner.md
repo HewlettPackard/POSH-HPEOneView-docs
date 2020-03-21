@@ -1,4 +1,4 @@
----
+﻿---
 description: Retrieve defined Support and Reseller partners.
 ---
 
@@ -30,12 +30,10 @@ Use this Cmdlet to Retrieve defined Remote Support partners that are authorized 
 {% hint style="info" %}
 Minimum required privileges: Read-
 {% endhint %}
-
 only
-
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVRemoteSupportPartner
@@ -59,15 +57,15 @@ Name of the HPE Partner.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -75,11 +73,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this Cmdlet.**_
+_**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.RemoteSupport.Partner \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.RemoteSupport.Partner [System.Management.Automation.PSCustomObject]**_
 
 Defined HPE authorized reseller and/or support partners.
 
@@ -88,4 +86,3 @@ Defined HPE authorized reseller and/or support partners.
 * [Get-HPOVRemoteSupport](get-hpovremotesupport.md)
 * [New-HPOVRemoteSupportPartner](new-hpovremotesupportpartner.md)
 * [Remove-HPOVRemoteSupportPartner](remove-hpovremotesupportpartner.md)
-

@@ -1,4 +1,4 @@
----
+﻿---
 description: Create a new HPE Synergy Logical JBOD resource.
 ---
 
@@ -58,7 +58,7 @@ If the logical drive settings in the server profile indicate that the data in th
 
 Using this Cmdlet will create a new logical JBOD on the connected appliance.
 
-Considerations when configuring logical JBODs:
+Considerations when configuring logical JBODs: 
 
 * You can configure the available scopes to allow or restrict access to the drive enclosures.
 * You can assign a logical JBOD to only one server profile.
@@ -76,7 +76,7 @@ Privileges: Infrastructure administrator, server administrator, server profile a
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 $CreatedLogicalJbod = New-HPOVLogicalJbod -Name "MyLogicalJBOD1" `
@@ -89,7 +89,7 @@ $CreatedLogicalJbod = New-HPOVLogicalJbod -Name "MyLogicalJBOD1" `
 
 Create a new logical JBOD specifying a SAS logical interconnect, requesting a specific drive media type, minimum size and number of drives.
 
-### Example 2
+###  Example 2 
 
 ```text
 $CreatedLogicalJbod = New-HPOVLogicalJbod -Name "MyLogicalJBOD1" `
@@ -102,7 +102,7 @@ $CreatedLogicalJbod = New-HPOVLogicalJbod -Name "MyLogicalJBOD1" `
 
 Create a new logical JBOD specifying a SAS drive enclosure, requesting a specific drive media type, minimum size and number of drives.
 
-### Example 3
+###  Example 3 
 
 ```text
 $Drives = Get-HPOVDriveEnclosureInventory -Available `
@@ -114,7 +114,7 @@ $CreatedLogicalJbod = New-HPOVLogicalJbod -Name "MyLogicalJBOD2" `
 
 Create a new logical JBOD with specific drive bays from a SAS logical interconnect.
 
-### Example 4
+###  Example 4 
 
 ```text
 $Drives = Get-HPOVDriveEnclosureInventory -Available `
@@ -130,15 +130,15 @@ Create a new logical JBOD with specific drive bays from a specific drive enclosu
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### -AvailableDriveType &lt;HPOneView.Storage.AvailableDriveType&gt;
 
@@ -149,7 +149,7 @@ When attempting to create a logical JBOD, specify the availabe drive type from `
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -Description &lt;string&gt;
@@ -166,17 +166,18 @@ Provide a description for the resource.
 
 ### -DriveType &lt;string&gt;
 
-When attempting to create a logical JBOD, specify the interface type for drives that will be used to build the logical drive. Supported values depend on the local storage capabilities of the selected server hardware type. Allowed value:
+When attempting to create a logical JBOD, specify the interface type for drives that will be used to build the logical drive. Supported values depend on the local storage capabilities of the selected server hardware type.  Allowed value:
 
-* SAS
-* SATA
-* SASSSD
-* SATASSD
-* Auto
-
+    * SAS
+    * SATA
+    * SASSSD
+    * SATASSD
+    * Auto
+    
 {% hint style="info" %}
-Auto is not supported when attempting to create an HPE Synergy D3940 Logical or JBOD disk. You must specify a disk technology type with `-DriveType` or `-AvailableDriveType` is used.
+Auto is not supported when attempting to create an HPE Synergy D3940 Logical or JBOD disk.  You must specify a disk technology type with `-DriveType` or `-AvailableDriveType` is used.
 {% endhint %}
+
 
 | Aliases | None |
 | :--- | :--- |
@@ -186,9 +187,9 @@ Auto is not supported when attempting to create an HPE Synergy D3940 Logical or 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Drives &lt;HPOneView.Storage.Drive\[\]&gt;
+### -Drives &lt;HPOneView.Storage.Drive[]&gt;
 
-Provide the specific drives to assign to the logical JBOD. Use the `Get-HPOVDriveEnclosureInventory` Cmdlet to identify the drives you wish to allocate to the new logical JBOD resource. Drives can be allocated from different HPE Synergy drive enclosures, but must reside within the same SAS Logical Interconnect.
+Provide the specific drives to assign to the logical JBOD.  Use the `Get-HPOVDriveEnclosureInventory` Cmdlet to identify the drives you wish to allocate to the new logical JBOD resource.  Drives can be allocated from different HPE Synergy drive enclosures, but must reside within the same SAS Logical Interconnect.
 
 | Aliases | None |
 | :--- | :--- |
@@ -200,7 +201,7 @@ Provide the specific drives to assign to the logical JBOD. Use the `Get-HPOVDriv
 
 ### -EraseDataOnDelete &lt;bool&gt;
 
-If set to True, and drives support erase on delete option, the drive enclosure will erase the data on the drives. This operation will take time, as the drive will not be added back into the available pool until the erase operation finishes.
+If set to True, and drives support erase on delete option, the drive enclosure will erase the data on the drives.  This operation will take time, as the drive will not be added back into the available pool until the erase operation finishes.
 
 | Aliases | None |
 | :--- | :--- |
@@ -224,7 +225,7 @@ When attempting to create a logical JBOD, and not specifying the exact drives, y
 
 ### -MaxDriveSize &lt;int&gt;
 
-When attempting to create a logical JBOD, you can specify the min and max drive size for the system to locate drive availability. Specify the maximum disk size in GB.
+When attempting to create a logical JBOD, you can specify the min and max drive size for the system to locate drive availability.  Specify the maximum disk size in GB.
 
 | Aliases | None |
 | :--- | :--- |
@@ -236,7 +237,7 @@ When attempting to create a logical JBOD, you can specify the min and max drive 
 
 ### -MinDriveSize &lt;int&gt;
 
-When attempting to create a logical JBOD, you can specify the min and max drive size for the system to locate drive availability. Specify the minimum disk size in GB.
+When attempting to create a logical JBOD, you can specify the min and max drive size for the system to locate drive availability.  Specify the minimum disk size in GB.
 
 | Aliases | None |
 | :--- | :--- |
@@ -260,7 +261,7 @@ Provide a globally unique name for the logical JBOD resource.
 
 ### -NumberofDrives &lt;int&gt;
 
-When attempting to create a logical JBOD, you can specify the min and max drive size for the system to locate drive availability. Specify the number of drives the system should allocate.
+When attempting to create a logical JBOD, you can specify the min and max drive size for the system to locate drive availability.  Specify the number of drives the system should allocate.
 
 | Aliases | None |
 | :--- | :--- |
@@ -272,13 +273,13 @@ When attempting to create a logical JBOD, you can specify the min and max drive 
 
 ### -Scope &lt;Object&gt;
 
-Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with. Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
+Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | AllResourcesInScope |
+| Default value | `AllResourcesInScope` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -294,7 +295,7 @@ The available drive type from [`Get-HPOVAvailableDriveType`](get-hpovavailabledr
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Asynchronous task resource to monitor.
 
@@ -305,4 +306,3 @@ Asynchronous task resource to monitor.
 * [Get-HPOVLogicalJBOD](get-hpovlogicaljbod.md)
 * [Remove-HPOVLogicalJBOD](remove-hpovlogicaljbod.md)
 * [Set-HPOVLogicalJBOD](set-hpovlogicaljbod.md)
-

@@ -1,4 +1,4 @@
----
+﻿---
 description: Return created label resources.
 ---
 
@@ -21,7 +21,7 @@ This Cmdlet will return all of the created labels on the specifed appliance.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVLabel
@@ -33,7 +33,7 @@ Return all labels from the appliance.
 
 ### -Name &lt;String&gt;
 
-The name of the Label to associate resources to. If Label does not exist, a new one will be created.
+The name of the Label to associate resources to.  If Label does not exist, a new one will be created.
 
 | Aliases | None |
 | :--- | :--- |
@@ -45,15 +45,15 @@ The name of the Label to associate resources to. If Label does not exist, a new 
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -61,7 +61,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this Cmdlet.**_
+_**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 

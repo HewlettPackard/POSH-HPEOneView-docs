@@ -1,4 +1,4 @@
----
+﻿---
 description: Retrieve address pool information.
 ---
 
@@ -19,19 +19,19 @@ An ID pool is a collection of one or more ranges that you can be randomly genera
 
 This Cmdlet will get the available and configured address pools, and their associated Ranges from the appliance. Currently, the appliance supports the following address pools:
 
-* VMAC
-* VWWN
-* VSN
-* IPv6
-* IPv4
+    * VMAC
+    * VWWN
+    * VSN
+    * IPv6
+    * IPv4
 
 You can specify one, some or all of the Pool types. A Range switch is provided to include the associated Range objects. A report switch is provided to display a report of each address pool type.
 
-Required Privileges: Network administrator \(virtual MAC addresses and virtual WWNs\), Infrastructure administrator \(all ID types\)
+Required Privileges: Network administrator (virtual MAC addresses and virtual WWNs), Infrastructure administrator (all ID types)
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVAddressPool
@@ -39,7 +39,7 @@ Get-HPOVAddressPool
 
 Get the address pools.
 
-### Example 2
+###  Example 2 
 
 ```text
 Get-HPOVAddressPool -type vmac
@@ -49,29 +49,29 @@ Get the vmac address pool.
 
 ## Parameters
 
-### -Type &lt;String\[\]&gt;
+### -Type &lt;String[]&gt;
 
-The address pool type. Accepted values are VMAC, VWWN, VSN, IPv4, IPv6, or All.
+The address pool type.  Accepted values are VMAC, VWWN, VSN, IPv4, IPv6, or All.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | all |
+| Default value | `all` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -79,15 +79,15 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this Cmdlet.**_
+_**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.AddressPool \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.AddressPool [System.Management.Automation.PSCustomObject]**_
 
 Single address pool and its contents.
 
-_**System.Collections.ArrayList**_ 
+_**System.Collections.ArrayList <HPOneView.Appliance.AddressPool>**_
 
 Collection of address pools and their contents.
 
@@ -100,4 +100,3 @@ Collection of address pools and their contents.
 * [Remove-HPOVAddressPoolRange](remove-hpovaddresspoolrange.md)
 * [Remove-HPOVAddressPoolSubnet](remove-hpovaddresspoolsubnet.md)
 * [Set-HPOVAddressPoolSubnet](set-hpovaddresspoolsubnet.md)
-

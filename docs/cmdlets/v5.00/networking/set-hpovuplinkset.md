@@ -1,4 +1,4 @@
----
+﻿---
 description: Update an uplink set resource
 ---
 
@@ -12,7 +12,7 @@ Default content
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Set-HPOVUplinkSet
@@ -22,7 +22,7 @@ Default example
 
 ## Parameters
 
-### -AddNetwork &lt;Object\[\]&gt;
+### -AddNetwork &lt;Object[]&gt;
 
 Specify the networks to add to the specified uplink set.
 
@@ -34,7 +34,9 @@ Specify the networks to add to the specified uplink set.
 | Accept pipeline input? |  |
 | Accept wildcard characters? |  |
 
-### -AddPorts &lt;Object\[\]&gt;
+### -AddPorts &lt;Object[]&gt;
+
+
 
 | Aliases |  |
 | :--- | :--- |
@@ -46,19 +48,21 @@ Specify the networks to add to the specified uplink set.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases \[-Appliance\]
+Aliases [-Appliance]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases |  |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? |  |  |
-| Accept wildcard characters? |  |  |
+| Aliases |  |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? |  |
+| Accept wildcard characters? |  |
 
 ### -ConsistencyChecking &lt;string&gt;
+
+
 
 | Aliases |  |
 | :--- | :--- |
@@ -70,6 +74,8 @@ Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name prope
 
 ### -EnableTrunking &lt;bool&gt;
 
+
+
 | Aliases |  |
 | :--- | :--- |
 | Required? | False |
@@ -79,6 +85,8 @@ Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name prope
 | Accept wildcard characters? |  |
 
 ### -InputObject &lt;Object&gt;
+
+
 
 | Aliases |  |
 | :--- | :--- |
@@ -90,6 +98,8 @@ Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name prope
 
 ### -LacpTimer &lt;string&gt;
 
+
+
 | Aliases |  |
 | :--- | :--- |
 | Required? | False |
@@ -99,6 +109,8 @@ Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name prope
 | Accept wildcard characters? |  |
 
 ### -Name &lt;string&gt;
+
+
 
 | Aliases |  |
 | :--- | :--- |
@@ -110,15 +122,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name prope
 
 ### -Network &lt;Object&gt;
 
-| Aliases |  |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? |  |
-| Accept wildcard characters? |  |
 
-### -RemoveNetwork &lt;Object\[\]&gt;
 
 | Aliases |  |
 | :--- | :--- |
@@ -128,7 +132,21 @@ Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name prope
 | Accept pipeline input? |  |
 | Accept wildcard characters? |  |
 
-### -RemovePorts &lt;Object\[\]&gt;
+### -RemoveNetwork &lt;Object[]&gt;
+
+
+
+| Aliases |  |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? |  |
+| Accept wildcard characters? |  |
+
+### -RemovePorts &lt;Object[]&gt;
+
+
 
 | Aliases |  |
 | :--- | :--- |
@@ -139,6 +157,8 @@ Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name prope
 | Accept wildcard characters? |  |
 
 ### -UntaggedNetwork &lt;Object&gt;
+
+
 
 | Aliases |  |
 | :--- | :--- |
@@ -160,4 +180,3 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 * [Get-HPOVUplinkSet](get-hpovuplinkset.md)
 * [New-HPOVUplinkSet](new-hpovuplinkset.md)
-

@@ -1,4 +1,4 @@
----
+﻿---
 description: Wait for a task to start.
 ---
 
@@ -19,13 +19,13 @@ Wait-HPOVTaskStart
 
 HPE OneView utilizes a task subsystem for operations that will take longer than 200ms, and will execute them Asyncrounously. An async task resource object is created and returned to the caller once the request has passed validation.
 
-This blocking Cmdlet assists a caller with waiting for the given task to "start" \(get beyond validation phase\) or timeout.
+This blocking Cmdlet assists a caller with waiting for the given task to "start" (get beyond validation phase) or timeout.
 
 Once the task enters the running state, the Cmdlet will return the task resource object. The caller could then use Wait-HPOVTaskComplete to further monitor the task progression.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 $Task = Add-HPOVServer -Hostname MyiLO.domain.com -Username Administrator -Password password | Wait-HPOVTaskStart
@@ -44,7 +44,7 @@ The object of the task resource to wait for.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -ResourceName &lt;String&gt;
@@ -61,13 +61,13 @@ Specify the associated ResourceName to the task in order to display in the `Writ
 
 ### -Timeout &lt;TimeSpan&gt;
 
-The time or object to wait for the task to start. Default is to wait for 20 minutes.
+The time or object to wait for the task to start.  Default is to wait for 20 minutes.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | $script:defaultTimeout |
+| Default value | `$script:defaultTimeout` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -75,13 +75,13 @@ The time or object to wait for the task to start. Default is to wait for 20 minu
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -89,13 +89,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Task async object
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Task async object
 
@@ -103,4 +103,3 @@ Task async object
 
 * [Get-HPOVTask](get-hpovtask.md)
 * [Wait-HPOVTaskComplete](wait-hpovtaskcomplete.md)
-

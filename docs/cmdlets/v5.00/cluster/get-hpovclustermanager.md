@@ -1,4 +1,4 @@
----
+﻿---
 description: Get configured hypervisor managers.
 ---
 
@@ -32,7 +32,7 @@ Minimum required privileges: Read only
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVClusterManager -Name vcenter.domain.com
@@ -40,7 +40,7 @@ Get-HPOVClusterManager -Name vcenter.domain.com
 
 Get the specified hypervisor manager by resource name.
 
-### Example 2
+###  Example 2 
 
 ```text
 Get-HPOVClusterManager -Version 5.5.0
@@ -52,15 +52,15 @@ Get all of the configured hypervisor managers that are vSphere 5.5.0.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### -Label &lt;String&gt;
 
@@ -88,20 +88,18 @@ Filter for vCenter name.
 
 ### -Scope &lt;Object&gt;
 
-Filter resources based on provided Scope membership. By default, all resources for the accounts Active Permissions will be displayed. Allowed values:
+Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-* AllResources
-
-  \*AllResourcesInScope
-
-* `[HPOneView.Appliance.ScopeCollection]`
-* `[HPOneView.Appliance.ConnectionPermission]`
+    * AllResources
+    *AllResourcesInScope
+    * `[HPOneView.Appliance.ScopeCollection]`
+    * `[HPOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | AllResourcesInScope |
+| Default value | `AllResourcesInScope` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -123,7 +121,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this Cmdlet.**_
+_**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
@@ -136,4 +134,3 @@ The configured hypervisor cluster manager and its properties
 * [Add-HPOVClusterManager](add-hpovclustermanager.md)
 * [Remove-HPOVClusterManager](remove-hpovclustermanager.md)
 * [Set-HPOVClusterManager](set-hpovclustermanager.md)
-

@@ -1,4 +1,4 @@
----
+﻿---
 description: Remove power device (iPDU)
 ---
 
@@ -17,11 +17,11 @@ Remove-HPOVPowerDevice
 
 ## Description
 
-Removes a power device \(iPDU\) from appliance management.
+Removes a power device (iPDU) from appliance management.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 $task = Remove-HPOVPowerDevice -PowerDevice "iPDU16" | Wait-HPOVTaskComplete
@@ -29,7 +29,7 @@ $task = Remove-HPOVPowerDevice -PowerDevice "iPDU16" | Wait-HPOVTaskComplete
 
 Remove the power device specifed by name. Wait for remove to complete.
 
-### Example 2
+###  Example 2 
 
 ```text
 $ipdu = Get-HPOVPowerDevice -name "iPDU24"
@@ -38,7 +38,7 @@ Remove-HPOVPowerDevice -PowerDevice $ipdu -force -confirm:$false
 
 Force-Remove the profile specifed by $ipdu. Disable confirmation prompt.
 
-### Example 3
+###  Example 3 
 
 ```text
 Get-HPOVPowerDevice | Remove-HPOVPowerDevice
@@ -50,19 +50,19 @@ Search for all power devices and remove them from appliance.
 
 ### -InputObject &lt;Object&gt;
 
-The Power Device object\(s\), name\(s\) or uri\(s\) to be removed from management.
+The Power Device object(s), name(s) or uri(s) to be removed from management.
 
 | Aliases | uri, name, PowerDevice |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -Force &lt;SwitchParameter&gt;
 
-Set to $true to `force-remove` the power device. `Force-removing` will succeed even when there are connectivity issues or resource errors.
+Set to $true to `force-remove` the power device.  `Force-removing` will succeed even when there are connectivity issues or resource errors.
 
 When the request is accepted by the appliance, it does not return an Async Task Resource.
 
@@ -70,19 +70,19 @@ When the request is accepted by the appliance, it does not return an Async Task 
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
+| Default value | `False` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
+| Default value | `False` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -90,15 +90,17 @@ Use this parameter to immediately return the async task. By default, the Cmdlet 
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### -WhatIf &lt;SwitchParameter&gt;
+
+
 
 | Aliases | wi |
 | :--- | :--- |
@@ -109,6 +111,8 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
+
+
 
 | Aliases | cf |
 | :--- | :--- |
@@ -124,13 +128,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.PowerDeliveryDevice \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.PowerDeliveryDevice [System.Management.Automation.PSCustomObject]**_
 
-Power Device \(iPDU\) Resource Object
+Power Device (iPDU) Resource Object
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async remove task
 
@@ -144,4 +148,3 @@ When using the `-Force` parameter, a PSCustomObject is returned indicating succe
 * [Add-HPOVPowerDeviceConnection](add-hpovpowerdeviceconnection.md)
 * [Get-HPOVPowerDevice](get-hpovpowerdevice.md)
 * [New-HPOVPowerDevice](new-hpovpowerdevice.md)
-

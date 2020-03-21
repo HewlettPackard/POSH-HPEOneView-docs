@@ -1,4 +1,4 @@
----
+﻿---
 description: Retrieve Managed SAN resource(s).
 ---
 
@@ -16,18 +16,19 @@ Get-HPOVManagedSan
 
 ## Description
 
-SANs are Fibre Channel \(FC\) or Fibre Channel over Ethernet \(FCoE\) storage area networks that connect servers to storage systems. The possible states for SANs are:
+SANs are Fibre Channel (FC) or Fibre Channel over Ethernet (FCoE) storage area networks that connect servers to storage systems. The possible states for SANs are:
 
-* Discovered - A SAN that is not associated with a network. SANs are automatically discovered when a SAN manager is added to HPE OneView.
-* Managed - A SAN that is associated with one or more networks in HPE OneView. Only managed SANs can be configured to be automatically zoned by HPE OneView.
+    * Discovered - A SAN that is not associated with a network. SANs are automatically discovered when a SAN manager is added to HPE OneView.
+    * Managed - A SAN that is associated with one or more networks in HPE OneView. Only managed SANs can be configured to be automatically zoned by HPE OneView.
 
 Direct attach SANs
 
-HPE OneView creates a direct attach SAN \(flat SAN\) automatically when you configure an enclosure with a logical interconnect that contains a direct attach uplink set. HPE OneView names the direct attach SAN using the format . The created SAN is a Fibre Channel \(FC\) direct attach SAN that is not zoned, and cannot be edited.
+HPE OneView creates a direct attach SAN (flat SAN) automatically when you configure an enclosure with a logical interconnect that contains a direct attach uplink set. HPE OneView names the direct attach SAN using the format <interconnect><uplink set>. The created SAN is a Fibre Channel (FC) direct attach SAN that is not zoned, and cannot be edited.
 
 {% hint style="info" %}
 HPE OneView creates a SAN for each interconnect module that is connected to a direct attach Fibre Channel network.
 {% endhint %}
+
 
 Zoning policy
 
@@ -37,24 +38,23 @@ A SAN zone enables communication between devices connected to the SAN. SAN zonin
 HPE OneView performs zoning only when you add a connection to a server profile and attach a SAN storage volume to it. When you do this, HPE OneView will determine if the current zoning allows connectivity. If current zoning does not allow connectivity, HPE OneView will create the necessary zoning based on the specified zoning policy.
 {% endhint %}
 
+
 Automate zoning
 
 Automated zoning enables HPE OneView to automatically create, edit, and delete zones on a zoned SAN when you attach storage volumes to servers through a volume attachment in a server profile.
 
-* Yes/True - Zoning is automated. HPE OneView takes full control of the zone naming and contents based on the zoning policy for the SAN. Use automated zoning when you want HPE OneView to configure new zones for volume attachments to server profiles. Existing zones are not modified unless the SAN storage attributes defined in a server profile change.
-* No/False - Zoning is not modified by HPE OneView. You must manually manage zoning.
+    * Yes/True - Zoning is automated. HPE OneView takes full control of the zone naming and contents based on the zoning policy for the SAN. Use automated zoning when you want HPE OneView to configure new zones for volume attachments to server profiles. Existing zones are not modified unless the SAN storage attributes defined in a server profile change.
+    * No/False - Zoning is not modified by HPE OneView. You must manually manage zoning.
 
 This Cmdlet is used to display or list the discovered and available Managed SAN resources in the appliance once a supported SAN manager has been added to the appliance.
 
 {% hint style="info" %}
 Minimum required privileges: Read-
 {% endhint %}
-
 only
-
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVManagedSan
@@ -66,7 +66,7 @@ Fabric A Ready OK     BNA Managed Fabric A Zoned             True
 
 Return all managed SAN resources.
 
-### Example 2
+###  Example 2 
 
 ```text
 Get-HPOVManagedSan -Name "Fabric A"
@@ -96,21 +96,21 @@ Specify the label associated with resources.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
+| Default value | `False` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -118,11 +118,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this Cmdlet.**_
+_**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Storage.ManagedSan \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Storage.ManagedSan [System.Management.Automation.PSCustomObject]**_
 
 Single Resource
 
@@ -134,4 +134,3 @@ Multiple Resources
 
 * [Get-HPOVSanZone](get-hpovsanzone.md)
 * [Set-HPOVManagedSan](set-hpovmanagedsan.md)
-

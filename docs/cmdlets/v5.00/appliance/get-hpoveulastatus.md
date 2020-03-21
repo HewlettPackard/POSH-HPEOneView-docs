@@ -1,4 +1,4 @@
----
+﻿---
 description: Get the appliance end user license agreement (EULA) status.
 ---
 
@@ -14,7 +14,7 @@ Get-HPOVEulaStatus
 
 ## Description
 
-The appliance has a EULA \(End-User License agreement\) that you must accept before using the appliance for the first time.
+The appliance has a EULA (End-User License agreement) that you must accept before using the appliance for the first time. 
 
 This Cmdlet supports an unauthenticated request. If attempting to get the EULA status of an appliance not yet configured, provide the IP Address or FQDN of the appliance. A temporary ApplianceConnection will be created then removed in the ${Global:ConnectedSessions} tracker.
 
@@ -24,7 +24,7 @@ Minimum required privileges: None
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVEulaStatus -Appliance myappliance.domain.com
@@ -36,7 +36,7 @@ myappliance.domain.com    False
 
 Get the EULA status from `[myappliance.domain.com]`
 
-### Example 2
+###  Example 2 
 
 ```text
 $Connection = Connect-HPOVMgmt -Appliance myappliance.domain.com -Username Administrator -Password MyPassw0rd
@@ -69,7 +69,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this Cmdlet.**_
+_**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
@@ -80,4 +80,3 @@ Object that returns the Appliance Name and if the EULA has been accepted with a 
 ## Related Links
 
 * [Set-HPOVEulaStatus](set-hpoveulastatus.md)
-

@@ -1,4 +1,4 @@
----
+﻿---
 description: Get the appliance remote Syslog audit log forwarding configuration.
 ---
 
@@ -14,15 +14,16 @@ Get-HPOVApplianceAuditLogForwarding
 
 ## Description
 
-Audit log forwarding enables the Infrastructure administrator to forward audit logs to remote Security Information and Event Management \(SIEM\) systems. Such systems enable centralized audit compliance, monitoring, log analysis, and controlled retention policies.
+Audit log forwarding enables the Infrastructure administrator to forward audit logs to remote Security Information and Event Management (SIEM) systems. Such systems enable centralized audit compliance, monitoring, log analysis, and controlled retention policies.
 
 The forwarding protocol used is the standard UDP-based syslog protocol described in RFC5424 and RFC5426. The syslog protocol is supported by all common syslog servers such as rsyslog, syslog-ng and SIEM products.
 
 {% hint style="info" %}
-Ensure that any firewalls between HPE OneView and the remote syslog server allow UDP traffic. The default UDP port used is 514.
+ Ensure that any firewalls between HPE OneView and the remote syslog server allow UDP traffic. The default UDP port used is 514.
 {% endhint %}
 
-As audit log entries are forwarded over UDP, the entries are not encrypted and delivery is not guaranteed. Even when you have HPE OneView and all managed devices on a dedicated, isolated management LAN, forwarding audit log entries to external systems can pose a security risk. In an environment where encryption is required, use the REST API /rest/audit-logs to schedule a job to download the appliance audit logs.
+
+As audit log entries are forwarded over UDP, the entries are not encrypted and delivery is not guaranteed. Even when you have HPE OneView and all managed devices on a dedicated, isolated management LAN, forwarding audit log entries to external systems can pose a security risk. In an environment where encryption is required, use the REST API /rest/audit-logs to schedule a job to download the appliance audit logs. 
 
 This Cmdlet will return the current status, remote Syslog destination and port currently configured on the appliance.
 
@@ -30,7 +31,7 @@ Privileges: Infrastructure administrator.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVApplianceAuditLogForwarding
@@ -42,15 +43,15 @@ Get the appliance audit log configuration.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -58,7 +59,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this Cmdlet.**_
+_**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
@@ -70,4 +71,3 @@ The appliance audit log forwarding configuration.
 
 * [Set-HPOVApplianceAuditLogForwarding](set-hpovapplianceauditlogforwarding.md)
 * [Test-HPOVApplianceAuditLogForwarding](test-hpovapplianceauditlogforwarding.md)
-

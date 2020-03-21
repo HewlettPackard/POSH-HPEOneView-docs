@@ -1,4 +1,4 @@
----
+﻿---
 description: Migrate Server Profile.
 ---
 
@@ -18,23 +18,24 @@ Convert-HPOVServerProfile
 
 ## Description
 
-Use this Cmdlet to change the Server Hardware Type and/or Enclosure Group set within the Server Profile. Changing to a different server hardware type may change the capabilities available to the server profile. Changing the enclosure group may change the connections which are available for the profile.
+Use this Cmdlet to change the Server Hardware Type and/or Enclosure Group set within the Server Profile.  Changing to
+a different server hardware type may change the capabilities available to the server profile. Changing the enclosure group may change the connections which are available for the profile.
 
-* The server hardware field will be set to "unassigned", requiring re-seletion of server hardware.
-* It may also cause incompatibilities with the current configuration.
-* All deployed connections will have their port assignment set to "Auto".
-* Any incompatibilities will be flagged when the server profile is committed.
-* If the new server hardware type does not support the local storage configuration, some storage may be lost.
-* If the enclosure group is changed, mezzanine storage is lost and the disk drives are released.
-* To prevent data loss, cancel this operation and backup data before applying the profile.
-* Any change in the server hardware type will lead to the associated volume loss.
-* If the server profile is associated with a server profile template, the server profile will become inconsistent with the template.  The server profile should be unassociated with the template before or after the migration.
+    * The server hardware field will be set to "unassigned", requiring re-seletion of server hardware.
+    * It may also cause incompatibilities with the current configuration.
+    * All deployed connections will have their port assignment set to "Auto".
+    * Any incompatibilities will be flagged when the server profile is committed.
+    * If the new server hardware type does not support the local storage configuration, some storage may be lost.
+    * If the enclosure group is changed, mezzanine storage is lost and the disk drives are released.
+    * To prevent data loss, cancel this operation and backup data before applying the profile.
+    * Any change in the server hardware type will lead to the associated volume loss.
+    * If the server profile is associated with a server profile template, the server profile will become inconsistent with the template.  The server profile should be unassociated with the template before or after the migration.
 
-Required Permissions: Infrastructure administrator or Server administrator.
+Minimum required Permissions: Infrastructure administrator or Server administrator.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 $ServerProfile = Get-HPOVServerProfile -Name "Prod Server 1" -ErrorAction Stop
@@ -44,7 +45,7 @@ Convert-HPOVServerProfile -InputObject $ServerProfile -ServerHardwareType $NewSe
 
 Transform the specified server profile object to a different server hardware type resource.
 
-### Example 2
+###  Example 2 
 
 ```text
 $ServerProfile = Get-HPOVServerProfile -Name "Prod Server 1" -ErrorAction Stop
@@ -54,7 +55,7 @@ Convert-HPOVServerProfile -InputObject $ServerProfile -EnclosureGroup $NewEnclos
 
 Transform the specified server profile object to a different enclosure group resource.
 
-### Example 3
+###  Example 3 
 
 ```text
 $ServerProfile = Get-HPOVServerProfile -Name "Prod Server 1" -ErrorAction Stop
@@ -69,25 +70,25 @@ Transform the specified server profile object to a different enclosure group and
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
+| Default value | `False` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -105,7 +106,7 @@ Override confirmation prompt.
 
 ### -EnclosureGroup &lt;Object&gt;
 
-Specify the target `[HPOneView.EnclosureGroup]` resource object. By changing the Enclosure Group, assigned Networks with Connections that do not exist on in the associated Logical Interconnect Group\(s\), the Connection may not be assigned to an available FlexNIC.
+Specify the target `[HPOneView.EnclosureGroup]` resource object.  By changing the Enclosure Group, assigned Networks with Connections that do not exist on in the associated Logical Interconnect Group(s), the Connection may not be assigned to an available FlexNIC.
 
 | Aliases | None |
 | :--- | :--- |
@@ -124,12 +125,12 @@ The `[HPOneView.ServerProfile]` object from `Get-HPOVServerProfile`.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -ServerHardwareType &lt;Object&gt;
 
-Specify the `[HPOneView.ServerHardwareType]` object to transform to. BIOS Settings will be reset to defaults, and Connection FlexNIC assignment will be reset back to Auto.
+Specify the `[HPOneView.ServerHardwareType]` object to transform to.  BIOS Settings will be reset to defaults, and Connection FlexNIC assignment will be reset back to Auto.
 
 | Aliases | None |
 | :--- | :--- |
@@ -151,7 +152,7 @@ The Server Profile resource object to transform.
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async Task resource to monitor progress of the Server Profile transformation.
 
@@ -179,4 +180,3 @@ Async Task resource to monitor progress of the Server Profile transformation.
 * [Set-HPOVServerProfile](set-hpovserverprofile.md)
 * [Set-HPOVServerProfileTemplate](set-hpovserverprofiletemplate.md)
 * [Update-HPOVServerProfile](update-hpovserverprofile.md)
-

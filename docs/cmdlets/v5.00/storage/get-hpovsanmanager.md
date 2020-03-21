@@ -1,4 +1,4 @@
----
+﻿---
 description: Retrieve SAN Manager resource(s).
 ---
 
@@ -21,19 +21,17 @@ SANs are created outside of HPE OneView in the SAN manager vendor?s management i
 
 When managing SAN managers, HPE OneView does not permit a SAN to be managed through more than one SAN manager. When associating an HPE OneView network to the SAN, the choice of which SAN to associate determines which SAN manager will be used to manage the SAN. Any subsequent change to a new SAN manager application requires to go through a phased migration process.
 
-HPE OneView supports SAN managers from different vendors. See the HPE OneView Support Matrix \([http://www.hpe.com/info/oneview/docs](http://www.hpe.com/info/oneview/docs)\) for a list of supported SAN managers.
+HPE OneView supports SAN managers from different vendors. See the HPE OneView Support Matrix (http://www.hpe.com/info/oneview/docs) for a list of supported SAN managers.
 
-This Cmdlet will return the configured SAN Manager\(s\).
+This Cmdlet will return the configured SAN Manager(s).
 
 {% hint style="info" %}
 Minimum required privileges: Read-
 {% endhint %}
-
 only
-
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVSanManager
@@ -68,21 +66,21 @@ Specify the label associated with resources.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
+| Default value | `False` |
 | Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -90,15 +88,15 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this Cmdlet.**_
+_**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Storage.SanManager \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Storage.SanManager [System.Management.Automation.PSCustomObject]**_
 
 Single SAN Manager resource
 
-_**System.Collections.ArrayList**_ 
+_**System.Collections.ArrayList <HPOneView.Storage.SanManager>**_
 
 Multiple SAN Manager resources
 
@@ -108,4 +106,3 @@ Multiple SAN Manager resources
 * [Remove-HPOVSanManager](remove-hpovsanmanager.md)
 * [Set-HPOVSanManager](set-hpovsanmanager.md)
 * [Update-HPOVSanManager](update-hpovsanmanager.md)
-
