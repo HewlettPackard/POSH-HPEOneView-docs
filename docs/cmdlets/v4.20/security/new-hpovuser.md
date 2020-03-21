@@ -180,7 +180,7 @@ If successful, returns a user resource
 ## Related Links
 
 * [Get-HPOVUser](../appliance/get-hpovuser.md)
-* [Remove-HPOVUser](remove-hpovuser.md)
+* [Remove-HPOVUser]()
 * [Set-HPOVUser](set-hpovuser.md)
 * [Set-HPOVUserPassword](set-hpovuserpassword.md)
 * [Set-HPOVUserRole](set-hpovuserrole.md)

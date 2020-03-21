@@ -109,5 +109,5 @@ Multiple Server Hardware types
 
 ## Related Links
 
-* [Set-HPOVServerHardwareType](set-hpovserverhardwaretype.md)
+* [Set-HPOVServerHardwareType]()
 

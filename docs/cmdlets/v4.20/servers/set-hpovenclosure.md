@@ -103,7 +103,7 @@ _**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObjec
 
 Single async task resource for resource name update
 
-_**System.Collections.ArrayList**_ 
+_**System.Collections.ArrayList**_
 
 Collection of async tasks
 

@@ -414,5 +414,5 @@ The newly created enclosure group resource
 
 * [Get-HPOVEnclosureGroup](get-hpovenclosuregroup.md)
 * [Remove-HPOVEnclosureGroup](remove-hpovenclosuregroup.md)
-* [Set-HPOVEnclosureGroup](set-hpovenclosuregroup.md)
+* [Set-HPOVEnclosureGroup]()
 

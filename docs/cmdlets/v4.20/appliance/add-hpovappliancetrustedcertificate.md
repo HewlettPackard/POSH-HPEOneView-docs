@@ -166,5 +166,5 @@ Asyncronous task resource to monitor.
 ## Related Links
 
 * [Get-HPOVApplianceTrustedCertificate](get-hpovappliancetrustedcertificate.md)
-* [Remove-HPOVApplianceTrustedCertificate](remove-hpovappliancetrustedcertificate.md)
+* [Remove-HPOVApplianceTrustedCertificate]()
 

@@ -151,5 +151,5 @@ Async task Resource object for configuring port monitoring on the requested logi
 
 * [Add-HPOVRackManager](add-hpovrackmanager.md)
 * [Get-HPOVRackManager](get-hpovrackmanager.md)
-* [Remove-HPOVRackManager](remove-hpovrackmanager.md)
+* [Remove-HPOVRackManager]()
 

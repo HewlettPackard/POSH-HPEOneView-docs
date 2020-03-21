@@ -233,7 +233,7 @@ Server Profile template resource
 * [Convert-HPOVServerProfileTemplate](convert-hpovserverprofiletemplate.md)
 * [ConvertTo-HPOVServerProfileTemplate](convertto-hpovserverprofiletemplate.md)
 * [New-HPOVServerProfileTemplate](new-hpovserverprofiletemplate.md)
-* [Remove-HPOVServerProfileTemplate](remove-hpovserverprofiletemplate.md)
-* [Save-HPOVServerProfileTemplate](save-hpovserverprofiletemplate.md)
-* [Set-HPOVServerProfileTemplate](set-hpovserverprofiletemplate.md)
+* [Remove-HPOVServerProfileTemplate]()
+* [Save-HPOVServerProfileTemplate]()
+* [Set-HPOVServerProfileTemplate]()
 

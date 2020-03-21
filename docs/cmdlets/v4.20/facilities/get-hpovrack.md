@@ -89,7 +89,7 @@ A Rack resource object.
 * [Get-HPOVRackMember](get-hpovrackmember.md)
 * [New-HPOVRack](new-hpovrack.md)
 * [Remove-HPOVRack]()
-* [Remove-HPOVRackManager](../servers/remove-hpovrackmanager.md)
+* [Remove-HPOVRackManager]()
 * [Remove-HPOVRackMember](remove-hpovrackmember.md)
 * [Set-HPOVRackMemberLocation]()
 * [Update-HPOVRackManager](../servers/update-hpovrackmanager.md)

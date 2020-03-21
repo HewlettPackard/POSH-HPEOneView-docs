@@ -243,5 +243,5 @@ Multiple configured Authentication Directories
 ## Related Links
 
 * [Get-HPOVLdapDirectory](get-hpovldapdirectory.md)
-* [Remove-HPOVLdapDirectory](remove-hpovldapdirectory.md)
+* [Remove-HPOVLdapDirectory]()
 

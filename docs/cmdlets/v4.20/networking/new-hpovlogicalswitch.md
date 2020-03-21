@@ -408,7 +408,7 @@ Collection of Logical Switch resources.
 * [Get-HPOVLogicalSwitch](get-hpovlogicalswitch.md)
 * [Get-HPOVLogicalSwitchGroup](get-hpovlogicalswitchgroup.md)
 * [New-HPOVLogicalSwitchGroup](new-hpovlogicalswitchgroup.md)
-* [Remove-HPOVLogicalSwitch](remove-hpovlogicalswitch.md)
-* [Remove-HPOVLogicalSwitchGroup](remove-hpovlogicalswitchgroup.md)
-* [Update-HPOVLogicalSwitch](update-hpovlogicalswitch.md)
+* [Remove-HPOVLogicalSwitch]()
+* [Remove-HPOVLogicalSwitchGroup]()
+* [Update-HPOVLogicalSwitch]()
 

@@ -187,8 +187,8 @@ Async Task resource to monitor progress.
 
 ## Related Links
 
-* [Add-HPOVPowerDeviceConnection](add-hpovpowerdeviceconnection.md)
+* [Add-HPOVPowerDeviceConnection]()
 * [Get-HPOVPowerDevice](get-hpovpowerdevice.md)
-* [New-HPOVPowerDevice](new-hpovpowerdevice.md)
-* [Remove-HPOVPowerDevice](remove-hpovpowerdevice.md)
+* [New-HPOVPowerDevice]()
+* [Remove-HPOVPowerDevice]()
 

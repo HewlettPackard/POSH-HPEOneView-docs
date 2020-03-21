@@ -461,8 +461,8 @@ A custom status object or array of objects containing the following PsCustomObje
 * [Get-HPOVNetwork](get-hpovnetwork.md)
 * [Get-HPOVNetworkSet](get-hpovnetworkset.md)
 * [New-HPOVNetworkSet](new-hpovnetworkset.md)
-* [Remove-HPOVNetwork](remove-hpovnetwork.md)
+* [Remove-HPOVNetwork]()
 * [Remove-HPOVNetworkSet](remove-hpovnetworkset.md)
 * [Set-HPOVNetwork](set-hpovnetwork.md)
-* [Set-HPOVNetworkSet](set-hpovnetworkset.md)
+* [Set-HPOVNetworkSet]()
 

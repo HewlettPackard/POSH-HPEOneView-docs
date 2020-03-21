@@ -113,7 +113,7 @@ _**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObjec
 
 Async create task resource
 
-_**System.Collections.ArrayList**_ 
+_**System.Collections.ArrayList**_
 
 Multiple task resources
 

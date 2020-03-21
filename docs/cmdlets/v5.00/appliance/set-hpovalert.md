@@ -169,7 +169,7 @@ The updated alert
 
 ## Related Links
 
-* [Clear-HPOVAlert](../../v4.20/appliance/clear-hpovalert.md)
+* [Clear-HPOVAlert](clear-hpovalert.md)
 * [Get-HPOVAlert](get-hpovalert.md)
 * [Remove-HPOVAlert](remove-hpovalert.md)
 

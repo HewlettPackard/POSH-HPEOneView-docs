@@ -113,5 +113,5 @@ Configured fabric manager resource object.
 ## Related Links
 
 * [Add-HPOVFabricManager](add-hpovfabricmanager.md)
-* [Remove-HPOVFabricManager](remove-hpovfabricmanager.md)
+* [Remove-HPOVFabricManager]()
 

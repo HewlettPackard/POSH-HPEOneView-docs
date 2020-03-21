@@ -124,7 +124,7 @@ _**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObjec
 
 A task resource that can be monitored for status of the profile deletion
 
-_**System.Collections.ArrayList**_ 
+_**System.Collections.ArrayList**_
 
 Multiple Async task resources.
 

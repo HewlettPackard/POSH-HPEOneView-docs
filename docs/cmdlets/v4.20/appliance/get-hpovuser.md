@@ -84,7 +84,7 @@ _**User Account Information**_
 ## Related Links
 
 * [New-HPOVUser](../security/new-hpovuser.md)
-* [Remove-HPOVUser](../security/remove-hpovuser.md)
+* [Remove-HPOVUser]()
 * [Set-HPOVUser](../security/set-hpovuser.md)
 * [Set-HPOVUserPassword](../security/set-hpovuserpassword.md)
 * [Set-HPOVUserRole](../security/set-hpovuserrole.md)

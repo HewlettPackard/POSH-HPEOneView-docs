@@ -132,6 +132,6 @@ The progress of uploading the file to the appliance, and in-progress or completi
 
 * [Get-HPOVBaseline](get-hpovbaseline.md)
 * [Get-HPOVBaselineRepository](get-hpovbaselinerepository.md)
-* [Remove-HPOVBaseline](remove-hpovbaseline.md)
+* [Remove-HPOVBaseline]()
 * [Show-HPOVBaselineRepositorySize](show-hpovbaselinerepositorysize.md)
 

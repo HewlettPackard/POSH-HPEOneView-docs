@@ -186,5 +186,5 @@ A Logical Interconnect Group or collection of Logical Interconnect Groups
 ## Related Links
 
 * [New-HPOVLogicalInterconnectGroup](new-hpovlogicalinterconnectgroup.md)
-* [Remove-HPOVLogicalInterconnectGroup](remove-hpovlogicalinterconnectgroup.md)
+* [Remove-HPOVLogicalInterconnectGroup]()
 

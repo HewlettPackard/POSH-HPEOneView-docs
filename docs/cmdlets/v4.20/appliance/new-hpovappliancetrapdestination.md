@@ -154,5 +154,5 @@ The configured SNMPv3 Trap Destination on the appliance.
 ## Related Links
 
 * [Get-HPOVApplianceTrapDestination](get-hpovappliancetrapdestination.md)
-* [Remove-HPOVApplianceTrapDestination](remove-hpovappliancetrapdestination.md)
+* [Remove-HPOVApplianceTrapDestination]()
 

@@ -182,6 +182,6 @@ Multiple Storage Systems
 
 * [Add-HPOVStorageSystem](add-hpovstoragesystem.md)
 * [Remove-HPOVStorageSystem](remove-hpovstoragesystem.md)
-* [Show-HPOVStorageSystemPerformancePolicy](show-hpovstoragesystemperformancepolicy.md)
+* [Show-HPOVStorageSystemPerformancePolicy]()
 * [Update-HPOVStorageSystem](update-hpovstoragesystem.md)
 

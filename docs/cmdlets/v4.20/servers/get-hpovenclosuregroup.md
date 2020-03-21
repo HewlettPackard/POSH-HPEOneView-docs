@@ -108,5 +108,5 @@ The matching enclosure group resources.
 
 * [New-HPOVEnclosureGroup](new-hpovenclosuregroup.md)
 * [Remove-HPOVEnclosureGroup](remove-hpovenclosuregroup.md)
-* [Set-HPOVEnclosureGroup](set-hpovenclosuregroup.md)
+* [Set-HPOVEnclosureGroup]()
 

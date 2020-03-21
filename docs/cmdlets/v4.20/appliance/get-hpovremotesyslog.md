@@ -76,6 +76,6 @@ Collection of Appliance Syslog settings
 ## Related Links
 
 * [Disable-HPOVRemoteSyslog](disable-hpovremotesyslog.md)
-* [Enable-HPOVRemoteSyslog](enable-hpovremotesyslog.md)
-* [Set-HPOVRemoteSyslog](set-hpovremotesyslog.md)
+* [Enable-HPOVRemoteSyslog]()
+* [Set-HPOVRemoteSyslog]()
 

@@ -110,6 +110,6 @@ Returns an async task resource to monitor.
 
 * [Add-HPOVStorageSystem](add-hpovstoragesystem.md)
 * [Get-HPOVStorageSystem](get-hpovstoragesystem.md)
-* [Show-HPOVStorageSystemPerformancePolicy](show-hpovstoragesystemperformancepolicy.md)
+* [Show-HPOVStorageSystemPerformancePolicy]()
 * [Update-HPOVStorageSystem](update-hpovstoragesystem.md)
 

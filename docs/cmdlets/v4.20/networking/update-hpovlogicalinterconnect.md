@@ -209,6 +209,6 @@ Description   | Description Name of difference
 * [Get-HPOVLogicalInterconnectPortMonitoring](get-hpovlogicalinterconnectportmonitoring.md)
 * [Install-HPOVLogicalInterconnectFirmware](install-hpovlogicalinterconnectfirmware.md)
 * [New-HPOVLogicalInterconnectGroup](new-hpovlogicalinterconnectgroup.md)
-* [Remove-HPOVLogicalInterconnectGroup](remove-hpovlogicalinterconnectgroup.md)
+* [Remove-HPOVLogicalInterconnectGroup]()
 * [Show-HPOVLogicalInterconnectMacTable](show-hpovlogicalinterconnectmactable.md)
 

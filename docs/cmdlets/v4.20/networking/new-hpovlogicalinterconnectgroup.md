@@ -531,5 +531,5 @@ Logical Interconnect Group creation async task
 ## Related Links
 
 * [Get-HPOVLogicalInterconnectGroup](get-hpovlogicalinterconnectgroup.md)
-* [Remove-HPOVLogicalInterconnectGroup](remove-hpovlogicalinterconnectgroup.md)
+* [Remove-HPOVLogicalInterconnectGroup]()
 

@@ -103,5 +103,5 @@ The License resource just added to the apliance
 ## Related Links
 
 * [Get-HPOVLicense](get-hpovlicense.md)
-* [Remove-HPOVLicense](remove-hpovlicense.md)
+* [Remove-HPOVLicense]()
 

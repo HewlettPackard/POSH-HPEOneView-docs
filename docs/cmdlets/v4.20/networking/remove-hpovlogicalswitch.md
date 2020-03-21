@@ -115,7 +115,7 @@ _**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObjec
 
 The async task resource object to monitor \(if `-Async` was used\) or results.
 
-_**System.Collections.ArrayList**_ 
+_**System.Collections.ArrayList**_
 
 Collection of remove Logical Switch async task resources.
 

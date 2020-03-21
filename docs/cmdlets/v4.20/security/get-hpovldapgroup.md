@@ -116,7 +116,7 @@ Multiple configured Directory Group role mappings
 ## Related Links
 
 * [New-HPOVLdapGroup](new-hpovldapgroup.md)
-* [Remove-HPOVLdapGroup](remove-hpovldapgroup.md)
+* [Remove-HPOVLdapGroup]()
 * [Set-HPOVLdapGroupRole](set-hpovldapgrouprole.md)
 * [Show-HPOVLdapGroups](show-hpovldapgroups.md)
 

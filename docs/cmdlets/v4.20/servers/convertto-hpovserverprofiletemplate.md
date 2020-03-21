@@ -124,7 +124,7 @@ Asyncronous task of the Server Profile Template creation request.
 * [Convert-HPOVServerProfileTemplate](convert-hpovserverprofiletemplate.md)
 * [Get-HPOVServerProfileTemplate](get-hpovserverprofiletemplate.md)
 * [New-HPOVServerProfileTemplate](new-hpovserverprofiletemplate.md)
-* [Remove-HPOVServerProfileTemplate](remove-hpovserverprofiletemplate.md)
-* [Save-HPOVServerProfileTemplate](save-hpovserverprofiletemplate.md)
-* [Set-HPOVServerProfileTemplate](set-hpovserverprofiletemplate.md)
+* [Remove-HPOVServerProfileTemplate]()
+* [Save-HPOVServerProfileTemplate]()
+* [Set-HPOVServerProfileTemplate]()
 

@@ -109,5 +109,5 @@ Multiple Authentication Directory settings objects
 ## Related Links
 
 * [New-HPOVLdapDirectory](new-hpovldapdirectory.md)
-* [Remove-HPOVLdapDirectory](remove-hpovldapdirectory.md)
+* [Remove-HPOVLdapDirectory]()
 

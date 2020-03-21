@@ -103,6 +103,6 @@ Multiple async tasks
 
 ## Related Links
 
-* [Get-HPOVStorageVolumeSnapShot](get-hpovstoragevolumesnapshot.md)
-* [Remove-HPOVStorageVolumeSnapshot](remove-hpovstoragevolumesnapshot.md)
+* [Get-HPOVStorageVolumeSnapShot]()
+* [Remove-HPOVStorageVolumeSnapshot]()
 

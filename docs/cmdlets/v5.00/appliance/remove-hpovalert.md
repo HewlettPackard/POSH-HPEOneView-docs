@@ -86,7 +86,7 @@ Status object indicating the resource was removed.
 
 ## Related Links
 
-* [Clear-HPOVAlert](../../v4.20/appliance/clear-hpovalert.md)
+* [Clear-HPOVAlert](clear-hpovalert.md)
 * [Get-HPOVAlert](get-hpovalert.md)
 * [Set-HPOVAlert](set-hpovalert.md)
 

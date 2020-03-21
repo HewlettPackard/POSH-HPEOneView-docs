@@ -2,8 +2,6 @@
 description: Initiate a connection to an HPE OneView appliance.
 ---
 
-[//]: # (This is a test comment to see if Gitbook.io does or does not render this text.)
-
 # Connect-HPOVMgmt
 
 ## Syntax
@@ -37,9 +35,15 @@ Connect-HPOVMgmt
 
 ## Description
 
-Establish a connection with the specified HPE OneView appliance. Logs the user into the appliance and establishes a session for use with subsequent requests. Prompts will be displayed for any omitted values.
+This Cmdlet establishes a connection to the specified HPE OneView or HPE Synergy Composer appliance. When the connection is successful, the user establishes a session for use with subsequent Cmdlet requests. The effective user permissions are established on the first connection. Please refer to [`about_appliance_connection_permissions`](../../../about/about_appliance_connection_permissions.md) and [`about_appliance_connections`](../../../about/about_appliance_connections.md) for more information about initiating multiple appliance connections.
 
 Appliance hostname or IP can include an alternate TCP port number. While the appliance does not allow the default TCP port 443 to be changed, the appliance could reside behind a firewall, which is redirecting an alternate TCP port number.
+
+If the appliance is configured to Common Access Card \(CAC\) authentication, the -Certificate parameter is required. If the CAC requires a PIN to unlock, the user will be prompted by the credential service to provide that value. The Cmdlet does not offer the ability to retrieve or store the CAC PIN.
+
+{% hint style="info" %}
+Minimum required privileges: Read-only.
+{% endhint %}
 
 ## Examples
 

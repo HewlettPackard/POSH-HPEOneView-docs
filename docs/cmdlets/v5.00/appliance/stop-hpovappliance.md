@@ -144,6 +144,6 @@ Generated error message
 * [Set-HPOVApplianceTwoFactorAuthentication](set-hpovappliancetwofactorauthentication.md)
 * [Show-HPOVApplianceSecurityModeCompatibilityReport](show-hpovappliancesecuritymodecompatibilityreport.md)
 * [Test-HPOVApplianceAuditLogForwarding](test-hpovapplianceauditlogforwarding.md)
-* [Update-HPOVApplianceTrustedAuthorityCrl](../../v4.20/appliance/update-hpovappliancetrustedauthoritycrl.md)
+* [Update-HPOVApplianceTrustedAuthorityCrl](update-hpovappliancetrustedauthoritycrl.md)
 * [Wait-HPOVApplianceStart](../library/wait-hpovappliancestart.md)
 

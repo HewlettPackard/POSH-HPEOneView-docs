@@ -207,7 +207,7 @@ Newly created rack.
 * [Get-HPOVRackManager](../servers/get-hpovrackmanager.md)
 * [Get-HPOVRackMember](get-hpovrackmember.md)
 * [Remove-HPOVRack]()
-* [Remove-HPOVRackManager](../servers/remove-hpovrackmanager.md)
+* [Remove-HPOVRackManager]()
 * [Remove-HPOVRackMember](remove-hpovrackmember.md)
 * [Set-HPOVRackMemberLocation]()
 * [Update-HPOVRackManager](../servers/update-hpovrackmanager.md)

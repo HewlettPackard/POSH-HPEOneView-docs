@@ -81,7 +81,7 @@ Collection of Appliance Async Task objects to monitor.
 
 ## Related Links
 
-* [Enable-HPOVRemoteSyslog](enable-hpovremotesyslog.md)
+* [Enable-HPOVRemoteSyslog]()
 * [Get-HPOVRemoteSyslog](get-hpovremotesyslog.md)
-* [Set-HPOVRemoteSyslog](set-hpovremotesyslog.md)
+* [Set-HPOVRemoteSyslog]()
 

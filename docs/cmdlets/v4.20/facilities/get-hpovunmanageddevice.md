@@ -100,5 +100,5 @@ Multiple Unmanaged Device resource objects
 ## Related Links
 
 * [New-HPOVUnmanagedDevice](new-hpovunmanageddevice.md)
-* [Remove-HPOVUnmanagedDevice](remove-hpovunmanageddevice.md)
+* [Remove-HPOVUnmanagedDevice]()
 

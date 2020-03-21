@@ -61,7 +61,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Storage.StoragePool**_
 
-One or more storage pool resources from [`Get-HPOVStoragePool`](get-hpovstoragepool.md).
+One or more storage pool resources from [`Get-HPOVStoragePool`]().
 
 ## Return Values
 
@@ -72,7 +72,7 @@ Asyncronous task resource to monitor.
 ## Related Links
 
 * [Add-HPOVStoragePool](add-hpovstoragepool.md)
-* [Get-HPOVStoragePool](get-hpovstoragepool.md)
-* [Remove-HPOVStoragePool](remove-hpovstoragepool.md)
-* [Set-HPOVStoragePool](set-hpovstoragepool.md)
+* [Get-HPOVStoragePool]()
+* [Remove-HPOVStoragePool]()
+* [Set-HPOVStoragePool]()
 

@@ -102,9 +102,9 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Related Links
 
-* [Add-HPOVClusterNodeToCluster](add-hpovclusternodetocluster.md)
+* [Add-HPOVClusterNodeToCluster]()
 * [Enter-HPOVClusterNodeMaintenanceMode](enter-hpovclusternodemaintenancemode.md)
 * [Exit-HPOVClusterNodeMaintenanceMode](exit-hpovclusternodemaintenancemode.md)
 * [Get-HPOVClusterNode](get-hpovclusternode.md)
-* [Update-HPOVClusterNode](update-hpovclusternode.md)
+* [Update-HPOVClusterNode]()
 

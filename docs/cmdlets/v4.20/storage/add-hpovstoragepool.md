@@ -101,8 +101,8 @@ _**Async Task\(s\) to monitor storage pool import.**_
 
 ## Related Links
 
-* [Get-HPOVStoragePool](get-hpovstoragepool.md)
-* [Remove-HPOVStoragePool](remove-hpovstoragepool.md)
-* [Set-HPOVStoragePool](set-hpovstoragepool.md)
+* [Get-HPOVStoragePool]()
+* [Remove-HPOVStoragePool]()
+* [Set-HPOVStoragePool]()
 * [Update-HPOVStoragePool](update-hpovstoragepool.md)
 

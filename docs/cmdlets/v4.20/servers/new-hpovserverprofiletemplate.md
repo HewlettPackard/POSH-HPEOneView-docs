@@ -935,7 +935,7 @@ When using the `-PassThru` parameter, the created server profile template object
 * [Convert-HPOVServerProfileTemplate](convert-hpovserverprofiletemplate.md)
 * [ConvertTo-HPOVServerProfileTemplate](convertto-hpovserverprofiletemplate.md)
 * [Get-HPOVServerProfileTemplate](get-hpovserverprofiletemplate.md)
-* [Remove-HPOVServerProfileTemplate](remove-hpovserverprofiletemplate.md)
-* [Save-HPOVServerProfileTemplate](save-hpovserverprofiletemplate.md)
-* [Set-HPOVServerProfileTemplate](set-hpovserverprofiletemplate.md)
+* [Remove-HPOVServerProfileTemplate]()
+* [Save-HPOVServerProfileTemplate]()
+* [Set-HPOVServerProfileTemplate]()
 

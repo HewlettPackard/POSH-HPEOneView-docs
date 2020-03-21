@@ -54,9 +54,9 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 * [New-HPOVServerProfileLogicalDiskController](new-hpovserverprofilelogicaldiskcontroller.md)
 * [New-HPOVServerProfileTemplate](new-hpovserverprofiletemplate.md)
 * [Remove-HPOVServerProfile](remove-hpovserverprofile.md)
-* [Remove-HPOVServerProfileTemplate](remove-hpovserverprofiletemplate.md)
+* [Remove-HPOVServerProfileTemplate]()
 * [Save-HPOVServerProfile](save-hpovserverprofile.md)
-* [Save-HPOVServerProfileTemplate](save-hpovserverprofiletemplate.md)
-* [Set-HPOVServerProfileTemplate](set-hpovserverprofiletemplate.md)
+* [Save-HPOVServerProfileTemplate]()
+* [Set-HPOVServerProfileTemplate]()
 * [Update-HPOVServerProfile](update-hpovserverprofile.md)
 

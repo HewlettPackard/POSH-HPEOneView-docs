@@ -278,7 +278,7 @@ HPE OneView alert.
 
 ## Related Links
 
-* [Clear-HPOVAlert](../../v4.20/appliance/clear-hpovalert.md)
+* [Clear-HPOVAlert](clear-hpovalert.md)
 * [Remove-HPOVAlert](remove-hpovalert.md)
 * [Set-HPOVAlert](set-hpovalert.md)
 

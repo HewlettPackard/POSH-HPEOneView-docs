@@ -156,5 +156,5 @@ Newly created Unmanaged Device resource
 ## Related Links
 
 * [Get-HPOVUnmanagedDevice](get-hpovunmanageddevice.md)
-* [Remove-HPOVUnmanagedDevice](remove-hpovunmanageddevice.md)
+* [Remove-HPOVUnmanagedDevice]()
 

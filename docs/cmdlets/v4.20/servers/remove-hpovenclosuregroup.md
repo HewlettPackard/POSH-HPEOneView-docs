@@ -127,5 +127,5 @@ A PSCustomObject is returned indicating successful removal of the resource
 
 * [Get-HPOVEnclosureGroup](get-hpovenclosuregroup.md)
 * [New-HPOVEnclosureGroup](new-hpovenclosuregroup.md)
-* [Set-HPOVEnclosureGroup](set-hpovenclosuregroup.md)
+* [Set-HPOVEnclosureGroup]()
 

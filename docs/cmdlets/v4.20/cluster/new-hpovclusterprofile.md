@@ -611,5 +611,5 @@ Asyncronous task resource to monitor.
 * [Get-HPOVClusterProfile](get-hpovclusterprofile.md)
 * [New-HPOVClusterProfileMember](new-hpovclusterprofilemember.md)
 * [Remove-HPOVClusterProfile](remove-hpovclusterprofile.md)
-* [Update-HPOVClusterProfile](update-hpovclusterprofile.md)
+* [Update-HPOVClusterProfile]()
 

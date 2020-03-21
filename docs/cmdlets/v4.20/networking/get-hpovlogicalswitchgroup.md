@@ -147,5 +147,5 @@ Collection of Logical Switch Group resources.
 ## Related Links
 
 * [New-HPOVLogicalSwitchGroup](new-hpovlogicalswitchgroup.md)
-* [Remove-HPOVLogicalSwitchGroup](remove-hpovlogicalswitchgroup.md)
+* [Remove-HPOVLogicalSwitchGroup]()
 

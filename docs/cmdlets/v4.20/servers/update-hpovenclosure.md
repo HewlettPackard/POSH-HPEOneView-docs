@@ -216,10 +216,10 @@ Async task Resource object for monitoring the enclosure import process
 * [Get-HPOVEnclosure](get-hpovenclosure.md)
 * [Get-HPOVEnclosureGroup](get-hpovenclosuregroup.md)
 * [New-HPOVEnclosureGroup](new-hpovenclosuregroup.md)
-* [Remove-HPOVEnclosure](remove-hpovenclosure.md)
+* [Remove-HPOVEnclosure]()
 * [Remove-HPOVEnclosureGroup](remove-hpovenclosuregroup.md)
 * [Reset-HPOVEnclosureDevice](reset-hpovenclosuredevice.md)
-* [Set-HPOVEnclosure](set-hpovenclosure.md)
+* [Set-HPOVEnclosure]()
 * [Set-HPOVEnclosureActiveFLM](set-hpovenclosureactiveflm.md)
-* [Set-HPOVEnclosureGroup](set-hpovenclosuregroup.md)
+* [Set-HPOVEnclosureGroup]()
 

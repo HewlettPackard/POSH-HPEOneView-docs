@@ -115,5 +115,5 @@ Collection of remove Logical Switch async task resources.
 ## Related Links
 
 * [Get-HPOVLogicalSwitchGroup](get-hpovlogicalswitchgroup.md)
-* [Remove-HPOVLogicalSwitchGroup](remove-hpovlogicalswitchgroup.md)
+* [Remove-HPOVLogicalSwitchGroup]()
 

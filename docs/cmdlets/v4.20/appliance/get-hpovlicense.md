@@ -118,5 +118,5 @@ HPE OneView License
 ## Related Links
 
 * [New-HPOVLicense](new-hpovlicense.md)
-* [Remove-HPOVLicense](remove-hpovlicense.md)
+* [Remove-HPOVLicense]()
 

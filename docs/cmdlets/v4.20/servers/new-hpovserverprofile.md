@@ -1151,10 +1151,10 @@ If successful returns a task resource which may be polled to follow the progress
 * [New-HPOVServerProfileLogicalDiskController](new-hpovserverprofilelogicaldiskcontroller.md)
 * [New-HPOVServerProfileTemplate](new-hpovserverprofiletemplate.md)
 * [Remove-HPOVServerProfile](remove-hpovserverprofile.md)
-* [Remove-HPOVServerProfileTemplate](remove-hpovserverprofiletemplate.md)
+* [Remove-HPOVServerProfileTemplate]()
 * [Save-HPOVServerProfile](save-hpovserverprofile.md)
-* [Save-HPOVServerProfileTemplate](save-hpovserverprofiletemplate.md)
+* [Save-HPOVServerProfileTemplate]()
 * [Set-HPOVServerProfile](set-hpovserverprofile.md)
-* [Set-HPOVServerProfileTemplate](set-hpovserverprofiletemplate.md)
+* [Set-HPOVServerProfileTemplate]()
 * [Update-HPOVServerProfile](update-hpovserverprofile.md)
 

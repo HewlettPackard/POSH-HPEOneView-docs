@@ -1,112 +1,105 @@
-﻿---
-description: Remove existing resource(s).
+---
+description: Remove existing resource.
 ---
 
 # Remove-HPOVResource
 
-## Syntax
+## HPE OneView 5.00 Library
+
+### Syntax
 
 ```text
-Remove-HPOVResource
-    [-InputObject] <Object>
-    [-ApplianceConnection] <Object>
-    [-force]
-    [<CommonParameters>]
+Remove-HPOVResource [-InputObject] <Object> [[-ApplianceConnection] <Object>] [[-Force] <SwitchParameter>] [<CommonParameters>]
 ```
 
-## Description
+### Description
 
-Removes a resource identified by either the resource uri or a resource object.  Remove-HPOVResource can be called with either -nameOrUri or -resource.  
+Removes a resource identified by either the resource uri or a resource object. Remove-HPOVResource can be called with either -nameOrUri or -resource.
 
-	*** This Cmdlet will not prompt for delete confirmation. Please use with caution. ***
+{% hint style="danger" %}
+This cmdlet will not prompt for delete confirmation. Please use with caution.
+{% endhint %}
 
-## Examples
+### Parameters
 
-###  Example 1 
+#### -ApplianceConnection &lt;Object&gt;
 
-```text
-Remove-HPOVResource -Resource "/rest/resource/1234-5678-9123"
-```
+Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the `ApplianceConnection` property of the object will be used.
 
-Removes the resource specified by the URI.
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | false |
+| Position? | 1 |
+| Default value | \(${Global:ConnectedSessions} \| ? Default\) |
+| Accept pipeline input? | true \(ByPropertyName\) |
+| Accept wildcard characters? | False |
 
-###  Example 2 
-
-```text
-Remove-HPOVResource -nameOrUri "ServerProfile-A"
-```
-
-Removes the resource named "ServerProfile-A".  If multiple resources exist with the name "ServerProfile-A", an error is returned.
-
-###  Example 3 
-
-```text
-$MyResourceObject = send-hpovrequest "/rest/resource/1234-5678-9123"
-Remove-HPOVResource -Resource $MyResourceObject
-```
-
-Removes the resource $MyReSourceObject.
-
-## Parameters
-
-### -InputObject &lt;Object&gt;
+#### -InputObject &lt;Object&gt;
 
 A resource to be deleted. Value can be either resource object, Name or URI.
 
 | Aliases | ro, nameOruri, uri, name, Resource |
 | :--- | :--- |
-| Required? | True |
-| Position? | Named |
+| Required? | true |
+| Position? | 0 |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
-### -force &lt;SwitchParameter&gt;
+#### -Force &lt;SwitchParameter&gt;
 
-Invoke switch `force-delete` the resource when OneView can no longer communicate with the resource and removal is needed.  `-Force` is not a PowerShell option, rather an HPE OneView API feature.  This does not override the `-Confirm` PowerShell option. Not all resources support `force-delete`.
+Invoke switch force-delete the resource when OneView can no longer communicate with the resource and removal is needed. -Force is not a PowerShell option, rather an HPE OneView API feature. This does not override the -Confirm PowerShell option. Not all resources support force-delete.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
-| Position? | Named |
+| Required? | false |
+| Position? | named |
 | Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;Object&gt;
-
-Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value | (${Global:ConnectedSessions} | ? Default) |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
-
-### &lt;CommonParameters&gt;
+&lt;CommonParameters&gt;
 
 This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer, PipelineVariable, and OutVariable. For more information, see about\_CommonParameters \([http://go.microsoft.com/fwlink/?LinkID=113216](http://go.microsoft.com/fwlink/?LinkID=113216)\)
 
-## Input Types
+### Input Types
 
 _**System.Management.Automation.PSCustomObject**_
 
-A valid resource object first retrieved by a call to a Get-HPOV*** Cmdlet
+A valid resource object first retrieved by a call to a Get-HPOV_\*_ cmdlet
 
-## Return Values
+### Return Values
 
 _**System.Management.Automation.PSCustomObject**_
 
 Removal async task
 
-## Related Links
+### Examples
 
-* [Add-HPOVResourceToLabel](../facilities/add-hpovresourcetolabel.md)
-* [Add-HPOVResourceToRack](../facilities/add-hpovresourcetorack.md)
-* [Add-HPOVResourceToScope](../appliance/add-hpovresourcetoscope.md)
+```text
+ -------------------------- EXAMPLE 1 --------------------------
+Remove-HPOVResource -Resource "/rest/resource/1234-5678-9123"
+```
+
+Removes the resource specified by the URI.
+
+```text
+ -------------------------- EXAMPLE 2 --------------------------
+Remove-HPOVResource -nameOrUri "ServerProfile-A"
+```
+
+Removes the resource named `ServerProfile-A`. If multiple resources exist with the name `ServerProfile-A`, an error is returned.
+
+```text
+ -------------------------- EXAMPLE 3 --------------------------
+$MyResourceObject = send-hpovrequest "/rest/resource/1234-5678-9123"
+Remove-HPOVResource -Resource $MyResourceObject
+```
+
+Removes the resource `$MyReSourceObject`.
+
+### Related Links
+
 * [New-HPOVResource](new-hpovresource.md)
-* [Remove-HPOVResourceFromLabel](../appliance/remove-hpovresourcefromlabel.md)
-* [Remove-HPOVResourceFromScope](../appliance/remove-hpovresourcefromscope.md)
 * [Set-HPOVResource](set-hpovresource.md)
+

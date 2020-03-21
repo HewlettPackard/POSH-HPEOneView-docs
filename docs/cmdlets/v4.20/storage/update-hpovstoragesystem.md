@@ -90,5 +90,5 @@ Multiple Update Storage System async task objects
 * [Add-HPOVStorageSystem](add-hpovstoragesystem.md)
 * [Get-HPOVStorageSystem](get-hpovstoragesystem.md)
 * [Remove-HPOVStorageSystem](remove-hpovstoragesystem.md)
-* [Show-HPOVStorageSystemPerformancePolicy](show-hpovstoragesystemperformancepolicy.md)
+* [Show-HPOVStorageSystemPerformancePolicy]()
 

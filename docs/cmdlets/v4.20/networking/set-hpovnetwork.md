@@ -278,7 +278,7 @@ The Update Network Resource Task object
 * [Get-HPOVNetworkSet](get-hpovnetworkset.md)
 * [New-HPOVNetwork](new-hpovnetwork.md)
 * [New-HPOVNetworkSet](new-hpovnetworkset.md)
-* [Remove-HPOVNetwork](remove-hpovnetwork.md)
+* [Remove-HPOVNetwork]()
 * [Remove-HPOVNetworkSet](remove-hpovnetworkset.md)
-* [Set-HPOVNetworkSet](set-hpovnetworkset.md)
+* [Set-HPOVNetworkSet]()
 

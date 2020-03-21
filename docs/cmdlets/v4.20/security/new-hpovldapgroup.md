@@ -181,7 +181,7 @@ New LDAP Group object with role assignment\(s\)
 ## Related Links
 
 * [Get-HPOVLdapGroup](get-hpovldapgroup.md)
-* [Remove-HPOVLdapGroup](remove-hpovldapgroup.md)
+* [Remove-HPOVLdapGroup]()
 * [Set-HPOVLdapGroupRole](set-hpovldapgrouprole.md)
 * [Show-HPOVLdapGroups](show-hpovldapgroups.md)
 

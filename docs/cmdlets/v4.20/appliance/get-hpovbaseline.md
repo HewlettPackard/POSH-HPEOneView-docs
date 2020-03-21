@@ -168,6 +168,6 @@ _**The firmware-baseline object or collection of firmware-baseline objects if no
 
 * [Add-HPOVBaseline](add-hpovbaseline.md)
 * [Get-HPOVBaselineRepository](get-hpovbaselinerepository.md)
-* [Remove-HPOVBaseline](remove-hpovbaseline.md)
+* [Remove-HPOVBaseline]()
 * [Show-HPOVBaselineRepositorySize](show-hpovbaselinerepositorysize.md)
 

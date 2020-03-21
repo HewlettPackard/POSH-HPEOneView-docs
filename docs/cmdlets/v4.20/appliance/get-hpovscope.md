@@ -116,5 +116,5 @@ Collection of Appliance Scope resource objects.
 ## Related Links
 
 * [New-HPOVScope](new-hpovscope.md)
-* [Remove-HPOVScope](remove-hpovscope.md)
+* [Remove-HPOVScope]()
 

@@ -120,5 +120,5 @@ Appliance trusted certificate authority object.
 ## Related Links
 
 * [Add-HPOVApplianceTrustedCertificate](add-hpovappliancetrustedcertificate.md)
-* [Remove-HPOVApplianceTrustedCertificate](remove-hpovappliancetrustedcertificate.md)
+* [Remove-HPOVApplianceTrustedCertificate]()
 

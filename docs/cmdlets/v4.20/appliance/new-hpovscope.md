@@ -131,5 +131,5 @@ Appliance Scope resource object.
 ## Related Links
 
 * [Get-HPOVScope](get-hpovscope.md)
-* [Remove-HPOVScope](remove-hpovscope.md)
+* [Remove-HPOVScope]()
 

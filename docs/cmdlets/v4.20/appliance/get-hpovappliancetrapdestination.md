@@ -93,5 +93,5 @@ Appliance SNMPv3 trap destination, including type, SNMPv3 user and target.
 ## Related Links
 
 * [New-HPOVApplianceTrapDestination](new-hpovappliancetrapdestination.md)
-* [Remove-HPOVApplianceTrapDestination](remove-hpovappliancetrapdestination.md)
+* [Remove-HPOVApplianceTrapDestination]()
 

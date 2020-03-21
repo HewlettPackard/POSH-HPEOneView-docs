@@ -1,7 +1,5 @@
 # Clear-HPOVAlert
 
----
-
 ### description: \[DEPRECATED\] Clear an Alert status.
 
 ## Clear-HPOVAlert

@@ -75,7 +75,7 @@ _**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObjec
 
 If successful, returns Appliance Async Task object to monitor.
 
-_**System.Collections.ArrayList**_ 
+_**System.Collections.ArrayList**_
 
 Collection of Appliance Async Task objects to monitor.
 

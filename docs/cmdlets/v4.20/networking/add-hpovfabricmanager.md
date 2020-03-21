@@ -171,5 +171,5 @@ Async Task resource to monitor progress.
 ## Related Links
 
 * [Get-HPOVFabricManager](get-hpovfabricmanager.md)
-* [Remove-HPOVFabricManager](remove-hpovfabricmanager.md)
+* [Remove-HPOVFabricManager]()
 

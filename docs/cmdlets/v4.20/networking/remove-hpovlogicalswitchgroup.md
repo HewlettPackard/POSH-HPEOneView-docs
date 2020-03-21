@@ -102,7 +102,7 @@ _**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObjec
 
 The async task resource object results.
 
-_**System.Collections.ArrayList**_ 
+_**System.Collections.ArrayList**_
 
 Collection of remove Logical Switch async task resources.
 

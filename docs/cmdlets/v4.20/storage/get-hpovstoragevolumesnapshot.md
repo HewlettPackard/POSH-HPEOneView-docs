@@ -85,7 +85,7 @@ Storage Volume resource
 
 ## Return Values
 
-_**System.Collections.ArrayList**_ 
+_**System.Collections.ArrayList**_
 
 Multiple storage volume snapshot resources
 

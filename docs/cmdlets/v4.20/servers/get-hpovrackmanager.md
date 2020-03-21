@@ -127,6 +127,6 @@ Rack manager resource object, with associated sub components like managers, chas
 ## Related Links
 
 * [Add-HPOVRackManager](add-hpovrackmanager.md)
-* [Remove-HPOVRackManager](remove-hpovrackmanager.md)
+* [Remove-HPOVRackManager]()
 * [Update-HPOVRackManager](update-hpovrackmanager.md)
 

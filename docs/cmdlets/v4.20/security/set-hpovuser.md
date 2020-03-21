@@ -239,7 +239,7 @@ If successful, returns a user resource
 
 * [Get-HPOVUser](../appliance/get-hpovuser.md)
 * [New-HPOVUser](new-hpovuser.md)
-* [Remove-HPOVUser](remove-hpovuser.md)
+* [Remove-HPOVUser]()
 * [Set-HPOVUserPassword](set-hpovuserpassword.md)
 * [Set-HPOVUserRole](set-hpovuserrole.md)
 * [Show-HPOVUserSession](../appliance/show-hpovusersession.md)
