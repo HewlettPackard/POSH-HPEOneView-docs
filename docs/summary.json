@@ -1,6 +1,6 @@
 ﻿{
     "Table of contents":  {
-                              "Home":  "README.md",
+                              "Introduction":  "README.md",
                               "Verb Mapping":  "verb-mapping.md",
                               "Command Reference":  {
                                                         "dir":  "cmdlets",
