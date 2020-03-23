@@ -1,4 +1,4 @@
----
+﻿---
 description: Create a new Network Set.
 ---
 
@@ -23,7 +23,7 @@ Create a new Network Set and connection type resource.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 New-HPOVNetworkSet -name "Production Networks" -untaggedNetwork yellow -networks blue, green, yellow
@@ -31,7 +31,7 @@ New-HPOVNetworkSet -name "Production Networks" -untaggedNetwork yellow -networks
 
 Create a new Network Set called "Production Networks", adding Ethernet Networks "blue", "green", and "yellow", on all connected appliances.
 
-### Example 2
+###  Example 2 
 
 ```text
 $networks = "blue","green","yellow" | % { Get-HPOVNetwork $_ -type Ethernet }
@@ -40,7 +40,7 @@ New-HPOVNetworkSet -name "Production Networks" -Networks $networks -UntaggedNetw
 
 Get Ethernet Networks "blue", "green", and "yellow", then create a new Network Set, with "Green" as the UntaggedNetowrk for the specified appliance connection.
 
-### Example 3
+###  Example 3 
 
 ```text
 New-HPOVNetworkSet -name "Production Networks" -untaggedNetwork yellow -networks blue, green, yellow -TypicalBandwidth 1000 -MaximumBandwidth 5000
@@ -58,37 +58,37 @@ The name of the new Network Set resource to be created.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Networks &lt;Object&gt;
 
-Ethernet Network Name\(s\), URI\("\)s or Resource Object\(s\).
+Ethernet Network Name(s), URI(")s or Resource Object(s).
 
 | Aliases | networkUris |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -UntaggedNetwork &lt;Object&gt;
 
-Network \(from the above list\) to be considered the "native" network in this set. Traffic on this network will leave the Virtual Connect downlink port untagged. When untagged traffic is received on this port, it will be mapped to this network.
+Network (from the above list) to be considered the "native" network in this set.  Traffic on this network will leave the Virtual Connect downlink port untagged.  When untagged traffic is received on this port, it will be mapped to this network.
 
 | Aliases | untagged, native, untaggedNetworkUri |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -TypicalBandwidth &lt;Int32&gt;
 
-Optional preferred amount of bandwidth to assign, specified in Mbps. Default value is 2500.
+Optional preferred amount of bandwidth to assign, specified in Mbps.  Default value is 2500.
 
 | Aliases | None |
 | :--- | :--- |
@@ -100,7 +100,7 @@ Optional preferred amount of bandwidth to assign, specified in Mbps. Default val
 
 ### -MaximumBandwidth &lt;Int32&gt;
 
-Optional maximum amount of bandwidth to assign, specified in Mbps. Default value is 10000.
+Optional maximum amount of bandwidth to assign, specified in Mbps.  Default value is 10000.
 
 | Aliases | None |
 | :--- | :--- |
@@ -114,13 +114,13 @@ Optional maximum amount of bandwidth to assign, specified in Mbps. Default value
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -128,7 +128,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this Cmdlet.**_
+_**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
@@ -144,5 +144,4 @@ If no bandwidth settings specified, an async task object is returned
 
 * [Get-HPOVNetworkSet](get-hpovnetworkset.md)
 * [Remove-HPOVNetworkSet](remove-hpovnetworkset.md)
-* [Set-HPOVNetworkSet](https://github.com/HewlettPackard/POSH-HPOneView-docs/tree/2c3cd0d508b6cdba6336a27d496637fc71c6ce4c/docs/cmdlets/v5.00/networking/set-hpovnetworkset.md)
-
+* [Set-HPOVNetworkSet](set-hpovnetworkset.md)

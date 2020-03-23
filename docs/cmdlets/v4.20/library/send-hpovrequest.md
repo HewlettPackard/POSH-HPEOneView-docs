@@ -1,4 +1,4 @@
----
+﻿---
 description: Sends a request to the management appliance
 ---
 
@@ -22,21 +22,22 @@ Send-HPOVRequest
 
 ## Description
 
-Receives the request input, properly constructs and formats the request header and body and sends the request to the management appliance. This is the main cmdlet that interacts with the appliance.
+Receives the request input, properly constructs and formats the request header and body and sends the request to the management appliance.  This is the main cmdlet that interacts with the appliance.
 
-The message body can contain valid JSON data, with the correct URI and accepted HTTP method accepted by the target resource manager. Please see the on-appliance Resource Model for more information \([https://\[appliance\_IP\]/help/cic/en/content/images/api/](https://[appliance_IP]/help/cic/en/content/images/api/).\)
+The message body can contain valid JSON data, with the correct URI and accepted HTTP method accepted by the target resource manager.  Please see the on-appliance Resource Model for more information (https://[appliance_IP]/help/cic/en/content/images/api/.)
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Send-HPOVRequest "/rest/enclosures"
+
 ```
 
 Returns all the enclosure objects managed by the appliance.
 
-### Example 2
+###  Example 2 
 
 ```text
 $e = Send-HPOVRequest "/rest/enclosures/SGH2X6J1" -Appliance MyAppliance.domain.com
@@ -56,7 +57,7 @@ The uri that identifies the required resource on the appliance.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -64,11 +65,11 @@ The uri that identifies the required resource on the appliance.
 
 The request HTTP Method.
 
-* "GET" \(default\) to get a resource from the appliance \(read\)
-* "POST" to create a new resource
-* "PUT" to modify a resource \(write\)
-* "PATCH" to modify a resource \(write\), with specific attributes set to values, other attributes should be set to $null.
-* "DELETE" to delete a resource
+    * "GET" (default) to get a resource from the appliance (read)
+    * "POST" to create a new resource
+    * "PUT" to modify a resource (write)
+    * "PATCH" to modify a resource (write), with specific attributes set to values, other attributes should be set to $null.
+    * "DELETE" to delete a resource
 
 | Aliases | None |
 | :--- | :--- |
@@ -80,19 +81,20 @@ The request HTTP Method.
 
 ### -Body &lt;Object&gt;
 
-Body for the request. Required if the method is POST or PUT.
+Body for the request.  Required if the method is POST or PUT.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Start &lt;Int32&gt;
 
-For GETs on resource collections, this specifies the starting index in the collection. If not specified, collection members starting from the beginning are returned.
+For GETs on resource collections, this specifies the starting index in the collection.
+If not specified, collection members starting from the beginning are returned.
 
 | Aliases | None |
 | :--- | :--- |
@@ -104,7 +106,8 @@ For GETs on resource collections, this specifies the starting index in the colle
 
 ### -Count &lt;Int32&gt;
 
-For GETs on resource collections, this specifies the number of collection members to return. If not specified, all members of the collection are returned from this function.
+For GETs on resource collections, this specifies the number of collection members to return.
+If not specified, all members of the collection are returned from this function.
 
 | Aliases | None |
 | :--- | :--- |
@@ -122,19 +125,19 @@ If additional headers are needed/required than the defaults, include header name
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -OverrideContentType &lt;String&gt;
 
-Workaround to override ContentType where needed \(e.g. PATCH /rest/scopes/{GUID}.
+Workaround to override ContentType where needed (e.g. PATCH /rest/scopes/{GUID}.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -146,23 +149,23 @@ Specify to override the HttpWebRequest syncronous timeout being made.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Hostname &lt;Object&gt;
 
-The destination appliance to process the request. When specifying a Value, it must match the HostName attribute of a valid `[HPOneView.Appliance.Connection]` object within the Global $ConnectedSessions variable. If no match is found, or no `[HPOneView.Appliance.Connection]` objects exist, an error will be thrown.
+The destination appliance to process the request.  When specifying a Value, it must match the HostName attribute of a valid `[HPOneView.Appliance.Connection]` object within the Global $ConnectedSessions variable.  If no match is found, or no `[HPOneView.Appliance.Connection]` objects exist, an error will be thrown.
 
 Default Value: All valid Appliance Connections within $Global:ConnectedSessions
 
-| Aliases | Appliance, ApplianceConnection |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance, ApplianceConnection |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -176,35 +179,31 @@ _**None. You cannot pipe objects to this cmdlet.**_
 
 _**System.Collections.ArrayList**_
 
-If collection of resources \(.i.e. GET /rest/ethernet-networks\)
+If collection of resources (.i.e. GET /rest/ethernet-networks)
 
 _**System.Management.Automation.PSCustomObject**_
 
 Single object returned from appliance
-
-```text
- If Async task, a Hashtable is returned with the following contents:
-
-     @{
-         uri = TaskUri;
-         category = "tasks";
-         type = "TaskResourceV2";
-         taskState = "New";
-         resource = @{};
-     }
-```
+ 
+     If Async task, a Hashtable is returned with the following contents:
+ 
+         @{
+             uri = TaskUri;
+             category = "tasks";
+             type = "TaskResourceV2";
+             taskState = "New";
+             resource = @{};
+         }
 
 _**System.Management.Automation.PSCustomObject**_
 
 If no resources are found, a PsCustomObject is returned that contains:
-
-```text
-     @{
-         statusCode = [int]HTTP Status Code;
-         statusMessage = [string]HTTP Status Message;
-         lastCall = [string]URI;
-     }
-```
+ 
+         @{
+             statusCode = [int]HTTP Status Code;
+             statusMessage = [string]HTTP Status Message;
+             lastCall = [string]URI;
+         }
 
 ## Related Links
 

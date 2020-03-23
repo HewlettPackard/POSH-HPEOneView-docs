@@ -1,4 +1,4 @@
----
+﻿---
 description: Modify an existing enclosure group policy.
 ---
 
@@ -24,7 +24,7 @@ Required permissions: Server administrator or Infrastructure administrator
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 $EnclosureGroup = Get-HPOVEnclosureGroup -Name ProdEG1 -ErrorAction Stop Set-HPOVEnclosureGroup -InputObject $EnclosureGroup -Name VirtProdEG1
@@ -32,7 +32,7 @@ $EnclosureGroup = Get-HPOVEnclosureGroup -Name ProdEG1 -ErrorAction Stop Set-HPO
 
 Change the name of the provided enclosure group resource.
 
-### Example 2
+###  Example 2 
 
 ```text
 $UpdatedConfigScript = 'REMOVE USER "admin"
@@ -68,15 +68,15 @@ Update the configuration script of the provided enclosure group.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### -ConfigurationScript &lt;String&gt;
 
@@ -86,7 +86,7 @@ An Onboard Administrator CLI Script. Only applicable for HPE BladeSystem `C-Clas
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -98,8 +98,8 @@ An enclosure group resource from `Get-HPOVEnclosureGroup`.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Default value | `` |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -Name &lt;String&gt;
@@ -110,7 +110,7 @@ Specify a new resource name.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -120,14 +120,14 @@ The Power Redundancy Mode to set when an Enclosure is added to the appliance.
 
 Allowed Values:
 
-* RedundantPowerFeed - Provides N+N Power Redundancy Configuration
-* RedundantPowerSupply - Provided N+1 Power Redundancy Configuration
+    * RedundantPowerFeed - Provides N+N Power Redundancy Configuration
+    * RedundantPowerSupply - Provided N+1 Power Redundancy Configuration
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -137,13 +137,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Servers.EnclosureGroup \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Servers.EnclosureGroup [System.Management.Automation.PSCustomObject]**_
 
 Enclosure group resource from [`Get-HPOVEnclosureGroup`](get-hpovenclosuregroup.md).
 
 ## Return Values
 
-_**HPOneView.Servers.EnclosureGroup \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Servers.EnclosureGroup [System.Management.Automation.PSCustomObject]**_
 
 The updated enclosure group resource.
 
@@ -152,4 +152,3 @@ The updated enclosure group resource.
 * [Get-HPOVEnclosureGroup](get-hpovenclosuregroup.md)
 * [New-HPOVEnclosureGroup](new-hpovenclosuregroup.md)
 * [Remove-HPOVEnclosureGroup](remove-hpovenclosuregroup.md)
-

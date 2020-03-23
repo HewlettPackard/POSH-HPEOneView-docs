@@ -64,7 +64,7 @@ Server Profile Template object to be saved.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 

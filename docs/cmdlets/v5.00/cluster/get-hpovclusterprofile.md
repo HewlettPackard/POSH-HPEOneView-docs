@@ -1,4 +1,4 @@
----
+﻿---
 description: Get a deployed cluster profile.
 ---
 
@@ -16,11 +16,12 @@ Get-HPOVClusterProfile
 
 ## Description
 
-A cluster profile enables you to deploy and manage a cluster of servers \(nodes\) managed by HPE OneView and orchestrates consistent configuration on cluster of server nodes to share the same workload. A cluster profile and the associated server profile template are used to define a consistent configuration from server nodes to members in the cluster. The associated server profiles define physical server configurations for server nodes in the cluster, which are derived from parent cluster profile and its associated server profile template.
+A cluster profile enables you to deploy and manage a cluster of servers (nodes) managed by HPE OneView and orchestrates consistent configuration on cluster of server nodes to share the same workload. A cluster profile and the associated server profile template are used to define a consistent configuration from server nodes to members in the cluster. The associated server profiles define physical server configurations for server nodes in the cluster, which are derived from parent cluster profile and its associated server profile template.
 
 {% hint style="info" %}
 The server profile template must have a configured connection to the hypervisor management network for the template to be valid for use by a hypervisor cluster profile.
 {% endhint %}
+
 
 The cluster profile helps you manage life cycle operations, such as growing or shrinking the cluster, modifying configurations based on needs, consistency checks, and nondisruptive firmware updates on the member nodes. For example, you can grow or shrink a cluster by adding or removing members from the cluster profile. Any change in the configuration of the cluster profile will be reported as an inconsistency. When inconsistencies are remediated, the changed configurations can be applied on cluster and member nodes.
 
@@ -34,7 +35,7 @@ Minimum required privileges: Read only
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVClusterProfile
@@ -42,7 +43,7 @@ Get-HPOVClusterProfile
 
 Get the available and managed cluster profiles.
 
-### Example 2
+###  Example 2 
 
 ```text
 Get-HPOVClusterProfile -NonCompliant
@@ -54,15 +55,15 @@ Get the non compliant and managed cluster profiles.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### -Name &lt;String&gt;
 
@@ -72,7 +73,7 @@ Specify a string value to filter for the specific resource
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -84,7 +85,7 @@ Filter resources based on their `non-compliant` state.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -94,11 +95,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this Cmdlet.**_
+_**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Cluster.ClusterProfile \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Cluster.ClusterProfile [System.Management.Automation.PSCustomObject]**_
 
 The returned cluster profile resource.
 
@@ -107,5 +108,4 @@ The returned cluster profile resource.
 * [New-HPOVClusterProfile](new-hpovclusterprofile.md)
 * [New-HPOVClusterProfileMember](new-hpovclusterprofilemember.md)
 * [Remove-HPOVClusterProfile](remove-hpovclusterprofile.md)
-* [Update-HPOVClusterProfile](https://github.com/HewlettPackard/POSH-HPOneView-docs/tree/2c3cd0d508b6cdba6336a27d496637fc71c6ce4c/docs/cmdlets/v5.00/cluster/update-hpovclusterprofile.md)
-
+* [Update-HPOVClusterProfile](update-hpovclusterprofile.md)

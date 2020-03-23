@@ -1,4 +1,4 @@
----
+﻿---
 description: Create a Server Profile Template
 ---
 
@@ -106,30 +106,30 @@ A Server Profile Template is the parent configuration for a Server Profile insta
 
 A Server Profile Template includes:
 
-* Basic server identification information
-* Connectivity settings for Ethernet networks, network sets, and Fibre Channel networks
-* Firmware versions
-* Local storage settings
-* SAN storage settings
-* BIOS settings
-* Boot order
-* Physical or virtual UUIDs, MAC addresses, and WWN addresses
+    * Basic server identification information
+    * Connectivity settings for Ethernet networks, network sets, and Fibre Channel networks
+    * Firmware versions
+    * Local storage settings
+    * SAN storage settings
+    * BIOS settings
+    * Boot order
+    * Physical or virtual UUIDs, MAC addresses, and WWN addresses
 
-When you create a server profile template, it is designated for a server hardware type and enclosure group \(for server blades\).
-
-To figure out BIOS Settings to override or set within the Server Profile, you will need to get the Server Hardware Type resource that your are modeling the Server Profile for. When retrieving the resource:
-
+When you create a server profile template, it is designated for a server hardware type and enclosure group (for server blades).
+    
+To figure out BIOS Settings to override or set within the Server Profile, you will need to get the Server Hardware Type resource that your are modeling the Server Profile for.  When retrieving the resource:
+    
 $bl460cgen9sht = Get-HPOVServerHardwareType "BL460c Gen9 1"
-
-The "biosSettings" Array property will be available \(only with supported Server Hardware Types; i.e. BL460c Gen8 or newer\). To locate potential BIOS Settings, you can use the following code as an example:
-
-$biosSettings = $bl460cgen9sht.biosSettings \| ? { $\_.name -match "power" }
-
-The code example above will return all matching BIOS Settings where the name contains "power". The found BIOS settings object\(s\) are then saved into $biosSettings. Update the "value" property accordingly, and you can then pass $biosSettings variable to the -biosSettings parameter.
+    
+The "biosSettings" Array property will be available (only with supported Server Hardware Types; i.e. BL460c Gen8 or newer).  To locate potential BIOS Settings, you can use the following code as an example:
+    
+$biosSettings = $bl460cgen9sht.biosSettings | ? { $_.name -match "power" }
+    
+The code example above will return all matching BIOS Settings where the name contains "power".  The found BIOS settings object(s) are then saved into $biosSettings.  Update the "value" property accordingly, and you can then pass $biosSettings variable to the -biosSettings parameter.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 $Name = "HP ProLiant BL460 Gen9 Profile Template"
@@ -148,11 +148,12 @@ $params = @{
 >>}
 >>
 New-HPOVServerProfileTemplate @params | Wait-HPOVTaskComplete
+
 ```
 
 Create a BL Gen8 Server Profile template, and pipe to `Wait-HPOVTaskComplete`.
 
-### Example 2
+###  Example 2 
 
 ```text
 $net41 = Get-HPOVNetwork "Net-41"
@@ -161,11 +162,12 @@ $net42 = Get-HPOVNetwork "Net-42"
 $con42 = New-HPOVServerProfileConnection -network $net42 -connectionType Ethernet -connectionId 2
 $conList = @($con41, $con42)
 $task = New-HPOVServerProfileTemplate -name $Name -serverHardwareType "bl460c Gen8 1" -enclosureGroup "Production Encl Grp1" -connections $conList  | Wait-HPOVTaskComplete
+
 ```
 
 Create a server profile template which includes networks "Net-41" and "Net-42".
 
-### Example 3
+###  Example 3 
 
 ```text
 $profileName = "Hypervisor Cluster Node Template v1.0"
@@ -179,11 +181,12 @@ $con5 = Get-HPOVNetwork "fabric a"  | New-HPOVServerProfileConnection -id 5 -typ
 $con6 = Get-HPOVNetwork "fabric b"  | New-HPOVServerProfileConnection -id 6 -type FibreChannel -bootable -priority Secondary -arrayWWPn "22:12:00:02:AC:00:72:03" -LUN 0
 $conList = $con1, $con2, $con3, $con4, $con5, $con6
 $task = New-HPOVServerProfileTemplate -name $profileName -connections $conList -sht $bl460SHT -eg $enclosuregroup -ManageBoot | Wait-HPOVTaskComplete
+
 ```
 
-Create a new Server Profile template with 6 Connections, 4 Ethernet \(including Network Sets\) and 2 Fibre Channel \(with BfS configured\).
+Create a new Server Profile template with 6 Connections, 4 Ethernet (including Network Sets) and 2 Fibre Channel (with BfS configured).
 
-### Example 4
+###  Example 4 
 
 ```text
 $profileName = "SQL DB Cluster Node Template v1.0"
@@ -217,6 +220,7 @@ $params = @{
 }
 >>    
 New-HPOVServerProfileTemplate @params | Wait-HPOVTaskComplete
+
 ```
 
 Create a BL Gen9 UEFI Server Profile template with Ethernet and FC connections, local storage, SAN Storage and BIOS Settings, then pipe to `Wait-HPOVTaskComplete`.
@@ -231,7 +235,7 @@ The name of the server profile resource to be created.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -243,7 +247,7 @@ Optional description for this server profile template.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -255,13 +259,13 @@ Optional description for created server profiles from this template.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ManageConnections &lt;Boolean&gt;
 
-Use this parameter to specify if Connections should be tracked from the Server Profile Template for compliance. If set to False, the `-Connections` parameter will be ignored, and Connections must be set and managed at the Server Profile.
+Use this parameter to specify if Connections should be tracked from the Server Profile Template for compliance.  If set to False, the `-Connections` parameter will be ignored, and Connections must be set and managed at the Server Profile.
 
 | Aliases | None |
 | :--- | :--- |
@@ -273,30 +277,48 @@ Use this parameter to specify if Connections should be tracked from the Server P
 
 ### -Connections &lt;Array&gt;
 
-The network connections that are to be part of this new server profile. This an array of profile conneciton objects which may be created with "New-HPOVServerProfileConnection".
+The network connections that are to be part of this new server profile.  This an array of profile conneciton objects which may be created with "New-HPOVServerProfileConnection".
 
 Expected Connection Format:
-
-`[System.Collections.ArrayList` \] @\( \[PsCustomObject\]@{ `[System.Int]`id - Connection ID. Valid `1-64`. A 0 value is allowed, but means Auto Connection ID assignment. `[System.String]`function - Ethernet or FibreChannel. `[System.String]`networkUri - URI to the Network resource. `[System.String]`portId - Auto or the specific Port ID. For FlexLOMs, the valid portId prefix will be "Flb", and Mezzanine would be "Mezz". Ex. FlexNIC 1a interface would be "Flb 1:1a" Ex. Mezzanine 2, FlexNIC 2c interface would be "Mezz 2:2c" `[System.Int`32\]requestedMpbs - Requested bandwidth in Mbps. `[System.Collections.Hashtable]`boot - Nested Hashtable @{ `[System.String]`priority - Boot priority for this connection. Can be used with Ethernet or FC connections. Allowed values: NotBootable Primary Secondary `[System.Collections.ArrayList` \]targets - Array of FC boot targets \(only 1 entry is allowed\) @\( `[System.String]`arrayWwpn - Target WWPN of storage array. `[System.String]`lun - Boot LUN ID
-
-```text
-                )
-        }
-    `[System.String]`macType - Allowed values:
-                                Physical
-                                UserDefined
-                                Virtual
-    `[System.String]`mac      - UserDefined MAC Address. Required for custom MAC and FCoE WWPN addresses.
-    `[System.String]`wwpnType - Allowed values:
-                                Physical
-                                UserDefined
-                                Virtual
-    `[System.String]`wwpn     - UserDefined WWPN Address
-    `[System.String]`wwnn     - UserDefined WWNN Address
-}
-```
-
-\)
+                    
+`[System.Collections.ArrayList` ] @(
+    [PsCustomObject]@{
+        `[System.Int]`id                     - Connection ID. Valid `1-64`. A 0 value is allowed,
+                                                but means Auto Connection ID assignment.
+        `[System.String]`function            - Ethernet or FibreChannel.
+        `[System.String]`networkUri          - URI to the Network resource.
+        `[System.String]`portId              - Auto or the specific Port ID. For FlexLOMs, the valid
+                                                portId prefix will be "Flb", and Mezzanine would be "Mezz".
+                                                Ex. FlexNIC 1a interface would be "Flb 1:1a"
+                                                Ex. Mezzanine 2, FlexNIC 2c interface would be "Mezz 2:2c"
+        `[System.Int`32]requestedMpbs        - Requested bandwidth in Mbps.
+        `[System.Collections.Hashtable]`boot - Nested Hashtable
+            @{
+                `[System.String]`priority    - Boot priority for this connection. Can be used with Ethernet
+                                                or FC connections.  Allowed values:
+                                                NotBootable
+                                                Primary
+                                                Secondary
+                `[System.Collections.ArrayList` ]targets      - Array of FC boot targets (only 1 entry is allowed)
+                    @(
+                        `[System.String]`arrayWwpn - Target WWPN of storage array.
+                        `[System.String]`lun       - Boot LUN ID
+                                        
+                    )
+            }
+        `[System.String]`macType - Allowed values:
+                                    Physical
+                                    UserDefined
+                                    Virtual
+        `[System.String]`mac      - UserDefined MAC Address. Required for custom MAC and FCoE WWPN addresses.
+        `[System.String]`wwpnType - Allowed values:
+                                    Physical
+                                    UserDefined
+                                    Virtual
+        `[System.String]`wwpn     - UserDefined WWPN Address
+        `[System.String]`wwnn     - UserDefined WWNN Address
+    }
+)
 
 Default: No connections
 
@@ -310,13 +332,13 @@ Default: No connections
 
 ### -EnclosureGroup &lt;Object&gt;
 
-The Enclosure Group resource the Server Profile Template will be bound to. When assigning to an Enclosure Group, OneView will then determine what farbic connectivity and storage devices are available.
+The Enclosure Group resource the Server Profile Template will be bound to.  When assigning to an Enclosure Group, OneView will then determine what farbic connectivity and storage devices are available.
 
 | Aliases | eg |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -328,13 +350,13 @@ The Server Hardware Type reource the Server Profile Template will be bound to.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Firmware &lt;SwitchParameter&gt;
 
-Enable Firmware Management. Cannot be enabled with Server Hardware Type does not support Firmware Management \(i.e. BL G7 servers.\)
+Enable Firmware Management.  Cannot be enabled with Server Hardware Type does not support Firmware Management (i.e. BL G7 servers.)
 
 | Aliases | None |
 | :--- | :--- |
@@ -346,23 +368,23 @@ Enable Firmware Management. Cannot be enabled with Server Hardware Type does not
 
 ### -Baseline &lt;Object&gt;
 
-Firmware baseline to assign. Can be either Baseline Name or URI.
+Firmware baseline to assign.  Can be either Baseline Name or URI.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -FirmwareInstallMode &lt;String&gt;
 
-Specify the Firmware Baseline Policy mode. Avialable options are:
+Specify the Firmware Baseline Policy mode.  Avialable options are:
 
-* FirmwareOnly - Updates the system firmware without powering down the server hardware using using HP Smart Update Tools. 
-* FirmwareAndSoftware - Updates the firmware and OS drivers without powering down the server hardware using HP Smart Update Tools.
-* FirmwareOffline - Manages the firmware through HPE OneView. Selecting this option requires the server hardware to be powered down.
+    * FirmwareOnly - Updates the system firmware without powering down the server hardware using using HP Smart Update Tools. 
+    * FirmwareAndSoftware - Updates the firmware and OS drivers without powering down the server hardware using HP Smart Update Tools.
+    * FirmwareOffline - Manages the firmware through HPE OneView. Selecting this option requires the server hardware to be powered down.
 
 | Aliases | FirmwareMode |
 | :--- | :--- |
@@ -374,7 +396,7 @@ Specify the Firmware Baseline Policy mode. Avialable options are:
 
 ### -ForceInstallFirmware &lt;SwitchParameter&gt;
 
-Using this parameter will force the bundled firmware components to install when the Server Profile is applied to a server. This will downgrade firmware if the component firmware is newer than what the SPP Baseline contains.
+Using this parameter will force the bundled firmware components to install when the Server Profile is applied to a server.  This will downgrade firmware if the component firmware is newer than what the SPP Baseline contains.
 
 | Aliases | None |
 | :--- | :--- |
@@ -386,11 +408,11 @@ Using this parameter will force the bundled firmware components to install when 
 
 ### -FirmwareActivationMode &lt;String&gt;
 
-Specify the firmware activation policy. Avialable options are:
+Specify the firmware activation policy.  Avialable options are:
 
-* Immediate - Immediately activate \(aka reboot the host\) firmware if needed.  Requires HPSUT to be installed in the Host OS or Proxy VM \(for VMware only\)
-* Scheduled - Specify a future time to activate \(aka reboot the host\) firmware if needed.  You will need to specify the FirmwareActivateDateTime parameter.  Requires HPSUT to be installed in the Host OS or Proxy VM \(for VMware only\)
-* NotScheduled - Scheduled firmware update is cancelled when you choose this option.
+    * Immediate - Immediately activate (aka reboot the host) firmware if needed.  Requires HPSUT to be installed in the Host OS or Proxy VM (for VMware only)
+    * Scheduled - Specify a future time to activate (aka reboot the host) firmware if needed.  You will need to specify the FirmwareActivateDateTime parameter.  Requires HPSUT to be installed in the Host OS or Proxy VM (for VMware only)
+    * NotScheduled - Scheduled firmware update is cancelled when you choose this option.
 
 | Aliases | None |
 | :--- | :--- |
@@ -402,7 +424,8 @@ Specify the firmware activation policy. Avialable options are:
 
 ### -Bios &lt;SwitchParameter&gt;
 
-Enable BIOS Settings Management. Cannot be enabled with Server Hardware Type does not support BIOS Management \(i.e. BL G7 servers.\)
+Enable BIOS Settings Management.  Cannot be enabled with Server Hardware Type does not support BIOS Management (i.e. BL G7 
+servers.)
 
 | Aliases | None |
 | :--- | :--- |
@@ -414,7 +437,7 @@ Enable BIOS Settings Management. Cannot be enabled with Server Hardware Type doe
 
 ### -BiosSettings &lt;Array&gt;
 
-BIOS Settings that are to be managed. You can get the BIOS settings available from `Get-HPOVServerHarwareType` and the returned biosSettings property.
+BIOS Settings that are to be managed.  You can get the BIOS settings available from `Get-HPOVServerHarwareType` and the returned biosSettings property.
 
 | Aliases | None |
 | :--- | :--- |
@@ -430,18 +453,18 @@ Specify the Gen9 Boot Envrionment.
 
 Sets the boot mode as one of the following:
 
-* UEFI
-* UEFIOptimized
-* BIOS
-* Unmanaged
+    * UEFI
+    * UEFIOptimized
+    * BIOS
+    * Unmanaged
 
 If you select UEFI or UEFI optimized for an HP ProLiant DL Gen9 rack mount server, the remaining boot setting available is the PXE boot policy.
 
-For the UEFI or UEFI optimized boot mode options, the boot mode choice should be based on the expected OS and required boot features for the server hardware. UEFI optimized boot mode reduces the time the system spends in POST \(Video driver initialization\). In order to select the appropriate boot mode, consider the following:
-
-* If a secure boot is required, the boot mode must be set to UEFI or UEFI optimized .
-* For operating systems that do not support UEFI \(such as DOS, or older versions of Windows and Linux\), the boot mode must be set to BIOS.
-* When booting in UEFI mode, Windows 7, Server 2008, or 2008 R2 should not be set to UEFIOptimized.
+For the UEFI or UEFI optimized boot mode options, the boot mode choice should be based on the expected OS and required boot features for the server hardware. UEFI optimized boot mode reduces the time the system spends in POST (Video driver initialization). In order to select the appropriate boot mode, consider the following:
+    
+    * If a secure boot is required, the boot mode must be set to UEFI or UEFI optimized .
+    * For operating systems that do not support UEFI (such as DOS, or older versions of Windows and Linux), the boot mode must be set to BIOS.
+    * When booting in UEFI mode, Windows 7, Server 2008, or 2008 R2 should not be set to UEFIOptimized.
 
 Default: BIOS
 
@@ -461,21 +484,21 @@ Specify if secure boot should be Unmanaged, Enabled or Disabled for Gen10 and ne
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -PxeBootPolicy &lt;String&gt;
 
-Controls the ordering of the network modes available to the Flexible LOM \(FLB\); for example, IPv4 and IPv6.
+Controls the ordering of the network modes available to the Flexible LOM (FLB); for example, IPv4 and IPv6.
 
 Select from the following policies:
 
-* Auto
-* IPv4 only
-* IPv6 only
-* IPv4 then IPv6
-* IPv6 then IPv4
+    * Auto
+    * IPv4 only
+    * IPv6 only
+    * IPv4 then IPv6
+    * IPv6 then IPv4
 
 Setting the policy to Auto means the order of the existing network boot targets in the UEFI Boot Order list will not be modified, and any new network boot targets will be added to the end of the list using the System ROM"s default policy.
 
@@ -491,7 +514,7 @@ Default: Auto
 
 ### -ManageBoot &lt;SwitchParameter&gt;
 
-Enable Boot Order Management. Also required for Connection boot enablement. If this is disabled \($False\), then PXE or FC BfS settings are disabled within the entire Server Profile.
+Enable Boot Order Management.  Also required for Connection boot enablement.  If this is disabled ($False), then PXE or FC BfS settings are disabled within the entire Server Profile.
 
 Default: $True
 
@@ -506,10 +529,12 @@ Default: $True
 ### -BootOrder &lt;Array&gt;
 
 Boot Order settings to be managed.
-
+          
 Defines the order in which boot will be attempted on the available devices. For Gen7 and Gen8 server hardware the possible values are "CD", "Floppy", "USB", "HardDisk", and "PXE". For Gen9 BL server hardware in Legacy BIOS boot mode, the possible values are "CD", "USB", "HardDisk", and "PXE". For Gen9 BL server hardware in UEFI or UEFI Optimized boot mode, only one value is allowed and must be either "HardDisk" or "PXE". For Gen9 DL server hardware in Legacy BIOS boot mode, the possible values are "CD", "USB", "HardDisk", and "PXE". For Gen9 DL server hardware in UEFI or UEFI Optimized boot mode, boot order configuration is not supported.
 
-Gen7/8 BIOS Default Boot Order: "CD","Floppy","USB","HardDisk","PXE" Gen9 Legacy BIOS Boot Order: "CD","USB","HardDisk","PXE" Gen9 UEFI Default Boot Order: "HardDisk"
+Gen7/8 BIOS Default Boot Order: "CD","Floppy","USB","HardDisk","PXE"
+Gen9 Legacy BIOS Boot Order: "CD","USB","HardDisk","PXE"
+Gen9 UEFI Default Boot Order: "HardDisk"
 
 | Aliases | None |
 | :--- | :--- |
@@ -539,25 +564,25 @@ The HPE Synergy Image Streamer OS deployment plan from `Get-HPOVOSDeploymentPlan
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -OSDeploymentPlanAttributes &lt;Array&gt;
 
-Configured OS Deployment Plan parameters from `Get-HPOVOSDeploymentPlanAttribute`. You will need to group required NIC parameters together based on needed values.
+Configured OS Deployment Plan parameters from `Get-HPOVOSDeploymentPlanAttribute`.  You will need to group required NIC parameters together based on needed values.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Initialize &lt;SwitchParameter&gt;
 
-Deprecated. Please refer to the `New-HPOVServerProfileLogicalDisk` and `New-HPOVServerProfileLogicalDiskController` Cmdlets.
+Deprecated.  Please refer to the `New-HPOVServerProfileLogicalDisk` and `New-HPOVServerProfileLogicalDiskController` Cmdlets.
 
 | Aliases |  |
 | :--- | :--- |
@@ -569,7 +594,7 @@ Deprecated. Please refer to the `New-HPOVServerProfileLogicalDisk` and `New-HPOV
 
 ### -ControllerMode &lt;String&gt;
 
-Deprecated. Please refer to the `New-HPOVServerProfileLogicalDisk` and `New-HPOVServerProfileLogicalDiskController` Cmdlets.
+Deprecated.  Please refer to the `New-HPOVServerProfileLogicalDisk` and `New-HPOVServerProfileLogicalDiskController` Cmdlets.
 
 | Aliases |  |
 | :--- | :--- |
@@ -581,19 +606,19 @@ Deprecated. Please refer to the `New-HPOVServerProfileLogicalDisk` and `New-HPOV
 
 ### -StorageController &lt;Object&gt;
 
-A resource object containing the StorageController, LogicalDisk or SasJbod configuration. Please refer to the `New-HPOVServerProfileLogicalDisk` and `New-HPOVServerProfileLogicalDiskController` Cmdlets.
+A resource object containing the StorageController, LogicalDisk or SasJbod configuration.  Please refer to the `New-HPOVServerProfileLogicalDisk` and `New-HPOVServerProfileLogicalDiskController` Cmdlets.
 
 | Aliases | LogicalDisk |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SANStorage &lt;SwitchParameter&gt;
 
-Optional. Enable SAN Storage Management within the Server Profile.
+Optional.  Enable SAN Storage Management within the Server Profile.
 
 | Aliases | None |
 | :--- | :--- |
@@ -605,61 +630,77 @@ Optional. Enable SAN Storage Management within the Server Profile.
 
 ### -HostOStype &lt;String&gt;
 
-Optional. Specify the Host OS type, which will set the Host OS value when HPE OneView created the Host object on the Storage System. Accepted values:
+Optional. Specify the Host OS type, which will set the Host OS value when HPE OneView created the Host object on the Storage System.  Accepted values:
 
-* CitrixXen = "Citrix Xen Server 5.x/6.x"
-* AIX       = "AIX"
-* IBMVIO    = "IBM VIO Server"
-* RHEL4     = "RHE Linux \(Pre RHEL 5\)"
-* RHEL3     = "RHE Linux \(Pre RHEL 5\)"
-* RHEL      = "RHE Linux \(5.x, 6.x\)"
-* RHEV      = "RHE Virtualization \(5.x, 6.x\)"
-* VMware    = "ESX 4.x/5.x"
-* Win2k3    = "Windows 2003"
-* Win2k8    = "Windows 2008/2008 R2"
-* Win2k12   = "Windows 2012 / WS2012 R2"
-* OpenVMS   = "OpenVMS"
-* Egenera   = "Egenera"
-* Exanet    = "Exanet"
-* Solaris9  = "Solaris 9/10"
-* Solaris10 = "Solaris 9/10"
-* Solaris11 = "Solaris 11"
-* ONTAP     = "NetApp/ONTAP"
-* OEL       = "OE Linux UEK \(5.x, 6.x\)"
-* HPUX11iv1 = "HP-UX \(11i v1, 11i v2\)"
-* HPUX11iv2 = "HP-UX \(11i v1, 11i v2\)"
-* HPUX11iv3 = "HP-UX \(11i v3\)"
-* SUSE      = "SuSE \(10.x, 11.x\)"
-* SUSE9     = "SuSE Linux \(Pre SLES 10\)"
-* Inform    = "InForm"
+    * CitrixXen = "Citrix Xen Server 5.x/6.x"
+    * AIX       = "AIX"
+    * IBMVIO    = "IBM VIO Server"
+    * RHEL4     = "RHE Linux (Pre RHEL 5)"
+    * RHEL3     = "RHE Linux (Pre RHEL 5)"
+    * RHEL      = "RHE Linux (5.x, 6.x)"
+    * RHEV      = "RHE Virtualization (5.x, 6.x)"
+    * VMware    = "ESX 4.x/5.x"
+    * Win2k3    = "Windows 2003"
+    * Win2k8    = "Windows 2008/2008 R2"
+    * Win2k12   = "Windows 2012 / WS2012 R2"
+    * OpenVMS   = "OpenVMS"
+    * Egenera   = "Egenera"
+    * Exanet    = "Exanet"
+    * Solaris9  = "Solaris 9/10"
+    * Solaris10 = "Solaris 9/10"
+    * Solaris11 = "Solaris 11"
+    * ONTAP     = "NetApp/ONTAP"
+    * OEL       = "OE Linux UEK (5.x, 6.x)"
+    * HPUX11iv1 = "HP-UX (11i v1, 11i v2)"
+    * HPUX11iv2 = "HP-UX (11i v1, 11i v2)"
+    * HPUX11iv3 = "HP-UX (11i v3)"
+    * SUSE      = "SuSE (10.x, 11.x)"
+    * SUSE9     = "SuSE Linux (Pre SLES 10)"
+    * Inform    = "InForm"
 
 | Aliases | OS |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -StorageVolume &lt;Object&gt;
 
-Optional. Array of Storage Volume resources to attach. Can be created by using the `New-HPOVServerProfileAttachVolume` cmdlet. This parameter does not accept a Storage Volume resource from the `Get-HPOVStorageVolume` cmdlet.
+Optional. Array of Storage Volume resources to attach.  Can be created by using the `New-HPOVServerProfileAttachVolume` cmdlet.  This parameter does not accept a Storage Volume resource from the `Get-HPOVStorageVolume` cmdlet.
 
 The format of the Storage Volume resource should be a PsCustomObject PowerShell resource with the following keys and values:
 
-\[PsCustomObject\]@{ `[System.Int]`id - Valid Host LUN ID `0-254` `[System.String]`lunType - Auto or Manual `[System.String]`volumeUri - URI to Storage Volume that has been created and not assigned to another Server Profile if it is a Private Volume. `[System.String]`volumeStoragePoolUri - URI to HPE OneView managed Storage Pool `[System.String]`volumeStorageSystemUri - URI to HPE OneView managed Storage System `[System.Collections.ArrayList` \]storagePaths - Array specifying the Profile FC Connection ID associated with the path to the attached volume, and if the path is enabled or disabled. @\( `[System.Int]`connectionId - FC Connection ID. If using `New-HPOVServerProfileAttachVolume` helper cmdlet, `New-HPOVServerProfile` will automatically determine the FC connection ID. `[System.Boolean]`isEnabled - Enable or disable the path \) }
+[PsCustomObject]@{
+    `[System.Int]`id                        - Valid Host LUN ID `0-254`
+    `[System.String]`lunType                - Auto or Manual
+    `[System.String]`volumeUri              - URI to Storage Volume that has been created and not
+                                            assigned to another Server Profile if it is a Private Volume.
+    `[System.String]`volumeStoragePoolUri   - URI to HPE OneView managed Storage Pool
+    `[System.String]`volumeStorageSystemUri - URI to HPE OneView managed Storage System
+    `[System.Collections.ArrayList` ]storagePaths            - Array specifying the Profile FC Connection ID associated
+                                            with the path to the attached volume, and if the path is
+                                            enabled or disabled.
+        @(
+            `[System.Int]`connectionId      - FC Connection ID.  If using `New-HPOVServerProfileAttachVolume` helper
+                                            cmdlet, `New-HPOVServerProfile` will automatically determine the FC
+                                            connection ID.
+            `[System.Boolean]`isEnabled     - Enable or disable the path
+        )
+}
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -EvenPathDisabled &lt;SwitchParameter&gt;
 
-Enable to disable even paths in the attached storage volume\(s\).
+Enable to disable even paths in the attached storage volume(s).
 
 | Aliases | Even |
 | :--- | :--- |
@@ -671,7 +712,7 @@ Enable to disable even paths in the attached storage volume\(s\).
 
 ### -OddPathDisabled &lt;SwitchParameter&gt;
 
-Enable to disable odd paths in the attached storage volume\(s\).
+Enable to disable odd paths in the attached storage volume(s).
 
 | Aliases | Odd |
 | :--- | :--- |
@@ -685,7 +726,7 @@ Enable to disable odd paths in the attached storage volume\(s\).
 
 In a server profile, the Affinity control sets the `remove-and`-replace behavior for blade servers. If you apply a server profile to a blade server and the server is subsequently removed from the device bay, the Affinity setting controls whether the server profile is reapplied when you insert a server blade into the empty bay. Server profiles for rack servers do not have affinity.
 
-Accepted values are either "Bay" or "BayAndServer". Default is "Bay".
+Accepted values are either "Bay" or "BayAndServer".  Default is "Bay".
 
 | Aliases | None |
 | :--- | :--- |
@@ -697,7 +738,7 @@ Accepted values are either "Bay" or "BayAndServer". Default is "Bay".
 
 ### -MacAssignment &lt;String&gt;
 
-Optional setting for MAC address assignment. May be Virtual or Physical. Use Virtual if you need to specify a UserDefined value when using the `New-HPOVServerProfileConnection` helper CMDLET.
+Optional setting for MAC address assignment.  May be Virtual or Physical.  Use Virtual if you need to specify a UserDefined value when using the `New-HPOVServerProfileConnection` helper CMDLET.
 
 | Aliases | None |
 | :--- | :--- |
@@ -709,7 +750,7 @@ Optional setting for MAC address assignment. May be Virtual or Physical. Use Vir
 
 ### -WwnAssignment &lt;String&gt;
 
-Optional setting for WWN assignment. May be Virtual or Physical. Use Virtual if you need to specify a UserDefined value when using the `New-HPOVServerProfileConnection` helper CMDLET.
+Optional setting for WWN assignment.  May be Virtual or Physical.  Use Virtual if you need to specify a UserDefined value when using the `New-HPOVServerProfileConnection` helper CMDLET.
 
 | Aliases | None |
 | :--- | :--- |
@@ -721,7 +762,7 @@ Optional setting for WWN assignment. May be Virtual or Physical. Use Virtual if 
 
 ### -SnAssignment &lt;String&gt;
 
-Optional setting for serial number and UUID assignment. May be Virtual, Physical or UserDefined.
+Optional setting for serial number and UUID assignment.  May be Virtual, Physical or UserDefined.
 
 Default: Virtual serial number and UUID assignment
 
@@ -737,9 +778,9 @@ Default: Virtual serial number and UUID assignment
 
 This setting provides the ability to hide unused FlexNICs from the operating system.
 
-If Hide Unused FlexNICs is set to $True \(default/enabled\), FlexNICs that do not map to any server profile connections are not presented to the operating system. For example, if you have a full complement of eight FlexNICs defined in your server profile but map only four, your operating system will see only the four mapped FlexNICs instead of eight.
+If Hide Unused FlexNICs is set to $True (default/enabled), FlexNICs that do not map to any server profile connections are not presented to the operating system. For example, if you have a full complement of eight FlexNICs defined in your server profile but map only four, your operating system will see only the four mapped FlexNICs instead of eight.
 
-If Hide Unused FlexNICs is set to $False \(disabled\), eight FlexNICs are enumerated in the operating system as network interfaces for each `Flex-10` or FlexFabric adapter.
+If Hide Unused FlexNICs is set to $False (disabled), eight FlexNICs are enumerated in the operating system as network interfaces for each `Flex-10` or FlexFabric adapter.
 
 Configuring Fibre Channel connections on a FlexFabric adapter can enumerate two storage interfaces, reducing the number of network interfaces to six.
 
@@ -757,7 +798,7 @@ By default, Hide Unused FlexNICs is enabled. This setting can be changed only wh
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
@@ -771,29 +812,30 @@ Use this parameter to immediately return the async task. By default, the Cmdlet 
 
 The name of the appliance or list of appliances to execute the command against.
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### -PassThru &lt;SwitchParameter&gt;
 
-Use this parameter to return the modified Server Profile Template object. In order to save the changes, please use the `Save-HPOVServerProfileTemplate` Cmdlet.
+Use this parameter to return the modified Server Profile Template object.  In order to save the changes, please use the `Save-HPOVServerProfileTemplate` Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -IscsiInitiatorNameAssignmet &lt;string&gt;
 
-Specify if the iSCSI initiator name should be automatically managed and assigned, or a custom value should be used. Allowed values:  _Virtual_  UserDefined Default Value: Virtual
+Specify if the iSCSI initiator name should be automatically managed and assigned, or a custom value  should be used.  Allowed values:     * Virtual     * UserDefined 
+Default Value: Virtual
 
 | Aliases | None |
 | :--- | :--- |
@@ -805,108 +847,108 @@ Specify if the iSCSI initiator name should be automatically managed and assigned
 
 ### -BiosConsistencyChecking &lt;string&gt;
 
-Use to override the consistency checking for the policy. Allowed values:
+Use to override the consistency checking for the policy.  Allowed values:
 
-* Exact
-* None
+    * Exact
+    * None
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -BootModeConsistencyChecking &lt;string&gt;
 
-Use to override the consistency checking for the policy. Allowed values:
+Use to override the consistency checking for the policy.  Allowed values:
 
-* Exact
-* None
+    * Exact
+    * None
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ConnectionsConsistencyChecking &lt;string&gt;
 
-Use to override the consistency checking for the policy. Allowed values:
+Use to override the consistency checking for the policy.  Allowed values:
 
-* Exact
-* Minimum
-* None
+    * Exact
+    * Minimum
+    * None
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -FirmwareConsistencyChecking &lt;string&gt;
 
-Use to override the consistency checking for the policy. Allowed values:
+Use to override the consistency checking for the policy.  Allowed values:
 
-* Exact
-* None
+    * Exact
+    * None
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -LocalStorageConsistencyChecking &lt;string&gt;
 
-Use to override the consistency checking for the policy. Allowed values:
+Use to override the consistency checking for the policy.  Allowed values:
 
-* Exact
-* None
+    * Exact
+    * None
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -OSDeploymentConsistencyChecking &lt;string&gt;
 
-Use to override the consistency checking for the policy. Allowed values:
+Use to override the consistency checking for the policy.  Allowed values:
 
-* Exact
-* None
+    * Exact
+    * None
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SANStorageConsistencyChecking &lt;string&gt;
 
-Use to override the consistency checking for the policy. Allowed values:
+Use to override the consistency checking for the policy.  Allowed values:
 
-* Exact
-* Minimum
-* None
+    * Exact
+    * Minimum
+    * None
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -922,11 +964,11 @@ The full path to the Server Profile JSON export file
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
-If successful returns a task resource which may be polled to follow the progress of the profile creation. Otherwise, a request validation error will be returned
+If successful returns a task resource which may be polled to follow the progress of the profile creation.  Otherwise, a request validation error will be returned
 
-_**HPOneVIew.ServerProfileTemplate \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneVIew.ServerProfileTemplate [System.Management.Automation.PSCustomObject]**_
 
 When using the `-PassThru` parameter, the created server profile template object is returned.
 
@@ -938,4 +980,3 @@ When using the `-PassThru` parameter, the created server profile template object
 * [Remove-HPOVServerProfileTemplate](remove-hpovserverprofiletemplate.md)
 * [Save-HPOVServerProfileTemplate](save-hpovserverprofiletemplate.md)
 * [Set-HPOVServerProfileTemplate](set-hpovserverprofiletemplate.md)
-

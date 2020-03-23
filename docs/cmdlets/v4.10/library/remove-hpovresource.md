@@ -1,4 +1,4 @@
----
+﻿---
 description: Remove existing resource(s).
 ---
 
@@ -13,35 +13,37 @@ Remove-HPOVResource
 
 ## Description
 
-Removes a resource identified by either the resource uri or a resource object. Remove-HPOVResource can be called with either -nameOrUri or -resource.
+Removes a resource identified by either the resource uri or a resource object.  Remove-HPOVResource can be called with either -nameOrUri or -resource.  
 
-```text
-*** This cmdlet will not prompt for delete confirmation. Please use with caution. ***
-```
+	*** This cmdlet will not prompt for delete confirmation. Please use with caution. ***
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Remove-HPOVResource -Resource "/rest/resource/1234-5678-9123"
+
 ```
 
 Removes the resource specified by the URI.
 
-### Example 2
+###  Example 2 
 
 ```text
 Remove-HPOVResource -nameOrUri "ServerProfile-A"
+
 ```
 
-Removes the resource named "ServerProfile-A". If multiple resources exist with the name "ServerProfile-A", an error is returned.
+Removes the resource named "ServerProfile-A".  If multiple resources exist with the name "ServerProfile-A", an error is returned.
 
-### Example 3
+###  Example 3 
 
 ```text
 $MyResourceObject = send-hpovrequest "/rest/resource/1234-5678-9123"
 Remove-HPOVResource -Resource $MyResourceObject
+
+
 ```
 
 Removes the resource $MyReSourceObject.
@@ -50,19 +52,20 @@ Removes the resource $MyReSourceObject.
 
 ### -InputObject &lt;Object&gt;
 
-Aliases \[-ro, `-name`, `-uri`, `-nameOruri`\] A resource to be deleted. Value can be either resource object, Name or URI.
+Aliases [-ro, `-name`, `-uri`, `-nameOruri`]
+A resource to be deleted. Value can be either resource object, Name or URI.
 
 | Aliases | ro, nameOruri, uri, name, Resource |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Default value | `` |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -force &lt;SwitchParameter&gt;
 
-Invoke switch `force-delete` the resource when OneView can no longer communicate with the resource and removal is needed. `-Force` is not a PowerShell option, rather an HPE OneView API feature. This does not override the `-Confirm` PowerShell option. Not all resources support `force-delete`.
+Invoke switch `force-delete` the resource when OneView can no longer communicate with the resource and removal is needed.  `-Force` is not a PowerShell option, rather an HPE OneView API feature.  This does not override the `-Confirm` PowerShell option. Not all resources support `force-delete`.
 
 | Aliases | None |
 | :--- | :--- |
@@ -74,19 +77,19 @@ Invoke switch `force-delete` the resource when OneView can no longer communicate
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases \[-Appliance\]
+Aliases [-Appliance]
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-Default Value: ${Global:ConnectedSessions} \| ? Default
+Default Value: ${Global:ConnectedSessions} | ? Default
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -96,7 +99,8 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**System.Management.Automation.PSCustomObject**_
 
-A valid resource object first retrieved by a call to a Get-HPOV_\*_ cmdlet
+A valid resource object first retrieved by a call to a Get-HPOV*** cmdlet
+
 
 ## Return Values
 
@@ -113,4 +117,3 @@ Removal async task
 * [Remove-HPOVResourceFromLabel](../appliance/remove-hpovresourcefromlabel.md)
 * [Remove-HPOVResourceFromScope](../appliance/remove-hpovresourcefromscope.md)
 * [Set-HPOVResource](set-hpovresource.md)
-

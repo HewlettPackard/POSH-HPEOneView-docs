@@ -1,4 +1,4 @@
----
+﻿---
 description: Retrieve Logical Switch Group resources.
 ---
 
@@ -25,11 +25,13 @@ Get-HPOVLogicalSwitchGroup
 
 ## Description
 
-The logical switch group is a template for creating logical switches. Logical switches are an aggregation of up to two physical top-of-rack switches. Once constructed from a logical switch group, a logical switch continues to be associated with its logical switch group. Any change in consistency between the logical switch group and its associated logical switches is monitored and made visible on the associated logical switch screen in HPE OneView. This Cmdlet will retrieve the specified or all Logical Switch Group resources.
+The logical switch group is a template for creating logical switches. Logical switches are an aggregation of up to two physical top-of-rack switches.
+ Once constructed from a logical switch group, a logical switch continues to be associated with its logical switch group. Any change in consistency between the logical switch group and its associated logical switches is monitored and made visible on the associated logical switch screen in HPE OneView.
+ This Cmdlet will retrieve the specified or all Logical Switch Group resources. 
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVLogicalSwitchGroup
@@ -37,7 +39,7 @@ Get-HPOVLogicalSwitchGroup
 
 Get all logical switch group resources found on the default appliance connection.
 
-### Example 2
+###  Example 2 
 
 ```text
 Get-HPOVLogicalSwitchGroup -Name "My Logical Switch Group Policy 1"
@@ -55,30 +57,30 @@ The Async task object after a Logical Switch Group resource is created, the Cmdl
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Default value | `` |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -Name &lt;String&gt;
 
-The Logical Switch Group resource Name. Supports the \* wildcard character.
+The Logical Switch Group resource Name.  Supports the * wildcard character.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Scope &lt;Object&gt;
 
-Filter resources based on provided Scope membership. By default, all resources for the accounts Active Permissions will be displayed. Allowed values:
+Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-* AllResources
-* AllResourcesInScope
-* `[HPOneView.Appliance.ScopeCollection]`
-* `[HPOneView.Appliance.ConnectionPermission]`
+    * AllResources
+    * AllResourcesInScope
+    * `[HPOneView.Appliance.ScopeCollection]`
+    * `[HPOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
@@ -102,27 +104,27 @@ Specify the label associated with resources.
 
 ### -ExportFile &lt;SwitchParameter&gt;
 
-Export the Logical Switch Group resource\(s\) to the specified JSON file.
+Export the Logical Switch Group resource(s) to the specified JSON file.
 
 | Aliases | x, export |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -130,17 +132,17 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task resource after a Logical Switch Group has been created.
 
 ## Return Values
 
-_**HPOneView.Networking.LogicalSwitchGroup \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Networking.LogicalSwitchGroup [System.Management.Automation.PSCustomObject]**_
 
-The async task resource object to monitor \(if `-Async` was used\) or results.
+The async task resource object to monitor (if `-Async` was used) or results.
 
-_**System.Collections.ArrayList**_ 
+_**System.Collections.ArrayList <HPOneView.Networking.LogicalSwitchGroup>**_
 
 Collection of Logical Switch Group resources.
 
@@ -148,4 +150,3 @@ Collection of Logical Switch Group resources.
 
 * [New-HPOVLogicalSwitchGroup](new-hpovlogicalswitchgroup.md)
 * [Remove-HPOVLogicalSwitchGroup](remove-hpovlogicalswitchgroup.md)
-

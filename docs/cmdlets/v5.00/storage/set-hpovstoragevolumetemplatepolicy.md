@@ -1,4 +1,4 @@
----
+﻿---
 description: Set Storage Volume Template Global Policy
 ---
 
@@ -22,11 +22,11 @@ Set-HPOVStorageVolumeTemplatePolicy
 
 ## Description
 
-By default, Storage Volumes can be created without reference to a Storage Volume Template. This Cmdlet will allow the administrator to change the global policy setting. Use with caution, as this will prevent copying Server Profiles that contain attached Storage Volumes.
+By default, Storage Volumes can be created without reference to a Storage Volume Template.  This Cmdlet will allow the administrator to change the global policy setting.  Use with caution, as this will prevent copying Server Profiles that contain attached Storage Volumes.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVStorageVolumeTemplatePolicy
@@ -72,17 +72,17 @@ Switch to disable the policy
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-Default Value: ${Global:ConnectSessions} \| ? Default
+Default Value: ${Global:ConnectSessions} | ? Default
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -90,7 +90,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this Cmdlet.**_
+_**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
@@ -101,4 +101,3 @@ Returned boolean value after changing policy
 ## Related Links
 
 * [Get-HPOVStorageVolumeTemplatePolicy](get-hpovstoragevolumetemplatepolicy.md)
-

@@ -1,4 +1,4 @@
----
+﻿---
 description: Refresh or reconnect a rack manager resource.
 ---
 
@@ -33,11 +33,11 @@ Update-HPOVRackManager
 
 ## Description
 
-A rack manager platform is a multinode system. The nodes are housed within a rack or across racks, and are centrally managed by a management controller. The Rack Managers screen enables you to manage and visualize the physical location of rack manager platforms within a rack. This Cmdlet will perform a refresh of the claimed rack manager. If there is a communication issue, the -Hostname and -Crednetial parameters will need to be provided, which will then re-establish communication to the rack manager. Minimum required privileges: Infrastructure administrator or Server administrator.
+A rack manager platform is a multinode system. The nodes are housed within a rack or across racks, and are centrally managed by a management controller. The Rack Managers screen enables you to manage and visualize the physical location of rack manager platforms within a rack. This Cmdlet will perform a refresh of the claimed rack manager.  If there is a communication issue, the -Hostname and -Crednetial parameters will need to be provided, which will then re-establish communication to the rack manager. Minimum required privileges: Infrastructure administrator or Server administrator. 
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVRackManager -Name rackmanager1.domain.com -ErrorAction Stop | Update-HPOVRackManager
@@ -45,7 +45,7 @@ Get-HPOVRackManager -Name rackmanager1.domain.com -ErrorAction Stop | Update-HPO
 
 Refresh the specified rack manager resource.
 
-### Example 2
+###  Example 2 
 
 ```text
 $RackManager = Get-HPOVRackManager -Name rackmanager1.domain.com -ErrorAction Stop $Credential = Get-Credential Administrator -Message "Password"     $RefreshParams = @{ InputObject = $RackManager} 
@@ -59,19 +59,19 @@ Refresh the specified rack manager resource, and provide the credentials to rest
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
@@ -89,13 +89,14 @@ Use this parameter if you want to provide a PSCredential object instead.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Force &lt;SwitchParameter&gt;
 
-**WARNING** Please use with caution. Using this parameter will force delete a resource for any reason and cannot be undone.
+****WARNING****
+Please use with caution.  Using this parameter will force delete a resource for any reason and cannot be undone.
 
 Force update the resource.
 
@@ -103,7 +104,7 @@ Force update the resource.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -115,11 +116,11 @@ The FQDN or IP Address of the rack manager.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -InputObject &lt;HPOneView.Servers.RackManager\[\]&gt;
+### -InputObject &lt;HPOneView.Servers.RackManager[]&gt;
 
 The `[HPOneView.Servers.RackManager]` resource to refresh.
 
@@ -127,8 +128,8 @@ The `[HPOneView.Servers.RackManager]` resource to refresh.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Default value | `` |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
@@ -143,7 +144,7 @@ The rack manager resource from [`Get-HPOVRackManager`](get-hpovrackmanager.md).
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task Resource object for configuring port monitoring on the requested logical intercinnect.
 
@@ -151,5 +152,4 @@ Async task Resource object for configuring port monitoring on the requested logi
 
 * [Add-HPOVRackManager](add-hpovrackmanager.md)
 * [Get-HPOVRackManager](get-hpovrackmanager.md)
-* [Remove-HPOVRackManager](https://github.com/HewlettPackard/POSH-HPOneView-docs/tree/2c3cd0d508b6cdba6336a27d496637fc71c6ce4c/docs/cmdlets/v5.00/servers/remove-hpovrackmanager.md)
-
+* [Remove-HPOVRackManager](remove-hpovrackmanager.md)

@@ -1,4 +1,4 @@
----
+﻿---
 description: Attach an existing server profile to a server profile template
 ---
 
@@ -20,7 +20,7 @@ Binds a server profile resource to the provided server profile template
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Join-HPOVServerProfileToTemplate -template "MyTemplate" -profile "MyProfile" -appliance hpOneView.contoso.com
@@ -28,7 +28,7 @@ Join-HPOVServerProfileToTemplate -template "MyTemplate" -profile "MyProfile" -ap
 
 Attaches the server profile template named MyTemplate to the server profile name MyProfile on the OneView appliance `[hpOneView.contoso.com]`
 
-### Example 2
+###  Example 2 
 
 ```text
 $p = Get-HPOVServerProfile "myProfile"
@@ -47,8 +47,8 @@ A server profile template name, URI, or resource object
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Default value | `` |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -ServerProfile &lt;Object&gt;
@@ -59,7 +59,7 @@ A server profile name, URI, or resource object
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -72,26 +72,30 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If
 | Required? | True |
 | Position? | Named |
 | Default value | `$Global:ConnectedSessions` |
-| Accept pipeline input? | true \(ByPropertyName\) |
+| Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
 ### -WhatIf &lt;SwitchParameter&gt;
+
+
 
 | Aliases |  |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
 
+
+
 | Aliases |  |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
@@ -101,17 +105,17 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.ServerProfile \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.ServerProfile [System.Management.Automation.PSCustomObject]**_
 
 A PSCustom object representing a server profile template resource retrieved from the HPE OneView appliance
 
 ## Return Values
 
-_**System.Collections.ArrayList**_
+_**System.Collections.ArrayList<HPOneView.Appliance.TaskResource>**_
 
 Collection of task resource objects
 
-_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 An HPE OneView task resource object
 

@@ -1,4 +1,4 @@
----
+﻿---
 description: Create a Logical Enclosure.
 ---
 
@@ -29,7 +29,7 @@ Use this Cmdlet to define a new Logical Enclosure that will include multiple Syn
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 $EG = Get-HPOVEnclosureGroup -Name "Prod Synergy EG 1"
@@ -48,20 +48,20 @@ A name for the new Logical Enclosure.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Enclosure &lt;Object&gt;
 
-One of the connected Frames. The Interlink Topology will be discovered to include the other Frame members.
+One of the connected Frames.  The Interlink Topology will be discovered to include the other Frame members.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Default value | `` |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -EnclosureGroup &lt;Object&gt;
@@ -72,7 +72,7 @@ The Enclosure Group resource to deploy the policy from.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -84,7 +84,7 @@ Provide the Firmware Baseline object to use with the Logical Enclosure is being 
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -102,7 +102,7 @@ Specify to force the installation of firmware if the same version is found or if
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
@@ -116,17 +116,17 @@ Use this parameter to immediately return the async task. By default, the Cmdlet 
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
-### -Scope &lt;HPOneView.Appliance.ScopeCollection\[\]&gt;
+### -Scope &lt;HPOneView.Appliance.ScopeCollection[]&gt;
 
-Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with. Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
+Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -142,13 +142,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Enclosure \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Enclosure [System.Management.Automation.PSCustomObject]**_
 
-Single Enclosure \(Synergy Frame\) resource object
+Single Enclosure (Synergy Frame) resource object
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 The async task resource
 
@@ -159,4 +159,3 @@ The async task resource
 * [Set-HPOVLogicalEnclosure](set-hpovlogicalenclosure.md)
 * [Update-HPOVLogicalEnclosure](update-hpovlogicalenclosure.md)
 * [Update-HPOVLogicalEnclosureFirmware](../networking/update-hpovlogicalenclosurefirmware.md)
-

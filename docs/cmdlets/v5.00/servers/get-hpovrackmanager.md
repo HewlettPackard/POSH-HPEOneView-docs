@@ -1,4 +1,4 @@
----
+﻿---
 description: Get claimed rack manage resource.
 ---
 
@@ -21,31 +21,29 @@ A rack manager platform is a multinode system. The nodes are housed within a rac
 
 A rack manager platform consists of the following:
 
-* One or more chassis - The chassis are individual nodes that are used to build logical components such as systems or partitions. Each chassis is a physical container for system components like the compute, storage, or network nodes.
+    * One or more chassis - The chassis are individual nodes that are used to build logical components such as systems or partitions. Each chassis is a physical container for system components like the compute, storage, or network nodes.
 
-  In an HPE Superdome Flex Server, the chassis are 5U nodes that represent the compute nodes with CPU, memory, I/O, power supplies, and fans.
+     In an HPE Superdome Flex Server, the chassis are 5U nodes that represent the compute nodes with CPU, memory, I/O, power supplies, and fans.
 
-* One or more systems or partitions - The system is a logical entity that functions as a server, and runs a single instance of an operating system to host services. In HPE OneView, the partition is modeled as a server hardware resource.
+    * One or more systems or partitions - The system is a logical entity that functions as a server, and runs a single instance of an operating system to host services. In HPE OneView, the partition is modeled as a server hardware resource.
 
-  In an HPE Superdome Flex Server, the systems are also called partitions. A partition consists of one or more compute chassis that are interconnected through an ultra-fast fabric. Each partition starts with a base chassis and can be extended using expansion chassis to form a large system.
+     In an HPE Superdome Flex Server, the systems are also called partitions. A partition consists of one or more compute chassis that are interconnected through an ultra-fast fabric. Each partition starts with a base chassis and can be extended using expansion chassis to form a large system.
 
-* One or more managers - The manager component manages the rack manager platform, and hosts the management controller function. HPE OneView communicates with the rack manager through this management controller enabling system administration, control, and platform management of the rack manager platform. Some platforms have multiple manager components to support redundancy.
+    * One or more managers - The manager component manages the rack manager platform, and hosts the management controller function. HPE OneView communicates with the rack manager through this management controller enabling system administration, control, and platform management of the rack manager platform. Some platforms have multiple manager components to support redundancy.
 
-  In an HPE Superdome Flex Server, the manager component is called the Rack Management Controller \(RMC\). The RMC hosts the DMTF Redfish APIs.
+     In an HPE Superdome Flex Server, the manager component is called the Rack Management Controller (RMC). The RMC hosts the DMTF Redfish APIs.
 
-* One or more racks - The racks physically contain all the rack manager platform components.
+    * One or more racks - The racks physically contain all the rack manager platform components.
 
 This Cmdlet will retrieve available rack managers added to the appliance.
 
 {% hint style="info" %}
 Minimum required privileges: Read-
 {% endhint %}
-
 only
-
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVRackManager
@@ -53,7 +51,7 @@ Get-HPOVRackManager
 
 Get all added rack manager resources.
 
-### Example 2
+###  Example 2 
 
 ```text
 Get-HPOVRackManager -Name manager1.domain.com -ErrorAction Stop
@@ -65,15 +63,15 @@ Get the specified rack manager resource.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### -Label &lt;String&gt;
 
@@ -83,7 +81,7 @@ Specify the label associated with resources.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -95,20 +93,18 @@ Specify a resource name to filter for.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Scope &lt;Object&gt;
 
-Filter resources based on provided Scope membership. By default, all resources for the accounts Active Permissions will be displayed. Allowed values:
+Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-* AllResources
-
-  \*AllResourcesInScope
-
-* `[HPOneView.Appliance.ScopeCollection]`
-* `[HPOneView.Appliance.ConnectionPermission]`
+    * AllResources
+    *AllResourcesInScope
+    * `[HPOneView.Appliance.ScopeCollection]`
+    * `[HPOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
@@ -124,7 +120,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this Cmdlet.**_
+_**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
@@ -135,6 +131,5 @@ Rack manager resource object, with associated sub components like managers, chas
 ## Related Links
 
 * [Add-HPOVRackManager](add-hpovrackmanager.md)
-* [Remove-HPOVRackManager](https://github.com/HewlettPackard/POSH-HPOneView-docs/tree/2c3cd0d508b6cdba6336a27d496637fc71c6ce4c/docs/cmdlets/v5.00/servers/remove-hpovrackmanager.md)
+* [Remove-HPOVRackManager](remove-hpovrackmanager.md)
 * [Update-HPOVRackManager](update-hpovrackmanager.md)
-

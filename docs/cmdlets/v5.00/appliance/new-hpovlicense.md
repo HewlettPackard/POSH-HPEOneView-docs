@@ -1,4 +1,4 @@
----
+﻿---
 description: Install license on the appliance
 ---
 
@@ -26,7 +26,7 @@ This Cmdlet will install licenses on the appliance.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 $license = "FC9E D9MA H9PA GTVZ C7B5 HWWB Y9JL KHPL B89H MZVU DXAU 9CSM GHTG L762 2F25 HJF9 KJVT D5TM EFVW TZNJ FGTM NQ6G 2P2J 9G82 ZJKZ EWLR VW8A Y5A4 N2SK H1MQ XJJL LUQH ZUWD 9ATC NJ79 CEJC 5S86 FC4X EKSZ X4CP XZLU FSXS FKS6 KKCE 4NMU FPN5 N82E Z2RX 3QTM EFQC 29JK 29MC "ORDER_101613 E1Y94A HP_OV_3yr_24x7_Supp_Phys_1_Svr_Lic EONEJTCDT4FJ"_35HZP-CYMTH-W414S-2DGKZ-S6MPH"
@@ -35,7 +35,7 @@ New-HPOVlicense $license
 
 Install license on the appliance connection.
 
-### Example 2
+###  Example 2 
 
 ```text
 New-HPOVlicense -file c:\licenses.txt
@@ -56,8 +56,8 @@ Used for adding license keys one at a time, or if only a single license key need
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Default value | `` |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -File &lt;String&gt;
@@ -68,7 +68,7 @@ A text file with each license key on a new line that will be installed on the ap
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -76,13 +76,13 @@ A text file with each license key on a new line that will be installed on the ap
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -103,5 +103,4 @@ The License resource just added to the apliance
 ## Related Links
 
 * [Get-HPOVLicense](get-hpovlicense.md)
-* [Remove-HPOVLicense](https://github.com/HewlettPackard/POSH-HPOneView-docs/tree/2c3cd0d508b6cdba6336a27d496637fc71c6ce4c/docs/cmdlets/v5.00/appliance/remove-hpovlicense.md)
-
+* [Remove-HPOVLicense](remove-hpovlicense.md)

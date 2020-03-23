@@ -1,4 +1,4 @@
----
+﻿---
 description: Import a power device.
 ---
 
@@ -21,14 +21,15 @@ Add-HPOVPowerDevice
 
 ## Description
 
-Import a power device \(iPDU\) to be managed by an HPE OneView appliance.
+Import a power device (iPDU) to be managed by an HPE OneView appliance.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Add-HPOVPowerDevice ipdu24.example.com admin password
+
 ```
 
 Add the iPDU to the appliance.
@@ -43,15 +44,16 @@ Hostname of the iPDU, either IP Address or FQDN.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Username &lt;String&gt;
 
 {% hint style="warning" %}
-This parameter is being deprecated. Please transition to the `-Credential` parameter.
+This parameter is being deprecated. Please transition to the `-Credential` parameter.
 {% endhint %}
+
 
 Administrator account of the target iPDU.
 
@@ -59,15 +61,16 @@ Administrator account of the target iPDU.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Password &lt;String&gt;
 
 {% hint style="warning" %}
-This parameter is being deprecated. Please transition to the `-Credential` parameter.
+This parameter is being deprecated. Please transition to the `-Credential` parameter.
 {% endhint %}
+
 
 Account password of the iPDU specified.
 
@@ -75,7 +78,7 @@ Account password of the iPDU specified.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -87,13 +90,13 @@ Use this parameter if you want to provide a PSCredential object instead.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -TrustLeaCertificate &lt;SwitchParameter&gt;
 
-When adding an iPDU resource, the SSL certificate may be `self-signed` and untrusted. Use this switch to add the iPDU SSL certificate to the appliance trust store, if Certificate Verification has not been disabled on the appliance.
+When adding an iPDU resource, the SSL certificate may be `self-signed` and untrusted.  Use this switch to add the iPDU SSL certificate to the appliance trust store, if Certificate Verification has not been disabled on the appliance.
 
 | Aliases |  |
 | :--- | :--- |
@@ -129,7 +132,7 @@ If the iPDU SSL certificate is not trusted, use this Cmdlet to add the certifica
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
@@ -143,31 +146,35 @@ Use this parameter to immediately return the async task. By default, the Cmdlet 
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### -WhatIf &lt;SwitchParameter&gt;
+
+
 
 | Aliases | wi |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
 
+
+
 | Aliases | cf |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -177,11 +184,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this cmdlet.**_
+_**None.  You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async Task resource to monitor progress.
 
@@ -191,4 +198,3 @@ Async Task resource to monitor progress.
 * [Get-HPOVPowerDevice](get-hpovpowerdevice.md)
 * [New-HPOVPowerDevice](new-hpovpowerdevice.md)
 * [Remove-HPOVPowerDevice](remove-hpovpowerdevice.md)
-

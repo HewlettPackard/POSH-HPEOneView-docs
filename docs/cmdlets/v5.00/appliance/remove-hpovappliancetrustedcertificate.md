@@ -40,7 +40,7 @@ The Alias Name of the certificate.  Please know that wildcard is not supported.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 

@@ -1,4 +1,4 @@
----
+﻿---
 description: Restart an HPE OneView appliance.
 ---
 
@@ -14,13 +14,13 @@ Restart-HPOVAppliance
 
 ## Description
 
-This Cmdlet will allow the administrator to restart/reboot the appliance. Restarting the appliance will cause all users to be disconnected and all ongoing tasks to be interrupted.
+This Cmdlet will allow the administrator to restart/reboot the appliance.  Restarting the appliance will cause all users to be disconnected and all ongoing tasks to be interrupted.
 
-Only the Infrastructure \(Full\) Administrator may restart the appliance.
+Only the Infrastructure (Full) Administrator may restart the appliance.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Connect-HPOVMgmt appliance.contoso.com Administrator P@ssw0rd
@@ -29,7 +29,7 @@ Restart-HPOVAppliance
 
 Restart the appliance
 
-### Example 2
+###  Example 2 
 
 ```text
 Restart-HPOVAppliance -confirm:$false
@@ -41,33 +41,37 @@ Restart all connected appliances without confirmation.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | true \(ByValue\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByValue) |
+| Accept wildcard characters? | False |
 
 ### -WhatIf &lt;SwitchParameter&gt;
+
+
 
 | Aliases | wi |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
 
+
+
 | Aliases | cf |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -127,8 +131,8 @@ Generated error message
 * [Pop-HPOVAppliancePermission](../library/pop-hpovappliancepermission.md)
 * [Push-HPOVAppliancePermission](../library/push-hpovappliancepermission.md)
 * [Remove-HPOVApplianceProxy](remove-hpovapplianceproxy.md)
-* [Remove-HPOVApplianceTrapDestination](https://github.com/HewlettPackard/POSH-HPOneView-docs/tree/2c3cd0d508b6cdba6336a27d496637fc71c6ce4c/docs/cmdlets/v5.00/appliance/remove-hpovappliancetrapdestination.md)
-* [Remove-HPOVApplianceTrustedCertificate](https://github.com/HewlettPackard/POSH-HPOneView-docs/tree/2c3cd0d508b6cdba6336a27d496637fc71c6ce4c/docs/cmdlets/v5.00/appliance/remove-hpovappliancetrustedcertificate.md)
+* [Remove-HPOVApplianceTrapDestination](remove-hpovappliancetrapdestination.md)
+* [Remove-HPOVApplianceTrustedCertificate](remove-hpovappliancetrustedcertificate.md)
 * [Set-HPOVApplianceAuditLogForwarding](set-hpovapplianceauditlogforwarding.md)
 * [Set-HPOVApplianceCurrentSecurityMode](set-hpovappliancecurrentsecuritymode.md)
 * [Set-HPOVApplianceDateTime](set-hpovappliancedatetime.md)
@@ -144,4 +148,3 @@ Generated error message
 * [Test-HPOVApplianceAuditLogForwarding](test-hpovapplianceauditlogforwarding.md)
 * [Update-HPOVApplianceTrustedAuthorityCrl](update-hpovappliancetrustedauthoritycrl.md)
 * [Wait-HPOVApplianceStart](../library/wait-hpovappliancestart.md)
-

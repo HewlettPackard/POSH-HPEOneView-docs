@@ -1,4 +1,4 @@
----
+﻿---
 description: Create Custom Baseline from Hotfixes and Source Baseline.
 ---
 
@@ -13,15 +13,17 @@ New-HPOVCustomBaseline
 
 ## Description
 
-HPE ProLiant Hotfixes are released out of the main SPP release cycle. Administrators can use HPSUM external to HPE OneView to create a custom baseline, but then need to upload to the appliance. Hotfixes can be directly uploaded to an HPE OneView 2.0 Appliance, with the ability to create a Custom Baseline by using a source Baseline \(which must exist in the Baseline Repository\) and specified Hotfix\(s\).
+HPE ProLiant Hotfixes are released out of the main SPP release cycle.  Administrators can use HPSUM external to HPE OneView to create a custom baseline, but then need to upload to the appliance.  Hotfixes can be directly uploaded to an HPE OneView 2.0 Appliance, with the ability to create a Custom Baseline by using a source Baseline (which must exist in the Baseline Repository) and specified Hotfix(s).
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 cp111111.exe,cp222222.scexe,cp333333.exe,cp444444.scexe | % { Add-HPOVBaseline $_ }
 Get-HPOVBaseline -BaselineName "MyBaseline" | New-HPOVCustomBaseline -Hotfixes cp111111.exe,cp222222.scexe,cp333333.exe,cp444444.scexe -BaselineName "MyNewBaseline_20160222"
+
+
 ```
 
 Upload hotfixes to appliance, then create a new custom baseline from the "MyBaseline" baseline.
@@ -36,21 +38,21 @@ An existing Baseline within the HPE OneView Baseline Repository.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Default value | `` |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -Hotfixes &lt;Array&gt;
 
-Array of Hotfix filenames, or Component name.
-
-Example: @\(cp111111.exe,cp222222.scexe,cp333333.exe,cp444444.scexe\)
+Array of Hotfix filenames, or Component name.  
+	
+Example: @(cp111111.exe,cp222222.scexe,cp333333.exe,cp444444.scexe)
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -58,47 +60,47 @@ Example: @\(cp111111.exe,cp222222.scexe,cp333333.exe,cp444444.scexe\)
 
 The final custom Baseline name.
 
-Example: custom\_SPPGen9Snap3\_2015\_0327\_82
+Example: custom_SPPGen9Snap3_2015_0327_82
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases \[-Appliance\]
+Aliases [-Appliance]
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-Default Value: ${Global:ConnectedSessions} \| ? Default
+Default Value: ${Global:ConnectedSessions} | ? Default
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### -Scope &lt;HPOneView.Appliance.ScopeCollection&gt;
 
-Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with. Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
+Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -114,17 +116,17 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Appliance.Baseline \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.Baseline [System.Management.Automation.PSCustomObject]**_
 
 Source HPE OneView Baseline from [`Get-HPOVBaseline`](get-hpovbaseline.md)
 
+
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Asyncronous task object to monitor.
 
 ## Related Links
 
 * [Restore-HPOVCustomBaseline](restore-hpovcustombaseline.md)
-

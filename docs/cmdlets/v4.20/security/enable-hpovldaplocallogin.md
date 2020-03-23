@@ -1,4 +1,4 @@
----
+﻿---
 description: Enable local authentication logins.
 ---
 
@@ -14,14 +14,15 @@ Enable-HPOVLdapLocalLogin
 
 ## Description
 
-Use this cmdlet to set enable appliance local logins. An existing authentication directory must be configured in order to use this CMDLET.
+Use this cmdlet to set enable appliance local logins.  An existing authentication directory must be configured in order to use this CMDLET.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Enable-HPOVLdapLocalLogin
+
 ```
 
 Enable local logins on the appliance.
@@ -30,33 +31,37 @@ Enable local logins on the appliance.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### -WhatIf &lt;SwitchParameter&gt;
+
+
 
 | Aliases | wi |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
 
+
+
 | Aliases | cf |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -66,7 +71,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this cmdlet.**_
+_**None.  You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
@@ -77,4 +82,3 @@ Appliance Authentication Directory setting.
 ## Related Links
 
 * [Disable-HPOVLdapLocalLogin](disable-hpovldaplocallogin.md)
-

@@ -40,7 +40,7 @@ The modified resource that is to be updated. Can be resource object, name or URI
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 

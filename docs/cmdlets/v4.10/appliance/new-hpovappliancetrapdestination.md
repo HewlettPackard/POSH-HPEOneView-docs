@@ -1,4 +1,4 @@
----
+﻿---
 description: Create a new appliance SNMP trap destiation.
 ---
 
@@ -28,25 +28,26 @@ New-HPOVApplianceTrapDestination
 
 ## Description
 
-HPE OneView can be used as a proxy to forward device traps from servers and enclosures \(OA\) to other SNMP-enabled applications on the network. HPE OneView can forward traps, as SNMPv3 or SNMPv1 traps, to configured destinations.
+HPE OneView can be used as a proxy to forward device traps from servers and enclosures (OA) to other SNMP-enabled applications on the network. HPE OneView can forward traps, as SNMPv3 or SNMPv1 traps, to configured destinations.
 
-Appliance SNMP settings allow you to add destinations to which the traps need to be forwarded. You can configure each destination as an SNMPv1 or SNMPv3 destination, depending on whether the traps are sent in SNMPv1 or SNMPv3 formats.
+Appliance SNMP settings allow you to add destinations to which the traps need to be forwarded. You can configure each destination as an SNMPv1 or SNMPv3 destination, depending on whether the traps are sent in SNMPv1 or SNMPv3 formats. 
 
-Additionally, if you have Gen6 or Gen7 servers being monitored by HPE OneView in your environment, you can configure the read community string that HPE OneView uses for monitoring these servers with SNMPv1.
+Additionally, if you have Gen6 or Gen7 servers being monitored by HPE OneView in your environment, you can configure the read community string that HPE OneView uses for monitoring these servers with SNMPv1. 
 
 Privileges: Infrastructure administrator
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 New-HPOVApplianceTrapDestination -Destination $SnmpV1TrapDestinationAddress -Type SNMPv1 -Port $SnmpV1TrapDestinationPort -CommunityString $SnmpV1Community
+
 ```
 
 Create a new SNMPv1 trap destination on the appliance.
 
-### Example 2
+###  Example 2 
 
 ```text
 $SnmpV3Password = ConvertTo-SecureString -String $CommonPassword -AsPlainText -Force
@@ -60,19 +61,19 @@ Define a new SNMPv3 user, and associate it with the new SNMPv3 trap destination 
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases \[-Appliance\]
+Aliases [-Appliance]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-Default Value: ${Global:ConnectedSessions} \| ? Default
+Default Value: ${Global:ConnectedSessions} | ? Default
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### -CommunityString &lt;String&gt;
 
@@ -82,7 +83,7 @@ SNMPv1 trap community string.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -94,7 +95,7 @@ IP Address or Hostname of the target SNMP trap reciever.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -118,16 +119,16 @@ The defined SNMPv3 user created on the appliance with `Get-HPOVSnmpV3User`.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Type &lt;String&gt;
 
-SNMP version type. Allowed values:
+SNMP version type.  Allowed values:
 
-* SNMPv1
-* SNMPv3
+	* SNMPv1
+	* SNMPv3
 
 | Aliases | None |
 | :--- | :--- |
@@ -143,7 +144,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this cmdlet.**_
+_**None.  You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
@@ -159,4 +160,3 @@ The configured SNMPv3 Trap Destination on the appliance.
 
 * [Get-HPOVApplianceTrapDestination](get-hpovappliancetrapdestination.md)
 * [Remove-HPOVApplianceTrapDestination](remove-hpovappliancetrapdestination.md)
-

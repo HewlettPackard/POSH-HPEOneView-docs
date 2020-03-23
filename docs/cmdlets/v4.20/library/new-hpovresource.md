@@ -1,4 +1,4 @@
----
+﻿---
 description: Create a new resource.
 ---
 
@@ -20,10 +20,11 @@ Create a new resource by passing the URI and the resource details in the form of
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 New-HPOVResource /rest/ethernet-networks @{vlanId=2000; purpose="General"; name="VLAN 2000"; smartLink=$true; privateNetwork=$false; type="ethernet-networkV2"}
+
 ```
 
 Create a new Ethernet Network, "VLAN 2000".
@@ -38,7 +39,7 @@ The location where the new object is to be created, using the HTTP POST method.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -50,21 +51,21 @@ The new resource that is to be created
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Default value | `` |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -88,7 +89,6 @@ The newly created resource, or async task
 * [Add-HPOVResourceToRack](../facilities/add-hpovresourcetorack.md)
 * [Add-HPOVResourceToScope](../appliance/add-hpovresourcetoscope.md)
 * [Remove-HPOVResource](remove-hpovresource.md)
-* [Remove-HPOVResourceFromLabel](../../v5.00/appliance/remove-hpovresourcefromlabel.md)
+* [Remove-HPOVResourceFromLabel](../appliance/remove-hpovresourcefromlabel.md)
 * [Remove-HPOVResourceFromScope](../appliance/remove-hpovresourcefromscope.md)
 * [Set-HPOVResource](set-hpovresource.md)
-

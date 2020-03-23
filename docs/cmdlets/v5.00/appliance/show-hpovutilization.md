@@ -42,7 +42,7 @@ default content
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? |  |
 | Accept wildcard characters? |  |
 

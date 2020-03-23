@@ -1,4 +1,4 @@
----
+﻿---
 description: Retrieve Network resource(s).
 ---
 
@@ -22,17 +22,19 @@ Get-HPOVNetwork
 
 A virtual connect interconnect in an enclosure supports the following types of data center networks:
 
-* Fibre Channel for storage networks, including fabric-attach \(SAN\) Fibre Channel \(FC\) connections and direct-attach \(Flat SAN\) Fibre Channel connections.
-* Ethernet for data networks, including tagged, untagged, or tunnel networks.
-* Fibre Channel over Ethernet \(FCoE\) for storage networks where storage traffic is carried over a dedicated Ethernet VLAN.
+    * Fibre Channel for storage networks, including fabric-attach (SAN) Fibre Channel (FC) connections and direct-attach (Flat SAN) Fibre Channel connections.
+    * Ethernet for data networks, including tagged, untagged, or tunnel networks.
+    * Fibre Channel over Ethernet (FCoE) for storage networks where storage traffic is carried over a dedicated Ethernet VLAN.
 
 {% hint style="info" %}
 The networking features described here apply to enclosures and servers only. The appliance does not monitor or manage the network features and hardware for rack mount servers or networking equipment outside the enclosures without using a supported logical switch or fabric manager.
 {% endhint %}
 
+
 {% hint style="info" %}
 You can associate a network to both an IPv4 subnet.
 {% endhint %}
+
 
 The details of your networks and any alerts associated with them appear on the Networks screen. If no resources are listed, you must add a resource. See Create networks.
 
@@ -55,12 +57,10 @@ This Cmdlet is used to retrieve a collection of network resources which have the
 {% hint style="info" %}
 Minimum required privileges: Read-
 {% endhint %}
-
 only
-
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 $net41 = Get-HPOVNetwork -name "Net-41"
@@ -68,7 +68,7 @@ $net41 = Get-HPOVNetwork -name "Net-41"
 
 Return the network resource with the name "Net-41"
 
-### Example 2
+###  Example 2 
 
 ```text
 $ethNets = Get-HPOVNetwork -type Ethernet
@@ -76,15 +76,15 @@ $ethNets = Get-HPOVNetwork -type Ethernet
 
 Return all the Ethernet network resources
 
-### Example 3
+###  Example 3 
 
 ```text
 $ethNets = Get-HPOVNetwork -Name VLAN_19*
 ```
 
-Return all Ethernet Networks that match "VLAN\_19\*".
+Return all Ethernet Networks that match "VLAN_19*".
 
-### Example 4
+###  Example 4 
 
 ```text
 $ethNets = "Net1","Net2","Net3" | Get-HPOVNetwork -Type Ethernet
@@ -92,7 +92,7 @@ $ethNets = "Net1","Net2","Net3" | Get-HPOVNetwork -Type Ethernet
 
 Return Net1, Net2, and Net3 Ethernet Networks from the specified appliance connection.
 
-### Example 5
+###  Example 5 
 
 ```text
 Get-HPOVNetwork -exportFile "c:\myApplianceConfig\myNets.json"
@@ -100,7 +100,7 @@ Get-HPOVNetwork -exportFile "c:\myApplianceConfig\myNets.json"
 
 Exports all networks to the file `[myNets.json]` in JSON format.
 
-### Example 6
+###  Example 6 
 
 ```text
 Get-HPOVNetwork -x "c:\myApplianceConfig\myNets.json" -type Ethernet
@@ -108,7 +108,7 @@ Get-HPOVNetwork -x "c:\myApplianceConfig\myNets.json" -type Ethernet
 
 Exports only the ethernet networks to the file `[myNets.json]`.
 
-### Example 7
+###  Example 7 
 
 ```text
 Get-HPOVNetwork
@@ -159,7 +159,7 @@ Name              Status Type         Typical Bandwidth Max Bandwidth Auto Login
 3PAR SAN Fabric A OK     FabricAttach 4000              8000          True                      30
 3PAR SAN Fabric B OK     FabricAttach 4000              8000          True                      30
 
-
+    
     Type: FCoE
 
 
@@ -177,25 +177,25 @@ Get all available networks.
 
 ### -Name &lt;String&gt;
 
-The name of the network resource to be returned. All network resources will be returned if omitted. Supports "\*" wildcard character.
+The name of the network resource to be returned.  All network resources will be returned if omitted.  Supports "*" wildcard character.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Default value | `` |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -Type &lt;String&gt;
 
-The type of the network resource to be returned. Valid types are "Ethernet" for Ethernet networks, "FC" or "FibreChannel" for Fibre Channel networks. All network resources will be returned if omitted.
+The type of the network resource to be returned.  Valid types are "Ethernet" for Ethernet networks, "FC" or "FibreChannel" for Fibre Channel networks.  All network resources will be returned if omitted.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -205,30 +205,30 @@ Specify the Ethernet Purpose value to filter on.
 
 Supported Values:
 
-* General
-* Management
-* VMMigration
-* FaultTolerance
-* ISCSI
+    * General
+    * Management
+    * VMMigration
+    * FaultTolerance
+    * ISCSI
 
-  Note: When using this parameter, only Ethernet networks will be returned.
+    Note: When using this parameter, only Ethernet networks will be returned.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Scope &lt;Object&gt;
 
-Filter resources based on provided Scope membership. By default, all resources for the accounts Active Permissions will be displayed. Allowed values:
+Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-* AllResources
-* AllResourcesInScope
-* `[HPOneView.Appliance.ScopeCollection]`
-* `[HPOneView.Appliance.ConnectionPermission]`
+    * AllResources
+    * AllResourcesInScope
+    * `[HPOneView.Appliance.ScopeCollection]`
+    * `[HPOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
@@ -240,27 +240,27 @@ Filter resources based on provided Scope membership. By default, all resources f
 
 ### -Label &lt;String&gt;
 
-Specify the label name the network resource is associated with. Cannot be combined with Name.
+Specify the label name the network resource is associated with.  Cannot be combined with Name.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### -ExportFile &lt;String&gt;
 
@@ -270,7 +270,7 @@ The full path and file name to export the JSON formatted definition of the netwo
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -282,7 +282,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**System.String**_
 
-Network Resource Name\(s\)
+Network Resource Name(s)
 
 ## Return Values
 
@@ -307,8 +307,7 @@ Multiple Network Object resources
 * [Get-HPOVNetworkSet](get-hpovnetworkset.md)
 * [New-HPOVNetwork](new-hpovnetwork.md)
 * [New-HPOVNetworkSet](new-hpovnetworkset.md)
-* [Remove-HPOVNetwork](https://github.com/HewlettPackard/POSH-HPOneView-docs/tree/1915d3e6119cf820b69e9b5eb07cbe928a3cfdc7/docs/cmdlets/v5.00/networking/remove-hpovnetwork.md)
+* [Remove-HPOVNetwork](remove-hpovnetwork.md)
 * [Remove-HPOVNetworkSet](remove-hpovnetworkset.md)
 * [Set-HPOVNetwork](set-hpovnetwork.md)
-* [Set-HPOVNetworkSet](https://github.com/HewlettPackard/POSH-HPOneView-docs/tree/1915d3e6119cf820b69e9b5eb07cbe928a3cfdc7/docs/cmdlets/v5.00/networking/set-hpovnetworkset.md)
-
+* [Set-HPOVNetworkSet](set-hpovnetworkset.md)

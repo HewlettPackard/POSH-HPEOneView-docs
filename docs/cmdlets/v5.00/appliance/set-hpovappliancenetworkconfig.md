@@ -1,7 +1,5 @@
----
-description: >-
-  Updates the configuration parameters for the primary network interface on the
-  appliance.
+﻿---
+description: Updates the configuration parameters for the primary network interface on the appliance.
 ---
 
 # Set-HPOVApplianceNetworkConfig
@@ -64,11 +62,11 @@ Set-HPOVApplianceNetworkConfig
 
 ## Description
 
-Updates any or all configuration parameters for the primary network interface on the appliance. All parameters are Current settings will be retained for any parameters NOT specified.
+Updates any or all configuration parameters for the primary network interface on the appliance. All parameters are  Current settings will be retained for any parameters NOT specified.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Set-HPOVApplianceNetworkConfig -hostname "appliance1.my.com" -IPv4Type "DHCP" -IPv6Type "UNCONFIGURE" -domainName "my.com"
@@ -76,7 +74,7 @@ Set-HPOVApplianceNetworkConfig -hostname "appliance1.my.com" -IPv4Type "DHCP" -I
 
 This example passes in updated values to set for the appliance networking configuration.
 
-### Example 2
+###  Example 2 
 
 ```text
 Set-HPOVApplianceNetworkConfig -importFile "c:\myNetworkInput.json"
@@ -94,7 +92,7 @@ Fully-qualified hostname for the appliance
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -112,37 +110,37 @@ Fully-qualified hostname for the appliance
 
 ### -IPv4Addr &lt;IPAddress&gt;
 
-"www.xxx.yyy.zzz" \(leave blank for DHCP\)
+"www.xxx.yyy.zzz" (leave blank for DHCP)
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -IPv4Subnet &lt;String&gt;
 
-"www.xxx.yyy.zzz" \(leave blank for DHCP\)
+"www.xxx.yyy.zzz" (leave blank for DHCP)
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -IPv4Gateway &lt;IPAddress&gt;
 
-"www.xxx.yyy.zzz" \(leave blank for DHCP\)
+"www.xxx.yyy.zzz" (leave blank for DHCP)
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -160,37 +158,37 @@ Fully-qualified hostname for the appliance
 
 ### -IPv6Addr &lt;IPAddress&gt;
 
-"ssss:tttt:uuuu:vvvv:wwww:xxxx:yyyy:zzzz" \(leave blank for DHCP\)
+"ssss:tttt:uuuu:vvvv:wwww:xxxx:yyyy:zzzz" (leave blank for DHCP)
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -IPv6Subnet &lt;String&gt;
 
-"ffff:ffff:ffff:ffff:0:0:0:0" \(leave blank for DHCP\)
+"ffff:ffff:ffff:ffff:0:0:0:0" (leave blank for DHCP)
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -IPv6Gateway &lt;String&gt;
 
-"ssss:tttt:uuuu:vvvv:wwww:xxxx:yyyy:zzzz" \(leave blank for DHCP\)
+"ssss:tttt:uuuu:vvvv:wwww:xxxx:yyyy:zzzz" (leave blank for DHCP)
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -202,7 +200,7 @@ Reserved for Synergy.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -214,7 +212,7 @@ Reserved for Synergy.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -226,7 +224,7 @@ Reserved for Synergy.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -238,7 +236,7 @@ Reserved for Synergy.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -274,7 +272,7 @@ DNS domain name for the appliance: "my.com"
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -286,7 +284,7 @@ Array of DNS search domains: "my.com", "other.com"
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -298,7 +296,7 @@ Array of DNS servers: "www.xxx.yyy.zzz", "sss.ttt.uuu.vvv"
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -310,31 +308,31 @@ Array of DNS servers: "fe80::200:f8ff:fe21:67cf", "fe80::200:f8ff:fe21:89cb"
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -NtpServers &lt;Object&gt;
 
-Deprecated parameter. NTP Server configuration is now controlled in the `Set-HPOVApplianceDateTime` Cmdlet. Please update your scripts accordingly.
+Deprecated parameter.  NTP Server configuration is now controlled in the `Set-HPOVApplianceDateTime` Cmdlet.  Please update your scripts accordingly.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -importFile &lt;Object&gt;
 
-File containing JSON formatted input values for the appliance network configuration parameters.
+ File containing JSON formatted input values for the appliance network configuration parameters.
 
 | Aliases | i, import |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -342,13 +340,13 @@ File containing JSON formatted input values for the appliance network configurat
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 
-| Aliases | None |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -356,15 +354,14 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this Cmdlet.**_
+_**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
 _**System.Management.Automation.PSCustomObject**_
 
-Final Task status \(for asynchronous appliance config\)
+Final Task status (for asynchronous appliance config)
 
 ## Related Links
 
 * [Get-HPOVApplianceNetworkConfig](get-hpovappliancenetworkconfig.md)
-

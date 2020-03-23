@@ -1,4 +1,4 @@
----
+﻿---
 description: Get OS deployment plan parameters and attributes.
 ---
 
@@ -15,19 +15,17 @@ Get-HPOVOSDeploymentPlanAttribute
 
 ## Description
 
-An OS Deployment Plan is a recipe on how to deploy and configure an operating system, which has been created and is managed from on the associated OS deployment server. It will contain custom attributes that are necessary to personalize the OS deployment plan. The supported OS deployment server is HPE Image Streamer for Synergy.
+An OS Deployment Plan is a recipe on how to deploy and configure an operating system, which has been created and is managed from on the associated OS deployment server.  It will contain custom attributes that are necessary to personalize the OS deployment plan.  The supported OS deployment server is HPE Image Streamer for Synergy.
 
 Use this Cmdlet to return defined OS deployment plan custom attributes from a specified OS deployment plan.
 
 {% hint style="info" %}
 Minimum required privileges: Read-
 {% endhint %}
-
 only
-
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVOSDeploymentPlan -Name "RHEL 7.2 OS" -ErrorAction Stop | Get-HPOVOSDeploymentPlanAttribute
@@ -35,7 +33,7 @@ Get-HPOVOSDeploymentPlan -Name "RHEL 7.2 OS" -ErrorAction Stop | Get-HPOVOSDeplo
 
 Return OS Deployment Plan parameters from the "RHEL 7.2 OS" deployment plan.
 
-### Example 2
+###  Example 2 
 
 ```text
 $OSDeploymentAttributes = Get-HPOVOSDeploymentPlanAttributes -InputObject $MyDeploymentPlan
@@ -62,21 +60,21 @@ The OS Deployment Plan from `Get-HPOVOSDeploymentPlan`.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Default value | `` |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -84,7 +82,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Appliance.OSDeploymentPlan \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.OSDeploymentPlan [System.Management.Automation.PSCustomObject]**_
 
 The OS Deployment Plan from [`Get-HPOVOSDeploymentPlan`](get-hpovosdeploymentplan.md).
 
@@ -97,4 +95,3 @@ The object contained the Name of the parameter, and its default Value.
 ## Related Links
 
 * [Get-HPOVOSDeploymentPlan](get-hpovosdeploymentplan.md)
-

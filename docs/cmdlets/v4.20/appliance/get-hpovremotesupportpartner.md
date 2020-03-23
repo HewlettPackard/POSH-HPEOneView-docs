@@ -1,4 +1,4 @@
----
+﻿---
 description: Retrieve defined Support and Reseller partners.
 ---
 
@@ -15,14 +15,15 @@ Get-HPOVRemoteSupportPartner
 
 ## Description
 
-Use this Cmdlet to retreive defined Remote Support partners that are authorized HPE Resellers and/or Support.
+Use this Cmdlet to retreive defined Remote Support partners that are authorized HPE Resellers and/or Support. 
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVRemoteSupportPartner
+
 ```
 
 Get all configured report support partners.
@@ -37,21 +38,21 @@ Name of the HPE Partner.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -59,16 +60,15 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this cmdlet.**_
+_**None.  You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.RemoteSupport.Partner \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.RemoteSupport.Partner [System.Management.Automation.PSCustomObject]**_
 
 Defined HPE authorized reseller and/or support partners.
 
 ## Related Links
 
 * [New-HPOVRemoteSupportPartner](new-hpovremotesupportpartner.md)
-* [Remove-HPOVRemoteSupportPartner](../../v5.00/appliance/remove-hpovremotesupportpartner.md)
-
+* [Remove-HPOVRemoteSupportPartner](remove-hpovremotesupportpartner.md)

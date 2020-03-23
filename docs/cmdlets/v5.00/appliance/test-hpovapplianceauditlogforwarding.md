@@ -1,4 +1,4 @@
----
+﻿---
 description: Generate test audit log forward message.
 ---
 
@@ -20,7 +20,7 @@ Required permissions: Infrastructure administrator
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Test-HPOVApplianceAuditLogForwarding
@@ -32,15 +32,15 @@ Generate audit log test message.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -56,4 +56,3 @@ _**None. You cannot pipe objects to this Cmdlet.**_
 
 * [Get-HPOVApplianceAuditLogForwarding](get-hpovapplianceauditlogforwarding.md)
 * [Set-HPOVApplianceAuditLogForwarding](set-hpovapplianceauditlogforwarding.md)
-

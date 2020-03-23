@@ -1,4 +1,4 @@
----
+﻿---
 description: Retrieve address pool range information.
 ---
 
@@ -26,23 +26,21 @@ An ID pool is a collection of one or more ranges that you can be randomly genera
 
 This Cmdlet will display configured address pool ranges defined on an HPE OneView appliance. Currently, the appliance supports the following address pool ranges:
 
-* VMAC
-* VWWN
-* VSN
-* IPv6
-* IPv4
+    * VMAC
+    * VWWN
+    * VSN
+    * IPv6
+    * IPv4
 
 You can specify one, some or all of the pool types.
 
 {% hint style="info" %}
-Minimum required privileges: Network administrator \(
+Minimum required privileges: Network administrator (
 {% endhint %}
-
-virtual MAC addresses and virtual WWNs\), Infrastructure administrator \(all ID types\)
-
+virtual MAC addresses and virtual WWNs), Infrastructure administrator (all ID types)
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 [PS] C:\> Get-HPOVAddressPoolRange
@@ -59,7 +57,7 @@ VSN  True    Generated 46656   0         46656     0        VCGA290000          
 
 Get all configured address pool ranges from all connected appliances.
 
-### Example 2
+###  Example 2 
 
 ```text
 [PS] C:\> Get-HPOVAddressPoolRange -Type vmac
@@ -70,31 +68,31 @@ VMAC True    Generated 1048576 2         1048574   0        62:79:84:50:00:00 62
 VMAC True    Generated 1048576 0         1048576   0        F6:38:E6:90:00:00 F6:38:E6:9F:FF:FF
 ```
 
-Get a specific address pool range type \(VMAC\) from all connected appliances.
+Get a specific address pool range type (VMAC) from all connected appliances.
 
 ## Parameters
 
 ### -InputObject &lt;Object&gt;
 
-Specify the address pool object from `Get-HPOVAddressPool`.
+Specify the address pool object from `Get-HPOVAddressPool`.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Default value | `` |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Type &lt;String\[\]&gt;
+### -Type &lt;String[]&gt;
 
-Specify the type of address pool. Allowed values are:
+Specify the type of address pool.  Allowed values are:
 
-* IPv4
-* VMAC
-* VWWN
-* VSN
-* All
+    * IPv4
+    * VMAC
+    * VWWN
+    * VSN
+    * All
 
 | Aliases | Pool |
 | :--- | :--- |
@@ -106,15 +104,15 @@ Specify the type of address pool. Allowed values are:
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -122,13 +120,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Appliance.AddressPool \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.AddressPool [System.Management.Automation.PSCustomObject]**_
 
 Address pool resource object.
 
 ## Return Values
 
-_**HPOneView.Appliance.AddressPoolRange \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.AddressPoolRange [System.Management.Automation.PSCustomObject]**_
 
 Address pool range object.
 
@@ -136,4 +134,3 @@ Address pool range object.
 
 * [New-HPOVAddressPoolRange](new-hpovaddresspoolrange.md)
 * [Remove-HPOVAddressPoolRange](remove-hpovaddresspoolrange.md)
-

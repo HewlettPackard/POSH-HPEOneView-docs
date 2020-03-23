@@ -1,4 +1,4 @@
----
+﻿---
 description: Modify an existing network set.
 ---
 
@@ -17,21 +17,24 @@ Modify a network set and/or its connection information.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 $netset = Get-HPOVNetworkSet "Set-1"
 $netset.maximumBandwidth = 5000
 $netset.typicalBandwidth = 3000
 Set-HPOVNetworkSet $netset
+
+
 ```
 
 Modify "Set-1" to be maximum bandwidth of 5000.
 
-### Example 2
+###  Example 2 
 
 ```text
 Get-HPOVNetworkSet NetSet-1 | Set-HPOVNetworkSet -name NewNetSet-1 -networks @(bluenet,rednet,greennet) -untagged bluenet
+
 ```
 
 Update "NetSet-1" with a new name, adjust the networks, and set "bluenet" as the Untagged Network.
@@ -40,14 +43,15 @@ Update "NetSet-1" with a new name, adjust the networks, and set "bluenet" as the
 
 ### -InputObject &lt;Object&gt;
 
-Aliases \[-NetworkSet, `-netSet`\] The Network Set resource object or name to be modified.
+Aliases [-NetworkSet, `-netSet`]
+The Network Set resource object or name to be modified.
 
 | Aliases | NetSet, NetworkSet |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Default value | `` |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -Name &lt;String&gt;
@@ -58,31 +62,32 @@ The updated name value of the Network Set.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Networks &lt;Object&gt;
 
-An array containing the updated list of networks. May contain Network Names or URI"s.
+An array containing the updated list of networks.  May contain Network Names or URI"s.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -UntaggedNetwork &lt;Object&gt;
 
-Aliases \[-untagged, `-native`, `-untaggedNetworkUri`\] The Name or URI of the Untaggged, or Native Network for the Network Set.
+Aliases [-untagged, `-native`, `-untaggedNetworkUri`]
+The Name or URI of the Untaggged, or Native Network for the Network Set.
 
 | Aliases | untagged, native, untaggedNetworkUri |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -112,21 +117,21 @@ The updated MAximum bandwidth, in Mbps.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases \[-Appliance\]
+Aliases [-Appliance]
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-Default Value: ${Global:ConnectedSessions} \| ? Default
+Default Value: ${Global:ConnectedSessions} | ? Default
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
-### -AddNetwork &lt;Object\[\]&gt;
+### -AddNetwork &lt;Object[]&gt;
 
 Specify 1 or more network resources to add to the specified network set.
 
@@ -134,7 +139,7 @@ Specify 1 or more network resources to add to the specified network set.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -146,7 +151,7 @@ Specify 1 or more network resources to remove from the specified network set.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -156,13 +161,14 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Networking.NetworkSet \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Networking.NetworkSet [System.Management.Automation.PSCustomObject]**_
 
 Single Network Set resource
 
+
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Update Network Set resource task
 
@@ -171,4 +177,3 @@ Update Network Set resource task
 * [Get-HPOVNetworkSet](get-hpovnetworkset.md)
 * [New-HPOVNetworkSet](new-hpovnetworkset.md)
 * [Remove-HPOVNetworkSet](remove-hpovnetworkset.md)
-

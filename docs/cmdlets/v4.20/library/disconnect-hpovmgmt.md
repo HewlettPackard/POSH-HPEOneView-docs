@@ -1,4 +1,4 @@
----
+﻿---
 description: Disconnect from the appliance.
 ---
 
@@ -14,11 +14,11 @@ Disconnect-HPOVMgmt
 
 ## Description
 
-This cmdlet disconnects the specified or all HPE OneView appliance session\(s\).
+This cmdlet disconnects the specified or all HPE OneView appliance session(s).
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 $Connection1 = Connect-HPOVMgmt MyAppliance.domain.com
@@ -27,18 +27,20 @@ Disconnect-HPOVMgmt -Hostname $Connection1
 
 Disconnect from the specific appliance session.
 
-### Example 2
+###  Example 2 
 
 ```text
 Disconnect-HPOVMgmt -Hostname 1
+
 ```
 
 Disconnect ConnectionID 1 appliance session.
 
-### Example 3
+###  Example 3 
 
 ```text
 $ConnectedSessions | Disconnect-HPOVMgmt
+
 ```
 
 Disconnect all appliance sessions.
@@ -47,15 +49,15 @@ Disconnect all appliance sessions.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance, ApplianceSession, Hostname |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`$ConnectedSessions | Where-Object Default\` |
-| Accept pipeline input? | true \(ByValue\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance, ApplianceSession, Hostname |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `$ConnectedSessions | Where-Object Default` |
+| Accept pipeline input? | true (ByValue) |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -69,7 +71,8 @@ _**None. You cannot pipe objects to this cmdlet.**_
 
 _**None.**_
 
+
+
 ## Related Links
 
 * [Connect-HPOVMgmt](connect-hpovmgmt.md)
-

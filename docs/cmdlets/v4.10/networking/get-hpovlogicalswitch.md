@@ -1,4 +1,4 @@
----
+﻿---
 description: Retrieve Logical Switch resources.
 ---
 
@@ -29,18 +29,20 @@ This cmdlet will retrieve one or more Logical Switch resources configured on the
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVLogicalSwitch
+
 ```
 
 Retrieve all Logical Switch resources from the default appliance connection.
 
-### Example 2
+###  Example 2 
 
 ```text
 Get-HPOVLogicalSwitch -Name MyLogicalSwitch1
+
 ```
 
 Retrieve the specified MyLogicalSwitch1 resource from the default appliance connection.
@@ -49,13 +51,13 @@ Retrieve the specified MyLogicalSwitch1 resource from the default appliance conn
 
 ### -Name &lt;String&gt;
 
-Name of the Logical Switch resource. Supports wildcard \* character.
+Name of the Logical Switch resource.  Supports wildcard * character.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -67,18 +69,18 @@ Provide an `[HPOneView.Appliance.TaskResource]` object and the Cmdlet will retur
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Default value | `` |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -Scope &lt;Object&gt;
 
-Filter resources based on provided Scope membership. By default, all resources for the accounts Active Permissions will be displayed. Allowed values:
+Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-* AllResources
-* AllResourcesInScope
-* `[HPOneView.Appliance.ScopeCollection]`
-* `[HPOneView.Appliance.ConnectionPermission]`
+	* AllResources
+	* AllResourcesInScope
+	* `[HPOneView.Appliance.ScopeCollection]`
+	* `[HPOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
@@ -102,31 +104,31 @@ Specify the label associated with resources.
 
 ### -ExportFile &lt;String&gt;
 
-Save the Logical Switch resource\(s\) to the specified JSON file.
+Save the Logical Switch resource(s) to the specified JSON file.
 
 | Aliases | x, export |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases \[-Appliance\]
+Aliases [-Appliance]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-Default Value: ${Global:ConnectedSessions} \| ? Default
+Default Value: ${Global:ConnectedSessions} | ? Default
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -134,17 +136,17 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async Task resource object, from [`New-HPOVLogicalSwitch`](new-hpovlogicalswitch.md).
 
 ## Return Values
 
-_**HPOneView.Networking.LogicalSwitch \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Networking.LogicalSwitch [System.Management.Automation.PSCustomObject]**_
 
 Single Logical Switch resource.
 
-_**System.Collections.ArrayList**_ 
+_**System.Collections.ArrayList <HPOneView.Networking.LogicalSwitch>**_
 
 Collection of Logical Switch resources.
 
@@ -156,4 +158,3 @@ Collection of Logical Switch resources.
 * [Remove-HPOVLogicalSwitch](remove-hpovlogicalswitch.md)
 * [Remove-HPOVLogicalSwitchGroup](remove-hpovlogicalswitchgroup.md)
 * [Update-HPOVLogicalSwitch](update-hpovlogicalswitch.md)
-

@@ -58,7 +58,7 @@ One or more `[HPOneView.Storage.StoragePool]` resources from `Get-HPOVStoragePoo
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
@@ -70,7 +70,7 @@ Specify a boolean value to modify the storage pools managed state.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

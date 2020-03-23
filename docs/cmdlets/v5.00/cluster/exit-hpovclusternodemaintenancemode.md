@@ -1,4 +1,4 @@
----
+﻿---
 description: Request a cluster node member to exit maintenance mode.
 ---
 
@@ -16,19 +16,17 @@ Exit-HPOVClusterNodeMaintenanceMode
 
 ## Description
 
-A cluster in an active state runs a shared workload, like virtual machines within a Hypervisor Cluster. When you place a cluster node into maintenance mode, the workload running on the cluster member is migrated to other available cluster member. While in maintenance state the server administrator can perform updates on the host software, server hardware, or both, preventing business downtime.
+A cluster in an active state runs a shared workload, like virtual machines within a Hypervisor Cluster. When you place a cluster node into maintenance mode, the workload running on the cluster member is migrated to other available cluster member.  While in maintenance state the server administrator can perform updates on the host software, server hardware, or both, preventing business downtime.
 
 After the maintenance operation on the cluster member completes, you must release it from maintenance mode to resume hosting the shared workload.
 
 {% hint style="info" %}
 Minimum required privileges: Infrastructure administrator,
 {% endhint %}
-
-Server administrator, Server Profile administrator, Server Profile architect, or Server Profile operator
-
+ Server administrator, Server Profile administrator, Server Profile architect, or Server Profile operator
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVClusterNode -Name Cluster1-Node1 | Exit-HPOVClusterNodeMaintenanceMode
@@ -40,19 +38,19 @@ Request to the specific node exit maintenance mode.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
@@ -70,7 +68,7 @@ Use to override the confirmation prompt.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -82,17 +80,19 @@ The cluster member from `Get-HPOVClusterNode`
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Default value | `` |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -WhatIf &lt;SwitchParameter&gt;
+
+
 
 | Aliases | wi |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -102,17 +102,16 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Cluster.ClusterNode \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Cluster.ClusterNode [System.Management.Automation.PSCustomObject]**_
 
 Cluster node member from [`Get-HPOVClusterNode`](get-hpovclusternode.md).
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Asynchronous task resource to monitor.
 
 ## Related Links
 
 * [Enter-HPOVClusterNodeMaintenanceMode](enter-hpovclusternodemaintenancemode.md)
-

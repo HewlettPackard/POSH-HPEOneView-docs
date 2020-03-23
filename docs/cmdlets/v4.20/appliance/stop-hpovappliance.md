@@ -1,4 +1,4 @@
----
+﻿---
 description: Stop an HPE OneView appliance.
 ---
 
@@ -14,13 +14,13 @@ Stop-HPOVAppliance
 
 ## Description
 
-This cmdlet will allow the administrator to stop/shutdown the appliance. Shutdown of the appliance will cause all users to be disconnected and all ongoing tasks to be interrupted.
+This cmdlet will allow the administrator to stop/shutdown the appliance.  Shutdown of the appliance will cause all users to be disconnected and all ongoing tasks to be interrupted.
 
-Only the Infrastructure \(Full\) Administrator may restart the appliance.
+Only the Infrastructure (Full) Administrator may restart the appliance.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Connect-HPOVMgmt appliance.contoso.com Administrator P@ssw0rd
@@ -29,10 +29,11 @@ Stop-HPOVAppliance
 
 Shutdown the appliance.
 
-### Example 2
+###  Example 2 
 
 ```text
 Stop-HPOVAppliance -confirm:$false
+
 ```
 
 Shutdown all connected appliances, disable confirmation.
@@ -41,35 +42,39 @@ Shutdown all connected appliances, disable confirmation.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-Default Value: ${Global:ConnectSessions} \| ? Default
+Default Value: ${Global:ConnectSessions} | ? Default
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | true \(ByValue\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByValue) |
+| Accept wildcard characters? | False |
 
 ### -WhatIf &lt;SwitchParameter&gt;
+
+
 
 | Aliases | wi |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
 
+
+
 | Aliases | cf |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -144,6 +149,5 @@ Generated error message
 * [Set-HPOVApplianceTwoFactorAuthentication](set-hpovappliancetwofactorauthentication.md)
 * [Show-HPOVApplianceSecurityModeCompatibilityReport](show-hpovappliancesecuritymodecompatibilityreport.md)
 * [Test-HPOVApplianceAuditLogForwarding](test-hpovapplianceauditlogforwarding.md)
-* [Update-HPOVApplianceTrustedAuthorityCrl]()
+* [Update-HPOVApplianceTrustedAuthorityCrl](update-hpovappliancetrustedauthoritycrl.md)
 * [Wait-HPOVApplianceStart](../library/wait-hpovappliancestart.md)
-

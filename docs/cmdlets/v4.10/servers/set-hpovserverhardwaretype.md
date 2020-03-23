@@ -1,4 +1,4 @@
----
+﻿---
 description: Rename or set a description to a Server Hardware Type resource.
 ---
 
@@ -13,16 +13,17 @@ Set-HPOVServerHardwareType
 
 ## Description
 
-Use this Cmdlet to rename or set a description to one or more Server Hardware Type resource\(s\).
+Use this Cmdlet to rename or set a description to one or more Server Hardware Type resource(s).
 
 Required permissions: Server administrator
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVServerHardwareType -Name "BL460c Gen9 1" -ErrorAction Stop | Set-HPOVServerHardwareType -Name "Corp Hypervisor Host Type"
+
 ```
 
 Rename the default "BL460c Gen9 1" server hardware type resource to a new name.
@@ -31,19 +32,19 @@ Rename the default "BL460c Gen9 1" server hardware type resource to a new name.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases \[-Appliance\]
+Aliases [-Appliance]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-Default Value: ${Global:ConnectedSessions} \| ? Default
+Default Value: ${Global:ConnectedSessions} | ? Default
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### -Description &lt;String&gt;
 
@@ -53,7 +54,7 @@ Set a new description.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -65,8 +66,8 @@ HPOneView.ServerHardwareType resource from `Get-HPOVServerHardwareType`.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Default value | `` |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -Name &lt;String&gt;
@@ -77,7 +78,7 @@ Set a new name.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -100,4 +101,3 @@ The updated resource object.
 ## Related Links
 
 * [Get-HPOVServerHardwareType](get-hpovserverhardwaretype.md)
-

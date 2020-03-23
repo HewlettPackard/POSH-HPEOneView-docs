@@ -1,4 +1,4 @@
----
+﻿---
 description: Restart Server Resource.
 ---
 
@@ -25,30 +25,33 @@ Restart-HPOVServer
 
 ## Description
 
-Restart the power state of the server using the virtual power button. By default, the Cmdlet will request a "Reset" request to initiate a server to restart. Using the ColdBoot will take away and present power back to the server resource.
+Restart the power state of the server using the virtual power button.  By default, the Cmdlet will request a "Reset" request to initiate a server to restart.  Using the ColdBoot will take away and present power back to the server resource.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVServer "Encl1, Bay 1" | Restart-HPOVServer | Wait-HPOVTaskComplete
+
 ```
 
 Restart the specific server device by passing the Server Object via pipeline.
 
-### Example 2
+###  Example 2 
 
 ```text
 Get-HPOVServerProfile "MyWebServer 1" | Restart-HPOVServer | Wait-HPOVTaskComplete
+
 ```
 
 Restart the specific server device by passing the Server Profile Object via pipeline.
 
-### Example 3
+###  Example 3 
 
 ```text
 Get-HPOVServer "Encl1, Bay 1" | Restart-HPOVServer -ColdBoot | Wait-HPOVTaskComplete
+
 ```
 
 Restart the specific server device by passing the Server Object via pipeline, and issue a cold boot request.
@@ -63,8 +66,8 @@ A Server hardware or Server Profile resource object.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Default value | `` |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -ColdBoot &lt;SwitchParameter&gt;
@@ -81,7 +84,7 @@ Use this parameter to request power be forcably removed then represented to the 
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
@@ -93,37 +96,41 @@ Use this parameter to immediately return the async task. By default, the Cmdlet 
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases \[-Appliance\]
+Aliases [-Appliance]
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-Default Value: ${Global:ConnectedSessions} \| ? Default
+Default Value: ${Global:ConnectedSessions} | ? Default
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### -WhatIf &lt;SwitchParameter&gt;
+
+
 
 | Aliases | wi |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
 
+
+
 | Aliases | cf |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -133,21 +140,24 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.ServerHardware \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.ServerHardware [System.Management.Automation.PSCustomObject]**_
 
 Server Hardware Resource
 
-_**HPOneView.ServerProfile \[System.Management.Automation.PSCustomObject\]**_
+
+_**HPOneView.ServerProfile [System.Management.Automation.PSCustomObject]**_
 
 Server Profile Resource
 
+
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task that tracks the power state change
 
-_**System.Collections.ArrayList**_ 
+
+_**System.Collections.ArrayList <HPOneView.Appliance.TaskResource>**_
 
 Multiple Async tasks
 
@@ -179,11 +189,10 @@ Multiple Async tasks
 * [Save-HPOVServerProfileTemplate](save-hpovserverprofiletemplate.md)
 * [Set-HPOVServerHardwareType](set-hpovserverhardwaretype.md)
 * [Set-HPOVServerPower](set-hpovserverpower.md)
-* [Set-HPOVServerProfile]()
-* [Set-HPOVServerProfileTemplate]()
+* [Set-HPOVServerProfile](set-hpovserverprofile.md)
+* [Set-HPOVServerProfileTemplate](set-hpovserverprofiletemplate.md)
 * [Start-HPOVServer](start-hpovserver.md)
 * [Stop-HPOVServer](stop-hpovserver.md)
 * [Update-HPOVServer](update-hpovserver.md)
 * [Update-HPOVServerHardwareLicenseIntent](update-hpovserverhardwarelicenseintent.md)
 * [Update-HPOVServerProfile](update-hpovserverprofile.md)
-

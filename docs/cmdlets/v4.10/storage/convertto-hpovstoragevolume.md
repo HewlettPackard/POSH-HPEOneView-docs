@@ -1,4 +1,4 @@
----
+﻿---
 description: Convert an existing Storage Volume Snapshot to a Storage Volume.
 ---
 
@@ -13,23 +13,26 @@ ConvertTo-HPOVStorageVolume
 
 ## Description
 
-Storage Volume Snapshots can be converted to assignable and managed Storage Volume resources. When converting a Snapshot to a Storag Volume, it will lose its parent/child relationship.
+Storage Volume Snapshots can be converted to assignable and managed Storage Volume resources.  When converting a Snapshot to a Storag Volume, it will lose its parent/child relationship.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVStorageVolume
+
 ```
 
 Return all storage volume resource objects.
 
-### Example 2
+###  Example 2 
 
 ```text
 $Snapshots = Get-HPOVStorageVolume "Volume 1" | Get-HPOVStorageVolumeSnapshot
 $Snapshots | ? { ((Get-Date $_.created -Format d) -eq (Get-Date 02/23/2016 -format d)} | ConvertTo-HPOVStorageVolume -Name "Copy of Volume 1" | Wait-HPOVTaskComplete
+
+
 ```
 
 Get all of the available storage volume snapshots for "Volume 1", then convert the snapshot created on the specified date to a storage volume resource.
@@ -38,7 +41,7 @@ Get all of the available storage volume snapshots for "Volume 1", then convert t
 
 ### -InputObject &lt;Object&gt;
 
-Aliases \[-Snapshot\]
+Aliases [-Snapshot]
 
 Provide the snapshot resource object to convert managed by the appliance.
 
@@ -46,8 +49,8 @@ Provide the snapshot resource object to convert managed by the appliance.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Default value | `` |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -Name &lt;String&gt;
@@ -58,7 +61,7 @@ The Storage Volume Name.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -70,7 +73,7 @@ The description of the storage volume.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -82,13 +85,13 @@ Specify if the new storage volume should be Private or Shared.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
@@ -100,19 +103,19 @@ Use this parameter to immediately return the async task. By default, the Cmdlet 
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases \[-Appliance\]
+Aliases [-Appliance]
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-Default Value: ${Global:ConnectSessions} \| ? Default
+Default Value: ${Global:ConnectSessions} | ? Default
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -120,19 +123,22 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Storage.VolumeSnapshot \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Storage.VolumeSnapshot [System.Management.Automation.PSCustomObject]**_
 
 Storage Volume Snapshot resource object.
 
+
 ## Return Values
 
-_**System.Collections.ArrayList**_ 
+_**System.Collections.ArrayList <HPOneView.Appliance.TaskResource>**_
 
 Multiple resources
 
-_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Create Storage Volume async task.
+
 
 ## Related Links
 
@@ -150,4 +156,3 @@ Create Storage Volume async task.
 * [Set-HPOVStorageVolume](set-hpovstoragevolume.md)
 * [Set-HPOVStorageVolumeTemplate](set-hpovstoragevolumetemplate.md)
 * [Set-HPOVStorageVolumeTemplatePolicy](set-hpovstoragevolumetemplatepolicy.md)
-

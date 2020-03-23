@@ -1,4 +1,4 @@
----
+﻿---
 description: Return a collection of available D3940 disks.
 ---
 
@@ -15,30 +15,33 @@ Get-HPOVAvailableDriveType
 
 ## Description
 
-This helper CMDLET will return a collection of available disk drives from a specified SAS Logical Interconnect or Drive Enclosure. The object can then be used to define the drive selection criteria for New-HPOVServerProfileLogicalDisk using the -AvailableDriveType parameter.
+This helper CMDLET will return a collection of available disk drives from a specified SAS Logical Interconnect or Drive Enclosure.  The object can then be used to define the drive selection criteria for New-HPOVServerProfileLogicalDisk using the -AvailableDriveType parameter.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVSasLogicalInterconnect | Get-HPOVAvailableDriveType
+
 ```
 
 Return all available disk drives from all SAS Logical Interconnects.
 
-### Example 2
+###  Example 2 
 
 ```text
 Get-HPOVSasLogicalInterconnect -Name "LE1-Default SAS Synergy LIG-3" -ErrorAction Stop | Get-HPOVAvailableDriveType
+
 ```
 
 Return all available disk drives from the specific SAS Logical Interconnect.
 
-### Example 3
+###  Example 3 
 
 ```text
 Get-HPOVDriveEnclosure -Name "EnclosureName, Bay 1" -ErrorAction Stop | Get-HPOVAvailableDriveType
+
 ```
 
 Return all available disk drives from the specific D3940 Drive Enclosure.
@@ -47,27 +50,28 @@ Return all available disk drives from the specific D3940 Drive Enclosure.
 
 ### -InputObject &lt;Object&gt;
 
-A SAS Logical Interconnect or D3940 Drive Enclosure resource. If providing a SAS Logical Interconnect, the Cmdlet will automatically locate the available drive enclosures.
+A SAS Logical Interconnect or D3940 Drive Enclosure resource.  If providing a SAS Logical Interconnect, the Cmdlet will automatically locate the available drive enclosures.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Default value | `` |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases \[-appliance\] The name of the appliance or list of appliances to execute the command against.
+Aliases [-appliance]
+The name of the appliance or list of appliances to execute the command against.
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 

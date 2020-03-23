@@ -1,4 +1,4 @@
----
+﻿---
 description: Update SAN Manager configuration
 ---
 
@@ -40,30 +40,33 @@ Set-HPOVSanManager
 
 ## Description
 
-Updates an existing SAN Manager configuration. Can update the hostname/IP Address and credentials. At least one optional parameter must be provided.
+Updates an existing SAN Manager configuration.  Can update the hostname/IP Address and credentials.  At least one optional parameter must be provided.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 $task = Get-HPOVSanManager bna.domain.com -ApplianceConnection hpov.domain.com | Set-HPOVSanManager -hostname bna.newdomain.com | Wait-HPOVTaskComplete
+
 ```
 
 Get the SAN Manager using `Get-HPOVSanManager`, and pipling the resource in order to update the hostname value.
 
-### Example 2
+###  Example 2 
 
 ```text
 $task = Set-HPOVSanManager -name BNA.contoso.com -hostname bna.newdomain.com -ApplianceConnection hpov.domain.com | Wait-HPOVTaskComplete
+
 ```
 
 Update the existing Brocade Network Advisor SAN Manager"s hostname with the new value.
 
-### Example 3
+###  Example 3 
 
 ```text
 $task = Set-HPOVSanManager -name BNA.contoso.com -username newadmin -password updatedpassword -ApplianceConnection hpov.domain.com | Wait-HPOVTaskComplete
+
 ```
 
 Update the existing Brocade Network Advisor SAN Manager"s username and password.
@@ -72,14 +75,15 @@ Update the existing Brocade Network Advisor SAN Manager"s username and password.
 
 ### -InputObject &lt;Object&gt;
 
-Aliases \[-name\] Resource Object \(from `Get-HPOVSanManager`\) or Name of the SAN Manager to update. If specifying a resource Name, the ApplianceConnection parameter is required.
+Aliases [-name]
+Resource Object (from `Get-HPOVSanManager`) or Name of the SAN Manager to update.  If specifying a resource Name, the ApplianceConnection parameter is required.
 
 | Aliases | name, Resource |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Default value | `` |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -Hostname &lt;String&gt;
@@ -90,7 +94,7 @@ Updated Hostname or IP Address of the SAN Manager.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -114,19 +118,19 @@ Updated Username used to authenticate and manage the SAN Manager.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Password &lt;Object&gt;
 
-Updated Password used to authenticate and manage the SAN Manager. Can either be a String or SecureString value.
+Updated Password used to authenticate and manage the SAN Manager.  Can either be a String or SecureString value.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -138,17 +142,17 @@ The SNMPv3 Community User Name.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SnmpAuthLevel &lt;String&gt;
 
-The SNMPv3 Authentication Level. Allowed values are:
+The SNMPv3 Authentication Level.  Allowed values are:
 
-* None - No Security is required, only the SNMPv3 UserName is provided.
-* AuthOnly - SNMPv3 Authentication Encryption Security Level only. Must also provide `-SnmpAuthProtocol` and `-SnmpAuthPassword` parameters.
-* AuthAndPriv - SNMPv3 Authentication Encryption Security and Privacy Levels. Must also provide `-SnmpAuthProtocol`, `-SnmpAuthPassword`, `-SnmpPrivProtocol` and `-SnmpPrivPassword` parameters.
+	* None - No Security is required, only the SNMPv3 UserName is provided.
+	* AuthOnly - SNMPv3 Authentication Encryption Security Level only. Must also provide `-SnmpAuthProtocol` and `-SnmpAuthPassword` parameters.
+	* AuthAndPriv - SNMPv3 Authentication Encryption Security and Privacy Levels. Must also provide `-SnmpAuthProtocol`, `-SnmpAuthPassword`, `-SnmpPrivProtocol` and `-SnmpPrivPassword` parameters.
 
 | Aliases | None |
 | :--- | :--- |
@@ -162,53 +166,53 @@ The SNMPv3 Authentication Level. Allowed values are:
 
 SNMPv3 Password Encryption Protocol. Allowed values are:
 
-* SHA
-* MD5
+	* SHA
+	* MD5
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SnmpAuthPassword &lt;Object&gt;
 
-SNMPv3 UserName Password. Can either be a String or SecureString value.
+SNMPv3 UserName Password.  Can either be a String or SecureString value.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SnmpPrivProtocol &lt;String&gt;
 
-SNMPv3 Privacy Protocol. Allowed values are:
+SNMPv3 Privacy Protocol.  Allowed values are:
 
-* AES
-* DES
+	* AES
+	* DES
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SnmpPrivPassword &lt;Object&gt;
 
-SNMPv3 Privacy Encryption Password. Can either be a String or SecureString value.
+SNMPv3 Privacy Encryption Password.  Can either be a String or SecureString value.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -238,7 +242,7 @@ Enable Secure WBEM communications to Brocade SAN Network Advisor.
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
@@ -250,19 +254,19 @@ Use this parameter to immediately return the async task. By default, the Cmdlet 
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases \[-Appliance\]
+Aliases [-Appliance]
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-Default Value: ${Global:ConnectSessions} \| ? Default
+Default Value: ${Global:ConnectSessions} | ? Default
 
-| Aliases | None |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | None |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -270,13 +274,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Storage.SanManager \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Storage.SanManager [System.Management.Automation.PSCustomObject]**_
 
 SAN Manager resource from [`Get-HPOVSanManager`](get-hpovsanmanager.md)
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Update async task
 
@@ -286,4 +290,3 @@ Update async task
 * [Get-HPOVSanManager](get-hpovsanmanager.md)
 * [Remove-HPOVSanManager](remove-hpovsanmanager.md)
 * [Update-HPOVSanManager](update-hpovsanmanager.md)
-

@@ -1,4 +1,4 @@
----
+﻿---
 description: List Synergy DAS Enclosures.
 ---
 
@@ -19,7 +19,7 @@ This Cmdlet will help display the avialable Synergy DAS Enclosures, and their as
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVDriveEnclosure
@@ -28,6 +28,8 @@ Appliance Name              State Status    Serial Number Drive Bays I/O Adapter
 appliance 0000A66101, bay 1 On    Monitored SN123100      40/40      2
 appliance 0000A66102, bay 1 On    Monitored SN123101      40/40      2
 appliance 0000A66103, bay 1 On    Monitored SN123102      40/40      2
+
+
 ```
 
 Get all available Synergy Drive Enclosures.
@@ -36,13 +38,13 @@ Get all available Synergy Drive Enclosures.
 
 ### -Name &lt;String&gt;
 
-The name of the Synergy DAS enclosure. Omitt to return all devices.
+The name of the Synergy DAS enclosure.  Omitt to return all devices.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -60,19 +62,19 @@ Specify the label associated with resources.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases \[-Appliance\]
+Aliases [-Appliance]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-Default Value: ${Global:ConnectedSessions} \| ? Default
+Default Value: ${Global:ConnectedSessions} | ? Default
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -80,15 +82,15 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this cmdlet.**_
+_**None.  You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Storage.DriveEnclosure \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Storage.DriveEnclosure [System.Management.Automation.PSCustomObject]**_
 
 Single resource object.
 
-_**System.Collections.ArrayList**_ 
+_**System.Collections.ArrayList <HPOneView.Storage.DriveEnclosure>**_
 
 Multiple resource objects.
 

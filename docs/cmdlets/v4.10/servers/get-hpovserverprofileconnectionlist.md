@@ -1,4 +1,4 @@
----
+﻿---
 description: Retrieve Server Profile Connections
 ---
 
@@ -17,14 +17,15 @@ Obtain a formatted list of server profile connection IDs, include hardware addre
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVServerProfileConnectionList "test"
 serverProfile   portId    cid networkType macAddress        wwpn             boot      arrayTarget lun
 -------------   --------  --- ----------- ----------        ----             ----      ----------- ---                     
 test            Flb 1:1-a   1 Ethernet    36:37:6B:90:00:08 1000378079e00011 Primary                  
-test            Flb 1:1-b   2 Ethernet    36:37:6B:90:00:06 1000378079e0000d Secondary
+test            Flb 1:1-b   2 Ethernet    36:37:6B:90:00:06 1000378079e0000d Secondary                
+
 ```
 
 List Server Profile connections for Test.
@@ -33,31 +34,31 @@ List Server Profile connections for Test.
 
 ### -Name &lt;String&gt;
 
-The name of the server profile resource to be returned. All server profile resources will be returned if name is omitted.
+The name of the server profile resource to be returned.  All server profile resources will be returned if name is omitted.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases \[-Appliance\]
+Aliases [-Appliance]
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 
-Default Value: ${Global:ConnectedSessions} \| ? Default
+Default Value: ${Global:ConnectedSessions} | ? Default
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -65,7 +66,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this cmdlet.**_
+_**None.  You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 

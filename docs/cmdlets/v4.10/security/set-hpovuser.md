@@ -1,4 +1,4 @@
----
+﻿---
 description: Modify an existing user account.
 ---
 
@@ -40,31 +40,34 @@ Set-HPOVUser
 
 ## Description
 
-Modify or update an existing local user account on the management appliance. This cmdlet will not update the password or roles of the currently logged in user account. To update your HPE OneView appliance local account"s password, please use the Set-HPOVUserPassword cmdlet.
+Modify or update an existing local user account on the management appliance.  This cmdlet will not update the password or roles of the currently logged in user account.  To update your HPE OneView appliance local account"s password, please use the Set-HPOVUserPassword cmdlet.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Set-HPOVUser -username Sally -roles @("server administrator","network administrator")
+
 ```
 
 Update the user account "Sally" with new roles.
 
-### Example 2
+###  Example 2 
 
 ```text
 Set-HPOVUser -username Sally -password NewP@ssw0rd
+
 ```
 
 Update the user account "Sally" with a new password.
 
-### Example 3
+###  Example 3 
 
 ```text
 $Scope = Get-HPOVScope -Name Scope1 -ErrorAction Stop
 Get-HPOVUser -Username Sally | Set-HPOVUser -Roles "Server administrator" -ScopePermissions @{Role = "Network administrator"; Scope = $Scope }
+
 ```
 
 Modify the user account with the new role and scope permissions.
@@ -79,8 +82,8 @@ The object of the user account to be updated.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Default value | `` |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -UserName &lt;String&gt;
@@ -91,19 +94,19 @@ The name or object of the user account to be updated.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Password &lt;String&gt;
 
-New password for the user account. Passwords must be at least 8 characters.
+New password for the user account.  Passwords must be at least 8 characters.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -115,13 +118,14 @@ Updated Full Name of the User Account.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Roles &lt;Array&gt;
 
-Aliases \[-r, `-role`\] The role\(s\) to assign to the Directroy Group, in `[System.Collections.ArrayList]` format. Accepted values are noted within the ApplianceRoles property of the `[HPOneView.Appliance.Connection]` object stored in the $Global:ConnectedSessions variable.
+Aliases [-r, `-role`]
+The role(s) to assign to the Directroy Group, in `[System.Collections.ArrayList]` format.  Accepted values are noted within the ApplianceRoles property of the `[HPOneView.Appliance.Connection]` object stored in the $Global:ConnectedSessions variable.
 
 Example: $roles = "Server administrator","Network administrator"
 
@@ -129,7 +133,7 @@ Example: $roles = "Server administrator","Network administrator"
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -141,7 +145,7 @@ Updated Email Address of the User Account.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -153,7 +157,7 @@ Updated office phone of the User Account.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -165,7 +169,7 @@ Updated mobile phone number
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -195,31 +199,31 @@ Disable the local user account.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases \[-Appliance\]
+Aliases [-Appliance]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-Default Value: ${Global:ConnectedSessions} \| ? Default
+Default Value: ${Global:ConnectedSessions} | ? Default
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### -ScopePermissions &lt;Array&gt;
 
-Array collection of Hashtable. Will overwrite existing scope to role mappings.
+Array collection of Hashtable<Role; Scope>.  Will overwrite existing scope to role mappings.
 
-Example: `-ScopePermissions` @{Role = "Network administrator"; Scope = \(Get-HPOVScope `-Name` CorpNetAdmins `-ErrorAction` Stop\) }
+Example: `-ScopePermissions` @{Role = "Network administrator"; Scope = (Get-HPOVScope `-Name` CorpNetAdmins `-ErrorAction` Stop) }
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -229,13 +233,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Appliance.User \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.User [System.Management.Automation.PSCustomObject]**_
 
 HPE OneView User Account object created on an appliance
 
 ## Return Values
 
-_**HPOneView.Appliance.User \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.User [System.Management.Automation.PSCustomObject]**_
 
 If successful, returns a user resource
 
@@ -246,5 +250,4 @@ If successful, returns a user resource
 * [Remove-HPOVUser](remove-hpovuser.md)
 * [Set-HPOVUserPassword](set-hpovuserpassword.md)
 * [Set-HPOVUserRole](set-hpovuserrole.md)
-* [Show-HPOVUserSession]()
-
+* [Show-HPOVUserSession](../appliance/show-hpovusersession.md)

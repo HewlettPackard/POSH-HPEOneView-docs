@@ -1,4 +1,4 @@
----
+﻿---
 description: List Directory Groups from the configured LDAP Directory.
 ---
 
@@ -27,34 +27,39 @@ Show-HPOVLdapGroups
 
 ## Description
 
-This cmdlet will display the available Authentication Directory security groups. The displayed Directory Groups can then be used to define new Directory Group Role assignment on the appliance with the New-HPOVLdapGroup cmdlet.
+This cmdlet will display the available Authentication Directory security groups.  The displayed Directory Groups can then be used to define new Directory Group Role assignment on the appliance with the New-HPOVLdapGroup cmdlet.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Show-HPOVLdapGroups -u "Sarah Peterson" -d Domain1
+
 ```
 
 Get list of Directory Groups from Domain1 and prompt for password.
 
-### Example 2
+###  Example 2 
 
 ```text
 $password = convertto-SecureString -asplaintext "password123890" -force
 $Directory = Get-HPOVLdapDirectory "Domain99"
 Show-HPOVLdapGroups -u "Sarah Peterson" -p $password -d $Directory
+
+
 ```
 
 Automate list of Directory Groups from Domain99 with the provided password.
 
-### Example 3
+###  Example 3 
 
 ```text
 $password = convertto-SecureString -asplaintext "password123890" -force
 $Directory = Get-HPOVLdapDirectory "Domain99"
 Show-HPOVLdapGroups -u "Sarah Peterson" -p $password -d $Directory -GroupName "Admins"
+
+
 ```
 
 Automate list of Directory Groups from Domain99 with the provided password, searching for group names that contain "Admins".
@@ -63,7 +68,7 @@ Automate list of Directory Groups from Domain99 with the provided password, sear
 
 ### -UserName &lt;String&gt;
 
-Aliases \[-u\]
+Aliases [-u]
 
 Username to authenticate with
 
@@ -71,13 +76,13 @@ Username to authenticate with
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Password &lt;SecureString&gt;
 
-Aliases \[-p\]
+Aliases [-p]
 
 User account password
 
@@ -85,13 +90,13 @@ User account password
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Directory &lt;Object&gt;
 
-Aliases \[-d, `-domain`, `-AuthProvider`\]
+Aliases [-d, `-domain`, `-AuthProvider`]
 
 The configured LDAP Directory object on the appliance.
 
@@ -99,37 +104,37 @@ The configured LDAP Directory object on the appliance.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Default value | `` |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -GroupName &lt;String&gt;
 
-Provide the name of the Directory Group to search for. If omitted, all found Directory Groups will be returned.
+Provide the name of the Directory Group to search for.  If omitted, all found Directory Groups will be returned.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases \[-Appliance\]
+Aliases [-Appliance]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-Default Value: ${Global:ConnectedSessions} \| ? Default
+Default Value: ${Global:ConnectedSessions} | ? Default
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### -Credential &lt;PSCredential&gt;
 
@@ -139,7 +144,7 @@ Use this parameter if you want to provide a PSCredential object instead.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -155,11 +160,12 @@ Directory User Account password
 
 ## Return Values
 
-_**HPOneView.Appliance.AuthDirectoryGroup \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.AuthDirectoryGroup [System.Management.Automation.PSCustomObject]**_
 
 Authentication Directory Group
 
-_**System.Collections.ArrayList**_
+
+_**System.Collections.ArrayList<HPOneView.Appliance.AuthDirectoryGroup>**_
 
 Array of Authentication Directory Groups found
 

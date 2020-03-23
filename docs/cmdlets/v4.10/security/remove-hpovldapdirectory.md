@@ -1,4 +1,4 @@
----
+﻿---
 description: Remove authentication Directory.
 ---
 
@@ -20,18 +20,20 @@ Remove authentication Directory from the appliance. Can provide Directory Name o
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Remove-HPOVLdapDirectory -Directory "My Directory1"
+
 ```
 
 Remove "My Directroy Group1" from the appliance.
 
-### Example 2
+###  Example 2 
 
 ```text
 Get-HPOVLdapDirectory | Remove-HPOVLdapDirectory
+
 ```
 
 Get all Directories and remove them from the default connected appliance.
@@ -40,31 +42,32 @@ Get all Directories and remove them from the default connected appliance.
 
 ### -InputObject &lt;Object&gt;
 
-Aliases \[-d, `-Directory`\] Configured authentication Directory Name or Object.
+Aliases [-d, `-Directory`]
+Configured authentication Directory Name or Object.
 
 | Aliases | d, Directory |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Default value | `` |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases \[-Appliance\]
+Aliases [-Appliance]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-Default Value: ${Global:ConnectedSessions} \| ? Default
+Default Value: ${Global:ConnectedSessions} | ? Default
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### -Force &lt;SwitchParameter&gt;
 
@@ -80,21 +83,25 @@ Foreably remove the resource from the appliance.
 
 ### -WhatIf &lt;SwitchParameter&gt;
 
+
+
 | Aliases | wi |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
 
+
+
 | Aliases | cf |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -108,9 +115,11 @@ _**System.Collections.ArrayList**_
 
 Collection of Directories
 
+
 _**System.Management.Automation.PSCustomObject**_
 
 Single Directory object
+
 
 ## Return Values
 
@@ -118,8 +127,8 @@ _**System.Management.Automation.PSCustomObject**_
 
 Resource Removed Status
 
+
 ## Related Links
 
 * [Get-HPOVLdapDirectory](get-hpovldapdirectory.md)
 * [New-HPOVLdapDirectory](new-hpovldapdirectory.md)
-

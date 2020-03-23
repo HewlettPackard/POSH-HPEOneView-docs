@@ -1,4 +1,4 @@
----
+﻿---
 description: Not implemented.
 ---
 
@@ -17,7 +17,7 @@ Not implemented.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Set-HPOVServerProfile
@@ -45,7 +45,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 * [Get-HPOVServerProfileConnectionList](get-hpovserverprofileconnectionlist.md)
 * [Get-HPOVServerProfileMessage](get-hpovserverprofilemessage.md)
 * [Get-HPOVServerProfileTemplate](get-hpovserverprofiletemplate.md)
-* [Join-HPOVServerProfileToTemplate](https://github.com/HewlettPackard/POSH-HPOneView-docs/tree/2c3cd0d508b6cdba6336a27d496637fc71c6ce4c/docs/cmdlets/v5.00/servers/join-hpovserverprofiletotemplate.md)
+* [Join-HPOVServerProfileToTemplate](join-hpovserverprofiletotemplate.md)
 * [New-HPOVServerProfile](new-hpovserverprofile.md)
 * [New-HPOVServerProfileAssign](new-hpovserverprofileassign.md)
 * [New-HPOVServerProfileAttachVolume](new-hpovserverprofileattachvolume.md)
@@ -56,7 +56,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 * [Remove-HPOVServerProfile](remove-hpovserverprofile.md)
 * [Remove-HPOVServerProfileTemplate](remove-hpovserverprofiletemplate.md)
 * [Save-HPOVServerProfile](save-hpovserverprofile.md)
-* [Save-HPOVServerProfileTemplate](https://github.com/HewlettPackard/POSH-HPOneView-docs/tree/2c3cd0d508b6cdba6336a27d496637fc71c6ce4c/docs/cmdlets/v5.00/servers/save-hpovserverprofiletemplate.md)
-* [Set-HPOVServerProfileTemplate](https://github.com/HewlettPackard/POSH-HPOneView-docs/tree/2c3cd0d508b6cdba6336a27d496637fc71c6ce4c/docs/cmdlets/v5.00/servers/set-hpovserverprofiletemplate.md)
+* [Save-HPOVServerProfileTemplate](save-hpovserverprofiletemplate.md)
+* [Set-HPOVServerProfileTemplate](set-hpovserverprofiletemplate.md)
 * [Update-HPOVServerProfile](update-hpovserverprofile.md)
-

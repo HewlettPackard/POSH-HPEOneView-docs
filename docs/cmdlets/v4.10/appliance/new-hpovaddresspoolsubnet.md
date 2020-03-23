@@ -1,4 +1,4 @@
----
+﻿---
 description: Create an IPv4 Subnet Pool.
 ---
 
@@ -19,16 +19,17 @@ New-HPOVAddressPoolSubnet
 
 ## Description
 
-This cmdlet will assist with creating a new IPv4 Address Pool. When creating a new IPv4 Address Subnet, you must provide the Network ID, Subnet Mask \(CIDR \[e.g. 24\] or IPv4 Address Value \[e.g. 255.255.255.0\]\), Gateway and Domain Name. DNS Servers are optional.
-
+This cmdlet will assist with creating a new IPv4 Address Pool.  When creating a new IPv4 Address Subnet, you must provide the Network ID, Subnet Mask (CIDR [e.g. 24] or IPv4 Address Value [e.g. 255.255.255.0]), Gateway and Domain Name.  DNS Servers are optional.
+	
 To add IPv4 Address Ranges to a Subnet after creating it, please use the New-HPOVAddressPoolRange CMDLET.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 PS C:> New-HPOVAddressPoolSubnet -NetworkID 192.168.10.0 -Subnetmask 24 -Gateway 192.168.10.254 -Domain vlan10.domain.com -DNSServers 10.250.33.12,10.250.34.80
+
 ```
 
 Create a new IPv4 Address Pool with the specified values.
@@ -43,19 +44,19 @@ The IPv4 Network ID value of the subnet.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SubnetMask &lt;String&gt;
 
-CIDR `[e.g`. 24\] or IPv4 Address Value `[e.g`. 255.255.255.0\]
+CIDR `[e.g`. 24] or IPv4 Address Value `[e.g`. 255.255.255.0]
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -67,7 +68,7 @@ IPv4 Address of the default gateway for the subnet.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -79,7 +80,7 @@ DNS Domain Name of the subnet.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -91,25 +92,25 @@ An array of DNS Server IPv4 Addresses.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases \[-Appliance\]
+Aliases [-Appliance]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-Default Value: ${Global:ConnectedSessions} \| ? Default
+Default Value: ${Global:ConnectedSessions} | ? Default
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -117,11 +118,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this cmdlet.**_
+_**None.  You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.IPv4AddressSubnet \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.IPv4AddressSubnet [System.Management.Automation.PSCustomObject]**_
 
 Newly created IPv4 Address Subnet
 
@@ -130,4 +131,3 @@ Newly created IPv4 Address Subnet
 * [Get-HPOVAddressPoolSubnet](get-hpovaddresspoolsubnet.md)
 * [Remove-HPOVAddressPoolSubnet](remove-hpovaddresspoolsubnet.md)
 * [Set-HPOVAddressPoolSubnet](set-hpovaddresspoolsubnet.md)
-

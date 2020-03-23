@@ -1,4 +1,4 @@
----
+﻿---
 description: Enable or Disable Automated SAN Zoning.
 ---
 
@@ -44,30 +44,33 @@ Set-HPOVManagedSan
 
 ## Description
 
-This cmdlet is used to Enable or Disable a Managed SAN resource on the appliance. Disabling a Managed SAN will prevent the appliance from configuring FC Zones.
+This cmdlet is used to Enable or Disable a Managed SAN resource on the appliance.  Disabling a Managed SAN will prevent the appliance from configuring FC Zones.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Set-HPOVManagedSan Fabric_A -ZoningPolicy SingleInitiatorAllTargets
+
 ```
 
-Enable Automated SAN Zoning for "Fabric\_A"
+Enable Automated SAN Zoning for "Fabric_A"
 
-### Example 2
+###  Example 2 
 
 ```text
 Set-HPOVManagedSan Fabric_A -ZoningPolicy NoZoning
+
 ```
 
-Disable Automated SAN Zoning for "Fabric\_A"
+Disable Automated SAN Zoning for "Fabric_A"
 
-### Example 3
+###  Example 3 
 
 ```text
 Get-HPOVManagedSan | Set-HPOVManagedSan -ZoningPolicy SingleInitiatorAllTargets
+
 ```
 
 Enable Automated SAN Zoning for all managed SAN Fabrics
@@ -76,7 +79,7 @@ Enable Automated SAN Zoning for all managed SAN Fabrics
 
 ### -InputObject &lt;Object&gt;
 
-Aliases \[-Fabric, `-Name`, `-ManagedSan`\]
+Aliases [-Fabric, `-Name`, `-ManagedSan`]
 
 Managed SAN Name or Object.
 
@@ -84,13 +87,13 @@ Managed SAN Name or Object.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Default value | `` |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -EnableAutomatedZoning &lt;SwitchParameter&gt;
 
-\(DEPRICATED - Please use `-ZoningPolicy` parameter.\) Enable Automated Zoning for the specified Managed SAN. When used, the default Zone Policy "SingleInitiatorAllTargets" is set.
+(DEPRICATED - Please use `-ZoningPolicy` parameter.) Enable Automated Zoning for the specified Managed SAN.  When used, the default Zone Policy "SingleInitiatorAllTargets" is set.
 
 | Aliases | ZoningEnable, Enable |
 | :--- | :--- |
@@ -102,7 +105,7 @@ Managed SAN Name or Object.
 
 ### -DisableAutomatedZoning &lt;SwitchParameter&gt;
 
-\(DEPRICATED - Please use `-ZoningPolicy` parameter.\) Disable Automated Zoning for the specified Managed SAN.
+(DEPRICATED - Please use `-ZoningPolicy` parameter.) Disable Automated Zoning for the specified Managed SAN.
 
 | Aliases | ZoningDisable, Disable |
 | :--- | :--- |
@@ -116,9 +119,9 @@ Managed SAN Name or Object.
 
 Policy setting that affects the way that zones are created. Allowed values:
 
-* NoZoning - Disable all automated zoning on the SAN and ignore policy settings related to zoning.
-* SingleInitiatorAllTargets - Create one zone per initiator containing all targets connected to that initiator.
-* SingleInitiatorSingleStorageSystem - Similar to SingleInitiatorAllTargets except that separate zones are created for targets that reside on different storage systems.
+	* NoZoning - Disable all automated zoning on the SAN and ignore policy settings related to zoning.
+	* SingleInitiatorAllTargets - Create one zone per initiator containing all targets connected to that initiator.
+	* SingleInitiatorSingleStorageSystem - Similar to SingleInitiatorAllTargets except that separate zones are created for targets that reside on different storage systems.
 
 | Aliases | None |
 | :--- | :--- |
@@ -162,13 +165,13 @@ Example: "initiator_{hostname}_{initiatorName}"
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -TargetGroupNameFormat &lt;String&gt;
 
-Format to use for target group \(ex. storage system port group\) alias names. The following `built-in` variables can be used: {storageSystemName}, {targetGroupName}.
+Format to use for target group (ex. storage system port group) alias names. The following `built-in` variables can be used: {storageSystemName}, {targetGroupName}.
 
 Example: "TargetGroup_{storageSystemName}_{targetGroupName}"
 
@@ -176,13 +179,13 @@ Example: "TargetGroup_{storageSystemName}_{targetGroupName}"
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -TargetNameFormat &lt;String&gt;
 
-Format to use for target \(ex. storage system port\) alias names. The following `built-in` variables can be used: {storageSystemName}, {targetName}.
+Format to use for target (ex. storage system port) alias names. The following `built-in` variables can be used: {storageSystemName}, {targetName}.
 
 Example: "Target_{storageSystemName}_{targetName}"
 
@@ -190,81 +193,81 @@ Example: "Target_{storageSystemName}_{targetName}"
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ZoneNameFormat &lt;String&gt;
 
-Format to use when naming new and updated zones. The following `built-in` variables can be used: {hostName}, {initiatorName}, {initiatorWwn}, {storageSystemName}, {targetName}, {targetGroupName}
+Format to use when naming new and updated zones. The following `built-in` variables can be used: {hostName}, {initiatorName}, {initiatorWwn}, {storageSystemName}, {targetName}, {targetGroupName} 
 
-Example: "{initiatorWwn}\_{initiatorName}"
+Example: "{initiatorWwn}_{initiatorName}"
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -UpdateZoneNames &lt;Boolean&gt;
 
-Format to use when naming new and updated zones. The following `built-in` variables can be used: {hostName}, {initiatorName}, {initiatorWwn}, {storageSystemName}, {targetName}, {targetGroupName}
+Format to use when naming new and updated zones. The following `built-in` variables can be used: {hostName}, {initiatorName}, {initiatorWwn}, {storageSystemName}, {targetName}, {targetGroupName} 
 
-Example: "{initiatorWwn}\_{initiatorName}"
+Example: "{initiatorWwn}_{initiatorName}"
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -UpdateInitiatorAliases &lt;Boolean&gt;
 
-Format to use when naming new and updated zones. The following `built-in` variables can be used: {hostName}, {initiatorName}, {initiatorWwn}, {storageSystemName}, {targetName}, {targetGroupName}
+Format to use when naming new and updated zones. The following `built-in` variables can be used: {hostName}, {initiatorName}, {initiatorWwn}, {storageSystemName}, {targetName}, {targetGroupName} 
 
-Example: "{initiatorWwn}\_{initiatorName}"
+Example: "{initiatorWwn}_{initiatorName}"
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -UpdateTargetAliases &lt;Boolean&gt;
 
-Format to use when naming new and updated zones. The following `built-in` variables can be used: {hostName}, {initiatorName}, {initiatorWwn}, {storageSystemName}, {targetName}, {targetGroupName}
+Format to use when naming new and updated zones. The following `built-in` variables can be used: {hostName}, {initiatorName}, {initiatorWwn}, {storageSystemName}, {targetName}, {targetGroupName} 
 
-Example: "{initiatorWwn}\_{initiatorName}"
+Example: "{initiatorWwn}_{initiatorName}"
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases \[-Appliance\]
+Aliases [-Appliance]
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-Default Value: ${Global:ConnectSessions} \| ? Default
+Default Value: ${Global:ConnectSessions} | ? Default
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -272,13 +275,15 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Storage.ManagedSan \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Storage.ManagedSan [System.Management.Automation.PSCustomObject]**_
 
 Single Resource
 
-_**System.Collection.ArrayList**_ 
+
+_**System.Collection.ArrayList <HPOneView.Storage.ManagedSan>**_
 
 Multiple Resources
+
 
 ## Return Values
 
@@ -286,11 +291,12 @@ _**System.Management.Automation.PSCustomObject**_
 
 Single Resource
 
+
 _**System.Collections.ArrayList**_
 
 Multiple Resources
 
+
 ## Related Links
 
 * [Get-HPOVManagedSan](get-hpovmanagedsan.md)
-

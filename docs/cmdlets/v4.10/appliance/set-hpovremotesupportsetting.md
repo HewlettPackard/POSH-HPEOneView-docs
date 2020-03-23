@@ -1,4 +1,4 @@
----
+﻿---
 description: Configure supported resource Remote Support settings.
 ---
 
@@ -13,33 +13,36 @@ Set-HPOVRemoteSupportSetting
 
 ## Description
 
-Use this Cmdlet to configure a supported resources Remote Support collection settings.
+Use this Cmdlet to configure a supported resources Remote Support collection settings. 
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 $NewReseller = Get-HPOVRemoteSupportContact -Name "New Reseller Name"
 Get-HPOVEnclosure -Name Encl1 | Set-HPOVRemoteSupportSetting -Reseller $NewReseller
+
 ```
 
 Update "Encl1" with a new reseller contact that was added to the appliance.
 
-### Example 2
+###  Example 2 
 
 ```text
-Get-HPOVServer -Name Prd-host-* | Set-HPOVRemoteSupportSetting -ContractType SupportAgreement -SupportID 111199990
+Get-HPOVServer -Name Prd-host-* | Set-HPOVRemoteSupportSetting -ContractType SupportAgreement -SupportID 111199990 
+
 ```
 
 Update the servers with a new support agreement.
 
-### Example 3
+###  Example 3 
 
 ```text
 PrimaryContact = Get-HPOVRemoteSupportContact -Name "Gladi Chua"
 $SecondaryContact = Get-HPOVRemoteSupportContact -Name "Luke Smith" 
 Get-HPOVEnclosure -Name Prod* | Set-HPOVRemoteSupportSetting -PrimaryContact $PrimaryContact -SecondaryContact $SecondaryContact -Async -OutVariable Tasks
+
 ```
 
 Update the Enclosures with new primary and secondary contacts, returning async tasks to monitor using the OutVariable Common Parameter.
@@ -54,8 +57,8 @@ Either a Server Hardware or Enclosure resource to get the configured Remote Supp
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Default value | `` |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -PrimaryContact &lt;Object&gt;
@@ -66,7 +69,7 @@ Primary Remote Support Contact user object.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -78,7 +81,7 @@ Secondary Remote Support Contact user object.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -90,7 +93,7 @@ Authorized HPE service partner object from `Get-HPOVRemoteSupportPartner`.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -102,34 +105,34 @@ Authorized HPE reseller partner object from `Get-HPOVRemoteSupportPartner`.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ContractType &lt;String&gt;
 
-Use to override the contract type. If specifying a different contract type, you must supply the SupportID. Allowed values are:
+Use to override the contract type.  If specifying a different contract type, you must supply the SupportID.  Allowed values are:
 
-* SupportAgreement
-* PackagedSupport.
+	* SupportAgreement
+	* PackagedSupport.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SupportID &lt;String&gt;
 
-The support Contract ID. You must specify the type of contract by using the `-ContractType` parameter.
+The support Contract ID.  You must specify the type of contract by using the `-ContractType` parameter.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -141,7 +144,7 @@ Use to update the HPE support backend with an updated serial number.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -153,13 +156,13 @@ Use to update the HPE support backend with an updated product number
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
@@ -171,19 +174,19 @@ Use this parameter to immediately return the async task. By default, the Cmdlet 
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases \[-Appliance\]
+Aliases [-Appliance]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-Default Value: ${Global:ConnectedSessions} \| ? Default
+Default Value: ${Global:ConnectedSessions} | ? Default
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -191,21 +194,20 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.ServerHardware \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.ServerHardware [System.Management.Automation.PSCustomObject]**_
 
 Server hardware resource object.
 
-_**HPOneView.Enclosure \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Enclosure [System.Management.Automation.PSCustomObject]**_
 
 Enclosure resource object.
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Asyncronous task resource to monitor
 
 ## Related Links
 
 * [Get-HPOVRemoteSupportSetting](get-hpovremotesupportsetting.md)
-

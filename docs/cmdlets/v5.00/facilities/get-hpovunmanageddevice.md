@@ -1,4 +1,4 @@
----
+﻿---
 description: Get Unmanaged Devices.
 ---
 
@@ -17,11 +17,11 @@ Get-HPOVUnmanagedDevice
 
 ## Description
 
-HPE OneView provides administrators with the capability to define unmanaged devices to them place within Racks, in order to provide a more realistic and complete data center layout. This Cmdlet will retrieve all or a specified Unmanaged Device. A report switch is provided to display the output in an easier to read format.
+HPE OneView provides administrators with the capability to define unmanaged devices to them place within Racks, in order to provide a more realistic and complete data center layout.  This Cmdlet will retrieve all or a specified Unmanaged Device.  A report switch is provided to display the output in an easier to read format.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVUnmanagedDevice
@@ -39,13 +39,13 @@ The name of the Unmanaged Device.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -List &lt;SwitchParameter&gt;
 
-Deprecated parameter. Cmdlet now defaults to `Format-Table` output.
+Deprecated parameter.  Cmdlet now defaults to `Format-Table` output.
 
 | Aliases | report |
 | :--- | :--- |
@@ -69,15 +69,15 @@ Specify the label associated with resources.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -85,11 +85,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this Cmdlet.**_
+_**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.UnmanagedResource \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.UnmanagedResource [System.Management.Automation.PSCustomObject]**_
 
 Single Unmanaged Device resource object
 
@@ -100,5 +100,4 @@ Multiple Unmanaged Device resource objects
 ## Related Links
 
 * [New-HPOVUnmanagedDevice](new-hpovunmanageddevice.md)
-* [Remove-HPOVUnmanagedDevice](https://github.com/HewlettPackard/POSH-HPOneView-docs/tree/2c3cd0d508b6cdba6336a27d496637fc71c6ce4c/docs/cmdlets/v5.00/facilities/remove-hpovunmanageddevice.md)
-
+* [Remove-HPOVUnmanagedDevice](remove-hpovunmanageddevice.md)

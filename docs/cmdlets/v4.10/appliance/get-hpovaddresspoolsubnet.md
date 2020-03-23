@@ -1,4 +1,4 @@
----
+﻿---
 description: Retrieve Address Subnet Pool information.
 ---
 
@@ -15,11 +15,11 @@ Get-HPOVAddressPoolSubnet
 
 ## Description
 
-Using this Cmdlet will display the configured IPv4 Subnet Address Pool\(s\) configured on an HPE OneView appliance.
+Using this Cmdlet will display the configured IPv4 Subnet Address Pool(s) configured on an HPE OneView appliance.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVAddressPoolSubnet
@@ -28,17 +28,21 @@ Appliance            Network ID   Subnet Mask   Gateway        DNS Server       
 hpov-tot1.domain.com 172.20.0.0   255.255.0.0   172.20.0.1     {10.250.33.12, 10.250.34.80} domain.com        Prod1
 hpov-tot1.domain.com 192.168.20.0 255.255.255.0 192.168.20.254 {10.250.33.12, 10.250.34.80} vlan20.domain.lab VLAN20Prod
 hpov-tot1.domain.com 192.168.10.0 255.255.255.0 192.168.10.254 {10.250.33.12, 10.250.34.80} domain.lab        VLAN10 Prod
+
+
 ```
 
 Get the configured IPv4 Address Pools from all appliances.
 
-### Example 2
+###  Example 2 
 
 ```text
 Get-HPOVAddressPoolSubnet -NetworkId 192.168.20.0
 Appliance            Network ID   Subnet Mask   Gateway        DNS Server                   Domain Name       Ranges
 ---------            ----------   -----------   -------        ----------                   -----------       ------
 hpov-tot1.domain.com 192.168.20.0 255.255.255.0 192.168.20.254 {10.250.33.12, 10.250.34.80} vlan20.domain.lab VLAN20Prod
+
+
 ```
 
 Get the specified IPv4 Address Pool from all appliances.
@@ -53,25 +57,25 @@ Specify the Network ID of the subnet in order to filter the results.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases \[-Appliance\]
+Aliases [-Appliance]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-Default Value: ${Global:ConnectedSessions} \| ? Default
+Default Value: ${Global:ConnectedSessions} | ? Default
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -79,21 +83,22 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. This Cmdlet does not support pipeline operations.**_
+_**None.  This Cmdlet does not support pipeline operations.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.IPv4AddressSubnet \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.IPv4AddressSubnet [System.Management.Automation.PSCustomObject]**_
 
 Single IPv4 Subnet Address Pool Range.
 
-_**System.Collections.ArrayList**_ 
 
-Collection of IPv4 Subnet Address Pool Range\(s\).
+_**System.Collections.ArrayList <HPOneView.Appliance.IPv4AddressSubnet>**_
+
+Collection of IPv4 Subnet Address Pool Range(s).
+
 
 ## Related Links
 
 * [New-HPOVAddressPoolSubnet](new-hpovaddresspoolsubnet.md)
 * [Remove-HPOVAddressPoolSubnet](remove-hpovaddresspoolsubnet.md)
 * [Set-HPOVAddressPoolSubnet](set-hpovaddresspoolsubnet.md)
-

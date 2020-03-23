@@ -1,4 +1,4 @@
----
+﻿---
 description: Create Server Profile Logical Disk object.
 ---
 
@@ -36,47 +36,52 @@ New-HPOVServerProfileLogicalDisk
 
 ## Description
 
-This helper CMDLET will create a Logical Disk object to then be assigned to a Server Profile Template or Server Profile using the -LogicalDisk parameter. The LogicalDisk configuration is supported with the embedded \(or Slot 0\) HPE SmartArray controller for DL and BL class systems only.
+This helper CMDLET will create a Logical Disk object to then be assigned to a Server Profile Template or Server Profile using the -LogicalDisk parameter.  The LogicalDisk configuration is supported with the embedded (or Slot 0) HPE SmartArray controller for DL and BL class systems only.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 $LogicalDisk = New-HPOVServerProfileLogicalDisk -Name "MyDisk"
+
 ```
 
 Create a default Logical Disk configuration object.
 
-### Example 2
+###  Example 2 
 
 ```text
 $ld1 = New-HPOVServerProfileLogicalDisk -Name "Boot Disk" -RAID RAID1 -NumberofDrives 2 -Bootable $True
+
 ```
 
 Create a custom Logical Disk with the provided parameter values.
 
-### Example 3
+###  Example 3 
 
 ```text
 $ld1 = New-HPOVServerProfileLogicalDisk -Name "Boot Disk" -RAID RAID1 -NumberofDrives 2 -DriveType SAS -MinDriveSize 300 -Bootable $True
+
 ```
 
 Create a custom HPE Synergy D3940 bootable RAID Logical Disk with the provided parameter values.
 
-### Example 4
+###  Example 4 
 
 ```text
 $AvailableDriveType = Get-HPOVSasLogicalInterconnect -Name "LE1-Default SAS Synergy LIG-3" -ErrorAction Stop | Get-HPOVAvailableDriveType  | ? { $_.Type -eq "SASHDD" -and $_.capacity -eq 900 }
 $NewLogicalDisk = New-HPOVServerProfileLogicalDisk -Name "LD1_RAID5_900GB_SASHDD" -DriveSelectionBy DriveType -NumberofDrives 6 -RAID RAID5 -AvailableDriveType $AvailableDriveType
+
 ```
 
 Create a RAID5 Logical Disk for a Server Profile using D3940 storage, and a specific available drive type, 900GB capacity and SASHDD type.
 
-### Example 5
+###  Example 5 
 
 ```text
 $JBODLogicalDisk = New-HPOVServerProfileLogicalDisk -Name "JBOD1_900GB_SASHDD" -NumberofDrives 6 -MinDriveSize 900 -DriveType SAS
+
 ```
 
 Create logical JBOD to then be attached to either a Gen10 Mixed Mode or Gen9 or newer HBA mode controller.
@@ -85,13 +90,13 @@ Create logical JBOD to then be attached to either a Gen10 Mixed Mode or Gen9 or 
 
 ### -Name &lt;String&gt;
 
-Logical Disk name. Must be unique within the Server Profile.
+Logical Disk name.  Must be unique within the Server Profile.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -99,7 +104,7 @@ Logical Disk name. Must be unique within the Server Profile.
 
 The RAID level of the logical drive. Supported values depend on the local storage capabilities of the selected server hardware type.
 
-Only RAID0 and RAID1 are supported for embedded BL disk policies. RAID5, RAID6, RAID10 are supported with DL servers with SmartArray controller that supports the RAID type. RAID0, RAID1ADM, RAID10, RAID5, and RAID6 are supported values with HPE Synergy D3940 disk shelf.
+Only RAID0 and RAID1 are supported for embedded BL disk policies.  RAID5, RAID6, RAID10 are supported with DL servers with SmartArray controller that supports the RAID type.  RAID0, RAID1ADM, RAID10, RAID5, and RAID6 are supported values with HPE Synergy D3940 disk shelf.
 
 | Aliases | None |
 | :--- | :--- |
@@ -123,29 +128,26 @@ The number of physical drives to be used to build the logical drive. The provide
 
 ### -DriveType &lt;String&gt;
 
-Defines the interface type for drives that will be used to build the logical drive. Supported values depend on the local storage capabilities of the selected server hardware type. Allowed value:
+Defines the interface type for drives that will be used to build the logical drive. Supported values depend on the local storage capabilities of the selected server hardware type.  Allowed value:
 
-* SAS
-
-  \*SATA
-
-  \*SASSSD
-
-  \*SATASSD
-
-  \*Auto
-
+    * SAS
+    *SATA
+    *SASSSD
+    *SATASSD
+    *Auto
 {% hint style="info" %}
-Auto is not supported when attempting to create an HPE Synergy D3940 Logical or JBOD disk. You must specify a disk technology type unless `-DriveSelectionBy` is changed to DriveType and `-AvailableDriveType` is used. Allowed values are:
+Auto is not supported when attempting to create an HPE Synergy D3940 Logical or JBOD disk.  You must specify a disk technology type unless `-DriveSelectionBy` is changed to DriveType and `-AvailableDriveType` is used.  Allowed values are:
 {% endhint %}
 
-* SAS
-* SATA
-* SASSSD
-* SATASSD
-* NVMeSas
-* NVMeSata
-* Auto
+
+    * SAS
+    * SATA
+    * SASSSD
+    * SATASSD
+    * NVMeSas
+    * NVMeSata
+    * Auto
+
 
 | Aliases | None |
 | :--- | :--- |
@@ -157,10 +159,10 @@ Auto is not supported when attempting to create an HPE Synergy D3940 Logical or 
 
 ### -DriveSelectionBy &lt;String&gt;
 
-Use to specify how the drive selection will be used. Allowed values:
+Use to specify how the drive selection will be used.  Allowed values:
 
-* DriveType - Use `Get-HPOVAvailableDriveType` to locate available drive types, quantity to which SAS Logical Interconnect or Drive Enclosure.
-* SizeAndTechnology - Use to define the attributes of the drive based on technology and min/max drive size.  The `-DriveType` and `-MinDriveSize` parameters are required.
+    * DriveType - Use `Get-HPOVAvailableDriveType` to locate available drive types, quantity to which SAS Logical Interconnect or Drive Enclosure.
+    * SizeAndTechnology - Use to define the attributes of the drive based on technology and min/max drive size.  The `-DriveType` and `-MinDriveSize` parameters are required.
 
 Default: SizeAndTechnology
 
@@ -174,7 +176,7 @@ Default: SizeAndTechnology
 
 ### -StorageLocation &lt;String&gt;
 
-Specify Internal for HPE Synergy Compute Nodes that have the Expanded Storage option connected to an available mezzanine SmartArray controller for NVMe drives. DriveType parameter then must be set to NVMeSata or NVMeSAS. Use External to specify storage will be allocated from the D3940 disk shelf.
+Specify Internal for HPE Synergy Compute Nodes that have the Expanded Storage option connected to an available mezzanine SmartArray controller for NVMe drives.  DriveType parameter then must be set to NVMeSata or NVMeSAS.  Use External to specify storage will be allocated from the D3940 disk shelf.
 
 | Aliases | None |
 | :--- | :--- |
@@ -192,13 +194,13 @@ A specific availabe drive type from `Get-HPOVAvailableDriveType`.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Default value | `` |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -MinDriveSize &lt;Int32&gt;
 
-Only for HPE Synergy D3940. Specify the minimum size disk to request. Required when `-DriveSelectionBy` is set to SizeAndTechnology.
+Only for HPE Synergy D3940.  Specify the minimum size disk to request.  Required when `-DriveSelectionBy` is set to SizeAndTechnology.
 
 | Aliases | None |
 | :--- | :--- |
@@ -210,7 +212,7 @@ Only for HPE Synergy D3940. Specify the minimum size disk to request. Required w
 
 ### -MaxDriveSize &lt;Int32&gt;
 
-Only for HPE Synergy D3940. If the parameter is not specified, the MinDriveSize parameter value will be used.
+Only for HPE Synergy D3940.  If the parameter is not specified, the MinDriveSize parameter value will be used.
 
 | Aliases | None |
 | :--- | :--- |
@@ -222,7 +224,7 @@ Only for HPE Synergy D3940. If the parameter is not specified, the MinDriveSize 
 
 ### -Bootable &lt;Boolean&gt;
 
-Indicates if the logical drive is bootable or not. Cannot be combined with an FC or FCoE Server Profile Connection that is also set as Bootable. Parameter is not valid with defining Synergy JBOD SAS disk policies.
+Indicates if the logical drive is bootable or not. Cannot be combined with an FC or FCoE Server Profile Connection that is also set as Bootable.  Parameter is not valid with defining Synergy JBOD SAS disk policies.
 
 | Aliases | None |
 | :--- | :--- |
@@ -246,7 +248,7 @@ Indicates if the logical drive should be erased when it is deleted from or with 
 
 ### -Accelerator &lt;String&gt;
 
-For Gen10 Smart Array controllers only. When using Auto for drive type allocation and supplied 'Enabled', the Accelorator policy will be set to 'ControllerCache'. If drive allocation type is an 'SSD' drive, the accelorator policy will be set to 'IOBypass'. Disabled will set the accelorator policy to 'None'. Default is 'Unmanaged'.
+For Gen10 Smart Array controllers only.  When using Auto for drive type allocation and supplied 'Enabled', the Accelorator policy will be set to 'ControllerCache'.  If drive allocation type is an 'SSD' drive, the accelorator policy will be set to 'IOBypass'.  Disabled will set the accelorator policy to 'None'.  Default is 'Unmanaged'.
 
 | Aliases | None |
 | :--- | :--- |
@@ -272,11 +274,10 @@ _**System.Management.Automation.PSCustomObject**_
 
 Logical Disk configuration object
 
-_**System.Collections.ArrayList**_
+_**System.Collections.ArrayList<System.Management.Automation.PSCustomObject>**_
 
 Collection of Logical Disk configuration objects
 
 ## Related Links
 
 * [New-HPOVServerProfileLogicalDiskController](new-hpovserverprofilelogicaldiskcontroller.md)
-

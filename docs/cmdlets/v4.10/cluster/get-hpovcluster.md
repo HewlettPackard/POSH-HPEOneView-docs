@@ -1,4 +1,4 @@
----
+﻿---
 description: Default content
 ---
 
@@ -12,10 +12,11 @@ Default content
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVCluster
+
 ```
 
 Default example
@@ -24,19 +25,19 @@ Default example
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases \[-Appliance\]
+Aliases [-Appliance]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-Default Value: ${Global:ConnectedSessions} \| ? Default
+Default Value: ${Global:ConnectedSessions} | ? Default
 
-| Aliases |  |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? |  |  |
-| Accept wildcard characters? |  |  |
+| Aliases |  |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? |  |
+| Accept wildcard characters? |  |
 
 ### -Name &lt;String&gt;
 
@@ -46,7 +47,7 @@ default content
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? |  |
 | Accept wildcard characters? |  |
 

@@ -1,4 +1,4 @@
----
+﻿---
 description: Change the appliance current security mode.
 ---
 
@@ -15,14 +15,15 @@ Set-HPOVApplianceCurrentSecurityMode
 
 ## Description
 
-Use this Cmdlet to change the current security mode \(Legacy, FIPS or CNSA\) of the appliance. Before modifying the appliance security mode, a compatibility report should be run using the Show-HPOVApplianceSecurityModeCompatibilityReport. When changing active security mode will require an immediate appliance reboot.
+Use this Cmdlet to change the current security mode (Legacy, FIPS or CNSA) of the appliance. Before modifying the appliance security mode, a compatibility report should be run using the Show-HPOVApplianceSecurityModeCompatibilityReport. When changing active security mode will require an immediate appliance reboot.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVApplianceAvailableSecurityMode -ModeName CNSA | Set-HPOVApplianceCurrentSecurityMode
+
 ```
 
 Put the appliance into CNSA mode. After confirmation prompt, appliance will immediately reboot.
@@ -31,19 +32,19 @@ Put the appliance into CNSA mode. After confirmation prompt, appliance will imme
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases \[-Appliance\]
+Aliases [-Appliance]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-Default Value: ${Global:ConnectedSessions} \| ? Default
+Default Value: ${Global:ConnectedSessions} | ? Default
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### -SecurityMode &lt;HPOVApplianceAvailableSecurityMode&gt;
 
@@ -53,8 +54,8 @@ Specify the Security Mode to change the appliance to by using `Get-HPOVAppliance
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Default value | `` |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
@@ -73,7 +74,7 @@ _**HPOneView.Appliance.SecurityMode**_
 
 After appliance reboots, the appliance current security mode is returned.
 
+
 ## Related Links
 
 * [Get-HPOVApplianceCurrentSecurityMode](get-hpovappliancecurrentsecuritymode.md)
-

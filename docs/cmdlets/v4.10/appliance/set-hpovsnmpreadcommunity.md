@@ -1,4 +1,4 @@
----
+﻿---
 description: Set SNMP Read Community.
 ---
 
@@ -13,14 +13,15 @@ Set-HPOVSnmpReadCommunity
 
 ## Description
 
-Set a new SNMP Read Community value on the appliance. Updating this value will cause the appliance to refresh the managed devices with the updated Read-Only SNMP Community string. This does not update the SNMP trap destination\(s\) for Logical Interconnects or Logical Interconnect Groups.
+Set a new SNMP Read Community value on the appliance.  Updating this value will cause the appliance to refresh the managed devices with the updated Read-Only SNMP Community string.  This does not update the SNMP trap destination(s) for Logical Interconnects or Logical Interconnect Groups.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Set-HPOVSnmpReadCommunity -name "MySNMPC0mmunity"
+
 ```
 
 Set the appliance SNMP Read Community string to the new value.
@@ -35,25 +36,25 @@ The name of the new SNMP `Read-Only` Community.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases \[-Appliance\]
+Aliases [-Appliance]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-Default Value: ${Global:ConnectedSessions} \| ? Default
+Default Value: ${Global:ConnectedSessions} | ? Default
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -61,15 +62,15 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this cmdlet.**_
+_**None.  You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
 _**None.**_
 
-None
+
+ None
 
 ## Related Links
 
 * [Get-HPOVSnmpReadCommunity](get-hpovsnmpreadcommunity.md)
-

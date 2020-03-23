@@ -1,4 +1,4 @@
----
+﻿---
 description: Retreive Uplink Set resource(s).
 ---
 
@@ -28,38 +28,42 @@ Get-HPOVUplinkSet
 
 ## Description
 
-This cmdlet will retrieve the list of all Uplink Sets or specific by the name. The cmdlet will only display provisioned Uplink Sets that are members of a Logical Interconnect resource. To view Uplink Sets of a Logical Interconnect Group, use the Get-HPOVLogicalInterconnectGroup CMDLET.
+This cmdlet will retrieve the list of all Uplink Sets or specific by the name.  The cmdlet will only display provisioned Uplink Sets that are members of a Logical Interconnect resource.  To view Uplink Sets of a Logical Interconnect Group, use the Get-HPOVLogicalInterconnectGroup CMDLET.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 $UplinkSets = Get-HPOVUplinkSet
+
 ```
 
 Get list of all Uplink Sets.
 
-### Example 2
+###  Example 2 
 
 ```text
 Get-HPOVUplinkSet -name "Production Networks"
+
 ```
 
-Get the "Production Networks" Uplink Set\(s\).
+Get the "Production Networks" Uplink Set(s).
 
-### Example 3
+###  Example 3 
 
 ```text
 Get-HPOVUplinkSet -name "Production Networks" -report
+
 ```
 
-Get the "Production Networks" Uplink Set\(s\), and generate a report.
+Get the "Production Networks" Uplink Set(s), and generate a report.
 
-### Example 4
+###  Example 4 
 
 ```text
 Get-HPOVUplinkSet -name "Production Networks" -liname "Encl1-LI" -report
+
 ```
 
 Get the "Production Networks" Uplink Set that is associated with "Encl1-LI" Logical Interconnect and generate a report.
@@ -74,40 +78,41 @@ Name of Uplink Set
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -LogicalInterconnect &lt;Object&gt;
 
-Aliases \[-LiName\] Name of the Logical Interconnect to show associated Uplink Set.
+Aliases [-LiName]
+Name of the Logical Interconnect to show associated Uplink Set.
 
 | Aliases | liname |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Default value | `` |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -type &lt;String&gt;
 
-Specify the Uplink Set Type to display. Will display all Uplink Sets of the type provided. Allowed values:
+Specify the Uplink Set Type to display.  Will display all Uplink Sets of the type provided.  Allowed values:
 
-* Ethernet
-* FibreChannel
+	* Ethernet
+	* FibreChannel
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -report &lt;SwitchParameter&gt;
 
-Generate a report of the defined Uplink Sets. Includes Uplink Set type, networks, redundancy report, and assigned uplink ports.
+Generate a report of the defined Uplink Sets.  Includes Uplink Set type, networks, redundancy report, and assigned uplink ports.
 
 | Aliases | None |
 | :--- | :--- |
@@ -119,19 +124,19 @@ Generate a report of the defined Uplink Sets. Includes Uplink Set type, networks
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases \[-Appliance\]
+Aliases [-Appliance]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-Default Value: ${Global:ConnectedSessions} \| ? Default
+Default Value: ${Global:ConnectedSessions} | ? Default
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### -exportFile &lt;String&gt;
 
@@ -141,7 +146,7 @@ Export the found Uplink Set resource objects to JSON files in the specified dire
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -151,7 +156,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this cmdlet.**_
+_**None.  You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
@@ -165,7 +170,8 @@ Multiple Uplink Sets
 
 _**Collection of Uplink Sets**_
 
+
+
 ## Related Links
 
 * [New-HPOVUplinkSet](new-hpovuplinkset.md)
-

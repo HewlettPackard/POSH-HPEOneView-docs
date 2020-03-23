@@ -56,7 +56,7 @@ The Name, URI or Object of the Unmanaged Device to remove.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
@@ -94,7 +94,7 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -106,7 +106,7 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

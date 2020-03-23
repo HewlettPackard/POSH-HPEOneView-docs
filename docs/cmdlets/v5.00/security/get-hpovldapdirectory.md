@@ -1,4 +1,4 @@
----
+﻿---
 description: Get configured Authentication Directories
 ---
 
@@ -24,22 +24,20 @@ Get-HPOVLdapDirectory
 
 You can configure HPE OneView to use an external enterprise directory service for user authentication. HPE OneView supports the following enterprise directory services:
 
-* Active Directory
-* OpenLDAP
+    * Active Directory
+    * OpenLDAP
 
 When you use a directory service, directory users are granted HPE OneView permissions using their group membership in the directory. After defining a directory service, use the User and Groups screen to define permissions for directory groups. Directory groups are assigned one or more HPE OneView permissions. A directory user is assigned the HPE OneView permissions that represent the union of the permissions for all the directory groups that the user is a member of. Only after permissions are defined for directory groups, directory users are authenticated into the appliance.
 
-This Cmdlet will retrieve the configured authentication directory\(ies\) configured on the appliance.
+This Cmdlet will retrieve the configured authentication directory(ies) configured on the appliance.
 
 {% hint style="info" %}
 Minimum required privileges: Read-
 {% endhint %}
-
 only
-
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVLdapDirectory
@@ -54,7 +52,7 @@ MyAppliance2 domain2 AD   dc=domain2,dc=com ou=Admins,ou=domain2.. {dc1.domain2.
 
 View the configured authentication directories, for all connected appliances.
 
-### Example 2
+###  Example 2 
 
 ```text
 Get-HPOVLdap -export -save c:\directory
@@ -72,7 +70,7 @@ The specific authentication directory name.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -84,23 +82,23 @@ Export the configured directories to individual files.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 Default Value: ${Global:ConnectSessions}
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -108,11 +106,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this Cmdlet.**_
+_**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.AuthDirectory \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.AuthDirectory [System.Management.Automation.PSCustomObject]**_
 
 Authentication Directory settings object
 
@@ -123,5 +121,4 @@ Multiple Authentication Directory settings objects
 ## Related Links
 
 * [New-HPOVLdapDirectory](new-hpovldapdirectory.md)
-* [Remove-HPOVLdapDirectory](https://github.com/HewlettPackard/POSH-HPOneView-docs/tree/2c3cd0d508b6cdba6336a27d496637fc71c6ce4c/docs/cmdlets/v5.00/security/remove-hpovldapdirectory.md)
-
+* [Remove-HPOVLdapDirectory](remove-hpovldapdirectory.md)

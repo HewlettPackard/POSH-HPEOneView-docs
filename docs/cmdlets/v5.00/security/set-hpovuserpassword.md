@@ -1,4 +1,4 @@
----
+﻿---
 description: Update current user account password.
 ---
 
@@ -16,11 +16,11 @@ Set-HPOVUserPassword
 
 ## Description
 
-This Cmdlet provides the ability to update the current user account password. Only HPE OneView appliance local account passwords will be changed. This Cmdlet does not assist with modifying or updating an LDAP or Active Directory user account"s password.
+This Cmdlet provides the ability to update the current user account password.  Only HPE OneView appliance local account passwords will be changed.  This Cmdlet does not assist with modifying or updating an LDAP or Active Directory user account"s password.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Set-HPOVUserPassword MyCurrentPass NewP@ssw0rd
@@ -38,7 +38,7 @@ The current password of the user account. If omitted, the Cmdlet will prompt for
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -50,23 +50,24 @@ The new password to be set for the user account. If omitted, the Cmdlet will pro
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+    
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+    
+Default Value: ${Global:ConnectedSessions} | ? Default
 
-Default Value: ${Global:ConnectedSessions} \| ? Default
-
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 

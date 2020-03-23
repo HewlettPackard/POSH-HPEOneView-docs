@@ -1,4 +1,4 @@
----
+﻿---
 description: Unassign or Reassign an existing Server Profile.
 ---
 
@@ -28,22 +28,24 @@ New-HPOVServerProfileAssign
 
 ## Description
 
-This cmdlet is used to unassign or reassign an existing HPE OneView Server Profile. The destination Server and its Server Hardware Type does not need to match the original Server Hardware Type defined in the Server Profile. The Server Profile will be updated accordingly.
+This cmdlet is used to unassign or reassign an existing HPE OneView Server Profile.  The destination Server and its Server Hardware Type does not need to match the original Server Hardware Type defined in the Server Profile.  The Server Profile will be updated accordingly.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVServerProfile "Profile 1" | New-HPOVServerProfileAssign -Server "Encl1, Bay 10" | Wait-HPOVTaskComplete
+
 ```
 
 Get "Profile 1" Server Profile and assign it to "Encl1, Bay 10", then wait for the async task to complete.
 
-### Example 2
+###  Example 2 
 
 ```text
 Get-HPOVServerProfile "Profile 1" | New-HPOVServerProfileAssign -unassign | Wait-HPOVTaskComplete
+
 ```
 
 Get "Profile 1" Server Profile and unassign it, then wait for the async task to complete.
@@ -52,7 +54,7 @@ Get "Profile 1" Server Profile and unassign it, then wait for the async task to 
 
 ### -ServerProfile &lt;Object&gt;
 
-Aliases \[-Profile\]
+Aliases [-Profile]
 
 The name or object of the server profile resource to modify assignment.
 
@@ -60,19 +62,19 @@ The name or object of the server profile resource to modify assignment.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Default value | `` |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -Server &lt;Object&gt;
 
-The server hardware resource where the new profile is to be applied. This is normally retrieved with a "Get-HPOVServer" call, and the Server state property should be "NoProfileApplied". Can also be the Server Hardware `[name.s]`
+The server hardware resource where the new profile is to be applied.  This is normally retrieved with a "Get-HPOVServer" call, and the Server state property should be "NoProfileApplied".  Can also be the Server Hardware `[name.s]`
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -90,23 +92,23 @@ Siwtch parameter to unassign a Server Profile.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases \[-Appliance\]
+Aliases [-Appliance]
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-Default Value: ${Global:ConnectedSessions} \| ? Default
+Default Value: ${Global:ConnectedSessions} | ? Default
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### -Scope &lt;HPOneView.Appliance.ScopeCollection&gt;
 
-Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with. Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
+Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
 
 | Aliases |  |
 | :--- | :--- |
@@ -118,7 +120,7 @@ Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially 
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
@@ -136,7 +138,7 @@ Use to force add the Server Profile if there are any async task validation failu
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -152,9 +154,9 @@ Server Profile resource object from [`Get-HPOVServerProfile`](get-hpovserverprof
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
-If successful returns a task resource which may be polled to follow the progress of the profile creation. Otherwise, a request validation error will be returned
+If successful returns a task resource which may be polled to follow the progress of the profile creation.  Otherwise, a request validation error will be returned
 
 ## Related Links
 

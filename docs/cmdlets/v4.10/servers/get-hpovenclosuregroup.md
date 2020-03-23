@@ -1,4 +1,4 @@
----
+﻿---
 description: Retrieve Enclosure Group resource(s).
 ---
 
@@ -17,18 +17,20 @@ Obtain a collection of Enclosure Group resources, or a single Enclosure Group wi
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 $enclosures = Get-HPOVEnclosureGroup
+
 ```
 
 Return all the enclosure groups managed by this appliance.
 
-### Example 2
+###  Example 2 
 
 ```text
 $enclosure = Get-HPOVEnclosureGroup "A"
+
 ```
 
 Return the enclosure group resource with name "A".
@@ -37,13 +39,13 @@ Return the enclosure group resource with name "A".
 
 ### -Name &lt;String&gt;
 
-The name of the Enclosure Group resource to be returned. All enclosure group resources will be returned if omitted.
+The name of the Enclosure Group resource to be returned.  All enclosure group resources will be returned if omitted.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -61,11 +63,11 @@ Specify the label associated with resources.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases \[-Appliance\]
+Aliases [-Appliance]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-Default Value: ${Global:ConnectedSessions} \| ? Default
+Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -77,13 +79,14 @@ Default Value: ${Global:ConnectedSessions} \| ? Default
 
 ### -exportFile &lt;String&gt;
 
-Aliases \[-x, `-export`\] Full path and file name to save the output of `Get-HPOVEnclosureGroup`
+Aliases [-x, `-export`]
+Full path and file name to save the output of `Get-HPOVEnclosureGroup`
 
 | Aliases | x, export |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -93,11 +96,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this cmdlet.**_
+_**None.  You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.EnclosureGroup \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.EnclosureGroup [System.Management.Automation.PSCustomObject]**_
 
 Single Enclosure Group
 
@@ -110,4 +113,3 @@ The matching enclosure group resources.
 * [New-HPOVEnclosureGroup](new-hpovenclosuregroup.md)
 * [Remove-HPOVEnclosureGroup](remove-hpovenclosuregroup.md)
 * [Set-HPOVEnclosureGroup](set-hpovenclosuregroup.md)
-

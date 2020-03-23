@@ -1,4 +1,4 @@
----
+﻿---
 description: Restart an HPE OneView appliance.
 ---
 
@@ -14,13 +14,13 @@ Restart-HPOVAppliance
 
 ## Description
 
-This cmdlet will allow the administrator to restart/reboot the appliance. Restarting the appliance will cause all users to be disconnected and all ongoing tasks to be interrupted.
+This cmdlet will allow the administrator to restart/reboot the appliance.  Restarting the appliance will cause all users to be disconnected and all ongoing tasks to be interrupted.
 
-Only the Infrastructure \(Full\) Administrator may restart the appliance.
+Only the Infrastructure (Full) Administrator may restart the appliance.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Connect-HPOVMgmt appliance.contoso.com Administrator P@ssw0rd
@@ -29,10 +29,11 @@ Restart-HPOVAppliance
 
 Restart the appliance
 
-### Example 2
+###  Example 2 
 
 ```text
 Restart-HPOVAppliance -confirm:$false
+
 ```
 
 Restart all connected appliances without confirmation.
@@ -41,33 +42,37 @@ Restart all connected appliances without confirmation.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | true \(ByValue\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByValue) |
+| Accept wildcard characters? | False |
 
 ### -WhatIf &lt;SwitchParameter&gt;
+
+
 
 | Aliases | wi |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
 
+
+
 | Aliases | cf |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -142,6 +147,5 @@ Generated error message
 * [Show-HPOVApplianceSecurityModeCompatibilityReport](show-hpovappliancesecuritymodecompatibilityreport.md)
 * [Stop-HPOVAppliance](stop-hpovappliance.md)
 * [Test-HPOVApplianceAuditLogForwarding](test-hpovapplianceauditlogforwarding.md)
-* [Update-HPOVApplianceTrustedAuthorityCrl]()
+* [Update-HPOVApplianceTrustedAuthorityCrl](update-hpovappliancetrustedauthoritycrl.md)
 * [Wait-HPOVApplianceStart](../library/wait-hpovappliancestart.md)
-

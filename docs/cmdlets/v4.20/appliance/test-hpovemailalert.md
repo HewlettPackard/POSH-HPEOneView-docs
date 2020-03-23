@@ -1,4 +1,4 @@
----
+﻿---
 description: Test appliance Email Alerting configuration.
 ---
 
@@ -17,22 +17,24 @@ Test-HPOVEmailAlert
 
 ## Description
 
-This cmdlet will generate a test email message.
+This cmdlet will generate a test email message. 
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Test-HPOVEmailAlert -Recipients user1@contoso.com
+
 ```
 
 Generate a test email message to "user1@contoso.com".
 
-### Example 2
+###  Example 2 
 
 ```text
-Test-HPOVEmailAlert -Recipients user1@contoso.com.,user2@contoso.com -Subject "This is a test email message."
+Test-HPOVEmailAlert -Recipients user1@contoso.com.,user2@contoso.com -Subject "This is a test email message." 
+
 ```
 
 Generate a test email message to multiple recipients with a custom subject.
@@ -47,7 +49,7 @@ Specify the Sender Email Address for the appliance.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -65,7 +67,7 @@ Provide a custom subject for the email message.
 
 ### -Body &lt;String&gt;
 
-Provide a custom message body. Can be either a plan text or HTML message.
+Provide a custom message body.  Can be either a plan text or HTML message.
 
 | Aliases | None |
 | :--- | :--- |
@@ -77,15 +79,15 @@ Provide a custom message body. Can be either a plan text or HTML message.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 

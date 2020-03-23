@@ -1,4 +1,4 @@
----
+﻿---
 description: Add a new cluster member to an existing cluster.
 ---
 
@@ -22,10 +22,11 @@ Use this Cmdlet to add a new cluster member to an existing cluster.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Add-HPOVClusterNode
+
 ```
 
 Default example
@@ -34,23 +35,23 @@ Default example
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases \[-Appliance\]
+Aliases [-Appliance]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-Default Value: ${Global:ConnectedSessions} \| ? Default
+Default Value: ${Global:ConnectedSessions} | ? Default
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
@@ -62,11 +63,13 @@ Use this parameter to immediately return the async task. By default, the Cmdlet 
 
 ### -ComputerName &lt;string&gt;
 
+
+
 | Aliases | Name |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -78,13 +81,13 @@ Use this parameter if you want to provide a PSCredential object.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Scope &lt;Object&gt;
 
-Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with. Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
+Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -104,9 +107,8 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Related Links
 
-* [Add-HPOVClusterNodeToCluster]()
+* [Add-HPOVClusterNodeToCluster](add-hpovclusternodetocluster.md)
 * [Enter-HPOVClusterNodeMaintenanceMode](enter-hpovclusternodemaintenancemode.md)
 * [Exit-HPOVClusterNodeMaintenanceMode](exit-hpovclusternodemaintenancemode.md)
 * [Get-HPOVClusterNode](get-hpovclusternode.md)
 * [Update-HPOVClusterNode](update-hpovclusternode.md)
-

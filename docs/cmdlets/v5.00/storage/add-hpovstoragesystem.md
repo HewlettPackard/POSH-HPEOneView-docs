@@ -1,4 +1,4 @@
----
+﻿---
 description: Import a supported Storage System
 ---
 
@@ -36,7 +36,7 @@ Add-HPOVStorageSystem
 
 ## Description
 
-A storage system is a storage device from which logical disks \(volumes\) can be provisioned and presented to servers through Fibre Channel ports or iSCSI IP addresses. Bringing SAN storage systems under management of the appliance enables you to add and create volumes. You can then attach volumes to server profiles through volume attachments. This enables the server hardware assigned to the server profiles to access the SAN storage system. StorveServe, StoreVirtual, and Nimble are the supported storage system types.
+A storage system is a storage device from which logical disks (volumes) can be provisioned and presented to servers through Fibre Channel ports or iSCSI IP addresses. Bringing SAN storage systems under management of the appliance enables you to add and create volumes. You can then attach volumes to server profiles through volume attachments. This enables the server hardware assigned to the server profiles to access the SAN storage system. StorveServe, StoreVirtual, and Nimble are the supported storage system types.
 
 This Cmdlet will assist with importing a supported Storage System. In order for the Storage Ports to be mapped to Expected Networks, either a Supported SAN Manager will need to be configured, or Fibre Channel Direct Attach networks will have to exist.
 
@@ -48,16 +48,16 @@ Minimum required privileges: Infrastructure administrator or Storage administrat
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 $task = Add-HPOVStorageSystem -hostname "3par-array.consoto.com" -Credential (Get-Credential) -Async
 Wait-HPOVTaskComplete -InputObject $task
 ```
 
-Add the Storage System using default settings, and let the appliance detect the connected Storage System Ports. \(A supported SAN Manager must first be added, and Managed SANs mapped to the specific FC Network resources.\)
+Add the Storage System using default settings, and let the appliance detect the connected Storage System Ports.  (A supported SAN Manager must first be added, and Managed SANs mapped to the specific FC Network resources.)
 
-### Example 2
+###  Example 2 
 
 ```text
 $StorageSystemPorts = @{"1:1:1" = "Fabric A"; "2:1:1" = "Fabric A"; "1:1:2" = "Fabric B"; "2:1:2" = "Fabric B"}
@@ -67,7 +67,7 @@ Add-HPOVStorageSystem -hostname "3par-array.consoto.com" -username 3paradm -pass
 
 Add the Storage System using default settings, and specify the Storage System Ports that will be assigned to the Expected Networks.
 
-### Example 3
+###  Example 3 
 
 ```text
 $IscsiNetwork = Get-HPOVNetwork -Name "IscsiNetwork" -ErrorAction Stop
@@ -88,7 +88,7 @@ IP Address or FQDN of the storage systems.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -112,15 +112,16 @@ Provide the credentials to authenticate to the storage system.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Username &lt;String&gt;
 
 {% hint style="info" %}
-This parameter is now deprecated. Please update to the `-Credential` parameter.
+This parameter is now deprecated.  Please update to the `-Credential` parameter.
 {% endhint %}
+
 
 Administrator account of the target storage system.
 
@@ -128,29 +129,30 @@ Administrator account of the target storage system.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Password &lt;Object&gt;
 
 {% hint style="info" %}
-This parameter is now deprecated. Please update to the `-Credential` parameter.
+This parameter is now deprecated.  Please update to the `-Credential` parameter.
 {% endhint %}
 
-Password of administrator account password. Can either be String or `[System.Security.SecureString]`.
+
+Password of administrator account password.  Can either be String or `[System.Security.SecureString]`.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Domain &lt;String&gt;
 
-Specify the HPE 3PAR Virtual Domain name. Default is "NO DOMAIN". The value provided is CAsesEnSItive.
+Specify the HPE 3PAR Virtual Domain name.  Default is "NO DOMAIN". The value provided is CAsesEnSItive.
 
 | Aliases | None |
 | :--- | :--- |
@@ -162,77 +164,73 @@ Specify the HPE 3PAR Virtual Domain name. Default is "NO DOMAIN". The value prov
 
 ### -Ports &lt;Object&gt;
 
-Specify the Host Ports and Expected Network in an Array of PSCustomObject entries.
-
+Specify the Host Ports and Expected Network in an Array of PSCustomObject entries. 
+    
 Example: @{"1:1:1"="Fabric A";"2:2:2"="Fabric B"}
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -PortGroups &lt;Hashtable&gt;
 
-Specify the Host Ports to group together.
-
+Specify the Host Ports to group together. 
+    
 Example: @{"1:1:1" = "PG1"; "2:2:2" = "PG2"}
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -VIPS &lt;Hashtable&gt;
 
-Specify the StoreVirtual or Nimble VIP\(s\) and associated Ethernet Network.
-
+Specify the StoreVirtual or Nimble VIP(s) and associated Ethernet Network. 
+    
 Example:
 
-```text
-@{"10.158.11.42" = $EthernetNetwork}
-```
+    @{"10.158.11.42" = $EthernetNetwork}
 
 or
 
-```text
-@{"10.158.11.42" = $EthernetNetwork1; "10.158.12.42" = $EthernetNetwork2;}
-```
+    @{"10.158.11.42" = $EthernetNetwork1; "10.158.12.42" = $EthernetNetwork2;}
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### -ShowSystemDetails &lt;SwitchParameter&gt;
 
-By default, the Cmdlet will no longer display the details about the Storage System. Use this parameter to display information about the storage system when adding to the appliance.
+By default, the Cmdlet will no longer display the details about the Storage System.  Use this parameter to display information about the storage system when adding to the appliance.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -242,21 +240,20 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this Cmdlet.**_
+_**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Add Storage System Async Task.
 
 ## Related Links
 
 * [Get-HPOVStorageSystem](get-hpovstoragesystem.md)
-* [Get-HPOVStoragePool](https://github.com/HewlettPackard/POSH-HPOneView-docs/tree/1915d3e6119cf820b69e9b5eb07cbe928a3cfdc7/docs/cmdlets/v5.00/storage/get-hpovstoragepool.md)
-* [Set-HPOVStoragePool](https://github.com/HewlettPackard/POSH-HPOneView-docs/tree/1915d3e6119cf820b69e9b5eb07cbe928a3cfdc7/docs/cmdlets/v5.00/storage/set-hpovstoragepool.md)
+* [Get-HPOVStoragePool](get-hpovstoragepool.md)
+* [Set-HPOVStoragePool](set-hpovstoragepool.md)
 * [Get-HPOVStorageVolumeSet](get-hpovstoragevolumeset.md)
 * [Remove-HPOVStorageSystem](remove-hpovstoragesystem.md)
-* [Show-HPOVStorageSystemPerformancePolicy](https://github.com/HewlettPackard/POSH-HPOneView-docs/tree/1915d3e6119cf820b69e9b5eb07cbe928a3cfdc7/docs/cmdlets/v5.00/storage/show-hpovstoragesystemperformancepolicy.md)
+* [Show-HPOVStorageSystemPerformancePolicy](show-hpovstoragesystemperformancepolicy.md)
 * [Update-HPOVStorageSystem](update-hpovstoragesystem.md)
-

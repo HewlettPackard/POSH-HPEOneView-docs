@@ -1,4 +1,4 @@
----
+﻿---
 description: Retrieve Managed SAN resource(s).
 ---
 
@@ -17,21 +17,23 @@ This cmdlet is used to display or list the available Managed SAN resources in th
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVManagedSan
 Name     State Status Network              Zoned Automated Zoning
 ----     ----- ------ -------              ----- ----------------
 Fabric A Ready OK     BNA Managed Fabric A Zoned             True
+
 ```
 
 Return all managed SAN resources.
 
-### Example 2
+###  Example 2 
 
 ```text
 Get-HPOVManagedSan "Fabric A"
+
 ```
 
 Show the "Fabric A" Managed SAN resource object.
@@ -40,13 +42,14 @@ Show the "Fabric A" Managed SAN resource object.
 
 ### -Name &lt;String&gt;
 
-Aliases \[-Fabric\] Managed SAN Name to retrieve.
+Aliases [-Fabric]
+Managed SAN Name to retrieve.
 
 | Aliases | Fabric |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -64,19 +67,19 @@ Specify the label associated with resources.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases \[-Appliance\]
+Aliases [-Appliance]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-Default Value: ${Global:ConnectedSessions} \| ? Default
+Default Value: ${Global:ConnectedSessions} | ? Default
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -84,19 +87,20 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this cmdlet.**_
+_**None.  You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Storage.ManagedSan \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Storage.ManagedSan [System.Management.Automation.PSCustomObject]**_
 
 Single Resource
+
 
 _**System.Collections.ArrayList**_
 
 Multiple Resources
 
+
 ## Related Links
 
 * [Set-HPOVManagedSan](set-hpovmanagedsan.md)
-

@@ -1,4 +1,4 @@
----
+﻿---
 description: Retrieves the configuration of the primary NIC of the appliance
 ---
 
@@ -17,7 +17,7 @@ Retrieves the configuration parameters of the primary network interface on the a
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVApplianceNetworkConfig
@@ -25,11 +25,13 @@ Hostname         IPv4Type IPv4Address    IPv4DNS                      IPv6Type  
 --------         -------- -----------    -------                      --------    ----------- -------
 hpov1.domain.com STATIC   172.20.51.4\24 {172.20.10.41, 172.20.10.42} UNCONFIGURE             {}
 hpov2.domain.com STATIC   172.20.52.4\24 {172.20.10.41, 172.20.10.42} UNCONFIGURE             {}
+
+
 ```
 
 Outputs the configuration of the primary network interface to standard output.
 
-### Example 2
+###  Example 2 
 
 ```text
 Get-HPOVApplianceNetworkConfig -Appliance hpov1.domain.com | fl
@@ -44,22 +46,26 @@ IPv6Address :
 IPv6Mask    :
 IPv6Gateway :
 IPv6DNS     : {}
+
+
 ```
 
 Outputs the configuration of the primary network interface and pipe to `Format-List` for more information about the network configuration.
 
-### Example 3
+###  Example 3 
 
 ```text
 $myAppNetConfig = Get-HPOVApplianceNetworkConfig -Appliance hpov1.domain.com
+
 ```
 
 Outputs the configuration of the primary network interface of the appliance to the object variable $myAppNetConfig
 
-### Example 4
+###  Example 4 
 
 ```text
 Get-HPOVApplianceNetworkConfig -Location .
+
 ```
 
 Outputs the configuration of the primary network interface of the appliance to the current directory.
@@ -68,31 +74,33 @@ Outputs the configuration of the primary network interface of the appliance to t
 
 ### -Location &lt;String&gt;
 
-Aliases \[-ExportFile\] Directory to where the applinace network configuration will be exported to. Exported file name will be "{$ApplianceConnection.Name}\_ApplianceNetConf.json".
+Aliases [-ExportFile]
+Directory to where the applinace network configuration will be exported to.
+Exported file name will be "{$ApplianceConnection.Name}_ApplianceNetConf.json".
 
 | Aliases | x, export, exportFile |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases \[-Appliance\]
+Aliases [-Appliance]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-Default Value: ${Global:ConnectedSessions} \| ? Default
+Default Value: ${Global:ConnectedSessions} | ? Default
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -100,23 +108,25 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this cmdlet.**_
+_**None.  You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.ApplianceServerConfiguration \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.ApplianceServerConfiguration [System.Management.Automation.PSCustomObject]**_
 
 A collection object containing the properties and values of the primary network interface of the appliance.
 
-_**HPOneView.Appliance.ApplianceServerConfiguration.ApplianceNetworks \[System.Management.Automation.PSCustomObject\]**_
 
-The applianceNetworks property will display the appliance Networking in either a Format-Table \(default\) or Format-List view.
+_**HPOneView.Appliance.ApplianceServerConfiguration.ApplianceNetworks [System.Management.Automation.PSCustomObject]**_
+
+The applianceNetworks property will display the appliance Networking in either a Format-Table (default) or Format-List view.
+
 
 _**System.IO.FileSystemInfo**_
 
 If exporting the appliance network configuration, the file object created will be returned.
 
+
 ## Related Links
 
 * [Set-HPOVApplianceNetworkConfig](set-hpovappliancenetworkconfig.md)
-

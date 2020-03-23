@@ -1,4 +1,4 @@
----
+﻿---
 description: Import an existing Storage Volume resource.
 ---
 
@@ -23,19 +23,19 @@ Add-HPOVStorageVolume
 
 A volume represents a logical disk provisioned from a storage pool on a storage system.
 
-A volume can be used by a single server \(private\) or can be used by multiple servers \(shared\).
+A volume can be used by a single server (private) or can be used by multiple servers (shared).
 
-You can attach volumes to one or more servers by configuring a volume attachment in the server profile. The volume attachment manages volume presentation on the storage system \(StoreServ port selection, host and vLUN creation\) as well as SAN zoning on SANs \(with automatic zoning enabled\) that connect the server and storage system.
+You can attach volumes to one or more servers by configuring a volume attachment in the server profile. The volume attachment manages volume presentation on the storage system (StoreServ port selection, host and vLUN creation) as well as SAN zoning on SANs (with automatic zoning enabled) that connect the server and storage system.
 
 Using volume templates, you can create multiple volumes with the same configuration.
 
-You can increase \(grow\) the capacity of a volume by editing it. You cannot decrease the capacity of a volume.
+You can increase (grow) the capacity of a volume by editing it. You cannot decrease the capacity of a volume.
 
-This Cmdlet will help add an existing storage volume that was provisioned on the Storage System. In order to import an existing storage volume, the following prerequisites must be met:
+This Cmdlet will help add an existing storage volume that was provisioned on the Storage System.  In order to import an existing storage volume, the following prerequisites must be met:
 
-* The storage system that contains the volume you want to add is being managed by the appliance, and the volume must be within the same 3Par virtual domain as the managed storage system.
-* The storage pool that contains the volume you want to add is being managed by the appliance.
-* The snapshot storage pool defined for the volume you want to add is being managed by the appliance.
+    * The storage system that contains the volume you want to add is being managed by the appliance, and the volume must be within the same 3Par virtual domain as the managed storage system.
+    * The storage pool that contains the volume you want to add is being managed by the appliance.
+    * The snapshot storage pool defined for the volume you want to add is being managed by the appliance.
 
 The Storage Volume's WWN or device name will be needed, which can be retrieved from the storage system management console.
 
@@ -45,7 +45,7 @@ Minimum required privileges: Infrastructure administrator or Storage administrat
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Add-HPOVStorageVolume -StorageSystem (Get-HPOVStorageSystem -Name 3ParSys1) -StorageDeviceName MyStorageVol1 -VolumeName MyStorageVol1
@@ -53,7 +53,7 @@ Add-HPOVStorageVolume -StorageSystem (Get-HPOVStorageSystem -Name 3ParSys1) -Sto
 
 Import the volume "MyStorageVol1" from the "3ParSys1" Storage System.
 
-### Example 2
+###  Example 2 
 
 ```text
 Get-HPOVStorageSystem -Name 3ParSys1 | Add-HPOVStorageVolume -StorageDeviceName MyStorageVol1 -VolumeName MyStorageVol1
@@ -61,7 +61,7 @@ Get-HPOVStorageSystem -Name 3ParSys1 | Add-HPOVStorageVolume -StorageDeviceName 
 
 Import the volume "MyStorageVol1" from the "3ParSys1" Storage System using the pipeline.
 
-### Example 3
+###  Example 3 
 
 ```text
 Get-HPOVStorageSystem -Name 3ParSys1 | Add-HPOVStorageVolume -StorageDeviceName ClusterSharedVol1 -VolumeName ClusterSharedVol1 -Shared
@@ -73,14 +73,14 @@ Import a volume using the storage device name "ClusterSharedVol1" on the "3ParSy
 
 ### -StorageSystem &lt;Object&gt;
 
-The Storage System where the volume will be imported from. Volume to be imported must be provisioned to the same Managed Domain as the Storage System.
+The Storage System where the volume will be imported from.  Volume to be imported must be provisioned to the same Managed Domain as the Storage System.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Default value | `` |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -VolumeID &lt;String&gt;
@@ -89,25 +89,26 @@ The Storage System where the volume will be imported from. Volume to be imported
 This parameter is deprecated. Please use the `-StorageDeviceName` parameter.
 {% endhint %}
 
-The 128bit WWN FC address of the volume to be imported. Address must be in the following format: AA:BB:CC:DD:EE:AA:BB:CC:DD:EE:AA:BB:CC:DD:EE:AA
+
+The 128bit WWN FC address of the volume to be imported.  Address must be in the following format: AA:BB:CC:DD:EE:AA:BB:CC:DD:EE:AA:BB:CC:DD:EE:AA
 
 | Aliases | volid, id, wwn |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -StorageDeviceName &lt;String&gt;
 
-The Storage Systems Device Name of the volume. This can be found in either the 3PAR IMC, CLI or HPE SSMC by looking at the provisioned volume and copying the "Name" property.
+The Storage Systems Device Name of the volume.  This can be found in either the 3PAR IMC, CLI or HPE SSMC by looking at the provisioned volume and copying the "Name" property.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -119,7 +120,7 @@ Specify the Storage Volume Name.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -131,13 +132,14 @@ Provide a description for the volume.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Shared &lt;SwitchParameter&gt;
 
-Include this switch to mark the Storage Volume as a Shareable resource for shared volume access. Default: Private
+Include this switch to mark the Storage Volume as a Shareable resource for shared volume access.
+Default: Private
 
 | Aliases | None |
 | :--- | :--- |
@@ -151,17 +153,17 @@ Include this switch to mark the Storage Volume as a Shareable resource for share
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
-### -Scope &lt;HPOneView.Appliance.ScopeCollection\[\]&gt;
+### -Scope &lt;HPOneView.Appliance.ScopeCollection[]&gt;
 
-Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with. Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
+Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -177,13 +179,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Storage.System \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Storage.System [System.Management.Automation.PSCustomObject]**_
 
 Storage Pool resource object
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async create task
 
@@ -204,4 +206,3 @@ Async create task
 * [Set-HPOVStorageVolume](set-hpovstoragevolume.md)
 * [Set-HPOVStorageVolumeTemplate](set-hpovstoragevolumetemplate.md)
 * [Set-HPOVStorageVolumeTemplatePolicy](set-hpovstoragevolumetemplatepolicy.md)
-

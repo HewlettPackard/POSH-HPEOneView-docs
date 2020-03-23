@@ -1,4 +1,4 @@
----
+﻿---
 description: Remove State Change Message Bus certificate from appliance.
 ---
 
@@ -19,31 +19,31 @@ Remove-HPOVScmbCertificate
 
 ## Description
 
-Remove the State Change Message Bus \(SCMB\) and Metric Streaming Message Bug \(MSMB\) read only account \(rabbitmq\_readonly\) certificate key pair from an appliance.
+Remove the State Change Message Bus (SCMB) and Metric Streaming Message Bug (MSMB) read only account (rabbitmq_readonly) certificate key pair from an appliance.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Remove-HPOVScmbCertificates
 ```
 
-Remove the SCMB \(rabbitmq\_readonly\) certificate key pair from an appliance.
+Remove the SCMB (rabbitmq_readonly) certificate key pair from an appliance.
 
 ## Parameters
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -51,7 +51,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this Cmdlet.**_
+_**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
@@ -62,4 +62,3 @@ Resource deleted response.
 ## Related Links
 
 * [Get-HPOVScmbCertificates](get-hpovscmbcertificates.md)
-

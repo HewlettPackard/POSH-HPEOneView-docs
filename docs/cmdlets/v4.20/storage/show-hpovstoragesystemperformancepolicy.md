@@ -1,4 +1,4 @@
----
+﻿---
 description: Show available Nimble Performance Policies.
 ---
 
@@ -19,10 +19,11 @@ Use this Cmdlet to show available Nimble Performance Policies in order to set a 
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Show-HPOVStorageSystemPerformancePolicy
+
 ```
 
 Default example
@@ -37,8 +38,8 @@ One or more storage systems from `Get-HPOVStorageSystem`.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Default value | `` |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -Name &lt;string&gt;
@@ -49,7 +50,7 @@ Provide a name of the performance policy to return.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -59,7 +60,9 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Storage.System \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Storage.System [System.Management.Automation.PSCustomObject]**_
+
+
 
 ## Return Values
 

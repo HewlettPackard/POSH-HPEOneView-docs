@@ -1,4 +1,4 @@
----
+﻿---
 description: Create a new facilities Rack.
 ---
 
@@ -23,19 +23,19 @@ New-HPOVRack
 
 ## Description
 
-A rack is a physical structure that contains IT equipment such as enclosures, servers, power delivery devices, and unmanaged devices \(an unmanaged device uses slots in the rack and consumes power or exhausts heat, but it is not managed by the appliance\). You can manage your racks and the equipment in them by adding them to the appliance. Having your racks managed by the appliance enables you to use the appliance for space and power planning. The appliance also gathers statistical data and monitors the power and temperature of the racks it manages.
+A rack is a physical structure that contains IT equipment such as enclosures, servers, power delivery devices, and unmanaged devices (an unmanaged device uses slots in the rack and consumes power or exhausts heat, but it is not managed by the appliance). You can manage your racks and the equipment in them by adding them to the appliance. Having your racks managed by the appliance enables you to use the appliance for space and power planning. The appliance also gathers statistical data and monitors the power and temperature of the racks it manages.
 
 When you add an enclosure to the appliance, it automatically creates a rack and places the enclosure in it. The appliance places into the rack all enclosures connected by management link cables. When enclosures are added, the appliance places them in the rack from top to bottom. When an enclosure is placed in an Intelligent Series Rack, the enclosure slots are automatically detected. For other racks, to accurately depict the layout of your enclosures within the rack you must edit the rack to place the enclosure in the proper slots.
 
-You can use the appliance to view and manage your rack configuration and power delivery topology. You can specify the physical dimensions of the rack \(width, height, and depth\), the number of U slots, and the location of each piece of equipment in the rack. You can specify the rack PDUs that provide power to the rack, and their physical position in the rack or on either side. You can also describe how the devices in the rack are connected to those PDUs.
+You can use the appliance to view and manage your rack configuration and power delivery topology. You can specify the physical dimensions of the rack (width, height, and depth), the number of U slots, and the location of each piece of equipment in the rack. You can specify the rack PDUs that provide power to the rack, and their physical position in the rack or on either side. You can also describe how the devices in the rack are connected to those PDUs.
 
 The appliance automatically discovers the rack height and rack model for a ProLiant server with Location Discovery Services and updates the physical locations of devices when they are relocated within and between racks for c7000 enclosures.
 
-This Cmdlet will create a new Rack resource.
+This Cmdlet will create a new Rack resource. 
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 $Params = @{
@@ -65,7 +65,7 @@ Name of resource.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -77,7 +77,7 @@ Thermal limit supported by the rack, in BTU"s.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -89,7 +89,7 @@ Serial number of the rack resource.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -101,7 +101,7 @@ Part number of the rack resource.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -163,15 +163,15 @@ Default: 600
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### -Model &lt;&gt;
 
@@ -181,7 +181,7 @@ Provide the model of the rack to add.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -191,7 +191,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this cmdlet.**_
+_**None.  You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
@@ -206,9 +206,8 @@ Newly created rack.
 * [Get-HPOVRack](get-hpovrack.md)
 * [Get-HPOVRackManager](../servers/get-hpovrackmanager.md)
 * [Get-HPOVRackMember](get-hpovrackmember.md)
-* [Remove-HPOVRack](../../v5.00/facilities/remove-hpovrack.md)
+* [Remove-HPOVRack](remove-hpovrack.md)
 * [Remove-HPOVRackManager](../servers/remove-hpovrackmanager.md)
 * [Remove-HPOVRackMember](remove-hpovrackmember.md)
-* [Set-HPOVRackMemberLocation](../../v5.00/facilities/set-hpovrackmemberlocation.md)
+* [Set-HPOVRackMemberLocation](set-hpovrackmemberlocation.md)
 * [Update-HPOVRackManager](../servers/update-hpovrackmanager.md)
-

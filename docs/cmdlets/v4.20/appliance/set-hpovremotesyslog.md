@@ -1,4 +1,4 @@
----
+﻿---
 description: Configure remote syslog.
 ---
 
@@ -18,14 +18,15 @@ Set-HPOVRemoteSyslog
 
 ## Description
 
-The remoteSyslog API provides the ability to configure remote logging on devices managed by OneView. This Cmdlet handles setting or updating the remote syslog configuration. Only a single destination can be set. When configured, the HPE OneView appliance will deploy the SysLog settings to managed resources automatically.
+The remoteSyslog API provides the ability to configure remote logging on devices managed by OneView.  This Cmdlet handles setting or updating the remote syslog configuration.  Only a single destination can be set.  When configured, the HPE OneView appliance will deploy the SysLog settings to managed resources automatically.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Set-HPOVRemoteSyslog -Destination 10.150.20.1 -SendTestMessage -Async | Wait-HPOVTaskComplete
+
 ```
 
 Set the remote syslog to the provided destination, using the default destination TCP port, and send a test message for all connected appliances.
@@ -40,7 +41,7 @@ Destination IPv4 Address of the Remote SysLog.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -72,7 +73,7 @@ Use to generate a syslog test message after the managed endpoint has finished co
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
@@ -84,15 +85,15 @@ Use this parameter to immediately return the async task. By default, the Cmdlet 
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -104,11 +105,11 @@ _**None. You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 If successful, returns Appliance Async Task object to monitor
 
-_**System.Collections.ArrayList**_ 
+_**System.Collections.ArrayList <HPOneView.Appliance.TaskResource>**_
 
 Collection of Appliance Async Task objects to monitor
 
@@ -117,4 +118,3 @@ Collection of Appliance Async Task objects to monitor
 * [Disable-HPOVRemoteSyslog](disable-hpovremotesyslog.md)
 * [Enable-HPOVRemoteSyslog](enable-hpovremotesyslog.md)
 * [Get-HPOVRemoteSyslog](get-hpovremotesyslog.md)
-

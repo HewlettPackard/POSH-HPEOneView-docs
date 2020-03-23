@@ -1,4 +1,4 @@
----
+﻿---
 description: Delete storage volume template(s) from appliance configuration.
 ---
 
@@ -20,15 +20,15 @@ Delete one or more storage volume templates from the appliance configuration.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 $task = Remove-HPOVStorageVolumeTemplate -storagePool "yellow" | Wait-HPOVTaskComplete
 ```
 
-Remove the storage volume template specifed by name. Wait for remove to complete.
+Remove the storage volume template specifed by name.  Wait for remove to complete.
 
-### Example 2
+###  Example 2 
 
 ```text
 $svt = Get-HPOVStorageVolumeTemplate -name "yellow"
@@ -37,7 +37,7 @@ Remove-HPOVStorageVolumeTemplate -name $svt -confirm:$false
 
 Remove the network specifed by $svt, and do not prompt for confirmation.
 
-### Example 3
+###  Example 3 
 
 ```text
 Get-HPOVStoragVolumeTemplate | Remove-HPOVStorageVolumeTemplate
@@ -49,29 +49,30 @@ Search for all storage volume templates and remove them from appliance.
 
 ### -InputObject &lt;Object&gt;
 
-Aliases \[-name, `-uri`, `-TemplateName`., `-Template`\] The Storage Volume Template object\(s\), name\(s\) or URI\(s\) to be deleted.
+Aliases [-name, `-uri`, `-TemplateName`., `-Template`]
+The Storage Volume Template object(s), name(s) or URI(s) to be deleted.
 
 | Aliases | uri, name, templateName, Template |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Default value | `` |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 Default Value: ${Global:ConnectSessions}
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### -Force &lt;SwitchParameter&gt;
 
@@ -89,21 +90,25 @@ When the request is accepted by the appliance, it does not return an Async Task 
 
 ### -WhatIf &lt;SwitchParameter&gt;
 
+
+
 | Aliases | wi |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
 
+
+
 | Aliases | cf |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -123,7 +128,7 @@ Multiple Storage Volume Template resources
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Removal async task
 
@@ -138,4 +143,3 @@ When using the `-Force` parameter, a PSCustomObject is returned indicating succe
 * [New-HPOVStorageVolumeTemplate](new-hpovstoragevolumetemplate.md)
 * [Set-HPOVStorageVolumeTemplate](set-hpovstoragevolumetemplate.md)
 * [Set-HPOVStorageVolumeTemplatePolicy](set-hpovstoragevolumetemplatepolicy.md)
-

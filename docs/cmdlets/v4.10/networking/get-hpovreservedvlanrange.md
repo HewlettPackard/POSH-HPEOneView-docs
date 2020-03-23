@@ -1,4 +1,4 @@
----
+﻿---
 description: Get the reserved VLAN range for HPE Synergy.
 ---
 
@@ -14,14 +14,15 @@ Get-HPOVReservedVlanRange
 
 ## Description
 
-By default, HPE Synergy reserves a sepcific VLAN range for Tunnel, untagged and FC networks for HPE Synergy Virtual Connect. This default range is 3967-4095. The range can be modified using Set-HPOVReservedVlanRange if none of the specified network resources have been created.
+By default, HPE Synergy reserves a sepcific VLAN range for Tunnel, untagged and FC networks for HPE Synergy Virtual Connect.  This default range is 3967-4095.  The range can be modified using Set-HPOVReservedVlanRange if none of the specified network resources have been created.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVReservedVlanRange
+
 ```
 
 Get the defined reserved VLAN range on the connected HPE Synergy appliance.
@@ -30,19 +31,19 @@ Get the defined reserved VLAN range on the connected HPE Synergy appliance.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases \[-Appliance\]
+Aliases [-Appliance]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-Default Value: ${Global:ConnectedSessions} \| ? Default
+Default Value: ${Global:ConnectedSessions} | ? Default
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -50,7 +51,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this cmdlet.**_
+_**None.  You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
@@ -58,7 +59,7 @@ _**HPOneView.Networking.ReservedVlanRange**_
 
 The reserved VLAN range object
 
+
 ## Related Links
 
 * [Set-HPOVReservedVlanRange](../appliance/set-hpovreservedvlanrange.md)
-

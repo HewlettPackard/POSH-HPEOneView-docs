@@ -47,7 +47,7 @@ The logical interconnect group object(s), name(s) or uris(s) to be removed from 
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
@@ -83,7 +83,7 @@ Invoke switch `force-delete` the resource when OneView can no longer communicate
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -95,7 +95,7 @@ Invoke switch `force-delete` the resource when OneView can no longer communicate
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

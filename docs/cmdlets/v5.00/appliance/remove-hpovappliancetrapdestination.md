@@ -59,7 +59,7 @@ Override confirmation prompt.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -71,7 +71,7 @@ The `[HPOneView.Appliance.SnmpV]`1TrapDestination or `[HPOneView.Appliance.SnmpV
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
@@ -83,7 +83,7 @@ The `[HPOneView.Appliance.SnmpV]`1TrapDestination or `[HPOneView.Appliance.SnmpV
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

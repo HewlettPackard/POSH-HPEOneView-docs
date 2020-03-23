@@ -1,4 +1,4 @@
----
+﻿---
 description: Get appliancce Login Message.
 ---
 
@@ -14,11 +14,11 @@ Get-HPOVLoginMessage
 
 ## Description
 
-Retreive the current Login Message for the connected appliance\(s\).
+Retreive the current Login Message for the connected appliance(s).
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVLoginMessage
@@ -30,7 +30,7 @@ Message     : ************************************
               abuse of this system may lead to corrective action including termination, civil and/or criminal penalties.
 Acknowledge : True
 
-
+	
 Appliance   : hpov2.domain.com
 Message     : ************************************
               *****        WARNING        ********
@@ -38,6 +38,9 @@ Message     : ************************************
               This management appliance is a company owned asset and provided for the exclusive use of authorized personnel. Unauthorized use or
               abuse of this system may lead to corrective action including termination, civil and/or criminal penalties.
 Acknowledge : False
+
+
+
 ```
 
 Get the Login Message from all connected appliances.
@@ -46,19 +49,19 @@ Get the Login Message from all connected appliances.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases \[-Appliance\]
+Aliases [-Appliance]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-Default Value: ${Global:ConnectedSessions} \| ? Default
+Default Value: ${Global:ConnectedSessions} | ? Default
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -77,4 +80,3 @@ If successful, returns a resource
 ## Related Links
 
 * [Set-HPOVLoginMessage](../security/set-hpovloginmessage.md)
-

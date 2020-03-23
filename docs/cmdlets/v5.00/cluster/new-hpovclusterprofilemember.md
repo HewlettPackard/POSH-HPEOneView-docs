@@ -1,4 +1,4 @@
----
+﻿---
 description: Helper Cmdlet to create proper add host request for New-HPOVClusterProfile.
 ---
 
@@ -21,12 +21,10 @@ This is a helper Cmdlet to create a valid resourc object New-HPOVClusterProfile 
 {% hint style="info" %}
 Minimum required privileges: Infrastructure administrator,
 {% endhint %}
-
-Server administrator, Server profile architect, or Server profile administrator.
-
+ Server administrator, Server profile architect, or Server profile administrator.
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 $Server = Get-HPOVServer -Name "Encl1, Bay 1"
@@ -35,7 +33,7 @@ New-HPOVClusterProfileMember -InputObject $Server
 
 Create a basic add host object for `New-HPOVClusterProfile`.
 
-### Example 2
+###  Example 2 
 
 ```text
 $Server = Get-HPOVServer -Name "Encl1, Bay 1"
@@ -44,7 +42,7 @@ New-HPOVClusterProfileMember -InputObject $Server -IPAddress 192.168.10.1
 
 Create anadd host object for `New-HPOVClusterProfile` and specify its managmenet IP Address if the associated Server Profile Template management network is not associated with an IP address pool.
 
-### Example 3
+###  Example 3 
 
 ```text
 $MyDeploymentPlan = Get-HPOVOSDeploymentPlan -Name "vSphere 6.5 U3 Corp Standard" -ErrorAction Stop
@@ -66,7 +64,7 @@ A valid IPv4 Address for the hypervisor host management interface.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -78,19 +76,19 @@ A server hardware resource
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Default value | `` |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -OSDeploymentAttributes &lt;OSDeploymentParameter\[\]&gt;
+### -OSDeploymentAttributes &lt;OSDeploymentParameter[]&gt;
 
-Configured OS Deployment Plan parameters from `Get-HPOVOSDeploymentPlanAttribute`. Only applicable for HPE Synergy Image Streamer deployment.
+Configured OS Deployment Plan parameters from `Get-HPOVOSDeploymentPlanAttribute`.  Only applicable for HPE Synergy Image Streamer deployment.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -100,7 +98,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.ServerHardware \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.ServerHardware [System.Management.Automation.PSCustomObject]**_
 
 An available server hardware resource.
 

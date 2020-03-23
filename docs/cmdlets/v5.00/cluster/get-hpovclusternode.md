@@ -1,4 +1,4 @@
----
+﻿---
 description: Default content
 ---
 
@@ -21,7 +21,7 @@ Default content
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVClusterNode
@@ -33,15 +33,15 @@ Default example
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### -Label &lt;String&gt;
 
@@ -51,30 +51,30 @@ Specify the label associated with resources.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Name &lt;string&gt;
 
+
+
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Scope &lt;Object&gt;
 
-Filter resources based on provided Scope membership. By default, all resources for the accounts Active Permissions will be displayed. Allowed values:
+Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-* AllResources
-
-  \*AllResourcesInScope
-
-* `[HPOneView.Appliance.ScopeCollection]`
-* `[HPOneView.Appliance.ConnectionPermission]`
+    * AllResources
+    *AllResourcesInScope
+    * `[HPOneView.Appliance.ScopeCollection]`
+    * `[HPOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
@@ -95,8 +95,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Related Links
 
 * [Add-HPOVClusterNode](add-hpovclusternode.md)
-* [Add-HPOVClusterNodeToCluster](https://github.com/HewlettPackard/POSH-HPOneView-docs/tree/2c3cd0d508b6cdba6336a27d496637fc71c6ce4c/docs/cmdlets/v5.00/cluster/add-hpovclusternodetocluster.md)
+* [Add-HPOVClusterNodeToCluster](add-hpovclusternodetocluster.md)
 * [Enter-HPOVClusterNodeMaintenanceMode](enter-hpovclusternodemaintenancemode.md)
 * [Exit-HPOVClusterNodeMaintenanceMode](exit-hpovclusternodemaintenancemode.md)
-* [Update-HPOVClusterNode](https://github.com/HewlettPackard/POSH-HPOneView-docs/tree/2c3cd0d508b6cdba6336a27d496637fc71c6ce4c/docs/cmdlets/v5.00/cluster/update-hpovclusternode.md)
-
+* [Update-HPOVClusterNode](update-hpovclusternode.md)

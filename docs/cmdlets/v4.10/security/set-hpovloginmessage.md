@@ -1,4 +1,4 @@
----
+﻿---
 description: Set appliancce Login Message.
 ---
 
@@ -16,11 +16,11 @@ Set-HPOVLoginMessage
 
 ## Description
 
-Configure the Login Message for the connected appliance\(s\). You can also set the Acknowledgement to be required.
+Configure the Login Message for the connected appliance(s).  You can also set the Acknowledgement to be required.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Set-HPOVLoginMessage -Message "************************************
@@ -29,11 +29,13 @@ Set-HPOVLoginMessage -Message "************************************
 >> Updated Message: This management appliance is a company owned asset and provided for the exclusive use of authorized personnel. Unauthorized use or
 >> abuse of this system may lead to corrective action including termination, civil and/or criminal penalties."
 >> -Acknowledgement $true
+
+
 ```
 
 Set the Login Message from all connected appliances.
 
-### Example 2
+###  Example 2 
 
 ```text
 $Message = "************************************
@@ -42,7 +44,9 @@ $Message = "************************************
 >> Updated Message: This management appliance is a company owned asset and provided for the exclusive use of authorized personnel. Unauthorized use or
 >> abuse of this system may lead to corrective action including termination, civil and/or criminal penalties."
 >>
-Set-HPOVLoginMessage -Message $Message -Acknowledgment $true
+Set-HPOVLoginMessage -Message $Message -Acknowledgment $true 
+
+
 ```
 
 Set the Login Message from the specified appliance connection.
@@ -57,13 +61,13 @@ The login message to set.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Acknowledgment &lt;Boolean&gt;
 
-Set to True if the login message should be acknowledged before authentication completes. If set to True, the `COnnect-HPOVMgmt` Cmdlet will prompt the user to acknowledge the message, if `-LoginAcknowledge` is not provided in the Cmdlet parameters.
+Set to True if the login message should be acknowledged before authentication completes.  If set to True, the `COnnect-HPOVMgmt` Cmdlet will prompt the user to acknowledge the message, if `-LoginAcknowledge` is not provided in the Cmdlet parameters.
 
 | Aliases | None |
 | :--- | :--- |
@@ -75,19 +79,19 @@ Set to True if the login message should be acknowledged before authentication co
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases \[-Appliance\]
+Aliases [-Appliance]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-Default Value: ${Global:ConnectedSessions} \| ? Default
+Default Value: ${Global:ConnectedSessions} | ? Default
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -101,9 +105,9 @@ _**None. You cannot pipe objects to this Cmdlet.**_
 
 _**HPOneView.Appliance.LoginMessage**_
 
-If successful, returns a resource
+
+ If successful, returns a resource
 
 ## Related Links
 
 * [Get-HPOVLoginMessage](../appliance/get-hpovloginmessage.md)
-

@@ -1,4 +1,4 @@
----
+﻿---
 description: Change the initial password of the Administrator user account.
 ---
 
@@ -16,14 +16,15 @@ Set-HPOVInitialPassword
 
 ## Description
 
-Changes the initial default password of the Administrator local appliance account to the supplied new password during first time setup \(FTS.\)
+Changes the initial default password of the Administrator local appliance account to the supplied new password during first time setup (FTS.)
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Set-HPOVInitialPassword -Appliance MyAppliance.domain.com
+
 ```
 
 Change the Administrator password, and prompted for both the original and new password.
@@ -32,37 +33,37 @@ Change the Administrator password, and prompted for both the original and new pa
 
 ### -OldPassword &lt;String&gt;
 
-Current default password for this account. Will prompt for password if not supplied.
+Current default password for this account.  Will prompt for password if not supplied.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -NewPassword &lt;String&gt;
 
-New password for this account. Will prompt for password if not supplied.
+New password for this account.  Will prompt for password if not supplied.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Appliance &lt;Object&gt;
 
-Specify Appliance FQDN, Name or IP Address. If no valid Appliance Connection is found, a temporary connection is created for the specified appliance.
+Specify Appliance FQDN, Name or IP Address.  If no valid Appliance Connection is found, a temporary connection is created for the specified appliance.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -72,13 +73,14 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this cmdlet.**_
+_**None.  You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
 _**None.**_
 
-None
+
+ None
 
 ## Related Links
 

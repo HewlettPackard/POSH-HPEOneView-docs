@@ -1,4 +1,4 @@
----
+﻿---
 description: Power on Server Resource.
 ---
 
@@ -17,26 +17,29 @@ Start the power state of the server using the virtual power button.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVServer "Encl1, Bay 1" | Start-HPOVServer
+
 ```
 
 Power on the specific server device by passing the Server Object via pipeline.
 
-### Example 2
+###  Example 2 
 
 ```text
 Get-HPOVServer "Encl1, *" | Start-HPOVServer -Async
+
 ```
 
 Power on the server devices found by passing the Server Object via pipeline, and return the async task immediately.
 
-### Example 3
+###  Example 3 
 
 ```text
 Get-HPOVServerProfile "MyWebServer 1" | Start-HPOVServer
+
 ```
 
 Power on the specific server device by passing the Server Profile Object via pipeline.
@@ -45,7 +48,7 @@ Power on the specific server device by passing the Server Profile Object via pip
 
 ### -InputObject &lt;Object&gt;
 
-Aliases \[-Server\]
+Aliases [-Server]
 
 A Server hardware or Server Profile resource object.
 
@@ -53,13 +56,13 @@ A Server hardware or Server Profile resource object.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Default value | `` |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
@@ -71,19 +74,19 @@ Use this parameter to immediately return the async task. By default, the Cmdlet 
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases \[-Appliance\]
+Aliases [-Appliance]
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-Default Value: ${Global:ConnectedSessions} \| ? Default
+Default Value: ${Global:ConnectedSessions} | ? Default
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -91,21 +94,24 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.ServerHardware \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.ServerHardware [System.Management.Automation.PSCustomObject]**_
 
 Server Hardware Resource
 
-_**HPOneView.ServerProfile \[System.Management.Automation.PSCustomObject\]**_
+
+_**HPOneView.ServerProfile [System.Management.Automation.PSCustomObject]**_
 
 Server Profile Resource
 
+
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task that tracks the power state change
 
-_**System.Collections.ArrayList**_ 
+
+_**System.Collections.ArrayList <HPOneView.Appliance.TaskResource>**_
 
 Multiple Async tasks
 
@@ -138,10 +144,9 @@ Multiple Async tasks
 * [Save-HPOVServerProfileTemplate](save-hpovserverprofiletemplate.md)
 * [Set-HPOVServerHardwareType](set-hpovserverhardwaretype.md)
 * [Set-HPOVServerPower](set-hpovserverpower.md)
-* [Set-HPOVServerProfile]()
-* [Set-HPOVServerProfileTemplate]()
+* [Set-HPOVServerProfile](set-hpovserverprofile.md)
+* [Set-HPOVServerProfileTemplate](set-hpovserverprofiletemplate.md)
 * [Stop-HPOVServer](stop-hpovserver.md)
 * [Update-HPOVServer](update-hpovserver.md)
 * [Update-HPOVServerHardwareLicenseIntent](update-hpovserverhardwarelicenseintent.md)
 * [Update-HPOVServerProfile](update-hpovserverprofile.md)
-

@@ -1,4 +1,4 @@
----
+﻿---
 description: Save the contents of a Server Profile to the appliance.
 ---
 
@@ -20,12 +20,13 @@ This Cmdlet allows administrators to save the modified Server Profile object wit
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 $MyProfile = Get-HPOVServerProfile -Name "My Profile 1" -ErrorAction Stop
 $MyProfile.name = "My Profile NewName 1"
 Save-HPOVServerProfile -InputObject $MyProfile
+
 ```
 
 Get a Server Profile, update its name, then save.
@@ -34,23 +35,23 @@ Get a Server Profile, update its name, then save.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases \[-Appliance\]
+Aliases [-Appliance]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-Default Value: ${Global:ConnectedSessions} \| ? Default
+Default Value: ${Global:ConnectedSessions} | ? Default
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
@@ -68,8 +69,8 @@ Server Profile object to be saved.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Default value | `` |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
@@ -84,9 +85,10 @@ A Server Profile resource object from Get-ServerProfile that was modified and ne
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task Resource object for monitoring the enclosure import process.
+
 
 ## Related Links
 
@@ -109,7 +111,6 @@ Async task Resource object for monitoring the enclosure import process.
 * [Remove-HPOVServerProfile](remove-hpovserverprofile.md)
 * [Remove-HPOVServerProfileTemplate](remove-hpovserverprofiletemplate.md)
 * [Save-HPOVServerProfileTemplate](save-hpovserverprofiletemplate.md)
-* [Set-HPOVServerProfile]()
-* [Set-HPOVServerProfileTemplate]()
+* [Set-HPOVServerProfile](set-hpovserverprofile.md)
+* [Set-HPOVServerProfileTemplate](set-hpovserverprofiletemplate.md)
 * [Update-HPOVServerProfile](update-hpovserverprofile.md)
-

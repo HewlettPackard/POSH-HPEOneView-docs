@@ -1,4 +1,4 @@
----
+﻿---
 description: Enable appliance service console access.
 ---
 
@@ -22,10 +22,11 @@ Required: Infrastructure administrator
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Enable-HPOVApplianceServiceConsoleAccess
+
 ```
 
 Enable appliance service console access.
@@ -34,15 +35,15 @@ Enable appliance service console access.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -50,7 +51,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this cmdlet.**_
+_**None.  You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
@@ -62,4 +63,3 @@ Appliance global security settings.
 
 * [Disable-HPOVApplianceServiceConsoleAccess](disable-hpovapplianceserviceconsoleaccess.md)
 * [Get-HPOVApplianceServiceConsoleAccess](get-hpovapplianceserviceconsoleaccess.md)
-

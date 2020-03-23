@@ -1,4 +1,4 @@
----
+﻿---
 description: Retrieve Logical Interconnect Group resource(s).
 ---
 
@@ -26,35 +26,38 @@ Get-HPOVLogicalInterconnectGroup
 
 ## Description
 
-Retrieves a list of all Logical Interconnect Groups or just specific ones via a query if the name parameter is provided. The output can be sent to a file using the exportFile parameter.
+Retrieves a list of all Logical Interconnect Groups or just specific ones via a query if the name parameter is provided.  The output can be sent to a file using the exportFile parameter.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVLogicalInterconnectGroup
+
 ```
 
 Returns all Logical Interconnect Groups defined on the appliance to standard output.
 
-### Example 2
+###  Example 2 
 
 ```text
 Get-HPOVLogicalInterconnectGroup -Name "Production"
+
 ```
 
 Returns just the Production Logical Interconnect Group object to standard output.
 
-### Example 3
+###  Example 3 
 
 ```text
 $myLigs = Get-HPOVLogicalInterconnectGroup
+
 ```
 
 Returns the `Get-HPOVLogicalInterconnectGroup` query and stores it in the object $myLigs
 
-### Example 4
+###  Example 4 
 
 ```text
 $LigName = "VC FF Virt Prod"
@@ -64,14 +67,17 @@ $CreatedLig
 Name            Enclosure Groups
 ----            ----------------
 VC FF Virt Prod
+
+
 ```
 
 Create a new Logical Interconnect Group resource, wait for the task to complete, then retrieve the created resource.
 
-### Example 5
+###  Example 5 
 
 ```text
 Get-HPOVLogicalInterconnectGroup -exportFile "c:\myApplianceConfig\LogicaICGs.json"
+
 ```
 
 Returns the `Get-HPOVLogicalInterconnectGroup` query results to the file c:\myApplianceConfig\LogicaICGs.json
@@ -86,8 +92,8 @@ Pipeline input resource generated from `Wait-HPOVTaskComplete`, or successfully 
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Default value | `` |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -Name &lt;String&gt;
@@ -98,30 +104,30 @@ The name of the Logical Interconnect Group to retrieve.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Type &lt;String&gt;
 
-Provide the type of Logical Interconnect Group to return. Omit to return all Logical Interconnect Group resources.
+Provide the type of Logical Interconnect Group to return.  Omit to return all Logical Interconnect Group resources.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Scope &lt;Object&gt;
 
-Filter resources based on provided Scope membership. By default, all resources for the accounts Active Permissions will be displayed. Allowed values:
+Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-* AllResources
-* AllResourcesInScope
-* `[HPOneView.Appliance.ScopeCollection]`
-* `[HPOneView.Appliance.ConnectionPermission]`
+	* AllResources
+	* AllResourcesInScope
+	* `[HPOneView.Appliance.ScopeCollection]`
+	* `[HPOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
@@ -145,29 +151,30 @@ Specify the label associated with resources.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases \[-Appliance\]
+Aliases [-Appliance]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-Default Value: ${Global:ConnectedSessions} \| ? Default
+Default Value: ${Global:ConnectedSessions} | ? Default
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### -exportFile &lt;String&gt;
 
-Aliases \[-x, `-export`\] The full path and file name to export the contents retrieved from the call to `Get-HPOVLogicalInterconnectGroup`.
+Aliases [-x, `-export`]
+The full path and file name to export the contents retrieved from the call to `Get-HPOVLogicalInterconnectGroup`.
 
 | Aliases | x, export |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -177,7 +184,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Successfully Completed Async task resource from [`Wait-HPOVTaskComplete`](../appliance/wait-hpovtaskcomplete.md) or other supported method
 
@@ -191,4 +198,3 @@ A Logical Interconnect Group or collection of Logical Interconnect Groups
 
 * [New-HPOVLogicalInterconnectGroup](new-hpovlogicalinterconnectgroup.md)
 * [Remove-HPOVLogicalInterconnectGroup](remove-hpovlogicalinterconnectgroup.md)
-

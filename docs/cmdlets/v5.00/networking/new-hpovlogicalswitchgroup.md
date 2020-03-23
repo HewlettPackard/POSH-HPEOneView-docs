@@ -1,4 +1,4 @@
----
+﻿---
 description: Create a new Logical Switch Group resource.
 ---
 
@@ -18,11 +18,11 @@ New-HPOVLogicalSwitchGroup
 
 ## Description
 
-The logical switch group is a template for creating logical switches. Logical switches are an aggregation of up to two physical top-of-rack switches. Once constructed from a logical switch group, a logical switch continues to be associated with its logical switch group. Any change in consistency between the logical switch group and its associated logical switches is monitored and made visible on the associated logical switch screen in HPE OneView. This Cmdlet will help create a Logical Switch Group resources. Use Get-HPOVSwitchType to identify which switch family and models are supported. Please refer to either Get-HPOVSwitchType values, or the HPE OneView Support Matrix for which specific models are supported. Required privileges: Infrastructure administrator or Network administrator
+The logical switch group is a template for creating logical switches. Logical switches are an aggregation of up to two physical top-of-rack switches. Once constructed from a logical switch group, a logical switch continues to be associated with its logical switch group. Any change in consistency between the logical switch group and its associated logical switches is monitored and made visible on the associated logical switch screen in HPE OneView. This Cmdlet will help create a Logical Switch Group resources.  Use Get-HPOVSwitchType to identify which switch family and models are supported. Please refer to either Get-HPOVSwitchType values, or the HPE OneView Support Matrix for which specific models are supported. Required privileges: Infrastructure administrator or Network administrator 
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVSwitchType -Name "Cisco Nexus 56xx" | New-HPOVLogicalSwitchGroup -Name "My Logical Switch Group Policy 1" -NumberOfSwitches 2
@@ -40,7 +40,7 @@ The Logical Switch Group resource Name.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -52,13 +52,13 @@ The Switch Type resource from `Get-HPOVSwitchType`.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Default value | `` |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -NumberOfSwitches &lt;Int&gt;
 
-The maximum number of switches supported in the Logical Switch Group. Only 1 or 2 are allowed.
+The maximum number of switches supported in the Logical Switch Group.  Only 1 or 2 are allowed.
 
 | Aliases | None |
 | :--- | :--- |
@@ -70,27 +70,27 @@ The maximum number of switches supported in the Logical Switch Group. Only 1 or 
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -104,11 +104,11 @@ Switch Type resource from [`Get-HPOVSwitchType`](get-hpovswitchtype.md).
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
-The async task resource object to monitor \(if `-Async` was used\) or results.
+The async task resource object to monitor (if `-Async` was used) or results.
 
-_**System.Collections.ArrayList**_ 
+_**System.Collections.ArrayList <HPOneView.Appliance.TaskResource>**_
 
 Collection of remove Logical Switch async task resources.
 
@@ -116,4 +116,3 @@ Collection of remove Logical Switch async task resources.
 
 * [Get-HPOVLogicalSwitchGroup](get-hpovlogicalswitchgroup.md)
 * [Remove-HPOVLogicalSwitchGroup](remove-hpovlogicalswitchgroup.md)
-

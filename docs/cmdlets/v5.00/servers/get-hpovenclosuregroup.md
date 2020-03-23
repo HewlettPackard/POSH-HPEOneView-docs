@@ -1,4 +1,4 @@
----
+﻿---
 description: Retrieve Enclosure Group resource(s).
 ---
 
@@ -26,7 +26,7 @@ Minimum required privileges: Read only
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 $enclosures = Get-HPOVEnclosureGroup
@@ -34,7 +34,7 @@ $enclosures = Get-HPOVEnclosureGroup
 
 Return all the enclosure groups managed by this appliance.
 
-### Example 2
+###  Example 2 
 
 ```text
 $enclosure = Get-HPOVEnclosureGroup "A"
@@ -46,13 +46,13 @@ Return the enclosure group resource with name "A".
 
 ### -Name &lt;String&gt;
 
-The name of the Enclosure Group resource to be returned. All enclosure group resources will be returned if omitted.
+The name of the Enclosure Group resource to be returned.  All enclosure group resources will be returned if omitted.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -70,7 +70,7 @@ Specify the label associated with resources.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -88,7 +88,7 @@ Full path and file name to save the output of `Get-HPOVEnclosureGroup`
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -98,11 +98,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this Cmdlet.**_
+_**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.EnclosureGroup \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.EnclosureGroup [System.Management.Automation.PSCustomObject]**_
 
 Enclosure Group resource.
 
@@ -113,8 +113,7 @@ Enclosure Group resource.
 * [Get-HPOVLogicalEnclosure](get-hpovlogicalenclosure.md)
 * [New-HPOVLogicalEnclosure](new-hpovlogicalenclosure.md)
 * [New-HPOVEnclosureGroup](new-hpovenclosuregroup.md)
-* [Remove-HPOVEnclosure](https://github.com/HewlettPackard/POSH-HPOneView-docs/tree/2c3cd0d508b6cdba6336a27d496637fc71c6ce4c/docs/cmdlets/v5.00/servers/remove-hpovenclosure.md)
+* [Remove-HPOVEnclosure](remove-hpovenclosure.md)
 * [Remove-HPOVEnclosureGroup](remove-hpovenclosuregroup.md)
-* [Set-HPOVEnclosureGroup](https://github.com/HewlettPackard/POSH-HPOneView-docs/tree/2c3cd0d508b6cdba6336a27d496637fc71c6ce4c/docs/cmdlets/v5.00/servers/set-hpovenclosuregroup.md)
+* [Set-HPOVEnclosureGroup](set-hpovenclosuregroup.md)
 * [Update-HPOVLogicalEnclosure](update-hpovlogicalenclosure.md)
-

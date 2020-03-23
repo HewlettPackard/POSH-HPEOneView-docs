@@ -1,4 +1,4 @@
----
+﻿---
 description: Refresh the state of a server resource.
 ---
 
@@ -36,18 +36,20 @@ By using this cmdlet, you can manually refresh the connection between the applia
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVServer "Encl1, Bay 1" | Update-HPOVServer | Wait-HPOVTaskComplete
+
 ```
 
 Refresh the state of the provided server hardware device.
 
-### Example 2
+###  Example 2 
 
 ```text
 $task = Get-HPOVServerProfile "Profile1" | Update-HPOVServer
+
 ```
 
 Refresh the state of the server hardware device assigned to the Server Profile object.
@@ -56,19 +58,20 @@ Refresh the state of the server hardware device assigned to the Server Profile o
 
 ### -InputObject &lt;Object&gt;
 
-Aliases \[-Name, `-Server`\] The Server object or Name, or can be a Server Profile object.
+Aliases [-Name, `-Server`]
+The Server object or Name, or can be a Server Profile object.
 
 | Aliases | name, Server |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Default value | `` |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
@@ -80,19 +83,19 @@ Use this parameter to immediately return the async task. By default, the Cmdlet 
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases \[-Appliance\]
+Aliases [-Appliance]
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-Default Value: ${Global:ConnectedSessions} \| ? Default
+Default Value: ${Global:ConnectedSessions} | ? Default
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### -Hostname &lt;String&gt;
 
@@ -102,7 +105,7 @@ When a server hardware resource is in an Error state where the iLO IP Address or
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -114,7 +117,7 @@ Provide a PSCredential object instead of the Username and Password.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -126,7 +129,7 @@ Force delete the resource.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -140,17 +143,20 @@ _**System.String**_
 
 Server Hardware Name
 
+
 _**System.Management.Automation.PSCustomObject**_
 
 Server Hardware Resource
+
 
 _**System.Management.Automation.PSCustomObject**_
 
 Server Profile Resource
 
+
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task that tracks the server refresh request
 
@@ -183,10 +189,9 @@ Async task that tracks the server refresh request
 * [Save-HPOVServerProfileTemplate](save-hpovserverprofiletemplate.md)
 * [Set-HPOVServerHardwareType](set-hpovserverhardwaretype.md)
 * [Set-HPOVServerPower](set-hpovserverpower.md)
-* [Set-HPOVServerProfile]()
-* [Set-HPOVServerProfileTemplate]()
+* [Set-HPOVServerProfile](set-hpovserverprofile.md)
+* [Set-HPOVServerProfileTemplate](set-hpovserverprofiletemplate.md)
 * [Start-HPOVServer](start-hpovserver.md)
 * [Stop-HPOVServer](stop-hpovserver.md)
 * [Update-HPOVServerHardwareLicenseIntent](update-hpovserverhardwarelicenseintent.md)
 * [Update-HPOVServerProfile](update-hpovserverprofile.md)
-

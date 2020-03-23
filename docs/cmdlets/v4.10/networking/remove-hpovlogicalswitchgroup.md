@@ -1,4 +1,4 @@
----
+﻿---
 description: Remove a new Logical Switch Group resource.
 ---
 
@@ -16,11 +16,12 @@ Remove-HPOVLogicalSwitchGroup
 
 ## Description
 
-This Cmdlet will remove the configured Logical Switch Group from the requested appliance\(s\). You cannot delete a logical switch group while it is being used by one or more logical switches. To delete the logical switch group, first delete the logical switches using the logical switch group. Required privileges: Infrastructure administrator or Network administrator
+This Cmdlet will remove the configured Logical Switch Group from the requested appliance(s).  You cannot delete a logical switch group while it is being used by one or more logical switches. To delete the logical switch group, first delete the logical switches using the logical switch group.
+ Required privileges: Infrastructure administrator or Network administrator 
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVLogicalSwitchGroup | Remove-HPOVLogicalSwitchGroup
@@ -28,7 +29,7 @@ Get-HPOVLogicalSwitchGroup | Remove-HPOVLogicalSwitchGroup
 
 Remove all logical switch group resources found on the default appliance connection.
 
-### Example 2
+###  Example 2 
 
 ```text
 Get-HPOVLogicalSwitchGroup -Name "My Logical Switch Group Policy 1" | Remove-HPOVLogicalSwitchGroup -confirm:$false
@@ -46,8 +47,8 @@ The Logical Switch resource Name or Object to update.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Default value | `` |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
@@ -58,7 +59,7 @@ Bypass the confirmation prompt, and process all of the objects.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -70,25 +71,25 @@ Force remove resource, even if there are communication problems.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases \[-Appliance\]
+Aliases [-Appliance]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-Default Value: ${Global:ConnectedSessions} \| ? Default
+Default Value: ${Global:ConnectedSessions} | ? Default
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -96,17 +97,17 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Networking.LogicalSwitchGroup \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Networking.LogicalSwitchGroup [System.Management.Automation.PSCustomObject]**_
 
 Logical Switch Group resource.
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 The async task resource object results.
 
-_**System.Collections.ArrayList**_ 
+_**System.Collections.ArrayList <HPOneView.Appliance.TaskResource>**_
 
 Collection of remove Logical Switch async task resources.
 
@@ -114,4 +115,3 @@ Collection of remove Logical Switch async task resources.
 
 * [Get-HPOVLogicalSwitchGroup](get-hpovlogicalswitchgroup.md)
 * [New-HPOVLogicalSwitchGroup](new-hpovlogicalswitchgroup.md)
-

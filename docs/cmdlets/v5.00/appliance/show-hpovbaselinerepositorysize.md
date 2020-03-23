@@ -1,4 +1,4 @@
----
+﻿---
 description: View appliance basline repository size.
 ---
 
@@ -12,7 +12,7 @@ This Cmdlet will display the appliance baseline repository size
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Show-HPOVBaselineRepositorySize
@@ -24,15 +24,15 @@ Show the appliance baseline repository size.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases |  |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? |  |  |
-| Accept wildcard characters? |  |  |
+| Aliases |  |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? |  |
+| Accept wildcard characters? |  |
 
 ### &lt;CommonParameters&gt;
 
@@ -44,7 +44,7 @@ _**None. You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.BaselineRepository \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.BaselineRepository [System.Management.Automation.PSCustomObject]**_
 
 Appliance baseline repository capacity object.
 

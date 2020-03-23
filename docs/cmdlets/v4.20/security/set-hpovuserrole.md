@@ -1,4 +1,4 @@
----
+﻿---
 description: (Deprecated) Assign or change roles for an existing user.
 ---
 
@@ -20,10 +20,11 @@ This CMDLET is now deprecated. Please use the Set-HPOVUser CMDLET to modify user
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Set-HPOVUserRole -user Sally -roleName "Server Administrator"
+
 ```
 
 Set the Server Administrator role for Sally"s user account.
@@ -38,13 +39,13 @@ The name of the user account to have a role assigned.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Default value | `` |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -Roles &lt;Array&gt;
 
-The role\(s\) to assign to the Directroy Group, in `[System.Collections.ArrayList]` format. Accepted values are noted within the ApplianceRoles property of the `[HPOneView.Appliance.Connection]` object stored in the $Global:ConnectedSessions variable.
+The role(s) to assign to the Directroy Group, in `[System.Collections.ArrayList]` format.  Accepted values are noted within the ApplianceRoles property of the `[HPOneView.Appliance.Connection]` object stored in the $Global:ConnectedSessions variable.
 
 Example: $roles = "Server administrator","Network administrator"
 
@@ -52,21 +53,21 @@ Example: $roles = "Server administrator","Network administrator"
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -74,15 +75,15 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Appliance.User \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.User [System.Management.Automation.PSCustomObject]**_
 
 HPE OneView applinace user account
 
 ## Return Values
 
-_**HPOneView.Appliance.User \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.User [System.Management.Automation.PSCustomObject]**_
 
-Updated user account with new role\(s\)
+Updated user account with new role(s)
 
 ## Related Links
 

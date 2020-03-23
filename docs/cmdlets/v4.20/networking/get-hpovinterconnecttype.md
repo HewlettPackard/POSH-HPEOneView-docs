@@ -1,4 +1,4 @@
----
+﻿---
 description: Retrieve Interconnect Type resource(s).
 ---
 
@@ -26,7 +26,7 @@ Retrieves a list of all Interconnect Types or just specific ones via a query if 
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVInterconnectType
@@ -34,7 +34,7 @@ Get-HPOVInterconnectType
 
 Returns all Interconnect Types available from all connected appliances to standard output.
 
-### Example 2
+###  Example 2 
 
 ```text
 Get-HPOVInterconnect -name "HP VC FlexFabric 10Gb/24-Port Module"
@@ -42,7 +42,7 @@ Get-HPOVInterconnect -name "HP VC FlexFabric 10Gb/24-Port Module"
 
 Returns just the "HP VC FlexFabric 10Gb/24-Port Module" Interconnect Type object to standard output.
 
-### Example 3
+###  Example 3 
 
 ```text
 Get-HPOVInterconnect -name "571956-B21"
@@ -60,7 +60,7 @@ The name of the interconnect type model name to retrieve.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -72,21 +72,21 @@ The Part Number of an Interconnect Type to search for.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -94,19 +94,21 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this cmdlet.**_
+_**None.  You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Networking.InterconnectType \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Networking.InterconnectType [System.Management.Automation.PSCustomObject]**_
 
 Single Interconnect Type resource.
 
-_**System.Collections.ArrayList**_ 
+_**System.Collections.ArrayList <HPOneView.Networking.InterconnectType>**_
 
 Multiple Interconnect Type resources or formatted table dispalying basic Interconnect Type information.
 
 _**An Interconnect Type or collection of Interconnect Types.**_
+
+
 
 ## Related Links
 

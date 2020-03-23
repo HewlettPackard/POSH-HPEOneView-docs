@@ -1,4 +1,4 @@
----
+﻿---
 description: Default content
 ---
 
@@ -21,10 +21,11 @@ Default content
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVClusterNode
+
 ```
 
 Default example
@@ -33,19 +34,19 @@ Default example
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases \[-Appliance\]
+Aliases [-Appliance]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-Default Value: ${Global:ConnectedSessions} \| ? Default
+Default Value: ${Global:ConnectedSessions} | ? Default
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### -Label &lt;String&gt;
 
@@ -55,23 +56,25 @@ Specify the label associated with resources.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Name &lt;string&gt;
 
+
+
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Scope &lt;Object&gt;
 
-Filter resources based on provided Scope membership. By default, all resources for the accounts Active Permissions will be displayed. Allowed values:\r\n\r\n\t _AllResources\r\n\t_AllResourcesInScope\r\n\t _`[HPOneView.Appliance.ScopeCollection]`\r\n\t_ `[HPOneView.Appliance.ConnectionPermission]`
+Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:\r\n\r\n\t* AllResources\r\n\t*AllResourcesInScope\r\n\t* `[HPOneView.Appliance.ScopeCollection]`\r\n\t* `[HPOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
@@ -92,8 +95,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Related Links
 
 * [Add-HPOVClusterNode](add-hpovclusternode.md)
-* [Add-HPOVClusterNodeToCluster]()
+* [Add-HPOVClusterNodeToCluster](add-hpovclusternodetocluster.md)
 * [Enter-HPOVClusterNodeMaintenanceMode](enter-hpovclusternodemaintenancemode.md)
 * [Exit-HPOVClusterNodeMaintenanceMode](exit-hpovclusternodemaintenancemode.md)
 * [Update-HPOVClusterNode](update-hpovclusternode.md)
-

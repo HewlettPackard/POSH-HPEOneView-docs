@@ -1,4 +1,4 @@
----
+﻿---
 description: Modify an existing Storage Volume Template resource.
 ---
 
@@ -79,14 +79,15 @@ Set-HPOVStorageVolumeTemplate
 
 ## Description
 
-This cmdlet will help modify an existing Storage Volume Template resource. Only the Volume Name, Description, Capcity, Snapshot Storage Pool, volume shared state and permenance can be modified.
+This cmdlet will help modify an existing Storage Volume Template resource.  Only the Volume Name, Description, Capcity, Snapshot Storage Pool, volume shared state and permenance can be modified.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVStorageVolumeTemplate -Name MyProdVolTemplate | Set-HPOVStorageVolumeTemplate -Size 160
+
 ```
 
 Update "MyProdVolTemplate" volume size to 160GB.
@@ -101,8 +102,8 @@ Source Storage Volume Template resource object.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Default value | `` |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -Name &lt;String&gt;
@@ -113,7 +114,7 @@ Updated Storage Volume Template Name.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -125,13 +126,13 @@ Updated description for the volume.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Capacity &lt;Int64&gt;
 
-New Max volume capacity in GB. Volume capacity can be increased to maximum of 16 TiB. Decreasing the capacity of volume is not supported.
+New Max volume capacity in GB.  Volume capacity can be increased to maximum of 16 TiB. Decreasing the capacity of volume is not supported. 
 
 Before increasing the capacity of fully provisioned volumes, ensure that the storage pool has enough capacity to support the operation. The update operation might fail if there is not enough space available in the storage pool.
 
@@ -153,7 +154,7 @@ The Storage Pool Name, URI or Object to be used for Volumes
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
@@ -165,7 +166,7 @@ When the Storage Pool name is not unique, specify the Storage System name the po
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -177,13 +178,14 @@ The Storage Pool Name, URI or Object to be used for Volume Snapshots.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Shared &lt;Boolean&gt;
 
-Include this switch to mark the Storage Volume as a Shareable resource for shared volume access. Default: Private
+Include this switch to mark the Storage Volume as a Shareable resource for shared volume access.
+Default: Private
 
 | Aliases | None |
 | :--- | :--- |
@@ -198,6 +200,7 @@ Include this switch to mark the Storage Volume as a Shareable resource for share
 {% hint style="info" %}
 This parameter is being deprecated for the `-ProvisionType` parameter. Please update your scripts.
 {% endhint %}
+
 
 Include to change the provisioned type to Thin.
 
@@ -215,6 +218,7 @@ Include to change the provisioned type to Thin.
 This parameter is being deprecated for the `-ProvisionType` parameter. Please update your scripts.
 {% endhint %}
 
+
 Include to change the provisioned type to Full.
 
 | Aliases | None |
@@ -227,20 +231,21 @@ Include to change the provisioned type to Full.
 
 ### -DataProtectionLevel &lt;String&gt;
 
-Specify the StoreVirtual protection level \(aka Network RAID\) for the volume. Allowed values are:
+Specify the StoreVirtual protection level (aka Network RAID) for the volume.  Allowed values are:
 
-* NetworkRaid0None
-* NetworkRaid5SingleParity
-* NetworkRaid10Mirror2Way
-* NetworkRaid10Mirror3Way
-* NetworkRaid10Mirror4Way
-* NetworkRaid6DualParity
+    * NetworkRaid0None
+    * NetworkRaid5SingleParity
+    * NetworkRaid10Mirror2Way
+    * NetworkRaid10Mirror3Way
+    * NetworkRaid10Mirror4Way
+    * NetworkRaid6DualParity
+
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -252,13 +257,13 @@ Specify to lock the DataProtectionLevel value in the template.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -EnableAdaptiveOptimization &lt;SwitchParameter&gt;
 
-Whether or not Adaptive Optimization is enabled on the storage volume. Only supported with StoreVirtual
+Whether or not Adaptive Optimization is enabled on the storage volume.  Only supported with StoreVirtual
 
 | Aliases | None |
 | :--- | :--- |
@@ -276,23 +281,23 @@ Specify to lock the EnableAdaptiveOptimization value in the template.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ProvisioningType &lt;String&gt;
 
-Specify the type of volume to provision. Allowed values are:
+Specify the type of volume to provision.  Allowed values are:
 
-* Thin
-* Full
-* TPDD \(Thin Provision Dedup\) - Only available for HPE StoreServ storage systems with SSD storage pools \(aka CPG"s\).
+    * Thin
+    * Full
+    * TPDD (Thin Provision Dedup) - Only available for HPE StoreServ storage systems with SSD storage pools (aka CPG"s).
 
 | Aliases | ProvisionType |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -304,7 +309,7 @@ Specify to lock the ProvisionType value in the template.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -346,7 +351,7 @@ Specify to lock the Capacity value in the template.
 
 ### -LockProvisionMode &lt;SwitchParameter&gt;
 
-Specify to lock the Provision Mode \(Shared or Private\) value in the template.
+Specify to lock the Provision Mode (Shared or Private) value in the template.
 
 | Aliases | None |
 | :--- | :--- |
@@ -360,17 +365,17 @@ Specify to lock the Provision Mode \(Shared or Private\) value in the template.
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### -CachePinning &lt;bool&gt;
 
-This is applicable for hybrid \(a mix of flash and mechanical storage\) arrays, and provides a 100 percent cache hit rate for specific volumes \(for example, volumes dedicated to critical applications\), and delivers the response times of an `all-flash` storage system. A volume is pinned when the entire active volume is placed in cache; associated snapshot \(inactive\) blocks are not pinned. All incoming data after that point is pinned. The number of volumes that can be pinned is limited by the size of the volumes and amount of available cache.
+This is applicable for hybrid (a mix of flash and mechanical storage) arrays, and provides a 100 percent cache hit rate for specific volumes (for example, volumes dedicated to critical applications), and delivers the response times of an `all-flash` storage system. A volume is pinned when the entire active volume is placed in cache; associated snapshot (inactive) blocks are not pinned. All incoming data after that point is pinned. The number of volumes that can be pinned is limited by the size of the volumes and amount of available cache.
 
 When defined in the Performance Profile, select to enable Cache Pinnning for the Nimble volume to be created.
 
@@ -378,7 +383,7 @@ When defined in the Performance Profile, select to enable Cache Pinnning for the
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -390,65 +395,63 @@ Specify the data transfer limit in MiB/S.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -EnableDataTransferLimit &lt;bool&gt;
 
-Enable data transfer limit. If enabled, the `-DataTransferLimit` parameter must be set. By default, data transfer limit is not set.
+Enable data transfer limit.  If enabled, the `-DataTransferLimit` parameter must be set.  By default, data transfer limit is not set.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -EnableEncryption &lt;bool&gt;
 
-When the storage system has encryption enabled, the volume can also be encrypted. Specify if the volume should be encrypted during creation.
+When the storage system has encryption enabled, the volume can also be encrypted.  Specify if the volume should be encrypted during creation.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -EnableIOPSLimit &lt;bool&gt;
 
-Set to enable or disable IOPS limit. If enabled, the `-IOPSLimit` parameter must be set. By default, IOPS limit is not set.
+Set to enable or disable IOPS limit.  If enabled, the `-IOPSLimit` parameter must be set.  By default, IOPS limit is not set.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Folder &lt;HPOneView.Storage.NimbleFolder&gt;
 
-Specify the Nimble folder where the volume should be created. To get availabe folder objects, use the `Get-HPOVStoragePool` Cmdlet. Folders are defined as a device specific attribute.
+Specify the Nimble folder where the volume should be created.  To get availabe folder objects, use the `Get-HPOVStoragePool` Cmdlet.  Folders are defined as a device specific attribute. 
 
 Example:
 
-```text
- (Get-HPOVStoragePool `-name` default).DeviceSpecificAttributes.Folders
-```
+     (Get-HPOVStoragePool `-name` default).DeviceSpecificAttributes.Folders
 
-ID Name
-
+ID                                         Name
+--                                         ----
 2f1ca8a5d76e271722000000000000000000000001 POSH
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -460,25 +463,23 @@ When enabling IOPS limit, provide a value that is greater than or equal to 256.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -PerformancePolicy &lt;HPOneView.Storage.PerformancePolicy&gt;
 
-A Nimble Performance Policy is associated with a storage system. Using the `Show-HPOVStorageSystemPerformancePolicy`, choose an available performance policy.
+A Nimble Performance Policy is associated with a storage system.  Using the `Show-HPOVStorageSystemPerformancePolicy`, choose an available performance policy.
 
 Example:
 
-```text
-`Get-HPOVStorageSystem` `-Name` MyNimbleSys | `Show-HPOVStorageSystemPerformancePolicy`
-```
+    `Get-HPOVStorageSystem` `-Name` MyNimbleSys | `Show-HPOVStorageSystemPerformancePolicy`
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -490,7 +491,7 @@ Use to specify a Volume Set the volume will be associated with, from `Get-HPOVSt
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -502,7 +503,7 @@ Lock the CachePinning value.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -514,7 +515,7 @@ Lock the DataTransferLimit value.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -526,7 +527,7 @@ Lock the EnableEncryption value.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -538,7 +539,7 @@ Lock the Folder value.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -550,7 +551,7 @@ Lock the IOPSLimit value.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -562,7 +563,7 @@ Lock the PerformancePolicy value.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -574,7 +575,7 @@ Lock the VolumeSet value.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | `` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -584,13 +585,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Storage.VolumeTemplate \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Storage.VolumeTemplate [System.Management.Automation.PSCustomObject]**_
 
 Storage Volume Template resource.
 
 ## Return Values
 
-_**HPOneView.Storage.VolumeTemplate \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Storage.VolumeTemplate [System.Management.Automation.PSCustomObject]**_
 
 Updated Storage Volume Template object.
 
@@ -601,4 +602,3 @@ Updated Storage Volume Template object.
 * [New-HPOVStorageVolumeTemplate](new-hpovstoragevolumetemplate.md)
 * [Remove-HPOVStorageVolumeTemplate](remove-hpovstoragevolumetemplate.md)
 * [Set-HPOVStorageVolumeTemplatePolicy](set-hpovstoragevolumetemplatepolicy.md)
-
