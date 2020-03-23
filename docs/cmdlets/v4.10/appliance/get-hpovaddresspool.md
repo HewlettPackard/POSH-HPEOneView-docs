@@ -54,7 +54,7 @@ The Address Pool type.  Accepted values are VMAC, VWWN, VSN, IPv4, or All.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `all` |
+| Default value | all |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -70,7 +70,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

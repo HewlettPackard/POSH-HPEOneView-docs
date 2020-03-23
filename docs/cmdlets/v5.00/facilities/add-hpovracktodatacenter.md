@@ -64,7 +64,7 @@ The Rack object from `Get-HPOVRack`.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
@@ -76,7 +76,7 @@ The DataCenter object from `Get-HPOVDataCenter`.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -88,7 +88,7 @@ The X coordinate in the DC.  Value can be in US Feet or Millimeters.  If specify
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `0` |
+| Default value | 0 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -100,7 +100,7 @@ The Y coordinate in the DC.  Value can be in US Feet or Millimeters.  If specify
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `0` |
+| Default value | 0 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -113,7 +113,7 @@ Allowed range 0 to 360
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `0` |
+| Default value | 0 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -125,7 +125,7 @@ If X and/or Y are in Millimeters, you must include this parameter.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -137,7 +137,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 

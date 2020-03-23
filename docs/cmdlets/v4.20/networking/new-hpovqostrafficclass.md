@@ -47,7 +47,7 @@ Name of the QoS Classifier.  Value cannot be "FCoE lossless".  If value is "Best
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -61,7 +61,7 @@ Value between 1 and 100
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -75,7 +75,7 @@ Value between 1 and 100
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -87,7 +87,7 @@ Specifies the dot1p priority value to remark for the egressing packets. This pro
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `0` |
+| Default value | 0 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -109,7 +109,7 @@ Specify an array of ingress Dot1p values, and to which traffic class it is curre
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -143,7 +143,7 @@ Specify an array of DSCP class mappings, per RFC 2475.  Allowed values:
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -155,7 +155,7 @@ Specifies whether the traffic class is real time. Only 1 traffic class can be re
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -167,7 +167,7 @@ Specify to Enable the traffic class. By default, the class is disabled, even tho
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

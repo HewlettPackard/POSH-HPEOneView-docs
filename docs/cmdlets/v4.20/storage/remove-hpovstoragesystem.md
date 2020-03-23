@@ -39,7 +39,7 @@ Name or URI of the managed storage system.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
@@ -51,7 +51,7 @@ Switch to force removal of a storage system the appliance can no longer communic
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -63,7 +63,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
@@ -75,7 +75,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -87,7 +87,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

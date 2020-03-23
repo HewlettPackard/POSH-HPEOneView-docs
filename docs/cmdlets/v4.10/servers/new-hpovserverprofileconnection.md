@@ -207,7 +207,7 @@ The numeric identifier for this connection.  Connections are normally numbered s
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `1` |
+| Default value | 1 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -220,7 +220,7 @@ Deprecated parameter.  Connection type is now derived from the provided Network 
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `Ethernet` |
+| Default value | Ethernet |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -232,7 +232,7 @@ The Network (Ethernet or Fibre Channel) or Network Set resource object to be use
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
@@ -244,7 +244,7 @@ Specify the LAG Name for a Synergy Ethernet connection.  Allowed value is "LAG1"
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -262,7 +262,7 @@ An example of a FlexLOM 1, FlexNIC 1a interface would be "Flb 1:1a".  An example
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `Auto` |
+| Default value | Auto |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -274,7 +274,7 @@ A string used to identify the respective connection. The connection name is case
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -288,7 +288,7 @@ Default: 2500
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `2500` |
+| Default value | 2500 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -300,7 +300,7 @@ Use to specify user defined address values
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -312,7 +312,7 @@ Requested MAC address of the connection.  Must be specified if setting WWPN and 
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -324,7 +324,7 @@ Requested WWNN address of the connection.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -336,7 +336,7 @@ Requested WWPN address of the connection.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -348,7 +348,7 @@ Specify the number of Virtual Functions to enable on an Ethernet Connection.  Mu
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `0` |
+| Default value | 0 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -362,7 +362,7 @@ Specify to configure bootable settings.  If omitted, then the connection is not 
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -380,7 +380,7 @@ Default: AdapterBIOS
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `AdapterBIOS` |
+| Default value | AdapterBIOS |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -404,7 +404,7 @@ When the Connection Type is Ethernet, this affects PXE boot.  If the Connection 
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `NotBootable` |
+| Default value | NotBootable |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -418,7 +418,7 @@ Target FC array WWPN.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -430,7 +430,7 @@ Target LUN ID, if BootVolumeSource is set to UserDefined.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `0` |
+| Default value | 0 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -444,7 +444,7 @@ If configuring a Connection for a Server Profile Template, the value will be ign
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -461,7 +461,7 @@ Specify the IPv4 Address Source for the connection.  Allowed values are:
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -473,7 +473,7 @@ The IPv4 Address to allocate for the initiator.  This parameter value is ignored
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -485,7 +485,7 @@ The IPv4 Subnet Mask in full or CIDR bit value.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -497,7 +497,7 @@ The IPv4 Gateway.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -509,7 +509,7 @@ The IQN of the target iSCSI host.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -521,7 +521,7 @@ The Primary Boot Target IPv4 Address.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -533,7 +533,7 @@ The Primary Boot Target TCP Port.  Default is 3260 if not otherwise specified.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `3260` |
+| Default value | 3260 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -545,7 +545,7 @@ The Secondary Boot Target IPv4 Address.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -557,7 +557,7 @@ The Secondary Boot Target TCP Port.  Default is 3260 if not otherwise specified.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `3260` |
+| Default value | 3260 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -569,7 +569,7 @@ Specify the Authentication protocol to use.  Allowed values are None, CHAP, Mutu
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -581,7 +581,7 @@ The CHAP challange name.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -593,7 +593,7 @@ The CHAP challange secret.  Accepts ASCII or HEX values.  If providing an ASCII 
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -605,7 +605,7 @@ The Mutual CHAP challange.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -617,7 +617,7 @@ The Mutual CHAP challange secret.  Accepts ASCII or HEX values.  If providing an
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -629,7 +629,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `false` |
+| Default value | false |
 | Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
@@ -645,7 +645,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 

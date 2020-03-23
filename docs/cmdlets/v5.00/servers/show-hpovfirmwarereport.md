@@ -56,7 +56,7 @@ By specifying an Enclosure Group, all associated Enclosures will be included in 
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
@@ -68,7 +68,7 @@ Resource Object or Name of the Firmware Baseline to report against what is insta
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -80,7 +80,7 @@ Indicate to export the report to a CSV file.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -94,7 +94,7 @@ Default: Current Working Directory
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `(get-location).Path` |
+| Default value | (get-location).Path |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -106,7 +106,7 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 

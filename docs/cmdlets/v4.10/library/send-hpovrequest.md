@@ -50,7 +50,7 @@ The uri that identifies the required resource on the appliance.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -68,7 +68,7 @@ The request HTTP Method.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `GET` |
+| Default value | GET |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -80,7 +80,7 @@ Body for the request.  Required if the method is POST or PUT.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -93,7 +93,7 @@ If not specified, collection members starting from the beginning are returned.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `0` |
+| Default value | 0 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -106,7 +106,7 @@ If not specified, all members of the collection are returned from this function.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `0` |
+| Default value | 0 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -118,7 +118,7 @@ If additional headers are needed/required than the defaults, include header name
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -130,7 +130,7 @@ Workaround to override ContentType where needed (e.g. PATCH /rest/scopes/{GUID}.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -142,7 +142,7 @@ Specify to override the HttpWebRequest syncronous timeout being made.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -156,7 +156,7 @@ Default Value: All valid Appliance Connections within $Global:ConnectedSessions
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

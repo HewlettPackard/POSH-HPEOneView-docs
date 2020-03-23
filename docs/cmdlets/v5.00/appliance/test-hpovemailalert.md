@@ -47,7 +47,7 @@ Specify the Sender Email Address for the appliance.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -59,7 +59,7 @@ Provide a custom subject for the email message.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `This is a test message.` |
+| Default value | This is a test message. |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -71,7 +71,7 @@ Provide a custom message body.  Can be either a plan text or HTML message.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `Test email message from HPE OneView appliance.` |
+| Default value | Test email message from HPE OneView appliance. |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -83,7 +83,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

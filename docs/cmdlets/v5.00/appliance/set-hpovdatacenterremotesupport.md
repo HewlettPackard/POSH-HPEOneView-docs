@@ -53,7 +53,7 @@ The DataCenter to modify.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
@@ -65,7 +65,7 @@ Primary Remote Support Contact object from `Get-HPOVRemoteSupportContact` define
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -77,7 +77,7 @@ Secondary Remote Support Contact object from `Get-HPOVRemoteSupportContact` defi
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -89,7 +89,7 @@ Address of datacenter.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -101,7 +101,7 @@ Optional address line.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -113,7 +113,7 @@ City of residence for the datacenter.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -125,7 +125,7 @@ State/province of residence for the datacenter.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -137,7 +137,7 @@ Postal code for the datacenter.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -149,7 +149,7 @@ Country of residence for the datacenter.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -161,7 +161,7 @@ Time Zone of residence for the datacenter.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -173,7 +173,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -185,7 +185,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 

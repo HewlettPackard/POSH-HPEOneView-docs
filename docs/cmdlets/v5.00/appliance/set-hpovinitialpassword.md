@@ -38,7 +38,7 @@ Current default password for this account.  Will prompt for password if not supp
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -50,7 +50,7 @@ New password for this account.  Will prompt for password if not supplied.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -62,7 +62,7 @@ Specify Appliance FQDN, Name or IP Address.  If no valid Appliance Connection is
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

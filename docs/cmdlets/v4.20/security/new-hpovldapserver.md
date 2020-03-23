@@ -55,7 +55,7 @@ Directory server name or IP Address to add.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
@@ -67,7 +67,7 @@ Directory Server"s LDAP SSL Port.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `636` |
+| Default value | 636 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -79,7 +79,7 @@ Directory Server SSL Certificate, either location to Base64 Cert or `multi-line`
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -91,7 +91,7 @@ Use this parameter if you want to provide a PSCredential object instead.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
@@ -103,7 +103,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
@@ -115,7 +115,7 @@ Use to specify if the certificate should be explicitly trusted, like a `self-sig
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

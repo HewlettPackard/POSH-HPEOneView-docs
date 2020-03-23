@@ -174,7 +174,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -186,7 +186,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -198,7 +198,7 @@ Specify the cluster manager that will manage the cluster and associated members,
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -210,7 +210,7 @@ Specify the location where the cluster will be created within the cluster manage
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -222,7 +222,7 @@ Specify the cluster member hostname prefix that will be used.  A unique numerica
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -234,7 +234,7 @@ Specify if DRS (if supported) should be enabled ($True) or disabled ($false).
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -246,7 +246,7 @@ Provide a description of the cluster.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -261,7 +261,7 @@ If overriding the distributed virtual switch configuring set by the cluster mana
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -273,7 +273,7 @@ If overriding the distributed virtual switch configuring set by the cluster mana
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -285,7 +285,7 @@ Specify if VMware HA (if supported) should be enabled ($True) or disabled ($fals
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -297,7 +297,7 @@ Specify if `multi-NIC` VMotion (if supported) should be enabled ($True) or disab
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -309,7 +309,7 @@ Provide the cluster profile name.  If `-Prefix` is omitted, this value will beco
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -321,7 +321,7 @@ Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially 
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `AllResourcesInScope` |
+| Default value | AllResourcesInScope |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -333,7 +333,7 @@ The server profile template from `Get-HPOVServerProfileTemplate` that the cluste
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -345,7 +345,7 @@ One or more storage volumes to assign.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -357,7 +357,7 @@ Use to configure the cluster profile to not manage host networking.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -372,7 +372,7 @@ Use to indicate which vSiwtch type to configure when overriding cluster manager 
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -384,7 +384,7 @@ Specify the cluster administrator/root account password.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -396,7 +396,7 @@ Specify if port groups should also be configured when configuring host networkin
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -408,7 +408,7 @@ Optional - When deploying a new cluster profile with HPE Synergy and Image Strea
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -420,7 +420,7 @@ When deploying a new cluster profile with HPE Synergy and Image Streamer, specif
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -432,7 +432,7 @@ Specify if the host should be left in maintenance mode (if applicable) before se
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -444,7 +444,7 @@ Use to indicate the desire to override the cluster manager default settings.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -456,7 +456,7 @@ Use to indicate address assignment.  If the server profile template boot connect
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -468,7 +468,7 @@ Use to indicate if network naming will be overridden.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -484,7 +484,7 @@ Use to specify what the PortGroup name override should be.  By default, PortGrou
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -496,7 +496,7 @@ Optional - When deploying a new cluster profile with HPE Synergy and Image Strea
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -508,7 +508,7 @@ Optional - When deploying a new cluster profile with HPE Synergy and Image Strea
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -520,7 +520,7 @@ One or more server resource objects from `New-HPOVClusterProfileMember`.  Value 
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -535,7 +535,7 @@ Specify if the storage volume(s) in the StorageVolume parameter should be format
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `Unmanaged` |
+| Default value | Unmanaged |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -547,7 +547,7 @@ When deploying a new cluster profile with HPE Synergy and Image Streamer, specif
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -559,7 +559,7 @@ Optional - When deploying a new cluster profile with HPE Synergy and Image Strea
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -575,7 +575,7 @@ Use to specify what the vSwitch name override should be.  By default, vSwitch na
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

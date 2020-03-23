@@ -154,7 +154,7 @@ The name of the server hardware resource to be returned.  All server hardware re
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -166,7 +166,7 @@ Specify the Server OS Name that is reported by the iLO.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -183,7 +183,7 @@ Filter resources based on provided Scope membership.  By default, all resources 
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `AllResourcesInScope` |
+| Default value | AllResourcesInScope |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -195,7 +195,7 @@ Specify the label associated with resources.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -207,7 +207,7 @@ Optional parameter that can be used with the report parameter to display Servers
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -220,7 +220,7 @@ Provide the Server Hardware Type or Server Profile Template Object to filter for
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
@@ -236,7 +236,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -248,7 +248,7 @@ Return no more than the provided value.  Combining other parameters to filter ma
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

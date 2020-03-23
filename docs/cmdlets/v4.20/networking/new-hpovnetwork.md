@@ -187,7 +187,7 @@ If specifying the `-VlanRange` parameter, this will become the Nework Name Prefi
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -204,7 +204,7 @@ Required value that specifies the type of Network Resource to create.  Allowed v
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `Ethernet` |
+| Default value | Ethernet |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -218,7 +218,7 @@ When creating an Ethernet Network on an HPE Synergy Composer, Vlan ID 1 is not a
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `0` |
+| Default value | 0 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -230,7 +230,7 @@ An IPv4 Subnet Object that will be associated with a specific Ethernet Network a
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -244,7 +244,7 @@ VLAN Range of networks to create.  Can be consecutive, `non-consecutive` or a co
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -262,7 +262,7 @@ Default value is Tagged.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `Tagged` |
+| Default value | Tagged |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -280,7 +280,7 @@ A description of the network"s role within the logical interconnect.  Accepted v
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `General` |
+| Default value | General |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -292,7 +292,7 @@ Default value is TRUE.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `True` |
+| Default value | True |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -304,7 +304,7 @@ Default value is FALSE.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -316,7 +316,7 @@ Preferred amount of bandwidth to assign, specified in Mbps.  Default value is 25
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `2500` |
+| Default value | 2500 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -328,7 +328,7 @@ Maximum amount of bandwidth to assign, specified in Mbps.  Default value is 1000
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `20000` |
+| Default value | 20000 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -340,7 +340,7 @@ The time in seconds the appliance waits before reconnecting to a link that was p
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `30` |
+| Default value | 30 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -357,7 +357,7 @@ This parameter is not applicable for Direct Attach Fabric Types.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -369,7 +369,7 @@ Valid values are DirectAttach and FabricAttach. Defaults to FabricAttach
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `FabricAttach` |
+| Default value | FabricAttach |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -381,7 +381,7 @@ Managed SAN Object or Name.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
@@ -393,7 +393,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -405,7 +405,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -417,7 +417,7 @@ Full path and file name of a JSON formatted input file containing network defini
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -429,7 +429,7 @@ Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially 
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -441,7 +441,7 @@ Specify one or more network set objects the network should be added to during cr
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

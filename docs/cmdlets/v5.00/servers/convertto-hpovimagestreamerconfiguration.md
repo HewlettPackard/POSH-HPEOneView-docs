@@ -52,7 +52,7 @@ Provide the Logical Enclosure resource object or name that will be recreated.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
@@ -64,7 +64,7 @@ The Uplink Set Name to be added.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -76,7 +76,7 @@ Specify 4 redundant Uplink Ports.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `@("Enclosure1:Bay3:Q1.1","Enclosure1:Bay3:Q2.1","Enclosure2:Bay6:Q1.1","Enclosure2:Bay6:Q2.1")` |
+| Default value | @("Enclosure1:Bay3:Q1.1","Enclosure1:Bay3:Q2.1","Enclosure2:Bay6:Q1.1","Enclosure2:Bay6:Q2.1") |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -88,7 +88,7 @@ Provide the Deployment Network object.  Must be associated with a valid IPv4 Sub
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -100,7 +100,7 @@ Use to override the convertion if SAS Logical Interconnects are detected.  WARNI
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
@@ -112,7 +112,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 

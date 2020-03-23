@@ -51,7 +51,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
@@ -63,7 +63,7 @@ Specify the label associated with resources.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -75,7 +75,7 @@ Filter for the resource name.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -91,7 +91,7 @@ Filter resources based on provided Scope membership.  By default, all resources 
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `AllResourcesInScope` |
+| Default value | AllResourcesInScope |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

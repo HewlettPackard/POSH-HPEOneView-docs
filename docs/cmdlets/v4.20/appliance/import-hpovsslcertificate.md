@@ -49,7 +49,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `${Global:ConnectedSessions}` |
+| Default value | ${Global:ConnectedSessions} |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 

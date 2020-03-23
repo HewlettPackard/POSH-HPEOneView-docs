@@ -40,7 +40,7 @@ The uri or object of the task resource to wait for.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
@@ -52,7 +52,7 @@ Specify the associated ResourceName to the task to display in the `Write-Progres
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -64,7 +64,7 @@ The time or object to wait for the task to start.  Default is to wait for 20 min
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `$script:defaultTimeout` |
+| Default value | $script:defaultTimeout |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -76,7 +76,7 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 

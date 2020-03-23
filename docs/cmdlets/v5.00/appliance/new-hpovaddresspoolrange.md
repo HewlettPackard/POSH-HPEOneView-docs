@@ -96,7 +96,7 @@ The IPv4 Subnet that the new IPv4 Range will be assigned to.  Start and End valu
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
@@ -112,7 +112,7 @@ Specify the Pool Type the new Range will be assinged to.  Accepted values are:
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -127,7 +127,7 @@ The type of Address Range to create (not applicable for IPv4 address pools/Subne
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `Generated` |
+| Default value | Generated |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -139,7 +139,7 @@ Provide the IPv4address pool range Name.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -151,7 +151,7 @@ The starting address in the range.  Cannot overlap with other address ranges, an
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -163,7 +163,7 @@ The ending address in the range.  Cannot overlap with other address ranges, and 
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -177,7 +177,7 @@ When attempting to create a new IPv4 address pool/Subnet, only a single `[HPOneV
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 

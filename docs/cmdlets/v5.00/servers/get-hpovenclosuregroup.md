@@ -52,7 +52,7 @@ The name of the Enclosure Group resource to be returned.  All enclosure group re
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -64,7 +64,7 @@ Specify the label associated with resources.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
@@ -76,7 +76,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `${Global:ConnectedSessions}` |
+| Default value | ${Global:ConnectedSessions} |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -88,7 +88,7 @@ Full path and file name to save the output of `Get-HPOVEnclosureGroup`
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

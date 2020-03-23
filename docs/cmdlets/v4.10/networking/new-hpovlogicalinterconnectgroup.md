@@ -143,7 +143,7 @@ The Logical Interconnect Group Name
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -155,7 +155,7 @@ The number of Synergy Frames to participate in the Logical Stack.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `0` |
+| Default value | 0 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -171,7 +171,7 @@ Which Synergy Interconnect Bay Set ID will the interconnects be populated in.  A
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `0` |
+| Default value | 0 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -187,7 +187,7 @@ Specify the Synergy Fabric Module type the Logical Interconnect Group will be mo
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -224,7 +224,7 @@ When configuring Synergy SAS Connection Module, no other device bays can be spec
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
@@ -241,7 +241,7 @@ Define the expected Synergy Fabric Interconnect Redundancy type.  Allowed value:
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `Redundant` |
+| Default value | Redundant |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -255,7 +255,7 @@ Default value: Disabled
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -272,7 +272,7 @@ Required: Yes, if IGMP snooping is enabled
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `260` |
+| Default value | 260 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -286,7 +286,7 @@ Default value:  Enabled
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `True` |
+| Default value | True |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -301,7 +301,7 @@ Default value: 5
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `5` |
+| Default value | 5 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -330,7 +330,7 @@ Default value: Enabled
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `True` |
+| Default value | True |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -359,7 +359,7 @@ Default value: Enabled
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `True` |
+| Default value | True |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -373,7 +373,7 @@ This parameter is only available for 2.00.07 or newer appliances.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -387,7 +387,7 @@ This parameter is only available for 2.00.07 or newer appliances.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -403,7 +403,7 @@ Specify the IP address format type to support.  Allowed values:
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -415,7 +415,7 @@ SNMP Settings to define SNMP configruation.  Use `New-HPOVSnmpConfiguration` and
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -427,7 +427,7 @@ An Array collection of Networks that will be marked as Internal only.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -440,7 +440,7 @@ A collection of QOS configurations that are created using the `New-HPOVQosConfig
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -456,7 +456,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -468,7 +468,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -480,7 +480,7 @@ Specify JSON source file to create Logical Interconnect Group.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -492,7 +492,7 @@ Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially 
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -504,7 +504,7 @@ Specify the SNMP version type is SNMPv1.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -516,7 +516,7 @@ Specify the SNMP version type is SNMPv3.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -528,7 +528,7 @@ Provide the SNMPv3 user object from `New-HPOVSnmpV3User`.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

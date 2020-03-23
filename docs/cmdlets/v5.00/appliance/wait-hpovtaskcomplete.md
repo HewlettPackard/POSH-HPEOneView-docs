@@ -53,7 +53,7 @@ The uri of the task resource to wait for.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
@@ -65,7 +65,7 @@ The timespan to wait for the task to complete.  Default is to wait for 20 minute
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `$DefaultTimeout` |
+| Default value | $DefaultTimeout |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -77,7 +77,7 @@ Internal use: to indicate if a task will cause appliance to reboot.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -89,7 +89,7 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 

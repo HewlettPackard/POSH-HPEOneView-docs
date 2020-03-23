@@ -61,7 +61,7 @@ The LDAP Directory Object from `Get-HPOVLdapDirectory`.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
@@ -74,7 +74,7 @@ Directory server name or IP Address to add.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -87,7 +87,7 @@ Directory Server"s LDAP SSL Port.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `636` |
+| Default value | 636 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -100,7 +100,7 @@ Directory Server SSL Certificate, either location to Base64 Cert or `multi-line`
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -113,7 +113,7 @@ Directory Username to authenticate with in order to validate LDAP configuration.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -126,7 +126,7 @@ Directory User account password in order to validate LDAP configuration.  Can be
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -142,7 +142,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
@@ -154,7 +154,7 @@ Use this parameter if you want to provide a PSCredential object instead.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -166,7 +166,7 @@ When adding a new LDAP directory server, the certificate may not be trusted.  Us
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

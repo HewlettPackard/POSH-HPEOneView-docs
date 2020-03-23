@@ -51,7 +51,7 @@ The name of the Unmanaged Device.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -63,7 +63,7 @@ The device model.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -75,7 +75,7 @@ Rack Unit height of the Unmanaged Device.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `1` |
+| Default value | 1 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -87,7 +87,7 @@ The maximum power consumption of the Unmanaged Device.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `0` |
+| Default value | 0 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -99,7 +99,7 @@ Provide the management interface L2 address.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -111,7 +111,7 @@ Provide the IPv4 Address value of the management interface.  This value does not
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -123,7 +123,7 @@ Provide the IPv6 Address value of the management interface.  This value does not
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -135,7 +135,7 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

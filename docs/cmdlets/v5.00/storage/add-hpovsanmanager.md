@@ -129,7 +129,7 @@ SAN Manager type to add.  Accepted values are:
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -141,7 +141,7 @@ FQDN or IP Address of the SAN Manager
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -153,7 +153,7 @@ TCP Port of the SAN Manager.  The default port for Brocade Network Advisor is "5
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `0` |
+| Default value | 0 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -165,7 +165,7 @@ Username used to authenticate and manage the SAN Manager.  This is only applicab
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -177,7 +177,7 @@ Password used to authenticate and manage the SAN Manager.  This is only applicab
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -189,7 +189,7 @@ The SNMPv3 Community User Name.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -205,7 +205,7 @@ The SNMPv3 Authentication Level.  Allowed values are:
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `None` |
+| Default value | None |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -220,7 +220,7 @@ SNMPv3 Password Encryption Protocol. Allowed values are:
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -232,7 +232,7 @@ SNMPv3 UserName Password.  Can be either `[System.String]` or `[System.Security.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -247,7 +247,7 @@ SNMPv3 Privacy Protocol.  Allowed values are:
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -259,7 +259,7 @@ SNMPv3 Privacy Encryption Password.  Can be either String or `[System.Security.S
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -271,7 +271,7 @@ Use to enable SSL communication with the SAN Manager (specifically for the Broca
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -283,7 +283,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -295,7 +295,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -307,7 +307,7 @@ Use this parameter if you want to provide a PSCredential object.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

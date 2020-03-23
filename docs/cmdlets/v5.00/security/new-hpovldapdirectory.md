@@ -70,7 +70,7 @@ Directory name to add.  Does not need to match LDAP/AD Directory Name, but shoul
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -82,7 +82,7 @@ Using Active Directory, which sets the authProtocol to AD and userNameField to C
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -94,7 +94,7 @@ Using LDAP (i.e. OpenLDAP), which sets the authProtocol to LDAP and userNameFiel
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -106,7 +106,7 @@ Directory Base DN (E.g. dc=domian,dc=local)
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -118,7 +118,7 @@ Directory Base DN (E.g. dc=domian,dc=local)
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
@@ -131,7 +131,7 @@ OpenLDAP OU"s to begin search for Directory Group and User Account authenticatio
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -147,7 +147,7 @@ Array of Directory Servers and their settings.  Must include the following:
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -159,7 +159,7 @@ Directory Username to authenticate with.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -171,7 +171,7 @@ Directory Username password.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -183,7 +183,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -195,7 +195,7 @@ Use this parameter if you want to provide a PSCredential object instead.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
@@ -207,7 +207,7 @@ Use to indicate the provided credential is a Service Account.  Required for when
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -220,7 +220,7 @@ Default Value: CN
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `CN` |
+| Default value | CN |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

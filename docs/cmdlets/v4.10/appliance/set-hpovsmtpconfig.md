@@ -72,7 +72,7 @@ Specify the Sender Email Address for the appliance.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -85,7 +85,7 @@ Specify the SMTP Relay Server if DNS does not contain a valid DNS MX record for 
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -98,7 +98,7 @@ Provide an alternate TCP port number than the default SMTP port value 25/TCP.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `25` |
+| Default value | 25 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -110,7 +110,7 @@ Provide an SMTP Password to authenticate to the SMTP Server.  This password will
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -122,7 +122,7 @@ Disable SMTP Email Alerting.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -134,7 +134,7 @@ Enable SMTP Email Alerting
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -146,7 +146,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -162,7 +162,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -178,7 +178,7 @@ Use to specify if the target SMTP server requires TLS security/authentication.  
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `None` |
+| Default value | None |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

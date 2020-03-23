@@ -85,7 +85,7 @@ IP Address of FQDN of the storage systems.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -99,7 +99,7 @@ Specify the type of Storage System to add: StorageVirtual or StoreServ.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `StoreServ` |
+| Default value | StoreServ |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -111,7 +111,7 @@ Use this parameter if you want to provide a PSCredential object instead.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -123,7 +123,7 @@ Administrator account of the target storage system.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -135,7 +135,7 @@ Password of administrator account password.  Can either be String or `[System.Se
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -147,7 +147,7 @@ Specify the HP 3PAR Virtual Domain name.  Default is "NO DOMAIN". The value prov
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `NO DOMAIN` |
+| Default value | NO DOMAIN |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -161,7 +161,7 @@ Example: @{"1:1:1"="Fabric A";"2:2:2"="Fabric B"}
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -175,7 +175,7 @@ Example: @{"1:1:1" = "PG1"; "2:2:2" = "PG2"}
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -195,7 +195,7 @@ or
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -211,7 +211,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -223,7 +223,7 @@ By default, the Cmdlet will no longer display the details about the Storage Syst
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

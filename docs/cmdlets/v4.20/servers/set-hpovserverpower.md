@@ -31,7 +31,7 @@ The server object, URI or Name, or can be a Server Profile object.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
@@ -43,7 +43,7 @@ Optional power state.  Default is On, other option is Off
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `On` |
+| Default value | On |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -55,7 +55,7 @@ Optional setting to control the virtual power button.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `MomentaryPress` |
+| Default value | MomentaryPress |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -67,7 +67,7 @@ The name of the appliance or list of appliances to execute the command against.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
@@ -79,7 +79,7 @@ The name of the appliance or list of appliances to execute the command against.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -91,7 +91,7 @@ The name of the appliance or list of appliances to execute the command against.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

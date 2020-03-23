@@ -56,7 +56,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `${Global:ConnectedSessions}` |
+| Default value | ${Global:ConnectedSessions} |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 

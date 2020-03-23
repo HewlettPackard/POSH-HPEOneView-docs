@@ -235,7 +235,7 @@ The name of the server profile resource to be created.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -247,7 +247,7 @@ Optional description for this server profile template.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -259,7 +259,7 @@ Optional description for created server profiles from this template.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -271,7 +271,7 @@ Use this parameter to specify if Connections should be tracked from the Server P
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `True` |
+| Default value | True |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -326,7 +326,7 @@ Default: No connections
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `@()` |
+| Default value | @() |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -338,7 +338,7 @@ The Enclosure Group resource the Server Profile Template will be bound to.  When
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -350,7 +350,7 @@ The Server Hardware Type reource the Server Profile Template will be bound to.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -362,7 +362,7 @@ Enable Firmware Management.  Cannot be enabled with Server Hardware Type does no
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -374,7 +374,7 @@ Firmware baseline to assign.  Can be either Baseline Name or URI.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -390,7 +390,7 @@ Specify the Firmware Baseline Policy mode.  Avialable options are:
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `FirmwareAndSoftware` |
+| Default value | FirmwareAndSoftware |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -402,7 +402,7 @@ Using this parameter will force the bundled firmware components to install when 
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -418,7 +418,7 @@ Specify the firmware activation policy.  Avialable options are:
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `Immediate` |
+| Default value | Immediate |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -431,7 +431,7 @@ servers.)
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -443,7 +443,7 @@ BIOS Settings that are to be managed.  You can get the BIOS settings available f
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `@()` |
+| Default value | @() |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -472,7 +472,7 @@ Default: BIOS
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `BIOS` |
+| Default value | BIOS |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -484,7 +484,7 @@ Specify if secure boot should be Unmanaged, Enabled or Disabled for Gen10 and ne
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -508,7 +508,7 @@ Default: Auto
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `Auto` |
+| Default value | Auto |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -522,7 +522,7 @@ Default: $True
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -540,7 +540,7 @@ Gen9 UEFI Default Boot Order: "HardDisk"
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `@()` |
+| Default value | @() |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -552,7 +552,7 @@ Enable local storage settings to be managed on the server.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -564,7 +564,7 @@ The HPE Synergy Image Streamer OS deployment plan from `Get-HPOVOSDeploymentPlan
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -576,7 +576,7 @@ Configured OS Deployment Plan parameters from `Get-HPOVOSDeploymentPlanAttribute
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -588,7 +588,7 @@ Deprecated.  Please refer to the `New-HPOVServerProfileLogicalDisk` and `New-HPO
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
@@ -600,7 +600,7 @@ Deprecated.  Please refer to the `New-HPOVServerProfileLogicalDisk` and `New-HPO
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `RAID` |
+| Default value | RAID |
 | Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
@@ -612,7 +612,7 @@ A resource object containing the StorageController, LogicalDisk or SasJbod confi
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -624,7 +624,7 @@ Optional.  Enable SAN Storage Management within the Server Profile.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -662,7 +662,7 @@ Optional. Specify the Host OS type, which will set the Host OS value when HPE On
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -694,7 +694,7 @@ The format of the Storage Volume resource should be a PsCustomObject PowerShell 
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -706,7 +706,7 @@ Enable to disable even paths in the attached storage volume(s).
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -718,7 +718,7 @@ Enable to disable odd paths in the attached storage volume(s).
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -732,7 +732,7 @@ Accepted values are either "Bay" or "BayAndServer".  Default is "Bay".
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `Bay` |
+| Default value | Bay |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -744,7 +744,7 @@ Optional setting for MAC address assignment.  May be Virtual or Physical.  Use V
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `Virtual` |
+| Default value | Virtual |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -756,7 +756,7 @@ Optional setting for WWN assignment.  May be Virtual or Physical.  Use Virtual i
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `Virtual` |
+| Default value | Virtual |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -770,7 +770,7 @@ Default: Virtual serial number and UUID assignment
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `Virtual` |
+| Default value | Virtual |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -792,7 +792,7 @@ By default, Hide Unused FlexNICs is enabled. This setting can be changed only wh
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `True` |
+| Default value | True |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -804,7 +804,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `false` |
+| Default value | false |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -816,7 +816,7 @@ The name of the appliance or list of appliances to execute the command against.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -828,7 +828,7 @@ Use this parameter to return the modified Server Profile Template object.  In or
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -841,7 +841,7 @@ Default Value: Virtual
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `Virtual` |
+| Default value | Virtual |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -856,7 +856,7 @@ Use to override the consistency checking for the policy.  Allowed values:
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -871,7 +871,7 @@ Use to override the consistency checking for the policy.  Allowed values:
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -887,7 +887,7 @@ Use to override the consistency checking for the policy.  Allowed values:
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -902,7 +902,7 @@ Use to override the consistency checking for the policy.  Allowed values:
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -917,7 +917,7 @@ Use to override the consistency checking for the policy.  Allowed values:
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -932,7 +932,7 @@ Use to override the consistency checking for the policy.  Allowed values:
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -948,7 +948,7 @@ Use to override the consistency checking for the policy.  Allowed values:
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

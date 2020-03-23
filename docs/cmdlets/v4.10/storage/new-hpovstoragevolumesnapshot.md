@@ -38,7 +38,7 @@ Specify the Storage Volume object to create a snapshot for.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
@@ -50,7 +50,7 @@ Name of Snapshot.  The parameter defaults to "{volumeName}_{timestamp}" variable
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `{volumeName}_{timestamp}` |
+| Default value | {volumeName}_{timestamp} |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -62,7 +62,7 @@ The description for the Storage Volume Snapshot.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -78,7 +78,7 @@ Default Value: ${Global:ConnectSessions} | ? Default
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 

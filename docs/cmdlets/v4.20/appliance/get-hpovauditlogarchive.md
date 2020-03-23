@@ -37,7 +37,7 @@ The full path to where the audit log will be saved to.  If omitted, current dire
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `(get-location).Path` |
+| Default value | (get-location).Path |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -49,7 +49,7 @@ One or more Appliance Connection Objects, Connection ID, or Connection Name.  If
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

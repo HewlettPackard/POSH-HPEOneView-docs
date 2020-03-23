@@ -66,7 +66,7 @@ Directory to store the SSL certificates.  If the directory doesn"t exist, it wil
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `($pwd).path` |
+| Default value | ($pwd).path |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -79,7 +79,7 @@ Convert rabbitmq_readonly client certificate to PFX format for .Net consumption.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -91,7 +91,7 @@ Password that will be used to encrypt the PFX client certificate.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
@@ -103,7 +103,7 @@ hoose to install the appliance root certificate to the current users Trusted Roo
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -115,7 +115,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

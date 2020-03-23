@@ -82,7 +82,7 @@ Managed SAN Name or Object.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
@@ -94,7 +94,7 @@ Managed SAN Name or Object.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -106,7 +106,7 @@ Managed SAN Name or Object.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -122,7 +122,7 @@ Policy setting that affects the way that zones are created. Allowed values:
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `SingleInitiatorAllTargets` |
+| Default value | SingleInitiatorAllTargets |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -134,7 +134,7 @@ Enable aliases to be created for initiators, targets and target groups based on 
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -146,7 +146,7 @@ Disable aliases to be created for initiators, targets and target groups based on
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `false` |
+| Default value | false |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -160,7 +160,7 @@ Example: "initiator_{hostname}_{initiatorName}"
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -174,7 +174,7 @@ Example: "TargetGroup_{storageSystemName}_{targetGroupName}"
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -188,7 +188,7 @@ Example: "Target_{storageSystemName}_{targetName}"
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -202,7 +202,7 @@ Example: "{initiatorWwn}_{initiatorName}"
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -216,7 +216,7 @@ Example: "{initiatorWwn}_{initiatorName}"
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -230,7 +230,7 @@ Example: "{initiatorWwn}_{initiatorName}"
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -244,7 +244,7 @@ Example: "{initiatorWwn}_{initiatorName}"
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -258,7 +258,7 @@ Default Value: ${Global:ConnectSessions} | ? Default
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 

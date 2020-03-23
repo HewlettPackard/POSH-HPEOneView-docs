@@ -117,7 +117,7 @@ Either a Logical Interconnect Group (Get-HPOVLogicalInterconnectGroup) or Logica
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
@@ -129,7 +129,7 @@ Logical Uplink set Name
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -149,7 +149,7 @@ ImageStreamer is only supported with Synergy infrastructure.  When assigning an 
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -161,7 +161,7 @@ Array of Ethernet Network Names
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `@()` |
+| Default value | @() |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -173,7 +173,7 @@ The valid name of the Native Ethernet Network that is a member of the usNetworks
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -192,7 +192,7 @@ Synergy VC FC `Sub-Interface` `[e.g]`. "Bay2:Q1.1","Bay2:Q2.1" or "Bay5:Q1.2","B
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `@()` |
+| Default value | @() |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -207,7 +207,7 @@ Sets the LACP mode on the uplink ports. Valid for ETHERNET Uplinks only. Accepte
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `Auto` |
+| Default value | Auto |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -222,7 +222,7 @@ Set the LACP Timer value, which sets the lacpdu frequecy to the LACP peer.  Acce
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `Short` |
+| Default value | Short |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -236,7 +236,7 @@ Example: "Bay1:X1"
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -253,7 +253,7 @@ Specify the Fibre Channel Uplink Port speed.  Accepted values:
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `Auto` |
+| Default value | Auto |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -265,7 +265,7 @@ Use this parameter to enable FC port trunking.  This parameter is only supported
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `false` |
+| Default value | false |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -277,7 +277,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `false` |
+| Default value | false |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
@@ -289,7 +289,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 

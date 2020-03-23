@@ -60,7 +60,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `$ConnectedSessions | Where-Object Default` |
+| Default value | $ConnectedSessions &vert; Where-Object Default |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 

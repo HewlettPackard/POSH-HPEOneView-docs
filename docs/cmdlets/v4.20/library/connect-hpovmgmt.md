@@ -81,7 +81,7 @@ The hostname or IP address of the appliance.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -95,7 +95,7 @@ Default is determined by connecting to the requested appliance and retrieving th
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `LOCAL` |
+| Default value | LOCAL |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -107,7 +107,7 @@ User name to authenticate.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -119,7 +119,7 @@ Password to log into the appliance.  Can be either `[System.String]` or SecureSt
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -131,7 +131,7 @@ Use this parameter if you want to provide a PSCredential object instead.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -143,7 +143,7 @@ When a Login Message has been configured and acknowledgement is Required, use th
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -155,7 +155,7 @@ Provide the X.509 certificate/SmartCard digital badge in order to authenticate t
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

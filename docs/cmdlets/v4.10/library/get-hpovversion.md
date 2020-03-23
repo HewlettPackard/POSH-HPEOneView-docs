@@ -80,7 +80,7 @@ Include the appliance version.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -92,7 +92,7 @@ Check the GitHub repository for an updated version of the library.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -108,7 +108,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `${Global:ConnectedSessions}` |
+| Default value | ${Global:ConnectedSessions} |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

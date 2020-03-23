@@ -43,7 +43,7 @@ Specify the appliance FQDN or IP Address without a valid connection created by u
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

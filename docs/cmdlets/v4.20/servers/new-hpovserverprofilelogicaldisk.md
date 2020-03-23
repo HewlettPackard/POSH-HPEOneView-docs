@@ -96,7 +96,7 @@ Logical Disk name.  Must be unique within the Server Profile.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -110,7 +110,7 @@ Only RAID0 and RAID1 are supported for embedded BL disk policies.  RAID5, RAID6,
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `RAID1` |
+| Default value | RAID1 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -122,7 +122,7 @@ The number of physical drives to be used to build the logical drive. The provide
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `2` |
+| Default value | 2 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -153,7 +153,7 @@ Auto is not supported when attempting to create an HPE Synergy D3940 Logical or 
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `Auto` |
+| Default value | Auto |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -170,7 +170,7 @@ Default: SizeAndTechnology
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `SizeAndTechnology` |
+| Default value | SizeAndTechnology |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -182,7 +182,7 @@ Specify Internal for HPE Synergy Compute Nodes that have the Expanded Storage op
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `External` |
+| Default value | External |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -194,7 +194,7 @@ A specific availabe drive type from `Get-HPOVAvailableDriveType`.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
@@ -206,7 +206,7 @@ Only for HPE Synergy D3940.  Specify the minimum size disk to request.  Required
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `0` |
+| Default value | 0 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -218,7 +218,7 @@ Only for HPE Synergy D3940.  If the parameter is not specified, the MinDriveSize
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `0` |
+| Default value | 0 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -230,7 +230,7 @@ Indicates if the logical drive is bootable or not. Cannot be combined with an FC
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -242,7 +242,7 @@ Indicates if the logical drive should be erased when it is deleted from or with 
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -254,7 +254,7 @@ For Gen10 Smart Array controllers only.  When using Auto for drive type allocati
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `Unmanaged` |
+| Default value | Unmanaged |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

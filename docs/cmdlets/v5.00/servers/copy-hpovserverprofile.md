@@ -72,7 +72,7 @@ The object of the source server profile to be copied.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
@@ -85,7 +85,7 @@ prefixed to the source name.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -97,7 +97,7 @@ The object of the target server to assign the new profile to.  If omitted, profi
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `unassigned` |
+| Default value | unassigned |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -109,7 +109,7 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 

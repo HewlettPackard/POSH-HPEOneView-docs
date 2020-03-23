@@ -65,7 +65,7 @@ Name of resource.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -77,7 +77,7 @@ Thermal limit supported by the rack, in BTU"s.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -89,7 +89,7 @@ Serial number of the rack resource.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -101,7 +101,7 @@ Part number of the rack resource.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -115,7 +115,7 @@ Default: 1000
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `1000` |
+| Default value | 1000 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -129,7 +129,7 @@ Default: 2004
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `2004` |
+| Default value | 2004 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -143,7 +143,7 @@ Default: 40
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `220` |
+| Default value | 220 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -157,7 +157,7 @@ Default: 600
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `600` |
+| Default value | 600 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -173,7 +173,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -185,7 +185,7 @@ Provide the model of the rack to add.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

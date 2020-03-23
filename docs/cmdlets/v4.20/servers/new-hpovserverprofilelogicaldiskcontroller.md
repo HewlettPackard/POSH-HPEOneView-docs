@@ -98,7 +98,7 @@ Please note that Mezz 1, Mezz 2 and Mezz 3 are only supported with HPE Synergy C
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `Embedded` |
+| Default value | Embedded |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -115,7 +115,7 @@ When specifying HBA, you cannot attach a RAID Logical Disk to this policy.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `RAID` |
+| Default value | RAID |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -127,7 +127,7 @@ Use this parameter to `re-initialize` the controller.  This will wipe any existi
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -139,7 +139,7 @@ Specify to import any found Logical Disk configuration and add to the Server Pro
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -151,7 +151,7 @@ A collection of Logical Disk objects from the `New-HPOVServerProfileLogicalDisk`
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
@@ -169,7 +169,7 @@ Default value: Unmanaged
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `Unmanaged` |
+| Default value | Unmanaged |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

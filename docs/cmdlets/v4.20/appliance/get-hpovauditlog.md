@@ -79,7 +79,7 @@ Specify the number of audit log entries to return.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -91,7 +91,7 @@ Specify the time span of to filter results on.  Cannot be combined with Start or
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -103,7 +103,7 @@ Specify the Start datetime object to begin the serach.  Can be combined with End
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -115,7 +115,7 @@ Specify the End datetime object to begin the serach.  Should be combined with St
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `[DateTime]::Now` |
+| Default value | [DateTime]::Now |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -127,7 +127,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

@@ -41,7 +41,7 @@ The command within a ScriptBlock to execute.  The Cmdlet will add the `-Verbose`
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
@@ -57,7 +57,7 @@ Default Value: (PWD).Path
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `(pwd).path` |
+| Default value | (pwd).path |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

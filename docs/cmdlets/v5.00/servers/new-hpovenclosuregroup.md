@@ -157,7 +157,7 @@ A name for the new enclosure group.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -169,7 +169,7 @@ Specify the number of Synergy Frames will participate within the Enclosure Group
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `1` |
+| Default value | 1 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -207,7 +207,7 @@ $LogicalInterconnectGroupMapping = @{Frame1 = $3FrameVCLIG,$SasLIG; Frame2 = $3F
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
@@ -224,7 +224,7 @@ Allowed Values:
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `RedundantPowerFeed` |
+| Default value | RedundantPowerFeed |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -236,7 +236,7 @@ An Onboard Administrator CLI Script. Only applicable for HPE BladeSystem `C-Clas
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -254,7 +254,7 @@ Default: DHCP
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `DHCP` |
+| Default value | DHCP |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -268,7 +268,7 @@ The IPv4 address pool object from `Get-HPOVAddressPoolRange`.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -280,7 +280,7 @@ The IPv6 address pool object from `Get-HPOVAddressPoolRange`.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -298,7 +298,7 @@ Default: None
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -316,7 +316,7 @@ Default: None
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `None` |
+| Default value | None |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -328,7 +328,7 @@ The Ethernet Network with the purpose property set to Management.  Must also inc
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -342,7 +342,7 @@ No Uplink Sets will be created. They will need to be added using the `New-HPOVUp
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -354,7 +354,7 @@ Provide the Onboard Administrator IP Address or FQDN.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -366,7 +366,7 @@ Provide an Onboard Administrator administrator account.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -378,7 +378,7 @@ Provide an Onboard Administrator administrator password.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -390,7 +390,7 @@ If specified, the Logical Interconnect Group that is created will be used in the
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -404,7 +404,7 @@ Default Value: ${Global:ConnectSessions} | ? Default
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
@@ -416,7 +416,7 @@ Provide the full path and file name of the JSON file.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -428,7 +428,7 @@ Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially 
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | `False` |
+| Default value | False |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 

@@ -52,7 +52,7 @@ The QOS Configuration Type.  Allowed values are:
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `Passthrough` |
+| Default value | Passthrough |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -68,7 +68,7 @@ Configure the Uplink QOS Marking classification type.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `DOT1P` |
+| Default value | DOT1P |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -84,7 +84,7 @@ Configure the Downlink QOS Marking classification type.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `DOT1P_AND_DSCP` |
+| Default value | DOT1P_AND_DSCP |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -96,7 +96,7 @@ A collection of traffic classes created using the `New-HPOVQosTrafficClass`.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `@()` |
+| Default value | @() |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

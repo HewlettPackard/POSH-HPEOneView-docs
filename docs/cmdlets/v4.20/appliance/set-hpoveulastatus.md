@@ -38,7 +38,7 @@ The FQDN or IP Address of an HPE OneView appliance or `[HPOneView.Applinace.Conn
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -50,7 +50,7 @@ Set to "yes" to allow HP suport access to the appliance, otherwise set to "no".
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | `` |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
