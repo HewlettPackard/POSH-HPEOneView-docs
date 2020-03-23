@@ -1,4 +1,4 @@
----
+﻿---
 description: Update an IPv4 Subnet Pool configuration.
 ---
 
@@ -19,14 +19,15 @@ Set-HPOVAddressPoolSubnet
 
 ## Description
 
-This cmdlet will assist with updating an existing IPv4 Address Pool. When updating an IPv4 Address Subnet, you must provide the Subnet Object or Name to modify. Only the Gateway, Domain Name, and DNS Servers can be updated once an IPv4 Subnet has been assigned to a resoruce.
+This cmdlet will assist with updating an existing IPv4 Address Pool.  When updating an IPv4 Address Subnet, you must provide the Subnet Object or Name to modify. Only the Gateway, Domain Name, and DNS Servers can be updated once an IPv4 Subnet has been assigned to a resoruce.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 PS C:> Get-HPOVAddressPoolSubnet 192.168.20.0 | Set-HPOVAddressPoolSubnet -Gateway 192.168.20.1
+
 ```
 
 Update the IPv4 Subnet Address Pool"s default gateway to the new address.
@@ -42,7 +43,7 @@ The IPv4 Subnet resource object to update.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -Gateway &lt;IPAddress&gt;
@@ -59,7 +60,7 @@ IPv4 Address of the default gateway for the subnet.
 
 ### -SubnetMask &lt;IPAddress&gt;
 
-IPv4 Subnet Mask of the subnet. Please know that if the Subnet is associated with another resource \(Ethernet Network, Logical Enclosure or Deployment Server\), there will be an error as the mask cannot be changed until it is unassociated with the resource.
+IPv4 Subnet Mask of the subnet.  Please know that if the Subnet is associated with another resource (Ethernet Network, Logical Enclosure or Deployment Server), there will be an error as the mask cannot be changed until it is unassociated with the resource.
 
 | Aliases | None |
 | :--- | :--- |
@@ -95,15 +96,15 @@ An array of DNS Server IPv4 Addresses.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -111,13 +112,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Appliance.IPv4AddressSubnet \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.IPv4AddressSubnet [System.Management.Automation.PSCustomObject]**_
 
 IPv4 Address Subnet
 
 ## Return Values
 
-_**HPOneView.Appliance.IPv4AddressSubnet \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.IPv4AddressSubnet [System.Management.Automation.PSCustomObject]**_
 
 Updated IPv4 Address Subnet
 
@@ -126,4 +127,3 @@ Updated IPv4 Address Subnet
 * [Get-HPOVAddressPoolSubnet](get-hpovaddresspoolsubnet.md)
 * [New-HPOVAddressPoolSubnet](new-hpovaddresspoolsubnet.md)
 * [Remove-HPOVAddressPoolSubnet](remove-hpovaddresspoolsubnet.md)
-

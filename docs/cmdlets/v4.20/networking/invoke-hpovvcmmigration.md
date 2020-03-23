@@ -1,4 +1,4 @@
----
+﻿---
 description: Migrate Virtual Connect Manager to HPE OneView.
 ---
 
@@ -63,21 +63,21 @@ Invoke-HPOVVcmMigration
 
 ## Description
 
-This function is used to migrate an existing Virtual Connect Manager configuration to HPE OneView. If an enclosure was added to an HPE OneView appliance as `Monitor-Only`, then you must first remove the enclosure from the appliance, and then use this cmdlet to migrate the enclosure.
-
+This function is used to migrate an existing Virtual Connect Manager configuration to HPE OneView.  If an enclosure was added to an HPE OneView appliance as Monitor-Only, then you must first remove the enclosure from the appliance, and then use this cmdlet to migrate the enclosure.
+    
 Using the -VCEMCMS, -VCEMUser and -VCEMPassword parameters, the targeted Virtual Connect Domain can be removed from a Virual Connect Enterprise Manager Domain Group first before initiating the VC Migration tool within the HPE OneView appliance.
-
-The required VCEM 7.3/7.4 Patch is available here: ftp://ftp.hp.com/pub/softlib2/software1/pubsw-generic/p270829882/v106568.
-
+    
+The required VCEM 7.3/7.4 Patch is available here:  ftp://ftp.hp.com/pub/softlib2/software1/pubsw-generic/p270829882/v106568.
+    
 VCEM 7.4.1 or greater users do not require the patch to be installed, as the API is built into 7.4.1 or greater.
-
-It is important to also have a Virtual Connect Domain Backup prior to migration. You may also want to gather the output from the "show config -includepoolinfo" VCM CLI command to review or verify resources were migrated successfully.
-
+    
+It is important to also have a Virtual Connect Domain Backup prior to migration.  You may also want to gather the output from the "show config -includepoolinfo" VCM CLI command to review or verify resources were migrated successfully.
+    
 Please read "Chapter 9 Planning for enclosure migration from VCM into HPE OneView" in the HPE OneView 1.20 User Guide for more information about migration and other planning resources.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 $OACreds = Get-Credential -Username Administrator -Message "Password" $VCMCreds = Get-Credential -Username Administrator -Message "Password" Invoke-HPOVVcmMigration -OAIPAddress 192.168.19.40 -OACredential $OACreds -VCMCredential $VCMCreds -LicensingIntent OneView -Report
@@ -85,7 +85,7 @@ $OACreds = Get-Credential -Username Administrator -Message "Password" $VCMCreds 
 
 Generate Virtual Connect Manager configuration migration report for the specified enclosure.
 
-### Example 2
+###  Example 2 
 
 ```text
 $OACreds = Get-Credential -Username Administrator -Message "Password" $VCMCreds = Get-Credential -Username Administrator -Message "Password" Invoke-HPOVVcmMigration -OAIPAddress 192.168.19.40 -OACredential $OACreds -VCMCredential $VCMCreds -LicensingIntent OneView
@@ -93,7 +93,7 @@ $OACreds = Get-Credential -Username Administrator -Message "Password" $VCMCreds 
 
 Migration will occur and create a new Enclosure Group and new Logical Interconnect Group based on the enclosure serial number.
 
-### Example 3
+###  Example 3 
 
 ```text
 $OACreds = Get-Credential -Username Administrator -Message "Password" $VCMCreds = Get-Credential -Username Administrator -Message "Password" $EnclosureGroup = Get-HPOVEnclosureGroup -Name EnclosureGroup1 -ErrorAction Stop Invoke-HPOVVcmMigration -OAIPAddress 192.168.19.40 -OACredential $OACreds -VCMCredential $VCMCreds -LicensingIntent OneView -EnclosureGroup $EnclosureGroup
@@ -101,15 +101,15 @@ $OACreds = Get-Credential -Username Administrator -Message "Password" $VCMCreds 
 
 Migration will occur and import the target enclosure into an existing Enclosure Group named "EnclosureGroup1".
 
-### Example 4
+###  Example 4 
 
 ```text
 Invoke-HPOVVcmMigration -OAIPAddress 192.168.19.40 -OAUserName Administrator -OAPassword hpinvent -VCMUserName Administrator -VCMPassword hpinvent -licensingIntent OneView -Report -Path c:\VCM-MigrationReports
 ```
 
-Migration will not be attempted. The migration report will be executed and the result saved to the file "c:\VCM-MigrationReports{enclosureName}\_{date}.report".
+Migration will not be attempted.  The migration report will be executed and the result saved to the file "c:\VCM-MigrationReports\{enclosureName}_{date}.report".
 
-### Example 5
+###  Example 5 
 
 ```text
 $OACreds = Get-Credential -Username Administrator -Message "Password" $VCMCreds = Get-Credential -Username Administrator -Message "Password" $VCEMCreds = Get-Credential -Username Domain\Adminisrator -Message "Password" $EnclosureGroup = Get-HPOVEnclosureGroup -Name EnclosureGroup1 -ErrorAction Stop Invoke-HPOVVcmMigration -OAIPAddress 192.168.19.40 -OACredential $OACreds -VCMCredential $VCMCreds -VCEMCMS vcemcms.domain.com -VCEMCredential $VCEMCreds -LicensingIntent OneView
@@ -157,7 +157,8 @@ Parameter is being deprecated. Please transition to using `-OACredential`. Passw
 
 ### -VCMUserName &lt;String&gt;
 
-Parameter is being deprecated. Please transition to using `-VCMCredential`. Username for the administrator account for Virtual Connect Manager.
+Parameter is being deprecated. Please transition to using `-VCMCredential`.
+Username for the administrator account for Virtual Connect Manager.
 
 | Aliases | vu |
 | :--- | :--- |
@@ -181,19 +182,19 @@ Parameter is being deprecated. Please transition to using `-VCMCredential`. Pass
 
 ### -EnclosureGroup &lt;Object&gt;
 
-OPTIONAL. The Name, URI or Object of an existing Enclosure Group. If the Enclosure Group Name does not exist, a new resource with the String value provided will be created. If omitted, a new Enclosure Group will be created based on the Serial Number of the Enclosure \(Example: "EG\_USE1234567A"\).
+OPTIONAL. The Name, URI or Object of an existing Enclosure Group.  If the Enclosure Group Name does not exist, a new resource with the String value provided will be created.  If omitted, a new Enclosure Group will be created based on the Serial Number of the Enclosure (Example: "EG_USE1234567A").
 
 | Aliases | eg |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -LogicalInterconnectGroup &lt;Object&gt;
 
-OPTIONAL. The Name, URI or Object of an existing Logical Interconnect Group. If the Logical Interconnect Group Name does not exist, a new resource with the String value provided will be created. If omitted, a new Logical Interconnect Group will be created based on the Serial Number of the Enclosure \(Example: "LIG\_USE1234567A"\).
+OPTIONAL. The Name, URI or Object of an existing Logical Interconnect Group.  If the Logical Interconnect Group Name does not exist, a new resource with the String value provided will be created.  If omitted, a new Logical Interconnect Group will be created based on the Serial Number of the Enclosure (Example: "LIG_USE1234567A").
 
 | Aliases | lig |
 | :--- | :--- |
@@ -208,9 +209,9 @@ OPTIONAL. The Name, URI or Object of an existing Logical Interconnect Group. If 
 REQUIRED. Specifies whether the intent is to apply either OneView or OneView w/o iLO licenses to the servers in the enclosure being imported.
 
 Accepted values are
-
-* OneView
-* OneViewNoiLO
+                    
+    * OneView
+    * OneViewNoiLO
 
 | Aliases | license, l |
 | :--- | :--- |
@@ -262,13 +263,13 @@ Administrator level account password on the VCEM host.
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | NoWait |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
+| Default value | `False` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -280,7 +281,7 @@ OPTIONAL. Execute the migration report only. Do not execute the migration proces
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
+| Default value | `False` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -288,7 +289,7 @@ OPTIONAL. Execute the migration report only. Do not execute the migration proces
 
 The directory path in which to save the report output to a file.
 
-* Filename will be created in the format: \[path\]{enclsoureName}\_{date}.report
+    * Filename will be created in the format: [path]\{enclsoureName}_{date}.report
 
 | Aliases | Export |
 | :--- | :--- |
@@ -302,13 +303,13 @@ The directory path in which to save the report output to a file.
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### -OACredential &lt;PSCredential&gt;
 
@@ -358,7 +359,7 @@ Valid Enclosure Group resource the appliance will migrate the source enclosure i
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task Resource object for monitoring the enclosure import process
 

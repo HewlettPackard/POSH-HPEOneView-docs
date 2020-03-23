@@ -1,4 +1,4 @@
----
+﻿---
 description: Remove a network set.
 ---
 
@@ -19,27 +19,29 @@ Delete a network set and its corresponding default connection type.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 $task = Remove-HPOVNetworkSet -networkSet "MyNetSet"
 Wait-HPOVTaskComplete $task
 ```
 
-Remove the network set specifed by name. Wait for remove to complete.
+Remove the network set specifed by name.  Wait for remove to complete.
 
-### Example 2
+###  Example 2 
 
 ```text
 $netSet = Get-HPOVNetworkSet -name "MyNetSet" | Remove-HPOVNetwork
+
 ```
 
 Remove the specified network set.
 
-### Example 3
+###  Example 3 
 
 ```text
 Get-HPOVNetworkSet | Remove-HPOVNetworkSet
+
 ```
 
 Search for all network sets and remove them from appliance.
@@ -48,29 +50,31 @@ Search for all network sets and remove them from appliance.
 
 ### -NetworkSet &lt;Object&gt;
 
-The network set object\(s\), name\(s\) or uri\(s\) to be deleted. If providing a URI, you must specify an Applinace Connection.
+The network set object(s), name(s) or uri(s) to be deleted.  If providing a URI, you must specify an Applinace Connection.
 
 | Aliases | uri, name |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### -WhatIf &lt;SwitchParameter&gt;
+
+
 
 | Aliases | wi |
 | :--- | :--- |
@@ -81,6 +85,8 @@ Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name prope
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
+
+
 
 | Aliases | cf |
 | :--- | :--- |
@@ -96,13 +102,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Networking.NetworkSet \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Networking.NetworkSet [System.Management.Automation.PSCustomObject]**_
 
 Network Set resource object
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Removal task
 
@@ -110,5 +116,4 @@ Removal task
 
 * [Get-HPOVNetworkSet](get-hpovnetworkset.md)
 * [New-HPOVNetworkSet](new-hpovnetworkset.md)
-* [Set-HPOVNetworkSet]()
-
+* [Set-HPOVNetworkSet](set-hpovnetworkset.md)

@@ -1,4 +1,4 @@
----
+﻿---
 description: Retrieve Server Hardware Type resource(s).
 ---
 
@@ -17,22 +17,24 @@ Get-HPOVServerHardwareType
 
 ## Description
 
-Obtain a collection of server hardware types. This includes information about the type of server, adapter layout and features, and possible server BIOS settings. This cmdlet is also used with the `New-HPOVServerProfile` cmdlet to retrieve the list of BIOS settings and adapters to configure.
+Obtain a collection of server hardware types.  This includes information about the type of server, adapter layout and features, and possible server BIOS settings.  This cmdlet is also used with the New-HPOVServerProfile cmdlet to retrieve the list of BIOS settings and adapters to configure.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 $sht = Get-HPOVServerHardwareType
+
 ```
 
 Return all the server hardware types on the appliance.
 
-### Example 2
+###  Example 2 
 
 ```text
 $shtBL460Gen81 = Get-HPOVServerHardwareType -name "BL460 Gen8 1"
+
 ```
 
 Return the "BL460 Gen8 1" server hardware type on the appliance.
@@ -41,7 +43,7 @@ Return the "BL460 Gen8 1" server hardware type on the appliance.
 
 ### -Name &lt;String&gt;
 
-The name of the server hardware type resource to be returned. All server hardware type resources will be returned if omitted.
+The name of the server hardware type resource to be returned.  All server hardware type resources will be returned if omitted.
 
 | Aliases | None |
 | :--- | :--- |
@@ -53,7 +55,7 @@ The name of the server hardware type resource to be returned. All server hardwar
 
 ### -Model &lt;String&gt;
 
-Filter based on Model name. Supports wildcard search.
+Filter based on Model name.  Supports wildcard search.
 
 | Aliases | None |
 | :--- | :--- |
@@ -65,17 +67,17 @@ Filter based on Model name. Supports wildcard search.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 Default Value: ${Global:ConnectSessions}
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### -ExportFile &lt;String&gt;
 
@@ -95,11 +97,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this cmdlet.**_
+_**None.  You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.ServerHardwareType \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.ServerHardwareType [System.Management.Automation.PSCustomObject]**_
 
 Single Server Hardware type
 
@@ -109,5 +111,4 @@ Multiple Server Hardware types
 
 ## Related Links
 
-* [Set-HPOVServerHardwareType]()
-
+* [Set-HPOVServerHardwareType](set-hpovserverhardwaretype.md)

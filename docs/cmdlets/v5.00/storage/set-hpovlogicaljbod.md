@@ -22,8 +22,10 @@ A logical JBOD is a group of physical drives that are dynamically defined as vir
 
 This Cmdlet will allow you to change the erase on delete option to False if the logical JBOD was created with the feature enabled (true).  Data can also be erased on the logial drive by clearing the metadata.  The number of assigned drives or type cannot be modified once the logical JBOD has been created.
 
-Privileges: Infrastructure administrator, server administrator, server profile architect, server profile administrator
-
+{% hint style="info" %}
+Minimum required privileges: Infrastructure administrator,
+{% endhint %}
+ server administrator, server profile architect, server profile administrator
 ## Examples
 
 ###  Example 1 

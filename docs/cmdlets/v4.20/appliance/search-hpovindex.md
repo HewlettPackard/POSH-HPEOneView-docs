@@ -1,4 +1,4 @@
----
+﻿---
 description: Search the resource index.
 ---
 
@@ -22,18 +22,20 @@ Search the resource index for any objects that match the specified search string
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Search-HPOVIndex "Profile1"
+
 ```
 
 Return all the index entries which include this string.
 
-### Example 2
+###  Example 2 
 
 ```text
 Search-HPOVIndex -categroy uplink-sets
+
 ```
 
 Search for all Uplink Set resources.
@@ -54,26 +56,26 @@ The search query, text to be found in the index.
 
 ### -Category &lt;String&gt;
 
-The resource category to be matched, if specified. Valid resource categories are:
+The resource category to be matched, if specified.  Valid resource categories are:
 
-* domains
-* users
-* racks
-* `enclosure-groups`
-* enclosures
-* `uplink-sets`
-* `logical-interconnect`-groups
-* `logical-interconnects`
-* `interconnect-types`
-* interconnects
-* networks
-* `firmware-drivers`
-* `server-hardware`-types
-* `server-hardware`
-* `server-profiles`
-* alerts
-* `storage-volumes`
-* `storage-systems`
+    * domains
+    * users
+    * racks
+    * `enclosure-groups`
+    * enclosures
+    * `uplink-sets`
+    * `logical-interconnect`-groups
+    * `logical-interconnects`
+    * `interconnect-types`
+    * interconnects
+    * networks
+    * `firmware-drivers`
+    * `server-hardware`-types
+    * `server-hardware`
+    * `server-profiles`
+    * alerts
+    * `storage-volumes`
+    * `storage-systems`
 
 | Aliases | None |
 | :--- | :--- |
@@ -85,13 +87,13 @@ The resource category to be matched, if specified. Valid resource categories are
 
 ### -Count &lt;Int32&gt;
 
-The maximum number of resource index entries to be returned. Defaults to 50.
+The maximum number of resource index entries to be returned.  Defaults to 50.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | 50 |
+| Default value | `50` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -103,21 +105,21 @@ The index of the first resource index to be returned, defaults to 0.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | 0 |
+| Default value | `0` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -125,7 +127,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this cmdlet.**_
+_**None.  You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 

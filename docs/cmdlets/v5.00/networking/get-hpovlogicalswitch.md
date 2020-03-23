@@ -58,8 +58,10 @@ If the cabling configuration is changed after the server profile assignment, ale
 
 Stacking links can be set from the originating peer or from the destination peer when two switches are participating in the MLAG environment.
 
-Required Privileges: Read-only
-
+{% hint style="info" %}
+Minimum required privileges: Read-
+{% endhint %}
+only
 ## Examples
 
 ###  Example 1 

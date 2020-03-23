@@ -1,4 +1,4 @@
----
+﻿---
 description: Retrieve Storage Volume resource(s).
 ---
 
@@ -26,14 +26,15 @@ Get-HPOVStorageVolume
 
 ## Description
 
-This cmdlet will display all or a specific storage volume\(s\) created on the HPE OneView appliance. A specific storage volume can be searched for by using the Name. Use the List switch to display a report of the requested volume\(s\), including any assignments to Server Profiles.
+This cmdlet will display all or a specific storage volume(s) created on the HPE OneView appliance.  A specific storage volume can be searched for by using the Name.  Use the List switch to display a report of the requested volume(s), including any assignments to Server Profiles.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVStorageVolume
+
 ```
 
 Return all storage volume resource objects.
@@ -49,12 +50,12 @@ Provide a Server Profile object and all associated Storage Volumes will be retur
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -Name &lt;String&gt;
 
-Specify the name of the Storage Volume to display.
+ Specify the name of the Storage Volume to display.
 
 | Aliases | VolumeName |
 | :--- | :--- |
@@ -72,7 +73,7 @@ Use to display Storage Volumes that are available for attachment.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
+| Default value | `False` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -84,36 +85,36 @@ Specify the label associated with resources.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
+| Default value | `False` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### -Scope &lt;Object&gt;
 
-Filter resources based on provided Scope membership. By default, all resources for the accounts Active Permissions will be displayed. Allowed values:
+Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-* AllResources
-* AllResourcesInScope
-* `[HPOneView.Appliance.ScopeCollection]`
-* `[HPOneView.Appliance.ConnectionPermission]`
+    * AllResources
+    * AllResourcesInScope
+    * `[HPOneView.Appliance.ScopeCollection]`
+    * `[HPOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | AllResourcesInScope |
+| Default value | `AllResourcesInScope` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -135,15 +136,15 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this cmdlet.**_
+_**None.  You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
-_**System.Collections.ArrayList**_ 
+_**System.Collections.ArrayList <HPOneView.Storage.Volume>**_
 
 Multiple storage volume resources
 
-_**HPOneView.Storage.Volume \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Storage.Volume [System.Management.Automation.PSCustomObject]**_
 
 Formatted table view of storage volume resources
 
@@ -152,16 +153,15 @@ Formatted table view of storage volume resources
 * [Add-HPOVStorageVolume](add-hpovstoragevolume.md)
 * [ConvertTo-HPOVStorageVolume](convertto-hpovstoragevolume.md)
 * [Get-HPOVStorageVolumeSet](get-hpovstoragevolumeset.md)
-* [Get-HPOVStorageVolumeSnapShot]()
+* [Get-HPOVStorageVolumeSnapShot](get-hpovstoragevolumesnapshot.md)
 * [Get-HPOVStorageVolumeTemplate](get-hpovstoragevolumetemplate.md)
 * [Get-HPOVStorageVolumeTemplatePolicy](get-hpovstoragevolumetemplatepolicy.md)
 * [New-HPOVStorageVolume](new-hpovstoragevolume.md)
 * [New-HPOVStorageVolumeSnapshot](new-hpovstoragevolumesnapshot.md)
 * [New-HPOVStorageVolumeTemplate](new-hpovstoragevolumetemplate.md)
 * [Remove-HPOVStorageVolume](remove-hpovstoragevolume.md)
-* [Remove-HPOVStorageVolumeSnapshot]()
+* [Remove-HPOVStorageVolumeSnapshot](remove-hpovstoragevolumesnapshot.md)
 * [Remove-HPOVStorageVolumeTemplate](remove-hpovstoragevolumetemplate.md)
 * [Set-HPOVStorageVolume](set-hpovstoragevolume.md)
 * [Set-HPOVStorageVolumeTemplate](set-hpovstoragevolumetemplate.md)
 * [Set-HPOVStorageVolumeTemplatePolicy](set-hpovstoragevolumetemplatepolicy.md)
-

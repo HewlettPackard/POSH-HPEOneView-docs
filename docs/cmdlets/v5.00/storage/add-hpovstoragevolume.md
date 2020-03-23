@@ -39,7 +39,9 @@ This Cmdlet will help add an existing storage volume that was provisioned on the
 
 The Storage Volume's WWN or device name will be needed, which can be retrieved from the storage system management console.
 
-Privileges: Infrastructure administrator or Storage administrator.
+{% hint style="info" %}
+Minimum required privileges: Infrastructure administrator or Storage administrator.
+{% endhint %}
 
 ## Examples
 

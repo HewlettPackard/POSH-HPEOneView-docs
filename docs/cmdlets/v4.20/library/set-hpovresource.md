@@ -1,4 +1,4 @@
----
+﻿---
 description: Update existing resource(s).
 ---
 
@@ -16,11 +16,11 @@ Set-HPOVResource
 
 ## Description
 
-This CMDLET will assist the user to update an existing resource. The resource should first be retrieved with a "Get-HPOV\[resourcename\]" CMDLET. The PowerShell resource may then be modified, followed by this "Set-HPOVResource" cmdlet.
+This CMDLET will assist the user to update an existing resource.  The resource should first be retrieved with a "Get-HPOV[resourcename]" CMDLET.  The PowerShell resource may then be modified, followed by this "Set-HPOVResource" cmdlet.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 $profile = Get-HPOVServerProfile "Profile 1"
@@ -41,18 +41,18 @@ The modified resource that is to be updated. Can be resource object, name or URI
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -force &lt;String&gt;
 
-Set to $true to `force-update` the resource. Not all resources support `force-update`.
+Set to $true to `force-update` the resource.  Not all resources support `force-update`.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | False |
+| Default value | `False` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -60,13 +60,13 @@ Set to $true to `force-update` the resource. Not all resources support `force-up
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -91,6 +91,5 @@ The modified resource or async task depending on the resource being modified
 * [Add-HPOVResourceToScope](../appliance/add-hpovresourcetoscope.md)
 * [New-HPOVResource](new-hpovresource.md)
 * [Remove-HPOVResource](remove-hpovresource.md)
-* [Remove-HPOVResourceFromLabel]()
+* [Remove-HPOVResourceFromLabel](../appliance/remove-hpovresourcefromlabel.md)
 * [Remove-HPOVResourceFromScope](../appliance/remove-hpovresourcefromscope.md)
-

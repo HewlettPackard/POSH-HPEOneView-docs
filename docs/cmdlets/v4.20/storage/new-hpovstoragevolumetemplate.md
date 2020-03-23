@@ -1,4 +1,4 @@
----
+﻿---
 description: Create storage volume template.
 ---
 
@@ -93,23 +93,25 @@ This cmdlet supports creating Storage Volume Templates, which are then used to p
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 New-HPOVStorageVolumeTemplate -templateName yellow-svt -storagePool yellow -capacity 40
+
 ```
 
 Create a new Storage Volume Template, setting the max size to 40GB, Thin Provisioning and Private.
 
-### Example 2
+###  Example 2 
 
 ```text
 $storageVolTemplate = New-HPOVStorageVolumeTemplate -templateName vmware-shared-svt -storagePool R5-CPG12 -capacity 250 -shared
+
 ```
 
 Create a new Storage Volume Template, setting the max size to 250GB, Thin Provisioning and Shareable.
 
-### Example 3
+###  Example 3 
 
 ```text
 $storagePool = Get-HPOVStoragePool R5-CPG12
@@ -118,10 +120,11 @@ $storageVolTemplate = New-HPOVStorageVolumeTemplate -templateName vmware-shared-
 
 Use the `Get-HPOVStoragePool` cmdlet to get the "R5-CPG12" pool, and create a new Storage Volume Template, setting the max size to 250GB, Thin Provisioning and Shareable.
 
-### Example 4
+###  Example 4 
 
 ```text
 $svt = Get-HPOVStoragePool R5-CPG12 | New-HPOVStorageVolumeTemplate -templateName vmware-shared-svt -SnapshotStoragePool "MySnapShotPool" -capacity 250 -shared
+
 ```
 
 Use the `Get-HPOVStoragePool` cmdlet to get the "R5-CPG12" pool, and create a new Storage Volume Template, setting the max size to 250GB, Thin Provisioning, Shareable, and providing the Snapshot Storage Pool.
@@ -154,7 +157,7 @@ Provide the description for the Storage Volume Template
 
 ### -StoragePool &lt;Object&gt;
 
-Specify the Storage Pool \(aka CPG\) the Storage Volume Template will be associated with. Storage Pool must already be managed by OneView.
+Specify the Storage Pool (aka CPG) the Storage Volume Template will be associated with.  Storage Pool must already be managed by OneView.
 
 | Aliases | None |
 | :--- | :--- |
@@ -166,7 +169,7 @@ Specify the Storage Pool \(aka CPG\) the Storage Volume Template will be associa
 
 ### -SnapshotStoragePool &lt;Object&gt;
 
-Specify the Storage Pool \(aka CPG\) the Storage Volume Template will use for volume snapshot use. The provided Storage Pool must already be managed by OneView. If you omit this value, then the StoragePool parameter value will be used. Only supported with HPE StoreServe platforms.
+Specify the Storage Pool (aka CPG) the Storage Volume Template will use for volume snapshot use.  The provided Storage Pool must already be managed by OneView.  If you omit this value, then the StoragePool parameter value will be used.  Only supported with HPE StoreServe platforms.
 
 | Aliases | None |
 | :--- | :--- |
@@ -190,31 +193,31 @@ If there are multiple Storage Pool resources with the same name, use this parame
 
 ### -Capacity &lt;Int64&gt;
 
-Max volume capacity in GB. `[e.g]`. 20 to specify 20GB.
+Max volume capacity in GB.  `[e.g]`. 20 to specify 20GB.
 
 | Aliases | size |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | 0 |
+| Default value | `0` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Full &lt;SwitchParameter&gt;
 
 {% hint style="info" %}
-This parameter is being deprecated for the \`
+This parameter is being deprecated for the `-ProvisionType` parameter. Please update your scripts.
 {% endhint %}
 
--ProvisionType\` parameter. Please update your scripts.
 
-Include this switch to enable Thick volume provisioning. Omit to specify Thin storage provisioning. Default: Thin
+Include this switch to enable Thick volume provisioning.  Omit to specify Thin storage provisioning.
+Default: Thin
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
+| Default value | `False` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -226,20 +229,21 @@ Include this switch to mark the Storage Volume Template as a Shareable resource 
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
+| Default value | `False` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -DataProtectionLevel &lt;String&gt;
 
-Specify the StoreVirtual protection level \(aka Network RAID\) for the volume. Allowed values are:
+Specify the StoreVirtual protection level (aka Network RAID) for the volume.  Allowed values are:
 
-* NetworkRaid0None
-* NetworkRaid5SingleParity
-* NetworkRaid10Mirror2Way
-* NetworkRaid10Mirror3Way
-* NetworkRaid10Mirror4Way
-* NetworkRaid6DualParity
+    * NetworkRaid0None
+    * NetworkRaid5SingleParity
+    * NetworkRaid10Mirror2Way
+    * NetworkRaid10Mirror3Way
+    * NetworkRaid10Mirror4Way
+    * NetworkRaid6DualParity
+
 
 | Aliases | None |
 | :--- | :--- |
@@ -263,13 +267,13 @@ Specify to lock the DataProtectionLevel value in the template.
 
 ### -EnableAdaptiveOptimization &lt;SwitchParameter&gt;
 
-Whether or not Adaptive Optimization is enabled on the storage volume. Only supported with StoreVirtual.
+Whether or not Adaptive Optimization is enabled on the storage volume.  Only supported with StoreVirtual.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
+| Default value | `False` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -287,11 +291,11 @@ Specify to lock the EnableAdaptiveOptimization value in the template.
 
 ### -ProvisioningType &lt;String&gt;
 
-Specify the type of volume to provision. Allowed values are:
+Specify the type of volume to provision.  Allowed values are:
 
-* Thin
-* Full
-* TPDD \(Thin Provision Dedup\) - Only available for HPE StoreServ storage systems with SSD storage pools \(aka CPG"s\).
+    * Thin
+    * Full
+    * TPDD (Thin Provision Dedup) - Only available for HPE StoreServ storage systems with SSD storage pools (aka CPG"s).
 
 | Aliases | ProvisionType |
 | :--- | :--- |
@@ -321,7 +325,7 @@ Specify to lock the StoragePool value in the template.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
+| Default value | `False` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -333,7 +337,7 @@ Specify to lock the SnapshotStoragePool value in the template.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
+| Default value | `False` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -345,19 +349,19 @@ Specify to lock the Capacity value in the template.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
+| Default value | `False` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -LockProvisionMode &lt;SwitchParameter&gt;
 
-Specify to lock the Provision Mode \(Shared or Private\) value in the template.
+Specify to lock the Provision Mode (Shared or Private) value in the template.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
+| Default value | `False` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -365,47 +369,47 @@ Specify to lock the Provision Mode \(Shared or Private\) value in the template.
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### -Scope &lt;HPOneView.Appliance.ScopeCollection&gt;
 
-Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with. Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
+Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
+| Default value | `False` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -EnableCompression &lt;Boolean&gt;
 
-Enable compression for StoreServe \(3PAR\) supported resources. Please verify the InformOS version installed supports Compression.
+Enable compression for StoreServe (3PAR) supported resources. Please verify the InformOS version installed supports Compression.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
+| Default value | `False` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -EnableDeduplication &lt;Boolean&gt;
 
-Enable deduplication for `SSD-based` Storage Pools \(CPG\).
+Enable deduplication for `SSD-based` Storage Pools (CPG).
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
+| Default value | `False` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -417,7 +421,7 @@ Lock the EnableDeduplication value.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
+| Default value | `False` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -429,13 +433,13 @@ Lock the EnableCompression value.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
+| Default value | `False` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -CachePinning &lt;bool&gt;
 
-This is applicable for hybrid \(a mix of flash and mechanical storage\) arrays, and provides a 100 percent cache hit rate for specific volumes \(for example, volumes dedicated to critical applications\), and delivers the response times of an `all-flash` storage system. A volume is pinned when the entire active volume is placed in cache; associated snapshot \(inactive\) blocks are not pinned. All incoming data after that point is pinned. The number of volumes that can be pinned is limited by the size of the volumes and amount of available cache.
+This is applicable for hybrid (a mix of flash and mechanical storage) arrays, and provides a 100 percent cache hit rate for specific volumes (for example, volumes dedicated to critical applications), and delivers the response times of an `all-flash` storage system. A volume is pinned when the entire active volume is placed in cache; associated snapshot (inactive) blocks are not pinned. All incoming data after that point is pinned. The number of volumes that can be pinned is limited by the size of the volumes and amount of available cache.
 
 When defined in the Performance Profile, select to enable Cache Pinnning for the Nimble volume to be created.
 
@@ -461,7 +465,7 @@ Specify the data transfer limit in MiB/S.
 
 ### -EnableDataTransferLimit &lt;bool&gt;
 
-Enable data transfer limit. If enabled, the `-DataTransferLimit` parameter must be set. By default, data transfer limit is not set.
+Enable data transfer limit.  If enabled, the `-DataTransferLimit` parameter must be set.  By default, data transfer limit is not set.
 
 | Aliases | None |
 | :--- | :--- |
@@ -473,7 +477,7 @@ Enable data transfer limit. If enabled, the `-DataTransferLimit` parameter must 
 
 ### -EnableEncryption &lt;bool&gt;
 
-When the storage system has encryption enabled, the volume can also be encrypted. Specify if the volume should be encrypted during creation.
+When the storage system has encryption enabled, the volume can also be encrypted.  Specify if the volume should be encrypted during creation.
 
 | Aliases | None |
 | :--- | :--- |
@@ -485,7 +489,7 @@ When the storage system has encryption enabled, the volume can also be encrypted
 
 ### -EnableIOPSLimit &lt;bool&gt;
 
-Set to enable or disable IOPS limit. If enabled, the `-IOPSLimit` parameter must be set. By default, IOPS limit is not set.
+Set to enable or disable IOPS limit.  If enabled, the `-IOPSLimit` parameter must be set.  By default, IOPS limit is not set.
 
 | Aliases | None |
 | :--- | :--- |
@@ -497,16 +501,14 @@ Set to enable or disable IOPS limit. If enabled, the `-IOPSLimit` parameter must
 
 ### -Folder &lt;HPOneView.Storage.NimbleFolder&gt;
 
-Specify the Nimble folder where the volume should be created. To get availabe folder objects, use the `Get-HPOVStoragePool` Cmdlet. Folders are defined as a device specific attribute.
+Specify the Nimble folder where the volume should be created.  To get availabe folder objects, use the `Get-HPOVStoragePool` Cmdlet.  Folders are defined as a device specific attribute. 
 
 Example:
 
-```text
- (Get-HPOVStoragePool `-name` default).DeviceSpecificAttributes.Folders
-```
+     (Get-HPOVStoragePool `-name` default).DeviceSpecificAttributes.Folders
 
-ID Name
-
+ID                                         Name
+--                                         ----
 2f1ca8a5d76e271722000000000000000000000001 POSH
 
 | Aliases | None |
@@ -531,13 +533,11 @@ When enabling IOPS limit, provide a value that is greater than or equal to 256.
 
 ### -PerformancePolicy &lt;HPOneView.Storage.PerformancePolicy&gt;
 
-A Nimble Performance Policy is associated with a storage system. Using the `Show-HPOVStorageSystemPerformancePolicy`, choose an available performance policy.
+A Nimble Performance Policy is associated with a storage system.  Using the `Show-HPOVStorageSystemPerformancePolicy`, choose an available performance policy.
 
 Example:
 
-```text
-`Get-HPOVStorageSystem` `-Name` MyNimbleSys | `Show-HPOVStorageSystemPerformancePolicy`
-```
+    `Get-HPOVStorageSystem` `-Name` MyNimbleSys | `Show-HPOVStorageSystemPerformancePolicy`
 
 | Aliases | None |
 | :--- | :--- |
@@ -649,7 +649,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Storage.System.Pool \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Storage.System.Pool [System.Management.Automation.PSCustomObject]**_
 
 Managed Storage Pool resource
 
@@ -666,4 +666,3 @@ Created Storage Volume Template resource
 * [Remove-HPOVStorageVolumeTemplate](remove-hpovstoragevolumetemplate.md)
 * [Set-HPOVStorageVolumeTemplate](set-hpovstoragevolumetemplate.md)
 * [Set-HPOVStorageVolumeTemplatePolicy](set-hpovstoragevolumetemplatepolicy.md)
-

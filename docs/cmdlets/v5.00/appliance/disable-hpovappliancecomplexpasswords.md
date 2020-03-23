@@ -16,7 +16,9 @@ Disable-HPOVApplianceComplexPasswords
 
 Disables whether users are required to have complex passwords.  This option does not force existing users to change their passwords, nor has any impact on directory accounts.  By default, the appliance does not enforce complex passwords during creating or modifying internal user account passwords.  Use this Cmdlet to disable the policy.
 
-Privileges: Infrastructure administrator
+{% hint style="info" %}
+Minimum required privileges: Infrastructure administrator
+{% endhint %}
 
 ## Examples
 

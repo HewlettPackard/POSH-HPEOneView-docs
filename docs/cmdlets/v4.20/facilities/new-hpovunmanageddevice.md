@@ -1,4 +1,4 @@
----
+﻿---
 description: Create an Unmanaged Device.
 ---
 
@@ -21,22 +21,24 @@ New-HPOVUnmanagedDevice
 
 ## Description
 
-HPE OneView provides administrators with the capability to define unmanaged devices to them place within Racks, in order to provide a more realistic and complete data center layout. Creating a device does not provide the ability to manage it from HPE OneView. The administrator will need to specify static characteristics of the device being added. The unmanaged device can then be assigned into the appropriate rack manually.
+HPE OneView provides administrators with the capability to define unmanaged devices to them place within Racks, in order to provide a more realistic and complete data center layout.  Creating a device does not provide the ability to manage it from HPE OneView.  The administrator will need to specify static characteristics of the device being added.  The unmanaged device can then be assigned into the appropriate rack manually.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 New-HPOVUnmanagedDevice -name "Unmanaged-SRVR1" -model "ProLiant DL380 G6" -height 2 -maxpower 750 -IPv4Address 10.154.1.10
+
 ```
 
 Create a new unmanaged server device.
 
-### Example 2
+###  Example 2 
 
 ```text
 New-HPOVUnmanagedDevice -name "HPN5900CP1" -model "HPN 5900CP" -height 1 -maxpower 260 -IPv4Address 172.18.254.99 "MyAppliance.domain.com"
+
 ```
 
 Create a new unmanaged switch device.
@@ -75,7 +77,7 @@ Rack Unit height of the Unmanaged Device.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | 1 |
+| Default value | `1` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -87,7 +89,7 @@ The maximum power consumption of the Unmanaged Device.
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
-| Default value | 0 |
+| Default value | `0` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -105,7 +107,7 @@ Provide the management interface L2 address.
 
 ### -IPv4Address &lt;String&gt;
 
-Provide the IPv4 Address value of the management interface. This value does not provide a method for an HPE OneView appliance to communicate with the management interface.
+Provide the IPv4 Address value of the management interface.  This value does not provide a method for an HPE OneView appliance to communicate with the management interface.
 
 | Aliases | None |
 | :--- | :--- |
@@ -117,7 +119,7 @@ Provide the IPv4 Address value of the management interface. This value does not 
 
 ### -IPv6Address &lt;String&gt;
 
-Provide the IPv6 Address value of the management interface. This value does not provide a method for an HPE OneView appliance to communicate with the management interface.
+Provide the IPv6 Address value of the management interface.  This value does not provide a method for an HPE OneView appliance to communicate with the management interface.
 
 | Aliases | None |
 | :--- | :--- |
@@ -131,13 +133,13 @@ Provide the IPv6 Address value of the management interface. This value does not 
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -145,16 +147,15 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this cmdlet.**_
+_**None.  You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.UnmanagedResource \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.UnmanagedResource [System.Management.Automation.PSCustomObject]**_
 
 Newly created Unmanaged Device resource
 
 ## Related Links
 
 * [Get-HPOVUnmanagedDevice](get-hpovunmanageddevice.md)
-* [Remove-HPOVUnmanagedDevice]()
-
+* [Remove-HPOVUnmanagedDevice](remove-hpovunmanageddevice.md)

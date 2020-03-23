@@ -1,4 +1,4 @@
----
+﻿---
 description: Assign or change roles for LDAP Groups.
 ---
 
@@ -42,45 +42,49 @@ Set-HPOVLdapGroupRole
 
 ## Description
 
-Changes current roles of an LDAP Group with a given set of roles. You must provide the list of all roles the LDAP Group should be set to, and not a subset of roles.
+Changes current roles of an LDAP Group with a given set of roles.  You must provide the list of all roles the LDAP Group should be set to, and not a subset of roles.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Set-HPOVLdapGroupRole -d Domain1 -GroupName "MY Directory Group1" -roles "Server administrator" -u "Sarah Peterson"
+
 ```
 
 Add "MY Directory Group1" from Domain1 with Server Administrator role and prompt for password for group validation.
 
-### Example 2
+###  Example 2 
 
 ```text
 $roles = "Server administrator","Backup administrator"
 $password = convertto-SecureString -asplaintext "password123890" -force
 Set-HPOVLdapGroupRole -d Domain1 -GroupName "MY Directory Group1" -roles $roles -u "Sarah Peterson" -p $password
+
 ```
 
 Set "MY Directory Group1" from Domain1 with Server and Backup administrator roles, and specify password for group validation.
 
-### Example 3
+###  Example 3 
 
 ```text
 $LdapDirectoryName = "CorpDomain"
 $MyAdCreds = Get-Credential
 Get-HPOVLdapGroup -Group $CorpNetworkAdmins -ErrorAction Stop | ? loginDomain -eq $LdapDirectoryName | Set-HPOVLdapGroupRole -ScopePermissions @{Role = "Network administrator"; Scope = $NewSBACScope } -Credential $MyAdCreds
+
 ```
 
 Change the Scope permissions for the specified authentication directory group.
 
-### Example 4
+###  Example 4 
 
 ```text
 $scope = Get-HPOVScope -Name $scopename
 $ScopePermissions = @{ Role = "Server administrator"; Scope = $scope
 }
 Get-HPOVLdapGroup -Name $scopename | Set-HPOVLdapGroupRole -ScopePermissions $ScopePermissions -Roles "Software administrator" -Credential $MyAdCreds
+
 ```
 
 Change the Scope permissions for the specified authentication directory group by using both ScopePermissions and Roles parameters.
@@ -108,12 +112,12 @@ Directroy Group to add.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -Roles &lt;Array&gt;
 
-The role\(s\) to assign to the Directroy Group, in `[System.Collections.ArrayList]` format. Accepted values are noted within the ApplianceRoles property of the `[HPOneView.Appliance.Connection]` object stored in the $Global:ConnectedSessions variable.
+The role(s) to assign to the Directroy Group, in `[System.Collections.ArrayList]` format.  Accepted values are noted within the ApplianceRoles property of the `[HPOneView.Appliance.Connection]` object stored in the $Global:ConnectedSessions variable.
 
 Example: $roles = "Server administrator","Network administrator"
 
@@ -151,15 +155,15 @@ Directory User account password
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### -Credential &lt;PSCredential&gt;
 
@@ -175,9 +179,9 @@ Use this parameter if you want to provide a PSCredential object instead.
 
 ### -ScopePermissions &lt;Array&gt;
 
-Array collection of Hashtable. Will overwrite existing scope to role mappings. To indiate all resouroures, use 'All' as the value.
+Array collection of Hashtable<Role; Scope>.  Will overwrite existing scope to role mappings.  To indiate all resouroures, use 'All' as the value.
 
-Example: `-ScopePermissions` @{Role = "Network administrator"; Scope = \(Get-HPOVScope `-Name` CorpNetAdmins `-ErrorAction` Stop\) }
+Example: `-ScopePermissions` @{Role = "Network administrator"; Scope = (Get-HPOVScope `-Name` CorpNetAdmins `-ErrorAction` Stop) }
 
 | Aliases | None |
 | :--- | :--- |
@@ -201,7 +205,7 @@ Directory User Account password
 
 _**System.Management.Automation.PSCustomObject**_
 
-Updated LDAP Group object with new role assignment\(s\)
+Updated LDAP Group object with new role assignment(s)
 
 ## Related Links
 

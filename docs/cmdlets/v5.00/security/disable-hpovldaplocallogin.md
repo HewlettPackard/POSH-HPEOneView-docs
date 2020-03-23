@@ -24,7 +24,7 @@ Directory groups are assigned one or more HPE OneView permissions. A directory u
 
 If you want to authenticate all logins to the appliance through a directory service, you must disable local logins. Also, if a directory is inaccessible in some special cases, you can enable the emergency local login. To enable emergency local login, you must disable local logins.
 
-IMPORTANT:
+NOTE:
 Local logins cannot be disabled until you log in using an authentication directory service as an Infrastructure administrator. Verify that you can log in to the appliance as an Infrastructure administrator from the authentication directory service before continuing.
 
 {% hint style="info" %}

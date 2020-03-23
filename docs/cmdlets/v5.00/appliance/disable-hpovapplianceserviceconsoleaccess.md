@@ -18,7 +18,9 @@ HPE OneView contains a technical feature that will allow an on-site Authorized t
 
 Use this Cmdlet to disable service console access.
 
-Privileges: Infrastructure administrator
+{% hint style="info" %}
+Minimum required privileges: Infrastructure administrator
+{% endhint %}
 
 ## Examples
 

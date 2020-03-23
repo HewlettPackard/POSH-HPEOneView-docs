@@ -1,4 +1,4 @@
----
+﻿---
 description: Accept the EULA and set support access for the specified appliance.
 ---
 
@@ -19,10 +19,11 @@ Accept the EULA and set support access for the specified appliance.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Set-HPOVEulaStatus -Appliance appliance.contoso.com -supportAccess "yes"
+
 ```
 
 Connects to a specific appliance, accepting the EULA and enable Support Access.
@@ -59,7 +60,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this cmdlet.**_
+_**None.  You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
@@ -70,4 +71,3 @@ Version and current support access state
 ## Related Links
 
 * [Get-HPOVEulaStatus](get-hpoveulastatus.md)
-

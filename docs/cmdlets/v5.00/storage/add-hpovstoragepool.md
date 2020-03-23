@@ -37,7 +37,9 @@ A storage system must first be added to the appliance before a storage pool can 
 
 Storage pools are scoped resources. You can associate a scope to a pool to restrict who can use the pool.
 
-Privileges: Infrastructure administrator or Storage administrator.
+{% hint style="info" %}
+Minimum required privileges: Infrastructure administrator or Storage administrator.
+{% endhint %}
 
 ## Examples
 

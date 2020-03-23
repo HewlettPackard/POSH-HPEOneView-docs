@@ -1,4 +1,4 @@
----
+﻿---
 description: Retrieve Logical Interconnect resource(s).
 ---
 
@@ -19,38 +19,42 @@ Get-HPOVLogicalInterconnect
 
 ## Description
 
-Retrieves a list of all Logical Interconnect or just specific ones via a query if the name parameter is provided. The output can be sent to a file using the exportFile parameter.
+Retrieves a list of all Logical Interconnect or just specific ones via a query if the name parameter is provided.  The output can be sent to a file using the exportFile parameter.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVLogicalInterconnect
+
 ```
 
 Returns all Logical Interconnect defined on the appliance to standard output.
 
-### Example 2
+###  Example 2 
 
 ```text
 Get-HPOVLogicalInterconnect "Production"
+
 ```
 
 Returns just the Production Logical Interconnect object to standard output.
 
-### Example 3
+###  Example 3 
 
 ```text
 $myLogicalICs = Get-HPOVLogicalInterconnect
+
 ```
 
 Returns the `Get-HPOVLogicalInterconnect` query and stores it in the object $myLogicalICs
 
-### Example 4
+###  Example 4 
 
 ```text
 Get-HPOVLogicalInterconnect -Export "c:\myApplianceConfig\LogicaICs.json"
+
 ```
 
 Returns the `Get-HPOVLogicalInterconnect` query results to the file c:\myApplianceConfig\LogicaICs.json
@@ -71,18 +75,18 @@ The name of the Logical Interconnect to retrieve.
 
 ### -Scope &lt;Object&gt;
 
-Filter resources based on provided Scope membership. By default, all resources for the accounts Active Permissions will be displayed. Allowed values:
+Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-* AllResources
-* AllResourcesInScope
-* `[HPOneView.Appliance.ScopeCollection]`
-* `[HPOneView.Appliance.ConnectionPermission]`
+    * AllResources
+    * AllResourcesInScope
+    * `[HPOneView.Appliance.ScopeCollection]`
+    * `[HPOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | AllResourcesInScope |
+| Default value | `AllResourcesInScope` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -94,21 +98,21 @@ Specify the label associated with resources.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
+| Default value | `False` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### -Export &lt;String&gt;
 
@@ -140,19 +144,21 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this cmdlet.**_
+_**None.  You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
-_**HPoneView.Networking.LogicalInterconnect \[System.Management.Automation.PSCustomObject\]**_
+_**HPoneView.Networking.LogicalInterconnect [System.Management.Automation.PSCustomObject]**_
 
 Logical Interconnect resource object from [`Get-HPOVLogicalInterconnect`](get-hpovlogicalinterconnect.md)
 
-_**System.Collections.ArrayList**_  
+_**System.Collections.ArrayList <HPoneView.Networking.LogicalInterconnect>    **_
 
 Multiple Logical Interconnects
 
 _**A Logical Interconnect or collection of Logical Interconnects**_
+
+
 
 ## Related Links
 
@@ -162,7 +168,6 @@ _**A Logical Interconnect or collection of Logical Interconnects**_
 * [Get-HPOVLogicalInterconnectPortMonitoring](get-hpovlogicalinterconnectportmonitoring.md)
 * [Install-HPOVLogicalInterconnectFirmware](install-hpovlogicalinterconnectfirmware.md)
 * [New-HPOVLogicalInterconnectGroup](new-hpovlogicalinterconnectgroup.md)
-* [Remove-HPOVLogicalInterconnectGroup]()
+* [Remove-HPOVLogicalInterconnectGroup](remove-hpovlogicalinterconnectgroup.md)
 * [Show-HPOVLogicalInterconnectMacTable](show-hpovlogicalinterconnectmactable.md)
 * [Update-HPOVLogicalInterconnect](update-hpovlogicalinterconnect.md)
-

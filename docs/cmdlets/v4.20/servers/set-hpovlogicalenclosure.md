@@ -1,4 +1,4 @@
----
+﻿---
 description: Modify a configured Logical Enclosure resource.
 ---
 
@@ -38,18 +38,20 @@ Use this Cmdlet to modify an existing Logical Enclosure.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVLogicalEnclosure -Name OriginalName | Set-HPOVLogicalEnclosure -Name NewName
+
 ```
 
 Change the Logical Enclosure name.
 
-### Example 2
+###  Example 2 
 
 ```text
 Get-HPOVLogicalEnclosure -Name OriginalName | Set-HPOVLogicalEnclosure -AmbientTemperatureSetting ASHRAE_A3
+
 ```
 
 Change the Logical Enclosure ambient temperature setting.
@@ -62,10 +64,11 @@ The ambient temperature mode describing the environment in which the logical enc
 
 Allowed values:
 
-* ASHRAE\_A3 - Extended ambient temperatures up to 40C/104F degrees.
-* ASHRAE\_A4 - Extended ambient temperatures up to 45C/113F degrees.
-* Standard - Expected ambient temperatures up to 35C/95F degrees.
-* Telco - Extended ambient temperatures up to 40C/104F degrees and operation extremes up to 55C/131F degrees.
+    * ASHRAE_A3 - Extended ambient temperatures up to 40C/104F degrees.
+    * ASHRAE_A4 - Extended ambient temperatures up to 45C/113F degrees.
+    * Standard - Expected ambient temperatures up to 35C/95F degrees.
+    * Telco - Extended ambient temperatures up to 40C/104F degrees and operation extremes up to 55C/131F degrees.
+
 
 | Aliases | None |
 | :--- | :--- |
@@ -77,25 +80,25 @@ Allowed values:
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
+| Default value | `False` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -108,7 +111,7 @@ Associate the Logical Enclosure with a new Enclosure Group.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -InputObject &lt;Object&gt;
@@ -120,7 +123,7 @@ Logical Enclosure resource from `Get-HPOVLogicalEnclosure`.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -Name &lt;String&gt;
@@ -141,8 +144,9 @@ Change the Power Mode of the Logical Enclosure.
 
 Allowed values:
 
-* RedundantPowerFeed - There are at least twice as many power supplies as are necessary \(n + n\).
-* RedundantPowerSupply - There is at least 1 more power supply than is necessary \(n + 1\).
+    * RedundantPowerFeed - There are at least twice as many power supplies as are necessary (n + n).
+    * RedundantPowerSupply - There is at least 1 more power supply than is necessary (n + 1).
+
 
 | Aliases | None |
 | :--- | :--- |
@@ -152,9 +156,9 @@ Allowed values:
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ConfigurationScript &lt;String\[\]&gt;
+### -ConfigurationScript &lt;String[]&gt;
 
-Specify a new HPE BladeSystem `c-Class` Onboard Administrator configuration script to set. This is not supported with HPE Synergy.
+Specify a new HPE BladeSystem `c-Class` Onboard Administrator configuration script to set.  This is not supported with HPE Synergy.
 
 | Aliases | None |
 | :--- | :--- |
@@ -176,7 +180,7 @@ HPE Syngery Logical Enclosure resource from [`Get-HPOVLogicalEnclosure`](get-hpo
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Asyncronous task resource to monitor
 
@@ -187,4 +191,3 @@ Asyncronous task resource to monitor
 * [Remove-HPOVLogicalEnclosure](remove-hpovlogicalenclosure.md)
 * [Update-HPOVLogicalEnclosure](update-hpovlogicalenclosure.md)
 * [Update-HPOVLogicalEnclosureFirmware](../networking/update-hpovlogicalenclosurefirmware.md)
-

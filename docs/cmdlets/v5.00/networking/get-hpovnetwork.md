@@ -26,7 +26,10 @@ A virtual connect interconnect in an enclosure supports the following types of d
     * Ethernet for data networks, including tagged, untagged, or tunnel networks.
     * Fibre Channel over Ethernet (FCoE) for storage networks where storage traffic is carried over a dedicated Ethernet VLAN.
 
-IMPORTANT: The networking features described here apply to enclosures and servers only. The appliance does not monitor or manage the network features and hardware for rack mount servers or networking equipment outside the enclosures without using a supported logical switch or fabric manager.
+{% hint style="info" %}
+The networking features described here apply to enclosures and servers only. The appliance does not monitor or manage the network features and hardware for rack mount servers or networking equipment outside the enclosures without using a supported logical switch or fabric manager.
+{% endhint %}
+
 
 {% hint style="info" %}
 You can associate a network to both an IPv4 subnet.

@@ -1,4 +1,4 @@
----
+﻿---
 description: Verify pending appliance update has been staged.
 ---
 
@@ -14,14 +14,15 @@ Get-HPOVPendingUpdate
 
 ## Description
 
-Use this cmdlet to validate a pending update has been staged on an appliance. If one is present, the update details will be returned to the caller.
+Use this cmdlet to validate a pending update has been staged on an appliance.  If one is present, the update details will be returned to the caller.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVPendingUpdate
+
 ```
 
 Retrieve pending update from all connected appliance sessions.
@@ -30,15 +31,15 @@ Retrieve pending update from all connected appliance sessions.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -46,15 +47,14 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this cmdlet.**_
+_**None.  You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.Update.Pending \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.Update.Pending [System.Management.Automation.PSCustomObject]**_
 
 Pending appliance update
 
 ## Related Links
 
 * [Remove-HPOVPendingUpdate](remove-hpovpendingupdate.md)
-

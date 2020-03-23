@@ -42,7 +42,9 @@ This Cmdlet will assist with importing a supported Storage System. In order for 
 
 When adding supported HP 3PAR storage systems, please make sure "startwsapi" has been executed from the HP 3PAR CLI, which enables the HP 3PAR REST API that is required by HPE OneView.
 
-Privileges: Infrastructure administrator or Storage administrator.
+{% hint style="info" %}
+Minimum required privileges: Infrastructure administrator or Storage administrator.
+{% endhint %}
 
 ## Examples
 

@@ -17,6 +17,10 @@ Enable-HPOVRemoteSyslog
 
 The remoteSyslog API provides the ability to configure remote logging on devices managed by OneView.  This Cmdlet handles enabling the remote syslog configuration.  Only a single destination can be set.  When configured, the HPE OneView appliance will deploy the SysLog settings to managed resources automatically.
 
+{% hint style="info" %}
+Minimum required privileges: Infrastructure administrator,
+{% endhint %}
+ Server administrator
 ## Examples
 
 ###  Example 1 

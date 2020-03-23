@@ -18,8 +18,10 @@ New-HPOVClusterProfileMember
 
 This is a helper Cmdlet to create a valid resourc object New-HPOVClusterProfile will then use for the -Servers parameter.
 
-Privileges: Infrastructure administrator, Server administrator, Server profile architect, or Server profile administrator.
-
+{% hint style="info" %}
+Minimum required privileges: Infrastructure administrator,
+{% endhint %}
+ Server administrator, Server profile architect, or Server profile administrator.
 ## Examples
 
 ###  Example 1 

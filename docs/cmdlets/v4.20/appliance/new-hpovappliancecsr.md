@@ -1,4 +1,4 @@
----
+﻿---
 description: Generate appliance CSR
 ---
 
@@ -34,7 +34,7 @@ This cmdlet will create the CSR for an given appliance, to then be submitted to 
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 $CSR = @{
@@ -104,7 +104,7 @@ The organization name is a required entry, can contain up to 64 characters.
 
 ### -CommonName &lt;String&gt;
 
-The common name is a required entry, and can be FQDN/hostname or IPv4/IPv6 address.
+The common name is a required entry, and can be FQDN/hostname or IPv4/IPv6 address. 
 
 Example: "hpov.example.com"
 
@@ -130,7 +130,7 @@ The entry for the organizational unit name, may not exceed 64 characters.
 
 ### -AlternativeName &lt;String&gt;
 
-An optional entry containing additional names that apply to the owner of the certificate, possibly including additional `e-mail` addresses, DNS names, IP addresses and other identifiers.
+An optional entry containing additional names that apply to the owner of the certificate, possibly including additional `e-mail` addresses, DNS names, IP addresses and other identifiers. 
 
 Example: "hpov.example.com,hpov,192.168.1.1"
 
@@ -216,7 +216,7 @@ The distinguished name qualifier, which further identifies the certificate recip
 
 ### -ChallengePassword &lt;String&gt;
 
-The challenge password is a required entry and must contain a minimum of 8 characters. If you wish to be prompted to supply the password, use an asterisk \(\*\) character.
+The challenge password is a required entry and must contain a minimum of 8 characters.  If you wish to be prompted to supply the password, use an asterisk (*) character.
 
 | Aliases | None |
 | :--- | :--- |
@@ -228,7 +228,7 @@ The challenge password is a required entry and must contain a minimum of 8 chara
 
 ### -UnstructuredName &lt;String&gt;
 
-Defined by the certificate authority, and may contain up to 64 characters. Consult the certificate authority"s administrator or documentation for more information.
+Defined by the certificate authority, and may contain up to 64 characters.  Consult the certificate authority"s administrator or documentation for more information.
 
 | Aliases | UN |
 | :--- | :--- |
@@ -240,7 +240,7 @@ Defined by the certificate authority, and may contain up to 64 characters. Consu
 
 ### -CnsaCompliantRequest &lt;bool&gt;
 
-Specify to create a CNSA compliant certificate request. By default the certificate request will create a 2048bit key length, while CNSA compliant will create a 3072bit key length.
+Specify to create a CNSA compliant certificate request.  By default the certificate request will create a 2048bit key length, while CNSA compliant will create a 3072bit key length.
 
 | Aliases | None |
 | :--- | :--- |
@@ -254,13 +254,13 @@ Specify to create a CNSA compliant certificate request. By default the certifica
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -268,7 +268,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this cmdlet.**_
+_**None.  You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 

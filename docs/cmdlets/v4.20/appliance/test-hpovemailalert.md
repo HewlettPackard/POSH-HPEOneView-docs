@@ -1,4 +1,4 @@
----
+﻿---
 description: Test appliance Email Alerting configuration.
 ---
 
@@ -17,22 +17,24 @@ Test-HPOVEmailAlert
 
 ## Description
 
-This cmdlet will generate a test email message.
+This cmdlet will generate a test email message. 
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Test-HPOVEmailAlert -Recipients user1@contoso.com
+
 ```
 
 Generate a test email message to "user1@contoso.com".
 
-### Example 2
+###  Example 2 
 
 ```text
-Test-HPOVEmailAlert -Recipients user1@contoso.com.,user2@contoso.com -Subject "This is a test email message."
+Test-HPOVEmailAlert -Recipients user1@contoso.com.,user2@contoso.com -Subject "This is a test email message." 
+
 ```
 
 Generate a test email message to multiple recipients with a custom subject.
@@ -59,33 +61,33 @@ Provide a custom subject for the email message.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | This is a test message. |
+| Default value | `This is a test message.` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Body &lt;String&gt;
 
-Provide a custom message body. Can be either a plan text or HTML message.
+Provide a custom message body.  Can be either a plan text or HTML message.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | Test email message from HPE OneView appliance. |
+| Default value | `Test email message from HPE OneView appliance.` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 

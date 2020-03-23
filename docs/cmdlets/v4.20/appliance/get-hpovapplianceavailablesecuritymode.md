@@ -1,4 +1,4 @@
----
+﻿---
 description: Get appliance available security modes.
 ---
 
@@ -15,22 +15,24 @@ Get-HPOVApplianceAvailableSecurityMode
 
 ## Description
 
-Use this Cmdlet to get the appliances available security modes and the current mode. Security Modes adjust the allowed security protocols \(TLS\) and their associated cyphers.
+Use this Cmdlet to get the appliances available security modes and the current mode. Security Modes adjust the allowed security protocols (TLS) and their associated cyphers.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVApplianceAvailableSecurityMode
+
 ```
 
 Return all available security modes on the appliance.
 
-### Example 2
+###  Example 2 
 
 ```text
 Get-HPOVApplianceAvailableSecurityMode -ModeName CNSA
+
 ```
 
 Return the CNSA available security mode on the appliance.
@@ -39,23 +41,23 @@ Return the CNSA available security mode on the appliance.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
-### -ModeName &lt;String\[\]&gt;
+### -ModeName &lt;String[]&gt;
 
 The name of the mode to return. Allowed values:
 
-* Legacy
-* FIPS
-* CNSA
+    * Legacy
+    * FIPS
+    * CNSA
 
 Default: Return all available security modes.
 
@@ -73,7 +75,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this cmdlet.**_
+_**None.  You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 

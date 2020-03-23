@@ -89,7 +89,7 @@ New-HPOVClusterProfile
 A cluster profile enables you to deploy and manage a cluster of servers (nodes) managed by HPE OneView and orchestrates consistent configuration on cluster of server nodes to share the same workload.  A cluster profile and the associated server profile template are used to define a consistent configuration from server nodes to members in the cluster. The associated server profiles define physical server configurations for server nodes in the cluster, which are derived from parent cluster profile and its associated server profile template. 
 
 {% hint style="info" %}
-The server profile template must have a configured connection to the hypervisor management network for the template to be valid for use by a hypervisor cluster profile.
+The server profile template must have a configured connection to the hypervisor management network for the template to be valid for use by a hypervisor cluster profile.
 {% endhint %}
 
 
@@ -99,8 +99,10 @@ A cluster profile can manage VMware ESXi-based hypervisor clusters by leveraging
 
 Use this Cmdlet to create a new cluster profile within OneView.  Any new created clusters within OneView cannot be removed from OneView withour destroying the cluster within the cluster manager.
 
-Privileges: Infrastructure administrator, Server administrator, Server profile architect, or Server profile administrator.
-
+{% hint style="info" %}
+Minimum required privileges: Infrastructure administrator,
+{% endhint %}
+ Server administrator, Server profile architect, or Server profile administrator.
 ## Examples
 
 ###  Example 1 

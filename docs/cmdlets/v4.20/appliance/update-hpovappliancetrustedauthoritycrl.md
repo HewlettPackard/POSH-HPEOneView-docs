@@ -1,4 +1,4 @@
----
+﻿---
 description: Update appliance certificate authority revocation list.
 ---
 
@@ -25,13 +25,13 @@ Update-HPOVApplianceTrustedAuthorityCrl
 
 ## Description
 
-HPE OneView enables users to import a CA CRL file and to perform the appropriate revocation checking on existing certificates in the trust store and for certificates received during communication with a managed device or external server. Certificate revocation checks are enabled by default. However, if a matching CRL has not been imported for a `CA-issued` certificate, or if a CRL has expired, the appliance bypasses the revocation check for the associated certificate when performing an HTTPS connection. If you want to restrict \(or relax\) revocation checking, use the options below on the edit screen.
+HPE OneView enables users to import a CA CRL file and to perform the appropriate revocation checking on existing certificates in the trust store and for certificates received during communication with a managed device or external server.  Certificate revocation checks are enabled by default. However, if a matching CRL has not been imported for a CA-issued certificate, or if a CRL has expired, the appliance bypasses the revocation check for the associated certificate when performing an HTTPS connection. If you want to restrict (or relax) revocation checking, use the options below on the edit screen.
 
-The Cmdlet will attempt to download the CRL from the HTTP location specified within the TrustedCertificateAuthority object. You can manually download the updated CRL and use the -Path paramter to specify the offline CRL.
+The Cmdlet will attempt to download the CRL from the HTTP location specified within the TrustedCertificateAuthority object.  You can manually download the updated CRL and use the -Path paramter to specify the offline CRL.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVApplianceTrustedCertificate -Name "VeriSign Class 3 Public Primary Certification Authority - G5" | Update-HPOVApplianceTrustedAuthorityCrl
@@ -39,7 +39,7 @@ Get-HPOVApplianceTrustedCertificate -Name "VeriSign Class 3 Public Primary Certi
 
 Update the `built-in` certificate authority resource.
 
-### Example 2
+###  Example 2 
 
 ```text
 # Download CA CRL for offline use
@@ -56,29 +56,29 @@ Update the `built-in` certificate authority resource.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
+| Default value | `False` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -InputObject &lt;HPOneView.Appliance.TrustedCertificateAuthority\[\]&gt;
+### -InputObject &lt;HPOneView.Appliance.TrustedCertificateAuthority[]&gt;
 
 HPOneView.Appliance.TrustedCertificateAuthority resource from `Get-HPOVApplianceTrustedCertificate`.
 
@@ -87,7 +87,7 @@ HPOneView.Appliance.TrustedCertificateAuthority resource from `Get-HPOVAppliance
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -Path &lt;FileInfo&gt;
@@ -110,11 +110,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Appliance.TrustedCertificateAuthority**_
 
-resource from [`Get-HPOVApplianceTrustedCertificate`](../../v5.00/appliance/get-hpovappliancetrustedcertificate.md).
+resource from [`Get-HPOVApplianceTrustedCertificate`](get-hpovappliancetrustedcertificate.md).
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task Resource object for configuring port monitoring on the requested logical intercinnect.
 

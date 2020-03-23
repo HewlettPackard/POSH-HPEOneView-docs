@@ -36,7 +36,7 @@ The appliance monitors the connectivity status of iPDUs. If the appliance loses 
 
 The appliance also monitors iPDU to remain synchronized with changes to hardware and power connections. However, some changes to devices made outside of the control of the appliance (from iLO or the OA, for example) may cause them to become out of synchronization with the appliance. You may have to manually refresh devices that lose synchronization with the appliance.
 
-Minimum required privilegesPrivileges: Infrastructure administrator or Server administrator.
+Minimum required privilegesMinimum required privileges: Infrastructure administrator or Server administrator.
 
 ## Examples
 
@@ -65,7 +65,7 @@ Hostname of the iPDU, either IP Address or FQDN.
 ### -Username &lt;String&gt;
 
 {% hint style="warning" %}
-This parameter is deprecated. Please transition to the `-Credential` parameter.
+This parameter is deprecated. Please transition to the `-Credential` parameter.
 {% endhint %}
 
 
@@ -82,7 +82,7 @@ Administrator account of the target iPDU.
 ### -Password &lt;String&gt;
 
 {% hint style="warning" %}
-This parameter is deprecated. Please transition to the `-Credential` parameter.
+This parameter is deprecated. Please transition to the `-Credential` parameter.
 {% endhint %}
 
 

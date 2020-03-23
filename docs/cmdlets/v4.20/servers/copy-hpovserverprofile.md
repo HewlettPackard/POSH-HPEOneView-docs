@@ -1,4 +1,4 @@
----
+﻿---
 description: Copy Server Profile
 ---
 
@@ -17,46 +17,52 @@ Copy-HPOVServerProfile
 
 ## Description
 
-This cmdlet will copy a source Server Profile to a new instance You can assign the copy to an existing Server Device, or specify "unassigned".
+This cmdlet will copy a source Server Profile to a new instance  You can assign the copy to an existing Server Device, or 
+specify "unassigned".
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Copy-HPOVServerProfile -SourceName "Profile 1"
+
 ```
 
 Copy "Profile 1" to a new Server Profile that is unassigned and named "Copy of Profile 1".
 
-### Example 2
+###  Example 2 
 
 ```text
 Copy-HPOVServerProfile -SourceName "Profile 1" -DestinationName "Profile 2"
+
 ```
 
 Copy "Profile 1" to a new Server Profile that is unassigned and named "Profile 2".
 
-### Example 3
+###  Example 3 
 
 ```text
 Copy-HPOVServerProfile -SourceName "Profile 1" -DestinationName "Profile 2" -assign "Encl1, Bay 9"
+
 ```
 
 Copy "Profile 1" to a new Server Profile that is assigned to "Encl1, Bay 9" named "Profile 2".
 
-### Example 4
+###  Example 4 
 
 ```text
 Get-HPOVServerProfile -Name "Profile 1" | Copy-HPOVServerProfile
+
 ```
 
 Use the `Get-HPOVServerProfile` CMDLET and pipe to `Copy-HPOVServerProfile`, where the copied profile name will be "Copy of Profile 1" and unassigned.
 
-### Example 5
+###  Example 5 
 
 ```text
 11..16 | % { Copy-HPOVServerProfile -SourceName "Profile Template" -DestinationName "Profile $_" -Assign "Encl1, bay $_" }
+
 ```
 
 Copy 5 Server Profiles from "Profile Template" that will be assigned to bays 11 - 16 of Encl1.
@@ -72,12 +78,13 @@ The Name or Resource Object of the source server profile to be copied.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -DestinationName &lt;String&gt;
 
-The name of the destination server profile that will be created. If omitted, the new name will have "Copy of " prefixed to the source name.
+The name of the destination server profile that will be created.  If omitted, the new name will have "Copy of " 
+prefixed to the source name.
 
 | Aliases | dname, dst |
 | :--- | :--- |
@@ -89,13 +96,13 @@ The name of the destination server profile that will be created. If omitted, the
 
 ### -Assign &lt;Object&gt;
 
-The name, URI, or object of the target server to assign the new profile to. If omitted, profile will be "unassigned"
+The name, URI, or object of the target server to assign the new profile to.  If omitted, profile will be "unassigned"
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | unassigned |
+| Default value | `unassigned` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -103,13 +110,13 @@ The name, URI, or object of the target server to assign the new profile to. If o
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -123,7 +130,7 @@ Server Profile resource object
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Profile Create async task
 
@@ -136,7 +143,7 @@ Profile Create async task
 * [Get-HPOVServerProfileConnectionList](get-hpovserverprofileconnectionlist.md)
 * [Get-HPOVServerProfileMessage](get-hpovserverprofilemessage.md)
 * [Get-HPOVServerProfileTemplate](get-hpovserverprofiletemplate.md)
-* [Join-HPOVServerProfileToTemplate]()
+* [Join-HPOVServerProfileToTemplate](join-hpovserverprofiletotemplate.md)
 * [New-HPOVServerProfile](new-hpovserverprofile.md)
 * [New-HPOVServerProfileAssign](new-hpovserverprofileassign.md)
 * [New-HPOVServerProfileAttachVolume](new-hpovserverprofileattachvolume.md)
@@ -145,10 +152,9 @@ Profile Create async task
 * [New-HPOVServerProfileLogicalDiskController](new-hpovserverprofilelogicaldiskcontroller.md)
 * [New-HPOVServerProfileTemplate](new-hpovserverprofiletemplate.md)
 * [Remove-HPOVServerProfile](remove-hpovserverprofile.md)
-* [Remove-HPOVServerProfileTemplate]()
+* [Remove-HPOVServerProfileTemplate](remove-hpovserverprofiletemplate.md)
 * [Save-HPOVServerProfile](save-hpovserverprofile.md)
-* [Save-HPOVServerProfileTemplate]()
+* [Save-HPOVServerProfileTemplate](save-hpovserverprofiletemplate.md)
 * [Set-HPOVServerProfile](set-hpovserverprofile.md)
-* [Set-HPOVServerProfileTemplate]()
+* [Set-HPOVServerProfileTemplate](set-hpovserverprofiletemplate.md)
 * [Update-HPOVServerProfile](update-hpovserverprofile.md)
-

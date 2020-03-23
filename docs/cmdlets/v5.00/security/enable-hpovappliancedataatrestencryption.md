@@ -15,9 +15,12 @@ Enable-HPOVApplianceDataAtRestEncryption
 
 ## Description
 
-HPE OneView encrypts sensitive data, such as managed device credentials, when it is stored on-disk in the appliance. The HPE OneView appliance encryption key (AEK) is used internally to encrypt the credentials for managed devices (such as, iLO, onboard administrator, frame link module). By default, the AEK is stored on the HPE Synergy Composer disk and also included in the appliance backup. This could pose a security risk in case the disk is stolen.
+HPE OneView encrypts sensitive data, such as managed device credentials, when it is stored on-disk in the appliance. The HPE OneView appliance encryption key (AEK) is used internally to encrypt the credentials for managed devices (such
+as, iLO, onboard administrator, frame link module). By default, the AEK is stored on the HPE Synergy Composer disk and also included in the appliance backup. This could pose a security risk in case the disk is stolen.
 
-The secure data-at-rest option, when enabled, stores the AEK off-disk in Composer NVRAM, and does not include the key in the appliance backup. Enabling this option requires the administrator to save a copy of the AEK (recovery AEK) for use in the following circumstances:
+The secure data-at-rest option, when enabled, stores the AEK off-disk in Composer NVRAM, and does not include the key
+in the appliance backup. Enabling this option requires the administrator to save a copy of the AEK (recovery AEK) for
+use in the following circumstances:
 When restoring a backup taken when a different AEK was in effect.
 
 To successfully boot the system in the unlikely event that the system copy of the key is corrupted.
@@ -29,6 +32,10 @@ The administrator must store the recovery AEK in a secure location, where it can
 If the downloaded recovery key and the AEK stored in the Composer NVRAM are both lost, the appliance data cannot be recovered.
 
 Using this Cmdlet will enable data at rest encryption for supported HPE Synergy composers.  The appliance encryption key (AEK) will automatically be downloaded and saved to the value of the -Location parameter.  By default, this will be the working directory where the Cmdlet is executed in.
+
+{% hint style="info" %}
+Minimum required privileges: Infrastructure administrator
+{% endhint %}
 
 ## Examples
 

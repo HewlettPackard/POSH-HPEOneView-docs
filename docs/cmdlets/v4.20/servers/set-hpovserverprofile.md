@@ -1,4 +1,4 @@
----
+﻿---
 description: Not implemented.
 ---
 
@@ -17,10 +17,11 @@ Not implemented.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Set-HPOVServerProfile
+
 ```
 
 Default example
@@ -45,7 +46,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 * [Get-HPOVServerProfileConnectionList](get-hpovserverprofileconnectionlist.md)
 * [Get-HPOVServerProfileMessage](get-hpovserverprofilemessage.md)
 * [Get-HPOVServerProfileTemplate](get-hpovserverprofiletemplate.md)
-* [Join-HPOVServerProfileToTemplate]()
+* [Join-HPOVServerProfileToTemplate](join-hpovserverprofiletotemplate.md)
 * [New-HPOVServerProfile](new-hpovserverprofile.md)
 * [New-HPOVServerProfileAssign](new-hpovserverprofileassign.md)
 * [New-HPOVServerProfileAttachVolume](new-hpovserverprofileattachvolume.md)
@@ -54,9 +55,8 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 * [New-HPOVServerProfileLogicalDiskController](new-hpovserverprofilelogicaldiskcontroller.md)
 * [New-HPOVServerProfileTemplate](new-hpovserverprofiletemplate.md)
 * [Remove-HPOVServerProfile](remove-hpovserverprofile.md)
-* [Remove-HPOVServerProfileTemplate]()
+* [Remove-HPOVServerProfileTemplate](remove-hpovserverprofiletemplate.md)
 * [Save-HPOVServerProfile](save-hpovserverprofile.md)
-* [Save-HPOVServerProfileTemplate]()
-* [Set-HPOVServerProfileTemplate]()
+* [Save-HPOVServerProfileTemplate](save-hpovserverprofiletemplate.md)
+* [Set-HPOVServerProfileTemplate](set-hpovserverprofiletemplate.md)
 * [Update-HPOVServerProfile](update-hpovserverprofile.md)
-

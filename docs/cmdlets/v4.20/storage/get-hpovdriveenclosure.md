@@ -1,4 +1,4 @@
----
+﻿---
 description: List Synergy DAS Enclosures.
 ---
 
@@ -19,7 +19,7 @@ This Cmdlet will help display the avialable Synergy DAS Enclosures, and their as
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVDriveEnclosure
@@ -36,7 +36,7 @@ Get all available Synergy Drive Enclosures.
 
 ### -Name &lt;String&gt;
 
-The name of the Synergy DAS enclosure. Omitt to return all devices.
+The name of the Synergy DAS enclosure.  Omitt to return all devices.
 
 | Aliases | None |
 | :--- | :--- |
@@ -54,21 +54,21 @@ Specify the label associated with resources.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
+| Default value | `False` |
 | Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -76,15 +76,15 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this cmdlet.**_
+_**None.  You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Storage.DriveEnclosure \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Storage.DriveEnclosure [System.Management.Automation.PSCustomObject]**_
 
 Single resource object.
 
-_**System.Collections.ArrayList**_ 
+_**System.Collections.ArrayList <HPOneView.Storage.DriveEnclosure>**_
 
 Multiple resource objects.
 

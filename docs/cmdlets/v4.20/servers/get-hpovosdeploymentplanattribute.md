@@ -1,4 +1,4 @@
----
+﻿---
 description: Get HPE Synergy Image Streamer deployment plan parameters.
 ---
 
@@ -15,11 +15,11 @@ Get-HPOVOSDeploymentPlanAttribute
 
 ## Description
 
-HPE Synergy Image Streamer allows administrators to rapidly provision stateless operating systems along with bare metal provisioning. An OS Deployment Plan dicates the characteristics of the OS, including vendor, version, boot disk size, and OS personalization parameters. This Cmdlet will return OS Deployment Plan available and editable parameters.
+HPE Synergy Image Streamer allows administrators to rapidly provision stateless operating systems along with bare metal provisioning.  An OS Deployment Plan dicates the characteristics of the OS, including vendor, version, boot disk size, and OS personalization parameters.  This Cmdlet will return OS Deployment Plan available and editable parameters. 
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVOSDeploymentPlan -Name "RHEL 7.2 OS" -ErrorAction Stop | Get-HPOVOSDeploymentPlanAttribute
@@ -27,7 +27,7 @@ Get-HPOVOSDeploymentPlan -Name "RHEL 7.2 OS" -ErrorAction Stop | Get-HPOVOSDeplo
 
 Return OS Deployment Plan parameters from the "RHEL 7.2 OS" deployment plan.
 
-### Example 2
+###  Example 2 
 
 ```text
 $OSDeploymentAttributes = Get-HPOVOSDeploymentPlanAttributes -InputObject $MyDeploymentPlan
@@ -55,20 +55,20 @@ The OS Deployment Plan from `Get-HPOVOSDeploymentPlan`.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -76,7 +76,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Appliance.OSDeploymentPlan \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.OSDeploymentPlan [System.Management.Automation.PSCustomObject]**_
 
 The OS Deployment Plan from [`Get-HPOVOSDeploymentPlan`](get-hpovosdeploymentplan.md).
 

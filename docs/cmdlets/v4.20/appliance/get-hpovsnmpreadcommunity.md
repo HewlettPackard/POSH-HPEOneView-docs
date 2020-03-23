@@ -1,4 +1,4 @@
----
+﻿---
 description: GRetrieve Appliance SNMP Read Community.
 ---
 
@@ -18,10 +18,11 @@ Get the configured appliance SNMP Read Community string.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVSnmpReadCommunity
+
 ```
 
 Retrieve the SNMP Read Community string the appliance is configured to use from all connected sessions.
@@ -30,15 +31,15 @@ Retrieve the SNMP Read Community string the appliance is configured to use from 
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -46,7 +47,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this cmdlet.**_
+_**None.  You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
@@ -57,4 +58,3 @@ The SNMP Read Community
 ## Related Links
 
 * [Set-HPOVSnmpReadCommunity](set-hpovsnmpreadcommunity.md)
-

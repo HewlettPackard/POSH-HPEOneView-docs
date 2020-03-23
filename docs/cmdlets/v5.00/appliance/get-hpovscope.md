@@ -58,7 +58,7 @@ When scopes are defined and resources assigned to them, you can:
 
 Returned Scope object(s) will contain a collection of associated resources.
 
-Minimum Required Privileges: Read-Only
+Minimum Minimum required privileges: Read-Only
 
 ## Examples
 

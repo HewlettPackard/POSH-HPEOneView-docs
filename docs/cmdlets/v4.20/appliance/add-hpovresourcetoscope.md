@@ -1,4 +1,4 @@
----
+﻿---
 description: Add supported resource to Scope.
 ---
 
@@ -17,24 +17,23 @@ Add-HPOVResourceToScope
 
 ## Description
 
-This Cmdlet will add supported resources to a specified Scope.. All the resources in these categories can be added to or removed from a scope:
+This Cmdlet will add supported resources to a specified Scope..  All the resources in these categories can be added to or removed from a scope:
 
-* Enclosures
-* Server Hardware
-* Networks \(Ethernet, FC, and FCoE\)
-* Network Sets
-* Interconnects, excluding SAS resources
-* Logical Interconnects, excluding SAS resources
-* Logical Interconnect Groups, excluding SAS resources
-* Switches
-* Logical Switches
-* Logical Switch Groups
+    * Enclosures
+    * Server Hardware
+    * Networks (Ethernet, FC, and FCoE)
+    * Network Sets
+    * Interconnects, excluding SAS resources
+    * Logical Interconnects, excluding SAS resources
+    * Logical Interconnect Groups, excluding SAS resources
+    * Switches
+    * Logical Switches
+    * Logical Switch Groups
 
 {% hint style="info" %}
-Resources in other categories are considered to be included in all scopes,
+Resources in other categories are considered to be included in all scopes, and they cannot be removed.
 {% endhint %}
 
-and they cannot be removed.
 
 {% hint style="info" %}
 Minimum required privileges: Infrastructure administrator
@@ -42,12 +41,13 @@ Minimum required privileges: Infrastructure administrator
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 $Resources += Get-HPOVNetwork -Name ProdVLan* 
 $Resources += Get-HPOVServer -Name Encl1* 
 Get-HPOVScope -Name MyScope | Add-HPOVResourceToScope -InputObject $Resources
+
 ```
 
 Add the resources collected to the MyScope scope.
@@ -56,14 +56,14 @@ Add the resources collected to the MyScope scope.
 
 ### -Scope &lt;HPOneView.Appliance.ScopeCollection&gt;
 
-The Scope resource to add the resource\(s\) to.
+The Scope resource to add the resource(s) to.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true \(ByValue\) |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -InputObject &lt;Object&gt;
@@ -80,7 +80,7 @@ Specify to return asyncronous task after file upload has completed.
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
@@ -94,13 +94,13 @@ Use this parameter to immediately return the async task. By default, the Cmdlet 
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | False |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? | true \(ByPropertyName\) |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -114,7 +114,7 @@ Scope resource object from [`Get-HPOVScope`](get-hpovscope.md).
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Asyncronous task resource that updates the Scope and associated resources.
 

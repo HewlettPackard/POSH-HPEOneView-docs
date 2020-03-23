@@ -18,7 +18,9 @@ HPE OneView contains a technical feature that will allow an on-site Authorized t
 
 Use this Cmdlet to enable service console access.
 
-Required: Infrastructure administrator
+{% hint style="info" %}
+Minimum required privileges: Infrastructure administrator
+{% endhint %}
 
 ## Examples
 

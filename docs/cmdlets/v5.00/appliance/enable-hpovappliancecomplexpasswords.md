@@ -25,7 +25,9 @@ Complex passwords must contain the following:
     * Minimum of one special character. For example: !@#$^*_-=+,.?
     * No whitespace
 
-Privileges: Infrastructure administrator
+{% hint style="info" %}
+Minimum required privileges: Infrastructure administrator
+{% endhint %}
 
 ## Examples
 

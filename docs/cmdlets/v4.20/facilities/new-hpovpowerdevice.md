@@ -1,4 +1,4 @@
----
+﻿---
 description: Default content
 ---
 
@@ -12,10 +12,11 @@ Default content
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 New-HPOVPowerDevice
+
 ```
 
 Default example
@@ -36,4 +37,3 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 * [Add-HPOVPowerDeviceConnection](add-hpovpowerdeviceconnection.md)
 * [Get-HPOVPowerDevice](get-hpovpowerdevice.md)
 * [Remove-HPOVPowerDevice](remove-hpovpowerdevice.md)
-

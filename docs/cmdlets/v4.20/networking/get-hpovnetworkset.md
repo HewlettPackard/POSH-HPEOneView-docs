@@ -1,4 +1,4 @@
----
+﻿---
 description: Retrieve Network Set resource(s).
 ---
 
@@ -27,38 +27,42 @@ Get-HPOVNetworkSet
 
 ## Description
 
-Retrieves a list of all Network Sets or just specific Networks Sets via a query if the name parameter is provided. The Network Set output can be sent to a file using the exportFile parameter.
+Retrieves a list of all Network Sets or just specific Networks Sets via a query if the name parameter is provided.  The Network Set output can be sent to a file using the exportFile parameter.
 
 ## Examples
 
-### Example 1
+###  Example 1 
 
 ```text
 Get-HPOVNetworkSet
+
 ```
 
 Returns all Network Sets defined on the appliance to standard output.
 
-### Example 2
+###  Example 2 
 
 ```text
 Get-HPOVNetworkSet -Name "Production"
+
 ```
 
 Returns just the Production Network Set object to standard output.
 
-### Example 3
+###  Example 3 
 
 ```text
 $myNetSets = Get-HPOVNetworkSet
+
 ```
 
 Returns the `Get-HPOVNetworkSet` query and stores it in the object $myNetSets
 
-### Example 4
+###  Example 4 
 
 ```text
 Get-HPOVNetworkSet -exportFile "c:\myApplianceConfig\Network-Sets.json"
+
 ```
 
 Returns the `Get-HPOVNetworkSet` query results to the file c:\myApplianceConfig\Network-Sets.json
@@ -79,18 +83,18 @@ The name of the Network Set to retrieve.
 
 ### -Scope &lt;Object&gt;
 
-Filter resources based on provided Scope membership. By default, all resources for the accounts Active Permissions will be displayed. Allowed values:
+Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-* AllResources
-* AllResourcesInScope
-* `[HPOneView.Appliance.ScopeCollection]`
-* `[HPOneView.Appliance.ConnectionPermission]`
+    * AllResources
+    * AllResourcesInScope
+    * `[HPOneView.Appliance.ScopeCollection]`
+    * `[HPOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | AllResourcesInScope |
+| Default value | `AllResourcesInScope` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -102,21 +106,21 @@ Specify the label associated with resources.
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
+| Default value | `False` |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
-| Aliases | Appliance |  |
-| :--- | :--- | :--- |
-| Required? | True |  |
-| Position? | Named |  |
-| Default value | \(${Global:ConnectedSessions} | ? Default\) |
-| Accept pipeline input? | false |  |
-| Accept wildcard characters? | False |  |
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value | `(${Global:ConnectedSessions} | ? Default)` |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### -exportFile &lt;String&gt;
 
@@ -136,15 +140,15 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this cmdlet.**_
+_**None.  You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Networking.NetworkSet \[System.Management.Automation.PSCustomObject\]**_
+_**HPOneView.Networking.NetworkSet [System.Management.Automation.PSCustomObject]**_
 
 Single Network Set
 
-_**System.Collections.ArrayList**_ 
+_**System.Collections.ArrayList <HPOneView.Networking.NetworkSet>**_
 
 Multiple Network Sets
 
@@ -152,5 +156,4 @@ Multiple Network Sets
 
 * [New-HPOVNetworkSet](new-hpovnetworkset.md)
 * [Remove-HPOVNetworkSet](remove-hpovnetworkset.md)
-* [Set-HPOVNetworkSet]()
-
+* [Set-HPOVNetworkSet](set-hpovnetworkset.md)

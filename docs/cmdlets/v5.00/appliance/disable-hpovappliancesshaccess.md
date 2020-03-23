@@ -19,7 +19,9 @@ HPE OneView supports Secure Shell (SSH) to remotely access the appliance to perf
 
 Use this Cmdlet to disable appliance SSH access.
 
-Privileges: Infrastructure administrator
+{% hint style="info" %}
+Minimum required privileges: Infrastructure administrator
+{% endhint %}
 
 ## Examples
 

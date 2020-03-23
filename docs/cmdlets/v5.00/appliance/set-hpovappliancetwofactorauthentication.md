@@ -177,7 +177,7 @@ You can edit the value to enable HPE OneView to search for the user name within 
 Use a `comma-separated` list to include multiple values in the entry field, allowing HPE OneView to search multiple Subject Alternative Name attributes for a valid user name.
 
 {% hint style="info" %}
-You can instruct HPE OneView to search for the user name within the attributes of the "Subject" field of the smart card certificate (either in addition to, or instead of, searching within "Subject Alternative Name" attributes). See subject entry in the "Certificate owner" field for details.
+You can instruct HPE OneView to search for the user name within the attributes of the "Subject" field of the smart card certificate (either in addition to, or instead of, searching within "Subject Alternative Name" attributes). See subject entry in the "Certificate owner" field for details.
 {% endhint %}
 
 
@@ -206,7 +206,7 @@ Microsoft Active Directory users must note that the DN is extracted as an aggreg
 Use a comma separated list to include multiple values in the entry field, allowing HPE OneView to search multiple Subject attributes for a valid user name. 
 
 {% hint style="info" %}
-You can instruct HPE OneView to search for the user name within the attributes of the "Subject" field of the smart card certificate (either in addition to, or instead of, searching within "Subject Alternative Name" attributes). 
+You can instruct HPE OneView to search for the user name within the attributes of the "Subject" field of the smart card certificate (either in addition to, or instead of, searching within "Subject Alternative Name" attributes). 
 {% endhint %}
 
 

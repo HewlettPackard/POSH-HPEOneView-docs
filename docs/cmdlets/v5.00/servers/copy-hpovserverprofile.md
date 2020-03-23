@@ -21,7 +21,9 @@ You can copy a server profile to server hardware of the same server hardware typ
 
 This Cmdlet will copy a source Server Profile to a new instance You can assign the copy to an existing Server Device, or specify "unassigned".
 
-Privileges: Infrastructure administrator or Server administrator
+{% hint style="info" %}
+Minimum required privileges: Infrastructure administrator or Server administrator
+{% endhint %}
 
 ## Examples
 

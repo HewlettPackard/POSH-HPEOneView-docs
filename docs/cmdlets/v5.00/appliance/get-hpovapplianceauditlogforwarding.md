@@ -27,7 +27,9 @@ As audit log entries are forwarded over UDP, the entries are not encrypted and d
 
 This Cmdlet will return the current status, remote Syslog destination and port currently configured on the appliance.
 
-Privileges: Infrastructure administrator.
+{% hint style="info" %}
+Minimum required privileges: Infrastructure administrator.
+{% endhint %}
 
 ## Examples
 
