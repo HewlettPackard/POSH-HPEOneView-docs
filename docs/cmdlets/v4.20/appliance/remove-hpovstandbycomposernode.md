@@ -1,4 +1,4 @@
-﻿---
+---
 description: Remove Standby Composer node.
 ---
 
@@ -15,15 +15,14 @@ Remove-HPOVStandbyComposerNode
 
 ## Description
 
-This Cmdlet will help remove the Standby Composer node from the Synergy management ring.  In order to remove the Active node from the Synergy management ring, you first must use the Enable-HPOVComposerHANode Cmdlet to transition the Standby node to the Active role.
+This Cmdlet will help remove the Standby Composer node from the Synergy management ring. In order to remove the Active node from the Synergy management ring, you first must use the Enable-HPOVComposerHANode Cmdlet to transition the Standby node to the Active role.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Remove-HPOVStandbyComposerNode
-
 ```
 
 Remove the Standby Composer node in the default Appliance Connection.
@@ -32,7 +31,7 @@ Remove the Standby Composer node in the default Appliance Connection.
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
@@ -46,17 +45,15 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default -eq $true)` |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | True |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default -eq $true\)\` |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### -WhatIf &lt;SwitchParameter&gt;
-
-
 
 | Aliases | wi |
 | :--- | :--- |
@@ -67,8 +64,6 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
-
-
 
 | Aliases | cf |
 | :--- | :--- |
@@ -84,15 +79,15 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this cmdlet.**_
+_**None. You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
 The Async task resource of the remove standby node request
 
-_**System.Collections.ArrayList <HPOneView.Appliance.TaskResource>**_
+_**System.Collections.ArrayList**_ 
 
 Multiple Async task resources
 

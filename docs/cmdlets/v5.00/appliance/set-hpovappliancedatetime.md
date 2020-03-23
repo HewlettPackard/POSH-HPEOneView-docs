@@ -1,4 +1,4 @@
-﻿---
+---
 description: Update Appliance Date/Time Configuration.
 ---
 
@@ -35,7 +35,7 @@ Minimum required privileges: Infrastructure administrator
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Set-HPOVApplianceDateTime -NTPServers 10.55.1.1, 10.54.1.1 -PollingInterval 60
@@ -43,7 +43,7 @@ Set-HPOVApplianceDateTime -NTPServers 10.55.1.1, 10.54.1.1 -PollingInterval 60
 
 This example passes in updated values to set for the appliance networking configuration.
 
-###  Example 2 
+### Example 2
 
 ```text
 Set-HPOVApplianceDateTime -SyncWithHost
@@ -55,7 +55,7 @@ This example passes in updated values to set for the appliance networking config
 
 ### -SyncWithHost &lt;SwitchParameter&gt;
 
-Specify to configure the embedded hypervisor integration agent to sync time with the hypervisor host.  Only used with a virtual machine appliance.
+Specify to configure the embedded hypervisor integration agent to sync time with the hypervisor host. Only used with a virtual machine appliance.
 
 | Aliases | None |
 | :--- | :--- |
@@ -67,7 +67,7 @@ Specify to configure the embedded hypervisor integration agent to sync time with
 
 ### -NTPServers &lt;Array&gt;
 
-An array of IPv4 Addresses or Fully Qualified Domain Names.  You must ensure DNS is configured on the appliance correctly..
+An array of IPv4 Addresses or Fully Qualified Domain Names. You must ensure DNS is configured on the appliance correctly..
 
 | Aliases | None |
 | :--- | :--- |
@@ -93,9 +93,9 @@ The polling interval in seconds the NTP client will use to verify time drift.
 
 Specify the language local for the appliance
 
-    * en_US - US English
-    * zh_CN - Simplified Chinese
-    * ja_JP - Japanese
+* en\_US - US English
+* zh\_CN - Simplified Chinese
+* ja\_JP - Japanese
 
 | Aliases | None |
 | :--- | :--- |
@@ -107,17 +107,17 @@ Specify the language local for the appliance
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-Default Value: ${Global:ConnectSessions} | ? Default
+Default Value: ${Global:ConnectSessions} \| ? Default
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### &lt;CommonParameters&gt;
 
@@ -125,14 +125,15 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this Cmdlet.**_
+_**None. You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
 Asynchronous task resource to monitor
 
 ## Related Links
 
 * [Get-HPOVApplianceDateTime](get-hpovappliancedatetime.md)
+

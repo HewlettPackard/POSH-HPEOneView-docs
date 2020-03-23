@@ -1,4 +1,4 @@
-﻿---
+---
 description: Set HPE OneView Remote Support default primary contact.
 ---
 
@@ -23,7 +23,7 @@ Required permissions: Infrastructure administrator
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 $PrimaryContact = Get-HPOVRemoteSupportContact -Name "Bob Smith"
@@ -36,19 +36,17 @@ Set a new HPE OneView Remote Support primary contact on the appliance.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | true \(ByPropertyName\) |  |
+| Accept wildcard characters? | False |  |
 
 ### -Confirm &lt;SwitchParameter&gt;
-
-
 
 | Aliases | cf |
 | :--- | :--- |
@@ -67,12 +65,10 @@ HPE OneView Remote Support contact from `Get-HPOVRemoteSupportContact`.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### -WhatIf &lt;SwitchParameter&gt;
-
-
 
 | Aliases | wi |
 | :--- | :--- |
@@ -88,16 +84,17 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Appliance.RemoteSupport.Contact [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.RemoteSupport.Contact \[System.Management.Automation.PSCustomObject\]**_
 
 Remote support contact from [`Get-HPOVRemoteSupportContact`](get-hpovremotesupportcontact.md).
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
 Asynchronous task resource to monitor
 
 ## Related Links
 
 * [Set-HPOVRemoteSupportSecondaryContact](set-hpovremotesupportsecondarycontact.md)
+

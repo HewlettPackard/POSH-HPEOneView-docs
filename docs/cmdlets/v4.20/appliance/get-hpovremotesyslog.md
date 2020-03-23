@@ -1,4 +1,4 @@
-﻿---
+---
 description: Get the configured remote syslog settings.
 ---
 
@@ -14,11 +14,11 @@ Get-HPOVRemoteSyslog
 
 ## Description
 
-The remoteSyslog API provides the ability to configure remote logging on devices managed by OneView.  This Cmdlet handles retrieving the remote syslog configuration.
+The remoteSyslog API provides the ability to configure remote logging on devices managed by OneView. This Cmdlet handles retrieving the remote syslog configuration.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Get-HPOVRemoteSyslog
@@ -30,7 +30,7 @@ appliance2.domain.com 10.150.20.1 514  True
 
 Get the current configuration from all connected appliances.
 
-###  Example 2 
+### Example 2
 
 ```text
 Get-HPOVRemoteSyslog -ApplianceConnection appliance1.domain.com
@@ -45,15 +45,15 @@ Get the current configuration from specified connected appliance.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | True |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### &lt;CommonParameters&gt;
 
@@ -65,11 +65,11 @@ _**None. You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.RemoteSyslog [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.RemoteSyslog \[System.Management.Automation.PSCustomObject\]**_
 
 If successful, returns Appliance Syslog settings
 
-_**System.Collections.ArrayList <HPOneView.RemoteSyslog>**_
+_**System.Collections.ArrayList**_ 
 
 Collection of Appliance Syslog settings
 
@@ -78,3 +78,4 @@ Collection of Appliance Syslog settings
 * [Disable-HPOVRemoteSyslog](disable-hpovremotesyslog.md)
 * [Enable-HPOVRemoteSyslog](enable-hpovremotesyslog.md)
 * [Set-HPOVRemoteSyslog](set-hpovremotesyslog.md)
+

@@ -1,4 +1,4 @@
-﻿---
+---
 description: Retrieve Enclosure Group resource(s).
 ---
 
@@ -20,20 +20,18 @@ Obtain a collection of Enclosure Group resources, or a single Enclosure Group wi
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 $enclosures = Get-HPOVEnclosureGroup
-
 ```
 
 Return all the enclosure groups managed by this appliance.
 
-###  Example 2 
+### Example 2
 
 ```text
 $enclosure = Get-HPOVEnclosureGroup "A"
-
 ```
 
 Return the enclosure group resource with name "A".
@@ -42,7 +40,7 @@ Return the enclosure group resource with name "A".
 
 ### -Name &lt;String&gt;
 
-The name of the Enclosure Group resource to be returned.  All enclosure group resources will be returned if omitted.
+The name of the Enclosure Group resource to be returned. All enclosure group resources will be returned if omitted.
 
 | Aliases | None |
 | :--- | :--- |
@@ -66,7 +64,7 @@ Specify the label associated with resources.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -94,11 +92,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this cmdlet.**_
+_**None. You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.EnclosureGroup [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.EnclosureGroup \[System.Management.Automation.PSCustomObject\]**_
 
 Single Enclosure Group
 
@@ -110,4 +108,5 @@ The matching enclosure group resources.
 
 * [New-HPOVEnclosureGroup](new-hpovenclosuregroup.md)
 * [Remove-HPOVEnclosureGroup](remove-hpovenclosuregroup.md)
-* [Set-HPOVEnclosureGroup](set-hpovenclosuregroup.md)
+* [Set-HPOVEnclosureGroup](../../v5.00/servers/set-hpovenclosuregroup.md)
+

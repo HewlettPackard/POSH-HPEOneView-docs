@@ -1,4 +1,4 @@
-﻿---
+---
 description: Retrieve available baseline repository information.
 ---
 
@@ -13,24 +13,22 @@ Get-HPOVBaselineRepository
 
 ## Description
 
-This Cmdlet will return all configured baseline repositoryies by default.  Only a single External Repository can be defined per appliance.
+This Cmdlet will return all configured baseline repositoryies by default. Only a single External Repository can be defined per appliance.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 $Repositories = Get-HPOVBaselineRepository
-
 ```
 
 Retrieves all repository objects from the appliance.
 
-###  Example 2 
+### Example 2
 
 ```text
 Get-HPOVBaselineRepository -Type External
-
 ```
 
 Retrieves only the configured external repository on the appliance.
@@ -63,19 +61,19 @@ Specify "Internal" or "External" to filter the repository type.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
+Aliases \[-Appliance\]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-Default Value: ${Global:ConnectedSessions} | ? Default
+Default Value: ${Global:ConnectedSessions} \| ? Default
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### &lt;CommonParameters&gt;
 
@@ -83,22 +81,21 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this Cmdlet.**_
+_**None. You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.BaselineRepository [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.BaselineRepository \[System.Management.Automation.PSCustomObject\]**_
 
 Either and Internal or External repository object
 
-_**System.Collections.ArrayList <HPOneView.Appliance.BaselineRepository>**_
+_**System.Collections.ArrayList**_ 
 
 Multiple resource objects
 
 _**The configured baseline repositories are returned if no parameters are provided.**_
 
-
-
 ## Related Links
 
 * [Show-HPOVBaselineRepositorySize](show-hpovbaselinerepositorysize.md)
+

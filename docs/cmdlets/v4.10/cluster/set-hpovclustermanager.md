@@ -1,4 +1,4 @@
-﻿---
+---
 description: Modify an existing hypervisor manager.
 ---
 
@@ -34,7 +34,7 @@ The user must have an infrastructure administrator privilege to register or upda
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 $Manager = Get-HPOVClusterManager -Name vCenter1 -ErrorAction Stop
@@ -43,15 +43,15 @@ Set-HPOVClusterManager -InputObject $Manager -Credential (Get-Credential NewUser
 
 Update the vCenter credentials to use for the conencted hypervisor manager, and enable DRS preference to true.
 
-###  Example 2 
+### Example 2
 
 ```text
-Get-HPOVClusterManager -Name vCenter1 -ErrorAction Stop | Set-HPOVClusterManager -VirtualSwitchType Distributed -DistributedSwitchUsage AllNetworks -DistributedSwitchVersion 6.0 
+Get-HPOVClusterManager -Name vCenter1 -ErrorAction Stop | Set-HPOVClusterManager -VirtualSwitchType Distributed -DistributedSwitchUsage AllNetworks -DistributedSwitchVersion 6.0
 ```
 
 Change the vCenter preferences to enable Distributed virtual switch for all networking, and set the distributed switch version to 6.0.
 
-###  Example 3 
+### Example 3
 
 ```text
 $Manager = Get-HPOVClusterManager -Name vCenter1 -ErrorAction Stop
@@ -62,7 +62,7 @@ $Manager.AvailableDvsVersions
 5.0.0
 5.1.0
 5.5.0
-Set-HPOVClusterManager -DistributedSwitchVersion 5.5.0 
+Set-HPOVClusterManager -DistributedSwitchVersion 5.5.0
 ```
 
 Get the hypervisor manager, display the supported and available distribute switch versions, and set the manager to the maximum supported version 5.5.0.
@@ -71,23 +71,23 @@ Get the hypervisor manager, display the supported and available distribute switc
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
+Aliases \[-Appliance\]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-Default Value: ${Global:ConnectedSessions} | ? Default
+Default Value: ${Global:ConnectedSessions} \| ? Default
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | true \(ByPropertyName\) |  |
+| Accept wildcard characters? | False |  |
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
@@ -137,8 +137,8 @@ Change the hypervisor managers display name. Used for resource lookup.
 
 Applicable only when vSwitch type is Distributed. This specifies which networks should be configured for distributed switches. Allowed values:
 
-	* AllNetworks - Configures all the networks in the hypervisor cluster profile with distributed virtual switches. All networks include Management, special purpose and general purpose networks. The special purpose networks comprise VM Migration, iSCSI and Fault Tolerance.
-	* GeneralNetworks - Configures the general purpose networks in the hypervisor cluster profile with distributed virtual switches.
+* AllNetworks - Configures all the networks in the hypervisor cluster profile with distributed virtual switches. All networks include Management, special purpose and general purpose networks. The special purpose networks comprise VM Migration, iSCSI and Fault Tolerance.
+* GeneralNetworks - Configures the general purpose networks in the hypervisor cluster profile with distributed virtual switches.
 
 | Aliases | None |
 | :--- | :--- |
@@ -193,7 +193,7 @@ The `[HPOneView.Cluster.HypervisorManager]` resource from `Get-HPOVClusterManage
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### -MultiNicVMotionEnabled &lt;bool&gt;
@@ -224,8 +224,8 @@ Modify the vCenter API SSL port.
 
 Configures virtual switch on a hypervisor with a specified type. Allowed values:
 
-	* Standard - A virtual switch configured and managed at the hypervisor level; provides networking to virtual machines and VM kernels.
-	* Distributed - A virtual switch configured and managed at data center level and configured for each hypervisor to provide networking to virtual machines and VM Kernels.
+* Standard - A virtual switch configured and managed at the hypervisor level; provides networking to virtual machines and VM kernels.
+* Distributed - A virtual switch configured and managed at data center level and configured for each hypervisor to provide networking to virtual machines and VM Kernels.
 
 | Aliases | None |
 | :--- | :--- |
@@ -247,13 +247,13 @@ The hypervisor manager from [`Get-HPOVClusterManager`](get-hpovclustermanager.md
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
 Asyncronous task resource to monitor.
-
 
 ## Related Links
 
 * [Add-HPOVClusterManager](add-hpovclustermanager.md)
 * [Get-HPOVClusterManager](get-hpovclustermanager.md)
 * [Remove-HPOVClusterManager](remove-hpovclustermanager.md)
+

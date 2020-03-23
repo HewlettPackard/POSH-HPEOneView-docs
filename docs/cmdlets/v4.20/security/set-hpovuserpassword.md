@@ -1,4 +1,4 @@
-﻿---
+---
 description: Update current user account password.
 ---
 
@@ -16,15 +16,14 @@ Set-HPOVUserPassword
 
 ## Description
 
-This cmdlet provides the ability to update the current user account password.  Only HPE OneView appliance local account passwords will be changed.  This cmdlet does not assist with modifying or updating an LDAP or Active Directory user account"s password.
+This cmdlet provides the ability to update the current user account password. Only HPE OneView appliance local account passwords will be changed. This cmdlet does not assist with modifying or updating an LDAP or Active Directory user account"s password.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Set-HPOVUserPassword MyCurrentPass NewP@ssw0rd
-
 ```
 
 Update your HPE OneView account password to the new value on all connected appliances.
@@ -57,18 +56,17 @@ The new password to be set for the user account. If omitted, the cmdlet will pro
 
 ### -ApplianceConnection &lt;Object&gt;
 
-    
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-    
-Default Value: ${Global:ConnectedSessions} | ? Default
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+Default Value: ${Global:ConnectedSessions} \| ? Default
+
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | True |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### &lt;CommonParameters&gt;
 

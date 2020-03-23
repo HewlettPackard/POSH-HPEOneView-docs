@@ -1,4 +1,4 @@
-﻿---
+---
 description: Save existing backups on an appliance.
 ---
 
@@ -24,26 +24,24 @@ Save-HPOVBackup
 
 HPE OneView provides the ability to save your configuration settings and management data to a backup file and enables you to use that backup to restore a corrupted appliance in the event of a catastrophic failure.
 
-The backup process involves creating a backup file and then downloading that file so that you can store it to a safe and secure (off-appliance) location for future use. You can schedule automatic backup operations and designate a remote location for the backup file.
+The backup process involves creating a backup file and then downloading that file so that you can store it to a safe and secure \(off-appliance\) location for future use. You can schedule automatic backup operations and designate a remote location for the backup file.
 
-Use this cmdlet to save the created appliance backup files.  Use the -SaveRemoteOnly parameter to save the backup file(s) to the remote location if configured on the appliance.
+Use this cmdlet to save the created appliance backup files. Use the -SaveRemoteOnly parameter to save the backup file\(s\) to the remote location if configured on the appliance.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Save-HPOVBackup
-
 ```
 
 Save the found backup file
 
-###  Example 2 
+### Example 2
 
 ```text
 Save-HPOVBackup -Location \\Server\BackupShare\HPOneView
-
 ```
 
 Save the found backup file to the specified location.
@@ -52,23 +50,23 @@ Save the found backup file to the specified location.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
+Aliases \[-Appliance\]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-Default Value: ${Global:ConnectedSessions} | ? Default
+Default Value: ${Global:ConnectedSessions} \| ? Default
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### -Location &lt;String&gt;
 
-Specify the directory or UNC path where to save the backup file(s) to.
+Specify the directory or UNC path where to save the backup file\(s\) to.
 
 | Aliases | save |
 | :--- | :--- |
@@ -80,7 +78,7 @@ Specify the directory or UNC path where to save the backup file(s) to.
 
 ### -SaveRemoteOnly &lt;SwitchParameter&gt;
 
-When appliance automatic backup is configured, use this parameter to specify the backup file(s) should be saved in the remote location, instead of the local PC.
+When appliance automatic backup is configured, use this parameter to specify the backup file\(s\) should be saved in the remote location, instead of the local PC.
 
 | Aliases | None |
 | :--- | :--- |
@@ -108,21 +106,20 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this cmdlet.**_
+_**None. You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
 Async Task resource to monitor progress of the backup file saved to the remote location.
-
 
 _**System.IO.FileInfo**_
 
 The saved backup file located on the PC.
 
-
 ## Related Links
 
 * [Get-HPOVBackup](get-hpovbackup.md)
 * [New-HPOVBackup](new-hpovbackup.md)
+

@@ -1,4 +1,4 @@
-﻿---
+---
 description: Enable Remote Support for a supported resource.
 ---
 
@@ -16,25 +16,23 @@ Enable-HPOVRemoteSupport
 
 ## Description
 
-This Cmdlet will enable Remote Support for a compute or enclosure resource.  If remote support has not been globally enabled and configured on the appliance, this Cmdlet will fail.
+This Cmdlet will enable Remote Support for a compute or enclosure resource. If remote support has not been globally enabled and configured on the appliance, this Cmdlet will fail.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Get-HPOVServer -Name Prod* | Enable-HPOVRemoteSupport
-
 ```
 
 Get the servers with their name matching "Prod" and enable Remote Support for those resources.
 
-###  Example 2 
+### Example 2
 
 ```text
 $Enclosure = Get-HPOVEnclousre -Name Enclosure-1A
 Enable-HPOVRemoteSupport -InputObject $Enclusre
-
 ```
 
 Get the specific enclosure reousrce and enable Remote Support.
@@ -50,12 +48,12 @@ The compute or enclosure resource to enable Remote Support for.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
@@ -67,19 +65,19 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
+Aliases \[-Appliance\]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-Default Value: ${Global:ConnectedSessions} | ? Default
+Default Value: ${Global:ConnectedSessions} \| ? Default
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | True |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | true \(ByPropertyName\) |  |
+| Accept wildcard characters? | False |  |
 
 ### &lt;CommonParameters&gt;
 
@@ -87,20 +85,19 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.ServerHardware [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.ServerHardware \[System.Management.Automation.PSCustomObject\]**_
 
 A Gen8 or newer generation server hardware resource object from [`Get-HPOVServer`](../servers/get-hpovserver.md).
 
-_**HPOneView.Enclosure [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Enclosure \[System.Management.Automation.PSCustomObject\]**_
 
 A Gen8 or newer generation server hardware resource object from [`Get-HPOVServer`](../servers/get-hpovserver.md).
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
 Async task Resource object for monitoring.
-
 
 ## Related Links
 
@@ -122,3 +119,4 @@ Async task Resource object for monitoring.
 * [Set-HPOVRemoteSupportSetting](set-hpovremotesupportsetting.md)
 * [Start-HPOVRemoteSupportCollection](start-hpovremotesupportcollection.md)
 * [Update-HPOVRemoteSupportEntitlement](update-hpovremotesupportentitlement.md)
+

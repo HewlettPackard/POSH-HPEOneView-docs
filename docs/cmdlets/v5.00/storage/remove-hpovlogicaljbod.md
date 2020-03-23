@@ -1,4 +1,4 @@
-﻿---
+---
 description: Create a new HPE Synergy Logical JBOD resource.
 ---
 
@@ -21,15 +21,17 @@ A logical JBOD is a group of physical drives that are dynamically defined as vir
 
 If the logical drive settings in the server profile indicate that the data in the logical JBOD is to be retained when you delete the server profile, then the data is retained and you can assign this logical JBOD to a different server profile.
 
-Using this Cmdlet will remove an existing logical JBOD on the connected appliance.  You can delete a logical JBOD only after you unassign it from the server profile. If you have chosen to erase the drive data when you delete a logical JBOD, all the drive data will be erased.
+Using this Cmdlet will remove an existing logical JBOD on the connected appliance. You can delete a logical JBOD only after you unassign it from the server profile. If you have chosen to erase the drive data when you delete a logical JBOD, all the drive data will be erased.
 
 {% hint style="info" %}
 Minimum required privileges: Infrastructure administrator,
 {% endhint %}
- server administrator, server profile architect, server profile administrator
+
+server administrator, server profile architect, server profile administrator
+
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 $LogicalJBOD = Get-HPOVLogicalJBOD -Name MyLJbod1
@@ -38,7 +40,7 @@ Remove-HPOVLogicalJBOD -InputObject $LogicalJBOD
 
 Remove the specified logical JBOD.
 
-###  Example 2 
+### Example 2
 
 ```text
 # Get the logical JBOD we intend to remove
@@ -63,19 +65,19 @@ Remove the specified logical JBOD when it is associated with a server profile re
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | true \(ByPropertyName\) |  |
+| Accept wildcard characters? | False |  |
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
@@ -86,8 +88,6 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
-
-
 
 | Aliases | cf |
 | :--- | :--- |
@@ -109,21 +109,19 @@ Force delete the resource.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -InputObject &lt;HPOneView.Storage.LogicalJBOD[]&gt;
+### -InputObject &lt;HPOneView.Storage.LogicalJBOD\[\]&gt;
 
-The logical JBOD resource from `Get-HPOVLogialJBOD` Cmdlet.  If the logical JBOD is associated with a server profile, it must first be unassociated from the server profile, then you can remove it.  If the erase on delete option is enabled (or set to true), then data will be deleted from the drive.
+The logical JBOD resource from `Get-HPOVLogialJBOD` Cmdlet. If the logical JBOD is associated with a server profile, it must first be unassociated from the server profile, then you can remove it. If the erase on delete option is enabled \(or set to true\), then data will be deleted from the drive.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### -WhatIf &lt;SwitchParameter&gt;
-
-
 
 | Aliases | wi |
 | :--- | :--- |
@@ -139,13 +137,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Storage.LogicalJBOD[]**_
+_**HPOneView.Storage.LogicalJBOD\[\]**_
 
 One or more logical JBOD resources from [`Get-HPOVLogicalJBOD`](get-hpovlogicaljbod.md).
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
 Asynchronous task resource to monitor.
 
@@ -156,3 +154,4 @@ Asynchronous task resource to monitor.
 * [Get-HPOVLogicalJBOD](get-hpovlogicaljbod.md)
 * [New-HPOVLogicalJBOD](new-hpovlogicaljbod.md)
 * [Set-HPOVLogicalJBOD](set-hpovlogicaljbod.md)
+

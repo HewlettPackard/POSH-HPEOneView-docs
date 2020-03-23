@@ -1,4 +1,4 @@
-﻿---
+---
 description: Retreive Storage Volume Template Global Policy.
 ---
 
@@ -13,11 +13,11 @@ Get-HPOVStorageVolumeTemplatePolicy
 
 ## Description
 
-By default, Storage Volumes can be created without reference to a Storage Volume Template.  This cmdlet will display the global policy setting.  Use Set-HPOVStorageVolumeTemplatePolicy to modify the global policy setting.
+By default, Storage Volumes can be created without reference to a Storage Volume Template. This cmdlet will display the global policy setting. Use Set-HPOVStorageVolumeTemplatePolicy to modify the global policy setting.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Get-HPOVStorageVolumeTemplatePolicy
@@ -25,8 +25,6 @@ Appliance               Name                          Value
 ---------               ----                          -----
 MyAppliance.domain.com  StorageVolumeTemplateRequired true
 MyAppliance2.domain.com StorageVolumeTemplateRequired false
-
-
 ```
 
 Get the Storage Volume Template Global Policy setting from all connected appliances.
@@ -35,19 +33,19 @@ Get the Storage Volume Template Global Policy setting from all connected applian
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
+Aliases \[-Appliance\]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-Default Value: ${Global:ConnectedSessions} | ? Default
+Default Value: ${Global:ConnectedSessions} \| ? Default
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### &lt;CommonParameters&gt;
 
@@ -55,14 +53,15 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this cmdlet.**_
+_**None. You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.GlobalSetting [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.GlobalSetting \[System.Management.Automation.PSCustomObject\]**_
 
 Object resource with the global setting value
 
 ## Related Links
 
 * [Set-HPOVStorageVolumeTemplatePolicy](set-hpovstoragevolumetemplatepolicy.md)
+

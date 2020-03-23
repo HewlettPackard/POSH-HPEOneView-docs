@@ -1,4 +1,4 @@
-﻿---
+---
 description: Verify pending appliance update has been staged.
 ---
 
@@ -26,7 +26,6 @@ Before you update the appliance, examine the HPE OneView Release Notes to learn 
 When you download the appliance update file, a link to the HPE OneView Release Notes appears in the download dialog box. Hewlett Packard Enterprise recommends that you click the link to read, save, and print the information for future reference. Once the download starts, you cannot access the link again.
 {% endhint %}
 
-
 When you install an appliance update, the appliance restarts and goes offline. When the appliance is offline, it does not affect the managed resources. The managed resources continue to operate while the appliance is offline.
 
 {% hint style="info" %}
@@ -35,7 +34,7 @@ Minimum required privileges: Infrastructure administrator or Software administra
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Get-HPOVPendingUpdate
@@ -47,15 +46,15 @@ Retrieve pending update from all connected appliance sessions.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### &lt;CommonParameters&gt;
 
@@ -63,11 +62,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this Cmdlet.**_
+_**None. You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.Update.Pending [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.Update.Pending \[System.Management.Automation.PSCustomObject\]**_
 
 Pending appliance update
 
@@ -76,3 +75,4 @@ Pending appliance update
 * [Get-HPOVVersion](../library/get-hpovversion.md)
 * [Install-HPOVUpdate](install-hpovupdate.md)
 * [Remove-HPOVPendingUpdate](remove-hpovpendingupdate.md)
+

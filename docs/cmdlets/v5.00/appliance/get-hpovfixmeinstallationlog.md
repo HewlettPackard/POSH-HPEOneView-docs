@@ -1,4 +1,4 @@
-﻿---
+---
 description: Get fixme installation log file.
 ---
 
@@ -23,7 +23,7 @@ Minimum required privileges: Infrastructure Administrator
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Get-HPOVFixMeInstallationLog
@@ -35,26 +35,26 @@ Get the fixme installation logs for the connected appliance.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### -Location &lt;System.IO.DirectoryInfo&gt;
 
-The directory location where to save the generated file to.  If omitted, will use the current working directory.
+The directory location where to save the generated file to. If omitted, will use the current working directory.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
@@ -63,7 +63,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this Cmdlet.**_
+_**None. You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 

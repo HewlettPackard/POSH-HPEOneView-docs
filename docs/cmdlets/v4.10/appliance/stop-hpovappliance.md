@@ -1,4 +1,4 @@
-﻿---
+---
 description: Stop an HPE OneView appliance.
 ---
 
@@ -13,28 +13,25 @@ Stop-HPOVAppliance
 
 ## Description
 
-This cmdlet will allow the administrator to stop/shutdown the appliance.  Shutdown of the appliance will cause all users to be disconnected and all ongoing tasks to be interrupted.
+This cmdlet will allow the administrator to stop/shutdown the appliance. Shutdown of the appliance will cause all users to be disconnected and all ongoing tasks to be interrupted.
 
-Only the Infrastructure (Full) Administrator may restart the appliance.
+Only the Infrastructure \(Full\) Administrator may restart the appliance.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Connect-HPOVMgmt appliance.contoso.com Administrator P@ssw0rd
 Stop-HPOVAppliance
-
-
 ```
 
 Shutdown the appliance.
 
-###  Example 2 
+### Example 2
 
 ```text
 Stop-HPOVAppliance -confirm:$false
-
 ```
 
 Shutdown all connected appliances, disable confirmation.
@@ -43,23 +40,21 @@ Shutdown all connected appliances, disable confirmation.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
+Aliases \[-Appliance\]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-Default Value: ${Global:ConnectSessions} | ? Default
+Default Value: ${Global:ConnectSessions} \| ? Default
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | true (ByValue) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | True |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | true \(ByValue\) |  |
+| Accept wildcard characters? | False |  |
 
 ### -WhatIf &lt;SwitchParameter&gt;
-
-
 
 | Aliases | wi |
 | :--- | :--- |
@@ -70,8 +65,6 @@ Default Value: ${Global:ConnectSessions} | ? Default
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
-
-
 
 | Aliases | cf |
 | :--- | :--- |
@@ -101,11 +94,9 @@ _**System.String**_
 
 Warning message the appliance is stopping
 
-
 _**Management.Automation.ErrorRecord**_
 
 Generated error message
-
 
 ## Related Links
 
@@ -152,3 +143,4 @@ Generated error message
 * [Show-HPOVApplianceSecurityModeCompatibilityReport](show-hpovappliancesecuritymodecompatibilityreport.md)
 * [Update-HPOVApplianceTrustedAuthorityCrl](update-hpovappliancetrustedauthoritycrl.md)
 * [Wait-HPOVApplianceStart](../library/wait-hpovappliancestart.md)
+

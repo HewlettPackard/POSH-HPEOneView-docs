@@ -1,4 +1,4 @@
-﻿---
+---
 description: Power reset or EFuse HPS Synergy Frame component.
 ---
 
@@ -30,14 +30,14 @@ Reset-HPOVEnclosureDevice
 
 ## Description
 
-This Cmdlet will assist Server Administrators in performing various power operations with enclosure resources.  The following resources are supported with their supported operation:
+This Cmdlet will assist Server Administrators in performing various power operations with enclosure resources. The following resources are supported with their supported operation:
 
-    * HPE Synergy Appliance Bay - EFuse
-    * HPE Synergy Frame Link Module - EFuse or Resetn    * Device Bay - EFuse or Resetn    * HPE Synergy Fabric Module Device - EFuse
+* HPE Synergy Appliance Bay - EFuse
+* HPE Synergy Frame Link Module - EFuse or Resetn     _Device Bay - EFuse or Resetn_     HPE Synergy Fabric Module Device - EFuse
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 $Enclosure = Get-HPOVEnclosure -Name Enclosure1 -ErrorAction Stop
@@ -46,7 +46,7 @@ Reset-HPOVEnclosureDevice -Enclosure $Enclosure -Component FLM -DeviceID 1 -EFus
 
 Reset the FLM in slot 1 by performing an EFuse.
 
-###  Example 2 
+### Example 2
 
 ```text
 $Task = Get-HPOVEnclosure -Name Enclosure1 -ErrorAction Stop | Reset-HPOVEnclosureDevice -Component Device -DeviceID 4 -Reset
@@ -65,17 +65,17 @@ The Synergy Frame resource from `Get-HPOVEnclosure`.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### -Component &lt;String&gt;
 
-The embedded component to perform the action against.  Allowed value:
+The embedded component to perform the action against. Allowed value:
 
 * FLM - Frame Link Module.  Both EFuse and Reset are supported.
 * Appliance - Management Appliance; Synergy Compser or Synergy Image Streamer.  Only supported method is EFuse.
 * ICM - Synergy Fabric Interconnect Module.  Only supported method is EFuse.
-* Device - Synergy Device (e.g. Compute Node populated in Bay 1). Both EFuse and Reset are supported.
+* Device - Synergy Device \(e.g. Compute Node populated in Bay 1\). Both EFuse and Reset are supported.
 
 | Aliases | None |
 | :--- | :--- |
@@ -99,7 +99,7 @@ The corrisponding bay ID.
 
 ### -Reset &lt;SwitchParameter&gt;
 
-Reset power to the device.  Only supported with certain component types.
+Reset power to the device. Only supported with certain component types.
 
 | Aliases | None |
 | :--- | :--- |
@@ -111,7 +111,7 @@ Reset power to the device.  Only supported with certain component types.
 
 ### -Efuse &lt;SwitchParameter&gt;
 
-EFuse will take away and then present power back to the device.  Supported with all component types.
+EFuse will take away and then present power back to the device. Supported with all component types.
 
 | Aliases | None |
 | :--- | :--- |
@@ -123,7 +123,7 @@ EFuse will take away and then present power back to the device.  Supported with 
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
@@ -135,21 +135,19 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
 Default Value: ${Global:ConnectSessions}
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | True |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | true \(ByPropertyName\) |  |
+| Accept wildcard characters? | False |  |
 
 ### -WhatIf &lt;SwitchParameter&gt;
-
-
 
 | Aliases | wi |
 | :--- | :--- |
@@ -160,8 +158,6 @@ Default Value: ${Global:ConnectSessions}
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
-
-
 
 | Aliases | cf |
 | :--- | :--- |
@@ -183,7 +179,7 @@ Resource from [`Get-HPOVEnclosure`](get-hpovenclosure.md).
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
 Asynchronous task resource to monitor
 

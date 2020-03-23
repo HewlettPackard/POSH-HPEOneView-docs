@@ -1,4 +1,4 @@
-﻿---
+---
 description: Retrieve HPE Synergy OS Deployment Server.
 ---
 
@@ -16,16 +16,14 @@ Get-HPOVOSDeploymentServer
 
 ## Description
 
-Retrieve the created HPE Synergy OS Deployment Server.  An OS deployment server is a resource that enables you to deploy (install and configure) operating systems for use by servers. HPE OneView connects to an OS deployment server and configures it for deploying operating systems.
-HPE OneView manages the OS deployment server after it is configured and displays the list of attributes, management settings, the OS deployment plans, and the server profiles that reference the available OS deployment plans. 
+Retrieve the created HPE Synergy OS Deployment Server. An OS deployment server is a resource that enables you to deploy \(install and configure\) operating systems for use by servers. HPE OneView connects to an OS deployment server and configures it for deploying operating systems. HPE OneView manages the OS deployment server after it is configured and displays the list of attributes, management settings, the OS deployment plans, and the server profiles that reference the available OS deployment plans.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Get-HPOVOSDeploymentServer
-
 ```
 
 List all HPE Synergy OS Deployment servers.
@@ -34,7 +32,7 @@ List all HPE Synergy OS Deployment servers.
 
 ### -Name &lt;String&gt;
 
-Image Streamer resource name.  Supported the * (asterisk) wildcard character.
+Image Streamer resource name. Supported the \* \(asterisk\) wildcard character.
 
 | Aliases | None |
 | :--- | :--- |
@@ -58,15 +56,15 @@ Specify the label associated with resources.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### &lt;CommonParameters&gt;
 
@@ -74,7 +72,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this cmdlet.**_
+_**None. You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
@@ -82,11 +80,12 @@ _**HPOneView.Appliance.OSDeploymentServer**_
 
 An HPE Synergy Image Streamer appliance object.
 
-_**System.Collections.ArrayList<HPOneView.Appliance.OSDeploymentServer>**_
+_**System.Collections.ArrayList**_
 
 A collection of HPE Synergy Image Streamer appliance objects.
 
 ## Related Links
 
 * [New-HPOVOSDeploymentServer](new-hpovosdeploymentserver.md)
-* [Remove-HPOVOSDeploymentServer](remove-hpovosdeploymentserver.md)
+* [Remove-HPOVOSDeploymentServer](../../v5.00/servers/remove-hpovosdeploymentserver.md)
+

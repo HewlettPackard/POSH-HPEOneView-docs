@@ -1,4 +1,4 @@
-﻿---
+---
 description: Get appliance audit log entries.
 ---
 
@@ -27,7 +27,7 @@ Using this CMDLET will retrive the appliance Audit Log enteries and display them
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Get-HPOVAuditLog
@@ -61,7 +61,7 @@ Details   : Add firmware bundle /rest/firmware-drivers/CP026527
 
 Return the audit logs from the appliance.
 
-###  Example 2 
+### Example 2
 
 ```text
 Get-HPOVAuditLog -Start ([DateTime]::Now).AddDays("-5")
@@ -85,7 +85,7 @@ Specify the number of audit log entries to return.
 
 ### -Timespan &lt;Timespan&gt;
 
-Specify the time span of to filter results on.  Cannot be combined with Start or End.
+Specify the time span of to filter results on. Cannot be combined with Start or End.
 
 | Aliases | None |
 | :--- | :--- |
@@ -97,7 +97,7 @@ Specify the time span of to filter results on.  Cannot be combined with Start or
 
 ### -Start &lt;DateTime&gt;
 
-Specify the Start datetime object to begin the serach.  Can be combined with End parameter.
+Specify the Start datetime object to begin the serach. Can be combined with End parameter.
 
 | Aliases | None |
 | :--- | :--- |
@@ -109,7 +109,7 @@ Specify the Start datetime object to begin the serach.  Can be combined with End
 
 ### -End &lt;Object&gt;
 
-Specify the End datetime object to begin the serach.  Should be combined with Start parameter.
+Specify the End datetime object to begin the serach. Should be combined with Start parameter.
 
 | Aliases | None |
 | :--- | :--- |
@@ -121,15 +121,15 @@ Specify the End datetime object to begin the serach.  Should be combined with St
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | True |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### &lt;CommonParameters&gt;
 
@@ -137,18 +137,19 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this cmdlet.**_
+_**None. You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.AuditLogEntry [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.AuditLogEntry \[System.Management.Automation.PSCustomObject\]**_
 
 Single Appliance Audit Log Entry
 
 _**System.Collections.ArrayList**_
 
-Multiple  Appliance Audit Log Entries
+Multiple Appliance Audit Log Entries
 
 ## Related Links
 
 * [Get-HPOVAuditLogArchive](get-hpovauditlogarchive.md)
+

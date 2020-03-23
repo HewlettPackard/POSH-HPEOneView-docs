@@ -1,4 +1,4 @@
-﻿---
+---
 description: Modify an existing hypervisor manager.
 ---
 
@@ -26,7 +26,7 @@ Set-HPOVClusterManager
 
 ## Description
 
-You can register a new hypervisor manager with HPE OneView by providing the hostname and credentials. The registered hypervisor manager contains preferences, which are used as default hypervisor or cluster settings during hypervisor cluster profile creation. You can modify the hypervisor manager preferences using the edit operation. You can override these values in a hypervisor cluster profile. 
+You can register a new hypervisor manager with HPE OneView by providing the hostname and credentials. The registered hypervisor manager contains preferences, which are used as default hypervisor or cluster settings during hypervisor cluster profile creation. You can modify the hypervisor manager preferences using the edit operation. You can override these values in a hypervisor cluster profile.
 
 A valid hypervisor manager certificate must be added to HPE OneView trust store to be able to successfully communicate with a hypervisor manager.
 
@@ -34,7 +34,7 @@ The user must have an infrastructure administrator privilege to register or upda
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Set-HPOVClusterManager
@@ -46,19 +46,19 @@ Default example
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | true \(ByPropertyName\) |  |
+| Accept wildcard characters? | False |  |
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
@@ -70,7 +70,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -Credential &lt;PSCredential&gt;
 
-Use this parameter if you want to provide a PSCredential object.  Using this parameter will update the authentication credentials needed to communicate with the cluster manager.
+Use this parameter if you want to provide a PSCredential object. Using this parameter will update the authentication credentials needed to communicate with the cluster manager.
 
 | Aliases | None |
 | :--- | :--- |
@@ -108,8 +108,8 @@ Change the display name of the cluster manager.
 
 Applicable only when vSwitch type is Distributed. This specifies which networks should be configured for distributed switches. Allowed values:
 
-    * AllNetworks - Configures all the networks in the hypervisor cluster profile with distributed virtual switches. All networks include Management, special purpose and general purpose networks. The special purpose networks comprise VM Migration, iSCSI and Fault Tolerance.
-    * GeneralNetworks - Configures the general purpose networks in the hypervisor cluster profile with distributed virtual switches.
+* AllNetworks - Configures all the networks in the hypervisor cluster profile with distributed virtual switches. All networks include Management, special purpose and general purpose networks. The special purpose networks comprise VM Migration, iSCSI and Fault Tolerance.
+* GeneralNetworks - Configures the general purpose networks in the hypervisor cluster profile with distributed virtual switches.
 
 | Aliases | None |
 | :--- | :--- |
@@ -164,7 +164,7 @@ The cluster manager resource object from `Get-HPOVClusterManager`.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### -MultiNicVMotionEnabled &lt;bool&gt;
@@ -195,8 +195,8 @@ Use to update the TCP port of the cluster manager.
 
 Use to adjust the virtual switch for hypervisor clsuters with the specified type. Allowed values:
 
-    * Standard - A virtual switch configured and managed at the hypervisor level; provides networking to virtual machines and VM kernels.
-    * Distributed - A virtual switch configured and managed at data center level and configured for each hypervisor to provide networking to virtual machines and VM Kernels.
+* Standard - A virtual switch configured and managed at the hypervisor level; provides networking to virtual machines and VM kernels.
+* Distributed - A virtual switch configured and managed at data center level and configured for each hypervisor to provide networking to virtual machines and VM Kernels.
 
 | Aliases | None |
 | :--- | :--- |
@@ -218,7 +218,7 @@ The cluster manager from [`Get-HPOVClusterManager`](get-hpovclustermanager.md).
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
 Asynchronous task resource to monitor.
 
@@ -227,3 +227,4 @@ Asynchronous task resource to monitor.
 * [Add-HPOVClusterManager](add-hpovclustermanager.md)
 * [Get-HPOVClusterManager](get-hpovclustermanager.md)
 * [Remove-HPOVClusterManager](remove-hpovclustermanager.md)
+

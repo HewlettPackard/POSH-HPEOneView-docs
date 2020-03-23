@@ -1,4 +1,4 @@
-﻿---
+---
 description: Retrieve HPE Synergy OS Deployment Server.
 ---
 
@@ -16,7 +16,7 @@ Get-HPOVOSDeploymentServer
 
 ## Description
 
-An OS deployment server is a resource that enables you to deploy (install and configure) operating systems for use by servers. HPE OneView connects to an OS deployment server and configures it for deploying operating systems.
+An OS deployment server is a resource that enables you to deploy \(install and configure\) operating systems for use by servers. HPE OneView connects to an OS deployment server and configures it for deploying operating systems.
 
 The default selection is HPE Synergy Image Streamer, when an Image Streamer is discovered in an HPE Synergy configuration.
 
@@ -27,10 +27,12 @@ This Cmdlet will return the discovered OS deployment servers.
 {% hint style="info" %}
 Minimum required privileges: Read-
 {% endhint %}
+
 only
+
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Get-HPOVOSDeploymentServer
@@ -42,7 +44,7 @@ List all HPE Synergy OS Deployment servers.
 
 ### -Name &lt;String&gt;
 
-OS deployment server resource name.  Supported the * (asterisk) wildcard character.
+OS deployment server resource name. Supported the \* \(asterisk\) wildcard character.
 
 | Aliases | None |
 | :--- | :--- |
@@ -66,15 +68,15 @@ Specify the label associated with resources.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### &lt;CommonParameters&gt;
 
@@ -82,7 +84,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this Cmdlet.**_
+_**None. You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
@@ -90,11 +92,12 @@ _**HPOneView.Appliance.OSDeploymentServer**_
 
 An HPE Synergy Image Streamer appliance object.
 
-_**System.Collections.ArrayList<HPOneView.Appliance.OSDeploymentServer>**_
+_**System.Collections.ArrayList**_
 
 A collection of HPE Synergy Image Streamer appliance objects.
 
 ## Related Links
 
 * [New-HPOVOSDeploymentServer](new-hpovosdeploymentserver.md)
-* [Remove-HPOVOSDeploymentServer](remove-hpovosdeploymentserver.md)
+* [Remove-HPOVOSDeploymentServer](https://github.com/HewlettPackard/POSH-HPOneView-docs/tree/2c3cd0d508b6cdba6336a27d496637fc71c6ce4c/docs/cmdlets/v5.00/servers/remove-hpovosdeploymentserver.md)
+

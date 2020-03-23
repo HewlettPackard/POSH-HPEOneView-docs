@@ -1,4 +1,4 @@
-﻿---
+---
 description: Get appliance API version.
 ---
 
@@ -13,24 +13,22 @@ Get-HPOVXApiVersion
 
 ## Description
 
-Returns the API versions supported by the appliance.  You do not need to authenticate, or call Connect-HPOVMgmt, to an appliance in order to retrieve the supported REST API Versions by the appliance.
+Returns the API versions supported by the appliance. You do not need to authenticate, or call Connect-HPOVMgmt, to an appliance in order to retrieve the supported REST API Versions by the appliance.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 (Get-HPOVXApiVersion myAppliance.domain.com).minimumversion
-
 ```
 
-This example retrieves the minimum XApi version supported by the appliance.  An existing connection is not needed since the appliance name is provided.
+This example retrieves the minimum XApi version supported by the appliance. An existing connection is not needed since the appliance name is provided.
 
-###  Example 2 
+### Example 2
 
 ```text
 (Get-HPOVXApiVersion).minimumversion
-
 ```
 
 This example retrieves the minimum XApi version supported by the appliance and requires that a connection has been established by using `Connect-HPOVMgmt`.
@@ -39,19 +37,19 @@ This example retrieves the minimum XApi version supported by the appliance and r
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
+Aliases \[-Appliance\]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-Default Value: ${Global:ConnectedSessions} | ? Default
+Default Value: ${Global:ConnectedSessions} \| ? Default
 
-| Aliases | appliance |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | appliance |  |
+| :--- | :--- | :--- |
+| Required? | True |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### &lt;CommonParameters&gt;
 
@@ -59,7 +57,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this cmdlet.**_
+_**None. You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 

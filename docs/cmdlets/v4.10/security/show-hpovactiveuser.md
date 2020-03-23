@@ -1,4 +1,4 @@
-﻿---
+---
 description: Display active and connected users.
 ---
 
@@ -14,11 +14,11 @@ Show-HPOVActiveUser
 
 ## Description
 
-Use this Cmdlet to display active and connected users to an HPE OneView or Synergy management appliance.  Infrastructure administrator or Security administrator role is required in order to view all connected users. 
+Use this Cmdlet to display active and connected users to an HPE OneView or Synergy management appliance. Infrastructure administrator or Security administrator role is required in order to view all connected users.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Get-HPOVActiveUser  UserName              LoginDomain       ClientHost    LoginTime --------              -----------       ----------    --------- BobSmith@domain.local doctors-lab.local 192.168.19.3  11/1/2018 9: 39: 34 PM administrator         Local             192.168.19.20 11/7/2018 1: 58: 48 PM Administrator         Local             192.168.19.3  11/10/2018 5: 36: 39 AM
@@ -30,19 +30,19 @@ Display connected active users to the appliance.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
+Aliases \[-Appliance\]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-Default Value: ${Global:ConnectedSessions} | ? Default
+Default Value: ${Global:ConnectedSessions} \| ? Default
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### &lt;CommonParameters&gt;
 
@@ -50,14 +50,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this cmdlet.**_
+_**None. You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
 _**HPOneView.Appliance.ActiveUserSession**_
 
 Connected user session and its details.
-
 
 ## Related Links
 

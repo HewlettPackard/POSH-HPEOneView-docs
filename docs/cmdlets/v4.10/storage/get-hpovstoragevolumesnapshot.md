@@ -1,4 +1,4 @@
-﻿---
+---
 description: Retrieve Storage Volume Snapshot resource(s).
 ---
 
@@ -17,7 +17,7 @@ This Cmdlet will display all of the avialable snapshots for a given Storage Volu
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Get-HPOVStorageVolume | Get-HPOVStorageVolumeSnapShot
@@ -29,17 +29,14 @@ hpov.domain.com Vol1_20160224235716                        Vol1                 
 hpov.domain.com Shared 1_20160224232717                    Shared 1                    Configured (None) 1,000.00 GB
 hpov.domain.com Shared 1_20160224235621                    Shared 1                    Configured (None) 1,000.00 GB
 hpov.domain.com Shared 1 Snapshot Converted_20160225214317 Shared 1 Snapshot Converted Configured (None) 1,000.00 GB
-
-
 ```
 
 Return all storage volume snapshot resource objects from all available storage volume resources.
 
-###  Example 2 
+### Example 2
 
 ```text
 Get-HPOVStorageVolume "Volume 1" | Get-HPOVStorageVolumeSnapShot
-
 ```
 
 Get available storage volume snapshots from a specific Storage Volume.
@@ -48,7 +45,7 @@ Get available storage volume snapshots from a specific Storage Volume.
 
 ### -InputObject &lt;Object&gt;
 
-Aliases [-Volume]
+Aliases \[-Volume\]
 
 Provide the Storage Volume resource object.
 
@@ -57,24 +54,24 @@ Provide the Storage Volume resource object.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
+Aliases \[-Appliance\]
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-Default Value: ${Global:ConnectSessions} | ? Default
+Default Value: ${Global:ConnectSessions} \| ? Default
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | True |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | true \(ByPropertyName\) |  |
+| Accept wildcard characters? | False |  |
 
 ### &lt;CommonParameters&gt;
 
@@ -82,23 +79,22 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Storage.Volume [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Storage.Volume \[System.Management.Automation.PSCustomObject\]**_
 
 Storage Volume resource
 
 ## Return Values
 
-_**System.Collections.ArrayList <HPOneView.Storage.VolumeSnapshot>**_
+_**System.Collections.ArrayList**_ 
 
 Multiple storage volume snapshot resources
 
-
-_**HPOneView.Storage.VolumeSnapshot [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Storage.VolumeSnapshot \[System.Management.Automation.PSCustomObject\]**_
 
 Formatted table view of storage volume snapshot resources
-
 
 ## Related Links
 
 * [New-HPOVStorageVolumeSnapshot](new-hpovstoragevolumesnapshot.md)
 * [Remove-HPOVStorageVolumeSnapshot](remove-hpovstoragevolumesnapshot.md)
+

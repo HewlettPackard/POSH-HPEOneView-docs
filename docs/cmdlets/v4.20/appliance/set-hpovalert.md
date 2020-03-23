@@ -1,4 +1,4 @@
-﻿---
+---
 description: Change status of an alert.
 ---
 
@@ -33,26 +33,24 @@ Set-HPOVAlert
 
 ## Description
 
-Alerts can be in one of two administratively controlled states: Active or Cleared.  This Cmdlet allows the administrator to change the status of an alert to either Active or Cleared.
+Alerts can be in one of two administratively controlled states: Active or Cleared. This Cmdlet allows the administrator to change the status of an alert to either Active or Cleared.
 
-In order for an Administrator to change the status of an Alert, the Administrator must be assigned to the respective resource role (Network, Server, Storage, or Infrastructure.)
+In order for an Administrator to change the status of an Alert, the Administrator must be assigned to the respective resource role \(Network, Server, Storage, or Infrastructure.\)
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Set-HPOVAlert -InputObject $Alert -Cleared
-
 ```
 
 Clears the alert.
 
-###  Example 2 
+### Example 2
 
 ```text
 Get-HPOVAlert -AlertState Active | Set-HPOVAlert -Cleared
-
 ```
 
 Get all alerts in an "Active" state, and set their state to "Cleared".
@@ -61,19 +59,19 @@ Get all alerts in an "Active" state, and set their state to "Cleared".
 
 ### -InputObject &lt;Object&gt;
 
-The alert to be cleared.  Can be URI or resource object.
+The alert to be cleared. Can be URI or resource object.
 
 | Aliases | alertUri, Alert |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### -AssignToUser &lt;String&gt;
 
-The users name in String value to assign the alert to.  The user name does not require, nor is mapped to, a local user account.
+The users name in String value to assign the alert to. The user name does not require, nor is mapped to, a local user account.
 
 | Aliases | None |
 | :--- | :--- |
@@ -121,15 +119,15 @@ Change the alert to "Active" status.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | true \(ByPropertyName\) |  |
+| Accept wildcard characters? | False |  |
 
 ### &lt;CommonParameters&gt;
 
@@ -141,18 +139,19 @@ _**System.String**_
 
 Alert URI
 
-_**HPOneView.Alert [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Alert \[System.Management.Automation.PSCustomObject\]**_
 
-Alert resource object (i.e. [`Get-HPOVAlert`](get-hpovalert.md))
+Alert resource object \(i.e. [`Get-HPOVAlert`](get-hpovalert.md)\)
 
 ## Return Values
 
-_**HPOneView.Alert [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Alert \[System.Management.Automation.PSCustomObject\]**_
 
 The updated alert
 
 ## Related Links
 
-* [Clear-HPOVAlert](clear-hpovalert.md)
+* [Clear-HPOVAlert]()
 * [Get-HPOVAlert](get-hpovalert.md)
 * [Remove-HPOVAlert](remove-hpovalert.md)
+

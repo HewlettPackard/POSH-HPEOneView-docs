@@ -1,4 +1,4 @@
-﻿---
+---
 description: Retrieve configured Remote Support contacts.
 ---
 
@@ -15,33 +15,31 @@ Get-HPOVRemoteSupportContact
 
 ## Description
 
-Use this Cmdlet to get the configured Remote Support contacts defined on the appliance. 
+Use this Cmdlet to get the configured Remote Support contacts defined on the appliance.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Get-HPOVRemoteSupportContact
-
 ```
 
 List all configured Remote Support Contacts.
 
-###  Example 2 
+### Example 2
 
 ```text
 Get-HPOVRemoteSupportContact -Name "Bob*"
-
 ```
 
-List all contacts with the name Bob, using the * wildcard character.
+List all contacts with the name Bob, using the \* wildcard character.
 
 ## Parameters
 
 ### -Name &lt;String&gt;
 
-Full ("Bob Smith") or partial ("Bob*") name of the contact.  When using partial names, please include the * (asterisk) wildcard character.
+Full \("Bob Smith"\) or partial \("Bob_"\) name of the contact. When using partial names, please include the_  \(asterisk\) wildcard character.
 
 | Aliases | None |
 | :--- | :--- |
@@ -53,15 +51,15 @@ Full ("Bob Smith") or partial ("Bob*") name of the contact.  When using partial 
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### &lt;CommonParameters&gt;
 
@@ -69,7 +67,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this cmdlet.**_
+_**None. You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
@@ -81,3 +79,4 @@ The configured Remote Support Contact.
 
 * [New-HPOVRemoteSupportContact](new-hpovremotesupportcontact.md)
 * [Remove-HPOVRemoteSupportContact](remove-hpovremotesupportcontact.md)
+

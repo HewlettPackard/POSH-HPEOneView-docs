@@ -1,4 +1,4 @@
-﻿---
+---
 description: Add supported resource to rack.
 ---
 
@@ -17,18 +17,17 @@ Add-HPOVResourceToRack
 
 ## Description
 
-A rack is a physical structure that contains IT equipment such as enclosures, rack managers, servers, power delivery devices, and unmanaged devices (an unmanaged device uses slots in the rack and consumes power or exhausts heat, but it is not managed by the appliance). You can manage your racks and the equipment in them by adding them to the appliance. Having your racks managed by the appliance enables you to use the appliance for space and power planning. The appliance also gathers statistical data and monitors the power and temperature of the racks it manages.
+A rack is a physical structure that contains IT equipment such as enclosures, rack managers, servers, power delivery devices, and unmanaged devices \(an unmanaged device uses slots in the rack and consumes power or exhausts heat, but it is not managed by the appliance\). You can manage your racks and the equipment in them by adding them to the appliance. Having your racks managed by the appliance enables you to use the appliance for space and power planning. The appliance also gathers statistical data and monitors the power and temperature of the racks it manages.
 
 When you add an enclosure to the appliance, it automatically creates a rack and places the enclosure in it. The appliance places into the rack all enclosures connected by management link cables. When enclosures are added, the appliance places them in the rack from top to bottom. When an enclosure is placed in an Intelligent Series Rack, the enclosure slots are automatically detected. For other racks, to accurately depict the layout of your enclosures within the rack you must edit the rack to place the enclosure in the proper slots.
 
-You can use the appliance to view and manage your rack configuration and power delivery topology. You can specify the physical dimensions of the rack (width, height, and depth), the number of U slots, and the location of each piece of equipment in the rack. You can specify the rack PDUs that provide power to the rack, and their physical position in the rack or on either side. You can also describe how the devices in the rack are connected to those PDUs.
+You can use the appliance to view and manage your rack configuration and power delivery topology. You can specify the physical dimensions of the rack \(width, height, and depth\), the number of U slots, and the location of each piece of equipment in the rack. You can specify the rack PDUs that provide power to the rack, and their physical position in the rack or on either side. You can also describe how the devices in the rack are connected to those PDUs.
 
 The appliance automatically discovers the rack height and rack model for a ProLiant server with Location Discovery Services and updates the physical locations of devices when they are relocated within and between racks for c7000 enclosures.
 
 {% hint style="info" %}
- When the appliance discovers Intelligent Series Racks, it sets the rack height automatically using the Intelligent Rack Location Discovery Services for c7000 enclosures. For non-intelligent racks or for empty racks, the default rack height is 42U.
+When the appliance discovers Intelligent Series Racks, it sets the rack height automatically using the Intelligent Rack Location Discovery Services for c7000 enclosures. For non-intelligent racks or for empty racks, the default rack height is 42U.
 {% endhint %}
-
 
 After adding a rack to the appliance for management, you can add the rack to a data center to visualize the data center layout and to monitor device power and cooling data.
 
@@ -40,7 +39,7 @@ Minimum required privileges: Edit privileges for the resource.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 $Rack = Get-HPOVRack -Name MyRack221 -ErrorAction Stop
@@ -52,9 +51,9 @@ ForEach ($Server in $Servers) {
 }
 ```
 
-Add "Prod221" (DL) servers to "MyRack221" rack object, starting at Rack U 1, and increasing the location based on the form factor of the DL servers.
+Add "Prod221" \(DL\) servers to "MyRack221" rack object, starting at Rack U 1, and increasing the location based on the form factor of the DL servers.
 
-###  Example 2 
+### Example 2
 
 ```text
 $Rack = Get-HPOVRack -Name MyRack222 -ErrorAction Stop
@@ -72,20 +71,20 @@ Add Enclosures which the Onboard Administrators report are in "MyRack222", and a
 
 ### -InputObject &lt;Object&gt;
 
-The supported resource object to add.
-Supported resource objects are:
-    * Enclosures
-    * Servers
-    * Rack manager
-    * Power device
-    * Unmanaged device
+The supported resource object to add. Supported resource objects are:
+
+* Enclosures
+* Servers
+* Rack manager
+* Power device
+* Unmanaged device
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### -Rack &lt;Object&gt;
@@ -114,15 +113,15 @@ The rack unit location where the resource is located.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | true \(ByPropertyName\) |  |
+| Accept wildcard characters? | False |  |
 
 ### &lt;CommonParameters&gt;
 
@@ -130,13 +129,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Facilities.Rack [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Facilities.Rack \[System.Management.Automation.PSCustomObject\]**_
 
 Rack resource object from [`Get-HPOVRack`](get-hpovrack.md).
 
 ## Return Values
 
-_**HPOneView.Facilities.Rack [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Facilities.Rack \[System.Management.Automation.PSCustomObject\]**_
 
 Updated rack object with the newly added resources in the contents property.
 
@@ -145,3 +144,4 @@ Updated rack object with the newly added resources in the contents property.
 * [Get-HPOVDataCenter](get-hpovdatacenter.md)
 * [Get-HPOVRack](get-hpovrack.md)
 * [Add-HPOVRackToDataCenter](add-hpovracktodatacenter.md)
+

@@ -1,4 +1,4 @@
-﻿---
+---
 description: List Directory Group role assignment.
 ---
 
@@ -22,23 +22,23 @@ Get-HPOVLdapGroup
 
 ## Description
 
-This cmdlet will display the configured directory groups on the appliance, and display their assigned role(s).  The default display will include the URI of each configured group. Use the Report switch to display only the Directory Group Name, Login Domain and assigned role(s).
+This cmdlet will display the configured directory groups on the appliance, and display their assigned role\(s\). The default display will include the URI of each configured group. Use the Report switch to display only the Directory Group Name, Login Domain and assigned role\(s\).
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Get-HPOVLdapGroup
 Name                              Directory                               Roles
 ----                              ---------                               -----
 My Directory Group1               domain1                                 {Storage administrator}
-My Directory Group2               domain1                                 {Network administrator} 
+My Directory Group2               domain1                                 {Network administrator}
 ```
 
 Get list of configured Directory Groups.
 
-###  Example 2 
+### Example 2
 
 ```text
 Get-HPOVLdapGroup -Group "My Directory Group1"
@@ -49,11 +49,10 @@ My Directory Group1               domain1                                 {Stora
 
 Display My Directroy Group1 and the assigned roles
 
-###  Example 3 
+### Example 3
 
 ```text
 Get-HPOVLdapGroup -export C:\dir\directorygroups.json
-
 ```
 
 Export configured Directory Groups to c:\dir\directorygroups.json
@@ -86,15 +85,15 @@ Export JSON content to file
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | True |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### &lt;CommonParameters&gt;
 
@@ -102,11 +101,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this cmdlet.**_
+_**None. You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.AuthDirectoryGroupRoleMapping [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.AuthDirectoryGroupRoleMapping \[System.Management.Automation.PSCustomObject\]**_
 
 Configured Directory Group role mapping
 
@@ -120,3 +119,4 @@ Multiple configured Directory Group role mappings
 * [Remove-HPOVLdapGroup](remove-hpovldapgroup.md)
 * [Set-HPOVLdapGroupRole](set-hpovldapgrouprole.md)
 * [Show-HPOVLdapGroups](show-hpovldapgroups.md)
+

@@ -1,4 +1,4 @@
-﻿---
+---
 description: Create a new user account.
 ---
 
@@ -27,11 +27,10 @@ Create a new local user account on the management appliance
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 New-HPOVUser -username Sally -fullName "Sally Smith" -password SallysPassword -roles "server administrator","network administrator"
-
 ```
 
 Create the Sally user account, and assigning to the Server Administrator and Network Administrator roles, on all connected appliances.
@@ -52,8 +51,7 @@ The name of the new user account to be created.
 
 ### -Password &lt;String&gt;
 
-The initial password to be assigned to the new user.
-Passwords must be at least 8 characters.
+The initial password to be assigned to the new user. Passwords must be at least 8 characters.
 
 | Aliases | None |
 | :--- | :--- |
@@ -77,8 +75,7 @@ Full name for the user.
 
 ### -Roles &lt;Array&gt;
 
-Aliases [-r, `-role`]
-The role(s) to assign to the Directroy Group, in `[System.Collections.ArrayList]` format.  Accepted values are noted within the ApplianceRoles property of the `[HPOneView.Appliance.Connection]` object stored in the $Global:ConnectedSessions variable.
+Aliases \[-r, `-role`\] The role\(s\) to assign to the Directroy Group, in `[System.Collections.ArrayList]` format. Accepted values are noted within the ApplianceRoles property of the `[HPOneView.Appliance.Connection]` object stored in the $Global:ConnectedSessions variable.
 
 Example: $roles = "Server administrator","Network administrator"
 
@@ -92,7 +89,7 @@ Example: $roles = "Server administrator","Network administrator"
 
 ### -EmailAddress &lt;String&gt;
 
-Provide the users email address.  This does not set the Email Notification value when configuring SMTP Notifications.
+Provide the users email address. This does not set the Email Notification value when configuring SMTP Notifications.
 
 | Aliases | None |
 | :--- | :--- |
@@ -128,7 +125,7 @@ Mobile phone number.
 
 ### -Enabled &lt;SwitchParameter&gt;
 
-Deprecated parameter.  By default, all new user accounts will be enabled.  In order to disable a user account, use the `Set-HPOVUser` Cmdlet.
+Deprecated parameter. By default, all new user accounts will be enabled. In order to disable a user account, use the `Set-HPOVUser` Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -140,25 +137,25 @@ Deprecated parameter.  By default, all new user accounts will be enabled.  In or
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
+Aliases \[-Appliance\]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
 Default Value: ${Global:ConnectSessions}
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | True |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### -ScopePermissions &lt;Array&gt;
 
-Array collection of Hashtable<Role; Scope>.  Will overwrite existing scope to role mappings.
+Array collection of Hashtable. Will overwrite existing scope to role mappings.
 
-Example: `-ScopePermissions` @{Role = "Network administrator"; Scope = (Get-HPOVScope `-Name` CorpNetAdmins `-ErrorAction` Stop) }
+Example: `-ScopePermissions` @{Role = "Network administrator"; Scope = \(Get-HPOVScope `-Name` CorpNetAdmins `-ErrorAction` Stop\) }
 
 | Aliases | None |
 | :--- | :--- |
@@ -178,7 +175,7 @@ _**None. You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.User [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.User \[System.Management.Automation.PSCustomObject\]**_
 
 If successful, returns a user resource
 
@@ -189,4 +186,5 @@ If successful, returns a user resource
 * [Set-HPOVUser](set-hpovuser.md)
 * [Set-HPOVUserPassword](set-hpovuserpassword.md)
 * [Set-HPOVUserRole](set-hpovuserrole.md)
-* [Show-HPOVUserSession](../appliance/show-hpovusersession.md)
+* [Show-HPOVUserSession]()
+

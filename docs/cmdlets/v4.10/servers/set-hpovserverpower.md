@@ -1,27 +1,29 @@
-﻿---
-description: [DEPRECATED] Set the power state of a server.
----
-
 # Set-HPOVServerPower
 
-## Syntax
+---
+
+### description: \[DEPRECATED\] Set the power state of a server.
+
+## Set-HPOVServerPower
+
+### Syntax
 
 ```text
 Set-HPOVServerPower
     [<CommonParameters>]
 ```
 
-## Description
+### Description
 
-This Cmdlet is now deprecated.  Please use the Start-HPOVServer, Stop-HPOVServer or Restart-HPOVServer Cmdlets.
+This Cmdlet is now deprecated. Please use the Start-HPOVServer, Stop-HPOVServer or Restart-HPOVServer Cmdlets.
 
-## Examples
+### Examples
 
-## Parameters
+### Parameters
 
-### -Server &lt;Object&gt;
+#### -Server &lt;Object&gt;
 
-Aliases [-name, `-uri`, `-serverUri`]
+Aliases \[-name, `-uri`, `-serverUri`\]
 
 The server object, URI or Name, or can be a Server Profile object.
 
@@ -30,12 +32,12 @@ The server object, URI or Name, or can be a Server Profile object.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
-### -State &lt;String&gt;
+#### -State &lt;String&gt;
 
-Optional power state.  Default is On, other option is Off
+Optional power state. Default is On, other option is Off
 
 | Aliases | PowerState |
 | :--- | :--- |
@@ -45,7 +47,7 @@ Optional power state.  Default is On, other option is Off
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -PowerControl &lt;String&gt;
+#### -PowerControl &lt;String&gt;
 
 Optional setting to control the virtual power button.
 
@@ -57,22 +59,19 @@ Optional setting to control the virtual power button.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;Object&gt;
+#### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-appliance]
-The name of the appliance or list of appliances to execute the command against.
+Aliases \[-appliance\] The name of the appliance or list of appliances to execute the command against.
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | True |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | true \(ByPropertyName\) |  |
+| Accept wildcard characters? | False |  |
 
-### -WhatIf &lt;SwitchParameter&gt;
-
-
+#### -WhatIf &lt;SwitchParameter&gt;
 
 | Aliases | wi |
 | :--- | :--- |
@@ -82,9 +81,7 @@ The name of the appliance or list of appliances to execute the command against.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Confirm &lt;SwitchParameter&gt;
-
-
+#### -Confirm &lt;SwitchParameter&gt;
 
 | Aliases | cf |
 | :--- | :--- |
@@ -94,25 +91,21 @@ The name of the appliance or list of appliances to execute the command against.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### &lt;CommonParameters&gt;
+#### &lt;CommonParameters&gt;
 
 This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer, PipelineVariable, and OutVariable. For more information, see about\_CommonParameters \([http://go.microsoft.com/fwlink/?LinkID=113216](http://go.microsoft.com/fwlink/?LinkID=113216)\)
 
-## Input Types
+### Input Types
 
 _**None**_
 
+None
 
- None
- 
-
-## Return Values
+### Return Values
 
 _**None**_
 
+None
 
- None
-
-
-## Related Links
+### Related Links
 

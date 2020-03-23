@@ -1,4 +1,4 @@
-﻿---
+---
 description: Import a physical server.
 ---
 
@@ -54,7 +54,7 @@ HPE OneView monitors the hardware for inventory and hardware status only. The se
 
 For HPE Superdome Flex Server, server chassis that are in a rack manager are added as monitored if the firmware installed on the rack manager does not support managed mode features.
 
-You cannot remove a server that is part of an enclosure or rack manager from the appliance using either Remove-HPOVServer. You must remove the rack manager instead using Remove-HPOVRackManager. Removing a rack manager from management removes its partitions and associations.  To remove a HPE BladeSystem or HPE Synergy server, it must be physically removed from the enclosure it is hosted within.
+You cannot remove a server that is part of an enclosure or rack manager from the appliance using either Remove-HPOVServer. You must remove the rack manager instead using Remove-HPOVRackManager. Removing a rack manager from management removes its partitions and associations. To remove a HPE BladeSystem or HPE Synergy server, it must be physically removed from the enclosure it is hosted within.
 
 {% hint style="info" %}
 Minimum required privileges: Infrastructure administrator or Server administrator.
@@ -62,7 +62,7 @@ Minimum required privileges: Infrastructure administrator or Server administrato
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Add-HPOVServer -Hostname serverilo.contoso.com -Credential (Get-Credential) -LicenseIntent OneView
@@ -70,7 +70,7 @@ Add-HPOVServer -Hostname serverilo.contoso.com -Credential (Get-Credential) -Lic
 
 Add `[serverilo.contoso.com]` to the appliance, with the OneView license.
 
-###  Example 2 
+### Example 2
 
 ```text
 Add-HPOVServer -Hostname serverilo2.contoso.com -Credential (Get-Credential) -Monitored
@@ -89,12 +89,12 @@ Hostname of the server's iLO, either IP Address or FQDN.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### -Username &lt;String&gt;
 
-This parameter is now deprecated.  Please transition to using the `-Credential` parameter.
+This parameter is now deprecated. Please transition to using the `-Credential` parameter.
 
 Administrator account of the target iLO.
 
@@ -108,9 +108,9 @@ Administrator account of the target iLO.
 
 ### -Password &lt;Object&gt;
 
-This parameter is now deprecated.  Please transition to using the `-Credential` parameter.
+This parameter is now deprecated. Please transition to using the `-Credential` parameter.
 
-Account password of the iLO specified.  Can be String or SecureString.
+Account password of the iLO specified. Can be String or SecureString.
 
 | Aliases | None |
 | :--- | :--- |
@@ -126,8 +126,8 @@ Specifies whether the intent is to apply either OneView or OneView w/o iLO licen
 
 Accepted values are
 
-    * OneView
-    * OneViewNoiLO
+* OneView
+* OneViewNoiLO
 
 | Aliases | None |
 | :--- | :--- |
@@ -139,7 +139,7 @@ Accepted values are
 
 ### -Monitored &lt;SwitchParameter&gt;
 
-Add the specified server for monitor only management.  You can view hardware for inventory and status information only.  Omitting this parameter, you can apply configurations, deploy server profiles, monitor operation status, collect statistics, and alert users to specific conditions.
+Add the specified server for monitor only management. You can view hardware for inventory and status information only. Omitting this parameter, you can apply configurations, deploy server profiles, monitor operation status, collect statistics, and alert users to specific conditions.
 
 | Aliases | None |
 | :--- | :--- |
@@ -151,7 +151,7 @@ Add the specified server for monitor only management.  You can view hardware for
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
@@ -165,17 +165,17 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 
-| Aliases | None |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | None |  |
+| :--- | :--- | :--- |
+| Required? | True |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### -Confirm &lt;SwitchParameter&gt;
 
-When attempting to add a Server to the appliance, the appliance will validate the target Server is not already claimed.  If it is, this parameter is used when the server has been claimed by another appliance to bypass the confirmation prompt, and force add the server resource.
+When attempting to add a Server to the appliance, the appliance will validate the target Server is not already claimed. If it is, this parameter is used when the server has been claimed by another appliance to bypass the confirmation prompt, and force add the server resource.
 
 | Aliases | cf |
 | :--- | :--- |
@@ -187,7 +187,7 @@ When attempting to add a Server to the appliance, the appliance will validate th
 
 ### -Scope &lt;Array&gt;
 
-Provide an array of <HPOneView.Appliance.ScopeResource> Scope resource(s) to initially add.
+Provide an array of  Scope resource\(s\) to initially add.
 
 | Aliases | None |
 | :--- | :--- |
@@ -215,11 +215,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this Cmdlet.**_
+_**None. You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
 Returns an async task resource to monitor.
 
@@ -235,7 +235,7 @@ Returns an async task resource to monitor.
 * [Get-HPOVServerProfileConnectionList](get-hpovserverprofileconnectionlist.md)
 * [Get-HPOVServerProfileMessage](get-hpovserverprofilemessage.md)
 * [Get-HPOVServerProfileTemplate](get-hpovserverprofiletemplate.md)
-* [Join-HPOVServerProfileToTemplate](join-hpovserverprofiletotemplate.md)
+* [Join-HPOVServerProfileToTemplate](https://github.com/HewlettPackard/POSH-HPOneView-docs/tree/2c3cd0d508b6cdba6336a27d496637fc71c6ce4c/docs/cmdlets/v5.00/servers/join-hpovserverprofiletotemplate.md)
 * [New-HPOVServerProfile](new-hpovserverprofile.md)
 * [New-HPOVServerProfileAssign](new-hpovserverprofileassign.md)
 * [New-HPOVServerProfileAttachVolume](new-hpovserverprofileattachvolume.md)
@@ -248,13 +248,14 @@ Returns an async task resource to monitor.
 * [Remove-HPOVServerProfileTemplate](remove-hpovserverprofiletemplate.md)
 * [Restart-HPOVServer](restart-hpovserver.md)
 * [Save-HPOVServerProfile](save-hpovserverprofile.md)
-* [Save-HPOVServerProfileTemplate](save-hpovserverprofiletemplate.md)
-* [Set-HPOVServerHardwareType](set-hpovserverhardwaretype.md)
+* [Save-HPOVServerProfileTemplate](https://github.com/HewlettPackard/POSH-HPOneView-docs/tree/2c3cd0d508b6cdba6336a27d496637fc71c6ce4c/docs/cmdlets/v5.00/servers/save-hpovserverprofiletemplate.md)
+* [Set-HPOVServerHardwareType](https://github.com/HewlettPackard/POSH-HPOneView-docs/tree/2c3cd0d508b6cdba6336a27d496637fc71c6ce4c/docs/cmdlets/v5.00/servers/set-hpovserverhardwaretype.md)
 * [Set-HPOVServerPower](set-hpovserverpower.md)
 * [Set-HPOVServerProfile](set-hpovserverprofile.md)
-* [Set-HPOVServerProfileTemplate](set-hpovserverprofiletemplate.md)
+* [Set-HPOVServerProfileTemplate](https://github.com/HewlettPackard/POSH-HPOneView-docs/tree/2c3cd0d508b6cdba6336a27d496637fc71c6ce4c/docs/cmdlets/v5.00/servers/set-hpovserverprofiletemplate.md)
 * [Start-HPOVServer](start-hpovserver.md)
 * [Stop-HPOVServer](stop-hpovserver.md)
 * [Update-HPOVServer](update-hpovserver.md)
-* [Update-HPOVServerHardwareLicenseIntent](update-hpovserverhardwarelicenseintent.md)
+* [Update-HPOVServerHardwareLicenseIntent](https://github.com/HewlettPackard/POSH-HPOneView-docs/tree/2c3cd0d508b6cdba6336a27d496637fc71c6ce4c/docs/cmdlets/v5.00/servers/update-hpovserverhardwarelicenseintent.md)
 * [Update-HPOVServerProfile](update-hpovserverprofile.md)
+

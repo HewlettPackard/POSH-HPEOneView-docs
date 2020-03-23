@@ -1,4 +1,4 @@
-﻿---
+---
 description: Remove storage volume snapshot resource(s).
 ---
 
@@ -13,26 +13,23 @@ Remove-HPOVStorageVolumeSnapshot
 
 ## Description
 
-This Cmdlet will remove a storage volume snapshot from a storage volume resource object.  Removal of a snapshot is a destructive operation of the snapshot only.
+This Cmdlet will remove a storage volume snapshot from a storage volume resource object. Removal of a snapshot is a destructive operation of the snapshot only.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 $Snapshots = Get-HPOVStorageVolume -Name "Volume 1" -ErrorAction Stop | Get-HPOVStorageVolumeSnapshot
 $Snapshots | ? { ((get-date) - (Get-Date $_.created)).days -ge 5 } | Remove-HPOVStorageVolumeSnapshot
-
-
 ```
 
 Get all of the available storage volume snapshots for "Volume 1", then remove any snapshots as old or older than 5 days.
 
-###  Example 2 
+### Example 2
 
 ```text
 Get-HPOVStorageVolume | Get-HPOVStorageVolumeSnapshot | Remove-HPOVStorageVolumeSnapshot
-
 ```
 
 Remove all Storage Volume Snapshots managed by HPE OneView.
@@ -41,7 +38,7 @@ Remove all Storage Volume Snapshots managed by HPE OneView.
 
 ### -InputObject &lt;Object&gt;
 
-Aliases [-Snapshot]
+Aliases \[-Snapshot\]
 
 Provide the snapshot resource object to remove from the appliance.
 
@@ -50,12 +47,12 @@ Provide the snapshot resource object to remove from the appliance.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
@@ -67,23 +64,21 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
+Aliases \[-Appliance\]
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-Default Value: ${Global:ConnectSessions} | ? Default
+Default Value: ${Global:ConnectSessions} \| ? Default
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | True |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | true \(ByPropertyName\) |  |
+| Accept wildcard characters? | False |  |
 
 ### -WhatIf &lt;SwitchParameter&gt;
-
-
 
 | Aliases | wi |
 | :--- | :--- |
@@ -94,8 +89,6 @@ Default Value: ${Global:ConnectSessions} | ? Default
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
-
-
 
 | Aliases | cf |
 | :--- | :--- |
@@ -111,18 +104,17 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Storage.VolumeSnapshot [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Storage.VolumeSnapshot \[System.Management.Automation.PSCustomObject\]**_
 
 Storage Volume Snapshot resource
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
 Async create task resource
 
-
-_**System.Collections.ArrayList <HPOneView.Appliance.TaskResource>**_
+_**System.Collections.ArrayList**_ 
 
 Multiple task resources
 
@@ -130,3 +122,4 @@ Multiple task resources
 
 * [Get-HPOVStorageVolumeSnapShot](get-hpovstoragevolumesnapshot.md)
 * [New-HPOVStorageVolumeSnapshot](new-hpovstoragevolumesnapshot.md)
+

@@ -1,4 +1,4 @@
-﻿---
+---
 description: Initiate Logical Enclosure Firmware update.
 ---
 
@@ -20,22 +20,27 @@ Update-HPOVLogicalEnclosureFirmware
 
 ## Description
 
-You can update firmware from a logical enclosure for shared infrastructure, shared infrastructure and profiles, and OA (Onboard Administrators) only, if any.  When you update the firmware for an enclosure associated with a logical enclosure, the firmware baseline configured for the logical enclosure sets the baseline on the enclosure and each of the logical interconnects in the enclosure, as well as the OA.
- Firmware is updated in the following order: 
+You can update firmware from a logical enclosure for shared infrastructure, shared infrastructure and profiles, and OA \(Onboard Administrators\) only, if any. When you update the firmware for an enclosure associated with a logical enclosure, the firmware baseline configured for the logical enclosure sets the baseline on the enclosure and each of the logical interconnects in the enclosure, as well as the OA. Firmware is updated in the following order:
 
-    * Onboard Administrators
-    * Logical interconnects
-    * Server hardware and their associated server profiles
- The Orchestrated activation option allows nondisruptive updates of interconnects in a production ready, properly configured, and redundant environment. Orchestrated firmware updates do not affect the network traffic and no outages are caused while the update process is in progress as one virtual connect module is always forwarding network traffic, with no or minimal impact to application network connection.
- A default delay of 8 minutes is set between activating or rebooting interconnect modules.
- Hypervisor clusters are updated nondisruptively when the orchestrated activation option is chosen. If the logical enclosure contains one or more hypervisor profiles, each hypervisor is serially placed into a maintenance mode before updating. It can take up to 90 minutes to place a hypervisor into the maintenance mode, perform the firmware update, and take it back out of the maintenance mode.
- Parallel activation activates all the interconnect modules at the same time, resulting in disruption of the network and storage connectivity. It is recommended to perform parallel activation during a maintenance window when you can better coordinate the downtime.
- When selecting "SharedInfrastructureAndServerProfiles" firmware update process, any servers without profiles will perform an automated offline firmware update. Assigned Server Profiles will require HPE Smart Update Tools (HPSUT, iSUT) to be installed and available.
- Required Privileges: Infrastructure administrator or Server administrator 
+* Onboard Administrators
+* Logical interconnects
+* Server hardware and their associated server profiles
+
+  The Orchestrated activation option allows nondisruptive updates of interconnects in a production ready, properly configured, and redundant environment. Orchestrated firmware updates do not affect the network traffic and no outages are caused while the update process is in progress as one virtual connect module is always forwarding network traffic, with no or minimal impact to application network connection.
+
+  A default delay of 8 minutes is set between activating or rebooting interconnect modules.
+
+  Hypervisor clusters are updated nondisruptively when the orchestrated activation option is chosen. If the logical enclosure contains one or more hypervisor profiles, each hypervisor is serially placed into a maintenance mode before updating. It can take up to 90 minutes to place a hypervisor into the maintenance mode, perform the firmware update, and take it back out of the maintenance mode.
+
+  Parallel activation activates all the interconnect modules at the same time, resulting in disruption of the network and storage connectivity. It is recommended to perform parallel activation during a maintenance window when you can better coordinate the downtime.
+
+  When selecting "SharedInfrastructureAndServerProfiles" firmware update process, any servers without profiles will perform an automated offline firmware update. Assigned Server Profiles will require HPE Smart Update Tools \(HPSUT, iSUT\) to be installed and available.
+
+  Required Privileges: Infrastructure administrator or Server administrator 
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 $Basline = Get-HPOVBaseline -Name "HPE Service Pack for ProLiant" -ErrorAction Stop Get-HPOVLogicalEnclosure -Name Encl1 -ErrorAction Stop | Update-HPOVLogicalEnclosureFirmware -Baseline $Basline -FirmwareUpdateProcess SharedInfrastructureOnly
@@ -47,19 +52,19 @@ Get the specified baseline, and update the specified logical enclosure's shared 
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | true \(ByPropertyName\) |  |
+| Accept wildcard characters? | False |  |
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
@@ -83,11 +88,11 @@ The firmware bundle or baseline to install.
 
 ### -FirmwareUpdateProcess &lt;String&gt;
 
-Specify the type of firmware update to invoke.  Allowed values:
+Specify the type of firmware update to invoke. Allowed values:
 
-    * EnclosureOnly - Will only upgrade enclosure or frame components (c-Class Onboard Administrator, Synergy Frame Link Module)
-    * SharedInfrastructureOnly
-    * SharedInfrastructureAndServerProfiles
+* EnclosureOnly - Will only upgrade enclosure or frame components \(c-Class Onboard Administrator, Synergy Frame Link Module\)
+* SharedInfrastructureOnly
+* SharedInfrastructureAndServerProfiles
 
 | Aliases | None |
 | :--- | :--- |
@@ -118,16 +123,15 @@ The `[HPOneView.LogicalEnclosure]` from `Get-HPOVLogicalEnclosure`.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### -InterconnectActivationMode &lt;String&gt;
 
-Specify the logical interconnect activation mode. Choosing "Parallel" is the fastest update operation but will require downtime and servers to be powered off.
- Allowed values:
+Specify the logical interconnect activation mode. Choosing "Parallel" is the fastest update operation but will require downtime and servers to be powered off. Allowed values:
 
-    * Orchestrated
-    * Parallel Default: Orchestrated
+* Orchestrated
+* Parallel Default: Orchestrated
 
 | Aliases | None |
 | :--- | :--- |
@@ -143,13 +147,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.LogicalEnclosure [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.LogicalEnclosure \[System.Management.Automation.PSCustomObject\]**_
 
 Logical enclosure resource from [`Get-HPOVLogicalEnclosure`](../servers/get-hpovlogicalenclosure.md).
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
 Async task Resource object for configuring port monitoring on the requested logical intercinnect.
 

@@ -1,4 +1,4 @@
-﻿---
+---
 description: Get a Switch resource.
 ---
 
@@ -24,11 +24,11 @@ Get-HPOVSwitch
 
 ## Description
 
-Retrieve a Switch that is managed by HPE OneView.  Currently, HPE OneView can Manage or Monitor Cisco Nexus-family of switches. This Cmdlet will retrieve the specified or all Logical Switch Group resources. 
+Retrieve a Switch that is managed by HPE OneView. Currently, HPE OneView can Manage or Monitor Cisco Nexus-family of switches. This Cmdlet will retrieve the specified or all Logical Switch Group resources.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Get-HPOVSwitch
@@ -36,7 +36,7 @@ Get-HPOVSwitch
 
 Get all logical switch group resources found on the default appliance connection.
 
-###  Example 2 
+### Example 2
 
 ```text
 Get-HPOVSwitch -Name "10.1.1.1"
@@ -48,7 +48,7 @@ Get the "10.1.1.1" switch resource.
 
 ### -Name &lt;String&gt;
 
-The Switch resource Name.  Supports the * wildcard character.
+The Switch resource Name. Supports the \* wildcard character.
 
 | Aliases | None |
 | :--- | :--- |
@@ -72,12 +72,12 @@ Specify the label associated with resources.
 
 ### -Scope &lt;Object&gt;
 
-Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
+Filter resources based on provided Scope membership. By default, all resources for the accounts Active Permissions will be displayed. Allowed values:
 
-    * AllResources
-    * AllResourcesInScope
-    * `[HPOneView.Appliance.ScopeCollection]`
-    * `[HPOneView.Appliance.ConnectionPermission]`
+* AllResources
+* AllResourcesInScope
+* `[HPOneView.Appliance.ScopeCollection]`
+* `[HPOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
@@ -89,15 +89,15 @@ Filter resources based on provided Scope membership.  By default, all resources 
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### &lt;CommonParameters&gt;
 
@@ -105,20 +105,21 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
 Async task resource after a Logical Switch Group has been created.
 
 ## Return Values
 
-_**HPOneView.Networking.LogicalSwitchGroup [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Networking.LogicalSwitchGroup \[System.Management.Automation.PSCustomObject\]**_
 
-The async task resource object to monitor (if `-Async` was used) or results.
+The async task resource object to monitor \(if `-Async` was used\) or results.
 
-_**System.Collections.ArrayList <HPOneView.Networking.LogicalSwitchGroup>**_
+_**System.Collections.ArrayList**_ 
 
 Collection of Logical Switch Group resources.
 
 ## Related Links
 
 * [Get-HPOVSwitchType](get-hpovswitchtype.md)
+

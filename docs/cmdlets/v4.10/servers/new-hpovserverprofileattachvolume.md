@@ -1,4 +1,4 @@
-﻿---
+---
 description: Create volume attachment for a server profile.
 ---
 
@@ -62,90 +62,78 @@ New-HPOVServerProfileAttachVolume
 
 ## Description
 
-This Cmdlet will assist with creating a Storage Volume object to then attach to a new Server Profile being created (New-HPOVServerProfile), and attach either an existing Storage Volume (Get-HPOVStorageVolume) or new Ephemeral Volume to an existing Server Profile (Get-HPOVServerProfile).  If attempting to attach to an existing Server Profile, the HostOSType parameter is required, and will enable SAN Management within the Server Profile, if the Server Hardware resource supports the feature.
+This Cmdlet will assist with creating a Storage Volume object to then attach to a new Server Profile being created \(New-HPOVServerProfile\), and attach either an existing Storage Volume \(Get-HPOVStorageVolume\) or new Ephemeral Volume to an existing Server Profile \(Get-HPOVServerProfile\). If attempting to attach to an existing Server Profile, the HostOSType parameter is required, and will enable SAN Management within the Server Profile, if the Server Hardware resource supports the feature.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 $attachVolume = New-HPOVServerProfileAttachVolume -volumeid 1 -volume Volume1
-
 ```
 
 Create a Volume Attach object that maps to the "Volume1" storage volume with an Auto assigned Host LUN ID.
 
-###  Example 2 
+### Example 2
 
 ```text
 $attachVolume = Get-HPOVStorageVolume Volume1 | New-HPOVServerProfileAttachVolume -volumeid 1
-
 ```
 
 Get the "Volume1" Storage Volume via the `Get-HPOVStorageVolume` Cmdlet, and pipe the resource object to the `Get-HPOVServerProfileAttachVolume` Cmdlet.
 
-###  Example 3 
+### Example 3
 
 ```text
 $attachVolume = Get-HPOVStorageVolume Volume1 | New-HPOVServerProfileAttachVolume -volumeid 1 -lunidtype manual -lunid 1
-
 ```
 
 Get the "Volume1" Storage Volume via the `Get-HPOVStorageVolume` Cmdlet, and pipe the resource object to the `Get-HPOVServerProfileAttachVolume` Cmdlet, providing a manual Host LUN ID.
 
-###  Example 4 
+### Example 4
 
 ```text
 $volume1 = Get-HPOVStorageVolume Volume1 | New-HPOVServerProfileAttachVolume -volumeid 1
 $volume2 = Get-HPOVStorageVolume SharedVolume1 | New-HPOVServerProfileAttachVolume -volumeid 2
 $attachVolumes = @($volume1,$volume2)
-
-
 ```
 
 Get the "Volume1" and "SharedVolume1" Storage Volumes via the `Get-HPOVStorageVolume` Cmdlet, and pipe the resource objects to the `Get-HPOVServerProfileAttachVolume` Cmdlet, saving to $attachVolumes array.
 
-###  Example 5 
+### Example 5
 
 ```text
 $storagepool = Get-HPOVStoragePool R1_FC
 $sp = Get-HPOVServerProfile "chef-web01"
 New-HPOVServerProfileAttachVolume -ServerProfile $sp -Name "Chef Web01 Vol 2" -StoragePool $storagepool  | Wait-HPOVTaskComplete
-
-
 ```
 
 Attach a new 10Gb Ephemeral Volume to an existing Server Profile.
 
-###  Example 6 
+### Example 6
 
 ```text
 $sp = Get-HPOVServerProfile "chef-web01"
 Get-HPOVStorageVolume "My New Volume 3" | New-HPOVServerProfileAttachVolume -ServerProfile $sp  | Wait-HPOVTaskComplete
-
-
 ```
 
 Attach an existing Storage Volume to a Server Profile.
 
-###  Example 7 
+### Example 7
 
 ```text
 $storagepool = Get-HPOVStoragePool R1_FC
 $sp = Get-HPOVServerProfile "My Server Profile"
 New-HPOVServerProfileAttachVolume -Name "My Server Profile Boot Vol" -ServerProfile $sp -StoragePool $storagepool -Bootable  | Wait-HPOVTaskComplete
-
-
 ```
 
 Add a bootable volume to an existing Server Profile.
 
-###  Example 8 
+### Example 8
 
 ```text
 $SVT = Get-HPOVStorageVolumeTemplate -Name StoreServe4-TPDD-SVT -ErrorAction Stop
 $StorageVolumeObject = New-HPOVServerProfileAttachVolume -Name "Template 3 Private Vol 1" -VolumeTemplate $SVT
-
 ```
 
 Create a new ephemeral storage volume attachment, using a storage volume template.
@@ -166,8 +154,7 @@ An existing Server Profile resource object from `Get-HPOVServerProfile` Cmdlet.
 
 ### -VolumeID &lt;Int32&gt;
 
-Aliases [-id]
-The numeric identifier for this volume.  Does not pertain to exported LUN ID value on array.
+Aliases \[-id\] The numeric identifier for this volume. Does not pertain to exported LUN ID value on array.
 
 | Aliases | id |
 | :--- | :--- |
@@ -186,7 +173,7 @@ The Volume Name, URI or Object to attach.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### -Name &lt;Object&gt;
@@ -227,7 +214,7 @@ If provided a StoragePool Resource Name, you must provide the StorageSystem name
 
 ### -Capacity &lt;Int64&gt;
 
-The requested Ephemeral Volume storage capacity in GB.  `[e.g]`. 20 to specify 20GB.
+The requested Ephemeral Volume storage capacity in GB. `[e.g]`. 20 to specify 20GB.
 
 | Aliases | None |
 | :--- | :--- |
@@ -239,15 +226,14 @@ The requested Ephemeral Volume storage capacity in GB.  `[e.g]`. 20 to specify 2
 
 ### -DataProtectionLevel &lt;String&gt;
 
-Specify the StoreVirtual protection level (aka Network RAID) for the volume.  Allowed values are:
+Specify the StoreVirtual protection level \(aka Network RAID\) for the volume. Allowed values are:
 
-	* NetworkRaid0None
-	* NetworkRaid5SingleParity
-	* NetworkRaid10Mirror2Way
-	* NetworkRaid10Mirror3Way
-	* NetworkRaid10Mirror4Way
-	* NetworkRaid6DualParity
-
+* NetworkRaid0None
+* NetworkRaid5SingleParity
+* NetworkRaid10Mirror2Way
+* NetworkRaid10Mirror3Way
+* NetworkRaid10Mirror4Way
+* NetworkRaid6DualParity
 
 | Aliases | None |
 | :--- | :--- |
@@ -259,7 +245,7 @@ Specify the StoreVirtual protection level (aka Network RAID) for the volume.  Al
 
 ### -Full &lt;SwitchParameter&gt;
 
-DEPRECATED.  This parameter is replaced by ProvisioningType.
+DEPRECATED. This parameter is replaced by ProvisioningType.
 
 Specify if the Ephemeral Volume provisioning type should be Thick. Default is Thin Volume.
 
@@ -285,8 +271,7 @@ Specify if the Ephemeral Volume should be permanent.
 
 ### -LunIdType &lt;String&gt;
 
-Aliases [-type]
- Specify Auto or Manual for the LUN ID assignment type.  If Manual, use the `-LunID` parameter and provide a numerical value.
+Aliases \[-type\] Specify Auto or Manual for the LUN ID assignment type. If Manual, use the `-LunID` parameter and provide a numerical value.
 
 | Aliases | type |
 | :--- | :--- |
@@ -298,7 +283,7 @@ Aliases [-type]
 
 ### -LunID &lt;Int32&gt;
 
-The Host LUN ID numerical value that will be configured in the Volume export on the Storage System.  Accepted range: `0-254`
+The Host LUN ID numerical value that will be configured in the Volume export on the Storage System. Accepted range: `0-254`
 
 | Aliases | None |
 | :--- | :--- |
@@ -310,37 +295,37 @@ The Host LUN ID numerical value that will be configured in the Volume export on 
 
 ### -HostOStype &lt;String&gt;
 
-Aliases [-OS]
+Aliases \[-OS\]
 
-Specify the Host OS type, which will set the Host OS value when HPE OneView creates the Host object on the Storage System.  This parameter is only necessary if the Server Profile object does not have SAN Management enabled.
-	
+Specify the Host OS type, which will set the Host OS value when HPE OneView creates the Host object on the Storage System. This parameter is only necessary if the Server Profile object does not have SAN Management enabled.
+
 Accepted values:
 
-	* CitrixXen = "Citrix Xen Server 5.x/6.x"
-	* AIX       = "AIX"
-	* IBMVIO    = "IBM VIO Server"
-	* RHEL4     = "RHE Linux (Pre RHEL 5)"
-	* RHEL3     = "RHE Linux (Pre RHEL 5)"
-	* RHEL      = "RHE Linux (5.x, 6.x)"
-	* RHEV      = "RHE Virtualization (5.x, 6.x)"
-	* VMware    = "ESX 4.x/5.x"
-	* Win2k3    = "Windows 2003"
-	* Win2k8    = "Windows 2008/2008 R2"
-	* Win2k12   = "Windows 2012 / WS2012 R2"
-	* OpenVMS   = "OpenVMS"
-	* Egenera   = "Egenera"
-	* Exanet    = "Exanet"
-	* Solaris9  = "Solaris 9/10"
-	* Solaris10 = "Solaris 9/10"
-	* Solaris11 = "Solaris 11"
-	* ONTAP     = "NetApp/ONTAP"
-	* OEL       = "OE Linux UEK (5.x, 6.x)"
-	* HPUX11iv1 = "HP-UX (11i v1, 11i v2)"
-	* HPUX11iv2 = "HP-UX (11i v1, 11i v2)"
-	* HPUX11iv3 = "HP-UX (11i v3)"
-	* SUSE      = "SuSE (10.x, 11.x)"
-	* SUSE9     = "SuSE Linux (Pre SLES 10)"
-	* Inform    = "InForm"
+* CitrixXen = "Citrix Xen Server 5.x/6.x"
+* AIX       = "AIX"
+* IBMVIO    = "IBM VIO Server"
+* RHEL4     = "RHE Linux \(Pre RHEL 5\)"
+* RHEL3     = "RHE Linux \(Pre RHEL 5\)"
+* RHEL      = "RHE Linux \(5.x, 6.x\)"
+* RHEV      = "RHE Virtualization \(5.x, 6.x\)"
+* VMware    = "ESX 4.x/5.x"
+* Win2k3    = "Windows 2003"
+* Win2k8    = "Windows 2008/2008 R2"
+* Win2k12   = "Windows 2012 / WS2012 R2"
+* OpenVMS   = "OpenVMS"
+* Egenera   = "Egenera"
+* Exanet    = "Exanet"
+* Solaris9  = "Solaris 9/10"
+* Solaris10 = "Solaris 9/10"
+* Solaris11 = "Solaris 11"
+* ONTAP     = "NetApp/ONTAP"
+* OEL       = "OE Linux UEK \(5.x, 6.x\)"
+* HPUX11iv1 = "HP-UX \(11i v1, 11i v2\)"
+* HPUX11iv2 = "HP-UX \(11i v1, 11i v2\)"
+* HPUX11iv3 = "HP-UX \(11i v3\)"
+* SUSE      = "SuSE \(10.x, 11.x\)"
+* SUSE9     = "SuSE Linux \(Pre SLES 10\)"
+* Inform    = "InForm"
 
 | Aliases | OS |
 | :--- | :--- |
@@ -352,10 +337,10 @@ Accepted values:
 
 ### -BootVolume &lt;SwitchParameter&gt;
 
-Aliases [-Bootable]
+Aliases \[-Bootable\]
 
-Use to indicate this volume is a bootable device.  When using this parameter, the Server Profile"s FC Connection(s) BootVolumeSource parameter set to "ManagedVolume".  
-	
+Use to indicate this volume is a bootable device. When using this parameter, the Server Profile"s FC Connection\(s\) BootVolumeSource parameter set to "ManagedVolume".
+
 This parameter is only applicable with Private volumes.
 
 | Aliases | Bootable |
@@ -368,23 +353,23 @@ This parameter is only applicable with Private volumes.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
+Aliases \[-Appliance\]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-Default Value: ${Global:ConnectedSessions} | ? Default
+Default Value: ${Global:ConnectedSessions} \| ? Default
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | True |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | true \(ByPropertyName\) |  |
+| Accept wildcard characters? | False |  |
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
 
 | Aliases |  |
 | :--- | :--- |
@@ -396,7 +381,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -Scope &lt;HPOneView.Appliance.ScopeCollection&gt;
 
-Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
+Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with. Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
 
 | Aliases |  |
 | :--- | :--- |
@@ -408,7 +393,7 @@ Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially 
 
 ### -TargetPortAssignment &lt;SwitchParameter&gt;
 
-Define whether host initiator port(s) should be mapped to target storage ports automatically or manually.
+Define whether host initiator port\(s\) should be mapped to target storage ports automatically or manually.
 
 | Aliases | None |
 | :--- | :--- |
@@ -420,7 +405,7 @@ Define whether host initiator port(s) should be mapped to target storage ports a
 
 ### -TargetAddresses &lt;Array&gt;
 
-An array of target Port ID(s) or WWN(s).  Example:  @("1:0:1", "1:2:1", "3:1:1", "4:0:0")
+An array of target Port ID\(s\) or WWN\(s\). Example: @\("1:0:1", "1:2:1", "3:1:1", "4:0:0"\)
 
 | Aliases | wwpns |
 | :--- | :--- |
@@ -432,7 +417,7 @@ An array of target Port ID(s) or WWN(s).  Example:  @("1:0:1", "1:2:1", "3:1:1",
 
 ### -VolumeTemplate &lt;Object&gt;
 
-For Ephemeral (private) volumes that should be provisioned from Storage Volume Templates.  Provide a valid resource from `Get-HPOVStorageVolumeTemplate`.
+For Ephemeral \(private\) volumes that should be provisioned from Storage Volume Templates. Provide a valid resource from `Get-HPOVStorageVolumeTemplate`.
 
 | Aliases | None |
 | :--- | :--- |
@@ -446,9 +431,9 @@ For Ephemeral (private) volumes that should be provisioned from Storage Volume T
 
 Specify the volume provisioning type. Supported values:
 
-	* Thin
-	* Full
-	* ThinDeduplication (only supported with HPE StoreServe)
+* Thin
+* Full
+* ThinDeduplication \(only supported with HPE StoreServe\)
 
 | Aliases | None |
 | :--- | :--- |
@@ -472,7 +457,7 @@ Specify if HPE StoreVirtual volume Adaptive Optimization is enabled.
 
 ### -PassThru &lt;SwitchParameter&gt;
 
-Use this parameter to return the modified Server Profile object.  In order to save the changes, please use the `Save-HPOVServerProfile` Cmdlet.
+Use this parameter to return the modified Server Profile object. In order to save the changes, please use the `Save-HPOVServerProfile` Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -484,7 +469,7 @@ Use this parameter to return the modified Server Profile object.  In order to sa
 
 ### -SnapshotStoragePool &lt;Object&gt;
 
-The supported Snapshot storage pool for a StoreServ storage system.  Snapshot storage pool must originate from the same storage system as the assigned storage pool.
+The supported Snapshot storage pool for a StoreServ storage system. Snapshot storage pool must originate from the same storage system as the assigned storage pool.
 
 | Aliases | None |
 | :--- | :--- |
@@ -504,19 +489,17 @@ _**System.String**_
 
 Storage Volume Name or URI
 
-
-_**HPOneView.Storage.Volume [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Storage.Volume \[System.Management.Automation.PSCustomObject\]**_
 
 Storage Volume Resource object
 
-
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
 When attaching a one or more Storage Volumes to an existing Server Profile, an Appliance Async Task will be created
 
-_**HPOneView.Profile.SanVolume [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Profile.SanVolume \[System.Management.Automation.PSCustomObject\]**_
 
 Returns a storage volume attachment object which may be used during profile creation.
 

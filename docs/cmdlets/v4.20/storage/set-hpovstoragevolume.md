@@ -1,4 +1,4 @@
-﻿---
+---
 description: Modify an existing Storage Volume resource.
 ---
 
@@ -22,15 +22,14 @@ Set-HPOVStorageVolume
 
 ## Description
 
-This cmdlet will help modify an existing Storage Volume resource.  Only the Volume Name, Description, Capcity, volume shared state and permenance can be modified.
+This cmdlet will help modify an existing Storage Volume resource. Only the Volume Name, Description, Capcity, volume shared state and permenance can be modified.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Get-HPOVStorageVolume ProdVol1 | Set-HPOVStorageVolume  -Size 160
-
 ```
 
 Update "ProdVol1" volume size to 160GB.
@@ -46,7 +45,7 @@ Source Storage Volume resource object.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### -Name &lt;String&gt;
@@ -75,7 +74,7 @@ Updated description for the volume.
 
 ### -Capacity &lt;Int64&gt;
 
-New Max volume capacity in GB.  Volume capacity can be increased to maximum of 16 TiB. Decreasing the capacity of volume is not supported. 
+New Max volume capacity in GB. Volume capacity can be increased to maximum of 16 TiB. Decreasing the capacity of volume is not supported.
 
 Before increasing the capacity of fully provisioned volumes, ensure that the storage pool has enough capacity to support the operation. The update operation might fail if there is not enough space available in the storage pool.
 
@@ -103,8 +102,7 @@ The Storage Pool Name, URI or Object to be used for Volume Snapshots.
 
 ### -Shared &lt;Boolean&gt;
 
-Include this switch to mark the Storage Volume as a Shareable resource for shared volume access.
-Default: Private
+Include this switch to mark the Storage Volume as a Shareable resource for shared volume access. Default: Private
 
 | Aliases | None |
 | :--- | :--- |
@@ -116,14 +114,14 @@ Default: Private
 
 ### -DataProtectionLevel &lt;String&gt;
 
-Specify the new StoreVirtual data protection level (aka Network RAID).  Allowed values:
+Specify the new StoreVirtual data protection level \(aka Network RAID\). Allowed values:
 
-    * NetworkRaid0None
-    * NetworkRaid5SingleParity
-    * NetworkRaid10Mirror2Way
-    * NetworkRaid10Mirror3Way
-    * NetworkRaid10Mirror4Way
-    * NetworkRaid6DualParity
+* NetworkRaid0None
+* NetworkRaid5SingleParity
+* NetworkRaid10Mirror2Way
+* NetworkRaid10Mirror3Way
+* NetworkRaid10Mirror4Way
+* NetworkRaid6DualParity
 
 | Aliases | None |
 | :--- | :--- |
@@ -135,8 +133,7 @@ Specify the new StoreVirtual data protection level (aka Network RAID).  Allowed 
 
 ### -PermitAdaptiveOptimization &lt;Boolean&gt;
 
-Include this switch to mark the Storage Volume as a Shareable resource for shared volume access.
-Default: Private
+Include this switch to mark the Storage Volume as a Shareable resource for shared volume access. Default: Private
 
 | Aliases | None |
 | :--- | :--- |
@@ -150,13 +147,13 @@ Default: Private
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | True |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | true \(ByPropertyName\) |  |
+| Accept wildcard characters? | False |  |
 
 ### &lt;CommonParameters&gt;
 
@@ -164,13 +161,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Storage.Volume [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Storage.Volume \[System.Management.Automation.PSCustomObject\]**_
 
 Storage Volume resource object
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
 Async create task
 
@@ -191,3 +188,4 @@ Async create task
 * [Remove-HPOVStorageVolumeTemplate](remove-hpovstoragevolumetemplate.md)
 * [Set-HPOVStorageVolumeTemplate](set-hpovstoragevolumetemplate.md)
 * [Set-HPOVStorageVolumeTemplatePolicy](set-hpovstoragevolumetemplatepolicy.md)
+

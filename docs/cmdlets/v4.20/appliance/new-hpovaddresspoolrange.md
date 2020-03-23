@@ -1,4 +1,4 @@
-﻿---
+---
 description: Create an Address Range.
 ---
 
@@ -36,7 +36,7 @@ New-HPOVAddressPoolRange
 
 ## Description
 
-This cmdlet will assist with creating a new Address Pool Range.  The support Address Pool Types are MAC Addresses (VMAC), Fibre Channel/FCoE World Wide Name (VWWN), Server Serial Number (VSN), and IPv4 Address Pools (IPv4).
+This cmdlet will assist with creating a new Address Pool Range. The support Address Pool Types are MAC Addresses \(VMAC\), Fibre Channel/FCoE World Wide Name \(VWWN\), Server Serial Number \(VSN\), and IPv4 Address Pools \(IPv4\).
 
 When creating new Address Pool Ranges, the Generated Range Type will allocate 1,048,576 MAC or WWN addresses, whereas it will allocate 46,656 Serial Numbers.
 
@@ -44,23 +44,23 @@ If you specify a Custom Range Type, you must specify a range of addresses no sma
 
 Custom Address Ranges must adhere to the following format rules:
 
-    * The MAC Address must be IEEE Compliant, and the format must be XH:XX:XX:XX:XX:XX, where H must be 0, 2, 4, 6, 8, A, C or E.
+* The MAC Address must be IEEE Compliant, and the format must be XH:XX:XX:XX:XX:XX, where H must be 0, 2, 4, 6, 8, A, C or E.
 
-    Example:  12:22:33:44:55:00
+  Example: 12:22:33:44:55:00
 
-    * The WWN Address must be IEEE compliant, and the format must be 10:00:XH:XX:XX:XX:XX:XX, where H must be 0, 2, 4, 6, 8, A, C or E.
+* The WWN Address must be IEEE compliant, and the format must be 10:00:XH:XX:XX:XX:XX:XX, where H must be 0, 2, 4, 6, 8, A, C or E.
 
-    Example:  10:00:6C:9F:06:B0:00:00
+  Example: 10:00:6C:9F:06:B0:00:00
 
-    * The Serial Number addresses must start with VCU, and cannot contain more than 10 characters total.
+* The Serial Number addresses must start with VCU, and cannot contain more than 10 characters total.
 
-    Example:  VCU1234567
+  Example: VCU1234567
 
-IPv4 Address Subnets do not support Auto Generated, as the RangeType parameter is not required.  When creating a new IPv4 Address Subnet, you must provide a unique Name, Subnet Mask (CIDR [e.g. 24] or IPv4 Address Value [e.g. 255.255.255.0]), Start and End IPv4 Address, Gateway and Domain Name.  DNS Servers are optional.  To add more Address Ranges to a Subnet after creating it, please use the New-HPOVAddressPoolRange CMDLET.
+IPv4 Address Subnets do not support Auto Generated, as the RangeType parameter is not required. When creating a new IPv4 Address Subnet, you must provide a unique Name, Subnet Mask \(CIDR \[e.g. 24\] or IPv4 Address Value \[e.g. 255.255.255.0\]\), Start and End IPv4 Address, Gateway and Domain Name. DNS Servers are optional. To add more Address Ranges to a Subnet after creating it, please use the New-HPOVAddressPoolRange CMDLET.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 PS C:> New-HPOVAddressPoolRange -PoolType vmac -RangeType Generated
@@ -68,7 +68,7 @@ PS C:> New-HPOVAddressPoolRange -PoolType vmac -RangeType Generated
 
 Create a new Appliance generated VMAC Pool Range.
 
-###  Example 2 
+### Example 2
 
 ```text
 PS C:> New-HPOVAddressPoolRange -PoolType vwwn -RangeType Custom -Start 10:00:6C:9F:06:B0:00:00 -End 10:00:6C:9F:06:BF:FF:FF
@@ -76,7 +76,7 @@ PS C:> New-HPOVAddressPoolRange -PoolType vwwn -RangeType Custom -Start 10:00:6C
 
 Create a new VWWN Address Pool Range with the custom addresses, for the MyAppliance1.domain.com appliance connection.
 
-###  Example 3 
+### Example 3
 
 ```text
 PS C:> Get-HPOVAddressPoolSubnet -NetworkId 192.168.20.0 | New-HPOVAddressPoolRange -Name "VLAN20 Mgmt" -Start 192.168.20.100 -end 192.168.20.200
@@ -88,23 +88,23 @@ Create a new IPv4 Address Pool Range, for the MyAppliance1.domain.com appliance 
 
 ### -IPv4Subnet &lt;Object&gt;
 
-The IPv4 Subnet that the new IPv4 Range will be assigned to.  Start and End values must be within the Network ID and Subnet value of the IPv4 Address Subnet Pool.
+The IPv4 Subnet that the new IPv4 Range will be assigned to. Start and End values must be within the Network ID and Subnet value of the IPv4 Address Subnet Pool.
 
 | Aliases | Subnet |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### -PoolType &lt;String&gt;
 
-Specify the Pool Type the new Range will be assinged to.  Accepted values are:
+Specify the Pool Type the new Range will be assinged to. Accepted values are:
 
-    * VMAC
-    * VWWN
-    * VSN
+* VMAC
+* VWWN
+* VSN
 
 | Aliases | None |
 | :--- | :--- |
@@ -116,10 +116,10 @@ Specify the Pool Type the new Range will be assinged to.  Accepted values are:
 
 ### -RangeType &lt;String&gt;
 
-The type of Address Range to create (not applicable for IPv4 Address Pools/Subnets).  Accepted values are:
+The type of Address Range to create \(not applicable for IPv4 Address Pools/Subnets\). Accepted values are:
 
-    * Generated
-    * Custom
+* Generated
+* Custom
 
 | Aliases | None |
 | :--- | :--- |
@@ -143,7 +143,7 @@ Provide the IPv4Address Pool Range Name.
 
 ### -Start &lt;String&gt;
 
-The starting address in the range.  Cannot overlap with other address ranges, and should be unique within the datacenter/infrastructure.
+The starting address in the range. Cannot overlap with other address ranges, and should be unique within the datacenter/infrastructure.
 
 | Aliases | None |
 | :--- | :--- |
@@ -155,7 +155,7 @@ The starting address in the range.  Cannot overlap with other address ranges, an
 
 ### -End &lt;String&gt;
 
-The ending address in the range.  Cannot overlap with other address ranges, and should be unique within the datacenter/infrastructure.
+The ending address in the range. Cannot overlap with other address ranges, and should be unique within the datacenter/infrastructure.
 
 | Aliases | None |
 | :--- | :--- |
@@ -167,17 +167,17 @@ The ending address in the range.  Cannot overlap with other address ranges, and 
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). 
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-When attempting to create a new IPv4 Address Pool/Subnet, only a single `[HPOneView.Appliance.Connection]` object or Name property value is allowed.  If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+When attempting to create a new IPv4 Address Pool/Subnet, only a single `[HPOneView.Appliance.Connection]` object or Name property value is allowed. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | true \(ByPropertyName\) |  |
+| Accept wildcard characters? | False |  |
 
 ### &lt;CommonParameters&gt;
 
@@ -185,13 +185,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Appliance.IPv4AddressSubnet [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.IPv4AddressSubnet \[System.Management.Automation.PSCustomObject\]**_
 
 IPv4 Address Subnet resource object from [`Get-HPOVAddressPoolSubnet`](get-hpovaddresspoolsubnet.md)
 
 ## Return Values
 
-_**HPOneView.Appliance.AddressPoolRange [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.AddressPoolRange \[System.Management.Automation.PSCustomObject\]**_
 
 Newly created and assigned Address Pool Range resource object
 
@@ -199,3 +199,4 @@ Newly created and assigned Address Pool Range resource object
 
 * [Get-HPOVAddressPoolRange](get-hpovaddresspoolrange.md)
 * [Remove-HPOVAddressPoolRange](remove-hpovaddresspoolrange.md)
+

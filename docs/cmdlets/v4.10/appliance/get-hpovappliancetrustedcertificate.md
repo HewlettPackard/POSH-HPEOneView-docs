@@ -1,4 +1,4 @@
-﻿---
+---
 description: Get X.509 SSL certificates from the appliace trusted store.
 ---
 
@@ -27,20 +27,18 @@ This Cmdlet will allow the Infrastructure Administrator to retrieve X.509 compli
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Get-HPOVApplianceTrustedCertificate
-
 ```
 
 Return all trusted certificates from the appliance trusted store.
 
-###  Example 2 
+### Example 2
 
 ```text
 Get-HPOVServer -Name MyServer.domain.com -ErrorAction SilentlyContinue | Get-HPOVApplianceTrustedCertificate
-
 ```
 
 Return the trusted certificate of the provided server hardware resource in the appliance trusted store.
@@ -49,7 +47,7 @@ Return the trusted certificate of the provided server hardware resource in the a
 
 ### -Name &lt;String&gt;
 
-The Alias Name of the certificate.  Please know that wildcard is not supported.
+The Alias Name of the certificate. Please know that wildcard is not supported.
 
 | Aliases | None |
 | :--- | :--- |
@@ -61,19 +59,19 @@ The Alias Name of the certificate.  Please know that wildcard is not supported.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
+Aliases \[-Appliance\]
 
 Specify one or more `[HPOneView.Appliance.Connection]` objects or Name property values.
 
-Default Value: ${Global:ConnectedSessions} | ? Default
+Default Value: ${Global:ConnectedSessions} \| ? Default
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | true \(ByPropertyName\) |  |
+| Accept wildcard characters? | False |  |
 
 ### -CertificateAuthoritiesOnly &lt;SwitchParameter&gt;
 
@@ -89,14 +87,14 @@ This parameter will filter for trusted certificate authorities only.
 
 ### -InputObject &lt;Object&gt;
 
-Provide an `[HPOneView.ServerHardware]` or `[HPOneView.Enclosure]` resource to return associated appliance trusted certificate(s).
+Provide an `[HPOneView.ServerHardware]` or `[HPOneView.Enclosure]` resource to return associated appliance trusted certificate\(s\).
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
@@ -127,3 +125,4 @@ Appliance trusted certificate authority object.
 
 * [Add-HPOVApplianceTrustedCertificate](add-hpovappliancetrustedcertificate.md)
 * [Remove-HPOVApplianceTrustedCertificate](remove-hpovappliancetrustedcertificate.md)
+

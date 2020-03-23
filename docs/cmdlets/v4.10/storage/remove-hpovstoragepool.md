@@ -1,4 +1,4 @@
-﻿---
+---
 description: Delete storage pool resource(s).
 ---
 
@@ -29,31 +29,27 @@ Delete one or more storage pools from the appliance configuration.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 $task = Remove-HPOVStoragePool -storagePool "yellow" | Wait-HPOVTaskComplete $task
-
 ```
 
-Remove the storage pool specifed by name.  Wait for remove to complete.
+Remove the storage pool specifed by name. Wait for remove to complete.
 
-###  Example 2 
+### Example 2
 
 ```text
 $pool = Get-HPOVStoragePool -name "yellow"
 Remove-HPOVStoragePool -storagePool $pool -confirm:$false
-
-
 ```
 
 Remove the network specifed by $pool, and do not prompt for confirmation.
 
-###  Example 3 
+### Example 3
 
 ```text
 Get-HPOVStoragePool | Remove-HPOVStoragePool
-
 ```
 
 Search for all storage pools and remove them from appliance.
@@ -62,21 +58,19 @@ Search for all storage pools and remove them from appliance.
 
 ### -InputObject &lt;Object&gt;
 
-Aliases [-name, `-StoragePool`]
-The network object(s) or name(s) to be removed on the appliance.
+Aliases \[-name, `-StoragePool`\] The network object\(s\) or name\(s\) to be removed on the appliance.
 
 | Aliases | uri, name, StoragePool |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### -StorageSystem &lt;Object&gt;
 
-Aliases [-storage]
-Provide the Storage System Name, URI or Object when the StoragePool name is not unique.
+Aliases \[-storage\] Provide the Storage System Name, URI or Object when the StoragePool name is not unique.
 
 | Aliases | storage |
 | :--- | :--- |
@@ -100,23 +94,21 @@ If specified, the Storage Pool resource will forceablly removed despite any prob
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
+Aliases \[-Appliance\]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-Default Value: ${Global:ConnectedSessions} | ? Default
+Default Value: ${Global:ConnectedSessions} \| ? Default
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | True |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | true \(ByPropertyName\) |  |
+| Accept wildcard characters? | False |  |
 
 ### -WhatIf &lt;SwitchParameter&gt;
-
-
 
 | Aliases | wi |
 | :--- | :--- |
@@ -127,8 +119,6 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
-
-
 
 | Aliases | cf |
 | :--- | :--- |
@@ -144,13 +134,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Storage.System.Pool [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Storage.System.Pool \[System.Management.Automation.PSCustomObject\]**_
 
 Single Storage Pool resource, typically retrieved with [`Get-HPOVStoragePool`](get-hpovstoragepool.md)
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
 Removal task
 
@@ -159,3 +149,4 @@ Removal task
 * [Add-HPOVStoragePool](add-hpovstoragepool.md)
 * [Get-HPOVStoragePool](get-hpovstoragepool.md)
 * [Set-HPOVStoragePool](set-hpovstoragepool.md)
+

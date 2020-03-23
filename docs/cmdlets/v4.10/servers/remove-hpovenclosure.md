@@ -1,4 +1,4 @@
-﻿---
+---
 description: Removes an enclosure and associated devices.
 ---
 
@@ -20,33 +20,28 @@ Removes an enclosure, its servers, and interconnects from appliance management
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 $task = Remove-HPOVEnclosure -enclosure "Enclosure-1234" -force
 Wait-HPOVTaskComplete $task
-                        
-
 ```
 
 Force-remove the enclosure specifed by name. Wait for remove to complete.
 
-###  Example 2 
+### Example 2
 
 ```text
 $enclosure = Get-HPOVEnclosure -name "Enclosure1"
 Remove-HPOVEnclosure $enclosure -confirm:$false
-
-
 ```
 
 Remove the enclosure specifed by $enclosure. Disable confirmation prompt.
 
-###  Example 3 
+### Example 3
 
 ```text
 Get-HPOVEnclosure | Remove-HPOVEnclosure
-
 ```
 
 Search for all enclosures and remove them from appliance.
@@ -55,36 +50,35 @@ Search for all enclosures and remove them from appliance.
 
 ### -InputObject &lt;Object&gt;
 
-Aliases [-name, `-enclosure`]
-The Enclosure object(s) or name(s) to be removed from management.
+Aliases \[-name, `-enclosure`\] The Enclosure object\(s\) or name\(s\) to be removed from management.
 
 | Aliases | uri, name, Enclosure, Resource |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
+Aliases \[-Appliance\]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-Default Value: ${Global:ConnectedSessions} | ? Default
+Default Value: ${Global:ConnectedSessions} \| ? Default
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | True |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | true \(ByPropertyName\) |  |
+| Accept wildcard characters? | False |  |
 
 ### -Force &lt;SwitchParameter&gt;
 
-Set to `force-remove` the enclosure. For example, if the enclosure is gone or is now being managed by a different appliance, `force-removing` will remove the enclosure from this appliance without clearing vcmode. 
+Set to `force-remove` the enclosure. For example, if the enclosure is gone or is now being managed by a different appliance, `force-removing` will remove the enclosure from this appliance without clearing vcmode.
 
 When the request is accepted by the appliance, it does not return an Async Task Resource.
 
@@ -98,8 +92,6 @@ When the request is accepted by the appliance, it does not return an Async Task 
 
 ### -WhatIf &lt;SwitchParameter&gt;
 
-
-
 | Aliases | wi |
 | :--- | :--- |
 | Required? | False |
@@ -109,8 +101,6 @@ When the request is accepted by the appliance, it does not return an Async Task 
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
-
-
 
 | Aliases | cf |
 | :--- | :--- |
@@ -130,13 +120,13 @@ _**System.Collections.ArrayList**_
 
 Collection of Enclosure Resources
 
-_**HPOneView.Enclosure [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Enclosure \[System.Management.Automation.PSCustomObject\]**_
 
 Single Enclosure resource object
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
 Removal async task
 
@@ -156,3 +146,4 @@ When using the `-Force` parameter, a PSCustomObject is returned indicating succe
 * [Set-HPOVEnclosureActiveFLM](set-hpovenclosureactiveflm.md)
 * [Set-HPOVEnclosureGroup](set-hpovenclosuregroup.md)
 * [Update-HPOVEnclosure](update-hpovenclosure.md)
+

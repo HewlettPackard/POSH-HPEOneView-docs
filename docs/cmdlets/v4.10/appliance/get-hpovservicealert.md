@@ -1,4 +1,4 @@
-﻿---
+---
 description: Generate report of HPE OneView Remote Support service events.
 ---
 
@@ -24,48 +24,43 @@ HPE OneView automatically checks if your hardware has a valid entitlement to Hew
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Get-HPOVServiceAlert
-
 ```
 
 Get all Service Alerts from the connected appliance.
 
-###  Example 2 
+### Example 2
 
 ```text
-Get-HPOVServiceAlert -Count 10 
-
+Get-HPOVServiceAlert -Count 10
 ```
 
 Get the first 10 Service Alerts from the connected appliance.
 
-###  Example 3 
+### Example 3
 
 ```text
 $TimeSpan = New-TimeSpan -Days 30
 Get-HPOVServiceAlert -Count 10 -TimeSpan $TimeSpan
-
 ```
 
 Get the first 10 Service Alerts within the last 30 days from the connected appliance.
 
-###  Example 4 
+### Example 4
 
 ```text
 Get-HPOVServiceAlert -Start ([DateTime]"2018-01-05") -End ([DateTime]"2018-01-30")
-
 ```
 
 Get the Service Alerts within the specified date range from the connected appliance.
 
-###  Example 5 
+### Example 5
 
 ```text
 Get-HPOVServer -Name "Encl1, Bay 1" -ErrorAction Stop | Get-HPOVServiceAlert -Start ([DateTime]"2018-01-05") -End ([DateTime]"2018-01-30")
-
 ```
 
 Get the Service Alerts within the specified date range for the specified server hardware resource from the connected appliance.
@@ -74,19 +69,19 @@ Get the Service Alerts within the specified date range for the specified server 
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
+Aliases \[-Appliance\]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-Default Value: ${Global:ConnectedSessions} | ? Default
+Default Value: ${Global:ConnectedSessions} \| ? Default
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | true \(ByPropertyName\) |  |
+| Accept wildcard characters? | False |  |
 
 ### -Count &lt;int&gt;
 
@@ -102,7 +97,7 @@ Specify the number of service alerts to return.
 
 ### -End &lt;DateTime&gt;
 
-DateTime object of the end date and time accompanied with the `-Start` parameter.  If omitted, the current time of the PC is used.
+DateTime object of the end date and time accompanied with the `-Start` parameter. If omitted, the current time of the PC is used.
 
 | Aliases | None |
 | :--- | :--- |
@@ -114,14 +109,14 @@ DateTime object of the end date and time accompanied with the `-Start` parameter
 
 ### -InputObject &lt;Object&gt;
 
-Use to filter for the supported hardware resource object.  Enclosures, Server Hardware and Server Profile objects are supported.  If an Enclosure resource is provided, only the Enclousre service events are queried.  Associated Server Hardare within the enclosure is not.  If providing a Server Profile object, it must be assigned to a supported hardware platform.  If the Server Profile has moved between hardware resources, only the currently assigned server hardware resource object will be used to query for service events.
+Use to filter for the supported hardware resource object. Enclosures, Server Hardware and Server Profile objects are supported. If an Enclosure resource is provided, only the Enclousre service events are queried. Associated Server Hardare within the enclosure is not. If providing a Server Profile object, it must be assigned to a supported hardware platform. If the Server Profile has moved between hardware resources, only the currently assigned server hardware resource object will be used to query for service events.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### -Start &lt;DateTime&gt;
@@ -138,14 +133,14 @@ DateTime object of the start date and time to being query.
 
 ### -State &lt;String&gt;
 
-Specify the state of the Service Alert.  The state is not correlated to the associated Alert.
+Specify the state of the Service Alert. The state is not correlated to the associated Alert.
 
-	* Closed - The state of Service event when the service call is closed.
-	* Error - The Service request has some error None This is a default state.
-	* Open - The state of Service event when the service call is open.
-	* Pending - The state of Service event when the service call is pending.
-	* Received - The state of Service event when the service call is received.
-	* Submitted - The state of Service event when the service call is submitted.
+* Closed - The state of Service event when the service call is closed.
+* Error - The Service request has some error None This is a default state.
+* Open - The state of Service event when the service call is open.
+* Pending - The state of Service event when the service call is pending.
+* Received - The state of Service event when the service call is received.
+* Submitted - The state of Service event when the service call is submitted.
 
 | Aliases | None |
 | :--- | :--- |
@@ -157,7 +152,7 @@ Specify the state of the Service Alert.  The state is not correlated to the asso
 
 ### -TimeSpan &lt;TimeSpan&gt;
 
-Specify a TimeSpan object in number of days.  Cannot be combined with `-Start` and `-End` parameters.
+Specify a TimeSpan object in number of days. Cannot be combined with `-Start` and `-End` parameters.
 
 | Aliases | None |
 | :--- | :--- |
@@ -179,7 +174,7 @@ A Server Hardware resource object from [`Get-HPOVServer`](../servers/get-hpovser
 
 _**HPOneView.ServerProfile**_
 
-A Server Profile resource object from [`Get-HPOVServerProfile`](../servers/get-hpovserverprofile.md).  If the Server Profile is not associated with a server hardware resource, an excpetion is thrown.  If the Server Profile has moved from one server hardware resource to another, only the currently assigned server hardware resource will be queried.
+A Server Profile resource object from [`Get-HPOVServerProfile`](../servers/get-hpovserverprofile.md). If the Server Profile is not associated with a server hardware resource, an excpetion is thrown. If the Server Profile has moved from one server hardware resource to another, only the currently assigned server hardware resource will be queried.
 
 _**HPOneView.Enclosure**_
 

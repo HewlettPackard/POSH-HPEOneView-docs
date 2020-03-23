@@ -1,4 +1,4 @@
-﻿---
+---
 description: Configure Remote Support and authorize appliance.
 ---
 
@@ -47,19 +47,24 @@ Set-HPOVRemoteSupport
 ## Description
 
 Register with Hewlett Packard Enterprise to allow automatic case creation for hardware failures on servers and enclosures and to enable Proactive Care. Once enabled, all eligible devices added in the future will be automatically enabled for remote support.
-Eligible devices are Gen8 and newer blades and enclosures.
+
+Eligible devices are Gen8 and newer blades and enclosures.
+
 {% hint style="info" %}
 Servers must be at iLO 2.1 firmware level or above to be enabled for remote support
 {% endhint %}
 
-Hewlett Packard Enterprise will contact you to ship a replacement part or send an engineer for devices that are under warranty or support contract.
-Remote support enables Proactive Care services including Proactive Scan reports and Firmware/Software Analysis reports with recommendations that are based on collected configuration data.
-Remote support is secure. No business data is collected, only device-specific configuration and fault data. All communications are outbound only and use industry standard TLS encryption ensuring confidentiality and integrity of the information.
- Once the appliance is configured, it cannot be unauthorized or disabled. 
+Hewlett Packard Enterprise will contact you to ship a replacement part or send an engineer for devices that are under warranty or support contract.
+
+Remote support enables Proactive Care services including Proactive Scan reports and Firmware/Software Analysis reports with recommendations that are based on collected configuration data.
+
+Remote support is secure. No business data is collected, only device-specific configuration and fault data. All communications are outbound only and use industry standard TLS encryption ensuring confidentiality and integrity of the information.
+
+Once the appliance is configured, it cannot be unauthorized or disabled.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Set-HPOVRemoteSupport -CompanyName MyCompany
@@ -67,7 +72,7 @@ Set-HPOVRemoteSupport -CompanyName MyCompany
 
 Configure and register the appliance for Remote Support.
 
-###  Example 2 
+### Example 2
 
 ```text
 Set-HPOVRemoteSupport -CompanyName MyCompany -InsightOnlineUsername mypassport@domain.local -InsightOnlinePassword (ConvertTo-SecureString -String MyPassword -AsPlainText -Force)
@@ -75,7 +80,7 @@ Set-HPOVRemoteSupport -CompanyName MyCompany -InsightOnlineUsername mypassport@d
 
 Configure and register the appliance for Remote Support, and enable Insight Online portal registration.
 
-###  Example 3 
+### Example 3
 
 ```text
 Set-HPOVRemoteSupport -Disable
@@ -83,7 +88,7 @@ Set-HPOVRemoteSupport -Disable
 
 Disable Remote Support on the appliance.
 
-###  Example 4 
+### Example 4
 
 ```text
 Set-HPOVRemoteSupport -Enable -ApplianceConnection $Appliance2
@@ -167,7 +172,7 @@ Use this parameter to enable remote support on an appliance, only if the applian
 
 ### -Disable &lt;SwitchParameter&gt;
 
-Use this parameter to disable remote support globally on the appliance.  Use the `-Enable` parameter to `re-enable` Remote Support.
+Use this parameter to disable remote support globally on the appliance. Use the `-Enable` parameter to `re-enable` Remote Support.
 
 | Aliases | None |
 | :--- | :--- |
@@ -179,19 +184,19 @@ Use this parameter to disable remote support globally on the appliance.  Use the
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
@@ -207,11 +212,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this Cmdlet.**_
+_**None. You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.RemoteSupportConfig [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.RemoteSupportConfig \[System.Management.Automation.PSCustomObject\]**_
 
 The appliance Remote Support configuration applied.
 
@@ -229,10 +234,11 @@ The appliance Remote Support configuration applied.
 * [New-HPOVRemoteSupportContact](new-hpovremotesupportcontact.md)
 * [New-HPOVRemoteSupportPartner](new-hpovremotesupportpartner.md)
 * [Remove-HPOVRemoteSupportContact](remove-hpovremotesupportcontact.md)
-* [Remove-HPOVRemoteSupportPartner](remove-hpovremotesupportpartner.md)
+* [Remove-HPOVRemoteSupportPartner](https://github.com/HewlettPackard/POSH-HPOneView-docs/tree/1915d3e6119cf820b69e9b5eb07cbe928a3cfdc7/docs/cmdlets/v5.00/appliance/remove-hpovremotesupportpartner.md)
 * [Set-HPOVRemoteSupportDataCollectionSchedule](set-hpovremotesupportdatacollectionschedule.md)
 * [Set-HPOVRemoteSupportDefaultSite](set-hpovremotesupportdefaultsite.md)
 * [Set-HPOVRemoteSupportPrimaryContact](set-hpovremotesupportprimarycontact.md)
 * [Set-HPOVRemoteSupportSetting](set-hpovremotesupportsetting.md)
 * [Start-HPOVRemoteSupportCollection](start-hpovremotesupportcollection.md)
 * [Update-HPOVRemoteSupportEntitlement](update-hpovremotesupportentitlement.md)
+

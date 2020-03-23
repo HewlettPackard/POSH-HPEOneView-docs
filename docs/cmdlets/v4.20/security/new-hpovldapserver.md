@@ -1,4 +1,4 @@
-﻿---
+---
 description: Define LDAP Directory Server object.
 ---
 
@@ -21,7 +21,7 @@ A helper cmdlet that will define an LDAP Directory Server object to be used with
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 $ServerA = New-HPOVLdapServer -Name servera.domain.com -Certificate C:\dir\servera.cer
@@ -29,7 +29,7 @@ $ServerA = New-HPOVLdapServer -Name servera.domain.com -Certificate C:\dir\serve
 
 Define a new Directory Server, ServerA, specifying the Base64 Public Certificate and using the default LDAP SSL port 636.
 
-###  Example 2 
+### Example 2
 
 ```text
 $ServerA = New-HPOVLdapServer -Name servera.domain.com -Port 2636 -Certificate C:\dir\servera.cer
@@ -37,7 +37,7 @@ $ServerA = New-HPOVLdapServer -Name servera.domain.com -Port 2636 -Certificate C
 
 Define a new Directory Server, ServerA, specifying the Base64 Public Certificate, using a custom LDAP SSL port.
 
-###  Example 3 
+### Example 3
 
 ```text
 $dc1,$dc2 = "dc1.mydomain.com","dc2.mydomain.com" | New-HPOVLdapServer
@@ -56,7 +56,7 @@ Directory server name or IP Address to add.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### -SSLPort &lt;Int32&gt;
@@ -73,7 +73,7 @@ Directory Server"s LDAP SSL Port.
 
 ### -Certificate &lt;Object&gt;
 
-Directory Server SSL Certificate, either location to Base64 Cert or `multi-line` string value.  If omitted, the CMDLET will attempt to retrieve the Directory Servers Secure LDAP Certiciate.
+Directory Server SSL Certificate, either location to Base64 Cert or `multi-line` string value. If omitted, the CMDLET will attempt to retrieve the Directory Servers Secure LDAP Certiciate.
 
 | Aliases | cert |
 | :--- | :--- |
@@ -97,15 +97,15 @@ Use this parameter if you want to provide a PSCredential object instead.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases |  |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? |  |
-| Accept wildcard characters? | False |
+| Aliases |  |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? |  |  |
+| Accept wildcard characters? | False |  |
 
 ### -TrustLeafCertificate &lt;SwitchParameter&gt;
 
@@ -135,7 +135,7 @@ Mutlple Directory Server Name or IP Address System.String values
 
 ## Return Values
 
-_**HPOneView.Appliance.AuthDirectoryServer [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.AuthDirectoryServer \[System.Management.Automation.PSCustomObject\]**_
 
 New LDAP Server Resource Object to be used with [`New-HPOVLdapDirectory`](new-hpovldapdirectory.md) CMDLET
 
@@ -143,3 +143,4 @@ New LDAP Server Resource Object to be used with [`New-HPOVLdapDirectory`](new-hp
 
 * [Add-HPOVLdapServer](add-hpovldapserver.md)
 * [Remove-HPOVLdapServer](remove-hpovldapserver.md)
+

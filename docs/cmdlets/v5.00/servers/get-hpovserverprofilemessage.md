@@ -1,4 +1,4 @@
-﻿---
+---
 description: Display Server Profile alert messages.
 ---
 
@@ -15,11 +15,11 @@ Get-HPOVServerProfileMessage
 
 ## Description
 
-Use this Cmdlet to display alert or other activity messages that are not tracked as Alerts or Tasks.  For instance, failed Connection will be reported as a Server Profile Message.  Firmware update status (using HPSUT) wil be displayed as messages.
+Use this Cmdlet to display alert or other activity messages that are not tracked as Alerts or Tasks. For instance, failed Connection will be reported as a Server Profile Message. Firmware update status \(using HPSUT\) wil be displayed as messages.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Get-HPOVServerProfile MyProfile | Get-HPOVServerProfileMessage
@@ -43,15 +43,15 @@ The Server Profile resource object.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | True |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | true \(ByPropertyName\) |  |
+| Accept wildcard characters? | False |  |
 
 ### &lt;CommonParameters&gt;
 
@@ -59,17 +59,17 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.ServerProfile [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.ServerProfile \[System.Management.Automation.PSCustomObject\]**_
 
 Server Profile resource object from [`Get-HPOVServerProfile`](get-hpovserverprofile.md)
 
 ## Return Values
 
-_**HPOneView.ServerProfileMessage [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.ServerProfileMessage \[System.Management.Automation.PSCustomObject\]**_
 
 Server Profile message object.
 
-_**System.Collections.ArrayList <HPOneView.ServerProfileMessage>**_
+_**System.Collections.ArrayList**_ 
 
 Server Profile message object.
 

@@ -1,4 +1,4 @@
-﻿---
+---
 description: Change the appliance SNMPv3 Engine ID
 ---
 
@@ -21,11 +21,10 @@ Required permissions: Infrastructure administrator
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Set-HPOVApplianceSnmpV3EngineId -EngineID 0x73cb660f279b9e
-
 ```
 
 Default example
@@ -34,15 +33,15 @@ Default example
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### -EngineID &lt;string&gt;
 
@@ -62,7 +61,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this cmdlet.**_
+_**None. You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
@@ -73,3 +72,4 @@ The appliance SNMPv3 engine ID.
 ## Related Links
 
 * [Get-HPOVApplianceSnmpV3EngineId](get-hpovappliancesnmpv3engineid.md)
+

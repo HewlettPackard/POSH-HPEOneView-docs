@@ -1,4 +1,4 @@
-﻿---
+---
 description: Remove a configured Fabric Manager and associated tenants.
 ---
 
@@ -16,13 +16,11 @@ Remove-HPOVFabricManager
 
 ## Description
 
-Fabric Managers is a resource manager in HPE OneView that enables integration of a Cisco ACI fabric (an external entity) with HPE Synergy. A fabric manager aligns HPE OneView resources as defined by Cisco Application Policy Infrastructure Controller (APIC) policies. It represents a remote Cisco APIC or an APIC cluster that manages a Cisco ACI fabric.
- This Cmdlet will remove the fabric manager and will disassociate it's tenant from all logical interconnects, networks and networks sets. Inconsistencies with the APIC tenant configuration will no longer be monitored or remediated by OneView.
- Required privileges: Infrastructure administrator or Server administrator 
+Fabric Managers is a resource manager in HPE OneView that enables integration of a Cisco ACI fabric \(an external entity\) with HPE Synergy. A fabric manager aligns HPE OneView resources as defined by Cisco Application Policy Infrastructure Controller \(APIC\) policies. It represents a remote Cisco APIC or an APIC cluster that manages a Cisco ACI fabric. This Cmdlet will remove the fabric manager and will disassociate it's tenant from all logical interconnects, networks and networks sets. Inconsistencies with the APIC tenant configuration will no longer be monitored or remediated by OneView. Required privileges: Infrastructure administrator or Server administrator
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Get-HPOVFabricManager -Name fabricmgr.domain.com -ErrorAction Stop | Remove-HPOVFabricManager
@@ -34,19 +32,19 @@ Remove the specified fabric manager.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
+Aliases \[-Appliance\]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-Default Value: ${Global:ConnectedSessions} | ? Default
+Default Value: ${Global:ConnectedSessions} \| ? Default
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | true \(ByPropertyName\) |  |
+| Accept wildcard characters? | False |  |
 
 ### -Force &lt;SwitchParameter&gt;
 
@@ -60,7 +58,7 @@ Force delete the resource.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -InputObject &lt;HPOneView.Networking.FabricManager[]&gt;
+### -InputObject &lt;HPOneView.Networking.FabricManager\[\]&gt;
 
 The `[HPOneView.Networking.FabricManager]` resource to remove.
 
@@ -69,7 +67,7 @@ The `[HPOneView.Networking.FabricManager]` resource to remove.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
@@ -84,12 +82,12 @@ The fabric manager resource from [`Get-HPOVFabricManager`](get-hpovfabricmanager
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
 Asyncronous task resource to monitor.
-
 
 ## Related Links
 
 * [Add-HPOVFabricManager](add-hpovfabricmanager.md)
 * [Get-HPOVFabricManager](get-hpovfabricmanager.md)
+

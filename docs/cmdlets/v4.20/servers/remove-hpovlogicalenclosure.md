@@ -1,4 +1,4 @@
-﻿---
+---
 description: Remove a Logical Enclosure.
 ---
 
@@ -16,15 +16,14 @@ Remove-HPOVLogicalEnclosure
 
 ## Description
 
-This cmdlet willRemove a Logical Enclosure.  Removing a Logical Enclosure is only supported with Synergy.  If a C7000 Enclosure needs to be removed, use the Remove-HPOVEnclosure Cmdlet.
+This cmdlet willRemove a Logical Enclosure. Removing a Logical Enclosure is only supported with Synergy. If a C7000 Enclosure needs to be removed, use the Remove-HPOVEnclosure Cmdlet.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Get-HPOVLogicalEnclosure LogicalEnclosure1 | Remove-HPOVLogicalEnclosure
-
 ```
 
 Remove "LogicalEnclosure1" Logical Enclosure resource.
@@ -33,27 +32,27 @@ Remove "LogicalEnclosure1" Logical Enclosure resource.
 
 ### -InputObject &lt;Object&gt;
 
-Provide the Logical Enclosure name, URI or Object, or `[System.Collections.ArrayList` ] of names, URIs or Objects to remove.
+Provide the Logical Enclosure name, URI or Object, or `[System.Collections.ArrayList` \] of names, URIs or Objects to remove.
 
 | Aliases | uri, name, le, Resource |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | True |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | true \(ByPropertyName\) |  |
+| Accept wildcard characters? | False |  |
 
 ### -Force &lt;SwitchParameter&gt;
 
@@ -69,8 +68,6 @@ Forcefully remove the Logical Enclosure resource.
 
 ### -WhatIf &lt;SwitchParameter&gt;
 
-
-
 | Aliases | wi |
 | :--- | :--- |
 | Required? | False |
@@ -80,8 +77,6 @@ Forcefully remove the Logical Enclosure resource.
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
-
-
 
 | Aliases | cf |
 | :--- | :--- |
@@ -97,7 +92,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.LogicalEnclosure [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.LogicalEnclosure \[System.Management.Automation.PSCustomObject\]**_
 
 Single Logical Enclosure resource
 
@@ -107,7 +102,7 @@ Multiple Logical Enclosure resources
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
 Async task Resource object
 
@@ -118,3 +113,4 @@ Async task Resource object
 * [Set-HPOVLogicalEnclosure](set-hpovlogicalenclosure.md)
 * [Update-HPOVLogicalEnclosure](update-hpovlogicalenclosure.md)
 * [Update-HPOVLogicalEnclosureFirmware](../networking/update-hpovlogicalenclosurefirmware.md)
+

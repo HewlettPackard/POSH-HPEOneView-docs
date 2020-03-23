@@ -1,4 +1,4 @@
-﻿---
+---
 description: Modify an existing Datacenter resource.
 ---
 
@@ -26,16 +26,13 @@ Set-HPOVDataCenter
 
 ## Description
 
-A data center represents a physically contiguous area in which racks containing IT equipment are located.
-For example, you have IT equipment in two rooms or on separate floors. You could create a data center for each of these areas.
-Each server, enclosure, or power distribution device in your data center can report its power requirements, but it can be difficult to understand the power and cooling requirements for your data center as a whole. The appliance enables you to bring power and cooling management of your servers, enclosures, and power delivery devices together in a single management system.
-When you initialize the appliance for the first time, it creates a data center named Datacenter 1. The appliance provides this data center as a place to visualize your racks. You can rename or edit this data center to match the values and layout of your data center, you can use it as the basis for a planned data center model, or you can delete this data center without adverse effects.
+A data center represents a physically contiguous area in which racks containing IT equipment are located. For example, you have IT equipment in two rooms or on separate floors. You could create a data center for each of these areas. Each server, enclosure, or power distribution device in your data center can report its power requirements, but it can be difficult to understand the power and cooling requirements for your data center as a whole. The appliance enables you to bring power and cooling management of your servers, enclosures, and power delivery devices together in a single management system. When you initialize the appliance for the first time, it creates a data center named Datacenter 1. The appliance provides this data center as a place to visualize your racks. You can rename or edit this data center to match the values and layout of your data center, you can use it as the basis for a planned data center model, or you can delete this data center without adverse effects.
 
-This Cmdlet will create a new datacenter.  You will need to specify the Name and dimensions.  Optionally, you can override the default Electrical Derating, default voltage, local currency (which will aid in power calculation costs) and power cooling capacity.  Remote Support settings can only be set when Remote Support has been enabled and configured on the appliance.  If omitting Remote Support location settings, then the datacenter will default to the default location set. 
+This Cmdlet will create a new datacenter. You will need to specify the Name and dimensions. Optionally, you can override the default Electrical Derating, default voltage, local currency \(which will aid in power calculation costs\) and power cooling capacity. Remote Support settings can only be set when Remote Support has been enabled and configured on the appliance. If omitting Remote Support location settings, then the datacenter will default to the default location set.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 $DataCenter1Name = "LA DC 12"
@@ -55,7 +52,7 @@ New-HPOVDataCenter -Name $DataCenter1Name -Width $DataCenter1Width -Depth $DataC
 
 Create new "LA DC 12" datacenter.
 
-###  Example 2 
+### Example 2
 
 ```text
 $NewDCParams = @{
@@ -94,7 +91,7 @@ Datacenter object from `Get-HPOVDataCenter`.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### -Name &lt;String&gt;
@@ -111,7 +108,7 @@ A name to identify the data center. Must not exceed 255 characters; no leading s
 
 ### -Width &lt;Float&gt;
 
-Width of the datacenter, in (US) Feet.  Maximum of 50 meters (164.042 feet).  Millimeters can be used, which requires the `-Millimeters` switch parameter.
+Width of the datacenter, in \(US\) Feet. Maximum of 50 meters \(164.042 feet\). Millimeters can be used, which requires the `-Millimeters` switch parameter.
 
 | Aliases | None |
 | :--- | :--- |
@@ -123,7 +120,7 @@ Width of the datacenter, in (US) Feet.  Maximum of 50 meters (164.042 feet).  Mi
 
 ### -Depth &lt;Float&gt;
 
-Depth of the datacenter, in (US) Feet.  Maximum of 50 meters (164.042 feet).  Millimeters can be used, which requires the `-Millimeters` switch parameter.
+Depth of the datacenter, in \(US\) Feet. Maximum of 50 meters \(164.042 feet\). Millimeters can be used, which requires the `-Millimeters` switch parameter.
 
 | Aliases | None |
 | :--- | :--- |
@@ -231,7 +228,7 @@ The ratio of cooling cost to power cost for the data center.
 
 This value represents the relative cost of cooling the system compared to the cost of powering the system. The default value of 1.5 indicates that it costs 1.5 times as much to cool the system as it does to power the system.
 
-Default:  1.5
+Default: 1.5
 
 | Aliases | None |
 | :--- | :--- |
@@ -255,7 +252,7 @@ Primary Remote Support Contact object from `Get-HPOVRemoteSupportContact` define
 
 ### -SecondaryContact &lt;Object&gt;
 
-Secondary Remote Support Contact object from `Get-HPOVRemoteSupportContact` defined on the appliance.  Must not be the same value as the Primary Contact.
+Secondary Remote Support Contact object from `Get-HPOVRemoteSupportContact` defined on the appliance. Must not be the same value as the Primary Contact.
 
 | Aliases |  |
 | :--- | :--- |
@@ -351,15 +348,15 @@ Time Zone of residence for the datacenter.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### &lt;CommonParameters&gt;
 
@@ -367,7 +364,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this Cmdlet.**_
+_**None. You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
@@ -379,5 +376,6 @@ Newly created datacenter.
 
 * [Get-HPOVDataCenter](get-hpovdatacenter.md)
 * [New-HPOVDataCenter](new-hpovdatacenter.md)
-* [Remove-HPOVDataCenter](remove-hpovdatacenter.md)
+* [Remove-HPOVDataCenter](https://github.com/HewlettPackard/POSH-HPOneView-docs/tree/2c3cd0d508b6cdba6336a27d496637fc71c6ce4c/docs/cmdlets/v5.00/facilities/remove-hpovdatacenter.md)
 * [Set-HPOVDataCenterRemoteSupport](../appliance/set-hpovdatacenterremotesupport.md)
+

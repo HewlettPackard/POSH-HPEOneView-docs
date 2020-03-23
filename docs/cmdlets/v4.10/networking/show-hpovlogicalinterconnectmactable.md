@@ -1,4 +1,4 @@
-﻿---
+---
 description: Show the MAC Table for Logical Interconnect resource(s).
 ---
 
@@ -35,24 +35,23 @@ Show-HPOVLogicalInterconnectMacTable
 
 ## Description
 
-This cmdlet will help show the MAC Table of Logical Interconnect resources.  The REST API currently limits the first 100 MAC addresses from the MAC table, regardless of the number of MAC Addresses learned in the table.
+This cmdlet will help show the MAC Table of Logical Interconnect resources. The REST API currently limits the first 100 MAC addresses from the MAC table, regardless of the number of MAC Addresses learned in the table.
 
-Use the -Network parameter to specify the Network Name to display learned MAC Addresses.  You can export the results to a CSV file, by providing the full path and filename to export to, using the -ExportFile parameter.
+Use the -Network parameter to specify the Network Name to display learned MAC Addresses. You can export the results to a CSV file, by providing the full path and filename to export to, using the -ExportFile parameter.
 
 To display the results in a formatted list, use the -List parameter.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Show-HPOVLogicalInterconnectMacTable
-
 ```
 
 Return as many MAC Addresses allowed by the API for all Logical Interconnect resources.
 
-###  Example 2 
+### Example 2
 
 ```text
 Show-HPOVLogicalInterconnectMacTable -network VLAN100
@@ -61,34 +60,30 @@ Enclosure Interconnect    Interface Address           Type    Network   VLAN
 Encl1      interconnect 2 LAG 27    38:22:D6:35:5A:62 Learned VLAN100  30
 Encl1      interconnect 1 LAG 26    38:22:D6:35:5A:62 Learned VLAN100  30
 Encl1      interconnect 1 LAG 26    78:AC:C0:72:E5:D9 Learned VLAN100  30
-
-
 ```
 
 Display all available MAC Addresses learned in "VLAN100" network in all Logical Interconnect resources, and display in a formatted table.
 
-###  Example 3 
+### Example 3
 
 ```text
 Show-HPOVLogicalInterconnectMacTable -network VLAN100 -exportfile C:\reports\Encl1-LI_vlan100_mactable.csv
-
 ```
 
-Retrieve the available MAC Addresses learned in "VLAN100" network, and export to C:\reports\Encl1-LI_vlan100_mactable.csv
+Retrieve the available MAC Addresses learned in "VLAN100" network, and export to C:\reports\Encl1-LI\_vlan100\_mactable.csv
 
 ## Parameters
 
 ### -InputObject &lt;Object&gt;
 
-Aliases [-name, `-li`, `-LogicalInterconnect`]
-The Name, URI, Logical Interconnect Resource or an array of either to display the MAC Address tables from.
+Aliases \[-name, `-li`, `-LogicalInterconnect`\] The Name, URI, Logical Interconnect Resource or an array of either to display the MAC Address tables from.
 
 | Aliases | name, li, LogicalInterconnect |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### -Network &lt;String&gt;
@@ -117,8 +112,7 @@ Provide a MAC Address to locate in the MAC Table.
 
 ### -Export &lt;String&gt;
 
-Aliases [-x, `-exportFile`]
-Export to a CSV, provide the full path and filename.
+Aliases \[-x, `-exportFile`\] Export to a CSV, provide the full path and filename.
 
 | Aliases | x, ExportFile |
 | :--- | :--- |
@@ -130,19 +124,19 @@ Export to a CSV, provide the full path and filename.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
+Aliases \[-Appliance\]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-Default Value: ${Global:ConnectedSessions} | ? Default
+Default Value: ${Global:ConnectedSessions} \| ? Default
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | True |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | true \(ByPropertyName\) |  |
+| Accept wildcard characters? | False |  |
 
 ### &lt;CommonParameters&gt;
 
@@ -157,7 +151,6 @@ An Array of Logical Interconnect resource URI"s, Names or Objects
 _**System.Management.Automation.PSCustomObject**_
 
 Logical Interconnect Resource Object
-
 
 ## Return Values
 

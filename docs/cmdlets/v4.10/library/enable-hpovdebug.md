@@ -1,4 +1,4 @@
-﻿---
+---
 description: Enable specific appliance-level component debug logging.
 ---
 
@@ -17,7 +17,7 @@ Enable-HPOVDebug
 
 ## Description
 
-FOR HP SUPPORT USE ONLY.  This cmdlet will enable appliance level component debug logging for during issue triage.  Do not use this cmdlet unless otherwise instructed by HP Support.
+FOR HP SUPPORT USE ONLY. This cmdlet will enable appliance level component debug logging for during issue triage. Do not use this cmdlet unless otherwise instructed by HP Support.
 
 ## Examples
 
@@ -49,12 +49,12 @@ The internal component name.
 
 ### -Level &lt;String&gt;
 
-The verbose level to enable.  Allowed values are:
+The verbose level to enable. Allowed values are:
 
-	* ERROR
-	* WARN
-	* DEBUG
-	* TRACE
+* ERROR
+* WARN
+* DEBUG
+* TRACE
 
 | Aliases | None |
 | :--- | :--- |
@@ -66,19 +66,19 @@ The verbose level to enable.  Allowed values are:
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
+Aliases \[-Appliance\]
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 
-Default Value: ${Global:ConnectedSessions} | ? Default
+Default Value: ${Global:ConnectedSessions} \| ? Default
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | True |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | true \(ByPropertyName\) |  |
+| Accept wildcard characters? | False |  |
 
 ### &lt;CommonParameters&gt;
 
@@ -90,13 +90,11 @@ _**HPOneView.Appliance.Connection**_
 
 HPE OneView Appliance Connection object.
 
-
 ## Return Values
 
 _**System.Management.Automation.PSCustomObject**_
 
-
-
 ## Related Links
 
 * [Disable-HPOVDebug](disable-hpovdebug.md)
+

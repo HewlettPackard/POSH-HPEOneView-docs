@@ -1,4 +1,4 @@
-﻿---
+---
 description: Define the Remote Support Default Site.
 ---
 
@@ -21,11 +21,11 @@ Set-HPOVRemoteSupportDefaultSite
 
 ## Description
 
-Use this Cmdlet to set the default data center site used for Remote Support.  All resources defined will use this data center site. 
+Use this Cmdlet to set the default data center site used for Remote Support. All resources defined will use this data center site.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Set-HPOVRemoteSupportDefaultSite -AddressLine1 "3000 Hanover St." -City "Palo Alto" -State CA -PostalCode 94304 -Country US -TimeZone "US/Pacific"
@@ -37,8 +37,7 @@ Get the configured Remote Support default site.
 
 ### -AddressLine1 &lt;String&gt;
 
-Aliases [-a1]
-Primary Address line 1.
+Aliases \[-a1\] Primary Address line 1.
 
 | Aliases | a1 |
 | :--- | :--- |
@@ -50,8 +49,7 @@ Primary Address line 1.
 
 ### -AddressLine2 &lt;String&gt;
 
-Aliases [-a2]
-Primary Address line 2.
+Aliases \[-a2\] Primary Address line 2.
 
 | Aliases | a2 |
 | :--- | :--- |
@@ -75,8 +73,7 @@ City.
 
 ### -State &lt;String&gt;
 
-Aliases [-Provence]
-State or Provence.
+Aliases \[-Provence\] State or Provence.
 
 | Aliases | Province |
 | :--- | :--- |
@@ -112,7 +109,7 @@ Postal or zip code.
 
 ### -TimeZone &lt;String&gt;
 
-Timezone of the data center, in `ISO-3166` location format (e.g. US/Central).
+Timezone of the data center, in `ISO-3166` location format \(e.g. US/Central\).
 
 | Aliases | None |
 | :--- | :--- |
@@ -124,15 +121,15 @@ Timezone of the data center, in `ISO-3166` location format (e.g. US/Central).
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### &lt;CommonParameters&gt;
 
@@ -140,7 +137,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this Cmdlet.**_
+_**None. You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
@@ -151,3 +148,4 @@ Configured Remote Support default site.
 ## Related Links
 
 * [Get-HPOVRemoteSupportDefaultSite](get-hpovremotesupportdefaultsite.md)
+

@@ -1,4 +1,4 @@
-﻿---
+---
 description: Change appliance connection active permissions.
 ---
 
@@ -14,11 +14,11 @@ Push-HPOVAppliancePermission
 
 ## Description
 
-Upon successful login, the caller can change their active permissions, and operate in a less priviledge mode at anytime.  The Push-HPOVAppliancePermission Cmdlet will accept a single or collection of [HPOneView.Appliance.ConnectionPermission] objects.  A new SessionID token will be stored within the ApplianceConnection, and the ConnectionPermissions within the ActivePermissions property that were not provided will have their State set to "false".
+Upon successful login, the caller can change their active permissions, and operate in a less priviledge mode at anytime. The Push-HPOVAppliancePermission Cmdlet will accept a single or collection of \[HPOneView.Appliance.ConnectionPermission\] objects. A new SessionID token will be stored within the ApplianceConnection, and the ConnectionPermissions within the ActivePermissions property that were not provided will have their State set to "false".
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 $ConnectedSessions[0].ActivePermissions
@@ -34,7 +34,7 @@ Push-HPOVAppliancePermission -SetActivePermissions $NewPermissions
 
 Change active permissions by filtering for a specific Role.
 
-###  Example 2 
+### Example 2
 
 ```text
 $ConnectedSessions[0].ActivePermissions
@@ -67,19 +67,19 @@ One or more `[HPOneView.Appliance.ConnectionPermission]` objects from an `[HPOne
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
+Aliases \[-Appliance\]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-Default Value: ${Global:ConnectedSessions} | ? Default
+Default Value: ${Global:ConnectedSessions} \| ? Default
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | true \(ByPropertyName\) |  |
+| Accept wildcard characters? | False |  |
 
 ### &lt;CommonParameters&gt;
 
@@ -87,7 +87,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this cmdlet.**_
+_**None. You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
@@ -98,3 +98,4 @@ One or more appliance connection permissions and their active state.
 ## Related Links
 
 * [Pop-HPOVAppliancePermission](pop-hpovappliancepermission.md)
+

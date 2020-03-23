@@ -1,4 +1,4 @@
-﻿---
+---
 description: Create new Scope.
 ---
 
@@ -18,32 +18,31 @@ New-HPOVScope
 
 A scope is a grouping of resources that can be used to restrict the range of an operation or action. For example, you can create scopes based on:
 
-    * Organizations (Marketing, Research and Development, Finance)
-    * Usage (Production, Development, Testing)
-    * Skills (Linux, Windows)
+* Organizations \(Marketing, Research and Development, Finance\)
+* Usage \(Production, Development, Testing\)
+* Skills \(Linux, Windows\)
 
 The resources are arranged by categories. All the resources in these categories can be added to or removed from a scope:
 
-    * Enclosures
-    * Server Hardware
-    * Networks (Ethernet, FC, and FCoE)
-    * Network Sets
-    * Interconnects, excluding SAS resources
-    * Logical Interconnects, excluding SAS resources
-    * Logical Interconnect Groups, excluding SAS resources
-    * Switches
-    * Logical Switches
-    * Logical Switch Groups
+* Enclosures
+* Server Hardware
+* Networks \(Ethernet, FC, and FCoE\)
+* Network Sets
+* Interconnects, excluding SAS resources
+* Logical Interconnects, excluding SAS resources
+* Logical Interconnect Groups, excluding SAS resources
+* Switches
+* Logical Switches
+* Logical Switch Groups
 
 {% hint style="info" %}
 Resources in other categories are considered to be included in all scopes, and they cannot be removed.
 {% endhint %}
 
-
 When scopes are defined and resources assigned to them, you can:
 
-    * Restrict your view of the user interface (UI) to the resources in the scope.
-    * Filter email notifications for alerts based on the scope of the associated resources.
+* Restrict your view of the user interface \(UI\) to the resources in the scope.
+* Filter email notifications for alerts based on the scope of the associated resources.
 
 {% hint style="info" %}
 Minimum required privileges: Infrastructure administrator
@@ -51,29 +50,26 @@ Minimum required privileges: Infrastructure administrator
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 New-HPOVScope -Name MyFinanceScope
-
 ```
 
 Create a "MyFinanceScope" for the default appliance connection.
 
-###  Example 2 
+### Example 2
 
 ```text
 New-HPOVScope -Name MyFinanceScope -Descrition "Finance Scope of resources"
-
 ```
 
 Create a "MyFinanceScope" with a descrition for the default appliance connection.
 
-###  Example 3 
+### Example 3
 
 ```text
 New-HPOVScope -Name MyFinanceScope -Descrition "Finance Scope of resources" -ApplianceConnection $ConnectedSessions
-
 ```
 
 Create a "MyFinanceScope" with a descrition for all appliance connections.
@@ -106,15 +102,15 @@ Administrator account of the target iLO.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### &lt;CommonParameters&gt;
 
@@ -122,11 +118,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this cmdlet.**_
+_**None. You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.Scope [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.Scope \[System.Management.Automation.PSCustomObject\]**_
 
 Appliance Scope resource object.
 
@@ -134,3 +130,4 @@ Appliance Scope resource object.
 
 * [Get-HPOVScope](get-hpovscope.md)
 * [Remove-HPOVScope](remove-hpovscope.md)
+

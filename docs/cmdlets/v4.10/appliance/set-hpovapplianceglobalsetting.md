@@ -1,4 +1,4 @@
-﻿---
+---
 description: (Reserved for future use) Update appliance global settings.
 ---
 
@@ -23,15 +23,14 @@ Set-HPOVApplianceGlobalSetting
 
 ## Description
 
-(Reserved for future use) Updates the value for an existing global parameter.
+\(Reserved for future use\) Updates the value for an existing global parameter.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Set-HPOVApplianceGlobalSetting alertMax 75000
-
 ```
 
 Returns the "alertMax" setting object with the updated value of 75000
@@ -40,7 +39,7 @@ Returns the "alertMax" setting object with the updated value of 75000
 
 ### -InputObject &lt;HPOneView.Appliance.GlobalSetting&gt;
 
-Aliases [-Object]
+Aliases \[-Object\]
 
 The Appliance Global Setting object from `Get-HPOVApplianceGlobalSetting`.
 
@@ -49,7 +48,7 @@ The Appliance Global Setting object from `Get-HPOVApplianceGlobalSetting`.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### -Name &lt;String&gt;
@@ -78,19 +77,19 @@ The updated value for the global parameter.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
+Aliases \[-Appliance\]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-Default Value: ${Global:ConnectedSessions} | ? Default
+Default Value: ${Global:ConnectedSessions} \| ? Default
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | True |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | true \(ByPropertyName\) |  |
+| Accept wildcard characters? | False |  |
 
 ### &lt;CommonParameters&gt;
 
@@ -106,8 +105,7 @@ Appliance global setting from [`Get-HPOVApplianceGlobalSetting`](get-hpovapplian
 
 _**The setting object with updated parameters.**_
 
-
-
 ## Related Links
 
 * [Get-HPOVApplianceGlobalSetting](get-hpovapplianceglobalsetting.md)
+

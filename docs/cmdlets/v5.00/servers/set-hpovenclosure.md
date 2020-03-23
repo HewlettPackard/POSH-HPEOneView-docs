@@ -1,4 +1,4 @@
-﻿---
+---
 description: Rename Synergy Frame Name or Rack Name.
 ---
 
@@ -17,11 +17,11 @@ Set-HPOVEnclosure
 
 ## Description
 
-This Cmdlet provides the ability to set a Synergy Frame/Enclosure Name and/or the Synergy Rack Name to provided values.  Each requires a seperate async task to complete.
+This Cmdlet provides the ability to set a Synergy Frame/Enclosure Name and/or the Synergy Rack Name to provided values. Each requires a seperate async task to complete.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Get-HPOVEnclosure -Name "0000A66101" -ErrorAction Stop | Set-HPOVEnclosure -Name "MyEnclName1" | Wait-HPOVTaskComplete
@@ -29,7 +29,7 @@ Get-HPOVEnclosure -Name "0000A66101" -ErrorAction Stop | Set-HPOVEnclosure -Name
 
 Set the provided Synergy Frame resource Name to a new value.
 
-###  Example 2 
+### Example 2
 
 ```text
 Get-HPOVEnclosure -Name "0000A66101" -ErrorAction Stop | Set-HPOVEnclosure -Name "MyEnclName1" -RackName "DC11-Rack4A" | Wait-HPOVTaskComplete
@@ -48,7 +48,7 @@ A Syngery Frame/Enclosure Object.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### -Name &lt;String&gt;
@@ -79,13 +79,13 @@ The new name of ta Synergy Rack.
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | true \(ByPropertyName\) |  |
+| Accept wildcard characters? | False |  |
 
 ### &lt;CommonParameters&gt;
 
@@ -93,17 +93,17 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Enclosure [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Enclosure \[System.Management.Automation.PSCustomObject\]**_
 
 Single Syngery Enclosure resource
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
 Single async task resource for resource name update
 
-_**System.Collections.ArrayList <HPOneView.Appliance.TaskResource>**_
+_**System.Collections.ArrayList**_ 
 
 Collection of async tasks
 
@@ -113,9 +113,10 @@ Collection of async tasks
 * [Get-HPOVEnclosure](get-hpovenclosure.md)
 * [Get-HPOVEnclosureGroup](get-hpovenclosuregroup.md)
 * [New-HPOVEnclosureGroup](new-hpovenclosuregroup.md)
-* [Remove-HPOVEnclosure](remove-hpovenclosure.md)
+* [Remove-HPOVEnclosure](https://github.com/HewlettPackard/POSH-HPOneView-docs/tree/2c3cd0d508b6cdba6336a27d496637fc71c6ce4c/docs/cmdlets/v5.00/servers/remove-hpovenclosure.md)
 * [Remove-HPOVEnclosureGroup](remove-hpovenclosuregroup.md)
 * [Reset-HPOVEnclosureDevice](reset-hpovenclosuredevice.md)
 * [Set-HPOVEnclosureActiveFLM](set-hpovenclosureactiveflm.md)
-* [Set-HPOVEnclosureGroup](set-hpovenclosuregroup.md)
+* [Set-HPOVEnclosureGroup](https://github.com/HewlettPackard/POSH-HPOneView-docs/tree/2c3cd0d508b6cdba6336a27d496637fc71c6ce4c/docs/cmdlets/v5.00/servers/set-hpovenclosuregroup.md)
 * [Update-HPOVEnclosure](update-hpovenclosure.md)
+

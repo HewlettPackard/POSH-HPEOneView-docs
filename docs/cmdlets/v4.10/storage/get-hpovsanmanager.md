@@ -1,4 +1,4 @@
-﻿---
+---
 description: Retrieve SAN Manager resource(s).
 ---
 
@@ -13,11 +13,11 @@ Get-HPOVSanManager
 
 ## Description
 
-This cmdlet will return the configured SAN Manager(s).
+This cmdlet will return the configured SAN Manager\(s\).
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Get-HPOVSanManager
@@ -25,7 +25,6 @@ Name            Status State   Type                    Version  Managed SANs
 ----            ------ -----   ----                    -------  ------------
 bna1.domain.com OK     Managed Brocade Network Advisor 12.3.4.5 {Fabric_A, Fabric_B}
 bna2.domain.com OK     Managed Brocade Network Advisor 12.3.4.5 {Fabric_C, Fabric_D}
-
 ```
 
 Display all SAN Managers.
@@ -34,8 +33,7 @@ Display all SAN Managers.
 
 ### -Name &lt;String&gt;
 
-Aliases [-SanManager]
-Provide the name of the SAN Manager to display.
+Aliases \[-SanManager\] Provide the name of the SAN Manager to display.
 
 | Aliases | SanManager |
 | :--- | :--- |
@@ -59,19 +57,19 @@ Specify the label associated with resources.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
+Aliases \[-Appliance\]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-Default Value: ${Global:ConnectedSessions} | ? Default
+Default Value: ${Global:ConnectedSessions} \| ? Default
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### &lt;CommonParameters&gt;
 
@@ -79,19 +77,17 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this cmdlet.**_
+_**None. You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Storage.SanManager [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Storage.SanManager \[System.Management.Automation.PSCustomObject\]**_
 
 Single SAN Manager resource
 
-
-_**System.Collections.ArrayList <HPOneView.Storage.SanManager>**_
+_**System.Collections.ArrayList**_ 
 
 Multiple SAN Manager resources
-
 
 ## Related Links
 
@@ -99,3 +95,4 @@ Multiple SAN Manager resources
 * [Remove-HPOVSanManager](remove-hpovsanmanager.md)
 * [Set-HPOVSanManager](set-hpovsanmanager.md)
 * [Update-HPOVSanManager](update-hpovsanmanager.md)
+

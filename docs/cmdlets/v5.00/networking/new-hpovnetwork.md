@@ -1,4 +1,4 @@
-﻿---
+---
 description: Creates one or more new Ethernet or Fibre-Channel networks on the appliance.
 ---
 
@@ -83,26 +83,26 @@ New-HPOVNetwork
 
 ## Description
 
-Create a new network resource, including its default connection type.  Network definitions can be supplied as direct Cmdlet parameters or as input from a file containing the network definition in JSON format.
+Create a new network resource, including its default connection type. Network definitions can be supplied as direct Cmdlet parameters or as input from a file containing the network definition in JSON format.
 
 To create an Ethernet Network for Image Streamer, use the following paramters:
 
-    * Name
-    * VlanType = Untagged
-    * IPv4Subnet Object
-    * Purpose = Management
+* Name
+* VlanType = Untagged
+* IPv4Subnet Object
+* Purpose = Management
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 New-HPOVNetwork -type Ethernet -name MyNetwork1 -vlanid 100 -typicalbandwidth 5000 -maximumbandwidth 7500
 ```
 
-Creates new Ethernet Network type, with "MyNetwork1" name, VLAN ID 100, and specifies preferred bandwidth to 5Gb/s and max to 7.5Gb/s.  Network will be created on all connected appliances.
+Creates new Ethernet Network type, with "MyNetwork1" name, VLAN ID 100, and specifies preferred bandwidth to 5Gb/s and max to 7.5Gb/s. Network will be created on all connected appliances.
 
-###  Example 2 
+### Example 2
 
 ```text
 New-HPOVNetwork -type Ethernet -name MyNetwork1 -vlanid 100 -typicalbandwidth 5000 -maximumbandwidth 7500 -Appliance MyAppliance
@@ -110,7 +110,7 @@ New-HPOVNetwork -type Ethernet -name MyNetwork1 -vlanid 100 -typicalbandwidth 50
 
 Creates new Ethernet Network type, with "MyNetwork1" name, VLAN ID 100, an dspecifies preferred bandwidth to 5Gb/s and max to 7.5Gb/s to be created on "MyAppliance"
 
-###  Example 3 
+### Example 3
 
 ```text
 $Connection1 = Connect-HPOVMgmt MyAppliance1.domain.local Administrator MyPassword
@@ -120,7 +120,7 @@ New-HPOVNetwork -type Ethernet -name MyNetwork1 -vlanid 100 -typicalbandwidth 50
 
 Creates new Ethernet Network type, with "MyNetwork1" name, VLAN ID 100, an dspecifies preferred bandwidth to 5Gb/s and max to 7.5Gb/s to be created on "MyAppliance1" and "MyAppliance2" using the connection objects.
 
-###  Example 4 
+### Example 4
 
 ```text
 10,20,30,40,50,60 | % { New-HPOVNetwork -type Ethernet -name "VLAN $_" -vlanid $_ }
@@ -128,7 +128,7 @@ Creates new Ethernet Network type, with "MyNetwork1" name, VLAN ID 100, an dspec
 
 Create multiple Ethernet Networks.
 
-###  Example 5 
+### Example 5
 
 ```text
 10,20,30,40,50,60 | % { New-HPOVNetwork -type Ethernet -name "VLAN $_-A" -vlanid $_ }
@@ -137,7 +137,7 @@ Create multiple Ethernet Networks.
 
 Create Ethernet Networks for an Active/Active configuration.
 
-###  Example 6 
+### Example 6
 
 ```text
 New-HPOVNetwork -name "VLAN A Side" -vlanRange "10,20,30,40,50,60"
@@ -146,7 +146,7 @@ New-HPOVNetwork -name "VLAN B Side" -VlanRange "10,20,30,40,50,60"
 
 Create Ethernet Networks for an Active/Active configuration using the `-VlanRange` parameter.
 
-###  Example 7 
+### Example 7
 
 ```text
 New-HPOVNetwork -type FC -name "Fabric A" -typicalBandwidth 2000 -maximumBandwidth 4000
@@ -154,7 +154,7 @@ New-HPOVNetwork -type FC -name "Fabric A" -typicalBandwidth 2000 -maximumBandwid
 
 Creates a new FC network type, called "Fabric A" and preferred bandwidth is 2Gb/s and max is 4Gb/s.
 
-###  Example 8 
+### Example 8
 
 ```text
 New-HPOVNetwork -type FC -name "Fabric A" -typicalBandwidth 2000 -maximumBandwidth 4000 -fabricType FabricAttach -managedSAN Fabric_A
@@ -162,20 +162,19 @@ New-HPOVNetwork -type FC -name "Fabric A" -typicalBandwidth 2000 -maximumBandwid
 
 Creates a new FC network type, called "Fabric A", preferred bandwidth is 2Gb/s and max is 4Gb/s, and is associated with a Managed SAN Fabric.
 
-###  Example 9 
+### Example 9
 
 ```text
 New-HPOVNetwork -importFile "c:\OneViewInput\myNewNets.json"
 ```
 
-Creates the network(s) defined in the input file `[myNewNets.json]`
+Creates the network\(s\) defined in the input file `[myNewNets.json]`
 
 ## Parameters
 
 ### -Name &lt;String&gt;
 
-Required object to provide a display name for the network being created.
-If specifying the `-VlanRange` parameter, this will become the Nework Name Prefix (i.e. "VLAN" will become "VLAN-[vlanid]".)
+Required object to provide a display name for the network being created. If specifying the `-VlanRange` parameter, this will become the Nework Name Prefix \(i.e. "VLAN" will become "VLAN-\[vlanid\]".\)
 
 | Aliases | None |
 | :--- | :--- |
@@ -187,12 +186,12 @@ If specifying the `-VlanRange` parameter, this will become the Nework Name Prefi
 
 ### -Type &lt;String&gt;
 
-Required value that specifies the type of Network Resource to create.  Allowed values are:
+Required value that specifies the type of Network Resource to create. Allowed values are:
 
-    * Ethernet
-    * FC
-    * FibreChannel
-    * FCoE
+* Ethernet
+* FC
+* FibreChannel
+* FCoE
 
 | Aliases | None |
 | :--- | :--- |
@@ -204,9 +203,9 @@ Required value that specifies the type of Network Resource to create.  Allowed v
 
 ### -VlanId &lt;Int32&gt;
 
-The Virtual LAN (VLAN) identification number assigned to the network. The VLAN ID must be unique. The VLAN ID cannot be changed once the network has been created.
+The Virtual LAN \(VLAN\) identification number assigned to the network. The VLAN ID must be unique. The VLAN ID cannot be changed once the network has been created.
 
-When creating an Ethernet Network on an HPE Synergy Composer, Vlan ID 1 is not a valid ID.  The allowed range is `2-4095`.
+When creating an Ethernet Network on an HPE Synergy Composer, Vlan ID 1 is not a valid ID. The allowed range is `2-4095`.
 
 | Aliases | None |
 | :--- | :--- |
@@ -230,7 +229,7 @@ An IPv4 Subnet Object that will be associated with a specific Ethernet Network a
 
 ### -VlanRange &lt;String&gt;
 
-VLAN Range of networks to create.  Can be consecutive, `non-consecutive` or a combination of both.
+VLAN Range of networks to create. Can be consecutive, `non-consecutive` or a combination of both.
 
 `[e.g]`. `-VLANRange` "10-90,94,96,200-210"
 
@@ -244,11 +243,11 @@ VLAN Range of networks to create.  Can be consecutive, `non-consecutive` or a co
 
 ### -VLANType &lt;String&gt;
 
-The type of VLAN configuration for the Ethernet Network.  This setting is only applicable for the Uplink Set configuration, and not the Network Set it could be assigned to.  Accepted values are 
-            
-    * Tagged
-    * Tunnel
-    * Access
+The type of VLAN configuration for the Ethernet Network. This setting is only applicable for the Uplink Set configuration, and not the Network Set it could be assigned to. Accepted values are
+
+* Tagged
+* Tunnel
+* Access
 
 Default value is Tagged.
 
@@ -262,13 +261,13 @@ Default value is Tagged.
 
 ### -Purpose &lt;String&gt;
 
-A description of the network"s role within the logical interconnect.  Accepted values in string format are:
+A description of the network"s role within the logical interconnect. Accepted values in string format are:
 
-    * General
-    * Management
-    * VMMigration
-    * FaultTolerance
-    * iSCSI
+* General
+* Management
+* VMMigration
+* FaultTolerance
+* iSCSI
 
 | Aliases | None |
 | :--- | :--- |
@@ -304,7 +303,7 @@ Default value is FALSE.
 
 ### -TypicalBandwidth &lt;Int32&gt;
 
-Preferred amount of bandwidth to assign, specified in Mbps.  Default value is 2500.
+Preferred amount of bandwidth to assign, specified in Mbps. Default value is 2500.
 
 | Aliases | None |
 | :--- | :--- |
@@ -316,7 +315,7 @@ Preferred amount of bandwidth to assign, specified in Mbps.  Default value is 25
 
 ### -MaximumBandwidth &lt;Int32&gt;
 
-Maximum amount of bandwidth to assign, specified in Mbps.  Default value is 10000.
+Maximum amount of bandwidth to assign, specified in Mbps. Default value is 10000.
 
 | Aliases | None |
 | :--- | :--- |
@@ -328,7 +327,7 @@ Maximum amount of bandwidth to assign, specified in Mbps.  Default value is 1000
 
 ### -LinkStabilityTime &lt;Int32&gt;
 
-The time in seconds the appliance waits before reconnecting to a link that was previously offline (Login redistribution). This interval prevents connection loss due to reconnecting to a link that is unstable (going online and offline repeatedly).
+The time in seconds the appliance waits before reconnecting to a link that was previously offline \(Login redistribution\). This interval prevents connection loss due to reconnecting to a link that is unstable \(going online and offline repeatedly\).
 
 | Aliases | None |
 | :--- | :--- |
@@ -340,10 +339,9 @@ The time in seconds the appliance waits before reconnecting to a link that was p
 
 ### -AutoLoginRedistribution &lt;Boolean&gt;
 
-Used for login balancing when logins are not distributed evenly over the Fibre Channel links (for example, when an uplink that was down becomes available).
+Used for login balancing when logins are not distributed evenly over the Fibre Channel links \(for example, when an uplink that was down becomes available\).
 
-True: Login redistribution is initiated automatically when the link stability time expires.
-False: Login redistribution must be initiated manually.
+True: Login redistribution is initiated automatically when the link stability time expires. False: Login redistribution must be initiated manually.
 
 This parameter is not applicable for Direct Attach Fabric Types.
 
@@ -376,12 +374,12 @@ Managed SAN Object or Name.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
 
-Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
+Use this parameter to immediately return the async task. By default, the Cmdlet will wait for the task to complete.
 
 | Aliases | None |
 | :--- | :--- |
@@ -393,15 +391,15 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | false |  |
+| Accept wildcard characters? | False |  |
 
 ### -ImportFile &lt;String&gt;
 
@@ -415,9 +413,9 @@ Full path and file name of a JSON formatted input file containing network defini
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;HPOneView.Appliance.ScopeCollection[]&gt;
+### -Scope &lt;HPOneView.Appliance.ScopeCollection\[\]&gt;
 
-Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
+Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with. Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -427,7 +425,7 @@ Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -NetworkSet &lt;Object[]&gt;
+### -NetworkSet &lt;Object\[\]&gt;
 
 Specify one or more network set objects the network should be added to during creation from `Get-HPOVNetworkSet`.
 
@@ -445,7 +443,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Storage.ManagedSan [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Storage.ManagedSan \[System.Management.Automation.PSCustomObject\]**_
 
 ManagedSan resource object to be assigned to a FC or FCoE Network
 
@@ -453,14 +451,15 @@ ManagedSan resource object to be assigned to a FC or FCoE Network
 
 _**System.Collections.ArrayList**_
 
-A custom status object or array of objects containing the following PsCustomObject keys:  * Name - name of the network object attempted to be created * Status - status of the creation attempt (Failed for http error return; Complete if a task object is returned) * Description - Task object or Error object * Exception -  System.Management.Automation.ErrorRecord object of the error generated
+A custom status object or array of objects containing the following PsCustomObject keys:  _Name - name of the network object attempted to be created_  Status - status of the creation attempt \(Failed for http error return; Complete if a task object is returned\)  _Description - Task object or Error object_  Exception - System.Management.Automation.ErrorRecord object of the error generated
 
 ## Related Links
 
 * [Get-HPOVNetwork](get-hpovnetwork.md)
 * [Get-HPOVNetworkSet](get-hpovnetworkset.md)
 * [New-HPOVNetworkSet](new-hpovnetworkset.md)
-* [Remove-HPOVNetwork](remove-hpovnetwork.md)
+* [Remove-HPOVNetwork](https://github.com/HewlettPackard/POSH-HPOneView-docs/tree/2c3cd0d508b6cdba6336a27d496637fc71c6ce4c/docs/cmdlets/v5.00/networking/remove-hpovnetwork.md)
 * [Remove-HPOVNetworkSet](remove-hpovnetworkset.md)
 * [Set-HPOVNetwork](set-hpovnetwork.md)
-* [Set-HPOVNetworkSet](set-hpovnetworkset.md)
+* [Set-HPOVNetworkSet](https://github.com/HewlettPackard/POSH-HPOneView-docs/tree/2c3cd0d508b6cdba6336a27d496637fc71c6ce4c/docs/cmdlets/v5.00/networking/set-hpovnetworkset.md)
+

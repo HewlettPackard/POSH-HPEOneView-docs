@@ -1,4 +1,4 @@
-﻿---
+---
 description: Updates a Logical Interconnect.
 ---
 
@@ -31,29 +31,28 @@ Update-HPOVLogicalInterconnect
 
 ## Description
 
-When a Logical Interconnect is inconsistent with its parent Logical Interconnect Group, it can be made consistent with this Cmdlet.  Updating the Logical Interconnect with its parent could cause an network outage depending on the changes about to be applied.
+When a Logical Interconnect is inconsistent with its parent Logical Interconnect Group, it can be made consistent with this Cmdlet. Updating the Logical Interconnect with its parent could cause an network outage depending on the changes about to be applied.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 $task = Update-HPOVLogicalInterconnect -name Encl1-LI
 Wait-HPOVTaskComplete $task
-                    
 ```
 
-Perform an update of the `Encl1-LI` Logical Interconnect.  Will be prompted for confirmation.
+Perform an update of the `Encl1-LI` Logical Interconnect. Will be prompted for confirmation.
 
-###  Example 2 
+### Example 2
 
 ```text
 $task = Update-HPOVLogicalInterconnect -name Encl1-LI -confirm:$false | Wait-HPOVTaskComplete
 ```
 
-Perform an update of the `Encl1-LI` Logical Interconnect.  Disable confirmation prompt.
+Perform an update of the `Encl1-LI` Logical Interconnect. Disable confirmation prompt.
 
-###  Example 3 
+### Example 3
 
 ```text
 Get-HPOVLogicalInterconnect | Update-HPOVLogicalInterconnect
@@ -61,7 +60,7 @@ Get-HPOVLogicalInterconnect | Update-HPOVLogicalInterconnect
 
 Search for all Logical Interconnects and update them.
 
-###  Example 4 
+### Example 4
 
 ```text
 Get-HPOVLogicalInterconnect -Name Encl1-Default VC FF LIG | Update-HPOVLogicalInterconnect -WhatIf
@@ -88,31 +87,31 @@ Refresh "LogicalEnclosure1" Logical Enclosure.
 
 ### -InputObject &lt;Object&gt;
 
-The Logical Interconnect object(s), name(s) or uris(s) to be updated.
+The Logical Interconnect object\(s\), name\(s\) or uris\(s\) to be updated.
 
 | Aliases | uri, li, name, Resource |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | True |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | true \(ByPropertyName\) |  |
+| Accept wildcard characters? | False |  |
 
 ### -Reapply &lt;SwitchParameter&gt;
 
-Switch to reapply the Logical Interconnect configuration.  This does NOT update the Logical Interconnect from the parent Logical Interconnect Group.
+Switch to reapply the Logical Interconnect configuration. This does NOT update the Logical Interconnect from the parent Logical Interconnect Group.
 
 | Aliases | None |
 | :--- | :--- |
@@ -136,8 +135,6 @@ Use this parameter to identify what is different or changed from the parent grou
 
 ### -Confirm &lt;SwitchParameter&gt;
 
-
-
 | Aliases | cf |
 | :--- | :--- |
 | Required? | False |
@@ -148,7 +145,7 @@ Use this parameter to identify what is different or changed from the parent grou
 
 ### -FactoryReset &lt;SwitchParameter&gt;
 
-Use to factory reset the HPE Synergy Fabric module.  Do know that an outage will happen while the fabric modules are reset.  Their configuration will need to be `re-applied` or deployed after task has completed.
+Use to factory reset the HPE Synergy Fabric module. Do know that an outage will happen while the fabric modules are reset. Their configuration will need to be `re-applied` or deployed after task has completed.
 
 | Aliases | None |
 | :--- | :--- |
@@ -164,42 +161,44 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Networking.LogicalInterconnect [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Networking.LogicalInterconnect \[System.Management.Automation.PSCustomObject\]**_
 
 Single Logical Interconnect resource object
 
-_**System.Collections.ArrayList <HPOneView.Networking.LogicalInterconnect>**_
+_**System.Collections.ArrayList**_ 
 
 Collection of Logical Interconnect Names, URIs or System.Management.Automation.PSCustomObject
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource \[System.Management.Automation.PSCustomObject\]**_
 
 Single async Update Task
 
-_**System.Collections.ArrayList <HPOneView.Appliance.TaskResource>**_
+_**System.Collections.ArrayList**_ 
 
 Multiple async Update Tasks
 
 _**HPOneView.Library.CompareObject**_
 
-The Cmdlet will return a compare object with the Parent and Child object and settings that are different.  Otherwise, no object is returned.
+The Cmdlet will return a compare object with the Parent and Child object and settings that are different. Otherwise, no object is returned.
 
-    Property Name | Description
-    ==========================================================
-    InputObject   | Compared Object Property or Setting Value
-    ----------------------------------------------------------
-    ParentSetting | Name of Property or Setting
-    ----------------------------------------------------------
-    ChildSetting  | Name of Property or Setting
-    ----------------------------------------------------------
-    Parent        | Name of Parent Object
-    ----------------------------------------------------------
-    Child         | Name of Child Object
-    ----------------------------------------------------------
-    Description   | Description Name of difference
-    ----------------------------------------------------------
+```text
+Property Name | Description
+==========================================================
+InputObject   | Compared Object Property or Setting Value
+----------------------------------------------------------
+ParentSetting | Name of Property or Setting
+----------------------------------------------------------
+ChildSetting  | Name of Property or Setting
+----------------------------------------------------------
+Parent        | Name of Parent Object
+----------------------------------------------------------
+Child         | Name of Child Object
+----------------------------------------------------------
+Description   | Description Name of difference
+----------------------------------------------------------
+```
 
 ## Related Links
 
@@ -210,5 +209,6 @@ The Cmdlet will return a compare object with the Parent and Child object and set
 * [Get-HPOVLogicalInterconnectPortMonitoring](get-hpovlogicalinterconnectportmonitoring.md)
 * [Install-HPOVLogicalInterconnectFirmware](install-hpovlogicalinterconnectfirmware.md)
 * [New-HPOVLogicalInterconnectGroup](new-hpovlogicalinterconnectgroup.md)
-* [Remove-HPOVLogicalInterconnectGroup](remove-hpovlogicalinterconnectgroup.md)
+* [Remove-HPOVLogicalInterconnectGroup](https://github.com/HewlettPackard/POSH-HPOneView-docs/tree/2c3cd0d508b6cdba6336a27d496637fc71c6ce4c/docs/cmdlets/v5.00/networking/remove-hpovlogicalinterconnectgroup.md)
 * [Show-HPOVLogicalInterconnectMacTable](show-hpovlogicalinterconnectmactable.md)
+

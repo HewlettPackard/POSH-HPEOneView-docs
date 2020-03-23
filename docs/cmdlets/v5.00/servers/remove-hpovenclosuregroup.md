@@ -1,4 +1,4 @@
-﻿---
+---
 description: Remove an enclosure group.
 ---
 
@@ -16,12 +16,11 @@ Remove-HPOVEnclosureGroup
 
 ## Description
 
-Deletes an enclosure group from the appliance.
-An enclosure group cannot be deleted if any enclosures are currently part of that enclosure group.
+Deletes an enclosure group from the appliance. An enclosure group cannot be deleted if any enclosures are currently part of that enclosure group.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 $resp = Remove-HPOVEnclosureGroup -enclosureGroup "My-EG" -force
@@ -29,7 +28,7 @@ $resp = Remove-HPOVEnclosureGroup -enclosureGroup "My-EG" -force
 
 Force-remove the enclosure group specifed by name.
 
-###  Example 2 
+### Example 2
 
 ```text
 $eg = Get-HPOVEnclosureGroup -name "My-EG"
@@ -38,7 +37,7 @@ Remove-HPOVEnclosureGroup $enclosureGroup -confirm:$false
 
 Remove the enclosure group specifed by $eg. Disable confirmation prompt.
 
-###  Example 3 
+### Example 3
 
 ```text
 Get-HPOVEnclosureGroup | Remove-HPOVEnclosureGroup
@@ -50,27 +49,27 @@ Search for all enclosure groups and remove them from appliance.
 
 ### -InputObject &lt;Object&gt;
 
-The Enclosure Group object(s), name(s) or uri(s) to be removed from management.
+The Enclosure Group object\(s\), name\(s\) or uri\(s\) to be removed from management.
 
 | Aliases | uri, name, EnclosureGroup, Resource |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | True |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | true \(ByPropertyName\) |  |
+| Accept wildcard characters? | False |  |
 
 ### -Force &lt;SwitchParameter&gt;
 
@@ -86,8 +85,6 @@ Specify to forceably remove the resource from the appliance.
 
 ### -WhatIf &lt;SwitchParameter&gt;
 
-
-
 | Aliases | wi |
 | :--- | :--- |
 | Required? | False |
@@ -97,8 +94,6 @@ Specify to forceably remove the resource from the appliance.
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
-
-
 
 | Aliases | cf |
 | :--- | :--- |
@@ -118,7 +113,7 @@ _**System.Collections.ArrayList**_
 
 Collection of Enclosure Resource Objects
 
-_**HPOneView.EnclosureGroup [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.EnclosureGroup \[System.Management.Automation.PSCustomObject\]**_
 
 Single Enclosure Grou Resource Object
 
@@ -132,4 +127,5 @@ A PSCustomObject is returned indicating successful removal of the resource
 
 * [Get-HPOVEnclosureGroup](get-hpovenclosuregroup.md)
 * [New-HPOVEnclosureGroup](new-hpovenclosuregroup.md)
-* [Set-HPOVEnclosureGroup](set-hpovenclosuregroup.md)
+* [Set-HPOVEnclosureGroup](https://github.com/HewlettPackard/POSH-HPOneView-docs/tree/2c3cd0d508b6cdba6336a27d496637fc71c6ce4c/docs/cmdlets/v5.00/servers/set-hpovenclosuregroup.md)
+

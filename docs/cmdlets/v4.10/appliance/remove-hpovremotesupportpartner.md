@@ -1,4 +1,4 @@
-﻿---
+---
 description: Remove Remote Support support and reseller partners.
 ---
 
@@ -15,11 +15,11 @@ Remove-HPOVRemoteSupportPartner
 
 ## Description
 
-Use this Cmdlet to remove defined Remote Support partner from a specified or all appliances. 
+Use this Cmdlet to remove defined Remote Support partner from a specified or all appliances.
 
 ## Examples
 
-###  Example 1 
+### Example 1
 
 ```text
 Get-HPOVRemoteSupportPartner -Name "ABC IT Vendor" -ErrorAction Stop | Remove-HPOVRemoteSupportPartner
@@ -38,24 +38,24 @@ Remote Suport partner resource object, from `Get-HPOVRemoteSupportPartner`.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | true \(ByValue\) |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
+Aliases \[-Appliance\]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object\(s\) or Name property value\(s\).
 
-Default Value: ${Global:ConnectedSessions} | ? Default
+Default Value: ${Global:ConnectedSessions} \| ? Default
 
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | `(${Global:ConnectedSessions} | ? Default)` |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
+| Aliases | Appliance |  |
+| :--- | :--- | :--- |
+| Required? | False |  |
+| Position? | Named |  |
+| Default value | \`\(${Global:ConnectedSessions} | ? Default\)\` |
+| Accept pipeline input? | true \(ByPropertyName\) |  |
+| Accept wildcard characters? | False |  |
 
 ### &lt;CommonParameters&gt;
 
@@ -63,10 +63,9 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Appliance.RemoteSupport.Partner [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.RemoteSupport.Partner \[System.Management.Automation.PSCustomObject\]**_
 
 Remote Suport partner resource from [`Get-HPOVRemoteSupportPartner`](get-hpovremotesupportpartner.md).
-
 
 ## Return Values
 
@@ -74,8 +73,8 @@ _**System.Management.Automation.PSCustomObject**_
 
 Object with status confirmation the resource was deleted.
 
-
 ## Related Links
 
 * [Get-HPOVRemoteSupportPartner](get-hpovremotesupportpartner.md)
 * [New-HPOVRemoteSupportPartner](new-hpovremotesupportpartner.md)
+
