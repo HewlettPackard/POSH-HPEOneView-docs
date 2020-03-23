@@ -1,6 +1,6 @@
-# Table of contents
+﻿# Table of content
 
-* [Introduction](README.md)
+* [Introduction](readme.md)
 * [Verb Mapping](verb-mapping.md)
 * [Command Reference](cmdlets/README.md)
   * [v5.00](cmdlets/v5.00/README.md)
@@ -1185,4 +1185,3 @@
 * [about\_Appliance\_Connections](about/about_appliance_connections.md)
 * [about\_Appliance\_Connection\_Permissions](about/about_appliance_connection_permissions.md)
 * [about\_Two\_Factor\_Authentication](about/about_two_factor_authentication.md)
-

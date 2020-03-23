@@ -9,17 +9,17 @@ description: Update Appliance Date/Time Configuration.
 ```text
 Set-HPOVApplianceDateTime
     [-SyncWithHost]
-    [-Locale] <String>
-    [-ApplianceConnection] <Object>
+    [-Locale <String>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 Set-HPOVApplianceDateTime
     [-NTPServers] <Array>
-    [-PollingInterval] <Int32>
-    [-Locale] <String>
-    [-ApplianceConnection] <Object>
+    [-PollingInterval <Int32>]
+    [-Locale <String>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -27,14 +27,18 @@ Set-HPOVApplianceDateTime
 
 Update the appliance Date and Time configuration, including Locale, NTP Servers, and NTP Polling.
 
-Using the -SyncWithHost parameter will set the NTPServers property to null.
+Using the -SyncWithHost parameter will set the NTPServers property to null, and is only applicable to a virtual machine applinace.
+
+{% hint style="info" %}
+Minimum required privileges: Infrastructure administrator
+{% endhint %}
 
 ## Examples
 
 ###  Example 1 
 
 ```text
-Set-HPOVApplianceDateTime -NTPServers 10.55.1.1,10.54.1.1 -PollingInterval 60
+Set-HPOVApplianceDateTime -NTPServers 10.55.1.1, 10.54.1.1 -PollingInterval 60
 ```
 
 This example passes in updated values to set for the appliance networking configuration.
@@ -51,11 +55,11 @@ This example passes in updated values to set for the appliance networking config
 
 ### -SyncWithHost &lt;SwitchParameter&gt;
 
-Specify to configure the embedded hypervisor integration agent to sync time with the hypervisor host.
+Specify to configure the embedded hypervisor integration agent to sync time with the hypervisor host.  Only used with a virtual machine appliance.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | `False` |
 | Accept pipeline input? | false |
@@ -63,7 +67,7 @@ Specify to configure the embedded hypervisor integration agent to sync time with
 
 ### -NTPServers &lt;Array&gt;
 
-Parameter is deprecated.  Please use the `Set-HPOVApplianceDateTime` Cmdlet.
+An array of IPv4 Addresses or Fully Qualified Domain Names.  You must ensure DNS is configured on the appliance correctly..
 
 | Aliases | None |
 | :--- | :--- |
@@ -79,7 +83,7 @@ The polling interval in seconds the NTP client will use to verify time drift.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | True |
+| Required? | False |
 | Position? | Named |
 | Default value | `0` |
 | Accept pipeline input? | false |
@@ -95,7 +99,7 @@ Specify the language local for the appliance
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | True |
+| Required? | False |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
@@ -109,7 +113,7 @@ Default Value: ${Global:ConnectSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | True |
+| Required? | False |
 | Position? | Named |
 | Default value | `(${Global:ConnectedSessions} | ? Default)` |
 | Accept pipeline input? | false |
