@@ -29,7 +29,9 @@ Use this Cmdlet to change the Server Hardware Type and/or Enclosure Group set wi
 	* To prevent data loss, cancel this operation and backup data before applying the profile.
 	* Any change in the server hardware type will lead to the associated volume loss.
 
-Required Permissions: Infrastructure administrator or Server administrator.
+{% hint style="info" %}
+Minimum required privileges: Infrastructure administrator or Server administrator.
+{% endhint %}
 
 ## Examples
 

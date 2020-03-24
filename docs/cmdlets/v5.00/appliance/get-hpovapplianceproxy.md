@@ -18,7 +18,9 @@ The setting an appliance proxy allows you to set the HTTP/HTTPS proxy, port numb
 
 This Cmdlet will return the configured appliance HTTP/HTTPS proxy configuration.
 
-Required permissions: Read only
+{% hint style="info" %}
+Minimum required privileges: Read only
+{% endhint %}
 
 ## Examples
 

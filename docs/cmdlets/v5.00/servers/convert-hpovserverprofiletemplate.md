@@ -27,7 +27,9 @@ Use this Cmdlet to change the Server Hardware Type and/or Enclosure Group set wi
     * If the enclosure group is changed, mezzanine storage for HPE Synergy is lost and the disk drives are released.
     * Any change in the server hardware type will lead to the associated volume loss.
 
-Minimum required Permissions: Infrastructure administrator or Server administrator.
+{% hint style="info" %}
+Minimum required privileges: Infrastructure administrator or Server administrator.
+{% endhint %}
 
 ## Examples
 

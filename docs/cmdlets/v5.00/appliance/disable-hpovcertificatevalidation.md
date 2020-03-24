@@ -51,7 +51,9 @@ If 2-factor authentication is configured, this policy cannot be disabled.
 {% endhint %}
 
 
-Required privileges: Infrastructure administrator
+{% hint style="info" %}
+Minimum required privileges: Infrastructure administrator
+{% endhint %}
 
 ## Examples
 

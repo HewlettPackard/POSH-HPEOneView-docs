@@ -18,7 +18,9 @@ Get-HPOVApplianceSecurityProtocol
 
 Get the appliance available security protocols, and their active state. By default the appliance current security mode will return the available security protocols and their configuration state. Use the -SecurityMode parameter to specify one or more modes. Use the -TlsVersion to specify one or more security protocols to return.
 
-Required permissions: Read only
+{% hint style="info" %}
+Minimum required privileges: Read only
+{% endhint %}
 
 ## Examples
 

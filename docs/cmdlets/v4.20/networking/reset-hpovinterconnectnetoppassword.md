@@ -21,8 +21,10 @@ Reset-HPOVInterconnectNetOpPassword
 
 This Cmdlet will reset the HPE Synergy Virtual Connect NetOp account password to the specified value.
 
-Required permissions: Infrastructure administrator, Network administrator
-
+{% hint style="info" %}
+Minimum required privileges: Infrastructure administrator,
+{% endhint %}
+ Network administrator
 ## Examples
 
 ###  Example 1 

@@ -18,7 +18,9 @@ Get-HPOVApplianceTrapDestination
 
 Use this Cmdlet to retrieve configured SNMPv1 and/or SNMPv3 trap destinations.
 
-Required permissions: Infrastructure administrator
+{% hint style="info" %}
+Minimum required privileges: Infrastructure administrator
+{% endhint %}
 
 ## Examples
 

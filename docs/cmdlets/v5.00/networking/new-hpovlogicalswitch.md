@@ -114,7 +114,9 @@ Logical switch configuration guidelines
     * When a Nexus switch expansion module is removed, a warning alert is generated unless the module is powered off.
     * HPE OneView can detect configuration changes that occur on the switches specified in the logical switch when it no longer matches the configuration that HPE OneView provisions. Warning alerts are generated. Administrators can correct the configuration manually or reapply the configuration on the associated logical interconnects to recover.
 
-Required privileges: Infrastructure administrator or Network administrator 
+{% hint style="info" %}
+Minimum required privileges: Infrastructure administrator or Network administrator
+{% endhint %}
 
 ## Examples
 

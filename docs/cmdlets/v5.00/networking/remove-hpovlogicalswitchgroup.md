@@ -16,7 +16,7 @@ Remove-HPOVLogicalSwitchGroup
 
 ## Description
 
-This Cmdlet will remove the configured Logical Switch Group from the requested appliance(s).  You cannot delete a logical switch group while it is being used by one or more logical switches. To delete the logical switch group, first delete the logical switches using the logical switch group. Required privileges: Infrastructure administrator or Network administrator 
+This Cmdlet will remove the configured Logical Switch Group from the requested appliance(s).  You cannot delete a logical switch group while it is being used by one or more logical switches. To delete the logical switch group, first delete the logical switches using the logical switch group. Minimum required privileges: Infrastructure administrator or Network administrator 
 
 ## Examples
 

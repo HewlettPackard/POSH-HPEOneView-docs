@@ -16,7 +16,7 @@ Update-HPOVLogicalSwitch
 
 ## Description
 
-A logical switch is based on a logical switch group configuration. If the logical switch transitions to an "Inconsistent with group state", due to changes in either the logical switch or the logical switch group, this Cmdlet will update (or refresh) the logical switch configuration based on the logical switch group and return to a consistent state. Required privileges: Infrastructure administrator or Network administrator 
+A logical switch is based on a logical switch group configuration. If the logical switch transitions to an "Inconsistent with group state", due to changes in either the logical switch or the logical switch group, this Cmdlet will update (or refresh) the logical switch configuration based on the logical switch group and return to a consistent state. Minimum required privileges: Infrastructure administrator or Network administrator 
 
 ## Examples
 

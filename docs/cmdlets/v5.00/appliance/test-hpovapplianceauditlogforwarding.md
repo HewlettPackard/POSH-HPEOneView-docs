@@ -16,7 +16,9 @@ Test-HPOVApplianceAuditLogForwarding
 
 This Cmdlet will generate a syslog message to test connectivity to the appliance configured remote Syslog server.
 
-Required permissions: Infrastructure administrator
+{% hint style="info" %}
+Minimum required privileges: Infrastructure administrator
+{% endhint %}
 
 ## Examples
 

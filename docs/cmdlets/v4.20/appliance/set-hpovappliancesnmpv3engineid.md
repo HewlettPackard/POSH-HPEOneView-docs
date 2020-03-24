@@ -17,7 +17,9 @@ Set-HPOVApplianceSnmpV3EngineId
 
 Change or update the appliance SNMPv3 engine ID.
 
-Required permissions: Infrastructure administrator
+{% hint style="info" %}
+Minimum required privileges: Infrastructure administrator
+{% endhint %}
 
 ## Examples
 

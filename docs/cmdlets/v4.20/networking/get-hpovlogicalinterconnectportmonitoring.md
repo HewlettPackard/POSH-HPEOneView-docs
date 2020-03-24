@@ -19,7 +19,9 @@ Port monitoring enables you to send a copy of every Ethernet or Fibre Channel fr
 
 This Cmdlet will return the port monitoring configuration for the provided logical interconnect.
 
-Required Privileges: Network administrator
+{% hint style="info" %}
+Minimum required privileges: Network administrator
+{% endhint %}
 
 ## Examples
 

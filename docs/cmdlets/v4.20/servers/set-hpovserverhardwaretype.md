@@ -19,7 +19,9 @@ Set-HPOVServerHardwareType
 
 Use this Cmdlet to rename or set a description to one or more Server Hardware Type resource(s).
 
-Required permissions: Server administrator
+{% hint style="info" %}
+Minimum required privileges: Server administrator
+{% endhint %}
 
 ## Examples
 

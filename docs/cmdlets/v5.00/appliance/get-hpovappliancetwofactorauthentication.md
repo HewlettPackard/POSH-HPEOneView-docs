@@ -20,7 +20,9 @@ When two-factor authentication is enabled, HPE OneView uses a Microsoft Active D
 
 Use this Cmdlet to get two factor authentication state of the connected appliance. Infrastructure administrator role is required.
 
-Minimum required permissions: Read only
+{% hint style="info" %}
+Minimum required privileges: Read only
+{% endhint %}
 
 ## Examples
 

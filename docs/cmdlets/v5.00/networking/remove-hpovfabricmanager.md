@@ -16,7 +16,7 @@ Remove-HPOVFabricManager
 
 ## Description
 
-Fabric Managers is a resource manager in HPE OneView that enables integration of a Cisco ACI fabric (an external entity) with HPE Synergy. A fabric manager aligns HPE OneView resources as defined by Cisco Application Policy Infrastructure Controller (APIC) policies. It represents a remote Cisco APIC or an APIC cluster that manages a Cisco ACI fabric. This Cmdlet will remove the fabric manager and will disassociate it's tenant from all logical interconnects, networks and networks sets. Inconsistencies with the APIC tenant configuration will no longer be monitored or remediated by OneView. Required privileges: Infrastructure administrator or Server administrator 
+Fabric Managers is a resource manager in HPE OneView that enables integration of a Cisco ACI fabric (an external entity) with HPE Synergy. A fabric manager aligns HPE OneView resources as defined by Cisco Application Policy Infrastructure Controller (APIC) policies. It represents a remote Cisco APIC or an APIC cluster that manages a Cisco ACI fabric. This Cmdlet will remove the fabric manager and will disassociate it's tenant from all logical interconnects, networks and networks sets. Inconsistencies with the APIC tenant configuration will no longer be monitored or remediated by OneView. Minimum required privileges: Infrastructure administrator or Server administrator 
 
 ## Examples
 

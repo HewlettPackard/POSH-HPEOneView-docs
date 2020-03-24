@@ -27,7 +27,9 @@ Port monitoring enables you to send a copy of every Ethernet or Fibre Channel fr
     *  The HPE Virtual Connect 16Gb 24-Port Fibre Channel Module monitors 1 downlink server port. 
     *  HPE Virtual Connect 16Gb 24-Port Fibre Channel Module firmware must be 4.00 or later 
 
-Required Privileges: Network administrator
+{% hint style="info" %}
+Minimum required privileges: Network administrator
+{% endhint %}
 
 ## Examples
 

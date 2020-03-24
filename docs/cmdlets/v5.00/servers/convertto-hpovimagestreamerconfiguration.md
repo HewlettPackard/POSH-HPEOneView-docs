@@ -26,7 +26,9 @@ which again may cause loss of data.
 
 Any associated Enclosure Groups with the Virtual Connect Ethernet Logical Interconnect Group will also be modified.  If this is not intended, you should first remove the Logical Interconnect Group from the Enclosure Group before executing this Cmdlet.
 
-Minimum required Permissions: Infrastructure administrator or Server administrator.
+{% hint style="info" %}
+Minimum required privileges: Infrastructure administrator or Server administrator.
+{% endhint %}
 
 ## Examples
 

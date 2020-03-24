@@ -18,7 +18,7 @@ Remove-HPOVLogicalSwitch
 ## Description
 
 This Cmdlet will remove the configured Logical Switch from the requested appliance(s).  When you delete a logical switch, HPE OneView no longer manages the physical switches associated with it.
- Required privileges: Infrastructure administrator or Network administrator 
+ Minimum required privileges: Infrastructure administrator or Network administrator 
 
 ## Examples
 

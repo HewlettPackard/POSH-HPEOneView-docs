@@ -4131,7 +4131,7 @@
             "Name": "Convert-HPOVServerProfile",
             "Contents": {
                 "Synopsis": "Migrate Server Profile.",
-                "Description": "Use this Cmdlet to change the Server Hardware Type and/or Enclosure Group set within the Server Profile.  Changing to a different server hardware type may change the capabilities available to the server profile. Changing the enclosure group may change the connections which are available for the profile.\r\n\r\n    * The server hardware field will be set to \"unassigned\", requiring re-seletion of server hardware.\r\n    * It may also cause incompatibilities with the current configuration.\r\n    * All deployed connections will have their port assignment set to \"Auto\".\r\n    * Any incompatibilities will be flagged when the server profile is committed.\r\n    * If the new server hardware type does not support the local storage configuration, some storage may be lost.\r\n    * If the enclosure group is changed, mezzanine storage is lost and the disk drives are released.\r\n    * To prevent data loss, cancel this operation and backup data before applying the profile.\r\n    * Any change in the server hardware type will lead to the associated volume loss.\r\n    * If the server profile is associated with a server profile template, the server profile will become inconsistent with the template.  The server profile should be unassociated with the template before or after the migration.\r\n\r\nRequired Permissions: Infrastructure administrator or Server administrator.",
+                "Description": "Use this Cmdlet to change the Server Hardware Type and/or Enclosure Group set within the Server Profile.  Changing to a different server hardware type may change the capabilities available to the server profile. Changing the enclosure group may change the connections which are available for the profile.\r\n\r\n    * The server hardware field will be set to \"unassigned\", requiring re-seletion of server hardware.\r\n    * It may also cause incompatibilities with the current configuration.\r\n    * All deployed connections will have their port assignment set to \"Auto\".\r\n    * Any incompatibilities will be flagged when the server profile is committed.\r\n    * If the new server hardware type does not support the local storage configuration, some storage may be lost.\r\n    * If the enclosure group is changed, mezzanine storage is lost and the disk drives are released.\r\n    * To prevent data loss, cancel this operation and backup data before applying the profile.\r\n    * Any change in the server hardware type will lead to the associated volume loss.\r\n    * If the server profile is associated with a server profile template, the server profile will become inconsistent with the template.  The server profile should be unassociated with the template before or after the migration.\r\n\r\nMinimum required privileges: Infrastructure administrator or Server administrator.",
                 "Parameters": [
                     {
                         "Name": "ApplianceConnection",
@@ -4360,7 +4360,7 @@
             "Name": "Convert-HPOVServerProfileTemplate",
             "Contents": {
                 "Synopsis": "Migrate Server Profile Template.",
-                "Description": "Use this Cmdlet to change the Server Hardware Type and/or Enclosure Group set within the Server Profile Template.  Changing to a different server hardware type may change the capabilities available to the server profile. Changing the enclosure group may change the connections which are available for the profile.\r\n\r\n    * The server hardware field will be set to \"unassigned\", requiring re-seletion of server hardware.\r\n    * It may also cause incompatibilities with the current configuration.\r\n    * All deployed connections will have their port assignment set to \"Auto\".\r\n    * Any incompatibilities will be flagged when the server profile is committed.\r\n    * If the new server hardware type does not support the local storage configuration, some storage may be lost.\r\n    * If the enclosure group is changed, mezzanine storage for HPE Synergy is lost and the disk drives are released.\r\n    * To prevent data loss, cancel this operation and backup data before applying the profile.\r\n    * Any change in the server hardware type will lead to the associated volume loss.\r\n\r\nRequired Permissions: Infrastructure administrator or Server administrator.",
+                "Description": "Use this Cmdlet to change the Server Hardware Type and/or Enclosure Group set within the Server Profile Template.  Changing to a different server hardware type may change the capabilities available to the server profile. Changing the enclosure group may change the connections which are available for the profile.\r\n\r\n    * The server hardware field will be set to \"unassigned\", requiring re-seletion of server hardware.\r\n    * It may also cause incompatibilities with the current configuration.\r\n    * All deployed connections will have their port assignment set to \"Auto\".\r\n    * Any incompatibilities will be flagged when the server profile is committed.\r\n    * If the new server hardware type does not support the local storage configuration, some storage may be lost.\r\n    * If the enclosure group is changed, mezzanine storage for HPE Synergy is lost and the disk drives are released.\r\n    * To prevent data loss, cancel this operation and backup data before applying the profile.\r\n    * Any change in the server hardware type will lead to the associated volume loss.\r\n\r\nMinimum required privileges: Infrastructure administrator or Server administrator.",
                 "Parameters": [
                     {
                         "Name": "ApplianceConnection",
@@ -6011,7 +6011,7 @@
             "Name": "Disable-HPOVLogicalInterconnectPortMonitoring",
             "Contents": {
                 "Synopsis": "Disable port monitoring for a logical interconnect.",
-                "Description": "Port monitoring enables you to send a copy of every Ethernet or Fibre Channel frame coming in and going out of a downlink (server-facing) port to another port. To evaluate network traffic between ports, you can connect debugging equipment, such as a network analyzer. This capability is important in a server environment where there is limited physical access to the network interfaces on the servers. \r\n\r\n\r\nNOTE: \r\n    *  You cannot use Virtual Connect to forward captured traffic to a server. For more information, see the HPE Virtual Connect for c-Class BladeSystem User Guide in the Hewlett Packard Enterprise Information Library. \r\n    *  You can configure one network analyzer port (the uplink port) for up to 16 downlink server ports within a logical interconnect. \r\n    *  The HPE Virtual Connect 16Gb 24-Port Fibre Channel Module monitors 1 downlink server port. \r\n    *  HPE Virtual Connect 16Gb 24-Port Fibre Channel Module firmware must be 4.00 or later \r\n\r\nRequired Privileges: Network administrator",
+                "Description": "Port monitoring enables you to send a copy of every Ethernet or Fibre Channel frame coming in and going out of a downlink (server-facing) port to another port. To evaluate network traffic between ports, you can connect debugging equipment, such as a network analyzer. This capability is important in a server environment where there is limited physical access to the network interfaces on the servers. \r\n\r\n\r\nNOTE: \r\n    *  You cannot use Virtual Connect to forward captured traffic to a server. For more information, see the HPE Virtual Connect for c-Class BladeSystem User Guide in the Hewlett Packard Enterprise Information Library. \r\n    *  You can configure one network analyzer port (the uplink port) for up to 16 downlink server ports within a logical interconnect. \r\n    *  The HPE Virtual Connect 16Gb 24-Port Fibre Channel Module monitors 1 downlink server port. \r\n    *  HPE Virtual Connect 16Gb 24-Port Fibre Channel Module firmware must be 4.00 or later \r\n\r\nMinimum required privileges: Network administrator",
                 "Parameters": [
                     {
                         "Name": "ApplianceConnection",
@@ -7131,7 +7131,7 @@
             "Name": "Enable-HPOVLogicalInterconnectPortMonitoring",
             "Contents": {
                 "Synopsis": "Enable port monitoring for a logical interconnect.",
-                "Description": "Port monitoring enables you to send a copy of every Ethernet or Fibre Channel frame coming in and going out of a downlink (server-facing) port to another port. To evaluate network traffic between ports, you can connect debugging equipment, such as a network analyzer. This capability is important in a server environment where there is limited physical access to the network interfaces on the servers. \r\n\r\n\r\nNOTE: \r\n    *  You cannot use Virtual Connect to forward captured traffic to a server. For more information, see the HPE Virtual Connect for c-Class BladeSystem User Guide in the Hewlett Packard Enterprise Information Library. \r\n    *  You can configure one network analyzer port (the uplink port) for up to 16 downlink server ports within a logical interconnect. \r\n    *  The HPE Virtual Connect 16Gb 24-Port Fibre Channel Module monitors 1 downlink server port. \r\n    *  HPE Virtual Connect 16Gb 24-Port Fibre Channel Module firmware must be 4.00 or later \r\n\r\nRequired Privileges: Network administrator",
+                "Description": "Port monitoring enables you to send a copy of every Ethernet or Fibre Channel frame coming in and going out of a downlink (server-facing) port to another port. To evaluate network traffic between ports, you can connect debugging equipment, such as a network analyzer. This capability is important in a server environment where there is limited physical access to the network interfaces on the servers. \r\n\r\n\r\nNOTE: \r\n    *  You cannot use Virtual Connect to forward captured traffic to a server. For more information, see the HPE Virtual Connect for c-Class BladeSystem User Guide in the Hewlett Packard Enterprise Information Library. \r\n    *  You can configure one network analyzer port (the uplink port) for up to 16 downlink server ports within a logical interconnect. \r\n    *  The HPE Virtual Connect 16Gb 24-Port Fibre Channel Module monitors 1 downlink server port. \r\n    *  HPE Virtual Connect 16Gb 24-Port Fibre Channel Module firmware must be 4.00 or later \r\n\r\nMinimum required privileges: Network administrator",
                 "Parameters": [
                     {
                         "Name": "AnalyzerPort",
@@ -8351,7 +8351,7 @@
             "Name": "Get-HPOVApplianceAuditLogForwarding",
             "Contents": {
                 "Synopsis": "Get the appliance remote Syslog audit log forwarding configuration.",
-                "Description": "HPE OneView can forward the internal audit log entries to a remote syslog server, in standard Syslog format.  This cmdlet will return the current status, remote Syslog destination and port currently configured on the appliance.\r\n\r\nRequired permissions: Infrastructure administrator",
+                "Description": "HPE OneView can forward the internal audit log entries to a remote syslog server, in standard Syslog format.  This cmdlet will return the current status, remote Syslog destination and port currently configured on the appliance.\r\n\r\nMinimum required privileges: Infrastructure administrator",
                 "Parameters": [
                     {
                         "Name": "ApplianceConnection",
@@ -8836,7 +8836,7 @@
             "Name": "Get-HPOVApplianceProxy",
             "Contents": {
                 "Synopsis": "Get appliance configured HTTP proxy.",
-                "Description": "The setting an appliance proxy allows you to set the HTTP/HTTPS proxy, port number for client connections, and whether authentication requires a username and a password.\r\n\r\nRequired permissions: Infrastructure administrator",
+                "Description": "The setting an appliance proxy allows you to set the HTTP/HTTPS proxy, port number for client connections, and whether authentication requires a username and a password.\r\n\r\nMinimum required privileges: Infrastructure administrator",
                 "Parameters": [
                     {
                         "Name": "ApplianceConnection",
@@ -9180,7 +9180,7 @@
             "Name": "Get-HPOVApplianceTrapDestination",
             "Contents": {
                 "Synopsis": "Get configured appliance SNMP trap destinations.",
-                "Description": "Use this Cmdlet to retrieve configured SNMPv1 and/or SNMPv3 trap destinations.\r\n\r\nRequired permissions: Infrastructure administrator",
+                "Description": "Use this Cmdlet to retrieve configured SNMPv1 and/or SNMPv3 trap destinations.\r\n\r\nMinimum required privileges: Infrastructure administrator",
                 "Parameters": [
                     {
                         "Name": "ApplianceConnection",
@@ -13177,7 +13177,7 @@
             "Name": "Get-HPOVLogicalInterconnectPortMonitoring",
             "Contents": {
                 "Synopsis": "Get port monitoring configuration from provided logical interconnect.",
-                "Description": "Port monitoring enables you to send a copy of every Ethernet or Fibre Channel frame coming in and going out of a downlink (server-facing) port to another port. To evaluate network traffic between ports, you can connect debugging equipment, such as a network analyzer. This capability is important in a server environment where there is limited physical access to the network interfaces on the servers.\r\n\r\nThis Cmdlet will return the port monitoring configuration for the provided logical interconnect.\r\n\r\nRequired Privileges: Network administrator",
+                "Description": "Port monitoring enables you to send a copy of every Ethernet or Fibre Channel frame coming in and going out of a downlink (server-facing) port to another port. To evaluate network traffic between ports, you can connect debugging equipment, such as a network analyzer. This capability is important in a server environment where there is limited physical access to the network interfaces on the servers.\r\n\r\nThis Cmdlet will return the port monitoring configuration for the provided logical interconnect.\r\n\r\nMinimum required privileges: Network administrator",
                 "Parameters": [
                     {
                         "Name": "ApplianceConnection",
@@ -26132,7 +26132,7 @@
             "Contents": {
                 "Synopsis": "Create a new Logical Switch resource.",
                 "Description": [
-                    "A logical switch is added into HPE OneView as a managed or monitored logical switch. The logical switch can consist of a maximum of two physical top-of-rack switches (external to the c7000 enclosure) configured in a single stacking domain.  It is based on a logical switch group configuration. If the logical switch transitions to an Inconsistent with group state (because of changes in either the logical switch or the logical switch group), update the logical switch configuration based on the logical switch group to return to a consistent state.\n\nYou can create a logical switch with a maximum of two Cisco Nexus switches. When there are two Cisco Nexus switches in a logical switch, they are expected to be in a virtual port channel (vPC) environment. vPC must be configured on both switches, and they should belong to the same vPC domain. For information about supported switches, see the Hewlett Packard Enterprise Information Library for supportability information.\n\nBefore you add a logical switch as managed, consider the following for Fabric Extender and Virtual Connect interconnects physically connected to the logical switch:\n\n    * When only IPv4 Ethernet networks are assigned to an uplink set at creation time, the uplink set can be physically connected to any upstream switch in the logical switch.\n    * When an FCoE network is assigned to an uplink set at creation time, the uplink set is limited to single-homed physical connectivity and all uplink ports must connect to the same upstream switch in the logical switch.  If a port is subsequently added to the uplink set with an FCoE network or an existing port in the uplink set is connected to a second upstream switch, that port is not available for configuration and an alert is generated. If a new port added to the uplink set is connected to the same switch as the other ports, that port is available to carry traffic and an alert is not generated.  To change an uplink set from single-homed connectivity to multi-homed connectivity or vice-versa, the uplink set configuration must be deleted and re-created with the appropriate network assignments and physical configuration.\n    * Make sure that LLDP is enabled on the top-of-rack switch internal (downlink) ports where Virtual Connect interconnects under HPE OneView management are connected.\n\nAdding a logical switch as monitored enables HPE OneView to monitor the logical switch for operation status, collect statistics, and alert users to specific conditions and incompatibilities between the switch and Fabric Extender or Virtual Connect interconnect. In the monitored mode, deployment of the server profile connections is supported for HPE Virtual Connect interconnects but not for Fabric Extender (FEX) interconnects.\n\nLogical switch configuration guidelines\n\n    * When Virtual Connect interconnects are connected to a logical switch, an uplink set cannot span multiple interconnects. This limitation is similar to FEX interconnects. However, multiple uplink sets are supported on a single Virtual Connect interconnect.\n    * When you enable or disable a top-of-rack switch internal port, the associated port on a FEX interconnect also displays the updated port status.\n    * When retrieving MAC addresses for FEX interconnects, only the entries that are associated with the managed FEX interconnects are displayed.\n    * If an FCoE network is assigned to an uplink set that is configured as dual-homed, (an invalid configuration), that FCoE network is not provisioned on the switch. Deployment of any server profile connection with this FCoE network will fail.\n    * When a logical switch is defined and configured with only a single physical switch, the uplink set associated with any FEX module connected to this logical switch is considered single-homed. Therefore, you can add an FCoE network to the uplink set even if the uplink set was initially created only with Ethernet networks. Deployment of any server profile connection with this FCoE network will succeed.\n    * For server profiles created for server ports connected to FEX interconnects, Ethernet networks are only supported on physical function a, and FCoE networks are only supported on physical function b at the server port. When both physical functions have connections defined, traffic is split evenly across both ports.\n    * If HPE OneView cannot log in to the switch, a critical alert is generated. Prevent any event on the switch that might trigger switch configuration; otherwise, the switch transitions to ConfigError state and you must reapply the configuration on the associated logical interconnects to recover.\n    * If HPE OneView is unable to claim a member switch of the logical switch when the operational mode of the logical switch is Managed, the operating state of the switch will transition to Added with Error. In this case, the Message of the Day (MOTD) banner on the switch will indicate that the switch is currently claimed by another HPE OneView appliance and the message \"This switch is being controlled by OneView Domain, Appliance ID: {}\" displays. You should remove the logical switch from that HPE OneView appliance, and then perform a refresh on the logical switch from the current HPE OneView appliance to re-initiate the claim operation.\n    * HPE OneView does not fully automate configuration of FCoE connectivity on the switch specified in the logical switch. For each FCoE network specified in the uplink set, HPE OneView only provisions the VLAN for that network on the switch. Network administrators must provision additional configuration for FCoE connectivity manually on the switch in addition to what HPE OneView provisions.\n        * To deploy server profile connections to a FEX interconnect, HPE OneView provisions the virtual Fibre Channel interface (VFC), VFC binding to FEX downlink port, and VSAN interface assignment on the switch.\n        * For the deployment of server profile connections for a Virtual Connect interconnect, the Network administrator must configure the virtual Fibre Channel interface (vFC), VFC binding to server port, and VSAN interface assignment binding manually.\n    * When a Nexus switch expansion module is removed, a warning alert is generated unless the module is powered off.\n    * HPE OneView can detect configuration changes that occur on the switches specified in the logical switch when it no longer matches the configuration that HPE OneView provisions. Warning alerts are generated. Administrators can correct the configuration manually or reapply the configuration on the associated logical interconnects to recover.\n\nRequired privileges: Infrastructure administrator or Network administrator"
+                    "A logical switch is added into HPE OneView as a managed or monitored logical switch. The logical switch can consist of a maximum of two physical top-of-rack switches (external to the c7000 enclosure) configured in a single stacking domain.  It is based on a logical switch group configuration. If the logical switch transitions to an Inconsistent with group state (because of changes in either the logical switch or the logical switch group), update the logical switch configuration based on the logical switch group to return to a consistent state.\n\nYou can create a logical switch with a maximum of two Cisco Nexus switches. When there are two Cisco Nexus switches in a logical switch, they are expected to be in a virtual port channel (vPC) environment. vPC must be configured on both switches, and they should belong to the same vPC domain. For information about supported switches, see the Hewlett Packard Enterprise Information Library for supportability information.\n\nBefore you add a logical switch as managed, consider the following for Fabric Extender and Virtual Connect interconnects physically connected to the logical switch:\n\n    * When only IPv4 Ethernet networks are assigned to an uplink set at creation time, the uplink set can be physically connected to any upstream switch in the logical switch.\n    * When an FCoE network is assigned to an uplink set at creation time, the uplink set is limited to single-homed physical connectivity and all uplink ports must connect to the same upstream switch in the logical switch.  If a port is subsequently added to the uplink set with an FCoE network or an existing port in the uplink set is connected to a second upstream switch, that port is not available for configuration and an alert is generated. If a new port added to the uplink set is connected to the same switch as the other ports, that port is available to carry traffic and an alert is not generated.  To change an uplink set from single-homed connectivity to multi-homed connectivity or vice-versa, the uplink set configuration must be deleted and re-created with the appropriate network assignments and physical configuration.\n    * Make sure that LLDP is enabled on the top-of-rack switch internal (downlink) ports where Virtual Connect interconnects under HPE OneView management are connected.\n\nAdding a logical switch as monitored enables HPE OneView to monitor the logical switch for operation status, collect statistics, and alert users to specific conditions and incompatibilities between the switch and Fabric Extender or Virtual Connect interconnect. In the monitored mode, deployment of the server profile connections is supported for HPE Virtual Connect interconnects but not for Fabric Extender (FEX) interconnects.\n\nLogical switch configuration guidelines\n\n    * When Virtual Connect interconnects are connected to a logical switch, an uplink set cannot span multiple interconnects. This limitation is similar to FEX interconnects. However, multiple uplink sets are supported on a single Virtual Connect interconnect.\n    * When you enable or disable a top-of-rack switch internal port, the associated port on a FEX interconnect also displays the updated port status.\n    * When retrieving MAC addresses for FEX interconnects, only the entries that are associated with the managed FEX interconnects are displayed.\n    * If an FCoE network is assigned to an uplink set that is configured as dual-homed, (an invalid configuration), that FCoE network is not provisioned on the switch. Deployment of any server profile connection with this FCoE network will fail.\n    * When a logical switch is defined and configured with only a single physical switch, the uplink set associated with any FEX module connected to this logical switch is considered single-homed. Therefore, you can add an FCoE network to the uplink set even if the uplink set was initially created only with Ethernet networks. Deployment of any server profile connection with this FCoE network will succeed.\n    * For server profiles created for server ports connected to FEX interconnects, Ethernet networks are only supported on physical function a, and FCoE networks are only supported on physical function b at the server port. When both physical functions have connections defined, traffic is split evenly across both ports.\n    * If HPE OneView cannot log in to the switch, a critical alert is generated. Prevent any event on the switch that might trigger switch configuration; otherwise, the switch transitions to ConfigError state and you must reapply the configuration on the associated logical interconnects to recover.\n    * If HPE OneView is unable to claim a member switch of the logical switch when the operational mode of the logical switch is Managed, the operating state of the switch will transition to Added with Error. In this case, the Message of the Day (MOTD) banner on the switch will indicate that the switch is currently claimed by another HPE OneView appliance and the message \"This switch is being controlled by OneView Domain, Appliance ID: {}\" displays. You should remove the logical switch from that HPE OneView appliance, and then perform a refresh on the logical switch from the current HPE OneView appliance to re-initiate the claim operation.\n    * HPE OneView does not fully automate configuration of FCoE connectivity on the switch specified in the logical switch. For each FCoE network specified in the uplink set, HPE OneView only provisions the VLAN for that network on the switch. Network administrators must provision additional configuration for FCoE connectivity manually on the switch in addition to what HPE OneView provisions.\n        * To deploy server profile connections to a FEX interconnect, HPE OneView provisions the virtual Fibre Channel interface (VFC), VFC binding to FEX downlink port, and VSAN interface assignment on the switch.\n        * For the deployment of server profile connections for a Virtual Connect interconnect, the Network administrator must configure the virtual Fibre Channel interface (vFC), VFC binding to server port, and VSAN interface assignment binding manually.\n    * When a Nexus switch expansion module is removed, a warning alert is generated unless the module is powered off.\n    * HPE OneView can detect configuration changes that occur on the switches specified in the logical switch when it no longer matches the configuration that HPE OneView provisions. Warning alerts are generated. Administrators can correct the configuration manually or reapply the configuration on the associated logical interconnects to recover.\n\nMinimum required privileges: Infrastructure administrator or Network administrator"
                 ],
                 "Parameters": [
                     {
@@ -26693,7 +26693,7 @@
                     "Once constructed from a logical switch group, a logical switch continues to be associated with its logical switch group. Any change in consistency between the logical switch group and its associated logical switches is monitored and made visible on the associated logical switch screen in HPE OneView.\r\n",
                     "This Cmdlet will help create a Logical Switch Group resources.  Use Get-HPOVSwitchType to identify which switch family and models are supported.",
                     "Please refer to either Get-HPOVSwitchType values, or the HPE OneView Support Matrix for which specific models are supported.\r\n",
-                    "Required privileges: Infrastructure administrator or Network administrator"
+                    "Minimum required privileges: Infrastructure administrator or Network administrator"
                 ],
                 "Parameters": [
                     {
@@ -36966,7 +36966,7 @@
             "Name": "Remove-HPOVApplianceProxy",
             "Contents": {
                 "Synopsis": "Remove appliance HTTP/HTTPS proxy.",
-                "Description": "The setting an appliance proxy allows you to set the HTTP/HTTPS proxy, port number for client connections, and whether authentication requires a username and a password.\r\n\r\nRequired permissions: Infrastructure administrator",
+                "Description": "The setting an appliance proxy allows you to set the HTTP/HTTPS proxy, port number for client connections, and whether authentication requires a username and a password.\r\n\r\nMinimum required privileges: Infrastructure administrator",
                 "Parameters": [
                     {
                         "Name": "ApplianceConnection",
@@ -37053,7 +37053,7 @@
             "Name": "Remove-HPOVApplianceTrapDestination",
             "Contents": {
                 "Synopsis": "Remove configured appliance SNMP trap destinations.",
-                "Description": "Use this Cmdlet to remove configured SNMPv1 and/or SNMPv3 trap destinations.\r\n\r\nRequired permissions: Infrastructure administrator",
+                "Description": "Use this Cmdlet to remove configured SNMPv1 and/or SNMPv3 trap destinations.\r\n\r\nMinimum required privileges: Infrastructure administrator",
                 "Parameters": [
                     {
                         "Name": "ApplianceConnection",
@@ -38162,7 +38162,7 @@
                 "Description": [
                     "Fabric Managers is a resource manager in HPE OneView that enables integration of a Cisco ACI fabric (an external entity) with HPE Synergy. A fabric manager aligns HPE OneView resources as defined by Cisco Application Policy Infrastructure Controller (APIC) policies. It represents a remote Cisco APIC or an APIC cluster that manages a Cisco ACI fabric.\r\n",
                     "This Cmdlet will remove the fabric manager and will disassociate it\u0027s tenant from all logical interconnects, networks and networks sets. Inconsistencies with the APIC tenant configuration will no longer be monitored or remediated by OneView.\r\n",
-                    "Required privileges: Infrastructure administrator or Server administrator"
+                    "Minimum required privileges: Infrastructure administrator or Server administrator"
                 ],
                 "Parameters": [
                     {
@@ -39040,7 +39040,7 @@
                 "Synopsis": "Remove a new Logical Switch resource.",
                 "Description": [
                     "This Cmdlet will remove the configured Logical Switch from the requested appliance(s).  When you delete a logical switch, HPE OneView no longer manages the physical switches associated with it.\r\n",
-                    "Required privileges: Infrastructure administrator or Network administrator"
+                    "Minimum required privileges: Infrastructure administrator or Network administrator"
                 ],
                 "Parameters": [
                     {
@@ -39191,7 +39191,7 @@
                 "Synopsis": "Remove a new Logical Switch Group resource.",
                 "Description": [
                     "This Cmdlet will remove the configured Logical Switch Group from the requested appliance(s).  You cannot delete a logical switch group while it is being used by one or more logical switches. To delete the logical switch group, first delete the logical switches using the logical switch group.\r\n",
-                    "Required privileges: Infrastructure administrator or Network administrator"
+                    "Minimum required privileges: Infrastructure administrator or Network administrator"
                 ],
                 "Parameters": [
                     {
@@ -43069,7 +43069,7 @@
             "Name": "Reset-HPOVInterconnectNetOpPassword",
             "Contents": {
                 "Synopsis": "Reset HPE Synergy Virtual Connect NetOp account password.",
-                "Description": "*** THIS CMDLET SHOULD NOT BE EXECUTED WITHOUT GUIDANCE FROM HPE CUSTOMER SUPPORT CENTER ***\n\nThis Cmdlet will reset the HPE Synergy Virtual Connect NetOp account password to the specified value.\n\nRequired permissions: Infrastructure administrator, Network administrator",
+                "Description": "*** THIS CMDLET SHOULD NOT BE EXECUTED WITHOUT GUIDANCE FROM HPE CUSTOMER SUPPORT CENTER ***\n\nThis Cmdlet will reset the HPE Synergy Virtual Connect NetOp account password to the specified value.\n\nMinimum required privileges: Infrastructure administrator, Network administrator",
                 "Parameters": [
                     {
                         "Name": "ApplianceConnection",
@@ -45020,7 +45020,7 @@
             "Name": "Set-HPOVApplianceAuditLogForwarding",
             "Contents": {
                 "Synopsis": "Modify remote Syslog audit log forwarding.",
-                "Description": "HPE OneView can forward the internal audit log entries to a remote syslog server, in standard Syslog format.  This cmdlet will chnage the current status, remote Syslog destination and port to be configured on the appliance.\r\n\r\nRequired permissions: Infrastructure administrator",
+                "Description": "HPE OneView can forward the internal audit log entries to a remote syslog server, in standard Syslog format.  This cmdlet will chnage the current status, remote Syslog destination and port to be configured on the appliance.\r\n\r\nMinimum required privileges: Infrastructure administrator",
                 "Parameters": [
                     {
                         "Name": "ApplianceConnection",
@@ -46309,7 +46309,7 @@
             "Name": "Set-HPOVApplianceSnmpV3EngineId",
             "Contents": {
                 "Synopsis": "Change the appliance SNMPv3 Engine ID",
-                "Description": "Change or update the appliance SNMPv3 engine ID.\r\n\r\nRequired permissions: Infrastructure administrator",
+                "Description": "Change or update the appliance SNMPv3 engine ID.\r\n\r\nMinimum required privileges: Infrastructure administrator",
                 "Parameters": [
                     {
                         "Name": "ApplianceConnection",
@@ -48024,7 +48024,7 @@
             "Name": "Set-HPOVEnclosureGroup",
             "Contents": {
                 "Synopsis": "Modify an existing enclosure group policy.",
-                "Description": "An enclosure group is a logical resource that defines a standard configuration for member logical enclosures. Use this Cmdlet to update the configuration policy for a specific enclosure group resource.\r\n\r\nRequired permissions: Server administrator or Infrastructure administrator",
+                "Description": "An enclosure group is a logical resource that defines a standard configuration for member logical enclosures. Use this Cmdlet to update the configuration policy for a specific enclosure group resource.\r\n\r\nMinimum required privileges: Server administrator or Infrastructure administrator",
                 "Parameters": [
                     {
                         "Name": "ApplianceConnection",
@@ -50773,7 +50773,7 @@
             "Name": "Set-HPOVRemoteSupportPrimaryContact",
             "Contents": {
                 "Synopsis": "Set HPE OneView Remote Support default primary contact.",
-                "Description": "Register with Hewlett Packard Enterprise to allow automatic case creation for hardware failures on servers and enclosures and to enable Proactive Care. Once enabled, all eligible devices added in the future will be automatically enabled for remote support.\n\nUse this Cmdlet to change or update the HPE OneView Remote Support primary Contact.\n\nRequired permissions: Infrastructure administrator",
+                "Description": "Register with Hewlett Packard Enterprise to allow automatic case creation for hardware failures on servers and enclosures and to enable Proactive Care. Once enabled, all eligible devices added in the future will be automatically enabled for remote support.\n\nUse this Cmdlet to change or update the HPE OneView Remote Support primary Contact.\n\nMinimum required privileges: Infrastructure administrator",
                 "Parameters": [
                     {
                         "Name": "ApplianceConnection",
@@ -51284,7 +51284,7 @@
             "Name": "Set-HPOVReservedVlanRange",
             "Contents": {
                 "Synopsis": "Modify the reserved VLAN range for HPE Synergy.",
-                "Description": "By default, HPE Synergy reserves VLANs 3967-4095.  In order to modify the default range, Tunnel, untagged and FC networks must not exist.  The -Length parameter must not exceed 128.  The reserved VLAN range is concurrent.\r\n\r\nRequired permissions:  Network administrator, Infrastructure administrator",
+                "Description": "By default, HPE Synergy reserves VLANs 3967-4095.  In order to modify the default range, Tunnel, untagged and FC networks must not exist.  The -Length parameter must not exceed 128.  The reserved VLAN range is concurrent.\r\n\r\nMinimum required privileges:  Network administrator, Infrastructure administrator",
                 "Parameters": [
                     {
                         "Name": "ApplianceConnection",
@@ -51825,7 +51825,7 @@
             "Name": "Set-HPOVServerHardwareType",
             "Contents": {
                 "Synopsis": "Rename or set a description to a Server Hardware Type resource.",
-                "Description": "Use this Cmdlet to rename or set a description to one or more Server Hardware Type resource(s).\r\n\r\nRequired permissions: Server administrator",
+                "Description": "Use this Cmdlet to rename or set a description to one or more Server Hardware Type resource(s).\r\n\r\nMinimum required privileges: Server administrator",
                 "Parameters": [
                     {
                         "Name": "ApplianceConnection",
@@ -56288,7 +56288,7 @@
             "Name": "Test-HPOVApplianceAuditLogForwarding",
             "Contents": {
                 "Synopsis": "Generate test audit log forward message.",
-                "Description": "This Cmdlet will generate a syslog message to test connectivity to the appliance configured remote Syslog server.\r\n\r\nRequired permissions: Infrastructure administrator",
+                "Description": "This Cmdlet will generate a syslog message to test connectivity to the appliance configured remote Syslog server.\r\n\r\nMinimum required privileges: Infrastructure administrator",
                 "Parameters": [
                     {
                         "Name": "ApplianceConnection",
@@ -57773,7 +57773,7 @@
                 "Synopsis": "Refresh a new Logical Switch resource.",
                 "Description": [
                     "A logical switch is based on a logical switch group configuration. If the logical switch transitions to an \"Inconsistent with group state\", due to changes in either the logical switch or the logical switch group, this Cmdlet will update (or refresh) the logical switch configuration based on the logical switch group and return to a consistent state.\r\n",
-                    "Required privileges: Infrastructure administrator or Network administrator"
+                    "Minimum required privileges: Infrastructure administrator or Network administrator"
                 ],
                 "Parameters": [
                     {

@@ -28,7 +28,9 @@ Other one-time boot options are available through the HPE iLO interface; however
 
 After setting the one-time boot option, when the server hardware is powered off and powered on, HPE iLO attempts to boot the server using the selected boot option. If the selected boot option is not available, HPE iLO attempts to boot the server using the boot order defined in the server profile. After using or attempting to use the one-time boot value, the one-time boot value is reset to No one-time boot and the server boots using the boot order defined in its server profile or through HPE iLO.
 
-Required permissions: Server administrator
+{% hint style="info" %}
+Minimum required privileges: Server administrator
+{% endhint %}
 
 ## Examples
 

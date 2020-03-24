@@ -20,7 +20,9 @@ The backup process involves creating a backup file and then downloading that fil
 
 This Cmdlet will get the automatic backup configuration from the connected appliance(s). Use Set-HPOVAutomaticBackupConfig to set a new automatic backup policy for the appliance(s).
 
-Minimum required permissions: Read only
+{% hint style="info" %}
+Minimum required privileges: Read only
+{% endhint %}
 
 ## Examples
 

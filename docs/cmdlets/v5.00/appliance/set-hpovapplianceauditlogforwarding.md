@@ -27,7 +27,9 @@ Set-HPOVApplianceAuditLogForwarding
 
 HPE OneView can forward the internal audit log entries to a remote syslog server, in standard Syslog format.  This Cmdlet will chnage the current status, remote Syslog destination and port to be configured on the appliance.
 
-Required permissions: Infrastructure administrator
+{% hint style="info" %}
+Minimum required privileges: Infrastructure administrator
+{% endhint %}
 
 ## Examples
 

@@ -70,7 +70,9 @@ The audit log includes entries for all Maintenance console events except for vie
 
 Use this Cmdlet to retrieve appliance audit log archive, which contains all available audit log entries, in ZIP format.
 
-Minimum required permissions:  Infrastructure administrator
+{% hint style="info" %}
+Minimum required privileges:  Infrastructure administrator
+{% endhint %}
 
 ## Examples
 

@@ -16,8 +16,29 @@ Set-HPOVStoragePool
 
 ## Description
 
-A storage pool is an aggregation of physical storage resources (disks) in a storage system. Storage systems contain information about the storage ports through which they can be accessed. You can provision logical storage spaces, known as volumes, from storage pools. You cannot create or delete storage pools from the appliance, you can only add or remove them from management. Using this Cmdlet will change the managed state of a storage pool.  Its management state cannot be changed when volumes are currently provisioned from it and managed by HPE OneView, or a storage volume template specify the storage pool. If you remove a storage system from the appliance, all storage pools in it are removed automatically. Minimum required privileges: Infrastructure administrator or Storage administrator.  
+A reserved VLAN pool is a range of VLANs used for allocation of non-tagged networks:
 
+    * Tunnel
+    * Untagged
+
+Tagged networks and FCoE networks use VLANs outside of the reserved pool. You cannot use a reserved VLAN for tagged or FCoE networks.
+
+The VLAN pool allows the number of available VLANs to be segregated between tagged and non-tagged networks. Because non-tagged networks use VLANs for internal translation resources, a reserved VLAN pool can provide a sufficient number of VLANs available for allocation of those internal VLANs. In addition, the reserved pool range removes the need for translation resources to be used on tagged networks.
+
+For the maximum number of VLANs per physical downlink port, see the HPE OneView Support Matrix for HPE Synergy.
+
+Creating and managing a reserved VLAN pool
+
+A reserved VLAN pool is unique within a fabric, but independently allocated within each logical interconnect. The reserved range is identical across all logical interconnects within a fabric. The remaining VLANs (outside of the pool) are shared among all the logical interconnects within the fabric.
+
+For HPE OneView running embedded on a HPE Synergy 12000 Frame, the default range starts at 3967 and the size is 128. The minimum size of the pool must be 60 VLANs to ensure the pool is not exhausted.
+
+The size of the pool cannot exceed 128 VLANs.
+
+{% hint style="info" %}
+Minimum required privileges:  Infrastructure administrator,
+{% endhint %}
+ Network administrator
 ## Examples
 
 ###  Example 1 

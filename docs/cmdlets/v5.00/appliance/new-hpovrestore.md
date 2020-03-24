@@ -32,8 +32,10 @@ Restoring from a backup is a disruptive action:
   are disabled after the post-restore process completes. The appliance automatically re-creates replacement
   address and identifier ranges.
 
-Required permissions: Infrastructure administrator, Software administrator
-
+{% hint style="info" %}
+Minimum required privileges: Infrastructure administrator,
+{% endhint %}
+ Software administrator
 ## Examples
 
 ###  Example 1 

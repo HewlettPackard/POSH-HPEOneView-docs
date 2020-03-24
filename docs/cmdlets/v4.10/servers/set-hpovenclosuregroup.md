@@ -20,7 +20,9 @@ Set-HPOVEnclosureGroup
 
 An enclosure group is a logical resource that defines a standard configuration for member logical enclosures. Use this Cmdlet to update the configuration policy for a specific enclosure group resource.
 
-Required permissions: Server administrator or Infrastructure administrator
+{% hint style="info" %}
+Minimum required privileges: Server administrator or Infrastructure administrator
+{% endhint %}
 
 ## Examples
 

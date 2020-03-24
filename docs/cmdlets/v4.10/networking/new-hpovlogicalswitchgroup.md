@@ -26,7 +26,7 @@ The logical switch group is a template for creating logical switches. Logical sw
  * Cisco Nexus 5600
  * Cisco Nexus 6000
  Please refer to either Get-HPOVSwitchType values, or the HPE OneView Support Matrix for which specific models are supported.
- Required privileges: Infrastructure administrator or Network administrator 
+ Minimum required privileges: Infrastructure administrator or Network administrator 
 
 ## Examples
 

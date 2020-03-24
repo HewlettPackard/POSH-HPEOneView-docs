@@ -4017,7 +4017,7 @@
             "Name": "Convert-HPOVServerProfile",
             "Contents": {
                 "Synopsis": "Migrate Server Profile.",
-                "Description": "Use this Cmdlet to change the Server Hardware Type and/or Enclosure Group set within the Server Profile.  Changing to a different server hardware type may change the capabilities available to the server profile. Changing the enclosure group may change the connections which are available for the profile.\r\n\r\n\t* The server hardware field will be set to \"unassigned\", requiring re-seletion of server hardware.\r\n\t* It may also cause incompatibilities with the current configuration.\r\n\t* All deployed connections will have their port assignment set to \"Auto\".\r\n\t* Any incompatibilities will be flagged when the server profile is committed.\r\n\t* If the new server hardware type does not support the local storage configuration, some storage may be lost.\r\n\t* If the enclosure group is changed, mezzanine storage is lost and the disk drives are released.\r\n\t* To prevent data loss, cancel this operation and backup data before applying the profile.\r\n\t* Any change in the server hardware type will lead to the associated volume loss.\r\n\t* If the server profile is associated with a server profile template, the server profile will become inconsistent with the template.  The server profile should be unassociated with the template before or after the migration.\r\n\r\nRequired Permissions: Infrastructure administrator or Server administrator.",
+                "Description": "Use this Cmdlet to change the Server Hardware Type and/or Enclosure Group set within the Server Profile.  Changing to a different server hardware type may change the capabilities available to the server profile. Changing the enclosure group may change the connections which are available for the profile.\r\n\r\n\t* The server hardware field will be set to \"unassigned\", requiring re-seletion of server hardware.\r\n\t* It may also cause incompatibilities with the current configuration.\r\n\t* All deployed connections will have their port assignment set to \"Auto\".\r\n\t* Any incompatibilities will be flagged when the server profile is committed.\r\n\t* If the new server hardware type does not support the local storage configuration, some storage may be lost.\r\n\t* If the enclosure group is changed, mezzanine storage is lost and the disk drives are released.\r\n\t* To prevent data loss, cancel this operation and backup data before applying the profile.\r\n\t* Any change in the server hardware type will lead to the associated volume loss.\r\n\t* If the server profile is associated with a server profile template, the server profile will become inconsistent with the template.  The server profile should be unassociated with the template before or after the migration.\r\n\r\nMinimum required privileges: Infrastructure administrator or Server administrator.",
                 "Parameters": [
                     {
                         "Name": "ApplianceConnection",
@@ -4246,7 +4246,7 @@
             "Name": "Convert-HPOVServerProfileTemplate",
             "Contents": {
                 "Synopsis": "Migrate Server Profile Template.",
-                "Description": "Use this Cmdlet to change the Server Hardware Type and/or Enclosure Group set within the Server Profile Template.  Changing to a different server hardware type may change the capabilities available to the server profile. Changing the enclosure group may change the connections which are available for the profile.\r\n\r\n\t* The server hardware field will be set to \"unassigned\", requiring re-seletion of server hardware.\r\n\t* It may also cause incompatibilities with the current configuration.\r\n\t* All deployed connections will have their port assignment set to \"Auto\".\r\n\t* Any incompatibilities will be flagged when the server profile is committed.\r\n\t* If the new server hardware type does not support the local storage configuration, some storage may be lost.\r\n\t* If the enclosure group is changed, mezzanine storage for HPE Synergy is lost and the disk drives are released.\r\n\t* To prevent data loss, cancel this operation and backup data before applying the profile.\r\n\t* Any change in the server hardware type will lead to the associated volume loss.\r\n\r\nRequired Permissions: Infrastructure administrator or Server administrator.",
+                "Description": "Use this Cmdlet to change the Server Hardware Type and/or Enclosure Group set within the Server Profile Template.  Changing to a different server hardware type may change the capabilities available to the server profile. Changing the enclosure group may change the connections which are available for the profile.\r\n\r\n\t* The server hardware field will be set to \"unassigned\", requiring re-seletion of server hardware.\r\n\t* It may also cause incompatibilities with the current configuration.\r\n\t* All deployed connections will have their port assignment set to \"Auto\".\r\n\t* Any incompatibilities will be flagged when the server profile is committed.\r\n\t* If the new server hardware type does not support the local storage configuration, some storage may be lost.\r\n\t* If the enclosure group is changed, mezzanine storage for HPE Synergy is lost and the disk drives are released.\r\n\t* To prevent data loss, cancel this operation and backup data before applying the profile.\r\n\t* Any change in the server hardware type will lead to the associated volume loss.\r\n\r\nMinimum required privileges: Infrastructure administrator or Server administrator.",
                 "Parameters": [
                     {
                         "Name": "ApplianceConnection",
@@ -8532,7 +8532,7 @@
             "Name": "Get-HPOVApplianceProxy",
             "Contents": {
                 "Synopsis": "Get appliance configured HTTP proxy.",
-                "Description": "The setting an appliance proxy allows you to set the HTTP/HTTPS proxy, port number for client connections, and whether authentication requires a username and a password.\r\n\r\nRequired permissions: Infrastructure administrator",
+                "Description": "The setting an appliance proxy allows you to set the HTTP/HTTPS proxy, port number for client connections, and whether authentication requires a username and a password.\r\n\r\nMinimum required privileges: Infrastructure administrator",
                 "Parameters": [
                     {
                         "Name": "ApplianceConnection",
@@ -8867,7 +8867,7 @@
             "Name": "Get-HPOVApplianceTrapDestination",
             "Contents": {
                 "Synopsis": "Get configured appliance SNMP trap destinations.",
-                "Description": "Use this Cmdlet to retrieve configured SNMPv1 and/or SNMPv3 trap destinations.\r\n\r\nRequired permissions: Infrastructure administrator",
+                "Description": "Use this Cmdlet to retrieve configured SNMPv1 and/or SNMPv3 trap destinations.\r\n\r\nMinimum required privileges: Infrastructure administrator",
                 "Parameters": [
                     {
                         "Name": "ApplianceConnection",
@@ -25320,7 +25320,7 @@
                     "   * For the deployment of server profile connections for a Virtual Connect interconnect, the Network administrator must configure the virtual Fibre Channel interface (vFC), VFC binding to server port, and VSAN interface assignment binding manually.\r\n",
                     "* When a Nexus switch expansion module is removed, a warning alert is generated unless the module is powered off.\n",
                     "* HPE OneView can detect configuration changes that occur on the switches specified in the logical switch when it no longer matches the configuration that HPE OneView provisions. Warning alerts are generated. Administrators can correct the configuration manually or reapply the configuration on the associated logical interconnects to recover.\r\n",
-                    "Required privileges: Infrastructure administrator or Network administrator"
+                    "Minimum required privileges: Infrastructure administrator or Network administrator"
                 ],
                 "Parameters": [
                     {
@@ -25885,7 +25885,7 @@
                     "* Cisco Nexus 5600\n",
                     "* Cisco Nexus 6000\r\n",
                     "Please refer to either Get-HPOVSwitchType values, or the HPE OneView Support Matrix for which specific models are supported.\r\n",
-                    "Required privileges: Infrastructure administrator or Network administrator"
+                    "Minimum required privileges: Infrastructure administrator or Network administrator"
                 ],
                 "Parameters": [
                     {
@@ -35299,7 +35299,7 @@
             "Name": "Remove-HPOVApplianceProxy",
             "Contents": {
                 "Synopsis": "Remove appliance HTTP/HTTPS proxy.",
-                "Description": "The setting an appliance proxy allows you to set the HTTP/HTTPS proxy, port number for client connections, and whether authentication requires a username and a password.\r\n\r\nRequired permissions: Infrastructure administrator",
+                "Description": "The setting an appliance proxy allows you to set the HTTP/HTTPS proxy, port number for client connections, and whether authentication requires a username and a password.\r\n\r\nMinimum required privileges: Infrastructure administrator",
                 "Parameters": [
                     {
                         "Name": "ApplianceConnection",
@@ -35386,7 +35386,7 @@
             "Name": "Remove-HPOVApplianceTrapDestination",
             "Contents": {
                 "Synopsis": "Remove configured appliance SNMP trap destinations.",
-                "Description": "Use this Cmdlet to remove configured SNMPv1 and/or SNMPv3 trap destinations.\r\n\r\nRequired permissions: Infrastructure administrator",
+                "Description": "Use this Cmdlet to remove configured SNMPv1 and/or SNMPv3 trap destinations.\r\n\r\nMinimum required privileges: Infrastructure administrator",
                 "Parameters": [
                     {
                         "Name": "ApplianceConnection",
@@ -36342,7 +36342,7 @@
                 "Description": [
                     "Fabric Managers is a resource manager in HPE OneView that enables integration of a Cisco ACI fabric (an external entity) with HPE Synergy. A fabric manager aligns HPE OneView resources as defined by Cisco Application Policy Infrastructure Controller (APIC) policies. It represents a remote Cisco APIC or an APIC cluster that manages a Cisco ACI fabric.\r\n",
                     "This Cmdlet will remove the fabric manager and will disassociate it\u0027s tenant from all logical interconnects, networks and networks sets. Inconsistencies with the APIC tenant configuration will no longer be monitored or remediated by OneView.\r\n",
-                    "Required privileges: Infrastructure administrator or Server administrator"
+                    "Minimum required privileges: Infrastructure administrator or Server administrator"
                 ],
                 "Parameters": [
                     {
@@ -37220,7 +37220,7 @@
                 "Synopsis": "Remove a new Logical Switch resource.",
                 "Description": [
                     "This Cmdlet will remove the configured Logical Switch from the requested appliance(s).  When you delete a logical switch, HPE OneView no longer manages the physical switches associated with it.\r\n",
-                    "Required privileges: Infrastructure administrator or Network administrator"
+                    "Minimum required privileges: Infrastructure administrator or Network administrator"
                 ],
                 "Parameters": [
                     {
@@ -37371,7 +37371,7 @@
                 "Synopsis": "Remove a new Logical Switch Group resource.",
                 "Description": [
                     "This Cmdlet will remove the configured Logical Switch Group from the requested appliance(s).  You cannot delete a logical switch group while it is being used by one or more logical switches. To delete the logical switch group, first delete the logical switches using the logical switch group.\r\n",
-                    "Required privileges: Infrastructure administrator or Network administrator"
+                    "Minimum required privileges: Infrastructure administrator or Network administrator"
                 ],
                 "Parameters": [
                     {
@@ -45632,7 +45632,7 @@
             "Name": "Set-HPOVEnclosureGroup",
             "Contents": {
                 "Synopsis": "Modify an existing enclosure group policy.",
-                "Description": "An enclosure group is a logical resource that defines a standard configuration for member logical enclosures. Use this Cmdlet to update the configuration policy for a specific enclosure group resource.\r\n\r\nRequired permissions: Server administrator or Infrastructure administrator",
+                "Description": "An enclosure group is a logical resource that defines a standard configuration for member logical enclosures. Use this Cmdlet to update the configuration policy for a specific enclosure group resource.\r\n\r\nMinimum required privileges: Server administrator or Infrastructure administrator",
                 "Parameters": [
                     {
                         "Name": "ApplianceConnection",
@@ -48623,7 +48623,7 @@
             "Name": "Set-HPOVReservedVlanRange",
             "Contents": {
                 "Synopsis": "Modify the reserved VLAN range for HPE Synergy.",
-                "Description": "By default, HPE Synergy reserves VLANs 3967-4095.  In order to modify the default range, Tunnel, untagged and FC networks must not exist.  The -Length parameter must not exceed 128.  The reserved VLAN range is concurrent.\r\n\r\nRequired permissions:  Network administrator, Infrastructure administrator",
+                "Description": "A reserved VLAN pool is a range of VLANs used for allocation of non-tagged networks:\n\n    * Tunnel\n    * Untagged\n\nTagged networks and FCoE networks use VLANs outside of the reserved pool. You cannot use a reserved VLAN for tagged or FCoE networks.\n\nThe VLAN pool allows the number of available VLANs to be segregated between tagged and non-tagged networks. Because non-tagged networks use VLANs for internal translation resources, a reserved VLAN pool can provide a sufficient number of VLANs available for allocation of those internal VLANs. In addition, the reserved pool range removes the need for translation resources to be used on tagged networks.\n\nFor the maximum number of VLANs per physical downlink port, see the HPE OneView Support Matrix for HPE Synergy.\n\nCreating and managing a reserved VLAN pool\n\nA reserved VLAN pool is unique within a fabric, but independently allocated within each logical interconnect. The reserved range is identical across all logical interconnects within a fabric. The remaining VLANs (outside of the pool) are shared among all the logical interconnects within the fabric.\n\nFor HPE OneView running embedded on a HPE Synergy 12000 Frame, the default range starts at 3967 and the size is 128. The minimum size of the pool must be 60 VLANs to ensure the pool is not exhausted.\n\nThe size of the pool cannot exceed 128 VLANs.\n\nMinimum required privileges:  Infrastructure administrator, Network administrator",
                 "Parameters": [
                     {
                         "Name": "ApplianceConnection",
@@ -49151,7 +49151,7 @@
             "Name": "Set-HPOVServerHardwareType",
             "Contents": {
                 "Synopsis": "Rename or set a description to a Server Hardware Type resource.",
-                "Description": "Use this Cmdlet to rename or set a description to one or more Server Hardware Type resource(s).\r\n\r\nRequired permissions: Server administrator",
+                "Description": "Use this Cmdlet to rename or set a description to one or more Server Hardware Type resource(s).\r\n\r\nMinimum required privileges: Server administrator",
                 "Parameters": [
                     {
                         "Name": "ApplianceConnection",
@@ -54466,7 +54466,7 @@
                 "Synopsis": "Refresh a new Logical Switch resource.",
                 "Description": [
                     "A logical switch is based on a logical switch group configuration. If the logical switch transitions to an \"Inconsistent with group state\", due to changes in either the logical switch or the logical switch group, this Cmdlet will update (or refresh) the logical switch configuration based on the logical switch group and return to a consistent state.\r\n",
-                    "Required privileges: Infrastructure administrator or Network administrator"
+                    "Minimum required privileges: Infrastructure administrator or Network administrator"
                 ],
                 "Parameters": [
                     {

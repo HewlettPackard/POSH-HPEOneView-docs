@@ -16,10 +16,29 @@ Set-HPOVReservedVlanRange
 
 ## Description
 
-By default, HPE Synergy reserves VLANs 3967-4095.  In order to modify the default range, Tunnel, untagged and FC networks must not exist.  The -Length parameter must not exceed 128.  The reserved VLAN range is concurrent.
+A reserved VLAN pool is a range of VLANs used for allocation of non-tagged networks:
 
-Required permissions:  Network administrator, Infrastructure administrator
+    * Tunnel
+    * Untagged
 
+Tagged networks and FCoE networks use VLANs outside of the reserved pool. You cannot use a reserved VLAN for tagged or FCoE networks.
+
+The VLAN pool allows the number of available VLANs to be segregated between tagged and non-tagged networks. Because non-tagged networks use VLANs for internal translation resources, a reserved VLAN pool can provide a sufficient number of VLANs available for allocation of those internal VLANs. In addition, the reserved pool range removes the need for translation resources to be used on tagged networks.
+
+For the maximum number of VLANs per physical downlink port, see the HPE OneView Support Matrix for HPE Synergy.
+
+Creating and managing a reserved VLAN pool
+
+A reserved VLAN pool is unique within a fabric, but independently allocated within each logical interconnect. The reserved range is identical across all logical interconnects within a fabric. The remaining VLANs (outside of the pool) are shared among all the logical interconnects within the fabric.
+
+For HPE OneView running embedded on a HPE Synergy 12000 Frame, the default range starts at 3967 and the size is 128. The minimum size of the pool must be 60 VLANs to ensure the pool is not exhausted.
+
+The size of the pool cannot exceed 128 VLANs.
+
+{% hint style="info" %}
+Minimum required privileges:  Infrastructure administrator,
+{% endhint %}
+ Network administrator
 ## Examples
 
 ###  Example 1 

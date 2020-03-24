@@ -31,7 +31,9 @@ a different server hardware type may change the capabilities available to the se
     * Any change in the server hardware type will lead to the associated volume loss.
     * If the server profile is associated with a server profile template, the server profile will become inconsistent with the template.  The server profile should be unassociated with the template before or after the migration.
 
-Minimum required Permissions: Infrastructure administrator or Server administrator.
+{% hint style="info" %}
+Minimum required privileges: Infrastructure administrator or Server administrator.
+{% endhint %}
 
 ## Examples
 
