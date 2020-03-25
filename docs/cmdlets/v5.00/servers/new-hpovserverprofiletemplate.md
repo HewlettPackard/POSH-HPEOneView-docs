@@ -33,6 +33,7 @@ New-HPOVServerProfileTemplate
     [-PxeBootPolicy <String>]
     [-ManageBoot]
     [-BootOrder <Array>]
+    [-BootOrderConsistencyChecking <string>]
     [-SecureBoot <String>]
     [-LocalStorage]
     [-LocalStorageConsistencyChecking <string>]
@@ -79,6 +80,7 @@ New-HPOVServerProfileTemplate
     [-PxeBootPolicy <String>]
     [-ManageBoot]
     [-BootOrder <Array>]
+    [-BootOrderConsistencyChecking <string>]
     [-SecureBoot <String>]
     [-LocalStorage]
     [-LocalStorageConsistencyChecking <string>]
@@ -941,6 +943,21 @@ Use to override the consistency checking for the policy.  Allowed values:
     * None
 
 | Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -BootOrderConsistencyChecking &lt;string&gt;
+
+Use to override the consistency checking for the policy.  Allowed values:
+
+    * Exact
+    * None
+
+| Aliases |  |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |

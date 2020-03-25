@@ -9,6 +9,7 @@ description: Update Server Profile from Template
 ```text
 Update-HPOVServerProfile
     [-InputObject] <Object>
+    [-Stage]
     [-ApplianceConnection <Object>]
     [-Async]
     [<CommonParameters>]
@@ -24,6 +25,7 @@ Update-HPOVServerProfile
     [-LocalStorage]
     [-SANStorage]
     [-BIOS]
+    [-Ilo]
     [-OSDeployment]
     [-ApplianceConnection <Object>]
     [-Async]
@@ -32,7 +34,13 @@ Update-HPOVServerProfile
 
 ## Description
 
-This Cmdlet will perform the "Update from Server Profile Template" operation on 1 or more Server Profile resources.  If a Server Profile is already in a "Compliant" state, then no action will be taken.
+This Cmdlet performs one of two different operations.  By default, it will perform the "Update from Server Profile Template" operation on 1 or more Server Profile resources.  You can use Update from template to update the configuration of the server profile to make it consistent with its parent server profile template.
+
+To bring an inconsistent (Inconsistent with template) server profile configuration back into consistency (Consistent) with the server profile template, you must reapply the settings from the server profile template either manually or automatically. Some server profile updates can be automatically performed when the server hardware is powered on and some updates can only be performed when the server hardware is powered off. You can now defer the automatic updates until the next hardware maintenance window or cancel them if you do not want to proceed with the updates.  If a Server Profile is already in a "Compliant" state, then no action will be taken
+
+The second operation is Reapply, using the -Reapply parameter.  You can reapply a server profile to resolve errors or to ensure that the server hardware configuration matches the server profile. To reduce the time required to reapply a profile, individual components can be omitted from the reapply operation by clearing those components by omitting their switch parameter. Profiles that are in an error state can be reapplied, but individual components cannot be omitted.
+
+Minimum required permissions: (Update from Template) Infrastructure administrator or Server administrator.  (Reapply a server profile) Infrastructure administrator, Server administrator, or Server firmware operator.
 
 ## Examples
 
@@ -186,11 +194,11 @@ Re-apply OS Deployment Plan settings.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -WhatIf &lt;SwitchParameter&gt;
+### -Ilo &lt;SwitchParameter&gt;
 
-When using this parameter, an `[HPOneView.ServerProfile.CompliancePreview]` object is returned, which contains the operations that will be performed.
+Re-apply iLO settings that are defined in the profile.
 
-| Aliases | wi |
+| Aliases |  |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
@@ -198,11 +206,11 @@ When using this parameter, an `[HPOneView.ServerProfile.CompliancePreview]` obje
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Confirm &lt;SwitchParameter&gt;
+### -Stage &lt;SwitchParameter&gt;
 
+If a setting requires the server tobe powered off, certain updates can be staged.
 
-
-| Aliases | cf |
+| Aliases |  |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |

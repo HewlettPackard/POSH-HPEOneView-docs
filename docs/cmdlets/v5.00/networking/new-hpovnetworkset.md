@@ -14,12 +14,21 @@ New-HPOVNetworkSet
     [-TypicalBandwidth] <Int32>
     [-MaximumBandwidth] <Int32>
     [-ApplianceConnection] <Object>
+    [-Large]
     [<CommonParameters>]
 ```
 
 ## Description
 
-Create a new Network Set and connection type resource.
+A network set is a group of Ethernet L2/L3 networks assigned to one or more connections, giving each single connection access to multiple networks. A network set is a shared resource available to all logical interconnects. It is directly associated with a connection template governing the bandwidth permitted to connections that use the network set.
+
+Within a network set, all network frames are exchanged over the connection with their 802.1Q VLAN ID in place (in other words, network traffic is tagged with its VLAN ID). However, there is one exception to this rule: one network within the network set can be designated as the 'nativeNetwork'. The 802.1Q VLAN ID is removed from 'nativeNetwork' traffic egressing the interconnect downlink (in other words, 'nativeNetwork' traffic is untagged). This allows a single connection to support multiple tagged networks plus a single untagged network over the same downlink.
+
+All Ethernet networks in a network set must have unique VLAN IDs.
+
+This Cmdlet will create a new Network Set resource.
+
+Minimum required permissions: Infrastructure administrator, Network administrator
 
 ## Examples
 
@@ -119,6 +128,20 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 | Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -Large &lt;SwitchParameter&gt;
+
+A "Regular" network set may contain up to 162 networks. "Large" network sets can contain up to 4000 networks and can only be used by server profile template connections or server profile connections assigned to rackmount or HPE Synergy server hardware.
+
+By default, "Regular" Network Sets are created.
+
+| Aliases |  |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

@@ -18,7 +18,11 @@ Show-HPOVFirmwareReport
 
 ## Description
 
-Generate firmware report
+This Cmdlet will generate a CSV-compliance firmware report for various resources.  Enclosure Groups, Enclosures, Server Hardware and Interconnects are all suported resources.  If an Enclosure Group is provided, all associated Logical Enclosures and Enclosures are examined, with their embedded resources like fabric modules, enclosure managers (Synergy FLM and BladeSystem Onboard Administrator), and server hardware.  If a baseline is associated with an Enclosure Group, or server profile, it is used to compare what is expected, versus what the actual installed component is.  The baseline can be overridden by specifying a different baseline resource object from Get-HPOVBaseline.
+
+The genrated report can be exported.
+
+Minimum required permissions: Infrastructure administrator, Server administrator, Network administrator
 
 ## Examples
 

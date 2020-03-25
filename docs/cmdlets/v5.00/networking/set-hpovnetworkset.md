@@ -17,12 +17,21 @@ Set-HPOVNetworkSet
     [-TypicalBandwidth <Int32>]
     [-MaximumBandwidth <Int32>]
     [-ApplianceConnection <Object>]
+    [-Large]
     [<CommonParameters>]
 ```
 
 ## Description
 
-Modify a network set and/or its connection information.
+A network set is a group of Ethernet L2/L3 networks assigned to one or more connections, giving each single connection access to multiple networks. A network set is a shared resource available to all logical interconnects. It is directly associated with a connection template governing the bandwidth permitted to connections that use the network set.
+
+Within a network set, all network frames are exchanged over the connection with their 802.1Q VLAN ID in place (in other words, network traffic is tagged with its VLAN ID). However, there is one exception to this rule: one network within the network set can be designated as the 'UntaggedNetwork', or Native VLAN. The 802.1Q VLAN ID is removed from 'UntaggedNetwork' traffic egressing the interconnect downlink (in other words, 'UntaggedNetwork' traffic is untagged). This allows a single connection to support multiple tagged networks plus a single untagged network over the same downlink.
+
+All Ethernet networks in a network set must have unique VLAN IDs.
+
+Use this Cmdlet to change the Name, add or remove Ethernet networks, switch to a Large network set resource, what is the untagged network and adjust the allocated bandwidth of an existing network set.
+
+Minimum required permissions: Infrastructure administrator, Network administrator
 
 ## Examples
 
@@ -67,7 +76,7 @@ Remove the specified networks from the existing network set.
 
 ### -InputObject &lt;Object&gt;
 
-The Network Set resource object or name to be modified.
+The Network Set resource object to be modified.
 
 | Aliases | NetSet, NetworkSet |
 | :--- | :--- |
@@ -171,6 +180,20 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
+
+### -Large &lt;SwitchParameter&gt;
+
+A "Regular" network set (-Large:$False) may contain up to 162 networks. "Large" network sets can contain up to 4000 networks and can only be used by server profile template connections or server profile connections assigned to rackmount or HPE Synergy server hardware. A network set cannot be converted from regular to large if the network set is already in use by a server profile or server profile template.
+
+By default, "Regular" Network Sets are created.
+
+| Aliases |  |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

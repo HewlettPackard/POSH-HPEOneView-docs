@@ -188,8 +188,10 @@ Which Synergy Interconnect Bay Set ID will the interconnects be populated in.  A
 
 Specify the Synergy Fabric Module type the Logical Interconnect Group will be modeled for.  Allowed value:
 
+    *  SEVC100F32 - Virtual Connect SE 100Gb F32 Module for Synergy
     *  SEVC40F8 - Virtual Connect SE 40Gb F8 Module for Synergy
-    * SEVCFC - Virtual Connect SE 16Gb FC Module for Synergy
+    * SEVCFC or SEVC16GbFC - Virtual Connect SE 16Gb FC Module for Synergy
+    * SEVC32FC - Virtual Connect SE 32Gb FC Module for Synergy
     * SAS - Synergy 12Gb SAS Connection Module
 
 | Aliases | None |
@@ -216,8 +218,10 @@ HPE BladeSystem C7000 Support - A `[System.Collections.Hashtable]` object of eac
 
 HPE Synergy Support - A `[System.Collection.Hashtable]` object, with Frame and Fabric Bay definitions.  Accepted values are:
 
+    * SEVC100F32   - Virtual Connect SE 40Gb F8 Module for Synergy
+
     * SEVC40f8   - Virtual Connect SE 40Gb F8 Module for Synergy
-    * SEVC16GbFC - Virtual Connect SE 16Gb FC Module for Synergy
+    * SEVCFC or SEVC16GbFC - Virtual Connect SE 16Gb FC Module for Synergy
     * SE20ILM    - Synergy 20Gb Interconnect Link Module
     * SE10ILM    - Synergy 10Gb Interconnect Link Module
     * SE12SAS    - Synergy 12Gb SAS Connection Module
@@ -548,7 +552,7 @@ Default: Exact
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -InternalNetworkConsistencyChecking &lt;string&gt;
@@ -565,7 +569,7 @@ Default: Exact
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -QoSConsistencyChecking &lt;string&gt;
@@ -582,7 +586,7 @@ Default: Exact
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SNMPConsistencyChecking &lt;string&gt;
@@ -599,7 +603,7 @@ Default: Exact
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -DdnsDomainNameSuffix &lt;string&gt;

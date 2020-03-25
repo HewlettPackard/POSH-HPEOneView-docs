@@ -18183,14 +18183,14 @@
                 "Description": "Use this Cmdlet to display alert or other activity messages that are not tracked as Alerts or Tasks.  For instance, failed Connection will be reported as a Server Profile Message.  Firmware update status (using HPSUT) wil be displayed as messages.",
                 "Parameters": [
                     {
-                        "Name": "ServerProfile",
+                        "Name": "InputObject",
                         "Description": "The Server Profile resource object.",
                         "ParameterValue": {
                             "value": "Object",
                             "required": true
                         },
                         "DefaultValue": null,
-                        "Aliases": null,
+                        "Aliases": "ServerProfile",
                         "PipelineInput": null,
                         "SupportsWildcard": false
                     },
@@ -18240,11 +18240,11 @@
                     [
                         {
                             "Name": "InputObject",
-                            "Required": true
+                            "Required": false
                         },
                         {
                             "Name": "ApplianceConnection",
-                            "Required": true
+                            "Required": false
                         }
                     ]
                 ]
@@ -26568,7 +26568,7 @@
                     },
                     {
                         "Name": "FabricModuleType",
-                        "Description": "Specify the Synergy Fabric Module type the Logical Interconnect Group will be modeled for.  Allowed value:\n\n    *  SEVC40F8 - Virtual Connect SE 40Gb F8 Module for Synergy\n    * SEVCFC - Virtual Connect SE 16Gb FC Module for Synergy\n    * SAS - Synergy 12Gb SAS Connection Module",
+                        "Description": "Specify the Synergy Fabric Module type the Logical Interconnect Group will be modeled for.  Allowed value:\n\n    *  SEVC100F32 - Virtual Connect SE 100Gb F32 Module for Synergy\n    *  SEVC40F8 - Virtual Connect SE 40Gb F8 Module for Synergy\n    * SEVCFC or SEVC16GbFC - Virtual Connect SE 16Gb FC Module for Synergy\n    * SEVC32FC - Virtual Connect SE 32Gb FC Module for Synergy\n    * SAS - Synergy 12Gb SAS Connection Module",
                         "ParameterValue": {
                             "value": "String",
                             "required": true
@@ -26580,7 +26580,7 @@
                     },
                     {
                         "Name": "Bays",
-                        "Description": "HPE BladeSystem C7000 Support - A [System.Collections.Hashtable] object of each Interconnect Bay.  Accepted values are:\n\n    * FlexFabric - HP VC FlexFabric 10Gb/24-Port Module\n    * Flex10     - HP VC Flex-10 Enet Module\n    * Flex1010D  - HP VC Flex-10/10D Module\n    * Flex2040f8 - HP VC FlexFabric-20/40 F8 Module\n    * VCFC20     - HP VC 8Gb 20-Port FC Module\n    * VCFC24     - HP VC 8Gb 24-Port FC Module\n    * FEX        - Cisco Fabric Extender for HP BladeSystem\n        \nE.g. @{1 = \"Flex10\";2 = \"Flex10\";3 = \"FlexFabric\";4 = \"Flexfabric\";5 = \"\";6 = \"\";7 = \"\";8 = \"\";}   \n\nHPE Synergy Support - A [System.Collection.Hashtable] object, with Frame and Fabric Bay definitions.  Accepted values are:\n\n    * SEVC40f8   - Virtual Connect SE 40Gb F8 Module for Synergy\n    * SEVC16GbFC - Virtual Connect SE 16Gb FC Module for Synergy\n    * SE20ILM    - Synergy 20Gb Interconnect Link Module\n    * SE10ILM    - Synergy 10Gb Interconnect Link Module\n    * SE12SAS    - Synergy 12Gb SAS Connection Module\n\n$Bays = @{ Frame1 = @{Bay3 = \"SEVC40f8\"; Bay6 = \"SE20ILM\"}; Frame2 = @{Bay3 = \"SE20ILM\"; Bay6 = \"SEVC40f8\"} }\n\nNote: When configuring Synergy SAS Connection Module, no other device bays can be specified, and only a Single Frame can be configured.",
+                        "Description": "HPE BladeSystem C7000 Support - A [System.Collections.Hashtable] object of each Interconnect Bay.  Accepted values are:\n\n    * FlexFabric - HP VC FlexFabric 10Gb/24-Port Module\n    * Flex10     - HP VC Flex-10 Enet Module\n    * Flex1010D  - HP VC Flex-10/10D Module\n    * Flex2040f8 - HP VC FlexFabric-20/40 F8 Module\n    * VCFC20     - HP VC 8Gb 20-Port FC Module\n    * VCFC24     - HP VC 8Gb 24-Port FC Module\n    * FEX        - Cisco Fabric Extender for HP BladeSystem\n        \nE.g. @{1 = \"Flex10\";2 = \"Flex10\";3 = \"FlexFabric\";4 = \"Flexfabric\";5 = \"\";6 = \"\";7 = \"\";8 = \"\";}   \n\nHPE Synergy Support - A [System.Collection.Hashtable] object, with Frame and Fabric Bay definitions.  Accepted values are:\n\n    * SEVC100F32   - Virtual Connect SE 40Gb F8 Module for Synergy\n\n    * SEVC40f8   - Virtual Connect SE 40Gb F8 Module for Synergy\n    * SEVCFC or SEVC16GbFC - Virtual Connect SE 16Gb FC Module for Synergy\n    * SE20ILM    - Synergy 20Gb Interconnect Link Module\n    * SE10ILM    - Synergy 10Gb Interconnect Link Module\n    * SE12SAS    - Synergy 12Gb SAS Connection Module\n\n$Bays = @{ Frame1 = @{Bay3 = \"SEVC40f8\"; Bay6 = \"SE20ILM\"}; Frame2 = @{Bay3 = \"SE20ILM\"; Bay6 = \"SEVC40f8\"} }\n\nNote: When configuring Synergy SAS Connection Module, no other device bays can be specified, and only a Single Frame can be configured.",
                         "ParameterValue": {
                             "value": "Hashtable",
                             "required": true
@@ -26839,7 +26839,7 @@
                         },
                         "DefaultValue": "",
                         "Aliases": "None",
-                        "PipelineInput": "true (ByValue)",
+                        "PipelineInput": "false",
                         "SupportsWildcard": false
                     },
                     {
@@ -26851,7 +26851,7 @@
                         },
                         "DefaultValue": "",
                         "Aliases": "None",
-                        "PipelineInput": "true (ByValue)",
+                        "PipelineInput": "false",
                         "SupportsWildcard": false
                     },
                     {
@@ -26863,7 +26863,7 @@
                         },
                         "DefaultValue": "",
                         "Aliases": "None",
-                        "PipelineInput": "true (ByValue)",
+                        "PipelineInput": "false",
                         "SupportsWildcard": false
                     },
                     {
@@ -26875,7 +26875,7 @@
                         },
                         "DefaultValue": "",
                         "Aliases": "None",
-                        "PipelineInput": "true (ByValue)",
+                        "PipelineInput": "false",
                         "SupportsWildcard": false
                     },
                     {
@@ -28884,7 +28884,7 @@
             "Category": "Networking",
             "Contents": {
                 "Synopsis": "Create a new Network Set.",
-                "Description": "Create a new Network Set and connection type resource.",
+                "Description": "A network set is a group of Ethernet L2/L3 networks assigned to one or more connections, giving each single connection access to multiple networks. A network set is a shared resource available to all logical interconnects. It is directly associated with a connection template governing the bandwidth permitted to connections that use the network set.\n\nWithin a network set, all network frames are exchanged over the connection with their 802.1Q VLAN ID in place (in other words, network traffic is tagged with its VLAN ID). However, there is one exception to this rule: one network within the network set can be designated as the \u0027nativeNetwork\u0027. The 802.1Q VLAN ID is removed from \u0027nativeNetwork\u0027 traffic egressing the interconnect downlink (in other words, \u0027nativeNetwork\u0027 traffic is untagged). This allows a single connection to support multiple tagged networks plus a single untagged network over the same downlink.\n\nAll Ethernet networks in a network set must have unique VLAN IDs.\n\nThis Cmdlet will create a new Network Set resource.\n\nMinimum required permissions: Infrastructure administrator, Network administrator",
                 "Parameters": [
                     {
                         "Name": "Name",
@@ -28957,6 +28957,17 @@
                         "Aliases": "Appliance",
                         "PipelineInput": "false",
                         "SupportsWildcard": false
+                    },
+                    {
+                        "Name": "Large",
+                        "Description": "A \"Regular\" network set may contain up to 162 networks. \"Large\" network sets can contain up to 4000 networks and can only be used by server profile template connections or server profile connections assigned to rackmount or HPE Synergy server hardware.\n\nBy default, \"Regular\" Network Sets are created.",
+                        "ParameterValue": {
+                            "value": "SwitchParameter",
+                            "required": "False"
+                        },
+                        "DefaultValue": "",
+                        "PipelineInput": "false",
+                        "SupportsWildcard": false
                     }
                 ],
                 "InputTypes": [
@@ -29022,19 +29033,23 @@
                         },
                         {
                             "Name": "UntaggedNetwork",
-                            "Required": true
+                            "Required": false
                         },
                         {
                             "Name": "TypicalBandwidth",
-                            "Required": true
+                            "Required": false
                         },
                         {
                             "Name": "MaximumBandwidth",
-                            "Required": true
+                            "Required": false
                         },
                         {
                             "Name": "ApplianceConnection",
-                            "Required": true
+                            "Required": false
+                        },
+                        {
+                            "Name": "Large",
+                            "Required": false
                         }
                     ]
                 ]
@@ -34415,6 +34430,17 @@
                         "Aliases": "None",
                         "PipelineInput": "false",
                         "SupportsWildcard": false
+                    },
+                    {
+                        "Name": "BootOrderConsistencyChecking",
+                        "Description": "Use to override the consistency checking for the policy.  Allowed values:\n\n    * Exact\n    * None",
+                        "ParameterValue": {
+                            "value": "string",
+                            "required": "False"
+                        },
+                        "DefaultValue": "",
+                        "PipelineInput": "false",
+                        "SupportsWildcard": false
                     }
                 ],
                 "InputTypes": [
@@ -34588,6 +34614,10 @@
                             "Required": false
                         },
                         {
+                            "Name": "BootOrderConsistencyChecking",
+                            "Required": false
+                        },
+                        {
                             "Name": "SecureBoot",
                             "Required": false
                         },
@@ -34651,15 +34681,15 @@
                         },
                         {
                             "Name": "SANStorage",
-                            "Required": false
+                            "Required": true
                         },
                         {
                             "Name": "HostOStype",
-                            "Required": false
+                            "Required": true
                         },
                         {
                             "Name": "StorageVolume",
-                            "Required": false
+                            "Required": true
                         },
                         {
                             "Name": "Description",
@@ -34751,6 +34781,10 @@
                         },
                         {
                             "Name": "BootOrder",
+                            "Required": false
+                        },
+                        {
+                            "Name": "BootOrderConsistencyChecking",
                             "Required": false
                         },
                         {
@@ -52026,11 +52060,11 @@
             "Category": "Networking",
             "Contents": {
                 "Synopsis": "Modify an existing network set.",
-                "Description": "Modify a network set and/or its connection information.",
+                "Description": "A network set is a group of Ethernet L2/L3 networks assigned to one or more connections, giving each single connection access to multiple networks. A network set is a shared resource available to all logical interconnects. It is directly associated with a connection template governing the bandwidth permitted to connections that use the network set.\n\nWithin a network set, all network frames are exchanged over the connection with their 802.1Q VLAN ID in place (in other words, network traffic is tagged with its VLAN ID). However, there is one exception to this rule: one network within the network set can be designated as the \u0027UntaggedNetwork\u0027, or Native VLAN. The 802.1Q VLAN ID is removed from \u0027UntaggedNetwork\u0027 traffic egressing the interconnect downlink (in other words, \u0027UntaggedNetwork\u0027 traffic is untagged). This allows a single connection to support multiple tagged networks plus a single untagged network over the same downlink.\n\nAll Ethernet networks in a network set must have unique VLAN IDs.\n\nUse this Cmdlet to change the Name, add or remove Ethernet networks, switch to a Large network set resource, what is the untagged network and adjust the allocated bandwidth of an existing network set.\n\nMinimum required permissions: Infrastructure administrator, Network administrator",
                 "Parameters": [
                     {
                         "Name": "InputObject",
-                        "Description": "The Network Set resource object or name to be modified.",
+                        "Description": "The Network Set resource object to be modified.",
                         "ParameterValue": {
                             "value": "Object",
                             "required": true
@@ -52135,6 +52169,17 @@
                         "Aliases": "Appliance",
                         "PipelineInput": "true (ByPropertyName)",
                         "SupportsWildcard": false
+                    },
+                    {
+                        "Name": "Large",
+                        "Description": "A \"Regular\" network set (-Large:$False) may contain up to 162 networks. \"Large\" network sets can contain up to 4000 networks and can only be used by server profile template connections or server profile connections assigned to rackmount or HPE Synergy server hardware. A network set cannot be converted from regular to large if the network set is already in use by a server profile or server profile template.\n\nBy default, \"Regular\" Network Sets are created.",
+                        "ParameterValue": {
+                            "value": "SwitchParameter",
+                            "required": "False"
+                        },
+                        "DefaultValue": "",
+                        "PipelineInput": "false",
+                        "SupportsWildcard": false
                     }
                 ],
                 "InputTypes": [
@@ -52225,6 +52270,10 @@
                         },
                         {
                             "Name": "ApplianceConnection",
+                            "Required": false
+                        },
+                        {
+                            "Name": "Large",
                             "Required": false
                         }
                     ]
@@ -56697,7 +56746,7 @@
             "Category": "Servers",
             "Contents": {
                 "Synopsis": "Generate firmware report",
-                "Description": "Generate firmware report",
+                "Description": "This Cmdlet will generate a CSV-compliance firmware report for various resources.  Enclosure Groups, Enclosures, Server Hardware and Interconnects are all suported resources.  If an Enclosure Group is provided, all associated Logical Enclosures and Enclosures are examined, with their embedded resources like fabric modules, enclosure managers (Synergy FLM and BladeSystem Onboard Administrator), and server hardware.  If a baseline is associated with an Enclosure Group, or server profile, it is used to compare what is expected, versus what the actual installed component is.  The baseline can be overridden by specifying a different baseline resource object from Get-HPOVBaseline.\n\nThe genrated report can be exported.\n\nMinimum required permissions: Infrastructure administrator, Server administrator, Network administrator",
                 "Parameters": [
                     {
                         "Name": "InputObject",
@@ -61043,7 +61092,7 @@
             "Category": "Servers",
             "Contents": {
                 "Synopsis": "Update Server Profile from Template",
-                "Description": "This Cmdlet will perform the \"Update from Server Profile Template\" operation on 1 or more Server Profile resources.  If a Server Profile is already in a \"Compliant\" state, then no action will be taken.",
+                "Description": "This Cmdlet performs one of two different operations.  By default, it will perform the \"Update from Server Profile Template\" operation on 1 or more Server Profile resources.  You can use Update from template to update the configuration of the server profile to make it consistent with its parent server profile template.\n\nTo bring an inconsistent (Inconsistent with template) server profile configuration back into consistency (Consistent) with the server profile template, you must reapply the settings from the server profile template either manually or automatically. Some server profile updates can be automatically performed when the server hardware is powered on and some updates can only be performed when the server hardware is powered off. You can now defer the automatic updates until the next hardware maintenance window or cancel them if you do not want to proceed with the updates.  If a Server Profile is already in a \"Compliant\" state, then no action will be taken\n\nThe second operation is Reapply, using the -Reapply parameter.  You can reapply a server profile to resolve errors or to ensure that the server hardware configuration matches the server profile. To reduce the time required to reapply a profile, individual components can be omitted from the reapply operation by clearing those components by omitting their switch parameter. Profiles that are in an error state can be reapplied, but individual components cannot be omitted.\n\nMinimum required permissions: (Update from Template) Infrastructure administrator or Server administrator.  (Reapply a server profile) Infrastructure administrator, Server administrator, or Server firmware operator.",
                 "Parameters": [
                     {
                         "Name": "InputObject",
@@ -61178,26 +61227,24 @@
                         "SupportsWildcard": false
                     },
                     {
-                        "Name": "WhatIf",
-                        "Description": "When using this parameter, an HPOneView.ServerProfile.CompliancePreview object is returned, which contains the operations that will be performed.",
+                        "Name": "Ilo",
+                        "Description": "Re-apply iLO settings that are defined in the profile.",
                         "ParameterValue": {
                             "value": "SwitchParameter",
-                            "required": false
+                            "required": "False"
                         },
-                        "DefaultValue": null,
-                        "Aliases": "wi",
+                        "DefaultValue": "",
                         "PipelineInput": "false",
                         "SupportsWildcard": false
                     },
                     {
-                        "Name": "Confirm",
-                        "Description": null,
+                        "Name": "Stage",
+                        "Description": "If a setting requires the server tobe powered off, certain updates can be staged.",
                         "ParameterValue": {
                             "value": "SwitchParameter",
-                            "required": false
+                            "required": "False"
                         },
-                        "DefaultValue": null,
-                        "Aliases": "cf",
+                        "DefaultValue": "",
                         "PipelineInput": "false",
                         "SupportsWildcard": false
                     }
@@ -61339,6 +61386,10 @@
                             "Required": true
                         },
                         {
+                            "Name": "Stage",
+                            "Required": false
+                        },
+                        {
                             "Name": "ApplianceConnection",
                             "Required": false
                         },
@@ -61354,7 +61405,7 @@
                         },
                         {
                             "Name": "Reapply",
-                            "Required": false
+                            "Required": true
                         },
                         {
                             "Name": "Baseline",
@@ -61378,6 +61429,10 @@
                         },
                         {
                             "Name": "BIOS",
+                            "Required": false
+                        },
+                        {
+                            "Name": "Ilo",
                             "Required": false
                         },
                         {

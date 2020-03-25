@@ -8,7 +8,7 @@ description: Display Server Profile alert messages.
 
 ```text
 Get-HPOVServerProfileMessage
-    [-InputObject <>]
+    [-InputObject] <Object>
     [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
@@ -29,11 +29,11 @@ Display the Server Profile messages for the provided resource.
 
 ## Parameters
 
-### -ServerProfile &lt;Object&gt;
+### -InputObject &lt;Object&gt;
 
 The Server Profile resource object.
 
-| Aliases |  |
+| Aliases | ServerProfile |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
