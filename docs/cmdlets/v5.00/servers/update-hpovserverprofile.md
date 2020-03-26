@@ -18,6 +18,15 @@ Update-HPOVServerProfile
 ```text
 Update-HPOVServerProfile
     [-InputObject] <Object>
+    [-Refresh]
+    [-ApplianceConnection <Object>]
+    [-Async]
+    [<CommonParameters>]
+```
+
+```text
+Update-HPOVServerProfile
+    [-InputObject] <Object>
     [-Reapply]
     [-Baseline]
     [-AdapterAndBoot]
@@ -218,6 +227,18 @@ If a setting requires the server tobe powered off, certain updates can be staged
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
+### -Refresh &lt;SwitchParameter&gt;
+
+Choose to refresh the server profile state.  This does not perform `re-apply` or update from template operation.
+
+| Aliases |  |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
 ### &lt;CommonParameters&gt;
 
 This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer, PipelineVariable, and OutVariable. For more information, see about\_CommonParameters \([http://go.microsoft.com/fwlink/?LinkID=113216](http://go.microsoft.com/fwlink/?LinkID=113216)\)
@@ -226,11 +247,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.ServerProfile [System.Management.Automation.PSCustomObject]**_
 
-Single Server Profile
-
-_**System.CollectionsArrayList <HPOneView.ServerProfile>**_
-
-Multiple Server Profiles
+One or more Server Profile resources from [`Get-HPOVServerProfile`](get-hpovserverprofile.md).
 
 ## Return Values
 
@@ -238,13 +255,9 @@ _**HPOneView.ServerProfile.CompliancePreview**_
 
 Object containing the operations to be performed when the Server Profile object is not compliant.
 
-_**HPOneView.Appliance.Task {System.Management.Automation.PSCustomObject}**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
-Async update task
-
-_**System.Collections.ArrayList <HPOneView.Appliance.Task>**_
-
-Multiple Async update tasks
+Async task Resource object to monitoring.
 
 ## Related Links
 
