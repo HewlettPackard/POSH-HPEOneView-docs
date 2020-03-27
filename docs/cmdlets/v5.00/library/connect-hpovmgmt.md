@@ -217,4 +217,4 @@ On error, appliance response is returned as a terminating error.
 
 * [Disconnect-HPOVMgmt](disconnect-hpovmgmt.md)
 * [about_Appliance_Connection_Permissions](../../about_Appliance_Connection_Permissions)
-* [[${Global:ConnectedSessions}]](../../about/about_appliance_connections.md)
+* [[${Global:ConnectedSessions}]](../../about/about_appliance_connections)

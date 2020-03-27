@@ -96,4 +96,4 @@ One or more appliance connection permissions and their active state.
 
 * [Pop-HPOVAppliancePermission](pop-hpovappliancepermission.md)
 * [about_Appliance_Connection_Permissions](../../about_Appliance_Connection_Permissions)
-* [[${Global:ConnectedSessions}]](../../about/about_appliance_connections.md)
+* [[${Global:ConnectedSessions}]](../../about/about_appliance_connections)
