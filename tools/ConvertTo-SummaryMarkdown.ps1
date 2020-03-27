@@ -92,7 +92,21 @@ ForEach ($TopLevel in ($SummarySourceJson."Table of contents".PSObject.Members |
     else
     {
 
-        $FinalString = $MarkdownTableItem -f $TopLevel.Name, ($TopLevel.Value.ToLower())
+        if ($TopLevel.Value.ToUpper().StartsWith("README"))
+        {
+
+            $Value = $TopLevel.Value
+
+        }
+
+        else
+        {
+
+            $Value = $TopLevel.Value.ToLower()
+
+        }
+
+        $FinalString = $MarkdownTableItem -f $TopLevel.Name, $Value
 
         [void]$StringBuilder.Add($FinalString)
 
