@@ -17,8 +17,16 @@ if (-not $SourceJsonFiles.Count)
 else
 {
 
+    Write-Progress -Id 1 -Activity "Update summary.json with new source content mapping." -PercentComplete 0
+
+    $f = 1
+
     ForEach ($File in $SourceJsonFiles)
     {
+
+        $FileName = "{0}\{1}\{2}" -f $File.Split("\")[-3], $File.Split("\")[-2], $File.Split("\")[-1]
+
+        Write-Progress -id 1 -Activity "Update summary.json with new source content mapping." -Status ("[{0}/{1}] {2}" -f $f, $SourceJsonFiles.Count, $FileName) -PercentComplete ($f / $SourceJsonFiles.Count * 100)
 
         # Read the source JSON file
         $CmdletsJson = ([System.IO.File]::ReadAllLines($File, [System.Text.Encoding]::UTF8)) | ConvertFrom-Json
@@ -28,30 +36,56 @@ else
 
         $FinalDirectorySummary = [PSCustomObject]@{$CmdletLibraryVersion = [PSCustomObject]@{dir = $CmdletLibraryVersion} }
 
-        ForEach ($Category in ($CmdletsJson.Cmdlets | Select-Object Category -Unique -ExpandProperty Category | Sort-Object))
+        $Categories = ($CmdletsJson.Cmdlets | Select-Object Category -Unique -ExpandProperty Category | Sort-Object)
+
+        $Cat = 1
+
+        ForEach ($Category in $Categories)
         {
+
+            Write-Progress -id 2 -ParentId 1 -Activity "Process Cmdlet categories" -Status ("[{0}/{1}] {2}" -f $Cat, $Categories.Count, $Category) -PercentComplete ($Cat / $Categories.Count * 100)
 
             $FinalDirectorySummary.$CmdletLibraryVersion | Add-Member -NotePropertyName $Category -NotePropertyValue ([PSCustomObject]@{})
 
             # Add the directory name to the top
             Add-Member -InputObject $FinalDirectorySummary."$CmdletLibraryVersion"."$Category" -NotePropertyName dir -NotePropertyValue $Category.ToLower()
 
-            ForEach ($Cmdlet in ($CmdletsJson | Where-Object Category -eq $Category | Sort-Object Name))
+            $c = 1
+
+            $Cmdlets =  ($CmdletsJson.Cmdlets | Where-Object Category -eq $Category | Sort-Object Name)
+
+            ForEach ($Cmdlet in $Cmdlets)
             {
+
+                Write-Progress -id 3 -ParentId 2 -Activity "Process Cmdlets" -Status ("[{0}/{1}] {2}" -f $c, $Cmdlets.Count, $Cmdlet.Name) -PercentComplete ($C / $Cmdlets.Count * 100)
 
                 # Add the child member of document pages
                 $FinalDirectorySummary.$CmdletLibraryVersion.$Category | Add-Member -NotePropertyName $Cmdlet.Name -NotePropertyValue "$($Cmdlet.Name.ToLower()).md"
 
+                $c++
+
             }
+
+            Write-Progress -id 3 -ParentId 2 -Activity "Process Cmdlets" -Completed
+
+            $Cat++
 
         }
 
+        Write-Progress -id 2 -ParentId 1 -Activity "Process Cmdlet categories" -Completed
+
         $SummaryJson."Table of contents"."Command Reference"."$CmdletLibraryVersion" = $FinalDirectorySummary."$CmdletLibraryVersion"
 
+        $f++
+
     }
+
+    Write-Progress -Id 1 -Activity "Update summary.json with new source content mapping." -Status "Writing final SUMMARY.json file."
 
     $FinalSummary = $SummaryJson | ConvertTo-Json -Depth 99
 
     [System.IO.File]::WriteAllLines($CurrentPath + '\..\docs\summary.json', $FinalSummary, [System.Text.Encoding]::UTF8)
+
+    Write-Progress -Id 1 -Activity "Update summary.json with new source content mapping." -Completed
 
 }

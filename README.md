@@ -6,11 +6,11 @@ Welcome to the POSH-HPOneView-Docs repository, home of the library documentation
 
 This repository serves as the source for the [HPE OneView PowerShell library documentation](https://hpe-docs.gitbook.io/posh-hponeview/).  The following folder structure is required for the docs library:
 
-- [/docs/](https://hpe-docs.gitbook.io/posh-hponeview/) is the source directory for all supported library
+- [/docs](./docs) is the source directory for all supported library
    versions.
-- [/source](./source) This content is the source of help content to build for both online and offline (`Get-Help`)
+- [/source](./source) This content is the source of help content to build for both online and offline (`Get-Help` Cmdlet)
    user documentation, in JSON format.
-- [tools](./tools) - this folder contains the tooling necessary to build the online help documentation
+- [/tools](./tools) - this folder contains the tooling necessary to build the online help documentation
    (in Markdown format).
 
 ## Contributing and feature requests
