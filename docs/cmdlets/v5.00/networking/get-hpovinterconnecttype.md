@@ -112,9 +112,5 @@ _**System.Collections.ArrayList <HPOneView.Networking.InterconnectType>**_
 
 Multiple Interconnect Type resources or formatted table dispalying basic Interconnect Type information.
 
-_**An Interconnect Type or collection of Interconnect Types.**_
-
-
-
 ## Related Links
 

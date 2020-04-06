@@ -10,7 +10,7 @@ description: List appliance backups.
 Get-HPOVBackup
     [-Before <DateTime>]
     [-After <DateTime>]
-    [-ApplianceConnection] <Array>
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -72,7 +72,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | True |
+| Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | false |
@@ -88,8 +88,9 @@ _**None.  You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
-_**The generated backup File if appliance is not setup for remote storage or the Force parameter is used.**_
+_**HPOneView.Appliance.Backup**_
 
+Created backup resource from the appliance that was created with [`New-HPOVBackup`](new-hpovbackup.md).
 
 
 ## Related Links

@@ -114,10 +114,6 @@ _**System.COllections.ArrayList <HPOneView.Storage.VolumeTemplate>**_
 
 Multiple Storage Volume Template
 
-_**The matching Storage Volume Template resource(s).**_
-
-
-
 ## Related Links
 
 * [Get-HPOVStorageVolumeTemplatePolicy](get-hpovstoragevolumetemplatepolicy.md)

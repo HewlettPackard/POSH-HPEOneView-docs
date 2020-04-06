@@ -99,9 +99,9 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**Various objects are supported.**_
+_**Object**_
 
-
+Various objects are supported.
 
 ## Return Values
 

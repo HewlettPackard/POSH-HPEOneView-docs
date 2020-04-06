@@ -20,6 +20,14 @@ FOR HP SUPPORT USE ONLY.  This cmdlet will disable appliance level component deb
 
 ## Examples
 
+###  Example 1 
+
+```text
+This Cmdlets does not have a public example.
+```
+
+This Cmdlet does not have a public example.
+
 ## Parameters
 
 ### -Scope &lt;String&gt;
@@ -54,10 +62,10 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | True |
+| Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | true (ByPropertyName) |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
@@ -75,7 +83,7 @@ HPE OneView Appliance Connection object.
 
 _**System.Management.Automation.PSCustomObject**_
 
-
+The returned object global setting.
 
 ## Related Links
 

@@ -96,14 +96,6 @@ _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject
 
 Async task resource.
 
-_**System.Collections.ArrayList <HPOneView.Appliance.TaskResource>**_
-
-Multiple async task resources.
-
-_**Async Task(s) to monitor storage pool import.**_
-
-
-
 ## Related Links
 
 * [Get-HPOVStoragePool](get-hpovstoragepool.md)

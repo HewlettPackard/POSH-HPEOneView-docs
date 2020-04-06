@@ -31,8 +31,8 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? |  |
-| Accept wildcard characters? |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### -Name &lt;String&gt;
 
@@ -43,8 +43,8 @@ default content
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? |  |
-| Accept wildcard characters? |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 
@@ -52,7 +52,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
+_**None.  You cannot pipe objects to this cmdlet.**_
+
 ## Return Values
+
+_**HPOneView.Cluster.Cluster**_
+
+Cluster resource.
 
 ## Related Links
 

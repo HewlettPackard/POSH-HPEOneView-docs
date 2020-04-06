@@ -61,18 +61,6 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Confirm &lt;SwitchParameter&gt;
-
-
-
-| Aliases | cf |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
 ### -Location &lt;string&gt;
 
 The file location where to save the appliance encription key (AEK).  The AEK should be stored in a secure location.
@@ -82,18 +70,6 @@ The file location where to save the appliance encription key (AEK).  The AEK sho
 | Required? | False |
 | Position? | Named |
 | Default value | (get-location).Path |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
-### -WhatIf &lt;SwitchParameter&gt;
-
-
-
-| Aliases | wi |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

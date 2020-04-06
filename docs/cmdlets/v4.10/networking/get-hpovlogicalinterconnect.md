@@ -163,10 +163,6 @@ _**System.Collections.ArrayList <HPoneView.Networking.LogicalInterconnect>	**_
 Multiple Logical Interconnects
 
 
-_**A Logical Interconnect or collection of Logical Interconnects**_
-
-
-
 ## Related Links
 
 * [Disable-HPOVLogicalInterconnectPortMonitoring](disable-hpovlogicalinterconnectportmonitoring.md)

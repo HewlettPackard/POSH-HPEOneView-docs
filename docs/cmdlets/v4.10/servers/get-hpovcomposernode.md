@@ -61,11 +61,7 @@ _**None.  You cannot pipe objects to this cmdlet.**_
 
 _**HPOneView.ComposerNode [System.Management.Automation.PSCustomObject]**_
 
-Single Synergy Compose node.
-
-_**System.Collections.ArrayList <HPOneView.ComposerNode>**_
-
-Multiple Synergy Compose nodes.
+Synergy Composer node.
 
 ## Related Links
 

@@ -22,11 +22,11 @@ Use this Cmdlet to download the on appliance audit log.
 ###  Example 1 
 
 ```text
-Get-HPOVAuditLogArchive c:	emp
+Get-HPOVAuditLogArchive c:\temp
 
 ```
 
-Save the Appliance audit log archive to C:	emp
+Save the Appliance audit log archive to c:\temp
 
 ## Parameters
 
@@ -64,9 +64,9 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**The generated audit log File**_
+_**System.IO.FileInfo**_
 
-
+The generated file.
 
 ## Related Links
 

@@ -92,10 +92,6 @@ _**System.Collections.ArrayList <HPOneView.Appliance.BaselineRepository>**_
 
 Multiple resource objects
 
-_**The configured baseline repositories are returned if no parameters are provided.**_
-
-
-
 ## Related Links
 
 * [Show-HPOVBaselineRepositorySize](show-hpovbaselinerepositorysize.md)

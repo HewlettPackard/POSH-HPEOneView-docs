@@ -127,7 +127,7 @@ Directory Base DN (E.g. dc=domian,dc=local)
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? |  |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -OrganizationalUnits &lt;Array&gt;

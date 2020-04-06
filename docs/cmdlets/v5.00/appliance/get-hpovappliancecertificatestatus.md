@@ -40,7 +40,7 @@ Minimum required privileges: No minimum required
 Get-HPOVApplianceCertificateStatus
 ```
 
-
+Returns appliance certificate status.
 
 ## Parameters
 

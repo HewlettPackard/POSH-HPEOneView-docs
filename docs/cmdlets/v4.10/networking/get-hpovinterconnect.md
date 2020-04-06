@@ -137,22 +137,11 @@ _**None.  You cannot pipe objects to this cmdlet.**_
 
 _**HPOneView.Networking.Interconnect [System.Management.Automation.PSCustomObject]**_
 
-Single Interconnect object.
-
+Interconnect object.
 
 _**HPOneView.Networking.SasInterconnect [System.Management.Automation.PSCustomObject]**_
 
-Single SAS Interconnect object.
-
-
-_**System.Collections.ArrayList**_
-
-Multiple Interconnect objects.
-
-
-_**An Interconnect or collection of Interconnects**_
-
-
+SAS Interconnect object.
 
 ## Related Links
 

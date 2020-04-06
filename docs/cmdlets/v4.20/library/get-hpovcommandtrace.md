@@ -9,7 +9,7 @@ description: Start an HPOV Library Verbose Trace.
 ```text
 Get-HPOVCommandTrace
     [-ScriptBlock] <ScriptBlock>
-    [-Location <String>]
+    [-Location] <String>
     [<CommonParameters>]
 ```
 

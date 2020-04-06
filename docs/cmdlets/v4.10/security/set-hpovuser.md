@@ -18,7 +18,7 @@ Set-HPOVUser
     [-MobilePhone] <String>
     [-Enabled]
     [-Disabled]
-    [-ApplianceConnection] <Object>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -34,7 +34,7 @@ Set-HPOVUser
     [-MobilePhone] <String>
     [-Enabled]
     [-Disabled]
-    [-ApplianceConnection] <Object>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -207,7 +207,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | True |
+| Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |

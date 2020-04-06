@@ -126,30 +126,6 @@ Switch to reapply the Logical Interconnect configuration.  This does NOT update 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -WhatIf &lt;SwitchParameter&gt;
-
-Use this parameter to identify what is different or changed from the parent group policy.
-
-| Aliases | wi |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
-### -Confirm &lt;SwitchParameter&gt;
-
-
-
-| Aliases | cf |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
 ### -FactoryReset &lt;SwitchParameter&gt;
 
 Use to factory reset the HPE Synergy Fabric module.  Do know that an outage will happen while the fabric modules are reset.  Their configuration will need to be `re-applied` or deployed after task has completed.

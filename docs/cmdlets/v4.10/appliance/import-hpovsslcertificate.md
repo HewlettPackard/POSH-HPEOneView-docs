@@ -8,6 +8,7 @@ description: Import an appliance SSL Certificate.
 
 ```text
 Import-HPOVSslCertificate
+    [-ApplianceConnection] <Array>
     [<CommonParameters>]
 ```
 
@@ -24,8 +25,6 @@ Please note that the Subject Alternate Name (SAN) must match that of the Applian
 ```text
 $Connection = Connect-HPOVMgmt Myappliance.domain.com Administrator MyP@ssword
 Import-HPOVSslCertificate
-
-
 ```
 
 Import the SSL certificate from the specific appliance.
@@ -35,9 +34,7 @@ Import the SSL certificate from the specific appliance.
 ```text
 Connect-HPOVMgmt Myappliance.domain.com Administrator MyP@ssword
 Connect-HPOVMgmt Myappliance2.domain.com Administrator MyP@ssword
-$ConnectedSessions | Import-HPOVSslCertificate 
-
-
+$ConnectedSessions | Import-HPOVSslCertificate
 ```
 
 Import the SSL Certificate from all connected sessions.
@@ -46,11 +43,7 @@ Import the SSL Certificate from all connected sessions.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -72,9 +65,9 @@ HPE OneView Appliance Connection object
 
 ## Return Values
 
-_**None.**_
+_**None**_
 
-
+This Cmdlet does not return any object.
 
 ## Related Links
 

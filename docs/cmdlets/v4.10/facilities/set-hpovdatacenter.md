@@ -94,7 +94,7 @@ Datacenter object from `Get-HPOVDataCenter`.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Name &lt;String&gt;
@@ -250,7 +250,7 @@ Primary Remote Support Contact object from `Get-HPOVRemoteSupportContact` define
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? |  |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SecondaryContact &lt;Object&gt;
@@ -262,7 +262,7 @@ Secondary Remote Support Contact object from `Get-HPOVRemoteSupportContact` defi
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? |  |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Address1 &lt;String&gt;
@@ -274,7 +274,7 @@ Address of datacenter.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? |  |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Address2 &lt;String&gt;
@@ -286,7 +286,7 @@ Optional address line.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? |  |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -City &lt;String&gt;
@@ -298,7 +298,7 @@ City of residence for the datacenter.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? |  |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -State &lt;String&gt;
@@ -310,7 +310,7 @@ State/province of residence for the datacenter.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? |  |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -PostCode &lt;String&gt;
@@ -322,7 +322,7 @@ Postal code for the datacenter.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? |  |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Country &lt;String&gt;
@@ -334,7 +334,7 @@ Country of residence for the datacenter.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? |  |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -TimeZone &lt;String&gt;
@@ -346,7 +346,7 @@ Time Zone of residence for the datacenter.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? |  |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;

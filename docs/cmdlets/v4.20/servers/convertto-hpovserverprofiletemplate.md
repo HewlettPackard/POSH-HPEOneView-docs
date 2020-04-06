@@ -9,9 +9,9 @@ description: Create a Server Profile Template from Server Profile.
 ```text
 ConvertTo-HPOVServerProfileTemplate
     [-InputObject] <Object>
-    [-Name] <String>
-    [-Description] <String>
-    [-ApplianceConnection] <Object>
+    [-Name <String>]
+    [-Description <String>]
+    [-ApplianceConnection <Object>]
     [-Async]
     [<CommonParameters>]
 ```
@@ -58,7 +58,7 @@ The Server Profile Template Name to assign.  If omitted, then a new name of "Cop
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | True |
+| Required? | False |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
@@ -70,7 +70,7 @@ The Server Profile description.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | True |
+| Required? | False |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
@@ -94,7 +94,7 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | True |
+| Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
@@ -127,4 +127,3 @@ Asyncronous task of the Server Profile Template creation request.
 * [New-HPOVServerProfileTemplate](new-hpovserverprofiletemplate.md)
 * [Remove-HPOVServerProfileTemplate](remove-hpovserverprofiletemplate.md)
 * [Save-HPOVServerProfileTemplate](save-hpovserverprofiletemplate.md)
-* [Set-HPOVServerProfileTemplate](set-hpovserverprofiletemplate.md)

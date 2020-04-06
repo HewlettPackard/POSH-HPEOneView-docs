@@ -67,7 +67,7 @@ Filter resources based on provided Scope membership.  By default, all resources 
 | Required? | False |
 | Position? | Named |
 | Default value | AllResourcesInScope |
-| Accept pipeline input? |  |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Label &lt;String&gt;
@@ -123,10 +123,6 @@ Logical Interconnect resource object from [`Get-HPOVLogicalInterconnect`](get-hp
 _**System.Collections.ArrayList <HPoneView.Storage.SasLogicalInterconnect>    **_
 
 Multiple Logical Interconnects
-
-_**A SAS Logical Interconnect or collection of SAS Logical Interconnects**_
-
-
 
 ## Related Links
 

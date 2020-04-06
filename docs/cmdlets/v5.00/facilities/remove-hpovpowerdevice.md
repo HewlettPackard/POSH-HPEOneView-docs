@@ -98,30 +98,6 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -WhatIf &lt;SwitchParameter&gt;
-
-
-
-| Aliases | wi |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
-### -Confirm &lt;SwitchParameter&gt;
-
-
-
-| Aliases | cf |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
 ### &lt;CommonParameters&gt;
 
 This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer, PipelineVariable, and OutVariable. For more information, see about\_CommonParameters \([http://go.microsoft.com/fwlink/?LinkID=113216](http://go.microsoft.com/fwlink/?LinkID=113216)\)
@@ -145,6 +121,5 @@ When using the `-Force` parameter, a PSCustomObject is returned indicating succe
 ## Related Links
 
 * [Add-HPOVPowerDevice](add-hpovpowerdevice.md)
-* [Add-HPOVPowerDeviceConnection](add-hpovpowerdeviceconnection.md)
 * [Get-HPOVPowerDevice](get-hpovpowerdevice.md)
 * [New-HPOVPowerDevice](new-hpovpowerdevice.md)

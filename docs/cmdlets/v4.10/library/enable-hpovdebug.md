@@ -21,6 +21,14 @@ FOR HP SUPPORT USE ONLY.  This cmdlet will enable appliance level component debu
 
 ## Examples
 
+###  Example 1 
+
+```text
+This Cmdlets does not have a public example.
+```
+
+This Cmdlet does not have a public example.
+
 ## Parameters
 
 ### -Scope &lt;String&gt;
@@ -95,7 +103,7 @@ HPE OneView Appliance Connection object.
 
 _**System.Management.Automation.PSCustomObject**_
 
-
+The returned object global setting.
 
 ## Related Links
 

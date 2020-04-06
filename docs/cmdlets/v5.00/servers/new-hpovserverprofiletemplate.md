@@ -55,8 +55,8 @@ New-HPOVServerProfileTemplate
     [-Name] <String>
     [-ServerHardwareType] <Object>
     [-SANStorage]
-    [-HostOStype <String>]
-    [-StorageVolume <Object>]
+    [-HostOStype] <String>
+    [-StorageVolume] <Object>
     [-Description <String>]
     [-ServerProfileDescription <String>]
     [-ManageConnections <Boolean>]
@@ -587,7 +587,7 @@ Deprecated.  Please refer to the `New-HPOVServerProfileLogicalDisk` and `New-HPO
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? |  |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ControllerMode &lt;String&gt;
@@ -599,7 +599,7 @@ Deprecated.  Please refer to the `New-HPOVServerProfileLogicalDisk` and `New-HPO
 | Required? | False |
 | Position? | Named |
 | Default value | RAID |
-| Accept pipeline input? |  |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -StorageController &lt;Object&gt;
@@ -992,4 +992,3 @@ When using the `-PassThru` parameter, the created server profile template object
 * [Get-HPOVServerProfileTemplate](get-hpovserverprofiletemplate.md)
 * [Remove-HPOVServerProfileTemplate](remove-hpovserverprofiletemplate.md)
 * [Save-HPOVServerProfileTemplate](save-hpovserverprofiletemplate.md)
-* [Set-HPOVServerProfileTemplate](set-hpovserverprofiletemplate.md)

@@ -106,11 +106,18 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
+_**HPOneView.Servers.ServerHardware**_
+
+The server hardware resource to add to the cluster.
+
 ## Return Values
+
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+
+Async task resource to monitor.
 
 ## Related Links
 
-* [Add-HPOVClusterNodeToCluster](add-hpovclusternodetocluster.md)
 * [Enter-HPOVClusterNodeMaintenanceMode](enter-hpovclusternodemaintenancemode.md)
 * [Exit-HPOVClusterNodeMaintenanceMode](exit-hpovclusternodemaintenancemode.md)
 * [Get-HPOVClusterNode](get-hpovclusternode.md)

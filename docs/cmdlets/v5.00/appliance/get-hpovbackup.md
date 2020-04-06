@@ -92,8 +92,9 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**The generated backup File if appliance is not setup for remote storage or the Force parameter is used.**_
+_**HPOneView.Appliance.Backup**_
 
+Created backup resource from the appliance that was created with [`New-HPOVBackup`](new-hpovbackup.md).
 
 
 ## Related Links

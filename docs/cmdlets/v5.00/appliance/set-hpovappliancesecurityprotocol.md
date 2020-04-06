@@ -69,7 +69,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | true (ByPropertyName) |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -EnableTlsVersion &lt;String[]&gt;

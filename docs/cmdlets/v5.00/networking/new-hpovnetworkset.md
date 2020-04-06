@@ -10,10 +10,10 @@ description: Create a new Network Set.
 New-HPOVNetworkSet
     [-Name] <String>
     [-Networks] <Object>
-    [-UntaggedNetwork] <Object>
-    [-TypicalBandwidth] <Int32>
-    [-MaximumBandwidth] <Int32>
-    [-ApplianceConnection] <Object>
+    [-UntaggedNetwork <Object>]
+    [-TypicalBandwidth <Int32>]
+    [-MaximumBandwidth <Int32>]
+    [-ApplianceConnection <Object>]
     [-Large]
     [<CommonParameters>]
 ```

@@ -56,20 +56,6 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -Confirm &lt;SwitchParameter&gt;
-
-Use to override the prompt.
-
-**** WARNING **** - Use this with caution, as removing a cluster from OneView will also destroy the cluster within the cluster manager.
-
-| Aliases | cf |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
 ### -Force &lt;SwitchParameter&gt;
 
 Force delete the resource.
@@ -92,18 +78,6 @@ The cluster profile from `Get-HPOVClusterProfile`.
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
-| Accept wildcard characters? | False |
-
-### -WhatIf &lt;SwitchParameter&gt;
-
-
-
-| Aliases | wi |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

@@ -144,8 +144,6 @@ Multiple Async tasks
 * [Save-HPOVServerProfileTemplate](save-hpovserverprofiletemplate.md)
 * [Set-HPOVServerHardwareType](set-hpovserverhardwaretype.md)
 * [Set-HPOVServerPower](set-hpovserverpower.md)
-* [Set-HPOVServerProfile](set-hpovserverprofile.md)
-* [Set-HPOVServerProfileTemplate](set-hpovserverprofiletemplate.md)
 * [Stop-HPOVServer](stop-hpovserver.md)
 * [Update-HPOVServer](update-hpovserver.md)
 * [Update-HPOVServerHardwareLicenseIntent](update-hpovserverhardwarelicenseintent.md)

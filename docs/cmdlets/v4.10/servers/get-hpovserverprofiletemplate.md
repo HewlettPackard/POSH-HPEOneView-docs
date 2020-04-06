@@ -234,9 +234,9 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None**_
+_**HPOneView.Servers.ServerHardwareType [System.Management.Automation.PSCustomObject]**_
 
-
+The server hardware type resource to filter server profilte templates modeled for.
 
 ## Return Values
 
@@ -251,4 +251,3 @@ Server Profile template resource
 * [New-HPOVServerProfileTemplate](new-hpovserverprofiletemplate.md)
 * [Remove-HPOVServerProfileTemplate](remove-hpovserverprofiletemplate.md)
 * [Save-HPOVServerProfileTemplate](save-hpovserverprofiletemplate.md)
-* [Set-HPOVServerProfileTemplate](set-hpovserverprofiletemplate.md)

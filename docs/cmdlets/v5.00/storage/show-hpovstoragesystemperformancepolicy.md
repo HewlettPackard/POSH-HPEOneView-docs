@@ -25,7 +25,7 @@ Use this Cmdlet to show available Nimble Performance Policies in order to set a 
 Show-HPOVStorageSystemPerformancePolicy
 ```
 
-Default example
+Display the Nimble storage system performance policies configured.
 
 ## Parameters
 
@@ -61,7 +61,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Storage.System [System.Management.Automation.PSCustomObject]**_
 
-
+The Nimble storage system object from [`Get-HPOVStorageSystem`](get-hpovstoragesystem.md).
 
 ## Return Values
 

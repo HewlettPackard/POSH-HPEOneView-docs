@@ -100,9 +100,5 @@ _**System.Collections.ArrayList <HPOneView.Networking.SasInterconnectType>**_
 
 Multiple SAS Interconnect Type resources or formatted table dispalying basic Interconnect Type information
 
-_**A SAS Interconnect Type or collection of SAS Interconnect Types.**_
-
-
-
 ## Related Links
 

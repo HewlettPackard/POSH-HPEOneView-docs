@@ -67,7 +67,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 | Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | true (ByPropertyName) |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Scope &lt;Object&gt;
@@ -96,7 +96,7 @@ Filter resources based on provided EnclosureGroup association.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -NonCompliant &lt;SwitchParameter&gt;

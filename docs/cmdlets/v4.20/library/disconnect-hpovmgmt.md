@@ -31,7 +31,6 @@ Disconnect from the specific appliance session.
 
 ```text
 Disconnect-HPOVMgmt -Hostname 1
-
 ```
 
 Disconnect ConnectionID 1 appliance session.
@@ -40,7 +39,6 @@ Disconnect ConnectionID 1 appliance session.
 
 ```text
 $ConnectedSessions | Disconnect-HPOVMgmt
-
 ```
 
 Disconnect all appliance sessions.
@@ -65,13 +63,15 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this cmdlet.**_
+_**HPOneView.Library.ApplianceConnection**_
+
+The appliance library connection object from ${Global:ConnectedSessions} global variable.
 
 ## Return Values
 
 _**None.**_
 
-
+This Cmdlet does not return any object.
 
 ## Related Links
 

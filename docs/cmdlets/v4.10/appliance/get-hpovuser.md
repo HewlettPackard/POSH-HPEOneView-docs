@@ -83,10 +83,6 @@ _**System.Collections.ArrayList**_
 
 Multiple User resourses, or formatted table displaying a report of user accounts
 
-_**User Account Information**_
-
-
-
 ## Related Links
 
 * [New-HPOVUser](../security/new-hpovuser.md)

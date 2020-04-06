@@ -143,7 +143,7 @@ Profile a Server Hardware or Server Profile Template resource, and the associate
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Name &lt;String&gt;
@@ -232,7 +232,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | true (ByPropertyName) |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -export &lt;SwitchParameter&gt;
@@ -269,9 +269,9 @@ _**None.  You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
-_**System.Management.Automation.PSCustomObject**_
+_**HPOneView.Servers.ServerProfile [System.Management.Automation.PSCustomObject]**_
 
-
+The server profile resource object.
 
 ## Related Links
 
@@ -294,6 +294,4 @@ _**System.Management.Automation.PSCustomObject**_
 * [Remove-HPOVServerProfileTemplate](remove-hpovserverprofiletemplate.md)
 * [Save-HPOVServerProfile](save-hpovserverprofile.md)
 * [Save-HPOVServerProfileTemplate](save-hpovserverprofiletemplate.md)
-* [Set-HPOVServerProfile](set-hpovserverprofile.md)
-* [Set-HPOVServerProfileTemplate](set-hpovserverprofiletemplate.md)
 * [Update-HPOVServerProfile](update-hpovserverprofile.md)

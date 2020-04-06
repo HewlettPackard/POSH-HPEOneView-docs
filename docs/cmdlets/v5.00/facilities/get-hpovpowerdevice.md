@@ -123,6 +123,5 @@ The matching power device resources
 ## Related Links
 
 * [Add-HPOVPowerDevice](add-hpovpowerdevice.md)
-* [Add-HPOVPowerDeviceConnection](add-hpovpowerdeviceconnection.md)
 * [New-HPOVPowerDevice](new-hpovpowerdevice.md)
 * [Remove-HPOVPowerDevice](remove-hpovpowerdevice.md)

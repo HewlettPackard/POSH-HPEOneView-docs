@@ -165,15 +165,7 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 _**HPOneView.Appliance.Baseline [System.Management.Automation.PSCustomObject]**_
 
-Single SPP resource object
-
-_**System.Collections.ArrayList  (HPOneView.Appliance.Baseline)**_
-
-Multiple SPP resource objects
-
-_**The firmware-baseline object or collection of firmware-baseline objects if no sppFile is provided in the command.**_
-
-
+SPP resource object
 
 ## Related Links
 

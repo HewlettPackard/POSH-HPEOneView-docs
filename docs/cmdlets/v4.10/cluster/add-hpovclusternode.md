@@ -105,6 +105,10 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Return Values
 
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+
+Async task resource to monitor.
+
 ## Related Links
 
 * [Add-HPOVClusterNodeToCluster](add-hpovclusternodetocluster.md)

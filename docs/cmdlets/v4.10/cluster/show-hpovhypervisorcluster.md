@@ -64,5 +64,10 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Return Values
 
+_**HPOneView.Cluster.ClusterProfile**_
+
+HPE OneView Cluster Profile containined cluster node members.
+
+
 ## Related Links
 

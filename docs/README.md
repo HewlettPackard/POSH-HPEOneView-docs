@@ -1,9 +1,5 @@
 # Introduction
 
-{% hint style="warning" %}
-Documentation is a work in progress.
-{% endhint %}
-
 ## Introduction
 
 HPE OneView makes it simple to deploy and manage today’s complex hybrid cloud infrastructure. HPE OneView can help you transform your data center to software-defined, and it supports HPE’s broad portfolio of servers, storage, and networking solutions, ensuring the simple and automated management of your hybrid infrastructure. Software-defined intelligence enables a template-driven approach for deploying, provisioning, updating, and integrating compute, storage, and networking infrastructure.
@@ -143,7 +139,7 @@ Starting with the HPE OneView 3.00 library, the installation directory \(includi
 To ease the use of the HPE OneView PowerShell library, we have included a number of sample scripts administrators can use to quickly get familiar with the capabilities of the library. The sample scripts are part of the Source Code and installer. Depending on which installation selection you chose \(Just You, or For Everyone\), there is a Samples directory that contain all of the sample scripts. By no means are they exhaustive, but will help you get more familiar with the library.
 
 ```text
-[PS] ...\Samples> dir               
+[PS] ...\Samples> dir
     Directory: \POSH-HPOneView.500\Samples
 
 
@@ -260,7 +256,7 @@ Others have contributed example scripts to further automate management within th
 
 * [HPE OneView Release Notes](http://hpe.com/info/OneView/docs)
 * [HPE OneView Support Matrix](http://hpe.com/info/OneView/docs)
-* [HPE OneView Installation Guide](http://hpe.com/info/OneView/docs) 
+* [HPE OneView Installation Guide](http://hpe.com/info/OneView/docs)
 * [HPE OneView User Guide](http://hpe.com/info/OneView/docs)
 * [HPE OneView Online Help](http://hpe.com/info/OneView/docs)
 * [HPE OneView REST API Reference](http://hpe.com/info/OneView/docs)

@@ -109,7 +109,7 @@ Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially 
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? |  |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;

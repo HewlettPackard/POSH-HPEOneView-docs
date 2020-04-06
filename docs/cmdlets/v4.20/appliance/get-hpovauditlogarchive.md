@@ -8,8 +8,8 @@ description: Download appliance audit log.
 
 ```text
 Get-HPOVAuditLogArchive
-    [-Location] <String>
-    [-ApplianceConnection] <Object>
+    [-Location <System.IO.FileInfo>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -29,13 +29,13 @@ Save the Appliance audit log archive to C:\Temp
 
 ## Parameters
 
-### -Location &lt;String&gt;
+### -Location &lt;System.IO.FileInfo&gt;
 
 The full path to where the audit log will be saved to.  If omitted, current directory location will be used.
 
 | Aliases | save |
 | :--- | :--- |
-| Required? | True |
+| Required? | False |
 | Position? | Named |
 | Default value | (get-location).Path |
 | Accept pipeline input? | false |
@@ -47,7 +47,7 @@ One or more Appliance Connection Objects, Connection ID, or Connection Name.  If
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | True |
+| Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | false |
@@ -63,9 +63,9 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**The generated audit log File**_
+_**System.IO.FileInfo**_
 
-
+The generated audit log File
 
 ## Related Links
 

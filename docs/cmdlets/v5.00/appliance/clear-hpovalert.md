@@ -29,10 +29,6 @@ _**None.**_
 
 ## Return Values
 
-_**None**_
-
-
-
 ## Related Links
 
 * [Get-HPOVAlert](get-hpovalert.md)

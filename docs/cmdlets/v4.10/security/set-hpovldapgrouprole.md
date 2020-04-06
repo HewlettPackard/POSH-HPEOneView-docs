@@ -102,7 +102,7 @@ LDAP/Active Directory Domain Name
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? |  |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -InputObject &lt;Object&gt;

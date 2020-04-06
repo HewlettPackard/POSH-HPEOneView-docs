@@ -242,7 +242,7 @@ When providing a Logical Interconnect Group resource, you must specify the name 
 
 | Aliases |  |
 | :--- | :--- |
-| Required? | True |
+| Required? | False |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
