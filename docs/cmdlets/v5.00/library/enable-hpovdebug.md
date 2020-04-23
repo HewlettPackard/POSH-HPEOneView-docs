@@ -74,8 +74,6 @@ The verbose level to enable.  Allowed values are:
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 
 Default Value: ${Global:ConnectedSessions} | ? Default

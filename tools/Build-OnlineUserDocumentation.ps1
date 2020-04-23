@@ -6,11 +6,11 @@ Param
 
     [Parameter (Mandatory = $false, HelpMessage = "Provide the root directory to where the Library source is located.")]
     [ValidateNotNullorEmpty()]
-    [string]$Path = ((Get-Location).Path + '\..\source'),
+    [string]$Path = ((Split-Path $MyInvocation.MyCommand.Path -parent) + '\..\source'),
 
     [Parameter (Mandatory = $false, HelpMessage = "Provide the root directory path to save the generated help markdown files to.")]
     [ValidateNotNullorEmpty()]
-    [String]$Destination = ((Get-Location).Path + '\..\')
+    [String]$Destination = ((Split-Path $MyInvocation.MyCommand.Path -parent) + '\..\')
 
 )
 

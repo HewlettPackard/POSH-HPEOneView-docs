@@ -9,7 +9,7 @@ description: Update an uplink set resource
 ```text
 Set-HPOVUplinkSet
     [-InputObject] <Object>
-    [-UplinkSetName] <string>
+    [-UplinkSetName <string>]
     [-Name <string>]
     [-AddNetwork <Object[]>]
     [-RemoveNetwork <Object[]>]
@@ -25,7 +25,7 @@ Set-HPOVUplinkSet
 ```text
 Set-HPOVUplinkSet
     [-InputObject] <Object>
-    [-UplinkSetName] <string>
+    [-UplinkSetName <string>]
     [-Name <string>]
     [-AddPorts <Object[]>]
     [-RemovePorts <Object[]>]
@@ -110,8 +110,6 @@ Synergy VC FC `Sub-Interface` `[e.g]`. "Bay2:Q1.1","Bay2:Q2.1" or "Bay5:Q1.2","B
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
-
-Aliases [-Appliance]
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

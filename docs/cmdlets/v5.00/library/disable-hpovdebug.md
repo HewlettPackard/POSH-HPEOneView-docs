@@ -56,8 +56,6 @@ The internal component name.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 
 | Aliases | None |

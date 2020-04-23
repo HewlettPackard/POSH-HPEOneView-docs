@@ -1,5 +1,5 @@
 # This script is the main script to execute for a new doc build
-$ParentScriptPath = Join-Path (Get-Location).Path "tools"
+$ParentScriptPath = Split-Path $MyInvocation.MyCommand.Path -parent
 
 # Call Update-SummaryJson.ps1 first, so that any new Cmdlets within the source are found, they are added to summary.json
 Try
@@ -25,8 +25,8 @@ Catch
 Try
 {
 
-    Write-Host "-- Converting summary.json to summary.md (ConverTo-SummaryMarkdow.ps1)" -ForegroundColor Yellow -NoNewline
-    & (Join-Path $ParentScriptPath "ConverTo-SummaryMarkdown.ps1")
+    Write-Host "-- Converting summary.json to summary.md (ConvertTo-SummaryMarkdow.ps1)" -ForegroundColor Yellow -NoNewline
+    & (Join-Path $ParentScriptPath "ConvertTo-SummaryMarkdown.ps1")
 
     Write-Host " --> DONE!" -ForegroundColor Green
 
