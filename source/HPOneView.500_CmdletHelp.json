@@ -3620,7 +3620,7 @@
                     },
                     {
                         "Name": "Credential",
-                        "Description": "Use this parameter if you want to provide a PSCredential object instead.",
+                        "Description": "Use this parameter to provide a secure crednetial object.  The Username format can support either just a string username value (i.e. JSmith), or include either NTDomainName (i.e. MyDomain\\JSmith) or Universal Principle Name (i.e. jsmith@domain.com).  If providing either NYDomainname or Universal Principal Name, ensure the Authentication Directory name is spelled exactly the same, and the -AuthLoginDomain is not required.",
                         "DataType": "PSCredential",
                         "Required": true,
                         "DefaultValue": "",
@@ -5245,7 +5245,7 @@
                     },
                     {
                         "Name": "ApplianceConnection",
-                        "Description": "Aliases [-Appliance]\n\nSpecify one HPOneView.Appliance.Connection object or Name property value.",
+                        "Description": "Specify one HPOneView.Appliance.Connection object or Name property value.",
                         "DataType": "Object",
                         "Required": false,
                         "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
@@ -6325,7 +6325,7 @@
                     },
                     {
                         "Name": "ApplianceConnection",
-                        "Description": "Aliases [-Appliance]\n\nSpecify one HPOneView.Appliance.Connection object or Name property value.\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
+                        "Description": "Specify one HPOneView.Appliance.Connection object or Name property value.\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
                         "DataType": "Object",
                         "Required": true,
                         "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
@@ -33938,7 +33938,7 @@
                     },
                     {
                         "Name": "ApplianceConnection",
-                        "Description": "Aliases [-Appliance]\n\nSpecify one or more HPOneView.Appliance.Connection object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
+                        "Description": "Specify one or more HPOneView.Appliance.Connection object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
                         "DataType": "Array",
                         "Required": false,
                         "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
@@ -55761,7 +55761,7 @@
                 "Parameters": [
                     {
                         "Name": "ApplianceConnection",
-                        "Description": "Aliases [-Appliance]\n\nSpecify one or more HPOneView.Appliance.Connection object(s) or Name property value(s).",
+                        "Description": "Specify one or more HPOneView.Appliance.Connection object(s) or Name property value(s).",
                         "DataType": "Object",
                         "Required": false,
                         "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
@@ -55837,7 +55837,7 @@
                         },
                         {
                             "Name": "UplinkSetName",
-                            "Required": true
+                            "Required": false
                         },
                         {
                             "Name": "Name",
@@ -55883,7 +55883,7 @@
                         },
                         {
                             "Name": "UplinkSetName",
-                            "Required": true
+                            "Required": false
                         },
                         {
                             "Name": "Name",
@@ -55934,7 +55934,7 @@
                     },
                     {
                         "Name": "ApplianceConnection",
-                        "Description": "Aliases [-Appliance]\n\nSpecify one or more HPOneView.Appliance.Connection object(s) or Name property value(s).\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
+                        "Description": "Specify one or more HPOneView.Appliance.Connection object(s) or Name property value(s).\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
                         "DataType": "Object",
                         "Required": false,
                         "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
