@@ -1,0 +1,296 @@
+﻿---
+description: Retrieve Server Profile resource(s).
+---
+
+# Get-HPOVServerProfile
+
+## Syntax
+
+```text
+Get-HPOVServerProfile
+    [-Name] <>
+    [-NonCompliant <>]
+    [-Unassigned <>]
+    [-InputObject <>]
+    [-Label <>]
+    [-Scope <>]
+    [-ApplianceConnection] <>
+    [<CommonParameters>]
+```
+
+```text
+Get-HPOVServerProfile
+    [-export <>]
+    [-location] <>
+    [-Name] <>
+    [-Unassigned <>]
+    [-InputObject <>]
+    [-Label <>]
+    [-Scope <>]
+    [-ApplianceConnection] <>
+    [<CommonParameters>]
+```
+
+```text
+Get-HPOVServerProfile
+    [-Detailed <>]
+    [-Name] <>
+    [-Label <>]
+    [-Scope <>]
+    [-ApplianceConnection] <>
+    [<CommonParameters>]
+```
+
+## Description
+
+This Cmdlet will obtain a collection of Server Profile resources, or a specific Server Profile the specified name. It returns all aspects of the Server Profile.
+    
+This will also provide the ability to export Server Profile objects to their own JSON encoded file.  All appliance unique properties (minus the Server Hardware Type, Enclosure Group, and Connection Network assignment) are removed.  Connection layout, assigned addresses, networks, bandwidth, BIOS, Boot Order, Firmware settings will all be retained.  Assigned Address types will change from Virtual to UserDefined in order to retain their assignment.
+
+## Examples
+
+###  Example 1 
+
+```text
+Get-HPOVServerProfile 
+Profile Name   Managing BIOS Managing Firmware Assigned      State
+------------   ------------- ----------------- --------      -----
+Copy of test 2         False             False Unassigned    Normal
+Profile 11              True              True Encl1, bay 11 Normal
+Profile 12             False             False Encl1, bay 12 Normal
+Profile 13             False             False Encl1, bay 13 Normal
+Profile 14             False             False Encl1, bay 14 Normal
+Profile 15             False             False Encl1, bay 15 Normal
+Profile 16             False             False Encl1, bay 16 Normal
+Test 1                 False             False Unassigned    Normal
+test 2                 False             False Encl1, bay 3  Normal
+test 3                 False             False Unassigned    Normal
+```
+
+Generate a list of all server profiles.
+
+###  Example 2 
+
+```text
+$profile = Get-HPOVServerProfile -Name "SA"
+```
+
+Return the server profile resource with name "SA".
+
+###  Example 3 
+
+```text
+$profiles = Get-HPOVServerProfile -Name profile*
+```
+
+Return server profile resources that match "profile*".
+
+###  Example 4 
+
+```text
+Get-HPOVServerProfile -name "test 1" -list
+Profile Name   Managing BIOS Managing Firmware Assigned      State
+------------   ------------- ----------------- --------      -----
+Test 1                 False             False Unassigned    Normal
+```
+
+Generate a report of a specific server profile.
+
+###  Example 5 
+
+```text
+Get-HPOVServerProfile -unassigned
+Profile Name   Managing BIOS Managing Firmware Assigned      State
+------------   ------------- ----------------- --------      -----
+Copy of test 2         False             False Unassigned    Normal
+Test 1                 False             False Unassigned    Normal
+test 3                 False             False Unassigned    Normal
+```
+
+Generate a list of all Unassigned server profiles.
+
+###  Example 6 
+
+```text
+Get-HPOVServerProfile -export -location c:\profiles
+```
+
+Save all Server Profile objects to their own backup file to C:\profiles.
+
+###  Example 7 
+
+```text
+Get-HPOVServerProfile -name Profile1 -export -location c:\profiles
+```
+
+Save Profile1 Server Profile object to its own backup file in C:\profiles.
+
+## Parameters
+
+### -InputObject &lt;&gt;
+
+Profile a Server Hardware or Server Profile Template resource, and the associated Server Hardware will be returned.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | true (ByValue) |
+| Accept wildcard characters? | False |
+
+### -Name &lt;&gt;
+
+The name of the server profile resource to be returned.  All server profile resources will be returned if omitted.  Supports * wildcard character.
+
+| Aliases | profile |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -Detailed &lt;&gt;
+
+Display detailed report list of Server Profiles
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | False |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -NonCompliant &lt;&gt;
+
+Return collection of Server Profiles that are not compliant with their template.  Will not return Server Profiles that have no Template association.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | False |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -Unassigned &lt;&gt;
+
+Optional parameter that can be included with the List switch parameter to only display unassigned Server Profiles.  Can also be combined with the name parameter for Server Profile wildcard name search.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | False |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -Scope &lt;&gt;
+
+Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
+
+    * AllResources
+    * AllResourcesInScope
+    * `[HPOneView.Appliance.ScopeCollection]`
+    * `[HPOneView.Appliance.ConnectionPermission]`
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | AllResourcesInScope |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -Label &lt;&gt;
+
+Specify the label associated with resources.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | False |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -ApplianceConnection &lt;&gt;
+
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | (${Global:ConnectedSessions} &vert; ? Default) |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
+
+### -export &lt;&gt;
+
+Switch used to export Server Profile object to JSON encoded file.
+
+| Aliases | x |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | False |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -location &lt;&gt;
+
+Location where to save the Server Profile
+
+| Aliases | save |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### &lt;CommonParameters&gt;
+
+This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer, PipelineVariable, and OutVariable. For more information, see about\_CommonParameters \([http://go.microsoft.com/fwlink/?LinkID=113216](http://go.microsoft.com/fwlink/?LinkID=113216)\)
+
+## Input Types
+
+_**None.  You cannot pipe objects to this Cmdlet.**_
+
+## Return Values
+
+_**System.Management.Automation.PSCustomObject**_
+
+
+
+## Related Links
+
+* [Convert-HPOVServerProfile](convert-hpovserverprofile.md)
+* [Convert-HPOVServerProfileTemplate](convert-hpovserverprofiletemplate.md)
+* [ConvertTo-HPOVServerProfileTemplate](convertto-hpovserverprofiletemplate.md)
+* [Copy-HPOVServerProfile](copy-hpovserverprofile.md)
+* [Disable-HPOVMaintenanceMode](disable-hpovmaintenancemode.md)
+* [Enable-HPOVMaintenanceMode](enable-hpovmaintenancemode.md)
+* [Get-HPOVServerProfileConnectionList](get-hpovserverprofileconnectionlist.md)
+* [Get-HPOVServerProfileMessage](get-hpovserverprofilemessage.md)
+* [Get-HPOVServerProfileTemplate](get-hpovserverprofiletemplate.md)
+* [Join-HPOVServerProfileToTemplate](join-hpovserverprofiletotemplate.md)
+* [New-HPOVServerProfile](new-hpovserverprofile.md)
+* [New-HPOVServerProfileAssign](new-hpovserverprofileassign.md)
+* [New-HPOVServerProfileAttachVolume](new-hpovserverprofileattachvolume.md)
+* [New-HPOVServerProfileConnection](new-hpovserverprofileconnection.md)
+* [New-HPOVServerProfileLogicalDisk](new-hpovserverprofilelogicaldisk.md)
+* [New-HPOVServerProfileLogicalDiskController](new-hpovserverprofilelogicaldiskcontroller.md)
+* [New-HPOVServerProfileTemplate](new-hpovserverprofiletemplate.md)
+* [Remove-HPOVServerProfile](remove-hpovserverprofile.md)
+* [Remove-HPOVServerProfileTemplate](remove-hpovserverprofiletemplate.md)
+* [Save-HPOVServerProfile](save-hpovserverprofile.md)
+* [Save-HPOVServerProfileTemplate](save-hpovserverprofiletemplate.md)
+* [Set-HPOVServerProfile](set-hpovserverprofile.md)
+* [Set-HPOVServerProfileTemplate](set-hpovserverprofiletemplate.md)
+* [Update-HPOVServerProfile](update-hpovserverprofile.md)
+* [Get-HPOVServerOneTimeBoot](get-hpovserveronetimeboot.md)
+* [Set-HPOVServerOneTimeBoot](set-hpovserveronetimeboot.md)

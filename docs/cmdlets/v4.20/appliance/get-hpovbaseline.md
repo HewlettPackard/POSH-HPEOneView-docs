@@ -162,10 +162,6 @@ _**System.Collections.ArrayList  (HPOneView.Appliance.Baseline)**_
 
 Multiple SPP resource objects
 
-_**The firmware-baseline object or collection of firmware-baseline objects if no sppFile is provided in the command.**_
-
-
-
 ## Related Links
 
 * [Add-HPOVBaseline](add-hpovbaseline.md)

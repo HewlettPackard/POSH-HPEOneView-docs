@@ -96,7 +96,7 @@ Appliance Update file to install.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Eula &lt;String&gt;
@@ -173,30 +173,6 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 | Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
-
-### -WhatIf &lt;SwitchParameter&gt;
-
-
-
-| Aliases | wi |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
-### -Confirm &lt;SwitchParameter&gt;
-
-
-
-| Aliases | cf |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

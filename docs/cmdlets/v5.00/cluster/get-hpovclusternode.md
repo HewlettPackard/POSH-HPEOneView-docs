@@ -8,7 +8,7 @@ description: Default content
 
 ```text
 Get-HPOVClusterNode
-    [-Name] <string>
+    [-Name <string>]
     [-Label <String>]
     [-Scope <Object>]
     [-ApplianceConnection <Object>]
@@ -61,7 +61,7 @@ Specify the label associated with resources.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | True |
+| Required? | False |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
@@ -90,12 +90,17 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
+_**None.  You cannot pipe objects to this cmdlet.**_
+
 ## Return Values
+
+_**HPOneView.Cluster.ClusterNode**_
+
+A cluster node that is a member of a cluster profile.
 
 ## Related Links
 
 * [Add-HPOVClusterNode](add-hpovclusternode.md)
-* [Add-HPOVClusterNodeToCluster](add-hpovclusternodetocluster.md)
 * [Enter-HPOVClusterNodeMaintenanceMode](enter-hpovclusternodemaintenancemode.md)
 * [Exit-HPOVClusterNodeMaintenanceMode](exit-hpovclusternodemaintenancemode.md)
 * [Update-HPOVClusterNode](update-hpovclusternode.md)

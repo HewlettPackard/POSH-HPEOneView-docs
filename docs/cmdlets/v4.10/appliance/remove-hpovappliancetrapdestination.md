@@ -59,18 +59,6 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -Confirm &lt;SwitchParameter&gt;
-
-Override confirmation prompt.
-
-| Aliases | cf |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
 ### -InputObject &lt;Object&gt;
 
 The `[HPOneView.Appliance.SnmpV]`1TrapDestination or `[HPOneView.Appliance.SnmpV]`3TrapDestination object from `Get-HPOVApplianceTrapDestination` to remove.
@@ -81,18 +69,6 @@ The `[HPOneView.Appliance.SnmpV]`1TrapDestination or `[HPOneView.Appliance.SnmpV
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
-| Accept wildcard characters? | False |
-
-### -WhatIf &lt;SwitchParameter&gt;
-
-
-
-| Aliases | wi |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

@@ -62,5 +62,10 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Return Values
 
+_**HPEOneView.Cluster.UnmanagedCluster**_
+
+Unmanaged cluster resource from the cluster manager.
+
+
 ## Related Links
 

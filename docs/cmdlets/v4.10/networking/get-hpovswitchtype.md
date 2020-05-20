@@ -120,9 +120,5 @@ _**System.Collections.ArrayList <HPOneView.Networking.SwitchType>**_
 Multiple Switch Type resources.
 
 
-_**A Switch Type or collection of Switch Types.**_
-
-
-
 ## Related Links
 

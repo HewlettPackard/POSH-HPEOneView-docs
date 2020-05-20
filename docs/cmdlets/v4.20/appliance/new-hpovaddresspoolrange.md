@@ -10,7 +10,7 @@ description: Create an Address Range.
 New-HPOVAddressPoolRange
     [-PoolType] <String>
     [-RangeType] <String>
-    [-ApplianceConnection <Object>]
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -20,7 +20,7 @@ New-HPOVAddressPoolRange
     [-Name] <String>
     [-Start] <String>
     [-End] <String>
-    [-ApplianceConnection <Object>]
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -30,7 +30,7 @@ New-HPOVAddressPoolRange
     [-RangeType] <String>
     [-Start] <String>
     [-End] <String>
-    [-ApplianceConnection <Object>]
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 

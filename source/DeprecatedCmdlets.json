@@ -1,0 +1,7 @@
+[
+    "Clear-HPOVAlert",
+    "Set-HPOVServerPower",
+    "Get-HPOVRole",
+    "Show-HPOVUserSession",
+    "Start-HPOVLibraryTrace"
+]

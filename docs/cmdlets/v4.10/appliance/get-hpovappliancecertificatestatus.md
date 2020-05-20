@@ -8,6 +8,7 @@ description: Get the appliance SSL certificate status.
 
 ```text
 Get-HPOVApplianceCertificateStatus
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -21,10 +22,9 @@ This CMDLET will retrieve the SSL Certificate details installed on the appliance
 
 ```text
 Get-HPOVApplianceCertificateStatus
-
 ```
 
-
+Returns appliance certificate status.
 
 ## Parameters
 
@@ -57,7 +57,6 @@ _**None.  You cannot pipe objects to this cmdlet.**_
 _**HPOneView.Appliance.ApplianceSslCertificateStatus [System.Management.Automation.PSCustomObject]**_
 
 Formatted table display of the SSL Certificate object.
-
 
 ## Related Links
 

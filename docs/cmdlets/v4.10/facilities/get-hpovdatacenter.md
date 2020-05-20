@@ -92,7 +92,6 @@ _**HPOneView.Facilities.DataCenter**_
 
 A DataCenter resource object.
 
-
 ## Related Links
 
 * [New-HPOVDataCenter](new-hpovdatacenter.md)

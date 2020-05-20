@@ -51,9 +51,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this cmdlet.**_
+_**None.  You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
+
+_**None.**_
+
+This Cmdlet does not return any object.
 
 ## Related Links
 

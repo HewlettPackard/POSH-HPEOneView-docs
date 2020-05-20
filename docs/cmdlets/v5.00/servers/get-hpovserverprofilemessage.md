@@ -8,8 +8,8 @@ description: Display Server Profile alert messages.
 
 ```text
 Get-HPOVServerProfileMessage
-    [-InputObject] <Object>
-    [-ApplianceConnection] <Object>
+    [-InputObject <Object>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -38,7 +38,7 @@ The Server Profile resource object.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? |  |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;

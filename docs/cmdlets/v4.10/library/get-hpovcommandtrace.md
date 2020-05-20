@@ -24,11 +24,11 @@ Please know that this Cmdlet is currently not supported in the Windows PowerShel
 ###  Example 1 
 
 ```text
-Get-HPOVCommandTrace C:	emp
+Get-HPOVCommandTrace c:\temp
 
 ```
 
-Start a new library trace, which will create a file in the `C:	emp` directory.
+Start a new library trace, which will create a file in the `c:\temp` directory.
 
 ## Parameters
 

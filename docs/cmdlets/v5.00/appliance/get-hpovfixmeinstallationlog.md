@@ -54,7 +54,7 @@ The directory location where to save the generated file to.  If omitted, will us
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

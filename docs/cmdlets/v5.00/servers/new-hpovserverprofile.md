@@ -729,7 +729,7 @@ DEPRECATED.  Please use the `New-HPOVServerProfileLogicalDiskController` Cmdlet.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? |  |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Initialize &lt;SwitchParameter&gt;
@@ -741,7 +741,7 @@ DEPRECATED.  Please use the `New-HPOVServerProfileLogicalDiskController` Cmdlet.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? |  |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ControllerMode &lt;String&gt;
@@ -753,7 +753,7 @@ DEPRECATED.  Please use the `New-HPOVServerProfileLogicalDiskController` Cmdlet.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? |  |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -StorageController &lt;Object&gt;
@@ -1193,6 +1193,4 @@ If successful returns a task resource which may be polled to follow the progress
 * [Remove-HPOVServerProfileTemplate](remove-hpovserverprofiletemplate.md)
 * [Save-HPOVServerProfile](save-hpovserverprofile.md)
 * [Save-HPOVServerProfileTemplate](save-hpovserverprofiletemplate.md)
-* [Set-HPOVServerProfile](set-hpovserverprofile.md)
-* [Set-HPOVServerProfileTemplate](set-hpovserverprofiletemplate.md)
 * [Update-HPOVServerProfile](update-hpovserverprofile.md)

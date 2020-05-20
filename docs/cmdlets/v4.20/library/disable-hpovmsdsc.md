@@ -42,7 +42,7 @@ _**None. You cannot pipe objects to this cmdlet.**_
 
 _**None.**_
 
-
+This Cmdlet does not return any object.
 
 ## Related Links
 

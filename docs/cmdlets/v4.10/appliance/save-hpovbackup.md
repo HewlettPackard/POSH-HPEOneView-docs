@@ -99,7 +99,7 @@ If no backup file exist on the appliance, override the `non-terminating` error g
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? |  |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

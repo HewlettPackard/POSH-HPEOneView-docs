@@ -32,7 +32,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? |  |
-| Accept wildcard characters? |  |
+| Accept wildcard characters? | False |
 
 ### -InputObject &lt;Object&gt;
 
@@ -44,7 +44,7 @@ default content
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? |  |
-| Accept wildcard characters? |  |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 

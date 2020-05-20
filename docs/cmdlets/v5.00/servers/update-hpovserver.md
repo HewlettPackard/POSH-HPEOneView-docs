@@ -179,8 +179,6 @@ Async task that tracks the server refresh request
 * [Save-HPOVServerProfileTemplate](save-hpovserverprofiletemplate.md)
 * [Set-HPOVServerHardwareType](set-hpovserverhardwaretype.md)
 * [Set-HPOVServerPower](set-hpovserverpower.md)
-* [Set-HPOVServerProfile](set-hpovserverprofile.md)
-* [Set-HPOVServerProfileTemplate](set-hpovserverprofiletemplate.md)
 * [Start-HPOVServer](start-hpovserver.md)
 * [Stop-HPOVServer](stop-hpovserver.md)
 * [Update-HPOVServerHardwareLicenseIntent](update-hpovserverhardwarelicenseintent.md)

@@ -39,11 +39,11 @@ This command will generate a new backup, and if a remote location is configured,
 ###  Example 2 
 
 ```text
-New-HPOVBackup "c:	emp" -Force
+New-HPOVBackup "c:\temp" -Force
 
 ```
 
-This command will save the Appliance backup file to C:	emp
+This command will save the Appliance backup file to c:\temp
 
 ## Parameters
 
@@ -110,10 +110,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 _**None.  You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
-
-_**The generated backup File if appliance is not setup for remote storage or the Force parameter is used.**_
-
-
 
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 

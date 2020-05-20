@@ -147,10 +147,6 @@ _**System.Collections.ArrayList**_
 
 Multiple Interconnect objects.
 
-_**An Interconnect or collection of Interconnects**_
-
-
-
 ## Related Links
 
 * [Get-HPOVInterconnectType](get-hpovinterconnecttype.md)

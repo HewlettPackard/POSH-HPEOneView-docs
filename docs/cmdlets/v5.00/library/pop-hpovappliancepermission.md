@@ -37,7 +37,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | true (ByPropertyName) |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
@@ -57,5 +57,5 @@ List of appliance connection permissions and their active state.
 ## Related Links
 
 * [Push-HPOVAppliancePermission](push-hpovappliancepermission.md)
-* [about_Appliance_Connection_Permissions](../../about_Appliance_Connection_Permissions)
-* [[${Global:ConnectedSessions}]](../../about/about_appliance_connections)
+* [about_Appliance_Connection_Permissions](https://hpe-docs.gitbook.io/posh-hponeview/about/about_appliance_connection_permissions)
+* [[${Global:ConnectedSessions}]](https://hpe-docs.gitbook.io/posh-hponeview/about/about_appliance_connections)

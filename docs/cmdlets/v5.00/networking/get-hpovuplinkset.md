@@ -87,7 +87,7 @@ Name of the Logical Interconnect to show associated Uplink Set.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -type &lt;String&gt;
@@ -158,10 +158,6 @@ Single Uplink Set
 _**System.Collections.ArrayList**_
 
 Multiple Uplink Sets
-
-_**Collection of Uplink Sets**_
-
-
 
 ## Related Links
 

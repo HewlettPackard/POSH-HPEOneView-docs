@@ -22,10 +22,9 @@ This CMDLET will retrieve the SSL Certificate details installed on the appliance
 
 ```text
 Get-HPOVApplianceCertificateStatus
-
 ```
 
-
+Returns appliance certificate status.
 
 ## Parameters
 

@@ -88,30 +88,6 @@ Set to `force-delete` the profile.  For example, `force-remove` will successfull
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -WhatIf &lt;SwitchParameter&gt;
-
-
-
-| Aliases | wi |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
-### -Confirm &lt;SwitchParameter&gt;
-
-
-
-| Aliases | cf |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
 ### &lt;CommonParameters&gt;
 
 This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer, PipelineVariable, and OutVariable. For more information, see about\_CommonParameters \([http://go.microsoft.com/fwlink/?LinkID=113216](http://go.microsoft.com/fwlink/?LinkID=113216)\)
@@ -143,4 +119,3 @@ Multiple Async task resources.
 * [Get-HPOVServerProfileTemplate](get-hpovserverprofiletemplate.md)
 * [New-HPOVServerProfileTemplate](new-hpovserverprofiletemplate.md)
 * [Save-HPOVServerProfileTemplate](save-hpovserverprofiletemplate.md)
-* [Set-HPOVServerProfileTemplate](set-hpovserverprofiletemplate.md)

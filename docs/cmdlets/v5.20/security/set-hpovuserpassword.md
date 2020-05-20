@@ -1,0 +1,81 @@
+﻿---
+description: Update current user account password.
+---
+
+# Set-HPOVUserPassword
+
+## Syntax
+
+```text
+Set-HPOVUserPassword
+    [-Current] <>
+    [-New] <>
+    [-ApplianceConnection] <>
+    [<CommonParameters>]
+```
+
+## Description
+
+This Cmdlet provides the ability to update the current user account password.  Only HPE OneView appliance local account passwords will be changed.  This Cmdlet does not assist with modifying or updating an LDAP or Active Directory user account"s password.
+
+## Examples
+
+###  Example 1 
+
+```text
+Set-HPOVUserPassword MyCurrentPass NewP@ssw0rd
+```
+
+Update your HPE OneView account password to the new value on all connected appliances.
+
+## Parameters
+
+### -Current &lt;&gt;
+
+The current password of the user account. If omitted, the Cmdlet will prompt for the users password as a secure string.
+
+| Aliases | CurrentPassword |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -New &lt;&gt;
+
+The new password to be set for the user account. If omitted, the Cmdlet will prompt for the users password as a secure string.
+
+| Aliases | NewPassword |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -ApplianceConnection &lt;&gt;
+
+    
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+    
+Default Value: ${Global:ConnectedSessions} | ? Default
+
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | (${Global:ConnectedSessions} &vert; ? Default) |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### &lt;CommonParameters&gt;
+
+This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer, PipelineVariable, and OutVariable. For more information, see about\_CommonParameters \([http://go.microsoft.com/fwlink/?LinkID=113216](http://go.microsoft.com/fwlink/?LinkID=113216)\)
+
+## Input Types
+
+## Return Values
+
+## Related Links
+

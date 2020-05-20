@@ -97,4 +97,3 @@ Async task Resource object for monitoring the enclosure import process.
 * [Get-HPOVServerProfileTemplate](get-hpovserverprofiletemplate.md)
 * [New-HPOVServerProfileTemplate](new-hpovserverprofiletemplate.md)
 * [Remove-HPOVServerProfileTemplate](remove-hpovserverprofiletemplate.md)
-* [Set-HPOVServerProfileTemplate](set-hpovserverprofiletemplate.md)

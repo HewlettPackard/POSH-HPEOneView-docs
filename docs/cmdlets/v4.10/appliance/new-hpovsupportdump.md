@@ -9,17 +9,17 @@ description: Generate and download Support Dumps.
 ```text
 New-HPOVSupportDump
     [-Type] <String>
-    [-Location] <String>
+    [-Location <String>]
     [-Encrypted]
-    [-ApplianceConnection] <Array>
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
 ```text
 New-HPOVSupportDump
     [-LogicalInterconnect] <Object>
-    [-Location] <String>
-    [-ApplianceConnection] <Array>
+    [-Location <String>]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -37,35 +37,33 @@ The Appliance Support Dump contains important log files about the appliance, but
 ###  Example 1 
 
 ```text
-New-HPOVSupportDump c:	emp appliance
+New-HPOVSupportDump c:\temp appliance
 
 ```
 
-This command will save the Appliance support dump to C:	emp, for `[Myappliance.domain.com]` Appliance Connection.
+This command will save the Appliance support dump to c:\temp, for `[Myappliance.domain.com]` Appliance Connection.
 
 ###  Example 2 
 
 ```text
-New-HPOVSupportDump c:	emp appliance
+New-HPOVSupportDump c:\temp appliance
 
 ```
 
-This command will save the Appliance support dump to C:	emp, for all Appliance Connections.
+This command will save the Appliance support dump to c:\temp, for all Appliance Connections.
 
 ###  Example 3 
 
 ```text
-New-HPOVSupportDump c:	emp li ENC1-LI
-
+New-HPOVSupportDump c:\temp li ENC1-LI
 ```
 
-This command will save the Logical Interconnect `ENC1-LI` to C:	emp.
+This command will save the Logical Interconnect `ENC1-LI` to c:\temp.
 
 ###  Example 4 
 
 ```text
-Get-HPOVlogicalinterconnect ENC1-LI | New-HPOVSupportDump c:	emp
-
+Get-HPOVlogicalinterconnect ENC1-LI | New-HPOVSupportDump c:\temp
 ```
 
 Accepting the response from `Get-HPOVLogicalInterconnect` CMDLET.
@@ -73,8 +71,7 @@ Accepting the response from `Get-HPOVLogicalInterconnect` CMDLET.
 ###  Example 5 
 
 ```text
-Get-HPOVlogicalinterconnect | New-HPOVSupportDump c:	emp
-
+Get-HPOVlogicalinterconnect | New-HPOVSupportDump c:\temp
 ```
 
 Accepting the response from `Get-HPOVLogicalInterconnect` CMDLET for all Logical Interconnects and creating support dumps for all.
@@ -89,7 +86,7 @@ The full path to where the Support Dump will be saved to.  The downloaded file n
 
 | Aliases | save |
 | :--- | :--- |
-| Required? | True |
+| Required? | False |
 | Position? | Named |
 | Default value | (get-location).Path |
 | Accept pipeline input? | false |
@@ -99,8 +96,8 @@ The full path to where the Support Dump will be saved to.  The downloaded file n
 
 The type of Support Dump to collect.  Possible values are:
 
-1.  appliance
-2.  li
+    * Appliance
+    * li
 
 | Aliases | None |
 | :--- | :--- |
@@ -146,7 +143,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | True |
+| Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
@@ -158,15 +155,15 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**Accepts pipeline input from Get-HPOVLogicalInterconnect only.**_
+_**HPOneView.Networking.LogicalInterconnect**_
 
-
+Accepts pipeline input from [`Get-HPOVLogicalInterconnect`](../networking/get-hpovlogicalinterconnect.md) only.
 
 ## Return Values
 
-_**The generated Support Dump File**_
+_**System.IO.FileInfo**_
 
-
+The location of the saved support dump.
 
 ## Related Links
 

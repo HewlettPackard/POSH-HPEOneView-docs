@@ -188,30 +188,6 @@ Re-apply OS Deployment Plan settings.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -WhatIf &lt;SwitchParameter&gt;
-
-When using this parameter, an `[HPOneView.ServerProfile.CompliancePreview]` object is returned, which contains the operations that will be performed.
-
-| Aliases | wi |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
-### -Confirm &lt;SwitchParameter&gt;
-
-
-
-| Aliases | cf |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
 ### &lt;CommonParameters&gt;
 
 This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer, PipelineVariable, and OutVariable. For more information, see about\_CommonParameters \([http://go.microsoft.com/fwlink/?LinkID=113216](http://go.microsoft.com/fwlink/?LinkID=113216)\)
@@ -262,5 +238,3 @@ Multiple Async update tasks
 * [Remove-HPOVServerProfileTemplate](remove-hpovserverprofiletemplate.md)
 * [Save-HPOVServerProfile](save-hpovserverprofile.md)
 * [Save-HPOVServerProfileTemplate](save-hpovserverprofiletemplate.md)
-* [Set-HPOVServerProfile](set-hpovserverprofile.md)
-* [Set-HPOVServerProfileTemplate](set-hpovserverprofiletemplate.md)

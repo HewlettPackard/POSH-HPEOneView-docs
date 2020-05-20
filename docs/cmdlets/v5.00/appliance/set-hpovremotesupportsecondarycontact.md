@@ -38,8 +38,6 @@ Set a new HPE OneView Remote Support secondary contact on the appliance.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Aliases [-Appliance]
-
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |

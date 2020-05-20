@@ -10,7 +10,7 @@ description: Update current user account password.
 Set-HPOVUserPassword
     [-Current] <String>
     [-New] <String>
-    [-ApplianceConnection] <Object>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -23,7 +23,7 @@ This cmdlet provides the ability to update the current user account password.  O
 ###  Example 1 
 
 ```text
-Set-HPOVUserPassword MyCurrentPass NewP@ssw0rd
+Set-HPOVUserPassword -Current MyCurrentPass -New NewP@ssw0rd
 
 ```
 
@@ -57,14 +57,13 @@ The new password to be set for the user account. If omitted, the cmdlet will pro
 
 ### -ApplianceConnection &lt;Object&gt;
 
-    
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
-    
+
 Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | True |
+| Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | false |
@@ -76,7 +75,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
+_**None.  You cannot pipe objects to this cmdlet.**_
+
 ## Return Values
+
+_**HPOneView.Appliance.User [System.Management.Automation.PSCustomObject]**_
+
+HPOneView appliance local user account.
 
 ## Related Links
 

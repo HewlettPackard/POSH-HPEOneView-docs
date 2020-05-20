@@ -139,7 +139,7 @@ Password to log into the appliance.  Can be either `[System.String]` or SecureSt
 
 ### -Credential &lt;PSCredential&gt;
 
-Use this parameter if you want to provide a PSCredential object instead.
+Use this parameter to provide a secure crednetial object.  The Username format can support either just a string username value (i.e. JSmith), or include either NTDomainName (i.e. MyDomain\JSmith) or Universal Principle Name (i.e. jsmith@domain.com).  If providing either NYDomainname or Universal Principal Name, ensure the Authentication Directory name is spelled exactly the same, and the `-AuthLoginDomain` is not required.
 
 | Aliases | PSCredential |
 | :--- | :--- |
@@ -216,5 +216,5 @@ On error, appliance response is returned as a terminating error.
 ## Related Links
 
 * [Disconnect-HPOVMgmt](disconnect-hpovmgmt.md)
-* [about_Appliance_Connection_Permissions](../../about_Appliance_Connection_Permissions)
-* [[${Global:ConnectedSessions}]](../../about/about_appliance_connections)
+* [about_Appliance_Connection_Permissions](https://hpe-docs.gitbook.io/posh-hponeview/about/about_appliance_connection_permissions)
+* [[${Global:ConnectedSessions}]](https://hpe-docs.gitbook.io/posh-hponeview/about/about_appliance_connections)

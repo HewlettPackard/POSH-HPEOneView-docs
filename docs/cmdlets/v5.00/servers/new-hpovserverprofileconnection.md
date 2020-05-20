@@ -223,7 +223,7 @@ The Network (Ethernet or Fibre Channel) or Network Set resource object to be use
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -LagName &lt;String&gt;
@@ -617,7 +617,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Required? | False |
 | Position? | Named |
 | Default value | false |
-| Accept pipeline input? |  |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -629,7 +629,7 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | true (ByPropertyName) |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

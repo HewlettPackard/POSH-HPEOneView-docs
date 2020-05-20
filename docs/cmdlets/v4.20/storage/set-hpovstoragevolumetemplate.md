@@ -155,7 +155,7 @@ The Storage Pool Name, URI or Object to be used for Volumes
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? |  |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -StorageSystem &lt;Object&gt;
@@ -322,7 +322,7 @@ Specify to lock the StoragePool value in the template.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? |  |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -LockSnapShotStoragePool &lt;SwitchParameter&gt;

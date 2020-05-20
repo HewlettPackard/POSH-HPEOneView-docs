@@ -31,7 +31,7 @@ Set-HPOVApplianceGlobalSetting
 ###  Example 1 
 
 ```text
-Set-HPOVApplianceGlobalSetting alertMax 75000
+Set-HPOVApplianceGlobalSetting -Name alertMax -Value 75000
 ```
 
 Returns the "alertMax" setting object with the updated value of 75000
@@ -100,9 +100,9 @@ Appliance global setting from [`Get-HPOVApplianceGlobalSetting`](get-hpovapplian
 
 ## Return Values
 
-_**The setting object with updated parameters.**_
+_**HPOneView.Appliance.GlobalSetting**_
 
-
+The udpated appliance global setting.
 
 ## Related Links
 

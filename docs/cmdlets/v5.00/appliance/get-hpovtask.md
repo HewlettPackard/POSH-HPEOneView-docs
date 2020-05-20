@@ -178,10 +178,6 @@ _**System.Collections.ArrayList <HPOneView.Appliance.TaskResource>**_
 
 Multiple Task resources or formatted table list of tasks
 
-_**The matching task resources.**_
-
-
-
 ## Related Links
 
 * [Wait-HPOVTaskComplete](wait-hpovtaskcomplete.md)

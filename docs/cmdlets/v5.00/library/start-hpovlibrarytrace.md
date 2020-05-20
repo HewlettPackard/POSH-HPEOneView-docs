@@ -50,10 +50,6 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**None**_
-
-
-
 ## Related Links
 
 * [Stop-HPOVLibraryTrace](stop-hpovlibrarytrace.md)

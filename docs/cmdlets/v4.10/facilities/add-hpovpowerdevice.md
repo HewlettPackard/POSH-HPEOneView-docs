@@ -86,18 +86,6 @@ Use this parameter if you want to provide a PSCredential object instead.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -TrustLeaCertificate &lt;SwitchParameter&gt;
-
-When adding an iPDU resource, the SSL certificate may be `self-signed` and untrusted.  Use this switch to add the iPDU SSL certificate to the appliance trust store, if Certificate Verification has not been disabled on the appliance.
-
-| Aliases |  |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | False |
-| Accept pipeline input? |  |
-| Accept wildcard characters? | False |
-
 ### -Force &lt;SwitchParameter&gt;
 
 Force the import of the iPDU when currently managed by another HPE OneView appliance.
@@ -147,30 +135,6 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
-### -WhatIf &lt;SwitchParameter&gt;
-
-
-
-| Aliases | wi |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
-### -Confirm &lt;SwitchParameter&gt;
-
-
-
-| Aliases | cf |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

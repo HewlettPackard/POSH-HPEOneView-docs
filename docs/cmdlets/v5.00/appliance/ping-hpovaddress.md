@@ -9,8 +9,8 @@ description: Validate IP Connectivity to resources.
 ```text
 Ping-HPOVAddress
     [-Address] <String>
-    [-Packets <Int32>]
-    [-ApplianceConnection <Object>]
+    [-Packets] <Int32>
+    [-ApplianceConnection] <Object>
     [-Async]
     [<CommonParameters>]
 ```

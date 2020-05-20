@@ -116,7 +116,7 @@ Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially 
 | Required? | False |
 | Position? | Named |
 | Default value | AllResourcesInScope |
-| Accept pipeline input? |  |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SecondaryManagementAddress &lt;String&gt;

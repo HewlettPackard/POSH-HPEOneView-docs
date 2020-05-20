@@ -256,18 +256,6 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Confirm &lt;SwitchParameter&gt;
-
-When attempting to add a Server to the appliance, the appliance will validate the target Server is not already claimed.  If it is, this parameter is used when the server has been claimed by another appliance to bypass the confirmation prompt, and force add the server resource.
-
-| Aliases | cf |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
 ### -Scope &lt;Array&gt;
 
 Provide an array of <HPOneView.Appliance.ScopeResource> Scope resource(s) to initially add.

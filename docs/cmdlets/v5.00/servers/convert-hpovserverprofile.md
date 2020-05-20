@@ -94,18 +94,6 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Confirm &lt;SwitchParameter&gt;
-
-Override confirmation prompt.
-
-| Aliases | cf |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
 ### -EnclosureGroup &lt;Object&gt;
 
 Specify the target `[HPOneView.EnclosureGroup]` resource object.  By changing the Enclosure Group, assigned Networks with Connections that do not exist on in the associated Logical Interconnect Group(s), the Connection may not be assigned to an available FlexNIC.
@@ -179,6 +167,4 @@ Async Task resource to monitor progress of the Server Profile transformation.
 * [Remove-HPOVServerProfileTemplate](remove-hpovserverprofiletemplate.md)
 * [Save-HPOVServerProfile](save-hpovserverprofile.md)
 * [Save-HPOVServerProfileTemplate](save-hpovserverprofiletemplate.md)
-* [Set-HPOVServerProfile](set-hpovserverprofile.md)
-* [Set-HPOVServerProfileTemplate](set-hpovserverprofiletemplate.md)
 * [Update-HPOVServerProfile](update-hpovserverprofile.md)

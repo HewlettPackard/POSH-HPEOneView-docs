@@ -57,7 +57,7 @@ Specify the label associated with resources.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? |  |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Array&gt;
@@ -88,11 +88,7 @@ _**None.  You cannot pipe objects to this cmdlet.**_
 
 _**HPOneView.Storage.DriveEnclosure [System.Management.Automation.PSCustomObject]**_
 
-Single resource object.
-
-_**System.Collections.ArrayList <HPOneView.Storage.DriveEnclosure>**_
-
-Multiple resource objects.
+HPE D3940 Drive Enclosure resource.
 
 ## Related Links
 

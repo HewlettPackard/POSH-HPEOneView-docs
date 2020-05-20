@@ -6,11 +6,11 @@ Param
 
     [Parameter (Mandatory = $false, HelpMessage = "Provide the root directory to where the Library source is located.")]
     [ValidateNotNullorEmpty()]
-    [string]$Path = ((Get-Location).Path + '\..\source'),
+    [string]$Path = ((Split-Path $MyInvocation.MyCommand.Path -parent) + '\..\source'),
 
     [Parameter (Mandatory = $false, HelpMessage = "Provide the root directory path to save the generated help markdown files to.")]
     [ValidateNotNullorEmpty()]
-    [String]$Destination = ((Get-Location).Path + '\..\')
+    [String]$Destination = ((Split-Path $MyInvocation.MyCommand.Path -parent) + '\..\')
 
 )
 
@@ -23,6 +23,13 @@ $Script:MinimumPermissionsPattern                  = [System.Text.RegularExpress
 $Script:NoteMessagePattern                         = [System.Text.RegularExpressions.RegEx]::new("(?:^NOTE: (?'subtext'[\s\w]+.+))", [System.Text.RegularExpressions.RegexOptions]::Multiline -bor [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
 $Script:WarningMessagePattern                      = [System.Text.RegularExpressions.RegEx]::new("(?:^WARNING: (?'subtext'[\s\w]+.+))", [System.Text.RegularExpressions.RegexOptions]::Multiline -bor [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
 $Script:CriticalMessagePattern                     = [System.Text.RegularExpressions.RegEx]::new("(?:^CRITICAL: (?'subtext'[\s\w]+.+))", [System.Text.RegularExpressions.RegexOptions]::Multiline -bor [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
+$Script:ParentLinkableAssociatedLinks              = [Ordered]@{
+    '[${Global:ConnectedSessions}]'          = 'https://hpe-docs.gitbook.io/posh-hponeview/about/about_appliance_connections';
+    '${Global:ConnectedSessions}'            = 'https://hpe-docs.gitbook.io/posh-hponeview/about/about_appliance_connections';
+    'about_appliance_connections'            = 'https://hpe-docs.gitbook.io/posh-hponeview/about/about_appliance_connections'
+    'about_Appliance_Connection_Permissions' = 'https://hpe-docs.gitbook.io/posh-hponeview/about/about_appliance_connection_permissions';
+    'about_two_factor_authentication'        = 'https://hpe-docs.gitbook.io/posh-hponeview/about/about_two_factor_authentication'
+}
 
 $H1 = "# "
 $H2 = "## "
@@ -211,7 +218,7 @@ class ParameterEntry
 
         }
 
-        $FinalTable = [ParameterEntry]::Table -f $Parameter.Aliases, [Convert]::ToBoolean($Parameter.ParameterValue.Required), $DefaultValue, $Parameter.PipelineInput, $Parameter.SupportsWildcard, [System.Environment]::NewLine
+        $FinalTable = [ParameterEntry]::Table -f $Parameter.Aliases, [Convert]::ToBoolean($Parameter.Required), $DefaultValue, $Parameter.PipelineInput, $Parameter.SupportsWildcard, [System.Environment]::NewLine
         [void]$FinalString.AppendLine($FinalTable)
 
         return $FinalString.ToString()
@@ -391,7 +398,7 @@ else
 
                         $CmdletParameterName = '[-{0}' -f $SyntaxParameter.Name
 
-                        if ($ParameterDef.ParameterValue.Value -eq 'SwitchParameter')
+                        if ($ParameterDef.DataType -eq 'SwitchParameter')
                         {
 
                             $CmdletParameterType = ''
@@ -401,12 +408,12 @@ else
                         else
                         {
 
-                            $CmdletParameterType = ' <{0}>' -f $ParameterDef.ParameterValue.Value
+                            $CmdletParameterType = ' <{0}>' -f $ParameterDef.DataType
 
                         }
 
                         # If parameter is required, the brace needs to be around the parameter name
-                        if ([Convert]::ToBoolean($ParameterDef.ParameterValue.Required))
+                        if ([Convert]::ToBoolean($SyntaxParameter.Required))
                         {
 
                             $CmdletParameterString = '{0}]{1}' -f $CmdletParameterName, $CmdletParameterType
@@ -525,7 +532,7 @@ else
                 ForEach ($Parameter in $Cmdlet.Contents.Parameters)
                 {
 
-                    $Type = $ParameterType -f $Parameter.ParameterValue.Value
+                    $Type = $ParameterType -f $Parameter.DataType
 
                     $_Header = '{0}-{1} {2}{3}' -f $H3, $Parameter.Name, $Type, [System.Environment]::NewLine
                     [void]$FinalMarkdownOutput.Add($_Header)
@@ -585,26 +592,50 @@ else
                 {
 
                     "    --> Adding associated link: {0}" -f $Link.Text | Write-Verbose
-
-                    $AssociatedLinkCmdlet = $script:LibraryJsonContents.Cmdlets | Where-Object Name -eq $Link.Text
-
-                    iF (-not [String]::IsNullOrEmpty($Link.Uri) -and -not $Link.Uri.StartsWith('https://'))
+                    if ($Script:ParentLinkableAssociatedLinks.GetEnumerator().Name -contains $Link.Text)
                     {
 
-                        $AssociatedLinkRelativeUri = $Link.Uri
+                        $AssociatedLinkRelativeUri = $Script:ParentLinkableAssociatedLinks[$Link.Text]
 
                     }
 
                     else
                     {
 
-                        $AssociatedLinkRelativeUri = "{0}.md" -f $AssociatedLinkCmdlet.Name.ToLower()
+                        $AssociatedLinkCmdlet = $script:LibraryJsonContents.Cmdlets | Where-Object Name -eq $Link.Text
 
-                        # Check if the Category is the same. If not, then the relative and parent directory needs to be in the URI
-                        if ($AssociatedLinkCmdlet.Category -ne $Cmdlet.Category)
+                        if ([String]::IsNullOrEmpty($AssociatedLinkCmdlet))
                         {
 
-                            $AssociatedLinkRelativeUri = "../{0}/{1}" -f $AssociatedLinkCmdlet.Category.ToLower(), $AssociatedLinkRelativeUri
+                            $Message = "Unable to find associated link '{0}' to '{1}' Cmdlet." -f $Link.Text, $Cmdlet.Name
+                            $PSCmdlet.WriteError([Management.Automation.ErrorRecord]::new((New-Object 'InvalidOperationException' $Message), 'RelatedLinkNotFound', 'ResourceUnavailable', 'HelpJSONSource'))
+
+                        }
+
+                        else
+                        {
+
+                            if (-not [String]::IsNullOrEmpty($Link.Uri) -and -not $Link.Uri.StartsWith('https://'))
+                            {
+
+                                $AssociatedLinkRelativeUri = $Link.Uri
+
+                            }
+
+                            else
+                            {
+
+                                $AssociatedLinkRelativeUri = "{0}.md" -f $AssociatedLinkCmdlet.Name.ToLower()
+
+                                # Check if the Category is the same. If not, then the relative and parent directory needs to be in the URI
+                                if ($AssociatedLinkCmdlet.Category -ne $Cmdlet.Category)
+                                {
+
+                                    $AssociatedLinkRelativeUri = "../{0}/{1}" -f $AssociatedLinkCmdlet.Category.ToLower(), $AssociatedLinkRelativeUri
+
+                                }
+
+                            }
 
                         }
 

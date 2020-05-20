@@ -10,14 +10,15 @@ description: (Reserved for future use) Update appliance global settings.
 Set-HPOVApplianceGlobalSetting
     [-Name] <String>
     [-Value] <String>
-    [-ApplianceConnection] <Object>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 Set-HPOVApplianceGlobalSetting
     [-InputObject] <HPOneView.Appliance.GlobalSetting>
-    [-ApplianceConnection] <Object>
+    [-Value] <String>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -30,7 +31,7 @@ Set-HPOVApplianceGlobalSetting
 ###  Example 1 
 
 ```text
-Set-HPOVApplianceGlobalSetting alertMax 75000
+Set-HPOVApplianceGlobalSetting -Name alertMax  -Value 75000
 
 ```
 
@@ -39,8 +40,6 @@ Returns the "alertMax" setting object with the updated value of 75000
 ## Parameters
 
 ### -InputObject &lt;HPOneView.Appliance.GlobalSetting&gt;
-
-Aliases [-Object]
 
 The Appliance Global Setting object from `Get-HPOVApplianceGlobalSetting`.
 
@@ -58,7 +57,7 @@ The name of the global parameter.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | True |
+| Required? | False |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
@@ -86,7 +85,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | True |
+| Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
@@ -104,9 +103,9 @@ Appliance global setting from [`Get-HPOVApplianceGlobalSetting`](get-hpovapplian
 
 ## Return Values
 
-_**The setting object with updated parameters.**_
+_**HPOneView.Appliance.GlobalSetting**_
 
-
+The udpated appliance global setting.
 
 ## Related Links
 

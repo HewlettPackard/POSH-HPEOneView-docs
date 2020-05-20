@@ -30,9 +30,12 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Return Values
 
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+
+Async task resource to monitor.
+
 ## Related Links
 
 * [Add-HPOVPowerDevice](add-hpovpowerdevice.md)
-* [Add-HPOVPowerDeviceConnection](add-hpovpowerdeviceconnection.md)
 * [Get-HPOVPowerDevice](get-hpovpowerdevice.md)
 * [Remove-HPOVPowerDevice](remove-hpovpowerdevice.md)

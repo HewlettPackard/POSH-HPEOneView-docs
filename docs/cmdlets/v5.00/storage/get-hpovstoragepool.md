@@ -210,10 +210,6 @@ _**System.Collections.ArrayList**_
 
 Multiple Storage Pool resources
 
-_**The matching storage pool resources.**_
-
-
-
 ## Related Links
 
 * [Add-HPOVStoragePool](add-hpovstoragepool.md)

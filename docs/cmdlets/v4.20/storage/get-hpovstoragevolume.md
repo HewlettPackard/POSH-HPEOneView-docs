@@ -50,7 +50,7 @@ Provide a Server Profile object and all associated Storage Volumes will be retur
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | true (ByValue) |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Name &lt;String&gt;
@@ -98,7 +98,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | true (ByPropertyName) |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Scope &lt;Object&gt;

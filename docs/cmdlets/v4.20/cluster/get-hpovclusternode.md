@@ -92,10 +92,14 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Return Values
 
+_**HPOneView.Cluster.ClusterNode**_
+
+HPE OneView cluster node.
+
+
 ## Related Links
 
 * [Add-HPOVClusterNode](add-hpovclusternode.md)
-* [Add-HPOVClusterNodeToCluster](add-hpovclusternodetocluster.md)
 * [Enter-HPOVClusterNodeMaintenanceMode](enter-hpovclusternodemaintenancemode.md)
 * [Exit-HPOVClusterNodeMaintenanceMode](exit-hpovclusternodemaintenancemode.md)
 * [Update-HPOVClusterNode](update-hpovclusternode.md)
