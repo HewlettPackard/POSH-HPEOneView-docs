@@ -9,7 +9,7 @@ about_HPOneView.500
 COPYRIGHT
 
 ```text
-(C) Copyright 2013-2019 Hewlett Packard Enterprise Development LP 
+(C) Copyright 2013-2020 Hewlett Packard Enterprise Development LP
 ```
 
 LICENSE
@@ -59,7 +59,7 @@ Release 5.00.2150.3666
  -- Added Network Set support to New-HPOVUplinkSet to either track network set resources,
     or to copy networks from the provided Network Set(s) with the -CopyNetworksFromNetworkSet
     parameter.
- -- Added unmanaged fibre channel connection to New-HPOVServerProfile and 
+ -- Added unmanaged fibre channel connection to New-HPOVServerProfile and
     New-HPOVServerProfileConnection for supported servers.
  -- Added Get-HPOVServerOneTimeBoot and Set-HPOVServerOneTimeBoot to support server One
     Time Boot settings.
@@ -84,7 +84,7 @@ wrapper scripts.  The core cmdlets are:
 A set of sample scripts are also provided, that show how to fully configure an
 HP OneView appliance from the ground up.
 
-For information regarding this project, to request features or report 
+For information regarding this project, to request features or report
 issues, please see: https://github.com/HewlettPackard/POSH-HPOneView/issues
 ```
 

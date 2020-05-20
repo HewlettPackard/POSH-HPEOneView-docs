@@ -9,7 +9,7 @@ about_HPOneView.420
 COPYRIGHT
 
 ```text
-(C) Copyright 2013-2019 Hewlett Packard Enterprise Development LP 
+(C) Copyright 2013-2020 Hewlett Packard Enterprise Development LP
 ```
 
 LICENSE
@@ -64,7 +64,7 @@ wrapper scripts.  The core cmdlets are:
 A set of sample scripts are also provided, that show how to fully configure an
 HP OneView appliance from the ground up.
 
-For information regarding this project, to request features or report 
+For information regarding this project, to request features or report
 issues, please see: https://github.com/HewlettPackard/POSH-HPOneView/issues
 ```
 
