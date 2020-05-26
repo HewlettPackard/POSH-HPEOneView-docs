@@ -8,8 +8,8 @@ description: Remove a rack resource.
 
 ```text
 Remove-HPOVRack
-    [-InputObject] <>
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -44,19 +44,19 @@ Remove rack resources from the appliance.
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 Rack object, from `Get-HPOVRack`.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

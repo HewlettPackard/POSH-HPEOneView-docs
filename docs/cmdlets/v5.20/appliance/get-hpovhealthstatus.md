@@ -8,7 +8,7 @@ description: Display appliance health.
 
 ```text
 Get-HPOVHealthStatus
-    [-ApplianceConnection <>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -32,7 +32,7 @@ Get the HPE OneView appliance health.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

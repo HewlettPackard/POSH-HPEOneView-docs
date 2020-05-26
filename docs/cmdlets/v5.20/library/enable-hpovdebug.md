@@ -8,10 +8,10 @@ description: Enable specific appliance-level component debug logging.
 
 ```text
 Enable-HPOVDebug
-    [-Scope] <>
-    [-LoggerName] <>
-    [-Level] <>
-    [-ApplianceConnection <>]
+    [-Scope] <String>
+    [-LoggerName] <String>
+    [-Level] <String>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -23,31 +23,31 @@ FOR HP SUPPORT USE ONLY.  This Cmdlet will enable appliance level component debu
 
 ## Parameters
 
-### -Scope &lt;&gt;
+### -Scope &lt;String&gt;
 
 The Scope of the LoggerName.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -LoggerName &lt;&gt;
+### -LoggerName &lt;String&gt;
 
 The internal component name.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Level &lt;&gt;
+### -Level &lt;String&gt;
 
 The verbose level to enable.  Allowed values are:
 
@@ -58,13 +58,13 @@ The verbose level to enable.  Allowed values are:
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 

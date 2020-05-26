@@ -8,26 +8,26 @@ description: Add a new LDAP Directory Server.
 
 ```text
 Add-HPOVLdapServer
-    [-InputObject] <>
-    [-Hostname] <>
-    [-Username] <>
-    [-SSLPort <>]
-    [-Certificate <>]
-    [-Password <>]
-    [-TrustLeafCertificate <>]
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-Hostname] <String>
+    [-Username] <String>
+    [-SSLPort <Int32>]
+    [-Certificate <Object>]
+    [-Password <Object>]
+    [-TrustLeafCertificate]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 Add-HPOVLdapServer
-    [-InputObject] <>
-    [-Hostname] <>
-    [-Credential <>]
-    [-SSLPort <>]
-    [-Certificate <>]
-    [-TrustLeafCertificate <>]
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-Hostname] <String>
+    [-Credential <PSCredential>]
+    [-SSLPort <Int32>]
+    [-Certificate <Object>]
+    [-TrustLeafCertificate]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -82,31 +82,31 @@ Add a new LDAP Directory server.
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 The LDAP Directory Object from `Get-HPOVLdapDirectory`.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Hostname &lt;&gt;
+### -Hostname &lt;String&gt;
 
 Directory server name or IP Address to add.
 
 | Aliases | Name |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SSLPort &lt;&gt;
+### -SSLPort &lt;Int32&gt;
 
 Directory Servers LDAP SSL Port.
 
@@ -118,7 +118,7 @@ Directory Servers LDAP SSL Port.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Certificate &lt;&gt;
+### -Certificate &lt;Object&gt;
 
 Directory Server SSL Certificate, either location to Base64 Cert or `multi-line` string value.  If omitted, the Cmdlet will attempt to retrieve the Directory Servers Secure LDAP Certiciate.
 
@@ -130,19 +130,19 @@ Directory Server SSL Certificate, either location to Base64 Cert or `multi-line`
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Username &lt;&gt;
+### -Username &lt;String&gt;
 
 Directory Username to authenticate with in order to validate LDAP configuration.
 
 | Aliases | u, user |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Password &lt;&gt;
+### -Password &lt;Object&gt;
 
 Directory User account password in order to validate LDAP configuration.  Can be `[System.String]` or `[System.Security.SecureString]` object.
 
@@ -154,7 +154,7 @@ Directory User account password in order to validate LDAP configuration.  Can be
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 
@@ -166,7 +166,7 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -Credential &lt;&gt;
+### -Credential &lt;PSCredential&gt;
 
 Use this parameter if you want to provide a PSCredential object instead.
 
@@ -178,7 +178,7 @@ Use this parameter if you want to provide a PSCredential object instead.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -TrustLeafCertificate &lt;&gt;
+### -TrustLeafCertificate &lt;SwitchParameter&gt;
 
 When adding a new LDAP directory server, the certificate may not be trusted.  Use this switch to force trust the certificate.  Or, use the `Add-HPOVApplianceTrustedCertificate` to add the enterprise issuing certificate authority"s certificate.
 

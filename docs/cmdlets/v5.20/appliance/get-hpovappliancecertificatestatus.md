@@ -8,7 +8,7 @@ description: Get the appliance SSL certificate status.
 
 ```text
 Get-HPOVApplianceCertificateStatus
-    [-ApplianceConnection <>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -44,7 +44,7 @@ Get-HPOVApplianceCertificateStatus
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

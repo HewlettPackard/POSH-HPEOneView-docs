@@ -8,10 +8,10 @@ description: Add supported resource(s) to a Scope.
 
 ```text
 Add-HPOVResourceToScope
-    [-Scope] <>
-    [-InputObject] <>
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-Scope] <HPOneView.Appliance.ScopeCollection[]>
+    [-InputObject] <Object>
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -79,31 +79,31 @@ Add the resources collected to the MyScope scope.
 
 ## Parameters
 
-### -Scope &lt;&gt;
+### -Scope &lt;HPOneView.Appliance.ScopeCollection[]&gt;
 
 The Scope resource to add the resource(s) to.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 The supported resource object to add to the intended scope provided in the `-Scope` parameter.
 
 | Aliases | Resource |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -115,7 +115,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 

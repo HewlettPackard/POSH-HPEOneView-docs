@@ -8,10 +8,10 @@ description: Copy or clone a server profile.
 
 ```text
 Copy-HPOVServerProfile
-    [-InputObject] <>
-    [-DestinationName <>]
-    [-Assign <>]
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-DestinationName <String>]
+    [-Assign <Object>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -64,19 +64,19 @@ Copy 5 Server Profiles from "Profile Template" that will be assigned to bays 11 
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 The object of the source server profile to be copied.
 
 | Aliases | sname, src, SourceName |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -DestinationName &lt;&gt;
+### -DestinationName &lt;String&gt;
 
 The name of the destination server profile that will be created.  If omitted, the new name will have "Copy of " 
 prefixed to the source name.
@@ -89,7 +89,7 @@ prefixed to the source name.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Assign &lt;&gt;
+### -Assign &lt;Object&gt;
 
 The object of the target server to assign the new profile to.  If omitted, profile will be "unassigned"
 
@@ -101,7 +101,7 @@ The object of the target server to assign the new profile to.  If omitted, profi
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 

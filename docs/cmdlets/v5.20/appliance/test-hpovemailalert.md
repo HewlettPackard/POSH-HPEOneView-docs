@@ -8,10 +8,10 @@ description: Test appliance Email Alerting configuration.
 
 ```text
 Test-HPOVEmailAlert
-    [-Recipients] <>
-    [-Subject <>]
-    [-Body <>]
-    [-ApplianceConnection <>]
+    [-Recipients] <Array>
+    [-Subject <String>]
+    [-Body <String>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -39,19 +39,19 @@ Generate a test email message to multiple recipients with a custom subject.
 
 ## Parameters
 
-### -Recipients &lt;&gt;
+### -Recipients &lt;Array&gt;
 
 Specify the Sender Email Address for the appliance.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Subject &lt;&gt;
+### -Subject &lt;String&gt;
 
 Provide a custom subject for the email message.
 
@@ -63,7 +63,7 @@ Provide a custom subject for the email message.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Body &lt;&gt;
+### -Body &lt;String&gt;
 
 Provide a custom message body.  Can be either a plan text or HTML message.
 
@@ -75,7 +75,7 @@ Provide a custom message body.  Can be either a plan text or HTML message.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

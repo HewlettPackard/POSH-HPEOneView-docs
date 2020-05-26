@@ -8,10 +8,10 @@ description: Create new Storage Volume Snapshot resource.
 
 ```text
 New-HPOVStorageVolumeSnapshot
-    [-InputObject] <>
-    [-Name] <>
-    [-Description] <>
-    [-ApplianceConnection] <>
+    [-InputObject] <Object>
+    [-Name] <String>
+    [-Description] <String>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -31,43 +31,43 @@ Create a new storage volume snapshot using the default values.
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 Specify the Storage Volume object to create a snapshot for.
 
 | Aliases | Volume |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 Name of Snapshot.  The parameter defaults to "{volumeName}_{timestamp}" variables provided by the appliance.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | {volumeName}_{timestamp} |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Description &lt;&gt;
+### -Description &lt;String&gt;
 
 The description for the Storage Volume Snapshot.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
@@ -75,7 +75,7 @@ Default Value: ${Global:ConnectSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |

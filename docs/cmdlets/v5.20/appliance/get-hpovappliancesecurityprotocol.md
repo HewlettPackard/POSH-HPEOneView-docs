@@ -8,9 +8,9 @@ description: Get appliance supported security protocols and ciphers.
 
 ```text
 Get-HPOVApplianceSecurityProtocol
-    [-TlsVersion <>]
-    [-SecurityMode <>]
-    [-ApplianceConnection <>]
+    [-TlsVersion <String[]>]
+    [-SecurityMode <String[]>]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -42,7 +42,7 @@ Get the appliance FIPS security mode and TLSv1.1 and TLSv1.2 security protocols.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -54,7 +54,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -SecurityMode &lt;&gt;
+### -SecurityMode &lt;String[]&gt;
 
 Specify the Security Mode to return supported security protocols and encryption ciphers. By default, will return the current appliance security mode. Allowed values:
 
@@ -70,7 +70,7 @@ Specify the Security Mode to return supported security protocols and encryption 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -TlsVersion &lt;&gt;
+### -TlsVersion &lt;String[]&gt;
 
 Filter for specific TLS version(s). By default, will return all TLS Versions. Allowed values:
 

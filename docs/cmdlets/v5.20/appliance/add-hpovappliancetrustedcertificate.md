@@ -8,14 +8,14 @@ description: Add X.509 SSL certificates to appliance trusted store.
 
 ```text
 Add-HPOVApplianceTrustedCertificate
-    [-Path] <>
-    [-CertObject] <>
-    [-ComputerName <>]
-    [-Port <>]
-    [-AliasName <>]
-    [-Force <>]
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-Path] <System.IO.FileInfo>
+    [-CertObject] <Object>
+    [-ComputerName <String>]
+    [-Port <Int>]
+    [-AliasName <String>]
+    [-Force]
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -61,19 +61,19 @@ Use the Cmdlet to add the self signed iLO certificate to the appliance.
 
 ## Parameters
 
-### -Path &lt;&gt;
+### -Path &lt;System.IO.FileInfo&gt;
 
 The filesystem object of the X.509 public SSL certificate to add.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` objects or Name property values.
 
@@ -85,7 +85,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` objects or Name property 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -97,19 +97,19 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -CertObject &lt;&gt;
+### -CertObject &lt;Object&gt;
 
 Specify the public Base64 X.509 certificate of the remote endpoint to add to the appliances internal trust store.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -ComputerName &lt;&gt;
+### -ComputerName &lt;String&gt;
 
 The remote endpoint Computer Name or IP Address.  This should match either the X.509 Subject or Subject Alternative Name fields with in the cert object.  If omitting the `-CertObject` parameter, the Cmdlet will initiate a TCP connection in order to retrieve the certificate.  Use the `-Port` parameter to specify the correct TCP port the SSL/TLS service is listening on.
 
@@ -121,7 +121,7 @@ The remote endpoint Computer Name or IP Address.  This should match either the X
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Port &lt;&gt;
+### -Port &lt;Int&gt;
 
 Specify the TCP port where the TLS/SSL service is bound and listening on.  Use with the `-ComputerName` parameter.
 
@@ -133,7 +133,7 @@ Specify the TCP port where the TLS/SSL service is bound and listening on.  Use w
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -AliasName &lt;&gt;
+### -AliasName &lt;String&gt;
 
 Specify an alias name of the certificate stored on the appliance.  By default, the Subject name will be used.
 
@@ -145,7 +145,7 @@ Specify an alias name of the certificate stored on the appliance.  By default, t
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Force &lt;&gt;
+### -Force &lt;SwitchParameter&gt;
 
 Use to force add an untrusted (self signed or a certificate authority certificate has not been added to the appliance) certificate into the appliances trust store.
 

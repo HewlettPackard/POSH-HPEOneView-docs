@@ -8,7 +8,7 @@ description: Retrieve appliance Remote Support configuration.
 
 ```text
 Get-HPOVRemoteSupport
-    [-ApplianceConnection <>]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -53,7 +53,7 @@ Returns the existing Remote Support configuration of the appliance.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

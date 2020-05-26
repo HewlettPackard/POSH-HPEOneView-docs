@@ -8,7 +8,7 @@ description: Start HPOV Library Verbose Trace.
 
 ```text
 Start-HPOVLibraryTrace
-    [-Location <>]
+    [-Location <String>]
     [<CommonParameters>]
 ```
 
@@ -28,7 +28,7 @@ Transcript stopped, output file is C:\Users\Administrator\1604251128_HPOV_transc
 
 ## Parameters
 
-### -Location &lt;&gt;
+### -Location &lt;String&gt;
 
 Location where to store the log file.
 

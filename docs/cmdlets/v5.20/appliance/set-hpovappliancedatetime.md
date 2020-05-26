@@ -8,18 +8,18 @@ description: Update Appliance Date/Time Configuration.
 
 ```text
 Set-HPOVApplianceDateTime
-    [-SyncWithHost] <>
-    [-Locale <>]
-    [-ApplianceConnection <>]
+    [-SyncWithHost]
+    [-Locale <String>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 Set-HPOVApplianceDateTime
-    [-NTPServers] <>
-    [-PollingInterval <>]
-    [-Locale <>]
-    [-ApplianceConnection <>]
+    [-NTPServers] <Array>
+    [-PollingInterval <Int32>]
+    [-Locale <String>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -53,31 +53,31 @@ This example passes in updated values to set for the appliance networking config
 
 ## Parameters
 
-### -SyncWithHost &lt;&gt;
+### -SyncWithHost &lt;SwitchParameter&gt;
 
 Specify to configure the embedded hypervisor integration agent to sync time with the hypervisor host.  Only used with a virtual machine appliance.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -NTPServers &lt;&gt;
+### -NTPServers &lt;Array&gt;
 
 An array of IPv4 Addresses or Fully Qualified Domain Names.  You must ensure DNS is configured on the appliance correctly..
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -PollingInterval &lt;&gt;
+### -PollingInterval &lt;Int32&gt;
 
 The polling interval in seconds the NTP client will use to verify time drift.
 
@@ -89,7 +89,7 @@ The polling interval in seconds the NTP client will use to verify time drift.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Locale &lt;&gt;
+### -Locale &lt;String&gt;
 
 Specify the language local for the appliance
 
@@ -105,7 +105,7 @@ Specify the language local for the appliance
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

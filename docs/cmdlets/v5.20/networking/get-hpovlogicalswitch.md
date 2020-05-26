@@ -8,18 +8,18 @@ description: Retrieve Logical Switch resources.
 
 ```text
 Get-HPOVLogicalSwitch
-    [-Name <>]
-    [-Scope <>]
-    [-Label <>]
-    [-ApplianceConnection <>]
-    [-exportFile <>]
+    [-Name <String>]
+    [-Scope <Object>]
+    [-Label <String>]
+    [-ApplianceConnection <Object>]
+    [-exportFile <String>]
     [<CommonParameters>]
 ```
 
 ```text
 Get-HPOVLogicalSwitch
-    [-InputObject] <>
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -82,7 +82,7 @@ Retrieve the specified MyLogicalSwitch1 resource from the default appliance conn
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 Name of the Logical Switch resource.  Supports wildcard * character.
 
@@ -94,19 +94,19 @@ Name of the Logical Switch resource.  Supports wildcard * character.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 Provide an `[HPOneView.Appliance.TaskResource]` object and the Cmdlet will return the associated Logical Switch resource created from the `New-HPOVLogicalSwitch` Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;&gt;
+### -Scope &lt;Object&gt;
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
@@ -123,7 +123,7 @@ Filter resources based on provided Scope membership.  By default, all resources 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Label &lt;&gt;
+### -Label &lt;String&gt;
 
 Specify the label associated with resources.
 
@@ -135,7 +135,7 @@ Specify the label associated with resources.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ExportFile &lt;&gt;
+### -ExportFile &lt;String&gt;
 
 Save the Logical Switch resource(s) to the specified JSON file.
 
@@ -147,7 +147,7 @@ Save the Logical Switch resource(s) to the specified JSON file.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 

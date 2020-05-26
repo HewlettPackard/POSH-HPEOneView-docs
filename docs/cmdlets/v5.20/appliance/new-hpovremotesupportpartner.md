@@ -8,11 +8,11 @@ description: Retrieve Remote Support Default Site.
 
 ```text
 New-HPOVRemoteSupportPartner
-    [-Name] <>
-    [-Type] <>
-    [-PartnerId] <>
-    [-Default <>]
-    [-ApplianceConnection <>]
+    [-Name] <String>
+    [-Type] <String>
+    [-PartnerId] <Int>
+    [-Default]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -40,43 +40,43 @@ Define a new authorized HPE Support partner, and make it the default appliance S
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 Supply the Partner Name.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -PartnerID &lt;&gt;
+### -PartnerID &lt;Int&gt;
 
 The HPE Authorized Support and/or Reseller Partner ID.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Type &lt;&gt;
+### -Type &lt;String&gt;
 
 Specify if the authorized partner is a Reseller or Support.  If requiring a partner that is both Support and a Reseller, create it twice.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Default &lt;&gt;
+### -Default &lt;SwitchParameter&gt;
 
 Use to specify if the partner should be the default Support or Reseller partner.  All supproted monitored resources by default will inherit from the appliance.
 
@@ -88,7 +88,7 @@ Use to specify if the partner should be the default Support or Reseller partner.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

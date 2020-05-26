@@ -8,7 +8,7 @@ description: Set the Default Appliance Connection.
 
 ```text
 Set-HPOVApplianceDefaultConnection
-    [-ApplianceConnection] <>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -58,7 +58,7 @@ Display the current appliance connections, then set the new default to "Applianc
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 [Aliases `-Connection`]
 
@@ -66,7 +66,7 @@ Either the `[HPOneView.Appliance.Connection]` object, full or partial value of t
 
 | Aliases | Appliance, Connection |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |

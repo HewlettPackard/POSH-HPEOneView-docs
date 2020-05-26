@@ -8,25 +8,25 @@ description: Refresh the state of a server resource.
 
 ```text
 Update-HPOVServer
-    [-InputObject] <>
-    [-Async <>]
-    [-ApplianceConnection] <>
+    [-InputObject] <Object>
+    [-Async]
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ```text
 Update-HPOVServer
-    [-InputObject] <>
-    [-Credential] <>
-    [-Hostname] <>
-    [-Force <>]
-    [-Async <>]
+    [-InputObject] <Object>
+    [-Credential] <String>
+    [-Hostname] <String>
+    [-Force]
+    [-Async]
     [<CommonParameters>]
 ```
 
 ```text
 Update-HPOVServer
-    [-ApplianceConnection] <>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -54,19 +54,19 @@ Refresh the state of the server hardware device assigned to the Server Profile o
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 The Server object or Name, or can be a Server Profile object.
 
 | Aliases | name, Server |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -78,43 +78,43 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -Hostname &lt;&gt;
+### -Hostname &lt;String&gt;
 
 When a server hardware resource is in an Error state where the iLO IP Address or FQDN has changed, or the HPE OneView managed configuration is no longer present, you will need to provide the IP Address or FQDN.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Credential &lt;&gt;
+### -Credential &lt;String&gt;
 
 Provide a PSCredential object instead of the Username and Password.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Force &lt;&gt;
+### -Force &lt;SwitchParameter&gt;
 
 If the target server resource is repoting to be claimed by another external manager, use this parameter to force claim from the connected appliance.
 

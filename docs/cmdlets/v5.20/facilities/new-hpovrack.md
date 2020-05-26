@@ -8,16 +8,16 @@ description: Create a new facilities Rack.
 
 ```text
 New-HPOVRack
-    [-Name] <>
-    [-ThermalLimit <>]
-    [-SerialNumber <>]
-    [-PartNumber <>]
+    [-Name] <String>
+    [-ThermalLimit <Int>]
+    [-SerialNumber <String>]
+    [-PartNumber <String>]
     [-Model <>]
-    [-Depth <>]
-    [-Height <>]
-    [-UHeight <>]
-    [-Width <>]
-    [-ApplianceConnection <>]
+    [-Depth <Int>]
+    [-Height <Int>]
+    [-UHeight <Int>]
+    [-Width <Int>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -57,19 +57,19 @@ Create new "Rack-230" rack resource.
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 Name of resource.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ThermalLimit &lt;&gt;
+### -ThermalLimit &lt;Int&gt;
 
 Thermal limit supported by the rack, in BTU"s.
 
@@ -81,7 +81,7 @@ Thermal limit supported by the rack, in BTU"s.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SerialNumber &lt;&gt;
+### -SerialNumber &lt;String&gt;
 
 Serial number of the rack resource.
 
@@ -93,7 +93,7 @@ Serial number of the rack resource.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -PartNumber &lt;&gt;
+### -PartNumber &lt;String&gt;
 
 Part number of the rack resource.
 
@@ -105,7 +105,7 @@ Part number of the rack resource.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Depth &lt;&gt;
+### -Depth &lt;Int&gt;
 
 Rack depth, in millimeters.
 
@@ -119,7 +119,7 @@ Default: 1000
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Height &lt;&gt;
+### -Height &lt;Int&gt;
 
 Height of rack, in millimeters.
 
@@ -133,7 +133,7 @@ Default: 2004
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -UHeight &lt;&gt;
+### -UHeight &lt;Int&gt;
 
 The rack unit height of the rack.
 
@@ -147,7 +147,7 @@ Default: 40
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Width &lt;&gt;
+### -Width &lt;Int&gt;
 
 Width of rack, in millimeters.
 
@@ -161,7 +161,7 @@ Default: 600
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

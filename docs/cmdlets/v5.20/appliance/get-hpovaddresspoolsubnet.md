@@ -8,8 +8,8 @@ description: Retrieve address pool subnet information.
 
 ```text
 Get-HPOVAddressPoolSubnet
-    [-NetworkId <>]
-    [-ApplianceConnection <>]
+    [-NetworkId <String>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -47,7 +47,7 @@ Get the specified IPv4 address pool.
 
 ## Parameters
 
-### -NetworkId &lt;&gt;
+### -NetworkId &lt;String&gt;
 
 Specify the Network ID of the subnet in order to filter the results.
 
@@ -59,7 +59,7 @@ Specify the Network ID of the subnet in order to filter the results.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

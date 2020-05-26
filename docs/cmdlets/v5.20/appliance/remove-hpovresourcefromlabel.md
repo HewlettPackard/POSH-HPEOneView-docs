@@ -8,17 +8,17 @@ description: Remove association of resource with existing Label.
 
 ```text
 Remove-HPOVResourceFromLabel
-    [-Name] <>
-    [-InputObject] <>
-    [-ApplianceConnection <>]
+    [-Name] <String>
+    [-InputObject] <Object>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 Remove-HPOVResourceFromLabel
-    [-InputObject] <>
-    [-RemoveAllLabelsFromResource] <>
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-RemoveAllLabelsFromResource]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -48,43 +48,43 @@ Remove all label associations from network resources.
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 The name of the Label associated with the resource.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 The resource to remove associatation with the label.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -RemoveAllLabelsFromResource &lt;&gt;
+### -RemoveAllLabelsFromResource &lt;SwitchParameter&gt;
 
 Use to remove all associated labels with the provide resource.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

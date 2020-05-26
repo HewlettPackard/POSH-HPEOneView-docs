@@ -8,28 +8,28 @@ description: Initiate a connection to an HPE OneView appliance.
 
 ```text
 Connect-HPOVMgmt
-    [-Hostname] <>
-    [-UserName] <>
-    [-AuthLoginDomain] <>
-    [-Password] <>
-    [-LoginAcknowledge <>]
+    [-Hostname] <String>
+    [-UserName] <String>
+    [-AuthLoginDomain] <String>
+    [-Password] <Object>
+    [-LoginAcknowledge]
     [<CommonParameters>]
 ```
 
 ```text
 Connect-HPOVMgmt
-    [-Hostname] <>
-    [-Certificate <>]
-    [-LoginAcknowledge <>]
+    [-Hostname] <String>
+    [-Certificate <Object>]
+    [-LoginAcknowledge]
     [<CommonParameters>]
 ```
 
 ```text
 Connect-HPOVMgmt
-    [-Hostname] <>
-    [-Credential] <>
-    [-AuthLoginDomain] <>
-    [-LoginAcknowledge <>]
+    [-Hostname] <String>
+    [-Credential] <PSCredential>
+    [-AuthLoginDomain] <String>
+    [-LoginAcknowledge]
     [<CommonParameters>]
 ```
 
@@ -77,19 +77,19 @@ Connect to a specific appliance using a digital badge.
 
 ## Parameters
 
-### -Hostname &lt;&gt;
+### -Hostname &lt;String&gt;
 
 The hostname or IP address of the appliance.
 
 | Aliases | Appliance, Computername |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -AuthLoginDomain &lt;&gt;
+### -AuthLoginDomain &lt;String&gt;
 
 The Directory Name for LDAP/Active Directory authentication, or LOCAL for appliance internal user accounts.  
     
@@ -97,13 +97,13 @@ Default is determined by connecting to the requested appliance and retrieving th
 
 | Aliases | authProvider |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | LOCAL |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -UserName &lt;&gt;
+### -UserName &lt;String&gt;
 
 {% hint style="warning" %}
 This parameter is now obsolete.  Please transition to using the `-Credential` parameter.
@@ -114,13 +114,13 @@ User name to authenticate.
 
 | Aliases | u, user |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Password &lt;&gt;
+### -Password &lt;Object&gt;
 
 {% hint style="warning" %}
 This parameter is now obsolete.  Please transition to using the `-Credential` parameter.
@@ -131,25 +131,25 @@ Password to log into the appliance.  Can be either `[System.String]` or SecureSt
 
 | Aliases | p |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Credential &lt;&gt;
+### -Credential &lt;PSCredential&gt;
 
 Use this parameter if you want to provide a PSCredential object instead.
 
 | Aliases | PSCredential |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -LoginAcknowledge &lt;&gt;
+### -LoginAcknowledge &lt;SwitchParameter&gt;
 
 When a Login Message has been configured and acknowledgement is Required, use this parameter to acknowledge it during the initial call.  Otherwise, if omitted, and a Login Banner acknowledgement is required, the caller will be prompted.  This prompt does not support the `-Confirm` parameter.
 
@@ -161,7 +161,7 @@ When a Login Message has been configured and acknowledgement is Required, use th
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Certificate &lt;&gt;
+### -Certificate &lt;Object&gt;
 
 Provide the X.509 certificate/SmartCard digital badge in order to authenticate to a supported appliance.  `Two-factor` authentication must be configured on the appliance in order to provide a X.509 certificate.
 

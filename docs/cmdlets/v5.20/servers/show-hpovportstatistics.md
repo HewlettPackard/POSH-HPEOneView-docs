@@ -8,16 +8,16 @@ description: Display Interconnect Port Statistics.
 
 ```text
 Show-HPOVPortStatistics
-    [-Interconnect] <>
-    [-Port] <>
-    [-ApplianceConnection] <>
+    [-Interconnect] <Object>
+    [-Port] <Object>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ```text
 Show-HPOVPortStatistics
-    [-Port] <>
-    [-ApplianceConnection] <>
+    [-Port] <Object>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -124,37 +124,37 @@ Display all available ports of the provided Interconnect, using an Interconnect 
 
 ## Parameters
 
-### -Port &lt;&gt;
+### -Port &lt;Object&gt;
 
 The name of the Interconnect Port ID (i.e. X1 or D5) to retrieve.  If no Port ID is provided, all Ports of the Interconnect will be returned.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Interconnect &lt;&gt;
+### -Interconnect &lt;Object&gt;
 
 The Interconnect resource the Port ID is a member of.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | false |

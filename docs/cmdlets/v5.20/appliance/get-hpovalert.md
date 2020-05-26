@@ -8,16 +8,16 @@ description: Get an alert.
 
 ```text
 Get-HPOVAlert
-    [-InputObject <>]
-    [-Severity <>]
-    [-HealthCategory <>]
-    [-AssignedToUser <>]
-    [-AlertState <>]
-    [-Count <>]
-    [-TimeSpan <>]
-    [-Start <>]
-    [-End <>]
-    [-ApplianceConnection <>]
+    [-InputObject <Object>]
+    [-Severity <String>]
+    [-HealthCategory <String>]
+    [-AssignedToUser <String>]
+    [-AlertState <String>]
+    [-Count <String>]
+    [-TimeSpan <Timespan>]
+    [-Start <DateTime>]
+    [-End <DateTime>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -115,7 +115,7 @@ Return all alerts Starting at `2016-12`-01 to `2016-12`-09.
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 Alerts for the specified resource will be returned.
 
@@ -127,7 +127,7 @@ Alerts for the specified resource will be returned.
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Severity &lt;&gt;
+### -Severity &lt;String&gt;
 
 Alerts with given severity will be returned.  Allowed severity values are:
 
@@ -145,7 +145,7 @@ Alerts with given severity will be returned.  Allowed severity values are:
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -HealthCategory &lt;&gt;
+### -HealthCategory &lt;String&gt;
 
 Alerts with given health category will be returned.  Allowed health category values are: 
 
@@ -178,7 +178,7 @@ Alerts with given health category will be returned.  Allowed health category val
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -AssignedToUser &lt;&gt;
+### -AssignedToUser &lt;String&gt;
 
 Alerts assigned to the given user will be returned.
 
@@ -190,7 +190,7 @@ Alerts assigned to the given user will be returned.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -AlertState &lt;&gt;
+### -AlertState &lt;String&gt;
 
 Alerts with given alert state will be returned.  State values include Active and Cleared
 
@@ -202,7 +202,7 @@ Alerts with given alert state will be returned.  State values include Active and
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Count &lt;&gt;
+### -Count &lt;String&gt;
 
 Return only the number of alerts from the appliance.  Can be combined with other parameters to return a pruned list of alerts.
 
@@ -214,7 +214,7 @@ Return only the number of alerts from the appliance.  Can be combined with other
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Timespan &lt;&gt;
+### -Timespan &lt;Timespan&gt;
 
 Return the number of alerts created from today to the defined number of days.
 
@@ -226,7 +226,7 @@ Return the number of alerts created from today to the defined number of days.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Start &lt;&gt;
+### -Start &lt;DateTime&gt;
 
 Return alerts that were created starting from the specified date.  Hour, Min and Seconds will not be used, only Month, Day and Year of the DateTime value.
 
@@ -238,7 +238,7 @@ Return alerts that were created starting from the specified date.  Hour, Min and
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -End &lt;&gt;
+### -End &lt;DateTime&gt;
 
 Return alerts that were created on the specified date.  Hour, Min and Seconds will not be used, only Month, Day and Year of the DateTime value.
 
@@ -250,7 +250,7 @@ Return alerts that were created on the specified date.  Hour, Min and Seconds wi
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 

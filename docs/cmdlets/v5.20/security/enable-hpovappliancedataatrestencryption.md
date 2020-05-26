@@ -8,8 +8,8 @@ description: Turn on HPE Synergy Composer data at rest encryption.
 
 ```text
 Enable-HPOVApplianceDataAtRestEncryption
-    [-Location <>]
-    [-ApplianceConnection <>]
+    [-Location <string>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -49,7 +49,7 @@ Enable data at rest encryption, where the AEK is saved to the working directory.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -61,7 +61,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Confirm &lt;&gt;
+### -Confirm &lt;SwitchParameter&gt;
 
 
 
@@ -73,7 +73,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Location &lt;&gt;
+### -Location &lt;string&gt;
 
 The file location where to save the appliance encription key (AEK).  The AEK should be stored in a secure location.
 
@@ -85,7 +85,7 @@ The file location where to save the appliance encription key (AEK).  The AEK sho
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -WhatIf &lt;&gt;
+### -WhatIf &lt;SwitchParameter&gt;
 
 
 

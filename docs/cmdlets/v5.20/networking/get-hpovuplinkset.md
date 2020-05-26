@@ -8,21 +8,21 @@ description: Retrieve Uplink Set resource(s).
 
 ```text
 Get-HPOVUplinkSet
-    [-Name] <>
-    [-LogicalInterconnect] <>
-    [-Report <>]
-    [-ApplianceConnection] <>
-    [-ExportFile] <>
+    [-Name] <String>
+    [-LogicalInterconnect] <Object>
+    [-Report]
+    [-ApplianceConnection] <Object>
+    [-ExportFile] <String>
     [<CommonParameters>]
 ```
 
 ```text
 Get-HPOVUplinkSet
-    [-LogicalInterconnect] <>
-    [-Type] <>
-    [-Report <>]
-    [-ApplianceConnection] <>
-    [-ExportFile] <>
+    [-LogicalInterconnect] <Object>
+    [-Type] <String>
+    [-Report]
+    [-ApplianceConnection] <Object>
+    [-ExportFile] <String>
     [<CommonParameters>]
 ```
 
@@ -66,31 +66,31 @@ Get the "Production Networks" Uplink Set that is associated with "Encl1-LI" Logi
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 Name of Uplink Set
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -LogicalInterconnect &lt;&gt;
+### -LogicalInterconnect &lt;Object&gt;
 
 Name of the Logical Interconnect to show associated Uplink Set.
 
 | Aliases | liname |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -type &lt;&gt;
+### -type &lt;String&gt;
 
 Specify the Uplink Set Type to display.  Will display all Uplink Sets of the type provided.  Allowed values:
 
@@ -99,13 +99,13 @@ Specify the Uplink Set Type to display.  Will display all Uplink Sets of the typ
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -report &lt;&gt;
+### -report &lt;SwitchParameter&gt;
 
 Generate a report of the defined Uplink Sets.  Includes Uplink Set type, networks, redundancy report, and assigned uplink ports.
 
@@ -117,25 +117,25 @@ Generate a report of the defined Uplink Sets.  Includes Uplink Set type, network
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -exportFile &lt;&gt;
+### -exportFile &lt;String&gt;
 
 Export the found Uplink Set resource objects to JSON files in the specified directory.
 
 | Aliases | x, export |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |

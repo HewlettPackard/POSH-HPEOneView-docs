@@ -8,31 +8,31 @@ description: Add a supported SAN Manager
 
 ```text
 Add-HPOVSanManager
-    [-Type] <>
-    [-Hostname] <>
-    [-Port <>]
-    [-Username] <>
-    [-Password] <>
-    [-Credential <>]
-    [-UseSsl <>]
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-Type] <String>
+    [-Hostname] <String>
+    [-Port <Int32>]
+    [-Username] <String>
+    [-Password] <Object>
+    [-Credential <PSCredential>]
+    [-UseSsl]
+    [-Async]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
 ```text
 Add-HPOVSanManager
-    [-Type] <>
-    [-Hostname] <>
-    [-SnmpUserName] <>
-    [-Port <>]
-    [-SnmpAuthLevel] <>
-    [-SnmpAuthProtocol] <>
-    [-SnmpAuthPassword] <>
-    [-SnmpPrivProtocol] <>
-    [-SnmpPrivPassword] <>
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-Type] <String>
+    [-Hostname] <String>
+    [-SnmpUserName] <String>
+    [-Port <Int32>]
+    [-SnmpAuthLevel] <String>
+    [-SnmpAuthProtocol] <String>
+    [-SnmpAuthPassword] <Object>
+    [-SnmpPrivProtocol] <String>
+    [-SnmpPrivPassword] <Object>
+    [-Async]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -112,7 +112,7 @@ Add two Cisco FC SAN switches as SAN Managers.
 
 ## Parameters
 
-### -Type &lt;&gt;
+### -Type &lt;String&gt;
 
 SAN Manager type to add.  Accepted values are:
 
@@ -127,25 +127,25 @@ SAN Manager type to add.  Accepted values are:
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Hostname &lt;&gt;
+### -Hostname &lt;String&gt;
 
 FQDN or IP Address of the SAN Manager
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Port &lt;&gt;
+### -Port &lt;Int32&gt;
 
 TCP Port of the SAN Manager.  The default port for Brocade Network Advisor is "5989".  The default port for HPN 5900CP is "161".
 
@@ -157,43 +157,43 @@ TCP Port of the SAN Manager.  The default port for Brocade Network Advisor is "5
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Username &lt;&gt;
+### -Username &lt;String&gt;
 
 Username used to authenticate and manage the SAN Manager.  This is only applicable for BNA SAN Manager.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Password &lt;&gt;
+### -Password &lt;Object&gt;
 
 Password used to authenticate and manage the SAN Manager.  This is only applicable for BNA SAN Manager.  Can be either String or `[System.Security.SecureString]` type.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SnmpUserName &lt;&gt;
+### -SnmpUserName &lt;String&gt;
 
 The SNMPv3 Community User Name.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SnmpAuthLevel &lt;&gt;
+### -SnmpAuthLevel &lt;String&gt;
 
 The SNMPv3 Authentication Level.  Allowed values are:
 
@@ -203,13 +203,13 @@ The SNMPv3 Authentication Level.  Allowed values are:
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | None |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SnmpAuthProtocol &lt;&gt;
+### -SnmpAuthProtocol &lt;String&gt;
 
 SNMPv3 Password Encryption Protocol. Allowed values are:
 
@@ -218,25 +218,25 @@ SNMPv3 Password Encryption Protocol. Allowed values are:
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SnmpAuthPassword &lt;&gt;
+### -SnmpAuthPassword &lt;Object&gt;
 
 SNMPv3 UserName Password.  Can be either `[System.String]` or `[System.Security.SecureString]` type.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SnmpPrivProtocol &lt;&gt;
+### -SnmpPrivProtocol &lt;String&gt;
 
 SNMPv3 Privacy Protocol.  Allowed values are:
 
@@ -245,25 +245,25 @@ SNMPv3 Privacy Protocol.  Allowed values are:
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SnmpPrivPassword &lt;&gt;
+### -SnmpPrivPassword &lt;Object&gt;
 
 SNMPv3 Privacy Encryption Password.  Can be either String or `[System.Security.SecureString]` type.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -UseSsl &lt;&gt;
+### -UseSsl &lt;SwitchParameter&gt;
 
 Use to enable SSL communication with the SAN Manager (specifically for the Brocade Network Advisor or BrocadeFOS SAN Manager type
 
@@ -275,7 +275,7 @@ Use to enable SSL communication with the SAN Manager (specifically for the Broca
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -287,7 +287,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -299,7 +299,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Credential &lt;&gt;
+### -Credential &lt;PSCredential&gt;
 
 Use this parameter if you want to provide a PSCredential object.
 

@@ -8,8 +8,8 @@ description: Change the appliance SNMPv3 Engine ID
 
 ```text
 Set-HPOVApplianceSnmpV3EngineId
-    [-EngineID] <>
-    [-ApplianceConnection <>]
+    [-EngineID] <string>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -33,7 +33,7 @@ Default example
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -45,13 +45,13 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EngineID &lt;&gt;
+### -EngineID &lt;string&gt;
 
 A 16 hexacharacter value. `[E.g]`. "0x73cb660f279b9e"
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |

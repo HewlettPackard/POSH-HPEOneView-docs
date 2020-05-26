@@ -8,7 +8,7 @@ description: Wait for Appliance services to start.
 
 ```text
 Wait-HPOVApplianceStart
-    [-Hostname] <>
+    [-Hostname] <String>
     [<CommonParameters>]
 ```
 
@@ -35,13 +35,13 @@ Wait for the appliance to start, and specify the appliance name.
 
 ## Parameters
 
-### -Hostname &lt;&gt;
+### -Hostname &lt;String&gt;
 
 Specify the appliance FQDN or IP Address without a valid connection created by using `Connect-HPOVMgmt`.
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |

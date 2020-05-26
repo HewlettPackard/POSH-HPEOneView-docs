@@ -8,9 +8,9 @@ description: Remove storage volume snapshot resource(s).
 
 ```text
 Remove-HPOVStorageVolumeSnapshot
-    [-InputObject] <>
-    [-ApplianceConnection] <>
-    [-Async <>]
+    [-InputObject] <Object>
+    [-ApplianceConnection] <Object>
+    [-Async]
     [<CommonParameters>]
 ```
 
@@ -39,19 +39,19 @@ Remove all Storage Volume Snapshots managed by HPE OneView.
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 Provide the snapshot resource object to remove from the appliance.
 
 | Aliases | Snapshot |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -63,7 +63,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
@@ -71,13 +71,13 @@ Default Value: ${Global:ConnectSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -WhatIf &lt;&gt;
+### -WhatIf &lt;SwitchParameter&gt;
 
 
 
@@ -89,7 +89,7 @@ Default Value: ${Global:ConnectSessions} | ? Default
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Confirm &lt;&gt;
+### -Confirm &lt;SwitchParameter&gt;
 
 
 

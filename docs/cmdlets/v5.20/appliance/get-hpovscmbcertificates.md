@@ -8,19 +8,19 @@ description: Get State Change Message Bus certificates.
 
 ```text
 Get-HPOVScmbCertificates
-    [-Location <>]
-    [-InstallApplianceRootCA <>]
-    [-ApplianceConnection <>]
+    [-Location <String>]
+    [-InstallApplianceRootCA]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
 ```text
 Get-HPOVScmbCertificates
-    [-Password] <>
-    [-Location <>]
-    [-ConvertToPFx] <>
-    [-InstallApplianceRootCA <>]
-    [-ApplianceConnection <>]
+    [-Password] <SecureString>
+    [-Location <String>]
+    [-ConvertToPFx]
+    [-InstallApplianceRootCA]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -58,7 +58,7 @@ Prompt for secure password input and pipe the value to convert the `[cert.pem]` 
 
 ## Parameters
 
-### -Location &lt;&gt;
+### -Location &lt;String&gt;
 
 Directory to store the SSL certificates.  If the directory doesn"t exist, it will be created.
 
@@ -70,32 +70,32 @@ Directory to store the SSL certificates.  If the directory doesn"t exist, it wil
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ConvertToPFx &lt;&gt;
+### -ConvertToPFx &lt;SwitchParameter&gt;
 
 Aliases [-pfx]        
 Convert rabbitmq_readonly client certificate to PFX format for .Net consumption.
 
 | Aliases | pfx |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Password &lt;&gt;
+### -Password &lt;SecureString&gt;
 
 Password that will be used to encrypt the PFX client certificate.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -InstallApplianceRootCA &lt;&gt;
+### -InstallApplianceRootCA &lt;SwitchParameter&gt;
 
 hoose to install the appliance root certificate to the current users Trusted Root Authorities store.
 
@@ -107,7 +107,7 @@ hoose to install the appliance root certificate to the current users Trusted Roo
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

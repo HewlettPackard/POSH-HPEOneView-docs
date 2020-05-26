@@ -8,7 +8,7 @@ description: Import an appliance SSL Certificate.
 
 ```text
 Import-HPOVSslCertificate
-    [-ApplianceConnection] <>
+    [-ApplianceConnection] <Array>
     [<CommonParameters>]
 ```
 
@@ -41,13 +41,13 @@ Import the SSL Certificate from all connected sessions.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | ${Global:ConnectedSessions} |
 | Accept pipeline input? | true (ByValue) |

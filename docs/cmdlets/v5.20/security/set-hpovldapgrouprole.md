@@ -8,35 +8,35 @@ description: Assign or change roles for LDAP Groups.
 
 ```text
 Set-HPOVLdapGroupRole
-    [-InputObject] <>
-    [-Roles] <>
-    [-UserName] <>
-    [-Password] <>
-    [-Credential <>]
-    [-ApplianceConnection] <>
+    [-InputObject] <Object>
+    [-Roles] <Array>
+    [-UserName] <String>
+    [-Password] <System.Security.SecureString>
+    [-Credential <PSCredential>]
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ```text
 Set-HPOVLdapGroupRole
-    [-InputObject] <>
-    [-Roles] <>
-    [-ScopePermissions <>]
-    [-UserName] <>
-    [-Password] <>
-    [-Credential <>]
-    [-ApplianceConnection] <>
+    [-InputObject] <Object>
+    [-Roles] <Array>
+    [-ScopePermissions <Array>]
+    [-UserName] <String>
+    [-Password] <System.Security.SecureString>
+    [-Credential <PSCredential>]
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ```text
 Set-HPOVLdapGroupRole
-    [-InputObject] <>
-    [-ScopePermissions <>]
-    [-UserName] <>
-    [-Password] <>
-    [-Credential <>]
-    [-ApplianceConnection] <>
+    [-InputObject] <Object>
+    [-ScopePermissions <Array>]
+    [-UserName] <String>
+    [-Password] <System.Security.SecureString>
+    [-Credential <PSCredential>]
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -87,31 +87,31 @@ Change the Scope permissions for the specified authentication directory group by
 
 ## Parameters
 
-### -AuthProvider &lt;&gt;
+### -AuthProvider &lt;String&gt;
 
 LDAP/Active Directory Domain Name
 
 | Aliases |  |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 Directroy Group to add.
 
 | Aliases | g, name, GroupName, Group |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Roles &lt;&gt;
+### -Roles &lt;Array&gt;
 
 The role(s) to assign to the Directroy Group, in `[System.Collections.ArrayList]` format.  Accepted values are noted within the ApplianceRoles property of the `[HPOneView.Appliance.Connection]` object stored in the $Global:ConnectedSessions variable.
 
@@ -119,49 +119,49 @@ Example: $roles = "Server administrator","Network administrator"
 
 | Aliases | r, role |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -UserName &lt;&gt;
+### -UserName &lt;String&gt;
 
 Directory Username to authenticate with
 
 | Aliases | u |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Password &lt;&gt;
+### -Password &lt;System.Security.SecureString&gt;
 
 Directory User account password
 
 | Aliases | p |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -Credential &lt;&gt;
+### -Credential &lt;PSCredential&gt;
 
 Use this parameter if you want to provide a PSCredential object instead.
 
@@ -173,7 +173,7 @@ Use this parameter if you want to provide a PSCredential object instead.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ScopePermissions &lt;&gt;
+### -ScopePermissions &lt;Array&gt;
 
 Array collection of Hashtable<Role; Scope>.  Will overwrite existing scope to role mappings.  To indiate all resouroures, use 'All' as the value.
 

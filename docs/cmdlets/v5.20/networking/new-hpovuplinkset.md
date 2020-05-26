@@ -8,58 +8,58 @@ description: Create a new Uplink Set.
 
 ```text
 New-HPOVUplinkSet
-    [-InputObject] <>
-    [-Name] <>
-    [-Type <>]
-    [-Networks] <>
-    [-NativeEthNetwork] <>
-    [-NetworkSets <>]
-    [-CopyNetworksFromNetworkSet <>]
-    [-UplinkPorts] <>
-    [-EthMode <>]
-    [-LacpTimer <>]
-    [-LacpLoadbalancingMode <>]
-    [-PrimaryPort <>]
-    [-ConsistencyChecking <>]
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-Name] <String>
+    [-Type <String>]
+    [-Networks] <Array>
+    [-NativeEthNetwork] <Object>
+    [-NetworkSets <array>]
+    [-CopyNetworksFromNetworkSet]
+    [-UplinkPorts] <Array>
+    [-EthMode <String>]
+    [-LacpTimer <String>]
+    [-LacpLoadbalancingMode <String>]
+    [-PrimaryPort <String>]
+    [-ConsistencyChecking <string>]
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 New-HPOVUplinkSet
-    [-Name] <>
-    [-Type <>]
-    [-Passthru] <>
-    [-InputObject] <>
-    [-Networks] <>
-    [-NativeEthNetwork] <>
-    [-NetworkSets <>]
-    [-CopyNetworksFromNetworkSet <>]
-    [-UplinkPorts] <>
-    [-EthMode <>]
-    [-LacpTimer <>]
-    [-LacpLoadbalancingMode <>]
-    [-PrimaryPort <>]
-    [-FcUplinkSpeed <>]
-    [-EnableTrunking <>]
-    [-ConsistencyChecking <>]
-    [-ApplianceConnection <>]
+    [-Name] <String>
+    [-Type <String>]
+    [-Passthru]
+    [-InputObject] <Object>
+    [-Networks] <Array>
+    [-NativeEthNetwork] <Object>
+    [-NetworkSets <array>]
+    [-CopyNetworksFromNetworkSet]
+    [-UplinkPorts] <Array>
+    [-EthMode <String>]
+    [-LacpTimer <String>]
+    [-LacpLoadbalancingMode <String>]
+    [-PrimaryPort <String>]
+    [-FcUplinkSpeed <String>]
+    [-EnableTrunking <Boolean>]
+    [-ConsistencyChecking <string>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 New-HPOVUplinkSet
-    [-InputObject] <>
-    [-Name] <>
-    [-Type <>]
-    [-Networks] <>
-    [-UplinkPorts] <>
-    [-FcUplinkSpeed <>]
-    [-EnableTrunking <>]
-    [-ConsistencyChecking <>]
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-Name] <String>
+    [-Type <String>]
+    [-Networks] <Array>
+    [-UplinkPorts] <Array>
+    [-FcUplinkSpeed <String>]
+    [-EnableTrunking <Boolean>]
+    [-ConsistencyChecking <string>]
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -140,31 +140,31 @@ Create a Synergy ImageStreamer Uplink Set.
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 Either a Logical Interconnect Group (Get-HPOVLogicalInterconnectGroup) or Logical Interconnect (Get-HPOVLogicalInterconnect) resource object.
 
 | Aliases | li, lig, ligName, Resource |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 Logical Uplink set Name
 
 | Aliases | usName |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Type &lt;&gt;
+### -Type &lt;String&gt;
 
 Uplink set Type.  Accepted values are 
 
@@ -184,31 +184,31 @@ ImageStreamer is only supported with Synergy infrastructure.  When assigning an 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Networks &lt;&gt;
+### -Networks &lt;Array&gt;
 
 Array of Ethernet Network Names
 
 | Aliases | usNetworks |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | @() |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -NativeEthNetwork &lt;&gt;
+### -NativeEthNetwork &lt;Object&gt;
 
 The valid name of the Native Ethernet Network that is a member of the usNetworks parameter.
 
 | Aliases | usNativeEthNetwork, Native, PVID |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -UplinkPorts &lt;&gt;
+### -UplinkPorts &lt;Array&gt;
 
 Array of uplink ports with "BAYID:FacePlatePortID".  When configuring a Synergy infrastructure, the Uplink Port format needs to be "EnclosureID:BayID:FacePlatePortID".
 
@@ -221,13 +221,13 @@ Synergy VC FC `Sub-Interface` `[e.g]`. "Bay2:Q1.1","Bay2:Q2.1" or "Bay5:Q1.2","B
 
 | Aliases | usUplinkPorts |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | @() |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EthMode &lt;&gt;
+### -EthMode &lt;String&gt;
 
 Sets the LACP mode on the uplink ports. Valid for ETHERNET Uplinks only. Accepted Values:
 
@@ -242,7 +242,7 @@ Sets the LACP mode on the uplink ports. Valid for ETHERNET Uplinks only. Accepte
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -LacpTimer &lt;&gt;
+### -LacpTimer &lt;String&gt;
 
 Set the LACP Timer value, which sets the lacpdu frequecy to the LACP peer.  Accepted values:
 
@@ -257,7 +257,7 @@ Set the LACP Timer value, which sets the lacpdu frequecy to the LACP peer.  Acce
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -PrimaryPort &lt;&gt;
+### -PrimaryPort &lt;String&gt;
 
 Specify the Primary Uplink Port when EthMode is set to Failover.  Parameter is not valid when EthMode parameter is set to Auto.
 
@@ -271,7 +271,7 @@ Example: "Bay1:X1"
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -fcUplinkSpeed &lt;&gt;
+### -fcUplinkSpeed &lt;String&gt;
 
 Specify the Fibre Channel Uplink Port speed.  Accepted values:
 
@@ -288,7 +288,7 @@ Specify the Fibre Channel Uplink Port speed.  Accepted values:
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EnableTrunking &lt;&gt;
+### -EnableTrunking &lt;Boolean&gt;
 
 Use this parameter to enable FC port trunking.  This parameter is only supported with HPE 16Gb or newer Virtual Connect Fibre Channel fabric modules.
 
@@ -300,7 +300,7 @@ Use this parameter to enable FC port trunking.  This parameter is only supported
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -312,7 +312,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
@@ -324,7 +324,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -ConsistencyChecking &lt;&gt;
+### -ConsistencyChecking &lt;string&gt;
 
 Use to indicate if the group policy will be tracked to with the deployed and configured resource. Allowed values:
 
@@ -341,7 +341,7 @@ Default: Exact
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -CopyNetworksFromNetworkSet &lt;&gt;
+### -CopyNetworksFromNetworkSet &lt;SwitchParameter&gt;
 
 When specifying the `-NetworkSets` parameter, you can choose to copy the networks from the associated set(s) only.  This will not set the Uplink Set to track the network set(s).
 
@@ -353,7 +353,7 @@ When specifying the `-NetworkSets` parameter, you can choose to copy the network
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -NetworkSets &lt;&gt;
+### -NetworkSets &lt;array&gt;
 
 Use this to specify one or more network sets to track the network configuration.
 
@@ -365,7 +365,7 @@ Use this to specify one or more network sets to track the network configuration.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -LacpLoadbalancingMode &lt;&gt;
+### -LacpLoadbalancingMode &lt;String&gt;
 
 When configuring Synergy Virtual Connect uplink sets, the LACP load balancing algorithm can be modified.
 
@@ -377,13 +377,13 @@ When configuring Synergy Virtual Connect uplink sets, the LACP load balancing al
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Passthru &lt;&gt;
+### -Passthru &lt;SwitchParameter&gt;
 
 Use this parameter to return a helper object with the `New-HPOVLogicalInterconnectGroup` `-UplinkSet` parameter.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |

@@ -8,7 +8,7 @@ description: Retrieve Remote Support Default Site.
 
 ```text
 Get-HPOVRemoteSupportDefaultSite
-    [-ApplianceConnection <>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -38,7 +38,7 @@ Get the configured Remote Support default site.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

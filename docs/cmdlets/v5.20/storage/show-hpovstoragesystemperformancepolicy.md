@@ -8,8 +8,8 @@ description: Show available Nimble Performance Policies.
 
 ```text
 Show-HPOVStorageSystemPerformancePolicy
-    [-InputObject] <>
-    [-Name <>]
+    [-InputObject] <Object>
+    [-Name <string>]
     [<CommonParameters>]
 ```
 
@@ -29,19 +29,19 @@ Default example
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 One or more storage systems from `Get-HPOVStorageSystem`.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Name &lt;&gt;
+### -Name &lt;string&gt;
 
 Provide a name of the performance policy to return.
 

@@ -8,8 +8,8 @@ description: Change appliance connection active permissions.
 
 ```text
 Push-HPOVAppliancePermission
-    [-SetActivePermissions] <>
-    [-ApplianceConnection <>]
+    [-SetActivePermissions] <Object>
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -54,19 +54,19 @@ Change active permissions by filtering for a specific Scope.
 
 ## Parameters
 
-### -SetActivePermissions &lt;&gt;
+### -SetActivePermissions &lt;Object&gt;
 
 One or more `[HPOneView.Appliance.ConnectionPermission]` objects from an `[HPOneView.Appliance.Connection]` ActivePermissions property.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

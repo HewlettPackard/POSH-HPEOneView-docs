@@ -8,7 +8,7 @@ description: Enable appliance complex password policy.
 
 ```text
 Enable-HPOVApplianceComplexPasswords
-    [-ApplianceConnection <>]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -41,7 +41,7 @@ Enable appliance complex password policy.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

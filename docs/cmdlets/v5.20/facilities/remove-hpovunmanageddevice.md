@@ -8,9 +8,9 @@ description: Remove an Unmanaged Device.
 
 ```text
 Remove-HPOVUnmanagedDevice
-    [-UnmanagedDevice] <>
-    [-force <>]
-    [-ApplianceConnection] <>
+    [-UnmanagedDevice] <Object>
+    [-force]
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -46,7 +46,7 @@ Get all Unmanaged Devices on the appliance and remove them.
 
 ## Parameters
 
-### -UnmanagedDevice &lt;&gt;
+### -UnmanagedDevice &lt;Object&gt;
 
 Alias [-name, `-uri`]
 
@@ -54,13 +54,13 @@ The Name, URI or Object of the Unmanaged Device to remove.
 
 | Aliases | uri, name |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -force &lt;&gt;
+### -force &lt;SwitchParameter&gt;
 
 Set to `force-remove` the resource.
 
@@ -74,19 +74,19 @@ When the request is accepted by the appliance, it does not return an Async Task 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -WhatIf &lt;&gt;
+### -WhatIf &lt;SwitchParameter&gt;
 
 
 
@@ -98,7 +98,7 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Confirm &lt;&gt;
+### -Confirm &lt;SwitchParameter&gt;
 
 
 

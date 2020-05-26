@@ -8,9 +8,9 @@ description: Modify an existing rack member U location.
 
 ```text
 Set-HPOVRackMemberLocation
-    [-InputObject] <>
-    [-ULocation] <>
-    [-ApplianceConnection <>]
+    [-InputObject] <HPOneView.Facilities.RackMember>
+    [-ULocation] <Int>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -38,31 +38,31 @@ Update the "DL380 1" rack member raising its current rack unit location by 5.
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;HPOneView.Facilities.RackMember&gt;
 
 The rack member to modify from `Get-HPOVRackMember`.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -ULocation &lt;&gt;
+### -ULocation &lt;Int&gt;
 
 The new Rack Unit location where the resource is located.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

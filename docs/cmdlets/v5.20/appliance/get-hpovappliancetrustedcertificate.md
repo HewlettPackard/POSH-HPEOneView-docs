@@ -8,16 +8,16 @@ description: Get X.509 SSL certificates from the appliace trusted store.
 
 ```text
 Get-HPOVApplianceTrustedCertificate
-    [-Name <>]
-    [-CertificateAuthoritiesOnly <>]
-    [-ApplianceConnection <>]
+    [-Name <String>]
+    [-CertificateAuthoritiesOnly]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 Get-HPOVApplianceTrustedCertificate
-    [-InputObject] <>
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -61,7 +61,7 @@ Return the trusted certificate of the provided server hardware resource in the a
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 The Alias Name of the certificate.  Please know that wildcard is not supported.
 
@@ -73,7 +73,7 @@ The Alias Name of the certificate.  Please know that wildcard is not supported.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` objects or Name property values.
 
@@ -85,7 +85,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` objects or Name property 
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -CertificateAuthoritiesOnly &lt;&gt;
+### -CertificateAuthoritiesOnly &lt;SwitchParameter&gt;
 
 This parameter will filter for trusted certificate authorities only.
 
@@ -97,13 +97,13 @@ This parameter will filter for trusted certificate authorities only.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 Provide an `[HPOneView.ServerHardware]` or `[HPOneView.Enclosure]` resource to return associated appliance trusted certificate(s).
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |

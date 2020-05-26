@@ -8,9 +8,9 @@ description: Create new Scope.
 
 ```text
 New-HPOVScope
-    [-Name] <>
-    [-Description <>]
-    [-ApplianceConnection <>]
+    [-Name] <String>
+    [-Description <String>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -77,19 +77,19 @@ Create a "MyFinanceScope" with a descrition for all appliance connections.
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 Name of the scope to create.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Description &lt;&gt;
+### -Description &lt;String&gt;
 
 Administrator account of the target iLO.
 
@@ -101,7 +101,7 @@ Administrator account of the target iLO.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

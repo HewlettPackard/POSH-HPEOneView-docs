@@ -8,27 +8,27 @@ description: Configure supported resource Remote Support settings.
 
 ```text
 Set-HPOVRemoteSupportSetting
-    [-InputObject] <>
-    [-PrimaryContact] <>
-    [-SecondaryContact <>]
-    [-ServicePartner <>]
-    [-Reseller <>]
-    [-ContractType <>]
-    [-SupportID <>]
-    [-NewSerialNumber <>]
-    [-NewProductNumber <>]
-    [-Enabled] <>
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-PrimaryContact] <Object>
+    [-SecondaryContact <Object>]
+    [-ServicePartner <Object>]
+    [-Reseller <Object>]
+    [-ContractType <String>]
+    [-SupportID <String>]
+    [-NewSerialNumber <String>]
+    [-NewProductNumber <String>]
+    [-Enabled]
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 Set-HPOVRemoteSupportSetting
-    [-InputObject] <>
-    [-Disabled] <>
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-Disabled]
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -67,31 +67,31 @@ Update the Enclosures with new primary and secondary contacts, returning async t
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 Either a Server Hardware or Enclosure resource to get the configured Remote Support collection settings.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -PrimaryContact &lt;&gt;
+### -PrimaryContact &lt;Object&gt;
 
 Primary Remote Support Contact user object.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SecondaryContact &lt;&gt;
+### -SecondaryContact &lt;Object&gt;
 
 Secondary Remote Support Contact user object.
 
@@ -103,7 +103,7 @@ Secondary Remote Support Contact user object.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ServicePartner &lt;&gt;
+### -ServicePartner &lt;Object&gt;
 
 Authorized HPE service partner object from `Get-HPOVRemoteSupportPartner`.
 
@@ -115,7 +115,7 @@ Authorized HPE service partner object from `Get-HPOVRemoteSupportPartner`.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Reseller &lt;&gt;
+### -Reseller &lt;Object&gt;
 
 Authorized HPE reseller partner object from `Get-HPOVRemoteSupportPartner`.
 
@@ -127,7 +127,7 @@ Authorized HPE reseller partner object from `Get-HPOVRemoteSupportPartner`.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ContractType &lt;&gt;
+### -ContractType &lt;String&gt;
 
 Use to override the contract type.  If specifying a different contract type, you must supply the SupportID.  Allowed values are:
 
@@ -142,7 +142,7 @@ Use to override the contract type.  If specifying a different contract type, you
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SupportID &lt;&gt;
+### -SupportID &lt;String&gt;
 
 The support Contract ID.  You must specify the type of contract by using the `-ContractType` parameter.
 
@@ -154,7 +154,7 @@ The support Contract ID.  You must specify the type of contract by using the `-C
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -NewSerialNumber &lt;&gt;
+### -NewSerialNumber &lt;String&gt;
 
 Use to update the HPE support backend with an updated serial number.
 
@@ -166,7 +166,7 @@ Use to update the HPE support backend with an updated serial number.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -NewProductNumber &lt;&gt;
+### -NewProductNumber &lt;String&gt;
 
 Use to update the HPE support backend with an updated product number
 
@@ -178,7 +178,7 @@ Use to update the HPE support backend with an updated product number
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -190,7 +190,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -202,25 +202,25 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -Disabled &lt;&gt;
+### -Disabled &lt;SwitchParameter&gt;
 
 Use to disable HPE OneView Remote Support configuration on the appliance.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Enabled &lt;&gt;
+### -Enabled &lt;SwitchParameter&gt;
 
 Use to enable HPE OneView Remote Support configuration on the appliance.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |

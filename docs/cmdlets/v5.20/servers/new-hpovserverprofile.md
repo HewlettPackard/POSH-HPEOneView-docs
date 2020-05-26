@@ -8,140 +8,140 @@ description: Create or Import a Server Profile
 
 ```text
 New-HPOVServerProfile
-    [-Name] <>
-    [-AssignmentType] <>
-    [-Enclosure <>]
-    [-EnclosureBay <>]
-    [-Server <>]
-    [-Description <>]
-    [-Connections <>]
-    [-EnclosureGroup <>]
-    [-ServerHardwareType] <>
-    [-Firmware <>]
-    [-Baseline <>]
-    [-FirmwareInstallMode <>]
-    [-FirmwareActivationMode <>]
-    [-FirmwareActivateDateTime <>]
-    [-ForceInstallFirmware <>]
-    [-Bios <>]
-    [-BiosSettings] <>
-    [-BootMode] <>
-    [-PxeBootPolicy] <>
-    [-ManageBoot <>]
-    [-BootOrder] <>
-    [-SecureBoot <>]
-    [-LocalStorage <>]
-    [-StorageController <>]
-    [-Affinity] <>
-    [-MacAssignment] <>
-    [-WwnAssignment] <>
-    [-SnAssignment] <>
-    [-SerialNumber] <>
-    [-Uuid] <>
-    [-HideUnusedFlexNics] <>
-    [-OSDeploymentPlan <>]
-    [-OSDeploymentAttributes <>]
-    [-Scope <>]
-    [-Async <>]
-    [-ApplianceConnection <>]
-    [-Passthru] <>
+    [-Name] <String>
+    [-AssignmentType] <String>
+    [-Enclosure <Object>]
+    [-EnclosureBay <Int32>]
+    [-Server <Object>]
+    [-Description <String>]
+    [-Connections <Array>]
+    [-EnclosureGroup <Object>]
+    [-ServerHardwareType] <Object>
+    [-Firmware]
+    [-Baseline <Object>]
+    [-FirmwareInstallMode <String>]
+    [-FirmwareActivationMode <String>]
+    [-FirmwareActivateDateTime <DateTime>]
+    [-ForceInstallFirmware]
+    [-Bios]
+    [-BiosSettings] <Array>
+    [-BootMode] <String>
+    [-PxeBootPolicy] <String>
+    [-ManageBoot]
+    [-BootOrder] <Array>
+    [-SecureBoot <String>]
+    [-LocalStorage]
+    [-StorageController <Object>]
+    [-Affinity] <String>
+    [-MacAssignment] <String>
+    [-WwnAssignment] <String>
+    [-SnAssignment] <String>
+    [-SerialNumber] <String>
+    [-Uuid] <String>
+    [-HideUnusedFlexNics] <Boolean>
+    [-OSDeploymentPlan <Object>]
+    [-OSDeploymentAttributes <Array>]
+    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
+    [-Async]
+    [-ApplianceConnection <Object>]
+    [-Passthru]
     [<CommonParameters>]
 ```
 
 ```text
 New-HPOVServerProfile
-    [-Name] <>
-    [-ServerProfileTemplate <>]
-    [-AssignmentType] <>
-    [-Enclosure <>]
-    [-EnclosureBay <>]
-    [-Server <>]
-    [-Description <>]
-    [-Connections <>]
-    [-FCConnectionAddresses <>]
-    [-Firmware <>]
-    [-Baseline <>]
-    [-FirmwareInstallMode <>]
-    [-FirmwareActivationMode <>]
-    [-FirmwareActivateDateTime <>]
-    [-ForceInstallFirmware <>]
-    [-ManageBoot <>]
-    [-LocalStorage <>]
-    [-StorageController <>]
-    [-MacAssignment] <>
-    [-WwnAssignment] <>
-    [-SnAssignment] <>
-    [-SerialNumber] <>
-    [-Uuid] <>
-    [-HideUnusedFlexNics] <>
-    [-IscsiIPv4Address] <>
-    [-ISCSIInitatorName] <>
-    [-ChapSecret] <>
-    [-MutualChapSecret] <>
-    [-OSDeploymentPlan <>]
-    [-OSDeploymentAttributes <>]
-    [-Scope <>]
-    [-Async <>]
-    [-ApplianceConnection <>]
-    [-Passthru] <>
+    [-Name] <String>
+    [-ServerProfileTemplate <Object>]
+    [-AssignmentType] <String>
+    [-Enclosure <Object>]
+    [-EnclosureBay <Int32>]
+    [-Server <Object>]
+    [-Description <String>]
+    [-Connections <Array>]
+    [-FCConnectionAddresses <Hashtable>]
+    [-Firmware]
+    [-Baseline <Object>]
+    [-FirmwareInstallMode <String>]
+    [-FirmwareActivationMode <String>]
+    [-FirmwareActivateDateTime <DateTime>]
+    [-ForceInstallFirmware]
+    [-ManageBoot]
+    [-LocalStorage]
+    [-StorageController <Object>]
+    [-MacAssignment] <String>
+    [-WwnAssignment] <String>
+    [-SnAssignment] <String>
+    [-SerialNumber] <String>
+    [-Uuid] <String>
+    [-HideUnusedFlexNics] <Boolean>
+    [-IscsiIPv4Address] <Array>
+    [-ISCSIInitatorName] <String>
+    [-ChapSecret] <System.Security.SecureString>
+    [-MutualChapSecret] <System.Security.SecureString>
+    [-OSDeploymentPlan <Object>]
+    [-OSDeploymentAttributes <Array>]
+    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
+    [-Async]
+    [-ApplianceConnection <Object>]
+    [-Passthru]
     [<CommonParameters>]
 ```
 
 ```text
 New-HPOVServerProfile
-    [-Name] <>
-    [-SANStorage <>]
-    [-HostOStype] <>
-    [-StorageVolume] <>
-    [-AssignmentType] <>
-    [-Enclosure <>]
-    [-EnclosureBay <>]
-    [-Server <>]
-    [-Description <>]
-    [-Connections <>]
-    [-EnclosureGroup <>]
-    [-ServerHardwareType] <>
-    [-Firmware <>]
-    [-Baseline <>]
-    [-FirmwareInstallMode <>]
-    [-FirmwareActivationMode <>]
-    [-FirmwareActivateDateTime <>]
-    [-ForceInstallFirmware <>]
-    [-Bios <>]
-    [-BiosSettings] <>
-    [-BootMode] <>
-    [-PxeBootPolicy] <>
-    [-ManageBoot <>]
-    [-BootOrder] <>
-    [-SecureBoot <>]
-    [-LocalStorage <>]
-    [-StorageController <>]
-    [-EvenPathDisabled <>]
-    [-OddPathDisabled <>]
-    [-Affinity] <>
-    [-MacAssignment] <>
-    [-WwnAssignment] <>
-    [-SnAssignment] <>
-    [-SerialNumber] <>
-    [-Uuid] <>
-    [-HideUnusedFlexNics] <>
-    [-OSDeploymentPlan <>]
-    [-OSDeploymentAttributes <>]
-    [-Scope <>]
-    [-Async <>]
-    [-ApplianceConnection <>]
-    [-Passthru] <>
+    [-Name] <String>
+    [-SANStorage]
+    [-HostOStype] <String>
+    [-StorageVolume] <Object>
+    [-AssignmentType] <String>
+    [-Enclosure <Object>]
+    [-EnclosureBay <Int32>]
+    [-Server <Object>]
+    [-Description <String>]
+    [-Connections <Array>]
+    [-EnclosureGroup <Object>]
+    [-ServerHardwareType] <Object>
+    [-Firmware]
+    [-Baseline <Object>]
+    [-FirmwareInstallMode <String>]
+    [-FirmwareActivationMode <String>]
+    [-FirmwareActivateDateTime <DateTime>]
+    [-ForceInstallFirmware]
+    [-Bios]
+    [-BiosSettings] <Array>
+    [-BootMode] <String>
+    [-PxeBootPolicy] <String>
+    [-ManageBoot]
+    [-BootOrder] <Array>
+    [-SecureBoot <String>]
+    [-LocalStorage]
+    [-StorageController <Object>]
+    [-EvenPathDisabled]
+    [-OddPathDisabled]
+    [-Affinity] <String>
+    [-MacAssignment] <String>
+    [-WwnAssignment] <String>
+    [-SnAssignment] <String>
+    [-SerialNumber] <String>
+    [-Uuid] <String>
+    [-HideUnusedFlexNics] <Boolean>
+    [-OSDeploymentPlan <Object>]
+    [-OSDeploymentAttributes <Array>]
+    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
+    [-Async]
+    [-ApplianceConnection <Object>]
+    [-Passthru]
     [<CommonParameters>]
 ```
 
 ```text
 New-HPOVServerProfile
-    [-Import <>]
-    [-ProfileObj] <>
-    [-AssignmentType] <>
-    [-Server <>]
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-Import]
+    [-ProfileObj] <Object>
+    [-AssignmentType] <String>
+    [-Server <Object>]
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -393,19 +393,19 @@ Retrieve list of all JSON files in C:\profiles, then pass each file and its full
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 The name of the server profile resource to be created.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -AssignmentType &lt;&gt;
+### -AssignmentType &lt;String&gt;
 
 The instruction of how the profile will be assigned.  The profile can be assigned to an empty server bay, a specific server, or unassigned.
 
@@ -413,13 +413,13 @@ Valid values for this parameter are "unassigned", "server", or "bay"
 
 | Aliases | assign |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Enclosure &lt;&gt;
+### -Enclosure &lt;Object&gt;
 
 The blade enclosure resource containing the bay where the server profile will be assigned.  Only required if assignmentType is "bay"
 
@@ -431,7 +431,7 @@ The blade enclosure resource containing the bay where the server profile will be
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EnclosureBay &lt;&gt;
+### -EnclosureBay &lt;Int32&gt;
 
 The empty enclosure bay to assign the server profile.
 
@@ -443,7 +443,7 @@ The empty enclosure bay to assign the server profile.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Server &lt;&gt;
+### -Server &lt;Object&gt;
 
 The server hardware resource where the new profile is to be applied.  This is normally retrieved with a "Get-HPOVServer" call, and the Server state property should be "NoProfileApplied".  Can also be the Server Hardware name or URI.
 
@@ -455,7 +455,7 @@ The server hardware resource where the new profile is to be applied.  This is no
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Description &lt;&gt;
+### -Description &lt;String&gt;
 
 Optional description for this server profile.
 
@@ -467,7 +467,7 @@ Optional description for this server profile.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ServerProfileTemplate &lt;&gt;
+### -ServerProfileTemplate &lt;Object&gt;
 
 Provide a Server Profile Template Object or Resource Name.
 
@@ -479,7 +479,7 @@ Provide a Server Profile Template Object or Resource Name.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Connections &lt;&gt;
+### -Connections &lt;Array&gt;
 
 The network connections that are to be part of this new server profile.  This an array of profile connection objects which may be created with "New-HPOVServerProfileConnection".
 
@@ -495,7 +495,7 @@ Default: No connections
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EnclosureGroup &lt;&gt;
+### -EnclosureGroup &lt;Object&gt;
 
 The Enclosure Group resource the Server Profile will be bound to.  Only required when Server value is "Unassigned".
 
@@ -507,19 +507,19 @@ The Enclosure Group resource the Server Profile will be bound to.  Only required
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ServerHardwareType &lt;&gt;
+### -ServerHardwareType &lt;Object&gt;
 
 The Server Hardware Type reource the Server Profile will be bound to.  Required when Server value is "Unassigned" or assigning to an empty device bay in an enclosure which must include the `-enclosure` and `-enclosureBay` parameters.
 
 | Aliases | sht |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Firmware &lt;&gt;
+### -Firmware &lt;SwitchParameter&gt;
 
 Enable Firmware Management.  Cannot be enabled with Server Hardware Type does not support Firmware Management (i.e. BL G7 servers.)
 
@@ -531,7 +531,7 @@ Enable Firmware Management.  Cannot be enabled with Server Hardware Type does no
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Baseline &lt;&gt;
+### -Baseline &lt;Object&gt;
 
 Firmware baseline to assign.  Can be either Baseline Name or URI.
 
@@ -543,7 +543,7 @@ Firmware baseline to assign.  Can be either Baseline Name or URI.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -FirmwareInstallMode &lt;&gt;
+### -FirmwareInstallMode &lt;String&gt;
 
 Specify the Firmware Baseline Policy mode.  Avialable options are:
 
@@ -559,7 +559,7 @@ Specify the Firmware Baseline Policy mode.  Avialable options are:
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ForceInstallFirmware &lt;&gt;
+### -ForceInstallFirmware &lt;SwitchParameter&gt;
 
 Using this parameter will force the bundled firmware components to install when the Server Profile is applied to a server.  This will downgrade firmware if the component firmware is newer than what the SPP Baseline contains.
 
@@ -571,7 +571,7 @@ Using this parameter will force the bundled firmware components to install when 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -FirmwareActivationMode &lt;&gt;
+### -FirmwareActivationMode &lt;String&gt;
 
 Specify the firmware activation policy.  Avialable options are:
 
@@ -587,7 +587,7 @@ Specify the firmware activation policy.  Avialable options are:
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -FirmwareActivateDateTime &lt;&gt;
+### -FirmwareActivateDateTime &lt;DateTime&gt;
 
 Using this parameter will force the bundled firmware components to install when the Server Profile is applied to a server.  This will downgrade firmware if the component firmware is newer than what the SPP Baseline contains.
 
@@ -599,7 +599,7 @@ Using this parameter will force the bundled firmware components to install when 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Bios &lt;&gt;
+### -Bios &lt;SwitchParameter&gt;
 
 Enable BIOS Settings Management.  Cannot be enabled with Server Hardware Type does not support BIOS Management (i.e. BL G7 servers.)
 
@@ -611,19 +611,19 @@ Enable BIOS Settings Management.  Cannot be enabled with Server Hardware Type do
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -BiosSettings &lt;&gt;
+### -BiosSettings &lt;Array&gt;
 
 BIOS Settings that are to be managed.  You can get the BIOS settings available from `Get-HPOVServerHarwareType` and the returned biosSettings property.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | @() |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -BootMode &lt;&gt;
+### -BootMode &lt;String&gt;
 
 Specify the Gen9 Boot Envrionment.
 
@@ -646,13 +646,13 @@ Default: BIOS
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | BIOS |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -PxeBootPolicy &lt;&gt;
+### -PxeBootPolicy &lt;String&gt;
 
 Controls the ordering of the network modes available to the Flexible LOM (FLB); for example, IPv4 and IPv6.
 
@@ -670,13 +670,13 @@ Default: Auto
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | Auto |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ManageBoot &lt;&gt;
+### -ManageBoot &lt;SwitchParameter&gt;
 
 Enable Boot Order Management.  Also required for Connection boot enablement.  If this is disabled ($False), then PXE or FC BfS settings are disabled within the entire Server Profile.
 
@@ -690,7 +690,7 @@ Default: $True
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -BootOrder &lt;&gt;
+### -BootOrder &lt;Array&gt;
 
 Boot Order settings to be managed.
           
@@ -702,13 +702,13 @@ Gen9 UEFI Default Boot Order: "HardDisk"
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | @() |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -LocalStorage &lt;&gt;
+### -LocalStorage &lt;SwitchParameter&gt;
 
 Enable local storage settings to be managed on the server.  Will only enable embedded Smart Array controller management.
 
@@ -720,7 +720,7 @@ Enable local storage settings to be managed on the server.  Will only enable emb
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ImportLogicalDisk &lt;&gt;
+### -ImportLogicalDisk &lt;SwitchParameter&gt;
 
 DEPRECATED.  Please use the `New-HPOVServerProfileLogicalDiskController` Cmdlet.
 
@@ -732,7 +732,7 @@ DEPRECATED.  Please use the `New-HPOVServerProfileLogicalDiskController` Cmdlet.
 | Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
-### -Initialize &lt;&gt;
+### -Initialize &lt;SwitchParameter&gt;
 
 DEPRECATED.  Please use the `New-HPOVServerProfileLogicalDiskController` Cmdlet.
 
@@ -744,7 +744,7 @@ DEPRECATED.  Please use the `New-HPOVServerProfileLogicalDiskController` Cmdlet.
 | Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
-### -ControllerMode &lt;&gt;
+### -ControllerMode &lt;String&gt;
 
 DEPRECATED.  Please use the `New-HPOVServerProfileLogicalDiskController` Cmdlet.
 
@@ -756,7 +756,7 @@ DEPRECATED.  Please use the `New-HPOVServerProfileLogicalDiskController` Cmdlet.
 | Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
-### -StorageController &lt;&gt;
+### -StorageController &lt;Object&gt;
 
 A collection (System.Collections.ArrayList  or `[System.Collections.ArrayList]`) of LogicalDisk Controller configuration objects from `New-HPOVServerProfileLogicalDisk` and `New-HPOVServerProfileLogicalDiskController`.
 
@@ -768,7 +768,7 @@ A collection (System.Collections.ArrayList  or `[System.Collections.ArrayList]`)
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SANStorage &lt;&gt;
+### -SANStorage &lt;SwitchParameter&gt;
 
 Optional.  Enable SAN Storage Management within the Server Profile.
 
@@ -780,7 +780,7 @@ Optional.  Enable SAN Storage Management within the Server Profile.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SecureBoot &lt;&gt;
+### -SecureBoot &lt;String&gt;
 
 Specify if secure boot should be Unmanaged, Enabled or Disabled for Gen10 and newer servers. Boot Mode must be set to 'UEFI Optimized'.
 
@@ -792,7 +792,7 @@ Specify if secure boot should be Unmanaged, Enabled or Disabled for Gen10 and ne
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -HostOStype &lt;&gt;
+### -HostOStype &lt;String&gt;
 
 Optional. Specify the Host OS type, which will set the Host OS value when HPE OneView created the Host object on the Storage System.  Accepted values:
 
@@ -824,13 +824,13 @@ Optional. Specify the Host OS type, which will set the Host OS value when HPE On
 
 | Aliases | OS |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -StorageVolume &lt;&gt;
+### -StorageVolume &lt;Object&gt;
 
 Optional. Array of Storage Volume resources to attach.  Can be created by using the `New-HPOVServerProfileAttachVolume` Cmdlet.  This parameter does not accept a Storage Volume resource from the `Get-HPOVStorageVolume` Cmdlet.
 
@@ -856,13 +856,13 @@ The format of the Storage Volume resource should be a PsCustomObject PowerShell 
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EvenPathDisabled &lt;&gt;
+### -EvenPathDisabled &lt;SwitchParameter&gt;
 
 Enable to disable even paths in the attached storage volume(s).
 
@@ -874,7 +874,7 @@ Enable to disable even paths in the attached storage volume(s).
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -OddPathDisabled &lt;&gt;
+### -OddPathDisabled &lt;SwitchParameter&gt;
 
 Enable to disable odd paths in the attached storage volume(s).
 
@@ -886,7 +886,7 @@ Enable to disable odd paths in the attached storage volume(s).
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Affinity &lt;&gt;
+### -Affinity &lt;String&gt;
 
 In a server profile, the Affinity control sets the `remove-and`-replace behavior for blade servers. If you apply a server profile to a blade server and the server is subsequently removed from the device bay, the Affinity setting controls whether the server profile is reapplied when you insert a server blade into the empty bay. Server profiles for rack servers do not have affinity.
 
@@ -894,37 +894,37 @@ Accepted values are either "Bay" or "BayAndServer".  Default is "Bay".
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | Bay |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -MacAssignment &lt;&gt;
+### -MacAssignment &lt;String&gt;
 
 Optional setting for MAC address assignment.  May be Virtual or Physical.  Use Virtual if you need to specify a UserDefined value when using the `New-HPOVServerProfileConnection` helper Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | Virtual |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -WwnAssignment &lt;&gt;
+### -WwnAssignment &lt;String&gt;
 
 Optional setting for WWN assignment.  May be Virtual or Physical.  Use Virtual if you need to specify a UserDefined value when using the `New-HPOVServerProfileConnection` helper Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | Virtual |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SnAssignment &lt;&gt;
+### -SnAssignment &lt;String&gt;
 
 Optional setting for serial number and UUID assignment.  May be Virtual, Physical or UserDefined.
 
@@ -932,37 +932,37 @@ Default: Virtual serial number and UUID assignment
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | Virtual |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SerialNumber &lt;&gt;
+### -SerialNumber &lt;String&gt;
 
 When specifying snAssignment parameter to UserDefined, you can provide a user defined Serial Number value.  You must also specify the UUID by using the uuid parameter.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Uuid &lt;&gt;
+### -Uuid &lt;String&gt;
 
 When specifying snAssignment parameter to UserDefined, you can provide a user defined UUID value.  You must also specify the Serial Number by using the serialnumber parameter.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -HideUnusedFlexNics &lt;&gt;
+### -HideUnusedFlexNics &lt;Boolean&gt;
 
 This setting provides the ability to hide unused FlexNICs from the operating system.
 
@@ -978,13 +978,13 @@ By default, Hide Unused FlexNICs is enabled. This setting can be changed only wh
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | True |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IscsiIPv4Address &lt;&gt;
+### -IscsiIPv4Address &lt;Array&gt;
 
 Parameter is required when creating a Server Profile and specifying a ServerProfileTemplate parameter value.
 
@@ -992,13 +992,13 @@ A collection of IPv4 Addresses to allocate for found iSCSI initiators that are B
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ISCSIInitatorName &lt;&gt;
+### -ISCSIInitatorName &lt;String&gt;
 
 Parameter is required when creating a Server Profile and specifying a ServerProfileTemplate parameter value which contain iSCSI Connections that are bootable.
 
@@ -1006,13 +1006,13 @@ Value to provide for the iSCSI Initiator.  All iSCSI Connections will share this
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ChapSecret &lt;&gt;
+### -ChapSecret &lt;System.Security.SecureString&gt;
 
 Parameter is required when creating a Server Profile, specifying a ServerProfileTemplate parameter value, and a Connection iSCSI Authentication Protocol is set to Chap or MutualChap.
 
@@ -1020,13 +1020,13 @@ The CHAP challange secret.  Accepts ASCII or HEX values.  If providing an ASCII 
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -MutualChapSecret &lt;&gt;
+### -MutualChapSecret &lt;System.Security.SecureString&gt;
 
 Parameter is required when creating a Server Profile, specifying a ServerProfileTemplate parameter value, and a Connection iSCSI Authentication Protocol is set to MutualChap.
     
@@ -1034,13 +1034,13 @@ The Mutual CHAP challange secret.  Accepts ASCII or HEX values.  If providing an
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -OSDeploymentPlan &lt;&gt;
+### -OSDeploymentPlan &lt;Object&gt;
 
 The HPE Synergy Image Streamer OS deployment plan from `Get-HPOVOSDeploymentPlan`.
 
@@ -1052,7 +1052,7 @@ The HPE Synergy Image Streamer OS deployment plan from `Get-HPOVOSDeploymentPlan
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -OSDeploymentAttributes &lt;&gt;
+### -OSDeploymentAttributes &lt;Array&gt;
 
 Configured OS Deployment Plan parameters from `Get-HPOVOSDeploymentPlanAttribute`.
 
@@ -1064,7 +1064,7 @@ Configured OS Deployment Plan parameters from `Get-HPOVOSDeploymentPlanAttribute
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -1076,7 +1076,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
@@ -1088,7 +1088,7 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -Import &lt;&gt;
+### -Import &lt;SwitchParameter&gt;
 
 Switch to import Server Profile JSON object or file.
 
@@ -1100,31 +1100,31 @@ Switch to import Server Profile JSON object or file.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ProfileObj &lt;&gt;
+### -ProfileObj &lt;Object&gt;
 
 Source Server Profile JSON object or file.
 
 | Aliases | location, file |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Passthru &lt;&gt;
+### -Passthru &lt;SwitchParameter&gt;
 
 Use this parameter to return the modified Server Profile object.  In order to save the changes, please use the `Save-HPOVServerProfile` Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;&gt;
+### -Scope &lt;HPOneView.Appliance.ScopeCollection[]&gt;
 
 Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
 
@@ -1136,7 +1136,7 @@ Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially 
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -FCConnectionAddresses &lt;&gt;
+### -FCConnectionAddresses &lt;Hashtable&gt;
 
 When providing a server profile template to create a server profile from and it contains unmanaged Fibre Channel connections, use this parameter to specify the connection ID and the FC WWPN value that should be associated with the connection.
 

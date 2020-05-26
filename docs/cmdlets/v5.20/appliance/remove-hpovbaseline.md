@@ -8,9 +8,9 @@ description: Delete a baseline or hotfix from an appliance repository.
 
 ```text
 Remove-HPOVBaseline
-    [-InputObject] <>
-    [-ApplianceConnection <>]
-    [-Force <>]
+    [-InputObject] <Object>
+    [-ApplianceConnection <Object>]
+    [-Force]
     [<CommonParameters>]
 ```
 
@@ -38,19 +38,19 @@ Remove the specified "My Custom Baseline" baseline.
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 The SPP Baseline or hotfix resource object.  Can be accepted via pipeline input.
 
 | Aliases | b, Baseline |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Force &lt;&gt;
+### -Force &lt;SwitchParameter&gt;
 
 Force remove the resource.
 
@@ -62,7 +62,7 @@ Force remove the resource.
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
@@ -74,7 +74,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -WhatIf &lt;&gt;
+### -WhatIf &lt;SwitchParameter&gt;
 
 
 
@@ -86,7 +86,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Confirm &lt;&gt;
+### -Confirm &lt;SwitchParameter&gt;
 
 
 

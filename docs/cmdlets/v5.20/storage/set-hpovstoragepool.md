@@ -8,9 +8,9 @@ description: Modify storage pool managed state.
 
 ```text
 Set-HPOVStoragePool
-    [-InputObject] <>
-    [-Managed] <>
-    [-ApplianceConnection <>]
+    [-InputObject] <HPOneView.Storage.StoragePool[]>
+    [-Managed] <bool>
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -59,7 +59,7 @@ Change the managed state to "unmanaged" of the specified storage pools.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -71,25 +71,25 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;HPOneView.Storage.StoragePool[]&gt;
 
 One or more `[HPOneView.Storage.StoragePool]` resources from `Get-HPOVStoragePool`.
 
 | Aliases | Pool |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Managed &lt;&gt;
+### -Managed &lt;bool&gt;
 
 Specify a boolean value to modify the storage pools managed state.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |

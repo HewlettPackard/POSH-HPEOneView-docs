@@ -8,13 +8,13 @@ description: Add rack resource to DataCenter.
 
 ```text
 Add-HPOVRackToDataCenter
-    [-InputObject] <>
-    [-DataCenter] <>
-    [-X <>]
-    [-Y <>]
-    [-Millimeters <>]
-    [-Rotate <>]
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-DataCenter] <Object>
+    [-X <Int32>]
+    [-Y <Int32>]
+    [-Millimeters]
+    [-Rotate <Int>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -56,31 +56,31 @@ Add "MyRack" to "Houston_DC1" datacenter object, located at 10",12".
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 The Rack object from `Get-HPOVRack`.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -DataCenter &lt;&gt;
+### -DataCenter &lt;Object&gt;
 
 The DataCenter object from `Get-HPOVDataCenter`.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -X &lt;&gt;
+### -X &lt;Int32&gt;
 
 The X coordinate in the DC.  Value can be in US Feet or Millimeters.  If specifying Millimeters, you need to include the `-Millimeters` switch parameter.  Feet will be converted to Millimeters.
 
@@ -92,7 +92,7 @@ The X coordinate in the DC.  Value can be in US Feet or Millimeters.  If specify
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Y &lt;&gt;
+### -Y &lt;Int32&gt;
 
 The Y coordinate in the DC.  Value can be in US Feet or Millimeters.  If specifying Millimeters, you need to include the `-Millimeters` switch parameter.  Feet will be converted to Millimeters.
 
@@ -104,7 +104,7 @@ The Y coordinate in the DC.  Value can be in US Feet or Millimeters.  If specify
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Rotate &lt;&gt;
+### -Rotate &lt;Int&gt;
 
 Specify the degree rotation of the rack.
 Allowed range 0 to 360
@@ -117,7 +117,7 @@ Allowed range 0 to 360
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Millimeters &lt;&gt;
+### -Millimeters &lt;SwitchParameter&gt;
 
 If X and/or Y are in Millimeters, you must include this parameter.
 
@@ -129,7 +129,7 @@ If X and/or Y are in Millimeters, you must include this parameter.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

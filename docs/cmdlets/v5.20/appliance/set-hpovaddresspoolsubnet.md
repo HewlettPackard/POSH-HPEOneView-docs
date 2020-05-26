@@ -8,12 +8,12 @@ description: Update an IPv4 Subnet Pool configuration.
 
 ```text
 Set-HPOVAddressPoolSubnet
-    [-InputObject] <>
-    [-SubnetMask <>]
-    [-Gateway <>]
-    [-Domain <>]
-    [-DNSServers <>]
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-SubnetMask <IPAddress>]
+    [-Gateway <IPAddress>]
+    [-Domain <String>]
+    [-DNSServers <Array>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -33,7 +33,7 @@ Update the IPv4 Subnet address pool"s default gateway to the new address.
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 Aliases [-Subnet, `-IPv4Subnet`]
 
@@ -41,13 +41,13 @@ The IPv4 Subnet resource object to update.
 
 | Aliases | Subnet, IPv4Subnet |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Gateway &lt;&gt;
+### -Gateway &lt;IPAddress&gt;
 
 IPv4 Address of the default gateway for the subnet.
 
@@ -59,7 +59,7 @@ IPv4 Address of the default gateway for the subnet.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SubnetMask &lt;&gt;
+### -SubnetMask &lt;IPAddress&gt;
 
 IPv4 Subnet Mask of the subnet.  Please know that if the Subnet is associated with another resource (Ethernet Network, Logical Enclosure or Deployment Server), there will be an error as the mask cannot be changed until it is unassociated with the resource.
 
@@ -71,7 +71,7 @@ IPv4 Subnet Mask of the subnet.  Please know that if the Subnet is associated wi
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Domain &lt;&gt;
+### -Domain &lt;String&gt;
 
 DNS Domain Name of the subnet.
 
@@ -83,7 +83,7 @@ DNS Domain Name of the subnet.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DNSServers &lt;&gt;
+### -DNSServers &lt;Array&gt;
 
 An array of DNS Server IPv4 Addresses.
 
@@ -95,7 +95,7 @@ An array of DNS Server IPv4 Addresses.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 

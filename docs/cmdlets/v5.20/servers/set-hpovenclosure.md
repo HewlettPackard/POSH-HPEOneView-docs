@@ -8,10 +8,10 @@ description: Rename Synergy Frame Name or Rack Name.
 
 ```text
 Set-HPOVEnclosure
-    [-InputObject] <>
-    [-Name <>]
-    [-RackName <>]
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-Name <String>]
+    [-RackName <String>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -39,19 +39,19 @@ Set the provided Synergy Frame resource Name and RackName to a new value.
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 A Syngery Frame/Enclosure Object.
 
 | Aliases | Enclosure, Encl |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 The new name of a Synergy Frame.
 
@@ -63,7 +63,7 @@ The new name of a Synergy Frame.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -RackName &lt;&gt;
+### -RackName &lt;String&gt;
 
 The new name of ta Synergy Rack.
 
@@ -75,7 +75,7 @@ The new name of ta Synergy Rack.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 

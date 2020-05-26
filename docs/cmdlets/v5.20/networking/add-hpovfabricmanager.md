@@ -8,14 +8,14 @@ description: Add an external fabric manager.
 
 ```text
 Add-HPOVFabricManager
-    [-ManagementAddress] <>
-    [-Name] <>
-    [-Credential <>]
-    [-SecondaryManagementAddress <>]
-    [-TertiearyManagementAddress <>]
-    [-TrustLeafCertificate <>]
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-ManagementAddress] <String>
+    [-Name] <String>
+    [-Credential <PSCredential>]
+    [-SecondaryManagementAddress <String>]
+    [-TertiearyManagementAddress <String>]
+    [-TrustLeafCertificate]
+    [-Async]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -50,7 +50,7 @@ Add the specified farbic manager with a redundant address.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -62,7 +62,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -74,7 +74,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Credential &lt;&gt;
+### -Credential &lt;PSCredential&gt;
 
 Use this parameter if you want to provide a PSCredential object instead.
 
@@ -86,31 +86,31 @@ Use this parameter if you want to provide a PSCredential object instead.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ManagementAddress &lt;&gt;
+### -ManagementAddress &lt;String&gt;
 
 The fabric managers primary IP Address or FQDN.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 The fabric managers resource name to use.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;&gt;
+### -Scope &lt;Object&gt;
 
 Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
 
@@ -122,7 +122,7 @@ Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially 
 | Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
-### -SecondaryManagementAddress &lt;&gt;
+### -SecondaryManagementAddress &lt;String&gt;
 
 The fabric managers secondary IP Address or FQDN.
 
@@ -134,7 +134,7 @@ The fabric managers secondary IP Address or FQDN.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -TertiearyManagementAddress &lt;&gt;
+### -TertiearyManagementAddress &lt;String&gt;
 
 The fabric managers tertieary IP Address or FQDN.
 
@@ -146,7 +146,7 @@ The fabric managers tertieary IP Address or FQDN.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -TrustLeafCertificate &lt;&gt;
+### -TrustLeafCertificate &lt;SwitchParameter&gt;
 
 If the resource SSL certificate is not trusted, use this parameter to add the certificate to the appliance trust store.
 

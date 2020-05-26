@@ -8,25 +8,25 @@ description: Create a new SNMPv3 user from appliance or Logical Interconnect/Swi
 
 ```text
 New-HPOVSnmpV3User
-    [-Username] <>
-    [-SecurityLevel <>]
-    [-AuthProtocol <>]
-    [-AuthPassword <>]
-    [-PrivProtocol <>]
-    [-PrivPassword <>]
+    [-Username] <String>
+    [-SecurityLevel <String>]
+    [-AuthProtocol <String>]
+    [-AuthPassword <System.Security.SecureString>]
+    [-PrivProtocol <String>]
+    [-PrivPassword <System.Security.SecureString>]
     [<CommonParameters>]
 ```
 
 ```text
 New-HPOVSnmpV3User
-    [-Username] <>
-    [-ApplianceSnmpUser] <>
-    [-SecurityLevel <>]
-    [-AuthProtocol <>]
-    [-AuthPassword <>]
-    [-PrivProtocol <>]
-    [-PrivPassword <>]
-    [-ApplianceConnection <>]
+    [-Username] <String>
+    [-ApplianceSnmpUser]
+    [-SecurityLevel <String>]
+    [-AuthProtocol <String>]
+    [-AuthPassword <System.Security.SecureString>]
+    [-PrivProtocol <String>]
+    [-PrivPassword <System.Security.SecureString>]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -60,7 +60,7 @@ Create a new SNMPv3 user for the appliance.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -72,19 +72,19 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceSnmpUser &lt;&gt;
+### -ApplianceSnmpUser &lt;SwitchParameter&gt;
 
 Use this to create an appliance SNMPv3 User.  Default is to create an `[HPOneView.Networking.SnmpV]`3User.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -AuthPassword &lt;&gt;
+### -AuthPassword &lt;System.Security.SecureString&gt;
 
 SNMpv3 Authentication password in `[System.Security.SecureString]` format.
 
@@ -96,7 +96,7 @@ SNMpv3 Authentication password in `[System.Security.SecureString]` format.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -AuthProtocol &lt;&gt;
+### -AuthProtocol &lt;String&gt;
 
 SNMPv3 Authentication protocol.  Supported values:
 
@@ -116,7 +116,7 @@ SNMPv3 Authentication protocol.  Supported values:
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -PrivPassword &lt;&gt;
+### -PrivPassword &lt;System.Security.SecureString&gt;
 
 SNMpv3 Privacy password in `[System.Security.SecureString]` format.
 
@@ -128,7 +128,7 @@ SNMpv3 Privacy password in `[System.Security.SecureString]` format.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -PrivProtocol &lt;&gt;
+### -PrivProtocol &lt;String&gt;
 
 SNMPv3 Privacy protocol.  Supported values:
 
@@ -147,7 +147,7 @@ SNMPv3 Privacy protocol.  Supported values:
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SecurityLevel &lt;&gt;
+### -SecurityLevel &lt;String&gt;
 
 Specify the type of SNMPv3 security policy.  Supported values: 
     * None
@@ -162,13 +162,13 @@ Specify the type of SNMPv3 security policy.  Supported values:
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Username &lt;&gt;
+### -Username &lt;String&gt;
 
 SNMPv3 Username
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |

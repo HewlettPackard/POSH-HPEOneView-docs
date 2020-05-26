@@ -8,19 +8,19 @@ description: Modify an existing hypervisor manager.
 
 ```text
 Set-HPOVClusterManager
-    [-InputObject] <>
-    [-Hostname <>]
-    [-DisplayName <>]
-    [-Port <>]
-    [-Credential <>]
-    [-VirtualSwitchType <>]
-    [-DistributedSwitchUsage <>]
-    [-DistributedSwitchVersion] <>
-    [-HAEnabled <>]
-    [-DRSEnabled <>]
-    [-MultiNicVMotionEnabled <>]
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-InputObject] <HypervisorManager>
+    [-Hostname <string>]
+    [-DisplayName <string>]
+    [-Port <int>]
+    [-Credential <PSCredential>]
+    [-VirtualSwitchType <string>]
+    [-DistributedSwitchUsage <string>]
+    [-DistributedSwitchVersion] <string>
+    [-HAEnabled <bool>]
+    [-DRSEnabled <bool>]
+    [-MultiNicVMotionEnabled <bool>]
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -44,7 +44,7 @@ Default example
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -56,7 +56,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -68,7 +68,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Credential &lt;&gt;
+### -Credential &lt;PSCredential&gt;
 
 Use this parameter if you want to provide a PSCredential object.  Using this parameter will update the authentication credentials needed to communicate with the cluster manager.
 
@@ -80,7 +80,7 @@ Use this parameter if you want to provide a PSCredential object.  Using this par
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DRSEnabled &lt;&gt;
+### -DRSEnabled &lt;bool&gt;
 
 Use to enable or disable VMware DRS default settings for clusters.
 
@@ -92,7 +92,7 @@ Use to enable or disable VMware DRS default settings for clusters.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DisplayName &lt;&gt;
+### -DisplayName &lt;string&gt;
 
 Change the display name of the cluster manager.
 
@@ -104,7 +104,7 @@ Change the display name of the cluster manager.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DistributedSwitchUsage &lt;&gt;
+### -DistributedSwitchUsage &lt;string&gt;
 
 Applicable only when vSwitch type is Distributed. This specifies which networks should be configured for distributed switches. Allowed values:
 
@@ -119,19 +119,19 @@ Applicable only when vSwitch type is Distributed. This specifies which networks 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DistributedSwitchVersion &lt;&gt;
+### -DistributedSwitchVersion &lt;string&gt;
 
 Applicable only when vSwitch type is of type distributed. Configures distributed virtual switch with the specified version, and must be supported by the Hypervisor Manager.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -HAEnabled &lt;&gt;
+### -HAEnabled &lt;bool&gt;
 
 Use to enable or disable VMware HA.
 
@@ -143,7 +143,7 @@ Use to enable or disable VMware HA.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Hostname &lt;&gt;
+### -Hostname &lt;string&gt;
 
 Use to update the IP or FQDN address of the target cluster manager.
 
@@ -155,19 +155,19 @@ Use to update the IP or FQDN address of the target cluster manager.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;HypervisorManager&gt;
 
 The cluster manager resource object from `Get-HPOVClusterManager`.
 
 | Aliases | Name |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -MultiNicVMotionEnabled &lt;&gt;
+### -MultiNicVMotionEnabled &lt;bool&gt;
 
 Use to enable or disable VMware VMotion `multi-NIC` vmotion.
 
@@ -179,7 +179,7 @@ Use to enable or disable VMware VMotion `multi-NIC` vmotion.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Port &lt;&gt;
+### -Port &lt;int&gt;
 
 Use to update the TCP port of the cluster manager.
 
@@ -191,7 +191,7 @@ Use to update the TCP port of the cluster manager.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -VirtualSwitchType &lt;&gt;
+### -VirtualSwitchType &lt;string&gt;
 
 Use to adjust the virtual switch for hypervisor clsuters with the specified type. Allowed values:
 

@@ -8,76 +8,76 @@ description: Creates one or more new Ethernet or Fibre-Channel networks on the a
 
 ```text
 New-HPOVNetwork
-    [-Name] <>
-    [-Type] <>
-    [-VlanId] <>
-    [-NetworkSet <>]
-    [-Subnet] <>
-    [-VLANType] <>
-    [-Purpose] <>
-    [-SmartLink] <>
-    [-PrivateNetwork] <>
-    [-TypicalBandwidth] <>
-    [-MaximumBandwidth] <>
-    [-Scope <>]
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-Name] <String>
+    [-Type] <String>
+    [-VlanId] <Int32>
+    [-NetworkSet <Object[]>]
+    [-Subnet] <Object>
+    [-VLANType] <String>
+    [-Purpose] <String>
+    [-SmartLink] <Boolean>
+    [-PrivateNetwork] <Boolean>
+    [-TypicalBandwidth] <Int32>
+    [-MaximumBandwidth] <Int32>
+    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 New-HPOVNetwork
-    [-Name] <>
-    [-VlanRange] <>
-    [-Type] <>
-    [-VLANType] <>
-    [-Purpose] <>
-    [-SmartLink] <>
-    [-PrivateNetwork] <>
-    [-TypicalBandwidth] <>
-    [-MaximumBandwidth] <>
-    [-Scope <>]
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-Name] <String>
+    [-VlanRange] <String>
+    [-Type] <String>
+    [-VLANType] <String>
+    [-Purpose] <String>
+    [-SmartLink] <Boolean>
+    [-PrivateNetwork] <Boolean>
+    [-TypicalBandwidth] <Int32>
+    [-MaximumBandwidth] <Int32>
+    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 New-HPOVNetwork
-    [-Name] <>
-    [-Type] <>
-    [-VlanId] <>
-    [-TypicalBandwidth] <>
-    [-MaximumBandwidth] <>
-    [-ManagedSan] <>
-    [-Scope <>]
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-Name] <String>
+    [-Type] <String>
+    [-VlanId] <Int32>
+    [-TypicalBandwidth] <Int32>
+    [-MaximumBandwidth] <Int32>
+    [-ManagedSan] <Object>
+    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 New-HPOVNetwork
-    [-Name] <>
-    [-Type] <>
-    [-TypicalBandwidth] <>
-    [-MaximumBandwidth] <>
-    [-LinkStabilityTime] <>
-    [-AutoLoginRedistribution] <>
-    [-FabricType] <>
-    [-ManagedSan] <>
-    [-Scope <>]
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-Name] <String>
+    [-Type] <String>
+    [-TypicalBandwidth] <Int32>
+    [-MaximumBandwidth] <Int32>
+    [-LinkStabilityTime] <Int32>
+    [-AutoLoginRedistribution] <Boolean>
+    [-FabricType] <String>
+    [-ManagedSan] <Object>
+    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 New-HPOVNetwork
-    [-ImportFile] <>
-    [-Scope <>]
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-ImportFile] <String>
+    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -172,20 +172,20 @@ Creates the network(s) defined in the input file `[myNewNets.json]`
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 Required object to provide a display name for the network being created.
 If specifying the `-VlanRange` parameter, this will become the Nework Name Prefix (i.e. "VLAN" will become "VLAN-[vlanid]".)
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Type &lt;&gt;
+### -Type &lt;String&gt;
 
 Required value that specifies the type of Network Resource to create.  Allowed values are:
 
@@ -196,13 +196,13 @@ Required value that specifies the type of Network Resource to create.  Allowed v
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | Ethernet |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -VlanId &lt;&gt;
+### -VlanId &lt;Int32&gt;
 
 The Virtual LAN (VLAN) identification number assigned to the network. The VLAN ID must be unique. The VLAN ID cannot be changed once the network has been created.
 
@@ -210,25 +210,25 @@ When creating an Ethernet Network on an HPE Synergy Composer, Vlan ID 1 is not a
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | 0 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Subnet &lt;&gt;
+### -Subnet &lt;Object&gt;
 
 An IPv4 Subnet Object that will be associated with a specific Ethernet Network and VLAN.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -VlanRange &lt;&gt;
+### -VlanRange &lt;String&gt;
 
 VLAN Range of networks to create.  Can be consecutive, `non-consecutive` or a combination of both.
 
@@ -236,13 +236,13 @@ VLAN Range of networks to create.  Can be consecutive, `non-consecutive` or a co
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -VLANType &lt;&gt;
+### -VLANType &lt;String&gt;
 
 The type of VLAN configuration for the Ethernet Network.  This setting is only applicable for the Uplink Set configuration, and not the Network Set it could be assigned to.  Accepted values are 
             
@@ -254,13 +254,13 @@ Default value is Tagged.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | Tagged |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Purpose &lt;&gt;
+### -Purpose &lt;String&gt;
 
 A description of the network"s role within the logical interconnect.  Accepted values in string format are:
 
@@ -272,73 +272,73 @@ A description of the network"s role within the logical interconnect.  Accepted v
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | General |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SmartLink &lt;&gt;
+### -SmartLink &lt;Boolean&gt;
 
 Default value is TRUE.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | True |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -PrivateNetwork &lt;&gt;
+### -PrivateNetwork &lt;Boolean&gt;
 
 Default value is FALSE.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -TypicalBandwidth &lt;&gt;
+### -TypicalBandwidth &lt;Int32&gt;
 
 Preferred amount of bandwidth to assign, specified in Mbps.  Default value is 2500.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | 2500 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -MaximumBandwidth &lt;&gt;
+### -MaximumBandwidth &lt;Int32&gt;
 
 Maximum amount of bandwidth to assign, specified in Mbps.  Default value is 10000.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | 20000 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -LinkStabilityTime &lt;&gt;
+### -LinkStabilityTime &lt;Int32&gt;
 
 The time in seconds the appliance waits before reconnecting to a link that was previously offline (Login redistribution). This interval prevents connection loss due to reconnecting to a link that is unstable (going online and offline repeatedly).
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | 30 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -AutoLoginRedistribution &lt;&gt;
+### -AutoLoginRedistribution &lt;Boolean&gt;
 
 Used for login balancing when logins are not distributed evenly over the Fibre Channel links (for example, when an uplink that was down becomes available).
 
@@ -349,37 +349,37 @@ This parameter is not applicable for Direct Attach Fabric Types.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -FabricType &lt;&gt;
+### -FabricType &lt;String&gt;
 
 Valid values are DirectAttach and FabricAttach. Defaults to FabricAttach
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | FabricAttach |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ManagedSan &lt;&gt;
+### -ManagedSan &lt;Object&gt;
 
 Managed SAN Object or Name.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -391,7 +391,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
@@ -403,19 +403,19 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ImportFile &lt;&gt;
+### -ImportFile &lt;String&gt;
 
 Full path and file name of a JSON formatted input file containing network definitions.
 
 | Aliases | i, import |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;&gt;
+### -Scope &lt;HPOneView.Appliance.ScopeCollection[]&gt;
 
 Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
 
@@ -427,7 +427,7 @@ Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -NetworkSet &lt;&gt;
+### -NetworkSet &lt;Object[]&gt;
 
 Specify one or more network set objects the network should be added to during creation from `Get-HPOVNetworkSet`.
 

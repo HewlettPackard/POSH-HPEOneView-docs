@@ -8,8 +8,8 @@ description: List Synergy DAS Enclosures.
 
 ```text
 Get-HPOVDriveEnclosure
-    [-Name <>]
-    [-ApplianceConnection <>]
+    [-Name <String>]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -42,7 +42,7 @@ Get all available Synergy Drive Enclosures.
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 The name of the Synergy DAS enclosure.  Omit to return all devices.
 
@@ -54,7 +54,7 @@ The name of the Synergy DAS enclosure.  Omit to return all devices.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Label &lt;&gt;
+### -Label &lt;String&gt;
 
 Specify the label associated with resources.
 
@@ -66,7 +66,7 @@ Specify the label associated with resources.
 | Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

@@ -8,25 +8,25 @@ description: Add a new Directory Group to appliance.
 
 ```text
 New-HPOVLdapGroup
-    [-Directory] <>
-    [-Group] <>
-    [-Roles] <>
-    [-Username] <>
-    [-Password <>]
-    [-Credential <>]
-    [-ApplianceConnection <>]
+    [-Directory] <Object>
+    [-Group] <Object>
+    [-Roles] <Array>
+    [-Username] <String>
+    [-Password <Object>]
+    [-Credential <PSCredential>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 New-HPOVLdapGroup
-    [-Directory] <>
-    [-Group] <>
-    [-ScopePermissions <>]
-    [-Username] <>
-    [-Password <>]
-    [-Credential <>]
-    [-ApplianceConnection <>]
+    [-Directory] <Object>
+    [-Group] <Object>
+    [-ScopePermissions <Array>]
+    [-Username] <String>
+    [-Password <Object>]
+    [-Credential <PSCredential>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -62,31 +62,31 @@ Add the new directory group with specific scope permissions, and using a PSCrede
 
 ## Parameters
 
-### -Directory &lt;&gt;
+### -Directory &lt;Object&gt;
 
 LDAP/Active Directory Domain object.
 
 | Aliases | d, domain, authProvider |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Group &lt;&gt;
+### -Group &lt;Object&gt;
 
 Directroy Group to add.  Can either be a string value of a Cononical Name of directory group, or object from `Show-HPOVLdapGroups`.
 
 | Aliases | g, GroupName, name |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Roles &lt;&gt;
+### -Roles &lt;Array&gt;
 
 The role(s) to assign to the Directroy Group, in `[System.Collections.ArrayList]` format.  Accepted values are noted within the ApplianceRoles property of the `[HPOneView.Appliance.Connection]` object stored in the $Global:ConnectedSessions variable.
 
@@ -94,13 +94,13 @@ Example: $roles = "Server administrator","Network administrator"
 
 | Aliases | r, role |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Username &lt;&gt;
+### -Username &lt;String&gt;
 
 {% hint style="warning" %}
 This parameter is now obsolete.  Please transition to using the `-Credential` parameter.
@@ -111,13 +111,13 @@ Directory Username to authenticate with
 
 | Aliases | u |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Password &lt;&gt;
+### -Password &lt;Object&gt;
 
 {% hint style="warning" %}
 This parameter is now obsolete.  Please transition to using the `-Credential` parameter.
@@ -134,7 +134,7 @@ Directory User account password.  Can be `[System.String]` or `[System.Security.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -146,7 +146,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Credential &lt;&gt;
+### -Credential &lt;PSCredential&gt;
 
 Use this parameter if you want to provide a PSCredential object instead.
 
@@ -158,7 +158,7 @@ Use this parameter if you want to provide a PSCredential object instead.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ScopePermissions &lt;&gt;
+### -ScopePermissions &lt;Array&gt;
 
 Array collection of Hashtable<Role; Scope>.
 

@@ -8,15 +8,15 @@ description: Configure appliance two-factor authentication settings.
 
 ```text
 Set-HPOVApplianceTwoFactorAuthentication
-    [-SmartCardLoginOnly <>]
-    [-EnableEmergencyLocalLogin <>]
-    [-EmergencyLoginAllowType <>]
-    [-SubjectAlternativeNamePatterns <>]
-    [-SubjectPatterns <>]
-    [-ValidationOids <>]
-    [-DirectoryDomainType <>]
-    [-DirectoryDomain <>]
-    [-ApplianceConnection <>]
+    [-SmartCardLoginOnly <Bool>]
+    [-EnableEmergencyLocalLogin <Bool>]
+    [-EmergencyLoginAllowType <String>]
+    [-SubjectAlternativeNamePatterns <Array>]
+    [-SubjectPatterns <String>]
+    [-ValidationOids <Array>]
+    [-DirectoryDomainType <String>]
+    [-DirectoryDomain <String>]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -42,7 +42,7 @@ Configured `two-factory` authentication using default validation OIDs.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -54,7 +54,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -Confirm &lt;&gt;
+### -Confirm &lt;SwitchParameter&gt;
 
 Override confirmation prompt when using `-SmartCardLoginOnly` parameter.
 
@@ -66,7 +66,7 @@ Override confirmation prompt when using `-SmartCardLoginOnly` parameter.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DirectoryDomain &lt;&gt;
+### -DirectoryDomain &lt;String&gt;
 
 Selection values for the "Manually specify" control
 
@@ -88,7 +88,7 @@ Configure HPE OneView to look in multiple certificate locations for domain infor
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DirectoryDomainType &lt;&gt;
+### -DirectoryDomainType &lt;String&gt;
 
 The Directory domain control allows you to specify which domain or directory to use when searching for the user in an enterprise directory. The domain name must match the Base DN of at least one of the directories added to HPE OneView. The options include:
 
@@ -109,7 +109,7 @@ If you select Manually specify, you can enter a specific domain using dot notati
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EmergencyLoginAllowType &lt;&gt;
+### -EmergencyLoginAllowType &lt;String&gt;
 
 Allow emergency login access if the configured authentication directory(ies) for `2-factor` are unavailable.  Highest security is obtained by restricting the local administrator account to "ApplianceConsoleOnly". Choose "NetworkAndApplianceConsole" to allow emergency access via the network.
 
@@ -121,7 +121,7 @@ Allow emergency login access if the configured authentication directory(ies) for
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EnableEmergencyLocalLogin &lt;&gt;
+### -EnableEmergencyLocalLogin &lt;Bool&gt;
 
 Boolean value to enable ($true) or disable ($false) emergency local login.  Must be set to $false when `-SmartCardLoginOnly` is used.
 
@@ -133,7 +133,7 @@ Boolean value to enable ($true) or disable ($false) emergency local login.  Must
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SmartCardLoginOnly &lt;&gt;
+### -SmartCardLoginOnly &lt;Bool&gt;
 
 Use to enforce smart card authentication only.  Enabling Smart card only login disables the authentication using a user name and password.  User name and password login is still available through the appliance console.  You will be prompted to confirm the use of this parameter.  Use the `-Confirm` to override prompt.
 
@@ -145,7 +145,7 @@ Use to enforce smart card authentication only.  Enabling Smart card only login d
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SubjectAlternativeNamePatterns &lt;&gt;
+### -SubjectAlternativeNamePatterns &lt;Array&gt;
 
 By default, the attribute entry associated with the "Subject Alternative Name" item, within the "Certificate owner" entry, contains `[OtherName.UPN]`=(.*). This tells HPE OneView to extract the user name from the "OtherName.UPN" attribute within the Subject Alternative Name field of the certificate on the smart card. This is the user name that HPE OneView uses to query the enterprise directory.
 
@@ -192,7 +192,7 @@ Subject Alternative Name multiple attribute entry example
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SubjectPatterns &lt;&gt;
+### -SubjectPatterns &lt;String&gt;
 
 By default, the attribute entry box associated with the "Subject" entry, within the "Certificate owner" field, contains CN=(.*). With this value, HPE OneView extracts the first user name it encounters within a "CN" attribute within the "Subject" field in the smart card certificate. You can edit the regular expression for the "CN" attribute using regular expressions to refine the list of acceptable values.
 You can edit the value if you need HPE OneView to search for the user name within other additional attributes within the certificate "Subject" field. The choices include: 
@@ -231,7 +231,7 @@ This is applicable when there are multiple CN attributes configured in a certifi
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ValidationOids &lt;&gt;
+### -ValidationOids &lt;Array&gt;
 
 This parameter allows you to configure who can access HPE OneView by specifying the Key Usage, Extended Key Usage and Policy ID Object Identifiers (OIDs) that must be present within a smart card certificate in order for the user associated with the card to be authenticated. You can configure up to five OID combinations to accommodate different groups of users within your organization.
 
@@ -250,7 +250,7 @@ If you specify multiple OID combinations and one is a `super-set` of another, co
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -WhatIf &lt;&gt;
+### -WhatIf &lt;SwitchParameter&gt;
 
 
 

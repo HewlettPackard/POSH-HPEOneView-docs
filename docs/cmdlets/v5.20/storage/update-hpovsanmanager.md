@@ -8,8 +8,8 @@ description: Refresh SAN Manager and it"s configuration.
 
 ```text
 Update-HPOVSanManager
-    [-InputObject] <>
-    [-ApplianceConnection] <>
+    [-InputObject] <Object>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -37,25 +37,25 @@ Refreshes all SAN Managers on the appliance.
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 Managed SAN Object to update.
 
 | Aliases | Name, SANManager |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |

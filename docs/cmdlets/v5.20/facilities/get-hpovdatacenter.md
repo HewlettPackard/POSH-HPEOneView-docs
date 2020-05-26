@@ -8,8 +8,8 @@ description: Retrieve a defined DataCenter.
 
 ```text
 Get-HPOVDataCenter
-    [-Name <>]
-    [-ApplianceConnection <>]
+    [-Name <String>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -51,7 +51,7 @@ Retrieve the Remote Support Location property from the found DataCenter resource
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 DataCenter name.  Supports wildcard (*) character.
 
@@ -63,7 +63,7 @@ DataCenter name.  Supports wildcard (*) character.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

@@ -8,39 +8,39 @@ description: Configure Remote Support and authorize appliance.
 
 ```text
 Set-HPOVRemoteSupport
-    [-CompanyName] <>
-    [-OptimizeOptIn <>]
-    [-AutoEnableDevices <>]
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-CompanyName] <String>
+    [-OptimizeOptIn]
+    [-AutoEnableDevices <bool>]
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 Set-HPOVRemoteSupport
-    [-CompanyName] <>
-    [-InsightOnlineUsername <>]
-    [-InsightOnlinePassword <>]
-    [-OptimizeOptIn <>]
-    [-AutoEnableDevices <>]
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-CompanyName] <String>
+    [-InsightOnlineUsername <String>]
+    [-InsightOnlinePassword <System.Security.SecureString>]
+    [-OptimizeOptIn]
+    [-AutoEnableDevices <bool>]
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 Set-HPOVRemoteSupport
-    [-Enable] <>
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-Enable]
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 Set-HPOVRemoteSupport
-    [-Disable] <>
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-Disable]
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -93,7 +93,7 @@ Enable Remote Support after it was previously disabled for the specific applianc
 
 ## Parameters
 
-### -AutoEnableDevices &lt;&gt;
+### -AutoEnableDevices &lt;bool&gt;
 
 Choose to allow the appliance to auto enable remote support for all and devices added in the future.
 
@@ -105,19 +105,19 @@ Choose to allow the appliance to auto enable remote support for all and devices 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -CompanyName &lt;&gt;
+### -CompanyName &lt;String&gt;
 
 The company name Remote Support will be authorized for.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -OptimizeOptIn &lt;&gt;
+### -OptimizeOptIn &lt;SwitchParameter&gt;
 
 Opt-in to allow HPE marketing to discuss datacenter optimization.
 
@@ -129,7 +129,7 @@ Opt-in to allow HPE marketing to discuss datacenter optimization.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -InsightOnlineUsername &lt;&gt;
+### -InsightOnlineUsername &lt;String&gt;
 
 The user name of your Insight Online account.
 
@@ -141,7 +141,7 @@ The user name of your Insight Online account.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -InsightOnlinePassword &lt;&gt;
+### -InsightOnlinePassword &lt;System.Security.SecureString&gt;
 
 The Insight Online account password.
 
@@ -153,31 +153,31 @@ The Insight Online account password.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Enable &lt;&gt;
+### -Enable &lt;SwitchParameter&gt;
 
 Use this parameter to enable remote support on an appliance, only if the appliance was previously configured for Remote Support and it was disabled.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Disable &lt;&gt;
+### -Disable &lt;SwitchParameter&gt;
 
 Use this parameter to disable remote support globally on the appliance.  Use the `-Enable` parameter to `re-enable` Remote Support.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -189,7 +189,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 

@@ -8,9 +8,9 @@ description: Update existing resource(s).
 
 ```text
 Set-HPOVResource
-    [-InputObject] <>
-    [-ApplianceConnection] <>
-    [-Force] <>
+    [-InputObject] <Object>
+    [-ApplianceConnection] <Object>
+    [-Force] <String>
     [<CommonParameters>]
 ```
 
@@ -32,37 +32,37 @@ Updates the name of the Server Profile resource.
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 The modified resource that is to be updated. Can be resource object, name or URI.
 
 | Aliases | Resource |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -force &lt;&gt;
+### -force &lt;String&gt;
 
 Set to $true to `force-update` the resource.  Not all resources support `force-update`.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |

@@ -8,8 +8,8 @@ description: View Managed SAN Zones.
 
 ```text
 Get-HPOVSanZone
-    [-ManagedSan <>]
-    [-ApplianceConnection <>]
+    [-ManagedSan <Object>]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -81,7 +81,7 @@ Get the Zone information from the specific Managed SAN, then display the associa
 
 ## Parameters
 
-### -ManagedSan &lt;&gt;
+### -ManagedSan &lt;Object&gt;
 
 The Managed SAN Resource Object.
 
@@ -93,7 +93,7 @@ The Managed SAN Resource Object.
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 

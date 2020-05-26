@@ -8,8 +8,8 @@ description: Promote Standby Composer node to Active.
 
 ```text
 Enable-HPOVComposerHANode
-    [-ApplianceConnection <>]
-    [-Async <>]
+    [-ApplianceConnection <Object>]
+    [-Async]
     [<CommonParameters>]
 ```
 
@@ -40,7 +40,7 @@ Transition the Standby Composer node in the default Appliance Connection.
 
 ## Parameters
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -52,7 +52,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 
@@ -64,7 +64,7 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -WhatIf &lt;&gt;
+### -WhatIf &lt;SwitchParameter&gt;
 
 
 
@@ -76,7 +76,7 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Confirm &lt;&gt;
+### -Confirm &lt;SwitchParameter&gt;
 
 
 

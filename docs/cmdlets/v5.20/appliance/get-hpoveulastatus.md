@@ -8,7 +8,7 @@ description: Get the appliance end user license agreement (EULA) status.
 
 ```text
 Get-HPOVEulaStatus
-    [-Appliance] <>
+    [-Appliance] <Object>
     [<CommonParameters>]
 ```
 
@@ -51,13 +51,13 @@ Connect to an appliance, then get the EULA status from `[myappliance.domain.com]
 
 ## Parameters
 
-### -Appliance &lt;&gt;
+### -Appliance &lt;Object&gt;
 
 The FQDN, IP Address or `[HPOneView.Appliance.Connection]` of an HPE OneView appliance must be provided.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |

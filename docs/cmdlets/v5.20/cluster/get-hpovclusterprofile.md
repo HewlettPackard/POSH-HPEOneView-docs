@@ -8,9 +8,9 @@ description: Get a deployed cluster profile.
 
 ```text
 Get-HPOVClusterProfile
-    [-Name <>]
-    [-NonCompliant <>]
-    [-ApplianceConnection <>]
+    [-Name <String>]
+    [-NonCompliant]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -53,7 +53,7 @@ Get the non compliant and managed cluster profiles.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -65,7 +65,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 Specify a string value to filter for the specific resource
 
@@ -77,7 +77,7 @@ Specify a string value to filter for the specific resource
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -NonCompliant &lt;&gt;
+### -NonCompliant &lt;SwitchParameter&gt;
 
 Filter resources based on their `non-compliant` state.
 

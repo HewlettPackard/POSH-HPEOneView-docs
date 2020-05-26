@@ -8,10 +8,10 @@ description: Define LDAP Directory Server object.
 
 ```text
 New-HPOVLdapServer
-    [-Hostname] <>
-    [-SSLPort] <>
-    [-Certificate] <>
-    [-TrustLeafCertificate <>]
+    [-Hostname] <String>
+    [-SSLPort] <Int32>
+    [-Certificate] <Object>
+    [-TrustLeafCertificate]
     [<CommonParameters>]
 ```
 
@@ -47,43 +47,43 @@ Create two new authentication directory servers, with the Cmdlet retrieving the 
 
 ## Parameters
 
-### -Hostname &lt;&gt;
+### -Hostname &lt;String&gt;
 
 Directory server name or IP Address to add.
 
 | Aliases | Name |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -SSLPort &lt;&gt;
+### -SSLPort &lt;Int32&gt;
 
 Directory Server"s LDAP SSL Port.
 
 | Aliases | port |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | 636 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Certificate &lt;&gt;
+### -Certificate &lt;Object&gt;
 
 Directory Server SSL Certificate, either location to Base64 Cert or multiline string value.  If omitted, the Cmdlet will attempt to retrieve the Directory Servers Secure LDAP Certiciate.
 
 | Aliases | cert |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Credential &lt;&gt;
+### -Credential &lt;PSCredential&gt;
 
 Use this parameter if you want to provide a PSCredential object instead.
 
@@ -95,7 +95,7 @@ Use this parameter if you want to provide a PSCredential object instead.
 | Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -107,7 +107,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
-### -TrustLeafCertificate &lt;&gt;
+### -TrustLeafCertificate &lt;SwitchParameter&gt;
 
 Use to specify if the certificate should be explicitly trusted, like a self signed certificate or where the root or issuing certificate authority has not been added to the appliance trust store.
 

@@ -8,10 +8,10 @@ description: Begin Remote Support collection from endpoints.
 
 ```text
 Start-HPOVRemoteSupportCollection
-    [-InputObject] <>
-    [-Type] <>
-    [-ApplianceConnection <>]
-    [-Async <>]
+    [-InputObject] <Object>
+    [-Type] <Object>
+    [-ApplianceConnection <Object>]
+    [-Async]
     [<CommonParameters>]
 ```
 
@@ -39,19 +39,19 @@ Start the collection of basic server configuration immediately.
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 A supported Gen8 or newer compute, HPE BladeSystem enclosure, or HPE Synergy frame.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Type &lt;&gt;
+### -Type &lt;Object&gt;
 
 Used to specify the type of remote support collection to start.  Allowed values are:
 
@@ -60,13 +60,13 @@ Used to specify the type of remote support collection to start.  Allowed values 
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -78,7 +78,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

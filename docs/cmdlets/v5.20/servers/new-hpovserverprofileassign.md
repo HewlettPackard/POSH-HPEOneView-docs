@@ -8,21 +8,21 @@ description: Unassign or Reassign an existing Server Profile.
 
 ```text
 New-HPOVServerProfileAssign
-    [-ServerProfile] <>
-    [-Server] <>
-    [-Force <>]
-    [-Async <>]
-    [-ApplianceConnection] <>
+    [-ServerProfile] <Object>
+    [-Server] <Object>
+    [-Force]
+    [-Async]
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ```text
 New-HPOVServerProfileAssign
-    [-ServerProfile] <>
-    [-Unassigned <>]
-    [-Force <>]
-    [-Async <>]
-    [-ApplianceConnection] <>
+    [-ServerProfile] <Object>
+    [-Unassigned]
+    [-Force]
+    [-Async]
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -50,31 +50,31 @@ Get "Profile 1" Server Profile and unassign it, then wait for the async task to 
 
 ## Parameters
 
-### -ServerProfile &lt;&gt;
+### -ServerProfile &lt;Object&gt;
 
 The name or object of the server profile resource to modify assignment.
 
 | Aliases | Profile |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Server &lt;&gt;
+### -Server &lt;Object&gt;
 
 The server hardware resource where the new profile is to be applied.  This is normally retrieved with a "Get-HPOVServer" call, and the Server state property should be "NoProfileApplied".  Can also be the Server Hardware `[name.s]`
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Unassigned &lt;&gt;
+### -Unassigned &lt;SwitchParameter&gt;
 
 Siwtch parameter to unassign a Server Profile.
 
@@ -86,19 +86,19 @@ Siwtch parameter to unassign a Server Profile.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;&gt;
+### -Scope &lt;HPOneView.Appliance.ScopeCollection[]&gt;
 
 Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
 
@@ -110,7 +110,7 @@ Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially 
 | Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -122,7 +122,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Force &lt;&gt;
+### -Force &lt;SwitchParameter&gt;
 
 Use to force add the Server Profile if there are any async task validation failures, like server hardware is in a Warning or Failed state, or SAN attach volume only have a single path configured.
 

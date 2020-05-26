@@ -8,8 +8,8 @@ description: Retrieve address pool information.
 
 ```text
 Get-HPOVAddressPool
-    [-Type <>]
-    [-ApplianceConnection <>]
+    [-Type <String[]>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -51,7 +51,7 @@ Get the vmac address pool.
 
 ## Parameters
 
-### -Type &lt;&gt;
+### -Type &lt;String[]&gt;
 
 The address pool type.  Accepted values are VMAC, VWWN, VSN, IPv4, IPv6, or All.
 
@@ -63,7 +63,7 @@ The address pool type.  Accepted values are VMAC, VWWN, VSN, IPv4, IPv6, or All.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

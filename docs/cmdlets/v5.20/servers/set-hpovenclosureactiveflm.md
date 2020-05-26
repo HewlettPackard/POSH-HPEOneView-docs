@@ -8,9 +8,9 @@ description: Power reset Enclosure component.
 
 ```text
 Set-HPOVEnclosureActiveFLM
-    [-Enclosure] <>
-    [-BayID] <>
-    [-Force <>]
+    [-Enclosure] <Object>
+    [-BayID] <Int32>
+    [-Force]
     [<CommonParameters>]
 ```
 
@@ -46,31 +46,31 @@ Display a brief list of the enclosures managed or monitored by the appliance.
 
 ## Parameters
 
-### -Enclosure &lt;&gt;
+### -Enclosure &lt;Object&gt;
 
 The Synergy Frame resource from `Get-HPOVEnclosure`.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -BayID &lt;&gt;
+### -BayID &lt;Int32&gt;
 
 BAYID
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | 0 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Force &lt;&gt;
+### -Force &lt;SwitchParameter&gt;
 
 FORCE
 
@@ -82,7 +82,7 @@ FORCE
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -WhatIf &lt;&gt;
+### -WhatIf &lt;SwitchParameter&gt;
 
 
 
@@ -94,7 +94,7 @@ FORCE
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Confirm &lt;&gt;
+### -Confirm &lt;SwitchParameter&gt;
 
 
 

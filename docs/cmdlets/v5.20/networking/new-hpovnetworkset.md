@@ -8,13 +8,13 @@ description: Create a new Network Set.
 
 ```text
 New-HPOVNetworkSet
-    [-Name] <>
-    [-Networks] <>
-    [-UntaggedNetwork <>]
-    [-TypicalBandwidth <>]
-    [-MaximumBandwidth <>]
-    [-ApplianceConnection <>]
-    [-Large <>]
+    [-Name] <String>
+    [-Networks] <Object>
+    [-UntaggedNetwork <Object>]
+    [-TypicalBandwidth <Int32>]
+    [-MaximumBandwidth <Int32>]
+    [-ApplianceConnection <Object>]
+    [-Large]
     [<CommonParameters>]
 ```
 
@@ -59,79 +59,79 @@ Create a new Network Set called "Production Networks", adding Ethernet Networks 
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 The name of the new Network Set resource to be created.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Networks &lt;&gt;
+### -Networks &lt;Object&gt;
 
 Ethernet Network Name(s), URI(")s or Resource Object(s).
 
 | Aliases | networkUris |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -UntaggedNetwork &lt;&gt;
+### -UntaggedNetwork &lt;Object&gt;
 
 Network (from the above list) to be considered the "native" network in this set.  Traffic on this network will leave the Virtual Connect downlink port untagged.  When untagged traffic is received on this port, it will be mapped to this network.
 
 | Aliases | untagged, native, untaggedNetworkUri |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -TypicalBandwidth &lt;&gt;
+### -TypicalBandwidth &lt;Int32&gt;
 
 Optional preferred amount of bandwidth to assign, specified in Mbps.  Default value is 2500.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | 2500 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -MaximumBandwidth &lt;&gt;
+### -MaximumBandwidth &lt;Int32&gt;
 
 Optional maximum amount of bandwidth to assign, specified in Mbps.  Default value is 10000.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | 10000 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Large &lt;&gt;
+### -Large &lt;SwitchParameter&gt;
 
 A "Regular" network set may contain up to 162 networks. "Large" network sets can contain up to 4000 networks and can only be used by server profile template connections or server profile connections assigned to rackmount or HPE Synergy server hardware.
 

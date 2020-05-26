@@ -8,9 +8,9 @@ description: Enable compute resource into maintenance mode.
 
 ```text
 Enable-HPOVMaintenanceMode
-    [-InputObject] <>
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -48,7 +48,7 @@ nEnable the maintenance mode state of the specific server resource that is assoc
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Aliases [-Appliance]
 
@@ -64,19 +64,19 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 Either a server hardware or server profile resource.
 
 | Aliases |  |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 

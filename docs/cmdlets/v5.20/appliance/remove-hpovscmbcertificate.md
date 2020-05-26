@@ -13,7 +13,7 @@ Remove-HPOVScmbCertificate
 
 ```text
 Remove-HPOVScmbCertificate
-    [-ApplianceConnection <>]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -33,7 +33,7 @@ Remove the SCMB (rabbitmq_readonly) certificate key pair from an appliance.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

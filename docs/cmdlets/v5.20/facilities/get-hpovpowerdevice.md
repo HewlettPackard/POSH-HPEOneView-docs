@@ -8,9 +8,9 @@ description: Retrieve Power Device (iPDU) resource(s).
 
 ```text
 Get-HPOVPowerDevice
-    [-Name <>]
-    [-Type <>]
-    [-ApplianceConnection <>]
+    [-Name <String>]
+    [-Type <String>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -60,7 +60,7 @@ Return the power device resource with name "iPDU_A".
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 The name of the power device resource to be returned.  All power device resources will be returned if omitted.
 
@@ -72,7 +72,7 @@ The name of the power device resource to be returned.  All power device resource
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Type &lt;&gt;
+### -Type &lt;String&gt;
 
 Filter the Power Delivery Device type.  Allowed values:
 
@@ -90,7 +90,7 @@ Filter the Power Delivery Device type.  Allowed values:
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

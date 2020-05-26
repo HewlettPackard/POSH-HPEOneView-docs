@@ -8,52 +8,52 @@ description: Create an Enclosure Group.
 
 ```text
 New-HPOVEnclosureGroup
-    [-Name] <>
-    [-LogicalInterconnectGroupMapping] <>
-    [-PowerRedundantMode <>]
-    [-ConfigurationScript <>]
-    [-Scope <>]
-    [-ApplianceConnection <>]
+    [-Name] <String>
+    [-LogicalInterconnectGroupMapping] <Object>
+    [-PowerRedundantMode <String>]
+    [-ConfigurationScript <String>]
+    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 New-HPOVEnclosureGroup
-    [-Name] <>
-    [-DiscoverFromEnclosure <>]
-    [-OAAddress] <>
-    [-Username] <>
-    [-Password] <>
-    [-PowerRedundantMode <>]
-    [-ConfigurationScript <>]
-    [-LigPrefix] <>
-    [-Scope <>]
-    [-ApplianceConnection <>]
+    [-Name] <String>
+    [-DiscoverFromEnclosure]
+    [-OAAddress] <String>
+    [-Username] <String>
+    [-Password] <String>
+    [-PowerRedundantMode <String>]
+    [-ConfigurationScript <String>]
+    [-LigPrefix] <String>
+    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 New-HPOVEnclosureGroup
-    [-Name] <>
-    [-LogicalInterconnectGroupMapping] <>
-    [-EnclosureCount] <>
-    [-PowerRedundantMode <>]
-    [-IPv4AddressType <>]
-    [-IPv4AddressRange <>]
-    [-IPv6AddressType <>]
-    [-IPv6AddressRange <>]
-    [-DeploymentNetworkType <>]
-    [-DeploymentNetwork <>]
-    [-Scope <>]
-    [-ApplianceConnection <>]
+    [-Name] <String>
+    [-LogicalInterconnectGroupMapping] <Object>
+    [-EnclosureCount] <Int32>
+    [-PowerRedundantMode <String>]
+    [-IPv4AddressType <String>]
+    [-IPv4AddressRange <Object>]
+    [-IPv6AddressType <string>]
+    [-IPv6AddressRange <Object>]
+    [-DeploymentNetworkType <String>]
+    [-DeploymentNetwork <Object>]
+    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 New-HPOVEnclosureGroup
-    [-ImportFile] <>
-    [-Scope <>]
-    [-ApplianceConnection <>]
+    [-ImportFile] <String>
+    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -149,31 +149,31 @@ Create a `3-Frame` Synergy Enclosure Group using multiple Logical Interconnect G
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 A name for the new enclosure group.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EnclosureCount &lt;&gt;
+### -EnclosureCount &lt;Int32&gt;
 
 Specify the number of Synergy Frames will participate within the Enclosure Group.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | 1 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -LogicalInterconnectGroupMapping &lt;&gt;
+### -LogicalInterconnectGroupMapping &lt;Object&gt;
 
 An Enclosure Group can reference multiple Logical Interconnect Groups, once per Interconnect Bay.  If a Single Logical Interconnect Group object is provided (either via parameter variable or via Pipeline), the Logical Interconnect Group objects Logical Interconnect Bay configuration will be used.
 
@@ -205,13 +205,13 @@ $LogicalInterconnectGroupMapping = @{Frame1 = $3FrameVCLIG,$SasLIG; Frame2 = $3F
 
 | Aliases | logicalInterconnectGroupUri, logicalInterconnectGroup |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -PowerRedundantMode &lt;&gt;
+### -PowerRedundantMode &lt;String&gt;
 
 The Power Redundancy Mode to set when an Enclosure is added to the appliance.
 
@@ -228,7 +228,7 @@ Allowed Values:
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ConfigurationScript &lt;&gt;
+### -ConfigurationScript &lt;String&gt;
 
 An Onboard Administrator CLI Script. Only applicable for HPE BladeSystem `C-Class`.
 
@@ -240,7 +240,7 @@ An Onboard Administrator CLI Script. Only applicable for HPE BladeSystem `C-Clas
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IPv4AddressType &lt;&gt;
+### -IPv4AddressType &lt;String&gt;
 
 Use to specify how the IPv4 Addresses will be assigned to Synergy resources management interface(s).  Allowed values:
 
@@ -258,7 +258,7 @@ Default: DHCP
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IPv4AddressRange &lt;&gt;
+### -IPv4AddressRange &lt;Object&gt;
 
 [Alias `-AddressPool`]
 
@@ -272,7 +272,7 @@ The IPv4 address pool object from `Get-HPOVAddressPoolRange`.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IPv6AddressRange &lt;&gt;
+### -IPv6AddressRange &lt;Object&gt;
 
 The IPv6 address pool object from `Get-HPOVAddressPoolRange`.
 
@@ -284,7 +284,7 @@ The IPv6 address pool object from `Get-HPOVAddressPoolRange`.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IPv6AddressType &lt;&gt;
+### -IPv6AddressType &lt;string&gt;
 
 Use to specify how the IPv6 Addresses will be assigned to Synergy resources management interface(s).  Allowed values:
 
@@ -302,7 +302,7 @@ Default: None
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DeploymentNetworkType &lt;&gt;
+### -DeploymentNetworkType &lt;String&gt;
 
 Specify the Synergy Image Stream deployment network type.  Allowed values:
 
@@ -320,7 +320,7 @@ Default: None
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DeploymentNetwork &lt;&gt;
+### -DeploymentNetwork &lt;Object&gt;
 
 The Ethernet Network with the purpose property set to Management.  Must also include DeploymentNetworkType parameter, value must be "External", with the Ethernet Network associated with a `non-ImageStreamer` Uplink Set.
 
@@ -332,7 +332,7 @@ The Ethernet Network with the purpose property set to Management.  Must also inc
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DiscoverFromEnclosure &lt;&gt;
+### -DiscoverFromEnclosure &lt;SwitchParameter&gt;
 
 Use this parameter for the appliance to create an Enclosure Group and associated Logical Interconnect Group by "discovering" the Enclosure and support interconnects.  The target Enclosure must not already be claimed by another external manager (i.e. HPE OneView), as the API will reject the request.
 
@@ -346,55 +346,55 @@ No Uplink Sets will be created. They will need to be added using the `New-HPOVUp
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -OAAddress &lt;&gt;
+### -OAAddress &lt;String&gt;
 
 Provide the Onboard Administrator IP Address or FQDN.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Username &lt;&gt;
+### -Username &lt;String&gt;
 
 Provide an Onboard Administrator administrator account.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Password &lt;&gt;
+### -Password &lt;String&gt;
 
 Provide an Onboard Administrator administrator password.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -LigPrefix &lt;&gt;
+### -LigPrefix &lt;String&gt;
 
 If specified, the Logical Interconnect Group that is created will be used in the "{LigPrefix} Logical Interconnect Group".
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
@@ -408,19 +408,19 @@ Default Value: ${Global:ConnectSessions} | ? Default
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -ImportFile &lt;&gt;
+### -ImportFile &lt;String&gt;
 
 Provide the full path and file name of the JSON file.
 
 | Aliases | i, import |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;&gt;
+### -Scope &lt;HPOneView.Appliance.ScopeCollection[]&gt;
 
 Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
 

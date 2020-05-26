@@ -8,82 +8,82 @@ description: Create new Logical Interconnect Group.
 
 ```text
 New-HPOVLogicalInterconnectGroup
-    [-Name] <>
-    [-Bays] <>
-    [-InterconnectConsistencyChecking <>]
-    [-EnableIgmpSnooping <>]
-    [-IgmpIdleTimeoutInterval <>]
+    [-Name] <String>
+    [-Bays] <Hashtable>
+    [-InterconnectConsistencyChecking <string>]
+    [-EnableIgmpSnooping <Boolean>]
+    [-IgmpIdleTimeoutInterval <Int32>]
     [-IgmpSnoopingConsistencyChecking <string>]
-    [-EnableFastMacCacheFailover <>]
-    [-MacRefreshInterval <>]
-    [-EnableNetworkLoopProtection <>]
-    [-EnablePauseFloodProtection <>]
-    [-EnableLLDPTagging <>]
-    [-EnableEnhancedLLDPTLV <>]
-    [-LldpAddressingMode <>]
-    [-SNMP <>]
-    [-SNMPConsistencyChecking <>]
-    [-SnmpV1 <>]
-    [-SnmpV3 <>]
-    [-SnmpV3User <>]
-    [-InternalNetworks <>]
-    [-InternalNetworkConsistencyChecking <>]
-    [-QosConfiguration <>]
-    [-QoSConsistencyChecking <>]
-    [-UplinkSet <>]
-    [-Scope <>]
-    [-ApplianceConnection <>]
-    [-Async <>]
+    [-EnableFastMacCacheFailover <Boolean>]
+    [-MacRefreshInterval <Int32>]
+    [-EnableNetworkLoopProtection <Boolean>]
+    [-EnablePauseFloodProtection <Boolean>]
+    [-EnableLLDPTagging <Boolean>]
+    [-EnableEnhancedLLDPTLV <Boolean>]
+    [-LldpAddressingMode <Boolean>]
+    [-SNMP <Object>]
+    [-SNMPConsistencyChecking <string>]
+    [-SnmpV1]
+    [-SnmpV3]
+    [-SnmpV3User <HPOneView.Appliance.SnmpV3User>]
+    [-InternalNetworks <Array>]
+    [-InternalNetworkConsistencyChecking <string>]
+    [-QosConfiguration <Object>]
+    [-QoSConsistencyChecking <string>]
+    [-UplinkSet <Hashtable[]>]
+    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
+    [-ApplianceConnection <Object>]
+    [-Async]
     [<CommonParameters>]
 ```
 
 ```text
 New-HPOVLogicalInterconnectGroup
-    [-Name] <>
-    [-FrameCount] <>
-    [-InterconnectBaySet] <>
-    [-FabricModuleType] <>
-    [-Bays] <>
-    [-InterconnectConsistencyChecking <>]
-    [-FabricRedundancy <>]
-    [-DownlinkSpeedMode <>]
-    [-EnableCutThroughSwitching <>]
-    [-EnableStormControl <>]
-    [-StormControlPacketsPerSecondThreshold <>]
-    [-StormControlPollingInterval <>]
-    [-EnableDdns <>]
-    [-DdnsDomainNameSuffix <>]
-    [-EnableIgmpSnooping <>]
-    [-IgmpVLANs <>]
-    [-IgmpIdleTimeoutInterval <>]
+    [-Name] <String>
+    [-FrameCount] <Int32>
+    [-InterconnectBaySet] <Int32>
+    [-FabricModuleType] <String>
+    [-Bays] <Hashtable>
+    [-InterconnectConsistencyChecking <string>]
+    [-FabricRedundancy <String>]
+    [-DownlinkSpeedMode <string>]
+    [-EnableCutThroughSwitching <bool>]
+    [-EnableStormControl <bool>]
+    [-StormControlPacketsPerSecondThreshold <int>]
+    [-StormControlPollingInterval <Int>]
+    [-EnableDdns <bool>]
+    [-DdnsDomainNameSuffix <string>]
+    [-EnableIgmpSnooping <Boolean>]
+    [-IgmpVLANs <string>]
+    [-IgmpIdleTimeoutInterval <Int32>]
     [-IgmpMulticastFloodPrevention <bool>]
     [-IgmpProxyReporting <bool>]
     [-IgmpSnoopingConsistencyChecking <string>]
-    [-EnableNetworkLoopProtection <>]
-    [-EnableLLDPTagging <>]
-    [-EnableEnhancedLLDPTLV <>]
-    [-LldpAddressingMode <>]
-    [-SNMP <>]
-    [-SNMPConsistencyChecking <>]
-    [-SnmpV1 <>]
-    [-SnmpV3 <>]
-    [-SnmpV3User <>]
-    [-InternalNetworks <>]
-    [-InternalNetworkConsistencyChecking <>]
-    [-QosConfiguration <>]
-    [-QoSConsistencyChecking <>]
-    [-UplinkSet <>]
-    [-Scope <>]
-    [-ApplianceConnection <>]
-    [-Async <>]
+    [-EnableNetworkLoopProtection <Boolean>]
+    [-EnableLLDPTagging <Boolean>]
+    [-EnableEnhancedLLDPTLV <Boolean>]
+    [-LldpAddressingMode <Boolean>]
+    [-SNMP <Object>]
+    [-SNMPConsistencyChecking <string>]
+    [-SnmpV1]
+    [-SnmpV3]
+    [-SnmpV3User <HPOneView.Appliance.SnmpV3User>]
+    [-InternalNetworks <Array>]
+    [-InternalNetworkConsistencyChecking <string>]
+    [-QosConfiguration <Object>]
+    [-QoSConsistencyChecking <string>]
+    [-UplinkSet <Hashtable[]>]
+    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
+    [-ApplianceConnection <Object>]
+    [-Async]
     [<CommonParameters>]
 ```
 
 ```text
 New-HPOVLogicalInterconnectGroup
-    [-Import] <>
-    [-Scope <>]
-    [-ApplianceConnection <>]
+    [-Import] <Object>
+    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -148,31 +148,31 @@ Create a Logical Interconnect Group by using a JSON formatted input file.
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 The Logical Interconnect Group Name
 
 | Aliases | ligname |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -FrameCount &lt;&gt;
+### -FrameCount &lt;Int32&gt;
 
 The number of Synergy Frames to participate in the Logical Stack.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | 0 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -InterconnectBaySet &lt;&gt;
+### -InterconnectBaySet &lt;Int32&gt;
 
 Which Synergy Interconnect Bay Set ID will the interconnects be populated in.  Allowed value:
 
@@ -182,13 +182,13 @@ Which Synergy Interconnect Bay Set ID will the interconnects be populated in.  A
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | 0 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -FabricModuleType &lt;&gt;
+### -FabricModuleType &lt;String&gt;
 
 Specify the Synergy Fabric Module type the Logical Interconnect Group will be modeled for.  Allowed value:
 
@@ -200,13 +200,13 @@ Specify the Synergy Fabric Module type the Logical Interconnect Group will be mo
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Bays &lt;&gt;
+### -Bays &lt;Hashtable&gt;
 
 HPE BladeSystem C7000 Support - A `[System.Collections.Hashtable]` object of each Interconnect Bay.  Accepted values are:
 
@@ -239,13 +239,13 @@ When configuring Synergy SAS Connection Module, no other device bays can be spec
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -FabricRedundancy &lt;&gt;
+### -FabricRedundancy &lt;String&gt;
 
 Define the expected Synergy Fabric Interconnect Redundancy type.  Allowed value:
 
@@ -262,7 +262,7 @@ Define the expected Synergy Fabric Interconnect Redundancy type.  Allowed value:
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EnableIgmpSnooping &lt;&gt;
+### -EnableIgmpSnooping &lt;Boolean&gt;
 
 The IGMP snooping feature allows interconnects to monitor the IGMP IP multicast membership activities and configure hardware Layer 2 switching behavior of multicast traffic to optimize network resource usage. Currently, only IGMP v1 and v2 (RFC 2236) are supported.
         
@@ -276,7 +276,7 @@ Default value: Disabled
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IgmpIdleTimeoutInterval &lt;&gt;
+### -IgmpIdleTimeoutInterval &lt;Int32&gt;
 
 The Group Membership Interval value, as specified by the IGMP v2 specification (RFC 2236).
 For optimum network resource usage, set the timeout interval to match your network"s multicast router settings.
@@ -293,7 +293,7 @@ Required: Yes, if IGMP snooping is enabled
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EnableFastMacCacheFailover &lt;&gt;
+### -EnableFastMacCacheFailover &lt;Boolean&gt;
 
 When an uplink that was in standby mode becomes active, it can take several minutes for external Ethernet interconnects to recognize that the server blades can now be reached on this newly active connection.  Enabling Fast MAC Cache Failover causes Ethernet packets to be transmitted on the newly active connection, which enables the external Ethernet interconnects to identify the new connection (and update their MAC caches).  The transmission sequence is repeated a few times at the MAC refresh interval and completes in about 1 minute.
 
@@ -307,7 +307,7 @@ Default value:  Enabled
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -MacRefreshInterval &lt;&gt;
+### -MacRefreshInterval &lt;Int32&gt;
 
 The time interval at which MAC caches are refreshed
         
@@ -322,7 +322,7 @@ Default value: 5
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EnableNetworkLoopProtection &lt;&gt;
+### -EnableNetworkLoopProtection &lt;Boolean&gt;
 
 Enables or disables network loop protection.
 
@@ -350,7 +350,7 @@ Default value: Enabled
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EnablePauseFloodProtection &lt;&gt;
+### -EnablePauseFloodProtection &lt;Boolean&gt;
 
 Enables or disables pause flood protection.
 
@@ -372,13 +372,13 @@ Default value: Enabled
 
 | Aliases | PauseProtect |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | True |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EnableLLDPTagging &lt;&gt;
+### -EnableLLDPTagging &lt;Boolean&gt;
 
 When enabled, tagged LLDP frames are transmitted over downlink ports to server hardware. The management IP address of the interconnect in the lowest numbered bay location in the logical interconnect will be advertised as the LLDP management address TLV.
 
@@ -392,7 +392,7 @@ This parameter is only available for 2.00.07 or newer appliances.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EnableEnhancedLLDPTLV &lt;&gt;
+### -EnableEnhancedLLDPTLV &lt;Boolean&gt;
 
 When enabled, the enclosure name and serial number are encapsulated in the Chassis ID TLV LLDPDU transmitted by interconnect uplink ports.
 
@@ -406,7 +406,7 @@ This parameter is only available for 2.00.07 or newer appliances.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -LldpAddressingMode &lt;&gt;
+### -LldpAddressingMode &lt;Boolean&gt;
 
 Specify the IP address format type to support.  Allowed values:
 
@@ -422,7 +422,7 @@ Specify the IP address format type to support.  Allowed values:
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SNMP &lt;&gt;
+### -SNMP &lt;Object&gt;
 
 SNMP Settings to define SNMP configruation.  Use `New-HPOVSnmpConfiguration` and `New-HPOVSnmpTrapDestination` Cmdlets to create the necessary SNMP Configuration object.
 
@@ -434,7 +434,7 @@ SNMP Settings to define SNMP configruation.  Use `New-HPOVSnmpConfiguration` and
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -InternalNetworks &lt;&gt;
+### -InternalNetworks &lt;Array&gt;
 
 An Array collection of Networks that will be marked as Internal only.
 
@@ -446,7 +446,7 @@ An Array collection of Networks that will be marked as Internal only.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -QosConfiguration &lt;&gt;
+### -QosConfiguration &lt;Object&gt;
 
 A collection of QOS configurations that are created using the `New-HPOVQosConfig` helper Cmdlet.
 
@@ -458,7 +458,7 @@ A collection of QOS configurations that are created using the `New-HPOVQosConfig
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -470,7 +470,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -482,19 +482,19 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Import &lt;&gt;
+### -Import &lt;Object&gt;
 
 Specify JSON source file to create Logical Interconnect Group.
 
 | Aliases | i |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;&gt;
+### -Scope &lt;HPOneView.Appliance.ScopeCollection[]&gt;
 
 Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
 
@@ -506,7 +506,7 @@ Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SnmpV1 &lt;&gt;
+### -SnmpV1 &lt;SwitchParameter&gt;
 
 Specify the SNMP version type is SNMPv1.
 
@@ -518,7 +518,7 @@ Specify the SNMP version type is SNMPv1.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SnmpV3 &lt;&gt;
+### -SnmpV3 &lt;SwitchParameter&gt;
 
 Specify the SNMP version type is SNMPv3.
 
@@ -530,7 +530,7 @@ Specify the SNMP version type is SNMPv3.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SnmpV3User &lt;&gt;
+### -SnmpV3User &lt;HPOneView.Appliance.SnmpV3User&gt;
 
 Provide the SNMPv3 user object from `New-HPOVSnmpV3User`.
 
@@ -542,7 +542,7 @@ Provide the SNMPv3 user object from `New-HPOVSnmpV3User`.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -InterconnectConsistencyChecking &lt;&gt;
+### -InterconnectConsistencyChecking &lt;string&gt;
 
 Use to indicate if the group policy will be tracked to with the deployed and configured resource. Allowed values:
 
@@ -559,7 +559,7 @@ Default: Exact
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -InternalNetworkConsistencyChecking &lt;&gt;
+### -InternalNetworkConsistencyChecking &lt;string&gt;
 
 Use to indicate if the group policy will be tracked to with the deployed and configured resource. Allowed values:
 
@@ -576,7 +576,7 @@ Default: Exact
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -QoSConsistencyChecking &lt;&gt;
+### -QoSConsistencyChecking &lt;string&gt;
 
 Use to indicate if the group policy will be tracked to with the deployed and configured resource. Allowed values:
 
@@ -593,7 +593,7 @@ Default: Exact
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SNMPConsistencyChecking &lt;&gt;
+### -SNMPConsistencyChecking &lt;string&gt;
 
 Use to indicate if the group policy will be tracked to with the deployed and configured resource. Allowed values:
 
@@ -610,7 +610,7 @@ Default: Exact
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DdnsDomainNameSuffix &lt;&gt;
+### -DdnsDomainNameSuffix &lt;string&gt;
 
 When enabled, Domain Name System (DNS) server will be updated automatically when either the IP address or hostname change for the interconnect module.
 
@@ -622,7 +622,7 @@ When enabled, Domain Name System (DNS) server will be updated automatically when
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DownlinkSpeedMode &lt;&gt;
+### -DownlinkSpeedMode &lt;string&gt;
 
 Specify the port downlink speed to be configured for HPE Virtual Connect SE 100Gb F32 module for Synergy.
 
@@ -641,7 +641,7 @@ Default: 25
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EnableCutThroughSwitching &lt;&gt;
+### -EnableCutThroughSwitching &lt;bool&gt;
 
 Enables or disables the `Cut-Through` switching mode. When enabled, the switch starts forwarding the frame as soon as the switch has read the destination details in the packet header. When enabled, Pause flood protection is disabled.
 
@@ -660,7 +660,7 @@ This option is available for HPE Virtual Connect SE 100Gb F32 Module for HPE Syn
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EnableDdns &lt;&gt;
+### -EnableDdns &lt;bool&gt;
 
 When enabled, Domain Name System (DNS) server will be updated automatically when either the IP address or hostname change for the interconnect module.  Must provide `-DdnsDomainNameSuffix` parameter.
 
@@ -672,7 +672,7 @@ When enabled, Domain Name System (DNS) server will be updated automatically when
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EnableStormControl &lt;&gt;
+### -EnableStormControl &lt;bool&gt;
 
 Enables or disables the suppression of excessive inbound broadcast, multicast, or DLF (Destination Lookup Failure) packets when a threshold is reached.
 
@@ -686,7 +686,7 @@ Default value:  Disabled
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IgmpVLANs &lt;&gt;
+### -IgmpVLANs &lt;string&gt;
 
 Specify values or range of VLAN IDs, from `1-4094`, associated with networks defined in the logical interconnect. Use comma or hyphens as separator, for example: `10-15`, 52, `100-200`.
 
@@ -698,7 +698,7 @@ Specify values or range of VLAN IDs, from `1-4094`, associated with networks def
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -StormControlPacketsPerSecondThreshold &lt;&gt;
+### -StormControlPacketsPerSecondThreshold &lt;int&gt;
 
 The Storm Control packet threshold at which traffic is suppressed.
 
@@ -712,7 +712,7 @@ Valid range: `1-262143` packets per second
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -StormControlPollingInterval &lt;&gt;
+### -StormControlPollingInterval &lt;Int&gt;
 
 When enabling Storm Control, Specify a value between 5 and 30 seconds.
 
@@ -724,7 +724,7 @@ When enabling Storm Control, Specify a value between 5 and 30 seconds.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -UplinkSet &lt;&gt;
+### -UplinkSet &lt;Hashtable[]&gt;
 
 A collection of uplink sets from `New-HPOVUplinkSet` using the `-Passthru` parameter.
 

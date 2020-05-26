@@ -8,53 +8,53 @@ description: Import a support HPE BladeSystem c-Class enclosure.
 
 ```text
 Add-HPOVEnclosure
-    [-Hostname] <>
-    [-EnclosureGroup] <>
-    [-Username] <>
-    [-Password] <>
-    [-LicensingIntent] <>
-    [-Baseline <>]
-    [-ForceInstallFirmware <>]
-    [-Scope <>]
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-Hostname] <String>
+    [-EnclosureGroup] <Object>
+    [-Username] <String>
+    [-Password] <Object>
+    [-LicensingIntent] <String>
+    [-Baseline <Object>]
+    [-ForceInstallFirmware]
+    [-Scope <Array>]
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 Add-HPOVEnclosure
-    [-Hostname] <>
-    [-EnclosureGroup] <>
-    [-Credential <>]
-    [-LicensingIntent] <>
-    [-Baseline <>]
-    [-ForceInstallFirmware <>]
-    [-Scope <>]
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-Hostname] <String>
+    [-EnclosureGroup] <Object>
+    [-Credential <PSCredential>]
+    [-LicensingIntent] <String>
+    [-Baseline <Object>]
+    [-ForceInstallFirmware]
+    [-Scope <Array>]
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 Add-HPOVEnclosure
-    [-Hostname] <>
-    [-Credential <>]
-    [-Monitored <>]
-    [-Scope <>]
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-Hostname] <String>
+    [-Credential <PSCredential>]
+    [-Monitored]
+    [-Scope <Array>]
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 Add-HPOVEnclosure
-    [-Hostname] <>
-    [-Username] <>
-    [-Password] <>
-    [-Monitored <>]
-    [-Scope <>]
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-Hostname] <String>
+    [-Username] <String>
+    [-Password] <Object>
+    [-Monitored]
+    [-Scope <Array>]
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -112,55 +112,55 @@ Add a new enclosure to the appliance for monitoring only.
 
 ## Parameters
 
-### -Hostname &lt;&gt;
+### -Hostname &lt;String&gt;
 
 IP Address, Hostname or FQDN of the Primary C7000 Onboard Administrator (OA).
 
 | Aliases | oa |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EnclosureGroup &lt;&gt;
+### -EnclosureGroup &lt;Object&gt;
 
 Enclosure Group Name to associate with the enclosure to import.
 
 | Aliases | eg, EnclGroupName |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Username &lt;&gt;
+### -Username &lt;String&gt;
 
 Administrator account of the target OA.  Can be either an OA Local Administrator or Active Directory (AD) account if the OA is configured for AD authentication.
 
 | Aliases | u, user |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Password &lt;&gt;
+### -Password &lt;Object&gt;
 
 Administrator Account password of the OA specified.  Value can be `[System.String]` or `[System.Security.SecureString]`.
 
 | Aliases | p, pw |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Credential &lt;&gt;
+### -Credential &lt;PSCredential&gt;
 
 Use this parameter if you want to provide a PSCredential object instead.
 
@@ -172,7 +172,7 @@ Use this parameter if you want to provide a PSCredential object instead.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -LicensingIntent &lt;&gt;
+### -LicensingIntent &lt;String&gt;
 
 Specifies whether the intent is to apply either OneView or OneView w/o iLO licenses to the servers in the enclosure being imported.
 
@@ -183,13 +183,13 @@ Accepted values are
 
 | Aliases | license, l |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | OneView |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Baseline &lt;&gt;
+### -Baseline &lt;Object&gt;
 
 Baseline File Name, Name, URI or Object.
 
@@ -206,7 +206,7 @@ $Name = "HP Service Pack For ProLiant  OneView 2014 11 13"
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ForceInstallFirmware &lt;&gt;
+### -ForceInstallFirmware &lt;SwitchParameter&gt;
 
  Force the installation of the provided Firmware Baseline.
 
@@ -218,7 +218,7 @@ $Name = "HP Service Pack For ProLiant  OneView 2014 11 13"
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Monitored &lt;&gt;
+### -Monitored &lt;SwitchParameter&gt;
 
 Add the specified enclosure for monitor only management.  You can view hardware for inventory and status information only.  Omitting this parameter, you can apply configurations, deploy server profiles, monitor operation status, collect statistics, and alert users to specific conditions.
 
@@ -230,7 +230,7 @@ Add the specified enclosure for monitor only management.  You can view hardware 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -242,7 +242,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
@@ -254,7 +254,7 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Confirm &lt;&gt;
+### -Confirm &lt;SwitchParameter&gt;
 
 When attempting to add an enclosure to the appliance, the appliance will validate the target enclosure is not already claimed. If it is, this parameter is used when the server has been claimed by another appliance to bypass the confirmation prompt, and force add the server resource.
 
@@ -266,7 +266,7 @@ When attempting to add an enclosure to the appliance, the appliance will validat
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;&gt;
+### -Scope &lt;Array&gt;
 
 Provide an array of <HPOneView.Appliance.ScopeResource> Scope resource(s) to initially add.
 

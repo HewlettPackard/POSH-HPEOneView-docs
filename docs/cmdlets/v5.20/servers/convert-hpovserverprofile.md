@@ -8,11 +8,11 @@ description: Migrate Server Profile.
 
 ```text
 Convert-HPOVServerProfile
-    [-InputObject] <>
-    [-ServerHardwareType <>]
-    [-EnclosureGroup <>]
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-ServerHardwareType <Object>]
+    [-EnclosureGroup <Object>]
+    [-Async]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -70,7 +70,7 @@ Transform the specified server profile object to a different enclosure group and
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -82,7 +82,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -94,7 +94,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Confirm &lt;&gt;
+### -Confirm &lt;SwitchParameter&gt;
 
 Override confirmation prompt.
 
@@ -106,7 +106,7 @@ Override confirmation prompt.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EnclosureGroup &lt;&gt;
+### -EnclosureGroup &lt;Object&gt;
 
 Specify the target `[HPOneView.EnclosureGroup]` resource object.  By changing the Enclosure Group, assigned Networks with Connections that do not exist on in the associated Logical Interconnect Group(s), the Connection may not be assigned to an available FlexNIC.
 
@@ -118,19 +118,19 @@ Specify the target `[HPOneView.EnclosureGroup]` resource object.  By changing th
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 The `[HPOneView.ServerProfile]` object from `Get-HPOVServerProfile`.
 
 | Aliases | ServerProfile, Profile |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -ServerHardwareType &lt;&gt;
+### -ServerHardwareType &lt;Object&gt;
 
 Specify the `[HPOneView.ServerHardwareType]` object to transform to.  BIOS Settings will be reset to defaults, and Connection FlexNIC assignment will be reset back to Auto.
 

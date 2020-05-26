@@ -8,20 +8,20 @@ description: List Directory Groups from the configured LDAP Directory.
 
 ```text
 Show-HPOVLdapGroups
-    [-Directory] <>
-    [-UserName] <>
-    [-Password] <>
-    [-GroupName] <>
-    [-ApplianceConnection] <>
+    [-Directory] <Object>
+    [-UserName] <String>
+    [-Password] <System.Security.SecureString>
+    [-GroupName] <String>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ```text
 Show-HPOVLdapGroups
-    [-Directory] <>
-    [-Credential <>]
-    [-GroupName] <>
-    [-ApplianceConnection] <>
+    [-Directory] <Object>
+    [-Credential <PSCredential>]
+    [-GroupName] <String>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -61,67 +61,67 @@ Automate list of Directory Groups from Domain99 with the provided password, sear
 
 ## Parameters
 
-### -UserName &lt;&gt;
+### -UserName &lt;String&gt;
 
 Username to authenticate with
 
 | Aliases | u |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Password &lt;&gt;
+### -Password &lt;System.Security.SecureString&gt;
 
 User account password
 
 | Aliases | p |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Directory &lt;&gt;
+### -Directory &lt;Object&gt;
 
 The configured LDAP Directory object on the appliance.
 
 | Aliases | d, domain, AuthProvider |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -GroupName &lt;&gt;
+### -GroupName &lt;String&gt;
 
 Provide the name of the Directory Group to search for.  If omitted, all found Directory Groups will be returned.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Credential &lt;&gt;
+### -Credential &lt;PSCredential&gt;
 
 Use this parameter if you want to provide a PSCredential object instead.
 

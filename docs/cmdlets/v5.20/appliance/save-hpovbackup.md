@@ -8,15 +8,15 @@ description: Save existing backups on an appliance.
 
 ```text
 Save-HPOVBackup
-    [-Location <>]
-    [-ApplianceConnection <>]
+    [-Location <String>]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
 ```text
 Save-HPOVBackup
-    [-SaveRemoteOnly] <>
-    [-ApplianceConnection <>]
+    [-SaveRemoteOnly]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -48,7 +48,7 @@ Save the found backup file to the specified location.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -60,7 +60,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Location &lt;&gt;
+### -Location &lt;String&gt;
 
 Specify the directory or UNC path where to save the backup file(s) to.
 
@@ -72,19 +72,19 @@ Specify the directory or UNC path where to save the backup file(s) to.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SaveRemoteOnly &lt;&gt;
+### -SaveRemoteOnly &lt;SwitchParameter&gt;
 
 When appliance automatic backup is configured, use this parameter to specify the backup file(s) should be saved in the remote location, instead of the local PC.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ErrorAction &lt;&gt;
+### -ErrorAction &lt;String&gt;
 
 If no backup file exist on the appliance, override the `non-terminating` error generated with `-ErrorAction` Continue.
 

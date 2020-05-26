@@ -8,8 +8,8 @@ description: Accept the EULA and set support access for the specified appliance.
 
 ```text
 Set-HPOVEulaStatus
-    [-Appliance] <>
-    [-SupportAccess] <>
+    [-Appliance] <Object>
+    [-SupportAccess] <String>
     [<CommonParameters>]
 ```
 
@@ -29,25 +29,25 @@ Connects to a specific appliance, accepting the EULA and enable Support Access.
 
 ## Parameters
 
-### -Appliance &lt;&gt;
+### -Appliance &lt;Object&gt;
 
 The FQDN or IP Address of an HPE OneView appliance or `[HPOneView.Appliance.Connection]` must be provided.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SupportAccess &lt;&gt;
+### -SupportAccess &lt;String&gt;
 
 Set to "yes" to allow HP suport access to the appliance, otherwise set to "no".
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |

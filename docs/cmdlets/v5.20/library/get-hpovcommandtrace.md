@@ -8,8 +8,8 @@ description: Start an HPOV Library Verbose Trace.
 
 ```text
 Get-HPOVCommandTrace
-    [-ScriptBlock] <>
-    [-Location <>]
+    [-ScriptBlock] <ScriptBlock>
+    [-Location <String>]
     [<CommonParameters>]
 ```
 
@@ -33,19 +33,19 @@ Start a new library trace, which will create a file in the `C:\Temp` directory.
 
 ## Parameters
 
-### -ScriptBlock &lt;&gt;
+### -ScriptBlock &lt;ScriptBlock&gt;
 
 The command within a ScriptBlock to execute.  The Cmdlet will add the `-Verbose` switch end of the command.
 
 | Aliases | Command |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Location &lt;&gt;
+### -Location &lt;String&gt;
 
 Specify the directory where the output file will be created.  A file with the following format will be created:
 

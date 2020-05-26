@@ -8,29 +8,29 @@ description: Create SNMP Trap Destination Object
 
 ```text
 New-HPOVSnmpTrapDestination
-    [-Destination] <>
-    [-Community] <>
-    [-Port <>]
-    [-SnmpFormat] <>
-    [-TrapSeverities] <>
-    [-VCMTrapCategories] <>
-    [-EnetTrapCategories] <>
-    [-FCTrapCategories] <>
+    [-Destination] <String>
+    [-Community] <String>
+    [-Port <Int>]
+    [-SnmpFormat] <String>
+    [-TrapSeverities] <Array>
+    [-VCMTrapCategories] <Array>
+    [-EnetTrapCategories] <Array>
+    [-FCTrapCategories] <Array>
     [<CommonParameters>]
 ```
 
 ```text
 New-HPOVSnmpTrapDestination
-    [-Destination] <>
-    [-SnmpV3User] <>
-    [-Port <>]
-    [-SnmpFormat] <>
-    [-NotificationType <>]
-    [-EngineID] <>
-    [-TrapSeverities] <>
-    [-VCMTrapCategories] <>
-    [-EnetTrapCategories] <>
-    [-FCTrapCategories] <>
+    [-Destination] <String>
+    [-SnmpV3User] <HPOneView.Appliance.SnmpV3User>
+    [-Port <Int>]
+    [-SnmpFormat] <String>
+    [-NotificationType <String>]
+    [-EngineID] <String>
+    [-TrapSeverities] <Array>
+    [-VCMTrapCategories] <Array>
+    [-EnetTrapCategories] <Array>
+    [-FCTrapCategories] <Array>
     [<CommonParameters>]
 ```
 
@@ -58,31 +58,31 @@ Create a new SNMP Configuration object, with the specified Trap Destinations, an
 
 ## Parameters
 
-### -Destination &lt;&gt;
+### -Destination &lt;String&gt;
 
 The SNMP destination IP Address or FQDN.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Community &lt;&gt;
+### -Community &lt;String&gt;
 
 The SNMP Trap Community String to set.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | public |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SnmpFormat &lt;&gt;
+### -SnmpFormat &lt;String&gt;
 
 SNMP Format type.  Allowed values:
 
@@ -92,13 +92,13 @@ SNMP Format type.  Allowed values:
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | SNMPv1 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -TrapSeverities &lt;&gt;
+### -TrapSeverities &lt;Array&gt;
 
 A collection `[System.Collections.ArrayList` ] of SNMP Trap Severities to generate Traps for.  Allowed values:
 
@@ -112,13 +112,13 @@ A collection `[System.Collections.ArrayList` ] of SNMP Trap Severities to genera
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -VCMTrapCategories &lt;&gt;
+### -VCMTrapCategories &lt;Array&gt;
 
 A collection `[System.Collections.ArrayList` ] of VCM Trap Categories.  Allowed values:
 
@@ -126,13 +126,13 @@ A collection `[System.Collections.ArrayList` ] of VCM Trap Categories.  Allowed 
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EnetTrapCategories &lt;&gt;
+### -EnetTrapCategories &lt;Array&gt;
 
 A collection `[System.Collections.ArrayList` ] of SNMP Trap Severities to generate Traps for.  Allowed values:
 
@@ -142,13 +142,13 @@ A collection `[System.Collections.ArrayList` ] of SNMP Trap Severities to genera
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -FCTrapCategories &lt;&gt;
+### -FCTrapCategories &lt;Array&gt;
 
 A collection `[System.Collections.ArrayList` ] of SNMP Trap Severities to generate Traps for.  Allowed values:
 
@@ -157,13 +157,13 @@ A collection `[System.Collections.ArrayList` ] of SNMP Trap Severities to genera
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -175,7 +175,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -187,7 +187,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
-### -Port &lt;&gt;
+### -Port &lt;Int&gt;
 
 Provide the alternate SNMP trap reciever port.
 
@@ -199,31 +199,31 @@ Provide the alternate SNMP trap reciever port.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SnmpV3User &lt;&gt;
+### -SnmpV3User &lt;HPOneView.Appliance.SnmpV3User&gt;
 
 A valid SNMPv3 user from `New-HPOVSnmpV3User`.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EngineID &lt;&gt;
+### -EngineID &lt;String&gt;
 
 The EngineId of remote SNMPv3 user.  Only applicable when configuring an SNMPv3 object for the appliance, not logical interconnect groups or logical interconnects.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -NotificationType &lt;&gt;
+### -NotificationType &lt;String&gt;
 
 Indicates whether the trap should be inform message or not.  Allowed values:
 

@@ -8,29 +8,29 @@ description: Create Server Profile Logical Disk object.
 
 ```text
 New-HPOVServerProfileLogicalDisk
-    [-Name] <>
-    [-RAID <>]
-    [-NumberofDrives <>]
-    [-DriveType <>]
-    [-StorageLocation <>]
-    [-Accelerator <>]
-    [-Bootable <>]
+    [-Name] <String>
+    [-RAID <String>]
+    [-NumberofDrives <Int32>]
+    [-DriveType <String>]
+    [-StorageLocation <String>]
+    [-Accelerator <String>]
+    [-Bootable <Boolean>]
     [<CommonParameters>]
 ```
 
 ```text
 New-HPOVServerProfileLogicalDisk
-    [-Name] <>
-    [-RAID <>]
-    [-NumberofDrives <>]
-    [-DriveType <>]
-    [-DriveSelectionBy <>]
-    [-AvailableDriveType <>]
-    [-StorageLocation <>]
-    [-MinDriveSize] <>
-    [-MaxDriveSize <>]
-    [-EraseDataOnDelete <>]
-    [-Bootable <>]
+    [-Name] <String>
+    [-RAID <String>]
+    [-NumberofDrives <Int32>]
+    [-DriveType <String>]
+    [-DriveSelectionBy <String>]
+    [-AvailableDriveType <HPOneView.Storage.AvailableDriveType>]
+    [-StorageLocation <String>]
+    [-MinDriveSize] <Int32>
+    [-MaxDriveSize <Int32>]
+    [-EraseDataOnDelete]
+    [-Bootable <Boolean>]
     [<CommonParameters>]
 ```
 
@@ -83,19 +83,19 @@ Create logical JBOD to then be attached to either a Gen10 Mixed Mode or Gen9 or 
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 Logical Disk name.  Must be unique within the Server Profile.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -RAID &lt;&gt;
+### -RAID &lt;String&gt;
 
 The RAID level of the logical drive. Supported values depend on the local storage capabilities of the selected server hardware type.
 
@@ -109,7 +109,7 @@ Only RAID0 and RAID1 are supported for embedded BL disk policies.  RAID5, RAID6,
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -NumberofDrives &lt;&gt;
+### -NumberofDrives &lt;Int32&gt;
 
 The number of physical drives to be used to build the logical drive. The provided values must be consistent with the selected RAID level and cannot exceed the maximum supported number of drives for the selected server hardware type.
 
@@ -121,7 +121,7 @@ The number of physical drives to be used to build the logical drive. The provide
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DriveType &lt;&gt;
+### -DriveType &lt;String&gt;
 
 Defines the interface type for drives that will be used to build the logical drive. Supported values depend on the local storage capabilities of the selected server hardware type.  Allowed value:
 
@@ -151,7 +151,7 @@ Auto is not supported when attempting to create an HPE Synergy D3940 Logical or 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DriveSelectionBy &lt;&gt;
+### -DriveSelectionBy &lt;String&gt;
 
 Use to specify how the drive selection will be used.  Allowed values:
 
@@ -168,7 +168,7 @@ Default: SizeAndTechnology
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -StorageLocation &lt;&gt;
+### -StorageLocation &lt;String&gt;
 
 Specify Internal for HPE Synergy Compute Nodes that have the Expanded Storage option connected to an available mezzanine SmartArray controller for NVMe drives.  DriveType parameter then must be set to NVMeSata or NVMeSAS.  Use External to specify storage will be allocated from the D3940 disk shelf.
 
@@ -180,7 +180,7 @@ Specify Internal for HPE Synergy Compute Nodes that have the Expanded Storage op
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -AvailableDriveType &lt;&gt;
+### -AvailableDriveType &lt;HPOneView.Storage.AvailableDriveType&gt;
 
 A specific availabe drive type from `Get-HPOVAvailableDriveType`.
 
@@ -192,19 +192,19 @@ A specific availabe drive type from `Get-HPOVAvailableDriveType`.
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -MinDriveSize &lt;&gt;
+### -MinDriveSize &lt;Int32&gt;
 
 Only for HPE Synergy D3940.  Specify the minimum size disk to request.  Required when `-DriveSelectionBy` is set to SizeAndTechnology.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | 0 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -MaxDriveSize &lt;&gt;
+### -MaxDriveSize &lt;Int32&gt;
 
 Only for HPE Synergy D3940.  If the parameter is not specified, the MinDriveSize parameter value will be used.
 
@@ -216,7 +216,7 @@ Only for HPE Synergy D3940.  If the parameter is not specified, the MinDriveSize
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Bootable &lt;&gt;
+### -Bootable &lt;Boolean&gt;
 
 Indicates if the logical drive is bootable or not. Cannot be combined with an FC or FCoE Server Profile Connection that is also set as Bootable.  Parameter is not valid with defining Synergy JBOD SAS disk policies.
 
@@ -228,7 +228,7 @@ Indicates if the logical drive is bootable or not. Cannot be combined with an FC
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EraseDataOnDelete &lt;&gt;
+### -EraseDataOnDelete &lt;SwitchParameter&gt;
 
 Indicates if the logical drive should be erased when it is deleted from or with the Server Profile.
 
@@ -240,7 +240,7 @@ Indicates if the logical drive should be erased when it is deleted from or with 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Accelerator &lt;&gt;
+### -Accelerator &lt;String&gt;
 
 For Gen10 Smart Array controllers only.  When using Auto for drive type allocation and supplied 'Enabled', the Accelorator policy will be set to 'ControllerCache'.  If drive allocation type is an 'SSD' drive, the accelorator policy will be set to 'IOBypass'.  Disabled will set the accelorator policy to 'None'.  Default is 'Unmanaged'.
 

@@ -8,11 +8,11 @@ description: Create a Server Profile Template from Server Profile.
 
 ```text
 ConvertTo-HPOVServerProfileTemplate
-    [-InputObject] <>
-    [-Name <>]
-    [-Description <>]
-    [-ApplianceConnection <>]
-    [-Async <>]
+    [-InputObject] <Object>
+    [-Name <String>]
+    [-Description <String>]
+    [-ApplianceConnection <Object>]
+    [-Async]
     [<CommonParameters>]
 ```
 
@@ -43,19 +43,19 @@ Use `Get-HPOVServerProfile` to retrieve the "MyProfile" object, creating a new S
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 A source Server Profile Object or Resource Name.
 
 | Aliases | source, ServerProfile |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 The Server Profile Template Name to assign.  If omitted, then a new name of "Copy of - {Original_Name}" will be defined.
 
@@ -67,7 +67,7 @@ The Server Profile Template Name to assign.  If omitted, then a new name of "Cop
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Description &lt;&gt;
+### -Description &lt;String&gt;
 
 The Server Profile description.
 
@@ -79,7 +79,7 @@ The Server Profile description.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -91,7 +91,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 

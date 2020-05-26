@@ -8,9 +8,9 @@ description: Add remote HPE Synergy Frame to Composer.
 
 ```text
 Add-HPOVRemoteFrame
-    [-Hostname] <>
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-Hostname] <String>
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -36,19 +36,19 @@ Add the specified remote HPE Synergy Frame.
 
 ## Parameters
 
-### -Hostname &lt;&gt;
+### -Hostname &lt;String&gt;
 
 The IPv6 Link Local address of the remote frame.  This can be viewed from the Frame Link Module (FLM) console using a crash cart.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -60,7 +60,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

@@ -8,9 +8,9 @@ description: Delete Server Profile Template Resource(s).
 
 ```text
 Remove-HPOVServerProfileTemplate
-    [-ServerProfileTemplate] <>
-    [-ApplianceConnection] <>
-    [-force <>]
+    [-ServerProfileTemplate] <Object>
+    [-ApplianceConnection] <Object>
+    [-force]
     [<CommonParameters>]
 ```
 
@@ -49,31 +49,31 @@ Search for all profile template resources and remove them from appliance.
 
 ## Parameters
 
-### -ServerProfileTemplate &lt;&gt;
+### -ServerProfileTemplate &lt;Object&gt;
 
 The server profile template object(s) or name(s) to be removed.
 
 | Aliases | spt, name |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -force &lt;&gt;
+### -force &lt;SwitchParameter&gt;
 
 Set to `force-delete` the profile.  For example, `force-remove` will successfully remove the profile, even when connectivity has been lost to the server or enclosure.
 
@@ -85,7 +85,7 @@ Set to `force-delete` the profile.  For example, `force-remove` will successfull
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -WhatIf &lt;&gt;
+### -WhatIf &lt;SwitchParameter&gt;
 
 
 
@@ -97,7 +97,7 @@ Set to `force-delete` the profile.  For example, `force-remove` will successfull
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Confirm &lt;&gt;
+### -Confirm &lt;SwitchParameter&gt;
 
 
 

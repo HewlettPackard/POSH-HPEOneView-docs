@@ -8,9 +8,9 @@ description: Remove rack manager from appliance.
 
 ```text
 Remove-HPOVRackManager
-    [-InputObject] <>
-    [-ApplianceConnection <>]
-    [-Force <>]
+    [-InputObject] <HPOneView.Servers.RackManager>
+    [-ApplianceConnection <Array>]
+    [-Force]
     [<CommonParameters>]
 ```
 
@@ -30,7 +30,7 @@ Remove the provided rack manager resource from the appliance.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -42,7 +42,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -Force &lt;&gt;
+### -Force &lt;SwitchParameter&gt;
 
 Force remove resource, in cases where the device manager has been `re-addressed` and is no longer accessible, or there are other communication issues preventing the resource removal.
 
@@ -54,13 +54,13 @@ Force remove resource, in cases where the device manager has been `re-addressed`
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;HPOneView.Servers.RackManager&gt;
 
 An `[HPOneView.Servers.RackManager]` resource from `Get-HPOVRackManager`.
 
 | Aliases | uri, name, Server |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |

@@ -8,9 +8,9 @@ description: Delete alerts.
 
 ```text
 Remove-HPOVAlert
-    [-InputObject] <>
-    [-Force <>]
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-Force]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -32,19 +32,19 @@ Remove all cleared alerts on the appliance.
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 The alert to be removed.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Force &lt;&gt;
+### -Force &lt;SwitchParameter&gt;
 
 Force remove the resource.
 
@@ -56,7 +56,7 @@ Force remove the resource.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 

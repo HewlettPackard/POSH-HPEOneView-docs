@@ -8,12 +8,12 @@ description: Convert an existing Storage Volume Snapshot to a Storage Volume.
 
 ```text
 ConvertTo-HPOVStorageVolume
-    [-InputObject] <>
-    [-Name] <>
-    [-Description <>]
-    [-SharingMode] <>
-    [-ApplianceConnection <>]
-    [-Async <>]
+    [-InputObject] <Object>
+    [-Name] <String>
+    [-Description <String>]
+    [-SharingMode] <String>
+    [-ApplianceConnection <Object>]
+    [-Async]
     [<CommonParameters>]
 ```
 
@@ -59,31 +59,31 @@ Get all of the available storage volume snapshots for "Volume 1", then convert t
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 Provide the snapshot resource object to convert managed by the appliance.
 
 | Aliases | Snapshot |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 The Storage Volume Name.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Description &lt;&gt;
+### -Description &lt;String&gt;
 
 The description of the storage volume.
 
@@ -95,19 +95,19 @@ The description of the storage volume.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SharingMode &lt;&gt;
+### -SharingMode &lt;String&gt;
 
 Specify if the new storage volume should be Private or Shared.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -119,7 +119,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 

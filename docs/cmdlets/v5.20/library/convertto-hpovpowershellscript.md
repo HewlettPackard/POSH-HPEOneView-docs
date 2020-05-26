@@ -8,9 +8,9 @@ description: Create PowerShell script from resource.
 
 ```text
 ConvertTo-HPOVPowerShellScript
-    [-InputObject] <>
-    [-Export <>]
-    [-Append <>]
+    [-InputObject] <Object>
+    [-Export <System.IO.FileInfo>]
+    [-Append]
     [<CommonParameters>]
 ```
 
@@ -57,19 +57,19 @@ Generate PowerShell script code for the returned server profile objects.
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 Resource object from supported Cmdlets.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Export &lt;&gt;
+### -Export &lt;System.IO.FileInfo&gt;
 
 Location where to write `UTF-8` file.
 
@@ -81,7 +81,7 @@ Location where to write `UTF-8` file.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Append &lt;&gt;
+### -Append &lt;SwitchParameter&gt;
 
 Indicte if the export file should be appended.  By default, a new file will be created with new content.
 

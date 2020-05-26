@@ -8,11 +8,11 @@ description: Modify a logical JBOD resource.
 
 ```text
 Set-HPOVLogicalJBOD
-    [-InputObject] <>
-    [-DisableEraseData <>]
-    [-ClearMetadata <>]
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-InputObject] <HPOneView.Storage.LogicalJBOD[]>
+    [-DisableEraseData]
+    [-ClearMetadata]
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -38,7 +38,7 @@ Disable erase data on delete policy for the specific logical JBOD.  This cannot 
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -50,7 +50,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -62,7 +62,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ClearMetadata &lt;&gt;
+### -ClearMetadata &lt;SwitchParameter&gt;
 
 Clear metadata on the associated drives, effectively wiping the data on the drive.  This is not a secure erase, and data recovery could be possible.
 
@@ -74,7 +74,7 @@ Clear metadata on the associated drives, effectively wiping the data on the driv
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DisableEraseData &lt;&gt;
+### -DisableEraseData &lt;SwitchParameter&gt;
 
 Can only be used if the logical JBOD was created with EraseDataOnDelete parameter was used in the call to `New-HPOVLogicalJBOD`.
 
@@ -86,13 +86,13 @@ Can only be used if the logical JBOD was created with EraseDataOnDelete paramete
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;HPOneView.Storage.LogicalJBOD[]&gt;
 
 The logical JBOD resource from `Get-HPOVLogicalJBOD`.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |

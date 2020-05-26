@@ -8,15 +8,15 @@ description: List Directory Group role assignment.
 
 ```text
 Get-HPOVLdapGroup
-    [-Name <>]
-    [-ApplianceConnection <>]
+    [-Name <String>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 Get-HPOVLdapGroup
-    [-Export <>]
-    [-ApplianceConnection <>]
+    [-Export <String>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -72,7 +72,7 @@ Export configured Directory Groups to c:\dir\directorygroups.json
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 Configured Directory Group Name. If omitted, all configured Directory Groups will be displayed.
 
@@ -84,7 +84,7 @@ Configured Directory Group Name. If omitted, all configured Directory Groups wil
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Export &lt;&gt;
+### -Export &lt;String&gt;
 
 Export JSON content to file
 
@@ -96,7 +96,7 @@ Export JSON content to file
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

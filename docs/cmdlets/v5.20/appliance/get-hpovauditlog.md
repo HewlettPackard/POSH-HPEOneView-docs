@@ -13,11 +13,11 @@ Get-HPOVAuditLog
 
 ```text
 Get-HPOVAuditLog
-    [-Count <>]
-    [-TimeSpan <>]
-    [-Start <>]
-    [-End <>]
-    [-ApplianceConnection <>]
+    [-Count <Int>]
+    [-TimeSpan <Timespan>]
+    [-Start <DateTime>]
+    [-End <DateTime>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -128,7 +128,7 @@ Return the audit logs from the appliance from 5 days ago from today.
 
 ## Parameters
 
-### -Count &lt;&gt;
+### -Count &lt;Int&gt;
 
 Specify the number of audit log entries to return.
 
@@ -140,7 +140,7 @@ Specify the number of audit log entries to return.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Timespan &lt;&gt;
+### -Timespan &lt;Timespan&gt;
 
 Specify the time span of to filter results on.  Cannot be combined with Start or End.
 
@@ -152,7 +152,7 @@ Specify the time span of to filter results on.  Cannot be combined with Start or
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Start &lt;&gt;
+### -Start &lt;DateTime&gt;
 
 Specify the Start datetime object to begin the search.  Can be combined with End parameter.
 
@@ -164,7 +164,7 @@ Specify the Start datetime object to begin the search.  Can be combined with End
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -End &lt;&gt;
+### -End &lt;DateTime&gt;
 
 Specify the End datetime object to begin the search.  Should be combined with Start parameter.
 
@@ -176,7 +176,7 @@ Specify the End datetime object to begin the search.  Should be combined with St
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

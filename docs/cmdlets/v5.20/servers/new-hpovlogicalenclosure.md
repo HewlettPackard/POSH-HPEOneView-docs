@@ -8,14 +8,14 @@ description: Create a Logical Enclosure.
 
 ```text
 New-HPOVLogicalEnclosure
-    [-Name] <>
-    [-Enclosure] <>
-    [-EnclosureGroup] <>
-    [-FirmwareBaseline] <>
-    [-ForceFirmwareBaseline] <>
-    [-Scope <>]
-    [-Async <>]
-    [-ApplianceConnection] <>
+    [-Name] <String>
+    [-Enclosure] <Object>
+    [-EnclosureGroup] <Object>
+    [-FirmwareBaseline] <String>
+    [-ForceFirmwareBaseline] <Boolean>
+    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
+    [-Async]
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -40,67 +40,67 @@ Create a new Logical Enclosure, "My Synergy LE 1", using the specified Enclosure
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 A name for the new Logical Enclosure.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Enclosure &lt;&gt;
+### -Enclosure &lt;Object&gt;
 
 One of the connected Frames.  The Interlink Topology will be discovered to include the other Frame members.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -EnclosureGroup &lt;&gt;
+### -EnclosureGroup &lt;Object&gt;
 
 The Enclosure Group resource to deploy the policy from.
 
 | Aliases | eg |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -FirmwareBaseline &lt;&gt;
+### -FirmwareBaseline &lt;String&gt;
 
 Provide the Firmware Baseline object to use with the Logical Enclosure is being created.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ForceFirmwareBaseline &lt;&gt;
+### -ForceFirmwareBaseline &lt;Boolean&gt;
 
 Specify to force the installation of firmware if the same version is found or if you wish to downgrade from a newer installed version.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -112,19 +112,19 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;&gt;
+### -Scope &lt;HPOneView.Appliance.ScopeCollection[]&gt;
 
 Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
 

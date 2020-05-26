@@ -8,30 +8,30 @@ description: Retrieve Enclosure resource(s).
 
 ```text
 Get-HPOVEnclosure
-    [-Name <>]
-    [-Scope <>]
-    [-Label <>]
-    [-ApplianceConnection <>]
+    [-Name <String>]
+    [-Scope <Object>]
+    [-Label <String>]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
 ```text
 Get-HPOVEnclosure
-    [-Name <>]
-    [-Scope <>]
-    [-Label <>]
-    [-ApplianceConnection <>]
-    [-Report <>]
+    [-Name <String>]
+    [-Scope <Object>]
+    [-Label <String>]
+    [-ApplianceConnection <Array>]
+    [-Report]
     [<CommonParameters>]
 ```
 
 ```text
 Get-HPOVEnclosure
-    [-Name <>]
-    [-Scope <>]
-    [-Label <>]
-    [-ApplianceConnection <>]
-    [-exportFile] <>
+    [-Name <String>]
+    [-Scope <Object>]
+    [-Label <String>]
+    [-ApplianceConnection <Array>]
+    [-exportFile] <String>
     [<CommonParameters>]
 ```
 
@@ -128,7 +128,7 @@ Generate a report of Encl1.
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 The name of the enclosure hardware resource to be returned.  All enclosure hardware resources will be returned if omitted.
 
@@ -140,7 +140,7 @@ The name of the enclosure hardware resource to be returned.  All enclosure hardw
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;&gt;
+### -Scope &lt;Object&gt;
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
@@ -157,7 +157,7 @@ Filter resources based on provided Scope membership.  By default, all resources 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Label &lt;&gt;
+### -Label &lt;String&gt;
 
 Specify the label associated with resources.
 
@@ -169,7 +169,7 @@ Specify the label associated with resources.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -181,19 +181,19 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ExportFile &lt;&gt;
+### -ExportFile &lt;String&gt;
 
 Full path and file name to save the output .
 
 | Aliases | x, export |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Report &lt;&gt;
+### -Report &lt;SwitchParameter&gt;
 
 Generate report of enclosure, including device bays, interconnect bays, and reported firmware for components.
 

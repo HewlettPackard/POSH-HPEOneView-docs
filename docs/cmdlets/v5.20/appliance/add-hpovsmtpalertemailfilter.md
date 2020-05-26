@@ -8,21 +8,21 @@ description: Add SMTP email alert filter
 
 ```text
 Add-HPOVSmtpAlertEmailFilter
-    [-Name] <>
-    [-Emails] <>
-    [-Filter <>]
-    [-Scope <>]
-    [-ScopeMatchPreference <>]
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-Name] <String>
+    [-Emails] <Net.Mail.MailAddress[]>
+    [-Filter <String>]
+    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
+    [-ScopeMatchPreference <String>]
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 Add-HPOVSmtpAlertEmailFilter
-    [-RemoteSupportFilter] <>
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-RemoteSupportFilter]
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -72,19 +72,19 @@ Create OneView Remote Support filter on the appliance.
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 Name of the Filter you are creating.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Filter &lt;&gt;
+### -Filter &lt;String&gt;
 
 REST API filter specifying the resource category, URI, name, and severity.  
     
@@ -98,7 +98,7 @@ Example:  CPU status:"warning" or status:"critical"
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;&gt;
+### -Scope &lt;HPOneView.Appliance.ScopeCollection[]&gt;
 
 Scope(s) the Filter should apply to.  Omitting parameter will apply filter to all resources.
 
@@ -110,7 +110,7 @@ Scope(s) the Filter should apply to.  Omitting parameter will apply filter to al
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ScopeMatchPreference &lt;&gt;
+### -ScopeMatchPreference &lt;String&gt;
 
 If providing multiple Scope resources, specify AND or OR to indicate match preference.
 
@@ -122,19 +122,19 @@ If providing multiple Scope resources, specify AND or OR to indicate match prefe
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Emails &lt;&gt;
+### -Emails &lt;Net.Mail.MailAddress[]&gt;
 
 Destination EMail address(es).
 
 | Aliases | recipients |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -146,7 +146,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -158,13 +158,13 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -RemoteSupportFilter &lt;&gt;
+### -RemoteSupportFilter &lt;SwitchParameter&gt;
 
 Use to create the HPE OneView Remote Support email filter for service events.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |

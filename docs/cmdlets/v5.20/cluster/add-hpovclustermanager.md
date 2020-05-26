@@ -8,14 +8,14 @@ description: Add new hypervisor manager.
 
 ```text
 Add-HPOVClusterManager
-    [-Hostname] <>
-    [-Credential] <>
-    [-DisplayName <>]
-    [-Port <>]
-    [-TrustLeafCertificate <>]
-    [-Scope <>]
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-Hostname] <String>
+    [-Credential] <PSCredential>
+    [-DisplayName <String>]
+    [-Port <int>]
+    [-TrustLeafCertificate]
+    [-Scope <Object>]
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -47,7 +47,7 @@ Add hypervisor manager by providing prompted PSCredential.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -59,7 +59,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -71,19 +71,19 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Credential &lt;&gt;
+### -Credential &lt;PSCredential&gt;
 
 Use this parameter to provide the cluster manager credentials.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DisplayName &lt;&gt;
+### -DisplayName &lt;String&gt;
 
 Override display name of the hypervisor manager. By default Hostname will be used.
 
@@ -95,19 +95,19 @@ Override display name of the hypervisor manager. By default Hostname will be use
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Hostname &lt;&gt;
+### -Hostname &lt;String&gt;
 
 IP or FQDN address of the hypervisor manager.
 
 | Aliases | Name, ComputerName |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Port &lt;&gt;
+### -Port &lt;int&gt;
 
 HTTPS port of the target hypervisor manager. Default is 443.
 
@@ -119,7 +119,7 @@ HTTPS port of the target hypervisor manager. Default is 443.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;&gt;
+### -Scope &lt;Object&gt;
 
 Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
 
@@ -131,7 +131,7 @@ Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -TrustLeafCertificate &lt;&gt;
+### -TrustLeafCertificate &lt;SwitchParameter&gt;
 
 If the resource SSL certificate is not trusted, use this parameter to add the certificate to the appliance trust store.
 

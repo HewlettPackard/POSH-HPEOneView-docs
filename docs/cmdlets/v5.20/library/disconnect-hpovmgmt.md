@@ -8,7 +8,7 @@ description: Logoff from the appliance.
 
 ```text
 Disconnect-HPOVMgmt
-    [-ApplianceConnection <>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -45,7 +45,7 @@ Disconnect all appliance sessions.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

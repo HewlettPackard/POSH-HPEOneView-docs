@@ -8,10 +8,10 @@ description: Rename or set a description to a Server Hardware Type resource.
 
 ```text
 Set-HPOVServerHardwareType
-    [-InputObject] <>
-    [-Name] <>
-    [-Description <>]
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-Name] <String>
+    [-Description <String>]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -35,7 +35,7 @@ Rename the default "BL460c Gen9 1" server hardware type resource to a new name.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -47,7 +47,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -Description &lt;&gt;
+### -Description &lt;String&gt;
 
 Set a new description.
 
@@ -59,25 +59,25 @@ Set a new description.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 HPOneView.ServerHardwareType resource from `Get-HPOVServerHardwareType`.
 
 | Aliases | Resource |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 Set a new name.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |

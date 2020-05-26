@@ -8,23 +8,23 @@ description: Power reset or EFuse HPS Synergy Frame component.
 
 ```text
 Reset-HPOVEnclosureDevice
-    [-Enclosure] <>
-    [-Component] <>
-    [-DeviceID] <>
-    [-Efuse <>]
-    [-Async <>]
-    [-ApplianceConnection] <>
+    [-Enclosure] <Object>
+    [-Component] <String>
+    [-DeviceID] <Int32>
+    [-Efuse]
+    [-Async]
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ```text
 Reset-HPOVEnclosureDevice
-    [-Enclosure] <>
-    [-Component] <>
-    [-DeviceID] <>
-    [-Reset <>]
-    [-Async <>]
-    [-ApplianceConnection] <>
+    [-Enclosure] <Object>
+    [-Component] <String>
+    [-DeviceID] <Int32>
+    [-Reset]
+    [-Async]
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -56,19 +56,19 @@ Reset the device in bay 4 by requesting it to reset itself.
 
 ## Parameters
 
-### -Enclosure &lt;&gt;
+### -Enclosure &lt;Object&gt;
 
 The Synergy Frame resource from `Get-HPOVEnclosure`.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Component &lt;&gt;
+### -Component &lt;String&gt;
 
 The embedded component to perform the action against.  Allowed value:
 
@@ -79,25 +79,25 @@ The embedded component to perform the action against.  Allowed value:
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DeviceID &lt;&gt;
+### -DeviceID &lt;Int32&gt;
 
 The corrisponding bay ID.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | 0 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Reset &lt;&gt;
+### -Reset &lt;SwitchParameter&gt;
 
 Reset power to the device.  Only supported with certain component types.
 
@@ -109,7 +109,7 @@ Reset power to the device.  Only supported with certain component types.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Efuse &lt;&gt;
+### -Efuse &lt;SwitchParameter&gt;
 
 EFuse will take away and then present power back to the device.  Supported with all component types.
 
@@ -121,7 +121,7 @@ EFuse will take away and then present power back to the device.  Supported with 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -133,7 +133,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -141,13 +141,13 @@ Default Value: ${Global:ConnectSessions}
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -WhatIf &lt;&gt;
+### -WhatIf &lt;SwitchParameter&gt;
 
 
 
@@ -159,7 +159,7 @@ Default Value: ${Global:ConnectSessions}
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Confirm &lt;&gt;
+### -Confirm &lt;SwitchParameter&gt;
 
 
 

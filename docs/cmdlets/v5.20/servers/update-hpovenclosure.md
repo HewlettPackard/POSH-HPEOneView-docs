@@ -8,23 +8,23 @@ description: Update or Refresh an enclosure.
 
 ```text
 Update-HPOVEnclosure
-    [-Refresh <>]
-    [-InputObject] <>
-    [-ApplianceConnection] <>
-    [-Hostname] <>
-    [-Username] <>
-    [-Password] <>
-    [-Credential <>]
-    [-Async <>]
+    [-Refresh]
+    [-InputObject] <Object>
+    [-ApplianceConnection] <Array>
+    [-Hostname] <String>
+    [-Username] <String>
+    [-Password] <String>
+    [-Credential <PSCredential>]
+    [-Async]
     [<CommonParameters>]
 ```
 
 ```text
 Update-HPOVEnclosure
-    [-Reapply <>]
-    [-InputObject] <>
-    [-ApplianceConnection] <>
-    [-Async <>]
+    [-Reapply]
+    [-InputObject] <Object>
+    [-ApplianceConnection] <Array>
+    [-Async]
     [<CommonParameters>]
 ```
 
@@ -62,32 +62,32 @@ Refresh "Enclosure1" enclosure, supplying the updated OA FQDN and administrator 
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 Aliases [-Enclosure]
 Provide the Enclosure name or Object, or `[System.Collections.ArrayList]` of names or Objects to refresh/update.
 
 | Aliases | Enclosure |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -Refresh &lt;&gt;
+### -Refresh &lt;SwitchParameter&gt;
 
 Refresh the enclosure to fix configuration issues.
 
@@ -99,43 +99,43 @@ Refresh the enclosure to fix configuration issues.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Hostname &lt;&gt;
+### -Hostname &lt;String&gt;
 
 When an Enclosure is in an Error state where the Primary Onboard Administrator IP Address changed, or the HPE OneView managed configuration is no longer present, you will need to provide the IP Address or FQDN of one of the Onboard Administrators in the target enclosure.  You will be prompted for this value if needed.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Username &lt;&gt;
+### -Username &lt;String&gt;
 
 Provide the Username of an Onboard Administrator administrator account to `re-apply` the configuration if the enclosure is in an error state and the HPE OneView managed configuration is no longer present.  You will be prompted for this value if needed.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Password &lt;&gt;
+### -Password &lt;String&gt;
 
 Provide the password of the Onboard Administrator administrator account to `re-apply` the configuration if the enclosure is in an error state and the HPE OneView managed configuration is no longer present.  You will be prompted for this value if needed.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Reapply &lt;&gt;
+### -Reapply &lt;SwitchParameter&gt;
 
 Reapply the Enclosure Configuration.
 
@@ -147,7 +147,7 @@ Reapply the Enclosure Configuration.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -159,7 +159,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -WhatIf &lt;&gt;
+### -WhatIf &lt;SwitchParameter&gt;
 
 
 
@@ -171,7 +171,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Confirm &lt;&gt;
+### -Confirm &lt;SwitchParameter&gt;
 
 
 
@@ -183,7 +183,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Credential &lt;&gt;
+### -Credential &lt;PSCredential&gt;
 
 Use this parameter if you want to provide a PSCredential object instead.
 

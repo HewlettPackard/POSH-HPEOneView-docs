@@ -8,16 +8,16 @@ description: Create QoS Configuration Object
 
 ```text
 New-HPOVQosConfig
-    [-ConfigType] <>
+    [-ConfigType] <String>
     [<CommonParameters>]
 ```
 
 ```text
 New-HPOVQosConfig
-    [-ConfigType] <>
-    [-UplinkClassificationType] <>
-    [-DownlinkClassificationType] <>
-    [-TrafficClassifiers] <>
+    [-ConfigType] <String>
+    [-UplinkClassificationType] <String>
+    [-DownlinkClassificationType] <String>
+    [-TrafficClassifiers] <ArrayList>
     [<CommonParameters>]
 ```
 
@@ -38,7 +38,7 @@ Create a new QOS Configuration object,and use the created object to add to a new
 
 ## Parameters
 
-### -ConfigType &lt;&gt;
+### -ConfigType &lt;String&gt;
 
 The QOS Configuration Type.  Allowed values are:
 
@@ -48,13 +48,13 @@ The QOS Configuration Type.  Allowed values are:
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | Passthrough |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -UplinkClassificationType &lt;&gt;
+### -UplinkClassificationType &lt;String&gt;
 
 Configure the Uplink QOS Marking classification type.
 
@@ -64,13 +64,13 @@ Configure the Uplink QOS Marking classification type.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | DOT1P |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DownlinkClassificationType &lt;&gt;
+### -DownlinkClassificationType &lt;String&gt;
 
 Configure the Downlink QOS Marking classification type.
 
@@ -80,19 +80,19 @@ Configure the Downlink QOS Marking classification type.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | DOT1P_AND_DSCP |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -TrafficClassifiers &lt;&gt;
+### -TrafficClassifiers &lt;ArrayList&gt;
 
 A collection of traffic classes created using the `New-HPOVQosTrafficClass`.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | @() |
 | Accept pipeline input? | false |

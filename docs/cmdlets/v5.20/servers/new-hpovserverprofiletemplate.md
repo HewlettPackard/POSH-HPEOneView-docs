@@ -8,95 +8,95 @@ description: Create a Server Profile Template
 
 ```text
 New-HPOVServerProfileTemplate
-    [-Name] <>
-    [-ServerHardwareType] <>
-    [-Description <>]
-    [-ServerProfileDescription <>]
-    [-ManageConnections <>]
-    [-Connections <>]
-    [-ConnectionsConsistencyChecking <>]
-    [-EnclosureGroup <>]
-    [-Firmware <>]
-    [-FirmwareConsistencyChecking <>]
-    [-FirmwareInstallMode <>]
-    [-FirmwareActivationMode <>]
-    [-Baseline <>]
-    [-ForceInstallFirmware <>]
-    [-OSDeploymentPlan <>]
-    [-OSDeploymentConsistencyChecking <>]
-    [-OSDeploymentPlanAttributes <>]
-    [-Bios <>]
-    [-BiosSettings <>]
-    [-BiosConsistencyChecking <>]
-    [-BootMode <>]
-    [-BootModeConsistencyChecking <>]
-    [-PxeBootPolicy <>]
-    [-ManageBoot <>]
-    [-BootOrder <>]
-    [-BootOrderConsistencyChecking <>]
-    [-SecureBoot <>]
-    [-LocalStorage <>]
-    [-LocalStorageConsistencyChecking <>]
-    [-StorageController <>]
-    [-Affinity <>]
-    [-MacAssignment <>]
-    [-WwnAssignment <>]
-    [-SnAssignment <>]
-    [-IscsiInitiatorNameAssignmet <>]
-    [-HideUnusedFlexNics <>]
-    [-Async <>]
-    [-PassThru <>]
-    [-ApplianceConnection <>]
+    [-Name] <String>
+    [-ServerHardwareType] <Object>
+    [-Description <String>]
+    [-ServerProfileDescription <String>]
+    [-ManageConnections <Boolean>]
+    [-Connections <Array>]
+    [-ConnectionsConsistencyChecking <string>]
+    [-EnclosureGroup <Object>]
+    [-Firmware]
+    [-FirmwareConsistencyChecking <string>]
+    [-FirmwareInstallMode <String>]
+    [-FirmwareActivationMode <String>]
+    [-Baseline <Object>]
+    [-ForceInstallFirmware]
+    [-OSDeploymentPlan <Object>]
+    [-OSDeploymentConsistencyChecking <string>]
+    [-OSDeploymentPlanAttributes <Array>]
+    [-Bios]
+    [-BiosSettings <Array>]
+    [-BiosConsistencyChecking <string>]
+    [-BootMode <String>]
+    [-BootModeConsistencyChecking <string>]
+    [-PxeBootPolicy <String>]
+    [-ManageBoot]
+    [-BootOrder <Array>]
+    [-BootOrderConsistencyChecking <string>]
+    [-SecureBoot <String>]
+    [-LocalStorage]
+    [-LocalStorageConsistencyChecking <string>]
+    [-StorageController <Object>]
+    [-Affinity <String>]
+    [-MacAssignment <String>]
+    [-WwnAssignment <String>]
+    [-SnAssignment <String>]
+    [-IscsiInitiatorNameAssignmet <string>]
+    [-HideUnusedFlexNics <Boolean>]
+    [-Async]
+    [-PassThru]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 New-HPOVServerProfileTemplate
-    [-Name] <>
-    [-ServerHardwareType] <>
-    [-SANStorage] <>
-    [-HostOStype] <>
-    [-StorageVolume] <>
-    [-Description <>]
-    [-ServerProfileDescription <>]
-    [-ManageConnections <>]
-    [-Connections <>]
-    [-ConnectionsConsistencyChecking <>]
-    [-EnclosureGroup <>]
-    [-Firmware <>]
-    [-FirmwareConsistencyChecking <>]
-    [-FirmwareInstallMode <>]
-    [-FirmwareActivationMode <>]
-    [-Baseline <>]
-    [-ForceInstallFirmware <>]
-    [-OSDeploymentPlan <>]
-    [-OSDeploymentConsistencyChecking <>]
-    [-OSDeploymentPlanAttributes <>]
-    [-Bios <>]
-    [-BiosSettings <>]
-    [-BiosConsistencyChecking <>]
-    [-BootMode <>]
-    [-BootModeConsistencyChecking <>]
-    [-PxeBootPolicy <>]
-    [-ManageBoot <>]
-    [-BootOrder <>]
-    [-BootOrderConsistencyChecking <>]
-    [-SecureBoot <>]
-    [-LocalStorage <>]
-    [-LocalStorageConsistencyChecking <>]
-    [-StorageController <>]
-    [-SANStorageConsistencyChecking <>]
-    [-EvenPathDisabled <>]
-    [-OddPathDisabled <>]
-    [-Affinity <>]
-    [-MacAssignment <>]
-    [-WwnAssignment <>]
-    [-SnAssignment <>]
-    [-IscsiInitiatorNameAssignmet <>]
-    [-HideUnusedFlexNics <>]
-    [-Async <>]
-    [-PassThru <>]
-    [-ApplianceConnection <>]
+    [-Name] <String>
+    [-ServerHardwareType] <Object>
+    [-SANStorage]
+    [-HostOStype] <String>
+    [-StorageVolume] <Object>
+    [-Description <String>]
+    [-ServerProfileDescription <String>]
+    [-ManageConnections <Boolean>]
+    [-Connections <Array>]
+    [-ConnectionsConsistencyChecking <string>]
+    [-EnclosureGroup <Object>]
+    [-Firmware]
+    [-FirmwareConsistencyChecking <string>]
+    [-FirmwareInstallMode <String>]
+    [-FirmwareActivationMode <String>]
+    [-Baseline <Object>]
+    [-ForceInstallFirmware]
+    [-OSDeploymentPlan <Object>]
+    [-OSDeploymentConsistencyChecking <string>]
+    [-OSDeploymentPlanAttributes <Array>]
+    [-Bios]
+    [-BiosSettings <Array>]
+    [-BiosConsistencyChecking <string>]
+    [-BootMode <String>]
+    [-BootModeConsistencyChecking <string>]
+    [-PxeBootPolicy <String>]
+    [-ManageBoot]
+    [-BootOrder <Array>]
+    [-BootOrderConsistencyChecking <string>]
+    [-SecureBoot <String>]
+    [-LocalStorage]
+    [-LocalStorageConsistencyChecking <string>]
+    [-StorageController <Object>]
+    [-SANStorageConsistencyChecking <string>]
+    [-EvenPathDisabled]
+    [-OddPathDisabled]
+    [-Affinity <String>]
+    [-MacAssignment <String>]
+    [-WwnAssignment <String>]
+    [-SnAssignment <String>]
+    [-IscsiInitiatorNameAssignmet <string>]
+    [-HideUnusedFlexNics <Boolean>]
+    [-Async]
+    [-PassThru]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -225,19 +225,19 @@ Create a BL Gen9 UEFI Server Profile template with Ethernet and FC connections, 
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 The name of the server profile resource to be created.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Description &lt;&gt;
+### -Description &lt;String&gt;
 
 Optional description for this server profile template.
 
@@ -249,7 +249,7 @@ Optional description for this server profile template.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ServerProfileDescription &lt;&gt;
+### -ServerProfileDescription &lt;String&gt;
 
 Optional description for created server profiles from this template.
 
@@ -261,7 +261,7 @@ Optional description for created server profiles from this template.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ManageConnections &lt;&gt;
+### -ManageConnections &lt;Boolean&gt;
 
 Use this parameter to specify if Connections should be tracked from the Server Profile Template for compliance.  If set to False, the `-Connections` parameter will be ignored, and Connections must be set and managed at the Server Profile.
 
@@ -273,7 +273,7 @@ Use this parameter to specify if Connections should be tracked from the Server P
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Connections &lt;&gt;
+### -Connections &lt;Array&gt;
 
 The network connections that are to be part of this new server profile.  This an array of profile connection objects which may be created with "New-HPOVServerProfileConnection".
 
@@ -328,7 +328,7 @@ Default: No connections
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EnclosureGroup &lt;&gt;
+### -EnclosureGroup &lt;Object&gt;
 
 The Enclosure Group resource the Server Profile Template will be bound to.  When assigning to an Enclosure Group, OneView will then determine what farbic connectivity and storage devices are available.
 
@@ -340,19 +340,19 @@ The Enclosure Group resource the Server Profile Template will be bound to.  When
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ServerHardwareType &lt;&gt;
+### -ServerHardwareType &lt;Object&gt;
 
 The Server Hardware Type reource the Server Profile Template will be bound to.
 
 | Aliases | sht |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Firmware &lt;&gt;
+### -Firmware &lt;SwitchParameter&gt;
 
 Enable Firmware Management.  Cannot be enabled with Server Hardware Type does not support Firmware Management (i.e. BL G7 servers.)
 
@@ -364,7 +364,7 @@ Enable Firmware Management.  Cannot be enabled with Server Hardware Type does no
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Baseline &lt;&gt;
+### -Baseline &lt;Object&gt;
 
 Firmware baseline to assign.  Can be either Baseline Name or URI.
 
@@ -376,7 +376,7 @@ Firmware baseline to assign.  Can be either Baseline Name or URI.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -FirmwareInstallMode &lt;&gt;
+### -FirmwareInstallMode &lt;String&gt;
 
 Specify the Firmware Baseline Policy mode.  Avialable options are:
 
@@ -392,7 +392,7 @@ Specify the Firmware Baseline Policy mode.  Avialable options are:
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ForceInstallFirmware &lt;&gt;
+### -ForceInstallFirmware &lt;SwitchParameter&gt;
 
 Using this parameter will force the bundled firmware components to install when the Server Profile is applied to a server.  This will downgrade firmware if the component firmware is newer than what the SPP Baseline contains.
 
@@ -404,7 +404,7 @@ Using this parameter will force the bundled firmware components to install when 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -FirmwareActivationMode &lt;&gt;
+### -FirmwareActivationMode &lt;String&gt;
 
 Specify the firmware activation policy.  Avialable options are:
 
@@ -420,7 +420,7 @@ Specify the firmware activation policy.  Avialable options are:
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Bios &lt;&gt;
+### -Bios &lt;SwitchParameter&gt;
 
 Enable BIOS Settings Management.  Cannot be enabled with Server Hardware Type does not support BIOS Management (i.e. BL G7 
 servers.)
@@ -433,7 +433,7 @@ servers.)
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -BiosSettings &lt;&gt;
+### -BiosSettings &lt;Array&gt;
 
 BIOS Settings that are to be managed.  You can get the BIOS settings available from `Get-HPOVServerHarwareType` and the returned biosSettings property.
 
@@ -445,7 +445,7 @@ BIOS Settings that are to be managed.  You can get the BIOS settings available f
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -BootMode &lt;&gt;
+### -BootMode &lt;String&gt;
 
 Specify the Gen9 Boot Envrionment.
 
@@ -474,7 +474,7 @@ Default: BIOS
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SecureBoot &lt;&gt;
+### -SecureBoot &lt;String&gt;
 
 Specify if secure boot should be Unmanaged, Enabled or Disabled for Gen10 and newer servers. Boot Mode must be set to 'UEFI Optimized'.
 
@@ -486,7 +486,7 @@ Specify if secure boot should be Unmanaged, Enabled or Disabled for Gen10 and ne
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -PxeBootPolicy &lt;&gt;
+### -PxeBootPolicy &lt;String&gt;
 
 Controls the ordering of the network modes available to the Flexible LOM (FLB); for example, IPv4 and IPv6.
 
@@ -510,7 +510,7 @@ Default: Auto
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ManageBoot &lt;&gt;
+### -ManageBoot &lt;SwitchParameter&gt;
 
 Enable Boot Order Management.  Also required for Connection boot enablement.  If this is disabled ($False), then PXE or FC BfS settings are disabled within the entire Server Profile.
 
@@ -524,7 +524,7 @@ Default: $True
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -BootOrder &lt;&gt;
+### -BootOrder &lt;Array&gt;
 
 Boot Order settings to be managed.
           
@@ -542,7 +542,7 @@ Gen9 UEFI Default Boot Order: "HardDisk"
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -LocalStorage &lt;&gt;
+### -LocalStorage &lt;SwitchParameter&gt;
 
 Enable local storage settings to be managed on the server.
 
@@ -554,7 +554,7 @@ Enable local storage settings to be managed on the server.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -OSDeploymentPlan &lt;&gt;
+### -OSDeploymentPlan &lt;Object&gt;
 
 The HPE Synergy Image Streamer OS deployment plan from `Get-HPOVOSDeploymentPlan`.
 
@@ -566,7 +566,7 @@ The HPE Synergy Image Streamer OS deployment plan from `Get-HPOVOSDeploymentPlan
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -OSDeploymentPlanAttributes &lt;&gt;
+### -OSDeploymentPlanAttributes &lt;Array&gt;
 
 Configured OS Deployment Plan parameters from `Get-HPOVOSDeploymentPlanAttribute`.  You will need to group required NIC parameters together based on needed values.
 
@@ -578,7 +578,7 @@ Configured OS Deployment Plan parameters from `Get-HPOVOSDeploymentPlanAttribute
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Initialize &lt;&gt;
+### -Initialize &lt;SwitchParameter&gt;
 
 Deprecated.  Please refer to the `New-HPOVServerProfileLogicalDisk` and `New-HPOVServerProfileLogicalDiskController` Cmdlets.
 
@@ -590,7 +590,7 @@ Deprecated.  Please refer to the `New-HPOVServerProfileLogicalDisk` and `New-HPO
 | Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
-### -ControllerMode &lt;&gt;
+### -ControllerMode &lt;String&gt;
 
 Deprecated.  Please refer to the `New-HPOVServerProfileLogicalDisk` and `New-HPOVServerProfileLogicalDiskController` Cmdlets.
 
@@ -602,7 +602,7 @@ Deprecated.  Please refer to the `New-HPOVServerProfileLogicalDisk` and `New-HPO
 | Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
-### -StorageController &lt;&gt;
+### -StorageController &lt;Object&gt;
 
 A resource object containing the StorageController, LogicalDisk or SasJbod configuration.  Please refer to the `New-HPOVServerProfileLogicalDisk` and `New-HPOVServerProfileLogicalDiskController` Cmdlets.
 
@@ -614,7 +614,7 @@ A resource object containing the StorageController, LogicalDisk or SasJbod confi
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SANStorage &lt;&gt;
+### -SANStorage &lt;SwitchParameter&gt;
 
 Optional.  Enable SAN Storage Management within the Server Profile.
 
@@ -626,7 +626,7 @@ Optional.  Enable SAN Storage Management within the Server Profile.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -HostOStype &lt;&gt;
+### -HostOStype &lt;String&gt;
 
 Optional. Specify the Host OS type, which will set the Host OS value when HPE OneView created the Host object on the Storage System.  Accepted values:
 
@@ -664,7 +664,7 @@ Optional. Specify the Host OS type, which will set the Host OS value when HPE On
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -StorageVolume &lt;&gt;
+### -StorageVolume &lt;Object&gt;
 
 Optional. Array of Storage Volume resources to attach.  Can be created by using the `New-HPOVServerProfileAttachVolume` Cmdlet.  This parameter does not accept a Storage Volume resource from the `Get-HPOVStorageVolume` Cmdlet.
 
@@ -696,7 +696,7 @@ The format of the Storage Volume resource should be a PsCustomObject PowerShell 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EvenPathDisabled &lt;&gt;
+### -EvenPathDisabled &lt;SwitchParameter&gt;
 
 Enable to disable even paths in the attached storage volume(s).
 
@@ -708,7 +708,7 @@ Enable to disable even paths in the attached storage volume(s).
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -OddPathDisabled &lt;&gt;
+### -OddPathDisabled &lt;SwitchParameter&gt;
 
 Enable to disable odd paths in the attached storage volume(s).
 
@@ -720,7 +720,7 @@ Enable to disable odd paths in the attached storage volume(s).
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Affinity &lt;&gt;
+### -Affinity &lt;String&gt;
 
 In a server profile, the Affinity control sets the `remove-and`-replace behavior for blade servers. If you apply a server profile to a blade server and the server is subsequently removed from the device bay, the Affinity setting controls whether the server profile is reapplied when you insert a server blade into the empty bay. Server profiles for rack servers do not have affinity.
 
@@ -734,7 +734,7 @@ Accepted values are either "Bay" or "BayAndServer".  Default is "Bay".
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -MacAssignment &lt;&gt;
+### -MacAssignment &lt;String&gt;
 
 Optional setting for MAC address assignment.  May be Virtual or Physical.  Use Virtual if you need to specify a UserDefined value when using the `New-HPOVServerProfileConnection` helper Cmdlet.
 
@@ -746,7 +746,7 @@ Optional setting for MAC address assignment.  May be Virtual or Physical.  Use V
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -WwnAssignment &lt;&gt;
+### -WwnAssignment &lt;String&gt;
 
 Optional setting for WWN assignment.  May be Virtual or Physical.  Use Virtual if you need to specify a UserDefined value when using the `New-HPOVServerProfileConnection` helper Cmdlet.
 
@@ -758,7 +758,7 @@ Optional setting for WWN assignment.  May be Virtual or Physical.  Use Virtual i
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SnAssignment &lt;&gt;
+### -SnAssignment &lt;String&gt;
 
 Optional setting for serial number and UUID assignment.  May be Virtual, Physical or UserDefined.
 
@@ -772,7 +772,7 @@ Default: Virtual serial number and UUID assignment
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -HideUnusedFlexNics &lt;&gt;
+### -HideUnusedFlexNics &lt;Boolean&gt;
 
 This setting provides the ability to hide unused FlexNICs from the operating system.
 
@@ -794,7 +794,7 @@ By default, Hide Unused FlexNICs is enabled. This setting can be changed only wh
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -806,7 +806,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 The name of the appliance or list of appliances to execute the command against.
 
@@ -818,7 +818,7 @@ The name of the appliance or list of appliances to execute the command against.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -PassThru &lt;&gt;
+### -PassThru &lt;SwitchParameter&gt;
 
 Use this parameter to return the modified Server Profile Template object.  In order to save the changes, please use the `Save-HPOVServerProfileTemplate` Cmdlet.
 
@@ -830,7 +830,7 @@ Use this parameter to return the modified Server Profile Template object.  In or
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IscsiInitiatorNameAssignmet &lt;&gt;
+### -IscsiInitiatorNameAssignmet &lt;string&gt;
 
 Specify if the iSCSI initiator name should be automatically managed and assigned, or a custom value  should be used.  Allowed values:     * Virtual     * UserDefined 
 Default Value: Virtual
@@ -843,7 +843,7 @@ Default Value: Virtual
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -BiosConsistencyChecking &lt;&gt;
+### -BiosConsistencyChecking &lt;string&gt;
 
 Use to override the consistency checking for the policy.  Allowed values:
 
@@ -858,7 +858,7 @@ Use to override the consistency checking for the policy.  Allowed values:
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -BootModeConsistencyChecking &lt;&gt;
+### -BootModeConsistencyChecking &lt;string&gt;
 
 Use to override the consistency checking for the policy.  Allowed values:
 
@@ -873,68 +873,7 @@ Use to override the consistency checking for the policy.  Allowed values:
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ConnectionsConsistencyChecking &lt;&gt;
-
-Use to override the consistency checking for the policy.  Allowed values:
-
-    * Exact
-    * Minimum
-    * None
-
-| Aliases | None |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
-### -FirmwareConsistencyChecking &lt;&gt;
-
-Use to override the consistency checking for the policy.  Allowed values:
-
-    * Exact
-    * None
-
-| Aliases | None |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
-### -LocalStorageConsistencyChecking &lt;&gt;
-
-Use to override the consistency checking for the policy.  Allowed values:
-
-    * Exact
-    * None
-
-| Aliases | None |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
-### -OSDeploymentConsistencyChecking &lt;&gt;
-
-Use to override the consistency checking for the policy.  Allowed values:
-
-    * Exact
-    * None
-
-| Aliases | None |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
-### -SANStorageConsistencyChecking &lt;&gt;
+### -ConnectionsConsistencyChecking &lt;string&gt;
 
 Use to override the consistency checking for the policy.  Allowed values:
 
@@ -950,7 +889,68 @@ Use to override the consistency checking for the policy.  Allowed values:
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -BootOrderConsistencyChecking &lt;&gt;
+### -FirmwareConsistencyChecking &lt;string&gt;
+
+Use to override the consistency checking for the policy.  Allowed values:
+
+    * Exact
+    * None
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -LocalStorageConsistencyChecking &lt;string&gt;
+
+Use to override the consistency checking for the policy.  Allowed values:
+
+    * Exact
+    * None
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -OSDeploymentConsistencyChecking &lt;string&gt;
+
+Use to override the consistency checking for the policy.  Allowed values:
+
+    * Exact
+    * None
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -SANStorageConsistencyChecking &lt;string&gt;
+
+Use to override the consistency checking for the policy.  Allowed values:
+
+    * Exact
+    * Minimum
+    * None
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -BootOrderConsistencyChecking &lt;string&gt;
 
 Use to override the consistency checking for the policy.  Allowed values:
 

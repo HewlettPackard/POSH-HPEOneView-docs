@@ -8,34 +8,34 @@ description: Retrieve Server Profile Template resource(s).
 
 ```text
 Get-HPOVServerProfileTemplate
-    [-Name <>]
-    [-ServerHardwareType <>]
-    [-Label <>]
-    [-Scope <>]
-    [-ApplianceConnection <>]
+    [-Name <String>]
+    [-ServerHardwareType <String>]
+    [-Label <String>]
+    [-Scope <Object>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 Get-HPOVServerProfileTemplate
-    [-Export <>]
-    [-Location <>]
-    [-Name <>]
-    [-ServerHardwareType <>]
-    [-Label <>]
-    [-Scope <>]
-    [-ApplianceConnection <>]
+    [-Export]
+    [-Location <String>]
+    [-Name <String>]
+    [-ServerHardwareType <String>]
+    [-Label <String>]
+    [-Scope <Object>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 Get-HPOVServerProfileTemplate
-    [-Detailed <>]
-    [-Name <>]
-    [-ServerHardwareType <>]
-    [-Label <>]
-    [-Scope <>]
-    [-ApplianceConnection <>]
+    [-Detailed]
+    [-Name <String>]
+    [-ServerHardwareType <String>]
+    [-Label <String>]
+    [-Scope <Object>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -114,7 +114,7 @@ Save Profile1 Server Profile  template object to its own backup file in C:\pro
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 The name of the specific Server Profile Template resource to retrieve
 
@@ -126,7 +126,7 @@ The name of the specific Server Profile Template resource to retrieve
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ServerHardwareType &lt;&gt;
+### -ServerHardwareType &lt;String&gt;
 
 Provide the Server Hardware Type resource object or name to return Server Profile Templates designed for it.
 
@@ -138,7 +138,7 @@ Provide the Server Hardware Type resource object or name to return Server Profil
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;&gt;
+### -Scope &lt;Object&gt;
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
@@ -155,7 +155,7 @@ Filter resources based on provided Scope membership.  By default, all resources 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Label &lt;&gt;
+### -Label &lt;String&gt;
 
 Specify the label associated with resources.
 
@@ -167,7 +167,7 @@ Specify the label associated with resources.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Detailed &lt;&gt;
+### -Detailed &lt;SwitchParameter&gt;
 
 Displays detailed information about the Server Profile Template in tabular format
 
@@ -179,7 +179,7 @@ Displays detailed information about the Server Profile Template in tabular forma
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -191,7 +191,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -Export &lt;&gt;
+### -Export &lt;SwitchParameter&gt;
 
 Switch used to export Server Profile Template object to JSON encoded file.
 
@@ -203,7 +203,7 @@ Switch used to export Server Profile Template object to JSON encoded file.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Location &lt;&gt;
+### -Location &lt;String&gt;
 
 Location where to save the Server Profile Template file.
 

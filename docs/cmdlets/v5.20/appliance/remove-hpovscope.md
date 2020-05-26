@@ -8,8 +8,8 @@ description: Remove Scope from appliance
 
 ```text
 Remove-HPOVScope
-    [-Scope] <>
-    [-ApplianceConnection <>]
+    [-Scope] <HPOneView.Appliance.ScopeCollection>
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -33,19 +33,19 @@ Remove the specified scope.
 
 ## Parameters
 
-### -Scope &lt;&gt;
+### -Scope &lt;HPOneView.Appliance.ScopeCollection&gt;
 
 The Scope resource to add the resource(s) to.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 

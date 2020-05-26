@@ -8,56 +8,56 @@ description: Migrate Virtual Connect Manager to HPE OneView.
 
 ```text
 Invoke-HPOVVcmMigration
-    [-OAIPAddress] <>
-    [-LicensingIntent] <>
-    [-OAUserName <>]
-    [-OAPassword <>]
-    [-OACredential <>]
-    [-VCMUserName <>]
-    [-VCMPassword <>]
-    [-VCMCredential <>]
-    [-EnclosureGroup] <>
-    [-LogicalInterconnectGroup] <>
-    [-Async <>]
-    [-ApplianceConnection] <>
+    [-OAIPAddress] <String>
+    [-LicensingIntent] <String>
+    [-OAUserName <String>]
+    [-OAPassword <String>]
+    [-OACredential <PSCredential>]
+    [-VCMUserName <String>]
+    [-VCMPassword <String>]
+    [-VCMCredential <PSCredential>]
+    [-EnclosureGroup] <Object>
+    [-LogicalInterconnectGroup] <Object>
+    [-Async]
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ```text
 Invoke-HPOVVcmMigration
-    [-OAIPAddress] <>
-    [-LicensingIntent] <>
-    [-VCEMCMS] <>
-    [-OAUserName <>]
-    [-OAPassword <>]
-    [-OACredential <>]
-    [-VCMUserName <>]
-    [-VCMPassword <>]
-    [-VCMCredential <>]
-    [-EnclosureGroup] <>
-    [-LogicalInterconnectGroup] <>
-    [-VCEMUser <>]
-    [-VCEMPassword <>]
-    [-VCEMCredential <>]
-    [-ApplianceConnection] <>
+    [-OAIPAddress] <String>
+    [-LicensingIntent] <String>
+    [-VCEMCMS] <String>
+    [-OAUserName <String>]
+    [-OAPassword <String>]
+    [-OACredential <PSCredential>]
+    [-VCMUserName <String>]
+    [-VCMPassword <String>]
+    [-VCMCredential <PSCredential>]
+    [-EnclosureGroup] <Object>
+    [-LogicalInterconnectGroup] <Object>
+    [-VCEMUser <String>]
+    [-VCEMPassword <String>]
+    [-VCEMCredential <PSCredential>]
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ```text
 Invoke-HPOVVcmMigration
-    [-OAIPAddress] <>
-    [-LicensingIntent] <>
-    [-Report <>]
-    [-OAUserName <>]
-    [-OAPassword <>]
-    [-OACredential <>]
-    [-VCMUserName <>]
-    [-VCMPassword <>]
-    [-VCMCredential <>]
-    [-EnclosureGroup] <>
-    [-LogicalInterconnectGroup] <>
-    [-Path <>]
-    [-ApplianceConnection] <>
+    [-OAIPAddress] <String>
+    [-LicensingIntent] <String>
+    [-Report]
+    [-OAUserName <String>]
+    [-OAPassword <String>]
+    [-OACredential <PSCredential>]
+    [-VCMUserName <String>]
+    [-VCMPassword <String>]
+    [-VCMCredential <PSCredential>]
+    [-EnclosureGroup] <Object>
+    [-LogicalInterconnectGroup] <Object>
+    [-Path <String>]
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -120,19 +120,19 @@ Perform a migration of a VCEM managed enclosure to HPE OneView.
 
 ## Parameters
 
-### -OAIPAddress &lt;&gt;
+### -OAIPAddress &lt;String&gt;
 
 REQUIRED. IP address or FQDN of the Primary Onboard Administrator in the target enclosure.
 
 | Aliases | oip |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -OAUserName &lt;&gt;
+### -OAUserName &lt;String&gt;
 
 Parameter is being deprecated. Please transition to using `-OACredential`. Administrator account of the target OA.
 
@@ -144,7 +144,7 @@ Parameter is being deprecated. Please transition to using `-OACredential`. Admin
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -OAPassword &lt;&gt;
+### -OAPassword &lt;String&gt;
 
 Parameter is being deprecated. Please transition to using `-OACredential`. Password for the Administrator account of the target OA.
 
@@ -156,7 +156,7 @@ Parameter is being deprecated. Please transition to using `-OACredential`. Passw
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -VCMUserName &lt;&gt;
+### -VCMUserName &lt;String&gt;
 
 Parameter is being deprecated. Please transition to using `-VCMCredential`.
 Username for the administrator account for Virtual Connect Manager.
@@ -169,7 +169,7 @@ Username for the administrator account for Virtual Connect Manager.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -VCMPassword &lt;&gt;
+### -VCMPassword &lt;String&gt;
 
 Parameter is being deprecated. Please transition to using `-VCMCredential`. Password for the Administrator account of Virtual Connect Manager.
 
@@ -181,31 +181,31 @@ Parameter is being deprecated. Please transition to using `-VCMCredential`. Pass
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EnclosureGroup &lt;&gt;
+### -EnclosureGroup &lt;Object&gt;
 
 OPTIONAL. The Name, URI or Object of an existing Enclosure Group.  If the Enclosure Group Name does not exist, a new resource with the String value provided will be created.  If omitted, a new Enclosure Group will be created based on the Serial Number of the Enclosure (Example: "EG_USE1234567A").
 
 | Aliases | eg |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -LogicalInterconnectGroup &lt;&gt;
+### -LogicalInterconnectGroup &lt;Object&gt;
 
 OPTIONAL. The Name, URI or Object of an existing Logical Interconnect Group.  If the Logical Interconnect Group Name does not exist, a new resource with the String value provided will be created.  If omitted, a new Logical Interconnect Group will be created based on the Serial Number of the Enclosure (Example: "LIG_USE1234567A").
 
 | Aliases | lig |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -LicensingIntent &lt;&gt;
+### -LicensingIntent &lt;String&gt;
 
 REQUIRED. Specifies whether the intent is to apply either OneView or OneView w/o iLO licenses to the servers in the enclosure being imported.
 
@@ -216,25 +216,25 @@ Accepted values are
 
 | Aliases | license, l |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -VCEMCMS &lt;&gt;
+### -VCEMCMS &lt;String&gt;
 
 The IP Address or FQDN of the VCEM host.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -VCEMUser &lt;&gt;
+### -VCEMUser &lt;String&gt;
 
 Parameter is being deprecated. Please transition to using `-VCEMCredential`
 
@@ -248,7 +248,7 @@ Administrator level account name available on the VCEM host.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -VCEMPassword &lt;&gt;
+### -VCEMPassword &lt;String&gt;
 
 Parameter is being deprecated. Please transition to using `-VCEMCredential`
 
@@ -262,7 +262,7 @@ Administrator level account password on the VCEM host.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -274,7 +274,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Report &lt;&gt;
+### -Report &lt;SwitchParameter&gt;
 
 OPTIONAL. Execute the migration report only. Do not execute the migration process.
 
@@ -286,7 +286,7 @@ OPTIONAL. Execute the migration report only. Do not execute the migration proces
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Path &lt;&gt;
+### -Path &lt;String&gt;
 
 The directory path in which to save the report output to a file.
 
@@ -300,19 +300,19 @@ The directory path in which to save the report output to a file.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -OACredential &lt;&gt;
+### -OACredential &lt;PSCredential&gt;
 
 PSCredential object containing the username and password details for the `c-Class` Onboard Administrator.
 
@@ -324,7 +324,7 @@ PSCredential object containing the username and password details for the `c-Clas
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -VCMCredential &lt;&gt;
+### -VCMCredential &lt;PSCredential&gt;
 
 PSCredential object containing the username and password details for the `c-Class` Virtual Connect Manager.
 
@@ -336,7 +336,7 @@ PSCredential object containing the username and password details for the `c-Clas
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -VCEMCredential &lt;&gt;
+### -VCEMCredential &lt;PSCredential&gt;
 
 PSCredential object containing the username and password details for the Virtual Connect Enterprise Manager associated with the Virtual Connect Manager Domain.
 

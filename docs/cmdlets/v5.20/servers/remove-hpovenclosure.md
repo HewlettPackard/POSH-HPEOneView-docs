@@ -8,9 +8,9 @@ description: Removes an enclosure and associated devices.
 
 ```text
 Remove-HPOVEnclosure
-    [-InputObject] <>
-    [-ApplianceConnection] <>
-    [-Force <>]
+    [-InputObject] <Object>
+    [-ApplianceConnection] <Array>
+    [-Force]
     [<CommonParameters>]
 ```
 
@@ -49,31 +49,31 @@ Search for all enclosures and remove them from appliance.
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 The Enclosure object(s) or name(s) to be removed from management.
 
 | Aliases | uri, name, Enclosure, Resource |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -Force &lt;&gt;
+### -Force &lt;SwitchParameter&gt;
 
 Set to `force-remove` the enclosure. For example, if the enclosure is gone or is now being managed by a different appliance, `force-removing` will remove the enclosure from this appliance without clearing vcmode. 
 
@@ -87,7 +87,7 @@ When the request is accepted by the appliance, it does not return an Async Task 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -WhatIf &lt;&gt;
+### -WhatIf &lt;SwitchParameter&gt;
 
 
 
@@ -99,7 +99,7 @@ When the request is accepted by the appliance, it does not return an Async Task 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Confirm &lt;&gt;
+### -Confirm &lt;SwitchParameter&gt;
 
 
 

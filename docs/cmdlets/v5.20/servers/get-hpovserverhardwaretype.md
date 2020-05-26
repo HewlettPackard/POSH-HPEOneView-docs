@@ -8,10 +8,10 @@ description: Retrieve Server Hardware Type resource(s).
 
 ```text
 Get-HPOVServerHardwareType
-    [-Name <>]
-    [-Model <>]
-    [-ApplianceConnection <>]
-    [-exportFile <>]
+    [-Name <String>]
+    [-Model <String>]
+    [-ApplianceConnection <Array>]
+    [-exportFile <String>]
     [<CommonParameters>]
 ```
 
@@ -39,7 +39,7 @@ Return the "BL460 Gen8 1" server hardware type on the appliance.
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 The name of the server hardware type resource to be returned.  All server hardware type resources will be returned if omitted.
 
@@ -51,7 +51,7 @@ The name of the server hardware type resource to be returned.  All server hardwa
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Model &lt;&gt;
+### -Model &lt;String&gt;
 
 Filter based on Model name.  Supports wildcard search.
 
@@ -63,7 +63,7 @@ Filter based on Model name.  Supports wildcard search.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -77,7 +77,7 @@ Default Value: ${Global:ConnectSessions}
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ExportFile &lt;&gt;
+### -ExportFile &lt;String&gt;
 
 The path where the resource will be exported to, in JSON text format.
 

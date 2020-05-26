@@ -8,7 +8,7 @@ description: Get appliance configured HTTP proxy.
 
 ```text
 Get-HPOVApplianceProxy
-    [-ApplianceConnection <>]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -34,7 +34,7 @@ Get the appliance configured HTTP/HTTPS proxy configuration.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

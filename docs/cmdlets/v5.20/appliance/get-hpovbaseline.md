@@ -8,26 +8,26 @@ description: Retrieve available SPP baseline and hotfix information.
 
 ```text
 Get-HPOVBaseline
-    [-File <>]
-    [-Scope <>]
-    [-ApplianceConnection <>]
+    [-File <String>]
+    [-Scope <Object>]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
 ```text
 Get-HPOVBaseline
-    [-SppName <>]
-    [-Version <>]
-    [-Scope <>]
-    [-ApplianceConnection <>]
+    [-SppName <String>]
+    [-Version <String>]
+    [-Scope <Object>]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
 ```text
 Get-HPOVBaseline
-    [-HotfixesOnly <>]
-    [-Scope <>]
-    [-ApplianceConnection <>]
+    [-HotfixesOnly]
+    [-Scope <Object>]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -75,7 +75,7 @@ Retrieves an baseline object with the SPP Name "HP Service Pack for ProLiant".
 
 ## Parameters
 
-### -File &lt;&gt;
+### -File &lt;String&gt;
 
 The file name of an SPP or hotfix component
 
@@ -87,7 +87,7 @@ The file name of an SPP or hotfix component
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SppName &lt;&gt;
+### -SppName &lt;String&gt;
 
 The SPP/Baseline or hotfix name.
 
@@ -99,7 +99,7 @@ The SPP/Baseline or hotfix name.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Version &lt;&gt;
+### -Version &lt;String&gt;
 
 If multiple SPP/Baselines with the same name exist, use the Version parameter to filter to the specific SPP/Baseline version.
 
@@ -111,7 +111,7 @@ If multiple SPP/Baselines with the same name exist, use the Version parameter to
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -HotfixesOnly &lt;&gt;
+### -HotfixesOnly &lt;SwitchParameter&gt;
 
 Display only the available hotfixes present with in the repository.
 
@@ -123,7 +123,7 @@ Display only the available hotfixes present with in the repository.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -135,7 +135,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;&gt;
+### -Scope &lt;Object&gt;
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 

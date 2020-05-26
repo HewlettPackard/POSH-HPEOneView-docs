@@ -8,8 +8,8 @@ description: (Reserved for future use) Retrieve appliance global settings.
 
 ```text
 Get-HPOVApplianceGlobalSetting
-    [-name <>]
-    [-ApplianceConnection <>]
+    [-name <String>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -31,7 +31,7 @@ Return appliance Global Settings and their values.
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 Name of the global setting to be retrieved.
 
@@ -43,7 +43,7 @@ Name of the global setting to be retrieved.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

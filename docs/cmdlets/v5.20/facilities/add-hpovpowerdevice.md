@@ -8,14 +8,14 @@ description: Import a power device.
 
 ```text
 Add-HPOVPowerDevice
-    [-Hostname] <>
-    [-Username <>]
-    [-Password <>]
-    [-Credential <>]
-    [-ApplianceConnection <>]
-    [-Async <>]
-    [-TrustLeafCertificate <>]
-    [-Force <>]
+    [-Hostname] <String>
+    [-Username <String>]
+    [-Password <String>]
+    [-Credential <PSCredential>]
+    [-ApplianceConnection <Object>]
+    [-Async]
+    [-TrustLeafCertificate]
+    [-Force]
     [<CommonParameters>]
 ```
 
@@ -50,19 +50,19 @@ Add the iPDU to the appliance.
 
 ## Parameters
 
-### -Hostname &lt;&gt;
+### -Hostname &lt;String&gt;
 
 Hostname of the iPDU, either IP Address or FQDN.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Username &lt;&gt;
+### -Username &lt;String&gt;
 
 {% hint style="warning" %}
 This parameter is deprecated. Please transition to the `-Credential` parameter.
@@ -79,7 +79,7 @@ Administrator account of the target iPDU.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Password &lt;&gt;
+### -Password &lt;String&gt;
 
 {% hint style="warning" %}
 This parameter is deprecated. Please transition to the `-Credential` parameter.
@@ -96,7 +96,7 @@ Account password of the iPDU specified.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Credential &lt;&gt;
+### -Credential &lt;PSCredential&gt;
 
 Use this parameter if you want to provide a PSCredential object instead.
 
@@ -108,7 +108,7 @@ Use this parameter if you want to provide a PSCredential object instead.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -TrustLeaCertificate &lt;&gt;
+### -TrustLeaCertificate &lt;SwitchParameter&gt;
 
 When adding an iPDU resource, the SSL certificate may be self signed and untrusted.  Use this switch to add the iPDU SSL certificate to the appliance trust store, if Certificate Verification has not been disabled on the appliance.
 
@@ -120,7 +120,7 @@ When adding an iPDU resource, the SSL certificate may be self signed and untrust
 | Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
-### -Force &lt;&gt;
+### -Force &lt;SwitchParameter&gt;
 
 Force the import of the iPDU when currently managed by another HPE OneView appliance.
 
@@ -132,7 +132,7 @@ Force the import of the iPDU when currently managed by another HPE OneView appli
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -TrustLeafCertificate &lt;&gt;
+### -TrustLeafCertificate &lt;SwitchParameter&gt;
 
 If the iPDU SSL certificate is not trusted, use this Cmdlet to add the certificate to the appliance trust store.
 
@@ -144,7 +144,7 @@ If the iPDU SSL certificate is not trusted, use this Cmdlet to add the certifica
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -156,7 +156,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 
@@ -168,7 +168,7 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -WhatIf &lt;&gt;
+### -WhatIf &lt;SwitchParameter&gt;
 
 
 
@@ -180,7 +180,7 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Confirm &lt;&gt;
+### -Confirm &lt;SwitchParameter&gt;
 
 
 

@@ -8,15 +8,15 @@ description: Modify an existing Storage Volume resource.
 
 ```text
 Set-HPOVStorageVolume
-    [-InputObject] <>
-    [-Name <>]
-    [-Description <>]
-    [-Capacity] <>
-    [-SnapShotStoragePool <>]
-    [-DataProtectionLevel <>]
-    [-PermitAdaptiveOptimization <>]
-    [-Shared <>]
-    [-ApplianceConnection] <>
+    [-InputObject] <Object>
+    [-Name <String>]
+    [-Description <String>]
+    [-Capacity] <Int64>
+    [-SnapShotStoragePool <Object>]
+    [-DataProtectionLevel <String>]
+    [-PermitAdaptiveOptimization <Boolean>]
+    [-Shared <Boolean>]
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -36,19 +36,19 @@ Update "ProdVol1" volume size to 160GB.
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 Source Storage Volume resource object.
 
 | Aliases | SourceVolume |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 Updated Storage Volume Name.
 
@@ -60,7 +60,7 @@ Updated Storage Volume Name.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Description &lt;&gt;
+### -Description &lt;String&gt;
 
 Updated description for the volume.
 
@@ -72,7 +72,7 @@ Updated description for the volume.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Capacity &lt;&gt;
+### -Capacity &lt;Int64&gt;
 
 New Max volume capacity in GB.  Volume capacity can be increased to maximum of 16 TiB. Decreasing the capacity of volume is not supported. 
 
@@ -82,13 +82,13 @@ Before increasing the capacity of fully provisioned volumes, ensure that the sto
 
 | Aliases | size |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | 0 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SnapShotStoragePool &lt;&gt;
+### -SnapShotStoragePool &lt;Object&gt;
 
 The Storage Pool Name, URI or Object to be used for Volume Snapshots.
 
@@ -100,7 +100,7 @@ The Storage Pool Name, URI or Object to be used for Volume Snapshots.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Shared &lt;&gt;
+### -Shared &lt;Boolean&gt;
 
 Include this switch to mark the Storage Volume as a Shareable resource for shared volume access.
 Default: Private
@@ -113,7 +113,7 @@ Default: Private
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DataProtectionLevel &lt;&gt;
+### -DataProtectionLevel &lt;String&gt;
 
 Specify the new StoreVirtual data protection level (aka Network RAID).  Allowed values:
 
@@ -132,7 +132,7 @@ Specify the new StoreVirtual data protection level (aka Network RAID).  Allowed 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -PermitAdaptiveOptimization &lt;&gt;
+### -PermitAdaptiveOptimization &lt;Boolean&gt;
 
 Include this switch to mark the Storage Volume as a Shareable resource for shared volume access.
 Default: Private
@@ -145,13 +145,13 @@ Default: Private
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |

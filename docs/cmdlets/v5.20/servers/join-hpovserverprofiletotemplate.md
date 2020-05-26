@@ -8,9 +8,9 @@ description: Attach an existing server profile to a server profile template
 
 ```text
 Join-HPOVServerProfileToTemplate
-    [-Template] <>
-    [-ServerProfile] <>
-    [-ApplianceConnection] <>
+    [-Template] <Object>
+    [-ServerProfile] <Object>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -39,43 +39,43 @@ Attaches the server profile template named MyTemplate to the server profile name
 
 ## Parameters
 
-### -Template &lt;&gt;
+### -Template &lt;Object&gt;
 
 A server profile template name, URI, or resource object
 
 | Aliases | t |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -ServerProfile &lt;&gt;
+### -ServerProfile &lt;Object&gt;
 
 A server profile name, URI, or resource object
 
 | Aliases | p, Profile |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | $Global:ConnectedSessions |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -WhatIf &lt;&gt;
+### -WhatIf &lt;SwitchParameter&gt;
 
 
 
@@ -87,7 +87,7 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If
 | Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
-### -Confirm &lt;&gt;
+### -Confirm &lt;SwitchParameter&gt;
 
 
 

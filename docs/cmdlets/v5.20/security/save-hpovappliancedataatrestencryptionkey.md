@@ -8,8 +8,8 @@ description: Generate a new HPE Synergy Composer appliance encryption key.
 
 ```text
 Save-HPOVApplianceDataAtRestEncryptionKey
-    [-Location <>]
-    [-ApplianceConnection <>]
+    [-Location <string>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -41,7 +41,7 @@ Save the appliance data at rest encryption key off the appliance.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -53,7 +53,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Location &lt;&gt;
+### -Location &lt;string&gt;
 
 Specify the directory where to save the appliance encryption key (AEK).  If no location is provided, the current working directory is used.
 

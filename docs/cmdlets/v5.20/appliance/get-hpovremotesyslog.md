@@ -8,7 +8,7 @@ description: Get the configured remote syslog settings.
 
 ```text
 Get-HPOVRemoteSyslog
-    [-ApplianceConnection <>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -49,7 +49,7 @@ Get the current configuration from specified connected appliance.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

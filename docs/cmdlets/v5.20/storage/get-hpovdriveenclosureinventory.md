@@ -8,22 +8,22 @@ description: Get the HPE Synergy D3940 drive enclosure inventory.
 
 ```text
 Get-HPOVDriveEnclosureInventory
-    [-Name <>]
-    [-DriveEnclosure <>]
-    [-SasLogicalInterconnect <>]
-    [-Count <>]
-    [-Available <>]
-    [-ApplianceConnection <>]
+    [-Name <string>]
+    [-DriveEnclosure <Object>]
+    [-SasLogicalInterconnect <Object>]
+    [-Count <int>]
+    [-Available]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 Get-HPOVDriveEnclosureInventory
-    [-Name <>]
-    [-DriveEnclosure <>]
-    [-SasLogicalInterconnect <>]
-    [-Assigned <>]
-    [-ApplianceConnection <>]
+    [-Name <string>]
+    [-DriveEnclosure <Object>]
+    [-SasLogicalInterconnect <Object>]
+    [-Assigned]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -75,7 +75,7 @@ Get the drive enventory from the specified SAS logical interconnect.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -87,7 +87,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -Assigned &lt;&gt;
+### -Assigned &lt;SwitchParameter&gt;
 
 Return only drives that are assigned to a Logical JBOD.
 
@@ -99,7 +99,7 @@ Return only drives that are assigned to a Logical JBOD.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Available &lt;&gt;
+### -Available &lt;SwitchParameter&gt;
 
 Return drives that are available for assignment.
 
@@ -111,7 +111,7 @@ Return drives that are available for assignment.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Count &lt;&gt;
+### -Count &lt;int&gt;
 
 Return a specific number of drives.  Will return in order from system inventory.
 
@@ -123,7 +123,7 @@ Return a specific number of drives.  Will return in order from system inventory.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DriveEnclosure &lt;&gt;
+### -DriveEnclosure &lt;Object&gt;
 
 Provide a drive enclosure from `Get-HPOVDriveEnclosure` to filter for associated drives.
 
@@ -135,7 +135,7 @@ Provide a drive enclosure from `Get-HPOVDriveEnclosure` to filter for associated
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Name &lt;&gt;
+### -Name &lt;string&gt;
 
 Specify a drive name, or wild card value.
 
@@ -147,7 +147,7 @@ Specify a drive name, or wild card value.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SasLogicalInterconnect &lt;&gt;
+### -SasLogicalInterconnect &lt;Object&gt;
 
 Provide a SAS Logical Interconnect from `Get-HPOVSasLogicalInterconnect` to filter for associated drives.
 

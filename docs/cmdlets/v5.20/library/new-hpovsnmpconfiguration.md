@@ -8,24 +8,24 @@ description: Create SNMP LIG Configuration Object
 
 ```text
 New-HPOVSnmpConfiguration
-    [-ReadCommunity] <>
-    [-SnmpV1] <>
-    [-SnmpV3] <>
-    [-Contact] <>
-    [-AccessList] <>
-    [-TrapDestinations] <>
+    [-ReadCommunity] <String>
+    [-SnmpV1] <bool>
+    [-SnmpV3] <bool>
+    [-Contact] <String>
+    [-AccessList] <Array>
+    [-TrapDestinations] <Array>
     [<CommonParameters>]
 ```
 
 ```text
 New-HPOVSnmpConfiguration
-    [-ReadCommunity] <>
-    [-SnmpV3] <>
-    [-SnmpV3Users] <>
-    [-SnmpV1] <>
-    [-Contact] <>
-    [-AccessList] <>
-    [-TrapDestinations] <>
+    [-ReadCommunity] <String>
+    [-SnmpV3] <bool>
+    [-SnmpV3Users] <SnmpV3User[]>
+    [-SnmpV1] <bool>
+    [-Contact] <String>
+    [-AccessList] <Array>
+    [-TrapDestinations] <Array>
     [<CommonParameters>]
 ```
 
@@ -45,85 +45,85 @@ Create a new QOS Configuration object,and use the created object to add to a new
 
 ## Parameters
 
-### -ReadCommunity &lt;&gt;
+### -ReadCommunity &lt;String&gt;
 
 The SNMP Read Community String to set.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Contact &lt;&gt;
+### -Contact &lt;String&gt;
 
 SNMP Contact Name.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -AccessList &lt;&gt;
+### -AccessList &lt;Array&gt;
 
 A collection `[System.Collections.ArrayList` ] of IP Addresses or Subnets.  You must include the Subnet Mask Bit value.  `[E.g]`. 10.44.120.9/32 or 172.20.148.0/22
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -TrapDestinations &lt;&gt;
+### -TrapDestinations &lt;Array&gt;
 
 A collection `[System.Collections.ArrayList` ] of SNMMP Trap Destinations.  Use `New-HPOVTrapDestination` Cmdlet to create the object.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SnmpV1 &lt;&gt;
+### -SnmpV1 &lt;bool&gt;
 
 Specify if SNMPv1 should be enabled.  Can be disabled when SNMPv3 is enabled.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SnmpV3 &lt;&gt;
+### -SnmpV3 &lt;bool&gt;
 
 Specify if SNMPv3 should be enabled.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SnmpV3Users &lt;&gt;
+### -SnmpV3Users &lt;SnmpV3User[]&gt;
 
 Collection of SNMPv3 users to configure within the SNMP configuration object.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |

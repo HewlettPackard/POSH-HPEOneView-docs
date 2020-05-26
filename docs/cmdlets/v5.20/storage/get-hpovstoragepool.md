@@ -8,13 +8,13 @@ description: Retrieve Storage Pool resource(s).
 
 ```text
 Get-HPOVStoragePool
-    [-Name <>]
-    [-StorageSystem <>]
-    [-Label <>]
-    [-Scope <>]
-    [-ApplianceConnection <>]
-    [-Managed <>]
-    [-Unmanaged <>]
+    [-Name <String>]
+    [-StorageSystem <Object>]
+    [-Label <Object>]
+    [-Scope <Object>]
+    [-ApplianceConnection <Array>]
+    [-Managed]
+    [-Unmanaged]
     [<CommonParameters>]
 ```
 
@@ -101,7 +101,7 @@ Returns the storage pool resource "HP_CPG1" on the storage system "HP_3PAR_1"
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 The name of the specific storage pool resource to be returned.  All storage pool resources will be returned if omitted.
 
@@ -113,7 +113,7 @@ The name of the specific storage pool resource to be returned.  All storage pool
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -StorageSystem &lt;&gt;
+### -StorageSystem &lt;Object&gt;
 
 The name or Storage System object of the specific storage system to return storage pool resource from.  Can be combined with the PoolName parameter to single out a specific storage pool in a specific storage system.
 
@@ -125,7 +125,7 @@ The name or Storage System object of the specific storage system to return stora
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Managed &lt;&gt;
+### -Managed &lt;SwitchParameter&gt;
 
 Only returned storage pools that are managed.
 
@@ -137,7 +137,7 @@ Only returned storage pools that are managed.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Unmanaged &lt;&gt;
+### -Unmanaged &lt;SwitchParameter&gt;
 
 Only returned storage pools that are unmanaged.
 
@@ -149,7 +149,7 @@ Only returned storage pools that are unmanaged.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Label &lt;&gt;
+### -Label &lt;Object&gt;
 
 Specify the Label to filter on.
 
@@ -161,7 +161,7 @@ Specify the Label to filter on.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
@@ -173,7 +173,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;&gt;
+### -Scope &lt;Object&gt;
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 

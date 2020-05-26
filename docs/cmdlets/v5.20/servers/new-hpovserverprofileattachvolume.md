@@ -8,64 +8,64 @@ description: Create volume attachment for a server profile.
 
 ```text
 New-HPOVServerProfileAttachVolume
-    [-Volume] <>
-    [-VolumeID] <>
-    [-LunIdType] <>
-    [-BootVolume <>]
-    [-TargetPortAssignment <>]
-    [-TargetAddresses <>]
-    [-ApplianceConnection] <>
+    [-Volume] <Array>
+    [-VolumeID] <Int32>
+    [-LunIdType] <String>
+    [-BootVolume]
+    [-TargetPortAssignment]
+    [-TargetAddresses <Array>]
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ```text
 New-HPOVServerProfileAttachVolume
-    [-Name] <>
-    [-ServerProfile] <>
-    [-PassThru <>]
-    [-VolumeID] <>
-    [-VolumeTemplate <>]
-    [-StoragePool] <>
-    [-SnapshotStoragePool <>]
-    [-StorageSystem] <>
-    [-Capacity] <>
-    [-ProvisioningType <>]
-    [-Full <>]
-    [-Permanent <>]
-    [-DataProtectionLevel <>]
-    [-EnableAdaptiveOptimization <>]
-    [-PerformancePolicy <>]
-    [-EnableEncryption <>]
-    [-CachePinning <>]
-    [-VolumeSet <>]
-    [-EnableIOPSLimit <>]
-    [-IOPSLimit <>]
-    [-EnableDataTransferLimit <>]
-    [-DataTransferLimit <>]
-    [-Folder <>]
-    [-LunIdType] <>
-    [-LunID] <>
-    [-HostOStype] <>
-    [-BootVolume <>]
-    [-TargetPortAssignment <>]
-    [-TargetAddresses <>]
-    [-ApplianceConnection] <>
+    [-Name] <Object>
+    [-ServerProfile] <Object>
+    [-PassThru]
+    [-VolumeID] <Int32>
+    [-VolumeTemplate <Object>]
+    [-StoragePool] <Object>
+    [-SnapshotStoragePool <Object>]
+    [-StorageSystem] <Object>
+    [-Capacity] <Int64>
+    [-ProvisioningType <String>]
+    [-Full]
+    [-Permanent]
+    [-DataProtectionLevel <String>]
+    [-EnableAdaptiveOptimization <Bool>]
+    [-PerformancePolicy <HPOneView.Storage.PerformancePolicy>]
+    [-EnableEncryption <bool>]
+    [-CachePinning <bool>]
+    [-VolumeSet <HPOneView.Storage.VolumeSet>]
+    [-EnableIOPSLimit <bool>]
+    [-IOPSLimit <int>]
+    [-EnableDataTransferLimit <bool>]
+    [-DataTransferLimit <int>]
+    [-Folder <HPOneView.Storage.NimbleFolder>]
+    [-LunIdType] <String>
+    [-LunID] <Int32>
+    [-HostOStype] <String>
+    [-BootVolume]
+    [-TargetPortAssignment]
+    [-TargetAddresses <Array>]
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ```text
 New-HPOVServerProfileAttachVolume
-    [-ServerProfile] <>
-    [-Volume] <>
-    [-PassThru <>]
-    [-VolumeID] <>
-    [-LunIdType] <>
-    [-LunID] <>
-    [-HostOStype] <>
-    [-BootVolume <>]
-    [-TargetPortAssignment <>]
-    [-TargetAddresses <>]
-    [-ApplianceConnection] <>
+    [-ServerProfile] <Object>
+    [-Volume] <Array>
+    [-PassThru]
+    [-VolumeID] <Int32>
+    [-LunIdType] <String>
+    [-LunID] <Int32>
+    [-HostOStype] <String>
+    [-BootVolume]
+    [-TargetPortAssignment]
+    [-TargetAddresses <Array>]
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -149,91 +149,91 @@ Create a new ephemeral storage volume attachment, using a storage volume templat
 
 ## Parameters
 
-### -ServerProfile &lt;&gt;
+### -ServerProfile &lt;Object&gt;
 
 An existing Server Profile resource object from `Get-HPOVServerProfile` Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -VolumeID &lt;&gt;
+### -VolumeID &lt;Int32&gt;
 
 The numeric identifier for this volume.  Does not pertain to exported LUN ID value on array.
 
 | Aliases | id |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | 1 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Volume &lt;&gt;
+### -Volume &lt;Array&gt;
 
 The Volume Name, URI or Object to attach.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Name &lt;&gt;
+### -Name &lt;Object&gt;
 
 Ephemeral Storage Volume resource name.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -StoragePool &lt;&gt;
+### -StoragePool &lt;Object&gt;
 
 The Storage Resource Pool object to provision the Ephemeral Volume from.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -StorageSystem &lt;&gt;
+### -StorageSystem &lt;Object&gt;
 
 If provided a StoragePool Resource Name, you must provide the StorageSystem name value if there are multiple Storage Pool resources with the same name.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Capacity &lt;&gt;
+### -Capacity &lt;Int64&gt;
 
 The requested Ephemeral Volume storage capacity in GB.  `[e.g]`. 20 to specify 20GB.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | 0 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DataProtectionLevel &lt;&gt;
+### -DataProtectionLevel &lt;String&gt;
 
 Specify the StoreVirtual protection level (aka Network RAID) for the volume.  Allowed values are:
 
@@ -252,7 +252,7 @@ Specify the StoreVirtual protection level (aka Network RAID) for the volume.  Al
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Full &lt;&gt;
+### -Full &lt;SwitchParameter&gt;
 
 DEPRECATED.  This parameter is replaced by ProvisioningType.
 
@@ -266,7 +266,7 @@ Specify if the Ephemeral Volume provisioning type should be Thick. Default is Th
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Permanent &lt;&gt;
+### -Permanent &lt;SwitchParameter&gt;
 
 Specify if the Ephemeral Volume should be permanent.
 
@@ -278,31 +278,31 @@ Specify if the Ephemeral Volume should be permanent.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -LunIdType &lt;&gt;
+### -LunIdType &lt;String&gt;
 
  Specify Auto or Manual for the LUN ID assignment type.  If Manual, use the `-LunID` parameter and provide a numerical value.
 
 | Aliases | type |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | Auto |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -LunID &lt;&gt;
+### -LunID &lt;Int32&gt;
 
 The Host LUN ID numerical value that will be configured in the Volume export on the Storage System.  Accepted range: `0-254`
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | 0 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -HostOStype &lt;&gt;
+### -HostOStype &lt;String&gt;
 
 Specify the Host OS type, which will set the Host OS value when HPE OneView creates the Host object on the Storage System.  This parameter is only necessary if the Server Profile object does not have SAN Management enabled.
     
@@ -336,13 +336,13 @@ Accepted values:
 
 | Aliases | OS |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -BootVolume &lt;&gt;
+### -BootVolume &lt;SwitchParameter&gt;
 
 Use to indicate this volume is a bootable device.  When using this parameter, the Server Profile"s FC Connection(s) BootVolumeSource parameter set to "ManagedVolume".  
     
@@ -356,19 +356,19 @@ This parameter is only applicable with Private volumes.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -380,7 +380,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;&gt;
+### -Scope &lt;HPOneView.Appliance.ScopeCollection[]&gt;
 
 Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
 
@@ -392,7 +392,7 @@ Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially 
 | Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
-### -TargetPortAssignment &lt;&gt;
+### -TargetPortAssignment &lt;SwitchParameter&gt;
 
 Define whether host initiator port(s) should be mapped to target storage ports automatically or manually.
 
@@ -404,7 +404,7 @@ Define whether host initiator port(s) should be mapped to target storage ports a
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -TargetAddresses &lt;&gt;
+### -TargetAddresses &lt;Array&gt;
 
 An array of target Port ID(s) or WWN(s).  Example:  @("1:0:1", "1:2:1", "3:1:1", "4:0:0")
 
@@ -416,7 +416,7 @@ An array of target Port ID(s) or WWN(s).  Example:  @("1:0:1", "1:2:1", "3:1:1",
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -VolumeTemplate &lt;&gt;
+### -VolumeTemplate &lt;Object&gt;
 
 For Ephemeral (private) volumes that should be provisioned from Storage Volume Templates.  Provide a valid resource from `Get-HPOVStorageVolumeTemplate`.
 
@@ -428,7 +428,7 @@ For Ephemeral (private) volumes that should be provisioned from Storage Volume T
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ProvisioningType &lt;&gt;
+### -ProvisioningType &lt;String&gt;
 
 Specify the volume provisioning type. Supported values:
 
@@ -444,7 +444,7 @@ Specify the volume provisioning type. Supported values:
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EnableAdaptiveOptimization &lt;&gt;
+### -EnableAdaptiveOptimization &lt;Bool&gt;
 
 Specify if HPE StoreVirtual volume Adaptive Optimization is enabled.
 
@@ -456,7 +456,7 @@ Specify if HPE StoreVirtual volume Adaptive Optimization is enabled.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -PassThru &lt;&gt;
+### -PassThru &lt;SwitchParameter&gt;
 
 Use this parameter to return the modified Server Profile object.  In order to save the changes, please use the `Save-HPOVServerProfile` Cmdlet.
 
@@ -468,7 +468,7 @@ Use this parameter to return the modified Server Profile object.  In order to sa
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SnapshotStoragePool &lt;&gt;
+### -SnapshotStoragePool &lt;Object&gt;
 
 The supported Snapshot storage pool for a StoreServ storage system.  Snapshot storage pool must originate from the same storage system as the assigned storage pool.
 
@@ -480,7 +480,7 @@ The supported Snapshot storage pool for a StoreServ storage system.  Snapshot st
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -CachePinning &lt;&gt;
+### -CachePinning &lt;bool&gt;
 
 This is applicable for hybrid (a mix of flash and mechanical storage) arrays, and provides a 100 percent cache hit rate for specific volumes (for example, volumes dedicated to critical applications), and delivers the response times of an `all-flash` storage system. A volume is pinned when the entire active volume is placed in cache; associated snapshot (inactive) blocks are not pinned. All incoming data after that point is pinned. The number of volumes that can be pinned is limited by the size of the volumes and amount of available cache.
 
@@ -494,7 +494,7 @@ When defined in the Performance Profile, select to enable Cache Pinnning for the
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DataTransferLimit &lt;&gt;
+### -DataTransferLimit &lt;int&gt;
 
 Specify the data transfer limit in MiB/S.
 
@@ -506,7 +506,7 @@ Specify the data transfer limit in MiB/S.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EnableDataTransferLimit &lt;&gt;
+### -EnableDataTransferLimit &lt;bool&gt;
 
 Enable data transfer limit.  If enabled, the `-DataTransferLimit` parameter must be set.  By default, data transfer limit is not set.
 
@@ -518,7 +518,7 @@ Enable data transfer limit.  If enabled, the `-DataTransferLimit` parameter must
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EnableEncryption &lt;&gt;
+### -EnableEncryption &lt;bool&gt;
 
 When the storage system has encryption enabled, the volume can also be encrypted.  Specify if the volume should be encrypted during creation.
 
@@ -530,7 +530,7 @@ When the storage system has encryption enabled, the volume can also be encrypted
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EnableIOPSLimit &lt;&gt;
+### -EnableIOPSLimit &lt;bool&gt;
 
 Set to enable or disable IOPS limit.  If enabled, the `-IOPSLimit` parameter must be set.  By default, IOPS limit is not set.
 
@@ -542,7 +542,7 @@ Set to enable or disable IOPS limit.  If enabled, the `-IOPSLimit` parameter mus
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Folder &lt;&gt;
+### -Folder &lt;HPOneView.Storage.NimbleFolder&gt;
 
 Specify the Nimble folder where the volume should be created.  To get availabe folder objects, use the `Get-HPOVStoragePool` Cmdlet.  Folders are defined as a device specific attribute. 
 
@@ -562,7 +562,7 @@ ID                                         Name
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IOPSLimit &lt;&gt;
+### -IOPSLimit &lt;int&gt;
 
 When enabling IOPS limit, provide a value that is greater than or equal to 256.
 
@@ -574,7 +574,7 @@ When enabling IOPS limit, provide a value that is greater than or equal to 256.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -PerformancePolicy &lt;&gt;
+### -PerformancePolicy &lt;HPOneView.Storage.PerformancePolicy&gt;
 
 A Nimble Performance Policy is associated with a storage system.  Using the `Show-HPOVStorageSystemPerformancePolicy`, choose an available performance policy.
 
@@ -590,7 +590,7 @@ Example:
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -VolumeSet &lt;&gt;
+### -VolumeSet &lt;HPOneView.Storage.VolumeSet&gt;
 
 Use to specify a Volume Set the volume will be associated with, from `Get-HPOVStorageVolumeSet`.
 

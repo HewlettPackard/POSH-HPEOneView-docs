@@ -8,16 +8,16 @@ description: Install Logical Interconnect Firmware.
 
 ```text
 Install-HPOVLogicalInterconnectFirmware
-    [-LogicalInterconnect] <>
-    [-Baseline] <>
-    [-Method] <>
-    [-EthernetActivateOrder] <>
-    [-EthernetActivateDelay] <>
-    [-FCActivateOrder] <>
-    [-FCActivateDelay] <>
-    [-Async <>]
-    [-Force <>]
-    [-ApplianceConnection] <>
+    [-LogicalInterconnect] <Object>
+    [-Baseline] <Object>
+    [-Method] <String>
+    [-EthernetActivateOrder] <String>
+    [-EthernetActivateDelay] <Int32>
+    [-FCActivateOrder] <String>
+    [-FCActivateDelay] <Int32>
+    [-Async]
+    [-Force]
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -52,19 +52,19 @@ Perform a firmware update of the `Encl1-LI` Logical Interconnect, do not prompt 
 
 ## Parameters
 
-### -LogicalInterconnect &lt;&gt;
+### -LogicalInterconnect &lt;Object&gt;
 
 The Logical Interconnect object(s), name(s) or uris(s) to be updated.
 
 | Aliases | name, uri, li |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Method &lt;&gt;
+### -Method &lt;String&gt;
 
 Upgrade method to perform.  Accepted values are:
 
@@ -74,13 +74,13 @@ Upgrade method to perform.  Accepted values are:
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | Update |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EthernetActivateOrder &lt;&gt;
+### -EthernetActivateOrder &lt;String&gt;
 
 Specify the Ethernet module firmware activation order.  Accepted values are:
 
@@ -90,13 +90,13 @@ Specify the Ethernet module firmware activation order.  Accepted values are:
 
 | Aliases | Order, ActivateOrder |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | OddEven |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EthernetActivateDelay &lt;&gt;
+### -EthernetActivateDelay &lt;Int32&gt;
 
 The amount of time in seconds to delay activating additional modules.
 
@@ -104,13 +104,13 @@ Default is 5 seconds.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | 5 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -FCActivateOrder &lt;&gt;
+### -FCActivateOrder &lt;String&gt;
 
 Specify the Fibre Channel module firmware activation order.  Accepted values are:
 
@@ -120,13 +120,13 @@ Specify the Fibre Channel module firmware activation order.  Accepted values are
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | Serial |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -FCActivateDelay &lt;&gt;
+### -FCActivateDelay &lt;Int32&gt;
 
 The amount of time in seconds to delay activating additional modules.
 
@@ -134,25 +134,25 @@ Default is 5 seconds.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | 5 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Baseline &lt;&gt;
+### -Baseline &lt;Object&gt;
 
 Firmware Baseline Name, URI or Object.
 
 | Aliases | spp |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -164,7 +164,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Force &lt;&gt;
+### -Force &lt;SwitchParameter&gt;
 
 Force the firmware update if the update version matches what is already installed.
 
@@ -176,19 +176,19 @@ Force the firmware update if the update version matches what is already installe
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -WhatIf &lt;&gt;
+### -WhatIf &lt;SwitchParameter&gt;
 
 
 
@@ -200,7 +200,7 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Confirm &lt;&gt;
+### -Confirm &lt;SwitchParameter&gt;
 
 
 

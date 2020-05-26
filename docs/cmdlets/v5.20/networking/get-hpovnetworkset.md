@@ -8,20 +8,20 @@ description: Retrieve Network Set resource(s).
 
 ```text
 Get-HPOVNetworkSet
-    [-Name <>]
-    [-Scope <>]
-    [-Label <>]
-    [-ApplianceConnection <>]
+    [-Name <String>]
+    [-Scope <Object>]
+    [-Label <String>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 Get-HPOVNetworkSet
-    [-Name <>]
-    [-Scope <>]
-    [-Label <>]
-    [-ApplianceConnection <>]
-    [-ExportFile] <>
+    [-Name <String>]
+    [-Scope <Object>]
+    [-Label <String>]
+    [-ApplianceConnection <Object>]
+    [-ExportFile] <String>
     [<CommonParameters>]
 ```
 
@@ -92,7 +92,7 @@ Returns the `Get-HPOVNetworkSet` query results to the file c:\myApplianceConfig\
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 The name of the Network Set to retrieve.
 
@@ -104,7 +104,7 @@ The name of the Network Set to retrieve.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;&gt;
+### -Scope &lt;Object&gt;
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
@@ -121,7 +121,7 @@ Filter resources based on provided Scope membership.  By default, all resources 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Label &lt;&gt;
+### -Label &lt;String&gt;
 
 Specify the label associated with resources.
 
@@ -133,7 +133,7 @@ Specify the label associated with resources.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -145,13 +145,13 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ExportFile &lt;&gt;
+### -ExportFile &lt;String&gt;
 
 The full path and file name to export the contents retrieved from the call to `Get-HPOVNetworkSet`.
 
 | Aliases | x, export |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |

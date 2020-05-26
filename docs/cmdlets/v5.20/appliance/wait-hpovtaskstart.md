@@ -8,10 +8,10 @@ description: Wait for a task to start.
 
 ```text
 Wait-HPOVTaskStart
-    [-InputObject] <>
-    [-resourceName <>]
-    [-Timeout <>]
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-resourceName <String>]
+    [-Timeout <TimeSpan>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -35,19 +35,19 @@ Add a new Server Device to the appliance, wait for the Asynchronous task to ente
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 The object of the task resource to wait for.
 
 | Aliases | taskuri, task |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -ResourceName &lt;&gt;
+### -ResourceName &lt;String&gt;
 
 Specify the associated ResourceName to the task in order to display in the `Write-Progress` `-activity` parameter.
 
@@ -59,7 +59,7 @@ Specify the associated ResourceName to the task in order to display in the `Writ
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Timeout &lt;&gt;
+### -Timeout &lt;TimeSpan&gt;
 
 The time or object to wait for the task to start.  Default is to wait for 20 minutes.
 
@@ -71,7 +71,7 @@ The time or object to wait for the task to start.  Default is to wait for 20 min
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 

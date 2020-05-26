@@ -8,15 +8,15 @@ description: Sends a request to the management appliance
 
 ```text
 Send-HPOVRequest
-    [-uri] <>
-    [-method] <>
-    [-body] <>
-    [-start] <>
-    [-count] <>
-    [-AddHeader] <>
-    [-OverrideContentType <>]
-    [-OverrideTimeout <>]
-    [-Hostname] <>
+    [-uri] <String>
+    [-method] <String>
+    [-body] <Object>
+    [-start] <Int32>
+    [-count] <Int32>
+    [-AddHeader] <Hashtable>
+    [-OverrideContentType <String>]
+    [-OverrideTimeout <Int>]
+    [-Hostname] <Object>
     [<CommonParameters>]
 ```
 
@@ -48,19 +48,19 @@ Updates the name of the enclosure object specified by the uri and Appliance Conn
 
 ## Parameters
 
-### -Uri &lt;&gt;
+### -Uri &lt;String&gt;
 
 The uri that identifies the required resource on the appliance.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Method &lt;&gt;
+### -Method &lt;String&gt;
 
 The request HTTP Method.
 
@@ -72,63 +72,63 @@ The request HTTP Method.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | GET |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Body &lt;&gt;
+### -Body &lt;Object&gt;
 
 Body for the request.  Required if the method is POST or PUT.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Start &lt;&gt;
+### -Start &lt;Int32&gt;
 
 For GETs on resource collections, this specifies the starting index in the collection.
 If not specified, collection members starting from the beginning are returned.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | 0 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Count &lt;&gt;
+### -Count &lt;Int32&gt;
 
 For GETs on resource collections, this specifies the number of collection members to return.
 If not specified, all members of the collection are returned from this function.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | 0 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -AddHeader &lt;&gt;
+### -AddHeader &lt;Hashtable&gt;
 
 If additional headers are needed/required than the defaults, include header names and values within a Hashtable.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -OverrideContentType &lt;&gt;
+### -OverrideContentType &lt;String&gt;
 
 Workaround to override ContentType where needed (e.g. PATCH /rest/scopes/{GUID}.
 
@@ -140,7 +140,7 @@ Workaround to override ContentType where needed (e.g. PATCH /rest/scopes/{GUID}.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -OverrideTimeout &lt;&gt;
+### -OverrideTimeout &lt;Int&gt;
 
 Specify to override the HttpWebRequest syncronous timeout being made.
 
@@ -152,7 +152,7 @@ Specify to override the HttpWebRequest syncronous timeout being made.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Hostname &lt;&gt;
+### -Hostname &lt;Object&gt;
 
 The destination appliance to process the request.  When specifying a Value, it must match the HostName attribute of a valid `[HPOneView.Appliance.Connection]` object within the Global $ConnectedSessions variable.  If no match is found, or no `[HPOneView.Appliance.Connection]` objects exist, an error will be thrown.
 
@@ -160,7 +160,7 @@ Default Value: All valid Appliance Connections within $Global:ConnectedSessions
 
 | Aliases | Appliance, ApplianceConnection |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | false |

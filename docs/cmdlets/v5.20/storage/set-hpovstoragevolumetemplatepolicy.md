@@ -8,15 +8,15 @@ description: Set Storage Volume Template Global Policy
 
 ```text
 Set-HPOVStorageVolumeTemplatePolicy
-    [-Enable <>]
-    [-ApplianceConnection] <>
+    [-Enable]
+    [-ApplianceConnection] <Array>
     [<CommonParameters>]
 ```
 
 ```text
 Set-HPOVStorageVolumeTemplatePolicy
-    [-Disable <>]
-    [-ApplianceConnection] <>
+    [-Disable]
+    [-ApplianceConnection] <Array>
     [<CommonParameters>]
 ```
 
@@ -46,7 +46,7 @@ Get the Storage Volume Template Global Policy setting, then disable it for all c
 
 ## Parameters
 
-### -Enable &lt;&gt;
+### -Enable &lt;SwitchParameter&gt;
 
 Switch to enable the policy
 
@@ -58,7 +58,7 @@ Switch to enable the policy
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Disable &lt;&gt;
+### -Disable &lt;SwitchParameter&gt;
 
 Switch to disable the policy
 
@@ -70,7 +70,7 @@ Switch to disable the policy
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -78,7 +78,7 @@ Default Value: ${Global:ConnectSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | false |

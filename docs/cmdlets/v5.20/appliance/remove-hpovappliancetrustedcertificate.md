@@ -8,9 +8,9 @@ description: Remove X.509 SSL certificates from the appliace trusted store.
 
 ```text
 Remove-HPOVApplianceTrustedCertificate
-    [-InputObject <>]
-    [-ApplianceConnection <>]
-    [-Async <>]
+    [-InputObject <String>]
+    [-ApplianceConnection <Object>]
+    [-Async]
     [<CommonParameters>]
 ```
 
@@ -30,7 +30,7 @@ Remove the specific trusted certificate from the appliances trusted certificate 
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;String&gt;
 
 Aliases [-Certificate]
 
@@ -44,7 +44,7 @@ The Alias Name of the certificate.  Please know that wildcard is not supported.
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` objects or Name property values.
 
@@ -56,7 +56,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` objects or Name property 
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 

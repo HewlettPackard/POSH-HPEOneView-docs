@@ -8,8 +8,8 @@ description: Retrieve defined Support and Reseller partners.
 
 ```text
 Get-HPOVRemoteSupportPartner
-    [-Name <>]
-    [-ApplianceConnection <>]
+    [-Name <String>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -43,7 +43,7 @@ Get all configured report support partners.
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 Name of the HPE Partner.
 
@@ -55,7 +55,7 @@ Name of the HPE Partner.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

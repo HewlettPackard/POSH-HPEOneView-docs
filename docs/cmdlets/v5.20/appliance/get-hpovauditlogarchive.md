@@ -8,8 +8,8 @@ description: Download archive of appliance audit logs.
 
 ```text
 Get-HPOVAuditLogArchive
-    [-Location <>]
-    [-ApplianceConnection <>]
+    [-Location <System.IO.DirectoryInfo>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -86,7 +86,7 @@ Save the Appliance audit log archive to C:\Temp
 
 ## Parameters
 
-### -Location &lt;&gt;
+### -Location &lt;System.IO.DirectoryInfo&gt;
 
 The full path to where the audit log will be saved to.  If omitted, current directory location will be used.
 
@@ -98,7 +98,7 @@ The full path to where the audit log will be saved to.  If omitted, current dire
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 One or more Appliance Connection Objects, Connection ID, or Connection Name.  If omitted, all connected appliances will be processed.
 

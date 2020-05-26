@@ -8,12 +8,12 @@ description: Add supported Rack Manager (HPE Superdome Flex) resource.
 
 ```text
 Add-HPOVRackManager
-    [-ComputerName] <>
-    [-Credential] <>
-    [-Scope <>]
-    [-Async <>]
-    [-Force <>]
-    [-ApplianceConnection <>]
+    [-ComputerName] <String>
+    [-Credential] <PSCredential>
+    [-Scope <Object>]
+    [-Async]
+    [-Force]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -46,7 +46,7 @@ Add the specified rack manager.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -58,7 +58,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -70,31 +70,31 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ComputerName &lt;&gt;
+### -ComputerName &lt;String&gt;
 
 The IP/Address of the supported rack manager
 
 | Aliases | Name |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Credential &lt;&gt;
+### -Credential &lt;PSCredential&gt;
 
 Use this parameter if you want to provide a PSCredential object instead.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Force &lt;&gt;
+### -Force &lt;SwitchParameter&gt;
 
 Force add the resource.  Use if you need to override the claim of a resource, and force the connected appliance to add.  Do know if the resource was claimed or added to a different appliance, it will no longer be able to monitor and/or manage the resource.
 
@@ -106,7 +106,7 @@ Force add the resource.  Use if you need to override the claim of a resource, an
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;&gt;
+### -Scope &lt;Object&gt;
 
 Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
 

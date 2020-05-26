@@ -8,10 +8,10 @@ description: Remove an HPE Synergy Image Streamer OS Deployment server.
 
 ```text
 Remove-HPOVOSDeploymentServer
-    [-InputObject] <>
-    [-Force <>]
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-InputObject] <HPOneView.Appliance.OSDeploymentServer>
+    [-Force]
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -33,19 +33,19 @@ Remove OS Deployment Servers from the appliance.
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;HPOneView.Appliance.OSDeploymentServer&gt;
 
 OS Deployment Server object, from `Get-HPOVOSDeploymentServer`.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Force &lt;&gt;
+### -Force &lt;SwitchParameter&gt;
 
 Forceably remove an OS Deployment Server.
 
@@ -57,7 +57,7 @@ Forceably remove an OS Deployment Server.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -69,7 +69,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

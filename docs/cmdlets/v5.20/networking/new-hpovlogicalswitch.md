@@ -8,79 +8,79 @@ description: Create a new Logical Switch resource.
 
 ```text
 New-HPOVLogicalSwitch
-    [-Name <>]
-    [-LogicalSwitchGroup] <>
-    [-Managed] <>
-    [-Switch1Address] <>
-    [-SshUserName] <>
-    [-SshPassword] <>
-    [-SnmpCommunity] <>
-    [-Switch2Address <>]
-    [-SnmpPort <>]
-    [-SnmpV1] <>
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-Name <String>]
+    [-LogicalSwitchGroup] <Object>
+    [-Managed]
+    [-Switch1Address] <String>
+    [-SshUserName] <String>
+    [-SshPassword] <Object>
+    [-SnmpCommunity] <String>
+    [-Switch2Address <String>]
+    [-SnmpPort <int>]
+    [-SnmpV1]
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 New-HPOVLogicalSwitch
-    [-Name <>]
-    [-LogicalSwitchGroup] <>
-    [-Monitored] <>
-    [-Switch1Address] <>
-    [-SshUserName] <>
-    [-SshPassword] <>
-    [-Switch2Address <>]
-    [-SnmpPort <>]
-    [-SnmpV3] <>
-    [-SnmpUserName] <>
-    [-SnmpAuthLevel] <>
-    [-SnmpAuthProtocol] <>
-    [-SnmpAuthPassword] <>
-    [-SnmpPrivProtocol] <>
-    [-SnmpPrivPassword] <>
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-Name <String>]
+    [-LogicalSwitchGroup] <Object>
+    [-Monitored]
+    [-Switch1Address] <String>
+    [-SshUserName] <String>
+    [-SshPassword] <Object>
+    [-Switch2Address <String>]
+    [-SnmpPort <int>]
+    [-SnmpV3]
+    [-SnmpUserName] <String>
+    [-SnmpAuthLevel] <String>
+    [-SnmpAuthProtocol] <String>
+    [-SnmpAuthPassword] <Object>
+    [-SnmpPrivProtocol] <String>
+    [-SnmpPrivPassword] <Object>
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 New-HPOVLogicalSwitch
-    [-Name <>]
-    [-LogicalSwitchGroup] <>
-    [-Managed] <>
-    [-Switch1Address] <>
-    [-SshUserName] <>
-    [-SshPassword] <>
-    [-Switch2Address <>]
-    [-SnmpPort <>]
-    [-SnmpV3] <>
-    [-SnmpUserName] <>
-    [-SnmpAuthLevel] <>
-    [-SnmpAuthProtocol] <>
-    [-SnmpAuthPassword] <>
-    [-SnmpPrivProtocol] <>
-    [-SnmpPrivPassword] <>
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-Name <String>]
+    [-LogicalSwitchGroup] <Object>
+    [-Managed]
+    [-Switch1Address] <String>
+    [-SshUserName] <String>
+    [-SshPassword] <Object>
+    [-Switch2Address <String>]
+    [-SnmpPort <int>]
+    [-SnmpV3]
+    [-SnmpUserName] <String>
+    [-SnmpAuthLevel] <String>
+    [-SnmpAuthProtocol] <String>
+    [-SnmpAuthPassword] <Object>
+    [-SnmpPrivProtocol] <String>
+    [-SnmpPrivPassword] <Object>
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 New-HPOVLogicalSwitch
-    [-Name <>]
-    [-LogicalSwitchGroup] <>
-    [-Monitored] <>
-    [-Switch1Address] <>
-    [-SshUserName] <>
-    [-SshPassword] <>
-    [-SnmpCommunity] <>
-    [-Switch2Address <>]
-    [-SnmpPort <>]
-    [-SnmpV1] <>
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-Name <String>]
+    [-LogicalSwitchGroup] <Object>
+    [-Monitored]
+    [-Switch1Address] <String>
+    [-SshUserName] <String>
+    [-SshPassword] <Object>
+    [-SnmpCommunity] <String>
+    [-Switch2Address <String>]
+    [-SnmpPort <int>]
+    [-SnmpV1]
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -142,7 +142,7 @@ Create the "My Logical Switch 2" as a Managed Logical Switch resource.
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 Name of the Logical Switch resource.  Supports wildcard * character.
 
@@ -154,43 +154,55 @@ Name of the Logical Switch resource.  Supports wildcard * character.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -LogicalSwitchGroup &lt;&gt;
+### -LogicalSwitchGroup &lt;Object&gt;
 
 Provide the Logical Switch Group policy object.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Managed &lt;&gt;
+### -Managed &lt;SwitchParameter&gt;
 
 Specify if the Logical Switch will be a Managed resource.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Monitored &lt;&gt;
+### -Monitored &lt;SwitchParameter&gt;
 
 Specify if the Logical Switch will be a Monintored resource.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Switch1Address &lt;&gt;
+### -Switch1Address &lt;String&gt;
+
+IP Address or FQDN of first Switch resource.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -Switch2Address &lt;String&gt;
 
 IP Address or FQDN of first Switch resource.
 
@@ -202,43 +214,31 @@ IP Address or FQDN of first Switch resource.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Switch2Address &lt;&gt;
-
-IP Address or FQDN of first Switch resource.
-
-| Aliases | None |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
-### -SshUserName &lt;&gt;
+### -SshUserName &lt;String&gt;
 
 The SSH account name.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SshPassword &lt;&gt;
+### -SshPassword &lt;Object&gt;
 
 Password of the SSH User.  Either `[System.String]` or `[System.Security.SecureString]` values are supported.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SnmpPort &lt;&gt;
+### -SnmpPort &lt;int&gt;
 
 The UDP port SNMP is configured to listen on the target Switch resource.
 
@@ -250,115 +250,115 @@ The UDP port SNMP is configured to listen on the target Switch resource.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SnmpV1 &lt;&gt;
+### -SnmpV1 &lt;SwitchParameter&gt;
 
 Specify if SNMPv1 is available.  Otherwise, use the `-SNMPv3` switch parameter.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SnmpCommunity &lt;&gt;
+### -SnmpCommunity &lt;String&gt;
 
 Specify the SNMPv1 Community name.  This parameter is not used if needing to configure SNMPv3.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SnmpV3 &lt;&gt;
+### -SnmpV3 &lt;SwitchParameter&gt;
 
 Specify if SNMPv3 is available.  Otherwise, use the `-SNMPv1` switch parameter.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SnmpUserName &lt;&gt;
+### -SnmpUserName &lt;String&gt;
 
 Specify the SNMPv3 Username.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SnmpAuthLevel &lt;&gt;
+### -SnmpAuthLevel &lt;String&gt;
 
 Defines the security levels supported by SNMPv3:  * Auth         - Communication with authorization and without privacy. Messages are authenticated but not encrypted. * AuthAndPrive - Communication with authorization as well as privacy. Messages are authenticated as well as encrypted.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SnmpAuthProtocol &lt;&gt;
+### -SnmpAuthProtocol &lt;String&gt;
 
 The protocol used for Authentication are either MD5 (Message Digest 5) or SHA (Secure Hash Algorithm).
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SnmpAuthPassword &lt;&gt;
+### -SnmpAuthPassword &lt;Object&gt;
 
 SNMPv3 Authorization Password.  Either `[System.String]` or `[System.Security.SecureString]` values are supported.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SnmpPrivProtocol &lt;&gt;
+### -SnmpPrivProtocol &lt;String&gt;
 
 The protocols used to encrypt the messages are Data Encryption Standard (DES56) or Advanced Encryption Standard (AES128).
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SnmpPrivPassword &lt;&gt;
+### -SnmpPrivPassword &lt;Object&gt;
 
 SNMPv3 Privacy Password.  Either `[System.String]` or `[System.Security.SecureString]` values are supported.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -370,7 +370,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 

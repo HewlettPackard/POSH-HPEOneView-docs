@@ -8,45 +8,45 @@ description: Create a new HPE Synergy Logical JBOD resource.
 
 ```text
 New-HPOVLogicalJBOD
-    [-Name] <>
-    [-InputObject] <>
-    [-DriveType] <>
-    [-Description <>]
-    [-NumberofDrives] <>
-    [-MinDriveSize] <>
-    [-MaxDriveSize] <>
-    [-EraseDataOnDelete <>]
-    [-Scope <>]
+    [-Name] <string>
+    [-InputObject] <Object>
+    [-DriveType] <string>
+    [-Description <string>]
+    [-NumberofDrives] <int>
+    [-MinDriveSize] <int>
+    [-MaxDriveSize] <int>
+    [-EraseDataOnDelete <bool>]
+    [-Scope <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 New-HPOVLogicalJBOD
-    [-Name] <>
-    [-Description <>]
-    [-Drives] <>
-    [-EraseDataOnDelete <>]
-    [-Scope <>]
-    [-ApplianceConnection <>]
+    [-Name] <string>
+    [-Description <string>]
+    [-Drives] <HPOneView.Storage.Drive[]>
+    [-EraseDataOnDelete <bool>]
+    [-Scope <Object>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 New-HPOVLogicalJBOD
-    [-Name] <>
-    [-InputObject] <>
-    [-AvailableDriveType <>]
-    [-Description <>]
-    [-NumberofDrives] <>
-    [-EraseDataOnDelete <>]
-    [-Scope <>]
-    [-ApplianceConnection <>]
+    [-Name] <string>
+    [-InputObject] <Object>
+    [-AvailableDriveType <HPOneView.Storage.AvailableDriveType>]
+    [-Description <string>]
+    [-NumberofDrives] <int>
+    [-EraseDataOnDelete <bool>]
+    [-Scope <Object>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 New-HPOVLogicalJBOD
-    [-ApplianceConnection <>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -130,7 +130,7 @@ Create a new logical JBOD with specific drive bays from a specific drive enclosu
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -142,7 +142,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -AvailableDriveType &lt;&gt;
+### -AvailableDriveType &lt;HPOneView.Storage.AvailableDriveType&gt;
 
 When attempting to create a logical JBOD, specify the availabe drive type from `Get-HPOVAvailableDriveType`.
 
@@ -154,7 +154,7 @@ When attempting to create a logical JBOD, specify the availabe drive type from `
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Description &lt;&gt;
+### -Description &lt;string&gt;
 
 Provide a description for the resource.
 
@@ -166,7 +166,7 @@ Provide a description for the resource.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DriveType &lt;&gt;
+### -DriveType &lt;string&gt;
 
 When attempting to create a logical JBOD, specify the interface type for drives that will be used to build the logical drive. Supported values depend on the local storage capabilities of the selected server hardware type.  Allowed value:
 
@@ -183,25 +183,25 @@ Auto is not supported when attempting to create an HPE Synergy D3940 Logical or 
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Drives &lt;&gt;
+### -Drives &lt;HPOneView.Storage.Drive[]&gt;
 
 Provide the specific drives to assign to the logical JBOD.  Use the `Get-HPOVDriveEnclosureInventory` Cmdlet to identify the drives you wish to allocate to the new logical JBOD resource.  Drives can be allocated from different HPE Synergy drive enclosures, but must reside within the same SAS Logical Interconnect.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EraseDataOnDelete &lt;&gt;
+### -EraseDataOnDelete &lt;bool&gt;
 
 If set to True, and drives support erase on delete option, the drive enclosure will erase the data on the drives.  This operation will take time, as the drive will not be added back into the available pool until the erase operation finishes.
 
@@ -213,67 +213,67 @@ If set to True, and drives support erase on delete option, the drive enclosure w
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 When attempting to create a logical JBOD, and not specifying the exact drives, you must provide either a SAS Logical Interconnect or HPE Synergy Frame resource.
 
 | Aliases | SasLogicalInterconnect, Enclosure, Frame |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -MaxDriveSize &lt;&gt;
+### -MaxDriveSize &lt;int&gt;
 
 When attempting to create a logical JBOD, you can specify the min and max drive size for the system to locate drive availability.  Specify the maximum disk size in GB.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -MinDriveSize &lt;&gt;
+### -MinDriveSize &lt;int&gt;
 
 When attempting to create a logical JBOD, you can specify the min and max drive size for the system to locate drive availability.  Specify the minimum disk size in GB.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Name &lt;&gt;
+### -Name &lt;string&gt;
 
 Provide a globally unique name for the logical JBOD resource.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -NumberofDrives &lt;&gt;
+### -NumberofDrives &lt;int&gt;
 
 When attempting to create a logical JBOD, you can specify the min and max drive size for the system to locate drive availability.  Specify the number of drives the system should allocate.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;&gt;
+### -Scope &lt;Object&gt;
 
 Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
 

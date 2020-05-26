@@ -8,18 +8,18 @@ description: Retrieve Logical Switch Group resources.
 
 ```text
 Get-HPOVLogicalSwitchGroup
-    [-Name <>]
-    [-Scope <>]
-    [-Label <>]
-    [-ApplianceConnection <>]
-    [-exportFile <>]
+    [-Name <String>]
+    [-Scope <Object>]
+    [-Label <String>]
+    [-ApplianceConnection <Object>]
+    [-exportFile]
     [<CommonParameters>]
 ```
 
 ```text
 Get-HPOVLogicalSwitchGroup
-    [-InputObject] <>
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -88,19 +88,19 @@ Get the "My Logical Switch Group Policy 1" resource.
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 The Async task object after a Logical Switch Group resource is created, the Cmdlet will return the associated object.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 The Logical Switch Group resource Name.  Supports the * wildcard character.
 
@@ -112,7 +112,7 @@ The Logical Switch Group resource Name.  Supports the * wildcard character.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;&gt;
+### -Scope &lt;Object&gt;
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
@@ -129,7 +129,7 @@ Filter resources based on provided Scope membership.  By default, all resources 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Label &lt;&gt;
+### -Label &lt;String&gt;
 
 Specify the label associated with resources.
 
@@ -141,7 +141,7 @@ Specify the label associated with resources.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ExportFile &lt;&gt;
+### -ExportFile &lt;SwitchParameter&gt;
 
 Export the Logical Switch Group resource(s) to the specified JSON file.
 
@@ -153,7 +153,7 @@ Export the Logical Switch Group resource(s) to the specified JSON file.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 

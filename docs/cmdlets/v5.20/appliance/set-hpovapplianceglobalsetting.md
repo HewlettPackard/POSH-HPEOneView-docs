@@ -8,17 +8,17 @@ description: (Reserved for future use) Update appliance global settings.
 
 ```text
 Set-HPOVApplianceGlobalSetting
-    [-Name] <>
-    [-Value] <>
-    [-ApplianceConnection] <>
+    [-Name] <String>
+    [-Value] <String>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ```text
 Set-HPOVApplianceGlobalSetting
-    [-InputObject] <>
-    [-Value] <>
-    [-ApplianceConnection] <>
+    [-InputObject] <HPOneView.Appliance.GlobalSetting>
+    [-Value] <String>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -38,7 +38,7 @@ Returns the "alertMax" setting object with the updated value of 75000
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;HPOneView.Appliance.GlobalSetting&gt;
 
 Aliases [-Object]
 
@@ -46,37 +46,37 @@ The Appliance Global Setting object from `Get-HPOVApplianceGlobalSetting`.
 
 | Aliases | Object |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 The name of the global parameter.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Value &lt;&gt;
+### -Value &lt;String&gt;
 
 The updated value for the global parameter.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

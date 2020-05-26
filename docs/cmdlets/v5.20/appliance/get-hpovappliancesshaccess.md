@@ -8,7 +8,7 @@ description: Get the current SSH console access state.
 
 ```text
 Get-HPOVApplianceSshAccess
-    [-ApplianceConnection <>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -34,7 +34,7 @@ Get the current state of the appliance SSH console.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

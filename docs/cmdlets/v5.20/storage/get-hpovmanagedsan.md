@@ -8,9 +8,9 @@ description: Retrieve Managed SAN resource(s).
 
 ```text
 Get-HPOVManagedSan
-    [-Name <>]
-    [-Label <>]
-    [-ApplianceConnection <>]
+    [-Name <String>]
+    [-Label <String>]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -76,7 +76,7 @@ Show the "Fabric A" Managed SAN resource object.
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 Managed SAN Name to retrieve.
 
@@ -88,7 +88,7 @@ Managed SAN Name to retrieve.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Label &lt;&gt;
+### -Label &lt;String&gt;
 
 Specify the label associated with resources.
 
@@ -100,7 +100,7 @@ Specify the label associated with resources.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

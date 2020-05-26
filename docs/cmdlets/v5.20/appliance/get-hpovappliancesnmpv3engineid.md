@@ -8,7 +8,7 @@ description: Get appliance SNMPv3 Engine ID.
 
 ```text
 Get-HPOVApplianceSnmpV3EngineId
-    [-ApplianceConnection <>]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -34,7 +34,7 @@ Get the SNMPv3 Engine ID of the connected appliance.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

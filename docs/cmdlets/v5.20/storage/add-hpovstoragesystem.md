@@ -8,29 +8,29 @@ description: Import a supported Storage System
 
 ```text
 Add-HPOVStorageSystem
-    [-Hostname] <>
-    [-Credential] <>
-    [-Username <>]
-    [-Password <>]
-    [-Family <>]
-    [-Domain <>]
-    [-Ports <>]
-    [-PortGroups <>]
-    [-ShowSystemDetails <>]
-    [-ApplianceConnection <>]
+    [-Hostname] <String>
+    [-Credential] <PSCredential>
+    [-Username <String>]
+    [-Password <Object>]
+    [-Family <String>]
+    [-Domain <String>]
+    [-Ports <Object>]
+    [-PortGroups <Hashtable>]
+    [-ShowSystemDetails]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
 ```text
 Add-HPOVStorageSystem
-    [-Hostname] <>
-    [-VIPS] <>
-    [-Credential] <>
-    [-Username <>]
-    [-Password <>]
-    [-Family <>]
-    [-ShowSystemDetails <>]
-    [-ApplianceConnection <>]
+    [-Hostname] <String>
+    [-VIPS] <Hashtable>
+    [-Credential] <PSCredential>
+    [-Username <String>]
+    [-Password <Object>]
+    [-Family <String>]
+    [-ShowSystemDetails]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -80,19 +80,19 @@ Add a Nimble iSCSI storage system with PSCredential object.
 
 ## Parameters
 
-### -Hostname &lt;&gt;
+### -Hostname &lt;String&gt;
 
 IP Address or FQDN of the storage systems.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Family &lt;&gt;
+### -Family &lt;String&gt;
 
 Specify the type of Storage System to add: Nimble, StorageVirtual, StoreServ or Primera.
 
@@ -104,19 +104,19 @@ Specify the type of Storage System to add: Nimble, StorageVirtual, StoreServ or 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Credential &lt;&gt;
+### -Credential &lt;PSCredential&gt;
 
 Provide the credentials to authenticate to the storage system.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Username &lt;&gt;
+### -Username &lt;String&gt;
 
 {% hint style="info" %}
 This parameter is now deprecated.  Please update to the `-Credential` parameter.
@@ -133,7 +133,7 @@ Administrator account of the target storage system.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Password &lt;&gt;
+### -Password &lt;Object&gt;
 
 {% hint style="info" %}
 This parameter is now deprecated.  Please update to the `-Credential` parameter.
@@ -150,7 +150,7 @@ Password of administrator account password.  Can either be String or `[System.Se
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Domain &lt;&gt;
+### -Domain &lt;String&gt;
 
 Specify the HPE 3PAR Virtual Domain name.  Default is "NO DOMAIN". The value provided is CAsesEnSItive.
 
@@ -162,7 +162,7 @@ Specify the HPE 3PAR Virtual Domain name.  Default is "NO DOMAIN". The value pro
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Ports &lt;&gt;
+### -Ports &lt;Object&gt;
 
 Specify the Host Ports and Expected Network in an Array of PSCustomObject entries. 
     
@@ -176,7 +176,7 @@ Example: @{"1:1:1"="Fabric A";"2:2:2"="Fabric B"}
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -PortGroups &lt;&gt;
+### -PortGroups &lt;Hashtable&gt;
 
 Specify the Host Ports to group together. 
     
@@ -190,7 +190,7 @@ Example: @{"1:1:1" = "PG1"; "2:2:2" = "PG2"}
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -VIPS &lt;&gt;
+### -VIPS &lt;Hashtable&gt;
 
 Specify the StoreVirtual or Nimble VIP(s) and associated Ethernet Network. 
     
@@ -204,13 +204,13 @@ or
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -222,7 +222,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ShowSystemDetails &lt;&gt;
+### -ShowSystemDetails &lt;SwitchParameter&gt;
 
 By default, the Cmdlet will no longer display the details about the Storage System.  Use this parameter to display information about the storage system when adding to the appliance.
 

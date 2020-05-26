@@ -8,9 +8,9 @@ description: Modify the reserved VLAN range for HPE Synergy.
 
 ```text
 Set-HPOVReservedVlanRange
-    [-Start] <>
-    [-Length] <>
-    [-ApplianceConnection <>]
+    [-Start] <int>
+    [-Length] <int>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -51,7 +51,7 @@ Change the reserved VLAN range to start at 2700, and end at 2828.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -63,25 +63,25 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Length &lt;&gt;
+### -Length &lt;int&gt;
 
 Must not exceed 128.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Start &lt;&gt;
+### -Start &lt;int&gt;
 
 The starting VLAN ID.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
