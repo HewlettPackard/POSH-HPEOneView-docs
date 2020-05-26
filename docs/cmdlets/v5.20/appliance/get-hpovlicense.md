@@ -8,11 +8,11 @@ description: Gets the installed licenses on the appliance.
 
 ```text
 Get-HPOVLicense
-    [-Type <>]
-    [-State <>]
-    [-Summary <>]
-    [-Report <>]
-    [-ApplianceConnection <>]
+    [-Type <String>]
+    [-State <String>]
+    [-Summary]
+    [-Report]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -76,7 +76,7 @@ Retrieve all installed license objects on the connected appliance(s).
 
 ## Parameters
 
-### -Type &lt;&gt;
+### -Type &lt;String&gt;
 
 Specify the type of License to retrieve.  Valid options are "HP_ONE_VIEW" or "HP_ONE_VIEW_WO_ILO".
 
@@ -88,7 +88,7 @@ Specify the type of License to retrieve.  Valid options are "HP_ONE_VIEW" or "HP
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -State &lt;&gt;
+### -State &lt;String&gt;
 
 Specify the license state to retrieve.  Valid options are "Unlicensed" or "Permanent".
 
@@ -100,7 +100,7 @@ Specify the license state to retrieve.  Valid options are "Unlicensed" or "Perma
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Summary &lt;&gt;
+### -Summary &lt;SwitchParameter&gt;
 
 Display a condensed summary view of the installed or required licenses.  This does not return a License object that can be used with `Remove-HPOVLicense`.
 
@@ -112,7 +112,7 @@ Display a condensed summary view of the installed or required licenses.  This do
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Report &lt;&gt;
+### -Report &lt;SwitchParameter&gt;
 
 PARAMETER IS DEPRECATED.
 
@@ -126,7 +126,7 @@ Generate a report of installed or required licenses, their type and assigned Nod
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

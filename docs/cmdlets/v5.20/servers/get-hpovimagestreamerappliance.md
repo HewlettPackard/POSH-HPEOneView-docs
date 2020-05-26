@@ -8,8 +8,8 @@ description: Retrieve HPE Synergy Image Streamer appliances.
 
 ```text
 Get-HPOVImageStreamerAppliance
-    [-Name <>]
-    [-ApplianceConnection <>]
+    [-Name <String>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -43,7 +43,7 @@ Retrieve the Image Streamer Appliance "0000A66102, appliance 2".
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 Image Streamer resource name.  Supported the * (asterisk) wildcard character.
 
@@ -55,7 +55,7 @@ Image Streamer resource name.  Supported the * (asterisk) wildcard character.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

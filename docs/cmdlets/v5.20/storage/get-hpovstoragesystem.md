@@ -8,20 +8,20 @@ description: Retrieve Storage System resource(s).
 
 ```text
 Get-HPOVStorageSystem
-    [-Name <>]
-    [-Hostname <>]
-    [-Family <>]
-    [-ApplianceConnection <>]
-    [-List <>]
+    [-Name <String>]
+    [-Hostname <String>]
+    [-Family <String>]
+    [-ApplianceConnection <Array>]
+    [-List]
     [<CommonParameters>]
 ```
 
 ```text
 Get-HPOVStorageSystem
-    [-SerialNumber <>]
-    [-Family <>]
-    [-ApplianceConnection <>]
-    [-List <>]
+    [-SerialNumber <String>]
+    [-Family <String>]
+    [-ApplianceConnection <Array>]
+    [-List]
     [<CommonParameters>]
 ```
 
@@ -88,7 +88,7 @@ Show a report of the managed storage system(s).
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 Display the specific Storage System by its system name.
 
@@ -100,7 +100,7 @@ Display the specific Storage System by its system name.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Hostname &lt;&gt;
+### -Hostname &lt;String&gt;
 
 Display the specific Storage System by its hostname (IP Address or FQDN).
 
@@ -112,7 +112,7 @@ Display the specific Storage System by its hostname (IP Address or FQDN).
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SerialNumber &lt;&gt;
+### -SerialNumber &lt;String&gt;
 
 Search for the Storage System based on the resource serial number instead of the name.
 
@@ -124,7 +124,7 @@ Search for the Storage System based on the resource serial number instead of the
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Family &lt;&gt;
+### -Family &lt;String&gt;
 
 Specify the type of Storage System to add: Nimble, StorageVirtual, StoreServ or Primera.
 
@@ -136,7 +136,7 @@ Specify the type of Storage System to add: Nimble, StorageVirtual, StoreServ or 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -148,7 +148,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -List &lt;&gt;
+### -List &lt;SwitchParameter&gt;
 
 Generate a report of the specific or all storage systems.
 

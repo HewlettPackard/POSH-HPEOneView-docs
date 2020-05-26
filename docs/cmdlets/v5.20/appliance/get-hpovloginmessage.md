@@ -8,7 +8,7 @@ description: Get appliance configured login message.
 
 ```text
 Get-HPOVLoginMessage
-    [-ApplianceConnection <>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -44,7 +44,7 @@ Get the Login Message from all connected appliances.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

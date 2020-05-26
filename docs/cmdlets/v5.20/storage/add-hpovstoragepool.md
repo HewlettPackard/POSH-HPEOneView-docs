@@ -8,9 +8,9 @@ description: Add managed Storage Pools.
 
 ```text
 Add-HPOVStoragePool
-    [-StorageSystem] <>
-    [-Pool] <>
-    [-ApplianceConnection <>]
+    [-StorageSystem] <Object>
+    [-Pool] <String[]>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -62,19 +62,19 @@ Add the "HP_CPG1" Storage Pool that is managed in the HP3PAR_1 Storage System.
 
 ## Parameters
 
-### -StorageSystem &lt;&gt;
+### -StorageSystem &lt;Object&gt;
 
 The Storage System object from `Get-HPOVStorageSystem`
 
 | Aliases | Hostname, name |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Pool &lt;&gt;
+### -Pool &lt;String[]&gt;
 
 One or more storage pool name resource(s) to be added during storage system import.
 
@@ -82,13 +82,13 @@ Example: $pools = "cpg1","cpg2"
 
 | Aliases | PoolName, spName, cpg |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 

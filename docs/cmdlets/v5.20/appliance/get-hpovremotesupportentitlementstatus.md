@@ -8,8 +8,8 @@ description: Get Remote Support for a supported resource.
 
 ```text
 Get-HPOVRemoteSupportEntitlementStatus
-    [-InputObject] <>
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -62,19 +62,19 @@ Get the specific enclosure resource and get Remote Support entitlement status.
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 The compute or enclosure resource to enable Remote Support for.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

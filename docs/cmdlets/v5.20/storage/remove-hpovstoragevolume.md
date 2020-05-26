@@ -8,10 +8,10 @@ description: Remove a Storage Volume
 
 ```text
 Remove-HPOVStorageVolume
-    [-InputObject] <>
-    [-ExportOnly <>]
-    [-Async <>]
-    [-ApplianceConnection] <>
+    [-InputObject] <Object>
+    [-ExportOnly]
+    [-Async]
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -40,19 +40,19 @@ Remove export of volume named "TestVol1" only, which leaves the volume still pro
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 Storage Volume Name, URI or Object.
 
 | Aliases | uri, name, StorageVolume |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -ExportOnly &lt;&gt;
+### -ExportOnly &lt;SwitchParameter&gt;
 
 Removes the volume from HPE OneView. The volume remains on the storage system, and must be managed manually until it is added back under management of HPE OneView.
 Default: Delete Export AND Volume from storage system.
@@ -65,7 +65,7 @@ Default: Delete Export AND Volume from storage system.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -77,19 +77,19 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -WhatIf &lt;&gt;
+### -WhatIf &lt;SwitchParameter&gt;
 
 
 
@@ -101,7 +101,7 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Confirm &lt;&gt;
+### -Confirm &lt;SwitchParameter&gt;
 
 
 

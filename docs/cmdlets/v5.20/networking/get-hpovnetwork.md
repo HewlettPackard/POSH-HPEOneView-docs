@@ -8,13 +8,13 @@ description: Retrieve Network resource(s).
 
 ```text
 Get-HPOVNetwork
-    [-Name <>]
-    [-Type <>]
-    [-Purpose <>]
-    [-Scope <>]
-    [-Label <>]
-    [-ApplianceConnection <>]
-    [-exportFile <>]
+    [-Name <String>]
+    [-Type <String>]
+    [-Purpose <String>]
+    [-Scope <Object>]
+    [-Label <String>]
+    [-ApplianceConnection <Object>]
+    [-exportFile <String>]
     [<CommonParameters>]
 ```
 
@@ -175,7 +175,7 @@ Get all available networks.
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 The name of the network resource to be returned.  All network resources will be returned if omitted.  Supports "*" wildcard character.
 
@@ -187,7 +187,7 @@ The name of the network resource to be returned.  All network resources will be 
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Type &lt;&gt;
+### -Type &lt;String&gt;
 
 The type of the network resource to be returned.  Valid types are "Ethernet" for Ethernet networks, "FC" or "FibreChannel" for Fibre Channel networks.  All network resources will be returned if omitted.
 
@@ -199,7 +199,7 @@ The type of the network resource to be returned.  Valid types are "Ethernet" for
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Purpose &lt;&gt;
+### -Purpose &lt;String&gt;
 
 Specify the Ethernet Purpose value to filter on.
 
@@ -221,7 +221,7 @@ Supported Values:
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;&gt;
+### -Scope &lt;Object&gt;
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
@@ -238,7 +238,7 @@ Filter resources based on provided Scope membership.  By default, all resources 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Label &lt;&gt;
+### -Label &lt;String&gt;
 
 Specify the label name the network resource is associated with.  Cannot be combined with Name.
 
@@ -250,7 +250,7 @@ Specify the label name the network resource is associated with.  Cannot be combi
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -262,7 +262,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ExportFile &lt;&gt;
+### -ExportFile &lt;String&gt;
 
 The full path and file name to export the JSON formatted definition of the networks to a file. The directory for the file is validated prior to execution and the function returns an error is the directory does not exist.
 

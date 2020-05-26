@@ -8,7 +8,7 @@ description: Remove pending or staged appliance update.
 
 ```text
 Remove-HPOVPendingUpdate
-    [-ApplianceConnection] <>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -36,19 +36,19 @@ Remove any found pending update specified appliance connection.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -WhatIf &lt;&gt;
+### -WhatIf &lt;SwitchParameter&gt;
 
 
 
@@ -60,7 +60,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Confirm &lt;&gt;
+### -Confirm &lt;SwitchParameter&gt;
 
 
 

@@ -8,14 +8,14 @@ description: Import an existing Storage Volume resource.
 
 ```text
 Add-HPOVStorageVolume
-    [-StorageSystem] <>
-    [-StorageDeviceName] <>
-    [-VolumeName] <>
-    [-VolumeID <>]
-    [-Description <>]
-    [-Shared <>]
-    [-Scope <>]
-    [-ApplianceConnection <>]
+    [-StorageSystem] <Object>
+    [-StorageDeviceName] <String>
+    [-VolumeName] <String>
+    [-VolumeID <String>]
+    [-Description <String>]
+    [-Shared]
+    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -71,19 +71,19 @@ Import a volume using the storage device name "ClusterSharedVol1" on the "3ParSy
 
 ## Parameters
 
-### -StorageSystem &lt;&gt;
+### -StorageSystem &lt;Object&gt;
 
 The Storage System where the volume will be imported from.  Volume to be imported must be provisioned to the same Managed Domain as the Storage System.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -VolumeID &lt;&gt;
+### -VolumeID &lt;String&gt;
 
 {% hint style="warning" %}
 This parameter is deprecated. Please use the `-StorageDeviceName` parameter.
@@ -100,31 +100,31 @@ The 128bit WWN FC address of the volume to be imported.  Address must be in the 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -StorageDeviceName &lt;&gt;
+### -StorageDeviceName &lt;String&gt;
 
 The Storage Systems Device Name of the volume.  This can be found in either the 3PAR IMC, CLI or HPE SSMC by looking at the provisioned volume and copying the "Name" property.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -VolumeName &lt;&gt;
+### -VolumeName &lt;String&gt;
 
 Specify the Storage Volume Name.
 
 | Aliases | Name |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Description &lt;&gt;
+### -Description &lt;String&gt;
 
 Provide a description for the volume.
 
@@ -136,7 +136,7 @@ Provide a description for the volume.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Shared &lt;&gt;
+### -Shared &lt;SwitchParameter&gt;
 
 Include this switch to mark the Storage Volume as a Shareable resource for shared volume access.
 Default: Private
@@ -149,7 +149,7 @@ Default: Private
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
@@ -161,7 +161,7 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;&gt;
+### -Scope &lt;HPOneView.Appliance.ScopeCollection[]&gt;
 
 Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
 

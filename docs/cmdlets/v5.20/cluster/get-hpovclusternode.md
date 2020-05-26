@@ -8,10 +8,10 @@ description: Default content
 
 ```text
 Get-HPOVClusterNode
-    [-Name] <>
-    [-Label <>]
-    [-Scope <>]
-    [-ApplianceConnection <>]
+    [-Name] <string>
+    [-Label <String>]
+    [-Scope <Object>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -31,7 +31,7 @@ Default example
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -43,7 +43,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Label &lt;&gt;
+### -Label &lt;String&gt;
 
 Specify the label associated with resources.
 
@@ -55,19 +55,19 @@ Specify the label associated with resources.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Name &lt;&gt;
+### -Name &lt;string&gt;
 
 
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;&gt;
+### -Scope &lt;Object&gt;
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 

@@ -8,33 +8,33 @@ description: Modify an existing user account.
 
 ```text
 Set-HPOVUser
-    [-UserName] <>
-    [-Password] <>
-    [-FullName] <>
-    [-Roles] <>
-    [-ScopePermissions <>]
-    [-EmailAddress] <>
-    [-OfficePhone] <>
-    [-MobilePhone] <>
-    [-Enabled <>]
-    [-Disabled <>]
-    [-ApplianceConnection] <>
+    [-UserName] <String>
+    [-Password] <String>
+    [-FullName] <String>
+    [-Roles] <Array>
+    [-ScopePermissions <Array>]
+    [-EmailAddress] <String>
+    [-OfficePhone] <String>
+    [-MobilePhone] <String>
+    [-Enabled]
+    [-Disabled]
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ```text
 Set-HPOVUser
-    [-UserObject] <>
-    [-Password] <>
-    [-FullName] <>
-    [-Roles] <>
-    [-ScopePermissions <>]
-    [-EmailAddress] <>
-    [-OfficePhone] <>
-    [-MobilePhone] <>
-    [-Enabled <>]
-    [-Disabled <>]
-    [-ApplianceConnection] <>
+    [-UserObject] <Object>
+    [-Password] <String>
+    [-FullName] <String>
+    [-Roles] <Array>
+    [-ScopePermissions <Array>]
+    [-EmailAddress] <String>
+    [-OfficePhone] <String>
+    [-MobilePhone] <String>
+    [-Enabled]
+    [-Disabled]
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -71,55 +71,55 @@ Modify the user account with the new role and scope permissions.
 
 ## Parameters
 
-### -UserObject &lt;&gt;
+### -UserObject &lt;Object&gt;
 
 The object of the user account to be updated.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -UserName &lt;&gt;
+### -UserName &lt;String&gt;
 
 The name or object of the user account to be updated.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Password &lt;&gt;
+### -Password &lt;String&gt;
 
 New password for the user account.  Passwords must be at least 8 characters.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -FullName &lt;&gt;
+### -FullName &lt;String&gt;
 
 Updated Full Name of the User Account.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Roles &lt;&gt;
+### -Roles &lt;Array&gt;
 
 The role(s) to assign to the Directroy Group, in `[System.Collections.ArrayList]` format.  Accepted values are noted within the ApplianceRoles property of the `[HPOneView.Appliance.Connection]` object stored in the $Global:ConnectedSessions variable.
 
@@ -127,49 +127,49 @@ Example: $roles = "Server administrator","Network administrator"
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EmailAddress &lt;&gt;
+### -EmailAddress &lt;String&gt;
 
 Updated Email Address of the User Account.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -OfficePhone &lt;&gt;
+### -OfficePhone &lt;String&gt;
 
 Updated office phone of the User Account.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -MobilePhone &lt;&gt;
+### -MobilePhone &lt;String&gt;
 
 Updated mobile phone number
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Enabled &lt;&gt;
+### -Enabled &lt;SwitchParameter&gt;
 
 Enable the local user account.
 
@@ -181,7 +181,7 @@ Enable the local user account.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Disabled &lt;&gt;
+### -Disabled &lt;SwitchParameter&gt;
 
 Disable the local user account.
 
@@ -193,19 +193,19 @@ Disable the local user account.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -ScopePermissions &lt;&gt;
+### -ScopePermissions &lt;Array&gt;
 
 Array collection of Hashtable<Role; Scope>.  Will overwrite existing scope to role mappings.
 

@@ -8,23 +8,23 @@ description: Modify a configured Logical Enclosure resource.
 
 ```text
 Set-HPOVLogicalEnclosure
-    [-InputObject] <>
-    [-EnclosureGroup <>]
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-EnclosureGroup <Object>]
+    [-Async]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
 ```text
 Set-HPOVLogicalEnclosure
-    [-InputObject] <>
-    [-Name <>]
-    [-ConfigurationScript <>]
-    [-EnclosureGroup <>]
-    [-PowerMode <>]
-    [-AmbientTemperatureSetting <>]
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-Name <String>]
+    [-ConfigurationScript <String[]>]
+    [-EnclosureGroup <Object>]
+    [-PowerMode <String>]
+    [-AmbientTemperatureSetting <String>]
+    [-Async]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -56,7 +56,7 @@ Change the Logical Enclosure ambient temperature setting.
 
 ## Parameters
 
-### -AmbientTemperatureSetting &lt;&gt;
+### -AmbientTemperatureSetting &lt;String&gt;
 
 The ambient temperature mode describing the environment in which the logical enclosure should be optimized to operate. When not specified, a default value of Standard is assumed.
 
@@ -75,7 +75,7 @@ Allowed values:
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -87,7 +87,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -99,7 +99,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EnclosureGroup &lt;&gt;
+### -EnclosureGroup &lt;Object&gt;
 
 Associate the Logical Enclosure with a new Enclosure Group.
 
@@ -111,19 +111,19 @@ Associate the Logical Enclosure with a new Enclosure Group.
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 Logical Enclosure resource from `Get-HPOVLogicalEnclosure`.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 Specify a new Logical Enclosure name.
 
@@ -135,7 +135,7 @@ Specify a new Logical Enclosure name.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -PowerMode &lt;&gt;
+### -PowerMode &lt;String&gt;
 
 Change the Power Mode of the Logical Enclosure.
 
@@ -152,7 +152,7 @@ Allowed values:
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ConfigurationScript &lt;&gt;
+### -ConfigurationScript &lt;String[]&gt;
 
 Specify a new HPE BladeSystem `c-Class` Onboard Administrator configuration script to set.  This is not supported with HPE Synergy.
 

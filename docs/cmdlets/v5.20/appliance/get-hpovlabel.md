@@ -8,8 +8,8 @@ description: Return created label resources.
 
 ```text
 Get-HPOVLabel
-    [-Name <>]
-    [-ApplianceConnection <>]
+    [-Name <String>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -31,7 +31,7 @@ Return all labels from the appliance.
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 The name of the Label to associate resources to.  If Label does not exist, a new one will be created.
 
@@ -43,7 +43,7 @@ The name of the Label to associate resources to.  If Label does not exist, a new
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

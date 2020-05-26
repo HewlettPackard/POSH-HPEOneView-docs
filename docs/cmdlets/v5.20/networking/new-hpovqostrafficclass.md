@@ -8,14 +8,14 @@ description: Create QoS Traffic Classifier Object
 
 ```text
 New-HPOVQosTrafficClass
-    [-Name] <>
-    [-MaxBandwidth] <>
-    [-BandwidthShare] <>
-    [-EgressDot1pValue] <>
-    [-IngressDot1pClassMapping] <>
-    [-IngressDscpClassMapping] <>
-    [-RealTime <>]
-    [-Enabled <>]
+    [-Name] <String>
+    [-MaxBandwidth] <Int32>
+    [-BandwidthShare] <String>
+    [-EgressDot1pValue] <Int32>
+    [-IngressDot1pClassMapping] <Array>
+    [-IngressDscpClassMapping] <Array>
+    [-RealTime]
+    [-Enabled]
     [<CommonParameters>]
 ```
 
@@ -39,19 +39,19 @@ Create new traffic class objects "Class1" and "Class2", creating a new collectio
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 Name of the QoS Classifier.  Value cannot be "FCoE lossless".  If value is "Best effort", only the MaxBandwidth Parameter is allowed to be modified.
 
 | Aliases | ClassName |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -MaxBandwidth &lt;&gt;
+### -MaxBandwidth &lt;Int32&gt;
 
 Maximum share the traffic class can use when other traffic classes are not using their guaranteed share.  The max share and the % share for a real time class must be equal and not exceed 50%. For other classes, the max share is greater than or equal to the % share.
  
@@ -59,13 +59,13 @@ Value between 1 and 100
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -BandwidthShare &lt;&gt;
+### -BandwidthShare &lt;String&gt;
 
 Minimum guaranteed bandwidth for the traffic class.  The % share and the max share for a real time class must be equal and not exceed 50%.
      
@@ -73,25 +73,25 @@ Value between 1 and 100
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EgressDot1pValue &lt;&gt;
+### -EgressDot1pValue &lt;Int32&gt;
 
 Specifies the dot1p priority value to remark for the egressing packets. This provides flexibility to control priority treatment for packets at the next hops based on the remarked dot1p value.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | 0 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IngressDot1pClassMapping &lt;&gt;
+### -IngressDot1pClassMapping &lt;Array&gt;
 
 Specify an array of ingress Dot1p values, and to which traffic class it is currently mapped.  Allowed values:
 
@@ -107,13 +107,13 @@ Specify an array of ingress Dot1p values, and to which traffic class it is curre
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IngressDscpClassMapping &lt;&gt;
+### -IngressDscpClassMapping &lt;Array&gt;
 
 Specify an array of DSCP class mappings, per RFC 2475.  Allowed values:
 
@@ -141,13 +141,13 @@ Specify an array of DSCP class mappings, per RFC 2475.  Allowed values:
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -RealTime &lt;&gt;
+### -RealTime &lt;SwitchParameter&gt;
 
 Specifies whether the traffic class is real time. Only 1 traffic class can be real time. Enabling real time for this class removes the real time flag for other classes.
 
@@ -159,7 +159,7 @@ Specifies whether the traffic class is real time. Only 1 traffic class can be re
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Enabled &lt;&gt;
+### -Enabled &lt;SwitchParameter&gt;
 
 Specify to Enable the traffic class. By default, the class is disabled, even though it is defined.
 

@@ -22,7 +22,7 @@ Default example
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -34,13 +34,13 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? |  |
 | Accept wildcard characters? |  |
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 default content
 
 | Aliases |  |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? |  |

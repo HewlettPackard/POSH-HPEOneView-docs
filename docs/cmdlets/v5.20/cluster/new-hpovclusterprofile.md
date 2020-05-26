@@ -8,79 +8,79 @@ description: Create a new cluster profile resource.
 
 ```text
 New-HPOVClusterProfile
-    [-Name] <>
-    [-ClusterManager] <>
-    [-ClusterManagerLocation] <>
-    [-ServerProfileTemplate] <>
-    [-ClusterPassword] <>
-    [-Description <>]
-    [-ClusterPrefix <>]
-    [-Servers <>]
-    [-UseIPAddressAsHostName <>]
-    [-LeaveHostsInMaintenanceMode] <>
-    [-StorageVolume <>]
-    [-StorageVolumeFileSystem <>]
-    [-Scope <>]
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-Name] <string>
+    [-ClusterManager] <HPOneView.Cluster.ClusterManager>
+    [-ClusterManagerLocation] <String>
+    [-ServerProfileTemplate] <Object>
+    [-ClusterPassword] <SecureString>
+    [-Description <String>]
+    [-ClusterPrefix <String>]
+    [-Servers <HPOneView.Cluster.AddHostRequest[]>]
+    [-UseIPAddressAsHostName <bool>]
+    [-LeaveHostsInMaintenanceMode] <bool>
+    [-StorageVolume <Object>]
+    [-StorageVolumeFileSystem <String>]
+    [-Scope <Object>]
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 New-HPOVClusterProfile
-    [-Name] <>
-    [-ClusterManager] <>
-    [-ClusterManagerLocation] <>
-    [-ServerProfileTemplate] <>
-    [-ClusterPassword] <>
-    [-UnmanageVSwitch] <>
-    [-Description <>]
-    [-ClusterPrefix <>]
-    [-Servers <>]
-    [-HAEnabled <>]
-    [-DRSEnabled <>]
-    [-MultiNicVMotionEnabled <>]
-    [-Scope <>]
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-Name] <string>
+    [-ClusterManager] <HPOneView.Cluster.ClusterManager>
+    [-ClusterManagerLocation] <String>
+    [-ServerProfileTemplate] <Object>
+    [-ClusterPassword] <SecureString>
+    [-UnmanageVSwitch]
+    [-Description <String>]
+    [-ClusterPrefix <String>]
+    [-Servers <HPOneView.Cluster.AddHostRequest[]>]
+    [-HAEnabled <Bool>]
+    [-DRSEnabled <Bool>]
+    [-MultiNicVMotionEnabled <bool>]
+    [-Scope <Object>]
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 New-HPOVClusterProfile
-    [-Name] <>
-    [-ClusterManager] <>
-    [-ClusterManagerLocation] <>
-    [-ServerProfileTemplate] <>
-    [-ClusterPassword] <>
-    [-Description <>]
-    [-ClusterPrefix <>]
-    [-Servers <>]
-    [-OverrideManagementAddressAssignmet] <>
-    [-SubnetMask] <>
-    [-Gateway] <>
-    [-PrimaryDNS <>]
-    [-SecondaryDNS <>]
-    [-TertiaryDNS <>]
-    [-Domain] <>
-    [-UseIPAddressAsHostName <>]
-    [-LeaveHostsInMaintenanceMode] <>
-    [-StorageVolume <>]
-    [-StorageVolumeFileSystem <>]
-    [-OverrideNetworkingConfig] <>
-    [-ConfigurePortGroups] <>
-    [-VSwitchNameOverride <>]
-    [-PortGroupNameOverride] <>
-    [-OverrideClusterManagerConfig] <>
-    [-VirtualSwitchType] <>
-    [-DistributedSwitchUsage <>]
-    [-DistributedSwitchVersion <>]
-    [-HAEnabled <>]
-    [-DRSEnabled <>]
-    [-MultiNicVMotionEnabled <>]
-    [-Scope <>]
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-Name] <string>
+    [-ClusterManager] <HPOneView.Cluster.ClusterManager>
+    [-ClusterManagerLocation] <String>
+    [-ServerProfileTemplate] <Object>
+    [-ClusterPassword] <SecureString>
+    [-Description <String>]
+    [-ClusterPrefix <String>]
+    [-Servers <HPOneView.Cluster.AddHostRequest[]>]
+    [-OverrideManagementAddressAssignmet]
+    [-SubnetMask] <IPAddress>
+    [-Gateway] <IPAddress>
+    [-PrimaryDNS <IPAddress>]
+    [-SecondaryDNS <IPAddress>]
+    [-TertiaryDNS <IPAddress>]
+    [-Domain] <String>
+    [-UseIPAddressAsHostName <bool>]
+    [-LeaveHostsInMaintenanceMode] <bool>
+    [-StorageVolume <Object>]
+    [-StorageVolumeFileSystem <String>]
+    [-OverrideNetworkingConfig]
+    [-ConfigurePortGroups] <bool>
+    [-VSwitchNameOverride <hashtable>]
+    [-PortGroupNameOverride] <Hashtable>
+    [-OverrideClusterManagerConfig]
+    [-VirtualSwitchType] <string>
+    [-DistributedSwitchUsage <String>]
+    [-DistributedSwitchVersion <String>]
+    [-HAEnabled <Bool>]
+    [-DRSEnabled <Bool>]
+    [-MultiNicVMotionEnabled <bool>]
+    [-Scope <Object>]
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -166,7 +166,7 @@ Create a new cluster profile, overriding clsuter manager settings.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -178,7 +178,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -190,31 +190,31 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ClusterManager &lt;&gt;
+### -ClusterManager &lt;HPOneView.Cluster.ClusterManager&gt;
 
 Specify the cluster manager that will manage the cluster and associated members, from `Get-HPOVClusterManager`.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ClusterManagerLocation &lt;&gt;
+### -ClusterManagerLocation &lt;String&gt;
 
 Specify the location where the cluster will be created within the cluster manager.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ClusterPrefix &lt;&gt;
+### -ClusterPrefix &lt;String&gt;
 
 Specify the cluster member hostname prefix that will be used.  A unique numerical value will be appended to the end.  If omitted, the clsuter name will be used as the prefix.
 
@@ -226,7 +226,7 @@ Specify the cluster member hostname prefix that will be used.  A unique numerica
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DRSEnabled &lt;&gt;
+### -DRSEnabled &lt;Bool&gt;
 
 Specify if DRS (if supported) should be enabled ($True) or disabled ($false).
 
@@ -238,7 +238,7 @@ Specify if DRS (if supported) should be enabled ($True) or disabled ($false).
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Description &lt;&gt;
+### -Description &lt;String&gt;
 
 Provide a description of the cluster.
 
@@ -250,7 +250,7 @@ Provide a description of the cluster.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DistributedSwitchUsage &lt;&gt;
+### -DistributedSwitchUsage &lt;String&gt;
 
 If overriding the distributed virtual switch configuring set by the cluster manager, specify the switch usage.  Allowed values:
 
@@ -265,7 +265,7 @@ If overriding the distributed virtual switch configuring set by the cluster mana
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DistributedSwitchVersion &lt;&gt;
+### -DistributedSwitchVersion &lt;String&gt;
 
 If overriding the distributed virtual switch configuring set by the cluster manager, specify the version.  To identify the supported versions, look at the AvailableDvsVersions property of the returned cluster manager from `Get-HPOVClusterManager`.
 
@@ -277,7 +277,7 @@ If overriding the distributed virtual switch configuring set by the cluster mana
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -HAEnabled &lt;&gt;
+### -HAEnabled &lt;Bool&gt;
 
 Specify if VMware HA (if supported) should be enabled ($True) or disabled ($false).
 
@@ -289,7 +289,7 @@ Specify if VMware HA (if supported) should be enabled ($True) or disabled ($fals
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -MultiNicVMotionEnabled &lt;&gt;
+### -MultiNicVMotionEnabled &lt;bool&gt;
 
 Specify if `multi-NIC` VMotion (if supported) should be enabled ($True) or disabled ($false).
 
@@ -301,19 +301,19 @@ Specify if `multi-NIC` VMotion (if supported) should be enabled ($True) or disab
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Name &lt;&gt;
+### -Name &lt;string&gt;
 
 Provide the cluster profile name.  If `-Prefix` is omitted, this value will become the cluster node prefix value.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;&gt;
+### -Scope &lt;Object&gt;
 
 Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
 
@@ -325,19 +325,19 @@ Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ServerProfileTemplate &lt;&gt;
+### -ServerProfileTemplate &lt;Object&gt;
 
 The server profile template from `Get-HPOVServerProfileTemplate` that the cluster configuration will be derived from and follow cluster consistency with.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -StorageVolume &lt;&gt;
+### -StorageVolume &lt;Object&gt;
 
 One or more storage volumes to assign.
 
@@ -349,19 +349,19 @@ One or more storage volumes to assign.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -UnmanageVSwitch &lt;&gt;
+### -UnmanageVSwitch &lt;SwitchParameter&gt;
 
 Use to configure the cluster profile to not manage host networking.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -VirtualSwitchType &lt;&gt;
+### -VirtualSwitchType &lt;string&gt;
 
 Use to indicate which vSiwtch type to configure when overriding cluster manager networking settings.  Allowed values are:
 
@@ -370,109 +370,109 @@ Use to indicate which vSiwtch type to configure when overriding cluster manager 
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ClusterPassword &lt;&gt;
+### -ClusterPassword &lt;SecureString&gt;
 
 Specify the cluster administrator/root account password.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ConfigurePortGroups &lt;&gt;
+### -ConfigurePortGroups &lt;bool&gt;
 
 Specify if port groups should also be configured when configuring host networking.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Domain &lt;&gt;
+### -Domain &lt;String&gt;
 
 Optional - When deploying a new cluster profile with HPE Synergy and Image Streamer, specify the domain name if the management network is not configured to use an IP address pool.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Gateway &lt;&gt;
+### -Gateway &lt;IPAddress&gt;
 
 When deploying a new cluster profile with HPE Synergy and Image Streamer, specify the gateway if the management network is not configured to use an IP address pool.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -LeaveHostsInMaintenanceMode &lt;&gt;
+### -LeaveHostsInMaintenanceMode &lt;bool&gt;
 
 Specify if the host should be left in maintenance mode (if applicable) before servicing the cluster.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -OverrideClusterManagerConfig &lt;&gt;
+### -OverrideClusterManagerConfig &lt;SwitchParameter&gt;
 
 Use to indicate the desire to override the cluster manager default settings.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -OverrideManagementAddressAssignmet &lt;&gt;
+### -OverrideManagementAddressAssignmet &lt;SwitchParameter&gt;
 
 Use to indicate address assignment.  If the server profile template boot connections are set to require static addresses, the IPAddress value must be used in the `New-HPOVClusterProfileMember` Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -OverrideNetworkingConfig &lt;&gt;
+### -OverrideNetworkingConfig &lt;SwitchParameter&gt;
 
 Use to indicate if network naming will be overridden.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -PortGroupNameOverride &lt;&gt;
+### -PortGroupNameOverride &lt;Hashtable&gt;
 
 Use to specify what the PortGroup name override should be.  By default, PortGroup names will be automatically assigned based on the network name, removing unique character strings.  Specify an Array of Hashtable with the following format:
 
@@ -482,13 +482,13 @@ Use to specify what the PortGroup name override should be.  By default, PortGrou
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -PrimaryDNS &lt;&gt;
+### -PrimaryDNS &lt;IPAddress&gt;
 
 Optional - When deploying a new cluster profile with HPE Synergy and Image Streamer, specify the primary DNS if the management network is not configured to use an IP address pool.
 
@@ -500,7 +500,7 @@ Optional - When deploying a new cluster profile with HPE Synergy and Image Strea
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SecondaryDNS &lt;&gt;
+### -SecondaryDNS &lt;IPAddress&gt;
 
 Optional - When deploying a new cluster profile with HPE Synergy and Image Streamer, specify the secondary DNS if the management network is not configured to use an IP address pool.
 
@@ -512,7 +512,7 @@ Optional - When deploying a new cluster profile with HPE Synergy and Image Strea
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Servers &lt;&gt;
+### -Servers &lt;HPOneView.Cluster.AddHostRequest[]&gt;
 
 One or more server resource objects from `New-HPOVClusterProfileMember`.  Value can be empty to create an empty cluster, if the target cluster manager supports that type of configuration, like VMware vSphere.
 
@@ -524,7 +524,7 @@ One or more server resource objects from `New-HPOVClusterProfileMember`.  Value 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -StorageVolumeFileSystem &lt;&gt;
+### -StorageVolumeFileSystem &lt;String&gt;
 
 Specify if the storage volume(s) in the StorageVolume parameter should be formatted with a specific filesystem.  Allowed values:
 
@@ -539,19 +539,19 @@ Specify if the storage volume(s) in the StorageVolume parameter should be format
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SubnetMask &lt;&gt;
+### -SubnetMask &lt;IPAddress&gt;
 
 When deploying a new cluster profile with HPE Synergy and Image Streamer, specify the subnet mask if the management network is not configured to use an IP address pool.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -TertiaryDNS &lt;&gt;
+### -TertiaryDNS &lt;IPAddress&gt;
 
 Optional - When deploying a new cluster profile with HPE Synergy and Image Streamer, specify the tertiary DNS if the management network is not configured to use an IP address pool.
 
@@ -563,7 +563,7 @@ Optional - When deploying a new cluster profile with HPE Synergy and Image Strea
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -VSwitchNameOverride &lt;&gt;
+### -VSwitchNameOverride &lt;hashtable&gt;
 
 Use to specify what the vSwitch name override should be.  By default, vSwitch names will be automatically assigned based on the network name, removing unique character strings.  Specify an Array of Hashtable with the following format:
 
@@ -579,7 +579,7 @@ Use to specify what the vSwitch name override should be.  By default, vSwitch na
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -UseIPAddressAsHostName &lt;&gt;
+### -UseIPAddressAsHostName &lt;bool&gt;
 
 Use to indicate if the IP Address allocated or assigned should be used for the cluster manager registration instead of the hostname or FQDN.
 

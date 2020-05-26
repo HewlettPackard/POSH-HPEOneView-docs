@@ -8,7 +8,7 @@ description: Display active and connected users.
 
 ```text
 Show-HPOVActiveUser
-    [-ApplianceConnection <>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -28,7 +28,7 @@ Display connected active users to the appliance.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

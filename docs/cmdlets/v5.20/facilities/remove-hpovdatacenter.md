@@ -8,8 +8,8 @@ description: Remove a datacenter resource.
 
 ```text
 Remove-HPOVDataCenter
-    [-InputObject] <>
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -42,19 +42,19 @@ Remove Datacenter resources from the appliance.
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 Datacenter object, from `Get-HPOVDataCenter`.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

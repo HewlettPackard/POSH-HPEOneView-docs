@@ -8,24 +8,24 @@ description: Updates a Logical Interconnect.
 
 ```text
 Update-HPOVLogicalInterconnect
-    [-InputObject] <>
-    [-ApplianceConnection] <>
+    [-InputObject] <Object>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ```text
 Update-HPOVLogicalInterconnect
-    [-FactoryReset] <>
-    [-InputObject] <>
-    [-ApplianceConnection] <>
+    [-FactoryReset]
+    [-InputObject] <Object>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ```text
 Update-HPOVLogicalInterconnect
-    [-Reapply <>]
-    [-InputObject] <>
-    [-ApplianceConnection] <>
+    [-Reapply]
+    [-InputObject] <Object>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -86,31 +86,31 @@ Refresh "LogicalEnclosure1" Logical Enclosure.
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 The Logical Interconnect object(s), name(s) or uris(s) to be updated.
 
 | Aliases | uri, li, name, Resource |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -Reapply &lt;&gt;
+### -Reapply &lt;SwitchParameter&gt;
 
 Switch to reapply the Logical Interconnect configuration.  This does NOT update the Logical Interconnect from the parent Logical Interconnect Group.
 
@@ -122,7 +122,7 @@ Switch to reapply the Logical Interconnect configuration.  This does NOT update 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -WhatIf &lt;&gt;
+### -WhatIf &lt;SwitchParameter&gt;
 
 Use this parameter to identify what is different or changed from the parent group policy.
 
@@ -134,7 +134,7 @@ Use this parameter to identify what is different or changed from the parent grou
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Confirm &lt;&gt;
+### -Confirm &lt;SwitchParameter&gt;
 
 
 
@@ -146,13 +146,13 @@ Use this parameter to identify what is different or changed from the parent grou
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -FactoryReset &lt;&gt;
+### -FactoryReset &lt;SwitchParameter&gt;
 
 Use to factory reset the HPE Synergy Fabric module.  Do know that an outage will happen while the fabric modules are reset.  Their configuration will need to be `re-applied` or deployed after task has completed.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |

@@ -8,8 +8,8 @@ description: Retrieve Remote Support Schedule settings on an appliance.
 
 ```text
 Get-HPOVRemoteSupportDataCollectionSchedule
-    [-Type <>]
-    [-ApplianceConnection <>]
+    [-Type <String>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -53,7 +53,7 @@ Get the Remote Support data collection schedules.
 
 ## Parameters
 
-### -Type &lt;&gt;
+### -Type &lt;String&gt;
 
 Specify the schedule type to modify.  Allowed value is:
     * AHS
@@ -68,7 +68,7 @@ If no value is provided, both schedules will be returned.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

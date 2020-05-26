@@ -8,7 +8,7 @@ description: Retrieve Storage Volume Template Global Policy.
 
 ```text
 Get-HPOVStorageVolumeTemplatePolicy
-    [-ApplianceConnection <>]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -32,7 +32,7 @@ Get the Storage Volume Template Global Policy setting from all connected applian
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

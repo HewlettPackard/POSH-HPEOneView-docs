@@ -8,7 +8,7 @@ description: Disable appliance complex password policy.
 
 ```text
 Disable-HPOVApplianceComplexPasswords
-    [-ApplianceConnection <>]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -32,7 +32,7 @@ Disable complex password policy on the appliance.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -44,7 +44,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -Confirm &lt;&gt;
+### -Confirm &lt;SwitchParameter&gt;
 
 Override the confirmation prompt.
 
@@ -56,7 +56,7 @@ Override the confirmation prompt.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -WhatIf &lt;&gt;
+### -WhatIf &lt;SwitchParameter&gt;
 
 Perform a test to identify the beahvior before executing the Cmdlet.  Will not modify resources.
 

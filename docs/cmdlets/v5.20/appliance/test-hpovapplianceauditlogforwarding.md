@@ -8,7 +8,7 @@ description: Generate test audit log forward message.
 
 ```text
 Test-HPOVApplianceAuditLogForwarding
-    [-ApplianceConnection <>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -32,7 +32,7 @@ Generate audit log test message.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

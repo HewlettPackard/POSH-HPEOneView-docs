@@ -8,12 +8,12 @@ description: Retrieve Logical Interconnect resource(s).
 
 ```text
 Get-HPOVLogicalInterconnect
-    [-Name <>]
-    [-NonCompliant <>]
-    [-Scope <>]
-    [-Label <>]
-    [-ApplianceConnection <>]
-    [-Export <>]
+    [-Name <String>]
+    [-NonCompliant]
+    [-Scope <Object>]
+    [-Label <String>]
+    [-ApplianceConnection <Object>]
+    [-Export <String>]
     [<CommonParameters>]
 ```
 
@@ -76,7 +76,7 @@ Returns the query results to the file c:\myApplianceConfig\LogicalInterconnects.
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 The name of the Logical Interconnect to retrieve.
 
@@ -88,7 +88,7 @@ The name of the Logical Interconnect to retrieve.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;&gt;
+### -Scope &lt;Object&gt;
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
@@ -105,7 +105,7 @@ Filter resources based on provided Scope membership.  By default, all resources 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Label &lt;&gt;
+### -Label &lt;String&gt;
 
 Specify the label associated with resources.
 
@@ -117,7 +117,7 @@ Specify the label associated with resources.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -129,7 +129,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Export &lt;&gt;
+### -Export &lt;String&gt;
 
 The full path and file name to export the contents retrieved from the call to `Get-HPOVLogicalInterconnect`.
 
@@ -141,7 +141,7 @@ The full path and file name to export the contents retrieved from the call to `G
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -NonCompliant &lt;&gt;
+### -NonCompliant &lt;SwitchParameter&gt;
 
 Filter resources based on their `non-compliant` state.
 

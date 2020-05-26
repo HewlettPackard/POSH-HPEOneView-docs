@@ -8,8 +8,8 @@ description: Start default web browser opened to appliance dashboard.
 
 ```text
 Invoke-HPOVWebBrowser
-    [-Resource <>]
-    [-ApplianceConnection <>]
+    [-Resource <String>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -30,7 +30,7 @@ Connect to the appliance, then launch default web browser to the appliance dashb
 
 ## Parameters
 
-### -Resource &lt;&gt;
+### -Resource &lt;String&gt;
 
 Use to quickly jump to the specific UI section of the connected appliance.  Allowed values:
 
@@ -59,7 +59,7 @@ By default, the Cmdlet will open your default web browser to the appliance dashb
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

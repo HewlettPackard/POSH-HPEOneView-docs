@@ -8,8 +8,8 @@ description: Update/Refresh available Storage Systems
 
 ```text
 Update-HPOVStorageSystem
-    [-InputObject] <>
-    [-ApplianceConnection] <>
+    [-InputObject] <Object>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -37,25 +37,25 @@ Get the "MyStorageSystem" managed Storage Systems and refresh it.
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 The Storage System resource object to update/refresh.
 
 | Aliases | Name, StorageSystem |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |

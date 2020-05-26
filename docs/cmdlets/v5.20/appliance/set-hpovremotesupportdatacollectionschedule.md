@@ -8,10 +8,10 @@ description: Modify Remote Support Schedule settings on an appliance.
 
 ```text
 Set-HPOVRemoteSupportDataCollectionSchedule
-    [-DateTime] <>
-    [-Type <>]
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-DateTime] <DateTime>
+    [-Type <String>]
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -41,7 +41,7 @@ Set a new schedule to collect AHS logs every Monday of every week, at 20:00 (8:0
 
 ## Parameters
 
-### -Type &lt;&gt;
+### -Type &lt;String&gt;
 
 Specify the schedule type to modify.  Allowed value is:
     * AHS
@@ -56,19 +56,19 @@ If no value is provided, both schedules will be modified.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DateTime &lt;&gt;
+### -DateTime &lt;DateTime&gt;
 
 Specify a DateTime value for the schedule to execute.  AHS schedule is executed on a weekly basis, and Server Basic Configuration is executed on a monthly basis.  When needing to configure a schedule for AHS log collection, the Month Day"s week day name will be used.  For instance, if "Oct 30, 2016" is provided and scheduling for AHS log collection, the task will execute every Sunday, which October 30th 2016 is on a Sunday.  When providing the hour of the day to execute, the value must be in 24hr time.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -80,7 +80,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

@@ -8,8 +8,8 @@ description: Retrieves the configuration of the primary NIC of the appliance
 
 ```text
 Get-HPOVApplianceNetworkConfig
-    [-Location <>]
-    [-ApplianceConnection <>]
+    [-Location <String>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -77,7 +77,7 @@ Outputs the configuration of the primary network interface of the appliance to t
 
 ## Parameters
 
-### -Location &lt;&gt;
+### -Location &lt;String&gt;
 
 Directory to where the appliance network configuration will be exported to.
 Exported file name will be "{$ApplianceConnection.Name}_ApplianceNetConf.json".
@@ -90,7 +90,7 @@ Exported file name will be "{$ApplianceConnection.Name}_ApplianceNetConf.json".
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

@@ -8,8 +8,8 @@ description: Retrieve SAN Manager resource(s).
 
 ```text
 Get-HPOVSanManager
-    [-Name <>]
-    [-ApplianceConnection <>]
+    [-Name <String>]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -46,7 +46,7 @@ Display all SAN Managers.
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 Provide the name of the SAN Manager to display.
 
@@ -58,7 +58,7 @@ Provide the name of the SAN Manager to display.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Label &lt;&gt;
+### -Label &lt;String&gt;
 
 Specify the label associated with resources.
 
@@ -70,7 +70,7 @@ Specify the label associated with resources.
 | Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

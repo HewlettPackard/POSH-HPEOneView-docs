@@ -8,10 +8,10 @@ description: Get available storage volume sets.
 
 ```text
 Get-HPOVStorageVolumeSet
-    [-Name <>]
-    [-Label <>]
-    [-Scope <>]
-    [-ApplianceConnection <>]
+    [-Name <string>]
+    [-Label <String>]
+    [-Scope <Object>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -41,7 +41,7 @@ Get the specified "VolumeSets" storage sets.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -53,7 +53,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -Label &lt;&gt;
+### -Label &lt;String&gt;
 
 Specify the label associated with resources.
 
@@ -65,7 +65,7 @@ Specify the label associated with resources.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Name &lt;&gt;
+### -Name &lt;string&gt;
 
 Filter for the resource name.
 
@@ -77,7 +77,7 @@ Filter for the resource name.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;&gt;
+### -Scope &lt;Object&gt;
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:nr
     * AllResources

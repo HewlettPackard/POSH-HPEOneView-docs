@@ -8,15 +8,15 @@ description: Get configured Authentication Directories
 
 ```text
 Get-HPOVLdapDirectory
-    [-Name <>]
-    [-ApplianceConnection <>]
+    [-Name <String>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 Get-HPOVLdapDirectory
-    [-Export <>]
-    [-ApplianceConnection <>]
+    [-Export <String>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -62,7 +62,7 @@ Export the Global Directory Configuration settings.
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 The specific authentication directory name.
 
@@ -74,7 +74,7 @@ The specific authentication directory name.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Export &lt;&gt;
+### -Export &lt;String&gt;
 
 Export the configured directories to individual files.
 
@@ -86,7 +86,7 @@ Export the configured directories to individual files.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

@@ -8,7 +8,7 @@ description: Get appliance API version.
 
 ```text
 Get-HPOVXApiVersion
-    [-ApplianceConnection] <>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -36,13 +36,13 @@ This example retrieves the minimum XApi version supported by the appliance and r
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | false |

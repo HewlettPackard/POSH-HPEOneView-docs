@@ -8,8 +8,8 @@ description: Retrieve user account resource(s).
 
 ```text
 Get-HPOVUser
-    [-Name] <>
-    [-ApplianceConnection] <>
+    [-Name] <String>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -37,25 +37,25 @@ List Sally"s user account from `[MyAppliance.domain.com]`.
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 The name of the new user account to display.
 
 | Aliases | Username |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | false |

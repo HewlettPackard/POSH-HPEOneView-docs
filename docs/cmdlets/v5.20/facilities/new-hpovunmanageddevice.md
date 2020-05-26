@@ -8,14 +8,14 @@ description: Create an Unmanaged Device.
 
 ```text
 New-HPOVUnmanagedDevice
-    [-Name] <>
-    [-Model] <>
-    [-MaxPower] <>
-    [-Height] <>
-    [-MacAddress] <>
-    [-IPv4Address] <>
-    [-IPv6Address] <>
-    [-ApplianceConnection] <>
+    [-Name] <String>
+    [-Model] <String>
+    [-MaxPower] <Int32>
+    [-Height] <Int32>
+    [-MacAddress] <String>
+    [-IPv4Address] <String>
+    [-IPv6Address] <String>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -43,97 +43,97 @@ Create a new unmanaged switch device.
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 The name of the Unmanaged Device.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Model &lt;&gt;
+### -Model &lt;String&gt;
 
 The device model.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Height &lt;&gt;
+### -Height &lt;Int32&gt;
 
 Rack Unit height of the Unmanaged Device.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | 1 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -MaxPower &lt;&gt;
+### -MaxPower &lt;Int32&gt;
 
 The maximum power consumption of the Unmanaged Device.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | 0 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -MacAddress &lt;&gt;
+### -MacAddress &lt;String&gt;
 
 Provide the management interface L2 address.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IPv4Address &lt;&gt;
+### -IPv4Address &lt;String&gt;
 
 Provide the IPv4 Address value of the management interface.  This value does not provide a method for an HPE OneView appliance to communicate with the management interface.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IPv6Address &lt;&gt;
+### -IPv6Address &lt;String&gt;
 
 Provide the IPv6 Address value of the management interface.  This value does not provide a method for an HPE OneView appliance to communicate with the management interface.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | false |

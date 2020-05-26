@@ -8,9 +8,9 @@ description: Retrieve Enclosure Group resource(s).
 
 ```text
 Get-HPOVEnclosureGroup
-    [-Name <>]
-    [-ApplianceConnection <>]
-    [-exportFile <>]
+    [-Name <String>]
+    [-ApplianceConnection <Array>]
+    [-exportFile <String>]
     [<CommonParameters>]
 ```
 
@@ -44,7 +44,7 @@ Return the enclosure group resource with name "A".
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 The name of the Enclosure Group resource to be returned.  All enclosure group resources will be returned if omitted.
 
@@ -56,7 +56,7 @@ The name of the Enclosure Group resource to be returned.  All enclosure group re
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Label &lt;&gt;
+### -Label &lt;String&gt;
 
 Specify the label associated with resources.
 
@@ -68,7 +68,7 @@ Specify the label associated with resources.
 | Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -80,7 +80,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -exportFile &lt;&gt;
+### -exportFile &lt;String&gt;
 
 Full path and file name to save the output of `Get-HPOVEnclosureGroup`
 

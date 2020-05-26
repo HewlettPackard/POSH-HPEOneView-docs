@@ -8,21 +8,21 @@ description: Create a new appliance SNMP trap destiation.
 
 ```text
 New-HPOVApplianceTrapDestination
-    [-Destination] <>
-    [-CommunityString] <>
-    [-Port <>]
-    [-Type <>]
-    [-ApplianceConnection <>]
+    [-Destination] <String>
+    [-CommunityString] <String>
+    [-Port <int>]
+    [-Type <String>]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
 ```text
 New-HPOVApplianceTrapDestination
-    [-Destination] <>
-    [-SnmpV3User] <>
-    [-Port <>]
-    [-Type <>]
-    [-ApplianceConnection <>]
+    [-Destination] <String>
+    [-SnmpV3User] <HPOneView.Appliance.SnmpV3User>
+    [-Port <int>]
+    [-Type <String>]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -60,7 +60,7 @@ Define a new SNMPv3 user, and associate it with the new SNMPv3 trap destination 
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -72,31 +72,31 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -CommunityString &lt;&gt;
+### -CommunityString &lt;String&gt;
 
 SNMPv1 trap community string.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Destination &lt;&gt;
+### -Destination &lt;String&gt;
 
 IP Address or Hostname of the target SNMP trap reciever.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Port &lt;&gt;
+### -Port &lt;int&gt;
 
 Specify the alternate SNMP destination port.
 
@@ -108,19 +108,19 @@ Specify the alternate SNMP destination port.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SnmpV3User &lt;&gt;
+### -SnmpV3User &lt;HPOneView.Appliance.SnmpV3User&gt;
 
 The defined SNMPv3 user created on the appliance with `Get-HPOVSnmpV3User`.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Type &lt;&gt;
+### -Type &lt;String&gt;
 
 SNMP version type.  Allowed values:
 

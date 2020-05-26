@@ -8,9 +8,9 @@ description: Retrieve HPE Synergy OS Deployment Server.
 
 ```text
 Get-HPOVOSDeploymentServer
-    [-Name <>]
-    [-Label <>]
-    [-ApplianceConnection <>]
+    [-Name <String>]
+    [-Label <String>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -40,7 +40,7 @@ List all HPE Synergy OS Deployment servers.
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 OS deployment server resource name.  Supported the * (asterisk) wildcard character.
 
@@ -52,7 +52,7 @@ OS deployment server resource name.  Supported the * (asterisk) wildcard charact
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Label &lt;&gt;
+### -Label &lt;String&gt;
 
 Specify the label associated with resources.
 
@@ -64,7 +64,7 @@ Specify the label associated with resources.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

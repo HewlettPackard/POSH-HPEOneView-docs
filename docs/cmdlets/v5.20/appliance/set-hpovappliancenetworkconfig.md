@@ -8,55 +8,55 @@ description: Updates the configuration parameters for the primary network interf
 
 ```text
 Set-HPOVApplianceNetworkConfig
-    [-Hostname] <>
-    [-IPv4Type] <>
-    [-IPv4Addr] <>
-    [-IPv4Subnet] <>
-    [-IPv4Gateway] <>
-    [-IPv6Type] <>
-    [-IPv6Addr] <>
-    [-IPv6Subnet] <>
-    [-IPv6Gateway] <>
-    [-OverrideIPv4DhcpDns <>]
-    [-OverrideIPv6DhcpDns <>]
-    [-DomainName] <>
-    [-SearchDomains] <>
-    [-IPv4NameServers] <>
-    [-IPv6NameServers] <>
-    [-NtpServers] <>
-    [-ApplianceConnection <>]
+    [-Hostname] <String>
+    [-IPv4Type] <String>
+    [-IPv4Addr] <IPAddress>
+    [-IPv4Subnet] <String>
+    [-IPv4Gateway] <IPAddress>
+    [-IPv6Type] <String>
+    [-IPv6Addr] <IPAddress>
+    [-IPv6Subnet] <String>
+    [-IPv6Gateway] <String>
+    [-OverrideIPv4DhcpDns]
+    [-OverrideIPv6DhcpDns]
+    [-DomainName] <String>
+    [-SearchDomains] <Array>
+    [-IPv4NameServers] <Array>
+    [-IPv6NameServers] <Array>
+    [-NtpServers] <Object>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 Set-HPOVApplianceNetworkConfig
-    [-Hostname] <>
-    [-IPv4Addr] <>
-    [-IPv4Subnet] <>
-    [-IPv4Gateway] <>
-    [-ServiceIPv4Node1] <>
-    [-ServiceIPv4Node2] <>
-    [-IPv4Type] <>
-    [-IPv6Type] <>
-    [-IPv6Addr] <>
-    [-IPv6Subnet] <>
-    [-IPv6Gateway] <>
-    [-ServiceIPv6Node1 <>]
-    [-ServiceIPv6Node2 <>]
-    [-OverrideIPv4DhcpDns <>]
-    [-OverrideIPv6DhcpDns <>]
-    [-DomainName] <>
-    [-SearchDomains] <>
-    [-IPv4NameServers] <>
-    [-IPv6NameServers] <>
-    [-ApplianceConnection <>]
+    [-Hostname] <String>
+    [-IPv4Addr] <IPAddress>
+    [-IPv4Subnet] <String>
+    [-IPv4Gateway] <IPAddress>
+    [-ServiceIPv4Node1] <IPAddress>
+    [-ServiceIPv4Node2] <IPAddress>
+    [-IPv4Type] <String>
+    [-IPv6Type] <String>
+    [-IPv6Addr] <IPAddress>
+    [-IPv6Subnet] <String>
+    [-IPv6Gateway] <String>
+    [-ServiceIPv6Node1 <IPAddress>]
+    [-ServiceIPv6Node2 <IPAddress>]
+    [-OverrideIPv4DhcpDns]
+    [-OverrideIPv6DhcpDns]
+    [-DomainName] <String>
+    [-SearchDomains] <Array>
+    [-IPv4NameServers] <Array>
+    [-IPv6NameServers] <Array>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 Set-HPOVApplianceNetworkConfig
-    [-importFile] <>
-    [-ApplianceConnection <>]
+    [-importFile] <Object>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -84,115 +84,139 @@ This example passes the name of an input file containing JSON formatted properti
 
 ## Parameters
 
-### -Hostname &lt;&gt;
+### -Hostname &lt;String&gt;
 
 Fully-qualified hostname for the appliance
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IPv4Type &lt;&gt;
+### -IPv4Type &lt;String&gt;
 
 "DHCP", "STATIC" or "UNCONFIGURE"
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | STATIC |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IPv4Addr &lt;&gt;
+### -IPv4Addr &lt;IPAddress&gt;
 
 "www.xxx.yyy.zzz" (leave blank for DHCP)
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IPv4Subnet &lt;&gt;
+### -IPv4Subnet &lt;String&gt;
 
 "www.xxx.yyy.zzz" (leave blank for DHCP)
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IPv4Gateway &lt;&gt;
+### -IPv4Gateway &lt;IPAddress&gt;
 
 "www.xxx.yyy.zzz" (leave blank for DHCP)
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IPv6Type &lt;&gt;
+### -IPv6Type &lt;String&gt;
 
 "DHCP", "STATIC" or "UNCONFIGURE"
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | UNCONFIGURE |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IPv6Addr &lt;&gt;
+### -IPv6Addr &lt;IPAddress&gt;
 
 "ssss:tttt:uuuu:vvvv:wwww:xxxx:yyyy:zzzz" (leave blank for DHCP)
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IPv6Subnet &lt;&gt;
+### -IPv6Subnet &lt;String&gt;
 
 "ffff:ffff:ffff:ffff:0:0:0:0" (leave blank for DHCP)
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IPv6Gateway &lt;&gt;
+### -IPv6Gateway &lt;String&gt;
 
 "ssss:tttt:uuuu:vvvv:wwww:xxxx:yyyy:zzzz" (leave blank for DHCP)
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ServiceIPv4Node1 &lt;&gt;
+### -ServiceIPv4Node1 &lt;IPAddress&gt;
+
+Reserved for Synergy.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -ServiceIPv4Node2 &lt;IPAddress&gt;
+
+Reserved for Synergy.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -ServiceIPv6Node1 &lt;IPAddress&gt;
 
 Reserved for Synergy.
 
@@ -204,7 +228,7 @@ Reserved for Synergy.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ServiceIPv4Node2 &lt;&gt;
+### -ServiceIPv6Node2 &lt;IPAddress&gt;
 
 Reserved for Synergy.
 
@@ -216,31 +240,7 @@ Reserved for Synergy.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ServiceIPv6Node1 &lt;&gt;
-
-Reserved for Synergy.
-
-| Aliases | None |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
-### -ServiceIPv6Node2 &lt;&gt;
-
-Reserved for Synergy.
-
-| Aliases | None |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
-### -OverrideIPv4DhcpDns &lt;&gt;
+### -OverrideIPv4DhcpDns &lt;SwitchParameter&gt;
 
 Switch to override DHCP provided DNS Servers
 
@@ -252,7 +252,7 @@ Switch to override DHCP provided DNS Servers
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -OverrideIPv6DhcpDns &lt;&gt;
+### -OverrideIPv6DhcpDns &lt;SwitchParameter&gt;
 
 Switch to override DHCPv6 provided DNS Servers
 
@@ -264,79 +264,79 @@ Switch to override DHCPv6 provided DNS Servers
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DomainName &lt;&gt;
+### -DomainName &lt;String&gt;
 
 DNS domain name for the appliance: "my.com"
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SearchDomains &lt;&gt;
+### -SearchDomains &lt;Array&gt;
 
 Array of DNS search domains: "my.com", "other.com"
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IPv4NameServers &lt;&gt;
+### -IPv4NameServers &lt;Array&gt;
 
 Array of DNS servers: "www.xxx.yyy.zzz", "sss.ttt.uuu.vvv"
 
 | Aliases | nameServers |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IPv6NameServers &lt;&gt;
+### -IPv6NameServers &lt;Array&gt;
 
 Array of DNS servers: "fe80::200:f8ff:fe21:67cf", "fe80::200:f8ff:fe21:89cb"
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -NtpServers &lt;&gt;
+### -NtpServers &lt;Object&gt;
 
 Deprecated parameter.  NTP Server configuration is now controlled in the `Set-HPOVApplianceDateTime` Cmdlet.  Please update your scripts accordingly.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -importFile &lt;&gt;
+### -importFile &lt;Object&gt;
 
  File containing JSON formatted input values for the appliance network configuration parameters.
 
 | Aliases | i, import |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 

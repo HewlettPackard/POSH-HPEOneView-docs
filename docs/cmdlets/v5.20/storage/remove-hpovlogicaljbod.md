@@ -8,10 +8,10 @@ description: Create a new HPE Synergy Logical JBOD resource.
 
 ```text
 Remove-HPOVLogicalJBOD
-    [-InputObject] <>
-    [-Force <>]
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-InputObject] <HPOneView.Storage.LogicalJBOD[]>
+    [-Force]
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -61,7 +61,7 @@ Remove the specified logical JBOD when it is associated with a server profile re
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -73,7 +73,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -85,19 +85,19 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Confirm &lt;&gt;
+### -Confirm &lt;SwitchParameter&gt;
 
 
 
 | Aliases | cf |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Force &lt;&gt;
+### -Force &lt;SwitchParameter&gt;
 
 Force delete the resource.
 
@@ -109,25 +109,25 @@ Force delete the resource.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;HPOneView.Storage.LogicalJBOD[]&gt;
 
 The logical JBOD resource from `Get-HPOVLogialJBOD` Cmdlet.  If the logical JBOD is associated with a server profile, it must first be unassociated from the server profile, then you can remove it.  If the erase on delete option is enabled (or set to true), then data will be deleted from the drive.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -WhatIf &lt;&gt;
+### -WhatIf &lt;SwitchParameter&gt;
 
 
 
 | Aliases | wi |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |

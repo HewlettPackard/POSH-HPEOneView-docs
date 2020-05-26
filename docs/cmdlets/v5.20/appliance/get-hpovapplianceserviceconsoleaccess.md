@@ -8,7 +8,7 @@ description: Get the appliance service console access configuration.
 
 ```text
 Get-HPOVApplianceServiceConsoleAccess
-    [-ApplianceConnection <>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -34,7 +34,7 @@ Get the service console access status.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

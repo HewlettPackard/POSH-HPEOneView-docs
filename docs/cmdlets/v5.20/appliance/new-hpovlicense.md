@@ -8,15 +8,15 @@ description: Install license on the appliance
 
 ```text
 New-HPOVLicense
-    [-LicenseKey] <>
-    [-ApplianceConnection] <>
+    [-LicenseKey] <String>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ```text
 New-HPOVLicense
-    [-File] <>
-    [-ApplianceConnection] <>
+    [-File] <String>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -48,37 +48,37 @@ Install licenses read from a file by `Get-Content`.
 
 ## Parameters
 
-### -LicenseKey &lt;&gt;
+### -LicenseKey &lt;String&gt;
 
 Used for adding license keys one at a time, or if only a single license key needs to be added.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -File &lt;&gt;
+### -File &lt;String&gt;
 
 A text file with each license key on a new line that will be installed on the appliance.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | false |

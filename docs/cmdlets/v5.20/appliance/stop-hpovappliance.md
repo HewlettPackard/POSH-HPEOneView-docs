@@ -8,7 +8,7 @@ description: Stop an HPE OneView appliance.
 
 ```text
 Stop-HPOVAppliance
-    [-ApplianceConnection] <>
+    [-ApplianceConnection] <Array>
     [<CommonParameters>]
 ```
 
@@ -39,7 +39,7 @@ Shutdown all connected appliances, disable confirmation.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -47,13 +47,13 @@ Default Value: ${Global:ConnectSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -WhatIf &lt;&gt;
+### -WhatIf &lt;SwitchParameter&gt;
 
 
 
@@ -65,7 +65,7 @@ Default Value: ${Global:ConnectSessions} | ? Default
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Confirm &lt;&gt;
+### -Confirm &lt;SwitchParameter&gt;
 
 
 

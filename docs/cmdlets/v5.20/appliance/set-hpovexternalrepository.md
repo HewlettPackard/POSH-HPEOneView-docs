@@ -8,28 +8,28 @@ description: Modify an existing external baseline repository.
 
 ```text
 Set-HPOVExternalRepository
-    [-InputObject] <>
-    [-Name] <>
-    [-Username <>]
-    [-Password <>]
-    [-Certificate <>]
-    [-Async <>]
+    [-InputObject] <Object>
+    [-Name] <String>
+    [-Username <String>]
+    [-Password <System.Security.SecureString>]
+    [-Certificate <String>]
+    [-Async]
     [<CommonParameters>]
 ```
 
 ```text
 Set-HPOVExternalRepository
-    [-InputObject] <>
-    [-Name] <>
-    [-Credential] <>
-    [-Certificate <>]
-    [-Async <>]
+    [-InputObject] <Object>
+    [-Name] <String>
+    [-Credential] <String>
+    [-Certificate <String>]
+    [-Async]
     [<CommonParameters>]
 ```
 
 ```text
 Set-HPOVExternalRepository
-    [-ApplianceConnection <>]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -78,43 +78,43 @@ Modify an existing repository with new Base64 SSL public certificate.
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 Provide the external repository object to modify.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 Update the configured repository with the new name.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Credential &lt;&gt;
+### -Credential &lt;String&gt;
 
 Provide a PSCredential object if the target web server requires authentication.  By default, HTTPS will be used and basic authentication is used to communicate with the target web server.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Username &lt;&gt;
+### -Username &lt;String&gt;
 
 Provide the username to authenticate to the target web server with if required.
 
@@ -126,7 +126,7 @@ Provide the username to authenticate to the target web server with if required.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Password &lt;&gt;
+### -Password &lt;System.Security.SecureString&gt;
 
 Provide the password of the username using a `[System.Security.SecureString]`.
 
@@ -138,7 +138,7 @@ Provide the password of the username using a `[System.Security.SecureString]`.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Certificate &lt;&gt;
+### -Certificate &lt;String&gt;
 
 The Base64 Certificate of the target web server.  Must be specified if the `-HTTP` parameter is not used.
 
@@ -150,7 +150,7 @@ The Base64 Certificate of the target web server.  Must be specified if the `-HTT
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -162,7 +162,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

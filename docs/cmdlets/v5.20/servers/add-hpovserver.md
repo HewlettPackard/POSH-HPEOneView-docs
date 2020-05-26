@@ -8,27 +8,27 @@ description: Import a physical server.
 
 ```text
 Add-HPOVServer
-    [-Hostname] <>
-    [-Username] <>
-    [-Password <>]
-    [-Credential] <>
-    [-LicensingIntent] <>
-    [-Scope <>]
-    [-Async <>]
-    [-ApplianceConnection] <>
+    [-Hostname] <String>
+    [-Username] <String>
+    [-Password <Object>]
+    [-Credential] <PSCredential>
+    [-LicensingIntent] <String>
+    [-Scope <Array>]
+    [-Async]
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ```text
 Add-HPOVServer
-    [-Hostname] <>
-    [-Monitored <>]
-    [-Username] <>
-    [-Password <>]
-    [-Credential] <>
-    [-Scope <>]
-    [-Async <>]
-    [-ApplianceConnection] <>
+    [-Hostname] <String>
+    [-Monitored]
+    [-Username] <String>
+    [-Password <Object>]
+    [-Credential] <PSCredential>
+    [-Scope <Array>]
+    [-Async]
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -80,19 +80,19 @@ Add serverilo2.contoso.com to the appliance as a monitored only device.
 
 ## Parameters
 
-### -Hostname &lt;&gt;
+### -Hostname &lt;String&gt;
 
 Hostname of the server's iLO, either IP Address or FQDN.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Username &lt;&gt;
+### -Username &lt;String&gt;
 
 This parameter is now deprecated.  Please transition to using the `-Credential` parameter.
 
@@ -100,13 +100,13 @@ Administrator account of the target iLO.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Password &lt;&gt;
+### -Password &lt;Object&gt;
 
 This parameter is now deprecated.  Please transition to using the `-Credential` parameter.
 
@@ -120,7 +120,7 @@ Account password of the iLO specified.  Can be String or SecureString.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -LicensingIntent &lt;&gt;
+### -LicensingIntent &lt;String&gt;
 
 Specifies whether the intent is to apply either OneView or OneView w/o iLO licenses to the server being imported. This is only required when the `-Managed` parameter switch is provided. If you include the `-Monitored` switch, LicenseIntent should not be provided.
 
@@ -131,13 +131,13 @@ Accepted values are
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | OneView |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Monitored &lt;&gt;
+### -Monitored &lt;SwitchParameter&gt;
 
 Add the specified server for monitor only management.  You can view hardware for inventory and status information only.  Omitting this parameter, you can apply configurations, deploy server profiles, monitor operation status, collect statistics, and alert users to specific conditions.
 
@@ -149,7 +149,7 @@ Add the specified server for monitor only management.  You can view hardware for
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -161,19 +161,19 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Confirm &lt;&gt;
+### -Confirm &lt;SwitchParameter&gt;
 
 When attempting to add a Server to the appliance, the appliance will validate the target Server is not already claimed.  If it is, this parameter is used when the server has been claimed by another appliance to bypass the confirmation prompt, and force add the server resource.
 
@@ -185,7 +185,7 @@ When attempting to add a Server to the appliance, the appliance will validate th
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;&gt;
+### -Scope &lt;Array&gt;
 
 Provide an array of <HPOneView.Appliance.ScopeResource> Scope resource(s) to initially add.
 
@@ -197,13 +197,13 @@ Provide an array of <HPOneView.Appliance.ScopeResource> Scope resource(s) to ini
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Credential &lt;&gt;
+### -Credential &lt;PSCredential&gt;
 
 Use this parameter if you want to provide a PSCredential object instead.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |

@@ -8,10 +8,10 @@ description: Get Unmanaged Devices.
 
 ```text
 Get-HPOVUnmanagedDevice
-    [-Name] <>
-    [-List <>]
-    [-Label <>]
-    [-ApplianceConnection] <>
+    [-Name] <String>
+    [-List]
+    [-Label <String>]
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -31,19 +31,19 @@ Get all unmanaged devices.
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 The name of the Unmanaged Device.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -List &lt;&gt;
+### -List &lt;SwitchParameter&gt;
 
 Deprecated parameter.  Cmdlet now defaults to `Format-Table` output.
 
@@ -55,7 +55,7 @@ Deprecated parameter.  Cmdlet now defaults to `Format-Table` output.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Label &lt;&gt;
+### -Label &lt;String&gt;
 
 Specify the label associated with resources.
 
@@ -67,13 +67,13 @@ Specify the label associated with resources.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | false |

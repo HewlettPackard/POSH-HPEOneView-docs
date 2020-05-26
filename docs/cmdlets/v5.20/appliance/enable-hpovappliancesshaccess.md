@@ -8,8 +8,8 @@ description: Enable appliance SSH access.
 
 ```text
 Enable-HPOVApplianceSshAccess
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-Async]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -35,7 +35,7 @@ Enable appliance SSH access.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -47,7 +47,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 

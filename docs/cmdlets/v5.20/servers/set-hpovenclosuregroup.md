@@ -8,11 +8,11 @@ description: Modify an existing enclosure group policy.
 
 ```text
 Set-HPOVEnclosureGroup
-    [-InputObject] <>
-    [-Name] <>
-    [-ConfigurationScript] <>
-    [-PowerRedundantMode] <>
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-Name] <String>
+    [-ConfigurationScript] <String>
+    [-PowerRedundantMode] <String>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -68,7 +68,7 @@ Update the configuration script of the provided enclosure group.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -80,43 +80,43 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -ConfigurationScript &lt;&gt;
+### -ConfigurationScript &lt;String&gt;
 
 An Onboard Administrator CLI Script. Only applicable for HPE BladeSystem `C-Class`.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 An enclosure group resource from `Get-HPOVEnclosureGroup`.
 
 | Aliases | EnclosureGroup |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 Specify a new resource name.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -PowerRedundantMode &lt;&gt;
+### -PowerRedundantMode &lt;String&gt;
 
 The Power Redundancy Mode to set when an Enclosure is added to the appliance.
 
@@ -127,7 +127,7 @@ Allowed Values:
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |

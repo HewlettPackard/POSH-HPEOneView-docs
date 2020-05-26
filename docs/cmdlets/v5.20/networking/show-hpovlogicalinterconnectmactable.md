@@ -8,28 +8,28 @@ description: Show the MAC Table for Logical Interconnect resource(s).
 
 ```text
 Show-HPOVLogicalInterconnectMacTable
-    [-InputObject] <>
-    [-network] <>
-    [-Export] <>
-    [-ApplianceConnection] <>
+    [-InputObject] <Object>
+    [-network] <String>
+    [-Export] <String>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ```text
 Show-HPOVLogicalInterconnectMacTable
-    [-InputObject] <>
-    [-network] <>
-    [-Export] <>
-    [-ApplianceConnection] <>
+    [-InputObject] <Object>
+    [-network] <String>
+    [-Export] <String>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ```text
 Show-HPOVLogicalInterconnectMacTable
-    [-InputObject] <>
-    [-MacAddress] <>
-    [-Export] <>
-    [-ApplianceConnection] <>
+    [-InputObject] <Object>
+    [-MacAddress] <String>
+    [-Export] <String>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -74,61 +74,61 @@ Retrieve the available MAC Addresses learned in "VLAN100" network, and export to
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 The Name, URI, Logical Interconnect Resource or an array of either to display the MAC Address tables from.
 
 | Aliases | name, li, LogicalInterconnect |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Network &lt;&gt;
+### -Network &lt;String&gt;
 
 Provide the Network Name to filter the MAC Table results for.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -MacAddress &lt;&gt;
+### -MacAddress &lt;String&gt;
 
 Provide a MAC Address to locate in the MAC Table.
 
 | Aliases | mac |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Export &lt;&gt;
+### -Export &lt;String&gt;
 
 Export to a CSV, provide the full path and filename.
 
 | Aliases | x, ExportFile |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |

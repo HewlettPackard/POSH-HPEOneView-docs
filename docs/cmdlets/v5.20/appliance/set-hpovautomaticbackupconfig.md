@@ -8,25 +8,25 @@ description: Configure automatic appliance backup.
 
 ```text
 Set-HPOVAutomaticBackupConfig
-    [-Hostname] <>
-    [-Username] <>
-    [-Password] <>
-    [-HostSSHKey] <>
-    [-Directory] <>
-    [-Protocol] <>
-    [-Interval] <>
-    [-Days] <>
-    [-Time] <>
-    [-Async <>]
-    [-ApplianceConnection] <>
+    [-Hostname] <String>
+    [-Username] <String>
+    [-Password] <System.Security.SecureString>
+    [-HostSSHKey] <String>
+    [-Directory] <String>
+    [-Protocol] <String>
+    [-Interval] <String>
+    [-Days] <Array>
+    [-Time] <String>
+    [-Async]
+    [-ApplianceConnection] <Array>
     [<CommonParameters>]
 ```
 
 ```text
 Set-HPOVAutomaticBackupConfig
-    [-Disabled <>]
-    [-Async <>]
-    [-ApplianceConnection] <>
+    [-Disabled]
+    [-Async]
+    [-ApplianceConnection] <Array>
     [<CommonParameters>]
 ```
 
@@ -59,43 +59,43 @@ This command will configure automatic appliance backup, based on a weekly Monday
 
 ## Parameters
 
-### -Hostname &lt;&gt;
+### -Hostname &lt;String&gt;
 
 The IP Address or FQDN of the target SCP or SFTP host.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Directory &lt;&gt;
+### -Directory &lt;String&gt;
 
 The remote directory on the host where the file will be saved to.  Omit to sepcify the root or default directory the user account is associated with.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Username &lt;&gt;
+### -Username &lt;String&gt;
 
 The username to authenticate to the SCP/SFTP host with.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Password &lt;&gt;
+### -Password &lt;System.Security.SecureString&gt;
 
 The password of the user.
 
@@ -103,25 +103,25 @@ Specify the Logical Interconnect URI or Object the Support Dump will be generate
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -HostSSHKey &lt;&gt;
+### -HostSSHKey &lt;String&gt;
 
 The SCP/SFTP hosts public key, in OpenSSH String format.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Protocol &lt;&gt;
+### -Protocol &lt;String&gt;
 
 The protocol to connect to the remote host with.  Supported values are:
 
@@ -132,13 +132,13 @@ Default: SCP
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | SCP |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Interval &lt;&gt;
+### -Interval &lt;String&gt;
 
 The frequency the backup will be generated.  Supported values are:
 
@@ -147,13 +147,13 @@ The frequency the backup will be generated.  Supported values are:
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Days &lt;&gt;
+### -Days &lt;Array&gt;
 
 If specifying a Weekly backup, provide the days in an Array.  Accepted values are:
 
@@ -167,25 +167,25 @@ If specifying a Weekly backup, provide the days in an Array.  Accepted values ar
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Time &lt;&gt;
+### -Time &lt;String&gt;
 
 The time to execute, in 24hr clock.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Disabled &lt;&gt;
+### -Disabled &lt;SwitchParameter&gt;
 
 Disable the automatic backup schedule.
 
@@ -197,7 +197,7 @@ Disable the automatic backup schedule.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -209,19 +209,19 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -WhatIf &lt;&gt;
+### -WhatIf &lt;SwitchParameter&gt;
 
 
 
@@ -233,7 +233,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Confirm &lt;&gt;
+### -Confirm &lt;SwitchParameter&gt;
 
 
 

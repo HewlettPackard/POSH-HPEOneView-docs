@@ -8,9 +8,9 @@ description: List appliance backups.
 
 ```text
 Get-HPOVBackup
-    [-Before <>]
-    [-After <>]
-    [-ApplianceConnection <>]
+    [-Before <DateTime>]
+    [-After <DateTime>]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -46,7 +46,7 @@ This command will return appliance backups that were created before 2017/01/01.
 
 ## Parameters
 
-### -Before &lt;&gt;
+### -Before &lt;DateTime&gt;
 
 Specify the DateTime object of when to locate backups created before.
 
@@ -58,7 +58,7 @@ Specify the DateTime object of when to locate backups created before.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -After &lt;&gt;
+### -After &lt;DateTime&gt;
 
 Specify the DateTime object of when to locate backups created after.
 
@@ -70,7 +70,7 @@ Specify the DateTime object of when to locate backups created after.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

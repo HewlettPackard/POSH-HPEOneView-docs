@@ -8,8 +8,8 @@ description: Change the appliance current security protocols.
 
 ```text
 Set-HPOVApplianceSecurityProtocol
-    [-EnableTlsVersion] <>
-    [-ApplianceConnection <>]
+    [-EnableTlsVersion] <String[]>
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -60,7 +60,7 @@ Set the appliance to enable all three supported TLS protocol versions. After con
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -72,7 +72,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -EnableTlsVersion &lt;&gt;
+### -EnableTlsVersion &lt;String[]&gt;
 
 Specify 1 or more security protocols to enable. Allowed values:
 
@@ -82,7 +82,7 @@ Specify 1 or more security protocols to enable. Allowed values:
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |

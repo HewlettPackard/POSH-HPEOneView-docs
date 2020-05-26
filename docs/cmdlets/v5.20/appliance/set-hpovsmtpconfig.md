@@ -8,22 +8,22 @@ description: Configure appliance SMTP Reporting settings.
 
 ```text
 Set-HPOVSMTPConfig
-    [-SenderEmailAddress <>]
-    [-Server <>]
-    [-Port <>]
+    [-SenderEmailAddress <String>]
+    [-Server <String>]
+    [-Port <Int32>]
     [-ConnectionSecurity <>]
-    [-Password <>]
-    [-AlertEmailEnabled <>]
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-Password <String>]
+    [-AlertEmailEnabled]
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 Set-HPOVSMTPConfig
-    [-AlertEmailDisabled] <>
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-AlertEmailDisabled]
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -61,7 +61,7 @@ Set the appliance"s SMTP Sender Email Address to "hpov-alerts@contoso.com", enab
 
 ## Parameters
 
-### -SenderEmailAddress &lt;&gt;
+### -SenderEmailAddress &lt;String&gt;
 
 Specify the Sender Email Address for the appliance.
 
@@ -73,7 +73,7 @@ Specify the Sender Email Address for the appliance.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Server &lt;&gt;
+### -Server &lt;String&gt;
 
 Specify the SMTP Relay Server if DNS does not contain a valid DNS MX record for the sender email address domain name.
 
@@ -85,7 +85,7 @@ Specify the SMTP Relay Server if DNS does not contain a valid DNS MX record for 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Port &lt;&gt;
+### -Port &lt;Int32&gt;
 
 Provide an alternate TCP port number than the default SMTP port value 25/TCP.
 
@@ -97,7 +97,7 @@ Provide an alternate TCP port number than the default SMTP port value 25/TCP.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Password &lt;&gt;
+### -Password &lt;String&gt;
 
 Provide an SMTP Password to authenticate to the SMTP Server.  This password will be sent in clear text to the SMTP server.
 
@@ -109,19 +109,19 @@ Provide an SMTP Password to authenticate to the SMTP Server.  This password will
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -AlertEmailDisabled &lt;&gt;
+### -AlertEmailDisabled &lt;SwitchParameter&gt;
 
 Disable SMTP Email Alerting.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -AlertEmailEnabled &lt;&gt;
+### -AlertEmailEnabled &lt;SwitchParameter&gt;
 
 Enable SMTP Email Alerting
 
@@ -133,7 +133,7 @@ Enable SMTP Email Alerting
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -145,7 +145,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

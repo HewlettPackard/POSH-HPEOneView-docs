@@ -8,7 +8,7 @@ description: Get the appliance configured data at rest encryption state.
 
 ```text
 Get-HPOVApplianceDataAtRestEncryption
-    [-ApplianceConnection <>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -44,7 +44,7 @@ Get the appliance data at rest encryption state.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

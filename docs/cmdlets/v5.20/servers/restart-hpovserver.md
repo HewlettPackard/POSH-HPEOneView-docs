@@ -8,18 +8,18 @@ description: Restart Server Resource.
 
 ```text
 Restart-HPOVServer
-    [-Server] <>
-    [-Async <>]
-    [-ApplianceConnection] <>
+    [-Server] <Object>
+    [-Async]
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ```text
 Restart-HPOVServer
-    [-Server] <>
-    [-ColdBoot <>]
-    [-Async <>]
-    [-ApplianceConnection] <>
+    [-Server] <Object>
+    [-ColdBoot]
+    [-Async]
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -55,19 +55,19 @@ Restart the specific server device by passing the Server Object via pipeline, an
 
 ## Parameters
 
-### -Server &lt;&gt;
+### -Server &lt;Object&gt;
 
 A Server hardware or Server Profile resource object.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -ColdBoot &lt;&gt;
+### -ColdBoot &lt;SwitchParameter&gt;
 
 Use this parameter to request power be forcably removed then represented to the server resource.
 
@@ -79,7 +79,7 @@ Use this parameter to request power be forcably removed then represented to the 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -91,19 +91,19 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -WhatIf &lt;&gt;
+### -WhatIf &lt;SwitchParameter&gt;
 
 
 
@@ -115,7 +115,7 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Confirm &lt;&gt;
+### -Confirm &lt;SwitchParameter&gt;
 
 
 

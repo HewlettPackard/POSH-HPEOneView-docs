@@ -8,16 +8,16 @@ description: Configure new Remote Support contact.
 
 ```text
 New-HPOVRemoteSupportContact
-    [-Firstname] <>
-    [-Lastname] <>
-    [-Email] <>
-    [-PrimaryPhone] <>
-    [-AlternatePhone <>]
-    [-Language <>]
-    [-Notes <>]
-    [-Default <>]
-    [-DefaultSecondary <>]
-    [-ApplianceConnection <>]
+    [-Firstname] <String>
+    [-Lastname] <String>
+    [-Email] <String>
+    [-PrimaryPhone] <String>
+    [-AlternatePhone <String>]
+    [-Language <String>]
+    [-Notes <String>]
+    [-Default]
+    [-DefaultSecondary]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -37,55 +37,55 @@ Configure a new user who is the default contact.
 
 ## Parameters
 
-### -Firstname &lt;&gt;
+### -Firstname &lt;String&gt;
 
 The contacts first or given name.
 
 | Aliases | GivenName |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Lastname &lt;&gt;
+### -Lastname &lt;String&gt;
 
 The contacts last or sur name.
 
 | Aliases | Surname |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Email &lt;&gt;
+### -Email &lt;String&gt;
 
 The contacts email address.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -PrimaryPhone &lt;&gt;
+### -PrimaryPhone &lt;String&gt;
 
 The contacts primary phone number.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -AlternatePhone &lt;&gt;
+### -AlternatePhone &lt;String&gt;
 
 The contacts alternate phone number.
 
@@ -97,7 +97,7 @@ The contacts alternate phone number.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Language &lt;&gt;
+### -Language &lt;String&gt;
 
 The contacts primary spoken language.
 
@@ -109,7 +109,7 @@ The contacts primary spoken language.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Notes &lt;&gt;
+### -Notes &lt;String&gt;
 
 The contacts special instructions.
 
@@ -121,7 +121,7 @@ The contacts special instructions.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Default &lt;&gt;
+### -Default &lt;SwitchParameter&gt;
 
 Use to specify if this contact is the Default.
 
@@ -133,7 +133,7 @@ Use to specify if this contact is the Default.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -145,7 +145,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DefaultSecondary &lt;&gt;
+### -DefaultSecondary &lt;SwitchParameter&gt;
 
 Use to indicate if the specified contact should be the appliance default secondary contact.
 

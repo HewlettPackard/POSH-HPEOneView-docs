@@ -8,18 +8,18 @@ description: Generate iLO SSO Token.
 
 ```text
 Get-HPOVIloSso
-    [-InputObject] <>
-    [-RemoteConsoleOnly <>]
-    [-IloRestSession <>]
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-RemoteConsoleOnly]
+    [-IloRestSession]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
 ```text
 Get-HPOVIloSso
-    [-InputObject] <>
-    [-IloRestSession <>]
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-IloRestSession]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -74,19 +74,19 @@ Generate iLO SSO Object that can then be used with the HPRESTCmdlets.
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 The Server Hardware or Server Profile resource object from `Get-HPOVServer` or `Get-HPOVServerProfile`.
 
 | Aliases | Server |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -RemoteConsoleOnly &lt;&gt;
+### -RemoteConsoleOnly &lt;SwitchParameter&gt;
 
 Generate an SSO URL Token for accessing the Remote Console.
 
@@ -98,7 +98,7 @@ Generate an SSO URL Token for accessing the Remote Console.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IloRestSession &lt;&gt;
+### -IloRestSession &lt;SwitchParameter&gt;
 
 Generate an HPRESTCmdlets compliant IloSession object.
 
@@ -110,7 +110,7 @@ Generate an HPRESTCmdlets compliant IloSession object.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

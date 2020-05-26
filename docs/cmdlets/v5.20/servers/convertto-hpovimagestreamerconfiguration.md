@@ -8,11 +8,11 @@ description: Convert Logical Enclosure to support HPE Image Streamer.
 
 ```text
 ConvertTo-HPOVImageStreamerConfiguration
-    [-InputObject] <>
-    [-UplinkSetName] <>
-    [-DeploymentNetwork] <>
-    [-UplinkPorts <>]
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-UplinkSetName] <Name>
+    [-DeploymentNetwork] <Object>
+    [-UplinkPorts <Array>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -46,31 +46,31 @@ Convert the MyLE1 Logical Enclosure to support Image Streamer, specifying uplink
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 Provide the Logical Enclosure resource object or name that will be recreated.
 
 | Aliases | EnclosureGroup, EG |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -UplinkSetName &lt;&gt;
+### -UplinkSetName &lt;Name&gt;
 
 The Uplink Set Name to be added.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -UplinkPorts &lt;&gt;
+### -UplinkPorts &lt;Array&gt;
 
 Specify 4 redundant Uplink Ports.
 
@@ -82,19 +82,19 @@ Specify 4 redundant Uplink Ports.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DeploymentNetwork &lt;&gt;
+### -DeploymentNetwork &lt;Object&gt;
 
 Provide the Deployment Network object.  Must be associated with a valid IPv4 Subnet that is within the same subnet as the Composer.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IgnoreSasLogicalInterconnects &lt;&gt;
+### -IgnoreSasLogicalInterconnects &lt;Object&gt;
 
 Use to override the convertion if SAS Logical Interconnects are detected.  WARNING: May result in data loss.  Please make sure data is backed up before convertion.
 
@@ -106,7 +106,7 @@ Use to override the convertion if SAS Logical Interconnects are detected.  WARNI
 | Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

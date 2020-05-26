@@ -8,9 +8,9 @@ description: Remove a cluster profile resource.
 
 ```text
 Remove-HPOVClusterProfile
-    [-InputObject] <>
-    [-Force <>]
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-Force]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -45,7 +45,7 @@ Remove the specified cluster profile.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -57,7 +57,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -Confirm &lt;&gt;
+### -Confirm &lt;SwitchParameter&gt;
 
 Use to override the prompt.
 
@@ -71,7 +71,7 @@ Use to override the prompt.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Force &lt;&gt;
+### -Force &lt;SwitchParameter&gt;
 
 Force delete the resource.
 
@@ -83,19 +83,19 @@ Force delete the resource.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 The cluster profile from `Get-HPOVClusterProfile`.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -WhatIf &lt;&gt;
+### -WhatIf &lt;SwitchParameter&gt;
 
 
 

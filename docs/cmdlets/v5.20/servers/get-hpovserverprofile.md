@@ -8,36 +8,36 @@ description: Retrieve Server Profile resource(s).
 
 ```text
 Get-HPOVServerProfile
-    [-Name] <>
-    [-NonCompliant <>]
-    [-Unassigned <>]
-    [-InputObject <>]
-    [-Label <>]
-    [-Scope <>]
-    [-ApplianceConnection] <>
+    [-Name] <String>
+    [-NonCompliant]
+    [-Unassigned]
+    [-InputObject <Object>]
+    [-Label <String>]
+    [-Scope <Object>]
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ```text
 Get-HPOVServerProfile
-    [-export <>]
-    [-location] <>
-    [-Name] <>
-    [-Unassigned <>]
-    [-InputObject <>]
-    [-Label <>]
-    [-Scope <>]
-    [-ApplianceConnection] <>
+    [-export]
+    [-location] <String>
+    [-Name] <String>
+    [-Unassigned]
+    [-InputObject <Object>]
+    [-Label <String>]
+    [-Scope <Object>]
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ```text
 Get-HPOVServerProfile
-    [-Detailed <>]
-    [-Name] <>
-    [-Label <>]
-    [-Scope <>]
-    [-ApplianceConnection] <>
+    [-Detailed]
+    [-Name] <String>
+    [-Label <String>]
+    [-Scope <Object>]
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -127,7 +127,7 @@ Save Profile1 Server Profile object to its own backup file in C:\profiles.
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 Profile a Server Hardware or Server Profile Template resource, and the associated Server Hardware will be returned.
 
@@ -139,19 +139,19 @@ Profile a Server Hardware or Server Profile Template resource, and the associate
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 The name of the server profile resource to be returned.  All server profile resources will be returned if omitted.  Supports * wildcard character.
 
 | Aliases | profile |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Detailed &lt;&gt;
+### -Detailed &lt;SwitchParameter&gt;
 
 Display detailed report list of Server Profiles
 
@@ -163,7 +163,7 @@ Display detailed report list of Server Profiles
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -NonCompliant &lt;&gt;
+### -NonCompliant &lt;SwitchParameter&gt;
 
 Return collection of Server Profiles that are not compliant with their template.  Will not return Server Profiles that have no Template association.
 
@@ -175,7 +175,7 @@ Return collection of Server Profiles that are not compliant with their template.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Unassigned &lt;&gt;
+### -Unassigned &lt;SwitchParameter&gt;
 
 Optional parameter that can be included with the List switch parameter to only display unassigned Server Profiles.  Can also be combined with the name parameter for Server Profile wildcard name search.
 
@@ -187,7 +187,7 @@ Optional parameter that can be included with the List switch parameter to only d
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;&gt;
+### -Scope &lt;Object&gt;
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
@@ -204,7 +204,7 @@ Filter resources based on provided Scope membership.  By default, all resources 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Label &lt;&gt;
+### -Label &lt;String&gt;
 
 Specify the label associated with resources.
 
@@ -216,19 +216,19 @@ Specify the label associated with resources.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -export &lt;&gt;
+### -export &lt;SwitchParameter&gt;
 
 Switch used to export Server Profile object to JSON encoded file.
 
@@ -240,13 +240,13 @@ Switch used to export Server Profile object to JSON encoded file.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -location &lt;&gt;
+### -location &lt;String&gt;
 
 Location where to save the Server Profile
 
 | Aliases | save |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |

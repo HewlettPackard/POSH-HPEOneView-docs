@@ -8,8 +8,8 @@ description: Retrieve a defined Rack.
 
 ```text
 Get-HPOVRack
-    [-Name <>]
-    [-ApplianceConnection <>]
+    [-Name <String>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -47,7 +47,7 @@ Locate all racks objects that begin with "Rack22".
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 Rack name.  Supports wildcard (*) character.
 
@@ -59,7 +59,7 @@ Rack name.  Supports wildcard (*) character.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

@@ -8,8 +8,8 @@ description: Get Scope resource(s)
 
 ```text
 Get-HPOVScope
-    [-Name <>]
-    [-ApplianceConnection <>]
+    [-Name <String>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -88,7 +88,7 @@ Use wildcard search for a specific scope on all connected appliances.
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 Name of the scope to return.
 
@@ -100,7 +100,7 @@ Name of the scope to return.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

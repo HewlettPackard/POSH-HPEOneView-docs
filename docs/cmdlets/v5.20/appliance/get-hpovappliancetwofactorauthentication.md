@@ -8,7 +8,7 @@ description: Get appliance two-factor configuration.
 
 ```text
 Get-HPOVApplianceTwoFactorAuthentication
-    [-ApplianceConnection <>]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -36,7 +36,7 @@ Get the appliance `two-factor` authentication configuration.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

@@ -8,11 +8,11 @@ description: Generate firmware report
 
 ```text
 Show-HPOVFirmwareReport
-    [-InputObject] <>
-    [-Baseline] <>
-    [-Location] <>
-    [-ApplianceConnection] <>
-    [-Export <>]
+    [-InputObject] <Object>
+    [-Baseline] <Object>
+    [-Location] <String>
+    [-ApplianceConnection] <Object>
+    [-Export]
     [<CommonParameters>]
 ```
 
@@ -45,7 +45,7 @@ Display a firmware report of the "Production EG" resource, and components (serve
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 The managed resource object to generate the report for.  Allowed resource object types are:
 
@@ -58,25 +58,25 @@ By specifying an Enclosure Group, all associated Enclosures will be included in 
 
 | Aliases | Resource |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Baseline &lt;&gt;
+### -Baseline &lt;Object&gt;
 
 Resource Object or Name of the Firmware Baseline to report against what is installed.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Export &lt;&gt;
+### -Export &lt;SwitchParameter&gt;
 
 Indicate to export the report to a CSV file.
 
@@ -88,7 +88,7 @@ Indicate to export the report to a CSV file.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Location &lt;&gt;
+### -Location &lt;String&gt;
 
 File system location where to save the exported report to.
 
@@ -96,19 +96,19 @@ Default: Current Working Directory
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (get-location).Path |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |

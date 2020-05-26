@@ -8,14 +8,14 @@ description: Define the Remote Support Default Site.
 
 ```text
 Set-HPOVRemoteSupportDefaultSite
-    [-AddressLine1] <>
-    [-City] <>
-    [-State] <>
-    [-Country] <>
-    [-TimeZone] <>
-    [-AddressLine2] <>
-    [-PostalCode <>]
-    [-ApplianceConnection <>]
+    [-AddressLine1] <String>
+    [-City] <String>
+    [-State] <String>
+    [-Country] <String>
+    [-TimeZone] <String>
+    [-AddressLine2] <String>
+    [-PostalCode <String>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -35,70 +35,70 @@ Get the configured Remote Support default site.
 
 ## Parameters
 
-### -AddressLine1 &lt;&gt;
+### -AddressLine1 &lt;String&gt;
 
 Aliases [-a1]
 Primary Address line 1.
 
 | Aliases | a1 |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -AddressLine2 &lt;&gt;
+### -AddressLine2 &lt;String&gt;
 
 Aliases [-a2]
 Primary Address line 2.
 
 | Aliases | a2 |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -City &lt;&gt;
+### -City &lt;String&gt;
 
 City.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -State &lt;&gt;
+### -State &lt;String&gt;
 
 Aliases [-Provence]
 State or Provence.
 
 | Aliases | Province |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Country &lt;&gt;
+### -Country &lt;String&gt;
 
 2-letter country code.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -PostalCode &lt;&gt;
+### -PostalCode &lt;String&gt;
 
 Postal or zip code.
 
@@ -110,19 +110,19 @@ Postal or zip code.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -TimeZone &lt;&gt;
+### -TimeZone &lt;String&gt;
 
 Timezone of the data center, in `ISO-3166` location format (e.g. US/Central).
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

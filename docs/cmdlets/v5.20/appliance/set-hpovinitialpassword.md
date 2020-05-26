@@ -8,9 +8,9 @@ description: Change the initial password of the Administrator user account.
 
 ```text
 Set-HPOVInitialPassword
-    [-OldPassword] <>
-    [-NewPassword] <>
-    [-Appliance] <>
+    [-OldPassword] <String>
+    [-NewPassword] <String>
+    [-Appliance] <Object>
     [<CommonParameters>]
 ```
 
@@ -30,37 +30,37 @@ Change the Administrator password, and prompted for both the original and new pa
 
 ## Parameters
 
-### -OldPassword &lt;&gt;
+### -OldPassword &lt;String&gt;
 
 Current default password for this account.  Will prompt for password if not supplied.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -NewPassword &lt;&gt;
+### -NewPassword &lt;String&gt;
 
 New password for this account.  Will prompt for password if not supplied.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Appliance &lt;&gt;
+### -Appliance &lt;Object&gt;
 
 Specify Appliance FQDN, Name or IP Address.  If no valid Appliance Connection is found, a temporary connection is created for the specified appliance.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |

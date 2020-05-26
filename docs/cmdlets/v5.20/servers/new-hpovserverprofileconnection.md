@@ -8,93 +8,93 @@ description: Create network connection for a server profile.
 
 ```text
 New-HPOVServerProfileConnection
-    [-ConnectionID] <>
-    [-Network] <>
-    [-ConnectionType <>]
-    [-PortId] <>
-    [-Name <>]
-    [-RequestedBW <>]
-    [-UserDefined <>]
-    [-MAC <>]
-    [-Bootable <>]
-    [-LagName <>]
-    [-BootVolumeSource] <>
-    [-Priority <>]
-    [-ApplianceConnection <>]
+    [-ConnectionID] <Int32>
+    [-Network] <Object>
+    [-ConnectionType <String>]
+    [-PortId] <String>
+    [-Name <String>]
+    [-RequestedBW <Int32>]
+    [-UserDefined]
+    [-MAC <String>]
+    [-Bootable]
+    [-LagName <String>]
+    [-BootVolumeSource] <String>
+    [-Priority <String>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 New-HPOVServerProfileConnection
-    [-ConnectionID] <>
-    [-Network] <>
-    [-ConnectionType <>]
-    [-PortId] <>
-    [-Name <>]
-    [-RequestedBW <>]
-    [-UserDefined <>]
-    [-MAC <>]
-    [-Bootable <>]
-    [-LagName <>]
-    [-BootVolumeSource] <>
-    [-Priority <>]
-    [-LUN <>]
-    [-IscsiIPv4AddressSource <>]
-    [-ISCSIInitatorName <>]
-    [-IscsiIPv4Address <>]
-    [-IscsiIPv4SubnetMask <>]
-    [-IscsiIPv4Gateway <>]
-    [-IscsiBootTargetIqn <>]
-    [-IscsiPrimaryBootTargetAddress] <>
-    [-IscsiPrimaryBootTargetPort <>]
-    [-IscsiSecondaryBootTargetAddress <>]
-    [-IscsiSecondaryBootTargetPort <>]
-    [-IscsiAuthenticationProtocol <>]
-    [-ChapName <>]
-    [-ChapSecret <>]
-    [-MutualChapName <>]
-    [-MutualChapSecret <>]
-    [-ApplianceConnection <>]
+    [-ConnectionID] <Int32>
+    [-Network] <Object>
+    [-ConnectionType <String>]
+    [-PortId] <String>
+    [-Name <String>]
+    [-RequestedBW <Int32>]
+    [-UserDefined]
+    [-MAC <String>]
+    [-Bootable]
+    [-LagName <String>]
+    [-BootVolumeSource] <String>
+    [-Priority <String>]
+    [-LUN <Int32>]
+    [-IscsiIPv4AddressSource <String>]
+    [-ISCSIInitatorName <String>]
+    [-IscsiIPv4Address <IPAddress>]
+    [-IscsiIPv4SubnetMask <String>]
+    [-IscsiIPv4Gateway <IPAddress>]
+    [-IscsiBootTargetIqn <String>]
+    [-IscsiPrimaryBootTargetAddress] <IPAddress>
+    [-IscsiPrimaryBootTargetPort <Int32>]
+    [-IscsiSecondaryBootTargetAddress <IPAddress>]
+    [-IscsiSecondaryBootTargetPort <Int32>]
+    [-IscsiAuthenticationProtocol <String>]
+    [-ChapName <String>]
+    [-ChapSecret <System.Security.SecureString>]
+    [-MutualChapName <String>]
+    [-MutualChapSecret <System.Security.SecureString>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 New-HPOVServerProfileConnection
-    [-ConnectionID] <>
-    [-Network] <>
-    [-ConnectionType <>]
-    [-PortId] <>
-    [-Name <>]
-    [-RequestedBW <>]
-    [-UserDefined <>]
-    [-MAC <>]
-    [-WWNN <>]
-    [-WWPN <>]
-    [-Bootable <>]
-    [-LagName <>]
-    [-BootVolumeSource] <>
-    [-Priority <>]
-    [-TargetWwpn <>]
-    [-LUN <>]
-    [-ApplianceConnection <>]
+    [-ConnectionID] <Int32>
+    [-Network] <Object>
+    [-ConnectionType <String>]
+    [-PortId] <String>
+    [-Name <String>]
+    [-RequestedBW <Int32>]
+    [-UserDefined]
+    [-MAC <String>]
+    [-WWNN <String>]
+    [-WWPN <String>]
+    [-Bootable]
+    [-LagName <String>]
+    [-BootVolumeSource] <String>
+    [-Priority <String>]
+    [-TargetWwpn <String>]
+    [-LUN <Int32>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 New-HPOVServerProfileConnection
-    [-ConnectionID] <>
-    [-Network] <>
-    [-ConnectionType <>]
-    [-PortId] <>
-    [-Name <>]
-    [-RequestedBW <>]
-    [-UserDefined <>]
-    [-MAC <>]
-    [-Virtualfunctions <>]
-    [-Bootable <>]
-    [-LagName <>]
-    [-Priority <>]
-    [-ApplianceConnection <>]
+    [-ConnectionID] <Int32>
+    [-Network] <Object>
+    [-ConnectionType <String>]
+    [-PortId] <String>
+    [-Name <String>]
+    [-RequestedBW <Int32>]
+    [-UserDefined]
+    [-MAC <String>]
+    [-Virtualfunctions <Int32>]
+    [-Bootable]
+    [-LagName <String>]
+    [-Priority <String>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -190,19 +190,19 @@ Create an HPE Synergy Image Streamer compliant connection.
 
 ## Parameters
 
-### -ConnectionID &lt;&gt;
+### -ConnectionID &lt;Int32&gt;
 
 The numeric identifier for this connection.  Connections are normally numbered sequentially from 1 within each profile.
 
 | Aliases | id |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | 1 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ConnectionType &lt;&gt;
+### -ConnectionType &lt;String&gt;
 
 Deprecated parameter.  Connection type is now derived from the provided Network resource object.
 
@@ -214,19 +214,19 @@ Deprecated parameter.  Connection type is now derived from the provided Network 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Network &lt;&gt;
+### -Network &lt;Object&gt;
 
 The Network (Ethernet or Fibre Channel) or Network Set resource object to be used with this connection.  Can either be the Name, URI, or object obtained with `Get-HPOVNetwork` or `Get-HPOVNetworkSet`.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -LagName &lt;&gt;
+### -LagName &lt;String&gt;
 
 Specify the LAG Name for a Synergy Ethernet connection.  Allowed value is "LAG1" - "LAG24".
 
@@ -238,7 +238,7 @@ Specify the LAG Name for a Synergy Ethernet connection.  Allowed value is "LAG1"
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -PortId &lt;&gt;
+### -PortId &lt;String&gt;
 
 Identifies the port (FlexNIC) used for this connection. The port can be automatically selected by specifying "Auto" when creating the connection.  "None" is a valid portID for an unconfigured, and unmapped Connection.  If you wish to specify the specific port, the portId format is "[adapter_type_prefix] [adapter_id]:[subport_id]".
 
@@ -250,13 +250,13 @@ An example of a FlexLOM 1, FlexNIC 1a interface would be "Flb 1:1a".  An example
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | Auto |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 A string used to identify the respective connection. The connection name is case insensitive, limited to 63 characters and must be unique within the profile.
 
@@ -268,7 +268,7 @@ A string used to identify the respective connection. The connection name is case
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -RequestedBW &lt;&gt;
+### -RequestedBW &lt;Int32&gt;
 
 Requested bandwidth (in Mbps) to be used for this connection.
             
@@ -282,7 +282,7 @@ Default: 2500
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -UserDefined &lt;&gt;
+### -UserDefined &lt;SwitchParameter&gt;
 
 Use to specify user defined address values
 
@@ -294,7 +294,7 @@ Use to specify user defined address values
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -MAC &lt;&gt;
+### -MAC &lt;String&gt;
 
 Requested MAC address of the connection.  Must be specified if setting WWPN and WWNN, and the connection is mapped to a FlexHBA.
 
@@ -306,7 +306,7 @@ Requested MAC address of the connection.  Must be specified if setting WWPN and 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -WWNN &lt;&gt;
+### -WWNN &lt;String&gt;
 
 Requested WWNN address of the connection.
 
@@ -318,7 +318,7 @@ Requested WWNN address of the connection.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -WWPN &lt;&gt;
+### -WWPN &lt;String&gt;
 
 Requested WWPN address of the connection.
 
@@ -330,7 +330,7 @@ Requested WWPN address of the connection.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Virtualfunctions &lt;&gt;
+### -Virtualfunctions &lt;Int32&gt;
 
 Specify the number of Virtual Functions to enable on an Ethernet Connection.  Must be in increments of 16.
 
@@ -342,7 +342,7 @@ Specify the number of Virtual Functions to enable on an Ethernet Connection.  Mu
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Bootable &lt;&gt;
+### -Bootable &lt;SwitchParameter&gt;
 
 Specify to configure bootable settings.  If omitted, then the connection is not bootable, and `-priority` is set to NotBootable.
 
@@ -356,7 +356,7 @@ Specify to configure bootable settings.  If omitted, then the connection is not 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -BootVolumeSource &lt;&gt;
+### -BootVolumeSource &lt;String&gt;
 
 Specify how the Boot Volume Source will be set.  Allowed values are:
 
@@ -368,13 +368,13 @@ Default: AdapterBIOS
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | AdapterBIOS |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Priority &lt;&gt;
+### -Priority &lt;String&gt;
 
 Optional boot option for this connection, but Required if `-bootable` is specified.  Allowed values:
 
@@ -398,7 +398,7 @@ When the Connection Type is Ethernet, this affects PXE boot.  If the Connection 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -TargetWwpn &lt;&gt;
+### -TargetWwpn &lt;String&gt;
 
 Target FC array WWPN.
 
@@ -410,7 +410,7 @@ Target FC array WWPN.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -LUN &lt;&gt;
+### -LUN &lt;Int32&gt;
 
 Target LUN ID, if BootVolumeSource is set to UserDefined.
 
@@ -422,7 +422,7 @@ Target LUN ID, if BootVolumeSource is set to UserDefined.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ISCSIInitatorName &lt;&gt;
+### -ISCSIInitatorName &lt;String&gt;
 
 Value to provide for the iSCSI Initiator.  All iSCSI Connections will share this value.  If no value is provided, the connection will default to using the Server Profile Name.
 
@@ -436,7 +436,7 @@ If configuring a Connection for a Server Profile Template, the value will be ign
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IscsiIPv4AddressSource &lt;&gt;
+### -IscsiIPv4AddressSource &lt;String&gt;
 
 Specify the IPv4 Address Source for the connection.  Allowed values are:
 
@@ -452,7 +452,7 @@ Specify the IPv4 Address Source for the connection.  Allowed values are:
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IscsiIPv4Address &lt;&gt;
+### -IscsiIPv4Address &lt;IPAddress&gt;
 
 The IPv4 Address to allocate for the initiator.  This parameter value is ignored when assiging the Connection to a Server Profile Template.  It will be enforced when creating a Server Profile from a Server Profile Template.
 
@@ -464,7 +464,7 @@ The IPv4 Address to allocate for the initiator.  This parameter value is ignored
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IscsiIPv4SubnetMask &lt;&gt;
+### -IscsiIPv4SubnetMask &lt;String&gt;
 
 The IPv4 Subnet Mask in full or CIDR bit value.
 
@@ -476,7 +476,7 @@ The IPv4 Subnet Mask in full or CIDR bit value.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IscsiIPv4Gateway &lt;&gt;
+### -IscsiIPv4Gateway &lt;IPAddress&gt;
 
 The IPv4 Gateway.
 
@@ -488,7 +488,7 @@ The IPv4 Gateway.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IscsiBootTargetIqn &lt;&gt;
+### -IscsiBootTargetIqn &lt;String&gt;
 
 The IQN of the target iSCSI host.
 
@@ -500,19 +500,19 @@ The IQN of the target iSCSI host.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IscsiPrimaryBootTargetAddress &lt;&gt;
+### -IscsiPrimaryBootTargetAddress &lt;IPAddress&gt;
 
 The Primary Boot Target IPv4 Address.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IscsiPrimaryBootTargetPort &lt;&gt;
+### -IscsiPrimaryBootTargetPort &lt;Int32&gt;
 
 The Primary Boot Target TCP Port.  Default is 3260 if not otherwise specified.
 
@@ -524,7 +524,7 @@ The Primary Boot Target TCP Port.  Default is 3260 if not otherwise specified.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IscsiSecondaryBootTargetAddress &lt;&gt;
+### -IscsiSecondaryBootTargetAddress &lt;IPAddress&gt;
 
 The Secondary Boot Target IPv4 Address.
 
@@ -536,7 +536,7 @@ The Secondary Boot Target IPv4 Address.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IscsiSecondaryBootTargetPort &lt;&gt;
+### -IscsiSecondaryBootTargetPort &lt;Int32&gt;
 
 The Secondary Boot Target TCP Port.  Default is 3260 if not otherwise specified.
 
@@ -548,7 +548,7 @@ The Secondary Boot Target TCP Port.  Default is 3260 if not otherwise specified.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IscsiAuthenticationProtocol &lt;&gt;
+### -IscsiAuthenticationProtocol &lt;String&gt;
 
 Specify the Authentication protocol to use.  Allowed values are None, CHAP, MutualCHAP.  When creating a Server Profile Connection for a Server Profile Template, the CHAP and Mutual CHAP credential parameters are ignored.  They will be enforced when creating a Server Profile from a Server Profile Template.
 
@@ -560,7 +560,7 @@ Specify the Authentication protocol to use.  Allowed values are None, CHAP, Mutu
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ChapName &lt;&gt;
+### -ChapName &lt;String&gt;
 
 The CHAP challange name.
 
@@ -572,7 +572,7 @@ The CHAP challange name.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ChapSecret &lt;&gt;
+### -ChapSecret &lt;System.Security.SecureString&gt;
 
 The CHAP challange secret.  Accepts ASCII or HEX values.  If providing an ASCII secret value, the length must be bewteen 12 and 16 characters.  If HEX, it must start with 0x and with `24-32` characters.  Value is ignored when creating a Connection for a Server Profile Template.
 
@@ -584,7 +584,7 @@ The CHAP challange secret.  Accepts ASCII or HEX values.  If providing an ASCII 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -MutualChapName &lt;&gt;
+### -MutualChapName &lt;String&gt;
 
 The Mutual CHAP challange.
 
@@ -596,7 +596,7 @@ The Mutual CHAP challange.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -MutualChapSecret &lt;&gt;
+### -MutualChapSecret &lt;System.Security.SecureString&gt;
 
 The Mutual CHAP challange secret.  Accepts ASCII or HEX values.  If providing an ASCII secret value, the length must be bewteen 12 and 16 characters.  If HEX, it must start with 0x and with `24-32` characters.  Value is ignored when creating a Connection for a Server Profile Template.
 
@@ -608,7 +608,7 @@ The Mutual CHAP challange secret.  Accepts ASCII or HEX values.  If providing an
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -620,7 +620,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 

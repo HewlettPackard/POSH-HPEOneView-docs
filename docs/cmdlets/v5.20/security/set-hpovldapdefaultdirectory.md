@@ -8,9 +8,9 @@ description: Configure Authentication Directory default directory.
 
 ```text
 Set-HPOVLdapDefaultDirectory
-    [-InputObject] <>
-    [-ApplianceConnection] <>
-    [-DisableLocalLogin <>]
+    [-InputObject] <Object>
+    [-ApplianceConnection] <Object>
+    [-DisableLocalLogin]
     [<CommonParameters>]
 ```
 
@@ -32,20 +32,20 @@ Set "Domain1" as the default authentication directory for the appliance.  Then, 
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 Aliases [-Directory]
 Provide the Directory Name, URI or Object.  If you want to set the Authentication Directory back to Local, specify LOCAL as the name.
 
 | Aliases | Directory |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -DisableLocalLogin &lt;&gt;
+### -DisableLocalLogin &lt;SwitchParameter&gt;
 
 Use to disable appliance local login accounts.  You cannot use this parameter if an Authentication Directory is not configured.
 
@@ -57,19 +57,19 @@ Use to disable appliance local login accounts.  You cannot use this parameter if
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -WhatIf &lt;&gt;
+### -WhatIf &lt;SwitchParameter&gt;
 
 
 
@@ -81,7 +81,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Confirm &lt;&gt;
+### -Confirm &lt;SwitchParameter&gt;
 
 
 

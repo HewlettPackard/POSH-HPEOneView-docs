@@ -8,9 +8,9 @@ description: Update current user account password.
 
 ```text
 Set-HPOVUserPassword
-    [-Current] <>
-    [-New] <>
-    [-ApplianceConnection] <>
+    [-Current] <String>
+    [-New] <String>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -30,31 +30,31 @@ Update your HPE OneView account password to the new value on all connected appli
 
 ## Parameters
 
-### -Current &lt;&gt;
+### -Current &lt;String&gt;
 
 The current password of the user account. If omitted, the Cmdlet will prompt for the users password as a secure string.
 
 | Aliases | CurrentPassword |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -New &lt;&gt;
+### -New &lt;String&gt;
 
 The new password to be set for the user account. If omitted, the Cmdlet will prompt for the users password as a secure string.
 
 | Aliases | NewPassword |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
     
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
@@ -63,7 +63,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | false |

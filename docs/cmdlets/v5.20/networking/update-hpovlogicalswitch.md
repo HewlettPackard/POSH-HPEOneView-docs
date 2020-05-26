@@ -8,9 +8,9 @@ description: Refresh a new Logical Switch resource.
 
 ```text
 Update-HPOVLogicalSwitch
-    [-InputObject] <>
-    [-ApplianceConnection <>]
-    [-Async <>]
+    [-InputObject] <Object>
+    [-ApplianceConnection <Object>]
+    [-Async]
     [<CommonParameters>]
 ```
 
@@ -38,19 +38,19 @@ Update the "My Logical Switch 1" resource.
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 The Logical Switch resource Name or Object to update.
 
 | Aliases | LS, LogicalSwitch |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Confirm &lt;&gt;
+### -Confirm &lt;SwitchParameter&gt;
 
 Bypass the confirmation prompt, and process all of the objects.
 
@@ -62,7 +62,7 @@ Bypass the confirmation prompt, and process all of the objects.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -74,7 +74,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 

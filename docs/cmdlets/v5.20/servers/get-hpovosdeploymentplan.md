@@ -8,9 +8,9 @@ description: Retrieve OS deployment server deployment plan.
 
 ```text
 Get-HPOVOSDeploymentPlan
-    [-Name <>]
-    [-Scope <>]
-    [-ApplianceConnection <>]
+    [-Name <String>]
+    [-Scope <Object>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -44,7 +44,7 @@ Retrieve the specified OS Deployment Plan on the appliance.
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 OS Deployment Plan name.  Supports wildcard (*) character.
 
@@ -56,7 +56,7 @@ OS Deployment Plan name.  Supports wildcard (*) character.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -68,7 +68,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;&gt;
+### -Scope &lt;Object&gt;
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 

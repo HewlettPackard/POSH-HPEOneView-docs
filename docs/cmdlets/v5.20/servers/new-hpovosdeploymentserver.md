@@ -8,12 +8,12 @@ description: Create a new HPE Synergy OS Deployment Server.
 
 ```text
 New-HPOVOSDeploymentServer
-    [-Name] <>
-    [-InputObject] <>
-    [-ManagementNetwork] <>
-    [-Description <>]
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-Name] <String>
+    [-InputObject] <Object>
+    [-ManagementNetwork] <Object>
+    [-Description <String>]
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -37,19 +37,19 @@ Get the Ethernet network resource object, then pass via the pipeline the first H
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 OS Deployment resource name.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Description &lt;&gt;
+### -Description &lt;String&gt;
 
 Description of the OS Deployment Server resource.
 
@@ -61,31 +61,31 @@ Description of the OS Deployment Server resource.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 HPE Synergy Image Streamer appliance.  Can be any Image Streamer resource object from `Get-HPOVImageStreamerAppliance`.
 
 | Aliases | ImageStreamer, I3S |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -ManagementNetwork &lt;&gt;
+### -ManagementNetwork &lt;Object&gt;
 
 Either a Tagged or Untagged Ethernet Network associated with an IPv4 address pool Subnet.  Subnet must be in the same IPv4 Address Network ID as the HPE Synergy Composer IPv4 Address(es).
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -97,7 +97,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

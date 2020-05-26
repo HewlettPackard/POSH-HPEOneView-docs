@@ -8,8 +8,8 @@ description: Change the appliance current security mode.
 
 ```text
 Set-HPOVApplianceCurrentSecurityMode
-    [-SecurityMode] <>
-    [-ApplianceConnection <>]
+    [-SecurityMode] <HPOVApplianceAvailableSecurityMode>
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -29,7 +29,7 @@ Put the appliance into CNSA mode. After confirmation prompt, appliance will imme
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -41,13 +41,13 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -SecurityMode &lt;&gt;
+### -SecurityMode &lt;HPOVApplianceAvailableSecurityMode&gt;
 
 Specify the Security Mode to change the appliance to by using `Get-HPOVApplianceAvailableSecurityMode`.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |

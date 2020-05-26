@@ -8,7 +8,7 @@ description: Verify pending appliance update has been staged.
 
 ```text
 Get-HPOVPendingUpdate
-    [-ApplianceConnection <>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -45,7 +45,7 @@ Retrieve pending update from all connected appliance sessions.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

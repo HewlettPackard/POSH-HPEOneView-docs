@@ -8,11 +8,11 @@ description: Retrieve Logical Enclosure resource(s).
 
 ```text
 Get-HPOVLogicalEnclosure
-    [-Name <>]
-    [-EnclosureGroup <>]
-    [-NonCompliant <>]
-    [-Scope <>]
-    [-ApplianceConnection <>]
+    [-Name <String>]
+    [-EnclosureGroup <Object>]
+    [-NonCompliant]
+    [-Scope <Object>]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -51,7 +51,7 @@ Return the associated logical enclosures that were created from the specific enc
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 The name of the Logical Enclosure resource to be returned.  All Logical Enclosure resources will be returned if omitted.
 
@@ -63,7 +63,7 @@ The name of the Logical Enclosure resource to be returned.  All Logical Enclosur
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -75,7 +75,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;&gt;
+### -Scope &lt;Object&gt;
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
@@ -92,7 +92,7 @@ Filter resources based on provided Scope membership.  By default, all resources 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EnclosureGroup &lt;&gt;
+### -EnclosureGroup &lt;Object&gt;
 
 Filter resources based on provided EnclosureGroup association.
 
@@ -104,7 +104,7 @@ Filter resources based on provided EnclosureGroup association.
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -NonCompliant &lt;&gt;
+### -NonCompliant &lt;SwitchParameter&gt;
 
 Filter resources based on their `non-compliant` state.
 

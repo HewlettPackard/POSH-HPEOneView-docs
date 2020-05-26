@@ -8,18 +8,18 @@ description: Update appliance certificate authority revocation list.
 
 ```text
 Update-HPOVApplianceTrustedAuthorityCrl
-    [-InputObject] <>
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-InputObject] <HPOneView.Appliance.TrustedCertificateAuthority[]>
+    [-Async]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
 ```text
 Update-HPOVApplianceTrustedAuthorityCrl
-    [-InputObject] <>
-    [-Path] <>
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-InputObject] <HPOneView.Appliance.TrustedCertificateAuthority[]>
+    [-Path] <FileInfo>
+    [-Async]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -54,7 +54,7 @@ Update the `built-in` certificate authority resource.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -66,7 +66,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -78,25 +78,25 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;HPOneView.Appliance.TrustedCertificateAuthority[]&gt;
 
 HPOneView.Appliance.TrustedCertificateAuthority resource from `Get-HPOVApplianceTrustedCertificate`.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Path &lt;&gt;
+### -Path &lt;FileInfo&gt;
 
 Path to manually downloaded CRL.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |

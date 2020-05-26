@@ -8,8 +8,8 @@ description: Get fixme installation log file.
 
 ```text
 Get-HPOVFixMeInstallationLog
-    [-Location <>]
-    [-ApplianceConnection <>]
+    [-Location <System.IO.DirectoryInfo>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -33,7 +33,7 @@ Get the fixme installation logs for the connected appliance.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -45,7 +45,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Location &lt;&gt;
+### -Location &lt;System.IO.DirectoryInfo&gt;
 
 The directory location where to save the generated file to.  If omitted, will use the current working directory.
 

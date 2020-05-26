@@ -8,7 +8,7 @@ description: Get Appliance Date/Time Configuration.
 
 ```text
 Get-HPOVApplianceDateTime
-    [-ApplianceConnection] <>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -40,7 +40,7 @@ This example passes in updated values to set for the appliance networking config
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -48,7 +48,7 @@ Default Value: ${Global:ConnectSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | false |

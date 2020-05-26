@@ -8,35 +8,35 @@ description: Install or stage an appliance update.
 
 ```text
 Install-HPOVUpdate
-    [-File] <>
-    [-Eula] <>
-    [-DisplayReleaseNotes <>]
-    [-ApplianceConnection] <>
+    [-File] <String>
+    [-Eula] <String>
+    [-DisplayReleaseNotes]
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ```text
 Install-HPOVUpdate
-    [-File] <>
-    [-Stage <>]
-    [-DisplayReleaseNotes <>]
-    [-ApplianceConnection] <>
+    [-File] <String>
+    [-Stage]
+    [-DisplayReleaseNotes]
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ```text
 Install-HPOVUpdate
-    [-InstallNow <>]
-    [-Eula] <>
-    [-ApplianceConnection] <>
+    [-InstallNow]
+    [-Eula] <String>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ```text
 Install-HPOVUpdate
-    [-ListPending <>]
-    [-DisplayReleaseNotes <>]
-    [-ApplianceConnection] <>
+    [-ListPending]
+    [-DisplayReleaseNotes]
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -81,31 +81,31 @@ List a pending, staged updates on the appliance, then display the Release Notes 
 
 ## Parameters
 
-### -File &lt;&gt;
+### -File &lt;String&gt;
 
 Appliance Update file to install.
 
 | Aliases | f |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Eula &lt;&gt;
+### -Eula &lt;String&gt;
 
 Will display EULA if no value is provided.  Pass "accept" to accept and not display EULA.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DisplayReleaseNotes &lt;&gt;
+### -DisplayReleaseNotes &lt;SwitchParameter&gt;
 
 Display Release Notes of Update
 
@@ -117,7 +117,7 @@ Display Release Notes of Update
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Stage &lt;&gt;
+### -Stage &lt;SwitchParameter&gt;
 
 Used to upload update to appliance and not apply update.
 
@@ -129,7 +129,7 @@ Used to upload update to appliance and not apply update.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -InstallNow &lt;&gt;
+### -InstallNow &lt;SwitchParameter&gt;
 
 Install pending update that was previously staged.
 
@@ -141,7 +141,7 @@ Install pending update that was previously staged.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ListPending &lt;&gt;
+### -ListPending &lt;SwitchParameter&gt;
 
 List any pending updates on the appliance that might have been staged.
 
@@ -153,19 +153,19 @@ List any pending updates on the appliance that might have been staged.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -WhatIf &lt;&gt;
+### -WhatIf &lt;SwitchParameter&gt;
 
 
 
@@ -177,7 +177,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Confirm &lt;&gt;
+### -Confirm &lt;SwitchParameter&gt;
 
 
 

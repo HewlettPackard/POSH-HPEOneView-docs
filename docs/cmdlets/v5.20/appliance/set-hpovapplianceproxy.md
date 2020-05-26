@@ -8,23 +8,23 @@ description: Configure appliance web proxy.
 
 ```text
 Set-HPOVApplianceProxy
-    [-Hostname] <>
-    [-Port] <>
-    [-Https <>]
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-Hostname] <String>
+    [-Port] <Int>
+    [-Https]
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 Set-HPOVApplianceProxy
-    [-Hostname] <>
-    [-Port] <>
-    [-Username] <>
-    [-Password] <>
-    [-Https <>]
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-Hostname] <String>
+    [-Port] <Int>
+    [-Username] <String>
+    [-Password] <System.Security.SecureString>
+    [-Https]
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -52,55 +52,55 @@ Configure the appliance proxy server by providing the required Hostname and Port
 
 ## Parameters
 
-### -Hostname &lt;&gt;
+### -Hostname &lt;String&gt;
 
 The FQDN or IP Address of the HTTPS Proxy server.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Port &lt;&gt;
+### -Port &lt;Int&gt;
 
 The web proxy TCP port to connect to.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | 0 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Username &lt;&gt;
+### -Username &lt;String&gt;
 
 The user name of your proxy server to authenticate with.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Password &lt;&gt;
+### -Password &lt;System.Security.SecureString&gt;
 
 The proxy server account password.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -112,7 +112,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -124,7 +124,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Https &lt;&gt;
+### -Https &lt;SwitchParameter&gt;
 
 Specify if target proxy server requires HTTPS.  The target SSL/TSL certificate must be added to the appliance using the `Add-HPOVApplianceTrustedCertificate` Cmdlet.
 

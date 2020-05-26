@@ -8,8 +8,8 @@ description: Disable unit identification (UID) of a device.
 
 ```text
 Disable-HPOVDeviceUid
-    [-InputObject] <>
-    [-ApplianceConnection] <>
+    [-InputObject] <Object>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -40,25 +40,25 @@ Disable the UID for "MyEncl, Bay 1" server.
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 Resource object to turn off the UID.  Supported resources are server hardware, enclosures and interconnects.
 
 | Aliases | Server, Enclosure, Frame, Resource |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |

@@ -8,7 +8,7 @@ description: Get the reserved VLAN range for HPE Synergy.
 
 ```text
 Get-HPOVReservedVlanRange
-    [-ApplianceConnection <>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -43,7 +43,7 @@ Get the defined reserved VLAN range on the connected HPE Synergy appliance.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

@@ -8,7 +8,7 @@ description: Restore a Custom Baseline after Restore of a Backup File.
 
 ```text
 Restore-HPOVCustomBaseline
-    [-ApplianceConnection] <>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -30,13 +30,13 @@ Restore all Custom Baselines that were previously created on all connected appli
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | false |

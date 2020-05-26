@@ -8,15 +8,15 @@ description: Retrieve address pool range information.
 
 ```text
 Get-HPOVAddressPoolRange
-    [-Type <>]
-    [-ApplianceConnection <>]
+    [-Type <String[]>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 Get-HPOVAddressPoolRange
-    [-InputObject] <>
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -72,19 +72,19 @@ Get a specific address pool range type (VMAC) from all connected appliances.
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 Specify the address pool object from `Get-HPOVAddressPool`.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Type &lt;&gt;
+### -Type &lt;String[]&gt;
 
 Specify the type of address pool.  Allowed values are:
 
@@ -102,7 +102,7 @@ Get a specific address pool range type (VMAC) from all connected appliances.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

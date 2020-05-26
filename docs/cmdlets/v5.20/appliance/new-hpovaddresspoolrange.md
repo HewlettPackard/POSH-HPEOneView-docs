@@ -8,29 +8,29 @@ description: Create an Address Range.
 
 ```text
 New-HPOVAddressPoolRange
-    [-PoolType] <>
-    [-RangeType] <>
-    [-ApplianceConnection] <>
+    [-PoolType] <String>
+    [-RangeType] <String>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ```text
 New-HPOVAddressPoolRange
-    [-IPSubnet] <>
-    [-Name] <>
-    [-Start] <>
-    [-End] <>
-    [-ApplianceConnection] <>
+    [-IPSubnet] <Object>
+    [-Name] <String>
+    [-Start] <String>
+    [-End] <String>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ```text
 New-HPOVAddressPoolRange
-    [-PoolType] <>
-    [-RangeType] <>
-    [-Start] <>
-    [-End] <>
-    [-ApplianceConnection] <>
+    [-PoolType] <String>
+    [-RangeType] <String>
+    [-Start] <String>
+    [-End] <String>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -86,7 +86,7 @@ Create a new IPv4 address pool range, for the MyAppliance1.domain.com appliance 
 
 ## Parameters
 
-### -IPSubnet &lt;&gt;
+### -IPSubnet &lt;Object&gt;
 
 [Aliases `-IPv4Subnet`] 
 
@@ -94,13 +94,13 @@ The IPv4 Subnet that the new IPv4 Range will be assigned to.  Start and End valu
 
 | Aliases | Subnet, IPv4Subnet, IPv6Subnet |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -PoolType &lt;&gt;
+### -PoolType &lt;String&gt;
 
 Specify the Pool Type the new Range will be assinged to.  Accepted values are:
 
@@ -110,13 +110,13 @@ Specify the Pool Type the new Range will be assinged to.  Accepted values are:
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -RangeType &lt;&gt;
+### -RangeType &lt;String&gt;
 
 The type of Address Range to create (not applicable for IPv4 address pools/Subnets).  Accepted values are:
 
@@ -125,49 +125,49 @@ The type of Address Range to create (not applicable for IPv4 address pools/Subne
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | Generated |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 Provide the IPv4address pool range Name.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Start &lt;&gt;
+### -Start &lt;String&gt;
 
 The starting address in the range.  Cannot overlap with other address ranges, and should be unique within the datacenter/infrastructure.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -End &lt;&gt;
+### -End &lt;String&gt;
 
 The ending address in the range.  Cannot overlap with other address ranges, and should be unique within the datacenter/infrastructure.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). 
 
@@ -175,7 +175,7 @@ When attempting to create a new IPv4 address pool/Subnet, only a single `[HPOneV
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |

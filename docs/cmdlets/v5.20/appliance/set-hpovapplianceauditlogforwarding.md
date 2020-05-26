@@ -8,18 +8,18 @@ description: Modify remote Syslog audit log forwarding.
 
 ```text
 Set-HPOVApplianceAuditLogForwarding
-    [-Enable <>]
-    [-ComputerName] <>
-    [-Port <>]
-    [-RemoveComputerName <>]
-    [-ApplianceConnection <>]
+    [-Enable]
+    [-ComputerName] <string[]>
+    [-Port <int>]
+    [-RemoveComputerName <string[]>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 Set-HPOVApplianceAuditLogForwarding
-    [-Disable] <>
-    [-ApplianceConnection <>]
+    [-Disable]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -67,7 +67,7 @@ Disable remote Syslog audit log forwarding configuration.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -79,19 +79,19 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ComputerName &lt;&gt;
+### -ComputerName &lt;string[]&gt;
 
 The target remote Syslog server IP Address or FQDN.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Port &lt;&gt;
+### -Port &lt;int&gt;
 
 The target remote Syslog server port if not using the default 514/UDP port.
 
@@ -103,7 +103,7 @@ The target remote Syslog server port if not using the default 514/UDP port.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -RemoveComputerName &lt;&gt;
+### -RemoveComputerName &lt;string[]&gt;
 
 Specify one or more remote Syslog server IP Address or FQDN to remove from the configuration.
 
@@ -115,19 +115,19 @@ Specify one or more remote Syslog server IP Address or FQDN to remove from the c
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Disable &lt;&gt;
+### -Disable &lt;SwitchParameter&gt;
 
 Using this parameter will disable remote Syslog audit log forwarding on the specified appliance.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Enable &lt;&gt;
+### -Enable &lt;SwitchParameter&gt;
 
 Using this parameter will enable remote Syslog audit log forwarding on the specified appliance.
 

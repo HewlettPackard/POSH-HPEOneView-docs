@@ -8,13 +8,13 @@ description: Initiate Logical Enclosure Firmware update.
 
 ```text
 Update-HPOVLogicalEnclosureFirmware
-    [-InputObject] <>
-    [-Baseline] <>
-    [-FirmwareUpdateProcess] <>
-    [-InterconnectActivationMode <>]
-    [-ForceInstallation <>]
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-Baseline] <HPOneView.Appliance.Baseline>
+    [-FirmwareUpdateProcess] <String>
+    [-InterconnectActivationMode <String>]
+    [-ForceInstallation]
+    [-Async]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -38,7 +38,7 @@ Get the specified baseline, and update the specified logical enclosure's shared 
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -50,7 +50,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -62,19 +62,19 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Baseline &lt;&gt;
+### -Baseline &lt;HPOneView.Appliance.Baseline&gt;
 
 The firmware bundle or baseline to install.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -FirmwareUpdateProcess &lt;&gt;
+### -FirmwareUpdateProcess &lt;String&gt;
 
 Specify the type of firmware update to invoke.  Allowed values:
 
@@ -84,13 +84,13 @@ Specify the type of firmware update to invoke.  Allowed values:
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ForceInstallation &lt;&gt;
+### -ForceInstallation &lt;SwitchParameter&gt;
 
 Force the `re-installation` or downgrade of components within the baseline.
 
@@ -102,19 +102,19 @@ Force the `re-installation` or downgrade of components within the baseline.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 The `[HPOneView.LogicalEnclosure]` from `Get-HPOVLogicalEnclosure`.
 
 | Aliases | le, LogicalEnclosure |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -InterconnectActivationMode &lt;&gt;
+### -InterconnectActivationMode &lt;String&gt;
 
 Specify the logical interconnect activation mode. Choosing "Parallel" is the fastest update operation but will require downtime and servers to be powered off. Allowed values:
 

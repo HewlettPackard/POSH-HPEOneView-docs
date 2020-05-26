@@ -8,30 +8,30 @@ description: Update an uplink set resource
 
 ```text
 Set-HPOVUplinkSet
-    [-InputObject] <>
-    [-UplinkSetName] <>
-    [-Name <>]
-    [-AddNetwork <>]
-    [-RemoveNetwork <>]
-    [-AddPorts <>]
-    [-RemovePorts <>]
-    [-UntaggedNetwork <>]
-    [-LacpTimer <>]
-    [-ConsistencyChecking <>]
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-UplinkSetName] <string>
+    [-Name <string>]
+    [-AddNetwork <Object[]>]
+    [-RemoveNetwork <Object[]>]
+    [-AddPorts <Object[]>]
+    [-RemovePorts <Object[]>]
+    [-UntaggedNetwork <Object>]
+    [-LacpTimer <string>]
+    [-ConsistencyChecking <string>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 Set-HPOVUplinkSet
-    [-InputObject] <>
-    [-UplinkSetName] <>
-    [-Name <>]
-    [-AddPorts <>]
-    [-RemovePorts <>]
-    [-EnableTrunking <>]
-    [-ConsistencyChecking <>]
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-UplinkSetName] <string>
+    [-Name <string>]
+    [-AddPorts <Object[]>]
+    [-RemovePorts <Object[]>]
+    [-EnableTrunking <bool>]
+    [-ConsistencyChecking <string>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -78,7 +78,7 @@ Add the specific ports to the created uplink set, and change the LACP Timer to "
 
 ## Parameters
 
-### -AddNetwork &lt;&gt;
+### -AddNetwork &lt;Object[]&gt;
 
 Specify the networks to add to the specified uplink set.
 
@@ -90,7 +90,7 @@ Specify the networks to add to the specified uplink set.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -AddPorts &lt;&gt;
+### -AddPorts &lt;Object[]&gt;
 
 Array of uplink ports to add with "BAYID:FacePlatePortID".  When configuring a Synergy infrastructure, the Uplink Port format needs to be "EnclosureID:BayID:FacePlatePortID".
 
@@ -109,7 +109,7 @@ Synergy VC FC `Sub-Interface` `[e.g]`. "Bay2:Q1.1","Bay2:Q2.1" or "Bay5:Q1.2","B
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Aliases [-Appliance]
 
@@ -125,7 +125,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -ConsistencyChecking &lt;&gt;
+### -ConsistencyChecking &lt;string&gt;
 
 Use to indicate if the group policy will be tracked to with the deployed and configured resource. Allowed values:
 
@@ -142,7 +142,7 @@ Default: Exact
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EnableTrunking &lt;&gt;
+### -EnableTrunking &lt;bool&gt;
 
 Use this parameter to enable or disable FC port trunking.  This parameter is only supported with HPE 16Gb or newer Virtual Connect Fibre Channel fabric modules.
 
@@ -154,19 +154,19 @@ Use this parameter to enable or disable FC port trunking.  This parameter is onl
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 Either a Logical Interconnect Group from `Get-HPOVLogicalInterconnectGroup` or Uplink Set `Get-HPOVUplinkSet` resource.
 
 | Aliases |  |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -LacpTimer &lt;&gt;
+### -LacpTimer &lt;string&gt;
 
 Set the LACP Timer value, which sets the lacpdu frequecy to the LACP peer.  Accepted values:
 
@@ -181,7 +181,7 @@ Set the LACP Timer value, which sets the lacpdu frequecy to the LACP peer.  Acce
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Name &lt;&gt;
+### -Name &lt;string&gt;
 
 Specify the new name of the resource.
 
@@ -193,7 +193,7 @@ Specify the new name of the resource.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -RemoveNetwork &lt;&gt;
+### -RemoveNetwork &lt;Object[]&gt;
 
 An array of networks to remove from the uplink set.
 
@@ -205,7 +205,7 @@ An array of networks to remove from the uplink set.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -RemovePorts &lt;&gt;
+### -RemovePorts &lt;Object[]&gt;
 
 Array of uplink ports to remove with "BAYID:FacePlatePortID".  When configuring a Synergy infrastructure, the Uplink Port format needs to be "EnclosureID:BayID:FacePlatePortID".
 
@@ -224,7 +224,7 @@ Synergy VC FC `Sub-Interface` `[e.g]`. "Bay2:Q1.1","Bay2:Q2.1" or "Bay5:Q1.2","B
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -UntaggedNetwork &lt;&gt;
+### -UntaggedNetwork &lt;Object&gt;
 
 Specify the network object that will be set as the untagged network.
 
@@ -236,13 +236,13 @@ Specify the network object that will be set as the untagged network.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -UplinkSetName &lt;&gt;
+### -UplinkSetName &lt;string&gt;
 
 When providing a Logical Interconnect Group resource, you must specify the name of the uplink set to modify.
 
 | Aliases |  |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |

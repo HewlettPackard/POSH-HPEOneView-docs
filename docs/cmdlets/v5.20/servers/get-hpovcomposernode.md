@@ -8,7 +8,7 @@ description: Retrieve Synergy Composer node information.
 
 ```text
 Get-HPOVComposerNode
-    [-ApplianceConnection <>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -39,7 +39,7 @@ Return all Synergy Composer nodes
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

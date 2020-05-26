@@ -8,19 +8,19 @@ description: Retrieve Storage Volume resource(s).
 
 ```text
 Get-HPOVStorageVolume
-    [-Name <>]
-    [-StorageVolumeTemplate <>]
-    [-Available <>]
-    [-Label <>]
-    [-Scope <>]
-    [-ApplianceConnection <>]
+    [-Name <String>]
+    [-StorageVolumeTemplate <Object>]
+    [-Available]
+    [-Label <String>]
+    [-Scope <Object>]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
 ```text
 Get-HPOVStorageVolume
-    [-InputObject <>]
-    [-ApplianceConnection <>]
+    [-InputObject <Object>]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -40,7 +40,7 @@ Return all storage volume resource objects.
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 Provide a Server Profile object and all associated Storage Volumes will be returned.
 
@@ -52,7 +52,7 @@ Provide a Server Profile object and all associated Storage Volumes will be retur
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
  Specify the name of the Storage Volume to display.
 
@@ -64,7 +64,7 @@ Provide a Server Profile object and all associated Storage Volumes will be retur
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Available &lt;&gt;
+### -Available &lt;SwitchParameter&gt;
 
 Use to display Storage Volumes that are available for attachment.
 
@@ -76,7 +76,7 @@ Use to display Storage Volumes that are available for attachment.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Label &lt;&gt;
+### -Label &lt;String&gt;
 
 Specify the label associated with resources.
 
@@ -88,7 +88,7 @@ Specify the label associated with resources.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -100,7 +100,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;&gt;
+### -Scope &lt;Object&gt;
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
@@ -117,7 +117,7 @@ Filter resources based on provided Scope membership.  By default, all resources 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -StorageVolumeTemplate &lt;&gt;
+### -StorageVolumeTemplate &lt;Object&gt;
 
 Return a list of provisioned Storage Volumes by their associated Storage Volume Template.
 

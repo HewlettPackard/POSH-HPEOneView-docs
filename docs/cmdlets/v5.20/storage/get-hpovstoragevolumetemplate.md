@@ -8,10 +8,10 @@ description: Retrieve Storage Volume Template (SVT) resource(s).
 
 ```text
 Get-HPOVStorageVolumeTemplate
-    [-Name <>]
-    [-Label <>]
-    [-Scope <>]
-    [-ApplianceConnection <>]
+    [-Name <String>]
+    [-Label <String>]
+    [-Scope <Object>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -39,7 +39,7 @@ Get the "R5SVT-1" template.
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 The Storage Volume Template name.
 
@@ -51,7 +51,7 @@ The Storage Volume Template name.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Label &lt;&gt;
+### -Label &lt;String&gt;
 
 Specify the label associated with resources.
 
@@ -63,7 +63,7 @@ Specify the label associated with resources.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -77,7 +77,7 @@ Default Value: ${Global:ConnectSessions}
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;&gt;
+### -Scope &lt;Object&gt;
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 

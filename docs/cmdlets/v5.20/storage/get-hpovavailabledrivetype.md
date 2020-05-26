@@ -8,8 +8,8 @@ description: Return a collection of available D3940 disks.
 
 ```text
 Get-HPOVAvailableDriveType
-    [-InputObject] <>
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -49,19 +49,19 @@ Return all available disk drives from the specific D3940 Drive Enclosure.
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 A SAS Logical Interconnect or D3940 Drive Enclosure resource.  If providing a SAS Logical Interconnect, the Cmdlet will automatically locate the available drive enclosures.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 The name of the appliance or list of appliances to execute the command against.
 

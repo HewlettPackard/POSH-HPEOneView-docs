@@ -8,8 +8,8 @@ description: Retrieve configured Remote Support contacts.
 
 ```text
 Get-HPOVRemoteSupportContact
-    [-Name <>]
-    [-ApplianceConnection <>]
+    [-Name <String>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -60,7 +60,7 @@ List all contacts with the name Bob, using the * wildcard character.
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 Full ("Bob Smith") or partial ("Bob*") name of the contact.  When using partial names, please include the * (asterisk) wildcard character.
 
@@ -72,7 +72,7 @@ Full ("Bob Smith") or partial ("Bob*") name of the contact.  When using partial 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

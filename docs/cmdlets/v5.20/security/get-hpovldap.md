@@ -8,15 +8,15 @@ description: List Global Authentication Directory settings.
 
 ```text
 Get-HPOVLdap
-    [-ApplianceConnection <>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 Get-HPOVLdap
-    [-Export <>]
-    [-Save] <>
-    [-ApplianceConnection <>]
+    [-Export]
+    [-Save] <String>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -59,7 +59,7 @@ Export the Global Authentication Directory configuration settings.
 
 ## Parameters
 
-### -Export &lt;&gt;
+### -Export &lt;SwitchParameter&gt;
 
 Export the configured directories to individual files.
 
@@ -71,19 +71,19 @@ Export the configured directories to individual files.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Save &lt;&gt;
+### -Save &lt;String&gt;
 
 Directory where the exported configured directories will be saved to.  A filename of "{appliance_name}_globalSettings.json" will be created.
 
 | Aliases | location |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

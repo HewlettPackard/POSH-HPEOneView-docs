@@ -8,15 +8,15 @@ description: Retrieve SAS Interconnect Type resource(s).
 
 ```text
 Get-HPOVSasInterconnectType
-    [-Name <>]
-    [-ApplianceConnection <>]
+    [-Name <String>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 Get-HPOVSasInterconnectType
-    [-PartNumber <>]
-    [-ApplianceConnection <>]
+    [-PartNumber <String>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -50,7 +50,7 @@ Returns just the "Synergy 12Gb SAS Connection Module" SAS Interconnect Type obje
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 The name of the interconnect type model name to retrieve.
 
@@ -62,7 +62,7 @@ The name of the interconnect type model name to retrieve.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -PartNumber &lt;&gt;
+### -PartNumber &lt;String&gt;
 
 The Part Number of an Interconnect Type to search for.
 
@@ -74,7 +74,7 @@ The Part Number of an Interconnect Type to search for.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

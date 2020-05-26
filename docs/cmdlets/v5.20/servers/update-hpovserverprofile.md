@@ -8,36 +8,36 @@ description: Update Server Profile from Template
 
 ```text
 Update-HPOVServerProfile
-    [-InputObject] <>
-    [-Stage <>]
-    [-ApplianceConnection <>]
-    [-Async <>]
+    [-InputObject] <Object>
+    [-Stage]
+    [-ApplianceConnection <Object>]
+    [-Async]
     [<CommonParameters>]
 ```
 
 ```text
 Update-HPOVServerProfile
-    [-InputObject] <>
-    [-Refresh] <>
-    [-ApplianceConnection <>]
-    [-Async <>]
+    [-InputObject] <Object>
+    [-Refresh]
+    [-ApplianceConnection <Object>]
+    [-Async]
     [<CommonParameters>]
 ```
 
 ```text
 Update-HPOVServerProfile
-    [-InputObject] <>
-    [-Reapply] <>
-    [-Baseline <>]
-    [-AdapterAndBoot <>]
-    [-Connections <>]
-    [-LocalStorage <>]
-    [-SANStorage <>]
-    [-BIOS <>]
-    [-Ilo <>]
-    [-OSDeployment <>]
-    [-ApplianceConnection <>]
-    [-Async <>]
+    [-InputObject] <Object>
+    [-Reapply]
+    [-Baseline]
+    [-AdapterAndBoot]
+    [-Connections]
+    [-LocalStorage]
+    [-SANStorage]
+    [-BIOS]
+    [-Ilo]
+    [-OSDeployment]
+    [-ApplianceConnection <Object>]
+    [-Async]
     [<CommonParameters>]
 ```
 
@@ -71,19 +71,19 @@ Get all Server Profile resources and perform the Update from Server Profile Temp
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 The Name or Resource Object of the specific Server Profile to update.
 
 | Aliases | profile, ServerProfile |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
@@ -95,7 +95,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -107,7 +107,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Reapply &lt;&gt;
+### -Reapply &lt;SwitchParameter&gt;
 
 Use to perform the Reapply Server Profile operation.  Server should be powered off to perform certain operations.
 
@@ -119,7 +119,7 @@ Use to perform the Reapply Server Profile operation.  Server should be powered o
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -AdapterAndBoot &lt;&gt;
+### -AdapterAndBoot &lt;SwitchParameter&gt;
 
 Re-apply Boot settings, including adapter boot preference.
 
@@ -131,7 +131,7 @@ Re-apply Boot settings, including adapter boot preference.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Baseline &lt;&gt;
+### -Baseline &lt;SwitchParameter&gt;
 
 Re-apply Baseline.  If setting is Firmware only, the associated server hardware must be powered off.
 
@@ -143,7 +143,7 @@ Re-apply Baseline.  If setting is Firmware only, the associated server hardware 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Connections &lt;&gt;
+### -Connections &lt;SwitchParameter&gt;
 
 Re-apply Vitual Connect connections.  Will `re-provision` downlink ports and connection templates for the provided server profile.
 
@@ -155,7 +155,7 @@ Re-apply Vitual Connect connections.  Will `re-provision` downlink ports and con
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -LocalStorage &lt;&gt;
+### -LocalStorage &lt;SwitchParameter&gt;
 
 Re-apply Local Storage settings.  This will cause the SmartArray to rescan for disks that should be part of the configured Logical Disk.  Server Hardware must be powered off in order for operation to be successful.
 
@@ -167,7 +167,7 @@ Re-apply Local Storage settings.  This will cause the SmartArray to rescan for d
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SANStorage &lt;&gt;
+### -SANStorage &lt;SwitchParameter&gt;
 
 Re-apply SAN storage settings.  Only applies to SAN zoning and volume presentation, and not recreating SAN volumes.
 
@@ -179,7 +179,7 @@ Re-apply SAN storage settings.  Only applies to SAN zoning and volume presentati
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -BIOS &lt;&gt;
+### -BIOS &lt;SwitchParameter&gt;
 
 Re-apply BIOS settings.  Gen8 server hardware must be powered off for this operation to be allowed.  Gen9 and newer can be performed while the server hardware is powered on.
 
@@ -191,7 +191,7 @@ Re-apply BIOS settings.  Gen8 server hardware must be powered off for this opera
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -OSDeployment &lt;&gt;
+### -OSDeployment &lt;SwitchParameter&gt;
 
 Re-apply OS Deployment Plan settings.
 
@@ -203,7 +203,7 @@ Re-apply OS Deployment Plan settings.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Ilo &lt;&gt;
+### -Ilo &lt;SwitchParameter&gt;
 
 Re-apply iLO settings that are defined in the profile.
 
@@ -215,7 +215,7 @@ Re-apply iLO settings that are defined in the profile.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Stage &lt;&gt;
+### -Stage &lt;SwitchParameter&gt;
 
 If a setting requires the server tobe powered off, certain updates can be staged.
 
@@ -227,13 +227,13 @@ If a setting requires the server tobe powered off, certain updates can be staged
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Refresh &lt;&gt;
+### -Refresh &lt;SwitchParameter&gt;
 
 Choose to refresh the server profile state.  This does not perform `re-apply` or update from template operation.
 
 | Aliases |  |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |

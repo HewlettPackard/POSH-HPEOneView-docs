@@ -8,9 +8,9 @@ description: Disable specific appliance-level component debug logging.
 
 ```text
 Disable-HPOVDebug
-    [-Scope] <>
-    [-LoggerName] <>
-    [-ApplianceConnection] <>
+    [-Scope] <String>
+    [-LoggerName] <String>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -22,37 +22,37 @@ FOR HP SUPPORT USE ONLY.  This Cmdlet will disable appliance level component deb
 
 ## Parameters
 
-### -Scope &lt;&gt;
+### -Scope &lt;String&gt;
 
 The Scope of the LoggerName.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -LoggerName &lt;&gt;
+### -LoggerName &lt;String&gt;
 
 The internal component name.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |

@@ -8,44 +8,44 @@ description: Get a member device from a defined Rack.
 
 ```text
 New-HPOVDataCenter
-    [-Name] <>
-    [-Width] <>
-    [-Depth] <>
-    [-Millimeters <>]
-    [-ElectricalDerating <>]
-    [-ElectricalDeratingType <>]
-    [-DefaultVoltage <>]
-    [-Currency <>]
-    [-PowerCosts <>]
-    [-CoolingCapacity <>]
-    [-CoolingMultiplier <>]
-    [-ApplianceConnection <>]
+    [-Name] <String>
+    [-Width] <Float>
+    [-Depth] <Float>
+    [-Millimeters]
+    [-ElectricalDerating <Int>]
+    [-ElectricalDeratingType <String>]
+    [-DefaultVoltage <Int>]
+    [-Currency <String>]
+    [-PowerCosts <Float>]
+    [-CoolingCapacity <Int>]
+    [-CoolingMultiplier <Float>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 New-HPOVDataCenter
-    [-Name] <>
-    [-Width] <>
-    [-Depth] <>
-    [-Millimeters <>]
-    [-ElectricalDerating <>]
-    [-ElectricalDeratingType <>]
-    [-DefaultVoltage <>]
-    [-Currency <>]
-    [-PowerCosts <>]
-    [-CoolingCapacity <>]
-    [-CoolingMultiplier <>]
-    [-PrimaryContact] <>
-    [-SecondaryContact] <>
-    [-Address1] <>
-    [-Address2 <>]
-    [-City] <>
-    [-State] <>
-    [-PostCode] <>
-    [-Country] <>
-    [-TimeZone] <>
-    [-ApplianceConnection <>]
+    [-Name] <String>
+    [-Width] <Float>
+    [-Depth] <Float>
+    [-Millimeters]
+    [-ElectricalDerating <Int>]
+    [-ElectricalDeratingType <String>]
+    [-DefaultVoltage <Int>]
+    [-Currency <String>]
+    [-PowerCosts <Float>]
+    [-CoolingCapacity <Int>]
+    [-CoolingMultiplier <Float>]
+    [-PrimaryContact] <Object>
+    [-SecondaryContact] <Object>
+    [-Address1] <String>
+    [-Address2 <String>]
+    [-City] <String>
+    [-State] <String>
+    [-PostCode] <String>
+    [-Country] <String>
+    [-TimeZone] <String>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -110,43 +110,43 @@ Create a new datacenter with Remote Support settings.
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 A name to identify the data center. Must not exceed 255 characters; no leading spaces.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Width &lt;&gt;
+### -Width &lt;Float&gt;
 
 Width of the datacenter, in (US) Feet.  Maximum of 50 meters (164.042 feet).  Millimeters can be used, which requires the `-Millimeters` switch parameter.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Depth &lt;&gt;
+### -Depth &lt;Float&gt;
 
 Depth of the datacenter, in (US) Feet.  Maximum of 50 meters (164.042 feet).  Millimeters can be used, which requires the `-Millimeters` switch parameter.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Millimeters &lt;&gt;
+### -Millimeters &lt;SwitchParameter&gt;
 
 If specifying millimeter value for Width and Depth, this parameter is required.
 
@@ -158,7 +158,7 @@ If specifying millimeter value for Width and Depth, this parameter is required.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ElectricalDerating &lt;&gt;
+### -ElectricalDerating &lt;Int&gt;
 
 If Custom ElectricalDetratingType is set to Custom, specify a value between `20-100`%.
 
@@ -172,7 +172,7 @@ Default: 20%
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ElectricalDeratingType &lt;&gt;
+### -ElectricalDeratingType &lt;String&gt;
 
 The percentage below the rated maximum power dissipation at which the devices are operated, accounting for case/body temperature, ambient temperature, and type of cooling.
 
@@ -188,7 +188,7 @@ Default: NA/Jp
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DefaultVoltage &lt;&gt;
+### -DefaultVoltage &lt;Int&gt;
 
 The default power line voltage for the data center.
 
@@ -202,7 +202,7 @@ Default: 220
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Currency &lt;&gt;
+### -Currency &lt;String&gt;
 
 The currency unit for energy costs.
 
@@ -214,7 +214,7 @@ The currency unit for energy costs.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -PowerCosts &lt;&gt;
+### -PowerCosts &lt;Float&gt;
 
 The energy cost per kWh, specified by the Currency.
 
@@ -226,7 +226,7 @@ The energy cost per kWh, specified by the Currency.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -CoolingCapacity &lt;&gt;
+### -CoolingCapacity &lt;Int&gt;
 
 The maximum cooling capacity for the data center, in KW. The appliance analyzes heat generation using this value.
 
@@ -238,7 +238,7 @@ The maximum cooling capacity for the data center, in KW. The appliance analyzes 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -CoolingMultiplier &lt;&gt;
+### -CoolingMultiplier &lt;Float&gt;
 
 The ratio of cooling cost to power cost for the data center.
 
@@ -254,43 +254,43 @@ Default:  1.5
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -PrimaryContact &lt;&gt;
+### -PrimaryContact &lt;Object&gt;
 
 Primary Remote Support Contact object from `Get-HPOVRemoteSupportContact` defined on the appliance.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SecondaryContact &lt;&gt;
+### -SecondaryContact &lt;Object&gt;
 
 Secondary Remote Support Contact object from `Get-HPOVRemoteSupportContact` defined on the appliance.  Must not be the same value as the Primary Contact.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Address1 &lt;&gt;
+### -Address1 &lt;String&gt;
 
 Address of datacenter.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Address2 &lt;&gt;
+### -Address2 &lt;String&gt;
 
 Optional address line.
 
@@ -302,67 +302,67 @@ Optional address line.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -City &lt;&gt;
+### -City &lt;String&gt;
 
 City of residence for the datacenter.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -State &lt;&gt;
+### -State &lt;String&gt;
 
 State/province of residence for the datacenter.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -PostCode &lt;&gt;
+### -PostCode &lt;String&gt;
 
 Postal code for the datacenter.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Country &lt;&gt;
+### -Country &lt;String&gt;
 
 Country of residence for the datacenter.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -TimeZone &lt;&gt;
+### -TimeZone &lt;String&gt;
 
 Time Zone of residence for the datacenter.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

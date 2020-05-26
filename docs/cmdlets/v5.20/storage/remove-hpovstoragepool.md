@@ -8,18 +8,18 @@ description: Delete storage pool resource(s).
 
 ```text
 Remove-HPOVStoragePool
-    [-InputObject] <>
-    [-Force <>]
-    [-ApplianceConnection] <>
+    [-InputObject] <Object>
+    [-Force]
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ```text
 Remove-HPOVStoragePool
-    [-InputObject] <>
-    [-StorageSystem] <>
-    [-Force <>]
-    [-ApplianceConnection] <>
+    [-InputObject] <Object>
+    [-StorageSystem] <Object>
+    [-Force]
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -56,31 +56,31 @@ Search for all storage pools and remove them from appliance.
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 The network object(s) or name(s) to be removed on the appliance.
 
 | Aliases | uri, name, StoragePool |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -StorageSystem &lt;&gt;
+### -StorageSystem &lt;Object&gt;
 
 Provide the Storage System Name, URI or Object when the StoragePool name is not unique.
 
 | Aliases | storage |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Force &lt;&gt;
+### -Force &lt;SwitchParameter&gt;
 
 If specified, the Storage Pool resource will forceablly removed despite any problems with network connectivity or errors with the resource.
 
@@ -92,19 +92,19 @@ If specified, the Storage Pool resource will forceablly removed despite any prob
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -WhatIf &lt;&gt;
+### -WhatIf &lt;SwitchParameter&gt;
 
 
 
@@ -116,7 +116,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Confirm &lt;&gt;
+### -Confirm &lt;SwitchParameter&gt;
 
 
 

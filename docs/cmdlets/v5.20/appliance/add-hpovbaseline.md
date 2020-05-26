@@ -8,11 +8,11 @@ description: Upload new SPP Baseline or hotfix to appliance firmware repository.
 
 ```text
 Add-HPOVBaseline
-    [-File] <>
-    [-CompSigFile <>]
-    [-Scope <>]
-    [-ApplianceConnection <>]
-    [-Async <>]
+    [-File] <String>
+    [-CompSigFile <String>]
+    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
+    [-ApplianceConnection <Array>]
+    [-Async]
     [<CommonParameters>]
 ```
 
@@ -67,19 +67,19 @@ Upload the specified Gen10 hotfix and its associated compsig file to all connect
 
 ## Parameters
 
-### -File &lt;&gt;
+### -File &lt;String&gt;
 
 The full path and file name of the SPP file.  The function returns an error if the file path cannot be validated.
 
 | Aliases | sppFile |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -CompSigFile &lt;&gt;
+### -CompSigFile &lt;String&gt;
 
 When adding a Gen10 hotfix component, the associated compsig file is required to validate the digital signature of the hotfix.  Use this parameter to accompany the hotfix file upload to the repository.
 
@@ -91,7 +91,7 @@ When adding a Gen10 hotfix component, the associated compsig file is required to
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -103,7 +103,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -115,7 +115,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;&gt;
+### -Scope &lt;HPOneView.Appliance.ScopeCollection[]&gt;
 
 Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
 

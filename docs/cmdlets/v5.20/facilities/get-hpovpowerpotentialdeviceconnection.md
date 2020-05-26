@@ -8,8 +8,8 @@ description: Retrieve power device (mPDU/Rack PDU) potential connections.
 
 ```text
 Get-HPOVPowerPotentialDeviceConnection
-    [-PowerDevice <>]
-    [-ApplianceConnection] <>
+    [-PowerDevice <Object>]
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -37,7 +37,7 @@ Return the potential power device connections for the "iPDU_A" power delivery de
 
 ## Parameters
 
-### -PowerDevice &lt;&gt;
+### -PowerDevice &lt;Object&gt;
 
 The name of the power device resource.  Can provide Name, URI or Object.
 
@@ -49,13 +49,13 @@ The name of the power device resource.  Can provide Name, URI or Object.
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |

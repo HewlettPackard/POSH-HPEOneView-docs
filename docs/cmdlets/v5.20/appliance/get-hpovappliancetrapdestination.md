@@ -8,9 +8,9 @@ description: Get configured appliance SNMP trap destinations.
 
 ```text
 Get-HPOVApplianceTrapDestination
-    [-Destination <>]
-    [-Type <>]
-    [-ApplianceConnection <>]
+    [-Destination <String>]
+    [-Type <String[]>]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -44,7 +44,7 @@ Get the specific appliance trap destination.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -56,7 +56,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Destination &lt;&gt;
+### -Destination &lt;String&gt;
 
 Filter trap destinations by the destination value.  Supports wildcard.
 
@@ -68,7 +68,7 @@ Filter trap destinations by the destination value.  Supports wildcard.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Type &lt;&gt;
+### -Type &lt;String[]&gt;
 
 Filter based on SNMP version.  Supported values:
 

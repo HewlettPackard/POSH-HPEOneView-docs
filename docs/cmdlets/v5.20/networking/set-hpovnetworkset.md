@@ -8,16 +8,16 @@ description: Modify an existing network set.
 
 ```text
 Set-HPOVNetworkSet
-    [-InputObject] <>
-    [-Name <>]
-    [-Networks <>]
-    [-AddNetwork <>]
-    [-RemoveNetwork <>]
-    [-UntaggedNetwork <>]
-    [-TypicalBandwidth <>]
-    [-MaximumBandwidth <>]
-    [-ApplianceConnection <>]
-    [-Large <>]
+    [-InputObject] <Object>
+    [-Name <String>]
+    [-Networks <Object[]>]
+    [-AddNetwork <Object[]>]
+    [-RemoveNetwork <Object>]
+    [-UntaggedNetwork <Object>]
+    [-TypicalBandwidth <Int32>]
+    [-MaximumBandwidth <Int32>]
+    [-ApplianceConnection <Object>]
+    [-Large]
     [<CommonParameters>]
 ```
 
@@ -74,19 +74,19 @@ Remove the specified networks from the existing network set.
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 The Network Set resource object to be modified.
 
 | Aliases | NetSet, NetworkSet |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 The updated name value of the Network Set.
 
@@ -98,7 +98,7 @@ The updated name value of the Network Set.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Networks &lt;&gt;
+### -Networks &lt;Object[]&gt;
 
 An array containing the updated list of networks.  May contain Network objects, names or URI"s.
 
@@ -110,7 +110,7 @@ An array containing the updated list of networks.  May contain Network objects, 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -AddNetwork &lt;&gt;
+### -AddNetwork &lt;Object[]&gt;
 
 Specify 1 or more network resources to add to the specified network set.
 
@@ -122,7 +122,7 @@ Specify 1 or more network resources to add to the specified network set.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -RemoveNetwork &lt;&gt;
+### -RemoveNetwork &lt;Object&gt;
 
 Specify 1 or more network resources to remove from the specified network set.
 
@@ -134,7 +134,7 @@ Specify 1 or more network resources to remove from the specified network set.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -UntaggedNetwork &lt;&gt;
+### -UntaggedNetwork &lt;Object&gt;
 
 The Name or URI of the Untaggged, or Native Network for the Network Set.
 
@@ -146,7 +146,7 @@ The Name or URI of the Untaggged, or Native Network for the Network Set.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -TypicalBandwidth &lt;&gt;
+### -TypicalBandwidth &lt;Int32&gt;
 
 The updated Typical or Preferred bandwidth, in Mbps.
 
@@ -158,7 +158,7 @@ The updated Typical or Preferred bandwidth, in Mbps.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -MaximumBandwidth &lt;&gt;
+### -MaximumBandwidth &lt;Int32&gt;
 
 The updated MAximum bandwidth, in Mbps.
 
@@ -170,7 +170,7 @@ The updated MAximum bandwidth, in Mbps.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
@@ -182,7 +182,7 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -Large &lt;&gt;
+### -Large &lt;SwitchParameter&gt;
 
 A "Regular" network set (-Large:$False) may contain up to 162 networks. "Large" network sets can contain up to 4000 networks and can only be used by server profile template connections or server profile connections assigned to rackmount or HPE Synergy server hardware. A network set cannot be converted from regular to large if the network set is already in use by a server profile or server profile template.
 

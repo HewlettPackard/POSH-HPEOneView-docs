@@ -8,18 +8,18 @@ description: Modify an existing Datacenter Remote Support setting.
 
 ```text
 Set-HPOVDataCenterRemoteSupport
-    [-InputObject] <>
-    [-PrimaryContact <>]
-    [-SecondaryContact <>]
-    [-Address1 <>]
-    [-Address2 <>]
-    [-City <>]
-    [-State <>]
-    [-PostCode] <>
-    [-Country <>]
-    [-TimeZone <>]
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-PrimaryContact <Object>]
+    [-SecondaryContact <Object>]
+    [-Address1 <String>]
+    [-Address2 <String>]
+    [-City <String>]
+    [-State <String>]
+    [-PostCode] <String>
+    [-Country <String>]
+    [-TimeZone <String>]
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -45,19 +45,19 @@ Modify "LA DC 12" datacenter with new Primary Contact.
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 The DataCenter to modify.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -PrimaryContact &lt;&gt;
+### -PrimaryContact &lt;Object&gt;
 
 Primary Remote Support Contact object from `Get-HPOVRemoteSupportContact` defined on the appliance.
 
@@ -69,7 +69,7 @@ Primary Remote Support Contact object from `Get-HPOVRemoteSupportContact` define
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SecondaryContact &lt;&gt;
+### -SecondaryContact &lt;Object&gt;
 
 Secondary Remote Support Contact object from `Get-HPOVRemoteSupportContact` defined on the appliance.  Must not be the same value as the Primary Contact.
 
@@ -81,7 +81,7 @@ Secondary Remote Support Contact object from `Get-HPOVRemoteSupportContact` defi
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Address1 &lt;&gt;
+### -Address1 &lt;String&gt;
 
 Address of datacenter.
 
@@ -93,7 +93,7 @@ Address of datacenter.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Address2 &lt;&gt;
+### -Address2 &lt;String&gt;
 
 Optional address line.
 
@@ -105,7 +105,7 @@ Optional address line.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -City &lt;&gt;
+### -City &lt;String&gt;
 
 City of residence for the datacenter.
 
@@ -117,7 +117,7 @@ City of residence for the datacenter.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -State &lt;&gt;
+### -State &lt;String&gt;
 
 State/province of residence for the datacenter.
 
@@ -129,19 +129,19 @@ State/province of residence for the datacenter.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -PostCode &lt;&gt;
+### -PostCode &lt;String&gt;
 
 Postal code for the datacenter.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Country &lt;&gt;
+### -Country &lt;String&gt;
 
 Country of residence for the datacenter.
 
@@ -153,7 +153,7 @@ Country of residence for the datacenter.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -TimeZone &lt;&gt;
+### -TimeZone &lt;String&gt;
 
 Time Zone of residence for the datacenter.
 
@@ -165,7 +165,7 @@ Time Zone of residence for the datacenter.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -177,7 +177,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

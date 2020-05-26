@@ -8,26 +8,26 @@ description: Refresh or reconnect a rack manager resource.
 
 ```text
 Update-HPOVRackManager
-    [-InputObject] <>
-    [-Force <>]
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-InputObject] <HPOneView.Servers.RackManager[]>
+    [-Force]
+    [-Async]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
 ```text
 Update-HPOVRackManager
-    [-InputObject] <>
-    [-Hostname] <>
-    [-Credential <>]
-    [-Force <>]
-    [-Async <>]
+    [-InputObject] <HPOneView.Servers.RackManager[]>
+    [-Hostname] <String>
+    [-Credential <PSCredential>]
+    [-Force]
+    [-Async]
     [<CommonParameters>]
 ```
 
 ```text
 Update-HPOVRackManager
-    [-ApplianceConnection <>]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -57,7 +57,7 @@ Refresh the specified rack manager resource, and provide the credentials to rest
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -69,7 +69,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -81,7 +81,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Credential &lt;&gt;
+### -Credential &lt;PSCredential&gt;
 
 Use this parameter if you want to provide a PSCredential object instead.
 
@@ -93,7 +93,7 @@ Use this parameter if you want to provide a PSCredential object instead.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Force &lt;&gt;
+### -Force &lt;SwitchParameter&gt;
 
 ****WARNING****
 Please use with caution.  Using this parameter will force delete a resource for any reason and cannot be undone.
@@ -108,25 +108,25 @@ Force update the resource.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Hostname &lt;&gt;
+### -Hostname &lt;String&gt;
 
 The FQDN or IP Address of the rack manager.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;HPOneView.Servers.RackManager[]&gt;
 
 The `[HPOneView.Servers.RackManager]` resource to refresh.
 
 | Aliases | name, Server |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |

@@ -8,10 +8,10 @@ description: Add supported resource to rack.
 
 ```text
 Add-HPOVResourceToRack
-    [-InputObject] <>
-    [-Rack] <>
-    [-ULocation] <>
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-Rack] <Object>
+    [-ULocation] <Int32>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -70,7 +70,7 @@ Add Enclosures which the Onboard Administrators report are in "MyRack222", and a
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 The supported resource object to add.
 Supported resource objects are:
@@ -82,37 +82,37 @@ Supported resource objects are:
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Rack &lt;&gt;
+### -Rack &lt;Object&gt;
 
 The Rack object from `Get-HPOVRack`.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ULocation &lt;&gt;
+### -ULocation &lt;Int32&gt;
 
 The rack unit location where the resource is located.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | 0 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

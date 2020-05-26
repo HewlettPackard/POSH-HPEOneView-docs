@@ -8,10 +8,10 @@ description: Get claimed rack manage resource.
 
 ```text
 Get-HPOVRackManager
-    [-Name <>]
-    [-Label <>]
-    [-Scope <>]
-    [-ApplianceConnection <>]
+    [-Name <String>]
+    [-Label <String>]
+    [-Scope <Object>]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -61,7 +61,7 @@ Get the specified rack manager resource.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -73,7 +73,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Label &lt;&gt;
+### -Label &lt;String&gt;
 
 Specify the label associated with resources.
 
@@ -85,7 +85,7 @@ Specify the label associated with resources.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 Specify a resource name to filter for.
 
@@ -97,7 +97,7 @@ Specify a resource name to filter for.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;&gt;
+### -Scope &lt;Object&gt;
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 

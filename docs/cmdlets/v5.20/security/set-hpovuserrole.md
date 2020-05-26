@@ -8,9 +8,9 @@ description: (Deprecated) Assign or change roles for an existing user.
 
 ```text
 Set-HPOVUserRole
-    [-Name] <>
-    [-Roles] <>
-    [-ApplianceConnection] <>
+    [-Name] <Object>
+    [-Roles] <Array>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -30,19 +30,19 @@ Set the Server Administrator role for Sally"s user account.
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;Object&gt;
 
 The name of the user account to have a role assigned.
 
 | Aliases | user, userName |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Roles &lt;&gt;
+### -Roles &lt;Array&gt;
 
 The role(s) to assign to the Directroy Group, in `[System.Collections.ArrayList]` format.  Accepted values are noted within the ApplianceRoles property of the `[HPOneView.Appliance.Connection]` object stored in the $Global:ConnectedSessions variable.
 
@@ -50,19 +50,19 @@ Example: $roles = "Server administrator","Network administrator"
 
 | Aliases | roleName |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |

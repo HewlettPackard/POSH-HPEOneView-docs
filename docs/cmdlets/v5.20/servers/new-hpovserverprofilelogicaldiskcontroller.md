@@ -8,21 +8,21 @@ description: Create Server Profile disk controller policy object.
 
 ```text
 New-HPOVServerProfileLogicalDiskController
-    [-ControllerID] <>
-    [-Mode] <>
-    [-Initialize <>]
-    [-WriteCache <>]
-    [-LogicalDisk] <>
+    [-ControllerID] <Object>
+    [-Mode] <String>
+    [-Initialize]
+    [-WriteCache <String>]
+    [-LogicalDisk] <Object>
     [<CommonParameters>]
 ```
 
 ```text
 New-HPOVServerProfileLogicalDiskController
-    [-ControllerID] <>
-    [-Mode] <>
-    [-Initialize <>]
-    [-WriteCache <>]
-    [-ImportExistingConfiguration <>]
+    [-ControllerID] <Object>
+    [-Mode] <String>
+    [-Initialize]
+    [-WriteCache <String>]
+    [-ImportExistingConfiguration]
     [<CommonParameters>]
 ```
 
@@ -80,7 +80,7 @@ Create a RAID5 Logical Disk for a Server Profile using D3940 storage, and a spec
 
 ## Parameters
 
-### -ControllerID &lt;&gt;
+### -ControllerID &lt;Object&gt;
 
 Specify the Controller ID location.  Supported options for this parameter are
      * Embedded
@@ -91,13 +91,13 @@ Please note that Mezz 1, Mezz 2 and Mezz 3 are only supported with HPE Synergy C
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | Embedded |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Mode &lt;&gt;
+### -Mode &lt;String&gt;
 
 The mode to configure the Smart Array Controller as.  Accepted values are:
 
@@ -108,13 +108,13 @@ When specifying HBA, you cannot attach a RAID Logical Disk to this policy.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | RAID |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Initialize &lt;&gt;
+### -Initialize &lt;SwitchParameter&gt;
 
 Use this parameter to `re-initialize` the controller.  This will wipe any existing logical disk configured for the controller and deploy the new policy defined.  Not supported when ControllerID is "Mezz 1", "Mezz 2", or "Mezz 3".
 
@@ -126,7 +126,7 @@ Use this parameter to `re-initialize` the controller.  This will wipe any existi
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ImportExistingConfiguration &lt;&gt;
+### -ImportExistingConfiguration &lt;SwitchParameter&gt;
 
 Specify to import any found Logical Disk configuration and add to the Server Profile as the Logical Disk policy.  This option is not available for Server Profile Templates.  Not supported when ControllerID is "Mezz 1", "Mezz 2", or "Mezz 3".
 
@@ -138,19 +138,19 @@ Specify to import any found Logical Disk configuration and add to the Server Pro
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -LogicalDisk &lt;&gt;
+### -LogicalDisk &lt;Object&gt;
 
 A collection of Logical Disk objects from the `New-HPOVServerProfileLogicalDisk` Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -WriteCache &lt;&gt;
+### -WriteCache &lt;String&gt;
 
 For Gen10 controllers, to enable, disable or unmanage controller write cache policy.  Allowed values:
 

@@ -8,7 +8,7 @@ description: Reset appliance connection active permissions back to login default
 
 ```text
 Pop-HPOVAppliancePermission
-    [-ApplianceConnection <>]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -28,7 +28,7 @@ Reset appliance connection active permissions to default.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

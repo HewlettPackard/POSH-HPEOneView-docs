@@ -8,82 +8,82 @@ description: Create storage volume template.
 
 ```text
 New-HPOVStorageVolumeTemplate
-    [-Name] <>
-    [-StoragePool <>]
-    [-Capacity] <>
-    [-Description <>]
-    [-LockStoragePool <>]
-    [-SnapshotStoragePool <>]
-    [-LockSnapShotStoragePool <>]
-    [-StorageSystem <>]
-    [-LockCapacity <>]
-    [-Full <>]
-    [-ProvisioningType <>]
-    [-LockProvisionType <>]
-    [-EnableDeduplication <>]
-    [-LockEnableDeduplication <>]
-    [-EnableCompression <>]
-    [-LockEnableCompression <>]
-    [-Shared <>]
-    [-LockProvisionMode <>]
-    [-Scope <>]
-    [-ApplianceConnection <>]
+    [-Name] <String>
+    [-StoragePool <Object>]
+    [-Capacity] <Int64>
+    [-Description <String>]
+    [-LockStoragePool]
+    [-SnapshotStoragePool <Object>]
+    [-LockSnapShotStoragePool]
+    [-StorageSystem <Object>]
+    [-LockCapacity]
+    [-Full]
+    [-ProvisioningType <String>]
+    [-LockProvisionType]
+    [-EnableDeduplication <Boolean>]
+    [-LockEnableDeduplication]
+    [-EnableCompression <Boolean>]
+    [-LockEnableCompression]
+    [-Shared]
+    [-LockProvisionMode]
+    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 New-HPOVStorageVolumeTemplate
-    [-Name] <>
-    [-StoragePool <>]
-    [-Capacity] <>
-    [-PerformancePolicy <>]
-    [-Description <>]
-    [-LockStoragePool <>]
-    [-LockCapacity <>]
-    [-ProvisioningType <>]
-    [-LockProvisionType <>]
-    [-Shared <>]
-    [-LockProvisionMode <>]
-    [-LockPerformancePolicy <>]
-    [-EnableEncryption <>]
-    [-LockEnableEncryption <>]
-    [-CachePinning <>]
-    [-LockCachePinning <>]
-    [-VolumeSet <>]
-    [-LockVolumeSet <>]
-    [-EnableIOPSLimit <>]
-    [-IOPSLimit <>]
-    [-LockIOPSLimit <>]
-    [-EnableDataTransferLimit <>]
-    [-DataTransferLimit <>]
-    [-LockDataTransferLimit <>]
-    [-Folder <>]
-    [-LockFolder <>]
-    [-Scope <>]
-    [-ApplianceConnection <>]
+    [-Name] <String>
+    [-StoragePool <Object>]
+    [-Capacity] <Int64>
+    [-PerformancePolicy <HPOneView.Storage.PerformancePolicy>]
+    [-Description <String>]
+    [-LockStoragePool]
+    [-LockCapacity]
+    [-ProvisioningType <String>]
+    [-LockProvisionType]
+    [-Shared]
+    [-LockProvisionMode]
+    [-LockPerformancePolicy]
+    [-EnableEncryption <bool>]
+    [-LockEnableEncryption]
+    [-CachePinning <bool>]
+    [-LockCachePinning]
+    [-VolumeSet <HPOneView.Storage.VolumeSet>]
+    [-LockVolumeSet]
+    [-EnableIOPSLimit <bool>]
+    [-IOPSLimit <int>]
+    [-LockIOPSLimit]
+    [-EnableDataTransferLimit <bool>]
+    [-DataTransferLimit <int>]
+    [-LockDataTransferLimit]
+    [-Folder <HPOneView.Storage.NimbleFolder>]
+    [-LockFolder]
+    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 New-HPOVStorageVolumeTemplate
-    [-Name] <>
-    [-StoragePool <>]
-    [-Capacity] <>
-    [-Description <>]
-    [-LockStoragePool <>]
-    [-StorageSystem <>]
-    [-LockCapacity <>]
-    [-Full <>]
-    [-ProvisioningType <>]
-    [-LockProvisionType <>]
-    [-Shared <>]
-    [-LockProvisionMode <>]
-    [-DataProtectionLevel <>]
-    [-LockProtectionLevel <>]
-    [-EnableAdaptiveOptimization <>]
-    [-LockAdaptiveOptimization <>]
-    [-Scope <>]
-    [-ApplianceConnection <>]
+    [-Name] <String>
+    [-StoragePool <Object>]
+    [-Capacity] <Int64>
+    [-Description <String>]
+    [-LockStoragePool]
+    [-StorageSystem <Object>]
+    [-LockCapacity]
+    [-Full]
+    [-ProvisioningType <String>]
+    [-LockProvisionType]
+    [-Shared]
+    [-LockProvisionMode]
+    [-DataProtectionLevel <String>]
+    [-LockProtectionLevel]
+    [-EnableAdaptiveOptimization]
+    [-LockAdaptiveOptimization]
+    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -128,19 +128,19 @@ Use the `Get-HPOVStoragePool` Cmdlet to get the "R5-CPG12" pool, and create a ne
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 Storage Volume Template name
 
 | Aliases | TemplateName |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Description &lt;&gt;
+### -Description &lt;String&gt;
 
 Provide the description for the Storage Volume Template
 
@@ -152,7 +152,7 @@ Provide the description for the Storage Volume Template
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -StoragePool &lt;&gt;
+### -StoragePool &lt;Object&gt;
 
 Specify the Storage Pool (aka CPG) the Storage Volume Template will be associated with.  Storage Pool must already be managed by OneView.
 
@@ -164,7 +164,7 @@ Specify the Storage Pool (aka CPG) the Storage Volume Template will be associate
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SnapshotStoragePool &lt;&gt;
+### -SnapshotStoragePool &lt;Object&gt;
 
 Specify the Storage Pool (aka CPG) the Storage Volume Template will use for volume snapshot use.  The provided Storage Pool must already be managed by OneView.  If you omit this value, then the StoragePool parameter value will be used.  Only supported with HPE StoreServe platforms.
 
@@ -176,7 +176,7 @@ Specify the Storage Pool (aka CPG) the Storage Volume Template will use for volu
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -StorageSystem &lt;&gt;
+### -StorageSystem &lt;Object&gt;
 
 If there are multiple Storage Pool resources with the same name, use this parameter to filter for the correct pool object.
 
@@ -188,19 +188,19 @@ If there are multiple Storage Pool resources with the same name, use this parame
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Capacity &lt;&gt;
+### -Capacity &lt;Int64&gt;
 
 Max volume capacity in GB.  `[e.g]`. 20 to specify 20GB.
 
 | Aliases | size |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | 0 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Full &lt;&gt;
+### -Full &lt;SwitchParameter&gt;
 
 {% hint style="info" %}
 This parameter is being deprecated for the `-ProvisionType` parameter. Please update your scripts.
@@ -218,7 +218,7 @@ Default: Thin
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Shared &lt;&gt;
+### -Shared &lt;SwitchParameter&gt;
 
 Include this switch to mark the Storage Volume Template as a Shareable resource for shared volume access.
 
@@ -230,7 +230,7 @@ Include this switch to mark the Storage Volume Template as a Shareable resource 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DataProtectionLevel &lt;&gt;
+### -DataProtectionLevel &lt;String&gt;
 
 Specify the StoreVirtual protection level (aka Network RAID) for the volume.  Allowed values are:
 
@@ -249,7 +249,7 @@ Specify the StoreVirtual protection level (aka Network RAID) for the volume.  Al
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -LockProtectionLevel &lt;&gt;
+### -LockProtectionLevel &lt;SwitchParameter&gt;
 
 Specify to lock the DataProtectionLevel value in the template.
 
@@ -261,7 +261,7 @@ Specify to lock the DataProtectionLevel value in the template.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EnableAdaptiveOptimization &lt;&gt;
+### -EnableAdaptiveOptimization &lt;SwitchParameter&gt;
 
 Whether or not Adaptive Optimization is enabled on the storage volume.  Only supported with StoreVirtual.
 
@@ -273,7 +273,7 @@ Whether or not Adaptive Optimization is enabled on the storage volume.  Only sup
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -LockAdaptiveOptimization &lt;&gt;
+### -LockAdaptiveOptimization &lt;SwitchParameter&gt;
 
 Specify to lock the EnableAdaptiveOptimization value in the template.
 
@@ -285,7 +285,7 @@ Specify to lock the EnableAdaptiveOptimization value in the template.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ProvisioningType &lt;&gt;
+### -ProvisioningType &lt;String&gt;
 
 Specify the type of volume to provision.  Allowed values are:
 
@@ -301,7 +301,7 @@ Specify the type of volume to provision.  Allowed values are:
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -LockProvisionType &lt;&gt;
+### -LockProvisionType &lt;SwitchParameter&gt;
 
 Specify to lock the ProvisionType value in the template.
 
@@ -313,7 +313,7 @@ Specify to lock the ProvisionType value in the template.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -LockStoragePool &lt;&gt;
+### -LockStoragePool &lt;SwitchParameter&gt;
 
 Specify to lock the StoragePool value in the template.
 
@@ -325,7 +325,7 @@ Specify to lock the StoragePool value in the template.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -LockSnapShotStoragePool &lt;&gt;
+### -LockSnapShotStoragePool &lt;SwitchParameter&gt;
 
 Specify to lock the SnapshotStoragePool value in the template.
 
@@ -337,7 +337,7 @@ Specify to lock the SnapshotStoragePool value in the template.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -LockCapacity &lt;&gt;
+### -LockCapacity &lt;SwitchParameter&gt;
 
 Specify to lock the Capacity value in the template.
 
@@ -349,7 +349,7 @@ Specify to lock the Capacity value in the template.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -LockProvisionMode &lt;&gt;
+### -LockProvisionMode &lt;SwitchParameter&gt;
 
 Specify to lock the Provision Mode (Shared or Private) value in the template.
 
@@ -361,7 +361,7 @@ Specify to lock the Provision Mode (Shared or Private) value in the template.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
@@ -373,7 +373,7 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;&gt;
+### -Scope &lt;HPOneView.Appliance.ScopeCollection[]&gt;
 
 Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
 
@@ -385,7 +385,7 @@ Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EnableCompression &lt;&gt;
+### -EnableCompression &lt;Boolean&gt;
 
 Enable compression for StoreServe (3PAR) supported resources. Please verify the InformOS version installed supports Compression.
 
@@ -397,7 +397,7 @@ Enable compression for StoreServe (3PAR) supported resources. Please verify the 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EnableDeduplication &lt;&gt;
+### -EnableDeduplication &lt;Boolean&gt;
 
 Enable deduplication for `SSD-based` Storage Pools (CPG).
 
@@ -409,7 +409,7 @@ Enable deduplication for `SSD-based` Storage Pools (CPG).
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -LockEnableDeduplication &lt;&gt;
+### -LockEnableDeduplication &lt;SwitchParameter&gt;
 
 Lock the EnableDeduplication value.
 
@@ -421,7 +421,7 @@ Lock the EnableDeduplication value.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -LockEnableCompression &lt;&gt;
+### -LockEnableCompression &lt;SwitchParameter&gt;
 
 Lock the EnableCompression value.
 
@@ -433,7 +433,7 @@ Lock the EnableCompression value.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -CachePinning &lt;&gt;
+### -CachePinning &lt;bool&gt;
 
 This is applicable for hybrid (a mix of flash and mechanical storage) arrays, and provides a 100 percent cache hit rate for specific volumes (for example, volumes dedicated to critical applications), and delivers the response times of an `all-flash` storage system. A volume is pinned when the entire active volume is placed in cache; associated snapshot (inactive) blocks are not pinned. All incoming data after that point is pinned. The number of volumes that can be pinned is limited by the size of the volumes and amount of available cache.
 
@@ -447,7 +447,7 @@ When defined in the Performance Profile, select to enable Cache Pinnning for the
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DataTransferLimit &lt;&gt;
+### -DataTransferLimit &lt;int&gt;
 
 Specify the data transfer limit in MiB/S.
 
@@ -459,7 +459,7 @@ Specify the data transfer limit in MiB/S.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EnableDataTransferLimit &lt;&gt;
+### -EnableDataTransferLimit &lt;bool&gt;
 
 Enable data transfer limit.  If enabled, the `-DataTransferLimit` parameter must be set.  By default, data transfer limit is not set.
 
@@ -471,7 +471,7 @@ Enable data transfer limit.  If enabled, the `-DataTransferLimit` parameter must
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EnableEncryption &lt;&gt;
+### -EnableEncryption &lt;bool&gt;
 
 When the storage system has encryption enabled, the volume can also be encrypted.  Specify if the volume should be encrypted during creation.
 
@@ -483,7 +483,7 @@ When the storage system has encryption enabled, the volume can also be encrypted
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EnableIOPSLimit &lt;&gt;
+### -EnableIOPSLimit &lt;bool&gt;
 
 Set to enable or disable IOPS limit.  If enabled, the `-IOPSLimit` parameter must be set.  By default, IOPS limit is not set.
 
@@ -495,7 +495,7 @@ Set to enable or disable IOPS limit.  If enabled, the `-IOPSLimit` parameter mus
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Folder &lt;&gt;
+### -Folder &lt;HPOneView.Storage.NimbleFolder&gt;
 
 Specify the Nimble folder where the volume should be created.  To get availabe folder objects, use the `Get-HPOVStoragePool` Cmdlet.  Folders are defined as a device specific attribute. 
 
@@ -515,7 +515,7 @@ ID                                         Name
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IOPSLimit &lt;&gt;
+### -IOPSLimit &lt;int&gt;
 
 When enabling IOPS limit, provide a value that is greater than or equal to 256.
 
@@ -527,7 +527,7 @@ When enabling IOPS limit, provide a value that is greater than or equal to 256.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -PerformancePolicy &lt;&gt;
+### -PerformancePolicy &lt;HPOneView.Storage.PerformancePolicy&gt;
 
 A Nimble Performance Policy is associated with a storage system.  Using the `Show-HPOVStorageSystemPerformancePolicy`, choose an available performance policy.
 
@@ -543,7 +543,7 @@ Example:
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -VolumeSet &lt;&gt;
+### -VolumeSet &lt;HPOneView.Storage.VolumeSet&gt;
 
 Use to specify a Volume Set the volume will be associated with, from `Get-HPOVStorageVolumeSet`.
 
@@ -555,7 +555,7 @@ Use to specify a Volume Set the volume will be associated with, from `Get-HPOVSt
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -LockCachePinning &lt;&gt;
+### -LockCachePinning &lt;SwitchParameter&gt;
 
 Lock the CachePinning value.
 
@@ -567,7 +567,7 @@ Lock the CachePinning value.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -LockDataTransferLimit &lt;&gt;
+### -LockDataTransferLimit &lt;SwitchParameter&gt;
 
 Lock the DataTransferLimit value.
 
@@ -579,7 +579,7 @@ Lock the DataTransferLimit value.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -LockEnableEncryption &lt;&gt;
+### -LockEnableEncryption &lt;SwitchParameter&gt;
 
 Lock the EnableEncryption value.
 
@@ -591,7 +591,7 @@ Lock the EnableEncryption value.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -LockFolder &lt;&gt;
+### -LockFolder &lt;SwitchParameter&gt;
 
 Lock the Folder value.
 
@@ -603,7 +603,7 @@ Lock the Folder value.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -LockIOPSLimit &lt;&gt;
+### -LockIOPSLimit &lt;SwitchParameter&gt;
 
 Lock the IOPSLimit value.
 
@@ -615,7 +615,7 @@ Lock the IOPSLimit value.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -LockPerformancePolicy &lt;&gt;
+### -LockPerformancePolicy &lt;SwitchParameter&gt;
 
 Lock the PerformancePolicy value.
 
@@ -627,7 +627,7 @@ Lock the PerformancePolicy value.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -LockVolumeSet &lt;&gt;
+### -LockVolumeSet &lt;SwitchParameter&gt;
 
 Lock the VolumeSet value.
 

@@ -8,11 +8,11 @@ description: Configure remote syslog.
 
 ```text
 Set-HPOVRemoteSyslog
-    [-Destination] <>
-    [-Port] <>
-    [-SendTestMessage <>]
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-Destination] <IPAddress>
+    [-Port] <Int32>
+    [-SendTestMessage]
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -32,19 +32,19 @@ Set the remote syslog to the provided destination, using the default destination
 
 ## Parameters
 
-### -Destination &lt;&gt;
+### -Destination &lt;IPAddress&gt;
 
 Destination IPv4 Address of the Remote SysLog.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Port &lt;&gt;
+### -Port &lt;Int32&gt;
 
 The destination TCP port.
 
@@ -52,13 +52,13 @@ Default value: 514
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | 514 |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SendTestMessage &lt;&gt;
+### -SendTestMessage &lt;SwitchParameter&gt;
 
 Use to generate a syslog test message after the managed endpoint has finished configuring.
 
@@ -70,7 +70,7 @@ Use to generate a syslog test message after the managed endpoint has finished co
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -82,7 +82,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

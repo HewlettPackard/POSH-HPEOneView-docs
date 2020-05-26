@@ -8,7 +8,7 @@ description: Retrieve automatic appliance backup configuration.
 
 ```text
 Get-HPOVAutomaticBackupConfig
-    [-ApplianceConnection <>]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -40,7 +40,7 @@ Get the configured automatic backup setting of the appliance.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 

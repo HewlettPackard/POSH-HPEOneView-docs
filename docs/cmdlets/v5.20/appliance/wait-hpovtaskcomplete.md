@@ -8,10 +8,10 @@ description: Wait for a task to complete.
 
 ```text
 Wait-HPOVTaskComplete
-    [-InputObject] <>
-    [-Timeout <>]
-    [-ApplianceConnection <>]
-    [-ApplianceWillReboot <>]
+    [-InputObject] <Object>
+    [-Timeout <TimeSpan>]
+    [-ApplianceConnection <Object>]
+    [-ApplianceWillReboot]
     [<CommonParameters>]
 ```
 
@@ -45,19 +45,19 @@ Retrieve the server details for ServerA, create a Server Profile and pass via pi
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 The uri of the task resource to wait for.
 
 | Aliases | TaskUri, Task |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Timeout &lt;&gt;
+### -Timeout &lt;TimeSpan&gt;
 
 The timespan to wait for the task to complete.  Default is to wait for 20 minutes.
 
@@ -69,7 +69,7 @@ The timespan to wait for the task to complete.  Default is to wait for 20 minute
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceWillReboot &lt;&gt;
+### -ApplianceWillReboot &lt;SwitchParameter&gt;
 
 Internal use: to indicate if a task will cause appliance to reboot.
 
@@ -81,7 +81,7 @@ Internal use: to indicate if a task will cause appliance to reboot.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 

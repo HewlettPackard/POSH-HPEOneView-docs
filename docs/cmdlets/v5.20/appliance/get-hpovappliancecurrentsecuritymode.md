@@ -8,7 +8,7 @@ description: Get the appliance current security mode.
 
 ```text
 Get-HPOVApplianceCurrentSecurityMode
-    [-ApplianceConnection <>]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -78,7 +78,7 @@ Get the appliances current security mode.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

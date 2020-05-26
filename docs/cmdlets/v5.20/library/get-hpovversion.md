@@ -8,15 +8,15 @@ description: Display library component versions.
 
 ```text
 Get-HPOVVersion
-    [-ApplianceVer <>]
-    [-CheckOnline <>]
-    [-ApplianceConnection] <>
+    [-ApplianceVer]
+    [-CheckOnline]
+    [-ApplianceConnection] <Array>
     [<CommonParameters>]
 ```
 
 ```text
 Get-HPOVVersion
-    [-CheckOnline <>]
+    [-CheckOnline]
     [<CommonParameters>]
 ```
 
@@ -67,7 +67,7 @@ Display the installed library version, and check for availability of an updated 
 
 ## Parameters
 
-### -ApplianceVer &lt;&gt;
+### -ApplianceVer &lt;SwitchParameter&gt;
 
 Include the appliance version.
 
@@ -79,7 +79,7 @@ Include the appliance version.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -CheckOnline &lt;&gt;
+### -CheckOnline &lt;SwitchParameter&gt;
 
 Check the GitHub repository for an updated version of the library.
 
@@ -91,13 +91,13 @@ Check the GitHub repository for an updated version of the library.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | ${Global:ConnectedSessions} |
 | Accept pipeline input? | false |

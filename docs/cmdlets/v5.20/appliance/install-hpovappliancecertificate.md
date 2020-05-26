@@ -8,9 +8,9 @@ description: Install signed private key.
 
 ```text
 Install-HPOVApplianceCertificate
-    [-Path] <>
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-Path] <System.IO.FileInfo>
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -40,19 +40,19 @@ Read the signed SSL certificate private key and install it on the appliance, and
 
 ## Parameters
 
-### -Path &lt;&gt;
+### -Path &lt;System.IO.FileInfo&gt;
 
 The private key certificate for the appliance. The source CER file can be passed to the Cmdlet via pipeline or this parameter.
 
 | Aliases | PrivateKey, Certificate |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -64,7 +64,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify the `[HPOneView.Appliance.Connection]` object or Name property value.
 

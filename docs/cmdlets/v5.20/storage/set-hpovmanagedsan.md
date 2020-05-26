@@ -8,37 +8,37 @@ description: Enable or Disable Automated SAN Zoning.
 
 ```text
 Set-HPOVManagedSan
-    [-InputObject] <>
-    [-EnableAutomatedZoning <>]
-    [-ZoningPolicy] <>
-    [-EnableAliasing <>]
-    [-InitiatorNameFormat <>]
-    [-TargetGroupNameFormat <>]
-    [-TargetNameFormat <>]
-    [-ZoneNameFormat <>]
-    [-UpdateZoneNames <>]
-    [-UpdateInitiatorAliases <>]
-    [-UpdateTargetAliases <>]
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-EnableAutomatedZoning]
+    [-ZoningPolicy] <String>
+    [-EnableAliasing]
+    [-InitiatorNameFormat <String>]
+    [-TargetGroupNameFormat <String>]
+    [-TargetNameFormat <String>]
+    [-ZoneNameFormat <String>]
+    [-UpdateZoneNames <Boolean>]
+    [-UpdateInitiatorAliases <Boolean>]
+    [-UpdateTargetAliases <Boolean>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 Set-HPOVManagedSan
-    [-InputObject] <>
-    [-EnableAutomatedZoning <>]
-    [-ZoningPolicy] <>
-    [-DisableAliasing <>]
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-EnableAutomatedZoning]
+    [-ZoningPolicy] <String>
+    [-DisableAliasing]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 Set-HPOVManagedSan
-    [-InputObject] <>
-    [-DisableAutomatedZoning] <>
-    [-ZoningPolicy] <>
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-DisableAutomatedZoning]
+    [-ZoningPolicy] <String>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -74,19 +74,19 @@ Enable Automated SAN Zoning for all managed SAN Fabrics
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 Managed SAN Name or Object.
 
 | Aliases | Fabric, Name, ManagedSan, Resource |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -EnableAutomatedZoning &lt;&gt;
+### -EnableAutomatedZoning &lt;SwitchParameter&gt;
 
 (DEPRICATED - Please use `-ZoningPolicy` parameter.) Enable Automated Zoning for the specified Managed SAN.  When used, the default Zone Policy "SingleInitiatorAllTargets" is set.
 
@@ -98,19 +98,19 @@ Managed SAN Name or Object.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DisableAutomatedZoning &lt;&gt;
+### -DisableAutomatedZoning &lt;SwitchParameter&gt;
 
 (DEPRICATED - Please use `-ZoningPolicy` parameter.) Disable Automated Zoning for the specified Managed SAN.
 
 | Aliases | ZoningDisable, Disable |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ZoningPolicy &lt;&gt;
+### -ZoningPolicy &lt;String&gt;
 
 Policy setting that affects the way that zones are created. Allowed values:
 
@@ -120,13 +120,13 @@ Policy setting that affects the way that zones are created. Allowed values:
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | SingleInitiatorAllTargets |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EnableAliasing &lt;&gt;
+### -EnableAliasing &lt;SwitchParameter&gt;
 
 Enable aliases to be created for initiators, targets and target groups based on the specified name formats
 
@@ -138,7 +138,7 @@ Enable aliases to be created for initiators, targets and target groups based on 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DisableAliasing &lt;&gt;
+### -DisableAliasing &lt;SwitchParameter&gt;
 
 Disable aliases to be created for initiators, targets and target groups based on the specified name formats
 
@@ -150,7 +150,7 @@ Disable aliases to be created for initiators, targets and target groups based on
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -InitiatorNameFormat &lt;&gt;
+### -InitiatorNameFormat &lt;String&gt;
 
 Format to use for initiator alias names. The following `built-in` variables can be used: {hostName}, {initiatorName}, {initiatorWwn}.
 
@@ -164,7 +164,7 @@ Example: "initiator_{hostname}_{initiatorName}"
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -TargetGroupNameFormat &lt;&gt;
+### -TargetGroupNameFormat &lt;String&gt;
 
 Format to use for target group (ex. storage system port group) alias names. The following `built-in` variables can be used: {storageSystemName}, {targetGroupName}.
 
@@ -178,7 +178,7 @@ Example: "TargetGroup_{storageSystemName}_{targetGroupName}"
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -TargetNameFormat &lt;&gt;
+### -TargetNameFormat &lt;String&gt;
 
 Format to use for target (ex. storage system port) alias names. The following `built-in` variables can be used: {storageSystemName}, {targetName}.
 
@@ -192,7 +192,7 @@ Example: "Target_{storageSystemName}_{targetName}"
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ZoneNameFormat &lt;&gt;
+### -ZoneNameFormat &lt;String&gt;
 
 Format to use when naming new and updated zones. The following `built-in` variables can be used: {hostName}, {initiatorName}, {initiatorWwn}, {storageSystemName}, {targetName}, {targetGroupName} 
 
@@ -206,7 +206,7 @@ Example: "{initiatorWwn}_{initiatorName}"
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -UpdateZoneNames &lt;&gt;
+### -UpdateZoneNames &lt;Boolean&gt;
 
 Format to use when naming new and updated zones. The following `built-in` variables can be used: {hostName}, {initiatorName}, {initiatorWwn}, {storageSystemName}, {targetName}, {targetGroupName} 
 
@@ -220,7 +220,7 @@ Example: "{initiatorWwn}_{initiatorName}"
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -UpdateInitiatorAliases &lt;&gt;
+### -UpdateInitiatorAliases &lt;Boolean&gt;
 
 Format to use when naming new and updated zones. The following `built-in` variables can be used: {hostName}, {initiatorName}, {initiatorWwn}, {storageSystemName}, {targetName}, {targetGroupName} 
 
@@ -234,7 +234,7 @@ Example: "{initiatorWwn}_{initiatorName}"
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -UpdateTargetAliases &lt;&gt;
+### -UpdateTargetAliases &lt;Boolean&gt;
 
 Format to use when naming new and updated zones. The following `built-in` variables can be used: {hostName}, {initiatorName}, {initiatorWwn}, {storageSystemName}, {targetName}, {targetGroupName} 
 
@@ -248,7 +248,7 @@ Example: "{initiatorWwn}_{initiatorName}"
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 

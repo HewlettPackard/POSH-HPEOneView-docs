@@ -8,7 +8,7 @@ description: Configure appliance SMTP Reporting settings.
 
 ```text
 Get-HPOVSMTPConfig
-    [-ApplianceConnection <>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -28,7 +28,7 @@ Get SMTP Email Alert configuration from the default appliance connection.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

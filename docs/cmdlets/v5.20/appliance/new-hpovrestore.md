@@ -8,9 +8,9 @@ description: Upload appliance backup file to restore its configuration.
 
 ```text
 New-HPOVRestore
-    [-FileName] <>
-    [-EncryptionKey <>]
-    [-ApplianceConnection <>]
+    [-FileName] <System.IO.FileInfo>
+    [-EncryptionKey <Object>]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -56,19 +56,19 @@ Upload a backup file to restore in the appliance, supplying the path to the encr
 
 ## Parameters
 
-### -FileName &lt;&gt;
+### -FileName &lt;System.IO.FileInfo&gt;
 
 The full path and file name of the appliance configuration backup file.
 
 | Aliases | File |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -80,7 +80,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -WhatIf &lt;&gt;
+### -WhatIf &lt;SwitchParameter&gt;
 
 
 
@@ -92,7 +92,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Confirm &lt;&gt;
+### -Confirm &lt;SwitchParameter&gt;
 
 
 
@@ -104,7 +104,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EncryptionKey &lt;&gt;
+### -EncryptionKey &lt;Object&gt;
 
 Provide the encryption key file path or file object.  When restoring an appliance backup, and after the appliance has been factory reset, the prior encryption key is needed to decrypt the backup file.  This is only supported with HPE Synergy Composer 2 appliances.
 

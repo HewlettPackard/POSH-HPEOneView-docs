@@ -8,10 +8,10 @@ description: Remove power device (iPDU)
 
 ```text
 Remove-HPOVPowerDevice
-    [-InputObject] <>
-    [-Force <>]
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-Force]
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -48,19 +48,19 @@ Search for all power devices and remove them from appliance.
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 The Power Device object(s), name(s) or uri(s) to be removed from management.
 
 | Aliases | uri, name, PowerDevice |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Force &lt;&gt;
+### -Force &lt;SwitchParameter&gt;
 
 Set to $true to `force-remove` the power device.  `Force-removing` will succeed even when there are connectivity issues or resource errors.
 
@@ -74,7 +74,7 @@ When the request is accepted by the appliance, it does not return an Async Task 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -86,7 +86,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
@@ -98,7 +98,7 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -WhatIf &lt;&gt;
+### -WhatIf &lt;SwitchParameter&gt;
 
 
 
@@ -110,7 +110,7 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Confirm &lt;&gt;
+### -Confirm &lt;SwitchParameter&gt;
 
 
 

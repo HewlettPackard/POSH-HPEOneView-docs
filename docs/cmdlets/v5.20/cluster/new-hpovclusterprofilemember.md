@@ -8,9 +8,9 @@ description: Helper Cmdlet to create proper add host request for New-HPOVCluster
 
 ```text
 New-HPOVClusterProfileMember
-    [-InputObject] <>
-    [-IPv4Address <>]
-    [-OSDeploymentAttributes <>]
+    [-InputObject] <Object>
+    [-IPv4Address <IPAaddress>]
+    [-OSDeploymentAttributes <OSDeploymentParameter[]>]
     [<CommonParameters>]
 ```
 
@@ -56,7 +56,7 @@ Create a basic add host object for `New-HPOVClusterProfile`.
 
 ## Parameters
 
-### -IPv4Address &lt;&gt;
+### -IPv4Address &lt;IPAaddress&gt;
 
 A valid IPv4 Address for the hypervisor host management interface.
 
@@ -68,19 +68,19 @@ A valid IPv4 Address for the hypervisor host management interface.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 A server hardware resource
 
 | Aliases | Server |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -OSDeploymentAttributes &lt;&gt;
+### -OSDeploymentAttributes &lt;OSDeploymentParameter[]&gt;
 
 Configured OS Deployment Plan parameters from `Get-HPOVOSDeploymentPlanAttribute`.  Only applicable for HPE Synergy Image Streamer deployment.
 

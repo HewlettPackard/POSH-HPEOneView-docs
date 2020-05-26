@@ -8,9 +8,9 @@ description: Get a member device from a defined Rack.
 
 ```text
 Get-HPOVRackMember
-    [-InputObject] <>
-    [-Name <>]
-    [-ApplianceConnection <>]
+    [-InputObject] <String>
+    [-Name <String>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -49,19 +49,19 @@ Retrieve rack members that begin with "ProdDL380" within the "Rack-221" rack res
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;String&gt;
 
 Rack resource from `Get-HPOVRack`.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 Name of a member within the Rack.  Supports (*) wildcard character.
 
@@ -73,7 +73,7 @@ Name of a member within the Rack.  Supports (*) wildcard character.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

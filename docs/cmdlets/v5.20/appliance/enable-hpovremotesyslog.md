@@ -8,8 +8,8 @@ description: Enable remote syslog.
 
 ```text
 Enable-HPOVRemoteSyslog
-    [-Async <>]
-    [-ApplianceConnection <>]
+    [-Async]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -41,7 +41,7 @@ Enable remote syslog configuration on the specific connected appliance.
 
 ## Parameters
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -53,7 +53,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

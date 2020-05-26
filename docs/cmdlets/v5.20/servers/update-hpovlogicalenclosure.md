@@ -8,19 +8,19 @@ description: Update or Refresh a Logical Enclosure.
 
 ```text
 Update-HPOVLogicalEnclosure
-    [-Reapply <>]
-    [-InputObject] <>
-    [-ApplianceConnection] <>
-    [-Async <>]
+    [-Reapply]
+    [-InputObject] <Object>
+    [-ApplianceConnection] <Array>
+    [-Async]
     [<CommonParameters>]
 ```
 
 ```text
 Update-HPOVLogicalEnclosure
-    [-Update <>]
-    [-InputObject] <>
-    [-ApplianceConnection] <>
-    [-Async <>]
+    [-Update]
+    [-InputObject] <Object>
+    [-ApplianceConnection] <Array>
+    [-Async]
     [<CommonParameters>]
 ```
 
@@ -81,31 +81,31 @@ Refresh "LogicalEnclosure1" Logical Enclosure.
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 Provide the Logical Enclosure name, URI or Object, or `[System.Collections.ArrayList` ] of names, URIs or Objects to refresh/update.
 
 | Aliases | le, LogicalEnclosure |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -Update &lt;&gt;
+### -Update &lt;SwitchParameter&gt;
 
 Useing this switch will update the Logical Enclosure to be compliant with the Parent Enclosure Group.  Can be combined with the `-WhatIf` parameter to perform a Compare with group and return object with differences.
 
@@ -117,7 +117,7 @@ Useing this switch will update the Logical Enclosure to be compliant with the Pa
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Reapply &lt;&gt;
+### -Reapply &lt;SwitchParameter&gt;
 
 Reapply the Enclosure Configuration.
 
@@ -129,7 +129,7 @@ Reapply the Enclosure Configuration.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -141,7 +141,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -WhatIf &lt;&gt;
+### -WhatIf &lt;SwitchParameter&gt;
 
 Use this parameter to identify what is different or changed from the parent group policy.
 
@@ -153,7 +153,7 @@ Use this parameter to identify what is different or changed from the parent grou
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Confirm &lt;&gt;
+### -Confirm &lt;SwitchParameter&gt;
 
 
 

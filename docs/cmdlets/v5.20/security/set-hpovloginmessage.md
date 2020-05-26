@@ -8,16 +8,16 @@ description: Set appliance Login Message.
 
 ```text
 Set-HPOVLoginMessage
-    [-Message] <>
-    [-Acknowledgment] <>
-    [-ApplianceConnection] <>
+    [-Message] <String>
+    [-Acknowledgment] <Boolean>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ```text
 Set-HPOVLoginMessage
-    [-Acknowledgment] <>
-    [-ApplianceConnection] <>
+    [-Acknowledgment] <Boolean>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -56,37 +56,37 @@ Set the Login Message from the specified appliance connection.
 
 ## Parameters
 
-### -Message &lt;&gt;
+### -Message &lt;String&gt;
 
 The login message to set.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Acknowledgment &lt;&gt;
+### -Acknowledgment &lt;Boolean&gt;
 
 Set to True if the login message should be acknowledged before authentication completes.  If set to True, the `COnnect-HPOVMgmt` Cmdlet will prompt the user to acknowledge the message, if `-LoginAcknowledge` is not provided in the Cmdlet parameters.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | false |

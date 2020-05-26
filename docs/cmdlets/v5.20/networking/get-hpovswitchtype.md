@@ -8,15 +8,15 @@ description: Retrieve Switch Type resource(s).
 
 ```text
 Get-HPOVSwitchType
-    [-Name <>]
-    [-ApplianceConnection <>]
+    [-Name <String>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 Get-HPOVSwitchType
-    [-PartNumber <>]
-    [-ApplianceConnection <>]
+    [-PartNumber <String>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -52,7 +52,7 @@ Returns just the partnumber "DCS-7060X-SERIES" Switch Type object to standard ou
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 The name of the switch type model name to retrieve.  Does not support wildcard search.
 
@@ -64,7 +64,7 @@ The name of the switch type model name to retrieve.  Does not support wildcard s
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -PartNumber &lt;&gt;
+### -PartNumber &lt;String&gt;
 
 The Part Number of an switch type to search for.
 
@@ -76,7 +76,7 @@ The Part Number of an switch type to search for.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

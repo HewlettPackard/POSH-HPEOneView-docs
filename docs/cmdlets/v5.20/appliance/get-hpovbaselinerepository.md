@@ -8,9 +8,9 @@ description: Retrieve available baseline repository information.
 
 ```text
 Get-HPOVBaselineRepository
-    [-Name <>]
-    [-Type <>]
-    [-ApplianceConnection <>]
+    [-Name <String>]
+    [-Type <String>]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -52,7 +52,7 @@ Retrieves only the configured external repository on the appliance.
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 Return the repository with the name or matching name.
 
@@ -64,7 +64,7 @@ Return the repository with the name or matching name.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Type &lt;&gt;
+### -Type &lt;String&gt;
 
 Specify "Internal" or "External" to filter the repository type.
 
@@ -76,7 +76,7 @@ Specify "Internal" or "External" to filter the repository type.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 

@@ -8,15 +8,15 @@ description: Retrieve Server Hardware resource(s).
 
 ```text
 Get-HPOVServer
-    [-Name <>]
-    [-ServerName <>]
-    [-Status <>]
-    [-NoProfile <>]
-    [-InputObject <>]
-    [-Label <>]
-    [-Count <>]
-    [-Scope <>]
-    [-ApplianceConnection <>]
+    [-Name <String>]
+    [-ServerName <String>]
+    [-Status <String[]>]
+    [-NoProfile]
+    [-InputObject <Object>]
+    [-Label <String>]
+    [-Count <int>]
+    [-Scope <Object>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -148,7 +148,7 @@ Return only servers that are currently reporting Warning or Critical status.
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 The name of the server hardware resource to be returned.  All server hardware resources will be returned if omitted.  Supports * wildcard character.
 
@@ -160,7 +160,7 @@ The name of the server hardware resource to be returned.  All server hardware re
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ServerName &lt;&gt;
+### -ServerName &lt;String&gt;
 
 Specify the Server OS Name that is reported by the iLO.
 
@@ -172,7 +172,7 @@ Specify the Server OS Name that is reported by the iLO.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;&gt;
+### -Scope &lt;Object&gt;
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
@@ -189,7 +189,7 @@ Filter resources based on provided Scope membership.  By default, all resources 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Label &lt;&gt;
+### -Label &lt;String&gt;
 
 Specify the label associated with resources.
 
@@ -201,7 +201,7 @@ Specify the label associated with resources.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -NoProfile &lt;&gt;
+### -NoProfile &lt;SwitchParameter&gt;
 
 Optional parameter that can be used with the report parameter to display Servers without a Server Profile assigned.
 
@@ -213,7 +213,7 @@ Optional parameter that can be used with the report parameter to display Servers
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -MaintenanceMode &lt;&gt;
+### -MaintenanceMode &lt;Boolean&gt;
 
 Optional parameter that can be used to filter for specific servers that are in maintenance mode or note based on the boolean value provided.
 
@@ -225,7 +225,7 @@ Optional parameter that can be used to filter for specific servers that are in m
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 Aliases [-ServerHardwareType, `-ServerProfileTemplate`]
 Provide the Server Hardware Type or Server Profile Template Object to filter for available server hardware.
@@ -238,7 +238,7 @@ Provide the Server Hardware Type or Server Profile Template Object to filter for
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -250,7 +250,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Count &lt;&gt;
+### -Count &lt;int&gt;
 
 Return no more than the provided value.  Combining other parameters to filter may not return the requested count value.
 
@@ -262,7 +262,7 @@ Return no more than the provided value.  Combining other parameters to filter ma
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Status &lt;&gt;
+### -Status &lt;String[]&gt;
 
 Filter resources based on their current status.  Allowed values:
 

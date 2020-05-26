@@ -8,10 +8,10 @@ description: Enable port monitoring for a logical interconnect.
 
 ```text
 Enable-HPOVLogicalInterconnectPortMonitoring
-    [-InputObject] <>
-    [-AnalyzerPort] <>
-    [-MonitoredPorts] <>
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-AnalyzerPort] <Object>
+    [-MonitoredPorts] <Hashtable>
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -49,7 +49,7 @@ Enable port monitoring for the specific logical interconnect.
 
 ## Parameters
 
-### -AnalyzerPort &lt;&gt;
+### -AnalyzerPort &lt;Object&gt;
 
 Specifies the network analyzer port (the `mirrored-to` uplink port) for the downlink server ports within a single enclosure. There is a single "mirrored-to port" per logical interconnect.
 
@@ -57,13 +57,13 @@ Allowed string value:  "Bay1:X6" or "Enclosure1:Bay6:Q1.1"
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -75,19 +75,19 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 HPOneView.Networking.LogicalInterconnect from `Get-HPOVLogicalInterconnect`.
 
 | Aliases | uri, li, name, Resource |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -MonitoredPorts &lt;&gt;
+### -MonitoredPorts &lt;Hashtable&gt;
 
 An Array of Hashtable or PSCustomObject with the following format:
 
@@ -103,7 +103,7 @@ The "Direction" property value must be one of the following:
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |

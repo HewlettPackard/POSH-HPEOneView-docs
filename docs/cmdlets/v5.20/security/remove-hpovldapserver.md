@@ -8,20 +8,20 @@ description: Remove an existing LDAP Directory Server.
 
 ```text
 Remove-HPOVLdapServer
-    [-InputObject] <>
-    [-DirectoryServerName] <>
-    [-Username] <>
-    [-Password <>]
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-DirectoryServerName] <String>
+    [-Username] <String>
+    [-Password <Object>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 Remove-HPOVLdapServer
-    [-InputObject] <>
-    [-DirectoryServerName] <>
-    [-Credential <>]
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-DirectoryServerName] <String>
+    [-Credential <PSCredential>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -41,43 +41,43 @@ Remove the specified LDAP Directory server from "MyDirectory".  Will be prompted
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 The LDAP Directory Object from `Get-HPOVLdapDirectory`.
 
 | Aliases | Directory |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -DirectoryServerName &lt;&gt;
+### -DirectoryServerName &lt;String&gt;
 
 Directory server name.
 
 | Aliases | Name |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Username &lt;&gt;
+### -Username &lt;String&gt;
 
 Directory Username to authenticate with in order to validate LDAP configuration.
 
 | Aliases | u, user |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Password &lt;&gt;
+### -Password &lt;Object&gt;
 
 Directory User account password in order to validate LDAP configuration.  Can be `[System.String]` or `[System.Security.SecureString]` object.
 
@@ -89,7 +89,7 @@ Directory User account password in order to validate LDAP configuration.  Can be
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 
@@ -101,7 +101,7 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -Credential &lt;&gt;
+### -Credential &lt;PSCredential&gt;
 
 Use this parameter if you want to provide a PSCredential object instead.
 

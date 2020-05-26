@@ -8,8 +8,8 @@ description: Get appliance available security cryptography modes.
 
 ```text
 Get-HPOVApplianceAvailableSecurityMode
-    [-ModeName <>]
-    [-ApplianceConnection <>]
+    [-ModeName <String[]>]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -87,7 +87,7 @@ Return the CNSA available security mode on the appliance.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -99,7 +99,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ModeName &lt;&gt;
+### -ModeName &lt;String[]&gt;
 
 The name of the mode to return. Allowed values:
 

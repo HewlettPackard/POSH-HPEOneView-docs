@@ -8,16 +8,16 @@ description: Create a new user account.
 
 ```text
 New-HPOVUser
-    [-UserName] <>
-    [-Password] <>
-    [-FullName] <>
-    [-Roles] <>
-    [-ScopePermissions <>]
-    [-EmailAddress <>]
-    [-OfficePhone <>]
-    [-MobilePhone <>]
-    [-Enabled <>]
-    [-ApplianceConnection] <>
+    [-UserName] <String>
+    [-Password] <String>
+    [-FullName] <String>
+    [-Roles] <Array>
+    [-ScopePermissions <Array>]
+    [-EmailAddress <String>]
+    [-OfficePhone <String>]
+    [-MobilePhone <String>]
+    [-Enabled]
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -37,44 +37,44 @@ Create the Sally user account, and assigning to the Server Administrator and Net
 
 ## Parameters
 
-### -UserName &lt;&gt;
+### -UserName &lt;String&gt;
 
 The name of the new user account to be created.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Password &lt;&gt;
+### -Password &lt;String&gt;
 
 The initial password to be assigned to the new user.
 Passwords must be at least 8 characters.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -FullName &lt;&gt;
+### -FullName &lt;String&gt;
 
 Full name for the user.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Roles &lt;&gt;
+### -Roles &lt;Array&gt;
 
 The role(s) to assign to the Directroy Group, in `[System.Collections.ArrayList]` format.  Accepted values are noted within the ApplianceRoles property of the `[HPOneView.Appliance.Connection]` object stored in the $Global:ConnectedSessions variable.
 
@@ -82,13 +82,13 @@ Example: $roles = "Server administrator","Network administrator"
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | @() |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EmailAddress &lt;&gt;
+### -EmailAddress &lt;String&gt;
 
 Provide the users email address.  This does not set the Email Notification value when configuring SMTP Notifications.
 
@@ -100,7 +100,7 @@ Provide the users email address.  This does not set the Email Notification value
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -OfficePhone &lt;&gt;
+### -OfficePhone &lt;String&gt;
 
 Office phone number.
 
@@ -112,7 +112,7 @@ Office phone number.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -MobilePhone &lt;&gt;
+### -MobilePhone &lt;String&gt;
 
 Mobile phone number.
 
@@ -124,7 +124,7 @@ Mobile phone number.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Enabled &lt;&gt;
+### -Enabled &lt;SwitchParameter&gt;
 
 Deprecated parameter.  By default, all new user accounts will be enabled.  In order to disable a user account, use the `Set-HPOVUser` Cmdlet.
 
@@ -136,7 +136,7 @@ Deprecated parameter.  By default, all new user accounts will be enabled.  In or
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -144,13 +144,13 @@ Default Value: ${Global:ConnectSessions}
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ScopePermissions &lt;&gt;
+### -ScopePermissions &lt;Array&gt;
 
 Array collection of Hashtable<Role; Scope>.  Will overwrite existing scope to role mappings.
 

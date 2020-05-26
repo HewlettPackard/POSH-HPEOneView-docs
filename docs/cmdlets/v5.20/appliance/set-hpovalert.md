@@ -8,26 +8,26 @@ description: Change status of an alert.
 
 ```text
 Set-HPOVAlert
-    [-InputObject] <>
-    [-AssignToUser <>]
-    [-Notes <>]
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-AssignToUser <String>]
+    [-Notes <String>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 Set-HPOVAlert
-    [-InputObject] <>
-    [-Active] <>
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-Active]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 Set-HPOVAlert
-    [-InputObject] <>
-    [-Cleared] <>
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-Cleared]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -75,19 +75,19 @@ Get aassociated alerts to the servers in an "Active" state, and set their state 
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 The alert to be cleared.  Can be URI or resource object.
 
 | Aliases | alertUri, Alert |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -AssignToUser &lt;&gt;
+### -AssignToUser &lt;String&gt;
 
 The users name in String value to assign the alert to.  The user name does not require, nor is mapped to, a local user account.
 
@@ -99,7 +99,7 @@ The users name in String value to assign the alert to.  The user name does not r
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Notes &lt;&gt;
+### -Notes &lt;String&gt;
 
 Notes of the action for the alert.
 
@@ -111,31 +111,31 @@ Notes of the action for the alert.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Cleared &lt;&gt;
+### -Cleared &lt;SwitchParameter&gt;
 
 Change the alert to "Cleared" status.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Active &lt;&gt;
+### -Active &lt;SwitchParameter&gt;
 
 Change the alert to "Active" status.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 

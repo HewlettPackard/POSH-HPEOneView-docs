@@ -8,33 +8,33 @@ description: Modify an existing network.
 
 ```text
 Set-HPOVNetwork
-    [-InputObject] <>
-    [-Name <>]
-    [-Prefix <>]
-    [-Suffix <>]
-    [-Purpose <>]
-    [-Smartlink <>]
-    [-PrivateNetwork <>]
-    [-TypicalBandwidth <>]
-    [-MaximumBandwidth <>]
-    [-IPv4Subnet <>]
-    [-IPv6Subnet <>]
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-Name <String>]
+    [-Prefix <String>]
+    [-Suffix <String>]
+    [-Purpose <String>]
+    [-Smartlink <Boolean>]
+    [-PrivateNetwork <Boolean>]
+    [-TypicalBandwidth <Int32>]
+    [-MaximumBandwidth <Int32>]
+    [-IPv4Subnet <Object>]
+    [-IPv6Subnet <Object>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 Set-HPOVNetwork
-    [-InputObject] <>
-    [-Name <>]
-    [-Prefix <>]
-    [-Suffix <>]
-    [-TypicalBandwidth <>]
-    [-MaximumBandwidth <>]
-    [-LinkStabilityTime <>]
-    [-AutoLoginRedistribution <>]
-    [-ManagedSan <>]
-    [-ApplianceConnection <>]
+    [-InputObject] <Object>
+    [-Name <String>]
+    [-Prefix <String>]
+    [-Suffix <String>]
+    [-TypicalBandwidth <Int32>]
+    [-MaximumBandwidth <Int32>]
+    [-LinkStabilityTime <Int32>]
+    [-AutoLoginRedistribution <Boolean>]
+    [-ManagedSan <Object>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -72,19 +72,19 @@ Get all Ethernet networks, and add a Suffix to their names.
 
 ## Parameters
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 The Name or Resource object of the network to be modified.
 
 | Aliases | net, Network |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 The network resource"s new Name value.
 
@@ -96,7 +96,7 @@ The network resource"s new Name value.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Prefix &lt;&gt;
+### -Prefix &lt;String&gt;
 
 Use this parameter to add a new prefix to the name.  Will not change the original name value, simply add the prefix to the orignal name.  Use the `-Name` parameter to adjust the entire name.
 
@@ -108,7 +108,7 @@ Use this parameter to add a new prefix to the name.  Will not change the origina
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Suffix &lt;&gt;
+### -Suffix &lt;String&gt;
 
 Use this parameter to add a new suffix to the name.  Will not change the original name value, simply add the suffix to the orignal name.  Use the `-Name` parameter to adjust the entire name.
 
@@ -120,7 +120,7 @@ Use this parameter to add a new suffix to the name.  Will not change the origina
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Purpose &lt;&gt;
+### -Purpose &lt;String&gt;
 
 A description of the network"s role within the logical interconnect.  Accepted values in string format are:
 
@@ -137,7 +137,7 @@ A description of the network"s role within the logical interconnect.  Accepted v
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Smartlink &lt;&gt;
+### -Smartlink &lt;Boolean&gt;
 
 Enable or Disable Smartlink within the Ethernet Network.
 
@@ -149,7 +149,7 @@ Enable or Disable Smartlink within the Ethernet Network.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -PrivateNetwork &lt;&gt;
+### -PrivateNetwork &lt;Boolean&gt;
 
 Enable or Disable Private Network within the Ethernet Network.
 
@@ -161,7 +161,7 @@ Enable or Disable Private Network within the Ethernet Network.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -TypicalBandwidth &lt;&gt;
+### -TypicalBandwidth &lt;Int32&gt;
 
 Preferred amount of bandwidth to assign within the Server Profile Connection, specified in Mbps.
 
@@ -173,7 +173,7 @@ Preferred amount of bandwidth to assign within the Server Profile Connection, sp
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -MaximumBandwidth &lt;&gt;
+### -MaximumBandwidth &lt;Int32&gt;
 
 The maximum bandwidth of a network connection, that will be allowed and reflected witin the Server Profile Connection, expressed in Mbps. In Flex10 adapters, the maximum supported Ethernet bandwidth is 10 Gbps. With 10Gb FlexFabric adapters, the maximum FCoE bandwidth is 8Gbps. With FlexFabric 20Gb adapters, the maximum Ethernet bandwidth is 20Gbps.
 
@@ -185,7 +185,7 @@ The maximum bandwidth of a network connection, that will be allowed and reflecte
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -LinkStabilityTime &lt;&gt;
+### -LinkStabilityTime &lt;Int32&gt;
 
 The time in seconds the appliance waits before reconnecting to a link that was previously offline (Login redistribution). This interval prevents connection loss due to reconnecting to a link that is unstable (going online and offline repeatedly).  Parameter is only supported with FibreChannel network resources.
 
@@ -200,7 +200,7 @@ Maximum Value: 1800
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -AutoLoginRedistribution &lt;&gt;
+### -AutoLoginRedistribution &lt;Boolean&gt;
 
 Used for login balancing when logins are not distributed evenly over the Fibre Channel links (for example, when an uplink that was down becomes available).  Parameter is only supported with FibreChannel network resources.
 
@@ -215,7 +215,7 @@ False: Login redistribution must be initiated manually.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ManagedSan &lt;&gt;
+### -ManagedSan &lt;Object&gt;
 
 Managed SAN Name or URI.
 
@@ -227,7 +227,7 @@ Managed SAN Name or URI.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IPv4Subnet &lt;&gt;
+### -IPv4Subnet &lt;Object&gt;
 
 Use to specify the one IPv4 subnet the network should be associated with from `Get-HPOVAddressPoolSubnet`.
 
@@ -239,7 +239,7 @@ Use to specify the one IPv4 subnet the network should be associated with from `G
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
@@ -251,7 +251,7 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -IPv6Subnet &lt;&gt;
+### -IPv6Subnet &lt;Object&gt;
 
 Use to specify the one IPv6 subnet the network should be associated with from `Get-HPOVAddressPoolSubnet`.
 

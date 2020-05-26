@@ -8,12 +8,12 @@ description: Create an IPv4 Subnet Pool.
 
 ```text
 New-HPOVAddressPoolSubnet
-    [-NetworkId] <>
-    [-SubnetMask] <>
-    [-Gateway] <>
-    [-Domain] <>
-    [-DNSServers] <>
-    [-ApplianceConnection] <>
+    [-NetworkId] <IPAddress>
+    [-SubnetMask] <String>
+    [-Gateway] <IPAddress>
+    [-Domain] <String>
+    [-DNSServers] <Array>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -35,73 +35,73 @@ Create a new IPv4 address pool with the specified values.
 
 ## Parameters
 
-### -NetworkId &lt;&gt;
+### -NetworkId &lt;IPAddress&gt;
 
 The IPv4 Network ID value of the subnet.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SubnetMask &lt;&gt;
+### -SubnetMask &lt;String&gt;
 
 CIDR `[e.g`. 24] or IPv4 Address Value `[e.g`. 255.255.255.0]
 
 | Aliases | PrefixLength |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Gateway &lt;&gt;
+### -Gateway &lt;IPAddress&gt;
 
 IPv4 Address of the default gateway for the subnet.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Domain &lt;&gt;
+### -Domain &lt;String&gt;
 
 DNS Domain Name of the subnet.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DNSServers &lt;&gt;
+### -DNSServers &lt;Array&gt;
 
 An array of DNS Server IPv4 Addresses.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | false |

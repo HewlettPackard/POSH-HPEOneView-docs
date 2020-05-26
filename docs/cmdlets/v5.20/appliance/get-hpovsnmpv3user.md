@@ -8,8 +8,8 @@ description: Get defined SNMPv3 user from appliance.
 
 ```text
 Get-HPOVSnmpV3User
-    [-Name <>]
-    [-ApplianceConnection <>]
+    [-Name <String>]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -42,7 +42,7 @@ Get the defined SNMPv3 users on the appliance.
 
 ## Parameters
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Array&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
@@ -54,7 +54,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 Filter for the SNMPv3 user.  Supports wildcard characters.
 

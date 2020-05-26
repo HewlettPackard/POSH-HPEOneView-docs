@@ -8,21 +8,21 @@ description: Retrieve Task resource(s).
 
 ```text
 Get-HPOVTask
-    [-Name <>]
-    [-InputObject <>]
-    [-State <>]
-    [-Count <>]
-    [-ApplianceConnection <>]
+    [-Name <String>]
+    [-InputObject <Object>]
+    [-State <String>]
+    [-Count <Int32>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 Get-HPOVTask
-    [-Name <>]
-    [-ResourceCategory <>]
-    [-State <>]
-    [-Count <>]
-    [-ApplianceConnection <>]
+    [-Name <String>]
+    [-ResourceCategory <String>]
+    [-State <String>]
+    [-Count <Int32>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -58,7 +58,7 @@ Display the 10 most recent tasks from the specified appliance connection.
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 The name of the task resource to be returned.  All names will match if omitted.
 
@@ -70,7 +70,7 @@ The name of the task resource to be returned.  All names will match if omitted.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -InputObject &lt;&gt;
+### -InputObject &lt;Object&gt;
 
 Related resource Name or Object to the task. To be used for filtering tasks specific to a resource object (i.e. Server Profile).
 
@@ -82,7 +82,7 @@ Related resource Name or Object to the task. To be used for filtering tasks spec
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -ResourceCategory &lt;&gt;
+### -ResourceCategory &lt;String&gt;
 
 Specify the Resource Category to filter task results to.  Cannot be combined with Resource parameter.
 
@@ -110,7 +110,7 @@ Some examples are:
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -State &lt;&gt;
+### -State &lt;String&gt;
 
 The state of the task resource a to be returned. May be one of the following strings:
             
@@ -134,7 +134,7 @@ All states will match if omitted.  All tasks will be returned if both names and 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Count &lt;&gt;
+### -Count &lt;Int32&gt;
 
 Specify the maximum amount of task objects to return.  0 will return all found task objects.
 
@@ -146,7 +146,7 @@ Specify the maximum amount of task objects to return.  0 will return all found t
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 

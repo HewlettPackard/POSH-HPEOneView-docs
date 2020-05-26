@@ -8,11 +8,11 @@ description: Create a new Logical Switch Group resource.
 
 ```text
 New-HPOVLogicalSwitchGroup
-    [-Name] <>
-    [-SwitchType <>]
-    [-NumberOfSwitches <>]
-    [-ApplianceConnection <>]
-    [-Async <>]
+    [-Name] <String>
+    [-SwitchType <HPOneView.Networking.SwitchType>]
+    [-NumberOfSwitches <Int>]
+    [-ApplianceConnection <Object>]
+    [-Async]
     [<CommonParameters>]
 ```
 
@@ -32,19 +32,19 @@ Create a Logical Switch Group fro the "Cisco Nexus 5600" series, specifying 2 ex
 
 ## Parameters
 
-### -Name &lt;&gt;
+### -Name &lt;String&gt;
 
 The Logical Switch Group resource Name.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SwitchType &lt;&gt;
+### -SwitchType &lt;HPOneView.Networking.SwitchType&gt;
 
 The Switch Type resource from `Get-HPOVSwitchType`.
 
@@ -56,7 +56,7 @@ The Switch Type resource from `Get-HPOVSwitchType`.
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -NumberOfSwitches &lt;&gt;
+### -NumberOfSwitches &lt;Int&gt;
 
 The maximum number of switches supported in the Logical Switch Group.  Only 1 or 2 are allowed.
 
@@ -68,7 +68,7 @@ The maximum number of switches supported in the Logical Switch Group.  Only 1 or
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Async &lt;&gt;
+### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
 
@@ -80,7 +80,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ApplianceConnection &lt;&gt;
+### -ApplianceConnection &lt;Object&gt;
 
 Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
