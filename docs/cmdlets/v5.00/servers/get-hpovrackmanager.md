@@ -38,9 +38,9 @@ A rack manager platform consists of the following:
 This Cmdlet will retrieve available rack managers added to the appliance.
 
 {% hint style="info" %}
-Minimum required privileges: Read-
+Minimum required privileges: Read
 {% endhint %}
-only
+-only
 ## Examples
 
 ###  Example 1 

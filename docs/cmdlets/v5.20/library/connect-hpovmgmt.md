@@ -42,9 +42,9 @@ Appliance hostname or IP can include an alternate TCP port number.  While the ap
 If the appliance is configured to Common Access Card (CAC) authentication, the -Certificate parameter is required.  If the CAC requires a PIN to unlock, the user will be prompted by the credential service to provide that value.  The Cmdlet does not offer the ability to retrieve or store the CAC PIN.
 
 {% hint style="info" %}
-Minimum required privileges:  Read-
+Minimum required privileges:  Read
 {% endhint %}
-only.
+-only.
 ## Examples
 
 ###  Example 1 

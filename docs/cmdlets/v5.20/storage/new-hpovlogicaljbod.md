@@ -68,14 +68,14 @@ Considerations when configuring logical JBODs:
 * You can choose to either erase or retain the drive data when you delete the logical JBOD by setting using the -EraseDataOnDelete parameter during the creation of a logical JBOD. You can change the Erase on delete settings later, using the Set-HPOVLogicalJBOD Cmdlet, only if you set -EraseDataOnDelete to True during creation.
 
 {% hint style="info" %}
-Minimum required privileges: Infrastructure administrator,
-{% endhint %}
- server administrator, server profile architect, server profile administrator
+Minimum required privileges: Infrastructure administrator, server administrator, server profile architect, server profile administrator
 
 * A logical interconnect group is created with the interconnect type Synergy 12 GB SAS Connection Module.
 * An enclosure group is created with the above created logical interconnect group set as the Logical interconnect group.
 * A logical enclosure is created. A SAS logical interconnect is created as part of creating the logical enclosure.
 * If scopes have been defined, make sure that sufficient number of drive enclosures are mapped to the user scopes.
+{% endhint %}
+
 ## Examples
 
 ###  Example 1 

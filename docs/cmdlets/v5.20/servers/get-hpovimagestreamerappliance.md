@@ -20,9 +20,9 @@ The default selection is HPE Synergy Image Streamer, when an Image Streamer is d
 Adding a deployment server causes Image Streamer appliances to be clustered and configured to manage OS deployment artifacts.
 This Cmdlet will retrieve populated and discovered HPE Synergy Image Streamer appliances within the Synergy Management fabric. Image Streamer appliances can be in either a Claimed or Unclaimed state. Appliances will only belong in a single redundant High Availability (H/A) Pair, and all H/A pairs will participate within the same HPE Synergy OS Deployment Server. Redundant H/A pairs will automatically be created during the Create Logical Enclosure task.
 {% hint style="info" %}
-Minimum required privileges: Read-
+Minimum required privileges: Read
 {% endhint %}
-only.
+-only.
 ## Examples
 
 ###  Example 1 

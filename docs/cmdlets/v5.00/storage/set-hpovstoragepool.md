@@ -36,9 +36,9 @@ For HPE OneView running embedded on a HPE Synergy 12000 Frame, the default range
 The size of the pool cannot exceed 128 VLANs.
 
 {% hint style="info" %}
-Minimum required privileges:  Infrastructure administrator,
+Minimum required privileges:  Infrastructure administrator, Network administrator
 {% endhint %}
- Network administrator
+
 ## Examples
 
 ###  Example 1 

@@ -100,9 +100,9 @@ A cluster profile can manage VMware ESXi-based hypervisor clusters by leveraging
 Use this Cmdlet to create a new cluster profile within OneView.  Any new created clusters within OneView cannot be removed from OneView withour destroying the cluster within the cluster manager.
 
 {% hint style="info" %}
-Minimum required privileges: Infrastructure administrator,
+Minimum required privileges: Infrastructure administrator, Server administrator, Server profile architect, or Server profile administrator.
 {% endhint %}
- Server administrator, Server profile architect, or Server profile administrator.
+
 ## Examples
 
 ###  Example 1 

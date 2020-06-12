@@ -23,9 +23,9 @@ Enabling server maintenance mode prevents the appliance from sending any email n
 Disabling maintenance mode causes email notifications to return to normal. No attempt is made to send any events that occurred during the maintenance mode. However, if the health of the server is not OK when maintenance mode is disabled, a single event will be sent, alerting that the server is in a non-healthy state.
 
 {% hint style="info" %}
-Minimum required privileges: Infrastructure administrator,
+Minimum required privileges: Infrastructure administrator, Network administrator
 {% endhint %}
- Network administrator
+
 ## Examples
 
 ###  Example 1 

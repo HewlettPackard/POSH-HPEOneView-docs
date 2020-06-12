@@ -36,9 +36,9 @@ You can filter the display of the activity list to help you locate and view spec
 This Cmdlet allows the administrator to get an alert. Alerts can be filtered by using the -State parameter.  If a resource object is supplied using the -InputObject parameter, all associated alerts will be returned.  This Cmdlet also supports additional filtering by state, assigned to user, severity, count and date range.
 
 {% hint style="info" %}
-Minimum required privileges: Network administrator,
+Minimum required privileges: Network administrator, Server administrator, Infrastructure administrator, Backup administrator, Read only
 {% endhint %}
- Server administrator, Infrastructure administrator, Backup administrator, Read only
+
 ## Examples
 
 ###  Example 1 

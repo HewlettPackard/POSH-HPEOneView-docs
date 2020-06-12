@@ -49,9 +49,9 @@ Automated zoning enables HPE OneView to automatically create, edit, and delete z
 This Cmdlet is used to display or list the discovered and available Managed SAN resources in the appliance once a supported SAN manager has been added to the appliance.
 
 {% hint style="info" %}
-Minimum required privileges: Read-
+Minimum required privileges: Read
 {% endhint %}
-only
+-only
 ## Examples
 
 ###  Example 1 

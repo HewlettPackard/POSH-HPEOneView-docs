@@ -21,16 +21,17 @@ Add-HPOVApplianceTrustedCertificate
 
 ## Description
 
-Hypervisor Manager is software for managing virtualized environments. Through the HPE OneView Hypervisor Manager resource, you can create, import, configure, and manage hypervisors and hypervisor clusters. A hypervisor manager provides the hostname and credentials to register with HPE OneView. HPE OneView uses these details to communicate with a hypervisor manager to perform tasks such as add, edit, and remove hypervisors or hypervisor clusters.
+HPE OneView performs certificate validation for all Transport Layer Security (TLS) communications between the appliance and external servers or devices. These checks guarantee confidentiality, integrity, and authentication with the remote end-point.
 
-You can register a new hypervisor cluster manager with HPE OneView by providing the hostname and credentials. The registered hypervisor manager contains preferences, which are used as default hypervisor or cluster settings during hypervisor cluster profile creation. You can modify the hypervisor manager preferences using Set-HPOVClusterManager. You can override these values also when deploying a new hypervisor cluster profile.
+In production environments, Hewlett Packard Enterprise strongly recommends that certificate validation be enabled. In environments where security is not a concern, such as a testing environment, certificate validation can optionally be disabled.
 
-A valid hypervisor manager certificate must be added to HPE OneView trust store to be able to successfully communicate with a hypervisor manager, which ensures secure and verified communication.
-
-Cluster managers can also be added to existing scope resources, or added later using Add-HPOVResourceToScope.
+This Cmdlet will allow an administrator to add X.509 compliant SSL certificates to the appliance trusted store.
 
 {% hint style="info" %}
-Minimum required privileges: Infrastructure administrator
+Minimum required privileges:
+
+    * Infrastructure Administrator to add certificate authority certificates and server certificates.
+    * Network administrator, Server administrator, Software administrator, or Storage administrator to add server certificates.
 {% endhint %}
 
 ## Examples

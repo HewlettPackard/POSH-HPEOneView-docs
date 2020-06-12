@@ -35,9 +35,9 @@ This Cmdlet will display configured address pool ranges defined on an HPE OneVie
 You can specify one, some or all of the pool types.
 
 {% hint style="info" %}
-Minimum required privileges: Network administrator (
+Minimum required privileges: Network administrator 
 {% endhint %}
-virtual MAC addresses and virtual WWNs), Infrastructure administrator (all ID types)
+(virtual MAC addresses and virtual WWNs), Infrastructure administrator (all ID types)
 ## Examples
 
 ###  Example 1 

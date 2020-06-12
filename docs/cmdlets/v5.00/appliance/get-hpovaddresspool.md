@@ -28,9 +28,9 @@ This Cmdlet will get the available and configured address pools, and their assoc
 You can specify one, some or all of the Pool types. A Range switch is provided to include the associated Range objects. A report switch is provided to display a report of each address pool type.
 
 {% hint style="info" %}
-Minimum required privileges: Network administrator (
+Minimum required privileges: Network administrator 
 {% endhint %}
-virtual MAC addresses and virtual WWNs), Infrastructure administrator (all ID types)
+(virtual MAC addresses and virtual WWNs), Infrastructure administrator (all ID types)
 ## Examples
 
 ###  Example 1 

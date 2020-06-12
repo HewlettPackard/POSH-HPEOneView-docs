@@ -54,9 +54,9 @@ If you purchase HPE OneView Advanced and HPE OneView Advanced w/o iLO licenses s
 This Cmdlet will retrieve licenses installed on the appliance. You can use this to get an inventory of what's installed and what licenses are consumed.
 
 {% hint style="info" %}
-Minimum required privileges: Read-
+Minimum required privileges: Read
 {% endhint %}
-only
+-only
 ## Examples
 
 ###  Example 1 

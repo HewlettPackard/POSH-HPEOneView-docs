@@ -27,9 +27,9 @@ Interconnects enable communication between the server hardware in the enclosure 
 This Cmdlet will retrieve a list of all supported interconnect types (Ethernet, FC, Converged Network, and/or SAS) or specific ones via a query if the name parameter is provided. The output can be sent to a file using the Export parameter.
 
 {% hint style="info" %}
-Minimum required privileges: Read-
+Minimum required privileges: Read
 {% endhint %}
-only
+-only
 ## Examples
 
 ###  Example 1 

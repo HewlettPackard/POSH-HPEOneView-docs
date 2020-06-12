@@ -53,9 +53,9 @@ For HPE Synergy:  Regular network sets can contain up to 1,000 networks. Large n
 This Cmdlet is used to retrieve a collection of network set resources which have the specified type and/or name. The default connection information is included in the returned network resources.
 
 {% hint style="info" %}
-Minimum required privileges: Read-
+Minimum required privileges: Read
 {% endhint %}
-only
+-only
 ## Examples
 
 ###  Example 1 

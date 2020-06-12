@@ -17,9 +17,9 @@ Get-HPOVHealthStatus
 Display the HPE OneView appliance health status.  This includes CPU, Memory and Disk Space.
 
 {% hint style="info" %}
-Minimum required privileges: Read-
+Minimum required privileges: Read
 {% endhint %}
-only
+-only
 ## Examples
 
 ###  Example 1 

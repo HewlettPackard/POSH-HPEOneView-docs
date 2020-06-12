@@ -62,9 +62,9 @@ Resources in other categories are considered to be included in all scopes, and t
 
 
 {% hint style="info" %}
-Minimum required privileges: Infrastructure administrator,
+Minimum required privileges: Infrastructure administrator, scope administrator, scope operator
 {% endhint %}
- scope administrator, scope operator
+
 ## Examples
 
 ###  Example 1 
