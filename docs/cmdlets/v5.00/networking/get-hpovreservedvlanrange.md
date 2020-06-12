@@ -28,9 +28,9 @@ For the maximum number of VLANs per physical downlink port, see the HPE OneView 
 Use this Cmdlet to get the configured reserved VLAN range pool.
 
 {% hint style="info" %}
-Minimum required privileges: Read-
+Minimum required privileges: Read
 {% endhint %}
-only
+-only
 ## Examples
 
 ###  Example 1 

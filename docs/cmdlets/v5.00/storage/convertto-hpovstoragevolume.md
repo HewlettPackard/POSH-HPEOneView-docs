@@ -34,9 +34,9 @@ Reverting to a snapshot of a volume will cause all data created or changed since
 
 
 {% hint style="info" %}
-Minimum required privileges: Infrastructure administrator,
+Minimum required privileges: Infrastructure administrator, Server administrator, or Storage administrator.
 {% endhint %}
- Server administrator, or Storage administrator.
+
 ## Examples
 
 ###  Example 1 

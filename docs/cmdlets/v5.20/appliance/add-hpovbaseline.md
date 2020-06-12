@@ -34,9 +34,9 @@ Please note that any file name that contains the . (period, CHAR46) character wi
 Example: My.Spp.To.Upload.201605.iso will become My_Spp_To_Upload_201605.iso.
 
 {% hint style="info" %}
-Minimum required privileges: Infrastructure administrator,
+Minimum required privileges: Infrastructure administrator, Network administrator, or Server administrator
 {% endhint %}
- Network administrator, or Server administrator
+
 ## Examples
 
 ###  Example 1 

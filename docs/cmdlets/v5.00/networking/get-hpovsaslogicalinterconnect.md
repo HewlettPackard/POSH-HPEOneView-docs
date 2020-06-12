@@ -26,9 +26,9 @@ A SAS Logical Interconnect represents a single SAS fabric local to the physical 
 This Cmdlet retrieves a list of all SAS Logical Interconnect or just specific ones via a query if the name parameter is provided. The output can be sent to a file using the exportFile parameter.
 
 {% hint style="info" %}
-Minimum required privileges: Read-
+Minimum required privileges: Read
 {% endhint %}
-only
+-only
 ## Examples
 
 ###  Example 1 

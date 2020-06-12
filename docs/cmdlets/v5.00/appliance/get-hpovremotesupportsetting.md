@@ -35,9 +35,9 @@ Once the appliance is configured, it cannot be unauthorized or disabled.
 Use this Cmdlet to retrieve a supported resources Remote Support settings of an enabled resource (compute or enclosure), defined Parimary and Secondary contact, and authorized reseller or support partners.
 
 {% hint style="info" %}
-Minimum required privileges: Read-
+Minimum required privileges: Read
 {% endhint %}
-only
+-only
 ## Examples
 
 ###  Example 1 

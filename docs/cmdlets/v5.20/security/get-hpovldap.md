@@ -32,9 +32,9 @@ When you use a directory service, directory users are granted HPE OneView permis
 This Cmdlet will display the global authentication directory settings configured on the appliance. It will show if local logins are enabled, default authentication directory name, and configured authentication directory names.
 
 {% hint style="info" %}
-Minimum required privileges: Read-
+Minimum required privileges: Read
 {% endhint %}
-only
+-only
 ## Examples
 
 ###  Example 1 

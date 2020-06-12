@@ -65,9 +65,9 @@ Stacking links can be set from the originating peer or from the destination peer
 This Cmdlet retrieves a list of all Logical Switch Groups or just specific ones via a query if the name parameter is provided. The output can be sent to a file using the exportFile parameter.
 
 {% hint style="info" %}
-Minimum required privileges: Read-
+Minimum required privileges: Read
 {% endhint %}
-only
+-only
 ## Examples
 
 ###  Example 1 

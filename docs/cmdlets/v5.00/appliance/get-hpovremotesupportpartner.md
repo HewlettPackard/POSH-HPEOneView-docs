@@ -28,9 +28,9 @@ In addition to the above information provided to Authorized Resellers, the Servi
 Use this Cmdlet to Retrieve defined Remote Support partners that are authorized HPE Resellers and/or Support.
 
 {% hint style="info" %}
-Minimum required privileges: Read-
+Minimum required privileges: Read
 {% endhint %}
-only
+-only
 ## Examples
 
 ###  Example 1 

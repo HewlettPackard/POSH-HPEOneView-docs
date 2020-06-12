@@ -19,9 +19,9 @@ Set-HPOVReservedVlanRange
 By default, HPE Synergy reserves VLANs 3967-4095.  In order to modify the default range, Tunnel, untagged and FC networks must not exist.  The -Length parameter must not exceed 128.  The reserved VLAN range is concurrent.
 
 {% hint style="info" %}
-Minimum required privileges:  Network administrator,
+Minimum required privileges:  Network administrator, Infrastructure administrator
 {% endhint %}
- Infrastructure administrator
+
 ## Examples
 
 ###  Example 1 

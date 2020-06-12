@@ -25,9 +25,9 @@ The UID light blinks automatically to indicate that a critical operation is unde
 
 
 {% hint style="info" %}
-Minimum required privileges: Infrastructure administrator,
+Minimum required privileges: Infrastructure administrator, Server administrator 
 {% endhint %}
- Server administrator (for enclosure, server, and frame link module UID lights), Network administrator (for interconnect UID lights)
+(for enclosure, server, and frame link module UID lights), Network administrator (for interconnect UID lights)
 ## Examples
 
 ###  Example 1 

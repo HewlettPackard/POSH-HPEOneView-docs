@@ -21,9 +21,9 @@ A cluster in an active state runs a shared workload, like virtual machines withi
 After the maintenance operation on the cluster member completes, you must release it from maintenance mode to resume hosting the shared workload.
 
 {% hint style="info" %}
-Minimum required privileges: Infrastructure administrator,
+Minimum required privileges: Infrastructure administrator, Server administrator, Server Profile administrator, Server Profile architect, or Server Profile operator
 {% endhint %}
- Server administrator, Server Profile administrator, Server Profile architect, or Server Profile operator
+
 ## Examples
 
 ###  Example 1 

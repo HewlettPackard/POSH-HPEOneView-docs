@@ -34,9 +34,9 @@ Drive enclosures are hardware devices that contain a set of drive bays. A drive 
 Using this Cmdlet will get the drive inventory from the connected appliance.  Inventory can be filtered on SAS logical interconnects and SAS drive enclosures.
 
 {% hint style="info" %}
-Minimum required privileges: Infrastructure administrator,
+Minimum required privileges: Infrastructure administrator, server administrator, server profile architect, server profile administrator
 {% endhint %}
- server administrator, server profile architect, server profile administrator
+
 ## Examples
 
 ###  Example 1 

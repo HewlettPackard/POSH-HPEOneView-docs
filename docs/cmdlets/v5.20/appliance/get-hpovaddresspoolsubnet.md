@@ -24,9 +24,9 @@ Associate an IPv4 or IPv6 subnet with an Ethernet network. If this is an iSCSI n
 Use this Cmdlet to retrieve the configured IPv4 or IPv6 address pool subnets.
 
 {% hint style="info" %}
-Minimum required privileges: Network administrator,
+Minimum required privileges: Network administrator, Infrastructure administrator
 {% endhint %}
- Infrastructure administrator
+
 ## Examples
 
 ###  Example 1 

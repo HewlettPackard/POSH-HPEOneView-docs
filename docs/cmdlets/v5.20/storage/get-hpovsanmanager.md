@@ -26,9 +26,9 @@ HPE OneView supports SAN managers from different vendors. See the HPE OneView Su
 This Cmdlet will return the configured SAN Manager(s).
 
 {% hint style="info" %}
-Minimum required privileges: Read-
+Minimum required privileges: Read
 {% endhint %}
-only
+-only
 ## Examples
 
 ###  Example 1 

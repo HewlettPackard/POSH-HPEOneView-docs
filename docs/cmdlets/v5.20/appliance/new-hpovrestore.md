@@ -33,9 +33,9 @@ Restoring from a backup is a disruptive action:
   address and identifier ranges.
 
 {% hint style="info" %}
-Minimum required privileges: Infrastructure administrator,
+Minimum required privileges: Infrastructure administrator, Software administrator
 {% endhint %}
- Software administrator
+
 ## Examples
 
 ###  Example 1 

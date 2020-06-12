@@ -30,9 +30,9 @@ A cluster profile can manage VMware ESXi-based hypervisor clusters by leveraging
 Use this Cmdlet to remove a cluster profile within OneView.  Removing a cluster within OneView will also destroy the cluster within the cluster manager.
 
 {% hint style="info" %}
-Minimum required privileges: Infrastructure administrator,
+Minimum required privileges: Infrastructure administrator, Server administrator, Server profile architect, or Server profile administrator.
 {% endhint %}
- Server administrator, Server profile architect, or Server profile administrator.
+
 ## Examples
 
 ###  Example 1 

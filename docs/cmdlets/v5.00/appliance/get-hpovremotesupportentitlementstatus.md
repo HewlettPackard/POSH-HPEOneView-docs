@@ -38,9 +38,9 @@ For more details on the data items transmitted, see the security white paper in 
 This Cmdlet will return the Remote Support entitlement status for a compute or enclosure resource. If remote support has not been globally enabled and configured on the appliance, this Cmdlet will fail.
 
 {% hint style="info" %}
-Minimum required privileges: Read-
+Minimum required privileges: Read
 {% endhint %}
-only
+-only
 ## Examples
 
 ###  Example 1 

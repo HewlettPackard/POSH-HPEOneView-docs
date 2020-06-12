@@ -37,9 +37,9 @@ The appliance also monitors iPDU to remain synchronized with changes to hardware
 
 
 {% hint style="info" %}
-Minimum required privileges: Read-
+Minimum required privileges: Read
 {% endhint %}
-only
+-only
 ## Examples
 
 ###  Example 1 

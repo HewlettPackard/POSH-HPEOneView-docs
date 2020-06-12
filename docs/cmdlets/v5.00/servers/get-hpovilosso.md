@@ -35,9 +35,9 @@ this is not supported on G7 or earlier servers.
 The generated SSO object or URL can be used with other HPE libraries that support iLO session tokens.
 
 {% hint style="info" %}
-Minimum required privileges: Read-
+Minimum required privileges: Read
 {% endhint %}
-only. Know that your user account role within OneView will be mapped to a specific iLO role.  Please review the HPE OneView online help for more information, searching for "Mapping of SSO roles".
+-only. Know that your user account role within OneView will be mapped to a specific iLO role.  Please review the HPE OneView online help for more information, searching for "Mapping of SSO roles".
 ## Examples
 
 ###  Example 1 

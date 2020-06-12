@@ -72,9 +72,9 @@ Uplink Sets can be created for Logical Interconnect Groups or Logical Interconne
 Please know that the UplinkPorts parameter syntax is different between HPE BladeSystem and HPE Synergy Virtual Connect.
 
 {% hint style="info" %}
-Minimum required privileges: Infrastructure administrator,
+Minimum required privileges: Infrastructure administrator, Network administrator
 {% endhint %}
- Network administrator
+
 ## Examples
 
 ###  Example 1 
