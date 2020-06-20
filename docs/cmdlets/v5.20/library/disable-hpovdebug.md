@@ -16,7 +16,7 @@ Disable-HPOVDebug
 
 ## Description
 
-FOR HP SUPPORT USE ONLY.  This Cmdlet will disable appliance level component debug logging for during issue triage, by setting the Level to INFO.  Do not use this Cmdlet unless otherwise instructed by HP Support.
+FOR HPE Support USE ONLY.  This Cmdlet will disable appliance level component debug logging for during issue triage, by setting the Level to INFO.  Do not use this Cmdlet unless otherwise instructed by HPE Support.
 
 ## Examples
 

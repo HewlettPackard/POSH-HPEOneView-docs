@@ -17,7 +17,7 @@ Enable-HPOVDebug
 
 ## Description
 
-FOR HP SUPPORT USE ONLY.  This Cmdlet will enable appliance level component debug logging for during issue triage.  Do not use this Cmdlet unless otherwise instructed by HP Support.
+FOR HPE Support USE ONLY.  This Cmdlet will enable appliance level component debug logging for during issue triage.  Do not use this Cmdlet unless otherwise instructed by HPE Support.
 
 ## Examples
 
