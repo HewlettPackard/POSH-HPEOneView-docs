@@ -10,10 +10,11 @@ description: Add an external fabric manager.
 Add-HPOVFabricManager
     [-ManagementAddress] <String>
     [-Name] <String>
-    [-Credential <PSCredential>]
+    [-Credential] <PSCredential>
     [-SecondaryManagementAddress <String>]
     [-TertiearyManagementAddress <String>]
     [-TrustLeafCertificate]
+    [-EnableAutomaticRemediation]
     [-Async]
     [-ApplianceConnection <Array>]
     [<CommonParameters>]
@@ -30,9 +31,14 @@ Remediation of networks, network sets, and logical interconnects Remediation is 
 The following conditions cause the fabric manager to be unable to synchronize with network policies:
 
     *  One or more networks connected across uplink sets in a logical interconnect within HPE Synergy have the same VLAN tag
-    *  The two networks are shared across tenants 
+    *  The two networks are shared across tenants
 
 When a fabric manager is non compliant with APIC network policies, a software remediation enables a fabric manager to synchronize with network policies. A compliance report is generated immediately after adding a fabric manager and is updated again after remediation. The compliance report details actions that you can perform to remediate inconsistencies. There are indicators for compliant, noncompliant, and compliance-check progress for each resource. Every tenant has a list of consistent and inconsistent reports based on the compliance records generated for a tenant. An inconsistency appears in the form of an alert, which contains an action choice: auto-remediate or manual. If you choose to auto-remediate, an automatic update of the selected HPE OneView resource will initiate.
+
+The Cisco APIC administrator provides the user login information to HPE OneView administrator using which fabric manager connects with the Cisco APIC. The Cisco APIC user must have Read all role and Read only access level to allow the fabric manager to retrieve all the required information when connected to the Cisco APIC.
+
+    * Read-all  User role for connectivity and protocol configuration under fabric infrastructure.
+    * Read only  Access level for accessing system configuration with no privileges to modify the system state.
 
 {% hint style="info" %}
 Minimum required privileges: Infrastructure administrator or Network administrator.
@@ -149,6 +155,37 @@ The fabric managers tertieary IP Address or FQDN.
 ### -TrustLeafCertificate &lt;SwitchParameter&gt;
 
 If the resource SSL certificate is not trusted, use this parameter to add the certificate to the appliance trust store.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -EnableAutomaticRemediation &lt;SwitchParameter&gt;
+
+You can resolve your resource inconsistencies manually or automatically.
+
+Automatic remediation
+
+Automatically resolve resource inconsistencies, using the Automatic remediation option on the Add Fabric Manager or Edit Fabric Manager screen. When you enable this option, all inconsistencies that are eligible for automatic remediation are detected and resolved without your intervention.
+
+When you disable automatic remediation, you must confirm to resolve all the inconsistencies that are eligible for remediation.
+
+{% hint style="info" %}
+ By default, automatic remediation is disabled on fabric managers that were added in older versions of HPE OneView.
+{% endhint %}
+
+
+Manual remediation
+
+Manual remediation means that the proposed remediation has a confict with the existing configuration of the HPE OneView and need to be resolved manually.
+
+Use the activity log (Get-HPOVAlert) to view the remediation status of the inconsistencies. In the activity log, an alert is created for every inconsistency and a task is created for every remediation. The alert status of all inconsistencies that were resolved automatically is set to cleared. The alert status of all inconsistencies that require manual remediation remain active.
+
+Use this parameter to enable automatic remediation.  If you wish to explicitly disable, use `-EnableAutomaticRemediation:$false`
 
 | Aliases | None |
 | :--- | :--- |

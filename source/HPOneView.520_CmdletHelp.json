@@ -1,4 +1,4 @@
-﻿{
+{
   "Version": "5.20",
   "LibraryGUID": "53cc9b65-a000-447b-aec8-805a2a8dd9aa",
   "Cmdlets": [
@@ -974,7 +974,7 @@
       "Category": "Networking",
       "Contents": {
         "Synopsis": "Add an external fabric manager.",
-        "Description": "Fabric Managers is a resource manager in HPE OneView that enables integration of a Cisco ACI fabric (an external entity) with HPE Synergy. A fabric manager aligns HPE OneView resources as defined by Cisco Application Policy Infrastructure Controller (APIC) policies. It represents a remote Cisco APIC or an APIC cluster that manages a Cisco ACI fabric.\n\nYou can operate a fabric manager after adding it in HPE OneView and configure a list of tenants to cover policies necessary for HPE Synergy and Cisco APIC integration.\n\nRemediation of networks, network sets, and logical interconnects Remediation is a process to convert a noncompliant health state of an HPE OneView resource to a compliant health state with respect to APIC policy definitions.\n\nThe following conditions cause the fabric manager to be unable to synchronize with network policies:\n\n    *  One or more networks connected across uplink sets in a logical interconnect within HPE Synergy have the same VLAN tag\n    *  The two networks are shared across tenants \n\nWhen a fabric manager is non compliant with APIC network policies, a software remediation enables a fabric manager to synchronize with network policies. A compliance report is generated immediately after adding a fabric manager and is updated again after remediation. The compliance report details actions that you can perform to remediate inconsistencies. There are indicators for compliant, noncompliant, and compliance-check progress for each resource. Every tenant has a list of consistent and inconsistent reports based on the compliance records generated for a tenant. An inconsistency appears in the form of an alert, which contains an action choice: auto-remediate or manual. If you choose to auto-remediate, an automatic update of the selected HPE OneView resource will initiate.\n\nMinimum required privileges: Infrastructure administrator or Network administrator.",
+        "Description": "Fabric Managers is a resource manager in HPE OneView that enables integration of a Cisco ACI fabric (an external entity) with HPE Synergy. A fabric manager aligns HPE OneView resources as defined by Cisco Application Policy Infrastructure Controller (APIC) policies. It represents a remote Cisco APIC or an APIC cluster that manages a Cisco ACI fabric.\n\nYou can operate a fabric manager after adding it in HPE OneView and configure a list of tenants to cover policies necessary for HPE Synergy and Cisco APIC integration.\n\nRemediation of networks, network sets, and logical interconnects Remediation is a process to convert a noncompliant health state of an HPE OneView resource to a compliant health state with respect to APIC policy definitions.\n\nThe following conditions cause the fabric manager to be unable to synchronize with network policies:\n\n    *  One or more networks connected across uplink sets in a logical interconnect within HPE Synergy have the same VLAN tag\n    *  The two networks are shared across tenants\n\nWhen a fabric manager is non compliant with APIC network policies, a software remediation enables a fabric manager to synchronize with network policies. A compliance report is generated immediately after adding a fabric manager and is updated again after remediation. The compliance report details actions that you can perform to remediate inconsistencies. There are indicators for compliant, noncompliant, and compliance-check progress for each resource. Every tenant has a list of consistent and inconsistent reports based on the compliance records generated for a tenant. An inconsistency appears in the form of an alert, which contains an action choice: auto-remediate or manual. If you choose to auto-remediate, an automatic update of the selected HPE OneView resource will initiate.\n\nThe Cisco APIC administrator provides the user login information to HPE OneView administrator using which fabric manager connects with the Cisco APIC. The Cisco APIC user must have Read all role and Read only access level to allow the fabric manager to retrieve all the required information when connected to the Cisco APIC.\n\n    * Read-all  User role for connectivity and protocol configuration under fabric infrastructure.\n    * Read only  Access level for accessing system configuration with no privileges to modify the system state.\n\nMinimum required privileges: Infrastructure administrator or Network administrator.",
         "Parameters": [
           {
             "Name": "ApplianceConnection",
@@ -1065,6 +1065,16 @@
             "SupportsWildcard": false,
             "DataType": "SwitchParameter",
             "Required": false
+          },
+          {
+            "Name": "EnableAutomaticRemediation",
+            "Description": "You can resolve your resource inconsistencies manually or automatically.\n\nAutomatic remediation\n\nAutomatically resolve resource inconsistencies, using the Automatic remediation option on the Add Fabric Manager or Edit Fabric Manager screen. When you enable this option, all inconsistencies that are eligible for automatic remediation are detected and resolved without your intervention.\n\nWhen you disable automatic remediation, you must confirm to resolve all the inconsistencies that are eligible for remediation.\n\nNOTE:  By default, automatic remediation is disabled on fabric managers that were added in older versions of HPE OneView.\n\nManual remediation\n\nManual remediation means that the proposed remediation has a confict with the existing configuration of the HPE OneView and need to be resolved manually.\n\nUse the activity log (Get-HPOVAlert) to view the remediation status of the inconsistencies. In the activity log, an alert is created for every inconsistency and a task is created for every remediation. The alert status of all inconsistencies that were resolved automatically is set to cleared. The alert status of all inconsistencies that require manual remediation remain active.\n\nUse this parameter to enable automatic remediation.  If you wish to explicitly disable, use `-EnableAutomaticRemediation:$false`",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -1112,7 +1122,7 @@
             },
             {
               "Name": "Credential",
-              "Required": false
+              "Required": true
             },
             {
               "Name": "SecondaryManagementAddress",
@@ -1124,6 +1134,10 @@
             },
             {
               "Name": "TrustLeafCertificate",
+              "Required": false
+            },
+            {
+              "Name": "EnableAutomaticRemediation",
               "Required": false
             },
             {
@@ -5501,7 +5515,7 @@
       "Category": "Library",
       "Contents": {
         "Synopsis": "Disable specific appliance-level component debug logging.",
-        "Description": "FOR HP SUPPORT USE ONLY.  This Cmdlet will disable appliance level component debug logging for during issue triage, by setting the Level to INFO.  Do not use this Cmdlet unless otherwise instructed by HP Support.",
+        "Description": "FOR HPE Support USE ONLY.  This Cmdlet will disable appliance level component debug logging for during issue triage, by setting the Level to INFO.  Do not use this Cmdlet unless otherwise instructed by HPE Support.",
         "Parameters": [
           {
             "Name": "Scope",
@@ -6647,7 +6661,7 @@
       "Category": "Library",
       "Contents": {
         "Synopsis": "Enable specific appliance-level component debug logging.",
-        "Description": "FOR HP SUPPORT USE ONLY.  This Cmdlet will enable appliance level component debug logging for during issue triage.  Do not use this Cmdlet unless otherwise instructed by HP Support.",
+        "Description": "FOR HPE Support USE ONLY.  This Cmdlet will enable appliance level component debug logging for during issue triage.  Do not use this Cmdlet unless otherwise instructed by HPE Support.",
         "Parameters": [
           {
             "Name": "Scope",
@@ -34539,13 +34553,13 @@
       "Category": "Appliance",
       "Contents": {
         "Synopsis": "Generate and download Support Dumps.",
-        "Description": "Support Dumps are required when an issue is encountered and HP Support requests one to be generated.  There are two different Support Dumps:\n\n1.  Appliance\n2.  Logical Interconnect\n\nThe Appliance Support Dump contains important log files about the appliance, but excludes the Logical Interconnect logs.",
+        "Description": "The support dump contains data that might be considered customer sensitive such as hostnames, IP addresses, and the appliance audit log. Unless you specify otherwise, all data in the support dump file is encrypted so that only an authorized technical support person can access it.\n\nYou can choose not to encrypt the support dump file if you are an Infrastructure administrator. This option can be useful if you have an onsite, authorized technical support person or if your environment prohibits outside connections. You can also validate the contents of the support dump file and verify that it does not contain data considered sensitive in your environment.\n\nUse the `-Advanced` parameter to customize the selection of support dump logs while creating the support dump. Customizing the selection of support dump logs reduces the size of the collection and as a result enables faster creation and download of the collection.\n\nNOTE:  Hewlett Packard Enterprise recommends that you customize the selection of the support dump logs with the help of an authorized technical support representative.\n\nSome error messages recommend that you create a support dump of the HPE Synergy Composer and send it to authorized technical support for analysis. The support dump process performs the following functions:\n\n    * Deletes any previous support dump file\n    * Gathers logs and other information required for debugging\n    * Creates a compressed file with a name in the following format:\n        \n        hostname-identifiertimestamp.sdmp\n \n      Where, for support dump files created from the UI, identifier is either CI (indicating an appliance support dump) or LE (indicating a logical enclosure support dump).\n\nIMPORTANT:  If the appliance is in an error state, a special Appliance error screen is displayed. Anyone can create an encrypted support dump file from that screen without the need for logging in or other authentication.\n\n    * Creating the support dump file will remove the backup file that exists on the HPE Synergy Composer. Move the backup file to an external location before proceeding.\n\nThe support dump file contains the following:\n\n    * Operating system logs\n    * Product logs\n    * The results of certain operating system and product-related commands\n\nItems logged in the support dump file are recorded according to UTC time.\n\nMinimum required privileges: Network administrator, Server administrator, Infrastructure administrator, Backup administrator, Read only\n\nNOTE:  Only the Infrastructure administrator has the option of not encrypting a support dump file. When a user with a different role creates a support dump file, it is encrypted automatically.",
         "Parameters": [
           {
-            "Name": "Location",
+            "Name": "Path",
             "Description": "The full path to where the Support Dump will be saved to.  The downloaded file name will be generated by the appliance.  If the directory does not exist, it will be created.",
             "DefaultValue": "(get-location).Path",
-            "Aliases": "save",
+            "Aliases": "Save, Location",
             "PipelineInput": "false",
             "SupportsWildcard": false,
             "DataType": "String",
@@ -34553,7 +34567,7 @@
           },
           {
             "Name": "Type",
-            "Description": "The type of Support Dump to collect.  Possible values are:\n\n1.  appliance\n2.  li",
+            "Description": "The type of Support Dump to collect.  Possible values are:\n\n1.  Appliance\n2.  LogicalEnclosure",
             "DefaultValue": null,
             "Aliases": "None",
             "PipelineInput": "false",
@@ -34572,10 +34586,10 @@
             "Required": false
           },
           {
-            "Name": "LogicalInterconnect",
-            "Description": "Specify the Logical Interconnect URI or Object the Support Dump will be generated for, from pipeline.",
+            "Name": "InputObject",
+            "Description": "When the support dump type is LogicalEnclosure, the logical enclosure resource must be passed from Get-HPOVLogicalEnclosure as a parameter value or pipeline.",
             "DefaultValue": null,
-            "Aliases": "liobject, li, name",
+            "Aliases": "LogicalEnclosure, LE",
             "PipelineInput": "true (ByValue)",
             "SupportsWildcard": false,
             "DataType": "Object",
@@ -34590,11 +34604,121 @@
             "SupportsWildcard": false,
             "DataType": "Array",
             "Required": true
+          },
+          {
+            "Name": "AHSLogsForComposer",
+            "Description": "[To be used by the direction of HPE Support]  Select to include the HPE Synergy Composer AHS logs.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "AdvancedSupportDump",
+            "Description": "[To be used by the direction of HPE Support]  Use to indicate certain log files are going to be requested (others not specified are excluded), resulting in a smaller support dump.  This cannot be combined with a Logical Enclosure support dump.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "AlertLogs",
+            "Description": "[To be used by the direction of HPE Support]  Use to include internal alert logs files.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "ApacheLogs",
+            "Description": "[To be used by the direction of HPE Support]  Use to include Apache internal log files.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "CiDbLogs",
+            "Description": "[To be used by the direction of HPE Support]  Use to include internal appliance database log files.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "CiDebugLogs",
+            "Description": "[To be used by the direction of HPE Support]  Use to include internal debug log files.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "CiRequestLogs",
+            "Description": "[To be used by the direction of HPE Support]  Use to include requests log files.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "ExcludeApplianceSupportDump",
+            "Description": "Use this parameter to exclude the appliance support dump when creating a logical enclosure support dump.  This reduces the time and size of the support dump.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "FLMLogs",
+            "Description": "[To be used by the direction of HPE Support]  Use to include HPE Synergy Frame Link Module (FLM) log files.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "JettyLogs",
+            "Description": "[To be used by the direction of HPE Support]  Use to include internal jetty servlet log files.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "LicenseManagerLogs",
+            "Description": "[To be used by the direction of HPE Support]  Use to include internal license manager log files.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
           {
-            "Value": "Accepts pipeline input from Get-HPOVLogicalInterconnect only.",
+            "Value": "Accepts pipeline input from Get-HPOVLogicalEnclosure only.",
             "Text": null
           }
         ],
@@ -34607,28 +34731,23 @@
         "Examples": [
           {
             "Title": "-------------------------- EXAMPLE 1 --------------------------",
-            "Code": "New-HPOVSupportDump C:\\Temp appliance",
-            "Description": "This command will save the Appliance support dump to C:\\Temp, for Myappliance.domain.com Appliance Connection."
+            "Code": "New-HPOVSupportDump -Path C:\\Temp -Type Appliance",
+            "Description": "This command will create and save the Appliance support dump to C:\\Temp."
           },
           {
             "Title": "-------------------------- EXAMPLE 2 --------------------------",
-            "Code": "New-HPOVSupportDump C:\\Temp appliance",
-            "Description": "This command will save the Appliance support dump to C:\\Temp, for all Appliance Connections."
+            "Code": "New-HPOVSupportDump -Path C:\\Temp -Type Appliance -Advanced -CiDebugLogs -AlertLogs",
+            "Description": "This command will create and save the appliance support dump to C:\\Temp, choosing specific log files requested by HPE Support."
           },
           {
             "Title": "-------------------------- EXAMPLE 3 --------------------------",
-            "Code": "New-HPOVSupportDump C:\\Temp li ENC1-LI",
-            "Description": "This command will save the Logical Interconnect ENC1-LI to C:\\Temp."
+            "Code": "$MyLogicalEnclosure = Get-HPOVLogicalEnclosure -Name MyLogicalEnclosure1\n\nNew-HPOVSupportDump -Path C:\\Temp -Type LogicalEnclosure -InputObject $MyLogicalEnclosure",
+            "Description": "This command will create and save the logical enclosure support dump to C:\\Temp."
           },
           {
             "Title": "-------------------------- EXAMPLE 4 --------------------------",
-            "Code": "Get-HPOVlogicalinterconnect ENC1-LI | New-HPOVSupportDump C:\\Temp",
-            "Description": "Accepting the response from Get-HPOVLogicalInterconnect Cmdlet."
-          },
-          {
-            "Title": "-------------------------- EXAMPLE 5 --------------------------",
-            "Code": "Get-HPOVlogicalinterconnect | New-HPOVSupportDump C:\\Temp",
-            "Description": "Accepting the response from Get-HPOVLogicalInterconnect Cmdlet for all Logical Interconnects and creating support dumps for all."
+            "Code": "Get-HPOVLogicalEnclosure -Name MyLogicalEnclosure1 | New-HPOVSupportDump -Path C:\\Temp -Type LogicalEnclosure -ExcludeApplianceSupportDump",
+            "Description": "This command will create and save the logical enclosure support dump to C:\\Temp, excluding the appliance support dump."
           }
         ],
         "RelatedLinks": [
@@ -34644,8 +34763,8 @@
               "Required": true
             },
             {
-              "Name": "Location",
-              "Required": true
+              "Name": "Path",
+              "Required": false
             },
             {
               "Name": "Encrypted",
@@ -34653,21 +34772,83 @@
             },
             {
               "Name": "ApplianceConnection",
-              "Required": true
+              "Required": false
             }
           ],
           [
             {
-              "Name": "LogicalInterconnect",
+              "Name": "Type",
               "Required": true
             },
             {
-              "Name": "Location",
+              "Name": "InputObject",
               "Required": true
+            },
+            {
+              "Name": "Path",
+              "Required": false
+            },
+            {
+              "Name": "ExcludeApplianceSupportDump",
+              "Required": false
             },
             {
               "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ],
+          [
+            {
+              "Name": "Type",
               "Required": true
+            },
+            {
+              "Name": "Path",
+              "Required": false
+            },
+            {
+              "Name": "AdvancedSupportDump",
+              "Required": false
+            },
+            {
+              "Name": "CiDebugLogs",
+              "Required": false
+            },
+            {
+              "Name": "CiRequestLogs",
+              "Required": false
+            },
+            {
+              "Name": "JettyLogs",
+              "Required": false
+            },
+            {
+              "Name": "ApacheLogs",
+              "Required": false
+            },
+            {
+              "Name": "AHSLogsForComposer",
+              "Required": false
+            },
+            {
+              "Name": "AlertLogs",
+              "Required": false
+            },
+            {
+              "Name": "CiDbLogs",
+              "Required": false
+            },
+            {
+              "Name": "FLMLogs",
+              "Required": false
+            },
+            {
+              "Name": "LicenseManagerLogs",
+              "Required": false
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
             }
           ]
         ]
