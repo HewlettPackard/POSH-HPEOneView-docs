@@ -6,7 +6,7 @@ $NoMatchCmdlets = [System.Collections.ArrayList]::new()
 $CurrentPath = Split-Path $MyInvocation.MyCommand.Path -parent
 
 # Get list of all sorce JSON files
-$SourceJsonFiles = [System.IO.Directory]::GetFiles($CurrentPath + "\..\source", "HPOneView.*.json")
+$SourceJsonFiles = [System.IO.Directory]::GetFiles($CurrentPath + "\..\source", "HPEOneView.*.json")
 $ApprovedCmdletCategories = [System.IO.File]::ReadAllLines($CurrentPath + "\..\source\ApprovedCategories.json", [System.Text.Encoding]::UTF8) | ConvertFrom-Json
 
 if (-not $SourceJsonFiles.Count)

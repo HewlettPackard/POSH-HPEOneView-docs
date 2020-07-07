@@ -34,7 +34,7 @@ Get the HPE OneView appliance health.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | appliance |
 | :--- | :--- |
@@ -54,7 +54,7 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.HealthStatus [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.HealthStatus [System.Management.Automation.PSCustomObject]**_
 
 Appliance health report in table format.
 

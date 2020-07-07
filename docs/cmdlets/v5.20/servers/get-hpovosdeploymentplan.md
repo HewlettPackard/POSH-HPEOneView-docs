@@ -58,7 +58,7 @@ OS Deployment Plan name.  Supports wildcard (*) character.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -74,8 +74,8 @@ Filter resources based on provided Scope membership.  By default, all resources 
 
     * AllResources
     * AllResourcesInScope
-    * `[HPOneView.Appliance.ScopeCollection]`
-    * `[HPOneView.Appliance.ConnectionPermission]`
+    * `[HPEOneView.Appliance.ScopeCollection]`
+    * `[HPEOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
@@ -95,11 +95,11 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.OSDeploymentPlan**_
+_**HPEOneView.Appliance.OSDeploymentPlan**_
 
 An HPE Synergy Image Streamer OS Deployment plan object.
 
-_**System.Collections.ArrayList<HPOneView.Appliance.OSDeploymentPlan>**_
+_**System.Collections.ArrayList<HPEOneView.Appliance.OSDeploymentPlan>**_
 
 A collection or HPE Synergy Image Streamer OS Deployment plan objects.
 

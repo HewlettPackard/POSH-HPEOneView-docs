@@ -72,7 +72,7 @@ Transform the specified server profile object to a different enclosure group and
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -108,7 +108,7 @@ Override confirmation prompt.
 
 ### -EnclosureGroup &lt;Object&gt;
 
-Specify the target `[HPOneView.EnclosureGroup]` resource object.  By changing the Enclosure Group, assigned Networks with Connections that do not exist on in the associated Logical Interconnect Group(s), the Connection may not be assigned to an available FlexNIC.
+Specify the target `[HPEOneView.EnclosureGroup]` resource object.  By changing the Enclosure Group, assigned Networks with Connections that do not exist on in the associated Logical Interconnect Group(s), the Connection may not be assigned to an available FlexNIC.
 
 | Aliases | None |
 | :--- | :--- |
@@ -120,7 +120,7 @@ Specify the target `[HPOneView.EnclosureGroup]` resource object.  By changing th
 
 ### -InputObject &lt;Object&gt;
 
-The `[HPOneView.ServerProfile]` object from `Get-HPOVServerProfile`.
+The `[HPEOneView.ServerProfile]` object from `Get-HPOVServerProfile`.
 
 | Aliases | ServerProfile, Profile |
 | :--- | :--- |
@@ -132,7 +132,7 @@ The `[HPOneView.ServerProfile]` object from `Get-HPOVServerProfile`.
 
 ### -ServerHardwareType &lt;Object&gt;
 
-Specify the `[HPOneView.ServerHardwareType]` object to transform to.  BIOS Settings will be reset to defaults, and Connection FlexNIC assignment will be reset back to Auto.
+Specify the `[HPEOneView.ServerHardwareType]` object to transform to.  BIOS Settings will be reset to defaults, and Connection FlexNIC assignment will be reset back to Auto.
 
 | Aliases | None |
 | :--- | :--- |
@@ -148,13 +148,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.ServerProfile**_
+_**HPEOneView.ServerProfile**_
 
 The Server Profile resource object to transform.
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async Task resource to monitor progress of the Server Profile transformation.
 

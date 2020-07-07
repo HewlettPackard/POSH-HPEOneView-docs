@@ -47,7 +47,7 @@ The name of the server profile resource to be returned.  All server profile reso
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
+Specify one `[HPEOneView.Appliance.Connection]` object or Name property value.
 
 | Aliases | Appliance |
 | :--- | :--- |

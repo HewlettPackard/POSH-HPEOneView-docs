@@ -120,7 +120,7 @@ _**System.Object**_
 
 Enclosure Report
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task resource to monitor
 

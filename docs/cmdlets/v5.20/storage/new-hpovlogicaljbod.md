@@ -24,7 +24,7 @@ New-HPOVLogicalJBOD
 New-HPOVLogicalJBOD
     [-Name] <string>
     [-Description <string>]
-    [-Drives] <HPOneView.Storage.Drive[]>
+    [-Drives] <HPEOneView.Storage.Drive[]>
     [-EraseDataOnDelete <bool>]
     [-Scope <Object>]
     [-ApplianceConnection <Object>]
@@ -35,7 +35,7 @@ New-HPOVLogicalJBOD
 New-HPOVLogicalJBOD
     [-Name] <string>
     [-InputObject] <Object>
-    [-AvailableDriveType <HPOneView.Storage.AvailableDriveType>]
+    [-AvailableDriveType <HPEOneView.Storage.AvailableDriveType>]
     [-Description <string>]
     [-NumberofDrives] <int>
     [-EraseDataOnDelete <bool>]
@@ -132,7 +132,7 @@ Create a new logical JBOD with specific drive bays from a specific drive enclosu
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -142,7 +142,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -AvailableDriveType &lt;HPOneView.Storage.AvailableDriveType&gt;
+### -AvailableDriveType &lt;HPEOneView.Storage.AvailableDriveType&gt;
 
 When attempting to create a logical JBOD, specify the availabe drive type from `Get-HPOVAvailableDriveType`.
 
@@ -189,7 +189,7 @@ Auto is not supported when attempting to create an HPE Synergy D3940 Logical or 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Drives &lt;HPOneView.Storage.Drive[]&gt;
+### -Drives &lt;HPEOneView.Storage.Drive[]&gt;
 
 Provide the specific drives to assign to the logical JBOD.  Use the `Get-HPOVDriveEnclosureInventory` Cmdlet to identify the drives you wish to allocate to the new logical JBOD resource.  Drives can be allocated from different HPE Synergy drive enclosures, but must reside within the same SAS Logical Interconnect.
 
@@ -275,7 +275,7 @@ When attempting to create a logical JBOD, you can specify the min and max drive 
 
 ### -Scope &lt;Object&gt;
 
-Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
+Provide an `[HPEOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -291,13 +291,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Storage.AvailableDriveType**_
+_**HPEOneView.Storage.AvailableDriveType**_
 
 The available drive type from [`Get-HPOVAvailableDriveType`](get-hpovavailabledrivetype.md)
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Asynchronous task resource to monitor.
 

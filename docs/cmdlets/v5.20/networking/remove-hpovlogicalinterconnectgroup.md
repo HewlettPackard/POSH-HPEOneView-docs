@@ -53,7 +53,7 @@ The logical interconnect group object(s), name(s) or uris(s) to be removed from 
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -115,7 +115,7 @@ Logical Interconnect Group resource object
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Removal Task
 

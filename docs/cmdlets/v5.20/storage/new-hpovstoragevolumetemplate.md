@@ -26,7 +26,7 @@ New-HPOVStorageVolumeTemplate
     [-LockEnableCompression]
     [-Shared]
     [-LockProvisionMode]
-    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
+    [-Scope <HPEOneView.Appliance.ScopeCollection[]>]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
@@ -36,7 +36,7 @@ New-HPOVStorageVolumeTemplate
     [-Name] <String>
     [-StoragePool <Object>]
     [-Capacity] <Int64>
-    [-PerformancePolicy <HPOneView.Storage.PerformancePolicy>]
+    [-PerformancePolicy <HPEOneView.Storage.PerformancePolicy>]
     [-Description <String>]
     [-LockStoragePool]
     [-LockCapacity]
@@ -49,7 +49,7 @@ New-HPOVStorageVolumeTemplate
     [-LockEnableEncryption]
     [-CachePinning <bool>]
     [-LockCachePinning]
-    [-VolumeSet <HPOneView.Storage.VolumeSet>]
+    [-VolumeSet <HPEOneView.Storage.VolumeSet>]
     [-LockVolumeSet]
     [-EnableIOPSLimit <bool>]
     [-IOPSLimit <int>]
@@ -57,9 +57,9 @@ New-HPOVStorageVolumeTemplate
     [-EnableDataTransferLimit <bool>]
     [-DataTransferLimit <int>]
     [-LockDataTransferLimit]
-    [-Folder <HPOneView.Storage.NimbleFolder>]
+    [-Folder <HPEOneView.Storage.NimbleFolder>]
     [-LockFolder]
-    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
+    [-Scope <HPEOneView.Appliance.ScopeCollection[]>]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
@@ -82,7 +82,7 @@ New-HPOVStorageVolumeTemplate
     [-LockProtectionLevel]
     [-EnableAdaptiveOptimization]
     [-LockAdaptiveOptimization]
-    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
+    [-Scope <HPEOneView.Appliance.ScopeCollection[]>]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
@@ -363,7 +363,7 @@ Specify to lock the Provision Mode (Shared or Private) value in the template.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one `[HPEOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -373,9 +373,9 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;HPOneView.Appliance.ScopeCollection[]&gt;
+### -Scope &lt;HPEOneView.Appliance.ScopeCollection[]&gt;
 
-Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
+Provide an `[HPEOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -495,7 +495,7 @@ Set to enable or disable IOPS limit.  If enabled, the `-IOPSLimit` parameter mus
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Folder &lt;HPOneView.Storage.NimbleFolder&gt;
+### -Folder &lt;HPEOneView.Storage.NimbleFolder&gt;
 
 Specify the Nimble folder where the volume should be created.  To get availabe folder objects, use the `Get-HPOVStoragePool` Cmdlet.  Folders are defined as a device specific attribute. 
 
@@ -527,7 +527,7 @@ When enabling IOPS limit, provide a value that is greater than or equal to 256.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -PerformancePolicy &lt;HPOneView.Storage.PerformancePolicy&gt;
+### -PerformancePolicy &lt;HPEOneView.Storage.PerformancePolicy&gt;
 
 A Nimble Performance Policy is associated with a storage system.  Using the `Show-HPOVStorageSystemPerformancePolicy`, choose an available performance policy.
 
@@ -543,7 +543,7 @@ Example:
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -VolumeSet &lt;HPOneView.Storage.VolumeSet&gt;
+### -VolumeSet &lt;HPEOneView.Storage.VolumeSet&gt;
 
 Use to specify a Volume Set the volume will be associated with, from `Get-HPOVStorageVolumeSet`.
 
@@ -645,7 +645,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Storage.System.Pool [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Storage.System.Pool [System.Management.Automation.PSCustomObject]**_
 
 Managed Storage Pool resource
 

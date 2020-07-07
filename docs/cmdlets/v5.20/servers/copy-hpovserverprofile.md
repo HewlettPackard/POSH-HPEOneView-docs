@@ -103,7 +103,7 @@ The object of the target server to assign the new profile to.  If omitted, profi
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one `[HPEOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -125,7 +125,7 @@ Server Profile resource object
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Profile Create async task
 

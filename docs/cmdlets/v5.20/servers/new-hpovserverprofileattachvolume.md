@@ -34,15 +34,15 @@ New-HPOVServerProfileAttachVolume
     [-Permanent]
     [-DataProtectionLevel <String>]
     [-EnableAdaptiveOptimization <Bool>]
-    [-PerformancePolicy <HPOneView.Storage.PerformancePolicy>]
+    [-PerformancePolicy <HPEOneView.Storage.PerformancePolicy>]
     [-EnableEncryption <bool>]
     [-CachePinning <bool>]
-    [-VolumeSet <HPOneView.Storage.VolumeSet>]
+    [-VolumeSet <HPEOneView.Storage.VolumeSet>]
     [-EnableIOPSLimit <bool>]
     [-IOPSLimit <int>]
     [-EnableDataTransferLimit <bool>]
     [-DataTransferLimit <int>]
-    [-Folder <HPOneView.Storage.NimbleFolder>]
+    [-Folder <HPEOneView.Storage.NimbleFolder>]
     [-LunIdType] <String>
     [-LunID] <Int32>
     [-HostOStype] <String>
@@ -358,7 +358,7 @@ This parameter is only applicable with Private volumes.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -380,9 +380,9 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;HPOneView.Appliance.ScopeCollection[]&gt;
+### -Scope &lt;HPEOneView.Appliance.ScopeCollection[]&gt;
 
-Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
+Provide an `[HPEOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
 
 | Aliases |  |
 | :--- | :--- |
@@ -542,7 +542,7 @@ Set to enable or disable IOPS limit.  If enabled, the `-IOPSLimit` parameter mus
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Folder &lt;HPOneView.Storage.NimbleFolder&gt;
+### -Folder &lt;HPEOneView.Storage.NimbleFolder&gt;
 
 Specify the Nimble folder where the volume should be created.  To get availabe folder objects, use the `Get-HPOVStoragePool` Cmdlet.  Folders are defined as a device specific attribute. 
 
@@ -574,7 +574,7 @@ When enabling IOPS limit, provide a value that is greater than or equal to 256.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -PerformancePolicy &lt;HPOneView.Storage.PerformancePolicy&gt;
+### -PerformancePolicy &lt;HPEOneView.Storage.PerformancePolicy&gt;
 
 A Nimble Performance Policy is associated with a storage system.  Using the `Show-HPOVStorageSystemPerformancePolicy`, choose an available performance policy.
 
@@ -590,7 +590,7 @@ Example:
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -VolumeSet &lt;HPOneView.Storage.VolumeSet&gt;
+### -VolumeSet &lt;HPEOneView.Storage.VolumeSet&gt;
 
 Use to specify a Volume Set the volume will be associated with, from `Get-HPOVStorageVolumeSet`.
 
@@ -608,17 +608,17 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Storage.Volume [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Storage.Volume [System.Management.Automation.PSCustomObject]**_
 
 Storage Volume Resource object
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 When attaching a one or more Storage Volumes to an existing Server Profile, an Appliance Async Task will be created
 
-_**HPOneView.Profile.SanVolume [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Profile.SanVolume [System.Management.Automation.PSCustomObject]**_
 
 Returns a storage volume attachment object which may be used during profile creation.
 

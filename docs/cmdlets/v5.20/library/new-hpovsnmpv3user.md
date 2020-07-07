@@ -62,7 +62,7 @@ Create a new SNMPv3 user for the appliance.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -74,7 +74,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 
 ### -ApplianceSnmpUser &lt;SwitchParameter&gt;
 
-Use this to create an appliance SNMPv3 User.  Default is to create an `[HPOneView.Networking.SnmpV]`3User.
+Use this to create an appliance SNMPv3 User.  Default is to create an `[HPEOneView.Networking.SnmpV]`3User.
 
 | Aliases | None |
 | :--- | :--- |
@@ -184,11 +184,11 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.SnmpV3User**_
+_**HPEOneView.Appliance.SnmpV3User**_
 
 Appliance SNMPv3 user account created on the appliance.
 
-_**HPOneView.Networking.SnmpV3User**_
+_**HPEOneView.Networking.SnmpV3User**_
 
 SNMPv3 user account for a networking resource.
 

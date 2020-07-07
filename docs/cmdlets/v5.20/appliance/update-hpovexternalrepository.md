@@ -73,7 +73,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -89,17 +89,17 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Appliance.BaselineRepository [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.BaselineRepository [System.Management.Automation.PSCustomObject]**_
 
 The external repository object from [`Get-HPOVBaselineRepository`](get-hpovbaselinerepository.md)
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 The async task for the caller to monitor.
 
-_**System.Collections.ArrayList <HPOneView.Appliance.TaskResource>**_
+_**System.Collections.ArrayList <HPEOneView.Appliance.TaskResource>**_
 
 Multiple async task resource objects.
 

@@ -54,7 +54,7 @@ ConnectionID Name                    UserName      AuthLoginDomain Default Conne
 2            Appliance2.domain.local administrator LOCAL           True
 ```
 
-Display the current appliance connections, then set the new default to "Appliance2" using the pipline by passing the `[HPOneView.Appliance.Connection]` object.
+Display the current appliance connections, then set the new default to "Appliance2" using the pipline by passing the `[HPEOneView.Appliance.Connection]` object.
 
 ## Parameters
 
@@ -62,7 +62,7 @@ Display the current appliance connections, then set the new default to "Applianc
 
 [Aliases `-Connection`]
 
-Either the `[HPOneView.Appliance.Connection]` object, full or partial value of the connection objects Name property.
+Either the `[HPEOneView.Appliance.Connection]` object, full or partial value of the connection objects Name property.
 
 | Aliases | Appliance, Connection |
 | :--- | :--- |
@@ -78,19 +78,19 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Appliance.Connection**_
+_**HPEOneView.Appliance.Connection**_
 
 The Appliance Connection object either provided from the [`Connect-HPOVMgmt`](connect-hpovmgmt.md) output or ${Global:ConnectedSessions} variable
 
 ## Return Values
 
-_**System.Collections.ArrayList <HPOneView.Appliance.Connection>**_
+_**System.Collections.ArrayList <HPEOneView.Appliance.Connection>**_
 
-Updated collection of [HPOneView.Appliance.Connection] Objects
+Updated collection of [HPEOneView.Appliance.Connection] Objects
 
 ## Related Links
 
 * [Connect-HPOVMgmt](connect-hpovmgmt.md)
 * [Disconnect-HPOVMgmt](disconnect-hpovmgmt.md)
-* [about_Appliance_Connection_Permissions](https://hpe-docs.gitbook.io/posh-hponeview/about/about_appliance_connection_permissions)
-* [[${Global:ConnectedSessions}]](https://hpe-docs.gitbook.io/posh-hponeview/about/about_appliance_connections)
+* [about_Appliance_Connection_Permissions](https://hpe-docs.gitbook.io/posh-hpeoneview/about/about_appliance_connection_permissions)
+* [[${Global:ConnectedSessions}]](https://hpe-docs.gitbook.io/posh-hpeoneview/about/about_appliance_connections)

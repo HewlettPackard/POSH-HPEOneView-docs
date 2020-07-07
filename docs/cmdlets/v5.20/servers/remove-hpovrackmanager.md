@@ -8,7 +8,7 @@ description: Remove rack manager from appliance.
 
 ```text
 Remove-HPOVRackManager
-    [-InputObject] <HPOneView.Servers.RackManager>
+    [-InputObject] <HPEOneView.Servers.RackManager>
     [-ApplianceConnection <Array>]
     [-Force]
     [<CommonParameters>]
@@ -32,7 +32,7 @@ Remove the provided rack manager resource from the appliance.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -54,9 +54,9 @@ Force remove resource, in cases where the device manager has been `re-addressed`
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -InputObject &lt;HPOneView.Servers.RackManager&gt;
+### -InputObject &lt;HPEOneView.Servers.RackManager&gt;
 
-An `[HPOneView.Servers.RackManager]` resource from `Get-HPOVRackManager`.
+An `[HPEOneView.Servers.RackManager]` resource from `Get-HPOVRackManager`.
 
 | Aliases | uri, name, Server |
 | :--- | :--- |
@@ -72,13 +72,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Servers.RackManager**_
+_**HPEOneView.Servers.RackManager**_
 
-An HPOneView.Servers.RackManager resource from [`Get-HPOVRackManager`](get-hpovrackmanager.md).
+An HPEOneView.Servers.RackManager resource from [`Get-HPOVRackManager`](get-hpovrackmanager.md).
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task Resource object for configuring port monitoring on the requested logical intercinnect.
 

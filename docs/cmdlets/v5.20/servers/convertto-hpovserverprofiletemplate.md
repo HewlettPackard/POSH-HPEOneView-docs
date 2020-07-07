@@ -93,7 +93,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one `[HPEOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -109,17 +109,17 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.ServerProfile [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.ServerProfile [System.Management.Automation.PSCustomObject]**_
 
 A Server Profile resource object from [`Get-HPOVServerProfile`](get-hpovserverprofile.md).
 
 _**System.Collections.ArrayList**_
 
-Multiple HPOneView.ServerProfile [System.Management.Automation.PSCustomObject] objects.
+Multiple HPEOneView.ServerProfile [System.Management.Automation.PSCustomObject] objects.
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject] objects.**_
+_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject] objects.**_
 
 Asynchronous task of the Server Profile Template creation request.
 

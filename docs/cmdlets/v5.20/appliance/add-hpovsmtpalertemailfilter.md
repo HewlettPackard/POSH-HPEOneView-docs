@@ -11,7 +11,7 @@ Add-HPOVSmtpAlertEmailFilter
     [-Name] <String>
     [-Emails] <Net.Mail.MailAddress[]>
     [-Filter <String>]
-    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
+    [-Scope <HPEOneView.Appliance.ScopeCollection[]>]
     [-ScopeMatchPreference <String>]
     [-Async]
     [-ApplianceConnection <Object>]
@@ -98,7 +98,7 @@ Example:  CPU status:"warning" or status:"critical"
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;HPOneView.Appliance.ScopeCollection[]&gt;
+### -Scope &lt;HPEOneView.Appliance.ScopeCollection[]&gt;
 
 Scope(s) the Filter should apply to.  Omitting parameter will apply filter to all resources.
 
@@ -148,7 +148,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -182,7 +182,7 @@ Array of email address recipient(s).
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource {System.Management.Automation.PSCustomObject}**_
+_**HPEOneView.Appliance.TaskResource {System.Management.Automation.PSCustomObject}**_
 
 Returns an async task resource to monitor.
 

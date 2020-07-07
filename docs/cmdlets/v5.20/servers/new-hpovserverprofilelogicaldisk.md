@@ -25,7 +25,7 @@ New-HPOVServerProfileLogicalDisk
     [-NumberofDrives <Int32>]
     [-DriveType <String>]
     [-DriveSelectionBy <String>]
-    [-AvailableDriveType <HPOneView.Storage.AvailableDriveType>]
+    [-AvailableDriveType <HPEOneView.Storage.AvailableDriveType>]
     [-StorageLocation <String>]
     [-MinDriveSize] <Int32>
     [-MaxDriveSize <Int32>]
@@ -180,7 +180,7 @@ Specify Internal for HPE Synergy Compute Nodes that have the Expanded Storage op
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -AvailableDriveType &lt;HPOneView.Storage.AvailableDriveType&gt;
+### -AvailableDriveType &lt;HPEOneView.Storage.AvailableDriveType&gt;
 
 A specific availabe drive type from `Get-HPOVAvailableDriveType`.
 
@@ -258,7 +258,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Storage.AvailableDriveType**_
+_**HPEOneView.Storage.AvailableDriveType**_
 
 An available disk drive type from [`Get-HPOVAvailableDriveType`](../storage/get-hpovavailabledrivetype.md) Cmdlet.
 

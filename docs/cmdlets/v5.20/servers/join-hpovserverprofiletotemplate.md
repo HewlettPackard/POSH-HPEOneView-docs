@@ -23,19 +23,19 @@ Binds a server profile resource to the provided server profile template
 ###  Example 1 
 
 ```text
-Join-HPOVServerProfileToTemplate -template "MyTemplate" -profile "MyProfile" -appliance hpOneView.contoso.com
+Join-HPOVServerProfileToTemplate -template "MyTemplate" -profile "MyProfile" -appliance HPEOneView.contoso.com
 ```
 
-Attaches the server profile template named MyTemplate to the server profile name MyProfile on the OneView appliance `[hpOneView.contoso.com]`
+Attaches the server profile template named MyTemplate to the server profile name MyProfile on the OneView appliance `[HPEOneView.contoso.com]`
 
 ###  Example 2 
 
 ```text
 $p = Get-HPOVServerProfile "myProfile"
-Get-HPOVServerProfileTemplate "myTemplate" | Join-HPOVServerProfileToTemplate -profile $p -appliance hpOneView.contoso.com
+Get-HPOVServerProfileTemplate "myTemplate" | Join-HPOVServerProfileToTemplate -profile $p -appliance HPEOneView.contoso.com
 ```
 
-Attaches the server profile template named MyTemplate to the server profile name MyProfile on the OneView appliance `[hpOneView.contoso.com]`
+Attaches the server profile template named MyTemplate to the server profile name MyProfile on the OneView appliance `[HPEOneView.contoso.com]`
 
 ## Parameters
 
@@ -65,7 +65,7 @@ A server profile name, URI, or resource object
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one `[HPEOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -105,17 +105,17 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.ServerProfile [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.ServerProfile [System.Management.Automation.PSCustomObject]**_
 
 A PSCustom object representing a server profile template resource retrieved from the HPE OneView appliance
 
 ## Return Values
 
-_**System.Collections.ArrayList<HPOneView.Appliance.TaskResource>**_
+_**System.Collections.ArrayList<HPEOneView.Appliance.TaskResource>**_
 
 Collection of task resource objects
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 An HPE OneView task resource object
 

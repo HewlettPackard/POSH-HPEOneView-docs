@@ -51,7 +51,7 @@ Managed SAN resource object or name to remove.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -91,7 +91,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Storage.SanManager [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Storage.SanManager [System.Management.Automation.PSCustomObject]**_
 
 SAN Manager resource object(s)
 

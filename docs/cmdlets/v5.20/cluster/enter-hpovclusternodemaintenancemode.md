@@ -38,7 +38,7 @@ Request to put the specific node into maintenance mode.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -102,13 +102,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Cluster.ClusterNode [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Cluster.ClusterNode [System.Management.Automation.PSCustomObject]**_
 
 Cluster node member from [`Get-HPOVClusterNode`](get-hpovclusternode.md).
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Asynchronous task resource to monitor.
 

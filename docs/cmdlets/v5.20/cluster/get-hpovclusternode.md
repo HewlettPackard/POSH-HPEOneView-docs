@@ -33,7 +33,7 @@ Default example
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -73,8 +73,8 @@ Filter resources based on provided Scope membership.  By default, all resources 
 
     * AllResources
     *AllResourcesInScope
-    * `[HPOneView.Appliance.ScopeCollection]`
-    * `[HPOneView.Appliance.ConnectionPermission]`
+    * `[HPEOneView.Appliance.ScopeCollection]`
+    * `[HPEOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |

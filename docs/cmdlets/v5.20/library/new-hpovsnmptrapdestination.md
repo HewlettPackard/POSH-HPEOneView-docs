@@ -22,7 +22,7 @@ New-HPOVSnmpTrapDestination
 ```text
 New-HPOVSnmpTrapDestination
     [-Destination] <String>
-    [-SnmpV3User] <HPOneView.Appliance.SnmpV3User>
+    [-SnmpV3User] <HPEOneView.Appliance.SnmpV3User>
     [-Port <Int>]
     [-SnmpFormat] <String>
     [-NotificationType <String>]
@@ -177,7 +177,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases |  |
 | :--- | :--- |
@@ -199,7 +199,7 @@ Provide the alternate SNMP trap reciever port.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SnmpV3User &lt;HPOneView.Appliance.SnmpV3User&gt;
+### -SnmpV3User &lt;HPEOneView.Appliance.SnmpV3User&gt;
 
 A valid SNMPv3 user from `New-HPOVSnmpV3User`.
 
@@ -248,7 +248,7 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Networking.SnmpTrapDestination [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Networking.SnmpTrapDestination [System.Management.Automation.PSCustomObject]**_
 
 SNMP Trap desitnation object for an SNMP Configuration Object
 

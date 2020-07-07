@@ -8,7 +8,7 @@ description: Add supported resource(s) to a Scope.
 
 ```text
 Add-HPOVResourceToScope
-    [-Scope] <HPOneView.Appliance.ScopeCollection[]>
+    [-Scope] <HPEOneView.Appliance.ScopeCollection[]>
     [-InputObject] <Object>
     [-Async]
     [-ApplianceConnection <Object>]
@@ -79,7 +79,7 @@ Add the resources collected to the MyScope scope.
 
 ## Parameters
 
-### -Scope &lt;HPOneView.Appliance.ScopeCollection[]&gt;
+### -Scope &lt;HPEOneView.Appliance.ScopeCollection[]&gt;
 
 The Scope resource to add the resource(s) to.
 
@@ -117,7 +117,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
+Specify one `[HPEOneView.Appliance.Connection]` object or Name property value.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -133,13 +133,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Appliance.ScopeCollection**_
+_**HPEOneView.Appliance.ScopeCollection**_
 
 Scope resource object from [`Get-HPOVScope`](get-hpovscope.md).
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Asynchronous task resource that updates the Scope and associated resources.
 

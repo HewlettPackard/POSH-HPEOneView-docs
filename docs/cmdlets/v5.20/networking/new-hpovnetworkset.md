@@ -121,7 +121,7 @@ Optional maximum amount of bandwidth to assign, specified in Mbps.  Default valu
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
+Specify one `[HPEOneView.Appliance.Connection]` object or Name property value.
 
 | Aliases | Appliance |
 | :--- | :--- |

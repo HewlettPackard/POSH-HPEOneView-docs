@@ -183,7 +183,7 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.Connection**_
+_**HPEOneView.Appliance.Connection**_
 
 When a valid connection is established with an appliance, this object is then added to ${Global:ConnectedSessions} connection tracker variable.  The object returned will contain the following public properties:      ==============================================================================
      | Name                   | Type       | Value                                |
@@ -216,5 +216,5 @@ On error, appliance response is returned as a terminating error.
 ## Related Links
 
 * [Disconnect-HPOVMgmt](disconnect-hpovmgmt.md)
-* [about_Appliance_Connection_Permissions](https://hpe-docs.gitbook.io/posh-hponeview/about/about_appliance_connection_permissions)
-* [[${Global:ConnectedSessions}]](https://hpe-docs.gitbook.io/posh-hponeview/about/about_appliance_connections)
+* [about_Appliance_Connection_Permissions](https://hpe-docs.gitbook.io/posh-hpeoneview/about/about_appliance_connection_permissions)
+* [[${Global:ConnectedSessions}]](https://hpe-docs.gitbook.io/posh-hpeoneview/about/about_appliance_connections)

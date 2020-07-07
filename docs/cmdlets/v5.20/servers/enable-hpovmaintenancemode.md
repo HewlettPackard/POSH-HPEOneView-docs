@@ -52,7 +52,7 @@ nEnable the maintenance mode state of the specific server resource that is assoc
 
 Aliases [-Appliance]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 Default Value: ${Global:ConnectedSessions} | ? Default
 
@@ -94,17 +94,17 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.ServerHardware [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.ServerHardware [System.Management.Automation.PSCustomObject]**_
 
 A server hardware resource from the appliance.
 
-_**HPOneView.ServerProfile [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.ServerProfile [System.Management.Automation.PSCustomObject]**_
 
 A server profile resource from the appliance.
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task resource object to monitor.
 

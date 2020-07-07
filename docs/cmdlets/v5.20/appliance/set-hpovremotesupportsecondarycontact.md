@@ -40,7 +40,7 @@ Set a new HPE OneView Remote Support secondary contact on the appliance.
 
 Aliases [-Appliance]
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -68,13 +68,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Appliance.RemoteSupport.Contact [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.RemoteSupport.Contact [System.Management.Automation.PSCustomObject]**_
 
 Remote support contact from [`Get-HPOVRemoteSupportContact`](get-hpovremotesupportcontact.md).
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Asynchronous task resource to monitor
 

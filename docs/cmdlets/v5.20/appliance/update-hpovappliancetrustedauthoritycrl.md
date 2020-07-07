@@ -8,7 +8,7 @@ description: Update appliance certificate authority revocation list.
 
 ```text
 Update-HPOVApplianceTrustedAuthorityCrl
-    [-InputObject] <HPOneView.Appliance.TrustedCertificateAuthority[]>
+    [-InputObject] <HPEOneView.Appliance.TrustedCertificateAuthority[]>
     [-Async]
     [-ApplianceConnection <Array>]
     [<CommonParameters>]
@@ -16,7 +16,7 @@ Update-HPOVApplianceTrustedAuthorityCrl
 
 ```text
 Update-HPOVApplianceTrustedAuthorityCrl
-    [-InputObject] <HPOneView.Appliance.TrustedCertificateAuthority[]>
+    [-InputObject] <HPEOneView.Appliance.TrustedCertificateAuthority[]>
     [-Path] <FileInfo>
     [-Async]
     [-ApplianceConnection <Array>]
@@ -56,7 +56,7 @@ Update the `built-in` certificate authority resource.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -78,9 +78,9 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -InputObject &lt;HPOneView.Appliance.TrustedCertificateAuthority[]&gt;
+### -InputObject &lt;HPEOneView.Appliance.TrustedCertificateAuthority[]&gt;
 
-HPOneView.Appliance.TrustedCertificateAuthority resource from `Get-HPOVApplianceTrustedCertificate`.
+HPEOneView.Appliance.TrustedCertificateAuthority resource from `Get-HPOVApplianceTrustedCertificate`.
 
 | Aliases | None |
 | :--- | :--- |
@@ -108,13 +108,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Appliance.TrustedCertificateAuthority**_
+_**HPEOneView.Appliance.TrustedCertificateAuthority**_
 
 resource from [`Get-HPOVApplianceTrustedCertificate`](get-hpovappliancetrustedcertificate.md).
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task Resource object for configuring port monitoring on the requested logical intercinnect.
 

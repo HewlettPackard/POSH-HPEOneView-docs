@@ -125,7 +125,7 @@ Display only the available hotfixes present with in the repository.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -141,8 +141,8 @@ Filter resources based on provided Scope membership.  By default, all resources 
 
     * AllResources
     * AllResourcesInScope
-    * `[HPOneView.Appliance.ScopeCollection]`
-    * `[HPOneView.Appliance.ConnectionPermission]`
+    * `[HPEOneView.Appliance.ScopeCollection]`
+    * `[HPEOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
@@ -162,13 +162,13 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.Baseline**_
+_**HPEOneView.Appliance.Baseline**_
 
 SPP baseline resource object.
 
-_**HPOneView.Appliance.BaselineHotfix : HPOneView.Appliance.Baseline**_
+_**HPEOneView.Appliance.BaselineHotfix : HPEOneView.Appliance.Baseline**_
 
-Baseline hotfix resource.  Class derived from HPOneView.Appliance.Baseline base class.
+Baseline hotfix resource.  Class derived from HPEOneView.Appliance.Baseline base class.
 
 ## Related Links
 

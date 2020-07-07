@@ -43,7 +43,7 @@ Remove all of the SNMPv3 trap destinations.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -67,7 +67,7 @@ Override confirmation prompt.
 
 ### -InputObject &lt;Object&gt;
 
-The `[HPOneView.Appliance.SnmpV]`1TrapDestination or `[HPOneView.Appliance.SnmpV]`3TrapDestination object from `Get-HPOVApplianceTrapDestination` to remove.
+The `[HPEOneView.Appliance.SnmpV]`1TrapDestination or `[HPEOneView.Appliance.SnmpV]`3TrapDestination object from `Get-HPOVApplianceTrapDestination` to remove.
 
 | Aliases | None |
 | :--- | :--- |
@@ -95,11 +95,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Appliance.SnmpV1TrapDestination**_
+_**HPEOneView.Appliance.SnmpV1TrapDestination**_
 
 Appliance SNMPv1 trap destination from [`Get-HPOVApplianceTrapDestination`](get-hpovappliancetrapdestination.md).
 
-_**HPOneView.Appliance.SnmpV3TrapDestination**_
+_**HPEOneView.Appliance.SnmpV3TrapDestination**_
 
 Appliance SNMPv3 trap destination from [`Get-HPOVApplianceTrapDestination`](get-hpovappliancetrapdestination.md).
 

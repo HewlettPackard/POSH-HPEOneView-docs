@@ -250,7 +250,7 @@ Example: "{initiatorWwn}_{initiatorName}"
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one `[HPEOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 Default Value: ${Global:ConnectSessions} | ? Default
 
@@ -268,11 +268,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Storage.ManagedSan [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Storage.ManagedSan [System.Management.Automation.PSCustomObject]**_
 
 Single Resource
 
-_**System.Collection.ArrayList <HPOneView.Storage.ManagedSan>**_
+_**System.Collection.ArrayList <HPEOneView.Storage.ManagedSan>**_
 
 Multiple Resources
 

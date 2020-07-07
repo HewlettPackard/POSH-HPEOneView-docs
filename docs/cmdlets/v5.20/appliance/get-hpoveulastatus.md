@@ -53,7 +53,7 @@ Connect to an appliance, then get the EULA status from `[myappliance.domain.com]
 
 ### -Appliance &lt;Object&gt;
 
-The FQDN, IP Address or `[HPOneView.Appliance.Connection]` of an HPE OneView appliance must be provided.
+The FQDN, IP Address or `[HPEOneView.Appliance.Connection]` of an HPE OneView appliance must be provided.
 
 | Aliases | None |
 | :--- | :--- |
@@ -73,7 +73,7 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.EulaStatus**_
+_**HPEOneView.Appliance.EulaStatus**_
 
 Object that returns the Appliance Name and if the EULA has been accepted with a boolean "Accepted" property.
 

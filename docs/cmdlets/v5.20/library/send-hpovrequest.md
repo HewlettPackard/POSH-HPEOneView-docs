@@ -154,7 +154,7 @@ Specify to override the HttpWebRequest syncronous timeout being made.
 
 ### -Hostname &lt;Object&gt;
 
-The destination appliance to process the request.  When specifying a Value, it must match the HostName attribute of a valid `[HPOneView.Appliance.Connection]` object within the Global $ConnectedSessions variable.  If no match is found, or no `[HPOneView.Appliance.Connection]` objects exist, an error will be thrown.
+The destination appliance to process the request.  When specifying a Value, it must match the HostName attribute of a valid `[HPEOneView.Appliance.Connection]` object within the Global $ConnectedSessions variable.  If no match is found, or no `[HPEOneView.Appliance.Connection]` objects exist, an error will be thrown.
 
 Default Value: All valid Appliance Connections within $Global:ConnectedSessions
 

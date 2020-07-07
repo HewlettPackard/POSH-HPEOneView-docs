@@ -5,7 +5,7 @@ $CurrentPath = Split-Path $MyInvocation.MyCommand.Path -parent
 
 $SummaryJson = [System.IO.File]::ReadAllLines($CurrentPath + '\..\docs\summary.json', [System.Text.Encoding]::UTF8) | ConvertFrom-Json
 
-$SourceJsonFiles = [System.IO.Directory]::GetFiles($CurrentPath + "\..\source", "HPOneView.*.json")
+$SourceJsonFiles = [System.IO.Directory]::GetFiles($CurrentPath + "\..\source", "HPEOneView.*.json")
 
 if (-not $SourceJsonFiles.Count)
 {
@@ -33,6 +33,13 @@ else
 
         # Get the library version from the Version property
         $CmdletLibraryVersion = 'v{0}.{1:00}' -f ([Version]$CmdletsJson.Version).Major, ([Version]$CmdletsJson.Version).Minor
+
+        if (-not ($SummaryJson."Table of contents"."Command Reference".PSObject.Properties | ? Name -eq $CmdletLibraryVersion))
+        {
+
+            $SummaryJson."Table of contents"."Command Reference" | Add-Member -NotePropertyName $CmdletLibraryVersion -NotePropertyValue @{}
+
+        }
 
         $FinalDirectorySummary = [PSCustomObject]@{$CmdletLibraryVersion = [PSCustomObject]@{dir = $CmdletLibraryVersion} }
 

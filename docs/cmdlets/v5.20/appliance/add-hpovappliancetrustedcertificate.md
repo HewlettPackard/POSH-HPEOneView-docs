@@ -76,7 +76,7 @@ The filesystem object of the X.509 public SSL certificate to add.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` objects or Name property values.
+Specify one or more `[HPEOneView.Appliance.Connection]` objects or Name property values.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -170,7 +170,7 @@ The filesystem object of the X.509 public SSL certificate to add.
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Asynchronous task resource to monitor.
 

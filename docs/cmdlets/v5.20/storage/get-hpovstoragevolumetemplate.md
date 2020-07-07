@@ -65,7 +65,7 @@ Specify the label associated with resources.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 Default Value: ${Global:ConnectSessions}
 
@@ -83,8 +83,8 @@ Filter resources based on provided Scope membership.  By default, all resources 
 
     * AllResources
     * AllResourcesInScope
-    * `[HPOneView.Appliance.ScopeCollection]`
-    * `[HPOneView.Appliance.ConnectionPermission]`
+    * `[HPEOneView.Appliance.ScopeCollection]`
+    * `[HPEOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
@@ -104,11 +104,11 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Storage.VolumeTemplate [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Storage.VolumeTemplate [System.Management.Automation.PSCustomObject]**_
 
 Single Storage Volume Template
 
-_**System.COllections.ArrayList <HPOneView.Storage.VolumeTemplate>**_
+_**System.COllections.ArrayList <HPEOneView.Storage.VolumeTemplate>**_
 
 Multiple Storage Volume Template
 

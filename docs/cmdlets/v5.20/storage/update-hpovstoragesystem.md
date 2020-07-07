@@ -51,7 +51,7 @@ The Storage System resource object to update/refresh.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one `[HPEOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -67,21 +67,21 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Storage.System [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Storage.System [System.Management.Automation.PSCustomObject]**_
 
 Single Storage System
 
-_**System.Collections.ArrayList <HPOneView.Storage.System>**_
+_**System.Collections.ArrayList <HPEOneView.Storage.System>**_
 
 Multiple Storage Systems
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Update Storage System async task object
 
-_**System.Collections.ArrayList <HPOneView.Appliance.TaskResource>**_
+_**System.Collections.ArrayList <HPEOneView.Appliance.TaskResource>**_
 
 Multiple Update Storage System async task objects
 

@@ -56,7 +56,7 @@ Resource object to turn on the UID.  Supported resources are Server Hardware and
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -72,17 +72,17 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.ServerHardware [System.Management.Automation.PSCustomObject] or HPOneView.Enclosure [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.ServerHardware [System.Management.Automation.PSCustomObject] or HPEOneView.Enclosure [System.Management.Automation.PSCustomObject]**_
 
 Server Hardware or Enclosure resource.
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 If successful, returns Appliance Async Task object to monitor.
 
-_**System.Collections.ArrayList <HPOneView.Appliance.TaskResource>**_
+_**System.Collections.ArrayList <HPEOneView.Appliance.TaskResource>**_
 
 Collection of Appliance Async Task objects to monitor.
 

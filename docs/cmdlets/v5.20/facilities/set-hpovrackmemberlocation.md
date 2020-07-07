@@ -8,7 +8,7 @@ description: Modify an existing rack member U location.
 
 ```text
 Set-HPOVRackMemberLocation
-    [-InputObject] <HPOneView.Facilities.RackMember>
+    [-InputObject] <HPEOneView.Facilities.RackMember>
     [-ULocation] <Int>
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -38,7 +38,7 @@ Update the "DL380 1" rack member raising its current rack unit location by 5.
 
 ## Parameters
 
-### -InputObject &lt;HPOneView.Facilities.RackMember&gt;
+### -InputObject &lt;HPEOneView.Facilities.RackMember&gt;
 
 The rack member to modify from `Get-HPOVRackMember`.
 
@@ -64,7 +64,7 @@ The new Rack Unit location where the resource is located.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -80,13 +80,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Facilities.RackMember**_
+_**HPEOneView.Facilities.RackMember**_
 
 DataCenter facility object from [`Get-HPOVDataCenter`](get-hpovdatacenter.md).
 
 ## Return Values
 
-_**HPOneView.Facilities.RackMember**_
+_**HPEOneView.Facilities.RackMember**_
 
 Modified rack member object with the updated Rack Unit location.
 

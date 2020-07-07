@@ -95,7 +95,7 @@ The Managed SAN Resource Object.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -111,13 +111,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneview.Storage.ManagedSan [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Storage.ManagedSan [System.Management.Automation.PSCustomObject]**_
 
 Managed SAN resource from [`Get-HPOVManagedSan`](get-hpovmanagedsan.md)
 
 ## Return Values
 
-_**HPOneView.Storage.ManagedSan.Zone [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Storage.ManagedSan.Zone [System.Management.Automation.PSCustomObject]**_
 
 Managed SAN Zone resource object
 

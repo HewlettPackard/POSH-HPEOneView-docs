@@ -163,7 +163,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
+Specify one `[HPEOneView.Appliance.Connection]` object or Name property value.
 
 | Aliases | None |
 | :--- | :--- |
@@ -187,7 +187,7 @@ When attempting to add a Server to the appliance, the appliance will validate th
 
 ### -Scope &lt;Array&gt;
 
-Provide an array of <HPOneView.Appliance.ScopeResource> Scope resource(s) to initially add.
+Provide an array of <HPEOneView.Appliance.ScopeResource> Scope resource(s) to initially add.
 
 | Aliases | None |
 | :--- | :--- |
@@ -219,7 +219,7 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Returns an async task resource to monitor.
 

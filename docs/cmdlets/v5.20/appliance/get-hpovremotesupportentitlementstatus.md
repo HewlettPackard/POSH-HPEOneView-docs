@@ -76,7 +76,7 @@ The compute or enclosure resource to enable Remote Support for.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -92,17 +92,17 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.ServerHardware [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.ServerHardware [System.Management.Automation.PSCustomObject]**_
 
 A Gen8 or newer generation server hardware resource object from [`Get-HPOVServer`](../servers/get-hpovserver.md).
 
-_**HPOneView.Enclosure [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Enclosure [System.Management.Automation.PSCustomObject]**_
 
 A Gen8 or newer generation server hardware resource object from [`Get-HPOVServer`](../servers/get-hpovserver.md).
 
 ## Return Values
 
-_**HPOneView.RemoteSupport.ContractAndWarrantyStatus**_
+_**HPEOneView.RemoteSupport.ContractAndWarrantyStatus**_
 
 The object with the current contract and warranty status.
 

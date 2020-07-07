@@ -41,7 +41,7 @@ Shutdown all connected appliances, disable confirmation.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 Default Value: ${Global:ConnectSessions} | ? Default
 
@@ -83,13 +83,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Appliance.Connection**_
+_**HPEOneView.Appliance.Connection**_
 
 Connected Appliance Session
 
 _**System.Collections.ArrayList**_
 
-Collection of HPOneView.Appliance.Connection objects
+Collection of HPEOneView.Appliance.Connection objects
 
 ## Return Values
 

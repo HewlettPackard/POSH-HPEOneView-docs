@@ -61,7 +61,7 @@ Specify the Network ID of the subnet in order to filter the results.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -81,11 +81,11 @@ _**None.  This Cmdlet does not support pipeline operations.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.IPAddressSubnet [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.IPAddressSubnet [System.Management.Automation.PSCustomObject]**_
 
 Single IPv4 Subnet address pool range.
 
-_**System.Collections.ArrayList <HPOneView.Appliance.IPAddressSubnet>**_
+_**System.Collections.ArrayList <HPEOneView.Appliance.IPAddressSubnet>**_
 
 Collection of IPv4 Subnet address pool range(s).
 

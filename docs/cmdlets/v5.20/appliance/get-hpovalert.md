@@ -252,7 +252,7 @@ Return alerts that were created on the specified date.  Hour, Min and Seconds wi
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -274,7 +274,7 @@ Resource object (i.e. [`Get-HPOVServer`](../servers/get-hpovserver.md)).
 
 ## Return Values
 
-_**HPOneView.Alert [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Alert [System.Management.Automation.PSCustomObject]**_
 
 HPE OneView alert.
 
