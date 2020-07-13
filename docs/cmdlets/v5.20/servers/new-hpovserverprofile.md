@@ -41,7 +41,7 @@ New-HPOVServerProfile
     [-HideUnusedFlexNics] <Boolean>
     [-OSDeploymentPlan <Object>]
     [-OSDeploymentAttributes <Array>]
-    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
+    [-Scope <HPEOneView.Appliance.ScopeCollection[]>]
     [-Async]
     [-ApplianceConnection <Object>]
     [-Passthru]
@@ -80,7 +80,7 @@ New-HPOVServerProfile
     [-MutualChapSecret] <System.Security.SecureString>
     [-OSDeploymentPlan <Object>]
     [-OSDeploymentAttributes <Array>]
-    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
+    [-Scope <HPEOneView.Appliance.ScopeCollection[]>]
     [-Async]
     [-ApplianceConnection <Object>]
     [-Passthru]
@@ -127,7 +127,7 @@ New-HPOVServerProfile
     [-HideUnusedFlexNics] <Boolean>
     [-OSDeploymentPlan <Object>]
     [-OSDeploymentAttributes <Array>]
-    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
+    [-Scope <HPEOneView.Appliance.ScopeCollection[]>]
     [-Async]
     [-ApplianceConnection <Object>]
     [-Passthru]
@@ -1078,7 +1078,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one `[HPEOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -1124,9 +1124,9 @@ Use this parameter to return the modified Server Profile object.  In order to sa
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;HPOneView.Appliance.ScopeCollection[]&gt;
+### -Scope &lt;HPEOneView.Appliance.ScopeCollection[]&gt;
 
-Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
+Provide an `[HPEOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -1162,13 +1162,13 @@ _**System.String**_
 
 The full path to the Server Profile JSON export file
 
-_**HPOneView.ServerHardware [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.ServerHardware [System.Management.Automation.PSCustomObject]**_
 
 Server Hardware resource object
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 If successful returns a task resource which may be polled to follow the progress of the profile creation.  Otherwise, a request validation error will be returned
 

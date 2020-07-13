@@ -31,7 +31,7 @@ Connects to a specific appliance, accepting the EULA and enable Support Access.
 
 ### -Appliance &lt;Object&gt;
 
-The FQDN or IP Address of an HPE OneView appliance or `[HPOneView.Appliance.Connection]` must be provided.
+The FQDN or IP Address of an HPE OneView appliance or `[HPEOneView.Appliance.Connection]` must be provided.
 
 | Aliases | None |
 | :--- | :--- |

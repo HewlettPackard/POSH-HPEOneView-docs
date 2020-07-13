@@ -67,8 +67,8 @@ Filter resources based on provided Scope membership.  By default, all resources 
 
     * AllResources
     * AllResourcesInScope
-    * `[HPOneView.Appliance.ScopeCollection]`
-    * `[HPOneView.Appliance.ConnectionPermission]`
+    * `[HPEOneView.Appliance.ScopeCollection]`
+    * `[HPEOneView.Appliance.ConnectionPermission]`
 
 | Aliases |  |
 | :--- | :--- |
@@ -92,7 +92,7 @@ Specify the label associated with resources.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -124,11 +124,11 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPoneView.Storage.SasLogicalInterconnect [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Storage.SasLogicalInterconnect [System.Management.Automation.PSCustomObject]**_
 
 Logical Interconnect resource object from [`Get-HPOVLogicalInterconnect`](get-hpovlogicalinterconnect.md)
 
-_**System.Collections.ArrayList <HPoneView.Storage.SasLogicalInterconnect>    **_
+_**System.Collections.ArrayList <HPEOneView.Storage.SasLogicalInterconnect>    **_
 
 Multiple Logical Interconnects
 

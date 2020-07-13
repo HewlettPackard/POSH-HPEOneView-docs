@@ -95,7 +95,7 @@ Provide the Logical Enclosure name, URI or Object, or `[System.Collections.Array
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -171,7 +171,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.LogicalEnclosure [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.LogicalEnclosure [System.Management.Automation.PSCustomObject]**_
 
 Single Logical Enclosure resource
 
@@ -179,7 +179,7 @@ _**System.Collections.ArrayList**_
 
 Multiple Logical Enclosure resources
 
-_**HPOneView.Library.CompareObject**_
+_**HPEOneView.Library.CompareObject**_
 
 The Cmdlet will return a compare object with the Parent and Child object and settings that are different.  Otherwise, no object is returned.
 
@@ -200,7 +200,7 @@ The Cmdlet will return a compare object with the Parent and Child object and set
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task Resource object for monitoring the enclosure import process
 

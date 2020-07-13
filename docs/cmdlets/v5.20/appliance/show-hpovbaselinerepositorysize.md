@@ -24,7 +24,7 @@ Show the appliance baseline repository size.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases |  |
 | :--- | :--- |
@@ -44,7 +44,7 @@ _**None. You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.BaselineRepository [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.BaselineRepository [System.Management.Automation.PSCustomObject]**_
 
 Appliance baseline repository capacity object.
 

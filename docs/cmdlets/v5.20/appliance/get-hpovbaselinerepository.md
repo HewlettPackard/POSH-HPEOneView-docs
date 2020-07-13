@@ -78,7 +78,7 @@ Specify "Internal" or "External" to filter the repository type.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -98,7 +98,7 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.BaselineRepository [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.BaselineRepository [System.Management.Automation.PSCustomObject]**_
 
 Either and Internal or External repository object.
 

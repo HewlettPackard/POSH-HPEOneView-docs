@@ -55,7 +55,7 @@ Returns the existing Remote Support configuration of the appliance.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -75,7 +75,7 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.RemoteSupport.Configuration**_
+_**HPEOneView.Appliance.RemoteSupport.Configuration**_
 
 The setting object with updated parameters.
 

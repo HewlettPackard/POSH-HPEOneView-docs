@@ -977,11 +977,11 @@ The full path to the Server Profile JSON export file
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 If successful returns a task resource which may be polled to follow the progress of the profile creation.  Otherwise, a request validation error will be returned
 
-_**HPOneVIew.ServerProfileTemplate [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.ServerProfileTemplate [System.Management.Automation.PSCustomObject]**_
 
 When using the `-PassThru` parameter, the created server profile template object is returned.
 

@@ -241,7 +241,7 @@ Use to specify the one IPv4 subnet the network should be associated with from `G
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one `[HPEOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -269,21 +269,21 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Networking.EthernetNetwork [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Networking.EthernetNetwork [System.Management.Automation.PSCustomObject]**_
 
 Ethernet Network resource object
 
-_**HPOneView.Networking.FCNetwork [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Networking.FCNetwork [System.Management.Automation.PSCustomObject]**_
 
 FC Network resource object
 
-_**HPOneView.Networking.FCoENetwork [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Networking.FCoENetwork [System.Management.Automation.PSCustomObject]**_
 
 FCoE Network resource object
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 The Update Network Resource Task object
 

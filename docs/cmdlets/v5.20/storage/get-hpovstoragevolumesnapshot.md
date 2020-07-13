@@ -61,7 +61,7 @@ Provide the Storage Volume resource object.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one `[HPEOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 Default Value: ${Global:ConnectSessions} | ? Default
 
@@ -79,17 +79,17 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Storage.Volume [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Storage.Volume [System.Management.Automation.PSCustomObject]**_
 
 Storage Volume resource
 
 ## Return Values
 
-_**System.Collections.ArrayList <HPOneView.Storage.VolumeSnapshot>**_
+_**System.Collections.ArrayList <HPEOneView.Storage.VolumeSnapshot>**_
 
 Multiple storage volume snapshot resources
 
-_**HPOneView.Storage.VolumeSnapshot [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Storage.VolumeSnapshot [System.Management.Automation.PSCustomObject]**_
 
 Formatted table view of storage volume snapshot resources
 

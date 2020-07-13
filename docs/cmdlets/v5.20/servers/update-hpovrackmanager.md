@@ -8,7 +8,7 @@ description: Refresh or reconnect a rack manager resource.
 
 ```text
 Update-HPOVRackManager
-    [-InputObject] <HPOneView.Servers.RackManager[]>
+    [-InputObject] <HPEOneView.Servers.RackManager[]>
     [-Force]
     [-Async]
     [-ApplianceConnection <Array>]
@@ -17,7 +17,7 @@ Update-HPOVRackManager
 
 ```text
 Update-HPOVRackManager
-    [-InputObject] <HPOneView.Servers.RackManager[]>
+    [-InputObject] <HPEOneView.Servers.RackManager[]>
     [-Hostname] <String>
     [-Credential <PSCredential>]
     [-Force]
@@ -59,7 +59,7 @@ Refresh the specified rack manager resource, and provide the credentials to rest
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -120,9 +120,9 @@ The FQDN or IP Address of the rack manager.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -InputObject &lt;HPOneView.Servers.RackManager[]&gt;
+### -InputObject &lt;HPEOneView.Servers.RackManager[]&gt;
 
-The `[HPOneView.Servers.RackManager]` resource to refresh.
+The `[HPEOneView.Servers.RackManager]` resource to refresh.
 
 | Aliases | name, Server |
 | :--- | :--- |
@@ -138,13 +138,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Servers.RackManager**_
+_**HPEOneView.Servers.RackManager**_
 
 The rack manager resource from [`Get-HPOVRackManager`](get-hpovrackmanager.md).
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task Resource object for configuring port monitoring on the requested logical intercinnect.
 

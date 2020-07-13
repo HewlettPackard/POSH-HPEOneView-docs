@@ -41,7 +41,7 @@ Restart all connected appliances without confirmation.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -81,13 +81,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Appliance.Connection**_
+_**HPEOneView.Appliance.Connection**_
 
 Appliance Connection object
 
 _**System.Collections.ArrayList**_
 
-Collection of HPOneView.Appliance.Connection objects
+Collection of HPEOneView.Appliance.Connection objects
 
 ## Return Values
 

@@ -41,7 +41,7 @@ Set the NetOp password to the new value, for the specific Interconnect.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -93,13 +93,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Networking.Interconnect [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Networking.Interconnect [System.Management.Automation.PSCustomObject]**_
 
 Interconnect resource from [`Get-HPOVInterconnect`](get-hpovinterconnect.md).
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task that tracks the operation.
 

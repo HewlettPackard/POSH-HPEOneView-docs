@@ -43,7 +43,7 @@ The Server Profile resource object.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -59,17 +59,17 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.ServerProfile [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.ServerProfile [System.Management.Automation.PSCustomObject]**_
 
 Server Profile resource object from [`Get-HPOVServerProfile`](get-hpovserverprofile.md)
 
 ## Return Values
 
-_**HPOneView.ServerProfileMessage [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.ServerProfileMessage [System.Management.Automation.PSCustomObject]**_
 
 Server Profile message object.
 
-_**System.Collections.ArrayList <HPOneView.ServerProfileMessage>**_
+_**System.Collections.ArrayList <HPEOneView.ServerProfileMessage>**_
 
 Server Profile message object.
 

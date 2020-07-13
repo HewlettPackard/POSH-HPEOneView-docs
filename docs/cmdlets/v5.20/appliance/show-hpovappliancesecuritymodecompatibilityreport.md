@@ -8,7 +8,7 @@ description: Generate or show security mode compatability report.
 
 ```text
 Show-HPOVApplianceSecurityModeCompatibilityReport
-    [-TargetSecurityMode] <HPOneView.Appliance.SecurityMode>
+    [-TargetSecurityMode] <HPEOneView.Appliance.SecurityMode>
     [-UpdateReport]
     [-ApplianceConnection <Array>]
     [<CommonParameters>]
@@ -41,7 +41,7 @@ Generate a compatibility report for changing the appliance mode to CNSA.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -51,7 +51,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -TargetSecurityMode &lt;HPOneView.Appliance.SecurityMode&gt;
+### -TargetSecurityMode &lt;HPEOneView.Appliance.SecurityMode&gt;
 
 Specify the target security mode to test resources from `Get-HPOVApplianceAvailableSecurityMode`.
 
@@ -81,13 +81,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Appliance.SecurityMode**_
+_**HPEOneView.Appliance.SecurityMode**_
 
 Available security mode from [`Get-HPOVApplianceAvailableSecurityMode`](get-hpovapplianceavailablesecuritymode.md).
 
 ## Return Values
 
-_**HPOneView.Appliance.SecurityModeCompatibilityReport**_
+_**HPEOneView.Appliance.SecurityModeCompatibilityReport**_
 
 Security mode compatibility report.
 

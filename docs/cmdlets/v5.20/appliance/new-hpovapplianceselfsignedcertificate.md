@@ -212,7 +212,7 @@ The distinguished name qualifier, which further identifies the certificate recip
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
+Specify one `[HPEOneView.Appliance.Connection]` object or Name property value.
 
 | Aliases | Appliance |
 | :--- | :--- |

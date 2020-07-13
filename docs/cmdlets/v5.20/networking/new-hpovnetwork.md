@@ -19,7 +19,7 @@ New-HPOVNetwork
     [-PrivateNetwork] <Boolean>
     [-TypicalBandwidth] <Int32>
     [-MaximumBandwidth] <Int32>
-    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
+    [-Scope <HPEOneView.Appliance.ScopeCollection[]>]
     [-Async]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -36,7 +36,7 @@ New-HPOVNetwork
     [-PrivateNetwork] <Boolean>
     [-TypicalBandwidth] <Int32>
     [-MaximumBandwidth] <Int32>
-    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
+    [-Scope <HPEOneView.Appliance.ScopeCollection[]>]
     [-Async]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -50,7 +50,7 @@ New-HPOVNetwork
     [-TypicalBandwidth] <Int32>
     [-MaximumBandwidth] <Int32>
     [-ManagedSan] <Object>
-    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
+    [-Scope <HPEOneView.Appliance.ScopeCollection[]>]
     [-Async]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -66,7 +66,7 @@ New-HPOVNetwork
     [-AutoLoginRedistribution] <Boolean>
     [-FabricType] <String>
     [-ManagedSan] <Object>
-    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
+    [-Scope <HPEOneView.Appliance.ScopeCollection[]>]
     [-Async]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -75,7 +75,7 @@ New-HPOVNetwork
 ```text
 New-HPOVNetwork
     [-ImportFile] <String>
-    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
+    [-Scope <HPEOneView.Appliance.ScopeCollection[]>]
     [-Async]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -393,7 +393,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -415,9 +415,9 @@ Full path and file name of a JSON formatted input file containing network defini
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;HPOneView.Appliance.ScopeCollection[]&gt;
+### -Scope &lt;HPEOneView.Appliance.ScopeCollection[]&gt;
 
-Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
+Provide an `[HPEOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -445,7 +445,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Storage.ManagedSan [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Storage.ManagedSan [System.Management.Automation.PSCustomObject]**_
 
 ManagedSan resource object to be assigned to a FC or FCoE Network
 

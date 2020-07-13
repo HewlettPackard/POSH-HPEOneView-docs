@@ -56,7 +56,7 @@ Switch to force removal of a storage system the appliance can no longer communic
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -96,17 +96,17 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Storage.System [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Storage.System [System.Management.Automation.PSCustomObject]**_
 
 Storage System resource object
 
-_**System.Collections.ArrayList <HPOneView.Storage.System>**_
+_**System.Collections.ArrayList <HPEOneView.Storage.System>**_
 
 Collections of Storage System resource objects
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Returns an async task resource to monitor.
 

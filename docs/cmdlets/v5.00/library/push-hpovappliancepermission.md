@@ -95,5 +95,5 @@ One or more appliance connection permissions and their active state.
 ## Related Links
 
 * [Pop-HPOVAppliancePermission](pop-hpovappliancepermission.md)
-* [about_Appliance_Connection_Permissions](https://hpe-docs.gitbook.io/posh-hponeview/about/about_appliance_connection_permissions)
-* [[${Global:ConnectedSessions}]](https://hpe-docs.gitbook.io/posh-hponeview/about/about_appliance_connections)
+* [about_Appliance_Connection_Permissions](https://hpe-docs.gitbook.io/posh-hpeoneview/about/about_appliance_connection_permissions)
+* [[${Global:ConnectedSessions}]](https://hpe-docs.gitbook.io/posh-hpeoneview/about/about_appliance_connections)

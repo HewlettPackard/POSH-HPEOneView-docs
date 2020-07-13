@@ -52,7 +52,7 @@ The IPv4 Subnet Pool resource Object.  Can be accepted via pipeline input.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one `[HPEOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -92,13 +92,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Appliance.IPAddressSubnet [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.IPAddressSubnet [System.Management.Automation.PSCustomObject]**_
 
 IPv4 or IPv6 Subnet Pool from [`Get-HPOVAddressPoolSubnet`](get-hpovaddresspoolsubnet.md)
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Result of resource removal
 

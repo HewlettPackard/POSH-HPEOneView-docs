@@ -98,13 +98,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.ServerHardware [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.ServerHardware [System.Management.Automation.PSCustomObject]**_
 
 An available server hardware resource.
 
 ## Return Values
 
-_**HPOneView.Cluster.AddHostRequest**_
+_**HPEOneView.Cluster.AddHostRequest**_
 
 Properly formatted object for [`New-HPOVClusterProfile`](new-hpovclusterprofile.md).
 

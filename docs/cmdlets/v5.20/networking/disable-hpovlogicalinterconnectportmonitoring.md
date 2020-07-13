@@ -42,7 +42,7 @@ Disable port monitoring for the specified logical interconnect resource.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -54,7 +54,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 
 ### -InputObject &lt;Object&gt;
 
-The `[HPOneView.Networking.LogicalInterconnect]` resource from `Get-HPOVLogicalInterconnect`.
+The `[HPEOneView.Networking.LogicalInterconnect]` resource from `Get-HPOVLogicalInterconnect`.
 
 | Aliases | uri, li, name, Resource |
 | :--- | :--- |
@@ -70,13 +70,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPoneView.Networking.LogicalInterconnect [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Networking.LogicalInterconnect [System.Management.Automation.PSCustomObject]**_
 
 Logical Interconnect resource object from [`Get-HPOVLogicalInterconnect`](get-hpovlogicalinterconnect.md)
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task Resource object for configuring port monitoring on the requested logical intercinnect.
 

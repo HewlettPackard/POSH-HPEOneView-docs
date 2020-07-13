@@ -99,7 +99,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -115,13 +115,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**System.Management.Automation.PSCustomObject [HPOneView.Appliance.ImageStreamerAppliance]**_
+_**System.Management.Automation.PSCustomObject [HPEOneView.Appliance.ImageStreamerAppliance]**_
 
 HPE Synergy Image Streamer Appliance object from [`Get-HPOVImageStreamerAppliance`](get-hpovimagestreamerappliance.md).
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task Resource object for modifying the Remote Support Collection schedules.
 

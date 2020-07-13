@@ -62,7 +62,7 @@ Set the appliance to enable all three supported TLS protocol versions. After con
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -98,7 +98,7 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.SecurityProtocol**_
+_**HPEOneView.Appliance.SecurityProtocol**_
 
 After appliance reboots, the updated security protocol configuration is returned.
 

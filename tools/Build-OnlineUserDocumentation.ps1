@@ -24,11 +24,11 @@ $Script:NoteMessagePattern                         = [System.Text.RegularExpress
 $Script:WarningMessagePattern                      = [System.Text.RegularExpressions.RegEx]::new("(?:^WARNING: (?'subtext'[\s\w]+.+))", [System.Text.RegularExpressions.RegexOptions]::Multiline -bor [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
 $Script:CriticalMessagePattern                     = [System.Text.RegularExpressions.RegEx]::new("(?:^CRITICAL: (?'subtext'[\s\w]+.+))", [System.Text.RegularExpressions.RegexOptions]::Multiline -bor [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
 $Script:ParentLinkableAssociatedLinks              = [Ordered]@{
-    '[${Global:ConnectedSessions}]'          = 'https://hpe-docs.gitbook.io/posh-hponeview/about/about_appliance_connections';
-    '${Global:ConnectedSessions}'            = 'https://hpe-docs.gitbook.io/posh-hponeview/about/about_appliance_connections';
-    'about_appliance_connections'            = 'https://hpe-docs.gitbook.io/posh-hponeview/about/about_appliance_connections'
-    'about_Appliance_Connection_Permissions' = 'https://hpe-docs.gitbook.io/posh-hponeview/about/about_appliance_connection_permissions';
-    'about_two_factor_authentication'        = 'https://hpe-docs.gitbook.io/posh-hponeview/about/about_two_factor_authentication'
+    '[${Global:ConnectedSessions}]'          = 'https://hpe-docs.gitbook.io/posh-hpeoneview/about/about_appliance_connections';
+    '${Global:ConnectedSessions}'            = 'https://hpe-docs.gitbook.io/posh-hpeoneview/about/about_appliance_connections';
+    'about_appliance_connections'            = 'https://hpe-docs.gitbook.io/posh-hpeoneview/about/about_appliance_connections'
+    'about_Appliance_Connection_Permissions' = 'https://hpe-docs.gitbook.io/posh-hpeoneview/about/about_appliance_connection_permissions';
+    'about_two_factor_authentication'        = 'https://hpe-docs.gitbook.io/posh-hpeoneview/about/about_two_factor_authentication'
 }
 
 $H1 = "# "
@@ -307,13 +307,13 @@ function LinkifyString ([String]$String, [String]$CmdletName)
 
 }
 
-$SourceJsonFiles = [System.IO.Directory]::GetFiles($Path, "HPOneView.*.json")
+$SourceJsonFiles = [System.IO.Directory]::GetFiles($Path, "HPEOneView.*.json")
 
 # Throw error here the JSON source is not found.
 if ([String]::IsNullOrEmpty($SourceJsonFiles))
 {
 
-    $Message = "Unable to find '{0}'.  Please check to make sure the source exists in the expected path." -f ($Path + '\HPOneView.*_CmdletHelp.json')
+    $Message = "Unable to find '{0}'.  Please check to make sure the source exists in the expected path." -f ($Path + '\HPEOneView.*_CmdletHelp.json')
     throw [Management.Automation.ErrorRecord]::new((New-Object 'InvalidOperationException' $Message), 'FileNotFound', 'ResourceUnavailable', 'HelpJSONSource')
 
 }
@@ -329,7 +329,7 @@ else
 
         $c                   = 0
 
-        $Activity = 'Processing HPOneView {0} Cmdlets' -f $Version
+        $Activity = 'Processing HPEOneView {0} Cmdlets' -f $Version
 
         # Need to process through all of the documented Cmdlets, getting the Syntax for parameterSetNames, parameter pipeline and waldcard support
         ForEach ($Cmdlet in $script:LibraryJsonContents.Cmdlets)

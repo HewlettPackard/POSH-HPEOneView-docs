@@ -38,7 +38,7 @@ Get the appliance `two-factor` authentication configuration.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -58,7 +58,7 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.Security.TwoFactorAuthConfiguration**_
+_**HPEOneView.Appliance.Security.TwoFactorAuthConfiguration**_
 
 Appliance two-factor security settings.
 

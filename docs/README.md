@@ -11,6 +11,19 @@ This PowerShell module requires the following minimum versions:
 ### **Table 1. Requirements**
 
 {% tabs %}
+{% tab title="HPE OneView 5.30" %}
+| Component | Version |
+| :--- | :--- |
+| .NetStandard | 2.0 or newer |
+| PowerShell | 5.1, 7.0 or newer |
+| PowerShellCore | 7.0 or newer |
+| HPE OneView/HPE Synergy | 5.30 or newer |
+
+{% hint style="info" %}
+.NetStandard 2.0 API's are supported by both the [.NetFramework 4.7.2 Windows](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-7-2/) and [DotNetCore 2.0](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-0/) clients.
+{% endhint %}
+{% endtab %}
+
 {% tab title="HPE OneView 5.20" %}
 | Component | Version |
 | :--- | :--- |
@@ -37,28 +50,6 @@ This PowerShell module requires the following minimum versions:
 {% endhint %}
 {% endtab %}
 
-{% tab title="HPE OneView 4.20" %}
-{% hint style="info" %}
-This library module is now in maintenance.  Only critical bug or security fixes will be considered. Otherwise, please look at upgrading your library to a newer version, along with your HPE OneView/Synergy Composer version.
-{% endhint %}
-
-| Component | Version |
-| :--- | :--- |
-| Windows Management Framework \(WMF\) | 4.0 |
-| .Net Client Framework | 4.6 |
-| HPE OneView/HPE Synergy | 4.20 or newer |
-| FormatPX | v1.1.2.12 or greater |
-| SnippetPX | v1.0.2.13 or greater |
-
-{% hint style="info" %}
-Windows Server 2008 R2 SP1 will be required to install the 4.6 .Net Client Framework.
-{% endhint %}
-
-{% hint style="info" %}
-FormatPX and SnippetPX are included with the EXE installer.  They can also be installed with the Install-Module Cmdlet from the PowerShell Gallery.
-{% endhint %}
-{% endtab %}
-
 {% endtabs %}
 
 ### **Table 2. Deprecated releases**
@@ -69,20 +60,23 @@ FormatPX and SnippetPX are included with the EXE installer.  They can also be in
 | HPE OneView 1.20 | .Net Client Framework | 4.0 |
 | HPE OneView 1.20 | HPE OneView | 1.20 or newer |
 | HPE OneView 2.00 | Windows Management Framework \(WMF\) | 4.0 |
-| HPE OneView 2.00 | .Net Client Framework | 4.6\*\* |
+| HPE OneView 2.00 | .Net Client Framework | 4.6 |
 | HPE OneView 2.00 | HPE OneView | 2.00 or newer |
 | HPE OneView 3.00 | Windows Management Framework \(WMF\) | 4.0 |
-| HPE OneView 3.00 | .Net Client Framework | 4.6\*\* |
+| HPE OneView 3.00 | .Net Client Framework | 4.6 |
 | HPE OneView 3.00 | HPE OneView/HPE Synergy | 3.00 or newer |
 | HPE OneView 3.10 | Windows Management Framework \(WMF\) | 4.0 |
-| HPE OneView 3.10 | .Net Client Framework | 4.6\*\* |
+| HPE OneView 3.10 | .Net Client Framework | 4.6 |
 | HPE OneView 3.10 | HPE OneView/HPE Synergy | 3.10 or newer |
 | HPE OneView 4.00 | Windows Management Framework \(WMF\) | 4.0 |
-| HPE OneView 4.00 | .Net Client Framework | 4.6\*\* |
+| HPE OneView 4.00 | .Net Client Framework | 4.6 |
 | HPE OneView 4.00 | HPE OneView/HPE Synergy | 4.00 or newer |
 | HPE OneView 4.10 | Windows Management Framework \(WMF\) | 4.0 |
-| HPE OneView 4.10 | .Net Client Framework | 4.6\*\* |
-| HPE OneView 4.10 | HPE OneView/HPE Synergy | 4.10 or newer |
+| HPE OneView 4.10 | .Net Client Framework | 4.6 |
+| HPE OneView 4.10 | HPE OneView/HPE Synergy | 4.20 or newer |
+| HPE OneView 4.20 | Windows Management Framework \(WMF\) | 4.0 |
+| HPE OneView 4.20 | .Net Client Framework | 4.6 |
+| HPE OneView 4.20 | HPE OneView/HPE Synergy | 4.20 or newer |
 
 ## Installer changes
 

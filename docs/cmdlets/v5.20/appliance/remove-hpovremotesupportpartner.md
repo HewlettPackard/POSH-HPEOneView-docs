@@ -43,7 +43,7 @@ Remote Suport partner resource object, from `Get-HPOVRemoteSupportPartner`.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -59,7 +59,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Appliance.RemoteSupport.Partner [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.RemoteSupport.Partner [System.Management.Automation.PSCustomObject]**_
 
 Remote Suport partner resource from [`Get-HPOVRemoteSupportPartner`](get-hpovremotesupportpartner.md).
 

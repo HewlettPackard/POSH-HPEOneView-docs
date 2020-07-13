@@ -139,7 +139,7 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Networking.SnmpConfiguration [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Networking.SnmpConfiguration [System.Management.Automation.PSCustomObject]**_
 
 SNMP Configuration object for a Logical Interconnect Group or Logical Interconnect resource
 

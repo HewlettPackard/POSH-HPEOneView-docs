@@ -111,7 +111,7 @@ Provide the name of the Directory Group to search for.  If omitted, all found Di
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -145,11 +145,11 @@ Directory User Account password
 
 ## Return Values
 
-_**HPOneView.Appliance.AuthDirectoryGroup [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.AuthDirectoryGroup [System.Management.Automation.PSCustomObject]**_
 
 Authentication Directory Group
 
-_**System.Collections.ArrayList<HPOneView.Appliance.AuthDirectoryGroup>**_
+_**System.Collections.ArrayList<HPEOneView.Appliance.AuthDirectoryGroup>**_
 
 Array of Authentication Directory Groups found
 

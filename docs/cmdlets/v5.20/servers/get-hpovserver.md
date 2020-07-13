@@ -178,8 +178,8 @@ Filter resources based on provided Scope membership.  By default, all resources 
 
     * AllResources
     * AllResourcesInScope
-    * `[HPOneView.Appliance.ScopeCollection]`
-    * `[HPOneView.Appliance.ConnectionPermission]`
+    * `[HPEOneView.Appliance.ScopeCollection]`
+    * `[HPEOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
@@ -240,7 +240,7 @@ Provide the Server Hardware Type or Server Profile Template Object to filter for
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -286,17 +286,17 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.ServerHardwareType [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.ServerHardwareType [System.Management.Automation.PSCustomObject]**_
 
 Server Hardware Type resource object.
 
-_**HPOneView.ServerProfileTemplate [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.ServerProfileTemplate [System.Management.Automation.PSCustomObject]**_
 
 Server Profile Template resource object.
 
 ## Return Values
 
-_**HPOneView.ServerHardware [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.ServerHardware [System.Management.Automation.PSCustomObject]**_
 
 Single Server Hardware resource
 

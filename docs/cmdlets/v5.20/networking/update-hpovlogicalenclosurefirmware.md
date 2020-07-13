@@ -9,7 +9,7 @@ description: Initiate Logical Enclosure Firmware update.
 ```text
 Update-HPOVLogicalEnclosureFirmware
     [-InputObject] <Object>
-    [-Baseline] <HPOneView.Appliance.Baseline>
+    [-Baseline] <HPEOneView.Appliance.Baseline>
     [-FirmwareUpdateProcess] <String>
     [-InterconnectActivationMode <String>]
     [-ForceInstallation]
@@ -40,7 +40,7 @@ Get the specified baseline, and update the specified logical enclosure's shared 
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -62,7 +62,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Baseline &lt;HPOneView.Appliance.Baseline&gt;
+### -Baseline &lt;HPEOneView.Appliance.Baseline&gt;
 
 The firmware bundle or baseline to install.
 
@@ -104,7 +104,7 @@ Force the `re-installation` or downgrade of components within the baseline.
 
 ### -InputObject &lt;Object&gt;
 
-The `[HPOneView.LogicalEnclosure]` from `Get-HPOVLogicalEnclosure`.
+The `[HPEOneView.LogicalEnclosure]` from `Get-HPOVLogicalEnclosure`.
 
 | Aliases | le, LogicalEnclosure |
 | :--- | :--- |
@@ -135,13 +135,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.LogicalEnclosure [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.LogicalEnclosure [System.Management.Automation.PSCustomObject]**_
 
 Logical enclosure resource from [`Get-HPOVLogicalEnclosure`](../servers/get-hpovlogicalenclosure.md).
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task Resource object for configuring port monitoring on the requested logical intercinnect.
 

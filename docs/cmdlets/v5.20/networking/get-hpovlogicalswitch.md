@@ -96,7 +96,7 @@ Name of the Logical Switch resource.  Supports wildcard * character.
 
 ### -InputObject &lt;Object&gt;
 
-Provide an `[HPOneView.Appliance.TaskResource]` object and the Cmdlet will return the associated Logical Switch resource created from the `New-HPOVLogicalSwitch` Cmdlet.
+Provide an `[HPEOneView.Appliance.TaskResource]` object and the Cmdlet will return the associated Logical Switch resource created from the `New-HPOVLogicalSwitch` Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -112,8 +112,8 @@ Filter resources based on provided Scope membership.  By default, all resources 
 
     * AllResources
     * AllResourcesInScope
-    * `[HPOneView.Appliance.ScopeCollection]`
-    * `[HPOneView.Appliance.ConnectionPermission]`
+    * `[HPEOneView.Appliance.ScopeCollection]`
+    * `[HPEOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
@@ -149,7 +149,7 @@ Save the Logical Switch resource(s) to the specified JSON file.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -165,13 +165,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async Task resource object, from [`New-HPOVLogicalSwitch`](new-hpovlogicalswitch.md).
 
 ## Return Values
 
-_**HPOneView.Networking.LogicalSwitch [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Networking.LogicalSwitch [System.Management.Automation.PSCustomObject]**_
 
 Single Logical Switch resource.
 

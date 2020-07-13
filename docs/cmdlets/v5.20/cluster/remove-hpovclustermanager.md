@@ -8,7 +8,7 @@ description: Remove configured hypervisor managers.
 
 ```text
 Remove-HPOVClusterManager
-    [-InputObject] <HPOneView.ClusterProfile.HypervisorManager>
+    [-InputObject] <HPEOneView.ClusterProfile.HypervisorManager>
     [-Force]
     [-ApplianceConnection <Array>]
     [<CommonParameters>]
@@ -36,7 +36,7 @@ Remove the specified hypervisor manager.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -70,9 +70,9 @@ Force delete the resource.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -InputObject &lt;HPOneView.ClusterProfile.HypervisorManager&gt;
+### -InputObject &lt;HPEOneView.ClusterProfile.HypervisorManager&gt;
 
-The `[HPOneView.ClusterProfile.HypervisorManager]` resource to remove from `Get-HPOVClusterManager`.
+The `[HPEOneView.ClusterProfile.HypervisorManager]` resource to remove from `Get-HPOVClusterManager`.
 
 | Aliases | None |
 | :--- | :--- |
@@ -100,13 +100,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.ClusterProfile.HypervisorManager**_
+_**HPEOneView.ClusterProfile.HypervisorManager**_
 
 The hypervisor manager object from [`Get-HPOVClusterManager`](get-hpovclustermanager.md).
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Asynchronous task resource to monitor.
 

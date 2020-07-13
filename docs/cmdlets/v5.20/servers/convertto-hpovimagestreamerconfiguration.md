@@ -108,7 +108,7 @@ Use to override the convertion if SAS Logical Interconnects are detected.  WARNI
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -124,7 +124,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.LogicalEnclosure [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.LogicalEnclosure [System.Management.Automation.PSCustomObject]**_
 
 HPE Synergy Logical Enclosure to convert.
 
@@ -134,7 +134,7 @@ _**System.Management.Automation.PSCustomObject**_
 
 If the Logical Enclosure cannot be removed or re-created, as PSCustomObject with original Server Profile location is provided.  Object properties are Name, ProfileUri, ServerSerialNumber.
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 The async task for each Server Profile that will be re-assigned for the caller to monitor.
 

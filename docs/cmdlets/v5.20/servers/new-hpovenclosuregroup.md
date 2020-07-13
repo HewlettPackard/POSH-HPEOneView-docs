@@ -12,7 +12,7 @@ New-HPOVEnclosureGroup
     [-LogicalInterconnectGroupMapping] <Object>
     [-PowerRedundantMode <String>]
     [-ConfigurationScript <String>]
-    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
+    [-Scope <HPEOneView.Appliance.ScopeCollection[]>]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
@@ -27,7 +27,7 @@ New-HPOVEnclosureGroup
     [-PowerRedundantMode <String>]
     [-ConfigurationScript <String>]
     [-LigPrefix] <String>
-    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
+    [-Scope <HPEOneView.Appliance.ScopeCollection[]>]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
@@ -44,7 +44,7 @@ New-HPOVEnclosureGroup
     [-IPv6AddressRange <Object>]
     [-DeploymentNetworkType <String>]
     [-DeploymentNetwork <Object>]
-    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
+    [-Scope <HPEOneView.Appliance.ScopeCollection[]>]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
@@ -52,7 +52,7 @@ New-HPOVEnclosureGroup
 ```text
 New-HPOVEnclosureGroup
     [-ImportFile] <String>
-    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
+    [-Scope <HPEOneView.Appliance.ScopeCollection[]>]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
@@ -396,7 +396,7 @@ If specified, the Logical Interconnect Group that is created will be used in the
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one `[HPEOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 Default Value: ${Global:ConnectSessions} | ? Default
 
@@ -420,9 +420,9 @@ Provide the full path and file name of the JSON file.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;HPOneView.Appliance.ScopeCollection[]&gt;
+### -Scope &lt;HPEOneView.Appliance.ScopeCollection[]&gt;
 
-Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
+Provide an `[HPEOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -438,13 +438,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Networking.LogicalInterconnectGroup [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Networking.LogicalInterconnectGroup [System.Management.Automation.PSCustomObject]**_
 
 Single Logical Interconnect Group resource object
 
 ## Return Values
 
-_**HPOneView.EnclosureGroup [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.EnclosureGroup [System.Management.Automation.PSCustomObject]**_
 
 The newly created enclosure group resource
 

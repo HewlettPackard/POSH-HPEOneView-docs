@@ -47,7 +47,7 @@ Get all defined fabric managers.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -87,8 +87,8 @@ Filter resources based on provided Scope membership.  By default, all resources 
 
     * AllResources
     *AllResourcesInScope
-    * `[HPOneView.Appliance.ScopeCollection]`
-    * `[HPOneView.Appliance.ConnectionPermission]`
+    * `[HPEOneView.Appliance.ScopeCollection]`
+    * `[HPEOneView.Appliance.ConnectionPermission]`
 
 | Aliases |  |
 | :--- | :--- |
@@ -108,7 +108,7 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Networking.FabricManager**_
+_**HPEOneView.Networking.FabricManager**_
 
 Configured fabric manager resource object.
 

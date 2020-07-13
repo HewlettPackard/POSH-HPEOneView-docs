@@ -44,7 +44,7 @@ Rack object, from `Get-HPOVRack`.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -60,13 +60,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Facilities.RackMember**_
+_**HPEOneView.Facilities.RackMember**_
 
 Rack member resource from [`Get-HPOVRackMember`](get-hpovrackmember.md).
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource**_
+_**HPEOneView.Appliance.TaskResource**_
 
 Async task object of updating the associated rack.
 
