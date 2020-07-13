@@ -58389,18 +58389,27 @@
       }
     },
     {
-      "Name": "Update-UserScript",
+      "Name": "Update-OVUserScript",
       "Category": "Library",
       "Contents": {
-        "Synopsis": "Default content",
-        "Description": "Default content",
+        "Synopsis": "Update user scripts with updated Cmdlet and class names.",
+        "Description": "The HPE OneVIew 5.30 PowerShell library has gone through a major change, in that all Cmdlet and the C# base class name have changed.  PowerShell Cmdlet nouns used the HPOV vendor prefix.  This is now OV.  The C# based class namespace was HPOneView, and is now HPEOneView.\n\nThis script will process a user created script to find references to the original Cmdlet and Class names, and update them acordingly.  By default, this Cmdlet will only output to the console the changes it would make.  Use the -Replace parameter to commit those changes to the orignal file.",
         "Syntax": [
-          []
+          [
+            {
+            "Name": "Path",
+            "Required": true
+            },
+            {
+              "Name": "Replace",
+              "Required": false
+            }
+          ]
         ],
         "Parameters": [
           {
             "Name": "Path",
-            "Description": "",
+            "Description": "The path and file to be process.",
             "DataType": "FileInfo",
             "Required": true,
             "DefaultValue": "",
@@ -58410,7 +58419,7 @@
           },
           {
             "Name": "Replace",
-            "Description": "",
+            "Description": "Use to save the changes to the original file.",
             "DataType": "SwitchParameter",
             "Required": false,
             "DefaultValue": "",
@@ -58419,18 +58428,33 @@
             "SupportsWildcard": false
           }
         ],
-        "InputTypes": [],
-        "ReturnValues": [],
+        "InputTypes": [
+          {
+              "Value":  "System.IO.FileInfo",
+              "Text":  "The file object to parse and update."
+          }
+        ],
+        "ReturnValues": [
+          {
+              "Value":  "System.String",
+              "Text":  "Output of script that would have been modified.  Using the -Replace parameter will generate no output.\n"
+          }
+        ],
         "Examples": [
           {
             "Title": "-------------------------- EXAMPLE 1 --------------------------",
-            "Code": "Update-UserScript\r\n",
-            "Description": "Default example"
+            "Code": "Update-OVUserScript -Path .\\MyScript.ps1\r\n",
+            "Description": "Process the MyScript.ps1 script present in the working directory."
+          },
+          {
+            "Title": "-------------------------- EXAMPLE 2 --------------------------",
+            "Code": "Get-ChildItem -Path C:\\MyDir -Include *.ps1 | Update-OVUserScript -Replace\r\n",
+            "Description": "Process scripts (.ps1) found in the specified directory, and save them."
           }
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v5.30//update-userscript",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v5.30/library/update-ovuserscript",
             "Text": "Online: "
           }
         ]
