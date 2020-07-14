@@ -39,6 +39,13 @@ else
 
             $SummaryJson."Table of contents"."Command Reference" | Add-Member -NotePropertyName $CmdletLibraryVersion -NotePropertyValue @{}
 
+            $barSortedProps = [PSCustomObject][Ordered]@{dir = "cmdlets"}
+
+            $SummaryJson.'Table of contents'.'Command Reference' | Get-Member -Type NoteProperty | Sort-Object Name -Descending | Where-Object name -ne "dir" | ForEach-Object {
+                 Add-Member -InputObject $barSortedProps -Type NoteProperty -Name $_.Name -Value $SummaryJson.'Table of contents'.'Command Reference'.$($_.Name) }
+
+            $SummaryJson.'Table of contents'.'Command Reference' = $barSortedProps
+
         }
 
         $FinalDirectorySummary = [PSCustomObject]@{$CmdletLibraryVersion = [PSCustomObject]@{dir = $CmdletLibraryVersion} }
