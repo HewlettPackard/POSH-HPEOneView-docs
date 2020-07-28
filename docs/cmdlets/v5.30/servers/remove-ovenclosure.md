@@ -23,23 +23,13 @@ Removes an enclosure, its servers, and interconnects from appliance management
 ###  Example 1 
 
 ```text
-$task = Remove-OVEnclosure -enclosure "Enclosure-1234" -force
-Wait-OVTaskComplete $task
-                        
-```
-
-Force-remove the enclosure specifed by name. Wait for remove to complete.
-
-###  Example 2 
-
-```text
 $enclosure = Get-OVEnclosure -name "Enclosure1"
 Remove-OVEnclosure $enclosure -confirm:$false
 ```
 
 Remove the enclosure specifed by $enclosure. Disable confirmation prompt.
 
-###  Example 3 
+###  Example 2 
 
 ```text
 Get-OVEnclosure | Remove-OVEnclosure

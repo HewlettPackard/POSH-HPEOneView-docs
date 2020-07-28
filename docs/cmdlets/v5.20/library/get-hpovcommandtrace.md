@@ -26,7 +26,7 @@ Please know that this Cmdlet is currently not supported in the Windows PowerShel
 ###  Example 1 
 
 ```text
-Get-HPOVCommandTrace C:\Temp
+Get-HPOVCommandTrace -ScriptBlock { Get-HPOVNetwork -Name MyNet } -Location C:\Temp
 ```
 
 Start a new library trace, which will create a file in the `C:\Temp` directory.

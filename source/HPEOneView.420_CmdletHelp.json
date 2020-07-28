@@ -34475,16 +34475,11 @@
                 "Examples": [
                     {
                         "Title": "-------------------------- EXAMPLE 1 --------------------------",
-                        "Code": "$task = Remove-HPOVEnclosure -enclosure \"Enclosure-1234\" -force\r\nWait-HPOVTaskComplete $task\r\n                        \r\n",
-                        "Description": "Force-remove the enclosure specifed by name. Wait for remove to complete."
-                    },
-                    {
-                        "Title": "-------------------------- EXAMPLE 2 --------------------------",
                         "Code": "$enclosure = Get-HPOVEnclosure -name \"Enclosure1\"\r\nRemove-HPOVEnclosure $enclosure -confirm:$false",
                         "Description": "Remove the enclosure specifed by $enclosure. Disable confirmation prompt."
                     },
                     {
-                        "Title": "-------------------------- EXAMPLE 3 --------------------------",
+                        "Title": "-------------------------- EXAMPLE 2 --------------------------",
                         "Code": "Get-HPOVEnclosure | Remove-HPOVEnclosure\r\n",
                         "Description": "Search for all enclosures and remove them from appliance."
                     }

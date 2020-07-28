@@ -37,7 +37,7 @@ Return OS Deployment Plan parameters from the "RHEL 7.2 OS" deployment plan.
 
 ```text
 $OSDeploymentAttributes = Get-HPOVOSDeploymentPlanAttributes -InputObject $MyDeploymentPlan
-$OSDeploymentAttributes = $OSDeploymentAttributes | Where-Object name -NotMatch 'dns|gateway|ipaddress|netmask'
+$OSDeploymentAttributes = $OSDeploymentAttributes | Where-Object name -NotMatch 'dns|gateway|IPAddress|netmask'
 ($OSDeploymentAttributes | Where-Object name -eq "NIC1.connectionid").value = 3
 ($OSDeploymentAttributes | Where-Object name -eq "NIC1.networkuri").value = $I3SCon3.networkUri
 ($OSDeploymentAttributes | Where-Object name -eq "NIC1.constraint").value = 'dhcp'
