@@ -11,11 +11,35 @@ New-HPOVLogicalEnclosure
     [-Name] <String>
     [-Enclosure] <Object>
     [-EnclosureGroup] <Object>
-    [-FirmwareBaseline] <String>
-    [-ForceFirmwareBaseline] <Boolean>
+    [-FirmwareBaseline <String>]
+    [-ForceFirmwareBaseline <Boolean>]
+    [-AutoFillIPv4DeviceAddress]
+    [-StartingIPv4DeviceAddress <ipaddress>]
+    [-AutoFillIPv4InterconnectAddress]
+    [-StartingIPv4InterconnectAddress <ipaddress>]
+    [-AutoFillIPv6DeviceAddress]
+    [-StartingIPv6DeviceAddress <ipaddress>]
+    [-AutoFillIPv6InterconnectAddress]
+    [-StartingIPv6InterconnectAddress <ipaddress>]
     [-Scope <HPEOneView.Appliance.ScopeCollection[]>]
     [-Async]
-    [-ApplianceConnection] <Object>
+    [-Passthru]
+    [-ApplianceConnection <Object>]
+    [<CommonParameters>]
+```
+
+```text
+New-HPOVLogicalEnclosure
+    [-Name] <String>
+    [-Enclosure] <Object>
+    [-EnclosureGroup] <Object>
+    [-FirmwareBaseline <String>]
+    [-ForceFirmwareBaseline <Boolean>]
+    [-Ebipa <Object>]
+    [-Scope <HPEOneView.Appliance.ScopeCollection[]>]
+    [-Async]
+    [-Passthru]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -133,6 +157,126 @@ Provide an `[HPEOneView.Appliance.ScopeCollection]` resource object to initially
 | Required? | False |
 | Position? | Named |
 | Default value | False |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -AutoFillIPv4DeviceAddress &lt;SwitchParameter&gt;
+
+
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -AutoFillIPv4InterconnectAddress &lt;SwitchParameter&gt;
+
+
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -AutoFillIPv6DeviceAddress &lt;SwitchParameter&gt;
+
+
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -AutoFillIPv6InterconnectAddress &lt;SwitchParameter&gt;
+
+
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -Ebipa &lt;Object&gt;
+
+
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -Passthru &lt;SwitchParameter&gt;
+
+
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -StartingIPv4DeviceAddress &lt;ipaddress&gt;
+
+
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -StartingIPv4InterconnectAddress &lt;ipaddress&gt;
+
+
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -StartingIPv6DeviceAddress &lt;ipaddress&gt;
+
+
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -StartingIPv6InterconnectAddress &lt;ipaddress&gt;
+
+
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

@@ -10271,12 +10271,12 @@
       "Name": "Get-OVCommandTrace",
       "Category": "Library",
       "Contents": {
-        "Synopsis": "Start an HPOV Library Verbose Trace.",
-        "Description": "This Cmdlet will assist the user in setting up the PowerShell environment to generate and capture Verbose output from HPOV Library Cmdlets.  Once this Cmdlet has been executed, the prior HPOV Cmdlets can be executed, without the need of using the `-Cerbose` switch.\n\nCmdlet output will be captured using the built-in Microsoft PowerShell Start-Transcript provider.  A transcript trace file will be saved in either the current working directory, or specified using the `-Location` parameter.\n\nPlease know that this Cmdlet is currently not supported in the Windows PowerShell ISE, unless using PowerShell v5 or newer.",
+        "Synopsis": "Start an OV Library Verbose Trace.",
+        "Description": "This Cmdlet will assist the user in setting up the PowerShell environment to generate and capture Verbose output from OV Library Cmdlets.  Once this Cmdlet has been executed, the prior OV Cmdlets can be executed, without the need of using the `-Cerbose` switch.\n\nCmdlet output will be captured using the built-in Microsoft PowerShell Start-Transcript provider.  A transcript trace file will be saved in either the current working directory, or specified using the `-Location` parameter.\n\nPlease know that this Cmdlet is currently not supported in the Windows PowerShell ISE, unless using PowerShell v5 or newer.",
         "Parameters": [
           {
             "Name": "ScriptBlock",
-            "Description": "The command within a ScriptBlock to execute.  The Cmdlet will add the -Verbose switch end of the command.",
+            "Description": "One or more HPOneView library Cmdlets.  The Cmdlet will execute the contents of the ScriptBlock, ensuring that the commands will generate verbose output and be captured to a log file.",
             "DefaultValue": null,
             "Aliases": "Command",
             "PipelineInput": "true (ByValue)",
@@ -10310,7 +10310,7 @@
         "Examples": [
           {
             "Title": "-------------------------- EXAMPLE 1 --------------------------",
-            "Code": "Get-OVCommandTrace C:\\Temp",
+            "Code": "Get-OVCommandTrace -ScriptBlock { Get-OVNetwork -Name MyNet } -Location C:\\Temp",
             "Description": "Start a new library trace, which will create a file in the `C:\\Temp` directory."
           }
         ],
@@ -37018,16 +37018,11 @@
         "Examples": [
           {
             "Title": "-------------------------- EXAMPLE 1 --------------------------",
-            "Code": "$task = Remove-OVEnclosure -enclosure \"Enclosure-1234\" -force\nWait-OVTaskComplete $task\n                        ",
-            "Description": "Force-remove the enclosure specifed by name. Wait for remove to complete."
-          },
-          {
-            "Title": "-------------------------- EXAMPLE 2 --------------------------",
             "Code": "$enclosure = Get-OVEnclosure -name \"Enclosure1\"\nRemove-OVEnclosure $enclosure -confirm:$false",
             "Description": "Remove the enclosure specifed by $enclosure. Disable confirmation prompt."
           },
           {
-            "Title": "-------------------------- EXAMPLE 3 --------------------------",
+            "Title": "-------------------------- EXAMPLE 2 --------------------------",
             "Code": "Get-OVEnclosure | Remove-OVEnclosure",
             "Description": "Search for all enclosures and remove them from appliance."
           }
@@ -58455,6 +58450,821 @@
         "RelatedLinks": [
           {
             "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v5.30/library/update-ovuserscript",
+            "Text": "Online: "
+          }
+        ]
+      }
+    },
+    {
+      "Name": "Disable-OVComposerIlo",
+      "Category": "Appliance",
+      "Contents": {
+        "Synopsis": "Disable HPE Synergy Composer2 iLO remote connectivity.",
+        "Description": "You can configure the HPE Synergy Composer2 for remote access through its embedded management processor (iLO). This configuration enables you to manage the Composer2 remotely and perform specific Composer2 management operations that previously required accessing the Composer console locally in the data center.\n\nUse this Cmdlet to disable remote access to the HPE Synergy Composer2 iLO.  Disabling external iLO access will delete the configured iLO user account and unassign the user specified static IPv4 and IPv6 addresses.\n\nMinimum required privileges: Infrastructure administrator",
+        "Syntax": [
+          [
+            {
+              "Name": "InputObject",
+              "Required": true
+            },
+            {
+              "Name": "Async",
+              "Required": false
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ],
+          [
+            {
+              "Name": "InputObject",
+              "Required": true
+            },
+            {
+              "Name": "DisableIPv4Address",
+              "Required": true
+            },
+            {
+              "Name": "Async",
+              "Required": false
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ],
+          [
+            {
+              "Name": "InputObject",
+              "Required": true
+            },
+            {
+              "Name": "DisableIPv6Address",
+              "Required": true
+            },
+            {
+              "Name": "Async",
+              "Required": false
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ]
+        ],
+        "Parameters": [
+          {
+            "Name": "ApplianceConnection",
+            "Description": "Specify one or more HPOneView.Appliance.Connection object(s) or Name property value(s).\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
+            "DataType": "Object",
+            "Required": false,
+            "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
+            "Aliases": "Appliance",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Async",
+            "Description": "Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "False",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Confirm",
+            "Description": "",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "cf",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "DisableIPv4Address",
+            "Description": "Use to unconfigure the user specified IPv4 address of the iLO.  The iLO will no longer be accessible by this address.  This paramete cannot be combined with the -DisableIPv6Address parameter.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "DisableIPv6Address",
+            "Description": "Use to unconfigure the user specified IPv6 address of the iLO.  The iLO will no longer be accessible by this address.  This paramete cannot be combined with the -DisableIPv4Address parameter.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "InputObject",
+            "Description": "The object from Get-OVComposerIloStatus.",
+            "DataType": "Object",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "WhatIf",
+            "Description": "",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "wi",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          }
+        ],
+        "InputTypes": [
+          {
+            "Value": "HPOneView.Appliance.HardwareConfig [System.Management.Automation.PSCustomObject]",
+            "Text": "The appliance hardware configuration object from Get-OVComposerIloStatus."
+          }
+        ],
+        "ReturnValues": [
+          {
+            "Value": "HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]",
+            "Text": "Async task resource to monitor."
+          }
+        ],
+        "Examples": [
+          {
+            "Title": "-------------------------- EXAMPLE 1 --------------------------",
+            "Code": "$ComposerAppliance = Get-OVComposerIloStatus | Where-Object IsExternallyAccessible\nDisable-OVComposerIlo\r\n",
+            "Description": "Disable HPE Synergy Composer 2 iLO's that are configured for remote connectivity.  The configued iLO user and IP Address(es) will be removed from the iLO."
+          },
+          {
+            "Title": "-------------------------- EXAMPLE 2 --------------------------",
+            "Code": "$ComposerAppliance = Get-OVComposerIloStatus | Where-Object IsExternallyAccessible\nDisable-OVComposerIlo -DisableIPv6Address\r\n",
+            "Description": "Disable only the configured IPv6 address on the HPE Synergy Composer 2 iLO's that are configured for remote connectivity."
+          }
+        ],
+        "RelatedLinks": [
+          {
+            "Uri": "",
+            "Text": "Enable-OVComposerIlo"
+          },
+          {
+            "Uri": "",
+            "Text": "Get-OVComposerIloStatus"
+          },
+          {
+            "Uri": "",
+            "Text": "Set-OVComposerIlo"
+          },
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.20/appliance/disable-ovcomposerilo",
+            "Text": "Online: "
+          }
+        ]
+      }
+    },
+    {
+      "Name": "Enable-OVComposerIlo",
+      "Category": "Appliance",
+      "Contents": {
+        "Synopsis": "Enable HPE Synergy Composer2 iLO for remote connectivity.",
+        "Description": "You can configure the HPE Synergy Composer2 for remote access through its embedded management processor (iLO). This configuration enables you to manage the Composer2 remotely and perform specific Composer2 management operations that previously required accessing the Composer console locally in the data center.\n\nAfter remote access to a Composer2 iLO is configured, you can:\n\n    * Use the iLO Integrated Remote Console (iLO IRC) to access the Composer2 physical console. The physical console provides access to the HPE OneView maintenance console. The Composer2 iLO has an independent IPaddress and is accessible even when the Composer2 is not available.\n    * Mount a virtual USB drive on the Composer2 through iLO and perform critical operations such as reimage,restore, backup, and create support dump without physically accessing the appliance.\n    * Power on or off the appliance.\n\nYou can configure the iLO of the HPE Synergy Composer2 for remote access using this Cmdlet. All the Composer2 nodes that are present in the enclosures managed by HPE OneView can be configured, including standby or standalone Composer2 nodes.  The following are the settings that you can configure for the Composer2 iLO in HPE OneView:\n\n    * The iLO user account and password that are required to log in to the Composer2 iLO.\n    * Network parameters that allow you to access the Composer2 iLO from an external browser. The network parameters include iLO hostname, iLO IP address, subnet mask, gateway, and DNS server names. Both IPv4 and IPv6 addresses are supported.\n\nSupported operations on the Composer2 through the iLO Integrated Remote Console\n\nYou can perform the following operations when using the HPE Synergy Composer2 iLO Integrated Remote Console (iLO IRC):\n\n    * Switch between the graphical console or the Composer2 maintenance console. By default, the Composer2 console displays a graphical browser interface. Use Ctrl+Alt+F1 and Ctrl+Alt+F2 to switch between the graphical interface and the maintenance console.\n    * For the first-time setup, Hewlett Packard Enterprise recommends that you configure the appliance network before the hardware discovery process starts.\n    * Power on and off the appliance using the integrated power control options on the iLO remote console.\n    * Use the Composer2 iLO virtual media feature to have a USB drive on your local workstation mounted as a virtual USB drive on the Composer2.\n\nVirtually mounting the USB drive allows you to:\n\n    * Reimage the Composer2 from a DD image on the virtual USB drive.\n    * Create a support dump file on the virtual USB drive.\n\n    NOTE:  If both virtual USB drive and local USB drive are plugged into the Composer2, by default the virtual USB drive is selected. To choose the USB drive that is plugged into the Composer2, unmount the virtual USB drive. In the iLO IRC, select Virtual Drives and clear the virtual drive selection to unmount the virtual USB drive.  You can also unmount the virtual USB drive from the maintenance console of HPE OneView.\n\n    * Restore the Composer2 from a backup image on the virtual USB drive.\n\nRequirements\n\n    * A single iLO user account is supported. Creating a user account replaces any existing user account.\n    * The iLO username cannot be Administrator or start with an _.\n\nNOTE: The iLO user account is assigned a predefined set of privileges that allows the user to perform a restricted set of iLO operations. Specifically, the iLO account has permissions to control power, use the iLO Integrated Remote Console (iLO IRC), and use the iLO Virtual Media.\n\nMinimum required privileges: Infrastructure administrator",
+        "Syntax": [
+          [
+            {
+              "Name": "InputObject",
+              "Required": true
+            },
+            {
+              "Name": "Username",
+              "Required": true
+            },
+            {
+              "Name": "Password",
+              "Required": true
+            },
+            {
+              "Name": "Async",
+              "Required": false
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ],
+          [
+            {
+              "Name": "InputObject",
+              "Required": true
+            },
+            {
+              "Name": "Username",
+              "Required": true
+            },
+            {
+              "Name": "Password",
+              "Required": true
+            },
+            {
+              "Name": "IPv4Address",
+              "Required": false
+            },
+            {
+              "Name": "IPv4SubnetMask",
+              "Required": false
+            },
+            {
+              "Name": "IPv4Gateway",
+              "Required": false
+            },
+            {
+              "Name": "IPv4DnsServer",
+              "Required": false
+            },
+            {
+              "Name": "IPv6Address",
+              "Required": false
+            },
+            {
+              "Name": "IPv6SubnetMask",
+              "Required": false
+            },
+            {
+              "Name": "IPv6Gateway",
+              "Required": false
+            },
+            {
+              "Name": "IPv6DnsServer",
+              "Required": false
+            },
+            {
+              "Name": "IloHostname",
+              "Required": false
+            },
+            {
+              "Name": "Async",
+              "Required": false
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ]
+        ],
+        "Parameters": [
+          {
+            "Name": "ApplianceConnection",
+            "Description": "Specify one or more HPOneView.Appliance.Connection object(s) or Name property value(s).\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
+            "DataType": "Object",
+            "Required": false,
+            "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
+            "Aliases": "Appliance",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Async",
+            "Description": "Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "False",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Confirm",
+            "Description": "",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "cf",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "IPv4Address",
+            "Description": "Use to configure a specific static IPv4 address to the iLO of the Composer appliance.",
+            "DataType": "IPAddress",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "IPv4DnsServer",
+            "Description": "Optionally configure the Primary and Secondary DNS server address(es).",
+            "DataType": "IPAddress[]",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "IPv4Gateway",
+            "Description": "Use to configure what the default gateway is for the subnet.",
+            "DataType": "IPAddress",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "IPv4SubnetMask",
+            "Description": "Use to set the subnet mask, either in decimal noted or CIDR format.",
+            "DataType": "String",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "IPv6Address",
+            "Description": "Use to configure the static IPv6 address to the iLO of the Compose appliance.",
+            "DataType": "IPAddress",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "IPv6DnsServer",
+            "Description": "Optionally configure the Primary and Secondary DNS server address(es).",
+            "DataType": "IPAddress[]",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "IPv6Gateway",
+            "Description": "Use to set the subnet mask, either in decimal noted or CIDR format.",
+            "DataType": "IPAddress",
+            "Required": false,
+            "DefaultValue": "Use to configure what the default gateway is for the subnet.",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "IPv6SubnetMask",
+            "Description": "Use to set the subnet mask, either in decimal noted or CIDR format.",
+            "DataType": "String",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "IloHostname",
+            "Description": "Use to specify a the iLO subsystem hostname.  If omitted, a randomly generated name will be created.",
+            "DataType": "String",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "InputObject",
+            "Description": "The object from Get-OVComposerIloStatus.",
+            "DataType": "Object",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Password",
+            "Description": "The SecureString of a password to set for the user account.",
+            "DataType": "SecureString",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Username",
+            "Description": "The iLO account to be created.  The account name must not begin with an '_' (underscore), or be the built-in Administrator account.",
+            "DataType": "String",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "WhatIf",
+            "Description": "",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "wi",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          }
+        ],
+        "InputTypes": [
+          {
+            "Value": "HPOneView.Appliance.HardwareConfig [System.Management.Automation.PSCustomObject]",
+            "Text": "The appliance hardware configuration object from Get-OVComposerIloStatus."
+          }
+        ],
+        "ReturnValues": [
+          {
+            "Value": "HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]",
+            "Text": "Async task resource to monitor."
+          }
+        ],
+        "Examples": [
+          {
+            "Title": "-------------------------- EXAMPLE 1 --------------------------",
+            "Code": "$SecurePassword = Read-Host \"Password\" -AsSecureString\n$ComposerAppliance = Get-OVComposerIloStatus\nEnable-OVComposerIlo -InputObject $ComposerAppliance -Hostname Myilohost.domian.com -Username iloadm -Password $SecurePassword\r\n",
+            "Description": "Enable HPE Synergy Composer 2 iLO remote connectivity, by setting the specified hostname, useraccount and secure password."
+          },
+          {
+            "Title": "-------------------------- EXAMPLE 2 --------------------------",
+            "Code": "$SecurePassword = Read-Host \"Password\" -AsSecureString\n$ComposerAppliance = Get-OVComposerIloStatus\nEnable-OVComposerIlo -InputObject $ComposerAppliance -Hostname Myilohost.domian.com -Username iloadm -Password $SecurePassword -IPv4Address 10.148.23.10 -IPv4SubnetMask 24 -IPv4Gateway 10.148.23.1 -IPv4DnsServer 10.10.4.23\r\n",
+            "Description": "Enable HPE Synergy Composer 2 iLO remote connectivity, by setting the specified hostname, useraccount, secure password and static IPv4 address."
+          },
+          {
+            "Title": "-------------------------- EXAMPLE 3 --------------------------",
+            "Code": "$SecurePassword = Read-Host \"Password\" -AsSecureString\n$ComposerAppliance = Get-OVComposerIloStatus\nEnable-OVComposerIlo -InputObject $ComposerAppliance -Hostname Myilohost.domian.com -Username iloadm -Password $SecurePassword -IPv6Address fd51:df0f:1f8c:4916::1 -IPv4SubnetMask 64 -IPv6Gateway fe80::1:1\n",
+            "Description": "Enable HPE Synergy Composer 2 iLO remote connectivity, by setting the specified hostname, useraccount, secure password and static IPv6 address."
+          }
+        ],
+        "RelatedLinks": [
+          {
+            "Uri": "",
+            "Text": "Disable-OVComposerIlo"
+          },
+          {
+            "Uri": "",
+            "Text": "Get-OVComposerIloStatus"
+          },
+          {
+            "Uri": "",
+            "Text": "Set-OVComposerIlo"
+          },
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.20/appliance/enable-ovcomposerilo",
+            "Text": "Online: "
+          }
+        ]
+      }
+    },
+    {
+      "Name": "Get-OVComposerIloStatus",
+      "Category": "Appliance",
+      "Contents": {
+        "Synopsis": "Retrieve the HPE Synergy Composer iLO configuration.",
+        "Description": "You can configure the HPE Synergy Composer2 for remote access through its embedded management processor (iLO). This configuration enables you to manage the Composer2 remotely and perform specific Composer2 management operations that previously required accessing the Composer console locally in the data center.\n\nAfter remote access to a Composer2 iLO is configured, you can:\n\n    * Use the iLO Integrated Remote Console (iLO IRC) to access the Composer2 physical console. The physical console provides access to the HPE OneView maintenance console. The Composer2 iLO has an independent IPaddress and is accessible even when the Composer2 is not available.\n    * Mount a virtual USB drive on the Composer2 through iLO and perform critical operations such as reimage,restore, backup, and create support dump without physically accessing the appliance.\n    * Power on or off the appliance.\n\nYou can configure the iLO of the HPE Synergy Composer2 for remote access using this Cmdlet. All the Composer2 nodes that are present in the enclosures managed by HPE OneView can be configured, including standby or standalone Composer2 nodes.  The following are the settings that you can configure for the Composer2 iLO in HPE OneView:\n\n    * The iLO user account and password that are required to log in to the Composer2 iLO.\n    * Network parameters that allow you to access the Composer2 iLO from an external browser. The network parameters include iLO hostname, iLO IP address, subnet mask, gateway, and DNS server names. Both IPv4 and IPv6 addresses are supported.\n\nSupported operations on the Composer2 through the iLO Integrated Remote Console\n\nYou can perform the following operations when using the HPE Synergy Composer2 iLO Integrated Remote Console (iLO IRC):\n\n    * Switch between the graphical console or the Composer2 maintenance console. By default, the Composer2 console displays a graphical browser interface. Use Ctrl+Alt+F1 and Ctrl+Alt+F2 to switch between the graphical interface and the maintenance console.\n    * For the first-time setup, Hewlett Packard Enterprise recommends that you configure the appliance network before the hardware discovery process starts.\n    * Power on and off the appliance using the integrated power control options on the iLO remote console.\n    * Use the Composer2 iLO virtual media feature to have a USB drive on your local workstation mounted as a virtual USB drive on the Composer2.\n\nVirtually mounting the USB drive allows you to:\n\n    * Reimage the Composer2 from a DD image on the virtual USB drive.\n    * Create a support dump file on the virtual USB drive.\n\n    NOTE:  If both virtual USB drive and local USB drive are plugged into the Composer2, by default the virtual USB drive is selected. To choose the USB drive that is plugged into the Composer2, unmount the virtual USB drive. In the iLO IRC, select Virtual Drives and clear the virtual drive selection to unmount the virtual USB drive.  You can also unmount the virtual USB drive from the maintenance console of HPE OneView.\n\n    * Restore the Composer2 from a backup image on the virtual USB drive.\n\nRequirements\n\n    * A single iLO user account is supported. Creating a user account replaces any existing user account.\n    * The iLO username cannot be Administrator or start with an _.\n\nNOTE: The iLO user account is assigned a predefined set of privileges that allows the user to perform a restricted set of iLO operations. Specifically, the iLO account has permissions to control power, use the iLO Integrated Remote Console (iLO IRC), and use the iLO Virtual Media.\n\nUse this Cmdlet to retrieve the iLO configuration of the support HPE Synergy Composer.  This will return an object detailing if the iLO is remotely accessible, configured iLO username and configured IP address(es).  The object will not contain the configued iLO username's password.\n\nMinimum required privileges: Read-only\n",
+        "Syntax": [
+          [
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ]
+        ],
+        "Parameters": [
+          {
+            "Name": "ApplianceConnection",
+            "Description": "Specify one or more HPOneView.Appliance.Connection object(s) or Name property value(s).\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
+            "DataType": "Object",
+            "Required": false,
+            "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
+            "Aliases": "Appliance",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          }
+        ],
+        "InputTypes": [
+          {
+            "Value": "None.  You cannot pipe objects to this cmdlet.",
+            "Text": null
+          }
+        ],
+        "ReturnValues": [
+          {
+            "Value": "HPOneView.Appliance.HardwareConfig [System.Management.Automation.PSCustomObject]",
+            "Text": "The existing iLO configuration of an HPE Synergy Composer.\n"
+          }
+        ],
+        "Examples": [
+          {
+            "Title": "-------------------------- EXAMPLE 1 --------------------------",
+            "Code": "Get-OVComposerIloStatus\r\n",
+            "Description": "Get the avialable HPE Synergy Composers and their iLO configuration."
+          }
+        ],
+        "RelatedLinks": [
+          {
+            "Uri": "",
+            "Text": "Disable-OVComposerIlo"
+          },
+          {
+            "Uri": "",
+            "Text": "Enable-OVComposerIlo"
+          },
+          {
+            "Uri": "",
+            "Text": "Set-OVComposerIlo"
+          },
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.20/appliance/get-ovcomposerilostatus",
+            "Text": "Online: "
+          }
+        ]
+      }
+    },
+    {
+      "Name": "Set-OVComposerIlo",
+      "Category": "Appliance",
+      "Contents": {
+        "Synopsis": "Modify the existing HPE Synergy Composer2 iLO configuration.",
+        "Description": "You can configure the HPE Synergy Composer2 for remote access through its embedded management processor (iLO). This configuration enables you to manage the Composer2 remotely and perform specific Composer2 management operations that previously required accessing the Composer console locally in the data center.\n\nAfter remote access to a Composer2 iLO is configured, you can:\n\n    * Use the iLO Integrated Remote Console (iLO IRC) to access the Composer2 physical console. The physical console provides access to the HPE OneView maintenance console. The Composer2 iLO has an independent IPaddress and is accessible even when the Composer2 is not available.\n    * Mount a virtual USB drive on the Composer2 through iLO and perform critical operations such as reimage,restore, backup, and create support dump without physically accessing the appliance.\n    * Power on or off the appliance.\n\nYou can configure the iLO of the HPE Synergy Composer2 for remote access using this Cmdlet. All the Composer2 nodes that are present in the enclosures managed by HPE OneView can be configured, including standby or standalone Composer2 nodes.  The following are the settings that you can configure for the Composer2 iLO in HPE OneView:\n\n    * The iLO user account and password that are required to log in to the Composer2 iLO.\n    * Network parameters that allow you to access the Composer2 iLO from an external browser. The network parameters include iLO hostname, iLO IP address, subnet mask, gateway, and DNS server names. Both IPv4 and IPv6 addresses are supported.\n\nSupported operations on the Composer2 through the iLO Integrated Remote Console\n\nYou can perform the following operations when using the HPE Synergy Composer2 iLO Integrated Remote Console (iLO IRC):\n\n    * Switch between the graphical console or the Composer2 maintenance console. By default, the Composer2 console displays a graphical browser interface. Use Ctrl+Alt+F1 and Ctrl+Alt+F2 to switch between the graphical interface and the maintenance console.\n    * For the first-time setup, Hewlett Packard Enterprise recommends that you configure the appliance network before the hardware discovery process starts.\n    * Power on and off the appliance using the integrated power control options on the iLO remote console.\n    * Use the Composer2 iLO virtual media feature to have a USB drive on your local workstation mounted as a virtual USB drive on the Composer2.\n\nVirtually mounting the USB drive allows you to:\n\n    * Reimage the Composer2 from a DD image on the virtual USB drive.\n    * Create a support dump file on the virtual USB drive.\n\n    NOTE:  If both virtual USB drive and local USB drive are plugged into the Composer2, by default the virtual USB drive is selected. To choose the USB drive that is plugged into the Composer2, unmount the virtual USB drive. In the iLO IRC, select Virtual Drives and clear the virtual drive selection to unmount the virtual USB drive.  You can also unmount the virtual USB drive from the maintenance console of HPE OneView.\n\n    * Restore the Composer2 from a backup image on the virtual USB drive.\n\nRequirements\n\n    * A single iLO user account is supported. Creating a user account replaces any existing user account.\n    * The iLO username cannot be Administrator or start with an _.\n\nNOTE: The iLO user account is assigned a predefined set of privileges that allows the user to perform a restricted set of iLO operations. Specifically, the iLO account has permissions to control power, use the iLO Integrated Remote Console (iLO IRC), and use the iLO Virtual Media.\n\nUse this Cmdlet to change the existing iLO configuration.  This Cmdlet supports changing the iLO Hostname, user account, its password, configured IPv4 or IPv6 addresses.\n\nMinimum required privileges: Infrastructure Administrator\n",
+        "Syntax": [
+          [
+            {
+              "Name": "InputObject",
+              "Required": true
+            },
+            {
+              "Name": "Username",
+              "Required": false
+            },
+            {
+              "Name": "Password",
+              "Required": false
+            },
+            {
+              "Name": "IPv4Address",
+              "Required": false
+            },
+            {
+              "Name": "IPv4SubnetMask",
+              "Required": false
+            },
+            {
+              "Name": "IPv4Gateway",
+              "Required": false
+            },
+            {
+              "Name": "IPv4DnsServer",
+              "Required": false
+            },
+            {
+              "Name": "IPv6Address",
+              "Required": false
+            },
+            {
+              "Name": "IPv6SubnetMask",
+              "Required": false
+            },
+            {
+              "Name": "IPv6Gateway",
+              "Required": false
+            },
+            {
+              "Name": "IPv6DnsServer",
+              "Required": false
+            },
+            {
+              "Name": "IloHostname",
+              "Required": false
+            },
+            {
+              "Name": "Async",
+              "Required": false
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ]
+        ],
+        "Parameters": [
+          {
+            "Name": "ApplianceConnection",
+            "Description": "Specify one or more HPOneView.Appliance.Connection object(s) or Name property value(s).\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
+            "DataType": "Object",
+            "Required": false,
+            "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
+            "Aliases": "Appliance",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Async",
+            "Description": "Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "False",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Confirm",
+            "Description": "",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "cf",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "IPv4Address",
+            "Description": "Use to specify a new IPv4 Address for the HPE Synergy Composer2 iLO.",
+            "DataType": "IPAddress",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "IPv4DnsServer",
+            "Description": "Use to optionally set 1 or 2 IPv4 DNS Servers.",
+            "DataType": "IPAddress[]",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "IPv4Gateway",
+            "Description": "Use to optionally specify the default gateway for the new IPv4 address.",
+            "DataType": "IPAddress",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "IPv4SubnetMask",
+            "Description": "Use to optionally update the IPv4 subnet mask for the new IPv4 address.  Can either be the full subnet mask in decimal noted or CIDR format.",
+            "DataType": "String",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "IPv6Address",
+            "Description": "Use to specify a new IPv6 Address for the HPE Synergy Composer2 iLO.",
+            "DataType": "IPAddress",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "IPv6DnsServer",
+            "Description": "Use to optionally set 1 or 2 IPv6 DNS Servers.",
+            "DataType": "IPAddress[]",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "IPv6Gateway",
+            "Description": "Use to optionally specify the default gateway for the new IPv6 address.",
+            "DataType": "String",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "IPv6SubnetMask",
+            "Description": "Use to optionally specify the default gateway for the new IPv6 address.  Can either be the full subnet mask in colon noted or CIDR format.",
+            "DataType": "string",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "IloHostname",
+            "Description": "Use to optionally specify a new iLO subsystem hostname.",
+            "DataType": "String",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "InputObject",
+            "Description": "The object from Get-OVComposerIloStatus.",
+            "DataType": "Object",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Password",
+            "Description": "Use to specify a new password for the configured iLO user account.",
+            "DataType": "securestring",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Username",
+            "Description": "Use to specify a new account name to configure.  The original account will be removed from the iLO.",
+            "DataType": "string",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "WhatIf",
+            "Description": "",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "wi",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          }
+        ],
+        "InputTypes": [
+          {
+            "Value": "HPOneView.Appliance.HardwareConfig [System.Management.Automation.PSCustomObject]",
+            "Text": "The appliance hardware configuration object from Get-OVComposerIloStatus."
+          }
+        ],
+        "ReturnValues": [
+          {
+            "Value": "HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]",
+            "Text": "Async task resource to monitor."
+          }
+        ],
+        "Examples": [
+          {
+            "Title": "-------------------------- EXAMPLE 1 --------------------------",
+            "Code": "$UpdatedSecurePassword = Read-Host \"Password\" -AsSecureString\n$ComposerAppliance = Get-OVComposerIloStatus\nSet-OVComposerIlo -InputObject $ComposerAppliance -Hostname Myilohost.domian.com -Password $UpdatedSecurePassword\r\n",
+            "Description": "Change the existing iLO user account password to the value provided for the specific HPE Synergy Composer 2 iLO."
+          },
+          {
+            "Title": "-------------------------- EXAMPLE 2 --------------------------",
+            "Code": "$ComposerAppliance = Get-OVComposerIloStatus | Where-Object Role -eq \"Active\"\nSet-OVComposerIlo -InputObject $ComposerAppliance -IPv4Address 10.16.1.102 -IPv4SubnetMask 23 -IPv4Gateway 10.16.0.1\r\n",
+            "Description": "Change the IPv4 address to the new value for the Active (Primary) HPE Synergy Composer 2 iLO."
+          },
+          {
+            "Title": "-------------------------- EXAMPLE 3 --------------------------",
+            "Code": "$ComposerAppliance = Get-OVComposerIloStatus | Where-Object Role -eq \"Standby\"\nSet-OVComposerIlo -InputObject $ComposerAppliance -IPv4Address 10.16.1.103 -IPv4SubnetMask 23 -IPv4Gateway 10.16.0.1\r\n",
+            "Description": "Change the IPv4 address to the new value for the Standby (Secondary) HPE Synergy Composer 2 iLO."
+          }
+        ],
+        "RelatedLinks": [
+          {
+            "Uri": "",
+            "Text": "Disable-OVComposerIlo"
+          },
+          {
+            "Uri": "",
+            "Text": "Enable-OVComposerIlo"
+          },
+          {
+            "Uri": "",
+            "Text": "Get-OVComposerIloStatus"
+          },
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.20/appliance/set-ovcomposerilo",
             "Text": "Online: "
           }
         ]

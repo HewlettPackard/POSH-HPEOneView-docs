@@ -9907,7 +9907,7 @@
                 "Examples": [
                     {
                         "Title": "-------------------------- EXAMPLE 1 --------------------------",
-                        "Code": "Get-HPOVCommandTrace C:\\Temp",
+                        "Code": "Get-HPOVCommandTrace -ScriptBlock { Get-HPOVNetwork -Name MyNet } -Location C:\\Temp",
                         "Description": "Start a new library trace, which will create a file in the `C:\\Temp` directory."
                     }
                 ],
@@ -36030,16 +36030,11 @@
                 "Examples": [
                     {
                         "Title": "-------------------------- EXAMPLE 1 --------------------------",
-                        "Code": "$task = Remove-HPOVEnclosure -enclosure \"Enclosure-1234\" -force\nWait-HPOVTaskComplete $task\n                        ",
-                        "Description": "Force-remove the enclosure specifed by name. Wait for remove to complete."
-                    },
-                    {
-                        "Title": "-------------------------- EXAMPLE 2 --------------------------",
                         "Code": "$enclosure = Get-HPOVEnclosure -name \"Enclosure1\"\nRemove-HPOVEnclosure $enclosure -confirm:$false",
                         "Description": "Remove the enclosure specifed by $enclosure. Disable confirmation prompt."
                     },
                     {
-                        "Title": "-------------------------- EXAMPLE 3 --------------------------",
+                        "Title": "-------------------------- EXAMPLE 2 --------------------------",
                         "Code": "Get-HPOVEnclosure | Remove-HPOVEnclosure",
                         "Description": "Search for all enclosures and remove them from appliance."
                     }

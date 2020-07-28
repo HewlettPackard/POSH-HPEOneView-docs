@@ -1,5 +1,5 @@
 ﻿---
-description: Start an HPOV Library Verbose Trace.
+description: Start an OV Library Verbose Trace.
 ---
 
 # Get-OVCommandTrace
@@ -15,7 +15,7 @@ Get-OVCommandTrace
 
 ## Description
 
-This Cmdlet will assist the user in setting up the PowerShell environment to generate and capture Verbose output from HPOV Library Cmdlets.  Once this Cmdlet has been executed, the prior HPOV Cmdlets can be executed, without the need of using the `-Cerbose` switch.
+This Cmdlet will assist the user in setting up the PowerShell environment to generate and capture Verbose output from OV Library Cmdlets.  Once this Cmdlet has been executed, the prior OV Cmdlets can be executed, without the need of using the `-Cerbose` switch.
 
 Cmdlet output will be captured using the built-in Microsoft PowerShell Start-Transcript provider.  A transcript trace file will be saved in either the current working directory, or specified using the `-Location` parameter.
 
@@ -26,7 +26,7 @@ Please know that this Cmdlet is currently not supported in the Windows PowerShel
 ###  Example 1 
 
 ```text
-Get-OVCommandTrace C:\Temp
+Get-OVCommandTrace -ScriptBlock { Get-OVNetwork -Name MyNet } -Location C:\Temp
 ```
 
 Start a new library trace, which will create a file in the `C:\Temp` directory.
@@ -35,7 +35,7 @@ Start a new library trace, which will create a file in the `C:\Temp` directory.
 
 ### -ScriptBlock &lt;ScriptBlock&gt;
 
-The command within a ScriptBlock to execute.  The Cmdlet will add the `-Verbose` switch end of the command.
+One or more HPOneView library Cmdlets.  The Cmdlet will execute the contents of the ScriptBlock, ensuring that the commands will generate verbose output and be captured to a log file.
 
 | Aliases | Command |
 | :--- | :--- |
