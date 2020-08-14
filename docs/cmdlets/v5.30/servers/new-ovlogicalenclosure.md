@@ -136,6 +136,141 @@ Provide an `[HPEOneView.Appliance.ScopeCollection]` resource object to initially
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
+### -AutoFillIPv4DeviceAddress &lt;SwitchParameter&gt;
+
+Use to autofill IPv4 addresses for device bays.  Must supply the StartingIPv4DeviceAddress parameter.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -AutoFillIPv4InterconnectAddress &lt;SwitchParameter&gt;
+
+Use to autofill IPv4 addresses for interconnect bays.  Must supply the StartingIPv4InterconnectAddress parameter.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -AutoFillIPv6DeviceAddress &lt;SwitchParameter&gt;
+
+Use to autofill IPv6 addresses for device bays.  Must supply the StartingIPv6DeviceAddress parameter.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -AutoFillIPv6InterconnectAddress &lt;SwitchParameter&gt;
+
+Use to autofill IPv6 addresses for interconnect bays.  Must supply the StartingIPv6InterconnectAddress parameter.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -Ebipa &lt;Object&gt;
+
+Use to specify a custom IPAddress assignment where the auto fill parameters are not sufficient.  This parameter cannot be combined with the auto fill parameters.
+
+Example Hasthtable format:
+
+@{
+    FrameName = @{
+        Device1 = @{
+            IPv4Address = "IPv4Address"; 
+            IPv6Address = "IPv6Address" 
+        };
+        Interconnect1 = @{
+            IPv4Address = "IPv4Address";
+            IPv6Address = "IPv6Address"
+        }
+    } 
+}
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -Passthru &lt;SwitchParameter&gt;
+
+Return the object created by the Cmdlet, and not to the API.  This is useful when you want to modify additional properties the Cmdlet does not yet support.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -StartingIPv4DeviceAddress &lt;IPAddress&gt;
+
+Use to autofill IPv4 addresses for device bays.  Must supply the AutoFillIPv4DeviceAddress parameter.  Concurrent IP addresses will be calculated and automatically assigned.  This does not take into account a subnet mask.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -StartingIPv4InterconnectAddress &lt;IPAddress&gt;
+
+Use to autofill IPv4 addresses for device bays.  Must supply the AutoFillIPv4InterconnectAddress parameter.  Concurrent IP addresses will be calculated and automatically assigned.  This does not take into account a subnet mask.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -StartingIPv6DeviceAddress &lt;IPAddress&gt;
+
+Use to autofill IPv6 addresses for device bays.  Must supply the AutoFillIPv6DeviceAddress parameter.  Concurrent IP addresses will be calculated and automatically assigned.  This does not take into account a subnet mask.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -StartingIPv6InterconnectAddress &lt;IPAddress&gt;
+
+Use to autofill IPv6 addresses for device bays.  Must supply the AutoFillIPv6InterconnectAddress parameter.  Concurrent IP addresses will be calculated and automatically assigned.  This does not take into account a subnet mask.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
 ### &lt;CommonParameters&gt;
 
 This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer, PipelineVariable, and OutVariable. For more information, see about\_CommonParameters \([http://go.microsoft.com/fwlink/?LinkID=113216](http://go.microsoft.com/fwlink/?LinkID=113216)\)
