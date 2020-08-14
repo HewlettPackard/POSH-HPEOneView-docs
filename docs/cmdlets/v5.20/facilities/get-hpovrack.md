@@ -9,6 +9,7 @@ description: Retrieve a defined Rack.
 ```text
 Get-HPOVRack
     [-Name <String>]
+    [-Datacenter <Object>]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
@@ -68,6 +69,18 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -Datacenter &lt;Object&gt;
+
+Filter racks that are a member of a data center.  Provide the data center object from `Get-HPOVDatacenter` Cmdlet.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

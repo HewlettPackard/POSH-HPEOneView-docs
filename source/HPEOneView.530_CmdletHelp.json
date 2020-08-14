@@ -14447,6 +14447,16 @@
             "SupportsWildcard": false,
             "DataType": "Object",
             "Required": false
+          },
+          {
+            "Name": "Datacenter",
+            "Description": "Filter racks that are a member of a data center.  Provide the data center object from Get-HPOVDatacenter Cmdlet.",
+            "DataType": "Object",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -24740,6 +24750,106 @@
             "SupportsWildcard": false,
             "DataType": "HPEOneView.Appliance.ScopeCollection[]",
             "Required": false
+          },
+          {
+            "Name": "AutoFillIPv4DeviceAddress",
+            "Description": "Use to autofill IPv4 addresses for device bays.  Must supply the StartingIPv4DeviceAddress parameter.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "AutoFillIPv4InterconnectAddress",
+            "Description": "Use to autofill IPv4 addresses for interconnect bays.  Must supply the StartingIPv4InterconnectAddress parameter.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "AutoFillIPv6DeviceAddress",
+            "Description": "Use to autofill IPv6 addresses for device bays.  Must supply the StartingIPv6DeviceAddress parameter.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "AutoFillIPv6InterconnectAddress",
+            "Description": "Use to autofill IPv6 addresses for interconnect bays.  Must supply the StartingIPv6InterconnectAddress parameter.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Ebipa",
+            "Description": "Use to specify a custom IPAddress assignment where the auto fill parameters are not sufficient.  This parameter cannot be combined with the auto fill parameters.\n\nExample Hasthtable format:\n\n@{\n    FrameName = @{\n        Device1 = @{\n            IPv4Address = \"IPv4Address\"; \n            IPv6Address = \"IPv6Address\" \n        };\n        Interconnect1 = @{\n            IPv4Address = \"IPv4Address\";\n            IPv6Address = \"IPv6Address\"\n        }\n    } \n}",
+            "DataType": "Object",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Passthru",
+            "Description": "Return the object created by the Cmdlet, and not to the API.  This is useful when you want to modify additional properties the Cmdlet does not yet support.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "StartingIPv4DeviceAddress",
+            "Description": "Use to autofill IPv4 addresses for device bays.  Must supply the AutoFillIPv4DeviceAddress parameter.  Concurrent IP addresses will be calculated and automatically assigned.  This does not take into account a subnet mask.",
+            "DataType": "IPAddress",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "StartingIPv4InterconnectAddress",
+            "Description": "Use to autofill IPv4 addresses for device bays.  Must supply the AutoFillIPv4InterconnectAddress parameter.  Concurrent IP addresses will be calculated and automatically assigned.  This does not take into account a subnet mask.",
+            "DataType": "IPAddress",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "StartingIPv6DeviceAddress",
+            "Description": "Use to autofill IPv6 addresses for device bays.  Must supply the AutoFillIPv6DeviceAddress parameter.  Concurrent IP addresses will be calculated and automatically assigned.  This does not take into account a subnet mask.",
+            "DataType": "IPAddress",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "StartingIPv6InterconnectAddress",
+            "Description": "Use to autofill IPv6 addresses for device bays.  Must supply the AutoFillIPv6InterconnectAddress parameter.  Concurrent IP addresses will be calculated and automatically assigned.  This does not take into account a subnet mask.",
+            "DataType": "IPAddress",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [

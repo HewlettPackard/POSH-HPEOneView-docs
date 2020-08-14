@@ -71,6 +71,18 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
+### -Datacenter &lt;Object&gt;
+
+Filter racks that are a member of a data center.  Provide the data center object from `Get-HPOVDatacenter` Cmdlet.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
 ### &lt;CommonParameters&gt;
 
 This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer, PipelineVariable, and OutVariable. For more information, see about\_CommonParameters \([http://go.microsoft.com/fwlink/?LinkID=113216](http://go.microsoft.com/fwlink/?LinkID=113216)\)
