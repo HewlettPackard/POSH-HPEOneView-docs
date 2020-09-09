@@ -24793,7 +24793,7 @@
           },
           {
             "Name": "Ebipa",
-            "Description": "Use to specify a custom IPAddress assignment where the auto fill parameters are not sufficient.  This parameter cannot be combined with the auto fill parameters.\n\nExample Hasthtable format:\n\n@{\n    FrameName = @{\n        Device1 = @{\n            IPv4Address = \"IPv4Address\"; \n            IPv6Address = \"IPv6Address\" \n        };\n        Interconnect1 = @{\n            IPv4Address = \"IPv4Address\";\n            IPv6Address = \"IPv6Address\"\n        }\n    } \n}",
+            "Description": "Use to specify a custom IPAddress assignment where the auto fill parameters are not sufficient.  This parameter cannot be combined with the auto fill parameters.\n\nExample Hasthtable format:\n\n@{\n    Frame# = @{\n        Device1 = @{\n            IPv4Address = \"IPv4Address\"; \n            IPv6Address = \"IPv6Address\" \n        };\n        Interconnect1 = @{\n            IPv4Address = \"IPv4Address\";\n            IPv6Address = \"IPv6Address\"\n        }\n    } \n}\n\nWhere \"Frame#\" is the frame ID of the Synergy Enclosure.  Can also be named \"Enclosure\" instead of \"Frame\".",
             "DataType": "Object",
             "Required": false,
             "DefaultValue": "",
@@ -48260,6 +48260,26 @@
             "SupportsWildcard": false,
             "DataType": "Object",
             "Required": false
+          },
+          {
+            "Name": "DisableTargetGroupAliasing",
+            "Description": "When the zoning policy is not set to SingleInitiatorSingleTarget, Target Group Aliasing can be enabled or disabled.",
+            "DataType": "bool",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "UpdateTargetGroupAliases",
+            "Description": "When Enabled (True), target and target group aliases will be updated in the SAN whenever resources are renamed in OneView.",
+            "DataType": "bool",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [

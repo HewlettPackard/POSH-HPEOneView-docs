@@ -262,6 +262,30 @@ Default Value: ${Global:ConnectSessions} | ? Default
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
+### -DisableTargetGroupAliasing &lt;bool&gt;
+
+When the zoning policy is not set to SingleInitiatorSingleTarget, Target Group Aliasing can be enabled or disabled.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -UpdateTargetGroupAliases &lt;bool&gt;
+
+When Enabled (True), target and target group aliases will be updated in the SAN whenever resources are renamed in OneView.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
 ### &lt;CommonParameters&gt;
 
 This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer, PipelineVariable, and OutVariable. For more information, see about\_CommonParameters \([http://go.microsoft.com/fwlink/?LinkID=113216](http://go.microsoft.com/fwlink/?LinkID=113216)\)

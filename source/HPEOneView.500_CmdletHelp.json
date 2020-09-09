@@ -46466,6 +46466,26 @@
                         "Aliases": "Appliance",
                         "PipelineInput": "true (ByPropertyName)",
                         "SupportsWildcard": false
+                    },
+                    {
+                      "Name": "DisableTargetGroupAliasing",
+                      "Description": "When the zoning policy is not set to SingleInitiatorSingleTarget, Target Group Aliasing can be enabled or disabled.",
+                      "DataType": "bool",
+                      "Required": false,
+                      "DefaultValue": "",
+                      "Aliases": "None",
+                      "PipelineInput": "false",
+                      "SupportsWildcard": false
+                    },
+                    {
+                      "Name": "UpdateTargetGroupAliases",
+                      "Description": "When Enabled (True), target and target group aliases will be updated in the SAN whenever resources are renamed in OneView.",
+                      "DataType": "bool",
+                      "Required": false,
+                      "DefaultValue": "",
+                      "Aliases": "None",
+                      "PipelineInput": "false",
+                      "SupportsWildcard": false
                     }
                 ],
                 "InputTypes": [

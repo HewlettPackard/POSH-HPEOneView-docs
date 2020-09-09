@@ -215,7 +215,7 @@ Use to specify a custom IPAddress assignment where the auto fill parameters are 
 Example Hasthtable format:
 
 @{
-    FrameName = @{
+    Frame# = @{
         Device1 = @{
             IPv4Address = "IPv4Address"; 
             IPv6Address = "IPv6Address" 
@@ -226,6 +226,8 @@ Example Hasthtable format:
         }
     } 
 }
+
+Where "Frame#" is the frame ID of the Synergy Enclosure.  Can also be named "Enclosure" instead of "Frame".
 
 | Aliases | None |
 | :--- | :--- |
