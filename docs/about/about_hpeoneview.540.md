@@ -1,9 +1,9 @@
-# about\_HPEOneView.420
+﻿# about\_HPEOneView.530
 
 TOPIC
 
 ```text
-about_HPOneView.420
+about_HPEOneView.540
 ```
 
 COPYRIGHT
@@ -37,15 +37,16 @@ THE SOFTWARE.
 SHORT DESCRIPTION
 
 ```text
-PowerShell library for HP OneView 4.10
+PowerShell library for HPE OneView 5.40
 ```
 
 WHAT'S NEW
 
 ```text
-Release 4.20.1971.1960
+   Release 5.40.2534.2926
 
- -- Initial 4.20 release.
+ -- Initial HPE OneView 5.40 library release.
+ -- Enhanced Set-OVManagedSan to perform additional validations to zone and alias policies.
 ```
 
 LONG DESCRIPTION
@@ -55,30 +56,30 @@ This library provides HP OneView management capabilities for Windows PowerShell.
 The library can be used as either a CLI or using the core cmdlets to call from
 wrapper scripts.  The core cmdlets are:
 
-  -- Connect-HPOVmgmt
-  -- Send-HPOVRequest
-  -- New-HPOVResource
-  -- Set-HPOVResource
-  -- Remove-HPOVResource
+  -- Connect-OVMgmt
+  -- Send-OVRequest
+  -- New-OVResource
+  -- Set-OVResource
+  -- Remove-OVResource
 
 A set of sample scripts are also provided, that show how to fully configure an
 HP OneView appliance from the ground up.
 
 For information regarding this project, to request features or report
-issues, please see: https://github.com/HewlettPackard/POSH-HPOneView/issues
+issues, please see: https://github.com/HewlettPackard/POSH-HPEOneView/issues
 ```
 
 SEE ALSO
 
 ```text
-https://github.com/HewlettPackard/POSH-HPOneView
+https://github.com/HewlettPackard/POSH-HPEOneView
+https://hpe-docs.gitbook.io/posh-hponeview
 http://hpe.com/info/oneviewcommunity
-Update-Help HPOneView.420
+Update-Help HPEOneView.540
 Get-Help about_Appliance_Connections
 Get-Help about_Appliance_Connection_Permissions
 Get-Help about_Two_Factor_Authentication
-Get-Help Connect-HPOVmgmt
-Get-Help Send-HPOVRequest
+Get-Help Connect-OVmgmt
+Get-Help Send-OVRequest
 [install_dir]\Samples
 ```
-
