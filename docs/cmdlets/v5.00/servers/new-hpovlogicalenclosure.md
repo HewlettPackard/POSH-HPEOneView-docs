@@ -11,11 +11,12 @@ New-HPOVLogicalEnclosure
     [-Name] <String>
     [-Enclosure] <Object>
     [-EnclosureGroup] <Object>
-    [-FirmwareBaseline] <String>
-    [-ForceFirmwareBaseline] <Boolean>
+    [-FirmwareBaseline <String>]
+    [-ForceFirmwareBaseline <Boolean>]
     [-Scope <HPOneView.Appliance.ScopeCollection[]>]
     [-Async]
-    [-ApplianceConnection] <Object>
+    [-Passthru]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -133,6 +134,18 @@ Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially 
 | Required? | False |
 | Position? | Named |
 | Default value | False |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -Passthru &lt;SwitchParameter&gt;
+
+Return the object created by the Cmdlet, and not to the API.  This is useful when you want to modify additional properties the Cmdlet does not yet support.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
