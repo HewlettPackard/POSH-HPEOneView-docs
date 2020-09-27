@@ -16,7 +16,7 @@ New-OVLogicalSwitch
     [-SshPassword] <Object>
     [-SnmpCommunity] <String>
     [-Switch2Address <String>]
-    [-SnmpPort <int>]
+    [-SnmpPort <Int>]
     [-SnmpV1]
     [-Async]
     [-ApplianceConnection <Object>]
@@ -32,7 +32,7 @@ New-OVLogicalSwitch
     [-SshUserName] <String>
     [-SshPassword] <Object>
     [-Switch2Address <String>]
-    [-SnmpPort <int>]
+    [-SnmpPort <Int>]
     [-SnmpV3]
     [-SnmpUserName] <String>
     [-SnmpAuthLevel] <String>
@@ -54,7 +54,7 @@ New-OVLogicalSwitch
     [-SshUserName] <String>
     [-SshPassword] <Object>
     [-Switch2Address <String>]
-    [-SnmpPort <int>]
+    [-SnmpPort <Int>]
     [-SnmpV3]
     [-SnmpUserName] <String>
     [-SnmpAuthLevel] <String>
@@ -77,7 +77,7 @@ New-OVLogicalSwitch
     [-SshPassword] <Object>
     [-SnmpCommunity] <String>
     [-Switch2Address <String>]
-    [-SnmpPort <int>]
+    [-SnmpPort <Int>]
     [-SnmpV1]
     [-Async]
     [-ApplianceConnection <Object>]
@@ -238,7 +238,7 @@ Password of the SSH User.  Either `[System.String]` or `[System.Security.SecureS
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SnmpPort &lt;int&gt;
+### -SnmpPort &lt;Int&gt;
 
 The UDP port SNMP is configured to listen on the target Switch resource.
 

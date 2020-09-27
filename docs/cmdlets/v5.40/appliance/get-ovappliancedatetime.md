@@ -21,9 +21,9 @@ When querying a Virtual Machine Appliance and the NTPServersproperty or field is
 When querying a Synergy Composer appliance and the NTPServersproperty or field is Null, the appliance will retrieve its Date and Time from the System ROM.
 
 {% hint style="info" %}
-Minimum required privileges: Read
+Minimum required privileges: Read-only
 {% endhint %}
--only
+
 ## Examples
 
 ###  Example 1 

@@ -38,9 +38,9 @@ For more details on the data items transmitted, see the security white paper in 
 Use this Cmdlet to retrieve configured schedules to collect Remote Support logs.
 
 {% hint style="info" %}
-Minimum required privileges: Read
+Minimum required privileges: Read-only
 {% endhint %}
--only
+
 ## Examples
 
 ###  Example 1 

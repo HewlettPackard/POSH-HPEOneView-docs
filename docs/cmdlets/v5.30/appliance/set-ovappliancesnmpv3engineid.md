@@ -8,7 +8,7 @@ description: Change the appliance SNMPv3 Engine ID
 
 ```text
 Set-OVApplianceSnmpV3EngineId
-    [-EngineID] <string>
+    [-EngineID] <String>
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
@@ -45,7 +45,7 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EngineID &lt;string&gt;
+### -EngineID &lt;String&gt;
 
 A 16 hexacharacter value. `[E.g]`. "0x73cb660f279b9e"
 

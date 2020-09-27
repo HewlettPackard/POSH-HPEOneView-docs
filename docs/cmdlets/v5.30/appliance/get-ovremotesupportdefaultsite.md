@@ -23,9 +23,9 @@ Enabling Remote Support configures your devices being remotely supported to secu
 This Cmdlet will get the address of the data center where the devices are located for support.
 
 {% hint style="info" %}
-Minimum required privileges: Read
+Minimum required privileges: Read-only
 {% endhint %}
--only
+
 ## Examples
 
 ###  Example 1 

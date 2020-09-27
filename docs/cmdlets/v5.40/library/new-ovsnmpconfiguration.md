@@ -9,8 +9,8 @@ description: Create SNMP LIG Configuration Object
 ```text
 New-OVSnmpConfiguration
     [-ReadCommunity] <String>
-    [-SnmpV1] <bool>
-    [-SnmpV3] <bool>
+    [-SnmpV1] <Bool>
+    [-SnmpV3] <Bool>
     [-Contact] <String>
     [-AccessList] <Array>
     [-TrapDestinations] <Array>
@@ -20,9 +20,9 @@ New-OVSnmpConfiguration
 ```text
 New-OVSnmpConfiguration
     [-ReadCommunity] <String>
-    [-SnmpV3] <bool>
+    [-SnmpV3] <Bool>
     [-SnmpV3Users] <SnmpV3User[]>
-    [-SnmpV1] <bool>
+    [-SnmpV1] <Bool>
     [-Contact] <String>
     [-AccessList] <Array>
     [-TrapDestinations] <Array>
@@ -93,7 +93,7 @@ A collection `[System.Collections.ArrayList` ] of SNMMP Trap Destinations.  Use 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SnmpV1 &lt;bool&gt;
+### -SnmpV1 &lt;Bool&gt;
 
 Specify if SNMPv1 should be enabled.  Can be disabled when SNMPv3 is enabled.
 
@@ -105,7 +105,7 @@ Specify if SNMPv1 should be enabled.  Can be disabled when SNMPv3 is enabled.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SnmpV3 &lt;bool&gt;
+### -SnmpV3 &lt;Bool&gt;
 
 Specify if SNMPv3 should be enabled.
 

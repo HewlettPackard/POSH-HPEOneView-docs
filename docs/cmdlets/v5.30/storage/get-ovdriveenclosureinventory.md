@@ -8,10 +8,10 @@ description: Get the HPE Synergy D3940 drive enclosure inventory.
 
 ```text
 Get-OVDriveEnclosureInventory
-    [-Name <string>]
+    [-Name <String>]
     [-DriveEnclosure <Object>]
     [-SasLogicalInterconnect <Object>]
-    [-Count <int>]
+    [-Count <Int>]
     [-Available]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -19,7 +19,7 @@ Get-OVDriveEnclosureInventory
 
 ```text
 Get-OVDriveEnclosureInventory
-    [-Name <string>]
+    [-Name <String>]
     [-DriveEnclosure <Object>]
     [-SasLogicalInterconnect <Object>]
     [-Assigned]
@@ -111,7 +111,7 @@ Return drives that are available for assignment.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Count &lt;int&gt;
+### -Count &lt;Int&gt;
 
 Return a specific number of drives.  Will return in order from system inventory.
 
@@ -135,7 +135,7 @@ Provide a drive enclosure from `Get-OVDriveEnclosure` to filter for associated d
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Name &lt;string&gt;
+### -Name &lt;String&gt;
 
 Specify a drive name, or wild card value.
 

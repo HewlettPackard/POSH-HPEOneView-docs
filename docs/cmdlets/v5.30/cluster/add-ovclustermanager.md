@@ -11,7 +11,7 @@ Add-OVClusterManager
     [-Hostname] <String>
     [-Credential] <PSCredential>
     [-DisplayName <String>]
-    [-Port <int>]
+    [-Port <Int>]
     [-TrustLeafCertificate]
     [-Scope <Object>]
     [-Async]
@@ -107,7 +107,7 @@ IP or FQDN address of the hypervisor manager.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Port &lt;int&gt;
+### -Port &lt;Int&gt;
 
 HTTPS port of the target hypervisor manager. Default is 443.
 

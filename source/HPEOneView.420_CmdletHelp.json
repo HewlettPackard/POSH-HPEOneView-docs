@@ -5749,8 +5749,8 @@
                 ],
                 "ReturnValues": [
                     {
-                        "Value":  "None.",
-                        "Text":  "This Cmdlet does not return any object."
+                        "Value": "None.",
+                        "Text": "This Cmdlet does not return any object."
                     }
                 ],
                 "Examples": [
@@ -6482,8 +6482,8 @@
                 ],
                 "ReturnValues": [
                     {
-                        "Value":  "None.",
-                        "Text":  "This Cmdlet does not return any response."
+                        "Value": "None.",
+                        "Text": "This Cmdlet does not return any response."
                     }
                 ],
                 "Examples": [
@@ -8915,10 +8915,10 @@
                         "Text": null
                     }
                 ],
-                "ReturnValues":  [
+                "ReturnValues": [
                     {
-                        "Value":  "HPOneView.Appliance.Backup",
-                        "Text":  "Created backup resource from the appliance that was created with New-HPOVBackup.\n"
+                        "Value": "HPOneView.Appliance.Backup",
+                        "Text": "Created backup resource from the appliance that was created with New-HPOVBackup.\n"
                     }
                 ],
                 "Examples": [
@@ -38690,8 +38690,8 @@
         {
             "Name": "Reset-HPOVEnclosureDevice",
             "Contents": {
-                "Synopsis": "Power reset or EFuse HPS Synergy Frame component.",
-                "Description": "This Cmdlet will assist Server Administrators in performing various power operations with enclosure resources.  The following resources are supported with their supported operation:\n\n    * HPE Synergy Appliance Bay - EFuse\n    * HPE Synergy Frame Link Module - EFuse or Resetn    * Device Bay - EFuse or Resetn    * HPE Synergy Fabric Module Device - EFuse\n",
+                "Synopsis": "Power reset or EFuse HPE Synergy Frame component.",
+                "Description": "This Cmdlet will assist server administrators in performing various power operations with HPE Synergy enclosure resources.  The following resources are supported with their supported operation:\n\n    * HPE Synergy Appliance Bay - EFuse\n    * HPE Synergy Frame Link Module - EFuse or Reset\n    * Device Bay - EFuse or Reset\n    * HPE Synergy Fabric Module Device - EFuse\n\nE-Fuse stands for Electronic Fuse. Setting the power state of a device to \"E-Fuse\" (or \"Reset\" for an Enclosure Manager) will reset the bay, but it will soon return to a normal running state.  An E-Fuse will turn off power to the bay and then turn it back on. If the bay was powered off before the E-Fuse operation it will be powered on afterwards. A \"Reset\" will do a hard reset of the bay without affecting the power. E-Fuse on a device bay will power-cycle the whole blade including the iLO. \n\nA reset on the active Synergy Frame Link Module causes a failover to the standby Synergy Frame Link Module. The reset will fail if the Synergy Frame Link Module's firmware is being updated. An E-Fuse against an active Synergy Frame Link Module is not allowed.\n\nMinimum required privileges: Infrastructure administrator, Server administrator",
                 "Parameters": [
                     {
                         "Name": "Enclosure",
@@ -38779,13 +38779,23 @@
                 "Examples": [
                     {
                         "Title": "-------------------------- EXAMPLE 1 --------------------------",
-                        "Code": "$Enclosure = Get-HPOVEnclosure -Name Enclosure1 -ErrorAction Stop\r\nReset-HPOVEnclosureDevice -Enclosure $Enclosure -Component FLM -DeviceID 1 -EFuse\n",
+                        "Code": "$Enclosure = Get-HPOVEnclosure -Name Enclosure1 -ErrorAction Stop\nReset-HPOVEnclosureDevice -Enclosure $Enclosure -Component FLM -DeviceID 1 -EFuse",
                         "Description": "Reset the FLM in slot 1 by performing an EFuse."
                     },
                     {
                         "Title": "-------------------------- EXAMPLE 2 --------------------------",
-                        "Code": "$Task = Get-HPOVEnclosure -Name Enclosure1 -ErrorAction Stop | Reset-HPOVEnclosureDevice -Component Device -DeviceID 4 -Reset\n",
+                        "Code": "$Enclosure = Get-HPOVEnclosure -Name Enclosure1 -ErrorAction Stop\nReset-HPOVEnclosureDevice -Enclosure $Enclosure -Component ICM -DeviceID 3 -EFuse",
+                        "Description": "Reset the ICM in interconnect bay 3 by performing an EFuse."
+                    },
+                    {
+                        "Title": "-------------------------- EXAMPLE 3 --------------------------",
+                        "Code": "$Task = Get-HPOVEnclosure -Name Enclosure1 -ErrorAction Stop | Reset-HPOVEnclosureDevice -Component Device -DeviceID 4 -Reset",
                         "Description": "Reset the device in bay 4 by requesting it to reset itself."
+                    },
+                    {
+                        "Title": "-------------------------- EXAMPLE 4 --------------------------",
+                        "Code": "$Task = Get-HPOVEnclosure -Name Enclosure1 -ErrorAction Stop | Reset-HPOVEnclosureDevice -Component Appliance -DeviceID 1 -EFuse",
+                        "Description": "Reset the appliance device in bay 1 by performing an EFuse."
                     }
                 ],
                 "RelatedLinks": [

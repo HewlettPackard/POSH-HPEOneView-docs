@@ -8,8 +8,8 @@ description: Modify the reserved VLAN range for HPE Synergy.
 
 ```text
 Set-OVReservedVlanRange
-    [-Start] <int>
-    [-Length] <int>
+    [-Start] <Int>
+    [-Length] <Int>
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
@@ -63,7 +63,7 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Length &lt;int&gt;
+### -Length &lt;Int&gt;
 
 Must not exceed 128.
 
@@ -75,7 +75,7 @@ Must not exceed 128.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Start &lt;int&gt;
+### -Start &lt;Int&gt;
 
 The starting VLAN ID.
 

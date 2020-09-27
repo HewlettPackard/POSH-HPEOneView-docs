@@ -32,9 +32,9 @@ When you use a directory service, directory users are granted HPE OneView permis
 This Cmdlet will display the configured directory groups on the appliance, and display their assigned role(s).
 
 {% hint style="info" %}
-Minimum required privileges: Read
+Minimum required privileges: Read-only
 {% endhint %}
--only
+
 ## Examples
 
 ###  Example 1 

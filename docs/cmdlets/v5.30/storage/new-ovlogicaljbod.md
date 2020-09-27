@@ -8,24 +8,24 @@ description: Create a new HPE Synergy Logical JBOD resource.
 
 ```text
 New-OVLogicalJBOD
-    [-Name] <string>
+    [-Name] <String>
     [-InputObject] <Object>
-    [-DriveType] <string>
-    [-Description <string>]
-    [-NumberofDrives] <int>
-    [-MinDriveSize] <int>
-    [-MaxDriveSize] <int>
-    [-EraseDataOnDelete <bool>]
+    [-DriveType] <String>
+    [-Description <String>]
+    [-NumberofDrives] <Int>
+    [-MinDriveSize] <Int>
+    [-MaxDriveSize] <Int>
+    [-EraseDataOnDelete <Bool>]
     [-Scope <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 New-OVLogicalJBOD
-    [-Name] <string>
-    [-Description <string>]
+    [-Name] <String>
+    [-Description <String>]
     [-Drives] <HPEOneView.Storage.Drive[]>
-    [-EraseDataOnDelete <bool>]
+    [-EraseDataOnDelete <Bool>]
     [-Scope <Object>]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -33,12 +33,12 @@ New-OVLogicalJBOD
 
 ```text
 New-OVLogicalJBOD
-    [-Name] <string>
+    [-Name] <String>
     [-InputObject] <Object>
     [-AvailableDriveType <HPEOneView.Storage.AvailableDriveType>]
-    [-Description <string>]
-    [-NumberofDrives] <int>
-    [-EraseDataOnDelete <bool>]
+    [-Description <String>]
+    [-NumberofDrives] <Int>
+    [-EraseDataOnDelete <Bool>]
     [-Scope <Object>]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -154,7 +154,7 @@ When attempting to create a logical JBOD, specify the availabe drive type from `
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Description &lt;string&gt;
+### -Description &lt;String&gt;
 
 Provide a description for the resource.
 
@@ -166,7 +166,7 @@ Provide a description for the resource.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DriveType &lt;string&gt;
+### -DriveType &lt;String&gt;
 
 When attempting to create a logical JBOD, specify the interface type for drives that will be used to build the logical drive. Supported values depend on the local storage capabilities of the selected server hardware type.  Allowed value:
 
@@ -201,7 +201,7 @@ Provide the specific drives to assign to the logical JBOD.  Use the `Get-OVDrive
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EraseDataOnDelete &lt;bool&gt;
+### -EraseDataOnDelete &lt;Bool&gt;
 
 If set to True, and drives support erase on delete option, the drive enclosure will erase the data on the drives.  This operation will take time, as the drive will not be added back into the available pool until the erase operation finishes.
 
@@ -225,7 +225,7 @@ When attempting to create a logical JBOD, and not specifying the exact drives, y
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -MaxDriveSize &lt;int&gt;
+### -MaxDriveSize &lt;Int&gt;
 
 When attempting to create a logical JBOD, you can specify the min and max drive size for the system to locate drive availability.  Specify the maximum disk size in GB.
 
@@ -237,7 +237,7 @@ When attempting to create a logical JBOD, you can specify the min and max drive 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -MinDriveSize &lt;int&gt;
+### -MinDriveSize &lt;Int&gt;
 
 When attempting to create a logical JBOD, you can specify the min and max drive size for the system to locate drive availability.  Specify the minimum disk size in GB.
 
@@ -249,7 +249,7 @@ When attempting to create a logical JBOD, you can specify the min and max drive 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Name &lt;string&gt;
+### -Name &lt;String&gt;
 
 Provide a globally unique name for the logical JBOD resource.
 
@@ -261,7 +261,7 @@ Provide a globally unique name for the logical JBOD resource.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -NumberofDrives &lt;int&gt;
+### -NumberofDrives &lt;Int&gt;
 
 When attempting to create a logical JBOD, you can specify the min and max drive size for the system to locate drive availability.  Specify the number of drives the system should allocate.
 

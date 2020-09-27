@@ -35,13 +35,13 @@ New-OVServerProfileAttachVolume
     [-DataProtectionLevel <String>]
     [-EnableAdaptiveOptimization <Bool>]
     [-PerformancePolicy <HPEOneView.Storage.PerformancePolicy>]
-    [-EnableEncryption <bool>]
-    [-CachePinning <bool>]
+    [-EnableEncryption <Bool>]
+    [-CachePinning <Bool>]
     [-VolumeSet <HPEOneView.Storage.VolumeSet>]
-    [-EnableIOPSLimit <bool>]
-    [-IOPSLimit <int>]
-    [-EnableDataTransferLimit <bool>]
-    [-DataTransferLimit <int>]
+    [-EnableIOPSLimit <Bool>]
+    [-IOPSLimit <Int>]
+    [-EnableDataTransferLimit <Bool>]
+    [-DataTransferLimit <Int>]
     [-Folder <HPEOneView.Storage.NimbleFolder>]
     [-LunIdType] <String>
     [-LunID] <Int32>
@@ -480,7 +480,7 @@ The supported Snapshot storage pool for a StoreServ storage system.  Snapshot st
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -CachePinning &lt;bool&gt;
+### -CachePinning &lt;Bool&gt;
 
 This is applicable for hybrid (a mix of flash and mechanical storage) arrays, and provides a 100 percent cache hit rate for specific volumes (for example, volumes dedicated to critical applications), and delivers the response times of an `all-flash` storage system. A volume is pinned when the entire active volume is placed in cache; associated snapshot (inactive) blocks are not pinned. All incoming data after that point is pinned. The number of volumes that can be pinned is limited by the size of the volumes and amount of available cache.
 
@@ -494,7 +494,7 @@ When defined in the Performance Profile, select to enable Cache Pinnning for the
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DataTransferLimit &lt;int&gt;
+### -DataTransferLimit &lt;Int&gt;
 
 Specify the data transfer limit in MiB/S.
 
@@ -506,7 +506,7 @@ Specify the data transfer limit in MiB/S.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EnableDataTransferLimit &lt;bool&gt;
+### -EnableDataTransferLimit &lt;Bool&gt;
 
 Enable data transfer limit.  If enabled, the `-DataTransferLimit` parameter must be set.  By default, data transfer limit is not set.
 
@@ -518,7 +518,7 @@ Enable data transfer limit.  If enabled, the `-DataTransferLimit` parameter must
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EnableEncryption &lt;bool&gt;
+### -EnableEncryption &lt;Bool&gt;
 
 When the storage system has encryption enabled, the volume can also be encrypted.  Specify if the volume should be encrypted during creation.
 
@@ -530,7 +530,7 @@ When the storage system has encryption enabled, the volume can also be encrypted
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EnableIOPSLimit &lt;bool&gt;
+### -EnableIOPSLimit &lt;Bool&gt;
 
 Set to enable or disable IOPS limit.  If enabled, the `-IOPSLimit` parameter must be set.  By default, IOPS limit is not set.
 
@@ -562,7 +562,7 @@ ID                                         Name
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IOPSLimit &lt;int&gt;
+### -IOPSLimit &lt;Int&gt;
 
 When enabling IOPS limit, provide a value that is greater than or equal to 256.
 

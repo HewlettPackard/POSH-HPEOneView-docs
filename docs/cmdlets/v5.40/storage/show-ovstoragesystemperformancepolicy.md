@@ -9,7 +9,7 @@ description: Show available Nimble Performance Policies.
 ```text
 Show-OVStorageSystemPerformancePolicy
     [-InputObject] <Object>
-    [-Name <string>]
+    [-Name <String>]
     [<CommonParameters>]
 ```
 
@@ -41,7 +41,7 @@ One or more storage systems from `Get-OVStorageSystem`.
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Name &lt;string&gt;
+### -Name &lt;String&gt;
 
 Provide a name of the performance policy to return.
 

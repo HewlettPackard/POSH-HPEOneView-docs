@@ -10,7 +10,7 @@ description: Configure Remote Support and authorize appliance.
 Set-OVRemoteSupport
     [-CompanyName] <String>
     [-OptimizeOptIn]
-    [-AutoEnableDevices <bool>]
+    [-AutoEnableDevices <Bool>]
     [-Async]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -22,7 +22,7 @@ Set-OVRemoteSupport
     [-InsightOnlineUsername <String>]
     [-InsightOnlinePassword <System.Security.SecureString>]
     [-OptimizeOptIn]
-    [-AutoEnableDevices <bool>]
+    [-AutoEnableDevices <Bool>]
     [-Async]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -93,7 +93,7 @@ Enable Remote Support after it was previously disabled for the specific applianc
 
 ## Parameters
 
-### -AutoEnableDevices &lt;bool&gt;
+### -AutoEnableDevices &lt;Bool&gt;
 
 Choose to allow the appliance to auto enable remote support for all and devices added in the future.
 

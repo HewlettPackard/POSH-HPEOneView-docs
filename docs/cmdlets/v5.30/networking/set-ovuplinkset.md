@@ -9,15 +9,15 @@ description: Update an uplink set resource
 ```text
 Set-OVUplinkSet
     [-InputObject] <Object>
-    [-UplinkSetName] <string>
-    [-Name <string>]
+    [-UplinkSetName] <String>
+    [-Name <String>]
     [-AddNetwork <Object[]>]
     [-RemoveNetwork <Object[]>]
     [-AddPorts <Object[]>]
     [-RemovePorts <Object[]>]
     [-UntaggedNetwork <Object>]
-    [-LacpTimer <string>]
-    [-ConsistencyChecking <string>]
+    [-LacpTimer <String>]
+    [-ConsistencyChecking <String>]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
@@ -25,12 +25,12 @@ Set-OVUplinkSet
 ```text
 Set-OVUplinkSet
     [-InputObject] <Object>
-    [-UplinkSetName] <string>
-    [-Name <string>]
+    [-UplinkSetName] <String>
+    [-Name <String>]
     [-AddPorts <Object[]>]
     [-RemovePorts <Object[]>]
-    [-EnableTrunking <bool>]
-    [-ConsistencyChecking <string>]
+    [-EnableTrunking <Bool>]
+    [-ConsistencyChecking <String>]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
@@ -125,7 +125,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -ConsistencyChecking &lt;string&gt;
+### -ConsistencyChecking &lt;String&gt;
 
 Use to indicate if the group policy will be tracked to with the deployed and configured resource. Allowed values:
 
@@ -142,7 +142,7 @@ Default: Exact
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EnableTrunking &lt;bool&gt;
+### -EnableTrunking &lt;Bool&gt;
 
 Use this parameter to enable or disable FC port trunking.  This parameter is only supported with HPE 16Gb or newer Virtual Connect Fibre Channel fabric modules.
 
@@ -166,7 +166,7 @@ Either a Logical Interconnect Group from `Get-OVLogicalInterconnectGroup` or Upl
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -LacpTimer &lt;string&gt;
+### -LacpTimer &lt;String&gt;
 
 Set the LACP Timer value, which sets the lacpdu frequecy to the LACP peer.  Accepted values:
 
@@ -181,7 +181,7 @@ Set the LACP Timer value, which sets the lacpdu frequecy to the LACP peer.  Acce
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Name &lt;string&gt;
+### -Name &lt;String&gt;
 
 Specify the new name of the resource.
 
@@ -236,7 +236,7 @@ Specify the network object that will be set as the untagged network.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -UplinkSetName &lt;string&gt;
+### -UplinkSetName &lt;String&gt;
 
 When providing a Logical Interconnect Group resource, you must specify the name of the uplink set to modify.
 

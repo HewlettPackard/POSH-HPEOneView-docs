@@ -8,7 +8,7 @@ description: Add a new cluster member to an existing cluster.
 
 ```text
 Add-OVClusterNode
-    [-ComputerName] <string>
+    [-ComputerName] <String>
     [-Credential] <PSCredential>
     [-Scope <Object>]
     [-Async]
@@ -64,7 +64,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ComputerName &lt;string&gt;
+### -ComputerName &lt;String&gt;
 
 The computer name of the hypervisor host to add.
 

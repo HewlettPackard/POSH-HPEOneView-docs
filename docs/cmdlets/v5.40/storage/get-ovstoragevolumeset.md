@@ -8,7 +8,7 @@ description: Get available storage volume sets.
 
 ```text
 Get-OVStorageVolumeSet
-    [-Name <string>]
+    [-Name <String>]
     [-Label <String>]
     [-Scope <Object>]
     [-ApplianceConnection <Object>]
@@ -65,7 +65,7 @@ Specify the label associated with resources.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Name &lt;string&gt;
+### -Name &lt;String&gt;
 
 Filter for the resource name.
 

@@ -1,5 +1,5 @@
 ﻿---
-description: Power reset or EFuse HPS Synergy Frame component.
+description: Power reset or EFuse HPE Synergy Frame component.
 ---
 
 # Reset-HPOVEnclosureDevice
@@ -30,10 +30,20 @@ Reset-HPOVEnclosureDevice
 
 ## Description
 
-This Cmdlet will assist Server Administrators in performing various power operations with enclosure resources.  The following resources are supported with their supported operation:
+This Cmdlet will assist server administrators in performing various power operations with HPE Synergy enclosure resources.  The following resources are supported with their supported operation:
 
     * HPE Synergy Appliance Bay - EFuse
-    * HPE Synergy Frame Link Module - EFuse or Resetn    * Device Bay - EFuse or Resetn    * HPE Synergy Fabric Module Device - EFuse
+    * HPE Synergy Frame Link Module - EFuse or Reset
+    * Device Bay - EFuse or Reset
+    * HPE Synergy Fabric Module Device - EFuse
+
+E-Fuse stands for Electronic Fuse. Setting the power state of a device to "E-Fuse" (or "Reset" for an Enclosure Manager) will reset the bay, but it will soon return to a normal running state.  An E-Fuse will turn off power to the bay and then turn it back on. If the bay was powered off before the E-Fuse operation it will be powered on afterwards. A "Reset" will do a hard reset of the bay without affecting the power. E-Fuse on a device bay will power-cycle the whole blade including the iLO. 
+
+A reset on the active Synergy Frame Link Module causes a failover to the standby Synergy Frame Link Module. The reset will fail if the Synergy Frame Link Module's firmware is being updated. An E-Fuse against an active Synergy Frame Link Module is not allowed.
+
+{% hint style="info" %}
+Minimum required privileges: Infrastructure administrator, Server administrator
+{% endhint %}
 
 ## Examples
 
@@ -49,10 +59,27 @@ Reset the FLM in slot 1 by performing an EFuse.
 ###  Example 2 
 
 ```text
+$Enclosure = Get-HPOVEnclosure -Name Enclosure1 -ErrorAction Stop
+Reset-HPOVEnclosureDevice -Enclosure $Enclosure -Component ICM -DeviceID 3 -EFuse
+```
+
+Reset the ICM in interconnect bay 3 by performing an EFuse.
+
+###  Example 3 
+
+```text
 $Task = Get-HPOVEnclosure -Name Enclosure1 -ErrorAction Stop | Reset-HPOVEnclosureDevice -Component Device -DeviceID 4 -Reset
 ```
 
 Reset the device in bay 4 by requesting it to reset itself.
+
+###  Example 4 
+
+```text
+$Task = Get-HPOVEnclosure -Name Enclosure1 -ErrorAction Stop | Reset-HPOVEnclosureDevice -Component Appliance -DeviceID 1 -EFuse
+```
+
+Reset the appliance device in bay 1 by performing an EFuse.
 
 ## Parameters
 

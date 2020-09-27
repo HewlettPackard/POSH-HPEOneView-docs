@@ -27,7 +27,7 @@ New-OVLdapDirectory
     [-BaseDN] <String>
     [-OrganizationalUnits] <Array>
     [-Servers] <Array>
-    [-UserNamingAttribute <string>]
+    [-UserNamingAttribute <String>]
     [-Username] <String>
     [-Password] <SecureString>
     [-Credential <PSCredential>]
@@ -211,7 +211,7 @@ Use to indicate the provided credential is a Service Account.  Required for when
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -UserNamingAttribute &lt;string&gt;
+### -UserNamingAttribute &lt;String&gt;
 
 Specify the naming attribute for OpenLDAP directories.  Allowed values:     * CN     * UID 
 Default Value: CN

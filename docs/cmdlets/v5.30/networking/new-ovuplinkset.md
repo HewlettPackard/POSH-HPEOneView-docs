@@ -20,7 +20,7 @@ New-OVUplinkSet
     [-LacpTimer <String>]
     [-LacpLoadbalancingMode <String>]
     [-PrimaryPort <String>]
-    [-ConsistencyChecking <string>]
+    [-ConsistencyChecking <String>]
     [-Async]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -43,7 +43,7 @@ New-OVUplinkSet
     [-PrimaryPort <String>]
     [-FcUplinkSpeed <String>]
     [-EnableTrunking <Boolean>]
-    [-ConsistencyChecking <string>]
+    [-ConsistencyChecking <String>]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
@@ -57,7 +57,7 @@ New-OVUplinkSet
     [-UplinkPorts] <Array>
     [-FcUplinkSpeed <String>]
     [-EnableTrunking <Boolean>]
-    [-ConsistencyChecking <string>]
+    [-ConsistencyChecking <String>]
     [-Async]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -324,7 +324,7 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -ConsistencyChecking &lt;string&gt;
+### -ConsistencyChecking &lt;String&gt;
 
 Use to indicate if the group policy will be tracked to with the deployed and configured resource. Allowed values:
 
@@ -389,7 +389,7 @@ Use this parameter to return a helper object with the `New-OVLogicalInterconnect
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -LacpDistributeUplinkPorts &lt;bool&gt;
+### -LacpDistributeUplinkPorts &lt;Bool&gt;
 
 The distribution of LACP uplink ports is supported on HPE Virtual Connect SE 40Gb F8 Module for HPE Synergy and HPE Virtual Connect SE 100Gb F32 Module for HPE Synergy interconnects.
 
@@ -410,7 +410,7 @@ The port distribution depends on the number of ports added from each interconnec
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -LacpFailoverActiveMemberThreshold &lt;int&gt;
+### -LacpFailoverActiveMemberThreshold &lt;Int&gt;
 
 Use to specify a value of 1 through 16, when the `-LacpFailoverTrigger` parameter is set to 'FailoverActiveMemberThreshold'.
 
@@ -427,7 +427,7 @@ Failover from active to standby uplinks will cause a brief interruption in the n
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -LacpFailoverBandwidthThreshold &lt;int&gt;
+### -LacpFailoverBandwidthThreshold &lt;Int&gt;
 
 Use to specify a value of 1 through 100 % (percent), when the `-LacpFailoverTrigger` parameter is set to 'FailoverBandwidthThreshold'.
 
@@ -444,7 +444,7 @@ Failover from active to standby uplinks will cause a brief interruption in the n
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -LacpFailoverTrigger &lt;string&gt;
+### -LacpFailoverTrigger &lt;String&gt;
 
 LACP failover trigger is only applicable to the Ethernet uplink sets in the `active-standby` configuration when there is no link aggregation configured on the `top-of`-rack (ToR) switches or an uplink set is configured without MLAG. In this case, all traffic to the compute modules will pass through the active set of uplink ports. Link failover trigger defines failover policy for when traffic will be redirected to the standby uplink ports. In case of failover trigger based on bandwidth/uplink count, link failover can be triggered either by reduction in active uplink bandwidth or increase in standby uplink bandwidth.
 
