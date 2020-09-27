@@ -9,16 +9,16 @@ description: Modify an existing hypervisor manager.
 ```text
 Set-OVClusterManager
     [-InputObject] <HypervisorManager>
-    [-Hostname <string>]
-    [-DisplayName <string>]
-    [-Port <int>]
+    [-Hostname <String>]
+    [-DisplayName <String>]
+    [-Port <Int>]
     [-Credential <PSCredential>]
-    [-VirtualSwitchType <string>]
-    [-DistributedSwitchUsage <string>]
-    [-DistributedSwitchVersion] <string>
-    [-HAEnabled <bool>]
-    [-DRSEnabled <bool>]
-    [-MultiNicVMotionEnabled <bool>]
+    [-VirtualSwitchType <String>]
+    [-DistributedSwitchUsage <String>]
+    [-DistributedSwitchVersion] <String>
+    [-HAEnabled <Bool>]
+    [-DRSEnabled <Bool>]
+    [-MultiNicVMotionEnabled <Bool>]
     [-Async]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -80,7 +80,7 @@ Use this parameter if you want to provide a PSCredential object.  Using this par
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DRSEnabled &lt;bool&gt;
+### -DRSEnabled &lt;Bool&gt;
 
 Use to enable or disable VMware DRS default settings for clusters.
 
@@ -92,7 +92,7 @@ Use to enable or disable VMware DRS default settings for clusters.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DisplayName &lt;string&gt;
+### -DisplayName &lt;String&gt;
 
 Change the display name of the cluster manager.
 
@@ -104,7 +104,7 @@ Change the display name of the cluster manager.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DistributedSwitchUsage &lt;string&gt;
+### -DistributedSwitchUsage &lt;String&gt;
 
 Applicable only when vSwitch type is Distributed. This specifies which networks should be configured for distributed switches. Allowed values:
 
@@ -119,7 +119,7 @@ Applicable only when vSwitch type is Distributed. This specifies which networks 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DistributedSwitchVersion &lt;string&gt;
+### -DistributedSwitchVersion &lt;String&gt;
 
 Applicable only when vSwitch type is of type distributed. Configures distributed virtual switch with the specified version, and must be supported by the Hypervisor Manager.
 
@@ -131,7 +131,7 @@ Applicable only when vSwitch type is of type distributed. Configures distributed
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -HAEnabled &lt;bool&gt;
+### -HAEnabled &lt;Bool&gt;
 
 Use to enable or disable VMware HA.
 
@@ -143,7 +143,7 @@ Use to enable or disable VMware HA.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Hostname &lt;string&gt;
+### -Hostname &lt;String&gt;
 
 Use to update the IP or FQDN address of the target cluster manager.
 
@@ -167,7 +167,7 @@ The cluster manager resource object from `Get-OVClusterManager`.
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -MultiNicVMotionEnabled &lt;bool&gt;
+### -MultiNicVMotionEnabled &lt;Bool&gt;
 
 Use to enable or disable VMware VMotion `multi-NIC` vmotion.
 
@@ -179,7 +179,7 @@ Use to enable or disable VMware VMotion `multi-NIC` vmotion.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Port &lt;int&gt;
+### -Port &lt;Int&gt;
 
 Use to update the TCP port of the cluster manager.
 
@@ -191,7 +191,7 @@ Use to update the TCP port of the cluster manager.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -VirtualSwitchType &lt;string&gt;
+### -VirtualSwitchType &lt;String&gt;
 
 Use to adjust the virtual switch for hypervisor clsuters with the specified type. Allowed values:
 

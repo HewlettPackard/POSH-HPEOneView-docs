@@ -55,9 +55,9 @@ An Ethernet and FCoE network must be provisioned to a logical interconnect and b
 This Cmdlet is used to retrieve a collection of network resources which have the specified type and/or name. The default connection information is included in the returned network resources.
 
 {% hint style="info" %}
-Minimum required privileges: Read
+Minimum required privileges: Read-only
 {% endhint %}
--only
+
 ## Examples
 
 ###  Example 1 

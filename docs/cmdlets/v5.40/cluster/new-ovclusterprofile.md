@@ -8,7 +8,7 @@ description: Create a new cluster profile resource.
 
 ```text
 New-OVClusterProfile
-    [-Name] <string>
+    [-Name] <String>
     [-ClusterManager] <HPEOneView.Cluster.ClusterManager>
     [-ClusterManagerLocation] <String>
     [-ServerProfileTemplate] <Object>
@@ -16,8 +16,8 @@ New-OVClusterProfile
     [-Description <String>]
     [-ClusterPrefix <String>]
     [-Servers <HPEOneView.Cluster.AddHostRequest[]>]
-    [-UseIPAddressAsHostName <bool>]
-    [-LeaveHostsInMaintenanceMode] <bool>
+    [-UseIPAddressAsHostName <Bool>]
+    [-LeaveHostsInMaintenanceMode] <Bool>
     [-StorageVolume <Object>]
     [-StorageVolumeFileSystem <String>]
     [-Scope <Object>]
@@ -28,7 +28,7 @@ New-OVClusterProfile
 
 ```text
 New-OVClusterProfile
-    [-Name] <string>
+    [-Name] <String>
     [-ClusterManager] <HPEOneView.Cluster.ClusterManager>
     [-ClusterManagerLocation] <String>
     [-ServerProfileTemplate] <Object>
@@ -39,7 +39,7 @@ New-OVClusterProfile
     [-Servers <HPEOneView.Cluster.AddHostRequest[]>]
     [-HAEnabled <Bool>]
     [-DRSEnabled <Bool>]
-    [-MultiNicVMotionEnabled <bool>]
+    [-MultiNicVMotionEnabled <Bool>]
     [-Scope <Object>]
     [-Async]
     [-ApplianceConnection <Object>]
@@ -48,7 +48,7 @@ New-OVClusterProfile
 
 ```text
 New-OVClusterProfile
-    [-Name] <string>
+    [-Name] <String>
     [-ClusterManager] <HPEOneView.Cluster.ClusterManager>
     [-ClusterManagerLocation] <String>
     [-ServerProfileTemplate] <Object>
@@ -63,21 +63,21 @@ New-OVClusterProfile
     [-SecondaryDNS <IPAddress>]
     [-TertiaryDNS <IPAddress>]
     [-Domain] <String>
-    [-UseIPAddressAsHostName <bool>]
-    [-LeaveHostsInMaintenanceMode] <bool>
+    [-UseIPAddressAsHostName <Bool>]
+    [-LeaveHostsInMaintenanceMode] <Bool>
     [-StorageVolume <Object>]
     [-StorageVolumeFileSystem <String>]
     [-OverrideNetworkingConfig]
-    [-ConfigurePortGroups] <bool>
+    [-ConfigurePortGroups] <Bool>
     [-VSwitchNameOverride <hashtable>]
     [-PortGroupNameOverride] <Hashtable>
     [-OverrideClusterManagerConfig]
-    [-VirtualSwitchType] <string>
+    [-VirtualSwitchType] <String>
     [-DistributedSwitchUsage <String>]
     [-DistributedSwitchVersion <String>]
     [-HAEnabled <Bool>]
     [-DRSEnabled <Bool>]
-    [-MultiNicVMotionEnabled <bool>]
+    [-MultiNicVMotionEnabled <Bool>]
     [-Scope <Object>]
     [-Async]
     [-ApplianceConnection <Object>]
@@ -289,7 +289,7 @@ Specify if VMware HA (if supported) should be enabled ($True) or disabled ($fals
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -MultiNicVMotionEnabled &lt;bool&gt;
+### -MultiNicVMotionEnabled &lt;Bool&gt;
 
 Specify if `multi-NIC` VMotion (if supported) should be enabled ($True) or disabled ($false).
 
@@ -301,7 +301,7 @@ Specify if `multi-NIC` VMotion (if supported) should be enabled ($True) or disab
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Name &lt;string&gt;
+### -Name &lt;String&gt;
 
 Provide the cluster profile name.  If `-Prefix` is omitted, this value will become the cluster node prefix value.
 
@@ -361,7 +361,7 @@ Use to configure the cluster profile to not manage host networking.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -VirtualSwitchType &lt;string&gt;
+### -VirtualSwitchType &lt;String&gt;
 
 Use to indicate which vSiwtch type to configure when overriding cluster manager networking settings.  Allowed values are:
 
@@ -388,7 +388,7 @@ Specify the cluster administrator/root account password.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ConfigurePortGroups &lt;bool&gt;
+### -ConfigurePortGroups &lt;Bool&gt;
 
 Specify if port groups should also be configured when configuring host networking.
 
@@ -424,7 +424,7 @@ When deploying a new cluster profile with HPE Synergy and Image Streamer, specif
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -LeaveHostsInMaintenanceMode &lt;bool&gt;
+### -LeaveHostsInMaintenanceMode &lt;Bool&gt;
 
 Specify if the host should be left in maintenance mode (if applicable) before servicing the cluster.
 
@@ -579,7 +579,7 @@ Use to specify what the vSwitch name override should be.  By default, vSwitch na
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -UseIPAddressAsHostName &lt;bool&gt;
+### -UseIPAddressAsHostName &lt;Bool&gt;
 
 Use to indicate if the IP Address allocated or assigned should be used for the cluster manager registration instead of the hostname or FQDN.
 

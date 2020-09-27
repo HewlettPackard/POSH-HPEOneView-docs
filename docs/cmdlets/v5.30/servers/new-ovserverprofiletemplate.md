@@ -14,35 +14,38 @@ New-OVServerProfileTemplate
     [-ServerProfileDescription <String>]
     [-ManageConnections <Boolean>]
     [-Connections <Array>]
-    [-ConnectionsConsistencyChecking <string>]
+    [-ConnectionsConsistencyChecking <String>]
     [-EnclosureGroup <Object>]
     [-Firmware]
-    [-FirmwareConsistencyChecking <string>]
+    [-FirmwareConsistencyChecking <String>]
     [-FirmwareInstallMode <String>]
     [-FirmwareActivationMode <String>]
     [-Baseline <Object>]
     [-ForceInstallFirmware]
     [-OSDeploymentPlan <Object>]
-    [-OSDeploymentConsistencyChecking <string>]
+    [-OSDeploymentConsistencyChecking <String>]
     [-OSDeploymentPlanAttributes <Array>]
     [-Bios]
     [-BiosSettings <Array>]
-    [-BiosConsistencyChecking <string>]
+    [-BiosConsistencyChecking <String>]
     [-BootMode <String>]
-    [-BootModeConsistencyChecking <string>]
+    [-BootModeConsistencyChecking <String>]
     [-PxeBootPolicy <String>]
     [-ManageBoot]
     [-BootOrder <Array>]
-    [-BootOrderConsistencyChecking <string>]
+    [-BootOrderConsistencyChecking <String>]
     [-SecureBoot <String>]
     [-LocalStorage]
-    [-LocalStorageConsistencyChecking <string>]
+    [-LocalStorageConsistencyChecking <String>]
     [-StorageController <Object>]
+    [-ManageIloSettings <Bool>]
+    [-IloSettings <PSObject>]
+    [-IloSettingsConsistencyChecking <String>]
     [-Affinity <String>]
     [-MacAssignment <String>]
     [-WwnAssignment <String>]
     [-SnAssignment <String>]
-    [-IscsiInitiatorNameAssignmet <string>]
+    [-IscsiInitiatorNameAssignmet <String>]
     [-HideUnusedFlexNics <Boolean>]
     [-Async]
     [-PassThru]
@@ -61,38 +64,41 @@ New-OVServerProfileTemplate
     [-ServerProfileDescription <String>]
     [-ManageConnections <Boolean>]
     [-Connections <Array>]
-    [-ConnectionsConsistencyChecking <string>]
+    [-ConnectionsConsistencyChecking <String>]
     [-EnclosureGroup <Object>]
     [-Firmware]
-    [-FirmwareConsistencyChecking <string>]
+    [-FirmwareConsistencyChecking <String>]
     [-FirmwareInstallMode <String>]
     [-FirmwareActivationMode <String>]
     [-Baseline <Object>]
     [-ForceInstallFirmware]
     [-OSDeploymentPlan <Object>]
-    [-OSDeploymentConsistencyChecking <string>]
+    [-OSDeploymentConsistencyChecking <String>]
     [-OSDeploymentPlanAttributes <Array>]
     [-Bios]
     [-BiosSettings <Array>]
-    [-BiosConsistencyChecking <string>]
+    [-BiosConsistencyChecking <String>]
     [-BootMode <String>]
-    [-BootModeConsistencyChecking <string>]
+    [-BootModeConsistencyChecking <String>]
     [-PxeBootPolicy <String>]
     [-ManageBoot]
     [-BootOrder <Array>]
-    [-BootOrderConsistencyChecking <string>]
+    [-BootOrderConsistencyChecking <String>]
     [-SecureBoot <String>]
     [-LocalStorage]
-    [-LocalStorageConsistencyChecking <string>]
+    [-LocalStorageConsistencyChecking <String>]
     [-StorageController <Object>]
-    [-SANStorageConsistencyChecking <string>]
+    [-ManageIloSettings <Bool>]
+    [-IloSettings <PSObject>]
+    [-IloSettingsConsistencyChecking <String>]
+    [-SANStorageConsistencyChecking <String>]
     [-EvenPathDisabled]
     [-OddPathDisabled]
     [-Affinity <String>]
     [-MacAssignment <String>]
     [-WwnAssignment <String>]
     [-SnAssignment <String>]
-    [-IscsiInitiatorNameAssignmet <string>]
+    [-IscsiInitiatorNameAssignmet <String>]
     [-HideUnusedFlexNics <Boolean>]
     [-Async]
     [-PassThru]
@@ -830,7 +836,7 @@ Use this parameter to return the modified Server Profile Template object.  In or
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IscsiInitiatorNameAssignmet &lt;string&gt;
+### -IscsiInitiatorNameAssignmet &lt;String&gt;
 
 Specify if the iSCSI initiator name should be automatically managed and assigned, or a custom value  should be used.  Allowed values:     * Virtual     * UserDefined 
 Default Value: Virtual
@@ -843,7 +849,7 @@ Default Value: Virtual
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -BiosConsistencyChecking &lt;string&gt;
+### -BiosConsistencyChecking &lt;String&gt;
 
 Use to override the consistency checking for the policy.  Allowed values:
 
@@ -858,7 +864,7 @@ Use to override the consistency checking for the policy.  Allowed values:
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -BootModeConsistencyChecking &lt;string&gt;
+### -BootModeConsistencyChecking &lt;String&gt;
 
 Use to override the consistency checking for the policy.  Allowed values:
 
@@ -873,68 +879,7 @@ Use to override the consistency checking for the policy.  Allowed values:
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ConnectionsConsistencyChecking &lt;string&gt;
-
-Use to override the consistency checking for the policy.  Allowed values:
-
-    * Exact
-    * Minimum
-    * None
-
-| Aliases | None |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
-### -FirmwareConsistencyChecking &lt;string&gt;
-
-Use to override the consistency checking for the policy.  Allowed values:
-
-    * Exact
-    * None
-
-| Aliases | None |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
-### -LocalStorageConsistencyChecking &lt;string&gt;
-
-Use to override the consistency checking for the policy.  Allowed values:
-
-    * Exact
-    * None
-
-| Aliases | None |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
-### -OSDeploymentConsistencyChecking &lt;string&gt;
-
-Use to override the consistency checking for the policy.  Allowed values:
-
-    * Exact
-    * None
-
-| Aliases | None |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
-### -SANStorageConsistencyChecking &lt;string&gt;
+### -ConnectionsConsistencyChecking &lt;String&gt;
 
 Use to override the consistency checking for the policy.  Allowed values:
 
@@ -950,7 +895,68 @@ Use to override the consistency checking for the policy.  Allowed values:
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -BootOrderConsistencyChecking &lt;string&gt;
+### -FirmwareConsistencyChecking &lt;String&gt;
+
+Use to override the consistency checking for the policy.  Allowed values:
+
+    * Exact
+    * None
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -LocalStorageConsistencyChecking &lt;String&gt;
+
+Use to override the consistency checking for the policy.  Allowed values:
+
+    * Exact
+    * None
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -OSDeploymentConsistencyChecking &lt;String&gt;
+
+Use to override the consistency checking for the policy.  Allowed values:
+
+    * Exact
+    * None
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -SANStorageConsistencyChecking &lt;String&gt;
+
+Use to override the consistency checking for the policy.  Allowed values:
+
+    * Exact
+    * Minimum
+    * None
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -BootOrderConsistencyChecking &lt;String&gt;
 
 Use to override the consistency checking for the policy.  Allowed values:
 
@@ -958,6 +964,45 @@ Use to override the consistency checking for the policy.  Allowed values:
     * None
 
 | Aliases |  |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -IloSettings &lt;PSObject&gt;
+
+Provide an iLO settings object from `New-OVServerProfileIloPolicy` Cmdlet.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -IloSettingsConsistencyChecking &lt;String&gt;
+
+Use to override the consistency checking for the policy.  Allowed values:
+
+    * Exact
+    * None
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -ManageIloSettings &lt;Bool&gt;
+
+Use to indicate iLO settings will be managed from the server profile.
+
+| Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |

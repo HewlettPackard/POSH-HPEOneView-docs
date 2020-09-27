@@ -9,7 +9,7 @@ description: Modify storage pool managed state.
 ```text
 Set-OVStoragePool
     [-InputObject] <HPEOneView.Storage.StoragePool[]>
-    [-Managed] <bool>
+    [-Managed] <Bool>
     [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
@@ -83,7 +83,7 @@ One or more `[HPEOneView.Storage.StoragePool]` resources from `Get-OVStoragePool
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -Managed &lt;bool&gt;
+### -Managed &lt;Bool&gt;
 
 Specify a boolean value to modify the storage pools managed state.
 

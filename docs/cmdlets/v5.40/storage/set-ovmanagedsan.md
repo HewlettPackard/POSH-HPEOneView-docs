@@ -14,13 +14,13 @@ Set-OVManagedSan
     [-EnableAliasing]
     [-InitiatorNameFormat <String>]
     [-TargetGroupNameFormat <String>]
-    [-DisableTargetGroupAliasing <bool>]
+    [-DisableTargetGroupAliasing <Bool>]
     [-TargetNameFormat <String>]
     [-ZoneNameFormat <String>]
     [-UpdateZoneNames <Boolean>]
     [-UpdateInitiatorAliases <Boolean>]
     [-UpdateTargetAliases <Boolean>]
-    [-UpdateTargetGroupAliases <bool>]
+    [-UpdateTargetGroupAliases <Bool>]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
@@ -264,7 +264,7 @@ Default Value: ${Global:ConnectSessions} | ? Default
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -DisableTargetGroupAliasing &lt;bool&gt;
+### -DisableTargetGroupAliasing &lt;Bool&gt;
 
 When the zoning policy is not set to SingleInitiatorSingleTarget, Target Group Aliasing can be enabled or disabled.
 
@@ -276,7 +276,7 @@ When the zoning policy is not set to SingleInitiatorSingleTarget, Target Group A
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -UpdateTargetGroupAliases &lt;bool&gt;
+### -UpdateTargetGroupAliases &lt;Bool&gt;
 
 When Enabled (True), target and target group aliases will be updated in the SAN whenever resources are renamed in OneView.
 

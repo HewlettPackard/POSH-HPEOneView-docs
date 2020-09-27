@@ -40,7 +40,7 @@ New-OVEnclosureGroup
     [-PowerRedundantMode <String>]
     [-IPv4AddressType <String>]
     [-IPv4AddressRange <Object>]
-    [-IPv6AddressType <string>]
+    [-IPv6AddressType <String>]
     [-IPv6AddressRange <Object>]
     [-DeploymentNetworkType <String>]
     [-DeploymentNetwork <Object>]
@@ -284,7 +284,7 @@ The IPv6 address pool object from `Get-OVAddressPoolRange`.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IPv6AddressType &lt;string&gt;
+### -IPv6AddressType &lt;String&gt;
 
 Use to specify how the IPv6 Addresses will be assigned to Synergy resources management interface(s).  Allowed values:
 

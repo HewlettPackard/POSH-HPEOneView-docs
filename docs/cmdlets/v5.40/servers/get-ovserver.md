@@ -14,7 +14,7 @@ Get-OVServer
     [-NoProfile]
     [-InputObject <Object>]
     [-Label <String>]
-    [-Count <int>]
+    [-Count <Int>]
     [-Scope <Object>]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -250,7 +250,7 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Count &lt;int&gt;
+### -Count &lt;Int&gt;
 
 Return no more than the provided value.  Combining other parameters to filter may not return the requested count value.
 

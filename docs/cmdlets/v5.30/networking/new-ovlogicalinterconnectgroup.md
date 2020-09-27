@@ -10,10 +10,10 @@ description: Create new Logical Interconnect Group.
 New-OVLogicalInterconnectGroup
     [-Name] <String>
     [-Bays] <Hashtable>
-    [-InterconnectConsistencyChecking <string>]
+    [-InterconnectConsistencyChecking <String>]
     [-EnableIgmpSnooping <Boolean>]
     [-IgmpIdleTimeoutInterval <Int32>]
-    [-IgmpSnoopingConsistencyChecking <string>]
+    [-IgmpSnoopingConsistencyChecking <String>]
     [-EnableFastMacCacheFailover <Boolean>]
     [-MacRefreshInterval <Int32>]
     [-EnableNetworkLoopProtection <Boolean>]
@@ -22,14 +22,14 @@ New-OVLogicalInterconnectGroup
     [-EnableEnhancedLLDPTLV <Boolean>]
     [-LldpAddressingMode <Boolean>]
     [-SNMP <Object>]
-    [-SNMPConsistencyChecking <string>]
+    [-SNMPConsistencyChecking <String>]
     [-SnmpV1]
     [-SnmpV3]
     [-SnmpV3User <HPEOneView.Appliance.SnmpV3User>]
     [-InternalNetworks <Array>]
-    [-InternalNetworkConsistencyChecking <string>]
+    [-InternalNetworkConsistencyChecking <String>]
     [-QosConfiguration <Object>]
-    [-QoSConsistencyChecking <string>]
+    [-QoSConsistencyChecking <String>]
     [-UplinkSet <Hashtable[]>]
     [-Scope <HPEOneView.Appliance.ScopeCollection[]>]
     [-ApplianceConnection <Object>]
@@ -44,34 +44,34 @@ New-OVLogicalInterconnectGroup
     [-InterconnectBaySet] <Int32>
     [-FabricModuleType] <String>
     [-Bays] <Hashtable>
-    [-InterconnectConsistencyChecking <string>]
+    [-InterconnectConsistencyChecking <String>]
     [-FabricRedundancy <String>]
-    [-DownlinkSpeedMode <string>]
-    [-EnableCutThroughSwitching <bool>]
-    [-EnableStormControl <bool>]
-    [-StormControlPacketsPerSecondThreshold <int>]
+    [-DownlinkSpeedMode <String>]
+    [-EnableCutThroughSwitching <Bool>]
+    [-EnableStormControl <Bool>]
+    [-StormControlPacketsPerSecondThreshold <Int>]
     [-StormControlPollingInterval <Int>]
-    [-EnableDdns <bool>]
-    [-DdnsDomainNameSuffix <string>]
+    [-EnableDdns <Bool>]
+    [-DdnsDomainNameSuffix <String>]
     [-EnableIgmpSnooping <Boolean>]
-    [-IgmpVLANs <string>]
+    [-IgmpVLANs <String>]
     [-IgmpIdleTimeoutInterval <Int32>]
-    [-IgmpMulticastFloodPrevention <bool>]
-    [-IgmpProxyReporting <bool>]
-    [-IgmpSnoopingConsistencyChecking <string>]
+    [-IgmpMulticastFloodPrevention <Bool>]
+    [-IgmpProxyReporting <Bool>]
+    [-IgmpSnoopingConsistencyChecking <String>]
     [-EnableNetworkLoopProtection <Boolean>]
     [-EnableLLDPTagging <Boolean>]
     [-EnableEnhancedLLDPTLV <Boolean>]
     [-LldpAddressingMode <Boolean>]
     [-SNMP <Object>]
-    [-SNMPConsistencyChecking <string>]
+    [-SNMPConsistencyChecking <String>]
     [-SnmpV1]
     [-SnmpV3]
     [-SnmpV3User <HPEOneView.Appliance.SnmpV3User>]
     [-InternalNetworks <Array>]
-    [-InternalNetworkConsistencyChecking <string>]
+    [-InternalNetworkConsistencyChecking <String>]
     [-QosConfiguration <Object>]
-    [-QoSConsistencyChecking <string>]
+    [-QoSConsistencyChecking <String>]
     [-UplinkSet <Hashtable[]>]
     [-Scope <HPEOneView.Appliance.ScopeCollection[]>]
     [-ApplianceConnection <Object>]
@@ -542,7 +542,7 @@ Provide the SNMPv3 user object from `New-OVSnmpV3User`.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -InterconnectConsistencyChecking &lt;string&gt;
+### -InterconnectConsistencyChecking &lt;String&gt;
 
 Use to indicate if the group policy will be tracked to with the deployed and configured resource. Allowed values:
 
@@ -559,7 +559,7 @@ Default: Exact
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -InternalNetworkConsistencyChecking &lt;string&gt;
+### -InternalNetworkConsistencyChecking &lt;String&gt;
 
 Use to indicate if the group policy will be tracked to with the deployed and configured resource. Allowed values:
 
@@ -576,7 +576,7 @@ Default: Exact
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -QoSConsistencyChecking &lt;string&gt;
+### -QoSConsistencyChecking &lt;String&gt;
 
 Use to indicate if the group policy will be tracked to with the deployed and configured resource. Allowed values:
 
@@ -593,7 +593,7 @@ Default: Exact
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SNMPConsistencyChecking &lt;string&gt;
+### -SNMPConsistencyChecking &lt;String&gt;
 
 Use to indicate if the group policy will be tracked to with the deployed and configured resource. Allowed values:
 
@@ -610,7 +610,7 @@ Default: Exact
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DdnsDomainNameSuffix &lt;string&gt;
+### -DdnsDomainNameSuffix &lt;String&gt;
 
 When enabled, Domain Name System (DNS) server will be updated automatically when either the IP address or hostname change for the interconnect module.
 
@@ -622,7 +622,7 @@ When enabled, Domain Name System (DNS) server will be updated automatically when
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -DownlinkSpeedMode &lt;string&gt;
+### -DownlinkSpeedMode &lt;String&gt;
 
 Specify the port downlink speed to be configured for HPE Virtual Connect SE 100Gb F32 module for Synergy.
 
@@ -641,7 +641,7 @@ Default: 25
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EnableCutThroughSwitching &lt;bool&gt;
+### -EnableCutThroughSwitching &lt;Bool&gt;
 
 Enables or disables the `Cut-Through` switching mode. When enabled, the switch starts forwarding the frame as soon as the switch has read the destination details in the packet header. When enabled, Pause flood protection is disabled.
 
@@ -660,7 +660,7 @@ This option is available for HPE Virtual Connect SE 100Gb F32 Module for HPE Syn
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EnableDdns &lt;bool&gt;
+### -EnableDdns &lt;Bool&gt;
 
 When enabled, Domain Name System (DNS) server will be updated automatically when either the IP address or hostname change for the interconnect module.  Must provide `-DdnsDomainNameSuffix` parameter.
 
@@ -672,7 +672,7 @@ When enabled, Domain Name System (DNS) server will be updated automatically when
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EnableStormControl &lt;bool&gt;
+### -EnableStormControl &lt;Bool&gt;
 
 Enables or disables the suppression of excessive inbound broadcast, multicast, or DLF (Destination Lookup Failure) packets when a threshold is reached.
 
@@ -686,7 +686,7 @@ Default value:  Disabled
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IgmpVLANs &lt;string&gt;
+### -IgmpVLANs &lt;String&gt;
 
 Specify values or range of VLAN IDs, from `1-4094`, associated with networks defined in the logical interconnect. Use comma or hyphens as separator, for example: `10-15`, 52, `100-200`.
 
@@ -698,7 +698,7 @@ Specify values or range of VLAN IDs, from `1-4094`, associated with networks def
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -StormControlPacketsPerSecondThreshold &lt;int&gt;
+### -StormControlPacketsPerSecondThreshold &lt;Int&gt;
 
 The Storm Control packet threshold at which traffic is suppressed.
 
@@ -736,7 +736,7 @@ A collection of uplink sets from `New-OVUplinkSet` using the `-Passthru` paramet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IgmpMulticastFloodPrevention &lt;bool&gt;
+### -IgmpMulticastFloodPrevention &lt;Bool&gt;
 
 By default, unregistered IGMP multicast traffic traversing VC Ethernet modules are flooded on the configured Ethernet network. The IGMP multicast flood prevention option prevents the flooding of unregistered multicast. The IGMP multicast flood prevention setting is effective only when IGMP snooping is enabled for all or a subset of VLANs. When enabled, unregistered multicast traffic from uplinks is dropped and traffic from the server ports is redirected to the active uplink port. IGMP multicast flood prevention is disabled by default.
 
@@ -752,7 +752,7 @@ The IGMP multicast flood prevention option is supported only on the following in
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IgmpProxyReporting &lt;bool&gt;
+### -IgmpProxyReporting &lt;Bool&gt;
 
 IGMP snooping with proxy reporting or report suppression actively filters the IGMP packets reducing the load on the multicast router. The IGMP proxy reporting is effective only when IGMP snooping is enabled for all or a subset of VLANs. The IGMP proxy reporting is enabled by default.
 
@@ -772,7 +772,7 @@ You can enable or disable the IGMP proxy reporting configuration on the Logical 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IgmpSnoopingConsistencyChecking &lt;string&gt;
+### -IgmpSnoopingConsistencyChecking &lt;String&gt;
 
 Use to override the consistency checking for the policy.  Allowed values:
 

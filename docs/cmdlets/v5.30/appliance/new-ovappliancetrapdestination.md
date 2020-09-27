@@ -10,7 +10,7 @@ description: Create a new appliance SNMP trap destiation.
 New-OVApplianceTrapDestination
     [-Destination] <String>
     [-CommunityString] <String>
-    [-Port <int>]
+    [-Port <Int>]
     [-Type <String>]
     [-ApplianceConnection <Array>]
     [<CommonParameters>]
@@ -20,7 +20,7 @@ New-OVApplianceTrapDestination
 New-OVApplianceTrapDestination
     [-Destination] <String>
     [-SnmpV3User] <HPEOneView.Appliance.SnmpV3User>
-    [-Port <int>]
+    [-Port <Int>]
     [-Type <String>]
     [-ApplianceConnection <Array>]
     [<CommonParameters>]
@@ -96,7 +96,7 @@ IP Address or Hostname of the target SNMP trap reciever.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Port &lt;int&gt;
+### -Port &lt;Int&gt;
 
 Specify the alternate SNMP destination port.
 

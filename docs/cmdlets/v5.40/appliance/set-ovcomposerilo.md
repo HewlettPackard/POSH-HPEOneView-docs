@@ -9,14 +9,14 @@ description: Modify the existing HPE Synergy Composer2 iLO configuration.
 ```text
 Set-OVComposerIlo
     [-InputObject] <Object>
-    [-Username <string>]
-    [-Password <securestring>]
+    [-Username <String>]
+    [-Password <SecureString>]
     [-IPv4Address <IPAddress>]
     [-IPv4SubnetMask <String>]
     [-IPv4Gateway <IPAddress>]
     [-IPv4DnsServer <IPAddress[]>]
     [-IPv6Address <IPAddress>]
-    [-IPv6SubnetMask <string>]
+    [-IPv6SubnetMask <String>]
     [-IPv6Gateway <String>]
     [-IPv6DnsServer <IPAddress[]>]
     [-IloHostname <String>]
@@ -232,7 +232,7 @@ Use to optionally specify the default gateway for the new IPv6 address.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IPv6SubnetMask &lt;string&gt;
+### -IPv6SubnetMask &lt;String&gt;
 
 Use to optionally specify the default gateway for the new IPv6 address.  Can either be the full subnet mask in colon noted or CIDR format.
 
@@ -268,7 +268,7 @@ The object from `Get-OVComposerIloStatus`.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Password &lt;securestring&gt;
+### -Password &lt;SecureString&gt;
 
 Use to specify a new password for the configured iLO user account.
 
@@ -280,7 +280,7 @@ Use to specify a new password for the configured iLO user account.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Username &lt;string&gt;
+### -Username &lt;String&gt;
 
 Use to specify a new account name to configure.  The original account will be removed from the iLO.
 

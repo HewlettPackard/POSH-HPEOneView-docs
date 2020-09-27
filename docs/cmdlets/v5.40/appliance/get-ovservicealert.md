@@ -10,7 +10,7 @@ description: Generate report of HPE OneView Remote Support service events.
 Get-OVServiceAlert
     [-InputObject <Object>]
     [-State <String>]
-    [-Count <int>]
+    [-Count <Int>]
     [-TimeSpan <TimeSpan>]
     [-Start <DateTime>]
     [-End <DateTime>]
@@ -79,7 +79,7 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -Count &lt;int&gt;
+### -Count &lt;Int&gt;
 
 Specify the number of service alerts to return.
 

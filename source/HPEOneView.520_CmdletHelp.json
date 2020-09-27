@@ -10367,7 +10367,7 @@
         "Examples": [
           {
             "Title": "-------------------------- EXAMPLE 1 --------------------------",
-            "Code": "Get-HPOVComposerNode\n\nAppliance                              Name                       State Status Model            Version         Role\n---------                              ----                       ----- ------ -----            -------         ----\nzpo-s18r18s3-ov.vse.rdlabs.hpecorp.net CN75160607 appliance bay 1 OK    OK     Synergy Composer 3.00.00-0251673 Active\nzpo-s18r18s3-ov.vse.rdlabs.hpecorp.net CN75140CPW appliance bay 1 OK    OK     Synergy Composer 3.00.00-0251673 Standby",
+            "Code": "Get-HPOVComposerNode\n\nAppliance                              Name                       State Status Model            Version         Role\n---------                              ----                       ----- ------ -----            -------         ----\nzpo-s18r18s3-HPOV.vse.rdlabs.hpecorp.net CN75160607 appliance bay 1 OK    OK     Synergy Composer 3.00.00-0251673 Active\nzpo-s18r18s3-HPOV.vse.rdlabs.hpecorp.net CN75140CPW appliance bay 1 OK    OK     Synergy Composer 3.00.00-0251673 Standby",
             "Description": "Return all Synergy Composer nodes"
           }
         ],
@@ -22374,7 +22374,7 @@
           },
           {
             "Title": "-------------------------- EXAMPLE 2 --------------------------",
-            "Code": "# Get the specific Cluster Manager\n$ClusterManager = Get-HPOVHypervisorManager -Name ClusterManager1\n\n# Display the allowed distributed switch versions supported by the cluster manager\n$ClusterManager.AvailableDvsVersions\n\n4.0\n4.10\n5.0.0\n5.1.0\n5.5.0\n6.0\n6.7\n\n$ClusterPassword = Read-Host -Prompt \"Cluster password\" -AsSecureString\n\n# Get the server profile template the cluster will be created and derived from\n$ServerProfileTemplate = Get-HPOVServerProfileTemplate -Name \"Hypervisor Cluster Prod\"\n\n# Get a list of servers based on the SPT, that are available to deploy to\n$Servers = Get-HPOVServer -NoProfile -InputObject $ServerProfileTemplate -Count 4\n\n# Create new cluster profile overriding the cluster manager settings\nNew-HPOVClusterProfile -Name ProdCluster1 -ClusterPrefix ProdClusterNode- -ClusterManager $ClusterManager -ClusterManagerLocation \"DC2\" -ServerProfileTemplate $ServerProfileTemplate -ClusterPassword $ClusterPassword -Servers $Servers -OverrideClusterManagerConfig -VirtualSwitchType Distributed -DistributedSwitchUsage AllNetworks -DistributedSwitchVersion 6.0 -HAEnabled $true -DRSEnabled $false ",
+            "Code": "# Get the specific Cluster Manager\n$ClusterManager = Get-HPOVHypervisorManager -Name ClusterManager1\n\n# Display the allowed distributed switch versions supported by the cluster manager\n$ClusterManager.AvailableDvsVersions\n\n4.0\n4.10\n5.0.0\n5.1.0\n5.5.0\n6.0\n6.7\n\n$ClusterPassword = Read-Host -Prompt \"Cluster password\" -AsSecureString\n\n# Get the server profile template the cluster will be created and derived from\n$ServerProfileTemplate = Get-HPOVServerProfileTemplate -Name \"Hypervisor Cluster Prod\"\n\n# Get a list of servers based on the SPT, that are available to deploy to\n$Servers = Get-HPOVServer -NoProfile -InputObject $ServerProfileTemplate -Count 4\n\n# Create new cluster profile overriding the cluster manager settings\nNew-HPOVClusterProfile -Name ProdCluster1 -ClusterPrefix ProdClusterNode- -ClusterManager $ClusterManager -ClusterManagerLocation \"DC2\" -ServerProfileTemplate $ServerProfileTemplate -ClusterPassword $ClusterPassword -Servers $Servers -HPOVerrideClusterManagerConfig -VirtualSwitchType Distributed -DistributedSwitchUsage AllNetworks -DistributedSwitchVersion 6.0 -HAEnabled $true -DRSEnabled $false ",
             "Description": "Create a new cluster profile, overriding clsuter manager settings."
           }
         ],
@@ -29231,6 +29231,26 @@
             "SupportsWildcard": false,
             "DataType": "Hashtable",
             "Required": false
+          },
+          {
+            "Name": "IloSettings",
+            "Description": "",
+            "DataType": "psobject",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "ManageIloSettings",
+            "Description": "",
+            "DataType": "bool",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -29418,7 +29438,7 @@
             },
             {
               "Name": "AssignmentType",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Enclosure",
@@ -29446,7 +29466,7 @@
             },
             {
               "Name": "ServerHardwareType",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Firmware",
@@ -29478,15 +29498,15 @@
             },
             {
               "Name": "BiosSettings",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "BootMode",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "PxeBootPolicy",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "ManageBoot",
@@ -29494,7 +29514,7 @@
             },
             {
               "Name": "BootOrder",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "SecureBoot",
@@ -29509,32 +29529,40 @@
               "Required": false
             },
             {
+              "Name": "ManageIloSettings",
+              "Required": false
+            },
+            {
+              "Name": "IloSettings",
+              "Required": false
+            },
+            {
               "Name": "Affinity",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "MacAssignment",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "WwnAssignment",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "SnAssignment",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "SerialNumber",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Uuid",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "HideUnusedFlexNics",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "OSDeploymentPlan",
@@ -29558,7 +29586,7 @@
             },
             {
               "Name": "Passthru",
-              "Required": true
+              "Required": false
             }
           ],
           [
@@ -29568,11 +29596,11 @@
             },
             {
               "Name": "ServerProfileTemplate",
-              "Required": false
+              "Required": true
             },
             {
               "Name": "AssignmentType",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Enclosure",
@@ -29635,44 +29663,52 @@
               "Required": false
             },
             {
+              "Name": "ManageIloSettings",
+              "Required": false
+            },
+            {
+              "Name": "IloSettings",
+              "Required": false
+            },
+            {
               "Name": "MacAssignment",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "WwnAssignment",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "SnAssignment",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "SerialNumber",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Uuid",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "HideUnusedFlexNics",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "IscsiIPv4Address",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "ISCSIInitatorName",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "ChapSecret",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "MutualChapSecret",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "OSDeploymentPlan",
@@ -29696,7 +29732,7 @@
             },
             {
               "Name": "Passthru",
-              "Required": true
+              "Required": false
             }
           ],
           [
@@ -29706,7 +29742,7 @@
             },
             {
               "Name": "SANStorage",
-              "Required": false
+              "Required": true
             },
             {
               "Name": "HostOStype",
@@ -29718,7 +29754,7 @@
             },
             {
               "Name": "AssignmentType",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Enclosure",
@@ -29746,7 +29782,7 @@
             },
             {
               "Name": "ServerHardwareType",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Firmware",
@@ -29778,15 +29814,15 @@
             },
             {
               "Name": "BiosSettings",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "BootMode",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "PxeBootPolicy",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "ManageBoot",
@@ -29794,7 +29830,7 @@
             },
             {
               "Name": "BootOrder",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "SecureBoot",
@@ -29809,6 +29845,14 @@
               "Required": false
             },
             {
+              "Name": "ManageIloSettings",
+              "Required": false
+            },
+            {
+              "Name": "IloSettings",
+              "Required": false
+            },
+            {
               "Name": "EvenPathDisabled",
               "Required": false
             },
@@ -29818,31 +29862,31 @@
             },
             {
               "Name": "Affinity",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "MacAssignment",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "WwnAssignment",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "SnAssignment",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "SerialNumber",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Uuid",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "HideUnusedFlexNics",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "OSDeploymentPlan",
@@ -29866,13 +29910,13 @@
             },
             {
               "Name": "Passthru",
-              "Required": true
+              "Required": false
             }
           ],
           [
             {
               "Name": "Import",
-              "Required": false
+              "Required": true
             },
             {
               "Name": "ProfileObj",
@@ -29880,7 +29924,7 @@
             },
             {
               "Name": "AssignmentType",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Server",
@@ -32285,6 +32329,36 @@
             "SupportsWildcard": false,
             "DataType": "string",
             "Required": "False"
+          },
+          {
+            "Name": "IloSettings",
+            "Description": "",
+            "DataType": "psobject",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "IloSettingsConsistencyChecking",
+            "Description": "",
+            "DataType": "string",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "ManageIloSettings",
+            "Description": "",
+            "DataType": "bool",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -32478,6 +32552,18 @@
               "Required": false
             },
             {
+              "Name": "ManageIloSettings",
+              "Required": false
+            },
+            {
+              "Name": "IloSettings",
+              "Required": false
+            },
+            {
+              "Name": "IloSettingsConsistencyChecking",
+              "Required": false
+            },
+            {
               "Name": "Affinity",
               "Required": false
             },
@@ -32645,6 +32731,18 @@
             },
             {
               "Name": "StorageController",
+              "Required": false
+            },
+            {
+              "Name": "ManageIloSettings",
+              "Required": false
+            },
+            {
+              "Name": "IloSettings",
+              "Required": false
+            },
+            {
+              "Name": "IloSettingsConsistencyChecking",
               "Required": false
             },
             {
@@ -42115,8 +42213,8 @@
       "Name": "Reset-HPOVEnclosureDevice",
       "Category": "Servers",
       "Contents": {
-        "Synopsis": "Power reset or EFuse HPS Synergy Frame component.",
-        "Description": "This Cmdlet will assist Server Administrators in performing various power operations with enclosure resources.  The following resources are supported with their supported operation:\n\n    * HPE Synergy Appliance Bay - EFuse\n    * HPE Synergy Frame Link Module - EFuse or Resetn    * Device Bay - EFuse or Resetn    * HPE Synergy Fabric Module Device - EFuse",
+        "Synopsis": "Power reset or EFuse HPE Synergy Frame component.",
+        "Description": "This Cmdlet will assist server administrators in performing various power operations with HPE Synergy enclosure resources.  The following resources are supported with their supported operation:\n\n    * HPE Synergy Appliance Bay - EFuse\n    * HPE Synergy Frame Link Module - EFuse or Reset\n    * Device Bay - EFuse or Reset\n    * HPE Synergy Fabric Module Device - EFuse\n\nE-Fuse stands for Electronic Fuse. Setting the power state of a device to \"E-Fuse\" (or \"Reset\" for an Enclosure Manager) will reset the bay, but it will soon return to a normal running state.  An E-Fuse will turn off power to the bay and then turn it back on. If the bay was powered off before the E-Fuse operation it will be powered on afterwards. A \"Reset\" will do a hard reset of the bay without affecting the power. E-Fuse on a device bay will power-cycle the whole blade including the iLO. \n\nA reset on the active Synergy Frame Link Module causes a failover to the standby Synergy Frame Link Module. The reset will fail if the Synergy Frame Link Module's firmware is being updated. An E-Fuse against an active Synergy Frame Link Module is not allowed.\n\nMinimum required privileges: Infrastructure administrator, Server administrator",
         "Parameters": [
           {
             "Name": "Enclosure",
@@ -42229,8 +42327,18 @@
           },
           {
             "Title": "-------------------------- EXAMPLE 2 --------------------------",
+            "Code": "$Enclosure = Get-HPOVEnclosure -Name Enclosure1 -ErrorAction Stop\nReset-HPOVEnclosureDevice -Enclosure $Enclosure -Component ICM -DeviceID 3 -EFuse",
+            "Description": "Reset the ICM in interconnect bay 3 by performing an EFuse."
+          },
+          {
+            "Title": "-------------------------- EXAMPLE 3 --------------------------",
             "Code": "$Task = Get-HPOVEnclosure -Name Enclosure1 -ErrorAction Stop | Reset-HPOVEnclosureDevice -Component Device -DeviceID 4 -Reset",
             "Description": "Reset the device in bay 4 by requesting it to reset itself."
+          },
+          {
+            "Title": "-------------------------- EXAMPLE 4 --------------------------",
+            "Code": "$Task = Get-HPOVEnclosure -Name Enclosure1 -ErrorAction Stop | Reset-HPOVEnclosureDevice -Component Appliance -DeviceID 1 -EFuse",
+            "Description": "Reset the appliance device in bay 1 by performing an EFuse."
           }
         ],
         "RelatedLinks": [
@@ -59445,6 +59553,957 @@
           },
           {
             "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.20/appliance/set-hpovcomposerilo",
+            "Text": "Online: "
+          }
+        ]
+      }
+    },
+    {
+      "Name": "New-HPOVIloDirectoryGroup",
+      "Category": "Library",
+      "Contents": {
+        "Synopsis": "Create compliant iLO directory group object for server profile type resources.",
+        "Description": "iLO settings enable you to configure and manage the settings in HPE OneView instead of logging into the iLO to apply the needed settings. These settings are included when you move the profile to another server hardware instance. Use a server profile template if you want to maintain consistent management for a specific iLO setting across multiple iLO.\n\nThis Cmdlet will create and grant access to specific directory groups for the iLO on the server hardware that is associated with a server profile. When managed from HPE OneView, all the directory groups on the iLO are replaced when configuring the directory groups specified in the server profile.",
+        "Syntax": [
+          [
+            {
+              "Name": "GroupDN",
+              "Required": true
+            },
+            {
+              "Name": "GroupSID",
+              "Required": true
+            },
+            {
+              "Name": "AdministerUserAccounts",
+              "Required": false
+            },
+            {
+              "Name": "RemoteConsole",
+              "Required": false
+            },
+            {
+              "Name": "VirtualMedia",
+              "Required": false
+            },
+            {
+              "Name": "VirtualPowerAndReset",
+              "Required": false
+            },
+            {
+              "Name": "ConfigureIloSettings",
+              "Required": false
+            }
+          ]
+        ],
+        "Parameters": [
+          {
+            "Name": "AdministerUserAccounts",
+            "Description": "Group has the permission to add, edit, and delete local iLO user accounts.",
+            "DataType": "Bool",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "ConfigureIloSettings",
+            "Description": "Group has the permission to configure most iLO settings, including security settings, and to update the iLO firmware.",
+            "DataType": "Bool",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "GroupDN",
+            "Description": "The Distinguished Name (DN) of the group from the directory to be authorized for iLO access.",
+            "DataType": "String",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "GroupSID",
+            "Description": "The SID of the directory group to be authorized for iLO access.",
+            "DataType": "String",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "RemoteConsole",
+            "Description": "Group has the permission to access the iLO remote console.",
+            "DataType": "Bool",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "VirtualMedia",
+            "Description": "Group has the permission to use the Virtual Media features on the host system.",
+            "DataType": "Bool",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "VirtualPowerAndReset",
+            "Description": "Group has the permission to power-cycle or reset the host system.",
+            "DataType": "Bool",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          }
+        ],
+        "InputTypes": [
+          {
+            "Value": "None.  You cannot pipe objects to this cmdlet.",
+            "Text": null
+          }
+        ],
+        "ReturnValues": [
+          {
+            "Value": "System.Management.Automation.PSCustomObject",
+            "Text": "An iLO settings complient object for server profile resources.\n"
+          }
+        ],
+        "Examples": [
+          {
+            "Title": "-------------------------- EXAMPLE 1 --------------------------",
+            "Code": "$Group1 = New-HPOVIloDirectoryGroup -GroupDN \"dn=ilogroup1, ou=ou1, dc=domain, dc=com\" `\n                                  -GroupSID \"sid12345\" `\n                                  -AdministerUserAccounts `\n                                  -RemoteConsole `\n                                  -VirtualMedia `\n                                  -ConfigureIloSettings",
+            "Description": "Create a directory group, with the specific privileges."
+          }
+        ],
+        "RelatedLinks": [
+          {
+            "Uri": null,
+            "Text": "New-HPOVServerProfileIloPolicy"
+          },
+          {
+            "Uri": null,
+            "Text": "New-HPOVIloLocalUserAccount"
+          },
+          {
+            "Uri": null,
+            "Text": "New-HPOVServerProfile"
+          },
+          {
+            "Uri": null,
+            "Text": "New-HPOVServerProfileTemplate"
+          },
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v5.20/servers/new-HPOVilodirectorygroup",
+            "Text": "Online: "
+          }
+        ]
+      }
+    },
+    {
+      "Name": "New-HPOVIloLocalUserAccount",
+      "Category": "Servers",
+      "Contents": {
+        "Synopsis": "Create compliant local iLO account object for server profile type resources.",
+        "Description": "iLO settings enable you to configure and manage the settings in HPE OneView instead of logging into the iLO to apply the needed settings. These settings are included when you move the profile to another server hardware instance. Use a server profile template if you want to maintain consistent management for a specific iLO setting across multiple iLO.\n\nThis Cmdlet will allow you to create a new local account that can then be passed into the LocalAccounts parameter of New-HPOVServerProfileIloPolicy Cmdlet. When managed from HPE OneView, all the local accounts on the iLO are replaced when configuring the accounts specified in the server profile.",
+        "Syntax": [
+          [
+            {
+              "Name": "Username",
+              "Required": true
+            },
+            {
+              "Name": "Password",
+              "Required": true
+            },
+            {
+              "Name": "DisplayName",
+              "Required": false
+            },
+            {
+              "Name": "AdministerUserAccounts",
+              "Required": false
+            },
+            {
+              "Name": "RemoteConsole",
+              "Required": false
+            },
+            {
+              "Name": "VirtualMedia",
+              "Required": false
+            },
+            {
+              "Name": "VirtualPowerAndReset",
+              "Required": false
+            },
+            {
+              "Name": "ConfigureIloSettings",
+              "Required": false
+            }
+          ],
+          [
+            {
+              "Name": "Username",
+              "Required": true
+            },
+            {
+              "Name": "Password",
+              "Required": true
+            },
+            {
+              "Name": "DisplayName",
+              "Required": false
+            },
+            {
+              "Name": "AdministerUserAccounts",
+              "Required": false
+            },
+            {
+              "Name": "RemoteConsole",
+              "Required": false
+            },
+            {
+              "Name": "VirtualMedia",
+              "Required": false
+            },
+            {
+              "Name": "VirtualPowerAndReset",
+              "Required": false
+            },
+            {
+              "Name": "ConfigureIloSettings",
+              "Required": false
+            },
+            {
+              "Name": "Login",
+              "Required": false
+            },
+            {
+              "Name": "HostBIOS",
+              "Required": false
+            },
+            {
+              "Name": "HostNIC",
+              "Required": false
+            },
+            {
+              "Name": "HostStorage",
+              "Required": false
+            }
+          ]
+        ],
+        "Parameters": [
+          {
+            "Name": "AdministerUserAccounts",
+            "Description": "User has the permission to add, edit, and delete local iLO user accounts.",
+            "DataType": "Bool",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "ConfigureIloSettings",
+            "Description": "User has the permission to configure most iLO settings, including security settings, and to update the iLO firmware.",
+            "DataType": "Bool",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "DisplayName",
+            "Description": "Optional display name of the user account.",
+            "DataType": "String",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "HostBIOS",
+            "Description": "User has the permission to change host system BIOS configuration.  This permission is specific to iLO5-based systems.",
+            "DataType": "Bool",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "HostNIC",
+            "Description": "User has the permission to change host system NIC configuration.  This permission is specific to iLO5-based systems.",
+            "DataType": "Bool",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "HostStorage",
+            "Description": "User has the permission to change host system storage configuration.  This permission is specific to iLO5-based systems.",
+            "DataType": "Bool",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Login",
+            "Description": "User has the permission to log into the iLO.  This permission is specific to iLO5-based systems.",
+            "DataType": "Bool",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Password",
+            "Description": "The securestring object of the user account password to set.",
+            "DataType": "SecureString",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "RemoteConsole",
+            "Description": "User has the permission to access the iLO remote console.",
+            "DataType": "Bool",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Username",
+            "Description": "The username of the account that will be created.",
+            "DataType": "String",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "VirtualMedia",
+            "Description": "User has the permission to use the Virtual Media features on the host system.",
+            "DataType": "Bool",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "VirtualPowerAndReset",
+            "Description": "User has the permission to power-cycle or reset the host system.",
+            "DataType": "Bool",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          }
+        ],
+        "InputTypes": [
+          {
+            "Value": "None.  You cannot pipe objects to this cmdlet.",
+            "Text": null
+          }
+        ],
+        "ReturnValues": [
+          {
+            "Value": "System.Management.Automation.PSCustomObject",
+            "Text": "An iLO settings complient object for server profile resources.\n"
+          }
+        ],
+        "Examples": [
+          {
+            "Title": "-------------------------- EXAMPLE 1 --------------------------",
+            "Code": "New-HPOVIloLocalUserAccount -Username \"localuser1\" `\n                          -Password (Read-Host \"localuser1 password\" -AsSecureString) `\n                          -DisplayName \"localuser1\" `\n                          -AdministerUserAccounts `\n                          -RemoteConsole `\n                          -VirtualMedia `\n                          -VirtualPowerAndReset `\n                          -ConfigureIloSettings",
+            "Description": "Create an iLO user account specific to iLO4, or does not include the additional iLO5 permissions."
+          },
+          {
+            "Title": "-------------------------- EXAMPLE 2 --------------------------",
+            "Code": "New-HPOVIloLocalUserAccount -Username \"localuser1\" `\n                          -Password (Read-Host \"localuser1 password\" -AsSecureString) `\n                          -DisplayName \"localuser1\" `\n                          -AdministerUserAccounts `\n                          -RemoteConsole `\n                          -VirtualMedia `\n                          -VirtualPowerAndReset `\n                          -ConfigureIloSettings `\n                          -Login `\n                          -HostBIOS `\n                          -HostNIC `\n                          -HostStorage",
+            "Description": "Create an iLO user account that includes iLO5 permissions."
+          }
+        ],
+        "RelatedLinks": [
+          {
+            "Uri": null,
+            "Text": "New-HPOVServerProfileIloPolicy"
+          },
+          {
+            "Uri": null,
+            "Text": "New-HPOVIloDirectoryGroup"
+          },
+          {
+            "Uri": null,
+            "Text": "New-HPOVServerProfile"
+          },
+          {
+            "Uri": null,
+            "Text": "New-HPOVServerProfileTemplate"
+          },
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v5.20/servers/new-HPOVilolocaluseraccount",
+            "Text": "Online: "
+          }
+        ]
+      }
+    },
+    {
+      "Name": "New-HPOVServerProfileIloPolicy",
+      "Category": "Servers",
+      "Contents": {
+        "Synopsis": "Create compliant iLO settings object for server profile type resources.",
+        "Description": "iLO settings enable you to configure and manage the settings in HPE OneView instead of logging into the iLO to apply the needed settings. These settings are included when you move the profile to another server hardware instance. Use a server profile template if you want to maintain consistent management for a specific iLO setting across multiple iLO.\n\nUsing this Cmdlet will help create a compliant iLO settings object for either a server profile template or server profile resource.\n\nManage administrator account\nConfigure the password of the predefined iLO administrator account or delete the account.\n\nManage local accounts\nConfigure and manage the local accounts. When managed from HPE OneView, all the local accounts on the iLO are replaced when configuring the accounts specified in the server profile.  Use New-HPOVIloLocalUserAccount helper Cmdlet to create a compliant object.\n\nManage iLO Hostname\nConfigure the iLO subsystem name (hostname). When the iLO networking is configured to use DHCP, the iLO subsystem name will be used as the DNS name for the iLO.\n\nWhen the Manage iLO Hostname setting is enabled for a server profile, the hostname applied to the iLO is determined by replacing any serverProfileName token present with the name of server profile. The resulting hostname must match the limitations of a hostname (A-Z, a-z, 0-9, and dash). When applied to the server hardware, the iLO is reset to apply the new networking configuration. When the server profile is unassigned or the Manage iLO hostname setting is disabled, the iLO hostname is reverted to the factory default, which is, ΓÇ£iLO + Server Physical Serial NumberΓÇ¥.\n\nManage directory configuration\nConfigure the iLO directory (Active Directory, LDAP, or Kerberos) to enable single sign-on.\n\nManage directory groups\nGrant access to specific directory groups for the iLO on the server hardware that is associated with the profile. When managed from HPE OneView, all the directory groups on the iLO are replaced when configuring the directory groups specified in the server profile.  Use New-HPOVIloDirectoryGroup helper Cmdlet to create a compliant object.\n\nManage key manager\nConfigure the iLO key manager for data at rest secure encryption.\n\nPlanning for iLOdirectory configuration and key management\n\nHewlett Packard Enterprise recommends that you plan your iLOdirectory configuration and key management in advance, and test on an iLO in the iLO interface. Confirm that the configuration is correct before configuring the iLO directory and key manager in HPE OneView using the tested settings.\n\nFor more information, see the HPE iLO User Guide (http://www.hpe.com/support/ilo-docs).",
+        "Syntax": [
+          [
+            {
+              "Name": "ManageLocalAdministratorAccount",
+              "Required": false
+            },
+            {
+              "Name": "LocalAdministratorPassword",
+              "Required": false
+            },
+            {
+              "Name": "RemoveLocalAdministratorAccount",
+              "Required": false
+            },
+            {
+              "Name": "ManageLocalAccounts",
+              "Required": false
+            },
+            {
+              "Name": "LocalAccounts",
+              "Required": false
+            },
+            {
+              "Name": "ManageDirectoryConfiguration",
+              "Required": false
+            },
+            {
+              "Name": "LdapSchema",
+              "Required": false
+            },
+            {
+              "Name": "GenericLDAP",
+              "Required": false
+            },
+            {
+              "Name": "LOMObjectDistinguishedName",
+              "Required": false
+            },
+            {
+              "Name": "IloObjectPassword",
+              "Required": false
+            },
+            {
+              "Name": "DirectoryServerAddress",
+              "Required": false
+            },
+            {
+              "Name": "DirectoryServerPort",
+              "Required": false
+            },
+            {
+              "Name": "DirectoryServerCertificate",
+              "Required": false
+            },
+            {
+              "Name": "DirectoryServerCertificateBase64",
+              "Required": false
+            },
+            {
+              "Name": "DirectoryUserContext",
+              "Required": false
+            },
+            {
+              "Name": "EnableKerberosAuthentication",
+              "Required": false
+            },
+            {
+              "Name": "KerberosRealm",
+              "Required": false
+            },
+            {
+              "Name": "KerberosKDCServerAddress",
+              "Required": false
+            },
+            {
+              "Name": "KerberosKDCServerPort",
+              "Required": false
+            },
+            {
+              "Name": "KerbersKeyTabFile",
+              "Required": false
+            },
+            {
+              "Name": "ManageDirectoryGroups",
+              "Required": false
+            },
+            {
+              "Name": "DirectoryGroups",
+              "Required": false
+            },
+            {
+              "Name": "ManageIloHostname",
+              "Required": false
+            },
+            {
+              "Name": "IloHostname",
+              "Required": false
+            },
+            {
+              "Name": "ManageKeyManager",
+              "Required": false
+            },
+            {
+              "Name": "PrimaryKeyServerAddress",
+              "Required": false
+            },
+            {
+              "Name": "PrimaryKeyServerPort",
+              "Required": false
+            },
+            {
+              "Name": "SecondaryKeyServerAddress",
+              "Required": false
+            },
+            {
+              "Name": "SecondaryKeyServerPort",
+              "Required": false
+            },
+            {
+              "Name": "RedundancyRequired",
+              "Required": false
+            },
+            {
+              "Name": "KeymanagerGroupName",
+              "Required": false
+            },
+            {
+              "Name": "KeymanagerLocalCertificateName",
+              "Required": false
+            },
+            {
+              "Name": "KeymanagerLoginName",
+              "Required": false
+            },
+            {
+              "Name": "KeymanagerPassword",
+              "Required": false
+            }
+          ]
+        ],
+        "Parameters": [
+          {
+            "Name": "DirectoryGroups",
+            "Description": "A collection of 1 or more directory groups created from New-HPOVIloDirectoryGroup helper Cmdlet.",
+            "DataType": "Object",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "DirectoryServerAddress",
+            "Description": "Specifies the network DNS name or IP address of the directory server. The directory server address can be up to 127 characters.",
+            "DataType": "String",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "DirectoryServerCertificate",
+            "Description": "Specifies a CA certificate to authenticate the directory server.  The relative path and file name of the PEM Base64 string format file of the certificate to be used.  Omit if the certificate has already been added to the appliance trust store.",
+            "DataType": "FileInfo",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "DirectoryServerCertificateBase64",
+            "Description": "Specifies a CA certificate to authenticate the directory server.  The PEM Base64 string format of the certificate to be used.  Omit if the certificate has already been added to the appliance trust store.",
+            "DataType": "String[]",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "DirectoryServerPort",
+            "Description": "Specifies the port number for the secure LDAP service on the server. The default value is 636. If your directory service is configured to use a different port, you can specify a different value. Make sure that you enter a secured LDAP port. iLO cannot connect to an unsecured LDAP port.",
+            "DataType": "Int",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "DirectoryUserContext",
+            "Description": "A common directory sub-context to be searched such that users do not need to enter their full DNs at login.",
+            "DataType": "String[]",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "EnableKerberosAuthentication",
+            "Description": "Enables Kerberos login. When Kerberos login is enabled and configured correctly, the Zero Sign In button appears on the iLO login page.  Kerberos configuration is independent of the LdapSchema chosen.",
+            "DataType": "Bool",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "GenericLDAP",
+            "Description": "Use the OpenLDAP supported BIND method.  Only supported when LdapSchema is DirectoryDefault.",
+            "DataType": "Bool",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "IloHostname",
+            "Description": "The iLO subsystem name (hostname). This cannot include the domain name. Used as the base hostname when the iLO is configured to use DHCP.",
+            "DataType": "String",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "IloObjectPassword",
+            "Description": "Specifies the password for the CAC LDAP service account when CAC/Smartcard authentication is configured and used with the schema-free directory option. User search contexts are not applied to the iLO object DN when iLO accesses the directory server.",
+            "DataType": "SecureString",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "KerberosKDCServerAddress",
+            "Description": "The IP address or DNS name of the KDC server. This value can be up to 128 characters. Each realm must have at least one Key Distribution Center (KDC) that contains an authentication server and a ticket grant server. These servers can be combined.",
+            "DataType": "String",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "KerberosKDCServerPort",
+            "Description": "The TCP or UDP port number on which the KDC is listening. The default value is 88.",
+            "DataType": "Int",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "KerberosRealm",
+            "Description": "The name of the Kerberos realm in which the iLO processor operates. This value can be up to 128 characters. The realm name is usually the DNS name converted to uppercase letters. Realm names are case-sensitive.",
+            "DataType": "String",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "KerbersKeyTabFile",
+            "Description": "An encoded binary file that contains pairs of service principal names and encrypted passwords. In the Windows environment, you use the ktpass utility to generate the keytab file. The components of the service principal name stored in the Kerberos keytab file are case sensitive. The primary (service type) must be in upper case (HTTP). The instance (iLO hostname) must be in lower case (e.g., iloexample.example.net). The realm name must be in upper case (e.g., EXAMPLE.NET). The REST encoding of this argument is a Base64-encoded Kerberos Keytab file as a string.",
+            "DataType": "FileInfo",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "KeymanagerGroupName",
+            "Description": "The Local Group created on the key manager for use with iLO user accounts and the keys iLO imports into the key manager.",
+            "DataType": "String",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "KeymanagerLocalCertificateName",
+            "Description": "The optional name of the local certificate authority certificate on the key manager. It is typically named Local CA.",
+            "DataType": "String",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "KeymanagerLoginName",
+            "Description": "The Local User name with administrator permissions that is configured on the key manager. The deployment user account must be created before you add key manager configuration details in iLO.",
+            "DataType": "String",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "KeymanagerPassword",
+            "Description": "The password for the Local User name with administrator permissions that is configured on the key manager.",
+            "DataType": "SecureString",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "LOMObjectDistinguishedName",
+            "Description": "Specifies the CAC LDAP service account when CAC/Smartcard authentication is configured and used with the schema-free directory option. User search contexts are not applied to the iLO object DN when iLO accesses the directory server.",
+            "DataType": "String",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "LdapSchema",
+            "Description": "Enable use of a directory service for iLO user authorization.\n\nAllowed values:\n\n\t* Disabled\n\t* DirectoryDefaulr\n\t* HPEExtended",
+            "DataType": "String",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "LocalAccounts",
+            "Description": "A collection of 1 or more local accounts created from New-HPOVIloLocalUserAccount helper Cmdlet.",
+            "DataType": "Object",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "LocalAdministratorPassword",
+            "Description": "The password to set for the local administrator account.",
+            "DataType": "SecureString",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "ManageDirectoryConfiguration",
+            "Description": "The iLO directory configuration (Active Directory, LDAP, or Kerberos) is managed via the profile.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "ManageDirectoryGroups",
+            "Description": "Replace all directory groups providing iLO management permissions.  If you omit the DirectoryGroups parameter, all configured directory groups that exist on the iLO will be removed.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "ManageIloHostname",
+            "Description": "The iLO hostname will be managed via the profile.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "ManageKeyManager",
+            "Description": "The iLO Key Manager (e.g. ESKM) configuration will be managed via the profile.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "ManageLocalAccounts",
+            "Description": "Replace all local iLO accounts beyond Administrator.  If you omit the LocalAccount parameter, all existing local accounts will be removed, except the build-in local Administrator and the configured _HPOneViewAdmin privileged accounts.  The local Administrator account can be removed using the RemoveLocalAdministratorAccount, but you then risk locking everyone from accessing the iLO.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "ManageLocalAdministratorAccount",
+            "Description": "The iLO Administrator account will be managed via the profile.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "PrimaryKeyServerAddress",
+            "Description": "The primary key server hostname, IP address, or FQDN. This string can be up to 79 characters long.",
+            "DataType": "String",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "PrimaryKeyServerPort",
+            "Description": "The primary key server port.  The default is 9000.",
+            "DataType": "Int",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "RedundancyRequired",
+            "Description": "If enabled, both a primary and secondary key server must be specified and will be validated by the iLO.",
+            "DataType": "Bool",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "RemoveLocalAdministratorAccount",
+            "Description": "Delete the account named Administrator from the iLO.  \r\rWARNING: The iLO account named Administrator will be deleted when the profile is applied and cannot later be restored by OneView with the original permissions. The 'Administrative Recovery Set' privilege can only be restored via an iLO factory reset operation.",
+            "DataType": "Bool",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "SecondaryKeyServerAddress",
+            "Description": "The secondary key server hostname, IP address, or FQDN. This string can be up to 79 characters long.",
+            "DataType": "String",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "SecondaryKeyServerPort",
+            "Description": "The secondary key server port.  The default is 9000.",
+            "DataType": "Int",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          }
+        ],
+        "InputTypes": [
+          {
+            "Value": "None.  You cannot pipe objects to this cmdlet.",
+            "Text": null
+          }
+        ],
+        "ReturnValues": [
+          {
+            "Value": "System.Management.Automation.PSCustomObject",
+            "Text": "An iLO settings complient object for server profile resources.\n"
+          }
+        ],
+        "Examples": [
+          {
+            "Title": "-------------------------- EXAMPLE 1 --------------------------",
+            "Code": "$AdministratorPasswordSecureString = Read-Host \"Administrator password\" -AsSecureString\n\n# Create iLO settings policy for server profile\nNew-HPOVServerProfileIloPolicy -ManageLocalAdministratorAccount `\n                             -LocalAdministratorPassword $AdministratorPasswordSecureString `\n                             -ManageIloHostname `\n                             -IloHostname \"{serverProfileName}-prod-ilo\"",
+            "Description": "Create a server profile compliant iLO settings policy by setting the local administrator password to the prompted value, and set the iLO hostname."
+          },
+          {
+            "Title": "-------------------------- EXAMPLE 2 --------------------------",
+            "Code": "# Create account1 object\n$Account1 = New-HPOVIloLocalUserAccount -Username \"localuser1\" `\n                                      -Password (Read-Host \"localuser1 password\" -AsSecureString) `\n                                      -DisplayName \"localuser1\" `\n                                      -AdministerUserAccounts `\n                                      -RemoteConsole `\n                                      -VirtualMedia `\n                                      -VirtualPowerAndReset `\n                                      -ConfigureIloSettings `\n                                      -Login `\n                                      -HostBIOS `\n                                      -HostNIC `\n                                      -HostStorage\n\n# Create account2 object\n$Account2 = New-HPOVIloLocalUserAccount -Username \"localuser2\" `\n                                      -Password (Read-Host \"localuser1 password\" -AsSecureString) `\n                                      -DisplayName \"localuser2\" `\n                                      -RemoteConsole `\n                                      -VirtualMedia `\n                                      -VirtualPowerAndReset `\n                                      -Login `\n                                      -HostBIOS `\n                                      -HostNIC `\n                                      -HostStorage\n\n# Create group1 object\n$Group1 = New-HPOVIloDirectoryGroup -GroupDN \"dn=ilogroup1, ou=ou1, dc=domain, dc=com\" `\n                                  -GroupSID \"sid12345\" `\n                                  -AdministerUserAccounts `\n                                  -RemoteConsole `\n                                  -VirtualMedia `\n                                  -ConfigureIloSettings\n\n# Create group2 object\n$Group2 = New-HPOVIloDirectoryGroup -GroupDN \"dn=opsgroup, ou=ou1, dc=domain,d c=com\" `\n                                  -GroupSID \"sid67890\" `\n                                  -RemoteConsole `\n                                  -VirtualMedia \n\n# Create iLO settings policy for server profile\nNew-HPOVServerProfileIloPolicy -ManageLocalAdministratorAccount `\n                             -LocalAdministratorPassword $AdministratorPasswordSecureString `\n                             -ManageLocalAccounts `\n                             -LocalAccounts $Account1, $Account2 `\n                             -ManageDirectoryConfiguration `\n                             -LdapSchema DirectoryDefault `\n                             -LOMObjectDistinguishedName \"dn=lomobject, ou=OU1, dc=domain, dc=com\" `\n                             -DirectoryServerAddress \"ldap.domain.com\" `\n                             -DirectoryUserContext 'ou=OU1, dc=domain, dc=com', 'ou=OU2, dc=domain, dc=com', 'ou=OU3, dc=domain, dc=com' `\n                             -ManageDirectoryGroups `\n                             -DirectoryGroups $Group1, $Group2 `\n                             -ManageIloHostname `\n                             -IloHostname \"{serverProfileName}-prod-ilo\"",
+            "Description": "Create a server profile compliant iLO settings policy, by managing the local administrator account, adding the specified local accounts, directory authentication and directory groups, and iLO hostname."
+          }
+        ],
+        "RelatedLinks": [
+          {
+            "Uri": null,
+            "Text": "New-HPOVIloLocalUserAccount"
+          },
+          {
+            "Uri": null,
+            "Text": "New-HPOVIloDirectoryGroup"
+          },
+          {
+            "Uri": null,
+            "Text": "New-HPOVServerProfile"
+          },
+          {
+            "Uri": null,
+            "Text": "New-HPOVServerProfileTemplate"
+          },
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v5.20/servers/new-HPOVserverprofileilopolicy",
             "Text": "Online: "
           }
         ]

@@ -37,9 +37,9 @@ Once the appliance is configured, it cannot be unauthorized or disabled.
 Use this Cmdlet to get the configured Remote Support contacts defined on the appliance.
 
 {% hint style="info" %}
-Minimum required privileges: Read
+Minimum required privileges: Read-only
 {% endhint %}
--only
+
 ## Examples
 
 ###  Example 1 

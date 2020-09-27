@@ -8,7 +8,7 @@ description: Get defined logical JBODs.
 
 ```text
 Get-OVLogicalJBOD
-    [-Name] <string>
+    [-Name] <String>
     [-Scope <Object>]
     [-Label <String>]
     [-ApplianceConnection <Object>]
@@ -59,7 +59,7 @@ Specify the label associated with resources.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Name &lt;string&gt;
+### -Name &lt;String&gt;
 
 Specify to filter resources by the specific name or wildcard search.
 

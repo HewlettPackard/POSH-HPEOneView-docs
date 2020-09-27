@@ -27,9 +27,9 @@ Interconnects enable communication between the server hardware in the enclosure 
 This Cmdlet will retrieve a list of supported SAS interconnect type or specific ones via a query if the name parameter is provided. 
 
 {% hint style="info" %}
-Minimum required privileges: Read
+Minimum required privileges: Read-only
 {% endhint %}
--only
+
 ## Examples
 
 ###  Example 1 

@@ -8,7 +8,7 @@ description: Default content
 
 ```text
 Show-OVHypervisorCluster
-    [-Name] <string>
+    [-Name] <String>
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
@@ -41,7 +41,7 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Name &lt;string&gt;
+### -Name &lt;String&gt;
 
 
 

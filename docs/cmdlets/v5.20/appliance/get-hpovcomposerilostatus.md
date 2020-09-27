@@ -58,9 +58,9 @@ The iLO user account is assigned a predefined set of privileges that allows the 
 Use this Cmdlet to retrieve the iLO configuration of the support HPE Synergy Composer.  This will return an object detailing if the iLO is remotely accessible, configured iLO username and configured IP address(es).  The object will not contain the configued iLO username's password.
 
 {% hint style="info" %}
-Minimum required privileges: Read
+Minimum required privileges: Read-only
+
 {% endhint %}
--only
 
 ## Examples
 

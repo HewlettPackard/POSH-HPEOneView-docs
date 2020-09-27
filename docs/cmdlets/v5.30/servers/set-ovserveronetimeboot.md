@@ -9,7 +9,7 @@ description: Modify a servers current One Time Boot setting.
 ```text
 Set-OVServerOneTimeBoot
     [-InputObject] <Object>
-    [-Setting] <string>
+    [-Setting] <String>
     [-ApplianceConnection <Object>]
     [-PowerOn]
     [<CommonParameters>]
@@ -111,7 +111,7 @@ If the server is already powered off, instruct OneView to power on the server on
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Setting &lt;string&gt;
+### -Setting &lt;String&gt;
 
 The intended one time boot setting.  Allowed values:
 

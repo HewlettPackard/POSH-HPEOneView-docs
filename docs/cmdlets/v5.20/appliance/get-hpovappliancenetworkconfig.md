@@ -23,9 +23,9 @@ Any time the IP address or hostname of the appliance changes, any CA-signed appl
 
 
 {% hint style="info" %}
-Minimum required privileges: Read
+Minimum required privileges: Read-only
 {% endhint %}
--only
+
 ## Examples
 
 ###  Example 1 

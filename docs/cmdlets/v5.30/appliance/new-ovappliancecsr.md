@@ -23,7 +23,7 @@ New-OVApplianceCsr
     [-DNQualifier] <String>
     [-ChallengePassword] <String>
     [-UnstructuredName] <String>
-    [-CnsaCompliantRequest <bool>]
+    [-CnsaCompliantRequest <Bool>]
     [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
@@ -238,7 +238,7 @@ Defined by the certificate authority, and may contain up to 64 characters.  Cons
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -CnsaCompliantRequest &lt;bool&gt;
+### -CnsaCompliantRequest &lt;Bool&gt;
 
 Specify to create a CNSA compliant certificate request.  By default the certificate request will create a 2048bit key length, while CNSA compliant will create a 3072bit key length.
 

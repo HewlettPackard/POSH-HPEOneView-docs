@@ -9,9 +9,9 @@ description: Modify remote Syslog audit log forwarding.
 ```text
 Set-OVApplianceAuditLogForwarding
     [-Enable]
-    [-ComputerName] <string[]>
-    [-Port <int>]
-    [-RemoveComputerName <string[]>]
+    [-ComputerName] <String[]>
+    [-Port <Int>]
+    [-RemoveComputerName <String[]>]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
@@ -79,7 +79,7 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ComputerName &lt;string[]&gt;
+### -ComputerName &lt;String[]&gt;
 
 The target remote Syslog server IP Address or FQDN.
 
@@ -91,7 +91,7 @@ The target remote Syslog server IP Address or FQDN.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Port &lt;int&gt;
+### -Port &lt;Int&gt;
 
 The target remote Syslog server port if not using the default 514/UDP port.
 
@@ -103,7 +103,7 @@ The target remote Syslog server port if not using the default 514/UDP port.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -RemoveComputerName &lt;string[]&gt;
+### -RemoveComputerName &lt;String[]&gt;
 
 Specify one or more remote Syslog server IP Address or FQDN to remove from the configuration.
 

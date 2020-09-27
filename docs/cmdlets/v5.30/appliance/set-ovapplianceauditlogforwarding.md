@@ -10,7 +10,7 @@ description: Modify remote Syslog audit log forwarding.
 Set-OVApplianceAuditLogForwarding
     [-Enable]
     [-ComputerName] <string[]>
-    [-Port <int>]
+    [-Port <Int>]
     [-RemoveComputerName <string[]>]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -91,7 +91,7 @@ The target remote Syslog server IP Address or FQDN.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Port &lt;int&gt;
+### -Port &lt;Int&gt;
 
 The target remote Syslog server port if not using the default 514/UDP port.
 
