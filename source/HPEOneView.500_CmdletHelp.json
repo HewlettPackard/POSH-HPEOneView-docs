@@ -28426,6 +28426,26 @@
             "Aliases": "None",
             "PipelineInput": "false",
             "SupportsWildcard": false
+          },
+          {
+            "Name": "IloSettings",
+            "Description": "Provide an iLO settings object from New-OVServerProfileIloPolicy Cmdlet.",
+            "DataType": "PSObject",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "ManageIloSettings",
+            "Description": "Use to indicate iLO settings will be managed from the server profile.",
+            "DataType": "Bool",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -28605,7 +28625,7 @@
             },
             {
               "Name": "AssignmentType",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Enclosure",
@@ -28633,7 +28653,7 @@
             },
             {
               "Name": "ServerHardwareType",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Firmware",
@@ -28665,15 +28685,15 @@
             },
             {
               "Name": "BiosSettings",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "BootMode",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "PxeBootPolicy",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "ManageBoot",
@@ -28681,7 +28701,7 @@
             },
             {
               "Name": "BootOrder",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "SecureBoot",
@@ -28696,32 +28716,40 @@
               "Required": false
             },
             {
+              "Name": "ManageIloSettings",
+              "Required": false
+            },
+            {
+              "Name": "IloSettings",
+              "Required": false
+            },
+            {
               "Name": "Affinity",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "MacAssignment",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "WwnAssignment",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "SnAssignment",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "SerialNumber",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Uuid",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "HideUnusedFlexNics",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "OSDeploymentPlan",
@@ -28745,7 +28773,7 @@
             },
             {
               "Name": "Passthru",
-              "Required": true
+              "Required": false
             }
           ],
           [
@@ -28755,11 +28783,11 @@
             },
             {
               "Name": "ServerProfileTemplate",
-              "Required": false
+              "Required": true
             },
             {
               "Name": "AssignmentType",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Enclosure",
@@ -28822,44 +28850,52 @@
               "Required": false
             },
             {
+              "Name": "ManageIloSettings",
+              "Required": false
+            },
+            {
+              "Name": "IloSettings",
+              "Required": false
+            },
+            {
               "Name": "MacAssignment",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "WwnAssignment",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "SnAssignment",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "SerialNumber",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Uuid",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "HideUnusedFlexNics",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "IscsiIPv4Address",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "ISCSIInitatorName",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "ChapSecret",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "MutualChapSecret",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "OSDeploymentPlan",
@@ -28883,7 +28919,7 @@
             },
             {
               "Name": "Passthru",
-              "Required": true
+              "Required": false
             }
           ],
           [
@@ -28893,7 +28929,7 @@
             },
             {
               "Name": "SANStorage",
-              "Required": false
+              "Required": true
             },
             {
               "Name": "HostOStype",
@@ -28905,7 +28941,7 @@
             },
             {
               "Name": "AssignmentType",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Enclosure",
@@ -28933,7 +28969,7 @@
             },
             {
               "Name": "ServerHardwareType",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Firmware",
@@ -28965,15 +29001,15 @@
             },
             {
               "Name": "BiosSettings",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "BootMode",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "PxeBootPolicy",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "ManageBoot",
@@ -28981,7 +29017,7 @@
             },
             {
               "Name": "BootOrder",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "SecureBoot",
@@ -28996,6 +29032,14 @@
               "Required": false
             },
             {
+              "Name": "ManageIloSettings",
+              "Required": false
+            },
+            {
+              "Name": "IloSettings",
+              "Required": false
+            },
+            {
               "Name": "EvenPathDisabled",
               "Required": false
             },
@@ -29005,31 +29049,31 @@
             },
             {
               "Name": "Affinity",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "MacAssignment",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "WwnAssignment",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "SnAssignment",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "SerialNumber",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Uuid",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "HideUnusedFlexNics",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "OSDeploymentPlan",
@@ -29053,13 +29097,13 @@
             },
             {
               "Name": "Passthru",
-              "Required": true
+              "Required": false
             }
           ],
           [
             {
               "Name": "Import",
-              "Required": false
+              "Required": true
             },
             {
               "Name": "ProfileObj",
@@ -29067,7 +29111,7 @@
             },
             {
               "Name": "AssignmentType",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Server",
@@ -31468,6 +31512,36 @@
             "Aliases": "",
             "PipelineInput": "false",
             "SupportsWildcard": false
+          },
+          {
+            "Name": "IloSettings",
+            "Description": "Provide an iLO settings object from New-OVServerProfileIloPolicy Cmdlet.",
+            "DataType": "PSObject",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "IloSettingsConsistencyChecking",
+            "Description": "Use to override the consistency checking for the policy.  Allowed values:\n\n    * Exact\n    * None",
+            "DataType": "String",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "ManageIloSettings",
+            "Description": "Use to indicate iLO settings will be managed from the server profile.",
+            "DataType": "Bool",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -31657,6 +31731,18 @@
               "Required": false
             },
             {
+              "Name": "ManageIloSettings",
+              "Required": false
+            },
+            {
+              "Name": "IloSettings",
+              "Required": false
+            },
+            {
+              "Name": "IloSettingsConsistencyChecking",
+              "Required": false
+            },
+            {
               "Name": "Affinity",
               "Required": false
             },
@@ -31824,6 +31910,18 @@
             },
             {
               "Name": "StorageController",
+              "Required": false
+            },
+            {
+              "Name": "ManageIloSettings",
+              "Required": false
+            },
+            {
+              "Name": "IloSettings",
+              "Required": false
+            },
+            {
+              "Name": "IloSettingsConsistencyChecking",
               "Required": false
             },
             {
@@ -56276,8 +56374,8 @@
         ],
         "InputTypes": [
           {
-              "Value":  "None.  You cannot pipe objects to this cmdlet.",
-              "Text":  null
+            "Value": "None.  You cannot pipe objects to this cmdlet.",
+            "Text": null
           }
         ],
         "ReturnValues": [

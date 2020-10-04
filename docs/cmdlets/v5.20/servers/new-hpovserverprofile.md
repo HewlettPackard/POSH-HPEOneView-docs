@@ -9,14 +9,14 @@ description: Create or Import a Server Profile
 ```text
 New-HPOVServerProfile
     [-Name] <String>
-    [-AssignmentType] <String>
+    [-AssignmentType <String>]
     [-Enclosure <Object>]
     [-EnclosureBay <Int32>]
     [-Server <Object>]
     [-Description <String>]
     [-Connections <Array>]
     [-EnclosureGroup <Object>]
-    [-ServerHardwareType] <Object>
+    [-ServerHardwareType <Object>]
     [-Firmware]
     [-Baseline <Object>]
     [-FirmwareInstallMode <String>]
@@ -24,21 +24,23 @@ New-HPOVServerProfile
     [-FirmwareActivateDateTime <DateTime>]
     [-ForceInstallFirmware]
     [-Bios]
-    [-BiosSettings] <Array>
-    [-BootMode] <String>
-    [-PxeBootPolicy] <String>
+    [-BiosSettings <Array>]
+    [-BootMode <String>]
+    [-PxeBootPolicy <String>]
     [-ManageBoot]
-    [-BootOrder] <Array>
+    [-BootOrder <Array>]
     [-SecureBoot <String>]
     [-LocalStorage]
     [-StorageController <Object>]
-    [-Affinity] <String>
-    [-MacAssignment] <String>
-    [-WwnAssignment] <String>
-    [-SnAssignment] <String>
-    [-SerialNumber] <String>
-    [-Uuid] <String>
-    [-HideUnusedFlexNics] <Boolean>
+    [-ManageIloSettings <bool>]
+    [-IloSettings <psobject>]
+    [-Affinity <String>]
+    [-MacAssignment <String>]
+    [-WwnAssignment <String>]
+    [-SnAssignment <String>]
+    [-SerialNumber <String>]
+    [-Uuid <String>]
+    [-HideUnusedFlexNics <Boolean>]
     [-OSDeploymentPlan <Object>]
     [-OSDeploymentAttributes <Array>]
     [-Scope <HPEOneView.Appliance.ScopeCollection[]>]
@@ -51,8 +53,8 @@ New-HPOVServerProfile
 ```text
 New-HPOVServerProfile
     [-Name] <String>
-    [-ServerProfileTemplate <Object>]
-    [-AssignmentType] <String>
+    [-ServerProfileTemplate] <Object>
+    [-AssignmentType <String>]
     [-Enclosure <Object>]
     [-EnclosureBay <Int32>]
     [-Server <Object>]
@@ -68,16 +70,18 @@ New-HPOVServerProfile
     [-ManageBoot]
     [-LocalStorage]
     [-StorageController <Object>]
-    [-MacAssignment] <String>
-    [-WwnAssignment] <String>
-    [-SnAssignment] <String>
-    [-SerialNumber] <String>
-    [-Uuid] <String>
-    [-HideUnusedFlexNics] <Boolean>
-    [-IscsiIPv4Address] <Array>
-    [-ISCSIInitatorName] <String>
-    [-ChapSecret] <System.Security.SecureString>
-    [-MutualChapSecret] <System.Security.SecureString>
+    [-ManageIloSettings <bool>]
+    [-IloSettings <psobject>]
+    [-MacAssignment <String>]
+    [-WwnAssignment <String>]
+    [-SnAssignment <String>]
+    [-SerialNumber <String>]
+    [-Uuid <String>]
+    [-HideUnusedFlexNics <Boolean>]
+    [-IscsiIPv4Address <Array>]
+    [-ISCSIInitatorName <String>]
+    [-ChapSecret <System.Security.SecureString>]
+    [-MutualChapSecret <System.Security.SecureString>]
     [-OSDeploymentPlan <Object>]
     [-OSDeploymentAttributes <Array>]
     [-Scope <HPEOneView.Appliance.ScopeCollection[]>]
@@ -93,14 +97,14 @@ New-HPOVServerProfile
     [-SANStorage]
     [-HostOStype] <String>
     [-StorageVolume] <Object>
-    [-AssignmentType] <String>
+    [-AssignmentType <String>]
     [-Enclosure <Object>]
     [-EnclosureBay <Int32>]
     [-Server <Object>]
     [-Description <String>]
     [-Connections <Array>]
     [-EnclosureGroup <Object>]
-    [-ServerHardwareType] <Object>
+    [-ServerHardwareType <Object>]
     [-Firmware]
     [-Baseline <Object>]
     [-FirmwareInstallMode <String>]
@@ -108,23 +112,25 @@ New-HPOVServerProfile
     [-FirmwareActivateDateTime <DateTime>]
     [-ForceInstallFirmware]
     [-Bios]
-    [-BiosSettings] <Array>
-    [-BootMode] <String>
-    [-PxeBootPolicy] <String>
+    [-BiosSettings <Array>]
+    [-BootMode <String>]
+    [-PxeBootPolicy <String>]
     [-ManageBoot]
-    [-BootOrder] <Array>
+    [-BootOrder <Array>]
     [-SecureBoot <String>]
     [-LocalStorage]
     [-StorageController <Object>]
+    [-ManageIloSettings <bool>]
+    [-IloSettings <psobject>]
     [-EvenPathDisabled]
     [-OddPathDisabled]
-    [-Affinity] <String>
-    [-MacAssignment] <String>
-    [-WwnAssignment] <String>
-    [-SnAssignment] <String>
-    [-SerialNumber] <String>
-    [-Uuid] <String>
-    [-HideUnusedFlexNics] <Boolean>
+    [-Affinity <String>]
+    [-MacAssignment <String>]
+    [-WwnAssignment <String>]
+    [-SnAssignment <String>]
+    [-SerialNumber <String>]
+    [-Uuid <String>]
+    [-HideUnusedFlexNics <Boolean>]
     [-OSDeploymentPlan <Object>]
     [-OSDeploymentAttributes <Array>]
     [-Scope <HPEOneView.Appliance.ScopeCollection[]>]
@@ -138,7 +144,7 @@ New-HPOVServerProfile
 New-HPOVServerProfile
     [-Import]
     [-ProfileObj] <Object>
-    [-AssignmentType] <String>
+    [-AssignmentType <String>]
     [-Server <Object>]
     [-Async]
     [-ApplianceConnection <Object>]
@@ -1143,6 +1149,30 @@ When providing a server profile template to create a server profile from and it 
 Expected format:
 
      @{1 = "10:00:00:60:69:00:23:90"; 2 = "10:00:00:60:69:00:23:92"}
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -IloSettings &lt;psobject&gt;
+
+
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -ManageIloSettings &lt;bool&gt;
+
+
 
 | Aliases | None |
 | :--- | :--- |
