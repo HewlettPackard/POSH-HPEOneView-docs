@@ -1566,7 +1566,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://github.com/HewlettPackard/POSH-HPOneView/wiki/Add-OVPowerDeviceConnection",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/add-ovpowerdeviceconnection",
             "Text": "Online: "
           }
         ]
@@ -9928,7 +9928,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://github.com/HewlettPackard/POSH-HPOneView/wiki/Get-OVCluster",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/cluster/get-ovcluster",
             "Text": "Online: "
           }
         ]
@@ -16641,7 +16641,7 @@
         ],
         "InputTypes": [
           {
-            "Value": "HPEOneView.Servers.ServerHardware [System.Management.Automation.PSCustomObject]",
+            "Value": "HPEOneView.ServerHardware [System.Management.Automation.PSCustomObject]",
             "Text": "Server hardware resource object from Get-OVServer."
           },
           {
@@ -16651,7 +16651,7 @@
         ],
         "ReturnValues": [
           {
-            "Value": "HPEOneView.Servers.ServerHardware+OneTimeBoot",
+            "Value": "HPEOneView.ServerHardware+OneTimeBoot",
             "Text": "The current One Time Boot setting of the server hardware resource."
           }
         ],
@@ -27476,7 +27476,7 @@
             "Text": "Remove-OVPowerDevice"
           },
           {
-            "Uri": "https://github.com/HewlettPackard/POSH-HPOneView/wiki/New-OVPowerDevice",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/new-ovpowerdevice",
             "Text": "Online: "
           }
         ]
@@ -50927,7 +50927,7 @@
         ],
         "InputTypes": [
           {
-            "Value": "HPEOneView.Servers.ServerHardware [System.Management.Automation.PSCustomObject]",
+            "Value": "HPEOneView.ServerHardware [System.Management.Automation.PSCustomObject]",
             "Text": "Server hardware resource object from Get-OVServer."
           },
           {
@@ -53258,7 +53258,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://github.com/HewlettPackard/POSH-HPOneView/wiki/Show-OVBaselineRepositorySize",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/show-ovbaselinerepositorysize",
             "Text": "Online: "
           }
         ]
@@ -54053,7 +54053,7 @@
         "Examples": [],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/show-OVusersession",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/show-ovusersession",
             "Text": "Online: "
           }
         ],
@@ -54064,38 +54064,72 @@
     },
     {
       "Name": "Show-OVUtilization",
-      "Category": "Appliance",
+      "Category": "Servers",
       "Contents": {
-        "Synopsis": "Not implemented.",
-        "Description": "Not implemented.",
+        "Synopsis": "Report server and enclosure supported utilization metrics.",
+        "Description": "For resources such as Enclosures and Server Hardware, the appliance collects CPU, power, and temperature utilization statistics from the management processors (iLO, OA, FLM). Utilization statistics are not instantaneous-data is gathered and reported every five minutes.\n\nThe fields that are displayed in the available statistics vary from component to component.\n\nCPU\n\nServer hardware CPU utilization statistics are gathered from the historical data stored on an iLO every five minutes.\n\nCPU utilization is expressed as a percentage.  A high percentage indicates that one or more processes running on the device are consuming a considerable amount of CPU resources. If the percentage appears frozen at or near 100%, a process might not be responding.\n\nCPU utilziation is only supported with server hardware resources, and are contained within the CPUCurrent, CPUAverage and CPUPeak properties.\n\nPower\n\nPower capacity is the calibrated maximum power that a device can consume. The power utilization metrics refresh every five minutes.\n\nYou can see the power utilization data for a component within the objects PowerCurrent, PowerAverage and PowerPeak properties.  The value contained will be in Watts.\n\nUse this data to determine how much power your facility is consuming and the resources that are consuming it. The appliance reports alerts for devices that exceed their power capacity.\n\nPowerCurrent\nThe current power reported by the device.\n\nPowerAverage\nThe average amount of power the resource is consuming.\n\nPowerPeak\nThe peak amount of power consumed by the resource.\n\nTemperature\n\nTemperature utilization graphs display the ambient/inlet air temperature of your data center. The air temperature is detected by sensors embedded on the front of enclosures and other hardware devices.\n\nThe operating threshold is 10┬░C to 35┬░C (50┬░F to 95┬░F). When the device reaches a threshold, it generates temperature alerts. The appliance displays these alerts in the notification banner and in the Activity sidebar.\n\nYou can see the temperature utilization data for a component within the AmbientTemperature and AmbientTemperatureAverage properties.\n\nNOTE:  The temperature properties are displayed in degrees Celsius or Fahrenheit, depending upon the locale or regional settings of your PC.",
         "Parameters": [
           {
             "Name": "ApplianceConnection",
-            "Description": "Specify one or more [HPEOneView.Appliance.Connection] object(s) or Name property value(s).",
+            "Description": "Specify one or more [HPEOneView.Appliansce.Connection] object(s) or Name property value(s).",
             "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
             "DataType": "Array",
             "Required": false
           },
           {
             "Name": "InputObject",
-            "Description": "default content",
+            "Description": "A server hardware, server profile or enclosure resource.  IF a server profile is unassigned, it will be skipped.",
             "DefaultValue": null,
             "DataType": "Object",
             "Required": true
           }
         ],
-        "InputTypes": [],
-        "ReturnValues": [],
+        "InputTypes": [
+          {
+              "Value":  "HPEOneView.ServerHardware [System.Management.Automation.PSCustomObject]",
+              "Text":  "A server hardware resource from Get-OVServer."
+          },
+          {
+              "Value":  "HPEOneView.ServerProfile [System.Management.Automation.PSCustomObject]",
+              "Text":  "A server profile from Get-OVServerProfile that is assigned to a physical server resource.  If the profile is not assigned to a server hardware resource, it is skipped."
+          },
+          {
+              "Value":  "HPEOneView.Enclosure [System.Management.Automation.PSCustomObject]",
+              "Text":  "An enclosure resource from Get-OVEnclosure."
+          }
+        ],
+        "ReturnValues": [
+          {
+              "Value":  "HPEOneView.ServerUtilization",
+              "Text":  "Server utilization object.\n"
+          },
+          {
+              "Value":  "HPEOneView.EnclosureUtilization",
+              "Text":  "Enclosure utilization object.\n"
+          }
+        ],
         "Examples": [
           {
             "Title": "-------------------------- EXAMPLE 1 --------------------------",
-            "Code": "Show-OVUtilization",
-            "Description": "Default example"
+            "Code": "Get-OVServer | Show-OVUtilization",
+            "Description": "Get all available server resources, and collect utilization data to report."
           }
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://github.com/HewlettPackard/POSH-HPOneView/wiki/Show-OVUtilization",
+              "Uri":  null,
+              "Text":  "Get-OVEnclosure"
+          },
+          {
+              "Uri":  null,
+              "Text":  "Get-OVServer"
+          },
+          {
+              "Uri":  null,
+              "Text":  "Get-OVServerProfile"
+          },
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/show-ovutilization",
             "Text": "Online: "
           }
         ]

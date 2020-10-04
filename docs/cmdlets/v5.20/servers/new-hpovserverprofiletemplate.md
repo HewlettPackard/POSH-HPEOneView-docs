@@ -38,6 +38,9 @@ New-HPOVServerProfileTemplate
     [-LocalStorage]
     [-LocalStorageConsistencyChecking <string>]
     [-StorageController <Object>]
+    [-ManageIloSettings <bool>]
+    [-IloSettings <psobject>]
+    [-IloSettingsConsistencyChecking <string>]
     [-Affinity <String>]
     [-MacAssignment <String>]
     [-WwnAssignment <String>]
@@ -85,6 +88,9 @@ New-HPOVServerProfileTemplate
     [-LocalStorage]
     [-LocalStorageConsistencyChecking <string>]
     [-StorageController <Object>]
+    [-ManageIloSettings <bool>]
+    [-IloSettings <psobject>]
+    [-IloSettingsConsistencyChecking <string>]
     [-SANStorageConsistencyChecking <string>]
     [-EvenPathDisabled]
     [-OddPathDisabled]
@@ -958,6 +964,42 @@ Use to override the consistency checking for the policy.  Allowed values:
     * None
 
 | Aliases |  |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -IloSettings &lt;psobject&gt;
+
+
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -IloSettingsConsistencyChecking &lt;string&gt;
+
+
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -ManageIloSettings &lt;bool&gt;
+
+
+
+| Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |

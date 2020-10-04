@@ -38,6 +38,9 @@ New-HPOVServerProfileTemplate
     [-LocalStorage]
     [-LocalStorageConsistencyChecking <string>]
     [-StorageController <Object>]
+    [-ManageIloSettings <Bool>]
+    [-IloSettings <PSObject>]
+    [-IloSettingsConsistencyChecking <String>]
     [-Affinity <String>]
     [-MacAssignment <String>]
     [-WwnAssignment <String>]
@@ -85,6 +88,9 @@ New-HPOVServerProfileTemplate
     [-LocalStorage]
     [-LocalStorageConsistencyChecking <string>]
     [-StorageController <Object>]
+    [-ManageIloSettings <Bool>]
+    [-IloSettings <PSObject>]
+    [-IloSettingsConsistencyChecking <String>]
     [-SANStorageConsistencyChecking <string>]
     [-EvenPathDisabled]
     [-OddPathDisabled]
@@ -958,6 +964,45 @@ Use to override the consistency checking for the policy.  Allowed values:
     * None
 
 | Aliases |  |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -IloSettings &lt;PSObject&gt;
+
+Provide an iLO settings object from `New-OVServerProfileIloPolicy` Cmdlet.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -IloSettingsConsistencyChecking &lt;String&gt;
+
+Use to override the consistency checking for the policy.  Allowed values:
+
+    * Exact
+    * None
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -ManageIloSettings &lt;Bool&gt;
+
+Use to indicate iLO settings will be managed from the server profile.
+
+| Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
