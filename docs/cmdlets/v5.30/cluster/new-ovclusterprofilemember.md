@@ -106,7 +106,7 @@ An available server hardware resource.
 
 _**HPEOneView.Cluster.AddHostRequest**_
 
-Properly formatted object for New-OVClusterProfile.
+Properly formatted object for [`New-OVClusterProfile`](new-ovclusterprofile.md).
 
 ## Related Links
 

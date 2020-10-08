@@ -270,7 +270,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**System.Management.Automation.PSCustomObject**_
 
-Resource object (i.e. Get-OVServer).
+Resource object (i.e. [`Get-OVServer`](../servers/get-ovserver.md)).
 
 ## Return Values
 

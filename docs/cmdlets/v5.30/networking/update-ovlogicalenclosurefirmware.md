@@ -137,7 +137,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.LogicalEnclosure [System.Management.Automation.PSCustomObject]**_
 
-Logical enclosure resource from Get-OVLogicalEnclosure.
+Logical enclosure resource from [`Get-OVLogicalEnclosure`](../servers/get-ovlogicalenclosure.md).
 
 ## Return Values
 

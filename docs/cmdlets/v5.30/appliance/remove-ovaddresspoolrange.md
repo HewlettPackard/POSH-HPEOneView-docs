@@ -93,7 +93,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Appliance.AddressPoolRange [System.Management.Automation.PSCustomObject]**_
 
-address pool range from Get-OVAddressPoolRange
+address pool range from [`Get-OVAddressPoolRange`](get-ovaddresspoolrange.md)
 
 ## Return Values
 

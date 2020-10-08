@@ -95,7 +95,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Networking.Interconnect [System.Management.Automation.PSCustomObject]**_
 
-Interconnect resource from Get-OVInterconnect.
+Interconnect resource from [`Get-OVInterconnect`](get-ovinterconnect.md).
 
 ## Return Values
 

@@ -22,12 +22,12 @@ Port monitoring enables you to send a copy of every Ethernet or Fibre Channel fr
 
 {% hint style="info" %}
 
-	*  You cannot use Virtual Connect to forward captured traffic to a server. For more information, see the HPE Virtual Connect for c-Class BladeSystem User Guide in the Hewlett Packard Enterprise Information Library. 
-{% endhint %}
-
+	*  You cannot use Virtual Connect to forward captured traffic to a server. For more information, see the HPE Virtual Connect for c-Class BladeSystem User Guide in the Hewlett Packard Enterprise Information Library. 
 	*  You can configure one network analyzer port (the uplink port) for up to 16 downlink server ports within a logical interconnect. 
 	*  The HPE Virtual Connect 16Gb 24-Port Fibre Channel Module monitors 1 downlink server port. 
 	*  HPE Virtual Connect 16Gb 24-Port Fibre Channel Module firmware must be 4.00 or later 
+
+{% endhint %}
 
 Required Privileges: Network administrator
 

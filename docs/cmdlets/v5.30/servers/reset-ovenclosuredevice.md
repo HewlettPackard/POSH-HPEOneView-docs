@@ -206,7 +206,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Enclosure**_
 
-Resource from Get-OVEnclosure.
+Resource from [`Get-OVEnclosure`](get-ovenclosure.md).
 
 ## Return Values
 

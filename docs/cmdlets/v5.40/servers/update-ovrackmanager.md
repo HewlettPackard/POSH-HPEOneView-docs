@@ -140,7 +140,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Servers.RackManager**_
 
-The rack manager resource from Get-OVRackManager.
+The rack manager resource from [`Get-OVRackManager`](get-ovrackmanager.md).
 
 ## Return Values
 

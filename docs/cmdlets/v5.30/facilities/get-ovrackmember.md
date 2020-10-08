@@ -93,7 +93,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Facilities.Rack**_
 
-Rack resource object from Get-OVRack.
+Rack resource object from [`Get-OVRack`](get-ovrack.md).
 
 ## Return Values
 

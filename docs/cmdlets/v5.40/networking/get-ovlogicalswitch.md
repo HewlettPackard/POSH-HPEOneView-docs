@@ -167,7 +167,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
-Async Task resource object, from New-OVLogicalSwitch.
+Async Task resource object, from [`New-OVLogicalSwitch`](new-ovlogicalswitch.md).
 
 ## Return Values
 

@@ -115,7 +115,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Cluster.ClusterProfile [System.Management.Automation.PSCustomObject]**_
 
-Cluster profile resource from Get-OVClusterProfile.
+Cluster profile resource from [`Get-OVClusterProfile`](get-ovclusterprofile.md).
 
 ## Return Values
 

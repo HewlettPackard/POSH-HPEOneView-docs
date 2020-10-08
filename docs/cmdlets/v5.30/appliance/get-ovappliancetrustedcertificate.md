@@ -117,11 +117,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.ServerHardware**_
 
-Server hardware resource from Get-OVServer.
+Server hardware resource from [`Get-OVServer`](../servers/get-ovserver.md).
 
 _**HPEOneView.Enclosure**_
 
-Enclosure resource from Get-OVEnclosure.
+Enclosure resource from [`Get-OVEnclosure`](../servers/get-ovenclosure.md).
 
 ## Return Values
 

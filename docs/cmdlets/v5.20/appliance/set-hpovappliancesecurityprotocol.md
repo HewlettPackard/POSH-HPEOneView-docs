@@ -15,26 +15,17 @@ Set-HPOVApplianceSecurityProtocol
 
 ## Description
 
-Use this Cmdlet to change the enabled security protocol(s) on the appliance. Before modifying the security protocols, a compatibility report should be run using the Show-HPOVApplianceSecurityModeCompatibilityReport.  Please be aware of the following rules:
+Use this Cmdlet to change the enabled security protocol(s) on the appliance. The security protocols that can be changed on an HPE OneView appliance are TLS protocol versions.  Please be aware of the following rules:
 
     * Enabling or disabling TLS protocols is allowed only for the current cryptography mode. For example, disabling TLSv1.1 in legacy mode of the appliance will not disable TLSv1.1 when the appliance is switched to FIPS mode.
     * Enabling an unsupported protocol for the current cryptography mode of the appliance is not allowed. For example, enabling TLSv1 is not allowed in the FIPS mode.
     * TLSv1.2 protocol cannot be disabled
     * Disabling all the protocols is not allowed.
 
-{% hint style="info" %}
-Changing active security protocols will require an immediate appliance reboot.
-{% endhint %}
-
-
 {% hint style="warning" %}
- Not all devices that HPE OneView manages or monitors support these stronger cryptography modes. Some examples are:
+Changing active security protocol(s) will require an immediate appliance reboot.
 {% endhint %}
 
-
-    * ProLiant Gen 6 systems have iLO versions that only support TLS 1.0. These servers are not supported when the appliance is in the FIPS or CNSA modes.
-    * Gen7 systems have iLO versions that only support TLS 1.0 and 1.1. These servers are not supported when the appliance is in the CNSA mode.
-    * ProLiant Gen8 systems have iLO versions that support TLS 1.1 and 1.2, and are compatible with both FIPS and CNSA modes.
 
 {% hint style="info" %}
 Minimum required privileges: Infrastructure administrator

@@ -94,11 +94,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.ServerHardware [System.Management.Automation.PSCustomObject]**_
 
-A Gen8 or newer generation server hardware resource object from Get-OVServer.
+A Gen8 or newer generation server hardware resource object from [`Get-OVServer`](../servers/get-ovserver.md).
 
 _**HPEOneView.Enclosure [System.Management.Automation.PSCustomObject]**_
 
-A Gen8 or newer generation server hardware resource object from Get-OVServer.
+A Gen8 or newer generation server hardware resource object from [`Get-OVServer`](../servers/get-ovserver.md).
 
 ## Return Values
 

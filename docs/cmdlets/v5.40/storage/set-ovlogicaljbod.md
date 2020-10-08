@@ -106,7 +106,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Storage.LogicalJBOD**_
 
-A logical JBOD resource from Get-OVLogicalJBOD.
+A logical JBOD resource from [`Get-OVLogicalJBOD`](get-ovlogicaljbod.md).
 
 ## Return Values
 

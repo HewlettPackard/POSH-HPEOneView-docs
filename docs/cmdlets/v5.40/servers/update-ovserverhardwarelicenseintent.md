@@ -84,7 +84,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.ServerHardware [System.Management.Automation.PSCustomObject]**_
 
-A server hardware resource from Get-OVServer.
+A server hardware resource from [`Get-OVServer`](get-ovserver.md).
 
 ## Return Values
 

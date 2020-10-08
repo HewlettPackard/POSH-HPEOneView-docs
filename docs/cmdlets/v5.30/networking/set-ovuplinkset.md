@@ -256,11 +256,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Networking.LogicalInterconnectGroup [System.Management.Automation.PSCustomObject]**_
 
-Logical Interconnect Group resource from Get-OVLogicalInterconnectGroup.
+Logical Interconnect Group resource from [`Get-OVLogicalInterconnectGroup`](get-ovlogicalinterconnectgroup.md).
 
 _**HPEOneView.Networking.UplinkSet [System.Management.Automation.PSCustomObject]**_
 
-Uplink set resource from Get-OVUplinkSet.
+Uplink set resource from [`Get-OVUplinkSet`](get-ovuplinkset.md).
 
 ## Return Values
 

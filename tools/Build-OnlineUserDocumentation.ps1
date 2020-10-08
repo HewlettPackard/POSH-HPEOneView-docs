@@ -20,8 +20,8 @@ $Script:FindFullyQualifiedClassWithoutBracePattern = [System.Text.RegularExpress
 $Script:FindFullyQualifiedClassPattern             = [System.Text.RegularExpressions.RegEx]::new('(?<=\s)\[([a-zA-Z]+[.])+[a-zA-Z]+[\]]?', [System.Text.RegularExpressions.RegexOptions]::Multiline)
 $Script:FindAboutTopicReferencePattern             = [System.Text.RegularExpressions.RegEx]::new('(?<=\s)about_\w+', [System.Text.RegularExpressions.RegexOptions]::Multiline -bor [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
 $Script:MinimumPermissionsPattern                  = [System.Text.RegularExpressions.RegEx]::new("(?:^Minimum required privileges:[\s\w*.,-]+)", [System.Text.RegularExpressions.RegexOptions]::Multiline)
-$Script:NoteMessagePattern                         = [System.Text.RegularExpressions.RegEx]::new("(?:^NOTE: (?'subtext'[\s\w]+.+))", [System.Text.RegularExpressions.RegexOptions]::Multiline -bor [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
-$Script:WarningMessagePattern                      = [System.Text.RegularExpressions.RegEx]::new("(?:^WARNING: (?'subtext'[\s\w]+.+))", [System.Text.RegularExpressions.RegexOptions]::Multiline -bor [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
+$Script:NoteMessagePattern                         = [System.Text.RegularExpressions.RegEx]::new("(?:^NOTE: (?'subtext'[\s\w]+.+)(?'table'\n*(\s{1,4}\*.+\n)+)?)", [System.Text.RegularExpressions.RegexOptions]::Multiline -bor [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
+$Script:WarningMessagePattern                      = [System.Text.RegularExpressions.RegEx]::new("(?:^WARNING: (?'subtext'[\s\w]+.+)(?'table'\n*(\s{1,4}\*.+\n)+)?)", [System.Text.RegularExpressions.RegexOptions]::Multiline -bor [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
 $Script:CriticalMessagePattern                     = [System.Text.RegularExpressions.RegEx]::new("(?:^CRITICAL: (?'subtext'[\s\w]+.+))", [System.Text.RegularExpressions.RegexOptions]::Multiline -bor [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
 $Script:ParentLinkableAssociatedLinks              = [Ordered]@{
     '[${Global:ConnectedSessions}]'          = 'https://hpe-docs.gitbook.io/posh-hpeoneview/about/about_appliance_connections';
@@ -173,7 +173,7 @@ class ParameterEntry
         if (($Script:NoteMessagePattern.Match($_Description)).Success)
         {
 
-            $NoteMessageReplace = [DisplayHint]::Build([HintStyleEnum]::info, '${subtext}')
+            $NoteMessageReplace = [DisplayHint]::Build([HintStyleEnum]::info, '${subtext}${table}')
             $_Description = $Script:NoteMessagePattern.Replace($_Description, $NoteMessageReplace)
 
         }
@@ -181,7 +181,7 @@ class ParameterEntry
         if (($Script:WarningMessagePattern.Match($_Description)).Success)
         {
 
-            $WarningMessageReplace = [DisplayHint]::Build([HintStyleEnum]::warning, '${subtext}')
+            $WarningMessageReplace = [DisplayHint]::Build([HintStyleEnum]::warning, '${subtext}${table}')
             $_Description = $Script:WarningMessagePattern.Replace($_Description, $WarningMessageReplace)
 
         }
@@ -253,8 +253,8 @@ function LinkifyString ([String]$String, [String]$CmdletName)
     While ($Match.Success)
     {
 
-        # Need to skip hyphenated strings that are found with the regex
-        if ($Match.Value.ToUpper().Contains('-HPOV') -and $Match.Value -ne 'Get-HPOV')
+        # Need to skip hyphenated strings and GET-OV/GET-HPOV which is referenced in Remove-OVResource/Remove-HPOVResource Cmdlet, that are found with the regex
+        if ($Match.Value.ToUpper().Contains('-HPOV') -or $Match.Value.ToUpper().Contains('-OV') -and ('Get-OV', 'Get-HPOV' -notcontains $Match.Value))
         {
 
             $FoundCmdletName          = $Match.Value
@@ -470,7 +470,7 @@ else
                 if (($NoteMessagePattern.Match($UpdatedDescription)).Success)
                 {
 
-                    $NoteMessageReplace = [DisplayHint]::Build([HintStyleEnum]::info, '${subtext}')
+                    $NoteMessageReplace = [DisplayHint]::Build([HintStyleEnum]::info, '${subtext}${table}')
                     $UpdatedDescription = $NoteMessagePattern.Replace($UpdatedDescription, $NoteMessageReplace)
 
                 }
@@ -478,7 +478,7 @@ else
                 if (($WarningMessagePattern.Match($UpdatedDescription)).Success)
                 {
 
-                    $WarningMessageReplace = [DisplayHint]::Build([HintStyleEnum]::warning, '${subtext}')
+                    $WarningMessageReplace = [DisplayHint]::Build([HintStyleEnum]::warning, '${subtext}${table}')
                     $UpdatedDescription = $WarningMessagePattern.Replace($UpdatedDescription, $WarningMessageReplace)
 
                 }

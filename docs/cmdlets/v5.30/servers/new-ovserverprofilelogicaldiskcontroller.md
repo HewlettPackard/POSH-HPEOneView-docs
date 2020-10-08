@@ -176,11 +176,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.ServerProfile.LogicalDisk [System.Management.Automation.PSCustomObject]**_
 
-Logical Disk configuration policy from New-OVServerProfileLogicalDisk
+Logical Disk configuration policy from [`New-OVServerProfileLogicalDisk`](new-ovserverprofilelogicaldisk.md)
 
 _**System.Collections.ArrayList <HPEOneView.ServerProfile.LogicalDisk>**_
 
-Collection of Logical Disk configuration policy from New-OVServerProfileLogicalDisk
+Collection of Logical Disk configuration policy from [`New-OVServerProfileLogicalDisk`](new-ovserverprofilelogicaldisk.md)
 
 ## Return Values
 

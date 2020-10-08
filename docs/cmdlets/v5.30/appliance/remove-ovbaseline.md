@@ -106,7 +106,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Appliance.Baseline [System.Management.Automation.PSCustomObject]**_
 
-Source HPE OneView Baseline from Get-OVBaseline
+Source HPE OneView Baseline from [`Get-OVBaseline`](get-ovbaseline.md)
 
 ## Return Values
 

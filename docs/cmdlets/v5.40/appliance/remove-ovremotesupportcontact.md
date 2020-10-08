@@ -61,7 +61,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Appliance.RemoteSupport.Contact [System.Management.Automation.PSCustomObject]**_
 
-A Remote Support Contact from Get-OVRemoteSupportContact.
+A Remote Support Contact from [`Get-OVRemoteSupportContact`](get-ovremotesupportcontact.md).
 
 ## Return Values
 

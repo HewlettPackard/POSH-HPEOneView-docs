@@ -96,7 +96,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Appliance.GlobalSetting**_
 
-Appliance global setting from Get-OVApplianceGlobalSetting.
+Appliance global setting from [`Get-OVApplianceGlobalSetting`](get-ovapplianceglobalsetting.md).
 
 ## Return Values
 

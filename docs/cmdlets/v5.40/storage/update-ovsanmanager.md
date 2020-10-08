@@ -69,11 +69,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Storage.SanManager [System.Management.Automation.PSCustomObject]**_
 
-SAN Manager resource object from Get-OVSanManager
+SAN Manager resource object from [`Get-OVSanManager`](get-ovsanmanager.md)
 
 _**System.Collections.ArrayList <HPEOneView.Storage.SanManager>**_
 
-Multiple SAN Manager resource objects from Get-OVSanManager
+Multiple SAN Manager resource objects from [`Get-OVSanManager`](get-ovsanmanager.md)
 
 ## Return Values
 
