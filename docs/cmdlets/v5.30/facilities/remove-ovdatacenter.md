@@ -74,7 +74,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Facilities.DataCenter**_
 
-Datacenter resource from Get-OVDataCenter.
+Datacenter resource from [`Get-OVDataCenter`](get-ovdatacenter.md).
 
 ## Return Values
 

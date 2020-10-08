@@ -270,7 +270,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Storage.SanManager [System.Management.Automation.PSCustomObject]**_
 
-SAN Manager resource from Get-OVSanManager
+SAN Manager resource from [`Get-OVSanManager`](get-ovsanmanager.md)
 
 ## Return Values
 

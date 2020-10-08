@@ -111,7 +111,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.ServerProfile [System.Management.Automation.PSCustomObject]**_
 
-A Server Profile resource object from Get-OVServerProfile.
+A Server Profile resource object from [`Get-OVServerProfile`](get-ovserverprofile.md).
 
 _**System.Collections.ArrayList**_
 

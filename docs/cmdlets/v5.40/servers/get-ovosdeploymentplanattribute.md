@@ -84,7 +84,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Appliance.OSDeploymentPlan [System.Management.Automation.PSCustomObject]**_
 
-The OS Deployment Plan from Get-OVOSDeploymentPlan.
+The OS Deployment Plan from [`Get-OVOSDeploymentPlan`](get-ovosdeploymentplan.md).
 
 ## Return Values
 

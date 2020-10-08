@@ -142,7 +142,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**System.Management.Automation.PSCustomObject**_
 
-Server Profile resource object from Get-OVServerProfile
+Server Profile resource object from [`Get-OVServerProfile`](get-ovserverprofile.md)
 
 ## Return Values
 

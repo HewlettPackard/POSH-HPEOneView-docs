@@ -165,7 +165,7 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 _**HPEOneView.Networking.LogicalInterconnect [System.Management.Automation.PSCustomObject]**_
 
-Logical Interconnect resource object from Get-OVLogicalInterconnect
+Logical Interconnect resource object from [`Get-OVLogicalInterconnect`](get-ovlogicalinterconnect.md)
 
 _**System.Collections.ArrayList <HPEOneView.Networking.LogicalInterconnect>    **_
 

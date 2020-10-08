@@ -91,7 +91,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.ServerHardwareType**_
 
-Resource from Get-OVServerHardwareType.
+Resource from [`Get-OVServerHardwareType`](get-ovserverhardwaretype.md).
 
 ## Return Values
 

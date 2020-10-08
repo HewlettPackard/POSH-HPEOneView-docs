@@ -470,11 +470,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Networking.LogicalInterconnect [System.Management.Automation.PSCustomObject]**_
 
-Logical Interconnect Resource from Get-OVLogicalInterconnect
+Logical Interconnect Resource from [`Get-OVLogicalInterconnect`](get-ovlogicalinterconnect.md)
 
 _**HPEOneView.Networking.LogicalInterconnectGroup [System.Management.Automation.PSCustomObject]**_
 
-Logical Interconnect Group Resource from Get-OVLogicalInterconnectGroup
+Logical Interconnect Group Resource from [`Get-OVLogicalInterconnectGroup`](get-ovlogicalinterconnectgroup.md)
 
 ## Return Values
 

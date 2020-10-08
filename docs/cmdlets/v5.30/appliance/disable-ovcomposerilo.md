@@ -160,7 +160,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Appliance.HardwareConfig [System.Management.Automation.PSCustomObject]**_
 
-The appliance hardware configuration object from Get-OVComposerIloStatus.
+The appliance hardware configuration object from [`Get-OVComposerIloStatus`](get-ovcomposerilostatus.md).
 
 ## Return Values
 

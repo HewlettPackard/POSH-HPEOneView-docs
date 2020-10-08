@@ -84,11 +84,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.ServerHardware [System.Management.Automation.PSCustomObject]**_
 
-Server hardware resource object from Get-OVServer.
+Server hardware resource object from [`Get-OVServer`](get-ovserver.md).
 
 _**HPEOneView.ServerProfile [System.Management.Automation.PSCustomObject]**_
 
-Server profile resource object from Get-OVServerProfile.
+Server profile resource object from [`Get-OVServerProfile`](get-ovserverprofile.md).
 
 ## Return Values
 

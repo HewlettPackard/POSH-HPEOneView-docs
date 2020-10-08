@@ -103,7 +103,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Storage.StoragePool**_
 
-Storage pool resource(s) from Get-OVStoragePool.
+Storage pool resource(s) from [`Get-OVStoragePool`](get-ovstoragepool.md).
 
 ## Return Values
 

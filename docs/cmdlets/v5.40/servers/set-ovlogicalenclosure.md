@@ -172,7 +172,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.LogicalEnclosure**_
 
-HPE Syngery Logical Enclosure resource from Get-OVLogicalEnclosure.
+HPE Syngery Logical Enclosure resource from [`Get-OVLogicalEnclosure`](get-ovlogicalenclosure.md).
 
 ## Return Values
 

@@ -117,7 +117,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**System.Management.Automation.PSCustomObject [HPEOneView.Appliance.ImageStreamerAppliance]**_
 
-HPE Synergy Image Streamer Appliance object from Get-OVImageStreamerAppliance.
+HPE Synergy Image Streamer Appliance object from [`Get-OVImageStreamerAppliance`](get-ovimagestreamerappliance.md).
 
 ## Return Values
 

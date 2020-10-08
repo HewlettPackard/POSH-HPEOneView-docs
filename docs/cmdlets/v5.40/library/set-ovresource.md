@@ -76,7 +76,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**System.Management.Automation.PSCustomObject**_
 
-Resource Object to modify by either using Send-OVRequest with the resource URI, or the resource GET Cmdlet
+Resource Object to modify by either using [`Send-OVRequest`](send-ovrequest.md) with the resource URI, or the resource GET Cmdlet
 
 ## Return Values
 

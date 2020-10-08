@@ -83,7 +83,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Appliance.SecurityMode**_
 
-Available security mode from Get-OVApplianceAvailableSecurityMode.
+Available security mode from [`Get-OVApplianceAvailableSecurityMode`](get-ovapplianceavailablesecuritymode.md).
 
 ## Return Values
 

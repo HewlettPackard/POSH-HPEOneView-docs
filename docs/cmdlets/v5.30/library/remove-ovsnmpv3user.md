@@ -98,7 +98,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Appliance.SnmpV3User**_
 
-Appliance SNMPv3 user account from Get-OVSnmpV3User.
+Appliance SNMPv3 user account from [`Get-OVSnmpV3User`](../appliance/get-ovsnmpv3user.md).
 
 ## Return Values
 

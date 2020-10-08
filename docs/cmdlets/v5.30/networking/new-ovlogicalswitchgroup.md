@@ -100,7 +100,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Networking.SwitchType**_
 
-Switch Type resource from Get-OVSwitchType.
+Switch Type resource from [`Get-OVSwitchType`](get-ovswitchtype.md).
 
 ## Return Values
 

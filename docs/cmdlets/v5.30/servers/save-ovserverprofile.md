@@ -76,7 +76,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.ServerProfile**_
 
-A Server Profile resource object from Get-OVServerProfile that was modified and needs to be saved.
+A Server Profile resource object from [`Get-OVServerProfile`](get-ovserverprofile.md) that was modified and needs to be saved.
 
 ## Return Values
 

@@ -214,7 +214,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Cluster.ClusterManager**_
 
-The cluster manager from Get-OVClusterManager.
+The cluster manager from [`Get-OVClusterManager`](get-ovclustermanager.md).
 
 ## Return Values
 

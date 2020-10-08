@@ -97,11 +97,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Appliance.SnmpV1TrapDestination**_
 
-Appliance SNMPv1 trap destination from Get-OVApplianceTrapDestination.
+Appliance SNMPv1 trap destination from [`Get-OVApplianceTrapDestination`](get-ovappliancetrapdestination.md).
 
 _**HPEOneView.Appliance.SnmpV3TrapDestination**_
 
-Appliance SNMPv3 trap destination from Get-OVApplianceTrapDestination.
+Appliance SNMPv3 trap destination from [`Get-OVApplianceTrapDestination`](get-ovappliancetrapdestination.md).
 
 ## Return Values
 

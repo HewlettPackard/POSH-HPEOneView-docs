@@ -89,7 +89,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Appliance.OSDeploymentServer**_
 
-HPE Synergy Image Streamer OS Deployment Server from Get-OVOSDeploymentServer
+HPE Synergy Image Streamer OS Deployment Server from [`Get-OVOSDeploymentServer`](get-ovosdeploymentserver.md)
 
 ## Return Values
 

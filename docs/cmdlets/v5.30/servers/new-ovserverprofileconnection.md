@@ -644,7 +644,7 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 _**System.Management.Automation.PSCustomObject**_
 
-Returns a connection object which may be used during profile creation with the New-OVServerProfile Cmdlet
+Returns a connection object which may be used during profile creation with the [`New-OVServerProfile`](new-ovserverprofile.md) Cmdlet
 
 ## Related Links
 

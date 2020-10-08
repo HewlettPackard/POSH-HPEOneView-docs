@@ -102,7 +102,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.ClusterProfile.HypervisorManager**_
 
-The hypervisor manager object from Get-OVClusterManager.
+The hypervisor manager object from [`Get-OVClusterManager`](get-ovclustermanager.md).
 
 ## Return Values
 

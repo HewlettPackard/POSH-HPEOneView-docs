@@ -137,7 +137,7 @@ Mutlple Directory Server Name or IP Address System.String values
 
 _**HPEOneView.Appliance.AuthDirectoryServer [System.Management.Automation.PSCustomObject]**_
 
-New LDAP Server Resource Object to be used with New-OVLdapDirectory Cmdlet
+New LDAP Server Resource Object to be used with [`New-OVLdapDirectory`](new-ovldapdirectory.md) Cmdlet
 
 ## Related Links
 

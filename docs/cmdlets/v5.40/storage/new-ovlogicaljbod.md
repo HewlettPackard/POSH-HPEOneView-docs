@@ -293,7 +293,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Storage.AvailableDriveType**_
 
-The available drive type from Get-OVAvailableDriveType
+The available drive type from [`Get-OVAvailableDriveType`](get-ovavailabledrivetype.md)
 
 ## Return Values
 

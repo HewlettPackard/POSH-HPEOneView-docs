@@ -82,7 +82,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Facilities.RackMember**_
 
-DataCenter facility object from Get-OVDataCenter.
+DataCenter facility object from [`Get-OVDataCenter`](get-ovdatacenter.md).
 
 ## Return Values
 

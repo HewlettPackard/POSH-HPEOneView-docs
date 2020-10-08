@@ -198,7 +198,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Storage.System**_
 
-Managed Storage System from Get-OVStorageSystem.
+Managed Storage System from [`Get-OVStorageSystem`](get-ovstoragesystem.md).
 
 ## Return Values
 

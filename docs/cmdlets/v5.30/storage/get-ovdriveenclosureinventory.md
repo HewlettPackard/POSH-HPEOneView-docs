@@ -167,7 +167,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Storage.DriveEnclosure [System.Management.Automation.PSCustomObject]**_
 
-Drive enclosure resource from Get-OVDriveEnclosure Cmdlet.
+Drive enclosure resource from [`Get-OVDriveEnclosure`](get-ovdriveenclosure.md) Cmdlet.
 
 ## Return Values
 
