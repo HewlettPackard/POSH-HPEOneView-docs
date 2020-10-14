@@ -49571,7 +49571,7 @@
                     ]
                 ]
             },
-            "Category": "Servers"
+            "Category": "Networking"
         },
         {
             "Name": "Show-HPOVSanEndpoint",

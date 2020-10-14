@@ -53703,7 +53703,7 @@
     },
     {
       "Name": "Show-OVPortStatistics",
-      "Category": "Servers",
+      "Category": "Networking",
       "Contents": {
         "Synopsis": "Display Interconnect Port Statistics.",
         "Description": "This Cmdlet will display the utilization (Format-Table view) or error (Format-List) statistics of a given Interconnect or Interconnect Port.  The default view is Format-Table.  Piping output to Format-List will display error statistics.",
