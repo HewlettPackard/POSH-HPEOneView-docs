@@ -36741,7 +36741,7 @@
         "Examples": [
           {
             "Title": "-------------------------- EXAMPLE 1 --------------------------",
-            "Code": "Get-OVApplianceTrustedCertificate -AliasName myhost1.domain.com | Remove-OVApplianceTrustedCertificate",
+            "Code": "Get-OVApplianceTrustedCertificate -Name myhost1.domain.com | Remove-OVApplianceTrustedCertificate",
             "Description": "Remove the specific trusted certificate from the appliances trusted certificate store."
           }
         ],
