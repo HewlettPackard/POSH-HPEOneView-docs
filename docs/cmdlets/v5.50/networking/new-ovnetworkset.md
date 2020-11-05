@@ -9,7 +9,7 @@ description: Create a new Network Set.
 ```text
 New-OVNetworkSet
     [-Name] <String>
-    [-Networks] <Object>
+    [-Networks <Object>]
     [-UntaggedNetwork <Object>]
     [-TypicalBandwidth <Int32>]
     [-MaximumBandwidth <Int32>]
@@ -35,7 +35,7 @@ Minimum required permissions: Infrastructure administrator, Network administrato
 ###  Example 1 
 
 ```text
-New-OVNetworkSet -name "Production Networks" -untaggedNetwork yellow -networks blue, green, yellow
+New-OVNetworkSet -Name "Production Networks" -untaggedNetwork yellow -networks blue, green, yellow
 ```
 
 Create a new Network Set called "Production Networks", adding Ethernet Networks "blue", "green", and "yellow", on all connected appliances.
@@ -52,7 +52,7 @@ Get Ethernet Networks "blue", "green", and "yellow", then create a new Network S
 ###  Example 3 
 
 ```text
-New-OVNetworkSet -name "Production Networks" -untaggedNetwork yellow -networks blue, green, yellow -TypicalBandwidth 1000 -MaximumBandwidth 5000
+New-OVNetworkSet -Name "Production Networks" -untaggedNetwork yellow -networks blue, green, yellow -TypicalBandwidth 1000 -MaximumBandwidth 5000
 ```
 
 Create a new Network Set called "Production Networks", adding Ethernet Networks "blue", "green", and "yellow", setting the Typical and Maximum Bandwidth.
@@ -77,7 +77,7 @@ Ethernet Network Name(s), URI(")s or Resource Object(s).
 
 | Aliases | networkUris |
 | :--- | :--- |
-| Required? | True |
+| Required? | False |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
