@@ -23,7 +23,7 @@ This Cmdlet will allow the Infrastructure Administrator to remove X.509 complian
 ###  Example 1 
 
 ```text
-Get-OVApplianceTrustedCertificate -AliasName myhost1.domain.com | Remove-OVApplianceTrustedCertificate
+Get-OVApplianceTrustedCertificate -Name myhost1.domain.com | Remove-OVApplianceTrustedCertificate
 ```
 
 Remove the specific trusted certificate from the appliances trusted certificate store.
