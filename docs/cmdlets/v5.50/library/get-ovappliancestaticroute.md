@@ -6,11 +6,6 @@ description: Default content
 
 ## Syntax
 
-```text
-Get-OVApplianceStaticRoute
-    [<CommonParameters>]
-```
-
 ## Description
 
 Default content

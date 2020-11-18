@@ -27,9 +27,10 @@ New-HPOVServerProfileLogicalDisk
     [-DriveSelectionBy <String>]
     [-AvailableDriveType <HPEOneView.Storage.AvailableDriveType>]
     [-StorageLocation <String>]
-    [-MinDriveSize] <Int32>
+    [-MinDriveSize <Int32>]
     [-MaxDriveSize <Int32>]
     [-EraseDataOnDelete]
+    [-Permanent <bool>]
     [-Bootable <Boolean>]
     [<CommonParameters>]
 ```
@@ -249,6 +250,18 @@ For Gen10 Smart Array controllers only.  When using Auto for drive type allocati
 | Required? | False |
 | Position? | Named |
 | Default value | Unmanaged |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -Permanent &lt;bool&gt;
+
+
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

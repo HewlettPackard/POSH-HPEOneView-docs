@@ -8,16 +8,29 @@ description: Install Logical Interconnect Firmware.
 
 ```text
 Install-OVLogicalInterconnectFirmware
-    [-LogicalInterconnect] <Object>
+    [-InputObject] <Object>
     [-Baseline] <Object>
-    [-Method] <String>
-    [-EthernetActivateOrder] <String>
-    [-EthernetActivateDelay] <Int32>
-    [-FCActivateOrder] <String>
-    [-FCActivateDelay] <Int32>
+    [-Method <String>]
+    [-EthernetActivateOrder <String>]
+    [-EthernetActivateDelay <Int32>]
+    [-FCActivateOrder <String>]
+    [-FCActivateDelay <Int32>]
+    [-NoPreview]
     [-Async]
     [-Force]
-    [-ApplianceConnection] <Object>
+    [-ApplianceConnection <Object>]
+    [<CommonParameters>]
+```
+
+```text
+Install-OVLogicalInterconnectFirmware
+    [-InputObject] <Object>
+    [-Baseline] <Object>
+    [-Method <String>]
+    [-SasActivationMethod <string>]
+    [-Async]
+    [-Force]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -205,6 +218,42 @@ Specify one `[HPEOneView.Appliance.Connection]` object or Name property value. I
 
 
 | Aliases | cf |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -InputObject &lt;Object&gt;
+
+
+
+| Aliases | LogicalInterconnect, name, uri, li |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | true (ByValue) |
+| Accept wildcard characters? | False |
+
+### -NoPreview &lt;SwitchParameter&gt;
+
+
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -SasActivationMethod &lt;string&gt;
+
+
+
+| Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |

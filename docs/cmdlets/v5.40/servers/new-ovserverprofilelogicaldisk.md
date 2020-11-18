@@ -30,6 +30,7 @@ New-OVServerProfileLogicalDisk
     [-MinDriveSize] <Int32>
     [-MaxDriveSize <Int32>]
     [-EraseDataOnDelete]
+    [-Permanent <String>]
     [-Bootable <Boolean>]
     [<CommonParameters>]
 ```
@@ -243,6 +244,18 @@ Indicates if the logical drive should be erased when it is deleted from or with 
 ### -Accelerator &lt;String&gt;
 
 For Gen10 Smart Array controllers only.  When using Auto for drive type allocation and supplied 'Enabled', the Accelorator policy will be set to 'ControllerCache'.  If drive allocation type is an 'SSD' drive, the accelorator policy will be set to 'IOBypass'.  Disabled will set the accelorator policy to 'None'.  Default is 'Unmanaged'.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | Unmanaged |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -Permanent &lt;String&gt;
+
+When set to true, the logical JBOD will not be deleted when the associated profile is deleted.
 
 | Aliases | None |
 | :--- | :--- |

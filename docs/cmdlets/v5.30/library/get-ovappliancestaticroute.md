@@ -2,9 +2,14 @@
 description: Default content
 ---
 
-# Get-OVApplianceIPAddress
+# Get-OVApplianceStaticRoute
 
 ## Syntax
+
+```text
+Get-OVApplianceStaticRoute
+    [<CommonParameters>]
+```
 
 ## Description
 
@@ -15,7 +20,7 @@ Default content
 ###  Example 1 
 
 ```text
-Get-OVApplianceIPAddress
+Get-OVApplianceStaticRoute
 
 ```
 
@@ -34,6 +39,30 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -Destination &lt;string&gt;
+
+
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -Interface &lt;string&gt;
+
+
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

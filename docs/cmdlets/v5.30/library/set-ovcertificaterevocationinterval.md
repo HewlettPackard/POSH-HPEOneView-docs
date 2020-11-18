@@ -2,9 +2,16 @@
 description: Default content
 ---
 
-# Get-OVApplianceIPAddress
+# Set-OVCertificateRevocationInterval
 
 ## Syntax
+
+```text
+Set-OVCertificateRevocationInterval
+    [-AutoCRLDownloadInterval] <int>
+    [-ApplianceConnection <Object>]
+    [<CommonParameters>]
+```
 
 ## Description
 
@@ -15,7 +22,7 @@ Default content
 ###  Example 1 
 
 ```text
-Get-OVApplianceIPAddress
+Set-OVCertificateRevocationInterval
 
 ```
 
@@ -34,6 +41,42 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
+
+### -AutoCRLDownloadInterval &lt;int&gt;
+
+
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -Confirm &lt;SwitchParameter&gt;
+
+
+
+| Aliases | cf |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -WhatIf &lt;SwitchParameter&gt;
+
+
+
+| Aliases | wi |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

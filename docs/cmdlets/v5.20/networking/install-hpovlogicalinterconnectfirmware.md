@@ -8,25 +8,58 @@ description: Install Logical Interconnect Firmware.
 
 ```text
 Install-HPOVLogicalInterconnectFirmware
-    [-LogicalInterconnect] <Object>
+    [-InputObject] <Object>
     [-Baseline] <Object>
-    [-Method] <String>
-    [-EthernetActivateOrder] <String>
-    [-EthernetActivateDelay] <Int32>
-    [-FCActivateOrder] <String>
-    [-FCActivateDelay] <Int32>
+    [-Method <String>]
+    [-EthernetActivateOrder <String>]
+    [-EthernetActivateDelay <Int32>]
+    [-FCActivateOrder <String>]
+    [-FCActivateDelay <Int32>]
+    [-NoPreview]
     [-Async]
     [-Force]
-    [-ApplianceConnection] <Object>
+    [-ApplianceConnection <Object>]
+    [<CommonParameters>]
+```
+
+```text
+Install-HPOVLogicalInterconnectFirmware
+    [-InputObject] <Object>
+    [-Baseline] <Object>
+    [-Method <String>]
+    [-SasActivationMethod <string>]
+    [-Async]
+    [-Force]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ## Description
 
-Use this Cmdlet to install/update the Logical Interconnect (i.e. Virtual Connect) firmware.  You can provide the Logical Interconnect Name, URI or Object and must specify a valid SPP Baseline present on the appliance.
+Firmware activation options allow you to maintain network availability by always keeping one path up for production traffic and reduce the outages due to human errors. You also have the option of staging the firmware for later activation. You can activate the staged firmware on an individual interconnect or on all interconnects.
 
-This Cmdlet will default to performing an Update (Stage + Activate), which will cause an outage.  If you wish to avoid an outage, first stage the update usind -method stage, then -method activate.  Interconnect activation can be controlled with the -ActivateOrder parameter, which defaults to Odd interconnects.  Once the specified interconnect activation is complete, you must then call the Cmdlet again with the alternate ActivateOrder value (i.e. even.)
+You have the following options when updating firmware based on a logical interconnect:
 
+    * Update (stage + activate) - Stages (uploads) the selected firmware to the secondary flash memory on the interconnect, and then activates the firmware as the baseline. At the end of this operation, all member interconnects are running the same firmware baseline and are compliant with one another.  This option and parallel activation affects the connectivity to and from the servers until the activation is complete, but does update the firmware in the shortest time.
+    * Stage - Stages (uploads) the selected firmware to the secondary flash memory on the interconnect, but does not activate the firmware. You can activate the firmware at a later time.  This option allows manual sequencing of the firmware activation and is the preferred approach to minimize service interruption.
+    * Activate - Activates the selected staged firmware by rebooting the interconnect modules.
+
+There are a few different activation methods available, depending on the platform:
+
+    * OddEven - Will perform updates to all odd module bays first, then even.  An activation delay can be specified with the EthernetActivateDelay parameter.
+    * Serial - Will perform updates to all device bays, starting with the first bay.  An activation delay can be specified with the EthernetActivateDelay parameter.
+    * Parallel - Will perform updates to all device bays, at the same time.  Activation will happen immediately once staging and installation have completed.  You cannot specify an activation delay.
+    * Orchestrated - Supported with HPE Synergy Virtual Connect and SAS modules only, a nondisruptive firmware update is attempted for the logical interconnects. The following scenarios might occur:
+
+        * Firmware update is executed automatically without any disruption to application network traffic.
+        * Firmware update is executed with minimal impact to application network traffic. A context-specific warning message displays along with an option to proceed or cancel the firmware update.
+        * For example, a warning message displays to ensure that OS level NIC teaming or bonding is enabled for Ethernet networks and MPIO is enabled when Fibre Channel connections are involved.
+        * Firmware update will result in a system outage. A warning message displays when network and storage connections might be disrupted.
+    
+{% hint style="info" %}
+Minimum required privileges: Network administrator, Server administrator 
+{% endhint %}
+(for the HPE Synergy 12Gb SAS Connection Module), or Infrastructure administrator.
 ## Examples
 
 ###  Example 1 
@@ -34,7 +67,7 @@ This Cmdlet will default to performing an Update (Stage + Activate), which will 
 ```text
 $li = Get-HPOVLogicalInterconnect Encl1-LI
 $spp = Get-HPOVSppFile "HP Service Pack for ProLiant" 
-$task = Install-HPOVLogicalInterconnectFirmware Stage $li $spp 
+$task = Install-HPOVLogicalInterconnectFirmware -Method Stage -InputObject $li -Baseline $spp 
 Wait-HPOVTaskComplete $task
 $task = Install-HPOVLogicalInterconnectFirmware Activate $li 
 Wait-HPOVTaskComplete $task
@@ -45,14 +78,14 @@ Perform a firmware update of the `Encl1-LI` Logical Interconnect by first stagin
 ###  Example 2 
 
 ```text
-Get-HPOVLogicalInterconnect Encl1-LI  | Install-HPOVLogicalInterconnectFirmware -method Update -baseline "HP Service Pack for ProLiant" -confirm:$false | Wait-HPOVTaskComplete
+Get-HPOVLogicalInterconnect Encl1-LI  | Install-HPOVLogicalInterconnectFirmware -method Update -Baseline "HP Service Pack for ProLiant" -confirm:$false | Wait-HPOVTaskComplete
 ```
 
 Perform a firmware update of the `Encl1-LI` Logical Interconnect, do not prompt for confirmation, then wait for the task to complete.
 
 ## Parameters
 
-### -LogicalInterconnect &lt;Object&gt;
+### -InputObject &lt;Object&gt;
 
 The Logical Interconnect object(s), name(s) or uris(s) to be updated.
 
@@ -87,6 +120,7 @@ Specify the Ethernet module firmware activation order.  Accepted values are:
     * OddEven (Default)
     * Parallel
     * Serial
+    * Orchestrated (supported with HPE Synergy only)
 
 | Aliases | Order, ActivateOrder |
 | :--- | :--- |
@@ -178,7 +212,7 @@ Force the firmware update if the update version matches what is already installe
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one `[HPEOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -188,11 +222,11 @@ Specify one `[HPEOneView.Appliance.Connection]` object or Name property value. I
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -WhatIf &lt;SwitchParameter&gt;
+### -NoPreview &lt;SwitchParameter&gt;
 
+Before applying the update, the firmware update can be validated if the update is disruptive. If the update is disruptive, follow the resolutions in the returned async task.
 
-
-| Aliases | wi |
+| Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
@@ -200,15 +234,18 @@ Specify one `[HPEOneView.Appliance.Connection]` object or Name property value. I
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Confirm &lt;SwitchParameter&gt;
+### -SasActivationMethod &lt;string&gt;
 
+Specify the Ethernet module firmware activation order.  Accepted values are:
 
+    * Orchestrated
+    * Parallel
 
-| Aliases | cf |
+| Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | Orchestrated |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -218,13 +255,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPEOneView.Networking.LogicalInterconnect [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Networking.LogicalInterconnect [System.Management.Automation.PSCustomObject]**_
 
 Logical Interconnect Resource Object
 
 ## Return Values
 
-_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Returns an async task resource to monitor.
 
