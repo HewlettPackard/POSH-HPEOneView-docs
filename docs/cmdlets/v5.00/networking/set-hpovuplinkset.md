@@ -9,10 +9,12 @@ description: Update an uplink set resource
 ```text
 Set-HPOVUplinkSet
     [-InputObject] <Object>
-    [-UplinkSetName <string>]
+    [-UplinkSetName] <string>
     [-Name <string>]
     [-AddNetwork <Object[]>]
     [-RemoveNetwork <Object[]>]
+    [-AddNetworkSet <Object[]>]
+    [-RemoveNetworkSet <Object[]>]
     [-AddPorts <Object[]>]
     [-RemovePorts <Object[]>]
     [-UntaggedNetwork <Object>]
@@ -25,7 +27,7 @@ Set-HPOVUplinkSet
 ```text
 Set-HPOVUplinkSet
     [-InputObject] <Object>
-    [-UplinkSetName <string>]
+    [-UplinkSetName] <string>
     [-Name <string>]
     [-AddPorts <Object[]>]
     [-RemovePorts <Object[]>]
@@ -246,6 +248,30 @@ When providing a Logical Interconnect Group resource, you must specify the name 
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
+### -AddNetworkSet &lt;Object[]&gt;
+
+Provide one or more network set objects from `Get-HPOVNetworkSet` to add to the uplink set.  This will simplify the configuration of the assigned networks to the uplink set.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -RemoveNetworkSet &lt;Object[]&gt;
+
+Provide one or more network set objects from `Get-HPOVNetworkSet` to remove from the uplink set.  This will simplify the configuration of the assigned networks to the uplink set.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
 ### &lt;CommonParameters&gt;
 
 This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer, PipelineVariable, and OutVariable. For more information, see about\_CommonParameters \([http://go.microsoft.com/fwlink/?LinkID=113216](http://go.microsoft.com/fwlink/?LinkID=113216)\)
@@ -268,6 +294,7 @@ Async task resource object to monitor.
 
 ## Related Links
 
+* [Get-HPOVNetworkSet](get-hpovnetworkset.md)
 * [Get-HPOVUplinkSet](get-hpovuplinkset.md)
 * [Get-HPOVLogicalInterconnectGroup](get-hpovlogicalinterconnectgroup.md)
 * [New-HPOVUplinkSet](new-hpovuplinkset.md)

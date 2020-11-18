@@ -159,7 +159,7 @@ $ServerProfileTemplate = Get-HPOVServerProfileTemplate -Name "Hypervisor Cluster
 $Servers = Get-HPOVServer -NoProfile -InputObject $ServerProfileTemplate -Count 4
 
 # Create new cluster profile overriding the cluster manager settings
-New-HPOVClusterProfile -Name ProdCluster1 -ClusterPrefix ProdClusterNode- -ClusterManager $ClusterManager -ClusterManagerLocation "DC2" -ServerProfileTemplate $ServerProfileTemplate -ClusterPassword $ClusterPassword -Servers $Servers -OverrideClusterManagerConfig -VirtualSwitchType Distributed -DistributedSwitchUsage AllNetworks -DistributedSwitchVersion 6.0 -HAEnabled $true -DRSEnabled $false 
+New-HPOVClusterProfile -Name ProdCluster1 -ClusterPrefix ProdClusterNode- -ClusterManager $ClusterManager -ClusterManagerLocation "DC2" -ServerProfileTemplate $ServerProfileTemplate -ClusterPassword $ClusterPassword -Servers $Servers -HPOVerrideClusterManagerConfig -VirtualSwitchType Distributed -DistributedSwitchUsage AllNetworks -DistributedSwitchVersion 6.0 -HAEnabled $true -DRSEnabled $false 
 ```
 
 Create a new cluster profile, overriding clsuter manager settings.

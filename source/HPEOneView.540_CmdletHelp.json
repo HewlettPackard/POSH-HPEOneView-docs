@@ -31463,6 +31463,16 @@
             "SupportsWildcard": false,
             "DataType": "String",
             "Required": false
+          },
+          {
+            "Name": "Permanent",
+            "Description": "When set to true, the logical JBOD will not be deleted when the associated profile is deleted.",
+            "DefaultValue": "Unmanaged",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false,
+            "DataType": "String",
+            "Required": false
           }
         ],
         "InputTypes": [
@@ -31588,6 +31598,10 @@
             },
             {
               "Name": "EraseDataOnDelete",
+              "Required": false
+            },
+            {
+              "Name": "Permanent",
               "Required": false
             },
             {

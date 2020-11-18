@@ -1,4 +1,4 @@
-﻿{
+{
   "Version": "5.20",
   "LibraryGUID": "53cc9b65-a000-447b-aec8-805a2a8dd9aa",
   "Cmdlets": [
@@ -19804,163 +19804,163 @@
       "Category": "Networking",
       "Contents": {
         "Synopsis": "Install Logical Interconnect Firmware.",
-        "Description": "Use this Cmdlet to install/update the Logical Interconnect (i.e. Virtual Connect) firmware.  You can provide the Logical Interconnect Name, URI or Object and must specify a valid SPP Baseline present on the appliance.\n\nThis Cmdlet will default to performing an Update (Stage + Activate), which will cause an outage.  If you wish to avoid an outage, first stage the update usind -method stage, then -method activate.  Interconnect activation can be controlled with the -ActivateOrder parameter, which defaults to Odd interconnects.  Once the specified interconnect activation is complete, you must then call the Cmdlet again with the alternate ActivateOrder value (i.e. even.)",
+        "Description": "Firmware activation options allow you to maintain network availability by always keeping one path up for production traffic and reduce the outages due to human errors. You also have the option of staging the firmware for later activation. You can activate the staged firmware on an individual interconnect or on all interconnects.\n\nYou have the following options when updating firmware based on a logical interconnect:\n\n    * Update (stage + activate) - Stages (uploads) the selected firmware to the secondary flash memory on the interconnect, and then activates the firmware as the baseline. At the end of this operation, all member interconnects are running the same firmware baseline and are compliant with one another.  This option and parallel activation affects the connectivity to and from the servers until the activation is complete, but does update the firmware in the shortest time.\n    * Stage - Stages (uploads) the selected firmware to the secondary flash memory on the interconnect, but does not activate the firmware. You can activate the firmware at a later time.  This option allows manual sequencing of the firmware activation and is the preferred approach to minimize service interruption.\n    * Activate - Activates the selected staged firmware by rebooting the interconnect modules.\n\nThere are a few different activation methods available, depending on the platform:\n\n    * OddEven - Will perform updates to all odd module bays first, then even.  An activation delay can be specified with the EthernetActivateDelay parameter.\n    * Serial - Will perform updates to all device bays, starting with the first bay.  An activation delay can be specified with the EthernetActivateDelay parameter.\n    * Parallel - Will perform updates to all device bays, at the same time.  Activation will happen immediately once staging and installation have completed.  You cannot specify an activation delay.\n    * Orchestrated - Supported with HPE Synergy Virtual Connect and SAS modules only, a nondisruptive firmware update is attempted for the logical interconnects. The following scenarios might occur:\n\n        * Firmware update is executed automatically without any disruption to application network traffic.\n        * Firmware update is executed with minimal impact to application network traffic. A context-specific warning message displays along with an option to proceed or cancel the firmware update.\n        * For example, a warning message displays to ensure that OS level NIC teaming or bonding is enabled for Ethernet networks and MPIO is enabled when Fibre Channel connections are involved.\n        * Firmware update will result in a system outage. A warning message displays when network and storage connections might be disrupted.\n    \nMinimum required privileges: Network administrator, Server administrator (for the HPE Synergy 12Gb SAS Connection Module), or Infrastructure administrator.",
         "Parameters": [
           {
-            "Name": "LogicalInterconnect",
+            "Name": "InputObject",
             "Description": "The Logical Interconnect object(s), name(s) or uris(s) to be updated.",
-            "DefaultValue": null,
+            "DataType": "Object",
+            "Required": true,
+            "DefaultValue": "",
             "Aliases": "name, uri, li",
             "PipelineInput": "true (ByValue)",
-            "SupportsWildcard": false,
-            "DataType": "Object",
-            "Required": true
+            "SupportsWildcard": false
           },
           {
             "Name": "Method",
             "Description": "Upgrade method to perform.  Accepted values are:\n\n    * UPDATE (Default)\n    * STAGE\n    * ACTIVATE",
+            "DataType": "String",
+            "Required": true,
             "DefaultValue": "Update",
             "Aliases": "None",
             "PipelineInput": "false",
-            "SupportsWildcard": false,
-            "DataType": "String",
-            "Required": true
+            "SupportsWildcard": false
           },
           {
             "Name": "EthernetActivateOrder",
-            "Description": "Specify the Ethernet module firmware activation order.  Accepted values are:\n\n    * OddEven (Default)\n    * Parallel\n    * Serial",
+            "Description": "Specify the Ethernet module firmware activation order.  Accepted values are:\n\n    * OddEven (Default)\n    * Parallel\n    * Serial\n    * Orchestrated (supported with HPE Synergy only)",
+            "DataType": "String",
+            "Required": true,
             "DefaultValue": "OddEven",
             "Aliases": "Order, ActivateOrder",
             "PipelineInput": "false",
-            "SupportsWildcard": false,
-            "DataType": "String",
-            "Required": true
+            "SupportsWildcard": false
           },
           {
             "Name": "EthernetActivateDelay",
             "Description": "The amount of time in seconds to delay activating additional modules.\n\nDefault is 5 seconds.",
+            "DataType": "Int32",
+            "Required": true,
             "DefaultValue": "5",
             "Aliases": "None",
             "PipelineInput": "false",
-            "SupportsWildcard": false,
-            "DataType": "Int32",
-            "Required": true
+            "SupportsWildcard": false
           },
           {
             "Name": "FCActivateOrder",
             "Description": "Specify the Fibre Channel module firmware activation order.  Accepted values are:\n\n    * OddEven\n    * Parallel\n    * Serial (Default)",
+            "DataType": "String",
+            "Required": true,
             "DefaultValue": "Serial",
             "Aliases": "None",
             "PipelineInput": "false",
-            "SupportsWildcard": false,
-            "DataType": "String",
-            "Required": true
+            "SupportsWildcard": false
           },
           {
             "Name": "FCActivateDelay",
             "Description": "The amount of time in seconds to delay activating additional modules.\n\nDefault is 5 seconds.",
+            "DataType": "Int32",
+            "Required": true,
             "DefaultValue": "5",
             "Aliases": "None",
             "PipelineInput": "false",
-            "SupportsWildcard": false,
-            "DataType": "Int32",
-            "Required": true
+            "SupportsWildcard": false
           },
           {
             "Name": "Baseline",
             "Description": "Firmware Baseline Name, URI or Object.",
-            "DefaultValue": null,
+            "DataType": "Object",
+            "Required": true,
+            "DefaultValue": "",
             "Aliases": "spp",
             "PipelineInput": "false",
-            "SupportsWildcard": false,
-            "DataType": "Object",
-            "Required": true
+            "SupportsWildcard": false
           },
           {
             "Name": "Async",
             "Description": "Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.",
+            "DataType": "SwitchParameter",
+            "Required": false,
             "DefaultValue": "False",
             "Aliases": "None",
             "PipelineInput": "false",
-            "SupportsWildcard": false,
-            "DataType": "SwitchParameter",
-            "Required": false
+            "SupportsWildcard": false
           },
           {
             "Name": "Force",
             "Description": "Force the firmware update if the update version matches what is already installed.",
+            "DataType": "SwitchParameter",
+            "Required": false,
             "DefaultValue": "False",
             "Aliases": "None",
             "PipelineInput": "false",
-            "SupportsWildcard": false,
-            "DataType": "SwitchParameter",
-            "Required": false
+            "SupportsWildcard": false
           },
           {
             "Name": "ApplianceConnection",
-            "Description": "Specify one HPEOneView.Appliance.Connection object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.",
+            "Description": "Specify one HPOneView.Appliance.Connection object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.",
+            "DataType": "Object",
+            "Required": true,
             "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
             "Aliases": "Appliance",
             "PipelineInput": "true (ByPropertyName)",
-            "SupportsWildcard": false,
-            "DataType": "Object",
-            "Required": true
+            "SupportsWildcard": false
           },
           {
-            "Name": "WhatIf",
-            "Description": null,
-            "DefaultValue": null,
-            "Aliases": "wi",
-            "PipelineInput": "false",
-            "SupportsWildcard": false,
+            "Name": "NoPreview",
+            "Description": "Before applying the update, the firmware update can be validated if the update is disruptive. If the update is disruptive, follow the resolutions in the returned async task.",
             "DataType": "SwitchParameter",
-            "Required": false
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           },
           {
-            "Name": "Confirm",
-            "Description": null,
-            "DefaultValue": null,
-            "Aliases": "cf",
+            "Name": "SasActivationMethod",
+            "Description": "Specify the Ethernet module firmware activation order.  Accepted values are:\n\n    * Orchestrated\n    * Parallel",
+            "DataType": "string",
+            "Required": false,
+            "DefaultValue": "Orchestrated",
+            "Aliases": "None",
             "PipelineInput": "false",
-            "SupportsWildcard": false,
-            "DataType": "SwitchParameter",
-            "Required": false
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
           {
-            "Value": "HPEOneView.Networking.LogicalInterconnect [System.Management.Automation.PSCustomObject]",
+            "Value": "HPOneView.Networking.LogicalInterconnect [System.Management.Automation.PSCustomObject]",
             "Text": "Logical Interconnect Resource Object"
           }
         ],
         "ReturnValues": [
           {
-            "Value": "HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]",
+            "Value": "HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]",
             "Text": "Returns an async task resource to monitor."
           }
         ],
         "Examples": [
           {
             "Title": "-------------------------- EXAMPLE 1 --------------------------",
-            "Code": "$li = Get-HPOVLogicalInterconnect Encl1-LI\n$spp = Get-HPOVSppFile \"HP Service Pack for ProLiant\" \n$task = Install-HPOVLogicalInterconnectFirmware Stage $li $spp \nWait-HPOVTaskComplete $task\n$task = Install-HPOVLogicalInterconnectFirmware Activate $li \nWait-HPOVTaskComplete $task",
+            "Code": "$li = Get-HPOVLogicalInterconnect Encl1-LI\n$spp = Get-HPOVSppFile \"HP Service Pack for ProLiant\" \n$task = Install-HPOVLogicalInterconnectFirmware -Method Stage -InputObject $li -Baseline $spp \nWait-HPOVTaskComplete $task\n$task = Install-HPOVLogicalInterconnectFirmware Activate $li \nWait-HPOVTaskComplete $task",
             "Description": "Perform a firmware update of the Encl1-LI Logical Interconnect by first staging the firmware. Then Acitate the firmware using the default OddEven Interconnect Bay order."
           },
           {
             "Title": "-------------------------- EXAMPLE 2 --------------------------",
-            "Code": "Get-HPOVLogicalInterconnect Encl1-LI  | Install-HPOVLogicalInterconnectFirmware -method Update -baseline \"HP Service Pack for ProLiant\" -confirm:$false | Wait-HPOVTaskComplete",
+            "Code": "Get-HPOVLogicalInterconnect Encl1-LI  | Install-HPOVLogicalInterconnectFirmware -method Update -Baseline \"HP Service Pack for ProLiant\" -confirm:$false | Wait-HPOVTaskComplete",
             "Description": "Perform a firmware update of the Encl1-LI Logical Interconnect, do not prompt for confirmation, then wait for the task to complete."
           }
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.20/networking/install-hpovlogicalinterconnectfirmware.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.00/networking/install-hpovlogicalinterconnectfirmware.md",
             "Text": "Online: "
           }
         ],
         "Syntax": [
           [
             {
-              "Name": "LogicalInterconnect",
+              "Name": "InputObject",
               "Required": true
             },
             {
@@ -19969,23 +19969,27 @@
             },
             {
               "Name": "Method",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "EthernetActivateOrder",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "EthernetActivateDelay",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "FCActivateOrder",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "FCActivateDelay",
-              "Required": true
+              "Required": false
+            },
+            {
+              "Name": "NoPreview",
+              "Required": false
             },
             {
               "Name": "Async",
@@ -19997,7 +20001,37 @@
             },
             {
               "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ],
+          [
+            {
+              "Name": "InputObject",
               "Required": true
+            },
+            {
+              "Name": "Baseline",
+              "Required": true
+            },
+            {
+              "Name": "Method",
+              "Required": false
+            },
+            {
+              "Name": "SasActivationMethod",
+              "Required": false
+            },
+            {
+              "Name": "Async",
+              "Required": false
+            },
+            {
+              "Name": "Force",
+              "Required": false
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
             }
           ]
         ]
@@ -31545,6 +31579,16 @@
             "SupportsWildcard": false,
             "DataType": "String",
             "Required": false
+          },
+          {
+            "Name": "Permanent",
+            "Description": "",
+            "DataType": "bool",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -31662,7 +31706,7 @@
             },
             {
               "Name": "MinDriveSize",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "MaxDriveSize",
@@ -31670,6 +31714,10 @@
             },
             {
               "Name": "EraseDataOnDelete",
+              "Required": false
+            },
+            {
+              "Name": "Permanent",
               "Required": false
             },
             {
@@ -58316,6 +58364,14 @@
               "Required": false
             },
             {
+              "Name": "AddNetworkSet",
+              "Required": false
+            },
+            {
+              "Name": "RemoveNetworkSet",
+              "Required": false
+            },
+            {
               "Name": "AddPorts",
               "Required": false
             },
@@ -58483,6 +58539,26 @@
             "SupportsWildcard": false,
             "DataType": "string",
             "Required": "True"
+          },
+          {
+            "Name": "AddNetworkSet",
+            "Description": "",
+            "DataType": "Object[]",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "RemoveNetworkSet",
+            "Description": "",
+            "DataType": "Object[]",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -60504,6 +60580,273 @@
           },
           {
             "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.20/servers/new-hpovserverprofileilopolicy.md",
+            "Text": "Online: "
+          }
+        ]
+      }
+    },
+    {
+      "Name": "Disable-HPOVCertificateRevocationChecking",
+      "Category": "Library",
+      "Contents": {
+        "Synopsis": "Default content",
+        "Description": "Default content",
+        "Syntax": [
+          [
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ]
+        ],
+        "Parameters": [
+          {
+            "Name": "ApplianceConnection",
+            "Description": "Specify one or more HPEOneView.Appliance.Connection object(s) or Name property value(s).\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
+            "DataType": "Object",
+            "Required": false,
+            "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
+            "Aliases": "Appliance",
+            "PipelineInput": "true (ByPropertyName)",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Confirm",
+            "Description": "",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "cf",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "WhatIf",
+            "Description": "",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "wi",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          }
+        ],
+        "InputTypes": [],
+        "ReturnValues": [],
+        "Examples": [
+          {
+            "Title": "-------------------------- EXAMPLE 1 --------------------------",
+            "Code": "Disable-HPOVCertificateRevocationChecking\r\n",
+            "Description": "Default example"
+          }
+        ],
+        "RelatedLinks": [
+          {
+            "Uri": "",
+            "Text": "Enable-HPOVCertificateRevocationChecking"
+          },
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v5.20//disable-hpovcertificaterevocationchecking",
+            "Text": "Online: "
+          }
+        ]
+      }
+    },
+    {
+      "Name": "Enable-HPOVCertificateRevocationChecking",
+      "Category": "Library",
+      "Contents": {
+        "Synopsis": "Default content",
+        "Description": "Default content",
+        "Syntax": [
+          [
+            {
+              "Name": "SkipRevocationCheck",
+              "Required": false
+            },
+            {
+              "Name": "AllowExpiredCRLs",
+              "Required": false
+            },
+            {
+              "Name": "NotifyExpiredMissingCRLs",
+              "Required": false
+            },
+            {
+              "Name": "EnableAutoCRLDownload",
+              "Required": false
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ]
+        ],
+        "Parameters": [
+          {
+            "Name": "AllowExpiredCRLs",
+            "Description": "",
+            "DataType": "bool",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "ApplianceConnection",
+            "Description": "Specify one or more HPEOneView.Appliance.Connection object(s) or Name property value(s).\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
+            "DataType": "Object",
+            "Required": false,
+            "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
+            "Aliases": "Appliance",
+            "PipelineInput": "true (ByPropertyName)",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Confirm",
+            "Description": "",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "cf",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "EnableAutoCRLDownload",
+            "Description": "",
+            "DataType": "bool",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "NotifyExpiredMissingCRLs",
+            "Description": "",
+            "DataType": "bool",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "SkipRevocationCheck",
+            "Description": "",
+            "DataType": "bool",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "WhatIf",
+            "Description": "",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "wi",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          }
+        ],
+        "InputTypes": [],
+        "ReturnValues": [],
+        "Examples": [
+          {
+            "Title": "-------------------------- EXAMPLE 1 --------------------------",
+            "Code": "Enable-HPOVCertificateRevocationChecking\r\n",
+            "Description": "Default example"
+          }
+        ],
+        "RelatedLinks": [
+          {
+            "Uri": "",
+            "Text": "Disable-HPOVCertificateRevocationChecking"
+          },
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v5.20//enable-hpovcertificaterevocationchecking",
+            "Text": "Online: "
+          }
+        ]
+      }
+    },
+    {
+      "Name": "Set-HPOVCertificateRevocationInterval",
+      "Category": "Library",
+      "Contents": {
+        "Synopsis": "Default content",
+        "Description": "Default content",
+        "Syntax": [
+          [
+            {
+              "Name": "AutoCRLDownloadInterval",
+              "Required": true
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ]
+        ],
+        "Parameters": [
+          {
+            "Name": "ApplianceConnection",
+            "Description": "Specify one or more HPEOneView.Appliance.Connection object(s) or Name property value(s).\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
+            "DataType": "Object",
+            "Required": false,
+            "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
+            "Aliases": "Appliance",
+            "PipelineInput": "true (ByPropertyName)",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "AutoCRLDownloadInterval",
+            "Description": "",
+            "DataType": "int",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Confirm",
+            "Description": "",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "cf",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "WhatIf",
+            "Description": "",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "wi",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          }
+        ],
+        "InputTypes": [],
+        "ReturnValues": [],
+        "Examples": [
+          {
+            "Title": "-------------------------- EXAMPLE 1 --------------------------",
+            "Code": "Set-HPOVCertificateRevocationInterval\r\n",
+            "Description": "Default example"
+          }
+        ],
+        "RelatedLinks": [
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v5.20//set-hpovcertificaterevocationinterval",
             "Text": "Online: "
           }
         ]

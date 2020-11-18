@@ -13,6 +13,8 @@ Set-OVUplinkSet
     [-Name <String>]
     [-AddNetwork <Object[]>]
     [-RemoveNetwork <Object[]>]
+    [-AddNetworkSet <Object[]>]
+    [-RemoveNetworkSet <Object[]>]
     [-AddPorts <Object[]>]
     [-RemovePorts <Object[]>]
     [-UntaggedNetwork <Object>]
@@ -246,6 +248,30 @@ When providing a Logical Interconnect Group resource, you must specify the name 
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
+| Accept wildcard characters? | False |
+
+### -AddNetworkSet &lt;Object[]&gt;
+
+
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -RemoveNetworkSet &lt;Object[]&gt;
+
+
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

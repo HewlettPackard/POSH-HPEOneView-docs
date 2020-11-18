@@ -30,7 +30,7 @@ New-OVServerProfileLogicalDisk
     [-MinDriveSize <Int32>]
     [-MaxDriveSize <Int32>]
     [-EraseDataOnDelete]
-    [-Permanent <bool>]
+    [-Permanent <String>]
     [-Bootable <Boolean>]
     [<CommonParameters>]
 ```
@@ -253,15 +253,15 @@ For Gen10 Smart Array controllers only.  When using Auto for drive type allocati
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Permanent &lt;bool&gt;
+### -Permanent &lt;String&gt;
 
-
+When set to true, the logical JBOD will not be deleted when the associated profile is deleted.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | Unmanaged |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

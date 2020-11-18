@@ -1160,7 +1160,7 @@ Expected format:
 
 ### -IloSettings &lt;PSObject&gt;
 
-Provide an iLO settings object from `New-OVServerProfileIloPolicy` Cmdlet.
+Provide an iLO settings object from `New-HPOVServerProfileIloPolicy` Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |

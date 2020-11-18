@@ -31,8 +31,8 @@ Get-HPOVComposerNode
 
 Appliance                              Name                       State Status Model            Version         Role
 ---------                              ----                       ----- ------ -----            -------         ----
-zpo-s18r18s3-ov.vse.rdlabs.hpecorp.net CN75160607 appliance bay 1 OK    OK     Synergy Composer 3.00.00-0251673 Active
-zpo-s18r18s3-ov.vse.rdlabs.hpecorp.net CN75140CPW appliance bay 1 OK    OK     Synergy Composer 3.00.00-0251673 Standby
+zpo-s18r18s3-HPOV.vse.rdlabs.hpecorp.net CN75160607 appliance bay 1 OK    OK     Synergy Composer 3.00.00-0251673 Active
+zpo-s18r18s3-HPOV.vse.rdlabs.hpecorp.net CN75140CPW appliance bay 1 OK    OK     Synergy Composer 3.00.00-0251673 Standby
 ```
 
 Return all Synergy Composer nodes

@@ -1,4 +1,4 @@
-﻿{
+{
   "Version": "5.30",
   "LibraryGUID": "7a28b926-da5e-4954-9966-762fa1f64817",
   "Cmdlets": [
@@ -14450,7 +14450,7 @@
           },
           {
             "Name": "Datacenter",
-            "Description": "Filter racks that are a member of a data center.  Provide the data center object from Get-HPOVDatacenter Cmdlet.",
+            "Description": "Filter racks that are a member of a data center.  Provide the data center object from Get-OVDatacenter Cmdlet.",
             "DataType": "Object",
             "Required": false,
             "DefaultValue": "",
@@ -19921,6 +19921,36 @@
             "SupportsWildcard": false,
             "DataType": "SwitchParameter",
             "Required": false
+          },
+          {
+            "Name": "InputObject",
+            "Description": "",
+            "DataType": "Object",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "LogicalInterconnect, name, uri, li",
+            "PipelineInput": "true (ByValue)",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "NoPreview",
+            "Description": "",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "SasActivationMethod",
+            "Description": "",
+            "DataType": "string",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -19949,14 +19979,14 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.30/networking/install-ovlogicalinterconnectfirmware.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.20/networking/install-OVlogicalinterconnectfirmware.md",
             "Text": "Online: "
           }
         ],
         "Syntax": [
           [
             {
-              "Name": "LogicalInterconnect",
+              "Name": "InputObject",
               "Required": true
             },
             {
@@ -19965,23 +19995,27 @@
             },
             {
               "Name": "Method",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "EthernetActivateOrder",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "EthernetActivateDelay",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "FCActivateOrder",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "FCActivateDelay",
-              "Required": true
+              "Required": false
+            },
+            {
+              "Name": "NoPreview",
+              "Required": false
             },
             {
               "Name": "Async",
@@ -19993,7 +20027,37 @@
             },
             {
               "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ],
+          [
+            {
+              "Name": "InputObject",
               "Required": true
+            },
+            {
+              "Name": "Baseline",
+              "Required": true
+            },
+            {
+              "Name": "Method",
+              "Required": false
+            },
+            {
+              "Name": "SasActivationMethod",
+              "Required": false
+            },
+            {
+              "Name": "Async",
+              "Required": false
+            },
+            {
+              "Name": "Force",
+              "Required": false
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
             }
           ]
         ]
@@ -31463,6 +31527,16 @@
             "SupportsWildcard": false,
             "DataType": "String",
             "Required": false
+          },
+          {
+            "Name": "Permanent",
+            "Description": "When set to true, the logical JBOD will not be deleted when the associated profile is deleted.",
+            "DefaultValue": "Unmanaged",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false,
+            "DataType": "String",
+            "Required": false
           }
         ],
         "InputTypes": [
@@ -31588,6 +31662,10 @@
             },
             {
               "Name": "EraseDataOnDelete",
+              "Required": false
+            },
+            {
+              "Name": "Permanent",
               "Required": false
             },
             {
@@ -58280,6 +58358,14 @@
               "Required": false
             },
             {
+              "Name": "AddNetworkSet",
+              "Required": false
+            },
+            {
+              "Name": "RemoveNetworkSet",
+              "Required": false
+            },
+            {
               "Name": "AddPorts",
               "Required": false
             },
@@ -58447,6 +58533,26 @@
             "SupportsWildcard": false,
             "DataType": "String",
             "Required": "True"
+          },
+          {
+            "Name": "AddNetworkSet",
+            "Description": "",
+            "DataType": "Object[]",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "RemoveNetworkSet",
+            "Description": "",
+            "DataType": "Object[]",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -60540,6 +60646,450 @@
           },
           {
             "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.30/servers/new-ovserverprofileilopolicy.md",
+            "Text": "Online: "
+          }
+        ]
+      }
+    },
+    {
+      "Name": "Disable-OVCertificateRevocationChecking",
+      "Category": "Library",
+      "Contents": {
+        "Synopsis": "Default content",
+        "Description": "Default content",
+        "Syntax": [
+          [
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ]
+        ],
+        "Parameters": [
+          {
+            "Name": "ApplianceConnection",
+            "Description": "Specify one or more HPEOneView.Appliance.Connection object(s) or Name property value(s).\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
+            "DataType": "Object",
+            "Required": false,
+            "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
+            "Aliases": "Appliance",
+            "PipelineInput": "true (ByPropertyName)",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Confirm",
+            "Description": "",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "cf",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "WhatIf",
+            "Description": "",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "wi",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          }
+        ],
+        "InputTypes": [],
+        "ReturnValues": [],
+        "Examples": [
+          {
+            "Title": "-------------------------- EXAMPLE 1 --------------------------",
+            "Code": "Disable-OVCertificateRevocationChecking\r\n",
+            "Description": "Default example"
+          }
+        ],
+        "RelatedLinks": [
+          {
+            "Uri": "",
+            "Text": "Enable-OVCertificateRevocationChecking"
+          },
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v5.30//disable-ovcertificaterevocationchecking",
+            "Text": "Online: "
+          }
+        ]
+      }
+    },
+    {
+      "Name": "Enable-OVCertificateRevocationChecking",
+      "Category": "Library",
+      "Contents": {
+        "Synopsis": "Default content",
+        "Description": "Default content",
+        "Syntax": [
+          [
+            {
+              "Name": "SkipRevocationCheck",
+              "Required": false
+            },
+            {
+              "Name": "AllowExpiredCRLs",
+              "Required": false
+            },
+            {
+              "Name": "NotifyExpiredMissingCRLs",
+              "Required": false
+            },
+            {
+              "Name": "EnableAutoCRLDownload",
+              "Required": false
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ]
+        ],
+        "Parameters": [
+          {
+            "Name": "AllowExpiredCRLs",
+            "Description": "",
+            "DataType": "bool",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "ApplianceConnection",
+            "Description": "Specify one or more HPEOneView.Appliance.Connection object(s) or Name property value(s).\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
+            "DataType": "Object",
+            "Required": false,
+            "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
+            "Aliases": "Appliance",
+            "PipelineInput": "true (ByPropertyName)",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Confirm",
+            "Description": "",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "cf",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "EnableAutoCRLDownload",
+            "Description": "",
+            "DataType": "bool",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "NotifyExpiredMissingCRLs",
+            "Description": "",
+            "DataType": "bool",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "SkipRevocationCheck",
+            "Description": "",
+            "DataType": "bool",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "WhatIf",
+            "Description": "",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "wi",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          }
+        ],
+        "InputTypes": [],
+        "ReturnValues": [],
+        "Examples": [
+          {
+            "Title": "-------------------------- EXAMPLE 1 --------------------------",
+            "Code": "Enable-OVCertificateRevocationChecking\r\n",
+            "Description": "Default example"
+          }
+        ],
+        "RelatedLinks": [
+          {
+            "Uri": "",
+            "Text": "Disable-OVCertificateRevocationChecking"
+          },
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v5.30//enable-ovcertificaterevocationchecking",
+            "Text": "Online: "
+          }
+        ]
+      }
+    },
+    {
+      "Name": "Get-OVApplianceIPAddress",
+      "Category": "Library",
+      "Contents": {
+        "Synopsis": "Default content",
+        "Description": "Default content",
+        "Syntax": [
+          []
+        ],
+        "Parameters": [
+          {
+            "Name": "ApplianceConnection",
+            "Description": "Specify one or more HPEOneView.Appliance.Connection object(s) or Name property value(s).\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
+            "DataType": "Object",
+            "Required": false,
+            "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
+            "Aliases": "Appliance",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          }
+        ],
+        "InputTypes": [],
+        "ReturnValues": [],
+        "Examples": [
+          {
+            "Title": "-------------------------- EXAMPLE 1 --------------------------",
+            "Code": "Get-OVApplianceIPAddress\r\n",
+            "Description": "Default example"
+          }
+        ],
+        "RelatedLinks": [
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v5.30//get-ovapplianceipaddress",
+            "Text": "Online: "
+          }
+        ]
+      }
+    },
+    {
+      "Name": "Get-OVApplianceStaticRoute",
+      "Category": "Library",
+      "Contents": {
+        "Synopsis": "Default content",
+        "Description": "Default content",
+        "Syntax": [
+          []
+        ],
+        "Parameters": [
+          {
+            "Name": "ApplianceConnection",
+            "Description": "Specify one or more HPEOneView.Appliance.Connection object(s) or Name property value(s).\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
+            "DataType": "Object",
+            "Required": false,
+            "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
+            "Aliases": "Appliance",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Destination",
+            "Description": "",
+            "DataType": "string",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Interface",
+            "Description": "",
+            "DataType": "string",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          }
+        ],
+        "InputTypes": [],
+        "ReturnValues": [],
+        "Examples": [
+          {
+            "Title": "-------------------------- EXAMPLE 1 --------------------------",
+            "Code": "Get-OVApplianceStaticRoute\r\n",
+            "Description": "Default example"
+          }
+        ],
+        "RelatedLinks": [
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v5.30//get-ovappliancestaticroute",
+            "Text": "Online: "
+          }
+        ]
+      }
+    },
+    {
+      "Name": "Set-OVCertificateRevocationInterval",
+      "Category": "Library",
+      "Contents": {
+        "Synopsis": "Default content",
+        "Description": "Default content",
+        "Syntax": [
+          [
+            {
+              "Name": "AutoCRLDownloadInterval",
+              "Required": true
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ]
+        ],
+        "Parameters": [
+          {
+            "Name": "ApplianceConnection",
+            "Description": "Specify one or more HPEOneView.Appliance.Connection object(s) or Name property value(s).\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
+            "DataType": "Object",
+            "Required": false,
+            "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
+            "Aliases": "Appliance",
+            "PipelineInput": "true (ByPropertyName)",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "AutoCRLDownloadInterval",
+            "Description": "",
+            "DataType": "int",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Confirm",
+            "Description": "",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "cf",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "WhatIf",
+            "Description": "",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "wi",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          }
+        ],
+        "InputTypes": [],
+        "ReturnValues": [],
+        "Examples": [
+          {
+            "Title": "-------------------------- EXAMPLE 1 --------------------------",
+            "Code": "Set-OVCertificateRevocationInterval\r\n",
+            "Description": "Default example"
+          }
+        ],
+        "RelatedLinks": [
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v5.30//set-ovcertificaterevocationinterval",
+            "Text": "Online: "
+          }
+        ]
+      }
+    },
+    {
+      "Name": "Test-OVRemoteSupportEvent",
+      "Category": "Library",
+      "Contents": {
+        "Synopsis": "Default content",
+        "Description": "Default content",
+        "Syntax": [
+          [
+            {
+              "Name": "InputObject",
+              "Required": true
+            },
+            {
+              "Name": "CreateTestCase",
+              "Required": false
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ]
+        ],
+        "Parameters": [
+          {
+            "Name": "ApplianceConnection",
+            "Description": "Specify one or more HPEOneView.Appliance.Connection object(s) or Name property value(s).\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
+            "DataType": "Object",
+            "Required": false,
+            "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
+            "Aliases": "Appliance",
+            "PipelineInput": "true (ByPropertyName)",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Async",
+            "Description": "Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "False",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "CreateTestCase",
+            "Description": "",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "InputObject",
+            "Description": "",
+            "DataType": "Object",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "true (ByValue)",
+            "SupportsWildcard": false
+          }
+        ],
+        "InputTypes": [],
+        "ReturnValues": [],
+        "Examples": [
+          {
+            "Title": "-------------------------- EXAMPLE 1 --------------------------",
+            "Code": "Test-OVRemoteSupportEvent\r\n",
+            "Description": "Default example"
+          }
+        ],
+        "RelatedLinks": [
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v5.30//test-ovremotesupportevent",
             "Text": "Online: "
           }
         ]

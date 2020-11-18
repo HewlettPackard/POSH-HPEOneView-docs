@@ -1,4 +1,4 @@
-﻿{
+{
   "Version": "5.00",
   "LibraryGUID": "39a18995-ec04-422b-a972-1c4b3f8cebe7",
   "Cmdlets": [
@@ -9964,7 +9964,7 @@
         "Examples": [
           {
             "Title": "-------------------------- EXAMPLE 1 --------------------------",
-            "Code": "Get-HPOVComposerNode\n\nAppliance                              Name                       State Status Model            Version         Role\n---------                              ----                       ----- ------ -----            -------         ----\nzpo-s18r18s3-ov.vse.rdlabs.hpecorp.net CN75160607 appliance bay 1 OK    OK     Synergy Composer 3.00.00-0251673 Active\nzpo-s18r18s3-ov.vse.rdlabs.hpecorp.net CN75140CPW appliance bay 1 OK    OK     Synergy Composer 3.00.00-0251673 Standby",
+            "Code": "Get-HPOVComposerNode\n\nAppliance                              Name                       State Status Model            Version         Role\n---------                              ----                       ----- ------ -----            -------         ----\nzpo-s18r18s3-HPOV.vse.rdlabs.hpecorp.net CN75160607 appliance bay 1 OK    OK     Synergy Composer 3.00.00-0251673 Active\nzpo-s18r18s3-HPOV.vse.rdlabs.hpecorp.net CN75140CPW appliance bay 1 OK    OK     Synergy Composer 3.00.00-0251673 Standby",
             "Description": "Return all Synergy Composer nodes"
           }
         ],
@@ -19306,10 +19306,10 @@
       "Category": "Networking",
       "Contents": {
         "Synopsis": "Install Logical Interconnect Firmware.",
-        "Description": "Use this Cmdlet to install/update the Logical Interconnect (i.e. Virtual Connect) firmware.  You can provide the Logical Interconnect Name, URI or Object and must specify a valid SPP Baseline present on the appliance.\n\nThis Cmdlet will default to performing an Update (Stage + Activate), which will cause an outage.  If you wish to avoid an outage, first stage the update usind -method stage, then -method activate.  Interconnect activation can be controlled with the -ActivateOrder parameter, which defaults to Odd interconnects.  Once the specified interconnect activation is complete, you must then call the Cmdlet again with the alternate ActivateOrder value (i.e. even.)",
+        "Description": "Firmware activation options allow you to maintain network availability by always keeping one path up for production traffic and reduce the outages due to human errors. You also have the option of staging the firmware for later activation. You can activate the staged firmware on an individual interconnect or on all interconnects.\n\nYou have the following options when updating firmware based on a logical interconnect:\n\n    * Update (stage + activate) - Stages (uploads) the selected firmware to the secondary flash memory on the interconnect, and then activates the firmware as the baseline. At the end of this operation, all member interconnects are running the same firmware baseline and are compliant with one another.  This option and parallel activation affects the connectivity to and from the servers until the activation is complete, but does update the firmware in the shortest time.\n    * Stage - Stages (uploads) the selected firmware to the secondary flash memory on the interconnect, but does not activate the firmware. You can activate the firmware at a later time.  This option allows manual sequencing of the firmware activation and is the preferred approach to minimize service interruption.\n    * Activate - Activates the selected staged firmware by rebooting the interconnect modules.\n\nThere are a few different activation methods available, depending on the platform:\n\n    * OddEven - Will perform updates to all odd module bays first, then even.  An activation delay can be specified with the EthernetActivateDelay parameter.\n    * Serial - Will perform updates to all device bays, starting with the first bay.  An activation delay can be specified with the EthernetActivateDelay parameter.\n    * Parallel - Will perform updates to all device bays, at the same time.  Activation will happen immediately once staging and installation have completed.  You cannot specify an activation delay.\n    * Orchestrated - Supported with HPE Synergy Virtual Connect and SAS modules only, a nondisruptive firmware update is attempted for the logical interconnects. The following scenarios might occur:\n\n        * Firmware update is executed automatically without any disruption to application network traffic.\n        * Firmware update is executed with minimal impact to application network traffic. A context-specific warning message displays along with an option to proceed or cancel the firmware update.\n        * For example, a warning message displays to ensure that OS level NIC teaming or bonding is enabled for Ethernet networks and MPIO is enabled when Fibre Channel connections are involved.\n        * Firmware update will result in a system outage. A warning message displays when network and storage connections might be disrupted.\n    \nMinimum required privileges: Network administrator, Server administrator (for the HPE Synergy 12Gb SAS Connection Module), or Infrastructure administrator.",
         "Parameters": [
           {
-            "Name": "LogicalInterconnect",
+            "Name": "InputObject",
             "Description": "The Logical Interconnect object(s), name(s) or uris(s) to be updated.",
             "DataType": "Object",
             "Required": true,
@@ -19330,7 +19330,7 @@
           },
           {
             "Name": "EthernetActivateOrder",
-            "Description": "Specify the Ethernet module firmware activation order.  Accepted values are:\n\n    * OddEven (Default)\n    * Parallel\n    * Serial",
+            "Description": "Specify the Ethernet module firmware activation order.  Accepted values are:\n\n    * OddEven (Default)\n    * Parallel\n    * Serial\n    * Orchestrated (supported with HPE Synergy only)",
             "DataType": "String",
             "Required": true,
             "DefaultValue": "OddEven",
@@ -19407,6 +19407,26 @@
             "Aliases": "Appliance",
             "PipelineInput": "true (ByPropertyName)",
             "SupportsWildcard": false
+          },
+          {
+            "Name": "NoPreview",
+            "Description": "Before applying the update, the firmware update can be validated if the update is disruptive. If the update is disruptive, follow the resolutions in the returned async task.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "SasActivationMethod",
+            "Description": "Specify the Ethernet module firmware activation order.  Accepted values are:\n\n    * Orchestrated\n    * Parallel",
+            "DataType": "string",
+            "Required": false,
+            "DefaultValue": "Orchestrated",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -19424,12 +19444,12 @@
         "Examples": [
           {
             "Title": "-------------------------- EXAMPLE 1 --------------------------",
-            "Code": "$li = Get-HPOVLogicalInterconnect Encl1-LI\n$spp = Get-HPOVSppFile \"HP Service Pack for ProLiant\" \n$task = Install-HPOVLogicalInterconnectFirmware Stage $li $spp \nWait-HPOVTaskComplete $task\n$task = Install-HPOVLogicalInterconnectFirmware Activate $li \nWait-HPOVTaskComplete $task",
+            "Code": "$li = Get-HPOVLogicalInterconnect Encl1-LI\n$spp = Get-HPOVSppFile \"HP Service Pack for ProLiant\" \n$task = Install-HPOVLogicalInterconnectFirmware -Method Stage -InputObject $li -Baseline $spp \nWait-HPOVTaskComplete $task\n$task = Install-HPOVLogicalInterconnectFirmware Activate $li \nWait-HPOVTaskComplete $task",
             "Description": "Perform a firmware update of the Encl1-LI Logical Interconnect by first staging the firmware. Then Acitate the firmware using the default OddEven Interconnect Bay order."
           },
           {
             "Title": "-------------------------- EXAMPLE 2 --------------------------",
-            "Code": "Get-HPOVLogicalInterconnect Encl1-LI  | Install-HPOVLogicalInterconnectFirmware -method Update -baseline \"HP Service Pack for ProLiant\" -confirm:$false | Wait-HPOVTaskComplete",
+            "Code": "Get-HPOVLogicalInterconnect Encl1-LI  | Install-HPOVLogicalInterconnectFirmware -method Update -Baseline \"HP Service Pack for ProLiant\" -confirm:$false | Wait-HPOVTaskComplete",
             "Description": "Perform a firmware update of the Encl1-LI Logical Interconnect, do not prompt for confirmation, then wait for the task to complete."
           }
         ],
@@ -19442,7 +19462,7 @@
         "Syntax": [
           [
             {
-              "Name": "LogicalInterconnect",
+              "Name": "InputObject",
               "Required": true
             },
             {
@@ -19451,23 +19471,27 @@
             },
             {
               "Name": "Method",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "EthernetActivateOrder",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "EthernetActivateDelay",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "FCActivateOrder",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "FCActivateDelay",
-              "Required": true
+              "Required": false
+            },
+            {
+              "Name": "NoPreview",
+              "Required": false
             },
             {
               "Name": "Async",
@@ -19479,7 +19503,37 @@
             },
             {
               "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ],
+          [
+            {
+              "Name": "InputObject",
               "Required": true
+            },
+            {
+              "Name": "Baseline",
+              "Required": true
+            },
+            {
+              "Name": "Method",
+              "Required": false
+            },
+            {
+              "Name": "SasActivationMethod",
+              "Required": false
+            },
+            {
+              "Name": "Async",
+              "Required": false
+            },
+            {
+              "Name": "Force",
+              "Required": false
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
             }
           ]
         ]
@@ -21813,7 +21867,7 @@
           },
           {
             "Title": "-------------------------- EXAMPLE 2 --------------------------",
-            "Code": "# Get the specific Cluster Manager\n$ClusterManager = Get-HPOVHypervisorManager -Name ClusterManager1\n\n# Display the allowed distributed switch versions supported by the cluster manager\n$ClusterManager.AvailableDvsVersions\n\n4.0\n4.10\n5.0.0\n5.1.0\n5.5.0\n6.0\n6.7\n\n$ClusterPassword = Read-Host -Prompt \"Cluster password\" -AsSecureString\n\n# Get the server profile template the cluster will be created and derived from\n$ServerProfileTemplate = Get-HPOVServerProfileTemplate -Name \"Hypervisor Cluster Prod\"\n\n# Get a list of servers based on the SPT, that are available to deploy to\n$Servers = Get-HPOVServer -NoProfile -InputObject $ServerProfileTemplate -Count 4\n\n# Create new cluster profile overriding the cluster manager settings\nNew-HPOVClusterProfile -Name ProdCluster1 -ClusterPrefix ProdClusterNode- -ClusterManager $ClusterManager -ClusterManagerLocation \"DC2\" -ServerProfileTemplate $ServerProfileTemplate -ClusterPassword $ClusterPassword -Servers $Servers -OverrideClusterManagerConfig -VirtualSwitchType Distributed -DistributedSwitchUsage AllNetworks -DistributedSwitchVersion 6.0 -HAEnabled $true -DRSEnabled $false ",
+            "Code": "# Get the specific Cluster Manager\n$ClusterManager = Get-HPOVHypervisorManager -Name ClusterManager1\n\n# Display the allowed distributed switch versions supported by the cluster manager\n$ClusterManager.AvailableDvsVersions\n\n4.0\n4.10\n5.0.0\n5.1.0\n5.5.0\n6.0\n6.7\n\n$ClusterPassword = Read-Host -Prompt \"Cluster password\" -AsSecureString\n\n# Get the server profile template the cluster will be created and derived from\n$ServerProfileTemplate = Get-HPOVServerProfileTemplate -Name \"Hypervisor Cluster Prod\"\n\n# Get a list of servers based on the SPT, that are available to deploy to\n$Servers = Get-HPOVServer -NoProfile -InputObject $ServerProfileTemplate -Count 4\n\n# Create new cluster profile overriding the cluster manager settings\nNew-HPOVClusterProfile -Name ProdCluster1 -ClusterPrefix ProdClusterNode- -ClusterManager $ClusterManager -ClusterManagerLocation \"DC2\" -ServerProfileTemplate $ServerProfileTemplate -ClusterPassword $ClusterPassword -Servers $Servers -HPOVerrideClusterManagerConfig -VirtualSwitchType Distributed -DistributedSwitchUsage AllNetworks -DistributedSwitchVersion 6.0 -HAEnabled $true -DRSEnabled $false ",
             "Description": "Create a new cluster profile, overriding clsuter manager settings."
           }
         ],
@@ -24031,7 +24085,7 @@
           },
           {
             "Name": "ApplianceConnection",
-            "Description": "Specify one HPEOneView.Appliance.Connection object or Name property value.",
+            "Description": "Specify one HPOneView.Appliance.Connection object or Name property value.",
             "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
             "Aliases": "Appliance",
             "PipelineInput": "false",
@@ -28429,7 +28483,7 @@
           },
           {
             "Name": "IloSettings",
-            "Description": "Provide an iLO settings object from New-OVServerProfileIloPolicy Cmdlet.",
+            "Description": "Provide an iLO settings object from New-HPOVServerProfileIloPolicy Cmdlet.",
             "DataType": "PSObject",
             "Required": false,
             "DefaultValue": "",
@@ -30732,6 +30786,16 @@
             "Aliases": "None",
             "PipelineInput": "false",
             "SupportsWildcard": false
+          },
+          {
+            "Name": "Permanent",
+            "Description": "When creating a logical JBOD for an HPE Synergy compute node and the HPE Synergy D3940 drive enclosure, the logical JBOD can be marked perminent.  If not provided, the logical JBOD will be deleted when the profile is deleted.",
+            "DataType": "bool",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -30849,7 +30913,7 @@
             },
             {
               "Name": "MinDriveSize",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "MaxDriveSize",
@@ -30857,6 +30921,10 @@
             },
             {
               "Name": "EraseDataOnDelete",
+              "Required": false
+            },
+            {
+              "Name": "Permanent",
               "Required": false
             },
             {
@@ -31515,7 +31583,7 @@
           },
           {
             "Name": "IloSettings",
-            "Description": "Provide an iLO settings object from New-OVServerProfileIloPolicy Cmdlet.",
+            "Description": "Provide an iLO settings object from New-HPOVServerProfileIloPolicy Cmdlet.",
             "DataType": "PSObject",
             "Required": false,
             "DefaultValue": "",
@@ -34054,7 +34122,7 @@
           },
           {
             "Name": "InputObject",
-            "Description": "When the support dump type is LogicalEnclosure, the logical enclosure resource must be passed from Get-OVLogicalEnclosure as a parameter value or pipeline.",
+            "Description": "When the support dump type is LogicalEnclosure, the logical enclosure resource must be passed from Get-HPOVLogicalEnclosure as a parameter value or pipeline.",
             "DefaultValue": null,
             "Aliases": "liobject, li, name, LogicalEnclosure",
             "PipelineInput": "true (ByValue)",
@@ -51376,7 +51444,7 @@
         "InputTypes": [],
         "ReturnValues": [
           {
-            "Value": "HPEOneView.Cluster.UnmanagedCluster",
+            "Value": "HPOneView.Cluster.UnmanagedCluster",
             "Text": "Unmanaged cluster resource from the cluster manager.\n"
           }
         ],
@@ -56013,7 +56081,7 @@
             },
             {
               "Name": "UplinkSetName",
-              "Required": false
+              "Required": true
             },
             {
               "Name": "Name",
@@ -56025,6 +56093,14 @@
             },
             {
               "Name": "RemoveNetwork",
+              "Required": false
+            },
+            {
+              "Name": "AddNetworkSet",
+              "Required": false
+            },
+            {
+              "Name": "RemoveNetworkSet",
               "Required": false
             },
             {
@@ -56059,7 +56135,7 @@
             },
             {
               "Name": "UplinkSetName",
-              "Required": false
+              "Required": true
             },
             {
               "Name": "Name",
@@ -56207,6 +56283,26 @@
             "Aliases": "",
             "PipelineInput": "true (ByValue)",
             "SupportsWildcard": false
+          },
+          {
+            "Name": "AddNetworkSet",
+            "Description": "Provide one or more network set objects from Get-HPOVNetworkSet to add to the uplink set.  This will simplify the configuration of the assigned networks to the uplink set.",
+            "DataType": "Object[]",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "RemoveNetworkSet",
+            "Description": "Provide one or more network set objects from Get-HPOVNetworkSet to remove from the uplink set.  This will simplify the configuration of the assigned networks to the uplink set.",
+            "DataType": "Object[]",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -56243,6 +56339,10 @@
           }
         ],
         "RelatedLinks": [
+          {
+            "Uri": null,
+            "Text": "Get-HPOVNetworkSet"
+          },
           {
             "Uri": null,
             "Text": "Get-HPOVUplinkSet"
@@ -57210,6 +57310,92 @@
             "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.00/servers/new-hpovserverprofileilopolicy.md",
             "Text": "Online: "
           }
+        ]
+      }
+    },
+    {
+
+      "Name": "Show-HPOVUtilization",
+      "Category": "Servers",
+      "Contents": {
+        "Synopsis": "Report server and enclosure supported utilization metrics.",
+        "Description": "For resources such as Enclosures and Server Hardware, the appliance collects CPU, power, and temperature utilization statistics from the management processors (iLO, OA, FLM). Utilization statistics are not instantaneous-data is gathered and reported every five minutes.\n\nThe fields that are displayed in the available statistics vary from component to component.\n\nCPU\n\nServer hardware CPU utilization statistics are gathered from the historical data stored on an iLO every five minutes.\n\nCPU utilization is expressed as a percentage.  A high percentage indicates that one or more processes running on the device are consuming a considerable amount of CPU resources. If the percentage appears frozen at or near 100%, a process might not be responding.\n\nCPU utilziation is only supported with server hardware resources, and are contained within the CPUCurrent, CPUAverage and CPUPeak properties.\n\nPower\n\nPower capacity is the calibrated maximum power that a device can consume. The power utilization metrics refresh every five minutes.\n\nYou can see the power utilization data for a component within the objects PowerCurrent, PowerAverage and PowerPeak properties.  The value contained will be in Watts.\n\nUse this data to determine how much power your facility is consuming and the resources that are consuming it. The appliance reports alerts for devices that exceed their power capacity.\n\nPowerCurrent\nThe current power reported by the device.\n\nPowerAverage\nThe average amount of power the resource is consuming.\n\nPowerPeak\nThe peak amount of power consumed by the resource.\n\nTemperature\n\nTemperature utilization graphs display the ambient/inlet air temperature of your data center. The air temperature is detected by sensors embedded on the front of enclosures and other hardware devices.\n\nThe operating threshold is 10┬░C to 35┬░C (50┬░F to 95┬░F). When the device reaches a threshold, it generates temperature alerts. The appliance displays these alerts in the notification banner and in the Activity sidebar.\n\nYou can see the temperature utilization data for a component within the AmbientTemperature and AmbientTemperatureAverage properties.\n\nNOTE:  The temperature properties are displayed in degrees Celsius or Fahrenheit, depending upon the locale or regional settings of your PC.",
+        "Parameters": [
+          {
+            "Name": "ApplianceConnection",
+            "Description": "Specify one or more [HPOneView.Appliansce.Connection] object(s) or Name property value(s).",
+            "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
+            "DataType": "Array",
+            "Required": false
+          },
+          {
+            "Name": "InputObject",
+            "Description": "A server hardware, server profile or enclosure resource.  IF a server profile is unassigned, it will be skipped.",
+            "DefaultValue": null,
+            "DataType": "Object",
+            "Required": true
+          }
+        ],
+        "InputTypes": [
+          {
+            "Value": "HPOneView.ServerHardware [System.Management.Automation.PSCustomObject]",
+            "Text": "A server hardware resource from Get-HPOVServer."
+          },
+          {
+            "Value": "HPOneView.ServerProfile [System.Management.Automation.PSCustomObject]",
+            "Text": "A server profile from Get-HPOVServerProfile that is assigned to a physical server resource.  If the profile is not assigned to a server hardware resource, it is skipped."
+          },
+          {
+            "Value": "HPOneView.Enclosure [System.Management.Automation.PSCustomObject]",
+            "Text": "An enclosure resource from Get-HPOVEnclosure."
+          }
+        ],
+        "ReturnValues": [
+          {
+            "Value": "HPOneView.ServerUtilization",
+            "Text": "Server utilization object.\n"
+          },
+          {
+            "Value": "HPOneView.EnclosureUtilization",
+            "Text": "Enclosure utilization object.\n"
+          }
+        ],
+        "Examples": [
+          {
+            "Title": "-------------------------- EXAMPLE 1 --------------------------",
+            "Code": "Get-HPOVServer | Show-HPOVUtilization",
+            "Description": "Get all available server resources, and collect utilization data to report."
+          }
+        ],
+        "RelatedLinks": [
+          {
+            "Uri": null,
+            "Text": "Get-HPOVEnclosure"
+          },
+          {
+            "Uri": null,
+            "Text": "Get-HPOVServer"
+          },
+          {
+            "Uri": null,
+            "Text": "Get-HPOVServerProfile"
+          },
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.30/servers/show-HPOVutilization.md",
+            "Text": "Online: "
+          }
+        ],
+        "Syntax": [
+          [
+            {
+              "Name": "InputObject",
+              "Required": true
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ]
         ]
       }
     }

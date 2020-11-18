@@ -108,7 +108,7 @@ A text file with each license key on a new line that will be installed on the ap
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one `[HPEOneView.Appliance.Connection]` object or Name property value.
+Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 
 | Aliases | Appliance |
 | :--- | :--- |

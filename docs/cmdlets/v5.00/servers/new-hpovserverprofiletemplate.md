@@ -973,7 +973,7 @@ Use to override the consistency checking for the policy.  Allowed values:
 
 ### -IloSettings &lt;PSObject&gt;
 
-Provide an iLO settings object from `New-OVServerProfileIloPolicy` Cmdlet.
+Provide an iLO settings object from `New-HPOVServerProfileIloPolicy` Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
