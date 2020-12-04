@@ -8,8 +8,8 @@ description: Upload new SPP Baseline or hotfix to appliance firmware repository.
 
 ```text
 Add-OVBaseline
-    [-File] <String>
-    [-CompSigFile <String>]
+    [-File] <System.IO.File>
+    [-CompSigFile <System.IO.File[]>]
     [-Scope <HPEOneView.Appliance.ScopeCollection[]>]
     [-ApplianceConnection <Array>]
     [-Async]
@@ -63,11 +63,21 @@ $CompSigFile = dir .\CP672214.compsig
 Add-OVBaseline -File $HotFixFile -CompSigFile $CompSigFile
 ```
 
-Upload the specified Gen10 hotfix and its associated compsig file to all connected appliances.
+Upload the specified Gen10 hotfix and its associated compsig file to the connected appliance.
+
+###  Example 4 
+
+```text
+$HotFixFile = dir .\cp044597.exe
+$CompSigFiles = dir .\cp044597_part*.compsig
+Add-OVBaseline -File $HotFixFile -CompSigFile $CompSigFiles
+```
+
+Upload the specified Gen10 hotfix and its associated compsig files to the connected appliance.
 
 ## Parameters
 
-### -File &lt;String&gt;
+### -File &lt;System.IO.File&gt;
 
 The full path and file name of the SPP file.  The function returns an error if the file path cannot be validated.
 
@@ -79,7 +89,7 @@ The full path and file name of the SPP file.  The function returns an error if t
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -CompSigFile &lt;String&gt;
+### -CompSigFile &lt;System.IO.File[]&gt;
 
 When adding a Gen10 hotfix component, the associated compsig file is required to validate the digital signature of the hotfix.  Use this parameter to accompany the hotfix file upload to the repository.
 
@@ -135,7 +145,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**System.IO.FileSystemInfo**_
 
-File System bject from Get-ChildItem
+File System object from Get-ChildItem of the baseline ISO image to upload.
 
 ## Return Values
 

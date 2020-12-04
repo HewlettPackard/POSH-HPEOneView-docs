@@ -1,4 +1,4 @@
-﻿{
+{
   "Version": "5.40",
   "LibraryGUID": "11e96b20-75f0-4f0a-85b1-6b360642b0f7",
   "Cmdlets": [
@@ -88,6 +88,16 @@
             "SupportsWildcard": false,
             "DataType": "SwitchParameter",
             "Required": false
+          },
+          {
+            "Name": "TrustCertChain",
+            "Description": "When providing a certificate, either with -Path, -CertObject or -ComputerName, use this parameter to build the certificate chain that issued the certificate to the endpoint.  In order for the certificate chain to automatically be built, the issuing and root authority certificates must be trusted from the operating system running PowerShell.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -137,11 +147,11 @@
           [
             {
               "Name": "Path",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "CertObject",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "ComputerName",
@@ -157,6 +167,36 @@
             },
             {
               "Name": "Force",
+              "Required": false
+            },
+            {
+              "Name": "Async",
+              "Required": false
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ],
+          [
+            {
+              "Name": "Path",
+              "Required": false
+            },
+            {
+              "Name": "CertObject",
+              "Required": false
+            },
+            {
+              "Name": "ComputerName",
+              "Required": false
+            },
+            {
+              "Name": "Port",
+              "Required": false
+            },
+            {
+              "Name": "TrustCertChain",
               "Required": false
             },
             {
@@ -185,7 +225,7 @@
             "Aliases": "sppFile",
             "PipelineInput": "true (ByValue)",
             "SupportsWildcard": false,
-            "DataType": "String",
+            "DataType": "System.IO.File",
             "Required": true
           },
           {
@@ -195,7 +235,7 @@
             "Aliases": "None",
             "PipelineInput": "false",
             "SupportsWildcard": false,
-            "DataType": "String",
+            "DataType": "System.IO.File[]",
             "Required": false
           },
           {
@@ -232,7 +272,7 @@
         "InputTypes": [
           {
             "Value": "System.IO.FileSystemInfo",
-            "Text": "File System bject from Get-ChildItem"
+            "Text": "File System object from Get-ChildItem of the baseline ISO image to upload."
           }
         ],
         "ReturnValues": [
@@ -255,7 +295,12 @@
           {
             "Title": "-------------------------- EXAMPLE 3 --------------------------",
             "Code": "$HotFixFile = dir .\\CP672214.exe\n$CompSigFile = dir .\\CP672214.compsig\nAdd-OVBaseline -File $HotFixFile -CompSigFile $CompSigFile",
-            "Description": "Upload the specified Gen10 hotfix and its associated compsig file to all connected appliances."
+            "Description": "Upload the specified Gen10 hotfix and its associated compsig file to the connected appliance."
+          },
+          {
+            "Title": "-------------------------- EXAMPLE 4 --------------------------",
+            "Code": "$HotFixFile = dir .\\cp044597.exe\n$CompSigFiles = dir .\\cp044597_part*.compsig\nAdd-OVBaseline -File $HotFixFile -CompSigFile $CompSigFiles",
+            "Description": "Upload the specified Gen10 hotfix and its associated compsig files to the connected appliance."
           }
         ],
         "RelatedLinks": [
@@ -3679,9 +3724,7 @@
             "Text": "Online: "
           }
         ],
-        "Syntax": [
-          []
-        ]
+        "Syntax": []
       }
     },
     {
@@ -5856,9 +5899,7 @@
             "Text": "Online: "
           }
         ],
-        "Syntax": [
-          []
-        ]
+        "Syntax": []
       }
     },
     {
@@ -7045,9 +7086,7 @@
             "Text": "Online: "
           }
         ],
-        "Syntax": [
-          []
-        ]
+        "Syntax": []
       }
     },
     {
@@ -14450,7 +14489,7 @@
           },
           {
             "Name": "Datacenter",
-            "Description": "Filter racks that are a member of a data center.  Provide the data center object from Get-HPOVDatacenter Cmdlet.",
+            "Description": "Filter racks that are a member of a data center.  Provide the data center object from Get-OVDatacenter Cmdlet.",
             "DataType": "Object",
             "Required": false,
             "DefaultValue": "",
@@ -15520,9 +15559,7 @@
             "Text": "Online: "
           }
         ],
-        "Syntax": [
-          []
-        ]
+        "Syntax": []
       }
     },
     {
@@ -16183,6 +16220,16 @@
             "Required": false
           },
           {
+            "Name": "SerialNumber",
+            "Description": "Specify the server hardware serial number to locate.  This parameter does not support wildcard chatacters.",
+            "DefaultValue": null,
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false,
+            "DataType": "String",
+            "Required": false
+          },
+          {
             "Name": "Scope",
             "Description": "Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:\n\n    * AllResources\n    * AllResourcesInScope\n    * HPEOneView.Appliance.ScopeCollection\n    * HPEOneView.Appliance.ConnectionPermission",
             "DefaultValue": "AllResourcesInScope",
@@ -16469,6 +16516,10 @@
             },
             {
               "Name": "ServerName",
+              "Required": false
+            },
+            {
+              "Name": "SerialNumber",
               "Required": false
             },
             {
@@ -19800,13 +19851,13 @@
       "Category": "Networking",
       "Contents": {
         "Synopsis": "Install Logical Interconnect Firmware.",
-        "Description": "Use this Cmdlet to install/update the Logical Interconnect (i.e. Virtual Connect) firmware.  You can provide the Logical Interconnect Name, URI or Object and must specify a valid SPP Baseline present on the appliance.\n\nThis Cmdlet will default to performing an Update (Stage + Activate), which will cause an outage.  If you wish to avoid an outage, first stage the update usind -method stage, then -method activate.  Interconnect activation can be controlled with the -ActivateOrder parameter, which defaults to Odd interconnects.  Once the specified interconnect activation is complete, you must then call the Cmdlet again with the alternate ActivateOrder value (i.e. even.)",
+        "Description": "Firmware activation options allow you to maintain network availability by always keeping one path up for production traffic and reduce the outages due to human errors. You also have the option of staging the firmware for later activation. You can activate the staged firmware on an individual interconnect or on all interconnects.\n\nYou have the following options when updating firmware based on a logical interconnect:\n\n    * Update (stage + activate) - Stages (uploads) the selected firmware to the secondary flash memory on the interconnect, and then activates the firmware as the baseline. At the end of this operation, all member interconnects are running the same firmware baseline and are compliant with one another.  This option and parallel activation affects the connectivity to and from the servers until the activation is complete, but does update the firmware in the shortest time.\n    * Stage - Stages (uploads) the selected firmware to the secondary flash memory on the interconnect, but does not activate the firmware. You can activate the firmware at a later time.  This option allows manual sequencing of the firmware activation and is the preferred approach to minimize service interruption.\n    * Activate - Activates the selected staged firmware by rebooting the interconnect modules.\n\nNOTE:  When updating firmware based on the logical interconnect, if one or more interconnects are already running the targeted firmware version, HPE OneView excludes those interconnects from the firmware update.\n\nFORCE INSTALLATION\n\nBy using the Force parameter, the update requires (forces) firmware update on every member interconnect regardless of its current installed version.\n\nThis option is not available if you select Activate for the Update parameter.\n\nTo install an older firmware version than the version contained in the SPP, you must specify the Force parameter option to downgrade the firmware. You might want to install older firmware if the newer firmware is known to cause a problem in your environment.\n\nThere are a few different activation methods available, depending on the platform:\n\nINSTALLATION METHODS\n\nWARNING:  Firmware updates using parallel activation must be performed during a maintenance window.\n\n    * OddEven - Will perform updates to all odd module bays first, then even.  An activation delay can be specified with the EthernetActivateDelay parameter.\n    * Serial - Will perform updates to all device bays, starting with the first bay.  An activation delay can be specified with the EthernetActivateDelay parameter.\n    * Parallel - Will perform updates to all device bays, at the same time.  Activation will happen immediately once staging and installation have completed.  You cannot specify an activation delay.  If one or more interconnects are already running the targeted firmware version, HPE OneView excludes the interconnects from the firmware downgrade.\n\n      Performing a parallel downgrade without selecting the Force installation option enables HPE OneView to perform the operation only on the non-compliant interconnects. A maintenance window might not be required to downgrade only the non-compliant interconnects.\n\n      Compliant modules are the modules that are compliant with the firmware baseline for the logical interconnect. You can make the newly inserted interconnect compliant with the baseline by performing upgrade or downgrade without selecting the Force installation. HPE OneView performs firmware upgrade or downgrade only on the non-compliant interconnects which requires upgrade or downgrade without disturbing the compliant modules. In cases where such downgrade is not possible, you are notified to select the Force installation option. In case of partial possibility, the Interconnect Link modules which can cause data disruption are ignored for downgrade. You are notified that these interconnect link modules are not updated during the task update.\n\n      Downgrading without the Force installation can be done on the following modules:\n\n        * HPE Virtual Connect SE 40Gb F8 Module for HPE Synergy\n        * HPE Virtual Connect SE 100Gb F32 Module for HPE Synergy\n        * HPE Synergy 50Gb Interconnect Link Module\n        * HPE Synergy 20Gb Interconnect Link Module\n        * HPE Synergy 10Gb Interconnect Link Module\n\n    * Orchestrated - Supported with HPE Synergy Virtual Connect and SAS modules only, a nondisruptive firmware update is attempted for the logical interconnects. The following scenarios might occur:\n\n        * Firmware update is executed automatically without any disruption to application network traffic.\n        * Firmware update is executed with minimal impact to application network traffic. A context-specific warning message displays along with an option to proceed or cancel the firmware update.\n        * For example, a warning message displays to ensure that OS level NIC teaming or bonding is enabled for Ethernet networks and MPIO is enabled when Fibre Channel connections are involved.\n        * Firmware update will result in a system outage. A warning message displays when network and storage connections might be disrupted.\n\n    * Manual - You can orchestrate the update in a stepwise approach using the following operations. These operations are not possible with the Parallel and Orchestrated firmware activation options.\n\n        * Select and update one side of the interconnect topology at a time by using the -ManualOrder parameter. You must specify the appropriate Bay side to update first.\n        * Once the update for the chosen side is complete, proceed to update the other side. If the firmware update on the interconnect module side that is updated first is not satisfactory, roll back to the original firmware version.\n        \n        Manual orchestration is available on the following modules:\n\n        * HPE Virtual Connect SE 40Gb F8 Module for HPE Synergy\n        * HPE Virtual Connect SE 100Gb F32 Module for HPE Synergy\n        * HPE Synergy 10Gb/20Gb/50Gb Interconnect Link Module\n\n        The firmware update is performed on the chosen side while the other side is available to carry production traffic. This side-by-side firmware update is allowed only at the logical interconnect level. Manual orchestration is applicable to most updates and downgrades. There are a few exceptions where you cannot use the manual orchestration option. When you try the option for any such exceptions, an error is displayed and the operation does not proceed. For example, you cannot downgrade to a firmware version that is less than the minimum version that is supported on the interconnect module.\n\n        NOTE:  To minimize potential disruption, ensure that the logical interconnect is redundantly configured.\n\n        NOTE:  After the interconnects in the first side of the logical interconnect are updated successfully, update the interconnects in the second side soon after. If the firmware versions of the interconnects in a logical interconnect are different, the interconnects remain in maintenance mode and you are not allowed to make any configuration changes until they are at the same version.\n    \nMinimum required privileges: Network administrator, Server administrator (for the HPE Synergy 12Gb SAS Connection Module), or Infrastructure administrator.",
         "Parameters": [
           {
-            "Name": "LogicalInterconnect",
-            "Description": "The Logical Interconnect object(s), name(s) or uris(s) to be updated.",
+            "Name": "InputObject",
+            "Description": "The Logical Interconnect object(s) from Get-OVLogicalInterconnect or Get-OVSasLogicalInterconnect Cmdlets to be updated.",
             "DefaultValue": null,
-            "Aliases": "name, uri, li",
+            "Aliases": "LogicalInterconnect, name, uri, li",
             "PipelineInput": "true (ByValue)",
             "SupportsWildcard": false,
             "DataType": "Object",
@@ -19824,7 +19875,7 @@
           },
           {
             "Name": "EthernetActivateOrder",
-            "Description": "Specify the Ethernet module firmware activation order.  Accepted values are:\n\n    * OddEven (Default)\n    * Parallel\n    * Serial",
+            "Description": "Specify the Ethernet module firmware activation order.  Accepted values are:\n\n    * OddEven (Default)\n    * Parallel\n    * Serial\n    * Orchetrated\n    * Manual\n\n  Orchestrated and Manual are only supported with HPE Synergy logical interconnect resources.",
             "DefaultValue": "OddEven",
             "Aliases": "Order, ActivateOrder",
             "PipelineInput": "false",
@@ -19844,7 +19895,7 @@
           },
           {
             "Name": "FCActivateOrder",
-            "Description": "Specify the Fibre Channel module firmware activation order.  Accepted values are:\n\n    * OddEven\n    * Parallel\n    * Serial (Default)",
+            "Description": "Specify the Fibre Channel module firmware activation order.  Accepted values are:\n\n    * OddEven\n    * Parallel\n    * Serial (Default)\n    * Orchestrated\n\n  Orchestrated is only supported with HPE Synergy logical interconnect resources.",
             "DefaultValue": "Serial",
             "Aliases": "None",
             "PipelineInput": "false",
@@ -19921,6 +19972,36 @@
             "SupportsWildcard": false,
             "DataType": "SwitchParameter",
             "Required": false
+          },
+          {
+            "Name": "ManualOrder",
+            "Description": "Use this parameter when the EthActivationOrder is set to Manual.  The allowed values are:\n\n\t * Bay3\n\t * Bay6\n\t * Bay1\n\t * Bay5\n\t * Bay2\n\t * Bay4",
+            "DataType": "string",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "NoPreview",
+            "Description": "By default, the Cmdlet will display a report if the interconnects can be updated without an outage by identifying the configuration.  This option is only supported with HPE Synergy.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "SasActivationMethod",
+            "Description": "Specify the HPE Synergy SAS module firmware activation order.  Accepted values are:\n\n\t* Parallel\n\t* Orchestrated",
+            "DataType": "string",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -19938,25 +20019,38 @@
         "Examples": [
           {
             "Title": "-------------------------- EXAMPLE 1 --------------------------",
-            "Code": "$li = Get-OVLogicalInterconnect Encl1-LI\n$spp = Get-OVSppFile \"HP Service Pack for ProLiant\" \n$task = Install-OVLogicalInterconnectFirmware Stage $li $spp \nWait-OVTaskComplete $task\n$task = Install-OVLogicalInterconnectFirmware Activate $li \nWait-OVTaskComplete $task",
+            "Code": "$li = Get-OVLogicalInterconnect Encl1-LI\n$spp = Get-OVBaseline \"HPE Service Pack for ProLiant\" \n$task = Install-OVLogicalInterconnectFirmware -Method Stage -InputObject $li -Baseline $spp \nWait-OVTaskComplete $task\n$task = Install-OVLogicalInterconnectFirmware -Method Activate -InputObject $li \nWait-OVTaskComplete $task",
             "Description": "Perform a firmware update of the Encl1-LI Logical Interconnect by first staging the firmware. Then Acitate the firmware using the default OddEven Interconnect Bay order."
           },
           {
             "Title": "-------------------------- EXAMPLE 2 --------------------------",
-            "Code": "Get-OVLogicalInterconnect Encl1-LI  | Install-OVLogicalInterconnectFirmware -method Update -baseline \"HP Service Pack for ProLiant\" -confirm:$false | Wait-OVTaskComplete",
+            "Code": "Get-OVLogicalInterconnect -Name Encl1-LI | Install-OVLogicalInterconnectFirmware -Method Update -Baseline (Get-OVBaseline -Name \"HPE Service Pack for ProLiant\") -Confirm:$false | Wait-OVTaskComplete",
             "Description": "Perform a firmware update of the Encl1-LI Logical Interconnect, do not prompt for confirmation, then wait for the task to complete."
+          },
+          {
+            "Title": "-------------------------- EXAMPLE 3 --------------------------",
+            "Code": "$Alerts = Get-OVLogicalInterconnect -Name Encl1-LI | ? status -ne \"OK\" | Get-OVAlert -State Active\n$Alerts | ForEach { \n    if ($_.alertTypeID -eq \"firmwareupdate.status\" -and `\n        $_.correctiveAction -match \"Update the firmware on the the logical interconnect\") { \n\n            Install-OVLogicalInterconnectFirmware -InputObject (Send-OVRequest -Uri $_.resourceUri) -Method Activate -EthernetActivateOrder Orchestrated -Confirm:$false | Wait-OVTaskComplete \n        \n        }\n}",
+            "Description": "Find active firmware update alert, and then activate the staged firmware on the logical interconnect."
           }
         ],
         "RelatedLinks": [
           {
             "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/install-ovlogicalinterconnectfirmware.md",
             "Text": "Online: "
+          },
+          {
+            "Uri": null,
+            "Text": "Get-OVLogicalInterconnect"
+          },
+          {
+            "Uri": null,
+            "Text": "Get-OVSasLogicalInterconnect"
           }
         ],
         "Syntax": [
           [
             {
-              "Name": "LogicalInterconnect",
+              "Name": "InputObject",
               "Required": true
             },
             {
@@ -19965,23 +20059,27 @@
             },
             {
               "Name": "Method",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "EthernetActivateOrder",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "EthernetActivateDelay",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "FCActivateOrder",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "FCActivateDelay",
-              "Required": true
+              "Required": false
+            },
+            {
+              "Name": "NoPreview",
+              "Required": false
             },
             {
               "Name": "Async",
@@ -19993,7 +20091,75 @@
             },
             {
               "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ],
+          [
+            {
+              "Name": "InputObject",
               "Required": true
+            },
+            {
+              "Name": "ManualOrder",
+              "Required": true
+            },
+            {
+              "Name": "Baseline",
+              "Required": true
+            },
+            {
+              "Name": "Method",
+              "Required": false
+            },
+            {
+              "Name": "EthernetActivateOrder",
+              "Required": false
+            },
+            {
+              "Name": "NoPreview",
+              "Required": false
+            },
+            {
+              "Name": "Async",
+              "Required": false
+            },
+            {
+              "Name": "Force",
+              "Required": false
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ],
+          [
+            {
+              "Name": "InputObject",
+              "Required": true
+            },
+            {
+              "Name": "Baseline",
+              "Required": true
+            },
+            {
+              "Name": "Method",
+              "Required": false
+            },
+            {
+              "Name": "SasActivationMethod",
+              "Required": false
+            },
+            {
+              "Name": "Async",
+              "Required": false
+            },
+            {
+              "Name": "Force",
+              "Required": false
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
             }
           ]
         ]
@@ -45936,6 +46102,16 @@
             "SupportsWildcard": false,
             "DataType": "SwitchParameter",
             "Required": false
+          },
+          {
+            "Name": "Port",
+            "Description": "The target port of the destination service.  By default, this is 22/TCP.  Only TCP ports are supported.",
+            "DataType": "int",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -45991,28 +46167,32 @@
               "Required": true
             },
             {
-              "Name": "HostSSHKey",
-              "Required": true
+              "Name": "Port",
+              "Required": false
             },
             {
               "Name": "Directory",
-              "Required": true
+              "Required": false
+            },
+            {
+              "Name": "HostSSHKey",
+              "Required": false
             },
             {
               "Name": "Protocol",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Interval",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Days",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Time",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Async",
@@ -46020,13 +46200,13 @@
             },
             {
               "Name": "ApplianceConnection",
-              "Required": true
+              "Required": false
             }
           ],
           [
             {
               "Name": "Disabled",
-              "Required": false
+              "Required": true
             },
             {
               "Name": "Async",
@@ -46034,7 +46214,7 @@
             },
             {
               "Name": "ApplianceConnection",
-              "Required": true
+              "Required": false
             }
           ]
         ]
@@ -54071,9 +54251,7 @@
             "Text": "Online: "
           }
         ],
-        "Syntax": [
-          []
-        ]
+        "Syntax": []
       }
     },
     {
@@ -54146,7 +54324,8 @@
             "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/show-ovutilization.md",
             "Text": "Online: "
           }
-        ]
+        ],
+        "Syntax": []
       }
     },
     {
@@ -54859,9 +55038,7 @@
             "Text": "Online: "
           }
         ],
-        "Syntax": [
-          []
-        ]
+        "Syntax": []
       }
     },
     {
@@ -58322,6 +58499,14 @@
               "Required": false
             },
             {
+              "Name": "AddNetworkSet",
+              "Required": false
+            },
+            {
+              "Name": "RemoveNetworkSet",
+              "Required": false
+            },
+            {
               "Name": "AddPorts",
               "Required": false
             },
@@ -58489,6 +58674,26 @@
             "SupportsWildcard": false,
             "DataType": "String",
             "Required": "True"
+          },
+          {
+            "Name": "AddNetworkSet",
+            "Description": "Specify one or more network set objects to add to an uplink set.",
+            "DataType": "Object[]",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "RemoveNetworkSet",
+            "Description": "Specify one or more network set objects to remove from an uplink set.",
+            "DataType": "Object[]",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -60582,6 +60787,460 @@
           },
           {
             "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/new-ovserverprofileilopolicy.md",
+            "Text": "Online: "
+          }
+        ]
+      }
+    },
+    {
+      "Name": "Test-OVRemoteSupportEvent",
+      "Category": "Appliance",
+      "Contents": {
+        "Synopsis": "Initiate remote support test event.",
+        "Description": "Register with Hewlett Packard Enterprise to allow automatic case creation for hardware failures on servers and enclosures and to enable Proactive Care. Once enabled, all eligible devices added in the future will be automatically enabled for remote support.\n\nHewlett Packard Enterprise recommends enabling all features and benefits provided by HPE OneView Remote Support so you can receive fast, accurate 'phone home' support and service per your contractual terms with Hewlett Packard Enterprise. Hewlett Packard Enterprise securely collects your HPE IT hardware diagnostics, configuration and telemetry information to provide you with remote support and services. The data is handled and managed to respect your privacy. For more information, Hewlett Packard Enterprise's Privacy Statement can be found at http://privacy.hpe.com.\n\nEnabling Remote Support configures your devices being remotely supported to securely send support or service events, IT configuration information, diagnostic, and telemetry information to Hewlett Packard Enterprise, together with your support contact information. No other business information is collected and the data is managed according to the Hewlett Packard Enterprise's Privacy Statement.\n\nThis Cmdlet will initiate a Remote Support test event for supported servers and compute modules.  Remote Support must be enabled globally on the appliance in order to use this Cmdlet.  Either basic connectivity (omitting -CreateTestCase parameter) or a support case (-CreateTestCase parameter) can be requested.  Requesting a test event may take up to 20 minutes and will send data back to Hewlett Packard Enterprise.\n\nMinimum required privileges: Infrastructure administrator, Server administrator, or Server firmware operator",
+        "Syntax": [
+          [
+            {
+              "Name": "InputObject",
+              "Required": true
+            },
+            {
+              "Name": "CreateTestCase",
+              "Required": false
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ]
+        ],
+        "Parameters": [
+          {
+            "Name": "ApplianceConnection",
+            "Description": "Specify one or more HPEOneView.Appliance.Connection object(s) or Name property value(s).\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
+            "DataType": "Object",
+            "Required": false,
+            "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
+            "Aliases": "Appliance",
+            "PipelineInput": "true (ByPropertyName)",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Async",
+            "Description": "Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "False",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "CreateTestCase",
+            "Description": "Request a test support caes be created during test event.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "InputObject",
+            "Description": "A support server hardware resource from Get-OVServer.",
+            "DataType": "Object",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "true (ByValue)",
+            "SupportsWildcard": false
+          }
+        ],
+        "InputTypes": [
+          {
+              "Value":  "HPEOneView.ServerHardware [System.Management.Automation.PSCustomObject]",
+              "Text":  "Supported server hardware from Get-OVServer Cmdlet."
+          }
+        ],
+        "ReturnValues": [
+          {
+              "Value":  "HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]",
+              "Text":  "Async task resource to monitor."
+          }
+        ],
+        "Examples": [
+          {
+            "Title": "-------------------------- EXAMPLE 1 --------------------------",
+            "Code": "Test-OVRemoteSupportEvent",
+            "Description": "Request a remote support test event without creating a test support case."
+          }
+        ],
+        "RelatedLinks": [
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v5.40/appliance/test-ovremotesupportevent",
+            "Text": "Online: "
+          }
+        ]
+      }
+    },
+    {
+      "Name": "Disable-OVCertificateRevocationChecking",
+      "Category": "Library",
+      "Contents": {
+        "Synopsis": "Default content",
+        "Description": "Default content",
+        "Syntax": [
+          [
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ]
+        ],
+        "Parameters": [
+          {
+            "Name": "ApplianceConnection",
+            "Description": "Specify one or more HPEOneView.Appliance.Connection object(s) or Name property value(s).\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
+            "DataType": "Object",
+            "Required": false,
+            "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
+            "Aliases": "Appliance",
+            "PipelineInput": "true (ByPropertyName)",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Confirm",
+            "Description": "",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "cf",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "WhatIf",
+            "Description": "",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "wi",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          }
+        ],
+        "InputTypes": [],
+        "ReturnValues": [],
+        "Examples": [
+          {
+            "Title": "-------------------------- EXAMPLE 1 --------------------------",
+            "Code": "Disable-OVCertificateRevocationChecking\r\n",
+            "Description": "Default example"
+          }
+        ],
+        "RelatedLinks": [
+          {
+            "Uri": "",
+            "Text": "Enable-OVCertificateRevocationChecking"
+          },
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v5.40//disable-ovcertificaterevocationchecking",
+            "Text": "Online: "
+          }
+        ]
+      }
+    },
+    {
+      "Name": "Enable-OVCertificateRevocationChecking",
+      "Category": "Library",
+      "Contents": {
+        "Synopsis": "Default content",
+        "Description": "Default content",
+        "Syntax": [
+          [
+            {
+              "Name": "SkipRevocationCheck",
+              "Required": false
+            },
+            {
+              "Name": "AllowExpiredCRLs",
+              "Required": false
+            },
+            {
+              "Name": "NotifyExpiredMissingCRLs",
+              "Required": false
+            },
+            {
+              "Name": "EnableAutoCRLDownload",
+              "Required": false
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ]
+        ],
+        "Parameters": [
+          {
+            "Name": "AllowExpiredCRLs",
+            "Description": "",
+            "DataType": "bool",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "ApplianceConnection",
+            "Description": "Specify one or more HPEOneView.Appliance.Connection object(s) or Name property value(s).\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
+            "DataType": "Object",
+            "Required": false,
+            "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
+            "Aliases": "Appliance",
+            "PipelineInput": "true (ByPropertyName)",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Confirm",
+            "Description": "",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "cf",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "EnableAutoCRLDownload",
+            "Description": "",
+            "DataType": "bool",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "NotifyExpiredMissingCRLs",
+            "Description": "",
+            "DataType": "bool",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "SkipRevocationCheck",
+            "Description": "",
+            "DataType": "bool",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "WhatIf",
+            "Description": "",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "wi",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          }
+        ],
+        "InputTypes": [],
+        "ReturnValues": [],
+        "Examples": [
+          {
+            "Title": "-------------------------- EXAMPLE 1 --------------------------",
+            "Code": "Enable-OVCertificateRevocationChecking\r\n",
+            "Description": "Default example"
+          }
+        ],
+        "RelatedLinks": [
+          {
+            "Uri": "",
+            "Text": "Disable-OVCertificateRevocationChecking"
+          },
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v5.40//enable-ovcertificaterevocationchecking",
+            "Text": "Online: "
+          }
+        ]
+      }
+    },
+    {
+      "Name": "Get-OVApplianceIPAddress",
+      "Category": "Library",
+      "Contents": {
+        "Synopsis": "Default content",
+        "Description": "Default content",
+        "Syntax": [
+          []
+        ],
+        "Parameters": [
+          {
+            "Name": "ApplianceConnection",
+            "Description": "Specify one or more HPEOneView.Appliance.Connection object(s) or Name property value(s).\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
+            "DataType": "Object",
+            "Required": false,
+            "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
+            "Aliases": "Appliance",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          }
+        ],
+        "InputTypes": [],
+        "ReturnValues": [],
+        "Examples": [
+          {
+            "Title": "-------------------------- EXAMPLE 1 --------------------------",
+            "Code": "Get-OVApplianceIPAddress\r\n",
+            "Description": "Default example"
+          }
+        ],
+        "RelatedLinks": [
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v5.40//get-ovapplianceipaddress",
+            "Text": "Online: "
+          }
+        ]
+      }
+    },
+    {
+      "Name": "Get-OVApplianceStaticRoute",
+      "Category": "Library",
+      "Contents": {
+        "Synopsis": "Default content",
+        "Description": "Default content",
+        "Syntax": [
+          []
+        ],
+        "Parameters": [
+          {
+            "Name": "ApplianceConnection",
+            "Description": "Specify one or more HPEOneView.Appliance.Connection object(s) or Name property value(s).\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
+            "DataType": "Object",
+            "Required": false,
+            "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
+            "Aliases": "Appliance",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Destination",
+            "Description": "",
+            "DataType": "string",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Interface",
+            "Description": "",
+            "DataType": "string",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          }
+        ],
+        "InputTypes": [],
+        "ReturnValues": [],
+        "Examples": [
+          {
+            "Title": "-------------------------- EXAMPLE 1 --------------------------",
+            "Code": "Get-OVApplianceStaticRoute\r\n",
+            "Description": "Default example"
+          }
+        ],
+        "RelatedLinks": [
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v5.40//get-ovappliancestaticroute",
+            "Text": "Online: "
+          }
+        ]
+      }
+    },
+    {
+      "Name": "Set-OVCertificateRevocationInterval",
+      "Category": "Library",
+      "Contents": {
+        "Synopsis": "Default content",
+        "Description": "Default content",
+        "Syntax": [
+          [
+            {
+              "Name": "AutoCRLDownloadInterval",
+              "Required": true
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ]
+        ],
+        "Parameters": [
+          {
+            "Name": "ApplianceConnection",
+            "Description": "Specify one or more HPEOneView.Appliance.Connection object(s) or Name property value(s).\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
+            "DataType": "Object",
+            "Required": false,
+            "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
+            "Aliases": "Appliance",
+            "PipelineInput": "true (ByPropertyName)",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "AutoCRLDownloadInterval",
+            "Description": "",
+            "DataType": "int",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Confirm",
+            "Description": "",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "cf",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "WhatIf",
+            "Description": "",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "wi",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          }
+        ],
+        "InputTypes": [],
+        "ReturnValues": [],
+        "Examples": [
+          {
+            "Title": "-------------------------- EXAMPLE 1 --------------------------",
+            "Code": "Set-OVCertificateRevocationInterval\r\n",
+            "Description": "Default example"
+          }
+        ],
+        "RelatedLinks": [
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v5.40//set-ovcertificaterevocationinterval",
             "Text": "Online: "
           }
         ]
