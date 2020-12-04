@@ -216,3 +216,5 @@ Asynchronous task resource to monitor
 
 ## Related Links
 
+* [Get-OVEnclosure](get-ovenclosure.md)
+* [Start-OVEnclosureAppliance](start-ovenclosureappliance.md)

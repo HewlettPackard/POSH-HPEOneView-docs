@@ -252,7 +252,7 @@ When providing a Logical Interconnect Group resource, you must specify the name 
 
 ### -AddNetworkSet &lt;Object[]&gt;
 
-
+Specify one or more network set objects to add to an uplink set.
 
 | Aliases | None |
 | :--- | :--- |
@@ -264,7 +264,7 @@ When providing a Logical Interconnect Group resource, you must specify the name 
 
 ### -RemoveNetworkSet &lt;Object[]&gt;
 
-
+Specify one or more network set objects to remove from an uplink set.
 
 | Aliases | None |
 | :--- | :--- |

@@ -8,6 +8,8 @@ description: Disable local authentication logins.
 
 ```text
 Disable-OVLdapLocalLogin
+    [-EnableEmergencyLocalLogin <Bool>]
+    [-EmergencyLoginAllowType <String>]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
@@ -39,7 +41,15 @@ Minimum required privileges: Infrastructure administrator.
 Disable-OVLdapLocalLogin
 ```
 
-Disable local logins on the appliance.
+Disable local logins on the appliance, and does not allow emergency local login by default.
+
+###  Example 2 
+
+```text
+Disable-OVLdapLocalLogin -EnableEmergencyLocalLogin $true -EmergencyLoginAllowType NetworkAndApplianceConsole
+```
+
+Disable local logins on the appliance, but allow emergency login access via SSH maintenance console or from the service console of the appliance.
 
 ## Parameters
 
@@ -72,6 +82,30 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 
 
 | Aliases | cf |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -EmergencyLoginAllowType &lt;String&gt;
+
+Allow emergency login access if the configured authentication directory(ies) are unavailable.  Highest security is obtained by restricting the local administrator account to "ApplianceConsoleOnly". Choose "NetworkAndApplianceConsole" to allow emergency access via the network.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -EnableEmergencyLocalLogin &lt;Bool&gt;
+
+Boolean value to enable ($true) or disable ($false) emergency local login.  Must be set to $false when SmartCardLoginOnly is set and used from `Set-OVApplianceTwoFactorAuthentication`.
+
+| Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |

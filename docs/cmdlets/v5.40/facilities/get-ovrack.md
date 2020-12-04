@@ -73,7 +73,7 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 
 ### -Datacenter &lt;Object&gt;
 
-Filter racks that are a member of a data center.  Provide the data center object from `Get-HPOVDatacenter` Cmdlet.
+Filter racks that are a member of a data center.  Provide the data center object from `Get-OVDatacenter` Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
