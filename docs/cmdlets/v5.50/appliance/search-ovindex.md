@@ -9,10 +9,10 @@ description: Search the resource index.
 ```text
 Search-OVIndex
     [-Search] <String>
-    [-Category] <String>
-    [-Count] <Int32>
-    [-Start] <Int32>
-    [-ApplianceConnection] <Object>
+    [-Category <String>]
+    [-Count <Int32>]
+    [-Start <Int32>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -25,7 +25,7 @@ Search the resource index for any objects that match the specified search string
 ###  Example 1 
 
 ```text
-Search-OVIndex "Profile1"
+Search-OVIndex -Search "Profile1"
 ```
 
 Return all the index entries which include this string.
@@ -33,7 +33,7 @@ Return all the index entries which include this string.
 ###  Example 2 
 
 ```text
-Search-OVIndex -categroy uplink-sets
+Search-OVIndex -Categroy uplink-sets
 ```
 
 Search for all Uplink Set resources.
@@ -89,7 +89,7 @@ The maximum number of resource index entries to be returned.  Defaults to 50.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | True |
+| Required? | False |
 | Position? | Named |
 | Default value | 50 |
 | Accept pipeline input? | false |
@@ -101,7 +101,7 @@ The index of the first resource index to be returned, defaults to 0.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | True |
+| Required? | False |
 | Position? | Named |
 | Default value | 0 |
 | Accept pipeline input? | false |
@@ -113,7 +113,7 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | True |
+| Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | false |

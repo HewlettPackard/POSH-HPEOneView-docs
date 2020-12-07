@@ -8,12 +8,12 @@ description: Search the association index.
 
 ```text
 Search-OVAssociations
-    [-AssociationName] <String>
-    [-Parent] <Object>
-    [-Child] <Object>
-    [-Count] <Int32>
-    [-Start] <Int32>
-    [-ApplianceConnection] <Object>
+    [-AssociationName <String>]
+    [-Parent <Object>]
+    [-Child <Object>]
+    [-Count <Int32>]
+    [-Start <Int32>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -26,10 +26,10 @@ Search the association index for any associations that match the specified name 
 ###  Example 1 
 
 ```text
-Search-OVAssociations BLADE_TO_PROFILE -endObjUri /rest/server-profiles/1ab4c031-a631-4288-9e7d-3cfca24d30cf
+Search-OVAssociations -AssociationName server_profiles_to_server_hardware -Parent (Get-OVServerProfile -Name "My Profile1")
 ```
 
-Return any BLADE_TO_PROFILE associations that have an end object with the specified uri
+Return server_profiles_to_server_hardware that have an association with the specified object.
 
 ## Parameters
 
@@ -37,7 +37,7 @@ Return any BLADE_TO_PROFILE associations that have an end object with the specif
 
 The association name to be matched, if specified.  Valid association names are 
 
-    * BLADE_TO_PROFILE
+    * server_profiles_to_server_hardware
     * PROFILE_TO_SERVER_HARDWARE_TYPE
     * RACK_TO_PHYSICAL_DEVICE
     * BLADE_TO_INTERCONNECT
@@ -64,7 +64,7 @@ The association name to be matched, if specified.  Valid association names are
 
 ### -Parent &lt;Object&gt;
 
-The uri of an object which is the start of an association
+The object which is the parent resource of an association.
 
 | Aliases | None |
 | :--- | :--- |
@@ -76,7 +76,7 @@ The uri of an object which is the start of an association
 
 ### -Child &lt;Object&gt;
 
-The uri of an object which is the end of an association
+The object which is the child resource of an association.
 
 | Aliases | None |
 | :--- | :--- |

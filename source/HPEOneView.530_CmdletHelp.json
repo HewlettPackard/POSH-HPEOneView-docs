@@ -43672,7 +43672,7 @@
         "Parameters": [
           {
             "Name": "AssociationName",
-            "Description": "The association name to be matched, if specified.  Valid association names are \n\n    * BLADE_TO_PROFILE\n    * PROFILE_TO_SERVER_HARDWARE_TYPE\n    * RACK_TO_PHYSICAL_DEVICE\n    * BLADE_TO_INTERCONNECT\n    * ENCLOSURE_GROUP_TO_ENCLOSURE\n    * ENCLOSURE_GROUP_TO_LOGICAL_INTERCONNECT_GROUP\n    * ENCLOSURE_TO_BLADE\n    * ENCLOSURE_TO_SWITCH\n    * LOGICAL_SWITCH_TO_LOGICAL_UPLINK\n    * SWITCH_TO_LOGICAL_SWITCH\n    * SERVER_PROFILES_TO_FC_NETWORKS\n    * SERVER_PROFILES_TO_NETWORKS\n    * STORAGE_SYSTEM_TO_STORAGE_POOL\n    * FC_NETWORK_TO_STORAGE_SYSTEM\n    * STORAGE_POOL_TO_VOLUME\n    * STORAGE_POOL_TO_VOLUME_TEMPLATE",
+            "Description": "The association name to be matched, if specified.  Valid association names are \n\n    * server_profiles_to_server_hardware\n    * PROFILE_TO_SERVER_HARDWARE_TYPE\n    * RACK_TO_PHYSICAL_DEVICE\n    * BLADE_TO_INTERCONNECT\n    * ENCLOSURE_GROUP_TO_ENCLOSURE\n    * ENCLOSURE_GROUP_TO_LOGICAL_INTERCONNECT_GROUP\n    * ENCLOSURE_TO_BLADE\n    * ENCLOSURE_TO_SWITCH\n    * LOGICAL_SWITCH_TO_LOGICAL_UPLINK\n    * SWITCH_TO_LOGICAL_SWITCH\n    * SERVER_PROFILES_TO_FC_NETWORKS\n    * SERVER_PROFILES_TO_NETWORKS\n    * STORAGE_SYSTEM_TO_STORAGE_POOL\n    * FC_NETWORK_TO_STORAGE_SYSTEM\n    * STORAGE_POOL_TO_VOLUME\n    * STORAGE_POOL_TO_VOLUME_TEMPLATE",
             "DefaultValue": null,
             "Aliases": "None",
             "PipelineInput": "false",
@@ -43682,7 +43682,7 @@
           },
           {
             "Name": "Parent",
-            "Description": "The uri of an object which is the start of an association",
+            "Description": "The object which is the parent resource of an association.",
             "DefaultValue": null,
             "Aliases": "None",
             "PipelineInput": "true (ByValue)",
@@ -43692,7 +43692,7 @@
           },
           {
             "Name": "Child",
-            "Description": "The uri of an object which is the end of an association",
+            "Description": "The object which is the child resource of an association.",
             "DefaultValue": null,
             "Aliases": "None",
             "PipelineInput": "false",
@@ -43754,8 +43754,8 @@
         "Examples": [
           {
             "Title": "-------------------------- EXAMPLE 1 --------------------------",
-            "Code": "Search-OVAssociations BLADE_TO_PROFILE -endObjUri /rest/server-profiles/1ab4c031-a631-4288-9e7d-3cfca24d30cf",
-            "Description": "Return any BLADE_TO_PROFILE associations that have an end object with the specified uri"
+            "Code": "Search-OVAssociations -AssociationName server_profiles_to_server_hardware -Parent (Get-OVServerProfile -Name \"My Profile1\")",
+            "Description": "Return server_profiles_to_server_hardware that have an association with the specified object."
           }
         ],
         "RelatedLinks": [
@@ -43768,27 +43768,27 @@
           [
             {
               "Name": "AssociationName",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Parent",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Child",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Count",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Start",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "ApplianceConnection",
-              "Required": true
+              "Required": false
             }
           ]
         ]
@@ -43829,7 +43829,7 @@
             "PipelineInput": "false",
             "SupportsWildcard": false,
             "DataType": "Int32",
-            "Required": true
+            "Required": false
           },
           {
             "Name": "Start",
@@ -43839,7 +43839,7 @@
             "PipelineInput": "false",
             "SupportsWildcard": false,
             "DataType": "Int32",
-            "Required": true
+            "Required": false
           },
           {
             "Name": "ApplianceConnection",
@@ -43849,7 +43849,7 @@
             "PipelineInput": "false",
             "SupportsWildcard": false,
             "DataType": "Object",
-            "Required": true
+            "Required": false
           }
         ],
         "InputTypes": [
@@ -43867,12 +43867,12 @@
         "Examples": [
           {
             "Title": "-------------------------- EXAMPLE 1 --------------------------",
-            "Code": "Search-OVIndex \"Profile1\"",
+            "Code": "Search-OVIndex -Search \"Profile1\"",
             "Description": "Return all the index entries which include this string."
           },
           {
             "Title": "-------------------------- EXAMPLE 2 --------------------------",
-            "Code": "Search-OVIndex -categroy uplink-sets",
+            "Code": "Search-OVIndex -Categroy uplink-sets",
             "Description": "Search for all Uplink Set resources."
           }
         ],
@@ -43890,19 +43890,19 @@
             },
             {
               "Name": "Category",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Count",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Start",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "ApplianceConnection",
-              "Required": true
+              "Required": false
             }
           ]
         ]
