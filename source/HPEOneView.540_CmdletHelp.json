@@ -48390,7 +48390,7 @@
         "Parameters": [
           {
             "Name": "Message",
-            "Description": "The login message to set.",
+            "Description": "The login message to set.  The value can be null to clear the login message.",
             "DefaultValue": null,
             "Aliases": "None",
             "PipelineInput": "false",
@@ -48406,7 +48406,7 @@
             "PipelineInput": "false",
             "SupportsWildcard": false,
             "DataType": "Boolean",
-            "Required": true
+            "Required": false
           },
           {
             "Name": "ApplianceConnection",
@@ -48416,26 +48416,19 @@
             "PipelineInput": "false",
             "SupportsWildcard": false,
             "DataType": "Object",
-            "Required": true
+            "Required": false
           }
         ],
         "InputTypes": [
           {
-            "Value": "None. You cannot pipe objects to this Cmdlet.",
-            "Text": [
-              "",
-              "None. You cannot pipe objects to this Cmdlet",
-              null
-            ]
+              "Value":  "None.  You cannot pipe objects to this cmdlet.",
+              "Text":  null
           }
         ],
         "ReturnValues": [
           {
-            "Value": "HPEOneView.Appliance.LoginMessage",
-            "Text": [
-              "",
-              "If successful, returns a resource"
-            ]
+              "Value":  "HPEOneView.Appliance.LoginMessage",
+              "Text":  "Returns the login message configured on the appliance.\n"
           }
         ],
         "Examples": [
@@ -48472,7 +48465,7 @@
             },
             {
               "Name": "ApplianceConnection",
-              "Required": true
+              "Required": false
             }
           ],
           [

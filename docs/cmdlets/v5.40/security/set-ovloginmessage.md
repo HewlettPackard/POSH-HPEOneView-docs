@@ -10,7 +10,7 @@ description: Set appliance Login Message.
 Set-OVLoginMessage
     [-Message] <String>
     [-Acknowledgment] <Boolean>
-    [-ApplianceConnection] <Object>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -58,7 +58,7 @@ Set the Login Message from the specified appliance connection.
 
 ### -Message &lt;String&gt;
 
-The login message to set.
+The login message to set.  The value can be null to clear the login message.
 
 | Aliases | None |
 | :--- | :--- |
@@ -74,7 +74,7 @@ Set to True if the login message should be acknowledged before authentication co
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | True |
+| Required? | False |
 | Position? | Named |
 | Default value | False |
 | Accept pipeline input? | false |
@@ -86,7 +86,7 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | True |
+| Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | false |
@@ -98,13 +98,14 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None. You cannot pipe objects to this Cmdlet.**_
+_**None.  You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
 _**HPEOneView.Appliance.LoginMessage**_
 
- If successful, returns a resource
+Returns the login message configured on the appliance.
+
 
 ## Related Links
 
