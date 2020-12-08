@@ -9,7 +9,7 @@ description: Set appliance Login Message.
 ```text
 Set-OVLoginMessage
     [-Message] <String>
-    [-Acknowledgment] <Boolean>
+    [-Acknowledgment <Boolean>]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
@@ -17,7 +17,7 @@ Set-OVLoginMessage
 ```text
 Set-OVLoginMessage
     [-Acknowledgment] <Boolean>
-    [-ApplianceConnection] <Object>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
