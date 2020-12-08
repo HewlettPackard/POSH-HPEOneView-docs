@@ -48558,7 +48558,7 @@
             },
             {
               "Name": "Acknowledgment",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "ApplianceConnection",
@@ -48572,7 +48572,7 @@
             },
             {
               "Name": "ApplianceConnection",
-              "Required": true
+              "Required": false
             }
           ]
         ]
