@@ -8,15 +8,15 @@ description: Sends a request to the management appliance
 
 ```text
 Send-OVRequest
-    [-uri] <String>
-    [-method] <String>
-    [-body] <Object>
-    [-start] <Int32>
-    [-count] <Int32>
-    [-AddHeader] <Hashtable>
+    [-Uri] <String>
+    [-Method <String>]
+    [-Body <Object>]
+    [-Start <Int32>]
+    [-Count <Int32>]
+    [-AddHeader <Hashtable>]
     [-OverrideContentType <String>]
     [-OverrideTimeout <Int>]
-    [-Hostname] <Object>
+    [-Hostname <Object>]
     [<CommonParameters>]
 ```
 
@@ -72,7 +72,7 @@ The request HTTP Method.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | True |
+| Required? | False |
 | Position? | Named |
 | Default value | GET |
 | Accept pipeline input? | false |
@@ -84,7 +84,7 @@ Body for the request.  Required if the method is POST or PUT.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | True |
+| Required? | False |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
@@ -97,7 +97,7 @@ If not specified, collection members starting from the beginning are returned.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | True |
+| Required? | False |
 | Position? | Named |
 | Default value | 0 |
 | Accept pipeline input? | false |
@@ -110,7 +110,7 @@ If not specified, all members of the collection are returned from this function.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | True |
+| Required? | False |
 | Position? | Named |
 | Default value | 0 |
 | Accept pipeline input? | false |
@@ -122,7 +122,7 @@ If additional headers are needed/required than the defaults, include header name
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | True |
+| Required? | False |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
@@ -160,7 +160,7 @@ Default Value: All valid Appliance Connections within $Global:ConnectedSessions
 
 | Aliases | Appliance, ApplianceConnection |
 | :--- | :--- |
-| Required? | True |
+| Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | false |
