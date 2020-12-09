@@ -44036,7 +44036,7 @@
             "PipelineInput": "false",
             "SupportsWildcard": false,
             "DataType": "String",
-            "Required": true
+            "Required": false
           },
           {
             "Name": "Body",
@@ -44046,7 +44046,7 @@
             "PipelineInput": "false",
             "SupportsWildcard": false,
             "DataType": "Object",
-            "Required": true
+            "Required": false
           },
           {
             "Name": "Start",
@@ -44056,7 +44056,7 @@
             "PipelineInput": "false",
             "SupportsWildcard": false,
             "DataType": "Int32",
-            "Required": true
+            "Required": false
           },
           {
             "Name": "Count",
@@ -44066,7 +44066,7 @@
             "PipelineInput": "false",
             "SupportsWildcard": false,
             "DataType": "Int32",
-            "Required": true
+            "Required": false
           },
           {
             "Name": "AddHeader",
@@ -44076,7 +44076,7 @@
             "PipelineInput": "false",
             "SupportsWildcard": false,
             "DataType": "Hashtable",
-            "Required": true
+            "Required": false
           },
           {
             "Name": "OverrideContentType",
@@ -44106,7 +44106,7 @@
             "PipelineInput": "false",
             "SupportsWildcard": false,
             "DataType": "Object",
-            "Required": true
+            "Required": false
           }
         ],
         "InputTypes": [
@@ -44170,28 +44170,28 @@
         "Syntax": [
           [
             {
-              "Name": "uri",
+              "Name": "Uri",
               "Required": true
             },
             {
-              "Name": "method",
-              "Required": true
+              "Name": "Method",
+              "Required": false
             },
             {
-              "Name": "body",
-              "Required": true
+              "Name": "Body",
+              "Required": false
             },
             {
-              "Name": "start",
-              "Required": true
+              "Name": "Start",
+              "Required": false
             },
             {
-              "Name": "count",
-              "Required": true
+              "Name": "Count",
+              "Required": false
             },
             {
               "Name": "AddHeader",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "OverrideContentType",
@@ -44203,7 +44203,7 @@
             },
             {
               "Name": "Hostname",
-              "Required": true
+              "Required": false
             }
           ]
         ]
