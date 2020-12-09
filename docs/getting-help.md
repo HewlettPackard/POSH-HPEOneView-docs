@@ -14,7 +14,7 @@ Windows PowerShell transcript start
 Start time: 20191028114038
 Username: LAB\Username
 RunAs User: LAB\Username
-Configuration Name: 
+Configuration Name:
 Machine: DESKTOP (Microsoft Windows NT 10.0.18362.0)
 Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
 Process ID: 8332
@@ -27,9 +27,9 @@ WSManStackVersion: 3.0
 PSRemotingProtocolVersion: 2.3
 SerializationVersion: 1.1.0.1
 **********************
-VERBOSE: 
-hpov5.doctors-lab.local             LibraryVersion Path                                                
------------------------             -------------- ----                                                
+VERBOSE:
+hpov5.doctors-lab.local             LibraryVersion Path
+-----------------------             -------------- ----
 ApplianceVersion: 5.00.00.398184.00 5.0.2152.1665  C:\Users\Username\Documents\WindowsPowerShell\Modules\HPOneView.500
 VERBOSE: [GET-HPOVNETWORK] Bound PS Parameters:
 VERBOSE: [GET-HPOVNETWORK] Called from: Get-HPOVCommandTrace
@@ -38,7 +38,7 @@ VERBOSE: [GET-HPOVNETWORK] Verify auth
 VERBOSE: [TEST-HPOVAUTH] Caller: Get-HPOVNetwork
 VERBOSE: [TEST-HPOVAUTH] Verify Auth for appliance.labdomain.local
 VERBOSE: [TEST-HPOVAUTH] $Appliance is [HPOneView.Appliance.Connection]
-VERBOSE: [TEST-HPOVAUTH] Received HPOneView.Appliance.Connection Object: 
+VERBOSE: [TEST-HPOVAUTH] Received HPOneView.Appliance.Connection Object:
 ConnectionID Name                      UserName      AuthLoginDomain Default
 ------------ ----                      --------      --------------- -------
 1            appliance.labdomain.local Administrator LOCAL           True
@@ -58,11 +58,14 @@ End time: 20191028114046
 Please remove or replace the PII data from the log file before submitting an issue to the project Issues tracker.
 {% endhint %}
 
-You have a general question about the library? For general questions, or need to discuss a topic that doesn't need to be tracked in the issue tracker, please join the Gitter.im chat room: [![Join the chat](https://camo.githubusercontent.com/fd5dd4417d3bc721ada1bf5564e66e74de3cf909/68747470733a2f2f696d672e736869656c64732e696f2f7374617469632f76312e7376673f6c6162656c3d63686174266d6573736167653d6f6e25323067697474657226636f6c6f723d696e666f726d6174696f6e616c266c6f676f3d676974746572)](https://gitter.im/POSH-HPOneView/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+You have a general question about the library? For general questions, or need to discuss a topic that doesn't need to be tracked in the issue tracker, please join the new GitHub Discussions for the project: [![Join the discussion][github-chat-badge-url]][github-chat-link]
 
-## 
+Still available, but not actively maintained Gitter.im chat room: [![Join the chat][gitter-chat-badge-url]][gitter-chat-link]
 
+##
 
-
-
-
+<!-- markdown variables links -->
+[github-chat-badge-url]: https://img.shields.io/badge/chat-on%20github%20discussions-green?style=flat&logo=gitter
+[github-chat-link]: https://github.com/HewlettPackard/POSH-HPEOneView/discussions
+[gitter-chat-badge-url]: https://camo.githubusercontent.com/fd5dd4417d3bc721ada1bf5564e66e74de3cf909/68747470733a2f2f696d672e736869656c64732e696f2f7374617469632f76312e7376673f6c6162656c3d63686174266d6573736167653d6f6e25323067697474657226636f6c6f723d696e666f726d6174696f6e616c266c6f676f3d676974746572
+[gitter-chat-link]: https://gitter.im/POSH-HPOneView/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
