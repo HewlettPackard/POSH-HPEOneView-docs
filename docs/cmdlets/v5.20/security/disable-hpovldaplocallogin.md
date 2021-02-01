@@ -8,6 +8,8 @@ description: Disable local authentication logins.
 
 ```text
 Disable-HPOVLdapLocalLogin
+    [-EnableEmergencyLocalLogin <bool>]
+    [-EmergencyLoginAllowType <string>]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
@@ -72,6 +74,30 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 
 
 | Aliases | cf |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -EmergencyLoginAllowType &lt;string&gt;
+
+
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -EnableEmergencyLocalLogin &lt;bool&gt;
+
+
+
+| Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |

@@ -9,8 +9,18 @@ description: Configure Authentication Directory default directory.
 ```text
 Set-HPOVLdapDefaultDirectory
     [-InputObject] <Object>
-    [-ApplianceConnection] <Object>
     [-DisableLocalLogin]
+    [-EnableEmergencyLocalLogin] <Bool>
+    [-EmergencyLoginAllowType <String>]
+    [-ApplianceConnection <Object>]
+    [<CommonParameters>]
+```
+
+```text
+Set-HPOVLdapDefaultDirectory
+    [-InputObject] <Object>
+    [-DisableLocalLogin]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -67,6 +77,30 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
+
+### -EmergencyLoginAllowType &lt;String&gt;
+
+Allow emergency login access if the configured authentication directory(ies) are unavailable.  Highest security is obtained by restricting the local administrator account to "ApplianceConsoleOnly". Choose "NetworkAndApplianceConsole" to allow emergency access via the network.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -EnableEmergencyLocalLogin &lt;Bool&gt;
+
+Boolean value to enable ($true) or disable ($false) emergency local login.  Must be set to $false when SmartCardLoginOnly is set and used from `Set-HPOVApplianceTwoFactorAuthentication`.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

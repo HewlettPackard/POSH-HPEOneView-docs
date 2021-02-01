@@ -1,26 +1,20 @@
 ﻿---
-description: Add SMTP email alert filter
+description: Modify an existing SMTP email alert filter.
 ---
 
-# Add-OVSmtpAlertEmailFilter
+# Set-OVSmtpAlertEmailFilter
 
 ## Syntax
 
 ```text
-Add-OVSmtpAlertEmailFilter
-    [-Name] <String>
-    [-Emails] <Net.Mail.MailAddress[]>
+Set-OVSmtpAlertEmailFilter
+    [-InputObject] <Object>
+    [-Name <String>]
+    [-Disable <bool>]
     [-Filter <String>]
+    [-Emails <Net.Mail.MailAddress[]>]
     [-Scope <HPEOneView.Appliance.ScopeCollection[]>]
     [-ScopeMatchPreference <String>]
-    [-Async]
-    [-ApplianceConnection <Object>]
-    [<CommonParameters>]
-```
-
-```text
-Add-OVSmtpAlertEmailFilter
-    [-RemoteSupportFilter]
     [-Async]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -38,7 +32,7 @@ You can enable or disable this email notification feature, or you can enable or 
 
 The appliance provides for as many as 100 recipient and filter combinations, and allows as many as 50 recipients in a single email message. This flexibility lets you fine-tune which alert messages are sent and to whom. For example, you can configure the appliance to send Warning alerts to one recipient and Critical alerts to another.
 
-This Cmdlet will help create an advanced alert to the specified recipient(s).  You can also use the Cmdlet to add default OneView Remote Support alerting to specified recipient(s) using the -RemoteSupportFilter parameter.  Appliance Email notification must be configured.
+This Cmdlet will allow you to modify an existing alert filter.  Parameters will replace the existing value if specified in the Cmdlet call.
 
 {% hint style="info" %}
 Minimum required privileges: Infrastructure administrator.
@@ -72,13 +66,25 @@ Create OneView Remote Support filter on the appliance.
 
 ## Parameters
 
-### -Name &lt;String&gt;
+### -InputObject &lt;Object&gt;
 
-Name of the Filter you are creating.
+The email alert filter from `Get-OVSmtpAlertEmailFilter`.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | true (ByValue) |
+| Accept wildcard characters? | False |
+
+### -Name &lt;String&gt;
+
+Name of the Filter you want to change to.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
@@ -86,8 +92,8 @@ Name of the Filter you are creating.
 
 ### -Filter &lt;String&gt;
 
-REST API filter specifying the resource category, URI, name, and severity.  
-    
+REST API filter specifying the resource category, URI, name, and severity.
+
 Example:  CPU status:"warning" or status:"critical"
 
 | Aliases | query |
@@ -100,7 +106,7 @@ Example:  CPU status:"warning" or status:"critical"
 
 ### -Scope &lt;HPEOneView.Appliance.ScopeCollection[]&gt;
 
-Scope(s) the Filter should apply to.  Omitting parameter will apply filter to all resources.
+Scope(s) the Filter should apply to.
 
 | Aliases | None |
 | :--- | :--- |
@@ -128,7 +134,7 @@ Destination EMail address(es).
 
 | Aliases | recipients |
 | :--- | :--- |
-| Required? | True |
+| Required? | False |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | true (ByValue) |
@@ -158,13 +164,13 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -RemoteSupportFilter &lt;SwitchParameter&gt;
+### -Disable &lt;bool&gt;
 
-Use to create the HPE OneView Remote Support email filter for service events.
+Disable the selected email alert filter.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | True |
+| Required? | False |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
@@ -176,9 +182,10 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**Net.Mail.MailAddress[]**_
+_**HPEOneView.Appliance.AlertEmailFilter [System.Management.Automation.PSCustomObject]**_
 
-Array of email address recipient(s).
+The configured email alert filter on the appliance.
+
 
 ## Return Values
 
@@ -191,6 +198,6 @@ Returns an async task resource to monitor.
 * [Get-OVSMTPConfig](get-ovsmtpconfig.md)
 * [Set-OVSMTPConfig](set-ovsmtpconfig.md)
 * [Test-OVEmailAlert](test-ovemailalert.md)
+* [Add-OVSmtpAlertEmailFilter](add-ovsmtpalertemailfilter.md)
 * [Get-OVSmtpAlertEmailFilter](get-ovsmtpalertemailfilter.md)
-* [Set-OVSmtpAlertEmailFilter](set-ovsmtpalertemailfilter.md)
 * [Remove-OVSmtpAlertEmailFilter](remove-ovsmtpalertemailfilter.md)

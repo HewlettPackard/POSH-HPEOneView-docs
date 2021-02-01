@@ -6,11 +6,6 @@ description: Default content
 
 ## Syntax
 
-```text
-Get-OVApplianceIPAddress
-    [<CommonParameters>]
-```
-
 ## Description
 
 Default content

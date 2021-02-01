@@ -88,6 +88,16 @@
             "SupportsWildcard": false,
             "DataType": "SwitchParameter",
             "Required": false
+          },
+          {
+            "Name": "TrustCertChain",
+            "Description": "",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -137,11 +147,11 @@
           [
             {
               "Name": "Path",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "CertObject",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "ComputerName",
@@ -157,6 +167,36 @@
             },
             {
               "Name": "Force",
+              "Required": false
+            },
+            {
+              "Name": "Async",
+              "Required": false
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ],
+          [
+            {
+              "Name": "Path",
+              "Required": false
+            },
+            {
+              "Name": "CertObject",
+              "Required": false
+            },
+            {
+              "Name": "ComputerName",
+              "Required": false
+            },
+            {
+              "Name": "Port",
+              "Required": false
+            },
+            {
+              "Name": "TrustCertChain",
               "Required": false
             },
             {
@@ -5704,6 +5744,26 @@
             "SupportsWildcard": false,
             "DataType": "SwitchParameter",
             "Required": false
+          },
+          {
+            "Name": "EmergencyLoginAllowType",
+            "Description": "",
+            "DataType": "string",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "EnableEmergencyLocalLogin",
+            "Description": "",
+            "DataType": "bool",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -5737,6 +5797,14 @@
         ],
         "Syntax": [
           [
+            {
+              "Name": "EnableEmergencyLocalLogin",
+              "Required": false
+            },
+            {
+              "Name": "EmergencyLoginAllowType",
+              "Required": false
+            },
             {
               "Name": "ApplianceConnection",
               "Required": false
@@ -16265,6 +16333,16 @@
             "SupportsWildcard": false,
             "DataType": "String[]",
             "Required": false
+          },
+          {
+            "Name": "SerialNumber",
+            "Description": "",
+            "DataType": "string",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -16472,6 +16550,10 @@
               "Required": false
             },
             {
+              "Name": "SerialNumber",
+              "Required": false
+            },
+            {
               "Name": "ServerName",
               "Required": false
             },
@@ -16485,6 +16567,10 @@
             },
             {
               "Name": "InputObject",
+              "Required": false
+            },
+            {
+              "Name": "MaintenanceMode",
               "Required": false
             },
             {
@@ -46020,6 +46106,16 @@
             "SupportsWildcard": false,
             "DataType": "SwitchParameter",
             "Required": false
+          },
+          {
+            "Name": "Port",
+            "Description": "",
+            "DataType": "int",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -46075,28 +46171,32 @@
               "Required": true
             },
             {
-              "Name": "HostSSHKey",
-              "Required": true
+              "Name": "Port",
+              "Required": false
             },
             {
               "Name": "Directory",
-              "Required": true
+              "Required": false
+            },
+            {
+              "Name": "HostSSHKey",
+              "Required": false
             },
             {
               "Name": "Protocol",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Interval",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Days",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Time",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Async",
@@ -46104,13 +46204,13 @@
             },
             {
               "Name": "ApplianceConnection",
-              "Required": true
+              "Required": false
             }
           ],
           [
             {
               "Name": "Disabled",
-              "Required": false
+              "Required": true
             },
             {
               "Name": "Async",
@@ -46118,7 +46218,7 @@
             },
             {
               "Name": "ApplianceConnection",
-              "Required": true
+              "Required": false
             }
           ]
         ]
@@ -47703,6 +47803,26 @@
             "SupportsWildcard": false,
             "DataType": "SwitchParameter",
             "Required": false
+          },
+          {
+            "Name": "EmergencyLoginAllowType",
+            "Description": "",
+            "DataType": "string",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "EnableEmergencyLocalLogin",
+            "Description": "",
+            "DataType": "bool",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -47737,11 +47857,33 @@
               "Required": true
             },
             {
+              "Name": "DisableLocalLogin",
+              "Required": true
+            },
+            {
+              "Name": "EnableEmergencyLocalLogin",
+              "Required": true
+            },
+            {
+              "Name": "EmergencyLoginAllowType",
+              "Required": false
+            },
+            {
               "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ],
+          [
+            {
+              "Name": "InputObject",
               "Required": true
             },
             {
               "Name": "DisableLocalLogin",
+              "Required": false
+            },
+            {
+              "Name": "ApplianceConnection",
               "Required": false
             }
           ]

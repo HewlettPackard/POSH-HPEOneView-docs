@@ -2,12 +2,12 @@
 description: Power on HPE Synergy appliance device.
 ---
 
-# Start-OVEnclosureAppliance
+# Start-HPOVEnclosureAppliance
 
 ## Syntax
 
 ```text
-Start-OVEnclosureAppliance
+Start-HPOVEnclosureAppliance
     [-InputObject] <Object>
     [-BayID] <int>
     [-Async]
@@ -17,7 +17,7 @@ Start-OVEnclosureAppliance
 
 ## Description
 
-This Cmdlet will assist server administrators in powering on appliance devices within HPE Synergy frames. Additional power operations for Frame devices are provided by Reset-OVEnclosureDevice.
+This Cmdlet will assist server administrators in powering on appliance devices within HPE Synergy frames. Additional power operations for Frame devices are provided by Reset-HPOVEnclosureDevice.
 
 {% hint style="info" %}
 Minimum required privileges: Infrastructure administrator, Server administrator
@@ -28,7 +28,7 @@ Minimum required privileges: Infrastructure administrator, Server administrator
 ###  Example 1 
 
 ```text
-Start-OVEnclosureAppliance -InputObject (Get-OVEnclosure -Name Enclosure-2) -BayID 1
+Start-HPOVEnclosureAppliance -InputObject (Get-HPOVEnclosure -Name Enclosure-2) -BayID 1
 ```
 
 Start the appliance device in bay 1 of the specified enclosure.
@@ -37,7 +37,7 @@ Start the appliance device in bay 1 of the specified enclosure.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 Default Value: ${Global:ConnectedSessions} | ? Default
 
@@ -75,7 +75,7 @@ The specified appliance bay ID of the provided enclosure resource.  Only ID's 1 
 
 ### -InputObject &lt;Object&gt;
 
-The HPE Synergy frame resource from `Get-OVEnclosure`.
+The HPE Synergy frame resource from `Get-HPOVEnclosure`.
 
 | Aliases | Encl |
 | :--- | :--- |
@@ -91,18 +91,18 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPEOneView.Enclosure [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Enclosure [System.Management.Automation.PSCustomObject]**_
 
-Enclosure resource from [`Get-OVEnclosure`](get-ovenclosure.md).
+Enclosure resource from [`Get-HPOVEnclosure`](get-hpovenclosure.md).
 
 ## Return Values
 
-_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task resource to monitor.
 
 ## Related Links
 
-* [Get-OVEnclosure](get-ovenclosure.md)
-* [Reset-OVEnclosureDevice](reset-ovenclosuredevice.md)
-* [Stop-OVAppliance](../appliance/stop-ovappliance.md)
+* [Get-HPOVEnclosure](get-hpovenclosure.md)
+* [Reset-HPOVEnclosureDevice](reset-hpovenclosuredevice.md)
+* [Stop-HPOVAppliance](../appliance/stop-hpovappliance.md)

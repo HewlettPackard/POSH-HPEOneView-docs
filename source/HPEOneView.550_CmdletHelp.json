@@ -3050,6 +3050,18 @@
             "Text": "Test-OVEmailAlert"
           },
           {
+            "Uri": null,
+            "Text": "Get-OVSmtpAlertEmailFilter"
+          },
+          {
+            "Uri": null,
+            "Text": "Set-OVSmtpAlertEmailFilter"
+          },
+          {
+            "Uri": null,
+            "Text": "Remove-OVSmtpAlertEmailFilter"
+          },
+          {
             "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.50/appliance/add-ovsmtpalertemailfilter.md",
             "Text": "Online: "
           }
@@ -5641,7 +5653,7 @@
         "Parameters": [
           {
             "Name": "InputObject",
-            "Description": "Resource object to turn off the UID.  Supported resources are server hardware, enclosures and interconnects.",
+            "Description": "Resource object to turn off the UID.  Supported resources are server hardware, enclosures and interconnects. \n\nNOTE:  HPE BladeSystem C7000 enclosures and interconnects are not supported, but the inserted servers are.",
             "DefaultValue": null,
             "Aliases": "Server, Enclosure, Frame, Resource",
             "PipelineInput": "true (ByValue)",
@@ -5683,7 +5695,7 @@
         "Examples": [
           {
             "Title": "-------------------------- EXAMPLE 1 --------------------------",
-            "Code": "Get-OVServer \"MyEncl, Bay 1\" | Disable-OVDeviceUid | Wait-OVTaskComplete",
+            "Code": "Get-OVServer -Name \"MyEncl, Bay 1\" | Disable-OVDeviceUid | Wait-OVTaskComplete",
             "Description": "Disable the UID for \"MyEncl, Bay 1\" server."
           }
         ],
@@ -6870,7 +6882,7 @@
         "Examples": [
           {
             "Title": "-------------------------- EXAMPLE 1 --------------------------",
-            "Code": "Get-OVServer \"MyEncl, Bay 1\" | Enable-OVDeviceUid | Wait-OVTaskComplete",
+            "Code": "Get-OVServer -Name \"MyEncl, Bay 1\" | Enable-OVDeviceUid | Wait-OVTaskComplete",
             "Description": "Enable the UID for \"MyEncl, Bay 1\" server."
           }
         ],
@@ -17739,6 +17751,22 @@
             "Text": "Set-OVSMTPConfig"
           },
           {
+            "Uri": null,
+            "Text": "Add-OVSmtpAlertEmailFilter"
+          },
+          {
+            "Uri": null,
+            "Text": "Get-OVSmtpAlertEmailFilter"
+          },
+          {
+            "Uri": null,
+            "Text": "Set-OVSmtpAlertEmailFilter"
+          },
+          {
+            "Uri": null,
+            "Text": "Remove-OVSmtpAlertEmailFilter"
+          },
+          {
             "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.50/appliance/get-ovsmtpconfig.md",
             "Text": "Online: "
           }
@@ -20985,7 +21013,7 @@
           },
           {
             "Title": "-------------------------- EXAMPLE 2 --------------------------",
-            "Code": "$p = Get-OVServerProfile \"myProfile\"\nGet-OVServerProfileTemplate \"myTemplate\" | Join-OVServerProfileToTemplate -profile $p -appliance HPEOneView.contoso.com",
+            "Code": "$p = Get-OVServerProfile -Name \"myProfile\"\nGet-OVServerProfileTemplate \"myTemplate\" | Join-OVServerProfileToTemplate -profile $p -appliance HPEOneView.contoso.com",
             "Description": "Attaches the server profile template named MyTemplate to the server profile name MyProfile on the OneView appliance HPEOneView.contoso.com"
           }
         ],
@@ -24813,7 +24841,7 @@
         ],
         "ReturnValues": [
           {
-            "Value": "HPOneView.Appliance.License",
+            "Value": "HPEOneView.Appliance.License",
             "Text": "The License resource just added to the apliance"
           }
         ],
@@ -30156,12 +30184,12 @@
         "Examples": [
           {
             "Title": "-------------------------- EXAMPLE 1 --------------------------",
-            "Code": "Get-OVServerProfile \"Profile 1\" | New-OVServerProfileAssign -Server \"Encl1, Bay 10\" | Wait-OVTaskComplete",
+            "Code": "Get-OVServerProfile -Name \"Profile 1\" | New-OVServerProfileAssign -Server \"Encl1, Bay 10\" | Wait-OVTaskComplete",
             "Description": "Get \"Profile 1\" Server Profile and assign it to \"Encl1, Bay 10\", then wait for the async task to complete."
           },
           {
             "Title": "-------------------------- EXAMPLE 2 --------------------------",
-            "Code": "Get-OVServerProfile \"Profile 1\" | New-OVServerProfileAssign -unassign | Wait-OVTaskComplete",
+            "Code": "Get-OVServerProfile -Name \"Profile 1\" | New-OVServerProfileAssign -unassign | Wait-OVTaskComplete",
             "Description": "Get \"Profile 1\" Server Profile and unassign it, then wait for the async task to complete."
           }
         ],
@@ -30596,17 +30624,17 @@
           },
           {
             "Title": "-------------------------- EXAMPLE 5 --------------------------",
-            "Code": "$storagepool = Get-OVStoragePool R1_FC\n$sp = Get-OVServerProfile \"chef-web01\"\nNew-OVServerProfileAttachVolume -ServerProfile $sp -Name \"Chef Web01 Vol 2\" -StoragePool $storagepool  | Wait-OVTaskComplete",
+            "Code": "$storagepool = Get-OVStoragePool R1_FC\n$sp = Get-OVServerProfile -Name \"chef-web01\"\nNew-OVServerProfileAttachVolume -ServerProfile $sp -Name \"Chef Web01 Vol 2\" -StoragePool $storagepool  | Wait-OVTaskComplete",
             "Description": "Attach a new 10Gb Ephemeral Volume to an existing Server Profile."
           },
           {
             "Title": "-------------------------- EXAMPLE 6 --------------------------",
-            "Code": "$sp = Get-OVServerProfile \"chef-web01\"\nGet-OVStorageVolume \"My New Volume 3\" | New-OVServerProfileAttachVolume -ServerProfile $sp  | Wait-OVTaskComplete",
+            "Code": "$sp = Get-OVServerProfile -Name \"chef-web01\"\nGet-OVStorageVolume \"My New Volume 3\" | New-OVServerProfileAttachVolume -ServerProfile $sp  | Wait-OVTaskComplete",
             "Description": "Attach an existing Storage Volume to a Server Profile."
           },
           {
             "Title": "-------------------------- EXAMPLE 7 --------------------------",
-            "Code": "$storagepool = Get-OVStoragePool R1_FC\n$sp = Get-OVServerProfile \"My Server Profile\"\nNew-OVServerProfileAttachVolume -Name \"My Server Profile Boot Vol\" -ServerProfile $sp -StoragePool $storagepool -Bootable  | Wait-OVTaskComplete",
+            "Code": "$storagepool = Get-OVStoragePool R1_FC\n$sp = Get-OVServerProfile -Name \"My Server Profile\"\nNew-OVServerProfileAttachVolume -Name \"My Server Profile Boot Vol\" -ServerProfile $sp -StoragePool $storagepool -Bootable  | Wait-OVTaskComplete",
             "Description": "Add a bootable volume to an existing Server Profile."
           },
           {
@@ -42514,12 +42542,12 @@
             "Text": "Online: "
           },
           {
-              "Uri":  null,
-              "Text":  "Get-OVEnclosure"
+            "Uri": null,
+            "Text": "Get-OVEnclosure"
           },
           {
-              "Uri":  null,
-              "Text":  "Start-OVEnclosureAppliance"
+            "Uri": null,
+            "Text": "Start-OVEnclosureAppliance"
           }
         ],
         "Syntax": [
@@ -43042,17 +43070,17 @@
         "Examples": [
           {
             "Title": "-------------------------- EXAMPLE 1 --------------------------",
-            "Code": "Get-OVServer \"Encl1, Bay 1\" | Restart-OVServer | Wait-OVTaskComplete",
+            "Code": "Get-OVServer -Name \"Encl1, Bay 1\" | Restart-OVServer | Wait-OVTaskComplete",
             "Description": "Restart the specific server device by passing the Server Object via pipeline."
           },
           {
             "Title": "-------------------------- EXAMPLE 2 --------------------------",
-            "Code": "Get-OVServerProfile \"MyWebServer 1\" | Restart-OVServer | Wait-OVTaskComplete",
+            "Code": "Get-OVServerProfile -Name \"MyWebServer 1\" | Restart-OVServer | Wait-OVTaskComplete",
             "Description": "Restart the specific server device by passing the Server Profile Object via pipeline."
           },
           {
             "Title": "-------------------------- EXAMPLE 3 --------------------------",
-            "Code": "Get-OVServer \"Encl1, Bay 1\" | Restart-OVServer -ColdBoot | Wait-OVTaskComplete",
+            "Code": "Get-OVServer -Name \"Encl1, Bay 1\" | Restart-OVServer -ColdBoot | Wait-OVTaskComplete",
             "Description": "Restart the specific server device by passing the Server Object via pipeline, and issue a cold boot request."
           }
         ],
@@ -44701,7 +44729,7 @@
         ],
         "ReturnValues": [
           {
-            "Value": "HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]",
+            "Value": "HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]",
             "Text": "Async task resource to monitor."
           }
         ],
@@ -48518,14 +48546,14 @@
         ],
         "InputTypes": [
           {
-              "Value":  "None.  You cannot pipe objects to this cmdlet.",
-              "Text":  null
+            "Value": "None.  You cannot pipe objects to this cmdlet.",
+            "Text": null
           }
         ],
         "ReturnValues": [
           {
-              "Value":  "HPEOneView.Appliance.LoginMessage",
-              "Text":  "Returns the login message configured on the appliance.\n"
+            "Value": "HPEOneView.Appliance.LoginMessage",
+            "Text": "Returns the login message configured on the appliance.\n"
           }
         ],
         "Examples": [
@@ -50681,7 +50709,7 @@
         "Examples": [
           {
             "Title": "-------------------------- EXAMPLE 1 --------------------------",
-            "Code": "$profile = Get-OVServerProfile \"Profile 1\"\n$profile.name = \"New Name\"\nSet-OVResource $profile",
+            "Code": "$profile = Get-OVServerProfile -Name \"Profile 1\"\n$profile.name = \"New Name\"\nSet-OVResource $profile",
             "Description": "Updates the name of the Server Profile resource."
           }
         ],
@@ -51693,8 +51721,24 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "",
+            "Uri": null,
             "Text": "Get-OVSMTPConfig"
+          },
+          {
+            "Uri": null,
+            "Text": "Add-OVSmtpAlertEmailFilter"
+          },
+          {
+            "Uri": null,
+            "Text": "Get-OVSmtpAlertEmailFilter"
+          },
+          {
+            "Uri": null,
+            "Text": "Set-OVSmtpAlertEmailFilter"
+          },
+          {
+            "Uri": null,
+            "Text": "Remove-OVSmtpAlertEmailFilter"
           },
           {
             "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.50/appliance/set-ovsmtpconfig.md",
@@ -54640,17 +54684,17 @@
         "Examples": [
           {
             "Title": "-------------------------- EXAMPLE 1 --------------------------",
-            "Code": "Get-OVServer \"Encl1, Bay 1\" | Start-OVServer",
+            "Code": "Get-OVServer -Name \"Encl1, Bay 1\" | Start-OVServer",
             "Description": "Power on the specific server device by passing the Server Object via pipeline."
           },
           {
             "Title": "-------------------------- EXAMPLE 2 --------------------------",
-            "Code": "Get-OVServer \"Encl1, *\" | Start-OVServer -Async",
+            "Code": "Get-OVServer -Name \"Encl1, *\" | Start-OVServer -Async",
             "Description": "Power on the server devices found by passing the Server Object via pipeline, and return the async task immediately."
           },
           {
             "Title": "-------------------------- EXAMPLE 3 --------------------------",
-            "Code": "Get-OVServerProfile \"MyWebServer 1\" | Start-OVServer",
+            "Code": "Get-OVServerProfile -Name \"MyWebServer 1\" | Start-OVServer",
             "Description": "Power on the specific server device by passing the Server Profile Object via pipeline."
           }
         ],
@@ -55078,8 +55122,8 @@
             "Text": "Wait-OVApplianceStart"
           },
           {
-              "Uri":  null,
-              "Text":  "Start-OVEnclosureAppliance"
+            "Uri": null,
+            "Text": "Start-OVEnclosureAppliance"
           },
           {
             "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.50/appliance/stop-ovappliance.md",
@@ -55226,17 +55270,17 @@
         "Examples": [
           {
             "Title": "-------------------------- EXAMPLE 1 --------------------------",
-            "Code": "Get-OVServer \"Encl1, Bay 1\" | Stop-OVServer | Wait-OVTaskComplete",
+            "Code": "Get-OVServer -Name \"Encl1, Bay 1\" | Stop-OVServer | Wait-OVTaskComplete",
             "Description": "Power off the specific server device by passing the Server Object via pipeline."
           },
           {
             "Title": "-------------------------- EXAMPLE 2 --------------------------",
-            "Code": "Get-OVServerProfile \"MyWebServer 1\" | Stop-OVServer | Wait-OVTaskComplete",
+            "Code": "Get-OVServerProfile -Name \"MyWebServer 1\" | Stop-OVServer | Wait-OVTaskComplete",
             "Description": "Power off the specific server device by passing the Server Profile Object via pipeline."
           },
           {
             "Title": "-------------------------- EXAMPLE 3 --------------------------",
-            "Code": "Get-OVServer \"Encl1, Bay 1\" | Stop-OVServer -Force | Wait-OVTaskComplete",
+            "Code": "Get-OVServer -Name \"Encl1, Bay 1\" | Stop-OVServer -Force | Wait-OVTaskComplete",
             "Description": "Power off the specific server device by passing the Server Object via pipeline, and forcably power off."
           }
         ],
@@ -57387,12 +57431,12 @@
         "Examples": [
           {
             "Title": "-------------------------- EXAMPLE 1 --------------------------",
-            "Code": "Get-OVServer \"Encl1, Bay 1\" | Update-OVServer | Wait-OVTaskComplete",
+            "Code": "Get-OVServer -Name \"Encl1, Bay 1\" | Update-OVServer | Wait-OVTaskComplete",
             "Description": "Refresh the state of the provided server hardware device."
           },
           {
             "Title": "-------------------------- EXAMPLE 2 --------------------------",
-            "Code": "$task = Get-OVServerProfile \"Profile1\" | Update-OVServer",
+            "Code": "$task = Get-OVServerProfile -Name \"Profile1\" | Update-OVServer",
             "Description": "Refresh the state of the server hardware device assigned to the Server Profile object."
           }
         ],
@@ -59181,7 +59225,7 @@
         "Parameters": [
           {
             "Name": "ApplianceConnection",
-            "Description": "Specify one or more HPOneView.Appliance.Connection object(s) or Name property value(s).\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
+            "Description": "Specify one or more HPEOneView.Appliance.Connection object(s) or Name property value(s).\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
             "DataType": "Object",
             "Required": false,
             "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
@@ -59252,13 +59296,13 @@
         ],
         "InputTypes": [
           {
-            "Value": "HPOneView.Appliance.HardwareConfig [System.Management.Automation.PSCustomObject]",
+            "Value": "HPEOneView.Appliance.HardwareConfig [System.Management.Automation.PSCustomObject]",
             "Text": "The appliance hardware configuration object from Get-OVComposerIloStatus."
           }
         ],
         "ReturnValues": [
           {
-            "Value": "HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]",
+            "Value": "HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]",
             "Text": "Async task resource to monitor."
           }
         ],
@@ -59385,7 +59429,7 @@
         "Parameters": [
           {
             "Name": "ApplianceConnection",
-            "Description": "Specify one or more HPOneView.Appliance.Connection object(s) or Name property value(s).\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
+            "Description": "Specify one or more HPEOneView.Appliance.Connection object(s) or Name property value(s).\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
             "DataType": "Object",
             "Required": false,
             "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
@@ -59546,13 +59590,13 @@
         ],
         "InputTypes": [
           {
-            "Value": "HPOneView.Appliance.HardwareConfig [System.Management.Automation.PSCustomObject]",
+            "Value": "HPEOneView.Appliance.HardwareConfig [System.Management.Automation.PSCustomObject]",
             "Text": "The appliance hardware configuration object from Get-OVComposerIloStatus."
           }
         ],
         "ReturnValues": [
           {
-            "Value": "HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]",
+            "Value": "HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]",
             "Text": "Async task resource to monitor."
           }
         ],
@@ -59610,7 +59654,7 @@
         "Parameters": [
           {
             "Name": "ApplianceConnection",
-            "Description": "Specify one or more HPOneView.Appliance.Connection object(s) or Name property value(s).\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
+            "Description": "Specify one or more HPEOneView.Appliance.Connection object(s) or Name property value(s).\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
             "DataType": "Object",
             "Required": false,
             "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
@@ -59627,7 +59671,7 @@
         ],
         "ReturnValues": [
           {
-            "Value": "HPOneView.Appliance.HardwareConfig [System.Management.Automation.PSCustomObject]",
+            "Value": "HPEOneView.Appliance.HardwareConfig [System.Management.Automation.PSCustomObject]",
             "Text": "The existing iLO configuration of an HPE Synergy Composer.\n"
           }
         ],
@@ -59727,7 +59771,7 @@
         "Parameters": [
           {
             "Name": "ApplianceConnection",
-            "Description": "Specify one or more HPOneView.Appliance.Connection object(s) or Name property value(s).\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
+            "Description": "Specify one or more HPEOneView.Appliance.Connection object(s) or Name property value(s).\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
             "DataType": "Object",
             "Required": false,
             "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
@@ -59888,13 +59932,13 @@
         ],
         "InputTypes": [
           {
-            "Value": "HPOneView.Appliance.HardwareConfig [System.Management.Automation.PSCustomObject]",
+            "Value": "HPEOneView.Appliance.HardwareConfig [System.Management.Automation.PSCustomObject]",
             "Text": "The appliance hardware configuration object from Get-OVComposerIloStatus."
           }
         ],
         "ReturnValues": [
           {
-            "Value": "HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]",
+            "Value": "HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]",
             "Text": "Async task resource to monitor."
           }
         ],
@@ -60890,8 +60934,8 @@
       "Name": "Disable-OVCertificateRevocationChecking",
       "Category": "Library",
       "Contents": {
-        "Synopsis": "Default content",
-        "Description": "Default content",
+        "Synopsis": "Disable appliance certificate revocation checking.",
+        "Description": "Hewlett Packard Enterprise strongly recommends that you enable strict certificate validation checks after completing an update as appropriate for your enterprise security policies. HPE OneView supports devices using self-signed certificates and devices using formal CA-signed certificates. CA-signed certificates offer benefits such as revocation checking and overall simplified management.  HPE OneView enables users to import a CA CRL file and to perform the appropriate revocation checking on existing certificates in the trust store and for certificates received during communication with a managed device or external server.\n\nThis Cmdlet will disable certificate revocation validation on the specified appliance.  By disabling this setting, the appliance will not validate the certificate has been revoked by an issuing certificate authority.  This setting has no applicability to self-signed certificates.\n\nMinimum required privileges: Infrastructure administrator",
         "Syntax": [
           [
             {
@@ -60932,7 +60976,12 @@
             "SupportsWildcard": false
           }
         ],
-        "InputTypes": [],
+        "InputTypes": [
+          {
+            "Value": "None.  You cannot pipe objects to this cmdlet.",
+            "Text": null
+          }
+        ],
         "ReturnValues": [],
         "Examples": [
           {
@@ -60957,8 +61006,8 @@
       "Name": "Enable-OVCertificateRevocationChecking",
       "Category": "Library",
       "Contents": {
-        "Synopsis": "Default content",
-        "Description": "Default content",
+        "Synopsis": "Enable appliance certificate revocation checking.",
+        "Description": "Hewlett Packard Enterprise strongly recommends that you enable strict certificate validation checks after completing an update as appropriate for your enterprise security policies. HPE OneView supports devices using self-signed certificates and devices using formal CA-signed certificates. CA-signed certificates offer benefits such as revocation checking and overall simplified management.  HPE OneView enables users to import a CA CRL file and to perform the appropriate revocation checking on existing certificates in the trust store and for certificates received during communication with a managed device or external server.\n\nThis Cmdlet will enables certificate revocation validation on the specified appliance.  When enabled and a certificate revocation list URL is present within a certificate authority's certificate, the appliance will validate if the certificate has been revoked.  A revoked certificate is then no longer valid and must be replaced on the device.  This setting has no applicability to self-signed certificates.\n\nMinimum required privileges: Infrastructure administrator",
         "Syntax": [
           [
             {
@@ -61317,7 +61366,7 @@
         ],
         "ReturnValues": [
           {
-            "Value": "HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]",
+            "Value": "HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]",
             "Text": "Async task resource to monitor."
           }
         ],
@@ -61385,7 +61434,7 @@
           },
           {
             "Name": "BayID",
-            "Description": "",
+            "Description": "The specified appliance bay ID of the provided enclosure resource.  Only ID's 1 or 2 are allowed.",
             "DataType": "int",
             "Required": true,
             "DefaultValue": "",
@@ -61395,7 +61444,7 @@
           },
           {
             "Name": "InputObject",
-            "Description": "",
+            "Description": "The HPE Synergy frame resource from Get-OVEnclosure.",
             "DataType": "Object",
             "Required": true,
             "DefaultValue": "",
@@ -61406,14 +61455,14 @@
         ],
         "InputTypes": [
           {
-              "Value":  "HPEOneView.Enclosure [System.Management.Automation.PSCustomObject]",
-              "Text":  "Enclosure resource from Get-OVEnclosure."
+            "Value": "HPEOneView.Enclosure [System.Management.Automation.PSCustomObject]",
+            "Text": "Enclosure resource from Get-OVEnclosure."
           }
         ],
         "ReturnValues": [
           {
-              "Value":  "HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]",
-              "Text":  "Async task resource to monitor."
+            "Value": "HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]",
+            "Text": "Async task resource to monitor."
           }
         ],
         "Examples": [
@@ -61429,17 +61478,403 @@
             "Text": "Online: "
           },
           {
-              "Uri":  null,
-              "Text":  "Get-OVEnclosure"
+            "Uri": null,
+            "Text": "Get-OVEnclosure"
           },
           {
-              "Uri":  null,
-              "Text":  "Reset-OVEnclosureDevice"
+            "Uri": null,
+            "Text": "Reset-OVEnclosureDevice"
           },
           {
-              "Uri":  null,
-              "Text":  "Stop-OVAppliance"
+            "Uri": null,
+            "Text": "Stop-OVAppliance"
           }
+        ]
+      }
+    },
+    {
+      "Name": "Get-OVSmtpAlertEmailFilter",
+      "Category": "Appliance",
+      "Contents": {
+        "Synopsis": "Retrieve SMTP email alert filter(s) configured on the appliance.",
+        "Description": "Email alerting feature notifies specified recipients when a certain alert occurs.  When this feature is configured and enabled, the appliance performs these steps in addition to posting the alert:\n\n    * The appliance compares the alert to configured search criteria.\n    * If the alert matches, it creates an email message containing the text of the alert.\n    * The appliance sends the email message to designated recipients in both plain text and HTML MIME types. Sending in both types allows the recipient?s mail application to determine the display.\n\nYou can enable or disable this email notification feature, or you can enable or disable individual filter notifications, as required.\n\nThe appliance provides for as many as 100 recipient and filter combinations, and allows as many as 50 recipients in a single email message. This flexibility lets you fine-tune which alert messages are sent and to whom. For example, you can configure the appliance to send Warning alerts to one recipient and Critical alerts to another.\n\nThis Cmdlet will help get the configured email alert filter(s) configured on the appliance.\n\nMinimum required privileges: Infrastructure administrator.",
+        "Parameters": [
+          {
+            "Name": "Name",
+            "Description": "Name of the Filter to return.  Supports wildcard.  To return the remote support email filter configuration, specify \"Remote Support\" as the filter name.",
+            "DefaultValue": null,
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": true,
+            "DataType": "String",
+            "Required": true
+          },
+          {
+            "Name": "ApplianceConnection",
+            "Description": "Specify one or more [HPEOneView.Appliance.Connection] object(s) or Name property value(s).",
+            "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
+            "Aliases": "Appliance",
+            "PipelineInput": "false",
+            "SupportsWildcard": false,
+            "DataType": "Object",
+            "Required": false
+          }
+        ],
+        "InputTypes": [
+          {
+            "Value": "None.  You cannot pipe objects to this cmdlet.",
+            "Text": null
+          }
+        ],
+        "ReturnValues": [
+          {
+            "Value": "HPEOneView.Appliance.AlertEmailFilter [System.Management.Automation.PSCustomObject]",
+            "Text": "The configured email alert filter on the appliance.\n"
+          }
+        ],
+        "Examples": [
+          {
+            "Title": "-------------------------- EXAMPLE 1 --------------------------",
+            "Code": "Get-OVSmtpAlertEmailFilter -Name \"Monitor CPU Error and Warning conditions\"",
+            "Description": "Get the specified email alert filter."
+          },
+          {
+            "Title": "-------------------------- EXAMPLE 2 --------------------------",
+            "Code": "Get-OVSmtpAlertEmailFilter -Name \"Remote Support\"",
+            "Description": "Get the remote support email filter."
+          }
+        ],
+        "RelatedLinks": [
+          {
+            "Uri": null,
+            "Text": "Get-OVSMTPConfig"
+          },
+          {
+            "Uri": null,
+            "Text": "Set-OVSMTPConfig"
+          },
+          {
+            "Uri": null,
+            "Text": "Test-OVEmailAlert"
+          },
+          {
+            "Uri": null,
+            "Text": "Add-OVSmtpAlertEmailFilter"
+          },
+          {
+            "Uri": null,
+            "Text": "Set-OVSmtpAlertEmailFilter"
+          },
+          {
+            "Uri": null,
+            "Text": "Remove-OVSmtpAlertEmailFilter"
+          },
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.50/appliance/get-ovsmtpalertemailfilter.md",
+            "Text": "Online: "
+          }
+        ],
+        "Syntax": [
+          [
+            {
+              "Name": "Name",
+              "Required": true
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "Name": "Set-OVSmtpAlertEmailFilter",
+      "Category": "Appliance",
+      "Contents": {
+        "Synopsis": "Modify an existing SMTP email alert filter.",
+        "Description": "Email alerting feature notifies specified recipients when a certain alert occurs.  When this feature is configured and enabled, the appliance performs these steps in addition to posting the alert:\n\n    * The appliance compares the alert to configured search criteria.\n    * If the alert matches, it creates an email message containing the text of the alert.\n    * The appliance sends the email message to designated recipients in both plain text and HTML MIME types. Sending in both types allows the recipient?s mail application to determine the display.\n\nYou can enable or disable this email notification feature, or you can enable or disable individual filter notifications, as required.\n\nThe appliance provides for as many as 100 recipient and filter combinations, and allows as many as 50 recipients in a single email message. This flexibility lets you fine-tune which alert messages are sent and to whom. For example, you can configure the appliance to send Warning alerts to one recipient and Critical alerts to another.\n\nThis Cmdlet will allow you to modify an existing alert filter.  Parameters will replace the existing value if specified in the Cmdlet call.\n\nMinimum required privileges: Infrastructure administrator.",
+        "Parameters": [
+          {
+            "Name": "InputObject",
+            "Description": "The email alert filter from Get-OVSmtpAlertEmailFilter.",
+            "DefaultValue": null,
+            "Aliases": "None",
+            "PipelineInput": "true (ByValue)",
+            "SupportsWildcard": false,
+            "DataType": "Object",
+            "Required": true
+          },
+          {
+            "Name": "Name",
+            "Description": "Name of the Filter you want to change to.",
+            "DefaultValue": null,
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false,
+            "DataType": "String",
+            "Required": false
+          },
+          {
+            "Name": "Filter",
+            "Description": "REST API filter specifying the resource category, URI, name, and severity.\n\nExample:  CPU status:\"warning\" or status:\"critical\"",
+            "DefaultValue": null,
+            "Aliases": "query",
+            "PipelineInput": "false",
+            "SupportsWildcard": false,
+            "DataType": "String",
+            "Required": false
+          },
+          {
+            "Name": "Scope",
+            "Description": "Scope(s) the Filter should apply to.",
+            "DefaultValue": null,
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false,
+            "DataType": "HPEOneView.Appliance.ScopeCollection[]",
+            "Required": false
+          },
+          {
+            "Name": "ScopeMatchPreference",
+            "Description": "If providing multiple Scope resources, specify AND or OR to indicate match preference.",
+            "DefaultValue": "OR",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false,
+            "DataType": "String",
+            "Required": false
+          },
+          {
+            "Name": "Emails",
+            "Description": "Destination EMail address(es).",
+            "DefaultValue": null,
+            "Aliases": "recipients",
+            "PipelineInput": "true (ByValue)",
+            "SupportsWildcard": false,
+            "DataType": "Net.Mail.MailAddress[]",
+            "Required": false
+          },
+          {
+            "Name": "Async",
+            "Description": "Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.",
+            "DefaultValue": null,
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false,
+            "DataType": "SwitchParameter",
+            "Required": false
+          },
+          {
+            "Name": "ApplianceConnection",
+            "Description": "Specify one or more [HPEOneView.Appliance.Connection] object(s) or Name property value(s).",
+            "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
+            "Aliases": "Appliance",
+            "PipelineInput": "false",
+            "SupportsWildcard": false,
+            "DataType": "Object",
+            "Required": false
+          },
+          {
+            "Name": "Disable",
+            "Description": "Disable the selected email alert filter.",
+            "DataType": "bool",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          }
+        ],
+        "InputTypes": [
+          {
+            "Value": "HPEOneView.Appliance.AlertEmailFilter [System.Management.Automation.PSCustomObject]",
+            "Text": "The configured email alert filter on the appliance.\n"
+          }
+        ],
+        "ReturnValues": [
+          {
+            "Value": "HPEOneView.Appliance.TaskResource {System.Management.Automation.PSCustomObject}",
+            "Text": "Returns an async task resource to monitor."
+          }
+        ],
+        "Examples": [
+          {
+            "Title": "-------------------------- EXAMPLE 1 --------------------------",
+            "Code": "Add-OVSmtpAlertEmailFilter -Name \"Monitor CPU Error and Warning conditions\" -query \"CPU status:warning or status:critical\" -emails admin1@domain.com,admin2@domain.com",
+            "Description": "Set SMTP Alert to notify when system CPU status is either \"warning\" or \"critical\", and email 2 addresses."
+          },
+          {
+            "Title": "-------------------------- EXAMPLE 2 --------------------------",
+            "Code": "Add-OVSmtpAlertEmailFilter -Name \"My Test Filter 3\" -Filter \"status:critical\" -Emails \"user1@domain.com\",\"user2@domain.com\" -Scope \"My new Scope\",\"My new Scope2\" -Async",
+            "Description": "Create a new email critical alert for the two scope names, and return the Async Task object without waiting."
+          },
+          {
+            "Title": "-------------------------- EXAMPLE 3 --------------------------",
+            "Code": "Add-OVSmtpAlertEmailFilter -RemoteSupportFilter",
+            "Description": "Create OneView Remote Support filter on the appliance."
+          }
+        ],
+        "RelatedLinks": [
+          {
+            "Uri": null,
+            "Text": "Get-OVSMTPConfig"
+          },
+          {
+            "Uri": null,
+            "Text": "Set-OVSMTPConfig"
+          },
+          {
+            "Uri": null,
+            "Text": "Test-OVEmailAlert"
+          },
+          {
+            "Uri": null,
+            "Text": "Add-OVSmtpAlertEmailFilter"
+          },
+          {
+            "Uri": null,
+            "Text": "Get-OVSmtpAlertEmailFilter"
+          },
+          {
+            "Uri": null,
+            "Text": "Remove-OVSmtpAlertEmailFilter"
+          },
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.50/appliance/set-ovsmtpalertemailfilter.md",
+            "Text": "Online: "
+          }
+        ],
+        "Syntax": [
+          [
+            {
+              "Name": "InputObject",
+              "Required": true
+            },
+            {
+              "Name": "Name",
+              "Required": false
+            },
+            {
+              "Name": "Disable",
+              "Required": false
+            },
+            {
+              "Name": "Filter",
+              "Required": false
+            },
+            {
+              "Name": "Emails",
+              "Required": false
+            },
+            {
+              "Name": "Scope",
+              "Required": false
+            },
+            {
+              "Name": "ScopeMatchPreference",
+              "Required": false
+            },
+            {
+              "Name": "Async",
+              "Required": false
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "Name": "Remove-OVSmtpAlertEmailFilter",
+      "Category": "Appliance",
+      "Contents": {
+        "Synopsis": "Remove an existing SMTP email alert filter.",
+        "Description": "Email alerting feature notifies specified recipients when a certain alert occurs.  When this feature is configured and enabled, the appliance performs these steps in addition to posting the alert:\n\n    * The appliance compares the alert to configured search criteria.\n    * If the alert matches, it creates an email message containing the text of the alert.\n    * The appliance sends the email message to designated recipients in both plain text and HTML MIME types. Sending in both types allows the recipient?s mail application to determine the display.\n\nYou can enable or disable this email notification feature, or you can enable or disable individual filter notifications, as required.\n\nThe appliance provides for as many as 100 recipient and filter combinations, and allows as many as 50 recipients in a single email message. This flexibility lets you fine-tune which alert messages are sent and to whom. For example, you can configure the appliance to send Warning alerts to one recipient and Critical alerts to another.\n\nThis Cmdlet will remove configured email alert filters from the appliance.\n\nMinimum required privileges: Infrastructure administrator.",
+        "Parameters": [
+          {
+            "Name": "InputObject",
+            "Description": "The email alert filter from Get-OVSmtpAlertEmailFilter.",
+            "DefaultValue": null,
+            "Aliases": "None",
+            "PipelineInput": "true (ByValue)",
+            "SupportsWildcard": false,
+            "DataType": "Object",
+            "Required": true
+          },
+          {
+            "Name": "ApplianceConnection",
+            "Description": "Specify one or more [HPEOneView.Appliance.Connection] object(s) or Name property value(s).",
+            "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
+            "Aliases": "Appliance",
+            "PipelineInput": "false",
+            "SupportsWildcard": false,
+            "DataType": "Object",
+            "Required": false
+          }
+        ],
+        "InputTypes": [
+          {
+            "Value": "HPEOneView.Appliance.AlertEmailFilter [System.Management.Automation.PSCustomObject]",
+            "Text": "The configured email alert filter on the appliance.\n"
+          }
+        ],
+        "ReturnValues": [
+          {
+            "Value": "HPEOneView.Appliance.TaskResource {System.Management.Automation.PSCustomObject}",
+            "Text": "Returns an async task resource to monitor."
+          }
+        ],
+        "Examples": [
+          {
+            "Title": "-------------------------- EXAMPLE 1 --------------------------",
+            "Code": "Get-OVSmtpAlertEmailFilter -Name \"Monitor CPU Error and Warning conditions\" | Remove-OVSmtpAlertEmailFilter",
+            "Description": "Remove the specified email alert filter."
+          }
+        ],
+        "RelatedLinks": [
+          {
+            "Uri": null,
+            "Text": "Get-OVSMTPConfig"
+          },
+          {
+            "Uri": null,
+            "Text": "Set-OVSMTPConfig"
+          },
+          {
+            "Uri": null,
+            "Text": "Test-OVEmailAlert"
+          },
+          {
+            "Uri": null,
+            "Text": "Add-OVSmtpAlertEmailFilter"
+          },
+          {
+            "Uri": null,
+            "Text": "Get-OVSmtpAlertEmailFilter"
+          },
+          {
+            "Uri": null,
+            "Text": "Set-OVSmtpAlertEmailFilter"
+          },
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.50/appliance/remove-ovsmtpalertemailfilter.md",
+            "Text": "Online: "
+          }
+        ],
+        "Syntax": [
+          [
+            {
+              "Name": "InputObject",
+              "Required": true
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ]
         ]
       }
     }
