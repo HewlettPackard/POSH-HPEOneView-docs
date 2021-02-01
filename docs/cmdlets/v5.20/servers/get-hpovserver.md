@@ -9,10 +9,12 @@ description: Retrieve Server Hardware resource(s).
 ```text
 Get-HPOVServer
     [-Name <String>]
+    [-SerialNumber <string>]
     [-ServerName <String>]
     [-Status <String[]>]
     [-NoProfile]
     [-InputObject <Object>]
+    [-MaintenanceMode <Boolean>]
     [-Label <String>]
     [-Count <int>]
     [-Scope <Object>]
@@ -271,6 +273,18 @@ Filter resources based on their current status.  Allowed values:
     * Critical
     * Unknown
     * Disabled
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -SerialNumber &lt;string&gt;
+
+
 
 | Aliases | None |
 | :--- | :--- |

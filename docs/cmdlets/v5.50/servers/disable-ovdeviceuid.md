@@ -33,7 +33,7 @@ Minimum required privileges: Infrastructure administrator, Server administrator
 ###  Example 1 
 
 ```text
-Get-OVServer "MyEncl, Bay 1" | Disable-OVDeviceUid | Wait-OVTaskComplete
+Get-OVServer -Name "MyEncl, Bay 1" | Disable-OVDeviceUid | Wait-OVTaskComplete
 ```
 
 Disable the UID for "MyEncl, Bay 1" server.
@@ -42,7 +42,12 @@ Disable the UID for "MyEncl, Bay 1" server.
 
 ### -InputObject &lt;Object&gt;
 
-Resource object to turn off the UID.  Supported resources are server hardware, enclosures and interconnects.
+Resource object to turn off the UID.  Supported resources are server hardware, enclosures and interconnects. 
+
+{% hint style="info" %}
+ HPE BladeSystem C7000 enclosures and interconnects are not supported, but the inserted servers are.
+{% endhint %}
+
 
 | Aliases | Server, Enclosure, Frame, Resource |
 | :--- | :--- |

@@ -1,4 +1,4 @@
-﻿{
+{
   "Version": "5.40",
   "LibraryGUID": "11e96b20-75f0-4f0a-85b1-6b360642b0f7",
   "Cmdlets": [
@@ -5747,6 +5747,26 @@
             "SupportsWildcard": false,
             "DataType": "SwitchParameter",
             "Required": false
+          },
+          {
+            "Name": "EmergencyLoginAllowType",
+            "Description": "",
+            "DataType": "string",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "EnableEmergencyLocalLogin",
+            "Description": "",
+            "DataType": "bool",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -5780,6 +5800,14 @@
         ],
         "Syntax": [
           [
+            {
+              "Name": "EnableEmergencyLocalLogin",
+              "Required": false
+            },
+            {
+              "Name": "EmergencyLoginAllowType",
+              "Required": false
+            },
             {
               "Name": "ApplianceConnection",
               "Required": false
@@ -47799,6 +47827,26 @@
             "SupportsWildcard": false,
             "DataType": "SwitchParameter",
             "Required": false
+          },
+          {
+            "Name": "EmergencyLoginAllowType",
+            "Description": "",
+            "DataType": "string",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "EnableEmergencyLocalLogin",
+            "Description": "",
+            "DataType": "bool",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -47833,11 +47881,33 @@
               "Required": true
             },
             {
+              "Name": "DisableLocalLogin",
+              "Required": true
+            },
+            {
+              "Name": "EnableEmergencyLocalLogin",
+              "Required": true
+            },
+            {
+              "Name": "EmergencyLoginAllowType",
+              "Required": false
+            },
+            {
               "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ],
+          [
+            {
+              "Name": "InputObject",
               "Required": true
             },
             {
               "Name": "DisableLocalLogin",
+              "Required": false
+            },
+            {
+              "Name": "ApplianceConnection",
               "Required": false
             }
           ]
@@ -48421,14 +48491,14 @@
         ],
         "InputTypes": [
           {
-              "Value":  "None.  You cannot pipe objects to this cmdlet.",
-              "Text":  null
+            "Value": "None.  You cannot pipe objects to this cmdlet.",
+            "Text": null
           }
         ],
         "ReturnValues": [
           {
-              "Value":  "HPEOneView.Appliance.LoginMessage",
-              "Text":  "Returns the login message configured on the appliance.\n"
+            "Value": "HPEOneView.Appliance.LoginMessage",
+            "Text": "Returns the login message configured on the appliance.\n"
           }
         ],
         "Examples": [
@@ -60851,14 +60921,14 @@
         ],
         "InputTypes": [
           {
-              "Value":  "HPEOneView.ServerHardware [System.Management.Automation.PSCustomObject]",
-              "Text":  "Supported server hardware from Get-OVServer Cmdlet."
+            "Value": "HPEOneView.ServerHardware [System.Management.Automation.PSCustomObject]",
+            "Text": "Supported server hardware from Get-OVServer Cmdlet."
           }
         ],
         "ReturnValues": [
           {
-              "Value":  "HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]",
-              "Text":  "Async task resource to monitor."
+            "Value": "HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]",
+            "Text": "Async task resource to monitor."
           }
         ],
         "Examples": [
@@ -61072,9 +61142,7 @@
       "Contents": {
         "Synopsis": "Default content",
         "Description": "Default content",
-        "Syntax": [
-          []
-        ],
+        "Syntax": [],
         "Parameters": [
           {
             "Name": "ApplianceConnection",
@@ -61110,9 +61178,7 @@
       "Contents": {
         "Synopsis": "Default content",
         "Description": "Default content",
-        "Syntax": [
-          []
-        ],
+        "Syntax": [],
         "Parameters": [
           {
             "Name": "ApplianceConnection",
@@ -61235,6 +61301,113 @@
           {
             "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v5.40//set-ovcertificaterevocationinterval",
             "Text": "Online: "
+          }
+        ]
+      }
+    },
+    {
+      "Name": "Start-OVEnclosureAppliance",
+      "Category": "Servers",
+      "Contents": {
+        "Synopsis": "Power on HPE Synergy appliance device.",
+        "Description": "This Cmdlet will assist server administrators in powering on appliance devices within HPE Synergy frames. Additional power operations for Frame devices are provided by Reset-OVEnclosureDevice.\n\nMinimum required privileges: Infrastructure administrator, Server administrator",
+        "Syntax": [
+          [
+            {
+              "Name": "InputObject",
+              "Required": true
+            },
+            {
+              "Name": "BayID",
+              "Required": true
+            },
+            {
+              "Name": "Async",
+              "Required": false
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ]
+        ],
+        "Parameters": [
+          {
+            "Name": "ApplianceConnection",
+            "Description": "Specify one or more HPEOneView.Appliance.Connection object(s) or Name property value(s).\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
+            "DataType": "Object",
+            "Required": false,
+            "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
+            "Aliases": "Appliance",
+            "PipelineInput": "true (ByPropertyName)",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Async",
+            "Description": "Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "False",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "BayID",
+            "Description": "The specified appliance bay ID of the provided enclosure resource.  Only ID's 1 or 2 are allowed.",
+            "DataType": "int",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "InputObject",
+            "Description": "The HPE Synergy frame resource from Get-OVEnclosure.",
+            "DataType": "Object",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "Encl",
+            "PipelineInput": "true (ByValue)",
+            "SupportsWildcard": false
+          }
+        ],
+        "InputTypes": [
+          {
+            "Value": "HPEOneView.Enclosure [System.Management.Automation.PSCustomObject]",
+            "Text": "Enclosure resource from Get-OVEnclosure."
+          }
+        ],
+        "ReturnValues": [
+          {
+            "Value": "HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]",
+            "Text": "Async task resource to monitor."
+          }
+        ],
+        "Examples": [
+          {
+            "Title": "-------------------------- EXAMPLE 1 --------------------------",
+            "Code": "Start-OVEnclosureAppliance -InputObject (Get-OVEnclosure -Name Enclosure-2) -BayID 1",
+            "Description": "Start the appliance device in bay 1 of the specified enclosure."
+          }
+        ],
+        "RelatedLinks": [
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v5.40/servers/start-ovenclosureappliance",
+            "Text": "Online: "
+          },
+          {
+            "Uri": null,
+            "Text": "Get-OVEnclosure"
+          },
+          {
+            "Uri": null,
+            "Text": "Reset-OVEnclosureDevice"
+          },
+          {
+            "Uri": null,
+            "Text": "Stop-OVAppliance"
           }
         ]
       }

@@ -32,7 +32,7 @@ Restart the power state of the server using the virtual power button.  By defaul
 ###  Example 1 
 
 ```text
-Get-OVServer "Encl1, Bay 1" | Restart-OVServer | Wait-OVTaskComplete
+Get-OVServer -Name "Encl1, Bay 1" | Restart-OVServer | Wait-OVTaskComplete
 ```
 
 Restart the specific server device by passing the Server Object via pipeline.
@@ -40,7 +40,7 @@ Restart the specific server device by passing the Server Object via pipeline.
 ###  Example 2 
 
 ```text
-Get-OVServerProfile "MyWebServer 1" | Restart-OVServer | Wait-OVTaskComplete
+Get-OVServerProfile -Name "MyWebServer 1" | Restart-OVServer | Wait-OVTaskComplete
 ```
 
 Restart the specific server device by passing the Server Profile Object via pipeline.
@@ -48,7 +48,7 @@ Restart the specific server device by passing the Server Profile Object via pipe
 ###  Example 3 
 
 ```text
-Get-OVServer "Encl1, Bay 1" | Restart-OVServer -ColdBoot | Wait-OVTaskComplete
+Get-OVServer -Name "Encl1, Bay 1" | Restart-OVServer -ColdBoot | Wait-OVTaskComplete
 ```
 
 Restart the specific server device by passing the Server Object via pipeline, and issue a cold boot request.

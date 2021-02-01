@@ -8,12 +8,24 @@ description: Add X.509 SSL certificates to appliance trusted store.
 
 ```text
 Add-HPOVApplianceTrustedCertificate
-    [-Path] <System.IO.FileInfo>
-    [-CertObject] <Object>
+    [-Path <System.IO.FileInfo>]
+    [-CertObject <Object>]
     [-ComputerName <String>]
     [-Port <Int>]
     [-AliasName <String>]
     [-Force]
+    [-Async]
+    [-ApplianceConnection <Object>]
+    [<CommonParameters>]
+```
+
+```text
+Add-HPOVApplianceTrustedCertificate
+    [-Path <System.IO.FileInfo>]
+    [-CertObject <Object>]
+    [-ComputerName <String>]
+    [-Port <Int>]
+    [-TrustCertChain]
     [-Async]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -149,6 +161,18 @@ Specify an alias name of the certificate stored on the appliance.  By default, t
 ### -Force &lt;SwitchParameter&gt;
 
 Use to force add an untrusted (self signed or a certificate authority certificate has not been added to the appliance) certificate into the appliances trust store.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -TrustCertChain &lt;SwitchParameter&gt;
+
+
 
 | Aliases | None |
 | :--- | :--- |

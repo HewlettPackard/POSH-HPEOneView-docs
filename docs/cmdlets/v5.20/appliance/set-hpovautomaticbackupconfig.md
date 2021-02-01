@@ -11,14 +11,15 @@ Set-HPOVAutomaticBackupConfig
     [-Hostname] <String>
     [-Username] <String>
     [-Password] <System.Security.SecureString>
-    [-HostSSHKey] <String>
-    [-Directory] <String>
-    [-Protocol] <String>
-    [-Interval] <String>
-    [-Days] <Array>
-    [-Time] <String>
+    [-Port <int>]
+    [-Directory <String>]
+    [-HostSSHKey <String>]
+    [-Protocol <String>]
+    [-Interval <String>]
+    [-Days <Array>]
+    [-Time <String>]
     [-Async]
-    [-ApplianceConnection] <Array>
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -26,7 +27,7 @@ Set-HPOVAutomaticBackupConfig
 Set-HPOVAutomaticBackupConfig
     [-Disabled]
     [-Async]
-    [-ApplianceConnection] <Array>
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -238,6 +239,18 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 
 
 | Aliases | cf |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -Port &lt;int&gt;
+
+
+
+| Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |

@@ -57,3 +57,7 @@ Returns SMTP Email Configurtion object from the specified appliance(s).
 ## Related Links
 
 * [Set-OVSMTPConfig](set-ovsmtpconfig.md)
+* [Add-OVSmtpAlertEmailFilter](add-ovsmtpalertemailfilter.md)
+* [Get-OVSmtpAlertEmailFilter](get-ovsmtpalertemailfilter.md)
+* [Set-OVSmtpAlertEmailFilter](set-ovsmtpalertemailfilter.md)
+* [Remove-OVSmtpAlertEmailFilter](remove-ovsmtpalertemailfilter.md)

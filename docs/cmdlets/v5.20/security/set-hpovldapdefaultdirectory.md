@@ -9,8 +9,18 @@ description: Configure Authentication Directory default directory.
 ```text
 Set-HPOVLdapDefaultDirectory
     [-InputObject] <Object>
-    [-ApplianceConnection] <Object>
     [-DisableLocalLogin]
+    [-EnableEmergencyLocalLogin] <bool>
+    [-EmergencyLoginAllowType <string>]
+    [-ApplianceConnection <Object>]
+    [<CommonParameters>]
+```
+
+```text
+Set-HPOVLdapDefaultDirectory
+    [-InputObject] <Object>
+    [-DisableLocalLogin]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -88,6 +98,30 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 | Aliases | cf |
 | :--- | :--- |
 | Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -EmergencyLoginAllowType &lt;string&gt;
+
+
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -EnableEmergencyLocalLogin &lt;bool&gt;
+
+
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |

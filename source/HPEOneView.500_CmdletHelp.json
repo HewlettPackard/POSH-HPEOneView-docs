@@ -88,6 +88,16 @@
             "Aliases": "None",
             "PipelineInput": "false",
             "SupportsWildcard": false
+          },
+          {
+            "Name": "TrustCertChain",
+            "Description": "When providing a certificate, either with -Path, -CertObject or -ComputerName, use this parameter to build the certificate chain that issued the certificate to the endpoint.  In order for the certificate chain to automatically be built, the issuing and root authority certificates must be trusted from the operating system running PowerShell.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -137,11 +147,11 @@
           [
             {
               "Name": "Path",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "CertObject",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "ComputerName",
@@ -157,6 +167,36 @@
             },
             {
               "Name": "Force",
+              "Required": false
+            },
+            {
+              "Name": "Async",
+              "Required": false
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ],
+          [
+            {
+              "Name": "Path",
+              "Required": false
+            },
+            {
+              "Name": "CertObject",
+              "Required": false
+            },
+            {
+              "Name": "ComputerName",
+              "Required": false
+            },
+            {
+              "Name": "Port",
+              "Required": false
+            },
+            {
+              "Name": "TrustCertChain",
               "Required": false
             },
             {
@@ -5387,16 +5427,38 @@
       "Contents": {
         "Synopsis": "Disable local authentication logins.",
         "Description": "You can configure HPE OneView to use an external enterprise directory service for user authentication. HPE OneView supports the following enterprise directory services:\n\n    * Active Directory\n    * OpenLDAP\n\nWhen you use a directory service, directory users are granted HPE OneView permissions using their group membership in the directory. After defining a directory service, use the User and Groups screen to define permissions for directory groups.\nDirectory groups are assigned one or more HPE OneView permissions. A directory user is assigned the HPE OneView permissions that represent the union of the permissions for all the directory groups that the user is a member of. Only after permissions are defined for directory groups, directory users are authenticated into the appliance.\n\nIf you want to authenticate all logins to the appliance through a directory service, you must disable local logins. Also, if a directory is inaccessible in some special cases, you can enable the emergency local login. To enable emergency local login, you must disable local logins.\n\nNOTE:\nLocal logins cannot be disabled until you log in using an authentication directory service as an Infrastructure administrator. Verify that you can log in to the appliance as an Infrastructure administrator from the authentication directory service before continuing.\n\nMinimum required privileges: Infrastructure administrator.",
-        "Parameters": {
-          "Name": "ApplianceConnection",
-          "Description": "Specify one or more [HPOneView.Appliance.Connection] object(s) or Name property value(s).",
-          "DataType": "Object",
-          "Required": false,
-          "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
-          "Aliases": "Appliance",
-          "PipelineInput": "false",
-          "SupportsWildcard": false
-        },
+        "Parameters": [
+          {
+            "Name": "ApplianceConnection",
+            "Description": "Specify one or more [HPOneView.Appliance.Connection] object(s) or Name property value(s).",
+            "DataType": "Object",
+            "Required": false,
+            "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
+            "Aliases": "Appliance",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "EmergencyLoginAllowType",
+            "Description": "Allow emergency login access if the configured authentication directory(ies) are unavailable.  Highest security is obtained by restricting the local administrator account to \"ApplianceConsoleOnly\". Choose \"NetworkAndApplianceConsole\" to allow emergency access via the network.",
+            "DefaultValue": null,
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false,
+            "DataType": "String",
+            "Required": false
+          },
+          {
+            "Name": "EnableEmergencyLocalLogin",
+            "Description": "Boolean value to enable ($true) or disable ($false) emergency local login.  Must be set to $false when SmartCardLoginOnly is set and used from Set-HPOVApplianceTwoFactorAuthentication.",
+            "DefaultValue": null,
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false,
+            "DataType": "Bool",
+            "Required": false
+          }
+        ],
         "InputTypes": [
           {
             "Value": "None.  You cannot pipe objects to this Cmdlet.",
@@ -5428,6 +5490,14 @@
         ],
         "Syntax": [
           [
+            {
+              "Name": "EnableEmergencyLocalLogin",
+              "Required": false
+            },
+            {
+              "Name": "EmergencyLoginAllowType",
+              "Required": false
+            },
             {
               "Name": "ApplianceConnection",
               "Required": false
@@ -15823,6 +15893,16 @@
             "Aliases": "None",
             "PipelineInput": "false",
             "SupportsWildcard": false
+          },
+          {
+            "Name": "SerialNumber",
+            "Description": "Specify the server hardware serial number to locate.  This parameter does not support wildcard chatacters.",
+            "DefaultValue": null,
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false,
+            "DataType": "String",
+            "Required": false
           }
         ],
         "InputTypes": [
@@ -16011,6 +16091,10 @@
           [
             {
               "Name": "Name",
+              "Required": false
+            },
+            {
+              "Name": "SerialNumber",
               "Required": false
             },
             {
@@ -44221,6 +44305,16 @@
             "Aliases": "Appliance",
             "PipelineInput": "false",
             "SupportsWildcard": false
+          },
+          {
+            "Name": "Port",
+            "Description": "The target port of the destination service.  By default, this is 22/TCP.  Only TCP ports are supported.",
+            "DataType": "int",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -44280,24 +44374,28 @@
               "Required": true
             },
             {
+              "Name": "Port",
+              "Required": false
+            },
+            {
               "Name": "Directory",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Protocol",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Interval",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Days",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Time",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Async",
@@ -44305,13 +44403,13 @@
             },
             {
               "Name": "ApplianceConnection",
-              "Required": true
+              "Required": false
             }
           ],
           [
             {
               "Name": "Disabled",
-              "Required": false
+              "Required": true
             },
             {
               "Name": "Async",
@@ -44319,7 +44417,7 @@
             },
             {
               "Name": "ApplianceConnection",
-              "Required": true
+              "Required": false
             }
           ]
         ]
@@ -45864,6 +45962,26 @@
             "Aliases": "Appliance",
             "PipelineInput": "true (ByPropertyName)",
             "SupportsWildcard": false
+          },
+          {
+            "Name": "EmergencyLoginAllowType",
+            "Description": "Allow emergency login access if the configured authentication directory(ies) are unavailable.  Highest security is obtained by restricting the local administrator account to \"ApplianceConsoleOnly\". Choose \"NetworkAndApplianceConsole\" to allow emergency access via the network.",
+            "DefaultValue": null,
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false,
+            "DataType": "String",
+            "Required": false
+          },
+          {
+            "Name": "EnableEmergencyLocalLogin",
+            "Description": "Boolean value to enable ($true) or disable ($false) emergency local login.  Must be set to $false when SmartCardLoginOnly is set and used from Set-HPOVApplianceTwoFactorAuthentication.",
+            "DefaultValue": null,
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false,
+            "DataType": "Bool",
+            "Required": false
           }
         ],
         "InputTypes": [
@@ -45898,11 +46016,33 @@
               "Required": true
             },
             {
+              "Name": "DisableLocalLogin",
+              "Required": true
+            },
+            {
+              "Name": "EnableEmergencyLocalLogin",
+              "Required": true
+            },
+            {
+              "Name": "EmergencyLoginAllowType",
+              "Required": false
+            },
+            {
               "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ],
+          [
+            {
+              "Name": "InputObject",
               "Required": true
             },
             {
               "Name": "DisableLocalLogin",
+              "Required": false
+            },
+            {
+              "Name": "ApplianceConnection",
               "Required": false
             }
           ]
@@ -57314,7 +57454,6 @@
       }
     },
     {
-
       "Name": "Show-HPOVUtilization",
       "Category": "Servers",
       "Contents": {
@@ -57396,6 +57535,113 @@
               "Required": false
             }
           ]
+        ]
+      }
+    },
+    {
+      "Name": "Start-HPOVEnclosureAppliance",
+      "Category": "Servers",
+      "Contents": {
+        "Synopsis": "Power on HPE Synergy appliance device.",
+        "Description": "This Cmdlet will assist server administrators in powering on appliance devices within HPE Synergy frames. Additional power operations for Frame devices are provided by Reset-HPOVEnclosureDevice.\n\nMinimum required privileges: Infrastructure administrator, Server administrator",
+        "Syntax": [
+          [
+            {
+              "Name": "InputObject",
+              "Required": true
+            },
+            {
+              "Name": "BayID",
+              "Required": true
+            },
+            {
+              "Name": "Async",
+              "Required": false
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ]
+        ],
+        "Parameters": [
+          {
+            "Name": "ApplianceConnection",
+            "Description": "Specify one or more HPOneView.Appliance.Connection object(s) or Name property value(s).\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
+            "DataType": "Object",
+            "Required": false,
+            "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
+            "Aliases": "Appliance",
+            "PipelineInput": "true (ByPropertyName)",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Async",
+            "Description": "Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "False",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "BayID",
+            "Description": "The specified appliance bay ID of the provided enclosure resource.  Only ID's 1 or 2 are allowed.",
+            "DataType": "int",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "InputObject",
+            "Description": "The HPE Synergy frame resource from Get-HPOVEnclosure.",
+            "DataType": "Object",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "Encl",
+            "PipelineInput": "true (ByValue)",
+            "SupportsWildcard": false
+          }
+        ],
+        "InputTypes": [
+          {
+              "Value":  "HPOneView.Enclosure [System.Management.Automation.PSCustomObject]",
+              "Text":  "Enclosure resource from Get-HPOVEnclosure."
+          }
+        ],
+        "ReturnValues": [
+          {
+              "Value":  "HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]",
+              "Text":  "Async task resource to monitor."
+          }
+        ],
+        "Examples": [
+          {
+            "Title": "-------------------------- EXAMPLE 1 --------------------------",
+            "Code": "Start-HPOVEnclosureAppliance -InputObject (Get-HPOVEnclosure -Name Enclosure-2) -BayID 1",
+            "Description": "Start the appliance device in bay 1 of the specified enclosure."
+          }
+        ],
+        "RelatedLinks": [
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v5.00/servers/start-HPOVenclosureappliance",
+            "Text": "Online: "
+          },
+          {
+              "Uri":  null,
+              "Text":  "Get-HPOVEnclosure"
+          },
+          {
+              "Uri":  null,
+              "Text":  "Reset-HPOVEnclosureDevice"
+          },
+          {
+              "Uri":  null,
+              "Text":  "Stop-HPOVAppliance"
+          }
         ]
       }
     }
