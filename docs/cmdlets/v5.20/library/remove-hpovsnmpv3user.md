@@ -8,7 +8,7 @@ description: Remove SNMPv3 user from appliance.
 
 ```text
 Remove-HPOVSnmpV3User
-    [-InputObject] <HPEOneView.Appliance.SnmpV3User>
+    [-InputObject] <HPOneView.Appliance.SnmpV3User>
     [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
@@ -44,7 +44,7 @@ Remove the specific SNMPv3 user account on the appliance.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -66,7 +66,7 @@ Override confirmation prompt.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -InputObject &lt;HPEOneView.Appliance.SnmpV3User&gt;
+### -InputObject &lt;HPOneView.Appliance.SnmpV3User&gt;
 
 SNMPv3 user account from `Get-HPOVSnmpV3User`.
 
@@ -96,7 +96,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPEOneView.Appliance.SnmpV3User**_
+_**HPOneView.Appliance.SnmpV3User**_
 
 Appliance SNMPv3 user account from [`Get-HPOVSnmpV3User`](../appliance/get-hpovsnmpv3user.md).
 

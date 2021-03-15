@@ -112,7 +112,7 @@ Generate an HPRESTCmdlets compliant IloSession object.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -128,11 +128,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPEOneView.ServerHardware [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.ServerHardware [System.Management.Automation.PSCustomObject]**_
 
 Server Hardware resource object.
 
-_**HPEOneView.ServerProfile [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.ServerProfile [System.Management.Automation.PSCustomObject]**_
 
 Server Profile resource object.
 

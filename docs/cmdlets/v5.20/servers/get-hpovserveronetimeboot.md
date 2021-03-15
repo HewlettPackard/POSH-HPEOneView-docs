@@ -54,7 +54,7 @@ Get the one time boot setting from the provided server profile resource.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -82,17 +82,17 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPEOneView.Servers.ServerHardware [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Servers.ServerHardware [System.Management.Automation.PSCustomObject]**_
 
 Server hardware resource object from [`Get-HPOVServer`](get-hpovserver.md).
 
-_**HPEOneView.ServerProfile [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.ServerProfile [System.Management.Automation.PSCustomObject]**_
 
 Server profile resource object from [`Get-HPOVServerProfile`](get-hpovserverprofile.md).
 
 ## Return Values
 
-_**HPEOneView.Servers.ServerHardware+OneTimeBoot**_
+_**HPOneView.Servers.ServerHardware+OneTimeBoot**_
 
 The current One Time Boot setting of the server hardware resource.
 

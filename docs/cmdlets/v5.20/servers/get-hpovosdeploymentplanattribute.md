@@ -66,7 +66,7 @@ The OS Deployment Plan from `Get-HPOVOSDeploymentPlan`.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -82,13 +82,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPEOneView.Appliance.OSDeploymentPlan [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.OSDeploymentPlan [System.Management.Automation.PSCustomObject]**_
 
 The OS Deployment Plan from [`Get-HPOVOSDeploymentPlan`](get-hpovosdeploymentplan.md).
 
 ## Return Values
 
-_**HPEOneView.ServerProfile.OSDeployment.OSDeploymentParameter**_
+_**HPOneView.ServerProfile.OSDeployment.OSDeploymentParameter**_
 
 The object contained the Name of the parameter, and its default Value.
 

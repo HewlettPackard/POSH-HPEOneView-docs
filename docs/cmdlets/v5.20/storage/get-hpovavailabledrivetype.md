@@ -79,17 +79,17 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPEOneView.Storage.SASLogicalInterconnect**_
+_**HPOneView.Storage.SASLogicalInterconnect**_
 
 A SAS Logical Interconnect resource from [`Get-HPOVSasLogicalInterconnect`](../networking/get-hpovsaslogicalinterconnect.md) Cmdlet.
 
-_**HPEOneView.Storage.DiskEnclosure**_
+_**HPOneView.Storage.DiskEnclosure**_
 
 A D3940 Drive Enclosure from [`Get-HPOVSasLogicalInterconnect`](../networking/get-hpovsaslogicalinterconnect.md) Cmdlet.
 
 ## Return Values
 
-_**HPEOneView.Storage.AvailableDriveType**_
+_**HPOneView.Storage.AvailableDriveType**_
 
 A disk type object that defines available quantity of drives based on interface, media type and capacity, organized by SAS Logical Interconnect.
 

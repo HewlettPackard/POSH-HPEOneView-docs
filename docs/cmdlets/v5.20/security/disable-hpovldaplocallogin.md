@@ -8,8 +8,8 @@ description: Disable local authentication logins.
 
 ```text
 Disable-HPOVLdapLocalLogin
-    [-EnableEmergencyLocalLogin <bool>]
-    [-EmergencyLoginAllowType <string>]
+    [-EnableEmergencyLocalLogin <Bool>]
+    [-EmergencyLoginAllowType <String>]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
@@ -43,11 +43,19 @@ Disable-HPOVLdapLocalLogin
 
 Disable local logins on the appliance.
 
+###  Example 2 
+
+```text
+Disable-HPOVLdapLocalLogin -EnableEmergencyLocalLogin $true -EmergencyLoginAllowType NetworkAndApplianceConsole
+```
+
+Disable local logins on the appliance, but allow emergency login access via SSH maintenance console or from the service console of the appliance.
+
 ## Parameters
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -81,9 +89,9 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EmergencyLoginAllowType &lt;string&gt;
+### -EmergencyLoginAllowType &lt;String&gt;
 
-
+Allow emergency login access if the configured authentication directory(ies) are unavailable.  Highest security is obtained by restricting the local administrator account to "ApplianceConsoleOnly". Choose "NetworkAndApplianceConsole" to allow emergency access via the network.
 
 | Aliases | None |
 | :--- | :--- |
@@ -93,9 +101,9 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EnableEmergencyLocalLogin &lt;bool&gt;
+### -EnableEmergencyLocalLogin &lt;Bool&gt;
 
-
+Boolean value to enable ($true) or disable ($false) emergency local login.  Must be set to $false when SmartCardLoginOnly is set and used from `Set-HPOVApplianceTwoFactorAuthentication`.
 
 | Aliases | None |
 | :--- | :--- |

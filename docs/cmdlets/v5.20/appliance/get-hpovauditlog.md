@@ -178,7 +178,7 @@ Specify the End datetime object to begin the search.  Should be combined with St
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -198,7 +198,7 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPEOneView.Appliance.AuditLogEntry [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.AuditLogEntry [System.Management.Automation.PSCustomObject]**_
 
 Single Appliance Audit Log Entry
 

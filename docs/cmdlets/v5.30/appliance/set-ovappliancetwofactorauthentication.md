@@ -111,7 +111,9 @@ If you select Manually specify, you can enter a specific domain using dot notati
 
 ### -EmergencyLoginAllowType &lt;String&gt;
 
-Allow emergency login access if the configured authentication directory(ies) for `2-factor` are unavailable.  Highest security is obtained by restricting the local administrator account to "ApplianceConsoleOnly". Choose "NetworkAndApplianceConsole" to allow emergency access via the network.
+[DEPRECATED]  This parameter is now part of both `Disable-OVLdapLocalLogin` and `Set-OVLdapDefaultDirectory`.
+
+Allow emergency login access if the configured authentication directory(ies) are unavailable.  Highest security is obtained by restricting the local administrator account to "ApplianceConsoleOnly". Choose "NetworkAndApplianceConsole" to allow emergency access via the network.
 
 | Aliases | None |
 | :--- | :--- |
@@ -122,6 +124,8 @@ Allow emergency login access if the configured authentication directory(ies) for
 | Accept wildcard characters? | False |
 
 ### -EnableEmergencyLocalLogin &lt;Bool&gt;
+
+[DEPRECATED]  This parameter is now part of both `Disable-OVLdapLocalLogin` and `Set-OVLdapDefaultDirectory`.
 
 Boolean value to enable ($true) or disable ($false) emergency local login.  Must be set to $false when `-SmartCardLoginOnly` is used.
 

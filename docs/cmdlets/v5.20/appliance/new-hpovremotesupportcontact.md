@@ -135,7 +135,7 @@ Use to specify if this contact is the Default.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -167,7 +167,7 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPEOneView.Appliance.RemoteSupport.Contact [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.RemoteSupport.Contact [System.Management.Automation.PSCustomObject]**_
 
 The created Remote Support Contact.
 

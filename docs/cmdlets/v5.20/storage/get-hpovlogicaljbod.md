@@ -37,7 +37,7 @@ Get the defined logical JBOD resources from an appliance.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -77,8 +77,8 @@ Filter resources based on provided Scope membership.  By default, all resources 
 
     * AllResources
     *AllResourcesInScope
-    * `[HPEOneView.Appliance.ScopeCollection]`
-    * `[HPEOneView.Appliance.ConnectionPermission]`
+    * `[HPOneView.Appliance.ScopeCollection]`
+    * `[HPOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
@@ -98,7 +98,7 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPEOneView.Storage.LogicalJBOD**_
+_**HPOneView.Storage.LogicalJBOD**_
 
 The defined logical JBOD resource from the appliance.
 

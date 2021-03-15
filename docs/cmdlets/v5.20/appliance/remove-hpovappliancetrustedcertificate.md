@@ -46,7 +46,7 @@ The Alias Name of the certificate.  Please know that wildcard is not supported.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` objects or Name property values.
+Specify one or more `[HPOneView.Appliance.Connection]` objects or Name property values.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -74,7 +74,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPEOneView.Appliance.TrustedCertificate**_
+_**HPOneView.Appliance.TrustedCertificate**_
 
 A trusted certificate from [`Get-HPOVApplianceTrustedCertificate`](get-hpovappliancetrustedcertificate.md).
 

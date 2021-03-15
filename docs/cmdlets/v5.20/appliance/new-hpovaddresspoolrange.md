@@ -169,9 +169,9 @@ The ending address in the range.  Cannot overlap with other address ranges, and 
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s). 
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). 
 
-When attempting to create a new IPv4 address pool/Subnet, only a single `[HPEOneView.Appliance.Connection]` object or Name property value is allowed.  If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+When attempting to create a new IPv4 address pool/Subnet, only a single `[HPOneView.Appliance.Connection]` object or Name property value is allowed.  If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -187,13 +187,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPEOneView.Appliance.IPAddressSubnet [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.IPAddressSubnet [System.Management.Automation.PSCustomObject]**_
 
 IPv4 Address Subnet resource object from [`Get-HPOVAddressPoolSubnet`](get-hpovaddresspoolsubnet.md)
 
 ## Return Values
 
-_**HPEOneView.Appliance.AddressPoolRange [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.AddressPoolRange [System.Management.Automation.PSCustomObject]**_
 
 Newly created and assigned address pool range resource object
 

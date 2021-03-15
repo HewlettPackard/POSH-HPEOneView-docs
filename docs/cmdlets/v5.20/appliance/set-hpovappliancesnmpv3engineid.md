@@ -35,7 +35,7 @@ Default example
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -67,7 +67,7 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPEOneView.Appliance.SnmpV3EngineId**_
+_**HPOneView.Appliance.SnmpV3EngineId**_
 
 The appliance SNMPv3 engine ID.
 

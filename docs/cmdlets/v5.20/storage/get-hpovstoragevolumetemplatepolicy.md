@@ -34,7 +34,7 @@ Get the Storage Volume Template Global Policy setting from all connected applian
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -54,7 +54,7 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPEOneView.Appliance.GlobalSetting [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.GlobalSetting [System.Management.Automation.PSCustomObject]**_
 
 Object resource with the global setting value
 

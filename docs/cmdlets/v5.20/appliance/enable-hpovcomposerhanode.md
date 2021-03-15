@@ -54,7 +54,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one `[HPEOneView.Appliance.Connection]` object or Name property value.
+Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -98,7 +98,7 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 The Async task resource of the role transition request
 

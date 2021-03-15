@@ -10,8 +10,8 @@ description: Configure Authentication Directory default directory.
 Set-OVLdapDefaultDirectory
     [-InputObject] <Object>
     [-DisableLocalLogin]
-    [-EnableEmergencyLocalLogin] <bool>
-    [-EmergencyLoginAllowType <string>]
+    [-EnableEmergencyLocalLogin] <Bool>
+    [-EmergencyLoginAllowType <String>]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
@@ -39,6 +39,22 @@ Set-OVLdapDefaultDirectory -InputObject "Domain1"
 ```
 
 Set "Domain1" as the default authentication directory for the appliance.  Then, the Cmdlet will create the REG_SZ "AuthProvider#MyAppliance.domain.com" with a value of "Domain1".
+
+###  Example 2 
+
+```text
+Set-OVLdapDefaultDirectory -InputObject (Get-OVLdapDirectory -Name MyDirectory) -DisableLocalLogin $true -EnableEmergencyLocalLogin
+```
+
+Set "MyDirectory" as the default authentication directory for the appliance, disabling local logins and allowing emergency local login via appliance console only.
+
+###  Example 3 
+
+```text
+Set-OVLdapDefaultDirectory -InputObject "LOCAL"
+```
+
+Set "LOCAL" as the default authentication directory for the appliance.
 
 ## Parameters
 
@@ -103,9 +119,9 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EmergencyLoginAllowType &lt;string&gt;
+### -EmergencyLoginAllowType &lt;String&gt;
 
-
+Allow emergency login access if the configured authentication directory(ies) are unavailable.  Highest security is obtained by restricting the local administrator account to "ApplianceConsoleOnly". Choose "NetworkAndApplianceConsole" to allow emergency access via the network.
 
 | Aliases | None |
 | :--- | :--- |
@@ -115,13 +131,13 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EnableEmergencyLocalLogin &lt;bool&gt;
+### -EnableEmergencyLocalLogin &lt;Bool&gt;
 
-
+Boolean value to enable ($true) or disable ($false) emergency local login.  Must be set to $false when SmartCardLoginOnly is set and used from `Set-OVApplianceTwoFactorAuthentication`.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | True |
+| Required? | False |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |

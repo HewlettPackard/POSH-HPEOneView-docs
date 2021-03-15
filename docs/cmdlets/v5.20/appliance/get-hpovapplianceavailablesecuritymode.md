@@ -89,7 +89,7 @@ Return the CNSA available security mode on the appliance.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -127,7 +127,7 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPEOneView.Appliance.SecurityMode**_
+_**HPOneView.Appliance.SecurityMode**_
 
 The available appliance security mode, including which mode is set as the current value.
 

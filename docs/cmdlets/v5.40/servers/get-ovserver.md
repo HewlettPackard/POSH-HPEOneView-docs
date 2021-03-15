@@ -159,7 +159,7 @@ The name of the server hardware resource to be returned.  All server hardware re
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Accept wildcard characters? | True |
 
 ### -ServerName &lt;String&gt;
 
@@ -171,7 +171,7 @@ Specify the Server OS Name that is reported by the iLO.
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Accept wildcard characters? | True |
 
 ### -SerialNumber &lt;String&gt;
 

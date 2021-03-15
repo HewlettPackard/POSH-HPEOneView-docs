@@ -39,7 +39,7 @@ Get the HPE OneView PowerShell library version
 ```text
 Get-HPOVVersion -ApplianceVer
 PowerShell Library Version : 1.20.208.0
-Library Path               : C:\Users\user\Documents\WindowsPowerShell\Modules\HPEOneView.120
+Library Path               : C:\Users\user\Documents\WindowsPowerShell\Modules\HPOneView.120
 Appliance Major Version    : 1
 Appliance Minor Version    : 20
 Appliance Version Info     : 1.20.05-0201918
@@ -53,7 +53,7 @@ Get the HPE OneView PowerShell library, Appliance and `X-API` version informatio
 ```text
 Get-HPOVVersion -CheckOnline
 PowerShell Library Version : 1.20.166.0
-Library Path               : C:\Users\user\Documents\WindowsPowerShell\Modules\HPEOneView.120
+Library Path               : C:\Users\user\Documents\WindowsPowerShell\Modules\HPOneView.120
 
 
 Please Confirm
@@ -93,7 +93,7 @@ Check the GitHub repository for an updated version of the library.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | appliance |
 | :--- | :--- |

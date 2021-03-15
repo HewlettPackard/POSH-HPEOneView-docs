@@ -179,7 +179,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -195,13 +195,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPEOneView.Facilities.DataCenter**_
+_**HPOneView.Facilities.DataCenter**_
 
 DataCenter facility object from [`Get-HPOVDataCenter`](../facilities/get-hpovdatacenter.md).
 
 ## Return Values
 
-_**HPEOneView.Appliance.AyncTask**_
+_**HPOneView.Appliance.AyncTask**_
 
 Modified datacenter Remote Support location Asynchronous task.
 

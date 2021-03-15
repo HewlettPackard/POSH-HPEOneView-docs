@@ -65,7 +65,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -81,17 +81,17 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPEOneView.ServerHardware [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.ServerHardware [System.Management.Automation.PSCustomObject]**_
 
 A Gen8 or newer generation server hardware resource object from [`Get-HPOVServer`](../servers/get-hpovserver.md).
 
-_**HPEOneView.Enclosure [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Enclosure [System.Management.Automation.PSCustomObject]**_
 
 A Gen8 or newer generation server hardware resource object from [`Get-HPOVServer`](../servers/get-hpovserver.md).
 
 ## Return Values
 
-_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task Resource object for monitoring.
 

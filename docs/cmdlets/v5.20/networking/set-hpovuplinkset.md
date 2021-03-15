@@ -115,7 +115,7 @@ Synergy VC FC `Sub-Interface` `[e.g]`. "Bay2:Q1.1","Bay2:Q2.1" or "Bay5:Q1.2","B
 
 Aliases [-Appliance]
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 Default Value: ${Global:ConnectedSessions} | ? Default
 
@@ -252,7 +252,7 @@ When providing a Logical Interconnect Group resource, you must specify the name 
 
 ### -AddNetworkSet &lt;Object[]&gt;
 
-
+Specify one or more network set objects to add to an uplink set.
 
 | Aliases | None |
 | :--- | :--- |
@@ -264,7 +264,7 @@ When providing a Logical Interconnect Group resource, you must specify the name 
 
 ### -RemoveNetworkSet &lt;Object[]&gt;
 
-
+Specify one or more network set objects to remove from an uplink set.
 
 | Aliases | None |
 | :--- | :--- |
@@ -280,17 +280,17 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPEOneView.Networking.LogicalInterconnectGroup [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Networking.LogicalInterconnectGroup [System.Management.Automation.PSCustomObject]**_
 
 Logical Interconnect Group resource from [`Get-HPOVLogicalInterconnectGroup`](get-hpovlogicalinterconnectgroup.md).
 
-_**HPEOneView.Networking.UplinkSet [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Networking.UplinkSet [System.Management.Automation.PSCustomObject]**_
 
 Uplink set resource from [`Get-HPOVUplinkSet`](get-hpovuplinkset.md).
 
 ## Return Values
 
-_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task resource object to monitor.
 

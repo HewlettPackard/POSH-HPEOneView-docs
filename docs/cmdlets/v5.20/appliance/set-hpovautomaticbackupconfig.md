@@ -212,7 +212,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -248,7 +248,7 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 
 ### -Port &lt;int&gt;
 
-
+The target port of the destination service.  By default, this is 22/TCP.  Only TCP ports are supported.
 
 | Aliases | None |
 | :--- | :--- |
@@ -268,11 +268,11 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Appliance async task to monitor
 
-_**System.Collections.Arraylist <HPEOneView.Appliance.TaskResource>**_
+_**System.Collections.Arraylist <HPOneView.Appliance.TaskResource>**_
 
 Multiple appliance async task to monitor
 

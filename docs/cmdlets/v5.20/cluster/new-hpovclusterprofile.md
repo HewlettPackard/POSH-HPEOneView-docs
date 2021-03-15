@@ -9,13 +9,13 @@ description: Create a new cluster profile resource.
 ```text
 New-HPOVClusterProfile
     [-Name] <string>
-    [-ClusterManager] <HPEOneView.Cluster.ClusterManager>
+    [-ClusterManager] <HPOneView.Cluster.ClusterManager>
     [-ClusterManagerLocation] <String>
     [-ServerProfileTemplate] <Object>
     [-ClusterPassword] <SecureString>
     [-Description <String>]
     [-ClusterPrefix <String>]
-    [-Servers <HPEOneView.Cluster.AddHostRequest[]>]
+    [-Servers <HPOneView.Cluster.AddHostRequest[]>]
     [-UseIPAddressAsHostName <bool>]
     [-LeaveHostsInMaintenanceMode] <bool>
     [-StorageVolume <Object>]
@@ -29,14 +29,14 @@ New-HPOVClusterProfile
 ```text
 New-HPOVClusterProfile
     [-Name] <string>
-    [-ClusterManager] <HPEOneView.Cluster.ClusterManager>
+    [-ClusterManager] <HPOneView.Cluster.ClusterManager>
     [-ClusterManagerLocation] <String>
     [-ServerProfileTemplate] <Object>
     [-ClusterPassword] <SecureString>
     [-UnmanageVSwitch]
     [-Description <String>]
     [-ClusterPrefix <String>]
-    [-Servers <HPEOneView.Cluster.AddHostRequest[]>]
+    [-Servers <HPOneView.Cluster.AddHostRequest[]>]
     [-HAEnabled <Bool>]
     [-DRSEnabled <Bool>]
     [-MultiNicVMotionEnabled <bool>]
@@ -49,13 +49,13 @@ New-HPOVClusterProfile
 ```text
 New-HPOVClusterProfile
     [-Name] <string>
-    [-ClusterManager] <HPEOneView.Cluster.ClusterManager>
+    [-ClusterManager] <HPOneView.Cluster.ClusterManager>
     [-ClusterManagerLocation] <String>
     [-ServerProfileTemplate] <Object>
     [-ClusterPassword] <SecureString>
     [-Description <String>]
     [-ClusterPrefix <String>]
-    [-Servers <HPEOneView.Cluster.AddHostRequest[]>]
+    [-Servers <HPOneView.Cluster.AddHostRequest[]>]
     [-OverrideManagementAddressAssignmet]
     [-SubnetMask] <IPAddress>
     [-Gateway] <IPAddress>
@@ -168,7 +168,7 @@ Create a new cluster profile, overriding clsuter manager settings.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -190,7 +190,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ClusterManager &lt;HPEOneView.Cluster.ClusterManager&gt;
+### -ClusterManager &lt;HPOneView.Cluster.ClusterManager&gt;
 
 Specify the cluster manager that will manage the cluster and associated members, from `Get-HPOVClusterManager`.
 
@@ -315,7 +315,7 @@ Provide the cluster profile name.  If `-Prefix` is omitted, this value will beco
 
 ### -Scope &lt;Object&gt;
 
-Provide an `[HPEOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
+Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -512,7 +512,7 @@ Optional - When deploying a new cluster profile with HPE Synergy and Image Strea
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Servers &lt;HPEOneView.Cluster.AddHostRequest[]&gt;
+### -Servers &lt;HPOneView.Cluster.AddHostRequest[]&gt;
 
 One or more server resource objects from `New-HPOVClusterProfileMember`.  Value can be empty to create an empty cluster, if the target cluster manager supports that type of configuration, like VMware vSphere.
 
@@ -601,7 +601,7 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Asynchronous task resource to monitor.
 

@@ -88,7 +88,7 @@ Directroy Group to add.  Can either be a string value of a Cononical Name of dir
 
 ### -Roles &lt;Array&gt;
 
-The role(s) to assign to the Directroy Group, in `[System.Collections.ArrayList]` format.  Accepted values are noted within the ApplianceRoles property of the `[HPEOneView.Appliance.Connection]` object stored in the $Global:ConnectedSessions variable.
+The role(s) to assign to the Directroy Group, in `[System.Collections.ArrayList]` format.  Accepted values are noted within the ApplianceRoles property of the `[HPOneView.Appliance.Connection]` object stored in the $Global:ConnectedSessions variable.
 
 Example: $roles = "Server administrator","Network administrator"
 
@@ -136,7 +136,7 @@ Directory User account password.  Can be `[System.String]` or `[System.Security.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -178,7 +178,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPEOneView.Appliance.DirectoryGroup [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.DirectoryGroup [System.Management.Automation.PSCustomObject]**_
 
 The external authentication directory object from `-Get`-HPOVLdapDirectory.
 

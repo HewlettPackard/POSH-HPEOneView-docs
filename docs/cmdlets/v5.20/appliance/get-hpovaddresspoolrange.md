@@ -104,7 +104,7 @@ Get a specific address pool range type (VMAC) from all connected appliances.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -120,13 +120,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPEOneView.Appliance.AddressPool [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.AddressPool [System.Management.Automation.PSCustomObject]**_
 
 Address pool resource object.
 
 ## Return Values
 
-_**HPEOneView.Appliance.AddressPoolRange [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.AddressPoolRange [System.Management.Automation.PSCustomObject]**_
 
 Address pool range object.
 

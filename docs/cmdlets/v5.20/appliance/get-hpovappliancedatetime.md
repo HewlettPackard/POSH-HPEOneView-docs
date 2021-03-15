@@ -42,7 +42,7 @@ This example passes in updated values to set for the appliance networking config
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 Default Value: ${Global:ConnectSessions} | ? Default
 
@@ -64,7 +64,7 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPEOneView.Appliance.ApplianceServerDateTime [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.ApplianceServerDateTime [System.Management.Automation.PSCustomObject]**_
 
 Date/Time object.
 

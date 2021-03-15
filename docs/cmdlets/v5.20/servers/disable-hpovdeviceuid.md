@@ -54,7 +54,7 @@ Resource object to turn off the UID.  Supported resources are server hardware, e
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one `[HPEOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -70,21 +70,21 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPEOneView.ServerHardware [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.ServerHardware [System.Management.Automation.PSCustomObject]**_
 
 Server Hardware or Enclosure resource.
 
-_**HPEOneView.Enclosure [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Enclosure [System.Management.Automation.PSCustomObject]**_
 
 Enclosure resource.
 
-_**HPEOneView.Networking.Interconnect [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Networking.Interconnect [System.Management.Automation.PSCustomObject]**_
 
 Interconnect resource.
 
 ## Return Values
 
-_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 If successful, returns Appliance Async Task object to monitor.
 

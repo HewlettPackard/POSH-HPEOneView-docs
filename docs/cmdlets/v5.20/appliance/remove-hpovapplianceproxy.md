@@ -34,7 +34,7 @@ Remove the configured HTTP/HTTP proxy settings on the appliance.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -78,7 +78,7 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPEOneView.Appliance.ProxyServer**_
+_**HPOneView.Appliance.ProxyServer**_
 
 Appliance proxy server settings.
 

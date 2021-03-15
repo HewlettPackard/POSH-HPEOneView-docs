@@ -8,7 +8,7 @@ description: Create a new HPE Synergy Logical JBOD resource.
 
 ```text
 Remove-HPOVLogicalJBOD
-    [-InputObject] <HPEOneView.Storage.LogicalJBOD[]>
+    [-InputObject] <HPOneView.Storage.LogicalJBOD[]>
     [-Force]
     [-Async]
     [-ApplianceConnection <Object>]
@@ -63,7 +63,7 @@ Remove the specified logical JBOD when it is associated with a server profile re
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -109,7 +109,7 @@ Force delete the resource.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -InputObject &lt;HPEOneView.Storage.LogicalJBOD[]&gt;
+### -InputObject &lt;HPOneView.Storage.LogicalJBOD[]&gt;
 
 The logical JBOD resource from `Get-HPOVLogialJBOD` Cmdlet.  If the logical JBOD is associated with a server profile, it must first be unassociated from the server profile, then you can remove it.  If the erase on delete option is enabled (or set to true), then data will be deleted from the drive.
 
@@ -139,13 +139,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPEOneView.Storage.LogicalJBOD[]**_
+_**HPOneView.Storage.LogicalJBOD[]**_
 
 One or more logical JBOD resources from [`Get-HPOVLogicalJBOD`](get-hpovlogicaljbod.md).
 
 ## Return Values
 
-_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Asynchronous task resource to monitor.
 

@@ -16,7 +16,7 @@ Set-HPOVApplianceGlobalSetting
 
 ```text
 Set-HPOVApplianceGlobalSetting
-    [-InputObject] <HPEOneView.Appliance.GlobalSetting>
+    [-InputObject] <HPOneView.Appliance.GlobalSetting>
     [-Value] <String>
     [-ApplianceConnection] <Object>
     [<CommonParameters>]
@@ -38,7 +38,7 @@ Returns the "alertMax" setting object with the updated value of 75000
 
 ## Parameters
 
-### -InputObject &lt;HPEOneView.Appliance.GlobalSetting&gt;
+### -InputObject &lt;HPOneView.Appliance.GlobalSetting&gt;
 
 Aliases [-Object]
 
@@ -78,7 +78,7 @@ The updated value for the global parameter.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -94,7 +94,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPEOneView.Appliance.GlobalSetting**_
+_**HPOneView.Appliance.GlobalSetting**_
 
 Appliance global setting from [`Get-HPOVApplianceGlobalSetting`](get-hpovapplianceglobalsetting.md).
 

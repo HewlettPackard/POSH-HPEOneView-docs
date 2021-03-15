@@ -19,7 +19,7 @@ New-HPOVApplianceTrapDestination
 ```text
 New-HPOVApplianceTrapDestination
     [-Destination] <String>
-    [-SnmpV3User] <HPEOneView.Appliance.SnmpV3User>
+    [-SnmpV3User] <HPOneView.Appliance.SnmpV3User>
     [-Port <int>]
     [-Type <String>]
     [-ApplianceConnection <Array>]
@@ -62,7 +62,7 @@ Define a new SNMPv3 user, and associate it with the new SNMPv3 trap destination 
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -108,7 +108,7 @@ Specify the alternate SNMP destination port.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SnmpV3User &lt;HPEOneView.Appliance.SnmpV3User&gt;
+### -SnmpV3User &lt;HPOneView.Appliance.SnmpV3User&gt;
 
 The defined SNMPv3 user created on the appliance with `Get-HPOVSnmpV3User`.
 
@@ -145,11 +145,11 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPEOneView.Appliance.SnmpV1TrapDestination**_
+_**HPOneView.Appliance.SnmpV1TrapDestination**_
 
 The configured SNMPv1 Trap Destination on the appliance.
 
-_**HPEOneView.Appliance.SnmpV3TrapDestination**_
+_**HPOneView.Appliance.SnmpV3TrapDestination**_
 
 The configured SNMPv3 Trap Destination on the appliance.
 

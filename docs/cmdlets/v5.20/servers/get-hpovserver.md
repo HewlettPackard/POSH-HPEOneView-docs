@@ -9,7 +9,7 @@ description: Retrieve Server Hardware resource(s).
 ```text
 Get-HPOVServer
     [-Name <String>]
-    [-SerialNumber <string>]
+    [-SerialNumber <String>]
     [-ServerName <String>]
     [-Status <String[]>]
     [-NoProfile]
@@ -180,8 +180,8 @@ Filter resources based on provided Scope membership.  By default, all resources 
 
     * AllResources
     * AllResourcesInScope
-    * `[HPEOneView.Appliance.ScopeCollection]`
-    * `[HPEOneView.Appliance.ConnectionPermission]`
+    * `[HPOneView.Appliance.ScopeCollection]`
+    * `[HPOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
@@ -242,7 +242,7 @@ Provide the Server Hardware Type or Server Profile Template Object to filter for
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -282,9 +282,9 @@ Filter resources based on their current status.  Allowed values:
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SerialNumber &lt;string&gt;
+### -SerialNumber &lt;String&gt;
 
-
+Specify the server hardware serial number to locate.  This parameter does not support wildcard chatacters.
 
 | Aliases | None |
 | :--- | :--- |
@@ -300,17 +300,17 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPEOneView.ServerHardwareType [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.ServerHardwareType [System.Management.Automation.PSCustomObject]**_
 
 Server Hardware Type resource object.
 
-_**HPEOneView.ServerProfileTemplate [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.ServerProfileTemplate [System.Management.Automation.PSCustomObject]**_
 
 Server Profile Template resource object.
 
 ## Return Values
 
-_**HPEOneView.ServerHardware [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.ServerHardware [System.Management.Automation.PSCustomObject]**_
 
 Single Server Hardware resource
 

@@ -75,7 +75,7 @@ The Alias Name of the certificate.  Please know that wildcard is not supported.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` objects or Name property values.
+Specify one or more `[HPOneView.Appliance.Connection]` objects or Name property values.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -99,7 +99,7 @@ This parameter will filter for trusted certificate authorities only.
 
 ### -InputObject &lt;Object&gt;
 
-Provide an `[HPEOneView.ServerHardware]` or `[HPEOneView.Enclosure]` resource to return associated appliance trusted certificate(s).
+Provide an `[HPOneView.ServerHardware]` or `[HPOneView.Enclosure]` resource to return associated appliance trusted certificate(s).
 
 | Aliases | None |
 | :--- | :--- |
@@ -115,21 +115,21 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPEOneView.ServerHardware**_
+_**HPOneView.ServerHardware**_
 
 Server hardware resource from [`Get-HPOVServer`](../servers/get-hpovserver.md).
 
-_**HPEOneView.Enclosure**_
+_**HPOneView.Enclosure**_
 
 Enclosure resource from [`Get-HPOVEnclosure`](../servers/get-hpovenclosure.md).
 
 ## Return Values
 
-_**HPEOneView.Appliance.TrustedCertificate**_
+_**HPOneView.Appliance.TrustedCertificate**_
 
 Appliance trusted certificate object.
 
-_**HPEOneView.Appliance.TrustedCertificateAuthority**_
+_**HPOneView.Appliance.TrustedCertificateAuthority**_
 
 Appliance trusted certificate authority object.
 

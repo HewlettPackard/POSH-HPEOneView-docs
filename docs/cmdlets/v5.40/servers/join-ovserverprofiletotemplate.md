@@ -31,7 +31,7 @@ Attaches the server profile template named MyTemplate to the server profile name
 ###  Example 2 
 
 ```text
-$p = Get-OVServerProfile "myProfile"
+$p = Get-OVServerProfile -Name "myProfile"
 Get-OVServerProfileTemplate "myTemplate" | Join-OVServerProfileToTemplate -profile $p -appliance HPEOneView.contoso.com
 ```
 

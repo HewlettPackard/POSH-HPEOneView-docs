@@ -3050,6 +3050,18 @@
             "Text": "Test-OVEmailAlert"
           },
           {
+            "Uri": null,
+            "Text": "Get-OVSmtpAlertEmailFilter"
+          },
+          {
+            "Uri": null,
+            "Text": "Set-OVSmtpAlertEmailFilter"
+          },
+          {
+            "Uri": null,
+            "Text": "Remove-OVSmtpAlertEmailFilter"
+          },
+          {
             "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.30/appliance/add-ovsmtpalertemailfilter.md",
             "Text": "Online: "
           }
@@ -5752,23 +5764,23 @@
           },
           {
             "Name": "EmergencyLoginAllowType",
-            "Description": "",
-            "DataType": "string",
-            "Required": false,
-            "DefaultValue": "",
+            "Description": "Allow emergency login access if the configured authentication directory(ies) are unavailable.  Highest security is obtained by restricting the local administrator account to \"ApplianceConsoleOnly\". Choose \"NetworkAndApplianceConsole\" to allow emergency access via the network.",
+            "DefaultValue": null,
             "Aliases": "None",
             "PipelineInput": "false",
-            "SupportsWildcard": false
+            "SupportsWildcard": false,
+            "DataType": "String",
+            "Required": false
           },
           {
             "Name": "EnableEmergencyLocalLogin",
-            "Description": "",
-            "DataType": "bool",
-            "Required": false,
-            "DefaultValue": "",
+            "Description": "Boolean value to enable ($true) or disable ($false) emergency local login.  Must be set to $false when SmartCardLoginOnly is set and used from Set-OVApplianceTwoFactorAuthentication.",
+            "DefaultValue": null,
             "Aliases": "None",
             "PipelineInput": "false",
-            "SupportsWildcard": false
+            "SupportsWildcard": false,
+            "DataType": "Bool",
+            "Required": false
           }
         ],
         "InputTypes": [
@@ -5788,6 +5800,11 @@
             "Title": "-------------------------- EXAMPLE 1 --------------------------",
             "Code": "Disable-OVLdapLocalLogin",
             "Description": "Disable local logins on the appliance."
+          },
+          {
+            "Title": "-------------------------- EXAMPLE 2 --------------------------",
+            "Code": "Disable-OVLdapLocalLogin -EnableEmergencyLocalLogin $true -EmergencyLoginAllowType NetworkAndApplianceConsole",
+            "Description": "Disable local logins on the appliance, but allow emergency login access via SSH maintenance console or from the service console of the appliance."
           }
         ],
         "RelatedLinks": [
@@ -17740,6 +17757,22 @@
           {
             "Uri": "",
             "Text": "Set-OVSMTPConfig"
+          },
+          {
+            "Uri": null,
+            "Text": "Add-OVSmtpAlertEmailFilter"
+          },
+          {
+            "Uri": null,
+            "Text": "Get-OVSmtpAlertEmailFilter"
+          },
+          {
+            "Uri": null,
+            "Text": "Set-OVSmtpAlertEmailFilter"
+          },
+          {
+            "Uri": null,
+            "Text": "Remove-OVSmtpAlertEmailFilter"
           },
           {
             "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.30/appliance/get-ovsmtpconfig.md",
@@ -45782,7 +45815,7 @@
           },
           {
             "Name": "EmergencyLoginAllowType",
-            "Description": "Allow emergency login access if the configured authentication directory(ies) for 2-factor are unavailable.  Highest security is obtained by restricting the local administrator account to \"ApplianceConsoleOnly\". Choose \"NetworkAndApplianceConsole\" to allow emergency access via the network.",
+            "Description": "[DEPRECATED]  This parameter is now part of both Disable-OVLdapLocalLogin and Set-OVLdapDefaultDirectory.\n\nAllow emergency login access if the configured authentication directory(ies) are unavailable.  Highest security is obtained by restricting the local administrator account to \"ApplianceConsoleOnly\". Choose \"NetworkAndApplianceConsole\" to allow emergency access via the network.",
             "DefaultValue": null,
             "Aliases": "None",
             "PipelineInput": "false",
@@ -45792,7 +45825,7 @@
           },
           {
             "Name": "EnableEmergencyLocalLogin",
-            "Description": "Boolean value to enable ($true) or disable ($false) emergency local login.  Must be set to $false when -SmartCardLoginOnly is used.",
+            "Description": "[DEPRECATED]  This parameter is now part of both Disable-OVLdapLocalLogin and Set-OVLdapDefaultDirectory.\n\nBoolean value to enable ($true) or disable ($false) emergency local login.  Must be set to $false when -SmartCardLoginOnly is used.",
             "DefaultValue": null,
             "Aliases": "None",
             "PipelineInput": "false",
@@ -47772,23 +47805,23 @@
           },
           {
             "Name": "EmergencyLoginAllowType",
-            "Description": "",
-            "DataType": "string",
-            "Required": false,
-            "DefaultValue": "",
+            "Description": "Allow emergency login access if the configured authentication directory(ies) are unavailable.  Highest security is obtained by restricting the local administrator account to \"ApplianceConsoleOnly\". Choose \"NetworkAndApplianceConsole\" to allow emergency access via the network.",
+            "DefaultValue": null,
             "Aliases": "None",
             "PipelineInput": "false",
-            "SupportsWildcard": false
+            "SupportsWildcard": false,
+            "DataType": "String",
+            "Required": false
           },
           {
             "Name": "EnableEmergencyLocalLogin",
-            "Description": "",
-            "DataType": "bool",
-            "Required": true,
-            "DefaultValue": "",
+            "Description": "Boolean value to enable ($true) or disable ($false) emergency local login.  Must be set to $false when SmartCardLoginOnly is set and used from Set-OVApplianceTwoFactorAuthentication.",
+            "DefaultValue": null,
             "Aliases": "None",
             "PipelineInput": "false",
-            "SupportsWildcard": false
+            "SupportsWildcard": false,
+            "DataType": "Bool",
+            "Required": false
           }
         ],
         "InputTypes": [
@@ -47808,6 +47841,16 @@
             "Title": "-------------------------- EXAMPLE 1 --------------------------",
             "Code": "Set-OVLdapDefaultDirectory -InputObject \"Domain1\"\n# Cmdlet will create:\n# HKCU:\\Software\\Hewlett-Packard\\HPOneView\\AuthProvider#MyAppliance.domain.com REG_SZ, value = \"Domain1\"",
             "Description": "Set \"Domain1\" as the default authentication directory for the appliance.  Then, the Cmdlet will create the REG_SZ \"AuthProvider#MyAppliance.domain.com\" with a value of \"Domain1\"."
+          },
+          {
+            "Title": "-------------------------- EXAMPLE 2 --------------------------",
+            "Code": "Set-OVLdapDefaultDirectory -InputObject (Get-OVLdapDirectory -Name MyDirectory) -DisableLocalLogin $true -EnableEmergencyLocalLogin",
+            "Description": "Set \"MyDirectory\" as the default authentication directory for the appliance, disabling local logins and allowing emergency local login via appliance console only."
+          },
+          {
+            "Title": "-------------------------- EXAMPLE 3 --------------------------",
+            "Code": "Set-OVLdapDefaultDirectory -InputObject \"LOCAL\"",
+            "Description": "Set \"LOCAL\" as the default authentication directory for the appliance."
           }
         ],
         "RelatedLinks": [
@@ -51600,8 +51643,24 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "",
+            "Uri": null,
             "Text": "Get-OVSMTPConfig"
+          },
+          {
+            "Uri": null,
+            "Text": "Add-OVSmtpAlertEmailFilter"
+          },
+          {
+            "Uri": null,
+            "Text": "Get-OVSmtpAlertEmailFilter"
+          },
+          {
+            "Uri": null,
+            "Text": "Set-OVSmtpAlertEmailFilter"
+          },
+          {
+            "Uri": null,
+            "Text": "Remove-OVSmtpAlertEmailFilter"
           },
           {
             "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.30/appliance/set-ovsmtpconfig.md",
@@ -61362,6 +61421,392 @@
             "Uri": null,
             "Text": "Stop-OVAppliance"
           }
+        ]
+      }
+    },
+    {
+      "Name": "Get-OVSmtpAlertEmailFilter",
+      "Category": "Appliance",
+      "Contents": {
+        "Synopsis": "Retrieve SMTP email alert filter(s) configured on the appliance.",
+        "Description": "Email alerting feature notifies specified recipients when a certain alert occurs.  When this feature is configured and enabled, the appliance performs these steps in addition to posting the alert:\n\n    * The appliance compares the alert to configured search criteria.\n    * If the alert matches, it creates an email message containing the text of the alert.\n    * The appliance sends the email message to designated recipients in both plain text and HTML MIME types. Sending in both types allows the recipient?s mail application to determine the display.\n\nYou can enable or disable this email notification feature, or you can enable or disable individual filter notifications, as required.\n\nThe appliance provides for as many as 100 recipient and filter combinations, and allows as many as 50 recipients in a single email message. This flexibility lets you fine-tune which alert messages are sent and to whom. For example, you can configure the appliance to send Warning alerts to one recipient and Critical alerts to another.\n\nThis Cmdlet will help get the configured email alert filter(s) configured on the appliance.\n\nMinimum required privileges: Infrastructure administrator.",
+        "Parameters": [
+          {
+            "Name": "Name",
+            "Description": "Name of the Filter to return.  Supports wildcard.  To return the remote support email filter configuration, specify \"Remote Support\" as the filter name.",
+            "DefaultValue": null,
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": true,
+            "DataType": "String",
+            "Required": false
+          },
+          {
+            "Name": "ApplianceConnection",
+            "Description": "Specify one or more [HPEOneView.Appliance.Connection] object(s) or Name property value(s).",
+            "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
+            "Aliases": "Appliance",
+            "PipelineInput": "false",
+            "SupportsWildcard": false,
+            "DataType": "Object",
+            "Required": false
+          }
+        ],
+        "InputTypes": [
+          {
+            "Value": "None.  You cannot pipe objects to this cmdlet.",
+            "Text": null
+          }
+        ],
+        "ReturnValues": [
+          {
+            "Value": "HPEOneView.Appliance.AlertEmailFilter [System.Management.Automation.PSCustomObject]",
+            "Text": "The configured email alert filter on the appliance.\n"
+          }
+        ],
+        "Examples": [
+          {
+            "Title": "-------------------------- EXAMPLE 1 --------------------------",
+            "Code": "Get-OVSmtpAlertEmailFilter -Name \"Monitor CPU Error and Warning conditions\"",
+            "Description": "Get the specified email alert filter."
+          },
+          {
+            "Title": "-------------------------- EXAMPLE 2 --------------------------",
+            "Code": "Get-OVSmtpAlertEmailFilter -Name \"Remote Support\"",
+            "Description": "Get the remote support email filter."
+          }
+        ],
+        "RelatedLinks": [
+          {
+            "Uri": null,
+            "Text": "Get-OVSMTPConfig"
+          },
+          {
+            "Uri": null,
+            "Text": "Set-OVSMTPConfig"
+          },
+          {
+            "Uri": null,
+            "Text": "Test-OVEmailAlert"
+          },
+          {
+            "Uri": null,
+            "Text": "Add-OVSmtpAlertEmailFilter"
+          },
+          {
+            "Uri": null,
+            "Text": "Set-OVSmtpAlertEmailFilter"
+          },
+          {
+            "Uri": null,
+            "Text": "Remove-OVSmtpAlertEmailFilter"
+          },
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.30/appliance/get-ovsmtpalertemailfilter.md",
+            "Text": "Online: "
+          }
+        ],
+        "Syntax": [
+          [
+            {
+              "Name": "Name",
+              "Required": false
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "Name": "Remove-OVSmtpAlertEmailFilter",
+      "Category": "Appliance",
+      "Contents": {
+        "Synopsis": "Remove an existing SMTP email alert filter.",
+        "Description": "Email alerting feature notifies specified recipients when a certain alert occurs.  When this feature is configured and enabled, the appliance performs these steps in addition to posting the alert:\n\n    * The appliance compares the alert to configured search criteria.\n    * If the alert matches, it creates an email message containing the text of the alert.\n    * The appliance sends the email message to designated recipients in both plain text and HTML MIME types. Sending in both types allows the recipient?s mail application to determine the display.\n\nYou can enable or disable this email notification feature, or you can enable or disable individual filter notifications, as required.\n\nThe appliance provides for as many as 100 recipient and filter combinations, and allows as many as 50 recipients in a single email message. This flexibility lets you fine-tune which alert messages are sent and to whom. For example, you can configure the appliance to send Warning alerts to one recipient and Critical alerts to another.\n\nThis Cmdlet will remove configured email alert filters from the appliance.\n\nMinimum required privileges: Infrastructure administrator.",
+        "Parameters": [
+          {
+            "Name": "InputObject",
+            "Description": "The email alert filter from Get-OVSmtpAlertEmailFilter.",
+            "DefaultValue": null,
+            "Aliases": "None",
+            "PipelineInput": "true (ByValue)",
+            "SupportsWildcard": false,
+            "DataType": "Object",
+            "Required": true
+          },
+          {
+            "Name": "ApplianceConnection",
+            "Description": "Specify one or more [HPEOneView.Appliance.Connection] object(s) or Name property value(s).",
+            "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
+            "Aliases": "Appliance",
+            "PipelineInput": "false",
+            "SupportsWildcard": false,
+            "DataType": "Object",
+            "Required": false
+          }
+        ],
+        "InputTypes": [
+          {
+            "Value": "HPEOneView.Appliance.AlertEmailFilter [System.Management.Automation.PSCustomObject]",
+            "Text": "The configured email alert filter on the appliance.\n"
+          }
+        ],
+        "ReturnValues": [
+          {
+            "Value": "HPEOneView.Appliance.TaskResource {System.Management.Automation.PSCustomObject}",
+            "Text": "Returns an async task resource to monitor."
+          }
+        ],
+        "Examples": [
+          {
+            "Title": "-------------------------- EXAMPLE 1 --------------------------",
+            "Code": "Get-OVSmtpAlertEmailFilter -Name \"Monitor CPU Error and Warning conditions\" | Remove-OVSmtpAlertEmailFilter",
+            "Description": "Remove the specified email alert filter."
+          }
+        ],
+        "RelatedLinks": [
+          {
+            "Uri": null,
+            "Text": "Get-OVSMTPConfig"
+          },
+          {
+            "Uri": null,
+            "Text": "Set-OVSMTPConfig"
+          },
+          {
+            "Uri": null,
+            "Text": "Test-OVEmailAlert"
+          },
+          {
+            "Uri": null,
+            "Text": "Add-OVSmtpAlertEmailFilter"
+          },
+          {
+            "Uri": null,
+            "Text": "Get-OVSmtpAlertEmailFilter"
+          },
+          {
+            "Uri": null,
+            "Text": "Set-OVSmtpAlertEmailFilter"
+          },
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.30/appliance/remove-ovsmtpalertemailfilter.md",
+            "Text": "Online: "
+          }
+        ],
+        "Syntax": [
+          [
+            {
+              "Name": "InputObject",
+              "Required": true
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "Name": "Set-OVSmtpAlertEmailFilter",
+      "Category": "Appliance",
+      "Contents": {
+        "Synopsis": "Modify an existing SMTP email alert filter.",
+        "Description": "Email alerting feature notifies specified recipients when a certain alert occurs.  When this feature is configured and enabled, the appliance performs these steps in addition to posting the alert:\n\n    * The appliance compares the alert to configured search criteria.\n    * If the alert matches, it creates an email message containing the text of the alert.\n    * The appliance sends the email message to designated recipients in both plain text and HTML MIME types. Sending in both types allows the recipient?s mail application to determine the display.\n\nYou can enable or disable this email notification feature, or you can enable or disable individual filter notifications, as required.\n\nThe appliance provides for as many as 100 recipient and filter combinations, and allows as many as 50 recipients in a single email message. This flexibility lets you fine-tune which alert messages are sent and to whom. For example, you can configure the appliance to send Warning alerts to one recipient and Critical alerts to another.\n\nThis Cmdlet will allow you to modify an existing alert filter.  Parameters will replace the existing value if specified in the Cmdlet call.\n\nMinimum required privileges: Infrastructure administrator.",
+        "Parameters": [
+          {
+            "Name": "InputObject",
+            "Description": "The email alert filter from Get-OVSmtpAlertEmailFilter.",
+            "DefaultValue": null,
+            "Aliases": "None",
+            "PipelineInput": "true (ByValue)",
+            "SupportsWildcard": false,
+            "DataType": "Object",
+            "Required": true
+          },
+          {
+            "Name": "Name",
+            "Description": "Name of the Filter you want to change to.",
+            "DefaultValue": null,
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false,
+            "DataType": "String",
+            "Required": false
+          },
+          {
+            "Name": "Filter",
+            "Description": "REST API filter specifying the resource category, URI, name, and severity.\n\nExample:  CPU status:\"warning\" or status:\"critical\"",
+            "DefaultValue": null,
+            "Aliases": "query",
+            "PipelineInput": "false",
+            "SupportsWildcard": false,
+            "DataType": "String",
+            "Required": false
+          },
+          {
+            "Name": "Scope",
+            "Description": "Scope(s) the Filter should apply to.",
+            "DefaultValue": null,
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false,
+            "DataType": "HPEOneView.Appliance.ScopeCollection[]",
+            "Required": false
+          },
+          {
+            "Name": "ScopeMatchPreference",
+            "Description": "If providing multiple Scope resources, specify AND or OR to indicate match preference.",
+            "DefaultValue": "OR",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false,
+            "DataType": "String",
+            "Required": false
+          },
+          {
+            "Name": "Emails",
+            "Description": "Destination EMail address(es).",
+            "DefaultValue": null,
+            "Aliases": "recipients",
+            "PipelineInput": "true (ByValue)",
+            "SupportsWildcard": false,
+            "DataType": "Net.Mail.MailAddress[]",
+            "Required": false
+          },
+          {
+            "Name": "Async",
+            "Description": "Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.",
+            "DefaultValue": null,
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false,
+            "DataType": "SwitchParameter",
+            "Required": false
+          },
+          {
+            "Name": "ApplianceConnection",
+            "Description": "Specify one or more [HPEOneView.Appliance.Connection] object(s) or Name property value(s).",
+            "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
+            "Aliases": "Appliance",
+            "PipelineInput": "false",
+            "SupportsWildcard": false,
+            "DataType": "Object",
+            "Required": false
+          },
+          {
+            "Name": "Disable",
+            "Description": "Disable the selected email alert filter.",
+            "DataType": "bool",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          }
+        ],
+        "InputTypes": [
+          {
+            "Value": "HPEOneView.Appliance.AlertEmailFilter [System.Management.Automation.PSCustomObject]",
+            "Text": "The configured email alert filter on the appliance.\n"
+          }
+        ],
+        "ReturnValues": [
+          {
+            "Value": "HPEOneView.Appliance.TaskResource {System.Management.Automation.PSCustomObject}",
+            "Text": "Returns an async task resource to monitor."
+          }
+        ],
+        "Examples": [
+          {
+            "Title": "-------------------------- EXAMPLE 1 --------------------------",
+            "Code": "Add-OVSmtpAlertEmailFilter -Name \"Monitor CPU Error and Warning conditions\" -query \"CPU status:warning or status:critical\" -emails admin1@domain.com,admin2@domain.com",
+            "Description": "Set SMTP Alert to notify when system CPU status is either \"warning\" or \"critical\", and email 2 addresses."
+          },
+          {
+            "Title": "-------------------------- EXAMPLE 2 --------------------------",
+            "Code": "Add-OVSmtpAlertEmailFilter -Name \"My Test Filter 3\" -Filter \"status:critical\" -Emails \"user1@domain.com\",\"user2@domain.com\" -Scope \"My new Scope\",\"My new Scope2\" -Async",
+            "Description": "Create a new email critical alert for the two scope names, and return the Async Task object without waiting."
+          },
+          {
+            "Title": "-------------------------- EXAMPLE 3 --------------------------",
+            "Code": "Add-OVSmtpAlertEmailFilter -RemoteSupportFilter",
+            "Description": "Create OneView Remote Support filter on the appliance."
+          }
+        ],
+        "RelatedLinks": [
+          {
+            "Uri": null,
+            "Text": "Get-OVSMTPConfig"
+          },
+          {
+            "Uri": null,
+            "Text": "Set-OVSMTPConfig"
+          },
+          {
+            "Uri": null,
+            "Text": "Test-OVEmailAlert"
+          },
+          {
+            "Uri": null,
+            "Text": "Add-OVSmtpAlertEmailFilter"
+          },
+          {
+            "Uri": null,
+            "Text": "Get-OVSmtpAlertEmailFilter"
+          },
+          {
+            "Uri": null,
+            "Text": "Remove-OVSmtpAlertEmailFilter"
+          },
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.30/appliance/set-ovsmtpalertemailfilter.md",
+            "Text": "Online: "
+          }
+        ],
+        "Syntax": [
+          [
+            {
+              "Name": "InputObject",
+              "Required": true
+            },
+            {
+              "Name": "Name",
+              "Required": false
+            },
+            {
+              "Name": "Disable",
+              "Required": false
+            },
+            {
+              "Name": "Filter",
+              "Required": false
+            },
+            {
+              "Name": "Emails",
+              "Required": false
+            },
+            {
+              "Name": "Scope",
+              "Required": false
+            },
+            {
+              "Name": "ScopeMatchPreference",
+              "Required": false
+            },
+            {
+              "Name": "Async",
+              "Required": false
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ]
         ]
       }
     }

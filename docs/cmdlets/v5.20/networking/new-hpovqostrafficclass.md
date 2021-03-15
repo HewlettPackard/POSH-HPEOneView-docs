@@ -181,7 +181,7 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPEOneView.Networking.QosTrafficClassifier [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Networking.QosTrafficClassifier [System.Management.Automation.PSCustomObject]**_
 
 QoS Traffic Classifier Object  @{      qosTrafficClass = [PSCustomObject]@{          maxBandwidth     = 100;         bandwidthShare   = "0";         egressDot1pValue = 0;         realTime         = $false;         className        = "Class";         enabled          = $false;      };                          qosClassificationMapping = [PSCustomObject]@{                      dot1pClassMapping = @();         dscpClassMapping  = @()                  }  }
 

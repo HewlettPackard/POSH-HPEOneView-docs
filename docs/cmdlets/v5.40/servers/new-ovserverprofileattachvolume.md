@@ -113,7 +113,7 @@ Get the "Volume1" and "SharedVolume1" Storage Volumes via the `Get-OVStorageVolu
 
 ```text
 $storagepool = Get-OVStoragePool R1_FC
-$sp = Get-OVServerProfile "chef-web01"
+$sp = Get-OVServerProfile -Name "chef-web01"
 New-OVServerProfileAttachVolume -ServerProfile $sp -Name "Chef Web01 Vol 2" -StoragePool $storagepool  | Wait-OVTaskComplete
 ```
 
@@ -122,7 +122,7 @@ Attach a new 10Gb Ephemeral Volume to an existing Server Profile.
 ###  Example 6 
 
 ```text
-$sp = Get-OVServerProfile "chef-web01"
+$sp = Get-OVServerProfile -Name "chef-web01"
 Get-OVStorageVolume "My New Volume 3" | New-OVServerProfileAttachVolume -ServerProfile $sp  | Wait-OVTaskComplete
 ```
 
@@ -132,7 +132,7 @@ Attach an existing Storage Volume to a Server Profile.
 
 ```text
 $storagepool = Get-OVStoragePool R1_FC
-$sp = Get-OVServerProfile "My Server Profile"
+$sp = Get-OVServerProfile -Name "My Server Profile"
 New-OVServerProfileAttachVolume -Name "My Server Profile Boot Vol" -ServerProfile $sp -StoragePool $storagepool -Bootable  | Wait-OVTaskComplete
 ```
 

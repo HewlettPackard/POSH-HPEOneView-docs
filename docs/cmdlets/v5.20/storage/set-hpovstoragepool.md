@@ -8,7 +8,7 @@ description: Modify storage pool managed state.
 
 ```text
 Set-HPOVStoragePool
-    [-InputObject] <HPEOneView.Storage.StoragePool[]>
+    [-InputObject] <HPOneView.Storage.StoragePool[]>
     [-Managed] <bool>
     [-ApplianceConnection <Array>]
     [<CommonParameters>]
@@ -61,7 +61,7 @@ Change the managed state to "unmanaged" of the specified storage pools.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -71,9 +71,9 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -InputObject &lt;HPEOneView.Storage.StoragePool[]&gt;
+### -InputObject &lt;HPOneView.Storage.StoragePool[]&gt;
 
-One or more `[HPEOneView.Storage.StoragePool]` resources from `Get-HPOVStoragePool`.
+One or more `[HPOneView.Storage.StoragePool]` resources from `Get-HPOVStoragePool`.
 
 | Aliases | Pool |
 | :--- | :--- |
@@ -101,13 +101,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPEOneView.Storage.StoragePool**_
+_**HPOneView.Storage.StoragePool**_
 
 Storage pool resource(s) from [`Get-HPOVStoragePool`](get-hpovstoragepool.md).
 
 ## Return Values
 
-_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task Resource object for configuring port monitoring on the requested logical intercinnect.
 

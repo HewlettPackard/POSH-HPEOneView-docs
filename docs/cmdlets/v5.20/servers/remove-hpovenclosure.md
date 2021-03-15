@@ -53,7 +53,7 @@ The Enclosure object(s) or name(s) to be removed from management.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -111,13 +111,13 @@ _**System.Collections.ArrayList**_
 
 Collection of Enclosure Resources
 
-_**HPEOneView.Enclosure [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Enclosure [System.Management.Automation.PSCustomObject]**_
 
 Single Enclosure resource object
 
 ## Return Values
 
-_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Removal async task
 

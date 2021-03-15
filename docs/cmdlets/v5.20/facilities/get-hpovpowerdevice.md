@@ -92,7 +92,7 @@ Filter the Power Delivery Device type.  Allowed values:
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -112,11 +112,11 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPEOneView.PowerDeliveryDevice [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.PowerDeliveryDevice [System.Management.Automation.PSCustomObject]**_
 
 The matching power device resources
 
-_**System.Collections.ArrayList <HPEOneView.PowerDeliveryDevice>**_
+_**System.Collections.ArrayList <HPOneView.PowerDeliveryDevice>**_
 
 The matching power device resources
 

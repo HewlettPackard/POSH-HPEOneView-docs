@@ -84,7 +84,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -104,11 +104,11 @@ _**None. You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 If successful, returns Appliance Async Task object to monitor
 
-_**System.Collections.ArrayList <HPEOneView.Appliance.TaskResource>**_
+_**System.Collections.ArrayList <HPOneView.Appliance.TaskResource>**_
 
 Collection of Appliance Async Task objects to monitor
 

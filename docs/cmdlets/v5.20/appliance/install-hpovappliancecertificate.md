@@ -66,7 +66,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify the `[HPEOneView.Appliance.Connection]` object or Name property value.
+Specify the `[HPOneView.Appliance.Connection]` object or Name property value.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -88,7 +88,7 @@ Certificate file path
 
 ## Return Values
 
-_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task resource object to monitor committing certificate, and deploying HPE SSO certificate update to managed/monitored devices
 

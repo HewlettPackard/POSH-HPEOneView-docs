@@ -76,7 +76,7 @@ When the request is accepted by the appliance, it does not return an Async Task 
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one `[HPEOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -116,7 +116,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPEOneView.UnmanagedResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.UnmanagedResource [System.Management.Automation.PSCustomObject]**_
 
 Unmanaged Device resource object
 

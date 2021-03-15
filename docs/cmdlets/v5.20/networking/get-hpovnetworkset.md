@@ -110,8 +110,8 @@ Filter resources based on provided Scope membership.  By default, all resources 
 
     * AllResources
     * AllResourcesInScope
-    * `[HPEOneView.Appliance.ScopeCollection]`
-    * `[HPEOneView.Appliance.ConnectionPermission]`
+    * `[HPOneView.Appliance.ScopeCollection]`
+    * `[HPOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
@@ -135,7 +135,7 @@ Specify the label associated with resources.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -167,11 +167,11 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPEOneView.Networking.NetworkSet [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Networking.NetworkSet [System.Management.Automation.PSCustomObject]**_
 
 Single Network Set
 
-_**System.Collections.ArrayList <HPEOneView.Networking.NetworkSet>**_
+_**System.Collections.ArrayList <HPOneView.Networking.NetworkSet>**_
 
 Multiple Network Sets
 

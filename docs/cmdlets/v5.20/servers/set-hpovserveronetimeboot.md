@@ -65,7 +65,7 @@ Set the specified server to boot normally, clearing the one time boot value.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -147,17 +147,17 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPEOneView.Servers.ServerHardware [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Servers.ServerHardware [System.Management.Automation.PSCustomObject]**_
 
 Server hardware resource object from [`Get-HPOVServer`](get-hpovserver.md).
 
-_**HPEOneView.ServerProfile [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.ServerProfile [System.Management.Automation.PSCustomObject]**_
 
 Server profile resource object from [`Get-HPOVServerProfile`](get-hpovserverprofile.md).
 
 ## Return Values
 
-_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Asynchronous task resource to monitor.
 

@@ -91,7 +91,7 @@ Directory User account password in order to validate LDAP configuration.  Can be
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one `[HPEOneView.Appliance.Connection]` object or Name property value.
+Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -119,13 +119,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPEOneView.Appliance.AuthDirectory [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.AuthDirectory [System.Management.Automation.PSCustomObject]**_
 
 Authentication Directory object that will have the LDAP Server added to.
 
 ## Return Values
 
-_**HPEOneView.Appliance.AuthDirectory [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.AuthDirectory [System.Management.Automation.PSCustomObject]**_
 
 Updated Authentication Directory.
 

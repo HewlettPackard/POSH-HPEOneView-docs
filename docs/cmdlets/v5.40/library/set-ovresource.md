@@ -23,7 +23,7 @@ This Cmdlet will assist the user to update an existing resource.  The resource s
 ###  Example 1 
 
 ```text
-$profile = Get-OVServerProfile "Profile 1"
+$profile = Get-OVServerProfile -Name "Profile 1"
 $profile.name = "New Name"
 Set-OVResource $profile
 ```

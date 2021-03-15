@@ -88,7 +88,7 @@ The filesystem object of the X.509 public SSL certificate to add.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` objects or Name property values.
+Specify one or more `[HPOneView.Appliance.Connection]` objects or Name property values.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -172,7 +172,7 @@ Use to force add an untrusted (self signed or a certificate authority certificat
 
 ### -TrustCertChain &lt;SwitchParameter&gt;
 
-
+When providing a certificate, either with `-Path`, `-CertObject` or `-ComputerName`, use this parameter to build the certificate chain that issued the certificate to the endpoint.  In order for the certificate chain to automatically be built, the issuing and root authority certificates must be trusted from the operating system running PowerShell.
 
 | Aliases | None |
 | :--- | :--- |
@@ -194,7 +194,7 @@ The filesystem object of the X.509 public SSL certificate to add.
 
 ## Return Values
 
-_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Asynchronous task resource to monitor.
 

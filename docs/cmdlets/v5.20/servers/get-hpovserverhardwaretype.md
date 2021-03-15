@@ -65,7 +65,7 @@ Filter based on Model name.  Supports wildcard search.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 Default Value: ${Global:ConnectSessions}
 
@@ -99,7 +99,7 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPEOneView.ServerHardwareType [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.ServerHardwareType [System.Management.Automation.PSCustomObject]**_
 
 Single Server Hardware type
 

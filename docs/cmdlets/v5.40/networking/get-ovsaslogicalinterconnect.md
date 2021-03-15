@@ -138,3 +138,4 @@ _**A SAS Logical Interconnect or collection of SAS Logical Interconnects**_
 
 ## Related Links
 
+* [Install-OVLogicalInterconnectFirmware](install-ovlogicalinterconnectfirmware.md)
