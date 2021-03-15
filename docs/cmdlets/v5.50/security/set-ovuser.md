@@ -9,32 +9,34 @@ description: Modify an existing user account.
 ```text
 Set-OVUser
     [-UserName] <String>
-    [-Password] <String>
-    [-FullName] <String>
-    [-Roles] <Array>
+    [-Password <String>]
+    [-FullName <String>]
+    [-Roles <Array>]
+    [-Append]
     [-ScopePermissions <Array>]
-    [-EmailAddress] <String>
-    [-OfficePhone] <String>
-    [-MobilePhone] <String>
+    [-EmailAddress <String>]
+    [-OfficePhone <String>]
+    [-MobilePhone <String>]
     [-Enabled]
     [-Disabled]
-    [-ApplianceConnection] <Object>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 Set-OVUser
     [-UserObject] <Object>
-    [-Password] <String>
-    [-FullName] <String>
-    [-Roles] <Array>
+    [-Password <String>]
+    [-FullName <String>]
+    [-Roles <Array>]
+    [-Append]
     [-ScopePermissions <Array>]
-    [-EmailAddress] <String>
-    [-OfficePhone] <String>
-    [-MobilePhone] <String>
+    [-EmailAddress <String>]
+    [-OfficePhone <String>]
+    [-MobilePhone <String>]
     [-Enabled]
     [-Disabled]
-    [-ApplianceConnection] <Object>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -210,6 +212,18 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 Array collection of Hashtable<Role; Scope>.  Will overwrite existing scope to role mappings.
 
 Example: `-ScopePermissions` @{Role = "Network administrator"; Scope = (Get-OVScope `-Name` CorpNetAdmins `-ErrorAction` Stop) }
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -Append &lt;SwitchParameter&gt;
+
+Use to append roles and/or scope permissions update.  If omitted, roles or scope permissions will be replaced.
 
 | Aliases | None |
 | :--- | :--- |
