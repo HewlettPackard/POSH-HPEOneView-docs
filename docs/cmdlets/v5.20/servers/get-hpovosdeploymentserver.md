@@ -66,7 +66,7 @@ Specify the label associated with resources.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -86,11 +86,11 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPEOneView.Appliance.OSDeploymentServer**_
+_**HPOneView.Appliance.OSDeploymentServer**_
 
 An HPE Synergy Image Streamer appliance object.
 
-_**System.Collections.ArrayList<HPEOneView.Appliance.OSDeploymentServer>**_
+_**System.Collections.ArrayList<HPOneView.Appliance.OSDeploymentServer>**_
 
 A collection of HPE Synergy Image Streamer appliance objects.
 

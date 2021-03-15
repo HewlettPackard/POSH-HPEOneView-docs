@@ -174,21 +174,21 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPEOneView.ServerProfile.LogicalDisk [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.ServerProfile.LogicalDisk [System.Management.Automation.PSCustomObject]**_
 
 Logical Disk configuration policy from [`New-HPOVServerProfileLogicalDisk`](new-hpovserverprofilelogicaldisk.md)
 
-_**System.Collections.ArrayList <HPEOneView.ServerProfile.LogicalDisk>**_
+_**System.Collections.ArrayList <HPOneView.ServerProfile.LogicalDisk>**_
 
 Collection of Logical Disk configuration policy from [`New-HPOVServerProfileLogicalDisk`](new-hpovserverprofilelogicaldisk.md)
 
 ## Return Values
 
-_**HPEOneView.ServerProfile.Controller [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.ServerProfile.Controller [System.Management.Automation.PSCustomObject]**_
 
 Server Profile Controller configuration object
 
-_**System.Collections.ArrayList <HPEOneView.ServerProfile.Controller>**_
+_**System.Collections.ArrayList <HPOneView.ServerProfile.Controller>**_
 
 Collection of Server Profile Controller configuration objects
 

@@ -121,7 +121,7 @@ Updated Full Name of the User Account.
 
 ### -Roles &lt;Array&gt;
 
-The role(s) to assign to the Directroy Group, in `[System.Collections.ArrayList]` format.  Accepted values are noted within the ApplianceRoles property of the `[HPEOneView.Appliance.Connection]` object stored in the $Global:ConnectedSessions variable.
+The role(s) to assign to the Directroy Group, in `[System.Collections.ArrayList]` format.  Accepted values are noted within the ApplianceRoles property of the `[HPOneView.Appliance.Connection]` object stored in the $Global:ConnectedSessions variable.
 
 Example: $roles = "Server administrator","Network administrator"
 
@@ -195,7 +195,7 @@ Disable the local user account.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -225,13 +225,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPEOneView.Appliance.User [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.User [System.Management.Automation.PSCustomObject]**_
 
 HPE OneView User Account object created on an appliance
 
 ## Return Values
 
-_**HPEOneView.Appliance.User [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.User [System.Management.Automation.PSCustomObject]**_
 
 If successful, returns a user resource
 

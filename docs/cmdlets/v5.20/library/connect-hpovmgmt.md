@@ -183,7 +183,7 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPEOneView.Appliance.Connection**_
+_**HPOneView.Appliance.Connection**_
 
 When a valid connection is established with an appliance, this object is then added to ${Global:ConnectedSessions} connection tracker variable.  The object returned will contain the following public properties:      ==============================================================================
      | Name                   | Type       | Value                                |

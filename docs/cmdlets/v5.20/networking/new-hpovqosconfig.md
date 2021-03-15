@@ -108,7 +108,7 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPEOneView.Networking.QosConfiguration [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Networking.QosConfiguration [System.Management.Automation.PSCustomObject]**_
 
 QoS Configuration object
 

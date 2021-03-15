@@ -8,7 +8,7 @@ description: Remove an HPE Synergy Image Streamer OS Deployment server.
 
 ```text
 Remove-HPOVOSDeploymentServer
-    [-InputObject] <HPEOneView.Appliance.OSDeploymentServer>
+    [-InputObject] <HPOneView.Appliance.OSDeploymentServer>
     [-Force]
     [-Async]
     [-ApplianceConnection <Object>]
@@ -33,7 +33,7 @@ Remove OS Deployment Servers from the appliance.
 
 ## Parameters
 
-### -InputObject &lt;HPEOneView.Appliance.OSDeploymentServer&gt;
+### -InputObject &lt;HPOneView.Appliance.OSDeploymentServer&gt;
 
 OS Deployment Server object, from `Get-HPOVOSDeploymentServer`.
 
@@ -71,7 +71,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -87,13 +87,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPEOneView.Appliance.OSDeploymentServer**_
+_**HPOneView.Appliance.OSDeploymentServer**_
 
 HPE Synergy Image Streamer OS Deployment Server from [`Get-HPOVOSDeploymentServer`](get-hpovosdeploymentserver.md)
 
 ## Return Values
 
-_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Resource removal async task.
 

@@ -191,3 +191,6 @@ Returns an async task resource to monitor.
 * [Get-OVSMTPConfig](get-ovsmtpconfig.md)
 * [Set-OVSMTPConfig](set-ovsmtpconfig.md)
 * [Test-OVEmailAlert](test-ovemailalert.md)
+* [Get-OVSmtpAlertEmailFilter](get-ovsmtpalertemailfilter.md)
+* [Set-OVSmtpAlertEmailFilter](set-ovsmtpalertemailfilter.md)
+* [Remove-OVSmtpAlertEmailFilter](remove-ovsmtpalertemailfilter.md)

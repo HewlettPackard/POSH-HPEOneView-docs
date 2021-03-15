@@ -10,7 +10,7 @@ description: Upload new SPP Baseline or hotfix to appliance firmware repository.
 Add-HPOVBaseline
     [-File] <String>
     [-CompSigFile <String>]
-    [-Scope <HPEOneView.Appliance.ScopeCollection[]>]
+    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
     [-ApplianceConnection <Array>]
     [-Async]
     [<CommonParameters>]
@@ -105,7 +105,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -115,9 +115,9 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;HPEOneView.Appliance.ScopeCollection[]&gt;
+### -Scope &lt;HPOneView.Appliance.ScopeCollection[]&gt;
 
-Provide an `[HPEOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
+Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |

@@ -150,7 +150,7 @@ The Interconnect resource the Port ID is a member of.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one `[HPEOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -166,17 +166,17 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPEOneView.Netwroking.Interconnect.Port [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Netwroking.Interconnect.Port [System.Management.Automation.PSCustomObject]**_
 
 An Interconnect Port object
 
 ## Return Values
 
-_**HPEOneView.Networking.PortStatistics.Ethernet [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Networking.PortStatistics.Ethernet [System.Management.Automation.PSCustomObject]**_
 
 Ethernet Uplink Port statistics
 
-_**HPEOneView.Networking.PortStatistics.FibreChannel [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Networking.PortStatistics.FibreChannel [System.Management.Automation.PSCustomObject]**_
 
 Ethernet Uplink Port statistics
 

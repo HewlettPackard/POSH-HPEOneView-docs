@@ -66,7 +66,7 @@ The verbose level to enable.  Allowed values are:
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one `[HPEOneView.Appliance.Connection]` object or Name property value.
+Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -82,7 +82,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPEOneView.Appliance.Connection**_
+_**HPOneView.Appliance.Connection**_
 
 HPE OneView Appliance Connection object.
 

@@ -76,7 +76,7 @@ Full name for the user.
 
 ### -Roles &lt;Array&gt;
 
-The role(s) to assign to the Directroy Group, in `[System.Collections.ArrayList]` format.  Accepted values are noted within the ApplianceRoles property of the `[HPEOneView.Appliance.Connection]` object stored in the $Global:ConnectedSessions variable.
+The role(s) to assign to the Directroy Group, in `[System.Collections.ArrayList]` format.  Accepted values are noted within the ApplianceRoles property of the `[HPOneView.Appliance.Connection]` object stored in the $Global:ConnectedSessions variable.
 
 Example: $roles = "Server administrator","Network administrator"
 
@@ -138,7 +138,7 @@ Deprecated parameter.  By default, all new user accounts will be enabled.  In or
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 Default Value: ${Global:ConnectSessions}
 
@@ -174,7 +174,7 @@ _**None. You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPEOneView.Appliance.User [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.User [System.Management.Automation.PSCustomObject]**_
 
 If successful, returns a user resource
 

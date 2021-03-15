@@ -314,7 +314,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -468,17 +468,17 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPEOneView.Networking.LogicalInterconnect [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Networking.LogicalInterconnect [System.Management.Automation.PSCustomObject]**_
 
 Logical Interconnect Resource from [`Get-HPOVLogicalInterconnect`](get-hpovlogicalinterconnect.md)
 
-_**HPEOneView.Networking.LogicalInterconnectGroup [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Networking.LogicalInterconnectGroup [System.Management.Automation.PSCustomObject]**_
 
 Logical Interconnect Group Resource from [`Get-HPOVLogicalInterconnectGroup`](get-hpovlogicalinterconnectgroup.md)
 
 ## Return Values
 
-_**HPEOneView.Appliance.TaskResource {System.Management.Automation.PSCustomObject}**_
+_**HPOneView.Appliance.TaskResource {System.Management.Automation.PSCustomObject}**_
 
 Async Task Resource object
 

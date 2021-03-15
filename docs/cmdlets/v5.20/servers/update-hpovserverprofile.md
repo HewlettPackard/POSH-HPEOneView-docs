@@ -85,7 +85,7 @@ The Name or Resource Object of the specific Server Profile to update.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -245,17 +245,17 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPEOneView.ServerProfile [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.ServerProfile [System.Management.Automation.PSCustomObject]**_
 
 One or more Server Profile resources from [`Get-HPOVServerProfile`](get-hpovserverprofile.md).
 
 ## Return Values
 
-_**HPEOneView.ServerProfile.CompliancePreview**_
+_**HPOneView.ServerProfile.CompliancePreview**_
 
 Object containing the operations to be performed when the Server Profile object is not compliant.
 
-_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task Resource object to monitoring.
 

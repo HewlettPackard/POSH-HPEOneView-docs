@@ -64,7 +64,7 @@ Force remove the resource.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -104,13 +104,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPEOneView.Appliance.Baseline [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.Baseline [System.Management.Automation.PSCustomObject]**_
 
 Source HPE OneView Baseline from [`Get-HPOVBaseline`](get-hpovbaseline.md)
 
 ## Return Values
 
-_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 The progress of uploading the file to the appliance, and in-progress or completion result
 

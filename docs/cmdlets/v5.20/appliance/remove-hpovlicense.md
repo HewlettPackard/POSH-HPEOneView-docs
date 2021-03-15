@@ -8,7 +8,7 @@ description: REmove installed licenses on the appliance.
 
 ```text
 Remove-HPOVLicense
-    [-InputObject] <HPEOneView.Appliance.License>
+    [-InputObject] <HPOneView.Appliance.License>
     [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
@@ -38,7 +38,7 @@ Get all installed licenses and remove them.
 
 ## Parameters
 
-### -InputObject &lt;HPEOneView.Appliance.License&gt;
+### -InputObject &lt;HPOneView.Appliance.License&gt;
 
 Provide the License URI or object to remove.
 
@@ -52,7 +52,7 @@ Provide the License URI or object to remove.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -92,7 +92,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPEOneView.Appliance.License**_
+_**HPOneView.Appliance.License**_
 
 HPE OneView License object
 

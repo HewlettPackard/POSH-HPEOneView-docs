@@ -179,7 +179,7 @@ Use this parameter to disable remote support globally on the appliance.  Use the
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -211,7 +211,7 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPEOneView.Appliance.RemoteSupportConfig [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.RemoteSupportConfig [System.Management.Automation.PSCustomObject]**_
 
 The appliance Remote Support configuration applied.
 

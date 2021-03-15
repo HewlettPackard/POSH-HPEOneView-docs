@@ -37,7 +37,7 @@ Rename the default "BL460c Gen9 1" server hardware type resource to a new name.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -61,7 +61,7 @@ Set a new description.
 
 ### -InputObject &lt;Object&gt;
 
-HPEOneView.ServerHardwareType resource from `Get-HPOVServerHardwareType`.
+HPOneView.ServerHardwareType resource from `Get-HPOVServerHardwareType`.
 
 | Aliases | Resource |
 | :--- | :--- |
@@ -89,13 +89,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPEOneView.ServerHardwareType**_
+_**HPOneView.ServerHardwareType**_
 
 Resource from [`Get-HPOVServerHardwareType`](get-hpovserverhardwaretype.md).
 
 ## Return Values
 
-_**HPEOneView.ServerHardwareType**_
+_**HPOneView.ServerHardwareType**_
 
 The updated resource object.
 

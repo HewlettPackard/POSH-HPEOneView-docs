@@ -38,9 +38,9 @@ New-HPOVServerProfileTemplate
     [-LocalStorage]
     [-LocalStorageConsistencyChecking <string>]
     [-StorageController <Object>]
-    [-ManageIloSettings <bool>]
-    [-IloSettings <psobject>]
-    [-IloSettingsConsistencyChecking <string>]
+    [-ManageIloSettings <Bool>]
+    [-IloSettings <PSObject>]
+    [-IloSettingsConsistencyChecking <String>]
     [-Affinity <String>]
     [-MacAssignment <String>]
     [-WwnAssignment <String>]
@@ -88,9 +88,9 @@ New-HPOVServerProfileTemplate
     [-LocalStorage]
     [-LocalStorageConsistencyChecking <string>]
     [-StorageController <Object>]
-    [-ManageIloSettings <bool>]
-    [-IloSettings <psobject>]
-    [-IloSettingsConsistencyChecking <string>]
+    [-ManageIloSettings <Bool>]
+    [-IloSettings <PSObject>]
+    [-IloSettingsConsistencyChecking <String>]
     [-SANStorageConsistencyChecking <string>]
     [-EvenPathDisabled]
     [-OddPathDisabled]
@@ -971,21 +971,9 @@ Use to override the consistency checking for the policy.  Allowed values:
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IloSettings &lt;psobject&gt;
+### -IloSettings &lt;PSObject&gt;
 
-
-
-| Aliases | None |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
-### -IloSettingsConsistencyChecking &lt;string&gt;
-
-
+Provide an iLO settings object from `New-HPOVServerProfileIloPolicy` Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -995,9 +983,24 @@ Use to override the consistency checking for the policy.  Allowed values:
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ManageIloSettings &lt;bool&gt;
+### -IloSettingsConsistencyChecking &lt;String&gt;
 
+Use to override the consistency checking for the policy.  Allowed values:
 
+    * Exact
+    * None
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -ManageIloSettings &lt;Bool&gt;
+
+Use to indicate iLO settings will be managed from the server profile.
 
 | Aliases | None |
 | :--- | :--- |
@@ -1019,11 +1022,11 @@ The full path to the Server Profile JSON export file
 
 ## Return Values
 
-_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 If successful returns a task resource which may be polled to follow the progress of the profile creation.  Otherwise, a request validation error will be returned
 
-_**HPEOneView.ServerProfileTemplate [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.ServerProfileTemplate [System.Management.Automation.PSCustomObject]**_
 
 When using the `-PassThru` parameter, the created server profile template object is returned.
 

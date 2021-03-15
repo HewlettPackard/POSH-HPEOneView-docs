@@ -10,8 +10,8 @@ description: Configure Authentication Directory default directory.
 Set-HPOVLdapDefaultDirectory
     [-InputObject] <Object>
     [-DisableLocalLogin]
-    [-EnableEmergencyLocalLogin] <bool>
-    [-EmergencyLoginAllowType <string>]
+    [-EnableEmergencyLocalLogin] <Bool>
+    [-EmergencyLoginAllowType <String>]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
@@ -69,7 +69,7 @@ Use to disable appliance local login accounts.  You cannot use this parameter if
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -103,9 +103,9 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EmergencyLoginAllowType &lt;string&gt;
+### -EmergencyLoginAllowType &lt;String&gt;
 
-
+Allow emergency login access if the configured authentication directory(ies) are unavailable.  Highest security is obtained by restricting the local administrator account to "ApplianceConsoleOnly". Choose "NetworkAndApplianceConsole" to allow emergency access via the network.
 
 | Aliases | None |
 | :--- | :--- |
@@ -115,13 +115,13 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -EnableEmergencyLocalLogin &lt;bool&gt;
+### -EnableEmergencyLocalLogin &lt;Bool&gt;
 
-
+Boolean value to enable ($true) or disable ($false) emergency local login.  Must be set to $false when SmartCardLoginOnly is set and used from `Set-HPOVApplianceTwoFactorAuthentication`.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | True |
+| Required? | False |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
@@ -133,7 +133,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPEOneView.Appliance.AuthDirectory [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.AuthDirectory [System.Management.Automation.PSCustomObject]**_
 
 Authentication Directory retrieved using [`Get-HPOVLdapDirectory`](get-hpovldapdirectory.md)
 

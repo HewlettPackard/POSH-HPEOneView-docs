@@ -42,7 +42,7 @@ Get the configured automatic backup setting of the appliance.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -62,11 +62,11 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPEOneView.Appliance.AutomaticBackupConfig [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.AutomaticBackupConfig [System.Management.Automation.PSCustomObject]**_
 
 Appliance automatic backup configuration object.
 
-_**System.Collections.Arraylist <HPEOneView.Appliance.AutomaticBackupConfig>**_
+_**System.Collections.Arraylist <HPOneView.Appliance.AutomaticBackupConfig>**_
 
 Multiple appliance automatic backup configuration objects.
 

@@ -97,7 +97,7 @@ Use this parameter if you want to provide a PSCredential object instead.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases |  |
 | :--- | :--- |
@@ -135,7 +135,7 @@ Mutlple Directory Server Name or IP Address System.String values
 
 ## Return Values
 
-_**HPEOneView.Appliance.AuthDirectoryServer [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.AuthDirectoryServer [System.Management.Automation.PSCustomObject]**_
 
 New LDAP Server Resource Object to be used with [`New-HPOVLdapDirectory`](new-hpovldapdirectory.md) Cmdlet
 

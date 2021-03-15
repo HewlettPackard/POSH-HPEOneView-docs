@@ -129,7 +129,7 @@ Provide the IPv6 Address value of the management interface.  This value does not
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one `[HPEOneView.Appliance.Connection]` object or Name property value.
+Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -149,7 +149,7 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPEOneView.UnmanagedResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.UnmanagedResource [System.Management.Automation.PSCustomObject]**_
 
 Newly created Unmanaged Device resource
 

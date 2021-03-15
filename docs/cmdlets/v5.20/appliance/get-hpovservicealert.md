@@ -69,7 +69,7 @@ Get the Service Alerts within the specified date range for the specified server 
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -164,21 +164,21 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPEOneView.ServerHardware**_
+_**HPOneView.ServerHardware**_
 
 A Server Hardware resource object from [`Get-HPOVServer`](../servers/get-hpovserver.md).
 
-_**HPEOneView.ServerProfile**_
+_**HPOneView.ServerProfile**_
 
 A Server Profile resource object from [`Get-HPOVServerProfile`](../servers/get-hpovserverprofile.md).  If the Server Profile is not associated with a server hardware resource, an excpetion is thrown.  If the Server Profile has moved from one server hardware resource to another, only the currently assigned server hardware resource will be queried.
 
-_**HPEOneView.Enclosure**_
+_**HPOneView.Enclosure**_
 
 An Enclosure resource object from [`Get-HPOVEnclosure`](../servers/get-hpovenclosure.md).
 
 ## Return Values
 
-_**HPEOneView.Appliance.ServiceAlert**_
+_**HPOneView.Appliance.ServiceAlert**_
 
 The Service Alert object that contains the CaseID, associated resource name, URI and serial number, and description of the service event.
 

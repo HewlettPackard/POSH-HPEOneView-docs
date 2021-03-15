@@ -118,8 +118,8 @@ Filter resources based on provided Scope membership.  By default, all resources 
 
     * AllResources
     * AllResourcesInScope
-    * `[HPEOneView.Appliance.ScopeCollection]`
-    * `[HPEOneView.Appliance.ConnectionPermission]`
+    * `[HPOneView.Appliance.ScopeCollection]`
+    * `[HPOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
@@ -155,7 +155,7 @@ Export the Logical Switch Group resource(s) to the specified JSON file.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -171,17 +171,17 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task resource after a Logical Switch Group has been created.
 
 ## Return Values
 
-_**HPEOneView.Networking.LogicalSwitchGroup [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Networking.LogicalSwitchGroup [System.Management.Automation.PSCustomObject]**_
 
 The async task resource object to monitor (if `-Async` was used) or results.
 
-_**System.Collections.ArrayList <HPEOneView.Networking.LogicalSwitchGroup>**_
+_**System.Collections.ArrayList <HPOneView.Networking.LogicalSwitchGroup>**_
 
 Collection of Logical Switch Group resources.
 

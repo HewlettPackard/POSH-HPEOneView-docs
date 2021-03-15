@@ -92,7 +92,7 @@ Exported file name will be "{$ApplianceConnection.Name}_ApplianceNetConf.json".
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -112,11 +112,11 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPEOneView.Appliance.ApplianceServerConfiguration [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.ApplianceServerConfiguration [System.Management.Automation.PSCustomObject]**_
 
 A collection object containing the properties and values of the primary network interface of the appliance.
 
-_**HPEOneView.Appliance.ApplianceServerConfiguration.ApplianceNetworks [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.ApplianceServerConfiguration.ApplianceNetworks [System.Management.Automation.PSCustomObject]**_
 
 The applianceNetworks property will display the appliance Networking in either a Format-Table (default) or Format-List view.
 

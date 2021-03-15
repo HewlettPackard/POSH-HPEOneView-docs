@@ -52,7 +52,7 @@ Get all of the configured hypervisor managers that are vSphere 5.5.0.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -92,8 +92,8 @@ Filter resources based on provided Scope membership.  By default, all resources 
 
     * AllResources
     *AllResourcesInScope
-    * `[HPEOneView.Appliance.ScopeCollection]`
-    * `[HPEOneView.Appliance.ConnectionPermission]`
+    * `[HPOneView.Appliance.ScopeCollection]`
+    * `[HPOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
@@ -125,7 +125,7 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPEOneView.Cluster.HypervisorManager**_
+_**HPOneView.Cluster.HypervisorManager**_
 
 The configured hypervisor cluster manager and its properties
 

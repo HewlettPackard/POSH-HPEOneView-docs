@@ -57,7 +57,7 @@ The new password to be set for the user account. If omitted, the Cmdlet will pro
 ### -ApplianceConnection &lt;Object&gt;
 
     
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
     
 Default Value: ${Global:ConnectedSessions} | ? Default
 

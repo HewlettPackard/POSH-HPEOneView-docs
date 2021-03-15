@@ -138,7 +138,7 @@ Specify the type of Storage System to add: Nimble, StorageVirtual, StoreServ or 
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -170,11 +170,11 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPEOneView.Storage.System [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Storage.System [System.Management.Automation.PSCustomObject]**_
 
 Single Storage System
 
-_**System.Collections.ArrayList <HPEOneView.Storage.System>**_
+_**System.Collections.ArrayList <HPOneView.Storage.System>**_
 
 Multiple Storage Systems
 

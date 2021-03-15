@@ -25,13 +25,13 @@ New-HPOVLogicalInterconnectGroup
     [-SNMPConsistencyChecking <string>]
     [-SnmpV1]
     [-SnmpV3]
-    [-SnmpV3User <HPEOneView.Appliance.SnmpV3User>]
+    [-SnmpV3User <HPOneView.Appliance.SnmpV3User>]
     [-InternalNetworks <Array>]
     [-InternalNetworkConsistencyChecking <string>]
     [-QosConfiguration <Object>]
     [-QoSConsistencyChecking <string>]
     [-UplinkSet <Hashtable[]>]
-    [-Scope <HPEOneView.Appliance.ScopeCollection[]>]
+    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
     [-ApplianceConnection <Object>]
     [-Async]
     [<CommonParameters>]
@@ -67,13 +67,13 @@ New-HPOVLogicalInterconnectGroup
     [-SNMPConsistencyChecking <string>]
     [-SnmpV1]
     [-SnmpV3]
-    [-SnmpV3User <HPEOneView.Appliance.SnmpV3User>]
+    [-SnmpV3User <HPOneView.Appliance.SnmpV3User>]
     [-InternalNetworks <Array>]
     [-InternalNetworkConsistencyChecking <string>]
     [-QosConfiguration <Object>]
     [-QoSConsistencyChecking <string>]
     [-UplinkSet <Hashtable[]>]
-    [-Scope <HPEOneView.Appliance.ScopeCollection[]>]
+    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
     [-ApplianceConnection <Object>]
     [-Async]
     [<CommonParameters>]
@@ -82,7 +82,7 @@ New-HPOVLogicalInterconnectGroup
 ```text
 New-HPOVLogicalInterconnectGroup
     [-Import] <Object>
-    [-Scope <HPEOneView.Appliance.ScopeCollection[]>]
+    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
@@ -460,7 +460,7 @@ A collection of QOS configurations that are created using the `New-HPOVQosConfig
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -494,9 +494,9 @@ Specify JSON source file to create Logical Interconnect Group.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;HPEOneView.Appliance.ScopeCollection[]&gt;
+### -Scope &lt;HPOneView.Appliance.ScopeCollection[]&gt;
 
-Provide an `[HPEOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
+Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -530,7 +530,7 @@ Specify the SNMP version type is SNMPv3.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SnmpV3User &lt;HPEOneView.Appliance.SnmpV3User&gt;
+### -SnmpV3User &lt;HPOneView.Appliance.SnmpV3User&gt;
 
 Provide the SNMPv3 user object from `New-HPOVSnmpV3User`.
 
@@ -799,7 +799,7 @@ Hashtable containing Interconnect Bay layout and associated interconnect module
 
 ## Return Values
 
-_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Logical Interconnect Group creation async task
 

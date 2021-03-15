@@ -8,7 +8,7 @@ description: Remove Scope from appliance
 
 ```text
 Remove-HPOVScope
-    [-Scope] <HPEOneView.Appliance.ScopeCollection>
+    [-Scope] <HPOneView.Appliance.ScopeCollection>
     [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
@@ -33,7 +33,7 @@ Remove the specified scope.
 
 ## Parameters
 
-### -Scope &lt;HPEOneView.Appliance.ScopeCollection&gt;
+### -Scope &lt;HPOneView.Appliance.ScopeCollection&gt;
 
 The Scope resource to add the resource(s) to.
 
@@ -47,7 +47,7 @@ The Scope resource to add the resource(s) to.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one `[HPEOneView.Appliance.Connection]` object or Name property value.
+Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -63,7 +63,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPEOneView.Appliance.ScopeCollection**_
+_**HPOneView.Appliance.ScopeCollection**_
 
 Scope resource object from [`Get-HPOVScope`](get-hpovscope.md).
 

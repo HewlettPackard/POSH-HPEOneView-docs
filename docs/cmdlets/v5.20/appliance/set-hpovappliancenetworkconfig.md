@@ -338,7 +338,7 @@ Deprecated parameter.  NTP Server configuration is now controlled in the `Set-HP
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one `[HPEOneView.Appliance.Connection]` object or Name property value.
+Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 
 | Aliases | None |
 | :--- | :--- |

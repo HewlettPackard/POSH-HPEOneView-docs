@@ -8,7 +8,7 @@ description: Remove a configured Fabric Manager and associated tenants.
 
 ```text
 Remove-HPOVFabricManager
-    [-InputObject] <HPEOneView.Networking.FabricManager[]>
+    [-InputObject] <HPOneView.Networking.FabricManager[]>
     [-Force]
     [-ApplianceConnection <Array>]
     [<CommonParameters>]
@@ -32,7 +32,7 @@ Remove the specified fabric manager.
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -54,9 +54,9 @@ Force delete the resource.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -InputObject &lt;HPEOneView.Networking.FabricManager[]&gt;
+### -InputObject &lt;HPOneView.Networking.FabricManager[]&gt;
 
-The `[HPEOneView.Networking.FabricManager]` resource to remove.
+The `[HPOneView.Networking.FabricManager]` resource to remove.
 
 | Aliases | None |
 | :--- | :--- |
@@ -72,13 +72,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPEOneView.Networking.FabricManager**_
+_**HPOneView.Networking.FabricManager**_
 
 The fabric manager resource from [`Get-HPOVFabricManager`](get-hpovfabricmanager.md).
 
 ## Return Values
 
-_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task Resource object for configuring port monitoring on the requested logical intercinnect.
 

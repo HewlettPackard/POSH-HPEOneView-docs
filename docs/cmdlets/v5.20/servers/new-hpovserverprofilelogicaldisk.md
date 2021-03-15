@@ -25,12 +25,12 @@ New-HPOVServerProfileLogicalDisk
     [-NumberofDrives <Int32>]
     [-DriveType <String>]
     [-DriveSelectionBy <String>]
-    [-AvailableDriveType <HPEOneView.Storage.AvailableDriveType>]
+    [-AvailableDriveType <HPOneView.Storage.AvailableDriveType>]
     [-StorageLocation <String>]
     [-MinDriveSize <Int32>]
     [-MaxDriveSize <Int32>]
     [-EraseDataOnDelete]
-    [-Permanent <bool>]
+    [-Permanent <String>]
     [-Bootable <Boolean>]
     [<CommonParameters>]
 ```
@@ -181,7 +181,7 @@ Specify Internal for HPE Synergy Compute Nodes that have the Expanded Storage op
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -AvailableDriveType &lt;HPEOneView.Storage.AvailableDriveType&gt;
+### -AvailableDriveType &lt;HPOneView.Storage.AvailableDriveType&gt;
 
 A specific availabe drive type from `Get-HPOVAvailableDriveType`.
 
@@ -253,15 +253,15 @@ For Gen10 Smart Array controllers only.  When using Auto for drive type allocati
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Permanent &lt;bool&gt;
+### -Permanent &lt;String&gt;
 
-
+When set to true, the logical JBOD will not be deleted when the associated profile is deleted.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value |  |
+| Default value | Unmanaged |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -271,7 +271,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPEOneView.Storage.AvailableDriveType**_
+_**HPOneView.Storage.AvailableDriveType**_
 
 An available disk drive type from [`Get-HPOVAvailableDriveType`](../storage/get-hpovavailabledrivetype.md) Cmdlet.
 

@@ -227,8 +227,8 @@ Filter resources based on provided Scope membership.  By default, all resources 
 
     * AllResources
     * AllResourcesInScope
-    * `[HPEOneView.Appliance.ScopeCollection]`
-    * `[HPEOneView.Appliance.ConnectionPermission]`
+    * `[HPOneView.Appliance.ScopeCollection]`
+    * `[HPOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
@@ -252,7 +252,7 @@ Specify the label name the network resource is associated with.  Cannot be combi
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -286,15 +286,15 @@ Network Resource Name(s)
 
 ## Return Values
 
-_**HPEOneView.Networking.EthernetNetwork**_
+_**HPOneView.Networking.EthernetNetwork**_
 
 Single Ethernet Network resource
 
-_**HPEOneView.Networking.FibreChannelNetwork**_
+_**HPOneView.Networking.FibreChannelNetwork**_
 
 Single Fibre Channel Network resource
 
-_**HPEOneView.Networking.FCoENetwork**_
+_**HPOneView.Networking.FCoENetwork**_
 
 Single FCoE Network resource
 

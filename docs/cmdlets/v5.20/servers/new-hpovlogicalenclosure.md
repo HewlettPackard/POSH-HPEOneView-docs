@@ -21,7 +21,7 @@ New-HPOVLogicalEnclosure
     [-StartingIPv6DeviceAddress <IPAddress>]
     [-AutoFillIPv6InterconnectAddress]
     [-StartingIPv6InterconnectAddress <IPAddress>]
-    [-Scope <HPEOneView.Appliance.ScopeCollection[]>]
+    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
     [-Async]
     [-Passthru]
     [-ApplianceConnection <Object>]
@@ -36,7 +36,7 @@ New-HPOVLogicalEnclosure
     [-FirmwareBaseline <String>]
     [-ForceFirmwareBaseline <Boolean>]
     [-Ebipa <Object>]
-    [-Scope <HPEOneView.Appliance.ScopeCollection[]>]
+    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
     [-Async]
     [-Passthru]
     [-ApplianceConnection <Object>]
@@ -138,7 +138,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one `[HPEOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -148,9 +148,9 @@ Specify one `[HPEOneView.Appliance.Connection]` object or Name property value. I
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;HPEOneView.Appliance.ScopeCollection[]&gt;
+### -Scope &lt;HPOneView.Appliance.ScopeCollection[]&gt;
 
-Provide an `[HPEOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
+Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -303,13 +303,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPEOneView.Enclosure [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Enclosure [System.Management.Automation.PSCustomObject]**_
 
 Single Enclosure (Synergy Frame) resource object
 
 ## Return Values
 
-_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 The async task resource
 

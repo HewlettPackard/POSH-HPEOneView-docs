@@ -15,7 +15,7 @@ Push-HPOVAppliancePermission
 
 ## Description
 
-Upon successful login, the caller can change their active permissions, and operate in a less priviledge mode at anytime.  The Push-HPOVAppliancePermission Cmdlet will accept a single or collection of [HPEOneView.Appliance.ConnectionPermission] objects.  A new SessionID token will be stored within the ApplianceConnection, and the ConnectionPermissions within the ActivePermissions property that were not provided will have their State set to "false".
+Upon successful login, the caller can change their active permissions, and operate in a less priviledge mode at anytime.  The Push-HPOVAppliancePermission Cmdlet will accept a single or collection of [HPOneView.Appliance.ConnectionPermission] objects.  A new SessionID token will be stored within the ApplianceConnection, and the ConnectionPermissions within the ActivePermissions property that were not provided will have their State set to "false".
 
 ## Examples
 
@@ -56,7 +56,7 @@ Change active permissions by filtering for a specific Scope.
 
 ### -SetActivePermissions &lt;Object&gt;
 
-One or more `[HPEOneView.Appliance.ConnectionPermission]` objects from an `[HPEOneView.Appliance.Connection]` ActivePermissions property.
+One or more `[HPOneView.Appliance.ConnectionPermission]` objects from an `[HPOneView.Appliance.Connection]` ActivePermissions property.
 
 | Aliases | None |
 | :--- | :--- |
@@ -68,7 +68,7 @@ One or more `[HPEOneView.Appliance.ConnectionPermission]` objects from an `[HPEO
 
 ### -ApplianceConnection &lt;Array&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -88,7 +88,7 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPEOneView.Appliance.ConnectionPermission**_
+_**HPOneView.Appliance.ConnectionPermission**_
 
 One or more appliance connection permissions and their active state.
 

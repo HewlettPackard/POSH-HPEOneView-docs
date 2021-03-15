@@ -11,6 +11,20 @@ This PowerShell module requires the following minimum versions:
 ### **Table 1. Requirements**
 
 {% tabs %}
+{% tab title="HPE OneView 6.00" %}
+| Component | Version |
+| :--- | :--- |
+| .NetStandard | 2.0 or newer |
+| PowerShell | 5.1, 7.0 or newer |
+| PowerShellCore | 7.0 or newer |
+| HPE OneView/HPE Synergy | 6.00 or newer |
+
+{% hint style="info" %}
+.NetStandard 2.0 API's are supported by both the [.NetFramework 4.7.2 Windows](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-7-2/) and [DotNetCore 2.0](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-0/) clients.
+{% endhint %}
+{% endtab %}
+
+{% tabs %}
 {% tab title="HPE OneView 5.50" %}
 | Component | Version |
 | :--- | :--- |
@@ -63,46 +77,37 @@ This PowerShell module requires the following minimum versions:
 {% endhint %}
 {% endtab %}
 
-{% tab title="HPE OneView 5.00" %}
-| Component | Version |
-| :--- | :--- |
-| .NetStandard | 2.0 or newer |
-| PowerShell | 5.1 or 6.0 |
-| PowerShellCore | 7.0 or newer |
-| HPE OneView/HPE Synergy | 5.00 or newer |
-
-{% hint style="info" %}
-.NetStandard 2.0 API's are supported by both the [.NetFramework 4.7.2 Windows](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-7-2/) and [DotNetCore 2.0](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-0/) clients.
-{% endhint %}
-{% endtab %}
-
 {% endtabs %}
 
 ### **Table 2. Deprecated releases**
 
 | Library | Components | Version |
 | :--- | :--- | :--- |
-| HPE OneView 1.20 | Windows Management Framework \(WMF\) | 3.0 |
-| HPE OneView 1.20 | .Net Client Framework | 4.0 |
-| HPE OneView 1.20 | HPE OneView | 1.20 or newer |
-| HPE OneView 2.00 | Windows Management Framework \(WMF\) | 4.0 |
-| HPE OneView 2.00 | .Net Client Framework | 4.6 |
-| HPE OneView 2.00 | HPE OneView | 2.00 or newer |
-| HPE OneView 3.00 | Windows Management Framework \(WMF\) | 4.0 |
-| HPE OneView 3.00 | .Net Client Framework | 4.6 |
-| HPE OneView 3.00 | HPE OneView/HPE Synergy | 3.00 or newer |
-| HPE OneView 3.10 | Windows Management Framework \(WMF\) | 4.0 |
-| HPE OneView 3.10 | .Net Client Framework | 4.6 |
-| HPE OneView 3.10 | HPE OneView/HPE Synergy | 3.10 or newer |
-| HPE OneView 4.00 | Windows Management Framework \(WMF\) | 4.0 |
-| HPE OneView 4.00 | .Net Client Framework | 4.6 |
-| HPE OneView 4.00 | HPE OneView/HPE Synergy | 4.00 or newer |
-| HPE OneView 4.10 | Windows Management Framework \(WMF\) | 4.0 |
-| HPE OneView 4.10 | .Net Client Framework | 4.6 |
-| HPE OneView 4.10 | HPE OneView/HPE Synergy | 4.20 or newer |
+| HPE OneView 5.00 | .NetStandard | 2.0 or newer |
+| HPE OneView 5.00 | PowerShell | 5.1 or 6.0 |
+| HPE OneView 5.00 | PowerShellCore | 7.0 or newer |
+| HPE OneView 5.00 | HPE OneView/HPE Synergy | 5.00 or newer |
 | HPE OneView 4.20 | Windows Management Framework \(WMF\) | 4.0 |
 | HPE OneView 4.20 | .Net Client Framework | 4.6 |
 | HPE OneView 4.20 | HPE OneView/HPE Synergy | 4.20 or newer |
+| HPE OneView 4.10 | Windows Management Framework \(WMF\) | 4.0 |
+| HPE OneView 4.10 | .Net Client Framework | 4.6 |
+| HPE OneView 4.10 | HPE OneView/HPE Synergy | 4.20 or newer |
+| HPE OneView 4.00 | Windows Management Framework \(WMF\) | 4.0 |
+| HPE OneView 4.00 | .Net Client Framework | 4.6 |
+| HPE OneView 4.00 | HPE OneView/HPE Synergy | 4.00 or newer |
+| HPE OneView 3.10 | Windows Management Framework \(WMF\) | 4.0 |
+| HPE OneView 3.10 | .Net Client Framework | 4.6 |
+| HPE OneView 3.10 | HPE OneView/HPE Synergy | 3.10 or newer |
+| HPE OneView 3.00 | Windows Management Framework \(WMF\) | 4.0 |
+| HPE OneView 3.00 | .Net Client Framework | 4.6 |
+| HPE OneView 3.00 | HPE OneView/HPE Synergy | 3.00 or newer |
+| HPE OneView 2.00 | Windows Management Framework \(WMF\) | 4.0 |
+| HPE OneView 2.00 | .Net Client Framework | 4.6 |
+| HPE OneView 2.00 | HPE OneView | 2.00 or newer |
+| HPE OneView 1.20 | Windows Management Framework \(WMF\) | 3.0 |
+| HPE OneView 1.20 | .Net Client Framework | 4.0 |
+| HPE OneView 1.20 | HPE OneView | 1.20 or newer |
 
 ## Installer changes
 

@@ -32,8 +32,8 @@ New-HPOVServerProfile
     [-SecureBoot <String>]
     [-LocalStorage]
     [-StorageController <Object>]
-    [-ManageIloSettings <bool>]
-    [-IloSettings <psobject>]
+    [-ManageIloSettings <Bool>]
+    [-IloSettings <PSObject>]
     [-Affinity <String>]
     [-MacAssignment <String>]
     [-WwnAssignment <String>]
@@ -43,7 +43,7 @@ New-HPOVServerProfile
     [-HideUnusedFlexNics <Boolean>]
     [-OSDeploymentPlan <Object>]
     [-OSDeploymentAttributes <Array>]
-    [-Scope <HPEOneView.Appliance.ScopeCollection[]>]
+    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
     [-Async]
     [-ApplianceConnection <Object>]
     [-Passthru]
@@ -70,8 +70,8 @@ New-HPOVServerProfile
     [-ManageBoot]
     [-LocalStorage]
     [-StorageController <Object>]
-    [-ManageIloSettings <bool>]
-    [-IloSettings <psobject>]
+    [-ManageIloSettings <Bool>]
+    [-IloSettings <PSObject>]
     [-MacAssignment <String>]
     [-WwnAssignment <String>]
     [-SnAssignment <String>]
@@ -84,7 +84,7 @@ New-HPOVServerProfile
     [-MutualChapSecret <System.Security.SecureString>]
     [-OSDeploymentPlan <Object>]
     [-OSDeploymentAttributes <Array>]
-    [-Scope <HPEOneView.Appliance.ScopeCollection[]>]
+    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
     [-Async]
     [-ApplianceConnection <Object>]
     [-Passthru]
@@ -120,8 +120,8 @@ New-HPOVServerProfile
     [-SecureBoot <String>]
     [-LocalStorage]
     [-StorageController <Object>]
-    [-ManageIloSettings <bool>]
-    [-IloSettings <psobject>]
+    [-ManageIloSettings <Bool>]
+    [-IloSettings <PSObject>]
     [-EvenPathDisabled]
     [-OddPathDisabled]
     [-Affinity <String>]
@@ -133,7 +133,7 @@ New-HPOVServerProfile
     [-HideUnusedFlexNics <Boolean>]
     [-OSDeploymentPlan <Object>]
     [-OSDeploymentAttributes <Array>]
-    [-Scope <HPEOneView.Appliance.ScopeCollection[]>]
+    [-Scope <HPOneView.Appliance.ScopeCollection[]>]
     [-Async]
     [-ApplianceConnection <Object>]
     [-Passthru]
@@ -1084,7 +1084,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one `[HPEOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -1130,9 +1130,9 @@ Use this parameter to return the modified Server Profile object.  In order to sa
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Scope &lt;HPEOneView.Appliance.ScopeCollection[]&gt;
+### -Scope &lt;HPOneView.Appliance.ScopeCollection[]&gt;
 
-Provide an `[HPEOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
+Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -1158,9 +1158,9 @@ Expected format:
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -IloSettings &lt;psobject&gt;
+### -IloSettings &lt;PSObject&gt;
 
-
+Provide an iLO settings object from `New-HPOVServerProfileIloPolicy` Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -1170,9 +1170,9 @@ Expected format:
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ManageIloSettings &lt;bool&gt;
+### -ManageIloSettings &lt;Bool&gt;
 
-
+Use to indicate iLO settings will be managed from the server profile.
 
 | Aliases | None |
 | :--- | :--- |
@@ -1192,13 +1192,13 @@ _**System.String**_
 
 The full path to the Server Profile JSON export file
 
-_**HPEOneView.ServerHardware [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.ServerHardware [System.Management.Automation.PSCustomObject]**_
 
 Server Hardware resource object
 
 ## Return Values
 
-_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 If successful returns a task resource which may be polled to follow the progress of the profile creation.  Otherwise, a request validation error will be returned
 

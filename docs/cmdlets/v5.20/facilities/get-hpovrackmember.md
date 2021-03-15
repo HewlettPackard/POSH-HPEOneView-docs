@@ -75,7 +75,7 @@ Name of a member within the Rack.  Supports (*) wildcard character.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -91,13 +91,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPEOneView.Facilities.Rack**_
+_**HPOneView.Facilities.Rack**_
 
 Rack resource object from [`Get-HPOVRack`](get-hpovrack.md).
 
 ## Return Values
 
-_**HPEOneView.Facilities.RackMember**_
+_**HPOneView.Facilities.RackMember**_
 
 The individual rack member resource object.
 
