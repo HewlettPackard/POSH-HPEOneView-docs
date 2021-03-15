@@ -11,6 +11,7 @@ This PowerShell module requires the following minimum versions:
 ### **Table 1. Requirements**
 
 {% tabs %}
+
 {% tab title="HPE OneView 6.00" %}
 | Component | Version |
 | :--- | :--- |
@@ -24,7 +25,6 @@ This PowerShell module requires the following minimum versions:
 {% endhint %}
 {% endtab %}
 
-{% tabs %}
 {% tab title="HPE OneView 5.50" %}
 | Component | Version |
 | :--- | :--- |
