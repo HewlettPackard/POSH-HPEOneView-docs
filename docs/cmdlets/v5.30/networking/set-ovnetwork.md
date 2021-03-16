@@ -50,7 +50,7 @@ Modify a network and it"s attributes information.  Use this Cmdlet to change the
 Get-OVNetwork -Name "Net-11" | Set-OVNetwork -name NewNet-11 -Purpose Management -SmartLink $true -PrivateNetwork $false -TypicalBandwidth 500 -MaximumBandwidth 1500 | Wait-OVTaskComplete
 ```
 
-Get the "Net-11" Ethernet Network, pipe it to `Set-OVNetwork` to update values.
+Get the "Net-11" Ethernet Network, pipe it to Set-OVNetwork to update values.
 
 ###  Example 2 
 
@@ -229,7 +229,7 @@ Managed SAN Name or URI.
 
 ### -IPv4Subnet &lt;Object&gt;
 
-Use to specify the one IPv4 subnet the network should be associated with from `Get-OVAddressPoolSubnet`.
+Use to specify the one IPv4 subnet the network should be associated with from Get-OVAddressPoolSubnet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -253,7 +253,7 @@ Specify one `[HPEOneView.Appliance.Connection]` object or Name property value. I
 
 ### -IPv6Subnet &lt;Object&gt;
 
-Use to specify the one IPv6 subnet the network should be associated with from `Get-OVAddressPoolSubnet`.
+Use to specify the one IPv6 subnet the network should be associated with from Get-OVAddressPoolSubnet.
 
 | Aliases | None |
 | :--- | :--- |

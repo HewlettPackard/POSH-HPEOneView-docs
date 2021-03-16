@@ -373,7 +373,7 @@ Specify one `[HPEOneView.Appliance.Connection]` object or Name property value. I
 
 ### -CachePinning &lt;Bool&gt;
 
-This is applicable for hybrid (a mix of flash and mechanical storage) arrays, and provides a 100 percent cache hit rate for specific volumes (for example, volumes dedicated to critical applications), and delivers the response times of an `all-flash` storage system. A volume is pinned when the entire active volume is placed in cache; associated snapshot (inactive) blocks are not pinned. All incoming data after that point is pinned. The number of volumes that can be pinned is limited by the size of the volumes and amount of available cache.
+This is applicable for hybrid (a mix of flash and mechanical storage) arrays, and provides a 100 percent cache hit rate for specific volumes (for example, volumes dedicated to critical applications), and delivers the response times of an all-flash storage system. A volume is pinned when the entire active volume is placed in cache; associated snapshot (inactive) blocks are not pinned. All incoming data after that point is pinned. The number of volumes that can be pinned is limited by the size of the volumes and amount of available cache.
 
 When defined in the Performance Profile, select to enable Cache Pinnning for the Nimble volume to be created.
 
@@ -435,11 +435,11 @@ Set to enable or disable IOPS limit.  If enabled, the `-IOPSLimit` parameter mus
 
 ### -Folder &lt;HPEOneView.Storage.NimbleFolder&gt;
 
-Specify the Nimble folder where the volume should be created.  To get availabe folder objects, use the `Get-OVStoragePool` Cmdlet.  Folders are defined as a device specific attribute. 
+Specify the Nimble folder where the volume should be created.  To get availabe folder objects, use the Get-OVStoragePool Cmdlet.  Folders are defined as a device specific attribute. 
 
 Example:
 
-     (Get-OVStoragePool `-name` default).DeviceSpecificAttributes.Folders
+     (`Get-OVStoragePool` `-name` default).DeviceSpecificAttributes.Folders
 
 ID                                         Name
 --                                         ----
@@ -467,11 +467,11 @@ When enabling IOPS limit, provide a value that is greater than or equal to 256.
 
 ### -PerformancePolicy &lt;HPEOneView.Storage.PerformancePolicy&gt;
 
-A Nimble Performance Policy is associated with a storage system.  Using the `Show-OVStorageSystemPerformancePolicy`, choose an available performance policy.
+A Nimble Performance Policy is associated with a storage system.  Using the Show-OVStorageSystemPerformancePolicy, choose an available performance policy.
 
 Example:
 
-    `Get-OVStorageSystem` `-Name` MyNimbleSys | `Show-OVStorageSystemPerformancePolicy`
+    Get-OVStorageSystem `-Name` MyNimbleSys | Show-OVStorageSystemPerformancePolicy
 
 | Aliases | None |
 | :--- | :--- |
@@ -483,7 +483,7 @@ Example:
 
 ### -VolumeSet &lt;HPEOneView.Storage.VolumeSet&gt;
 
-Use to specify a Volume Set the volume will be associated with, from `Get-OVStorageVolumeSet`.
+Use to specify a Volume Set the volume will be associated with, from Get-OVStorageVolumeSet.
 
 | Aliases | None |
 | :--- | :--- |

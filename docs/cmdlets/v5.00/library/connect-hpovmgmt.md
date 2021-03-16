@@ -163,7 +163,7 @@ When a Login Message has been configured and acknowledgement is Required, use th
 
 ### -Certificate &lt;Object&gt;
 
-Provide the X.509 certificate/SmartCard digital badge in order to authenticate to a supported appliance.  `Two-factor` authentication must be configured on the appliance in order to provide a X.509 certificate.
+Provide the X.509 certificate/SmartCard digital badge in order to authenticate to a supported appliance.  Two-factor authentication must be configured on the appliance in order to provide a X.509 certificate.
 
 | Aliases | None |
 | :--- | :--- |

@@ -220,7 +220,7 @@ $params = @{
 New-HPOVServerProfile @params | Wait-HPOVTaskComplete
 ```
 
-Create a BL Gen8 Server Profile template, and pipe to `Wait-HPOVTaskComplete`.
+Create a BL Gen8 Server Profile template, and pipe to Wait-HPOVTaskComplete.
 
 ###  Example 4 
 
@@ -287,7 +287,7 @@ $conList = @($con41, $con42)
 $task = New-HPOVServerProfile -name $profileName -assignmentType "server" -server $server -connections $conList -manageboot -bootorder @("PXE","HardDisk","CD","Floppy","USB") -bios -biossettings $bl460bios | Wait-HPOVTaskComplete
 ```
 
-Create a profile which includes networks "Net-41" and "Net-42", sets the boot order, and sets the BIOS. Then pipes to `Wait-HPOVTaskComplete`.
+Create a profile which includes networks "Net-41" and "Net-42", sets the boot order, and sets the BIOS. Then pipes to Wait-HPOVTaskComplete.
 
 ###  Example 8 
 
@@ -315,7 +315,7 @@ $params = @{
 New-HPOVServerProfile @params | Wait-HPOVTaskComplete
 ```
 
-Create a BL Gen9 UEFI Server Profile, and pipe to `Wait-HPOVTaskComplete`.
+Create a BL Gen9 UEFI Server Profile, and pipe to Wait-HPOVTaskComplete.
 
 ###  Example 9 
 
@@ -386,7 +386,7 @@ Basic Server Profile import.
 (Get-Content C:\profiles\ServerProfile1.json) -join "`n" | New-HPOVServerProfile -import
 ```
 
-Read the contents from ServerProfile1.json, join each line into a single object, and pipe to `New-HPOVServerProfile` to import.
+Read the contents from ServerProfile1.json, join each line into a single object, and pipe to New-HPOVServerProfile to import.
 
 ###  Example 13 
 
@@ -395,7 +395,7 @@ $jsonProfiles = Get-ChildItem C:\profiles\*.json
 $jsonProfiles | foreach-object { New-HPOVServerProfile -import -file $_.fullname }
 ```
 
-Retrieve list of all JSON files in C:\profiles, then pass each file and its full path to `New-HPOVServerProfile`.
+Retrieve list of all JSON files in C:\profiles, then pass each file and its full path to New-HPOVServerProfile.
 
 ## Parameters
 
@@ -619,7 +619,7 @@ Enable BIOS Settings Management.  Cannot be enabled with Server Hardware Type do
 
 ### -BiosSettings &lt;Array&gt;
 
-BIOS Settings that are to be managed.  You can get the BIOS settings available from `Get-HPOVServerHarwareType` and the returned biosSettings property.
+BIOS Settings that are to be managed.  You can get the BIOS settings available from Get-HPOVServerHarwareType and the returned biosSettings property.
 
 | Aliases | None |
 | :--- | :--- |
@@ -728,7 +728,7 @@ Enable local storage settings to be managed on the server.  Will only enable emb
 
 ### -ImportLogicalDisk &lt;SwitchParameter&gt;
 
-DEPRECATED.  Please use the `New-HPOVServerProfileLogicalDiskController` Cmdlet.
+DEPRECATED.  Please use the New-HPOVServerProfileLogicalDiskController Cmdlet.
 
 | Aliases |  |
 | :--- | :--- |
@@ -740,7 +740,7 @@ DEPRECATED.  Please use the `New-HPOVServerProfileLogicalDiskController` Cmdlet.
 
 ### -Initialize &lt;SwitchParameter&gt;
 
-DEPRECATED.  Please use the `New-HPOVServerProfileLogicalDiskController` Cmdlet.
+DEPRECATED.  Please use the New-HPOVServerProfileLogicalDiskController Cmdlet.
 
 | Aliases |  |
 | :--- | :--- |
@@ -752,7 +752,7 @@ DEPRECATED.  Please use the `New-HPOVServerProfileLogicalDiskController` Cmdlet.
 
 ### -ControllerMode &lt;String&gt;
 
-DEPRECATED.  Please use the `New-HPOVServerProfileLogicalDiskController` Cmdlet.
+DEPRECATED.  Please use the New-HPOVServerProfileLogicalDiskController Cmdlet.
 
 | Aliases |  |
 | :--- | :--- |
@@ -764,7 +764,7 @@ DEPRECATED.  Please use the `New-HPOVServerProfileLogicalDiskController` Cmdlet.
 
 ### -StorageController &lt;Object&gt;
 
-A collection (System.Collections.ArrayList  or `[System.Collections.ArrayList]`) of LogicalDisk Controller configuration objects from `New-HPOVServerProfileLogicalDisk` and `New-HPOVServerProfileLogicalDiskController`.
+A collection (System.Collections.ArrayList  or `[System.Collections.ArrayList]`) of LogicalDisk Controller configuration objects from New-HPOVServerProfileLogicalDisk and New-HPOVServerProfileLogicalDiskController.
 
 | Aliases | LogicalDisk |
 | :--- | :--- |
@@ -838,12 +838,12 @@ Optional. Specify the Host OS type, which will set the Host OS value when HPE On
 
 ### -StorageVolume &lt;Object&gt;
 
-Optional. Array of Storage Volume resources to attach.  Can be created by using the `New-HPOVServerProfileAttachVolume` Cmdlet.  This parameter does not accept a Storage Volume resource from the `Get-HPOVStorageVolume` Cmdlet.
+Optional. Array of Storage Volume resources to attach.  Can be created by using the New-HPOVServerProfileAttachVolume Cmdlet.  This parameter does not accept a Storage Volume resource from the Get-HPOVStorageVolume Cmdlet.
 
 The format of the Storage Volume resource should be a PsCustomObject PowerShell resource with the following keys and values:
 
 [PsCustomObject]@{
-    `[System.Int]`id                        - Valid Host LUN ID `0-254`
+    `[System.Int]`id                        - Valid Host LUN ID 0-254
     `[System.String]`lunType                - Auto or Manual
     `[System.String]`volumeUri              - URI to Storage Volume that has been created and not
                                             assigned to another Server Profile if it is a Private Volume.
@@ -853,8 +853,8 @@ The format of the Storage Volume resource should be a PsCustomObject PowerShell 
                                             with the path to the attached volume, and if the path is
                                             enabled or disabled.
         @(
-            `[System.Int]`connectionId      - FC Connection ID.  If using `New-HPOVServerProfileAttachVolume` helper
-                                            Cmdlet, `New-HPOVServerProfile` will automatically determine the FC
+            `[System.Int]`connectionId      - FC Connection ID.  If using New-HPOVServerProfileAttachVolume helper
+                                            Cmdlet, New-HPOVServerProfile will automatically determine the FC
                                             connection ID.
             `[System.Boolean]`isEnabled     - Enable or disable the path
         )
@@ -894,7 +894,7 @@ Enable to disable odd paths in the attached storage volume(s).
 
 ### -Affinity &lt;String&gt;
 
-In a server profile, the Affinity control sets the `remove-and`-replace behavior for blade servers. If you apply a server profile to a blade server and the server is subsequently removed from the device bay, the Affinity setting controls whether the server profile is reapplied when you insert a server blade into the empty bay. Server profiles for rack servers do not have affinity.
+In a server profile, the Affinity control sets the remove-and-replace behavior for blade servers. If you apply a server profile to a blade server and the server is subsequently removed from the device bay, the Affinity setting controls whether the server profile is reapplied when you insert a server blade into the empty bay. Server profiles for rack servers do not have affinity.
 
 Accepted values are either "Bay" or "BayAndServer".  Default is "Bay".
 
@@ -908,7 +908,7 @@ Accepted values are either "Bay" or "BayAndServer".  Default is "Bay".
 
 ### -MacAssignment &lt;String&gt;
 
-Optional setting for MAC address assignment.  May be Virtual or Physical.  Use Virtual if you need to specify a UserDefined value when using the `New-HPOVServerProfileConnection` helper Cmdlet.
+Optional setting for MAC address assignment.  May be Virtual or Physical.  Use Virtual if you need to specify a UserDefined value when using the New-HPOVServerProfileConnection helper Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -920,7 +920,7 @@ Optional setting for MAC address assignment.  May be Virtual or Physical.  Use V
 
 ### -WwnAssignment &lt;String&gt;
 
-Optional setting for WWN assignment.  May be Virtual or Physical.  Use Virtual if you need to specify a UserDefined value when using the `New-HPOVServerProfileConnection` helper Cmdlet.
+Optional setting for WWN assignment.  May be Virtual or Physical.  Use Virtual if you need to specify a UserDefined value when using the New-HPOVServerProfileConnection helper Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -974,7 +974,7 @@ This setting provides the ability to hide unused FlexNICs from the operating sys
 
 If Hide Unused FlexNICs is set to $True (default/enabled), FlexNICs that do not map to any server profile connections are not presented to the operating system. For example, if you have a full complement of eight FlexNICs defined in your server profile but map only four, your operating system will see only the four mapped FlexNICs instead of eight.
 
-If Hide Unused FlexNICs is set to $False (disabled), eight FlexNICs are enumerated in the operating system as network interfaces for each `Flex-10` or FlexFabric adapter.
+If Hide Unused FlexNICs is set to $False (disabled), eight FlexNICs are enumerated in the operating system as network interfaces for each Flex-10 or FlexFabric adapter.
 
 Configuring Fibre Channel connections on a FlexFabric adapter can enumerate two storage interfaces, reducing the number of network interfaces to six.
 
@@ -1022,7 +1022,7 @@ Value to provide for the iSCSI Initiator.  All iSCSI Connections will share this
 
 Parameter is required when creating a Server Profile, specifying a ServerProfileTemplate parameter value, and a Connection iSCSI Authentication Protocol is set to Chap or MutualChap.
 
-The CHAP challange secret.  Accepts ASCII or HEX values.  If providing an ASCII secret value, the length must be bewteen 12 and 16 characters.  If HEX, it must start with 0x and with `24-32` characters.
+The CHAP challange secret.  Accepts ASCII or HEX values.  If providing an ASCII secret value, the length must be bewteen 12 and 16 characters.  If HEX, it must start with 0x and with 24-32 characters.
 
 | Aliases | None |
 | :--- | :--- |
@@ -1036,7 +1036,7 @@ The CHAP challange secret.  Accepts ASCII or HEX values.  If providing an ASCII 
 
 Parameter is required when creating a Server Profile, specifying a ServerProfileTemplate parameter value, and a Connection iSCSI Authentication Protocol is set to MutualChap.
     
-The Mutual CHAP challange secret.  Accepts ASCII or HEX values.  If providing an ASCII secret value, the length must be bewteen 12 and 16 characters.  If HEX, it must start with 0x and with `24-32` characters.
+The Mutual CHAP challange secret.  Accepts ASCII or HEX values.  If providing an ASCII secret value, the length must be bewteen 12 and 16 characters.  If HEX, it must start with 0x and with 24-32 characters.
 
 | Aliases | None |
 | :--- | :--- |
@@ -1048,7 +1048,7 @@ The Mutual CHAP challange secret.  Accepts ASCII or HEX values.  If providing an
 
 ### -OSDeploymentPlan &lt;Object&gt;
 
-The HPE Synergy Image Streamer OS deployment plan from `Get-HPOVOSDeploymentPlan`.
+The HPE Synergy Image Streamer OS deployment plan from Get-HPOVOSDeploymentPlan.
 
 | Aliases | None |
 | :--- | :--- |
@@ -1060,7 +1060,7 @@ The HPE Synergy Image Streamer OS deployment plan from `Get-HPOVOSDeploymentPlan
 
 ### -OSDeploymentAttributes &lt;Array&gt;
 
-Configured OS Deployment Plan parameters from `Get-HPOVOSDeploymentPlanAttribute`.
+Configured OS Deployment Plan parameters from Get-HPOVOSDeploymentPlanAttribute.
 
 | Aliases | None |
 | :--- | :--- |
@@ -1120,7 +1120,7 @@ Source Server Profile JSON object or file.
 
 ### -Passthru &lt;SwitchParameter&gt;
 
-Use this parameter to return the modified Server Profile object.  In order to save the changes, please use the `Save-HPOVServerProfile` Cmdlet.
+Use this parameter to return the modified Server Profile object.  In order to save the changes, please use the Save-HPOVServerProfile Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -1132,7 +1132,7 @@ Use this parameter to return the modified Server Profile object.  In order to sa
 
 ### -Scope &lt;HPOneView.Appliance.ScopeCollection[]&gt;
 
-Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
+Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the Add-HPOVResourceToScope Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -1160,7 +1160,7 @@ Expected format:
 
 ### -IloSettings &lt;PSObject&gt;
 
-Provide an iLO settings object from `New-HPOVServerProfileIloPolicy` Cmdlet.
+Provide an iLO settings object from New-HPOVServerProfileIloPolicy Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |

@@ -32,7 +32,7 @@ Minimum required privileges: Read only
 Get-OVApplianceTwoFactorAuthentication
 ```
 
-Get the appliance `two-factor` authentication configuration.
+Get the appliance two-factor authentication configuration.
 
 ## Parameters
 

@@ -50,7 +50,7 @@ Get-HPOVNetwork "Net-11" | Set-HPOVNetwork -name NewNet-11 -Purpose Management -
 
 ```
 
-Get the "Net-11" Ethernet Network, pipe it to `Set-HPOVNetwork` to update values.
+Get the "Net-11" Ethernet Network, pipe it to Set-HPOVNetwork to update values.
 
 ###  Example 2 
 

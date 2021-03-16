@@ -87,7 +87,7 @@ $storageVolTemplate = New-HPOVStorageVolumeTemplate -templateName vmware-shared-
 
 ```
 
-Use the `Get-HPOVStoragePool` cmdlet to get the "R5-CPG12" pool, and create a new Storage Volume Template, setting the max size to 250GB, Thin Provisioning and Shareable.
+Use the Get-HPOVStoragePool cmdlet to get the "R5-CPG12" pool, and create a new Storage Volume Template, setting the max size to 250GB, Thin Provisioning and Shareable.
 
 ###  Example 4 
 
@@ -96,7 +96,7 @@ $svt = Get-HPOVStoragePool R5-CPG12 | New-HPOVStorageVolumeTemplate -templateNam
 
 ```
 
-Use the `Get-HPOVStoragePool` cmdlet to get the "R5-CPG12" pool, and create a new Storage Volume Template, setting the max size to 250GB, Thin Provisioning, Shareable, and providing the Snapshot Storage Pool.
+Use the Get-HPOVStoragePool cmdlet to get the "R5-CPG12" pool, and create a new Storage Volume Template, setting the max size to 250GB, Thin Provisioning, Shareable, and providing the Snapshot Storage Pool.
 
 ## Parameters
 
@@ -355,7 +355,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 
 ### -Scope &lt;HPOneView.Appliance.ScopeCollection&gt;
 
-Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
+Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the Add-HPOVResourceToScope Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -379,7 +379,7 @@ Enable compression for StoreServe (3PAR) supported resources. Please verify the 
 
 ### -EnableDeduplication &lt;Boolean&gt;
 
-Enable deduplication for `SSD-based` Storage Pools (CPG).
+Enable deduplication for SSD-based Storage Pools (CPG).
 
 | Aliases | None |
 | :--- | :--- |

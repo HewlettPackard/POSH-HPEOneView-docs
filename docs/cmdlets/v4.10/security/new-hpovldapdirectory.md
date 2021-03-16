@@ -215,7 +215,7 @@ Use this parameter if you want to provide a PSCredential object instead.
 
 ### -ServiceAccount &lt;SwitchParameter&gt;
 
-Use to indicate the provided credential is a Service Account.  Required for when configuring an Active Directory auth directory for `two-factor` authentication.
+Use to indicate the provided credential is a Service Account.  Required for when configuring an Active Directory auth directory for two-factor authentication.
 
 | Aliases | None |
 | :--- | :--- |

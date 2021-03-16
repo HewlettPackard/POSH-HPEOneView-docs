@@ -88,7 +88,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Storage.System [System.Management.Automation.PSCustomObject]**_
 
-Storage System resource object from [`Get-HPOVStorageSystem`](get-hpovstoragesystem.md).
+Storage System resource object from Get-HPOVStorageSystem.
 
 ## Return Values
 

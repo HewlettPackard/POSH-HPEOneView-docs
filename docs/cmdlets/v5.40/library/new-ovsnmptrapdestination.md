@@ -201,7 +201,7 @@ Provide the alternate SNMP trap reciever port.
 
 ### -SnmpV3User &lt;HPEOneView.Appliance.SnmpV3User&gt;
 
-A valid SNMPv3 user from `New-OVSnmpV3User`.
+A valid SNMPv3 user from New-OVSnmpV3User.
 
 | Aliases | None |
 | :--- | :--- |

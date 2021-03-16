@@ -63,7 +63,7 @@ A resource to be deleted. Value can be either resource object, Name or URI.
 
 ### -force &lt;SwitchParameter&gt;
 
-Invoke switch `force-delete` the resource when OneView can no longer communicate with the resource and removal is needed.  `-Force` is not a PowerShell option, rather an HPE OneView API feature.  This does not override the `-Confirm` PowerShell option. Not all resources support `force-delete`.
+Invoke switch force-delete the resource when OneView can no longer communicate with the resource and removal is needed.  `-Force` is not a PowerShell option, rather an HPE OneView API feature.  This does not override the `-Confirm` PowerShell option. Not all resources support force-delete.
 
 | Aliases | None |
 | :--- | :--- |

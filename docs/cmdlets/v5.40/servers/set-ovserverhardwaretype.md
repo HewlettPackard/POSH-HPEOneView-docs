@@ -61,7 +61,7 @@ Set a new description.
 
 ### -InputObject &lt;Object&gt;
 
-HPEOneView.ServerHardwareType resource from `Get-OVServerHardwareType`.
+HPEOneView.ServerHardwareType resource from Get-OVServerHardwareType.
 
 | Aliases | Resource |
 | :--- | :--- |
@@ -91,7 +91,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.ServerHardwareType**_
 
-Resource from [`Get-OVServerHardwareType`](get-ovserverhardwaretype.md).
+Resource from Get-OVServerHardwareType.
 
 ## Return Values
 

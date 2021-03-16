@@ -217,7 +217,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 
 Array collection of Hashtable<Role; Scope>.  Will overwrite existing scope to role mappings.
 
-Example: `-ScopePermissions` @{Role = "Network administrator"; Scope = (Get-HPOVScope `-Name` CorpNetAdmins `-ErrorAction` Stop) }
+Example: `-ScopePermissions` @{Role = "Network administrator"; Scope = (`Get-HPOVScope` `-Name` CorpNetAdmins `-ErrorAction` Stop) }
 
 | Aliases | None |
 | :--- | :--- |

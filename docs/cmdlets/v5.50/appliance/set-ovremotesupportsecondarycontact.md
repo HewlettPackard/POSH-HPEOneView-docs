@@ -52,7 +52,7 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 
 ### -InputObject &lt;Object&gt;
 
-HPE OneView Remote Support contact from `Get-OVRemoteSupportContact`.
+HPE OneView Remote Support contact from Get-OVRemoteSupportContact.
 
 | Aliases | Contact |
 | :--- | :--- |
@@ -70,7 +70,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Appliance.RemoteSupport.Contact [System.Management.Automation.PSCustomObject]**_
 
-Remote support contact from [`Get-OVRemoteSupportContact`](get-ovremotesupportcontact.md).
+Remote support contact from Get-OVRemoteSupportContact.
 
 ## Return Values
 

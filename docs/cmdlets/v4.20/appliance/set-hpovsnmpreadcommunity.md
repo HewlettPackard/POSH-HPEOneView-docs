@@ -32,7 +32,7 @@ Set the appliance SNMP Read Community string to the new value.
 
 ### -name &lt;String&gt;
 
-The name of the new SNMP `Read-Only` Community.
+The name of the new SNMP Read-Only Community.
 
 | Aliases | None |
 | :--- | :--- |

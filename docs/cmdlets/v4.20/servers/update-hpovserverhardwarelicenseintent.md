@@ -66,7 +66,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -InputObject &lt;Object&gt;
 
-A server hardware resource from `Get-HPOVServer`.
+A server hardware resource from Get-HPOVServer.
 
 | Aliases | name, Server |
 | :--- | :--- |
@@ -84,7 +84,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.ServerHardware [System.Management.Automation.PSCustomObject]**_
 
-A server hardware resource from [`Get-HPOVServer`](get-hpovserver.md).
+A server hardware resource from Get-HPOVServer.
 
 ## Return Values
 

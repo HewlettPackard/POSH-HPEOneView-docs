@@ -101,7 +101,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 ### -Export &lt;String&gt;
 
 Aliases [-x, `-export`]
-The full path and file name to export the contents retrieved from the call to `Get-HPOVLogicalInterconnect`.
+The full path and file name to export the contents retrieved from the call to Get-HPOVLogicalInterconnect.
 
 | Aliases | x, ExportFile |
 | :--- | :--- |
@@ -123,7 +123,7 @@ _**None.  You cannot pipe objects to this cmdlet.**_
 
 _**HPoneView.Storage.SasLogicalInterconnect [System.Management.Automation.PSCustomObject]**_
 
-Logical Interconnect resource object from [`Get-HPOVLogicalInterconnect`](get-hpovlogicalinterconnect.md)
+Logical Interconnect resource object from Get-HPOVLogicalInterconnect
 
 
 _**System.Collections.ArrayList <HPoneView.Storage.SasLogicalInterconnect>	**_

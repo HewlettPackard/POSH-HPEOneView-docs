@@ -79,13 +79,13 @@ Create a new Logical Interconnect Group resource, wait for the task to complete,
 Get-OVLogicalInterconnectGroup -exportFile "c:\myApplianceConfig\LogicaICGs.json"
 ```
 
-Returns the `Get-OVLogicalInterconnectGroup` query results to the file c:\myApplianceConfig\LogicaICGs.json
+Returns the Get-OVLogicalInterconnectGroup query results to the file c:\myApplianceConfig\LogicaICGs.json
 
 ## Parameters
 
 ### -InputObject &lt;Object&gt;
 
-Pipeline input resource generated from `Wait-OVTaskComplete`, or successfully completed Async Task resource object.
+Pipeline input resource generated from Wait-OVTaskComplete, or successfully completed Async Task resource object.
 
 | Aliases | Resource |
 | :--- | :--- |
@@ -162,7 +162,7 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 
 ### -exportFile &lt;String&gt;
 
-The full path and file name to export the contents retrieved from the call to `Get-OVLogicalInterconnectGroup`.
+The full path and file name to export the contents retrieved from the call to Get-OVLogicalInterconnectGroup.
 
 | Aliases | x, export |
 | :--- | :--- |

@@ -63,7 +63,7 @@ Description of the OS Deployment Server resource.
 
 ### -InputObject &lt;Object&gt;
 
-HPE Synergy Image Streamer appliance.  Can be any Image Streamer resource object from `Get-OVImageStreamerAppliance`.
+HPE Synergy Image Streamer appliance.  Can be any Image Streamer resource object from Get-OVImageStreamerAppliance.
 
 | Aliases | ImageStreamer, I3S |
 | :--- | :--- |
@@ -117,7 +117,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**System.Management.Automation.PSCustomObject [HPEOneView.Appliance.ImageStreamerAppliance]**_
 
-HPE Synergy Image Streamer Appliance object from [`Get-OVImageStreamerAppliance`](get-ovimagestreamerappliance.md).
+HPE Synergy Image Streamer Appliance object from Get-OVImageStreamerAppliance.
 
 ## Return Values
 

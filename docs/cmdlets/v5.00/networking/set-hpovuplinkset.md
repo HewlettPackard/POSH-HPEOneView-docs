@@ -99,9 +99,9 @@ Array of uplink ports to add with "BAYID:FacePlatePortID".  When configuring a S
 FlexFabric `[e.g]`. @("BAY1:X1","BAY1:X2") or "BAY1:X5","BAY2:X5"
 VC Fibre Channel `[e.g]`. @("BAY3:1","BAY3:2") or "BAY3:1","BAY3:2"
 Synergy VC Ethernet `[e.g]`. "Enclosure1:Bay3:Q1","Enclosure1:Bay3:Q2","Enclosure2:Bay6:Q1","Enclosure2:Bay6:Q2"
-Synergy VC `Sub-Interface` `[e.g]`. "Enclosure1:Bay3:Q1.1","Enclosure1:Bay3:Q2.1","Enclosure2:Bay6:Q1.2","Enclosure2:Bay6:Q2.2"
+Synergy VC Sub-Interface `[e.g]`. "Enclosure1:Bay3:Q1.1","Enclosure1:Bay3:Q2.1","Enclosure2:Bay6:Q1.2","Enclosure2:Bay6:Q2.2"
 Synergy VC FC Primary Port `[e.g]`. "Bay2:Q1","Bay2:Q2" or "Bay5:Q1","Bay5:Q2"
-Synergy VC FC `Sub-Interface` `[e.g]`. "Bay2:Q1.1","Bay2:Q2.1" or "Bay5:Q1.2","Bay5:Q2.2"
+Synergy VC FC Sub-Interface `[e.g]`. "Bay2:Q1.1","Bay2:Q2.1" or "Bay5:Q1.2","Bay5:Q2.2"
 
 | Aliases |  |
 | :--- | :--- |
@@ -156,7 +156,7 @@ Use this parameter to enable or disable FC port trunking.  This parameter is onl
 
 ### -InputObject &lt;Object&gt;
 
-Either a Logical Interconnect Group from `Get-HPOVLogicalInterconnectGroup` or Uplink Set `Get-HPOVUplinkSet` resource.
+Either a Logical Interconnect Group from Get-HPOVLogicalInterconnectGroup or Uplink Set Get-HPOVUplinkSet resource.
 
 | Aliases |  |
 | :--- | :--- |
@@ -212,9 +212,9 @@ Array of uplink ports to remove with "BAYID:FacePlatePortID".  When configuring 
 FlexFabric `[e.g]`. @("BAY1:X1","BAY1:X2") or "BAY1:X5","BAY2:X5"
 VC Fibre Channel `[e.g]`. @("BAY3:1","BAY3:2") or "BAY3:1","BAY3:2"
 Synergy VC Ethernet `[e.g]`. "Enclosure1:Bay3:Q1","Enclosure1:Bay3:Q2","Enclosure2:Bay6:Q1","Enclosure2:Bay6:Q2"
-Synergy VC `Sub-Interface` `[e.g]`. "Enclosure1:Bay3:Q1.1","Enclosure1:Bay3:Q2.1","Enclosure2:Bay6:Q1.2","Enclosure2:Bay6:Q2.2"
+Synergy VC Sub-Interface `[e.g]`. "Enclosure1:Bay3:Q1.1","Enclosure1:Bay3:Q2.1","Enclosure2:Bay6:Q1.2","Enclosure2:Bay6:Q2.2"
 Synergy VC FC Primary Port `[e.g]`. "Bay2:Q1","Bay2:Q2" or "Bay5:Q1","Bay5:Q2"
-Synergy VC FC `Sub-Interface` `[e.g]`. "Bay2:Q1.1","Bay2:Q2.1" or "Bay5:Q1.2","Bay5:Q2.2"
+Synergy VC FC Sub-Interface `[e.g]`. "Bay2:Q1.1","Bay2:Q2.1" or "Bay5:Q1.2","Bay5:Q2.2"
 
 | Aliases |  |
 | :--- | :--- |
@@ -250,7 +250,7 @@ When providing a Logical Interconnect Group resource, you must specify the name 
 
 ### -AddNetworkSet &lt;Object[]&gt;
 
-Provide one or more network set objects from `Get-HPOVNetworkSet` to add to the uplink set.  This will simplify the configuration of the assigned networks to the uplink set.
+Provide one or more network set objects from Get-HPOVNetworkSet to add to the uplink set.  This will simplify the configuration of the assigned networks to the uplink set.
 
 | Aliases | None |
 | :--- | :--- |
@@ -262,7 +262,7 @@ Provide one or more network set objects from `Get-HPOVNetworkSet` to add to the 
 
 ### -RemoveNetworkSet &lt;Object[]&gt;
 
-Provide one or more network set objects from `Get-HPOVNetworkSet` to remove from the uplink set.  This will simplify the configuration of the assigned networks to the uplink set.
+Provide one or more network set objects from Get-HPOVNetworkSet to remove from the uplink set.  This will simplify the configuration of the assigned networks to the uplink set.
 
 | Aliases | None |
 | :--- | :--- |
@@ -280,11 +280,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Networking.LogicalInterconnectGroup [System.Management.Automation.PSCustomObject]**_
 
-Logical Interconnect Group resource from [`Get-HPOVLogicalInterconnectGroup`](get-hpovlogicalinterconnectgroup.md).
+Logical Interconnect Group resource from Get-HPOVLogicalInterconnectGroup.
 
 _**HPOneView.Networking.UplinkSet [System.Management.Automation.PSCustomObject]**_
 
-Uplink set resource from [`Get-HPOVUplinkSet`](get-hpovuplinkset.md).
+Uplink set resource from Get-HPOVUplinkSet.
 
 ## Return Values
 

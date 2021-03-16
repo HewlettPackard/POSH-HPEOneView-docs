@@ -48,7 +48,7 @@ Returns just the Encl1, Interconnect 1 Interconnect object to standard output.
 Get-OVInterconnect -exportFile "c:\myApplianceConfig\ICs.json"
 ```
 
-Returns the `Get-OVInterconnect` query results to the file c:\myApplianceConfig\ICs.json
+Returns the Get-OVInterconnect query results to the file c:\myApplianceConfig\ICs.json
 
 ## Parameters
 
@@ -107,7 +107,7 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 
 ### -Export &lt;String&gt;
 
-The full path and file name to export the contents retrieved from the call to `Get-OVInterconnect`.
+The full path and file name to export the contents retrieved from the call to Get-OVInterconnect.
 
 | Aliases | x, exportFile |
 | :--- | :--- |

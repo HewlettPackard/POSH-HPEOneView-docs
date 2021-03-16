@@ -143,7 +143,7 @@ Alert URI
 
 _**HPOneView.Alert [System.Management.Automation.PSCustomObject]**_
 
-Alert resource object (i.e. [`Get-HPOVAlert`](get-hpovalert.md))
+Alert resource object (i.e. Get-HPOVAlert)
 
 ## Return Values
 

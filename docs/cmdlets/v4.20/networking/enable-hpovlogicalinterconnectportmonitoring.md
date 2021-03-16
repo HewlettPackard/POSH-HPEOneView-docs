@@ -57,7 +57,7 @@ Enable port monitoring for the specific logical interconnect.
 
 ### -AnalyzerPort &lt;Object&gt;
 
-Specifies the network analyzer port (the `mirrored-to` uplink port) for the downlink server ports within a single enclosure. There is a single ï¿½mirrored-to portï¿½ per logical interconnect.
+Specifies the network analyzer port (the mirrored-to uplink port) for the downlink server ports within a single enclosure. There is a single ï¿½mirrored-to portï¿½ per logical interconnect.
 
 Allowed string value:  "Bay1:X6" or "Enclosure1:Bay6:Q1.1"
 
@@ -83,7 +83,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 
 ### -InputObject &lt;Object&gt;
 
-HPOneView.Networking.LogicalInterconnect from `Get-HPOVLogicalInterconnect`.
+HPOneView.Networking.LogicalInterconnect from Get-HPOVLogicalInterconnect.
 
 | Aliases | uri, li, name, Resource |
 | :--- | :--- |
@@ -123,7 +123,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPoneView.Networking.LogicalInterconnect [System.Management.Automation.PSCustomObject]**_
 
-Logical Interconnect resource object from [`Get-HPOVLogicalInterconnect`](get-hpovlogicalinterconnect.md)
+Logical Interconnect resource object from Get-HPOVLogicalInterconnect
 
 ## Return Values
 

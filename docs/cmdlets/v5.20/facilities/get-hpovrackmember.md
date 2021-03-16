@@ -51,7 +51,7 @@ Retrieve rack members that begin with "ProdDL380" within the "Rack-221" rack res
 
 ### -InputObject &lt;String&gt;
 
-Rack resource from `Get-HPOVRack`.
+Rack resource from Get-HPOVRack.
 
 | Aliases | None |
 | :--- | :--- |
@@ -93,7 +93,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Facilities.Rack**_
 
-Rack resource object from [`Get-HPOVRack`](get-hpovrack.md).
+Rack resource object from Get-HPOVRack.
 
 ## Return Values
 

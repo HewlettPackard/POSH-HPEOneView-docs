@@ -62,7 +62,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -InputObject &lt;Object&gt;
 
-The cluster member from `Get-HPOVClusterNode`
+The cluster member from Get-HPOVClusterNode
 
 | Aliases | Name |
 | :--- | :--- |
@@ -80,7 +80,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Cluster.ClusterNode [System.Management.Automation.PSCustomObject]**_
 
-Cluster node member from [`Get-HPOVClusterNode`](get-hpovclusternode.md).
+Cluster node member from Get-HPOVClusterNode.
 
 ## Return Values
 

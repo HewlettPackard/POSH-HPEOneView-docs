@@ -166,15 +166,15 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.ServerHardware**_
 
-A Server Hardware resource object from [`Get-OVServer`](../servers/get-ovserver.md).
+A Server Hardware resource object from Get-OVServer.
 
 _**HPEOneView.ServerProfile**_
 
-A Server Profile resource object from [`Get-OVServerProfile`](../servers/get-ovserverprofile.md).  If the Server Profile is not associated with a server hardware resource, an excpetion is thrown.  If the Server Profile has moved from one server hardware resource to another, only the currently assigned server hardware resource will be queried.
+A Server Profile resource object from Get-OVServerProfile.  If the Server Profile is not associated with a server hardware resource, an excpetion is thrown.  If the Server Profile has moved from one server hardware resource to another, only the currently assigned server hardware resource will be queried.
 
 _**HPEOneView.Enclosure**_
 
-An Enclosure resource object from [`Get-OVEnclosure`](../servers/get-ovenclosure.md).
+An Enclosure resource object from Get-OVEnclosure.
 
 ## Return Values
 

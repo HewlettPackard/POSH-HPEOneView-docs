@@ -43,7 +43,7 @@ Remove the specified LDAP Directory server from "MyDirectory".  Will be prompted
 
 ### -InputObject &lt;Object&gt;
 
-The LDAP Directory Object from `Get-OVLdapDirectory`.
+The LDAP Directory Object from Get-OVLdapDirectory.
 
 | Aliases | Directory |
 | :--- | :--- |

@@ -33,7 +33,7 @@ This example retrieves the minimum XApi version supported by the appliance.  An 
 
 ```
 
-This example retrieves the minimum XApi version supported by the appliance and requires that a connection has been established by using `Connect-HPOVMgmt`.
+This example retrieves the minimum XApi version supported by the appliance and requires that a connection has been established by using Connect-HPOVMgmt.
 
 ## Parameters
 

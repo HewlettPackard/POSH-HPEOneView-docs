@@ -125,7 +125,7 @@ Return a specific number of drives.  Will return in order from system inventory.
 
 ### -DriveEnclosure &lt;Object&gt;
 
-Provide a drive enclosure from `Get-HPOVDriveEnclosure` to filter for associated drives.
+Provide a drive enclosure from Get-HPOVDriveEnclosure to filter for associated drives.
 
 | Aliases | None |
 | :--- | :--- |
@@ -149,7 +149,7 @@ Specify a drive name, or wild card value.
 
 ### -SasLogicalInterconnect &lt;Object&gt;
 
-Provide a SAS Logical Interconnect from `Get-HPOVSasLogicalInterconnect` to filter for associated drives.
+Provide a SAS Logical Interconnect from Get-HPOVSasLogicalInterconnect to filter for associated drives.
 
 | Aliases | None |
 | :--- | :--- |
@@ -167,7 +167,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Storage.DriveEnclosure [System.Management.Automation.PSCustomObject]**_
 
-Drive enclosure resource from [`Get-HPOVDriveEnclosure`](get-hpovdriveenclosure.md) Cmdlet.
+Drive enclosure resource from Get-HPOVDriveEnclosure Cmdlet.
 
 ## Return Values
 

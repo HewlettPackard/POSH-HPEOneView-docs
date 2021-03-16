@@ -100,7 +100,7 @@ Specify one `[HPEOneView.Appliance.Connection]` object or Name property value. I
 
 ### -Scope &lt;HPEOneView.Appliance.ScopeCollection[]&gt;
 
-Provide an `[HPEOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-OVResourceToScope` Cmdlet.
+Provide an `[HPEOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the Add-OVResourceToScope Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -118,7 +118,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Appliance.Baseline [System.Management.Automation.PSCustomObject]**_
 
-Source HPE OneView Baseline from [`Get-OVBaseline`](get-ovbaseline.md)
+Source HPE OneView Baseline from Get-OVBaseline
 
 ## Return Values
 

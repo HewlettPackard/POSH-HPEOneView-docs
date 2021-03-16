@@ -157,7 +157,7 @@ Use to update the IP or FQDN address of the target cluster manager.
 
 ### -InputObject &lt;HypervisorManager&gt;
 
-The cluster manager resource object from `Get-HPOVClusterManager`.
+The cluster manager resource object from Get-HPOVClusterManager.
 
 | Aliases | Name |
 | :--- | :--- |
@@ -169,7 +169,7 @@ The cluster manager resource object from `Get-HPOVClusterManager`.
 
 ### -MultiNicVMotionEnabled &lt;bool&gt;
 
-Use to enable or disable VMware VMotion `multi-NIC` vmotion.
+Use to enable or disable VMware VMotion multi-NIC vmotion.
 
 | Aliases | None |
 | :--- | :--- |
@@ -214,7 +214,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Cluster.ClusterManager**_
 
-The cluster manager from [`Get-HPOVClusterManager`](get-hpovclustermanager.md).
+The cluster manager from Get-HPOVClusterManager.
 
 ## Return Values
 

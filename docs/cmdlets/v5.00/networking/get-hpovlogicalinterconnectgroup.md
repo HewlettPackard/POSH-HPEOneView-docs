@@ -79,13 +79,13 @@ Create a new Logical Interconnect Group resource, wait for the task to complete,
 Get-HPOVLogicalInterconnectGroup -exportFile "c:\myApplianceConfig\LogicaICGs.json"
 ```
 
-Returns the `Get-HPOVLogicalInterconnectGroup` query results to the file c:\myApplianceConfig\LogicaICGs.json
+Returns the Get-HPOVLogicalInterconnectGroup query results to the file c:\myApplianceConfig\LogicaICGs.json
 
 ## Parameters
 
 ### -InputObject &lt;Object&gt;
 
-Pipeline input resource generated from `Wait-HPOVTaskComplete`, or successfully completed Async Task resource object.
+Pipeline input resource generated from Wait-HPOVTaskComplete, or successfully completed Async Task resource object.
 
 | Aliases | Resource |
 | :--- | :--- |
@@ -162,7 +162,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 
 ### -exportFile &lt;String&gt;
 
-The full path and file name to export the contents retrieved from the call to `Get-HPOVLogicalInterconnectGroup`.
+The full path and file name to export the contents retrieved from the call to Get-HPOVLogicalInterconnectGroup.
 
 | Aliases | x, export |
 | :--- | :--- |

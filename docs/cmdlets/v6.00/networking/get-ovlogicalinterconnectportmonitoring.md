@@ -56,7 +56,7 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 
 ### -InputObject &lt;Object&gt;
 
-HPEOneView.Networking.LogicalInterconnect from `Get-OVLogicalInterconnect`.
+HPEOneView.Networking.LogicalInterconnect from Get-OVLogicalInterconnect.
 
 | Aliases | uri, li, name, Resource |
 | :--- | :--- |
@@ -74,7 +74,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Networking.LogicalInterconnect [System.Management.Automation.PSCustomObject]**_
 
-Logical Interconnect resource object from [`Get-OVLogicalInterconnect`](get-ovlogicalinterconnect.md)
+Logical Interconnect resource object from Get-OVLogicalInterconnect
 
 ## Return Values
 

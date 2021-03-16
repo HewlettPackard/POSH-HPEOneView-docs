@@ -258,7 +258,7 @@ Use to optionally specify a new iLO subsystem hostname.
 
 ### -InputObject &lt;Object&gt;
 
-The object from `Get-OVComposerIloStatus`.
+The object from Get-OVComposerIloStatus.
 
 | Aliases | None |
 | :--- | :--- |
@@ -312,7 +312,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Appliance.HardwareConfig [System.Management.Automation.PSCustomObject]**_
 
-The appliance hardware configuration object from [`Get-OVComposerIloStatus`](get-ovcomposerilostatus.md).
+The appliance hardware configuration object from Get-OVComposerIloStatus.
 
 ## Return Values
 

@@ -78,7 +78,7 @@ The firmware bundle or baseline to install.
 
 Specify the type of firmware update to invoke.  Allowed values:
 
-    * EnclosureOnly - Will only upgrade enclosure or frame components (c-Class Onboard Administrator, Synergy Frame Link Module)
+    * EnclosureOnly - Will only upgrade enclosure or frame components (`c-Class` Onboard Administrator, Synergy Frame Link Module)
     * SharedInfrastructureOnly
     * SharedInfrastructureAndServerProfiles
 
@@ -92,7 +92,7 @@ Specify the type of firmware update to invoke.  Allowed values:
 
 ### -ForceInstallation &lt;SwitchParameter&gt;
 
-Force the `re-installation` or downgrade of components within the baseline.
+Force the re-installation or downgrade of components within the baseline.
 
 | Aliases | None |
 | :--- | :--- |
@@ -104,7 +104,7 @@ Force the `re-installation` or downgrade of components within the baseline.
 
 ### -InputObject &lt;Object&gt;
 
-The `[HPEOneView.LogicalEnclosure]` from `Get-OVLogicalEnclosure`.
+The `[HPEOneView.LogicalEnclosure]` from Get-OVLogicalEnclosure.
 
 | Aliases | le, LogicalEnclosure |
 | :--- | :--- |
@@ -137,7 +137,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.LogicalEnclosure [System.Management.Automation.PSCustomObject]**_
 
-Logical enclosure resource from [`Get-OVLogicalEnclosure`](../servers/get-ovlogicalenclosure.md).
+Logical enclosure resource from Get-OVLogicalEnclosure.
 
 ## Return Values
 

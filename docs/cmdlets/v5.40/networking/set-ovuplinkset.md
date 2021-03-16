@@ -99,9 +99,9 @@ Array of uplink ports to add with "BAYID:FacePlatePortID".  When configuring a S
 FlexFabric `[e.g]`. @("BAY1:X1","BAY1:X2") or "BAY1:X5","BAY2:X5"
 VC Fibre Channel `[e.g]`. @("BAY3:1","BAY3:2") or "BAY3:1","BAY3:2"
 Synergy VC Ethernet `[e.g]`. "Enclosure1:Bay3:Q1","Enclosure1:Bay3:Q2","Enclosure2:Bay6:Q1","Enclosure2:Bay6:Q2"
-Synergy VC `Sub-Interface` `[e.g]`. "Enclosure1:Bay3:Q1.1","Enclosure1:Bay3:Q2.1","Enclosure2:Bay6:Q1.2","Enclosure2:Bay6:Q2.2"
+Synergy VC Sub-Interface `[e.g]`. "Enclosure1:Bay3:Q1.1","Enclosure1:Bay3:Q2.1","Enclosure2:Bay6:Q1.2","Enclosure2:Bay6:Q2.2"
 Synergy VC FC Primary Port `[e.g]`. "Bay2:Q1","Bay2:Q2" or "Bay5:Q1","Bay5:Q2"
-Synergy VC FC `Sub-Interface` `[e.g]`. "Bay2:Q1.1","Bay2:Q2.1" or "Bay5:Q1.2","Bay5:Q2.2"
+Synergy VC FC Sub-Interface `[e.g]`. "Bay2:Q1.1","Bay2:Q2.1" or "Bay5:Q1.2","Bay5:Q2.2"
 
 | Aliases |  |
 | :--- | :--- |
@@ -158,7 +158,7 @@ Use this parameter to enable or disable FC port trunking.  This parameter is onl
 
 ### -InputObject &lt;Object&gt;
 
-Either a Logical Interconnect Group from `Get-OVLogicalInterconnectGroup` or Uplink Set `Get-OVUplinkSet` resource.
+Either a Logical Interconnect Group from Get-OVLogicalInterconnectGroup or Uplink Set Get-OVUplinkSet resource.
 
 | Aliases |  |
 | :--- | :--- |
@@ -214,9 +214,9 @@ Array of uplink ports to remove with "BAYID:FacePlatePortID".  When configuring 
 FlexFabric `[e.g]`. @("BAY1:X1","BAY1:X2") or "BAY1:X5","BAY2:X5"
 VC Fibre Channel `[e.g]`. @("BAY3:1","BAY3:2") or "BAY3:1","BAY3:2"
 Synergy VC Ethernet `[e.g]`. "Enclosure1:Bay3:Q1","Enclosure1:Bay3:Q2","Enclosure2:Bay6:Q1","Enclosure2:Bay6:Q2"
-Synergy VC `Sub-Interface` `[e.g]`. "Enclosure1:Bay3:Q1.1","Enclosure1:Bay3:Q2.1","Enclosure2:Bay6:Q1.2","Enclosure2:Bay6:Q2.2"
+Synergy VC Sub-Interface `[e.g]`. "Enclosure1:Bay3:Q1.1","Enclosure1:Bay3:Q2.1","Enclosure2:Bay6:Q1.2","Enclosure2:Bay6:Q2.2"
 Synergy VC FC Primary Port `[e.g]`. "Bay2:Q1","Bay2:Q2" or "Bay5:Q1","Bay5:Q2"
-Synergy VC FC `Sub-Interface` `[e.g]`. "Bay2:Q1.1","Bay2:Q2.1" or "Bay5:Q1.2","Bay5:Q2.2"
+Synergy VC FC Sub-Interface `[e.g]`. "Bay2:Q1.1","Bay2:Q2.1" or "Bay5:Q1.2","Bay5:Q2.2"
 
 | Aliases |  |
 | :--- | :--- |
@@ -282,11 +282,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Networking.LogicalInterconnectGroup [System.Management.Automation.PSCustomObject]**_
 
-Logical Interconnect Group resource from [`Get-OVLogicalInterconnectGroup`](get-ovlogicalinterconnectgroup.md).
+Logical Interconnect Group resource from Get-OVLogicalInterconnectGroup.
 
 _**HPEOneView.Networking.UplinkSet [System.Management.Automation.PSCustomObject]**_
 
-Uplink set resource from [`Get-OVUplinkSet`](get-ovuplinkset.md).
+Uplink set resource from Get-OVUplinkSet.
 
 ## Return Values
 

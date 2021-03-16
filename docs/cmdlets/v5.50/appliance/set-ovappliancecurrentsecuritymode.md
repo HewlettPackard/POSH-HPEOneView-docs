@@ -43,7 +43,7 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 
 ### -SecurityMode &lt;HPOVApplianceAvailableSecurityMode&gt;
 
-Specify the Security Mode to change the appliance to by using `Get-OVApplianceAvailableSecurityMode`.
+Specify the Security Mode to change the appliance to by using Get-OVApplianceAvailableSecurityMode.
 
 | Aliases | None |
 | :--- | :--- |
@@ -61,7 +61,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Appliance.SecurityMode**_
 
-The specified appliance security mode from [`Get-OVApplianceAvailableSecurityMode`](get-ovapplianceavailablesecuritymode.md).
+The specified appliance security mode from Get-OVApplianceAvailableSecurityMode.
 
 ## Return Values
 

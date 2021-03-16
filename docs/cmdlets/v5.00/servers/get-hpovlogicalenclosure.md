@@ -106,7 +106,7 @@ Filter resources based on provided EnclosureGroup association.
 
 ### -NonCompliant &lt;SwitchParameter&gt;
 
-Filter resources based on their `non-compliant` state.
+Filter resources based on their non-compliant state.
 
 | Aliases | None |
 | :--- | :--- |

@@ -113,7 +113,7 @@ Associate the Logical Enclosure with a new Enclosure Group.
 
 ### -InputObject &lt;Object&gt;
 
-Logical Enclosure resource from `Get-OVLogicalEnclosure`.
+Logical Enclosure resource from Get-OVLogicalEnclosure.
 
 | Aliases | None |
 | :--- | :--- |
@@ -154,7 +154,7 @@ Allowed values:
 
 ### -ConfigurationScript &lt;String[]&gt;
 
-Specify a new HPE BladeSystem `c-Class` Onboard Administrator configuration script to set.  This is not supported with HPE Synergy.
+Specify a new HPE BladeSystem c-Class Onboard Administrator configuration script to set.  This is not supported with HPE Synergy.
 
 | Aliases | None |
 | :--- | :--- |
@@ -172,7 +172,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.LogicalEnclosure**_
 
-HPE Syngery Logical Enclosure resource from [`Get-OVLogicalEnclosure`](get-ovlogicalenclosure.md).
+HPE Syngery Logical Enclosure resource from Get-OVLogicalEnclosure.
 
 ## Return Values
 

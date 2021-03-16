@@ -84,7 +84,7 @@ Add a new LDAP Directory server.
 
 ### -InputObject &lt;Object&gt;
 
-The LDAP Directory Object from `Get-OVLdapDirectory`.
+The LDAP Directory Object from Get-OVLdapDirectory.
 
 | Aliases | None |
 | :--- | :--- |
@@ -120,7 +120,7 @@ Directory Servers LDAP SSL Port.
 
 ### -Certificate &lt;Object&gt;
 
-Directory Server SSL Certificate, either location to Base64 Cert or `multi-line` string value.  If omitted, the Cmdlet will attempt to retrieve the Directory Servers Secure LDAP Certiciate.
+Directory Server SSL Certificate, either location to Base64 Cert or multi-line string value.  If omitted, the Cmdlet will attempt to retrieve the Directory Servers Secure LDAP Certiciate.
 
 | Aliases | cert |
 | :--- | :--- |
@@ -180,7 +180,7 @@ Use this parameter if you want to provide a PSCredential object instead.
 
 ### -TrustLeafCertificate &lt;SwitchParameter&gt;
 
-When adding a new LDAP directory server, the certificate may not be trusted.  Use this switch to force trust the certificate.  Or, use the `Add-OVApplianceTrustedCertificate` to add the enterprise issuing certificate authority"s certificate.
+When adding a new LDAP directory server, the certificate may not be trusted.  Use this switch to force trust the certificate.  Or, use the Add-OVApplianceTrustedCertificate to add the enterprise issuing certificate authority"s certificate.
 
 | Aliases | None |
 | :--- | :--- |

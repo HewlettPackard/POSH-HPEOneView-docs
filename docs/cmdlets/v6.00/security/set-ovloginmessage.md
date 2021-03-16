@@ -70,7 +70,7 @@ The login message to set.  The value can be null to clear the login message.
 
 ### -Acknowledgment &lt;Boolean&gt;
 
-Set to True if the login message should be acknowledged before authentication completes.  If set to True, the `COnnect-OVMgmt` Cmdlet will prompt the user to acknowledge the message, if `-LoginAcknowledge` is not provided in the Cmdlet parameters.
+Set to True if the login message should be acknowledged before authentication completes.  If set to True, the COnnect-OVMgmt Cmdlet will prompt the user to acknowledge the message, if `-LoginAcknowledge` is not provided in the Cmdlet parameters.
 
 | Aliases | None |
 | :--- | :--- |

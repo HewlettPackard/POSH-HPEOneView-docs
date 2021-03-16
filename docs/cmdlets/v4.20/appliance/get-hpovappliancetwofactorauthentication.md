@@ -28,7 +28,7 @@ Use this Cmdlet to get two factor authentication state of the connected applianc
 Get-HPOVApplianceTwoFactorAuthentication
 ```
 
-Get the appliance `two-factor` authentication configuration.
+Get the appliance two-factor authentication configuration.
 
 ## Parameters
 

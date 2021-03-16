@@ -78,7 +78,7 @@ Install license on the appliance connection.
 New-OVlicense -File c:\licenses.txt
 ```
 
-Install licenses read from a file by `Get-Content`.
+Install licenses read from a file by Get-Content.
 
 ## Parameters
 

@@ -68,7 +68,7 @@ Override confirmation prompt.
 
 ### -InputObject &lt;HPEOneView.Appliance.SnmpV3User&gt;
 
-SNMPv3 user account from `Get-OVSnmpV3User`.
+SNMPv3 user account from Get-OVSnmpV3User.
 
 | Aliases | None |
 | :--- | :--- |
@@ -98,7 +98,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Appliance.SnmpV3User**_
 
-Appliance SNMPv3 user account from [`Get-OVSnmpV3User`](../appliance/get-ovsnmpv3user.md).
+Appliance SNMPv3 user account from Get-OVSnmpV3User.
 
 ## Return Values
 

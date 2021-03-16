@@ -48,7 +48,7 @@ Display a brief list of the enclosures managed or monitored by the appliance.
 
 ### -Enclosure &lt;Object&gt;
 
-The Synergy Frame resource from `Get-OVEnclosure`.
+The Synergy Frame resource from Get-OVEnclosure.
 
 | Aliases | None |
 | :--- | :--- |

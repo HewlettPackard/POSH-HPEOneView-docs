@@ -46,7 +46,7 @@ Remove rack resources from the appliance.
 
 ### -InputObject &lt;Object&gt;
 
-Rack object, from `Get-HPOVRack`.
+Rack object, from Get-HPOVRack.
 
 | Aliases | None |
 | :--- | :--- |
@@ -80,7 +80,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Facilities.Rack**_
 
-Rack resource from [`Get-HPOVRack`](get-hpovrack.md).
+Rack resource from Get-HPOVRack.
 
 
 ## Return Values

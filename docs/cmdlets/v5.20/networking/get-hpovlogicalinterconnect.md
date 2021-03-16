@@ -64,7 +64,7 @@ Returns just the Production Logical Interconnect object to standard output.
 $myLogicalICs = Get-HPOVLogicalInterconnect -NonCompliant
 ```
 
-Returns `non-compliant` logical interconnect resources.
+Returns non-compliant logical interconnect resources.
 
 ###  Example 4 
 
@@ -131,7 +131,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 
 ### -Export &lt;String&gt;
 
-The full path and file name to export the contents retrieved from the call to `Get-HPOVLogicalInterconnect`.
+The full path and file name to export the contents retrieved from the call to Get-HPOVLogicalInterconnect.
 
 | Aliases | x, ExportFile |
 | :--- | :--- |
@@ -143,7 +143,7 @@ The full path and file name to export the contents retrieved from the call to `G
 
 ### -NonCompliant &lt;SwitchParameter&gt;
 
-Filter resources based on their `non-compliant` state.
+Filter resources based on their non-compliant state.
 
 | Aliases | None |
 | :--- | :--- |
@@ -165,7 +165,7 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 _**HPOneView.Networking.LogicalInterconnect [System.Management.Automation.PSCustomObject]**_
 
-Logical Interconnect resource object from [`Get-HPOVLogicalInterconnect`](get-hpovlogicalinterconnect.md)
+Logical Interconnect resource object from Get-HPOVLogicalInterconnect
 
 _**System.Collections.ArrayList <HPOneView.Networking.LogicalInterconnect>    **_
 

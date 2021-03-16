@@ -80,7 +80,7 @@ Request a test support caes be created during test event.
 
 ### -InputObject &lt;Object&gt;
 
-A support server hardware resource from `Get-OVServer`.
+A support server hardware resource from Get-OVServer.
 
 | Aliases | None |
 | :--- | :--- |
@@ -98,7 +98,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.ServerHardware [System.Management.Automation.PSCustomObject]**_
 
-Supported server hardware from [`Get-OVServer`](../servers/get-ovserver.md) Cmdlet.
+Supported server hardware from Get-OVServer Cmdlet.
 
 ## Return Values
 

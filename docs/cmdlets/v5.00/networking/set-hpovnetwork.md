@@ -50,7 +50,7 @@ Modify a network and it"s attributes information.  Use this Cmdlet to change the
 Get-HPOVNetwork -Name "Net-11" | Set-HPOVNetwork -name NewNet-11 -Purpose Management -SmartLink $true -PrivateNetwork $false -TypicalBandwidth 500 -MaximumBandwidth 1500 | Wait-HPOVTaskComplete
 ```
 
-Get the "Net-11" Ethernet Network, pipe it to `Set-HPOVNetwork` to update values.
+Get the "Net-11" Ethernet Network, pipe it to Set-HPOVNetwork to update values.
 
 ###  Example 2 
 
@@ -229,7 +229,7 @@ Managed SAN Name or URI.
 
 ### -IPv4Subnet &lt;Object&gt;
 
-Use to specify the one IPv4 subnet the network should be associated with from `Get-HPOVAddressPoolSubnet`.
+Use to specify the one IPv4 subnet the network should be associated with from Get-HPOVAddressPoolSubnet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -253,7 +253,7 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If
 
 ### -IPv6Subnet &lt;Object&gt;
 
-Use to specify the one IPv6 subnet the network should be associated with from `Get-HPOVAddressPoolSubnet`.
+Use to specify the one IPv6 subnet the network should be associated with from Get-HPOVAddressPoolSubnet.
 
 | Aliases | None |
 | :--- | :--- |

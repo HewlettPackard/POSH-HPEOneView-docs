@@ -113,7 +113,7 @@ $MySynergyLig1 = Get-HPOVLogicalInterconnectGroup -Name MySynergyLig1
 New-HPOVEnclosureGroup -name "My Synergy Enclosure Group 1" -LogicalInterconnectGroupMapping $MySynergyLig1 -EnclosureCount 3 -IPv4AddressType DHCP
 ```
 
-Create a `3-Frame` Synergy Enclosure Group using a single Logical Interconnect Group.
+Create a 3-Frame Synergy Enclosure Group using a single Logical Interconnect Group.
 
 ###  Example 6 
 
@@ -122,7 +122,7 @@ $MySynergyLig1 = Get-HPOVLogicalInterconnectGroup -Name MySynergyLig1
 New-HPOVEnclosureGroup -name "My Synergy Enclosure Group 1" -LogicalInterconnectGroupMapping @{Frame1 = $3FrameVCLIG,$SasLIG; Frame2 = $3FrameVCLIG,$SasLIG; Frame3 = $3FrameVCLIG } -EnclosureCount 3 -IPv4AddressType DHCP
 ```
 
-Create a `3-Frame` Synergy Enclosure Group using multiple Logical Interconnect Groups specific to each Frame.
+Create a 3-Frame Synergy Enclosure Group using multiple Logical Interconnect Groups specific to each Frame.
 
 ###  Example 7 
 
@@ -132,7 +132,7 @@ $MySynergyLig1 = Get-HPOVLogicalInterconnectGroup -Name MySynergyLig1
 New-HPOVEnclosureGroup -name "My Synergy Enclosure Group 1" -LogicalInterconnectGroupMapping @{Frame1 = $3FrameVCLIG,$SasLIG; Frame2 = $3FrameVCLIG,$SasLIG; Frame3 = $3FrameVCLIG } -EnclosureCount 3 -IPv4AddressType AddressPool -AddressPool $AddressPool -DeploymentNetworkType Internal
 ```
 
-Create a `3-Frame` Synergy Enclosure Group using multiple Logical Interconnect Groups specific to each Frame, with ImageStreamer support using a LIG with an ImageStreamer Uplink Set (aka Internal)..
+Create a 3-Frame Synergy Enclosure Group using multiple Logical Interconnect Groups specific to each Frame, with ImageStreamer support using a LIG with an ImageStreamer Uplink Set (aka Internal)..
 
 ###  Example 8 
 
@@ -143,7 +143,7 @@ $MySynergyLig1 = Get-HPOVLogicalInterconnectGroup -Name MySynergyLig1
 New-HPOVEnclosureGroup -name "My Synergy Enclosure Group 1" -LogicalInterconnectGroupMapping @{Frame1 = $3FrameVCLIG,$SasLIG; Frame2 = $3FrameVCLIG,$SasLIG; Frame3 = $3FrameVCLIG } -EnclosureCount 3 -IPv4AddressType AddressPool -AddressPool $AddressPool -DeploymentNetworkType External -DeploymentNetwork $DeploymentNetwork
 ```
 
-Create a `3-Frame` Synergy Enclosure Group using multiple Logical Interconnect Groups specific to each Frame, with ImageStreamer support using a LIG without an ImageStreamer Uplink Set and specifying which Ethernet Network object is the deployment network (aka External).
+Create a 3-Frame Synergy Enclosure Group using multiple Logical Interconnect Groups specific to each Frame, with ImageStreamer support using a LIG without an ImageStreamer Uplink Set and specifying which Ethernet Network object is the deployment network (aka External).
 
 ## Parameters
 
@@ -175,21 +175,21 @@ Specify the number of Synergy Frames will participate within the Enclosure Group
 
 An Enclosure Group can reference multiple Logical Interconnect Groups, once per Interconnect Bay.  If a Single Logical Interconnect Group object is provided (either via parameter variable or via Pipeline), the Logical Interconnect Group objects Logical Interconnect Bay configuration will be used.
 
-To specify a specific `C-Class` Logical Interconnect Group(s) for one or more Interconnect Bays, use a Hashtable, with the Bay ID as the Key, and Logical Interconnect Group Name, URI or Object as the Value.  Example:
+To specify a specific C-Class Logical Interconnect Group(s) for one or more Interconnect Bays, use a Hashtable, with the Bay ID as the Key, and Logical Interconnect Group Name, URI or Object as the Value.  Example:
 
 $LogicalInterConnectGroupMapping = @{ 1 = "MyLIg1"; 2 = "MyLig1"; 5 = "OtherLIG"; 6 = "OtherLIG"}
 
-$MyLig1 = `Get-HPOVLogicalInterconnectGroup` `-Name` MyLig1
-$OtherLIG = `Get-HPOVLogicalInterconnectGroup` OtherLIG
+$MyLig1 = Get-HPOVLogicalInterconnectGroup `-Name` MyLig1
+$OtherLIG = Get-HPOVLogicalInterconnectGroup OtherLIG
 $LogicalInterConnectGroupMapping = @{ 1 = $MyLig1; 2 = $MyLig1; 5 = $OtherLIG; 6 = $OtherLIG"
 
-When attempting to define a `Syenrgy-based` Enclosure Group, either an Array or Hashtable is allowed.  If an Array of Logical Interconnect Groups are provided, the Cmdlet will determine the Interconnect placement automatically. Example:
+When attempting to define a Syenrgy-based Enclosure Group, either an Array or Hashtable is allowed.  If an Array of Logical Interconnect Groups are provided, the Cmdlet will determine the Interconnect placement automatically. Example:
 
-$MySynergyLig1 = `Get-HPOVLogicalInterconnectGroup` `-Name` MySynergyLig1
+$MySynergyLig1 = Get-HPOVLogicalInterconnectGroup `-Name` MySynergyLig1
 $LogicalInterConnectGroupMapping = $MySynergyLig1
 #or
-$MySynergyLig1 = `Get-HPOVLogicalInterconnectGroup` `-Name` MySynergyLig1
-$MySynergyLig2 = `Get-HPOVLogicalInterconnectGroup` `-Name` MySynergyLig2
+$MySynergyLig1 = Get-HPOVLogicalInterconnectGroup `-Name` MySynergyLig1
+$MySynergyLig2 = Get-HPOVLogicalInterconnectGroup `-Name` MySynergyLig2
 $LogicalInterConnectGroupMapping = $MySynergyLig1,$MySynergyLig2
 
 
@@ -197,8 +197,8 @@ Do know that SAS and VC FC LIGs are bound to a single frame, and will not refere
 
 Use a Hashtable to bind specific LIGs to specific Frames.  The Interconnect placement will be determined automatically based on either the Hashtable Key name "Frame#" (where # is the numerical value of the Frame) or Enclosure Index value (depending if a SAS or Synergy VC FC LIG).  Example:
 
-$3FrameVCLIG = `Get-HPOVLogicalInterconnectGroup` `-Name` "My MultiFrame Synergy LIG 1"
-$SasLIG = `Get-HPOVLogicalInterconnectGroup` `-Name` "My Synergy Sas LIG 1"
+$3FrameVCLIG = Get-HPOVLogicalInterconnectGroup `-Name` "My MultiFrame Synergy LIG 1"
+$SasLIG = Get-HPOVLogicalInterconnectGroup `-Name` "My Synergy Sas LIG 1"
 $LogicalInterconnectGroupMapping = @{Frame1 = $3FrameVCLIG,$SasLIG; Frame2 = $3FrameVCLIG,$SasLIG; Frame3 = $3FrameVCLIG }
 
 | Aliases | logicalInterconnectGroupUri, logicalInterconnectGroup |
@@ -228,7 +228,7 @@ Allowed Values:
 
 ### -ConfigurationScript &lt;String&gt;
 
-An Onboard Administrator CLI Script. Only applicable for HPE BladeSystem `C-Class`.
+An Onboard Administrator CLI Script. Only applicable for HPE BladeSystem C-Class.
 
 | Aliases | None |
 | :--- | :--- |
@@ -244,7 +244,7 @@ Use to specify how the IPv4 Addresses will be assigned to Synergy resources mana
 
     * External -  The IPv4 address is managed externally, static assignment. 
     * DHCP -  The IPv4 address is assigned using DHCP. 
-    * AddressPool - The IPv4 address is assigned from a pool of IP addresses specified by the AddressPool parameter, similar to HPE BladeSystem `C-Class` "Enclosure Bay IP Addressing" (aka EBIPA). 
+    * AddressPool - The IPv4 address is assigned from a pool of IP addresses specified by the AddressPool parameter, similar to HPE BladeSystem C-Class "Enclosure Bay IP Addressing" (aka EBIPA). 
 
 Default: DHCP
 
@@ -258,7 +258,7 @@ Default: DHCP
 
 ### -AddressPool &lt;Object&gt;
 
-The IPv4 Address Pool object from `Get-HPOVAddressPoolRange`.
+The IPv4 Address Pool object from Get-HPOVAddressPoolRange.
 
 | Aliases | None |
 | :--- | :--- |
@@ -288,7 +288,7 @@ Default: None
 
 ### -DeploymentNetwork &lt;Object&gt;
 
-The Ethernet Network with the purpose property set to Management.  Must also include DeploymentNetworkType parameter, value must be "External", with the Ethernet Network associated with a `non-ImageStreamer` Uplink Set.
+The Ethernet Network with the purpose property set to Management.  Must also include DeploymentNetworkType parameter, value must be "External", with the Ethernet Network associated with a non-ImageStreamer Uplink Set.
 
 | Aliases | None |
 | :--- | :--- |
@@ -302,7 +302,7 @@ The Ethernet Network with the purpose property set to Management.  Must also inc
 
 Use this parameter for the appliance to create an Enclosure Group and associated Logical Interconnect Group by "discovering" the Enclosure and support interconnects.  The target Enclosure must not already be claimed by another external manager (i.e. HPE OneView), as the API will reject the request.
 
-No Uplink Sets will be created. They will need to be added using the `New-HPOVUplinkSet` Cmdlet once the Logical Interconnect Group resource has been created.
+No Uplink Sets will be created. They will need to be added using the New-HPOVUplinkSet Cmdlet once the Logical Interconnect Group resource has been created.
 
 | Aliases | None |
 | :--- | :--- |
@@ -388,7 +388,7 @@ Provide the full path and file name of the JSON file.
 
 ### -Scope &lt;HPOneView.Appliance.ScopeCollection&gt;
 
-Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
+Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the Add-HPOVResourceToScope Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |

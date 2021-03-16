@@ -76,7 +76,7 @@ LDAP/Active Directory Domain object.
 
 ### -Group &lt;Object&gt;
 
-Directroy Group to add.  Can either be a string value of a Cononical Name of directory group, or object from `Show-OVLdapGroups`.
+Directroy Group to add.  Can either be a string value of a Cononical Name of directory group, or object from Show-OVLdapGroups.
 
 | Aliases | g, GroupName, name |
 | :--- | :--- |
@@ -162,7 +162,7 @@ Use this parameter if you want to provide a PSCredential object instead.
 
 Array collection of Hashtable<Role; Scope>.
 
-Example: `-ScopePermissions` @{Role = "Network administrator"; Scope = (Get-OVScope `-Name` CorpNetAdmins `-ErrorAction` Stop) }
+Example: `-ScopePermissions` @{Role = "Network administrator"; Scope = (`Get-OVScope` `-Name` CorpNetAdmins `-ErrorAction` Stop) }
 
 | Aliases | None |
 | :--- | :--- |

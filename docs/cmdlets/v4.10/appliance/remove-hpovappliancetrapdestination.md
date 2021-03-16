@@ -61,7 +61,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 
 ### -InputObject &lt;Object&gt;
 
-The `[HPOneView.Appliance.SnmpV]`1TrapDestination or `[HPOneView.Appliance.SnmpV]`3TrapDestination object from `Get-HPOVApplianceTrapDestination` to remove.
+The `[HPOneView.Appliance.SnmpV]`1TrapDestination or `[HPOneView.Appliance.SnmpV]`3TrapDestination object from Get-HPOVApplianceTrapDestination to remove.
 
 | Aliases | None |
 | :--- | :--- |
@@ -79,12 +79,12 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Appliance.SnmpV1TrapDestination**_
 
-Appliance SNMPv1 trap destination from [`Get-HPOVApplianceTrapDestination`](get-hpovappliancetrapdestination.md).
+Appliance SNMPv1 trap destination from Get-HPOVApplianceTrapDestination.
 
 
 _**HPOneView.Appliance.SnmpV3TrapDestination**_
 
-Appliance SNMPv3 trap destination from [`Get-HPOVApplianceTrapDestination`](get-hpovappliancetrapdestination.md).
+Appliance SNMPv3 trap destination from Get-HPOVApplianceTrapDestination.
 
 
 ## Return Values

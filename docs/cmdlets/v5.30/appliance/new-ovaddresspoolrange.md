@@ -189,7 +189,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Appliance.IPAddressSubnet [System.Management.Automation.PSCustomObject]**_
 
-IPv4 Address Subnet resource object from [`Get-OVAddressPoolSubnet`](get-ovaddresspoolsubnet.md)
+IPv4 Address Subnet resource object from Get-OVAddressPoolSubnet
 
 ## Return Values
 

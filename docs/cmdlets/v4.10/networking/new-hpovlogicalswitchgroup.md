@@ -54,7 +54,7 @@ The Logical Switch Group resource Name.
 
 ### -SwitchType &lt;SwitchParameter&gt;
 
-The Switch Type resource from `Get-HPOVSwitchType`.
+The Switch Type resource from Get-HPOVSwitchType.
 
 | Aliases | None |
 | :--- | :--- |
@@ -112,7 +112,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Networking.SwitchType [System.Management.Automation.PSCustomObject]**_
 
-Switch Type resource from [`Get-HPOVSwitchType`](get-hpovswitchtype.md).
+Switch Type resource from Get-HPOVSwitchType.
 
 ## Return Values
 

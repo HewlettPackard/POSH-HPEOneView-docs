@@ -125,7 +125,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Storage.ManagedSan**_
 
-Managed SAN resource from [`Get-OVManagedSan`](get-ovmanagedsan.md)
+Managed SAN resource from Get-OVManagedSan
 
 ## Return Values
 

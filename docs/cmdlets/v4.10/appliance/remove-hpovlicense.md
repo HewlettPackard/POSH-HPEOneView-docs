@@ -28,7 +28,7 @@ Remove-HPOVLicense -InputObject $LicenseKeys[0]
 
 ```
 
-Get all installed licenses saving them to $LicenseKeys, then calling `Remove-HPOVLicense` to remove the first key in the variable.
+Get all installed licenses saving them to $LicenseKeys, then calling Remove-HPOVLicense to remove the first key in the variable.
 
 ###  Example 2 
 

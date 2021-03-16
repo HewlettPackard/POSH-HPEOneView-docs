@@ -75,7 +75,7 @@ The specified appliance bay ID of the provided enclosure resource.  Only ID's 1 
 
 ### -InputObject &lt;Object&gt;
 
-The HPE Synergy frame resource from `Get-HPOVEnclosure`.
+The HPE Synergy frame resource from Get-HPOVEnclosure.
 
 | Aliases | Encl |
 | :--- | :--- |
@@ -93,7 +93,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Enclosure [System.Management.Automation.PSCustomObject]**_
 
-Enclosure resource from [`Get-HPOVEnclosure`](get-hpovenclosure.md).
+Enclosure resource from Get-HPOVEnclosure.
 
 ## Return Values
 

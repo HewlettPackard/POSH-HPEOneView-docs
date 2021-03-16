@@ -32,7 +32,7 @@ This example retrieves the minimum XApi version supported by the appliance.  An 
 (Get-OVXApiVersion).minimumversion
 ```
 
-This example retrieves the minimum XApi version supported by the appliance and requires that a connection has been established by using `Connect-OVMgmt`.
+This example retrieves the minimum XApi version supported by the appliance and requires that a connection has been established by using Connect-OVMgmt.
 
 ## Parameters
 

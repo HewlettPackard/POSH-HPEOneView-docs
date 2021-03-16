@@ -76,7 +76,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.ServerProfileTemplate**_
 
-A Server Profile Template resource object from [`Get-OVServerProfileTemplate`](get-ovserverprofiletemplate.md) that was modified and needs to be saved.
+A Server Profile Template resource object from Get-OVServerProfileTemplate that was modified and needs to be saved.
 
 ## Return Values
 

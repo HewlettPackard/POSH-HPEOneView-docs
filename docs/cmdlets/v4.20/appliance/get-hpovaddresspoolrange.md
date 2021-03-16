@@ -58,7 +58,7 @@ Get a specific Address Pool Range type (VMAC) from all connected appliances.
 
 ### -InputObject &lt;Object&gt;
 
-Specify the type of Address Range Pool, or the Address Pool object fro `Get-HPOVAddressPool`.  Allowed values are:
+Specify the type of Address Range Pool, or the Address Pool object fro Get-HPOVAddressPool.  Allowed values are:
 
     * IPv4
     * VMAC
@@ -78,7 +78,7 @@ Default: All
 
 ### -Type &lt;Object&gt;
 
-Specify the type of Address Range Pool, or the Address Pool object fro `Get-HPOVAddressPool`.  Allowed values are:
+Specify the type of Address Range Pool, or the Address Pool object fro Get-HPOVAddressPool.  Allowed values are:
 
     * IPv4
     * VMAC

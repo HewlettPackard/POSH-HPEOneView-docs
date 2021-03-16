@@ -120,7 +120,7 @@ Specify the target `[HPEOneView.EnclosureGroup]` resource object.  By changing t
 
 ### -InputObject &lt;Object&gt;
 
-The `[HPEOneView.ServerProfile]` object from `Get-OVServerProfile`.
+The `[HPEOneView.ServerProfile]` object from Get-OVServerProfile.
 
 | Aliases | ServerProfile, Profile |
 | :--- | :--- |

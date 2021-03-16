@@ -84,7 +84,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 
 ### -Force &lt;SwitchParameter&gt;
 
-Set to `force-remove` the enclosure. For example, if the enclosure is gone or is now being managed by a different appliance, `force-removing` will remove the enclosure from this appliance without clearing vcmode. 
+Set to force-remove the enclosure. For example, if the enclosure is gone or is now being managed by a different appliance, force-removing will remove the enclosure from this appliance without clearing vcmode. 
 
 When the request is accepted by the appliance, it does not return an Async Task Resource.
 

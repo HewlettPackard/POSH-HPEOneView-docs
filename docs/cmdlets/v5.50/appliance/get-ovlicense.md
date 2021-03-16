@@ -102,7 +102,7 @@ Specify the license state to retrieve.  Valid options are "Unlicensed" or "Perma
 
 ### -Summary &lt;SwitchParameter&gt;
 
-Display a condensed summary view of the installed or required licenses.  This does not return a License object that can be used with `Remove-OVLicense`.
+Display a condensed summary view of the installed or required licenses.  This does not return a License object that can be used with Remove-OVLicense.
 
 | Aliases | None |
 | :--- | :--- |

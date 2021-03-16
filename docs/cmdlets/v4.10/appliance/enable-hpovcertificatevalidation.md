@@ -77,7 +77,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 
 ### -CheckForSelfSignedExpiry &lt;Bool&gt;
 
-Enable ($true) or Disable ($false) the option to check for expiration of `self-signed` certificates if you want to perform expiration checks for `self-signed` certificates.  By default, `self-signed` certiifcate expiry is not enabled.
+Enable ($true) or Disable ($false) the option to check for expiration of self-signed certificates if you want to perform expiration checks for self-signed certificates.  By default, self-signed certiifcate expiry is not enabled.
 
 | Aliases | None |
 | :--- | :--- |

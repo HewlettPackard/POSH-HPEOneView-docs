@@ -55,7 +55,7 @@ Add a new LDAP Directory server.
 
 ### -InputObject &lt;Object&gt;
 
-The LDAP Directory Object from `Get-HPOVLdapDirectory`.
+The LDAP Directory Object from Get-HPOVLdapDirectory.
 
 | Aliases | None |
 | :--- | :--- |
@@ -94,7 +94,7 @@ Directory Server"s LDAP SSL Port.
 ### -Certificate &lt;Object&gt;
 
 Aliases [-cert]
-Directory Server SSL Certificate, either location to Base64 Cert or `multi-line` string value.  If omitted, the CMDLET will attempt to retrieve the Directory Servers Secure LDAP Certiciate.
+Directory Server SSL Certificate, either location to Base64 Cert or multi-line string value.  If omitted, the CMDLET will attempt to retrieve the Directory Servers Secure LDAP Certiciate.
 
 | Aliases | cert |
 | :--- | :--- |
@@ -160,7 +160,7 @@ Use this parameter if you want to provide a PSCredential object instead.
 
 ### -TrustLeafCertificate &lt;SwitchParameter&gt;
 
-When adding a new LDAP directory server, the certificate may not be trusted.  Use this switch to force trust the certificate.  Or, use the `Add-HPOVApplianceTrustedCertificate` to add the enterprise issuing certificate authority"s certificate.
+When adding a new LDAP directory server, the certificate may not be trusted.  Use this switch to force trust the certificate.  Or, use the Add-HPOVApplianceTrustedCertificate to add the enterprise issuing certificate authority"s certificate.
 
 | Aliases | None |
 | :--- | :--- |

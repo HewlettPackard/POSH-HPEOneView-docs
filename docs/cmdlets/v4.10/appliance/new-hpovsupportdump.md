@@ -58,7 +58,7 @@ This command will save the Appliance support dump to c:\temp, for all Appliance 
 New-HPOVSupportDump c:\temp li ENC1-LI
 ```
 
-This command will save the Logical Interconnect `ENC1-LI` to c:\temp.
+This command will save the Logical Interconnect ENC1-LI to c:\temp.
 
 ###  Example 4 
 
@@ -66,7 +66,7 @@ This command will save the Logical Interconnect `ENC1-LI` to c:\temp.
 Get-HPOVlogicalinterconnect ENC1-LI | New-HPOVSupportDump c:\temp
 ```
 
-Accepting the response from `Get-HPOVLogicalInterconnect` CMDLET.
+Accepting the response from Get-HPOVLogicalInterconnect CMDLET.
 
 ###  Example 5 
 
@@ -74,7 +74,7 @@ Accepting the response from `Get-HPOVLogicalInterconnect` CMDLET.
 Get-HPOVlogicalinterconnect | New-HPOVSupportDump c:\temp
 ```
 
-Accepting the response from `Get-HPOVLogicalInterconnect` CMDLET for all Logical Interconnects and creating support dumps for all.
+Accepting the response from Get-HPOVLogicalInterconnect CMDLET for all Logical Interconnects and creating support dumps for all.
 
 ## Parameters
 
@@ -157,7 +157,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Networking.LogicalInterconnect**_
 
-Accepts pipeline input from [`Get-HPOVLogicalInterconnect`](../networking/get-hpovlogicalinterconnect.md) only.
+Accepts pipeline input from Get-HPOVLogicalInterconnect only.
 
 ## Return Values
 

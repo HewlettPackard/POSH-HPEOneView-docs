@@ -44,7 +44,7 @@ Install licenses from a file.
 GC C:\licenses.txt | New-HPOVlicense
 ```
 
-Install licenses read from a file by `Get-Content`.
+Install licenses read from a file by Get-Content.
 
 ## Parameters
 

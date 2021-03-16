@@ -206,7 +206,7 @@ Required value that specifies the type of Network Resource to create.  Allowed v
 
 The Virtual LAN (VLAN) identification number assigned to the network. The VLAN ID must be unique. The VLAN ID cannot be changed once the network has been created.
 
-When creating an Ethernet Network on an HPE Synergy Composer, Vlan ID 1 is not a valid ID.  The allowed range is `2-4095`.
+When creating an Ethernet Network on an HPE Synergy Composer, Vlan ID 1 is not a valid ID.  The allowed range is 2-4095.
 
 | Aliases | None |
 | :--- | :--- |
@@ -230,7 +230,7 @@ An IPv4 Subnet Object that will be associated with a specific Ethernet Network a
 
 ### -VlanRange &lt;String&gt;
 
-VLAN Range of networks to create.  Can be consecutive, `non-consecutive` or a combination of both.
+VLAN Range of networks to create.  Can be consecutive, non-consecutive or a combination of both.
 
 `[e.g]`. `-VLANRange` "10-90,94,96,200-210"
 
@@ -417,7 +417,7 @@ Full path and file name of a JSON formatted input file containing network defini
 
 ### -Scope &lt;HPEOneView.Appliance.ScopeCollection[]&gt;
 
-Provide an `[HPEOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-OVResourceToScope` Cmdlet.
+Provide an `[HPEOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the Add-OVResourceToScope Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -429,7 +429,7 @@ Provide an `[HPEOneView.Appliance.ScopeCollection]` resource object to initially
 
 ### -NetworkSet &lt;Object[]&gt;
 
-Specify one or more network set objects the network should be added to during creation from `Get-OVNetworkSet`.
+Specify one or more network set objects the network should be added to during creation from Get-OVNetworkSet.
 
 | Aliases | None |
 | :--- | :--- |

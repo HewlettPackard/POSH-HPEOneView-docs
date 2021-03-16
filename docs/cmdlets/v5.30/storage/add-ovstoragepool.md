@@ -64,7 +64,7 @@ Add the "HP_CPG1" Storage Pool that is managed in the HP3PAR_1 Storage System.
 
 ### -StorageSystem &lt;Object&gt;
 
-The Storage System object from `Get-OVStorageSystem`
+The Storage System object from Get-OVStorageSystem
 
 | Aliases | Hostname, name |
 | :--- | :--- |
@@ -108,7 +108,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Storage.System [System.Management.Automation.PSCustomObject]**_
 
-Storage System resource object from [`Get-OVStorageSystem`](get-ovstoragesystem.md).
+Storage System resource object from Get-OVStorageSystem.
 
 ## Return Values
 

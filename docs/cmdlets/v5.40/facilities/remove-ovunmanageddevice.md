@@ -62,7 +62,7 @@ The Name, URI or Object of the Unmanaged Device to remove.
 
 ### -force &lt;SwitchParameter&gt;
 
-Set to `force-remove` the resource.
+Set to force-remove the resource.
 
 When the request is accepted by the appliance, it does not return an Async Task Resource.
 

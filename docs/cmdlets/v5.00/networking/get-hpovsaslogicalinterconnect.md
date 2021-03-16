@@ -104,7 +104,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 
 ### -Export &lt;String&gt;
 
-The full path and file name to export the contents retrieved from the call to `Get-HPOVLogicalInterconnect`.
+The full path and file name to export the contents retrieved from the call to Get-HPOVLogicalInterconnect.
 
 | Aliases | x, ExportFile |
 | :--- | :--- |
@@ -126,7 +126,7 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 _**HPoneView.Storage.SasLogicalInterconnect [System.Management.Automation.PSCustomObject]**_
 
-Logical Interconnect resource object from [`Get-HPOVLogicalInterconnect`](get-hpovlogicalinterconnect.md)
+Logical Interconnect resource object from Get-HPOVLogicalInterconnect
 
 _**System.Collections.ArrayList <HPoneView.Storage.SasLogicalInterconnect>    **_
 

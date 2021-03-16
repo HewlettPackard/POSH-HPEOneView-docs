@@ -116,7 +116,7 @@ When an Enclosure is in an Error state where the Primary Onboard Administrator I
 
 ### -Username &lt;String&gt;
 
-Provide the Username of an Onboard Administrator administrator account to `re-apply` the configuration if the enclosure is in an error state and the HPE OneView managed configuration is no longer present.  You will be prompted for this value if needed.
+Provide the Username of an Onboard Administrator administrator account to re-apply the configuration if the enclosure is in an error state and the HPE OneView managed configuration is no longer present.  You will be prompted for this value if needed.
 
 | Aliases | None |
 | :--- | :--- |
@@ -128,7 +128,7 @@ Provide the Username of an Onboard Administrator administrator account to `re-ap
 
 ### -Password &lt;String&gt;
 
-Provide the password of the Onboard Administrator administrator account to `re-apply` the configuration if the enclosure is in an error state and the HPE OneView managed configuration is no longer present.  You will be prompted for this value if needed.
+Provide the password of the Onboard Administrator administrator account to re-apply the configuration if the enclosure is in an error state and the HPE OneView managed configuration is no longer present.  You will be prompted for this value if needed.
 
 | Aliases | None |
 | :--- | :--- |

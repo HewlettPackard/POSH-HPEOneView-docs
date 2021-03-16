@@ -73,7 +73,7 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 
 ### -InputObject &lt;HPEOneView.Storage.StoragePool[]&gt;
 
-One or more `[HPEOneView.Storage.StoragePool]` resources from `Get-OVStoragePool`.
+One or more `[HPEOneView.Storage.StoragePool]` resources from Get-OVStoragePool.
 
 | Aliases | Pool |
 | :--- | :--- |
@@ -103,7 +103,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Storage.StoragePool**_
 
-Storage pool resource(s) from [`Get-OVStoragePool`](get-ovstoragepool.md).
+Storage pool resource(s) from Get-OVStoragePool.
 
 ## Return Values
 

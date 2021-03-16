@@ -167,7 +167,7 @@ Use this parameter to enable remote support on an appliance, only if the applian
 
 ### -Disable &lt;SwitchParameter&gt;
 
-Use this parameter to disable remote support globally on the appliance.  Use the `-Enable` parameter to `re-enable` Remote Support.
+Use this parameter to disable remote support globally on the appliance.  Use the `-Enable` parameter to re-enable Remote Support.
 
 | Aliases | None |
 | :--- | :--- |

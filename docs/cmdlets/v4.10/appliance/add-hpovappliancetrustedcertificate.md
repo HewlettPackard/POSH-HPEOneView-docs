@@ -50,7 +50,7 @@ Add-HPOVApplianceTrustedCertificate -ComputerName server1-ilo.domain.com -AliasN
 
 ```
 
-Use the Cmdlet to add the `self-signed` iLO certificate to the appliance.
+Use the Cmdlet to add the self-signed iLO certificate to the appliance.
 
 ## Parameters
 
@@ -144,7 +144,7 @@ Specify an alias name of the certificate stored on the appliance.  By default, t
 
 ### -Force &lt;SwitchParameter&gt;
 
-Use to force add an untrusted (self-signed or a certificate authority certificate has not been added to the appliance) certificate into the appliances trust store.
+Use to force add an untrusted (`self-signed` or a certificate authority certificate has not been added to the appliance) certificate into the appliances trust store.
 
 | Aliases | None |
 | :--- | :--- |

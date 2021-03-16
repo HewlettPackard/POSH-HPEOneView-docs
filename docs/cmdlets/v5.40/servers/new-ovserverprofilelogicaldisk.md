@@ -156,7 +156,7 @@ Auto is not supported when attempting to create an HPE Synergy D3940 Logical or 
 
 Use to specify how the drive selection will be used.  Allowed values:
 
-    * DriveType - Use `Get-OVAvailableDriveType` to locate available drive types, quantity to which SAS Logical Interconnect or Drive Enclosure.
+    * DriveType - Use Get-OVAvailableDriveType to locate available drive types, quantity to which SAS Logical Interconnect or Drive Enclosure.
     * SizeAndTechnology - Use to define the attributes of the drive based on technology and min/max drive size.  The `-DriveType` and `-MinDriveSize` parameters are required.
 
 Default: SizeAndTechnology
@@ -183,7 +183,7 @@ Specify Internal for HPE Synergy Compute Nodes that have the Expanded Storage op
 
 ### -AvailableDriveType &lt;HPEOneView.Storage.AvailableDriveType&gt;
 
-A specific availabe drive type from `Get-OVAvailableDriveType`.
+A specific availabe drive type from Get-OVAvailableDriveType.
 
 | Aliases | None |
 | :--- | :--- |
@@ -273,7 +273,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Storage.AvailableDriveType**_
 
-An available disk drive type from [`Get-OVAvailableDriveType`](../storage/get-ovavailabledrivetype.md) Cmdlet.
+An available disk drive type from Get-OVAvailableDriveType Cmdlet.
 
 ## Return Values
 

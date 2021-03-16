@@ -82,7 +82,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 
 ### -ConfigurationScript &lt;String&gt;
 
-An Onboard Administrator CLI Script. Only applicable for HPE BladeSystem `C-Class`.
+An Onboard Administrator CLI Script. Only applicable for HPE BladeSystem C-Class.
 
 | Aliases | None |
 | :--- | :--- |
@@ -94,7 +94,7 @@ An Onboard Administrator CLI Script. Only applicable for HPE BladeSystem `C-Clas
 
 ### -InputObject &lt;Object&gt;
 
-An enclosure group resource from `Get-HPOVEnclosureGroup`.
+An enclosure group resource from Get-HPOVEnclosureGroup.
 
 | Aliases | EnclosureGroup |
 | :--- | :--- |
@@ -141,7 +141,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Servers.EnclosureGroup [System.Management.Automation.PSCustomObject]**_
 
-Enclosure group resource from [`Get-HPOVEnclosureGroup`](get-hpovenclosuregroup.md).
+Enclosure group resource from Get-HPOVEnclosureGroup.
 
 ## Return Values
 

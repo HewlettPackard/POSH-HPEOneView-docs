@@ -25,7 +25,7 @@ Use Disable-HPOVMsDSC to disable support.
 Enable-HPOVMSDSC
 ```
 
-Configures Registry value to overload `Write-Host`, which then uses `Write-Verbose`.
+Configures Registry value to overload Write-Host, which then uses Write-Verbose.
 
 ## Parameters
 

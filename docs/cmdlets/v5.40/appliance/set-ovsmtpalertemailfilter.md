@@ -68,7 +68,7 @@ Create OneView Remote Support filter on the appliance.
 
 ### -InputObject &lt;Object&gt;
 
-The email alert filter from `Get-OVSmtpAlertEmailFilter`.
+The email alert filter from Get-OVSmtpAlertEmailFilter.
 
 | Aliases | None |
 | :--- | :--- |

@@ -154,7 +154,7 @@ Disable aliases to be created for initiators, targets and target groups based on
 
 ### -InitiatorNameFormat &lt;String&gt;
 
-Format to use for initiator alias names. The following `built-in` variables can be used: {hostName}, {initiatorName}, {initiatorWwn}.
+Format to use for initiator alias names. The following built-in variables can be used: {hostName}, {initiatorName}, {initiatorWwn}.
 
 Example: "initiator_{hostname}_{initiatorName}"
 
@@ -168,7 +168,7 @@ Example: "initiator_{hostname}_{initiatorName}"
 
 ### -TargetGroupNameFormat &lt;String&gt;
 
-Format to use for target group (ex. storage system port group) alias names. The following `built-in` variables can be used: {storageSystemName}, {targetGroupName}.
+Format to use for target group (ex. storage system port group) alias names. The following built-in variables can be used: {storageSystemName}, {targetGroupName}.
 
 Example: "TargetGroup_{storageSystemName}_{targetGroupName}"
 
@@ -182,7 +182,7 @@ Example: "TargetGroup_{storageSystemName}_{targetGroupName}"
 
 ### -TargetNameFormat &lt;String&gt;
 
-Format to use for target (ex. storage system port) alias names. The following `built-in` variables can be used: {storageSystemName}, {targetName}.
+Format to use for target (ex. storage system port) alias names. The following built-in variables can be used: {storageSystemName}, {targetName}.
 
 Example: "Target_{storageSystemName}_{targetName}"
 
@@ -196,7 +196,7 @@ Example: "Target_{storageSystemName}_{targetName}"
 
 ### -ZoneNameFormat &lt;String&gt;
 
-Format to use when naming new and updated zones. The following `built-in` variables can be used: {hostName}, {initiatorName}, {initiatorWwn}, {storageSystemName}, {targetName}, {targetGroupName} 
+Format to use when naming new and updated zones. The following built-in variables can be used: {hostName}, {initiatorName}, {initiatorWwn}, {storageSystemName}, {targetName}, {targetGroupName} 
 
 Example: "{initiatorWwn}_{initiatorName}"
 
@@ -210,7 +210,7 @@ Example: "{initiatorWwn}_{initiatorName}"
 
 ### -UpdateZoneNames &lt;Boolean&gt;
 
-Format to use when naming new and updated zones. The following `built-in` variables can be used: {hostName}, {initiatorName}, {initiatorWwn}, {storageSystemName}, {targetName}, {targetGroupName} 
+Format to use when naming new and updated zones. The following built-in variables can be used: {hostName}, {initiatorName}, {initiatorWwn}, {storageSystemName}, {targetName}, {targetGroupName} 
 
 Example: "{initiatorWwn}_{initiatorName}"
 
@@ -224,7 +224,7 @@ Example: "{initiatorWwn}_{initiatorName}"
 
 ### -UpdateInitiatorAliases &lt;Boolean&gt;
 
-Format to use when naming new and updated zones. The following `built-in` variables can be used: {hostName}, {initiatorName}, {initiatorWwn}, {storageSystemName}, {targetName}, {targetGroupName} 
+Format to use when naming new and updated zones. The following built-in variables can be used: {hostName}, {initiatorName}, {initiatorWwn}, {storageSystemName}, {targetName}, {targetGroupName} 
 
 Example: "{initiatorWwn}_{initiatorName}"
 
@@ -238,7 +238,7 @@ Example: "{initiatorWwn}_{initiatorName}"
 
 ### -UpdateTargetAliases &lt;Boolean&gt;
 
-Format to use when naming new and updated zones. The following `built-in` variables can be used: {hostName}, {initiatorName}, {initiatorWwn}, {storageSystemName}, {targetName}, {targetGroupName} 
+Format to use when naming new and updated zones. The following built-in variables can be used: {hostName}, {initiatorName}, {initiatorWwn}, {storageSystemName}, {targetName}, {targetGroupName} 
 
 Example: "{initiatorWwn}_{initiatorName}"
 

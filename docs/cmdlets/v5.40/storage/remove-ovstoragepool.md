@@ -136,7 +136,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Storage.System.Pool [System.Management.Automation.PSCustomObject]**_
 
-Single Storage Pool resource, typically retrieved with [`Get-OVStoragePool`](get-ovstoragepool.md)
+Single Storage Pool resource, typically retrieved with Get-OVStoragePool
 
 ## Return Values
 

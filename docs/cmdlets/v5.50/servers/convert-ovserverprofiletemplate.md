@@ -116,7 +116,7 @@ Specify the target `[HPEOneView.EnclosureGroup]` resource object.  By changing t
 
 ### -InputObject &lt;Object&gt;
 
-The `[HPEOneView.ServerProfileTemplate]` object from `Get-OVServerProfileTemplate`.
+The `[HPEOneView.ServerProfileTemplate]` object from Get-OVServerProfileTemplate.
 
 | Aliases | ServerProfileTemplate, SPT |
 | :--- | :--- |

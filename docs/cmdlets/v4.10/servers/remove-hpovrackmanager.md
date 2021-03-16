@@ -47,7 +47,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 
 ### -Force &lt;SwitchParameter&gt;
 
-Force remove resource, in cases where the device manager has been `re-addressed` and is no longer accessible, or there are other communication issues preventing the resource removal.
+Force remove resource, in cases where the device manager has been re-addressed and is no longer accessible, or there are other communication issues preventing the resource removal.
 
 | Aliases | None |
 | :--- | :--- |
@@ -59,7 +59,7 @@ Force remove resource, in cases where the device manager has been `re-addressed`
 
 ### -InputObject &lt;HPOneView.Servers.RackManager&gt;
 
-An `[HPOneView.Servers.RackManager]` resource from `Get-HPOVRackManager`.
+An `[HPOneView.Servers.RackManager]` resource from Get-HPOVRackManager.
 
 | Aliases | uri, name, Server |
 | :--- | :--- |
@@ -77,7 +77,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Servers.RackManager**_
 
-An HPOneView.Servers.RackManager resource from [`Get-HPOVRackManager`](get-hpovrackmanager.md).
+An HPOneView.Servers.RackManager resource from Get-HPOVRackManager.
 
 ## Return Values
 

@@ -88,19 +88,19 @@ Specify the Resource Category to filter task results to.  Cannot be combined wit
 
 Some examples are:
 
-    * `ethernet-networks`
-    * `fc-networks`
-    * `power-devices`
-    * `unmanaged-devices`
-    * `server-profiles`
-    * `server-hardware`
+    * ethernet-networks
+    * fc-networks
+    * power-devices
+    * unmanaged-devices
+    * server-profiles
+    * server-hardware
     * enclosures
-    * `enclosure-groups`
+    * enclosure-groups
     * interconnects
-    * `logical-interconnects`
-    * `logical-interconnect`-groups
+    * logical-interconnects
+    * logical-interconnect-groups
     * appliance
-    * `firmware-drivers`
+    * firmware-drivers
 
 | Aliases | Category |
 | :--- | :--- |

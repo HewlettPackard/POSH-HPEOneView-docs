@@ -163,7 +163,7 @@ Use this parameter for the appliance to encrypt the Support Dump.  Only HPE Supp
 
 ### -InputObject &lt;Object&gt;
 
-When the support dump type is LogicalEnclosure, the logical enclosure resource must be passed from `Get-OVLogicalEnclosure` as a parameter value or pipeline.
+When the support dump type is LogicalEnclosure, the logical enclosure resource must be passed from Get-OVLogicalEnclosure as a parameter value or pipeline.
 
 | Aliases | LogicalEnclosure, LE |
 | :--- | :--- |

@@ -41,7 +41,7 @@ Returns the "alertMax" setting object with the updated value of 75000
 
 ### -InputObject &lt;HPOneView.Appliance.GlobalSetting&gt;
 
-The Appliance Global Setting object from `Get-HPOVApplianceGlobalSetting`.
+The Appliance Global Setting object from Get-HPOVApplianceGlobalSetting.
 
 | Aliases | Object |
 | :--- | :--- |
@@ -99,7 +99,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Appliance.GlobalSetting**_
 
-Appliance global setting from [`Get-HPOVApplianceGlobalSetting`](get-hpovapplianceglobalsetting.md).
+Appliance global setting from Get-HPOVApplianceGlobalSetting.
 
 ## Return Values
 

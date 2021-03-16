@@ -69,7 +69,7 @@ Specify a string value to filter for the specific resource
 
 ### -NonCompliant &lt;SwitchParameter&gt;
 
-Filter resources based on their `non-compliant` state.
+Filter resources based on their non-compliant state.
 
 | Aliases | None |
 | :--- | :--- |

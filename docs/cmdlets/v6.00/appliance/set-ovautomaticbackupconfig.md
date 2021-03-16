@@ -56,7 +56,7 @@ Set-OVAutomaticBackupConfig -Hostname scphost.domain.com -Username backupadmin -
 New-OVBackup
 ```
 
-This command will configure automatic appliance backup, based on a weekly Monday, Wednesday and Friday schedule to execute at 18:00 (6:00PM).  Then, a call to `New-OVBackup` will be made, which will generate and copy the backup file to the remote location configured.
+This command will configure automatic appliance backup, based on a weekly Monday, Wednesday and Friday schedule to execute at 18:00 (6:00PM).  Then, a call to New-OVBackup will be made, which will generate and copy the backup file to the remote location configured.
 
 ## Parameters
 

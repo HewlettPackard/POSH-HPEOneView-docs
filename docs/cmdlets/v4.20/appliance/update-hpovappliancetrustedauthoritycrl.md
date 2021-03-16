@@ -37,7 +37,7 @@ The Cmdlet will attempt to download the CRL from the HTTP location specified wit
 Get-HPOVApplianceTrustedCertificate -Name "VeriSign Class 3 Public Primary Certification Authority - G5" | Update-HPOVApplianceTrustedAuthorityCrl
 ```
 
-Update the `built-in` certificate authority resource.
+Update the built-in certificate authority resource.
 
 ###  Example 2 
 
@@ -50,7 +50,7 @@ Invoke-WebRequest -Uri $CA.CRLInfo.EndPointList[0] -OutFile C:\Directory\CA-upda
 Get-HPOVApplianceTrustedCertificate -CertificateAuthoritiesOnly -Name "DigiCert Global CA G2" | Update-HPOVApplianceTrustedAuthorityCrl -Path C:\Directory\CA-updated.crl
 ```
 
-Update the `built-in` certificate authority resource.
+Update the built-in certificate authority resource.
 
 ## Parameters
 
@@ -80,7 +80,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -InputObject &lt;HPOneView.Appliance.TrustedCertificateAuthority[]&gt;
 
-HPOneView.Appliance.TrustedCertificateAuthority resource from `Get-HPOVApplianceTrustedCertificate`.
+HPOneView.Appliance.TrustedCertificateAuthority resource from Get-HPOVApplianceTrustedCertificate.
 
 | Aliases | None |
 | :--- | :--- |
@@ -110,7 +110,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Appliance.TrustedCertificateAuthority**_
 
-resource from [`Get-HPOVApplianceTrustedCertificate`](get-hpovappliancetrustedcertificate.md).
+resource from Get-HPOVApplianceTrustedCertificate.
 
 ## Return Values
 

@@ -159,7 +159,7 @@ Alert URI
 
 _**HPEOneView.Alert [System.Management.Automation.PSCustomObject]**_
 
-Alert resource object (i.e. [`Get-OVAlert`](get-ovalert.md))
+Alert resource object (i.e. Get-OVAlert)
 
 ## Return Values
 

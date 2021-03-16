@@ -96,7 +96,7 @@ Name of the Logical Switch resource.  Supports wildcard * character.
 
 ### -InputObject &lt;Object&gt;
 
-Provide an `[HPEOneView.Appliance.TaskResource]` object and the Cmdlet will return the associated Logical Switch resource created from the `New-OVLogicalSwitch` Cmdlet.
+Provide an `[HPEOneView.Appliance.TaskResource]` object and the Cmdlet will return the associated Logical Switch resource created from the New-OVLogicalSwitch Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -167,7 +167,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
-Async Task resource object, from [`New-OVLogicalSwitch`](new-ovlogicalswitch.md).
+Async Task resource object, from New-OVLogicalSwitch.
 
 ## Return Values
 

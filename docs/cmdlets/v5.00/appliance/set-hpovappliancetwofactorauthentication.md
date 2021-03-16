@@ -38,7 +38,7 @@ Required: Infrastructure administrator
 Set-HPOVApplianceTwoFactorAuthentication -ValidationOids @(@{"1.3.6.1.4.1.311.20.2.2" = "Smart Card Logon"; "1.3.6.1.5.5.7.3.2" = "Client Authentication"})
 ```
 
-Configured `two-factory` authentication using default validation OIDs.
+Configured two-factory authentication using default validation OIDs.
 
 ## Parameters
 
@@ -99,7 +99,7 @@ If you select Manually specify, you can enter a specific domain using dot notati
 
 ### -EmergencyLoginAllowType &lt;String&gt;
 
-Allow emergency login access if the configured authentication directory(ies) for `2-factor` are unavailable.  Highest security is obtained by restricting the local administrator account to "ApplianceConsoleOnly". Choose "NetworkAndApplianceConsole" to allow emergency access via the network.
+Allow emergency login access if the configured authentication directory(ies) for 2-factor are unavailable.  Highest security is obtained by restricting the local administrator account to "ApplianceConsoleOnly". Choose "NetworkAndApplianceConsole" to allow emergency access via the network.
 
 | Aliases | None |
 | :--- | :--- |
@@ -162,7 +162,7 @@ You can edit the value to enable HPE OneView to search for the user name within 
             DC=test
             DC=com
 
-Use a `comma-separated` list to include multiple values in the entry field, allowing HPE OneView to search multiple Subject Alternative Name attributes for a valid user name.
+Use a comma-separated list to include multiple values in the entry field, allowing HPE OneView to search multiple Subject Alternative Name attributes for a valid user name.
 
 {% hint style="info" %}
 You can instruct HPE OneView to search for the user name within the attributes of the "Subject" field of the smart card certificate (either in addition to, or instead of, searching within "Subject Alternative Name" attributes). See subject entry in the "Certificate owner" field for details.
@@ -226,7 +226,7 @@ This parameter allows you to configure who can access HPE OneView by specifying 
 By default, one combination is configured, containing the OID combination Smart Card Logon (1.3.6.1.4.1.311.20.2.2), Client Authentication (1.3.6.1.5.5.7.3.2). This combination requires the certificate on the smart card to be configured to allow the certificate to be used for smart card logon and for client authentication. It should work for most installations. You can edit this field to opt for a different combination of OIDs, or to add additional OIDs. A maximum of ten OIDs can be configured in a single string.
 
 {% hint style="info" %}
-If you specify multiple OID combinations and one is a `super-set` of another, configure the more restrictive combination first.
+If you specify multiple OID combinations and one is a super-set of another, configure the more restrictive combination first.
 {% endhint %}
 
 

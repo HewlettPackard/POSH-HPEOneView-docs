@@ -30,7 +30,7 @@ Required: Infrastructure administrator
 Disable-OVApplianceTwoFactorAuthentication
 ```
 
-Disable `two-factor` authentication on the connected appliance.
+Disable two-factor authentication on the connected appliance.
 
 ## Parameters
 

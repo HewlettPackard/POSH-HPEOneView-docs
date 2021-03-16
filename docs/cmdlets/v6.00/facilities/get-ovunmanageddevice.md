@@ -45,7 +45,7 @@ The name of the Unmanaged Device.
 
 ### -List &lt;SwitchParameter&gt;
 
-Deprecated parameter.  Cmdlet now defaults to `Format-Table` output.
+Deprecated parameter.  Cmdlet now defaults to Format-Table output.
 
 | Aliases | report |
 | :--- | :--- |

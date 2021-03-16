@@ -118,7 +118,7 @@ The fabric managers resource name to use.
 
 ### -Scope &lt;Object&gt;
 
-Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
+Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the Add-HPOVResourceToScope Cmdlet.
 
 | Aliases |  |
 | :--- | :--- |
@@ -183,7 +183,7 @@ Manual remediation
 
 Manual remediation means that the proposed remediation has a confict with the existing configuration of the HPE OneView and need to be resolved manually.
 
-Use the activity log (Get-HPOVAlert) to view the remediation status of the inconsistencies. In the activity log, an alert is created for every inconsistency and a task is created for every remediation. The alert status of all inconsistencies that were resolved automatically is set to cleared. The alert status of all inconsistencies that require manual remediation remain active.
+Use the activity log (`Get-HPOVAlert`) to view the remediation status of the inconsistencies. In the activity log, an alert is created for every inconsistency and a task is created for every remediation. The alert status of all inconsistencies that were resolved automatically is set to cleared. The alert status of all inconsistencies that require manual remediation remain active.
 
 Use this parameter to enable automatic remediation.  If you wish to explicitly disable, use `-EnableAutomaticRemediation:$false`
 

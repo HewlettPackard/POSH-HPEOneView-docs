@@ -51,7 +51,7 @@ Display a brief list of the enclosures managed or monitored by the appliance.
 
 ### -Enclosure &lt;Object&gt;
 
-The Synergy Frame resource from `Get-HPOVEnclosure`.
+The Synergy Frame resource from Get-HPOVEnclosure.
 
 | Aliases | None |
 | :--- | :--- |

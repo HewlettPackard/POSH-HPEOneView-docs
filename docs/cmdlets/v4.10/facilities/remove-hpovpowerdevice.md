@@ -66,7 +66,7 @@ The Power Device object(s), name(s) or uri(s) to be removed from management.
 
 ### -Force &lt;SwitchParameter&gt;
 
-Set to $true to `force-remove` the power device.  `Force-removing` will succeed even when there are connectivity issues or resource errors.
+Set to $true to force-remove the power device.  Force-removing will succeed even when there are connectivity issues or resource errors.
 
 When the request is accepted by the appliance, it does not return an Async Task Resource.
 

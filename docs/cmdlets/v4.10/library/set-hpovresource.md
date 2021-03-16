@@ -45,7 +45,7 @@ The modified resource that is to be updated. Can be resource object, name or URI
 
 ### -force &lt;String&gt;
 
-Set to $true to `force-update` the resource.  Not all resources support `force-update`.
+Set to $true to force-update the resource.  Not all resources support force-update.
 
 | Aliases | None |
 | :--- | :--- |
@@ -79,7 +79,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**System.Management.Automation.PSCustomObject**_
 
-Resource Object to modify by either using [`Send-HPOVRequest`](send-hpovrequest.md) with the resource URI, or the resource GET CMDLET
+Resource Object to modify by either using Send-HPOVRequest with the resource URI, or the resource GET CMDLET
 
 ## Return Values
 

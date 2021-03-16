@@ -82,7 +82,7 @@ $attachVolume = Get-HPOVStorageVolume Volume1 | New-HPOVServerProfileAttachVolum
 
 ```
 
-Get the "Volume1" Storage Volume via the `Get-HPOVStorageVolume` Cmdlet, and pipe the resource object to the `Get-HPOVServerProfileAttachVolume` Cmdlet.
+Get the "Volume1" Storage Volume via the Get-HPOVStorageVolume Cmdlet, and pipe the resource object to the Get-HPOVServerProfileAttachVolume Cmdlet.
 
 ###  Example 3 
 
@@ -91,7 +91,7 @@ $attachVolume = Get-HPOVStorageVolume Volume1 | New-HPOVServerProfileAttachVolum
 
 ```
 
-Get the "Volume1" Storage Volume via the `Get-HPOVStorageVolume` Cmdlet, and pipe the resource object to the `Get-HPOVServerProfileAttachVolume` Cmdlet, providing a manual Host LUN ID.
+Get the "Volume1" Storage Volume via the Get-HPOVStorageVolume Cmdlet, and pipe the resource object to the Get-HPOVServerProfileAttachVolume Cmdlet, providing a manual Host LUN ID.
 
 ###  Example 4 
 
@@ -103,7 +103,7 @@ $attachVolumes = @($volume1,$volume2)
 
 ```
 
-Get the "Volume1" and "SharedVolume1" Storage Volumes via the `Get-HPOVStorageVolume` Cmdlet, and pipe the resource objects to the `Get-HPOVServerProfileAttachVolume` Cmdlet, saving to $attachVolumes array.
+Get the "Volume1" and "SharedVolume1" Storage Volumes via the Get-HPOVStorageVolume Cmdlet, and pipe the resource objects to the Get-HPOVServerProfileAttachVolume Cmdlet, saving to $attachVolumes array.
 
 ###  Example 5 
 
@@ -154,7 +154,7 @@ Create a new ephemeral storage volume attachment, using a storage volume templat
 
 ### -ServerProfile &lt;Object&gt;
 
-An existing Server Profile resource object from `Get-HPOVServerProfile` Cmdlet.
+An existing Server Profile resource object from Get-HPOVServerProfile Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -298,7 +298,7 @@ Aliases [-type]
 
 ### -LunID &lt;Int32&gt;
 
-The Host LUN ID numerical value that will be configured in the Volume export on the Storage System.  Accepted range: `0-254`
+The Host LUN ID numerical value that will be configured in the Volume export on the Storage System.  Accepted range: 0-254
 
 | Aliases | None |
 | :--- | :--- |
@@ -396,7 +396,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -Scope &lt;HPOneView.Appliance.ScopeCollection&gt;
 
-Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
+Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the Add-HPOVResourceToScope Cmdlet.
 
 | Aliases |  |
 | :--- | :--- |
@@ -432,7 +432,7 @@ An array of target Port ID(s) or WWN(s).  Example:  @("1:0:1", "1:2:1", "3:1:1",
 
 ### -VolumeTemplate &lt;Object&gt;
 
-For Ephemeral (private) volumes that should be provisioned from Storage Volume Templates.  Provide a valid resource from `Get-HPOVStorageVolumeTemplate`.
+For Ephemeral (private) volumes that should be provisioned from Storage Volume Templates.  Provide a valid resource from Get-HPOVStorageVolumeTemplate.
 
 | Aliases | None |
 | :--- | :--- |
@@ -472,7 +472,7 @@ Specify if HPE StoreVirtual volume Adaptive Optimization is enabled.
 
 ### -PassThru &lt;SwitchParameter&gt;
 
-Use this parameter to return the modified Server Profile object.  In order to save the changes, please use the `Save-HPOVServerProfile` Cmdlet.
+Use this parameter to return the modified Server Profile object.  In order to save the changes, please use the Save-HPOVServerProfile Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |

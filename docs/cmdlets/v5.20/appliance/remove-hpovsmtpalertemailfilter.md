@@ -45,7 +45,7 @@ Remove the specified email alert filter.
 
 ### -InputObject &lt;Object&gt;
 
-The email alert filter from `Get-HPOVSmtpAlertEmailFilter`.
+The email alert filter from Get-HPOVSmtpAlertEmailFilter.
 
 | Aliases | None |
 | :--- | :--- |

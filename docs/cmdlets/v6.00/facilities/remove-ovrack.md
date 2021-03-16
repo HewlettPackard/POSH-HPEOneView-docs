@@ -46,7 +46,7 @@ Remove rack resources from the appliance.
 
 ### -InputObject &lt;Object&gt;
 
-Rack object, from `Get-OVRack`.
+Rack object, from Get-OVRack.
 
 | Aliases | None |
 | :--- | :--- |
@@ -76,7 +76,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Facilities.Rack**_
 
-Rack resource from [`Get-OVRack`](get-ovrack.md).
+Rack resource from Get-OVRack.
 
 ## Return Values
 

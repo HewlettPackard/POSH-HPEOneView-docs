@@ -50,7 +50,7 @@ Updates an existing SAN Manager configuration.  Can update the hostname/IP Addre
 $task = Get-OVSanManager bna.domain.com -ApplianceConnection hpov.domain.com | Set-OVSanManager -hostname bna.newdomain.com | Wait-OVTaskComplete
 ```
 
-Get the SAN Manager using `Get-OVSanManager`, and pipling the resource in order to update the hostname value.
+Get the SAN Manager using Get-OVSanManager, and pipling the resource in order to update the hostname value.
 
 ###  Example 2 
 
@@ -72,7 +72,7 @@ Update the existing Brocade Network Advisor SAN Manager"s username and password.
 
 ### -InputObject &lt;Object&gt;
 
-Resource Object (from `Get-OVSanManager`) or Name of the SAN Manager to update.  If specifying a resource Name, the ApplianceConnection parameter is required.
+Resource Object (from Get-OVSanManager) or Name of the SAN Manager to update.  If specifying a resource Name, the ApplianceConnection parameter is required.
 
 | Aliases | name, Resource |
 | :--- | :--- |
@@ -270,7 +270,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Storage.SanManager [System.Management.Automation.PSCustomObject]**_
 
-SAN Manager resource from [`Get-OVSanManager`](get-ovsanmanager.md)
+SAN Manager resource from Get-OVSanManager
 
 ## Return Values
 

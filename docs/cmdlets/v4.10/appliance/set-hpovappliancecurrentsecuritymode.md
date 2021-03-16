@@ -48,7 +48,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 
 ### -SecurityMode &lt;HPOVApplianceAvailableSecurityMode&gt;
 
-Specify the Security Mode to change the appliance to by using `Get-HPOVApplianceAvailableSecurityMode`.
+Specify the Security Mode to change the appliance to by using Get-HPOVApplianceAvailableSecurityMode.
 
 | Aliases | None |
 | :--- | :--- |
@@ -66,7 +66,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Appliance.SecurityMode**_
 
-The specified applinace security mode from [`Get-HPOVApplianceAvailableSecurityMode`](get-hpovapplianceavailablesecuritymode.md).
+The specified applinace security mode from Get-HPOVApplianceAvailableSecurityMode.
 
 ## Return Values
 

@@ -110,7 +110,7 @@ Specify the alternate SNMP destination port.
 
 ### -SnmpV3User &lt;HPEOneView.Appliance.SnmpV3User&gt;
 
-The defined SNMPv3 user created on the appliance with `Get-OVSnmpV3User`.
+The defined SNMPv3 user created on the appliance with Get-OVSnmpV3User.
 
 | Aliases | None |
 | :--- | :--- |

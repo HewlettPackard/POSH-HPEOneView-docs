@@ -158,7 +158,7 @@ Create a server profile compliant iLO settings policy, by managing the local adm
 
 ### -DirectoryGroups &lt;Object&gt;
 
-A collection of 1 or more directory groups created from `New-OVIloDirectoryGroup` helper Cmdlet.
+A collection of 1 or more directory groups created from New-OVIloDirectoryGroup helper Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -218,7 +218,7 @@ Specifies the port number for the secure LDAP service on the server. The default
 
 ### -DirectoryUserContext &lt;String[]&gt;
 
-A common directory `sub-context` to be searched such that users do not need to enter their full DNs at login.
+A common directory sub-context to be searched such that users do not need to enter their full DNs at login.
 
 | Aliases | None |
 | :--- | :--- |
@@ -266,7 +266,7 @@ The iLO subsystem name (hostname). This cannot include the domain name. Used as 
 
 ### -IloObjectPassword &lt;SecureString&gt;
 
-Specifies the password for the CAC LDAP service account when CAC/Smartcard authentication is configured and used with the `schema-free` directory option. User search contexts are not applied to the iLO object DN when iLO accesses the directory server.
+Specifies the password for the CAC LDAP service account when CAC/Smartcard authentication is configured and used with the schema-free directory option. User search contexts are not applied to the iLO object DN when iLO accesses the directory server.
 
 | Aliases | None |
 | :--- | :--- |
@@ -302,7 +302,7 @@ The TCP or UDP port number on which the KDC is listening. The default value is 8
 
 ### -KerberosRealm &lt;String&gt;
 
-The name of the Kerberos realm in which the iLO processor operates. This value can be up to 128 characters. The realm name is usually the DNS name converted to uppercase letters. Realm names are `case-sensitive`.
+The name of the Kerberos realm in which the iLO processor operates. This value can be up to 128 characters. The realm name is usually the DNS name converted to uppercase letters. Realm names are case-sensitive.
 
 | Aliases | None |
 | :--- | :--- |
@@ -314,7 +314,7 @@ The name of the Kerberos realm in which the iLO processor operates. This value c
 
 ### -KerbersKeyTabFile &lt;FileInfo&gt;
 
-An encoded binary file that contains pairs of service principal names and encrypted passwords. In the Windows environment, you use the ktpass utility to generate the keytab file. The components of the service principal name stored in the Kerberos keytab file are case sensitive. The primary (service type) must be in upper case (HTTP). The instance (iLO hostname) must be in lower case (e.g., `[iloexample.example.net]`). The realm name must be in upper case (e.g., `[EXAMPLE.NET]`). The REST encoding of this argument is a `Base64-encoded` Kerberos Keytab file as a string.
+An encoded binary file that contains pairs of service principal names and encrypted passwords. In the Windows environment, you use the ktpass utility to generate the keytab file. The components of the service principal name stored in the Kerberos keytab file are case sensitive. The primary (service type) must be in upper case (HTTP). The instance (iLO hostname) must be in lower case (e.g., `[iloexample.example.net]`). The realm name must be in upper case (e.g., `[EXAMPLE.NET]`). The REST encoding of this argument is a Base64-encoded Kerberos Keytab file as a string.
 
 | Aliases | None |
 | :--- | :--- |
@@ -374,7 +374,7 @@ The password for the Local User name with administrator permissions that is conf
 
 ### -LOMObjectDistinguishedName &lt;String&gt;
 
-Specifies the CAC LDAP service account when CAC/Smartcard authentication is configured and used with the `schema-free` directory option. User search contexts are not applied to the iLO object DN when iLO accesses the directory server.
+Specifies the CAC LDAP service account when CAC/Smartcard authentication is configured and used with the schema-free directory option. User search contexts are not applied to the iLO object DN when iLO accesses the directory server.
 
 | Aliases | None |
 | :--- | :--- |
@@ -404,7 +404,7 @@ Allowed values:
 
 ### -LocalAccounts &lt;Object&gt;
 
-A collection of 1 or more local accounts created from `New-OVIloLocalUserAccount` helper Cmdlet.
+A collection of 1 or more local accounts created from New-OVIloLocalUserAccount helper Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -476,7 +476,7 @@ The iLO Key Manager (e.g. ESKM) configuration will be managed via the profile.
 
 ### -ManageLocalAccounts &lt;SwitchParameter&gt;
 
-Replace all local iLO accounts beyond Administrator.  If you omit the LocalAccount parameter, all existing local accounts will be removed, except the `build-in` local Administrator and the configured _HPOneViewAdmin privileged accounts.  The local Administrator account can be removed using the RemoveLocalAdministratorAccount, but you then risk locking everyone from accessing the iLO.
+Replace all local iLO accounts beyond Administrator.  If you omit the LocalAccount parameter, all existing local accounts will be removed, except the build-in local Administrator and the configured _HPOneViewAdmin privileged accounts.  The local Administrator account can be removed using the RemoveLocalAdministratorAccount, but you then risk locking everyone from accessing the iLO.
 
 | Aliases | None |
 | :--- | :--- |

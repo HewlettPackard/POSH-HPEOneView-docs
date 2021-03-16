@@ -89,7 +89,7 @@ Create a Volume Attach object that maps to the "Volume1" storage volume with an 
 $attachVolume = Get-OVStorageVolume -Name Volume1 | New-OVServerProfileAttachVolume -volumeid 1
 ```
 
-Get the "Volume1" Storage Volume via the `Get-OVStorageVolume` Cmdlet, and pipe the resource object to the `Get-OVServerProfileAttachVolume` Cmdlet.
+Get the "Volume1" Storage Volume via the Get-OVStorageVolume Cmdlet, and pipe the resource object to the Get-OVServerProfileAttachVolume Cmdlet.
 
 ###  Example 3 
 
@@ -97,7 +97,7 @@ Get the "Volume1" Storage Volume via the `Get-OVStorageVolume` Cmdlet, and pipe 
 $attachVolume = Get-OVStorageVolume -Name Volume1 | New-OVServerProfileAttachVolume -volumeid 1 -lunidtype manual -lunid 1
 ```
 
-Get the "Volume1" Storage Volume via the `Get-OVStorageVolume` Cmdlet, and pipe the resource object to the `Get-OVServerProfileAttachVolume` Cmdlet, providing a manual Host LUN ID.
+Get the "Volume1" Storage Volume via the Get-OVStorageVolume Cmdlet, and pipe the resource object to the Get-OVServerProfileAttachVolume Cmdlet, providing a manual Host LUN ID.
 
 ###  Example 4 
 
@@ -107,7 +107,7 @@ $volume2 = Get-OVStorageVolume SharedVolume1 | New-OVServerProfileAttachVolume -
 $attachVolumes = @($volume1,$volume2)
 ```
 
-Get the "Volume1" and "SharedVolume1" Storage Volumes via the `Get-OVStorageVolume` Cmdlet, and pipe the resource objects to the `Get-OVServerProfileAttachVolume` Cmdlet, saving to $attachVolumes array.
+Get the "Volume1" and "SharedVolume1" Storage Volumes via the Get-OVStorageVolume Cmdlet, and pipe the resource objects to the Get-OVServerProfileAttachVolume Cmdlet, saving to $attachVolumes array.
 
 ###  Example 5 
 
@@ -151,7 +151,7 @@ Create a new ephemeral storage volume attachment, using a storage volume templat
 
 ### -ServerProfile &lt;Object&gt;
 
-An existing Server Profile resource object from `Get-OVServerProfile` Cmdlet.
+An existing Server Profile resource object from Get-OVServerProfile Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -292,7 +292,7 @@ Specify if the Ephemeral Volume should be permanent.
 
 ### -LunID &lt;Int32&gt;
 
-The Host LUN ID numerical value that will be configured in the Volume export on the Storage System.  Accepted range: `0-254`
+The Host LUN ID numerical value that will be configured in the Volume export on the Storage System.  Accepted range: 0-254
 
 | Aliases | None |
 | :--- | :--- |
@@ -382,7 +382,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -Scope &lt;HPEOneView.Appliance.ScopeCollection[]&gt;
 
-Provide an `[HPEOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-OVResourceToScope` Cmdlet.
+Provide an `[HPEOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the Add-OVResourceToScope Cmdlet.
 
 | Aliases |  |
 | :--- | :--- |
@@ -418,7 +418,7 @@ An array of target Port ID(s) or WWN(s).  Example:  @("1:0:1", "1:2:1", "3:1:1",
 
 ### -VolumeTemplate &lt;Object&gt;
 
-For Ephemeral (private) volumes that should be provisioned from Storage Volume Templates.  Provide a valid resource from `Get-OVStorageVolumeTemplate`.
+For Ephemeral (private) volumes that should be provisioned from Storage Volume Templates.  Provide a valid resource from Get-OVStorageVolumeTemplate.
 
 | Aliases | None |
 | :--- | :--- |
@@ -458,7 +458,7 @@ Specify if HPE StoreVirtual volume Adaptive Optimization is enabled.
 
 ### -PassThru &lt;SwitchParameter&gt;
 
-Use this parameter to return the modified Server Profile object.  In order to save the changes, please use the `Save-OVServerProfile` Cmdlet.
+Use this parameter to return the modified Server Profile object.  In order to save the changes, please use the Save-OVServerProfile Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -482,7 +482,7 @@ The supported Snapshot storage pool for a StoreServ storage system.  Snapshot st
 
 ### -CachePinning &lt;Bool&gt;
 
-This is applicable for hybrid (a mix of flash and mechanical storage) arrays, and provides a 100 percent cache hit rate for specific volumes (for example, volumes dedicated to critical applications), and delivers the response times of an `all-flash` storage system. A volume is pinned when the entire active volume is placed in cache; associated snapshot (inactive) blocks are not pinned. All incoming data after that point is pinned. The number of volumes that can be pinned is limited by the size of the volumes and amount of available cache.
+This is applicable for hybrid (a mix of flash and mechanical storage) arrays, and provides a 100 percent cache hit rate for specific volumes (for example, volumes dedicated to critical applications), and delivers the response times of an all-flash storage system. A volume is pinned when the entire active volume is placed in cache; associated snapshot (inactive) blocks are not pinned. All incoming data after that point is pinned. The number of volumes that can be pinned is limited by the size of the volumes and amount of available cache.
 
 When defined in the Performance Profile, select to enable Cache Pinnning for the Nimble volume to be created.
 
@@ -544,11 +544,11 @@ Set to enable or disable IOPS limit.  If enabled, the `-IOPSLimit` parameter mus
 
 ### -Folder &lt;HPEOneView.Storage.NimbleFolder&gt;
 
-Specify the Nimble folder where the volume should be created.  To get availabe folder objects, use the `Get-OVStoragePool` Cmdlet.  Folders are defined as a device specific attribute. 
+Specify the Nimble folder where the volume should be created.  To get availabe folder objects, use the Get-OVStoragePool Cmdlet.  Folders are defined as a device specific attribute. 
 
 Example:
 
-     (Get-OVStoragePool `-name` default).DeviceSpecificAttributes.Folders
+     (`Get-OVStoragePool` `-name` default).DeviceSpecificAttributes.Folders
 
 ID                                         Name
 --                                         ----
@@ -576,11 +576,11 @@ When enabling IOPS limit, provide a value that is greater than or equal to 256.
 
 ### -PerformancePolicy &lt;HPEOneView.Storage.PerformancePolicy&gt;
 
-A Nimble Performance Policy is associated with a storage system.  Using the `Show-OVStorageSystemPerformancePolicy`, choose an available performance policy.
+A Nimble Performance Policy is associated with a storage system.  Using the Show-OVStorageSystemPerformancePolicy, choose an available performance policy.
 
 Example:
 
-    `Get-OVStorageSystem` `-Name` MyNimbleSys | `Show-OVStorageSystemPerformancePolicy`
+    Get-OVStorageSystem `-Name` MyNimbleSys | Show-OVStorageSystemPerformancePolicy
 
 | Aliases | None |
 | :--- | :--- |
@@ -592,7 +592,7 @@ Example:
 
 ### -VolumeSet &lt;HPEOneView.Storage.VolumeSet&gt;
 
-Use to specify a Volume Set the volume will be associated with, from `Get-OVStorageVolumeSet`.
+Use to specify a Volume Set the volume will be associated with, from Get-OVStorageVolumeSet.
 
 | Aliases | None |
 | :--- | :--- |

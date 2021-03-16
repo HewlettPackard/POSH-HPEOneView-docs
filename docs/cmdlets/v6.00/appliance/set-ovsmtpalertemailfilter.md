@@ -71,7 +71,7 @@ Create OneView Remote Support filter on the appliance.
 
 ### -InputObject &lt;Object&gt;
 
-The email alert filter from `Get-OVSmtpAlertEmailFilter`.
+The email alert filter from Get-OVSmtpAlertEmailFilter.
 
 | Aliases | None |
 | :--- | :--- |
@@ -193,7 +193,7 @@ Specify a boolean value to enable or disable the alert filter sender email addre
 
 ### -SenderEmail &lt;mailaddress&gt;
 
-Sending email address option to set `filters-specific` email sender address.
+Sending email address option to set filters-specific email sender address.
 
 | Aliases | None |
 | :--- | :--- |

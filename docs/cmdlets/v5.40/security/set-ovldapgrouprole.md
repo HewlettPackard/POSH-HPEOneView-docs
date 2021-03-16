@@ -177,7 +177,7 @@ Use this parameter if you want to provide a PSCredential object instead.
 
 Array collection of Hashtable<Role; Scope>.  Will overwrite existing scope to role mappings.  To indiate all resouroures, use 'All' as the value.
 
-Example: `-ScopePermissions` @{Role = "Network administrator"; Scope = (Get-OVScope `-Name` CorpNetAdmins `-ErrorAction` Stop) }
+Example: `-ScopePermissions` @{Role = "Network administrator"; Scope = (`Get-OVScope` `-Name` CorpNetAdmins `-ErrorAction` Stop) }
 
 | Aliases | None |
 | :--- | :--- |
