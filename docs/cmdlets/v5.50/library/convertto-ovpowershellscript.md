@@ -34,13 +34,13 @@ The following resources are supported by this Cmdlet:
     * Scopes (Get-OVScope)
     * Network (Get-OVNetwork)
     * Network Set (Get-OVNetworkSet)
-    * SAN Manager (Get-OVSanNanager)
+    * SAN Manager (Get-OVSanManager)
     * Storage System (Get-OVStorageSystem)
     * Storage Pool (Get-OVStoragePool)
     * Storage Volume Template (Get-OVStorageVolumeTemplate)
     * Storage Volume (Get-OVStorageVolume)
     * Logical Interconnect Group (Get-OVLogicalInterconnectGroup)
-    * Logical Enclosure Group (Get-OVLogicalEnclosureGroup)
+    * Enclosure Group (Get-OVEnclosureGroup)
     * Logical Enclosure (Get-OVLogicalEnclosure)
     * Server Profile Template (Get-OVServerProfileTemplate)
     * Server Profile (Get-OVServerProfile)
@@ -71,7 +71,7 @@ Resource object from supported Cmdlets.
 
 ### -Export &lt;System.IO.FileInfo&gt;
 
-Location where to write `UTF-8` file.
+Location where to write UTF-8 file.
 
 | Aliases | None |
 | :--- | :--- |

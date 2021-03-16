@@ -38,7 +38,7 @@ Name Rx Kb/s      Tx Kb/s      Rx Packets  Tx Packets  Rx Non-Unicast PPS Tx Non
 X1   5Kbps (1min) 0Kbps (1min) 6pps (1min) 0pps (1min) 6pps (1min)        0pps (1min)
 ```
 
-Displays the interface throughput statistics for X1 in a `Format-Table` display.
+Displays the interface throughput statistics for X1 in a Format-Table display.
 
 ###  Example 2 
 
@@ -59,7 +59,7 @@ MTU Exceeded Discards Rx/Tx :
 Giants Rx/Tx                :
 ```
 
-Displays the interface error statistics for X1 in a `Format-List` display.
+Displays the interface error statistics for X1 in a Format-List display.
 
 ###  Example 3 
 
@@ -67,7 +67,7 @@ Displays the interface error statistics for X1 in a `Format-List` display.
 (Get-HPOVInterconnect "Encl1, Interconnect 1").ports | ? name -eq X1 | Show-HPOVPortStatistics
 ```
 
-Pipe an Interconnect Port object to `Show-HPOVPortStatistics` and show the interface throughput statistics.
+Pipe an Interconnect Port object to Show-HPOVPortStatistics and show the interface throughput statistics.
 
 ###  Example 4 
 

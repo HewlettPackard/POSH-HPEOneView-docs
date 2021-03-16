@@ -44,7 +44,7 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 
 ### -Force &lt;SwitchParameter&gt;
 
-Force remove resource, in cases where the device manager has been `re-addressed` and is no longer accessible, or there are other communication issues preventing the resource removal.
+Force remove resource, in cases where the device manager has been re-addressed and is no longer accessible, or there are other communication issues preventing the resource removal.
 
 | Aliases | None |
 | :--- | :--- |
@@ -56,7 +56,7 @@ Force remove resource, in cases where the device manager has been `re-addressed`
 
 ### -InputObject &lt;HPEOneView.Servers.RackManager&gt;
 
-An `[HPEOneView.Servers.RackManager]` resource from `Get-OVRackManager`.
+An `[HPEOneView.Servers.RackManager]` resource from Get-OVRackManager.
 
 | Aliases | uri, name, Server |
 | :--- | :--- |
@@ -74,7 +74,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Servers.RackManager**_
 
-An HPEOneView.Servers.RackManager resource from [`Get-OVRackManager`](get-ovrackmanager.md).
+An HPEOneView.Servers.RackManager resource from Get-OVRackManager.
 
 ## Return Values
 

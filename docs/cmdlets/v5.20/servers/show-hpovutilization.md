@@ -48,7 +48,7 @@ Temperature
 
 Temperature utilization graphs display the ambient/inlet air temperature of your data center. The air temperature is detected by sensors embedded on the front of enclosures and other hardware devices.
 
-The operating threshold is 10┬░C to 35┬░C (50┬░F to 95┬░F). When the device reaches a threshold, it generates temperature alerts. The appliance displays these alerts in the notification banner and in the Activity sidebar.
+The operating threshold is 10C to 35C (50F to 95F). When the device reaches a threshold, it generates temperature alerts. The appliance generates these alerts, which can be retreived using Get-HPOVAlert, or in the notification banner and in the Activity sidebar in the appliance UI.
 
 You can see the temperature utilization data for a component within the AmbientTemperature and AmbientTemperatureAverage properties.
 
@@ -101,15 +101,15 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.ServerHardware [System.Management.Automation.PSCustomObject]**_
 
-A server hardware resource from [`Get-HPOVServer`](get-hpovserver.md).
+A server hardware resource from Get-HPOVServer.
 
 _**HPOneView.ServerProfile [System.Management.Automation.PSCustomObject]**_
 
-A server profile from [`Get-HPOVServerProfile`](get-hpovserverprofile.md) that is assigned to a physical server resource.  If the profile is not assigned to a server hardware resource, it is skipped.
+A server profile from Get-HPOVServerProfile that is assigned to a physical server resource.  If the profile is not assigned to a server hardware resource, it is skipped.
 
 _**HPOneView.Enclosure [System.Management.Automation.PSCustomObject]**_
 
-An enclosure resource from [`Get-HPOVEnclosure`](get-hpovenclosure.md).
+An enclosure resource from Get-HPOVEnclosure.
 
 ## Return Values
 

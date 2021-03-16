@@ -25,7 +25,7 @@ Remove a specific local user account from the management appliance
 Get-OVUser Sally | Remove-OVUser
 ```
 
-Retrieve "Sally" user account using `Get-OVUser`, then pipe it to `Remove-OVUser`.
+Retrieve "Sally" user account using Get-OVUser, then pipe it to Remove-OVUser.
 
 ## Parameters
 

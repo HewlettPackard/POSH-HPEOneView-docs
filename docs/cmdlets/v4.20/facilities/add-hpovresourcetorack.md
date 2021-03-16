@@ -69,7 +69,7 @@ Supported resource objects are:
 
 ### -Rack &lt;Object&gt;
 
-The Rack object from `Get-HPOVRack`.
+The Rack object from Get-HPOVRack.
 
 | Aliases | None |
 | :--- | :--- |
@@ -111,7 +111,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Facilities.Rack [System.Management.Automation.PSCustomObject]**_
 
-Rack resource object from [`Get-HPOVRack`](get-hpovrack.md).
+Rack resource object from Get-HPOVRack.
 
 ## Return Values
 

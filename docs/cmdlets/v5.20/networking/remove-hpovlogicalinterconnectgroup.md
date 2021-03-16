@@ -65,7 +65,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 
 ### -force &lt;SwitchParameter&gt;
 
-Invoke switch `force-delete` the resource when OneView can no longer communicate with the resource and removal is needed. Force remove succeeds even if there are network connectivity issues or resource errors.  `-Force` is not a PowerShell option, rather an HPE OneView API feature.  This does not override the `-Confirm` PowerShell option.
+Invoke switch force-delete the resource when OneView can no longer communicate with the resource and removal is needed. Force remove succeeds even if there are network connectivity issues or resource errors.  `-Force` is not a PowerShell option, rather an HPE OneView API feature.  This does not override the `-Confirm` PowerShell option.
 
 | Aliases | None |
 | :--- | :--- |

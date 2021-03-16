@@ -76,7 +76,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Appliance.TrustedCertificate**_
 
-A trusted certificate from [`Get-HPOVApplianceTrustedCertificate`](get-hpovappliancetrustedcertificate.md).
+A trusted certificate from Get-HPOVApplianceTrustedCertificate.
 
 ## Return Values
 

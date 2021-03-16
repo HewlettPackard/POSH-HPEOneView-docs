@@ -89,7 +89,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 
 ### -InputObject &lt;Object&gt;
 
-The server hardware or server profile resource object from `Get-HPOVServer` or `Get-HPOVServerProfile`.  If providing a server profile resource, it must be assigned to a server in order for one time boot settings to be returned.
+The server hardware or server profile resource object from Get-HPOVServer or Get-HPOVServerProfile.  If providing a server profile resource, it must be assigned to a server in order for one time boot settings to be returned.
 
 | Aliases | Server |
 | :--- | :--- |
@@ -149,11 +149,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Servers.ServerHardware [System.Management.Automation.PSCustomObject]**_
 
-Server hardware resource object from [`Get-HPOVServer`](get-hpovserver.md).
+Server hardware resource object from Get-HPOVServer.
 
 _**HPOneView.ServerProfile [System.Management.Automation.PSCustomObject]**_
 
-Server profile resource object from [`Get-HPOVServerProfile`](get-hpovserverprofile.md).
+Server profile resource object from Get-HPOVServerProfile.
 
 ## Return Values
 

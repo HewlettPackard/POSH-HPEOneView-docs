@@ -126,7 +126,7 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 
 ### -Https &lt;SwitchParameter&gt;
 
-Specify if target proxy server requires HTTPS.  The target SSL/TSL certificate must be added to the appliance using the `Add-OVApplianceTrustedCertificate` Cmdlet.
+Specify if target proxy server requires HTTPS.  The target SSL/TSL certificate must be added to the appliance using the Add-OVApplianceTrustedCertificate Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |

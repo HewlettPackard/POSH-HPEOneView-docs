@@ -44,7 +44,7 @@ Remove Datacenter resources from the appliance.
 
 ### -InputObject &lt;Object&gt;
 
-Datacenter object, from `Get-HPOVDataCenter`.
+Datacenter object, from Get-HPOVDataCenter.
 
 | Aliases | None |
 | :--- | :--- |
@@ -78,7 +78,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Facilities.DataCenter**_
 
-Datacenter resource from [`Get-HPOVDataCenter`](get-hpovdatacenter.md).
+Datacenter resource from Get-HPOVDataCenter.
 
 
 ## Return Values

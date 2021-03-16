@@ -94,7 +94,7 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 _**HPOneView.Appliance.Backup**_
 
-Created backup resource from the appliance that was created with [`New-HPOVBackup`](new-hpovbackup.md).
+Created backup resource from the appliance that was created with New-HPOVBackup.
 
 
 ## Related Links

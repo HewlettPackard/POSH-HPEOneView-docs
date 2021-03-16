@@ -100,7 +100,7 @@ New-HPOVServerProfileConnection
 
 ## Description
 
-A helper function to assist with connections when creating (New-HPOVServerProfile) or editing (Set-HPOVProfile) a server profile.
+A helper function to assist with connections when creating (New-HPOVServerProfile) or editing (Set-HPOVServerProfile) a server profile.
 
 ## Examples
 
@@ -224,7 +224,7 @@ Deprecated parameter.  Connection type is now derived from the provided Network 
 
 ### -Network &lt;Object&gt;
 
-The Network (Ethernet or Fibre Channel) or Network Set resource object to be used with this connection.  Can either be the Name, URI, or object obtained with `Get-HPOVNetwork` or `Get-HPOVNetworkSet`.
+The Network (Ethernet or Fibre Channel) or Network Set resource object to be used with this connection.  Can either be the Name, URI, or object obtained with Get-HPOVNetwork or Get-HPOVNetworkSet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -583,7 +583,7 @@ The CHAP challange name.
 
 ### -ChapSecret &lt;SecureString&gt;
 
-The CHAP challange secret.  Accepts ASCII or HEX values.  If providing an ASCII secret value, the length must be bewteen 12 and 16 characters.  If HEX, it must start with 0x and with `24-32` characters.  Value is ignored when creating a Connection for a Server Profile Template.
+The CHAP challange secret.  Accepts ASCII or HEX values.  If providing an ASCII secret value, the length must be bewteen 12 and 16 characters.  If HEX, it must start with 0x and with 24-32 characters.  Value is ignored when creating a Connection for a Server Profile Template.
 
 | Aliases | None |
 | :--- | :--- |
@@ -607,7 +607,7 @@ The Mutual CHAP challange.
 
 ### -MutualChapSecret &lt;SecureString&gt;
 
-The Mutual CHAP challange secret.  Accepts ASCII or HEX values.  If providing an ASCII secret value, the length must be bewteen 12 and 16 characters.  If HEX, it must start with 0x and with `24-32` characters.  Value is ignored when creating a Connection for a Server Profile Template.
+The Mutual CHAP challange secret.  Accepts ASCII or HEX values.  If providing an ASCII secret value, the length must be bewteen 12 and 16 characters.  If HEX, it must start with 0x and with 24-32 characters.  Value is ignored when creating a Connection for a Server Profile Template.
 
 | Aliases | None |
 | :--- | :--- |
@@ -653,7 +653,7 @@ _**None.  You cannot pipe objects to this cmdlet.**_
 
 _**System.Management.Automation.PSCustomObject**_
 
-Returns a connection object which may be used during profile creation with the [`New-HPOVServerProfile`](new-hpovserverprofile.md) CMDLET
+Returns a connection object which may be used during profile creation with the New-HPOVServerProfile CMDLET
 
 ## Related Links
 

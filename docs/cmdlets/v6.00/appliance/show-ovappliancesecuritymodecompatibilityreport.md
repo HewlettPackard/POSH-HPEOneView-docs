@@ -53,7 +53,7 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 
 ### -TargetSecurityMode &lt;HPEOneView.Appliance.SecurityMode&gt;
 
-Specify the target security mode to test resources from `Get-OVApplianceAvailableSecurityMode`.
+Specify the target security mode to test resources from Get-OVApplianceAvailableSecurityMode.
 
 | Aliases | None |
 | :--- | :--- |
@@ -83,7 +83,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Appliance.SecurityMode**_
 
-Available security mode from [`Get-OVApplianceAvailableSecurityMode`](get-ovapplianceavailablesecuritymode.md).
+Available security mode from Get-OVApplianceAvailableSecurityMode.
 
 ## Return Values
 

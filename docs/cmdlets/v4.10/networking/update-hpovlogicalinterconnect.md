@@ -36,7 +36,7 @@ Wait-HPOVTaskComplete $task
 
 ```
 
-Perform an update of the `Encl1-LI` Logical Interconnect.  Will be prompted for confirmation.
+Perform an update of the Encl1-LI Logical Interconnect.  Will be prompted for confirmation.
 
 ###  Example 2 
 
@@ -45,7 +45,7 @@ $task = Update-HPOVLogicalInterconnect -name Encl1-LI -confirm:$false | Wait-HPO
 
 ```
 
-Perform an update of the `Encl1-LI` Logical Interconnect.  Disable confirmation prompt.
+Perform an update of the Encl1-LI Logical Interconnect.  Disable confirmation prompt.
 
 ###  Example 3 
 

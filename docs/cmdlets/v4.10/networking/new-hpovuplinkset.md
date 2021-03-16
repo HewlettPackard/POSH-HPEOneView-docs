@@ -120,7 +120,7 @@ Create a Synergy ImageStreamer Uplink Set.
 ### -InputObject &lt;Object&gt;
 
 Aliases [-li, `-lig`]
-Either a Logical Interconnect Group (Get-HPOVLogicalInterconnectGroup) or Logical Interconnect (Get-HPOVLogicalInterconnect) resource object.
+Either a Logical Interconnect Group (`Get-HPOVLogicalInterconnectGroup`) or Logical Interconnect (`Get-HPOVLogicalInterconnect`) resource object.
 
 | Aliases | li, lig, ligName, Resource |
 | :--- | :--- |
@@ -198,9 +198,9 @@ Array of uplink ports with "BAYID:FacePlatePortID".  When configuring a Synergy 
 FlexFabric `[e.g]`. @("BAY1:X1","BAY1:X2") or "BAY1:X5","BAY2:X5"
 VC Fibre Channel `[e.g]`. @("BAY3:1","BAY3:2") or "BAY3:1","BAY3:2"
 Synergy VC Ethernet `[e.g]`. "Enclosure1:Bay3:Q1","Enclosure1:Bay3:Q2","Enclosure2:Bay6:Q1","Enclosure2:Bay6:Q2"
-Synergy VC `Sub-Interface` `[e.g]`. "Enclosure1:Bay3:Q1.1","Enclosure1:Bay3:Q2.1","Enclosure2:Bay6:Q1.2","Enclosure2:Bay6:Q2.2"
+Synergy VC Sub-Interface `[e.g]`. "Enclosure1:Bay3:Q1.1","Enclosure1:Bay3:Q2.1","Enclosure2:Bay6:Q1.2","Enclosure2:Bay6:Q2.2"
 Synergy VC FC Primary Port `[e.g]`. "Bay2:Q1","Bay2:Q2" or "Bay5:Q1","Bay5:Q2"
-Synergy VC FC `Sub-Interface` `[e.g]`. "Bay2:Q1.1","Bay2:Q2.1" or "Bay5:Q1.2","Bay5:Q2.2"
+Synergy VC FC Sub-Interface `[e.g]`. "Bay2:Q1.1","Bay2:Q2.1" or "Bay5:Q1.2","Bay5:Q2.2"
 
 | Aliases | usUplinkPorts |
 | :--- | :--- |
@@ -320,12 +320,12 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Networking.LogicalInterconnect [System.Management.Automation.PSCustomObject]**_
 
-Logical Interconnect Resource from [`Get-HPOVLogicalInterconnect`](get-hpovlogicalinterconnect.md)
+Logical Interconnect Resource from Get-HPOVLogicalInterconnect
 
 
 _**HPOneView.Networking.LogicalInterconnectGroup [System.Management.Automation.PSCustomObject]**_
 
-Logical Interconnect Group Resource from [`Get-HPOVLogicalInterconnectGroup`](get-hpovlogicalinterconnectgroup.md)
+Logical Interconnect Group Resource from Get-HPOVLogicalInterconnectGroup
 
 
 ## Return Values

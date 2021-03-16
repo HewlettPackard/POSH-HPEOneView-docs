@@ -116,7 +116,7 @@ $storagePool = Get-OVStoragePool R5-CPG12
 $storageVolTemplate = New-OVStorageVolumeTemplate -templateName vmware-shared-svt -storagePool $storagePool -capacity 250 -shared
 ```
 
-Use the `Get-OVStoragePool` Cmdlet to get the "R5-CPG12" pool, and create a new Storage Volume Template, setting the max size to 250GB, Thin Provisioning and Shareable.
+Use the Get-OVStoragePool Cmdlet to get the "R5-CPG12" pool, and create a new Storage Volume Template, setting the max size to 250GB, Thin Provisioning and Shareable.
 
 ###  Example 4 
 
@@ -124,7 +124,7 @@ Use the `Get-OVStoragePool` Cmdlet to get the "R5-CPG12" pool, and create a new 
 $svt = Get-OVStoragePool R5-CPG12 | New-OVStorageVolumeTemplate -templateName vmware-shared-svt -SnapshotStoragePool "MySnapShotPool" -capacity 250 -shared
 ```
 
-Use the `Get-OVStoragePool` Cmdlet to get the "R5-CPG12" pool, and create a new Storage Volume Template, setting the max size to 250GB, Thin Provisioning, Shareable, and providing the Snapshot Storage Pool.
+Use the Get-OVStoragePool Cmdlet to get the "R5-CPG12" pool, and create a new Storage Volume Template, setting the max size to 250GB, Thin Provisioning, Shareable, and providing the Snapshot Storage Pool.
 
 ## Parameters
 
@@ -375,7 +375,7 @@ Specify one `[HPEOneView.Appliance.Connection]` object or Name property value. I
 
 ### -Scope &lt;HPEOneView.Appliance.ScopeCollection[]&gt;
 
-Provide an `[HPEOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-OVResourceToScope` Cmdlet.
+Provide an `[HPEOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the Add-OVResourceToScope Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -399,7 +399,7 @@ Enable compression for StoreServe (3PAR) supported resources. Please verify the 
 
 ### -EnableDeduplication &lt;Boolean&gt;
 
-Enable deduplication for `SSD-based` Storage Pools (CPG).
+Enable deduplication for SSD-based Storage Pools (CPG).
 
 | Aliases | None |
 | :--- | :--- |
@@ -435,7 +435,7 @@ Lock the EnableCompression value.
 
 ### -CachePinning &lt;Bool&gt;
 
-This is applicable for hybrid (a mix of flash and mechanical storage) arrays, and provides a 100 percent cache hit rate for specific volumes (for example, volumes dedicated to critical applications), and delivers the response times of an `all-flash` storage system. A volume is pinned when the entire active volume is placed in cache; associated snapshot (inactive) blocks are not pinned. All incoming data after that point is pinned. The number of volumes that can be pinned is limited by the size of the volumes and amount of available cache.
+This is applicable for hybrid (a mix of flash and mechanical storage) arrays, and provides a 100 percent cache hit rate for specific volumes (for example, volumes dedicated to critical applications), and delivers the response times of an all-flash storage system. A volume is pinned when the entire active volume is placed in cache; associated snapshot (inactive) blocks are not pinned. All incoming data after that point is pinned. The number of volumes that can be pinned is limited by the size of the volumes and amount of available cache.
 
 When defined in the Performance Profile, select to enable Cache Pinnning for the Nimble volume to be created.
 
@@ -497,11 +497,11 @@ Set to enable or disable IOPS limit.  If enabled, the `-IOPSLimit` parameter mus
 
 ### -Folder &lt;HPEOneView.Storage.NimbleFolder&gt;
 
-Specify the Nimble folder where the volume should be created.  To get availabe folder objects, use the `Get-OVStoragePool` Cmdlet.  Folders are defined as a device specific attribute. 
+Specify the Nimble folder where the volume should be created.  To get availabe folder objects, use the Get-OVStoragePool Cmdlet.  Folders are defined as a device specific attribute. 
 
 Example:
 
-     (Get-OVStoragePool `-name` default).DeviceSpecificAttributes.Folders
+     (`Get-OVStoragePool` `-name` default).DeviceSpecificAttributes.Folders
 
 ID                                         Name
 --                                         ----
@@ -529,11 +529,11 @@ When enabling IOPS limit, provide a value that is greater than or equal to 256.
 
 ### -PerformancePolicy &lt;HPEOneView.Storage.PerformancePolicy&gt;
 
-A Nimble Performance Policy is associated with a storage system.  Using the `Show-OVStorageSystemPerformancePolicy`, choose an available performance policy.
+A Nimble Performance Policy is associated with a storage system.  Using the Show-OVStorageSystemPerformancePolicy, choose an available performance policy.
 
 Example:
 
-    `Get-OVStorageSystem` `-Name` MyNimbleSys | `Show-OVStorageSystemPerformancePolicy`
+    Get-OVStorageSystem `-Name` MyNimbleSys | Show-OVStorageSystemPerformancePolicy
 
 | Aliases | None |
 | :--- | :--- |
@@ -545,7 +545,7 @@ Example:
 
 ### -VolumeSet &lt;HPEOneView.Storage.VolumeSet&gt;
 
-Use to specify a Volume Set the volume will be associated with, from `Get-OVStorageVolumeSet`.
+Use to specify a Volume Set the volume will be associated with, from Get-OVStorageVolumeSet.
 
 | Aliases | None |
 | :--- | :--- |

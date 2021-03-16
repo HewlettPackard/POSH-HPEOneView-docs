@@ -30,7 +30,7 @@ New-HPOVClusterProfileMember -InputObject $Server
 
 ```
 
-Create a basic add host object for `New-HPOVClusterProfile`.
+Create a basic add host object for New-HPOVClusterProfile.
 
 ###  Example 2 
 
@@ -40,7 +40,7 @@ New-HPOVClusterProfileMember -InputObject $Server -IPAddress 192.168.10.1
 
 ```
 
-Create anadd host object for `New-HPOVClusterProfile` and specify its managmenet IP Address if the associated Server Profile Template management network is not associated with an IP Address Pool.
+Create anadd host object for New-HPOVClusterProfile and specify its managmenet IP Address if the associated Server Profile Template management network is not associated with an IP Address Pool.
 
 ###  Example 3 
 
@@ -53,7 +53,7 @@ New-HPOVClusterProfileMember -InputObject $Server -IPAddress 192.168.10.1 -OSDep
 
 ```
 
-Create a basic add host object for `New-HPOVClusterProfile`.
+Create a basic add host object for New-HPOVClusterProfile.
 
 ## Parameters
 
@@ -83,7 +83,7 @@ A server hardware resource
 
 ### -OSDeploymentAttributes &lt;OSDeploymentParameter[]&gt;
 
-Configured OS Deployment Plan parameters from `Get-HPOVOSDeploymentPlanAttribute`.  Only applicable for HPE Synergy Image Streamer deployment.
+Configured OS Deployment Plan parameters from Get-HPOVOSDeploymentPlanAttribute.  Only applicable for HPE Synergy Image Streamer deployment.
 
 | Aliases | None |
 | :--- | :--- |
@@ -107,7 +107,7 @@ An available server hardware resource.
 
 _**HPOneView.Cluster.AddHostRequest**_
 
-Properly formatted object for [`New-HPOVClusterProfile`](new-hpovclusterprofile.md).
+Properly formatted object for New-HPOVClusterProfile.
 
 
 ## Related Links

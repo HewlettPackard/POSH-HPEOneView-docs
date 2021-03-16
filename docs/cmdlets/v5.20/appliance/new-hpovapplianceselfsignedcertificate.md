@@ -52,7 +52,7 @@ Generate self signed Certificate for the appliance.
 
 ### -Country &lt;String&gt;
 
-The country code in either Full English or `ISO3166-2` `two-character` format, is a required entry and must contain only two letters.
+The country code in either Full English or ISO3166-2 two-character format, is a required entry and must contain only two letters.
 
 | Aliases | C |
 | :--- | :--- |
@@ -126,7 +126,7 @@ The entry for the organizational unit name, may not exceed 64 characters.
 
 ### -AlternativeName &lt;String&gt;
 
-An optional entry containing additional names that apply to the owner of the certificate, possibly including additional `e-mail` addresses, DNS names, IP addresses and other identifiers. 
+An optional entry containing additional names that apply to the owner of the certificate, possibly including additional e-mail addresses, DNS names, IP addresses and other identifiers. 
 
 Example: "hpov.example.com,hpov,192.168.1.1"
 

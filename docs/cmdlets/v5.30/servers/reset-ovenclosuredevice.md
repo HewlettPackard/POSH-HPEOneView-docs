@@ -85,7 +85,7 @@ Reset the appliance device in bay 1 by performing an EFuse.
 
 ### -Enclosure &lt;Object&gt;
 
-The Synergy Frame resource from `Get-OVEnclosure`.
+The Synergy Frame resource from Get-OVEnclosure.
 
 | Aliases | None |
 | :--- | :--- |
@@ -206,7 +206,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Enclosure**_
 
-Resource from [`Get-OVEnclosure`](get-ovenclosure.md).
+Resource from Get-OVEnclosure.
 
 ## Return Values
 

@@ -45,8 +45,8 @@ Create a new QOS Configuration object,and use the created object to add to a new
 The QOS Configuration Type.  Allowed values are:
 
 	* Passthrough (Default) - All ingress packets are not classified at egress. FCoE packets having a separate PG (Priority Group) are processed at ingress. There are no traffic classes, maps, or rules applied. Passthrough mode is equivalent to no QoS (QoS disabled).
-	* CustomNoFCoE          - Enables QoS and allows a customized configuration without FCoE. The configuration defines one system class (Best Effort). You can configure up to seven additional classes for `non-FCoE` Ethernet traffic.
-	* CustomWithFCoE        - Enables QoS and allows a customized configuration that includes FCoE class. The configuration defines two default system classes, Best Effort and FCoE Lossless. FCoE Lossless class cannot be edited by the user and is `pre-configured` for 50% bandwidth of the port. You can also configure up to six additional classes for `non-FCoE` Ethernet traffic.
+	* CustomNoFCoE          - Enables QoS and allows a customized configuration without FCoE. The configuration defines one system class (Best Effort). You can configure up to seven additional classes for non-FCoE Ethernet traffic.
+	* CustomWithFCoE        - Enables QoS and allows a customized configuration that includes FCoE class. The configuration defines two default system classes, Best Effort and FCoE Lossless. FCoE Lossless class cannot be edited by the user and is pre-configured for 50% bandwidth of the port. You can also configure up to six additional classes for non-FCoE Ethernet traffic.
 
 | Aliases | None |
 | :--- | :--- |
@@ -90,7 +90,7 @@ Configure the Downlink QOS Marking classification type.
 
 ### -TrafficClassifiers &lt;ArrayList&gt;
 
-A collection of traffic classes created using the `New-HPOVQosTrafficClass`.
+A collection of traffic classes created using the New-HPOVQosTrafficClass.
 
 | Aliases | None |
 | :--- | :--- |

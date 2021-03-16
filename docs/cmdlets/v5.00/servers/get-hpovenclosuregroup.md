@@ -82,7 +82,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 
 ### -exportFile &lt;String&gt;
 
-Full path and file name to save the output of `Get-HPOVEnclosureGroup`
+Full path and file name to save the output of Get-HPOVEnclosureGroup
 
 | Aliases | x, export |
 | :--- | :--- |

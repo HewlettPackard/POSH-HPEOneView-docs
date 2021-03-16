@@ -53,7 +53,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 
 ### -TargetSecurityMode &lt;HPOneView.Appliance.SecurityMode&gt;
 
-Specify the target security mode to test resources from `Get-HPOVApplianceAvailableSecurityMode`.
+Specify the target security mode to test resources from Get-HPOVApplianceAvailableSecurityMode.
 
 | Aliases | None |
 | :--- | :--- |
@@ -83,7 +83,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Appliance.SecurityMode**_
 
-Available security mode from [`Get-HPOVApplianceAvailableSecurityMode`](get-hpovapplianceavailablesecuritymode.md).
+Available security mode from Get-HPOVApplianceAvailableSecurityMode.
 
 ## Return Values
 

@@ -26,7 +26,7 @@ Disable-HPOVMSDSC
 
 ```
 
-Configures Registry value to no longer overload `Write-Host`.
+Configures Registry value to no longer overload Write-Host.
 
 ## Parameters
 

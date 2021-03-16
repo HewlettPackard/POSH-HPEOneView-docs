@@ -314,7 +314,7 @@ Specify one `[HPEOneView.Appliance.Connection]` object or Name property value. I
 
 ### -OACredential &lt;PSCredential&gt;
 
-PSCredential object containing the username and password details for the `c-Class` Onboard Administrator.
+PSCredential object containing the username and password details for the c-Class Onboard Administrator.
 
 | Aliases | None |
 | :--- | :--- |
@@ -326,7 +326,7 @@ PSCredential object containing the username and password details for the `c-Clas
 
 ### -VCMCredential &lt;PSCredential&gt;
 
-PSCredential object containing the username and password details for the `c-Class` Virtual Connect Manager.
+PSCredential object containing the username and password details for the c-Class Virtual Connect Manager.
 
 | Aliases | None |
 | :--- | :--- |

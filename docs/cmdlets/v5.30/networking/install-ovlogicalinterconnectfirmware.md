@@ -107,7 +107,7 @@ $task = Install-OVLogicalInterconnectFirmware -Method Activate -InputObject $li
 Wait-OVTaskComplete $task
 ```
 
-Perform a firmware update of the `Encl1-LI` Logical Interconnect by first staging the firmware. Then Acitate the firmware using the default OddEven Interconnect Bay order.
+Perform a firmware update of the Encl1-LI Logical Interconnect by first staging the firmware. Then Acitate the firmware using the default OddEven Interconnect Bay order.
 
 ###  Example 2 
 
@@ -115,7 +115,7 @@ Perform a firmware update of the `Encl1-LI` Logical Interconnect by first stagin
 Get-OVLogicalInterconnect -Name Encl1-LI | Install-OVLogicalInterconnectFirmware -Method Update -Baseline (Get-OVBaseline -Name "HPE Service Pack for ProLiant") -Confirm:$false | Wait-OVTaskComplete
 ```
 
-Perform a firmware update of the `Encl1-LI` Logical Interconnect, do not prompt for confirmation, then wait for the task to complete.
+Perform a firmware update of the Encl1-LI Logical Interconnect, do not prompt for confirmation, then wait for the task to complete.
 
 ###  Example 3 
 
@@ -137,7 +137,7 @@ Find active firmware update alert, and then activate the staged firmware on the 
 
 ### -InputObject &lt;Object&gt;
 
-The Logical Interconnect object(s) from `Get-OVLogicalInterconnect` or `Get-OVSasLogicalInterconnect` Cmdlets to be updated.
+The Logical Interconnect object(s) from Get-OVLogicalInterconnect or Get-OVSasLogicalInterconnect Cmdlets to be updated.
 
 | Aliases | LogicalInterconnect, name, uri, li |
 | :--- | :--- |

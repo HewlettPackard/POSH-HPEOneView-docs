@@ -109,7 +109,7 @@ Specify the target `[HPOneView.EnclosureGroup]` resource object.  By changing th
 
 ### -InputObject &lt;Object&gt;
 
-The `[HPOneView.ServerProfileTemplate]` object from `Get-HPOVServerProfileTemplate`.
+The `[HPOneView.ServerProfileTemplate]` object from Get-HPOVServerProfileTemplate.
 
 | Aliases | ServerProfileTemplate, SPT |
 | :--- | :--- |

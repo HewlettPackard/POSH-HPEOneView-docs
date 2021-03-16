@@ -31,7 +31,7 @@ Remove the specified remote support partner from the appliance.
 
 ### -InputObject &lt;Object&gt;
 
-Remote Suport partner resource object, from `Get-OVRemoteSupportPartner`.
+Remote Suport partner resource object, from Get-OVRemoteSupportPartner.
 
 | Aliases | Partner |
 | :--- | :--- |
@@ -61,7 +61,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Appliance.RemoteSupport.Partner [System.Management.Automation.PSCustomObject]**_
 
-Remote Suport partner resource from [`Get-OVRemoteSupportPartner`](get-ovremotesupportpartner.md).
+Remote Suport partner resource from Get-OVRemoteSupportPartner.
 
 ## Return Values
 

@@ -186,7 +186,7 @@ Update the vCenter hostname or IP Address.
 
 ### -InputObject &lt;HPOneView.Cluster.HypervisorManager&gt;
 
-The `[HPOneView.Cluster.HypervisorManager]` resource from `Get-HPOVClusterManager`.
+The `[HPOneView.Cluster.HypervisorManager]` resource from Get-HPOVClusterManager.
 
 | Aliases | Name |
 | :--- | :--- |
@@ -198,7 +198,7 @@ The `[HPOneView.Cluster.HypervisorManager]` resource from `Get-HPOVClusterManage
 
 ### -MultiNicVMotionEnabled &lt;bool&gt;
 
-Configures VMware `Multi-NIC` vMotion on hypervisors when there are multiple NICs to VM Migration network. Enable `Multi-NIC` vMotion to load balance a single or multiple vMotion transmissions over multiple physical NICs.
+Configures VMware Multi-NIC vMotion on hypervisors when there are multiple NICs to VM Migration network. Enable Multi-NIC vMotion to load balance a single or multiple vMotion transmissions over multiple physical NICs.
 
 | Aliases | None |
 | :--- | :--- |
@@ -243,7 +243,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Cluster.HypervisorManager**_
 
-The hypervisor manager from [`Get-HPOVClusterManager`](get-hpovclustermanager.md).
+The hypervisor manager from Get-HPOVClusterManager.
 
 ## Return Values
 

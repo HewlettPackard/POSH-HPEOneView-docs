@@ -197,7 +197,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 
 ### -Scope &lt;HPOneView.Appliance.ScopeCollection&gt;
 
-Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
+Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the Add-HPOVResourceToScope Cmdlet.
 
 | Aliases |  |
 | :--- | :--- |
@@ -221,7 +221,7 @@ Provide the alternate SNMP trap reciever port.
 
 ### -SnmpV3User &lt;HPOneView.Appliance.SnmpV3User&gt;
 
-A valid SNMPv3 user from `New-HPOVSnmpV3User`.
+A valid SNMPv3 user from New-HPOVSnmpV3User.
 
 | Aliases | None |
 | :--- | :--- |

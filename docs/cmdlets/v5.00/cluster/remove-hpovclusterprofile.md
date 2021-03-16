@@ -71,7 +71,7 @@ Force delete the resource.
 
 ### -InputObject &lt;Object&gt;
 
-The cluster profile from `Get-HPOVClusterProfile`.
+The cluster profile from Get-HPOVClusterProfile.
 
 | Aliases | None |
 | :--- | :--- |
@@ -89,7 +89,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Cluster.ClusterProfile [System.Management.Automation.PSCustomObject]**_
 
-Cluster profile resource from [`Get-HPOVClusterProfile`](get-hpovclusterprofile.md).
+Cluster profile resource from Get-HPOVClusterProfile.
 
 ## Return Values
 

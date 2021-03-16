@@ -81,11 +81,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Storage.SASLogicalInterconnect**_
 
-A SAS Logical Interconnect resource from [`Get-OVSasLogicalInterconnect`](../networking/get-ovsaslogicalinterconnect.md) Cmdlet.
+A SAS Logical Interconnect resource from Get-OVSasLogicalInterconnect Cmdlet.
 
 _**HPEOneView.Storage.DiskEnclosure**_
 
-A D3940 Drive Enclosure from [`Get-OVSasLogicalInterconnect`](../networking/get-ovsaslogicalinterconnect.md) Cmdlet.
+A D3940 Drive Enclosure from Get-OVSasLogicalInterconnect Cmdlet.
 
 ## Return Values
 

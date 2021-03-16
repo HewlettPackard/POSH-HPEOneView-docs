@@ -104,7 +104,7 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 
 ### -Export &lt;String&gt;
 
-The full path and file name to export the contents retrieved from the call to `Get-OVLogicalInterconnect`.
+The full path and file name to export the contents retrieved from the call to Get-OVLogicalInterconnect.
 
 | Aliases | x, ExportFile |
 | :--- | :--- |
@@ -126,7 +126,7 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 _**HPEOneView.Storage.SasLogicalInterconnect [System.Management.Automation.PSCustomObject]**_
 
-Logical Interconnect resource object from [`Get-OVLogicalInterconnect`](get-ovlogicalinterconnect.md)
+Logical Interconnect resource object from Get-OVLogicalInterconnect
 
 _**System.Collections.ArrayList <HPEOneView.Storage.SasLogicalInterconnect>    **_
 

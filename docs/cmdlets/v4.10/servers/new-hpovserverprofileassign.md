@@ -108,7 +108,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 
 ### -Scope &lt;HPOneView.Appliance.ScopeCollection&gt;
 
-Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
+Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the Add-HPOVResourceToScope Cmdlet.
 
 | Aliases |  |
 | :--- | :--- |
@@ -150,7 +150,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**System.Management.Automation.PSCustomObject**_
 
-Server Profile resource object from [`Get-HPOVServerProfile`](get-hpovserverprofile.md)
+Server Profile resource object from Get-HPOVServerProfile
 
 ## Return Values
 

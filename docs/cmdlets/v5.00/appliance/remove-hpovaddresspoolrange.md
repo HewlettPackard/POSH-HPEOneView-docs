@@ -69,7 +69,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Appliance.AddressPoolRange [System.Management.Automation.PSCustomObject]**_
 
-address pool range from [`Get-HPOVAddressPoolRange`](get-hpovaddresspoolrange.md)
+address pool range from Get-HPOVAddressPoolRange
 
 ## Return Values
 

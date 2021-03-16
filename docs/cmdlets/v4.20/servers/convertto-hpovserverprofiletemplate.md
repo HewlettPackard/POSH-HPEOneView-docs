@@ -36,7 +36,7 @@ Get-HPOVServerProfile MyProfile | ConvertTo-HPOVServerProfileTemplate -Name "Hyp
 
 ```
 
-Use `Get-HPOVServerProfile` to retrieve the "MyProfile" object, and pipe it to `ConvertTo-HPOVServerProfileTemplate`, creating a new Server Profile Template "Hyervisor Gold Template 1".
+Use Get-HPOVServerProfile to retrieve the "MyProfile" object, and pipe it to ConvertTo-HPOVServerProfileTemplate, creating a new Server Profile Template "Hyervisor Gold Template 1".
 
 ## Parameters
 
@@ -108,7 +108,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.ServerProfile [System.Management.Automation.PSCustomObject]**_
 
-A Server Profile resource object from [`Get-HPOVServerProfile`](get-hpovserverprofile.md).
+A Server Profile resource object from Get-HPOVServerProfile.
 
 _**System.Collections.ArrayList**_
 

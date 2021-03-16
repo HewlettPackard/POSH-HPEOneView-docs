@@ -80,7 +80,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 ### -exportFile &lt;String&gt;
 
 Aliases [-x, `-export`]
-Full path and file name to save the output of `Get-HPOVEnclosureGroup`
+Full path and file name to save the output of Get-HPOVEnclosureGroup
 
 | Aliases | x, export |
 | :--- | :--- |

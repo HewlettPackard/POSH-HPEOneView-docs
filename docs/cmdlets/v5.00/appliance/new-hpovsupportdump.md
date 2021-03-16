@@ -90,7 +90,7 @@ Use this parameter for the appliance to encrypt the Support Dump.  Only HPE Supp
 
 ### -InputObject &lt;Object&gt;
 
-When the support dump type is LogicalEnclosure, the logical enclosure resource must be passed from `Get-HPOVLogicalEnclosure` as a parameter value or pipeline.
+When the support dump type is LogicalEnclosure, the logical enclosure resource must be passed from Get-HPOVLogicalEnclosure as a parameter value or pipeline.
 
 | Aliases | liobject, li, name, LogicalEnclosure |
 | :--- | :--- |
@@ -122,7 +122,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Networking.LogicalInterconnect**_
 
-Accepts pipeline input from [`Get-HPOVLogicalInterconnect`](../networking/get-hpovlogicalinterconnect.md) only.
+Accepts pipeline input from Get-HPOVLogicalInterconnect only.
 
 ## Return Values
 

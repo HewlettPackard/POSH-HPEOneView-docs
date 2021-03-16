@@ -144,7 +144,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 
 ### -AvailableDriveType &lt;HPOneView.Storage.AvailableDriveType&gt;
 
-When attempting to create a logical JBOD, specify the availabe drive type from `Get-HPOVAvailableDriveType`.
+When attempting to create a logical JBOD, specify the availabe drive type from Get-HPOVAvailableDriveType.
 
 | Aliases | None |
 | :--- | :--- |
@@ -191,7 +191,7 @@ Auto is not supported when attempting to create an HPE Synergy D3940 Logical or 
 
 ### -Drives &lt;HPOneView.Storage.Drive[]&gt;
 
-Provide the specific drives to assign to the logical JBOD.  Use the `Get-HPOVDriveEnclosureInventory` Cmdlet to identify the drives you wish to allocate to the new logical JBOD resource.  Drives can be allocated from different HPE Synergy drive enclosures, but must reside within the same SAS Logical Interconnect.
+Provide the specific drives to assign to the logical JBOD.  Use the Get-HPOVDriveEnclosureInventory Cmdlet to identify the drives you wish to allocate to the new logical JBOD resource.  Drives can be allocated from different HPE Synergy drive enclosures, but must reside within the same SAS Logical Interconnect.
 
 | Aliases | None |
 | :--- | :--- |
@@ -275,7 +275,7 @@ When attempting to create a logical JBOD, you can specify the min and max drive 
 
 ### -Scope &lt;Object&gt;
 
-Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
+Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the Add-HPOVResourceToScope Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -293,7 +293,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Storage.AvailableDriveType**_
 
-The available drive type from [`Get-HPOVAvailableDriveType`](get-hpovavailabledrivetype.md)
+The available drive type from Get-HPOVAvailableDriveType
 
 ## Return Values
 

@@ -31,7 +31,7 @@ Default example
 
 ### -InputObject &lt;Object&gt;
 
-One or more storage systems from `Get-HPOVStorageSystem`.
+One or more storage systems from Get-HPOVStorageSystem.
 
 | Aliases | None |
 | :--- | :--- |

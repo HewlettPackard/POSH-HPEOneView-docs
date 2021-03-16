@@ -130,7 +130,7 @@ Re-apply Baseline.  If setting is Firmware only, the associated server hardware 
 
 ### -Connections &lt;SwitchParameter&gt;
 
-Re-apply Vitual Connect connections.  Will `re-provision` downlink ports and connection templates for the provided server profile.
+Re-apply Vitual Connect connections.  Will re-provision downlink ports and connection templates for the provided server profile.
 
 | Aliases | None |
 | :--- | :--- |

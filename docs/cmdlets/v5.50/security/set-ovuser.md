@@ -211,7 +211,7 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 
 Array collection of Hashtable<Role; Scope>.  Will overwrite existing scope to role mappings.
 
-Example: `-ScopePermissions` @{Role = "Network administrator"; Scope = (Get-OVScope `-Name` CorpNetAdmins `-ErrorAction` Stop) }
+Example: `-ScopePermissions` @{Role = "Network administrator"; Scope = (`Get-OVScope` `-Name` CorpNetAdmins `-ErrorAction` Stop) }
 
 | Aliases | None |
 | :--- | :--- |

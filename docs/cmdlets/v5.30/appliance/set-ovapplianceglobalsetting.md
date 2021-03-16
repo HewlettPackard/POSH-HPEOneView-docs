@@ -42,7 +42,7 @@ Returns the "alertMax" setting object with the updated value of 75000
 
 Aliases [-Object]
 
-The Appliance Global Setting object from `Get-OVApplianceGlobalSetting`.
+The Appliance Global Setting object from Get-OVApplianceGlobalSetting.
 
 | Aliases | Object |
 | :--- | :--- |
@@ -96,7 +96,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Appliance.GlobalSetting**_
 
-Appliance global setting from [`Get-OVApplianceGlobalSetting`](get-ovapplianceglobalsetting.md).
+Appliance global setting from Get-OVApplianceGlobalSetting.
 
 ## Return Values
 

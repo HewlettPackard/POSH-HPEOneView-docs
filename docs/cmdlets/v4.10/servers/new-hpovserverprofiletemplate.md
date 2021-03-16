@@ -138,7 +138,7 @@ New-HPOVServerProfileTemplate @params | Wait-HPOVTaskComplete
 
 ```
 
-Create a BL Gen8 Server Profile template, and pipe to `Wait-HPOVTaskComplete`.
+Create a BL Gen8 Server Profile template, and pipe to Wait-HPOVTaskComplete.
 
 ###  Example 2 
 
@@ -210,7 +210,7 @@ New-HPOVServerProfileTemplate @params | Wait-HPOVTaskComplete
 
 ```
 
-Create a BL Gen9 UEFI Server Profile template with Ethernet and FC connections, local storage, SAN Storage and BIOS Settings, then pipe to `Wait-HPOVTaskComplete`.
+Create a BL Gen9 UEFI Server Profile template with Ethernet and FC connections, local storage, SAN Storage and BIOS Settings, then pipe to Wait-HPOVTaskComplete.
 
 ## Parameters
 
@@ -270,7 +270,7 @@ Expected Connection Format:
                     
 `[System.Collections.ArrayList` ] @(
     [PsCustomObject]@{
-        `[System.Int]`id                     - Connection ID. Valid `1-64`. A 0 value is allowed,
+        `[System.Int]`id                     - Connection ID. Valid 1-64. A 0 value is allowed,
                                                 but means Auto Connection ID assignment.
         `[System.String]`function            - Ethernet or FibreChannel.
         `[System.String]`networkUri          - URI to the Network resource.
@@ -428,7 +428,7 @@ servers.)
 
 ### -BiosSettings &lt;Array&gt;
 
-BIOS Settings that are to be managed.  You can get the BIOS settings available from `Get-HPOVServerHarwareType` and the returned biosSettings property.
+BIOS Settings that are to be managed.  You can get the BIOS settings available from Get-HPOVServerHarwareType and the returned biosSettings property.
 
 | Aliases | None |
 | :--- | :--- |
@@ -551,7 +551,7 @@ Enable local storage settings to be managed on the server.
 
 ### -OSDeploymentPlan &lt;Object&gt;
 
-The HPE Synergy Image Streamer OS deployment plan from `Get-HPOVOSDeploymentPlan`.
+The HPE Synergy Image Streamer OS deployment plan from Get-HPOVOSDeploymentPlan.
 
 | Aliases | None |
 | :--- | :--- |
@@ -563,7 +563,7 @@ The HPE Synergy Image Streamer OS deployment plan from `Get-HPOVOSDeploymentPlan
 
 ### -OSDeploymentPlanAttributes &lt;Array&gt;
 
-Configured OS Deployment Plan parameters from `Get-HPOVOSDeploymentPlanAttribute`.  You will need to group required NIC parameters together based on needed values.
+Configured OS Deployment Plan parameters from Get-HPOVOSDeploymentPlanAttribute.  You will need to group required NIC parameters together based on needed values.
 
 | Aliases | None |
 | :--- | :--- |
@@ -575,7 +575,7 @@ Configured OS Deployment Plan parameters from `Get-HPOVOSDeploymentPlanAttribute
 
 ### -Initialize &lt;SwitchParameter&gt;
 
-Deprecated.  Please refer to the `New-HPOVServerProfileLogicalDisk` and `New-HPOVServerProfileLogicalDiskController` Cmdlets.
+Deprecated.  Please refer to the New-HPOVServerProfileLogicalDisk and New-HPOVServerProfileLogicalDiskController Cmdlets.
 
 | Aliases |  |
 | :--- | :--- |
@@ -587,7 +587,7 @@ Deprecated.  Please refer to the `New-HPOVServerProfileLogicalDisk` and `New-HPO
 
 ### -ControllerMode &lt;String&gt;
 
-Deprecated.  Please refer to the `New-HPOVServerProfileLogicalDisk` and `New-HPOVServerProfileLogicalDiskController` Cmdlets.
+Deprecated.  Please refer to the New-HPOVServerProfileLogicalDisk and New-HPOVServerProfileLogicalDiskController Cmdlets.
 
 | Aliases |  |
 | :--- | :--- |
@@ -599,7 +599,7 @@ Deprecated.  Please refer to the `New-HPOVServerProfileLogicalDisk` and `New-HPO
 
 ### -StorageController &lt;Object&gt;
 
-A resource object containing the StorageController, LogicalDisk or SasJbod configuration.  Please refer to the `New-HPOVServerProfileLogicalDisk` and `New-HPOVServerProfileLogicalDiskController` Cmdlets.
+A resource object containing the StorageController, LogicalDisk or SasJbod configuration.  Please refer to the New-HPOVServerProfileLogicalDisk and New-HPOVServerProfileLogicalDiskController Cmdlets.
 
 | Aliases | LogicalDisk |
 | :--- | :--- |
@@ -663,12 +663,12 @@ Optional. Specify the Host OS type, which will set the Host OS value when HPE On
 
 ### -StorageVolume &lt;Object&gt;
 
-Optional. Array of Storage Volume resources to attach.  Can be created by using the `New-HPOVServerProfileAttachVolume` cmdlet.  This parameter does not accept a Storage Volume resource from the `Get-HPOVStorageVolume` cmdlet.
+Optional. Array of Storage Volume resources to attach.  Can be created by using the New-HPOVServerProfileAttachVolume cmdlet.  This parameter does not accept a Storage Volume resource from the Get-HPOVStorageVolume cmdlet.
 
 The format of the Storage Volume resource should be a PsCustomObject PowerShell resource with the following keys and values:
 
 [PsCustomObject]@{
-    `[System.Int]`id                        - Valid Host LUN ID `0-254`
+    `[System.Int]`id                        - Valid Host LUN ID 0-254
     `[System.String]`lunType                - Auto or Manual
     `[System.String]`volumeUri              - URI to Storage Volume that has been created and not
                                             assigned to another Server Profile if it is a Private Volume.
@@ -678,8 +678,8 @@ The format of the Storage Volume resource should be a PsCustomObject PowerShell 
                                             with the path to the attached volume, and if the path is
                                             enabled or disabled.
         @(
-            `[System.Int]`connectionId      - FC Connection ID.  If using `New-HPOVServerProfileAttachVolume` helper
-                                            cmdlet, `New-HPOVServerProfile` will automatically determine the FC
+            `[System.Int]`connectionId      - FC Connection ID.  If using New-HPOVServerProfileAttachVolume helper
+                                            cmdlet, New-HPOVServerProfile will automatically determine the FC
                                             connection ID.
             `[System.Boolean]`isEnabled     - Enable or disable the path
         )
@@ -723,7 +723,7 @@ Enable to disable odd paths in the attached storage volume(s).
 
 ### -Affinity &lt;String&gt;
 
-In a server profile, the Affinity control sets the `remove-and`-replace behavior for blade servers. If you apply a server profile to a blade server and the server is subsequently removed from the device bay, the Affinity setting controls whether the server profile is reapplied when you insert a server blade into the empty bay. Server profiles for rack servers do not have affinity.
+In a server profile, the Affinity control sets the remove-and-replace behavior for blade servers. If you apply a server profile to a blade server and the server is subsequently removed from the device bay, the Affinity setting controls whether the server profile is reapplied when you insert a server blade into the empty bay. Server profiles for rack servers do not have affinity.
 
 Accepted values are either "Bay" or "BayAndServer".  Default is "Bay".
 
@@ -737,7 +737,7 @@ Accepted values are either "Bay" or "BayAndServer".  Default is "Bay".
 
 ### -MacAssignment &lt;String&gt;
 
-Optional setting for MAC address assignment.  May be Virtual or Physical.  Use Virtual if you need to specify a UserDefined value when using the `New-HPOVServerProfileConnection` helper CMDLET.
+Optional setting for MAC address assignment.  May be Virtual or Physical.  Use Virtual if you need to specify a UserDefined value when using the New-HPOVServerProfileConnection helper CMDLET.
 
 | Aliases | None |
 | :--- | :--- |
@@ -749,7 +749,7 @@ Optional setting for MAC address assignment.  May be Virtual or Physical.  Use V
 
 ### -WwnAssignment &lt;String&gt;
 
-Optional setting for WWN assignment.  May be Virtual or Physical.  Use Virtual if you need to specify a UserDefined value when using the `New-HPOVServerProfileConnection` helper CMDLET.
+Optional setting for WWN assignment.  May be Virtual or Physical.  Use Virtual if you need to specify a UserDefined value when using the New-HPOVServerProfileConnection helper CMDLET.
 
 | Aliases | None |
 | :--- | :--- |
@@ -779,7 +779,7 @@ This setting provides the ability to hide unused FlexNICs from the operating sys
 
 If Hide Unused FlexNICs is set to $True (default/enabled), FlexNICs that do not map to any server profile connections are not presented to the operating system. For example, if you have a full complement of eight FlexNICs defined in your server profile but map only four, your operating system will see only the four mapped FlexNICs instead of eight.
 
-If Hide Unused FlexNICs is set to $False (disabled), eight FlexNICs are enumerated in the operating system as network interfaces for each `Flex-10` or FlexFabric adapter.
+If Hide Unused FlexNICs is set to $False (disabled), eight FlexNICs are enumerated in the operating system as network interfaces for each Flex-10 or FlexFabric adapter.
 
 Configuring Fibre Channel connections on a FlexFabric adapter can enumerate two storage interfaces, reducing the number of network interfaces to six.
 
@@ -822,7 +822,7 @@ The name of the appliance or list of appliances to execute the command against.
 
 ### -PassThru &lt;SwitchParameter&gt;
 
-Use this parameter to return the modified Server Profile Template object.  In order to save the changes, please use the `Save-HPOVServerProfileTemplate` Cmdlet.
+Use this parameter to return the modified Server Profile Template object.  In order to save the changes, please use the Save-HPOVServerProfileTemplate Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |

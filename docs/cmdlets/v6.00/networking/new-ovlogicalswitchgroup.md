@@ -46,7 +46,7 @@ The Logical Switch Group resource Name.
 
 ### -SwitchType &lt;HPEOneView.Networking.SwitchType&gt;
 
-The Switch Type resource from `Get-OVSwitchType`.
+The Switch Type resource from Get-OVSwitchType.
 
 | Aliases | None |
 | :--- | :--- |
@@ -100,7 +100,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Networking.SwitchType**_
 
-Switch Type resource from [`Get-OVSwitchType`](get-ovswitchtype.md).
+Switch Type resource from Get-OVSwitchType.
 
 ## Return Values
 

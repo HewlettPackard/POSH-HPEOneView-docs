@@ -88,7 +88,7 @@ When appliance automatic backup is configured, use this parameter to specify the
 
 ### -ErrorAction &lt;String&gt;
 
-If no backup file exist on the appliance, override the `non-terminating` error generated with `-ErrorAction` Continue.
+If no backup file exist on the appliance, override the non-terminating error generated with `-ErrorAction` Continue.
 
 | Aliases |  |
 | :--- | :--- |

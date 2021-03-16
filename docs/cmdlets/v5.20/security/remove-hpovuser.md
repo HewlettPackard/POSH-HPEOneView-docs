@@ -25,7 +25,7 @@ Remove a specific local user account from the management appliance
 Get-HPOVUser Sally | Remove-HPOVUser
 ```
 
-Retrieve "Sally" user account using `Get-HPOVUser`, then pipe it to `Remove-HPOVUser`.
+Retrieve "Sally" user account using Get-HPOVUser, then pipe it to Remove-HPOVUser.
 
 ## Parameters
 

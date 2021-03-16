@@ -25,7 +25,7 @@ Use Disable-OVMsDSC to disable support.
 Enable-OVMSDSC
 ```
 
-Configures Registry value to overload `Write-Host`, which then uses `Write-Verbose`.
+Configures Registry value to overload Write-Host, which then uses Write-Verbose.
 
 ## Parameters
 

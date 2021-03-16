@@ -192,7 +192,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -ClusterManager &lt;HPEOneView.Cluster.ClusterManager&gt;
 
-Specify the cluster manager that will manage the cluster and associated members, from `Get-OVClusterManager`.
+Specify the cluster manager that will manage the cluster and associated members, from Get-OVClusterManager.
 
 | Aliases | None |
 | :--- | :--- |
@@ -267,7 +267,7 @@ If overriding the distributed virtual switch configuring set by the cluster mana
 
 ### -DistributedSwitchVersion &lt;String&gt;
 
-If overriding the distributed virtual switch configuring set by the cluster manager, specify the version.  To identify the supported versions, look at the AvailableDvsVersions property of the returned cluster manager from `Get-OVClusterManager`.
+If overriding the distributed virtual switch configuring set by the cluster manager, specify the version.  To identify the supported versions, look at the AvailableDvsVersions property of the returned cluster manager from Get-OVClusterManager.
 
 | Aliases | None |
 | :--- | :--- |
@@ -291,7 +291,7 @@ Specify if VMware HA (if supported) should be enabled ($True) or disabled ($fals
 
 ### -MultiNicVMotionEnabled &lt;Bool&gt;
 
-Specify if `multi-NIC` VMotion (if supported) should be enabled ($True) or disabled ($false).
+Specify if multi-NIC VMotion (if supported) should be enabled ($True) or disabled ($false).
 
 | Aliases | None |
 | :--- | :--- |
@@ -315,7 +315,7 @@ Provide the cluster profile name.  If `-Prefix` is omitted, this value will beco
 
 ### -Scope &lt;Object&gt;
 
-Provide an `[HPEOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-OVResourceToScope` Cmdlet.
+Provide an `[HPEOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the Add-OVResourceToScope Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -327,7 +327,7 @@ Provide an `[HPEOneView.Appliance.ScopeCollection]` resource object to initially
 
 ### -ServerProfileTemplate &lt;Object&gt;
 
-The server profile template from `Get-OVServerProfileTemplate` that the cluster configuration will be derived from and follow cluster consistency with.
+The server profile template from Get-OVServerProfileTemplate that the cluster configuration will be derived from and follow cluster consistency with.
 
 | Aliases | None |
 | :--- | :--- |
@@ -450,7 +450,7 @@ Use to indicate the desire to override the cluster manager default settings.
 
 ### -OverrideManagementAddressAssignmet &lt;SwitchParameter&gt;
 
-Use to indicate address assignment.  If the server profile template boot connections are set to require static addresses, the IPAddress value must be used in the `New-OVClusterProfileMember` Cmdlet.
+Use to indicate address assignment.  If the server profile template boot connections are set to require static addresses, the IPAddress value must be used in the New-OVClusterProfileMember Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -514,7 +514,7 @@ Optional - When deploying a new cluster profile with HPE Synergy and Image Strea
 
 ### -Servers &lt;HPEOneView.Cluster.AddHostRequest[]&gt;
 
-One or more server resource objects from `New-OVClusterProfileMember`.  Value can be empty to create an empty cluster, if the target cluster manager supports that type of configuration, like VMware vSphere.
+One or more server resource objects from New-OVClusterProfileMember.  Value can be empty to create an empty cluster, if the target cluster manager supports that type of configuration, like VMware vSphere.
 
 | Aliases | None |
 | :--- | :--- |

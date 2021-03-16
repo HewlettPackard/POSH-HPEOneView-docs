@@ -67,7 +67,7 @@ Override confirmation prompt.
 
 ### -InputObject &lt;Object&gt;
 
-The `[HPEOneView.Appliance.SnmpV]`1TrapDestination or `[HPEOneView.Appliance.SnmpV]`3TrapDestination object from `Get-OVApplianceTrapDestination` to remove.
+The `[HPEOneView.Appliance.SnmpV]`1TrapDestination or `[HPEOneView.Appliance.SnmpV]`3TrapDestination object from Get-OVApplianceTrapDestination to remove.
 
 | Aliases | None |
 | :--- | :--- |
@@ -97,11 +97,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Appliance.SnmpV1TrapDestination**_
 
-Appliance SNMPv1 trap destination from [`Get-OVApplianceTrapDestination`](get-ovappliancetrapdestination.md).
+Appliance SNMPv1 trap destination from Get-OVApplianceTrapDestination.
 
 _**HPEOneView.Appliance.SnmpV3TrapDestination**_
 
-Appliance SNMPv3 trap destination from [`Get-OVApplianceTrapDestination`](get-ovappliancetrapdestination.md).
+Appliance SNMPv3 trap destination from Get-OVApplianceTrapDestination.
 
 ## Return Values
 

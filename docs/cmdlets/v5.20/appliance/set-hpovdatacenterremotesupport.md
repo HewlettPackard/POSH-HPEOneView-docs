@@ -59,7 +59,7 @@ The DataCenter to modify.
 
 ### -PrimaryContact &lt;Object&gt;
 
-Primary Remote Support Contact object from `Get-HPOVRemoteSupportContact` defined on the appliance.
+Primary Remote Support Contact object from Get-HPOVRemoteSupportContact defined on the appliance.
 
 | Aliases | None |
 | :--- | :--- |
@@ -71,7 +71,7 @@ Primary Remote Support Contact object from `Get-HPOVRemoteSupportContact` define
 
 ### -SecondaryContact &lt;Object&gt;
 
-Secondary Remote Support Contact object from `Get-HPOVRemoteSupportContact` defined on the appliance.  Must not be the same value as the Primary Contact.
+Secondary Remote Support Contact object from Get-HPOVRemoteSupportContact defined on the appliance.  Must not be the same value as the Primary Contact.
 
 | Aliases | None |
 | :--- | :--- |
@@ -197,7 +197,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Facilities.DataCenter**_
 
-DataCenter facility object from [`Get-HPOVDataCenter`](../facilities/get-hpovdatacenter.md).
+DataCenter facility object from Get-HPOVDataCenter.
 
 ## Return Values
 

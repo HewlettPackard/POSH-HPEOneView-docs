@@ -39,7 +39,7 @@ Minimum required privileges: Infrastructure administrator or Server administrato
 Get-OVServerProfile -Name MyProfile | ConvertTo-OVServerProfileTemplate -Name "Hypervisor Gold Template 1"
 ```
 
-Use `Get-OVServerProfile` to retrieve the "MyProfile" object, creating a new Server Profile Template "Hyervisor Gold Template 1".
+Use Get-OVServerProfile to retrieve the "MyProfile" object, creating a new Server Profile Template "Hyervisor Gold Template 1".
 
 ## Parameters
 
@@ -111,7 +111,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.ServerProfile [System.Management.Automation.PSCustomObject]**_
 
-A Server Profile resource object from [`Get-OVServerProfile`](get-ovserverprofile.md).
+A Server Profile resource object from Get-OVServerProfile.
 
 _**System.Collections.ArrayList**_
 

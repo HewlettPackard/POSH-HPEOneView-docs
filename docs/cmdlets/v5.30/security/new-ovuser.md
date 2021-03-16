@@ -126,7 +126,7 @@ Mobile phone number.
 
 ### -Enabled &lt;SwitchParameter&gt;
 
-Deprecated parameter.  By default, all new user accounts will be enabled.  In order to disable a user account, use the `Set-OVUser` Cmdlet.
+Deprecated parameter.  By default, all new user accounts will be enabled.  In order to disable a user account, use the Set-OVUser Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -154,7 +154,7 @@ Default Value: ${Global:ConnectSessions}
 
 Array collection of Hashtable<Role; Scope>.  Will overwrite existing scope to role mappings.
 
-Example: `-ScopePermissions` @{Role = "Network administrator"; Scope = (Get-OVScope `-Name` CorpNetAdmins `-ErrorAction` Stop) }
+Example: `-ScopePermissions` @{Role = "Network administrator"; Scope = (`Get-OVScope` `-Name` CorpNetAdmins `-ErrorAction` Stop) }
 
 | Aliases | None |
 | :--- | :--- |

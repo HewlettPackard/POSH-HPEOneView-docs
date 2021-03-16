@@ -75,7 +75,7 @@ Specify one `[HPEOneView.Appliance.Connection]` object or Name property value. I
 
 ### -force &lt;SwitchParameter&gt;
 
-Set to `force-delete` the profile.  For example, `force-remove` will successfully remove the profile, even when connectivity has been lost to the server or enclosure.
+Set to force-delete the profile.  For example, force-remove will successfully remove the profile, even when connectivity has been lost to the server or enclosure.
 
 | Aliases | None |
 | :--- | :--- |

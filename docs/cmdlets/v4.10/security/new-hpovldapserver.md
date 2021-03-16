@@ -79,7 +79,7 @@ Directory Server"s LDAP SSL Port.
 ### -Certificate &lt;Object&gt;
 
 Aliases [-cert]
-Directory Server SSL Certificate, either location to Base64 Cert or `multi-line` string value.  If omitted, the CMDLET will attempt to retrieve the Directory Servers Secure LDAP Certiciate.
+Directory Server SSL Certificate, either location to Base64 Cert or multi-line string value.  If omitted, the CMDLET will attempt to retrieve the Directory Servers Secure LDAP Certiciate.
 
 | Aliases | cert |
 | :--- | :--- |
@@ -119,7 +119,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 
 ### -TrustLeafCertificate &lt;SwitchParameter&gt;
 
-Use to specify if the certificate should be explicitly trusted, like a `self-signed` certificate or where the root or issuing certificate authority has not been added to the appliance trust store.
+Use to specify if the certificate should be explicitly trusted, like a self-signed certificate or where the root or issuing certificate authority has not been added to the appliance trust store.
 
 | Aliases | None |
 | :--- | :--- |
@@ -148,7 +148,7 @@ Mutlple Directory Server Name or IP Address System.String values
 
 _**HPOneView.Appliance.AuthDirectoryServer [System.Management.Automation.PSCustomObject]**_
 
-New LDAP Server Resource Object to be used with [`New-HPOVLdapDirectory`](new-hpovldapdirectory.md) CMDLET
+New LDAP Server Resource Object to be used with New-HPOVLdapDirectory CMDLET
 
 ## Related Links
 

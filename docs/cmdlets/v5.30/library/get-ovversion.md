@@ -46,7 +46,7 @@ Appliance Version Info     : 1.20.05-0201918
 Appliance X-API Version    : 120
 ```
 
-Get the HPE OneView PowerShell library, Appliance and `X-API` version information
+Get the HPE OneView PowerShell library, Appliance and X-API version information
 
 ###  Example 3 
 

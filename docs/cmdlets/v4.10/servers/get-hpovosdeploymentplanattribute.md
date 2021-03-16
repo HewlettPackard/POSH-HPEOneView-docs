@@ -48,7 +48,7 @@ Get OS deployment plan attributes, and set DHCP for the two network connections.
 
 ### -InputObject &lt;Object&gt;
 
-The OS Deployment Plan from `Get-HPOVOSDeploymentPlan`.
+The OS Deployment Plan from Get-HPOVOSDeploymentPlan.
 
 | Aliases | None |
 | :--- | :--- |
@@ -82,7 +82,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Appliance.OSDeploymentPlan [System.Management.Automation.PSCustomObject]**_
 
-The OS Deployment Plan from [`Get-HPOVOSDeploymentPlan`](get-hpovosdeploymentplan.md).
+The OS Deployment Plan from Get-HPOVOSDeploymentPlan.
 
 
 ## Return Values

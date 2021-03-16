@@ -117,7 +117,7 @@ Allow emergency login access if the configured authentication directory(ies) are
 
 ### -EnableEmergencyLocalLogin &lt;Bool&gt;
 
-Boolean value to enable ($true) or disable ($false) emergency local login.  Must be set to $false when SmartCardLoginOnly is set and used from `Set-HPOVApplianceTwoFactorAuthentication`.
+Boolean value to enable ($true) or disable ($false) emergency local login.  Must be set to $false when SmartCardLoginOnly is set and used from Set-HPOVApplianceTwoFactorAuthentication.
 
 | Aliases | None |
 | :--- | :--- |
@@ -135,7 +135,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Appliance.AuthDirectory [System.Management.Automation.PSCustomObject]**_
 
-Authentication Directory retrieved using [`Get-HPOVLdapDirectory`](get-hpovldapdirectory.md)
+Authentication Directory retrieved using Get-HPOVLdapDirectory
 
 ## Return Values
 

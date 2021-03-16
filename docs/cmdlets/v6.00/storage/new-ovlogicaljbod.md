@@ -144,7 +144,7 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 
 ### -AvailableDriveType &lt;HPEOneView.Storage.AvailableDriveType&gt;
 
-When attempting to create a logical JBOD, specify the availabe drive type from `Get-OVAvailableDriveType`.
+When attempting to create a logical JBOD, specify the availabe drive type from Get-OVAvailableDriveType.
 
 | Aliases | None |
 | :--- | :--- |
@@ -191,7 +191,7 @@ Auto is not supported when attempting to create an HPE Synergy D3940 Logical or 
 
 ### -Drives &lt;HPEOneView.Storage.Drive[]&gt;
 
-Provide the specific drives to assign to the logical JBOD.  Use the `Get-OVDriveEnclosureInventory` Cmdlet to identify the drives you wish to allocate to the new logical JBOD resource.  Drives can be allocated from different HPE Synergy drive enclosures, but must reside within the same SAS Logical Interconnect.
+Provide the specific drives to assign to the logical JBOD.  Use the Get-OVDriveEnclosureInventory Cmdlet to identify the drives you wish to allocate to the new logical JBOD resource.  Drives can be allocated from different HPE Synergy drive enclosures, but must reside within the same SAS Logical Interconnect.
 
 | Aliases | None |
 | :--- | :--- |
@@ -275,7 +275,7 @@ When attempting to create a logical JBOD, you can specify the min and max drive 
 
 ### -Scope &lt;Object&gt;
 
-Provide an `[HPEOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-OVResourceToScope` Cmdlet.
+Provide an `[HPEOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the Add-OVResourceToScope Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -293,7 +293,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Storage.AvailableDriveType**_
 
-The available drive type from [`Get-OVAvailableDriveType`](get-ovavailabledrivetype.md)
+The available drive type from Get-OVAvailableDriveType
 
 ## Return Values
 

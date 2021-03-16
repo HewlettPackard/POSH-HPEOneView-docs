@@ -87,7 +87,7 @@ Create a new datacenter with Remote Support settings.
 
 ### -InputObject &lt;Object&gt;
 
-Datacenter object from `Get-HPOVDataCenter`.
+Datacenter object from Get-HPOVDataCenter.
 
 | Aliases | None |
 | :--- | :--- |
@@ -147,7 +147,7 @@ If specifying millimeter value for Width and Depth, this parameter is required.
 
 ### -ElectricalDerating &lt;Int&gt;
 
-If Custom ElectricalDetratingType is set to Custom, specify a value between `20-100`%.
+If Custom ElectricalDetratingType is set to Custom, specify a value between 20-100%.
 
 Default: 20%
 
@@ -243,7 +243,7 @@ Default:  1.5
 
 ### -PrimaryContact &lt;Object&gt;
 
-Primary Remote Support Contact object from `Get-HPOVRemoteSupportContact` defined on the appliance.
+Primary Remote Support Contact object from Get-HPOVRemoteSupportContact defined on the appliance.
 
 | Aliases |  |
 | :--- | :--- |
@@ -255,7 +255,7 @@ Primary Remote Support Contact object from `Get-HPOVRemoteSupportContact` define
 
 ### -SecondaryContact &lt;Object&gt;
 
-Secondary Remote Support Contact object from `Get-HPOVRemoteSupportContact` defined on the appliance.  Must not be the same value as the Primary Contact.
+Secondary Remote Support Contact object from Get-HPOVRemoteSupportContact defined on the appliance.  Must not be the same value as the Primary Contact.
 
 | Aliases |  |
 | :--- | :--- |

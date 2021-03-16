@@ -80,7 +80,7 @@ Returns just the Production Network Set object to standard output.
 $myNetSets = Get-HPOVNetworkSet
 ```
 
-Returns the `Get-HPOVNetworkSet` query and stores it in the object $myNetSets
+Returns the Get-HPOVNetworkSet query and stores it in the object $myNetSets
 
 ###  Example 4 
 
@@ -88,7 +88,7 @@ Returns the `Get-HPOVNetworkSet` query and stores it in the object $myNetSets
 Get-HPOVNetworkSet -exportFile "c:\myApplianceConfig\Network-Sets.json"
 ```
 
-Returns the `Get-HPOVNetworkSet` query results to the file c:\myApplianceConfig\Network-Sets.json
+Returns the Get-HPOVNetworkSet query results to the file c:\myApplianceConfig\Network-Sets.json
 
 ## Parameters
 
@@ -147,7 +147,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 
 ### -ExportFile &lt;String&gt;
 
-The full path and file name to export the contents retrieved from the call to `Get-HPOVNetworkSet`.
+The full path and file name to export the contents retrieved from the call to Get-HPOVNetworkSet.
 
 | Aliases | x, export |
 | :--- | :--- |

@@ -92,7 +92,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Appliance.BaselineRepository [System.Management.Automation.PSCustomObject]**_
 
-The external repository object from [`Get-HPOVBaselineRepository`](get-hpovbaselinerepository.md)
+The external repository object from Get-HPOVBaselineRepository
 
 ## Return Values
 

@@ -132,7 +132,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 
 ### -Https &lt;SwitchParameter&gt;
 
-Specify if target proxy server requires HTTPS.  The target SSL/TSL certificate must be added to the appliance using the `Add-HPOVApplianceTrustedCertificate` Cmdlet.
+Specify if target proxy server requires HTTPS.  The target SSL/TSL certificate must be added to the appliance using the Add-HPOVApplianceTrustedCertificate Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |

@@ -32,7 +32,7 @@ Remove "Rack-221" rack resource from the appliance.
 
 ### -InputObject &lt;Object&gt;
 
-Rack object, from `Get-HPOVRack`.
+Rack object, from Get-HPOVRack.
 
 | Aliases | None |
 | :--- | :--- |
@@ -62,7 +62,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Facilities.RackMember**_
 
-Rack member resource from [`Get-HPOVRackMember`](get-hpovrackmember.md).
+Rack member resource from Get-HPOVRackMember.
 
 ## Return Values
 

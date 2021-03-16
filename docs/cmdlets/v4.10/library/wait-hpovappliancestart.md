@@ -39,7 +39,7 @@ Wait for the appliance to start, and specify the appliance name.
 
 Aliases [-Appliance]
 
-Specify the appliance FQDN or IP Address without a valid connection created by using `Connect-HPOVMgmt`.
+Specify the appliance FQDN or IP Address without a valid connection created by using Connect-HPOVMgmt.
 
 | Aliases | Appliance |
 | :--- | :--- |

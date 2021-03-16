@@ -171,15 +171,15 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.ServerHardware**_
 
-A Server Hardware resource object from [`Get-HPOVServer`](../servers/get-hpovserver.md).
+A Server Hardware resource object from Get-HPOVServer.
 
 _**HPOneView.ServerProfile**_
 
-A Server Profile resource object from [`Get-HPOVServerProfile`](../servers/get-hpovserverprofile.md).  If the Server Profile is not associated with a server hardware resource, an excpetion is thrown.  If the Server Profile has moved from one server hardware resource to another, only the currently assigned server hardware resource will be queried.
+A Server Profile resource object from Get-HPOVServerProfile.  If the Server Profile is not associated with a server hardware resource, an excpetion is thrown.  If the Server Profile has moved from one server hardware resource to another, only the currently assigned server hardware resource will be queried.
 
 _**HPOneView.Enclosure**_
 
-An Enclosure resource object from [`Get-HPOVEnclosure`](../servers/get-hpovenclosure.md).
+An Enclosure resource object from Get-HPOVEnclosure.
 
 ## Return Values
 

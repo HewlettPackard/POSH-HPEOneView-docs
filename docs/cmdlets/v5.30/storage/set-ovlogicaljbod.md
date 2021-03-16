@@ -76,7 +76,7 @@ Clear metadata on the associated drives, effectively wiping the data on the driv
 
 ### -DisableEraseData &lt;SwitchParameter&gt;
 
-Can only be used if the logical JBOD was created with EraseDataOnDelete parameter was used in the call to `New-OVLogicalJBOD`.
+Can only be used if the logical JBOD was created with EraseDataOnDelete parameter was used in the call to New-OVLogicalJBOD.
 
 | Aliases | None |
 | :--- | :--- |
@@ -88,7 +88,7 @@ Can only be used if the logical JBOD was created with EraseDataOnDelete paramete
 
 ### -InputObject &lt;HPEOneView.Storage.LogicalJBOD[]&gt;
 
-The logical JBOD resource from `Get-OVLogicalJBOD`.
+The logical JBOD resource from Get-OVLogicalJBOD.
 
 | Aliases | None |
 | :--- | :--- |
@@ -106,7 +106,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Storage.LogicalJBOD**_
 
-A logical JBOD resource from [`Get-OVLogicalJBOD`](get-ovlogicaljbod.md).
+A logical JBOD resource from Get-OVLogicalJBOD.
 
 ## Return Values
 

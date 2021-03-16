@@ -83,7 +83,7 @@ A collection `[System.Collections.ArrayList` ] of IP Addresses or Subnets.  You 
 
 ### -TrapDestinations &lt;Array&gt;
 
-A collection `[System.Collections.ArrayList` ] of SNMMP Trap Destinations.  Use `New-OVTrapDestination` Cmdlet to create the object.
+A collection `[System.Collections.ArrayList` ] of SNMMP Trap Destinations.  Use New-OVTrapDestination Cmdlet to create the object.
 
 | Aliases | None |
 | :--- | :--- |

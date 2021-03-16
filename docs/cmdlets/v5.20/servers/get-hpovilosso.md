@@ -76,7 +76,7 @@ Generate iLO SSO Object that can then be used with the HPRESTCmdlets.
 
 ### -InputObject &lt;Object&gt;
 
-The Server Hardware or Server Profile resource object from `Get-HPOVServer` or `Get-HPOVServerProfile`.
+The Server Hardware or Server Profile resource object from Get-HPOVServer or Get-HPOVServerProfile.
 
 | Aliases | Server |
 | :--- | :--- |

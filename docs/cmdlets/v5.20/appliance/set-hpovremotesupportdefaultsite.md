@@ -112,7 +112,7 @@ Postal or zip code.
 
 ### -TimeZone &lt;String&gt;
 
-Timezone of the data center, in `ISO-3166` location format (e.g. US/Central).
+Timezone of the data center, in ISO-3166 location format (e.g. US/Central).
 
 | Aliases | None |
 | :--- | :--- |

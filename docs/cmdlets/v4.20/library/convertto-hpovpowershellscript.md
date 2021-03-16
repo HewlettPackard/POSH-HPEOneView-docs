@@ -34,13 +34,13 @@ The following resources are supported by this Cmdlet:
     * Scopes (Get-HPOVScope)
     * Network (Get-HPOVNetwork)
     * Network Set (Get-HPOVNetworkSet)
-    * SAN Manager (Get-HPOVSanNanager)
+    * SAN Manager (Get-HPOVSanManager)
     * Storage System (Get-HPOVStorageSystem)
     * Storage Pool (Get-HPOVStoragePool)
     * Storage Volume Template (Get-HPOVStorageVolumeTemplate)
     * Storage Volume (Get-HPOVStorageVolume)
     * Logical Interconnect Group (Get-HPOVLogicalInterconnectGroup)
-    * Logical Enclosure Group (Get-HPOVLogicalEnclosureGroup)
+    * Enclosure Group (Get-HPOVEnclosureGroup)
     * Logical Enclosure (Get-HPOVLogicalEnclosure)
     * Server Profile Template (Get-HPOVServerProfileTemplate)
     * Server Profile (Get-HPOVServerProfile)
@@ -73,7 +73,7 @@ Resource object from supported Cmdlets.
 
 ### -Export &lt;System.IO.FileInfo&gt;
 
-Location where to write `UTF-8` file.
+Location where to write UTF-8 file.
 
 | Aliases | None |
 | :--- | :--- |

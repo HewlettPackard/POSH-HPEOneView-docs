@@ -76,7 +76,7 @@ The Server object(s), name(s) or uri(s) to be removed from management.
 
 ### -Force &lt;SwitchParameter&gt;
 
-Use to `force-remove` the server.  For example, if the server is gone or managed by a different appliance, `force-remove` will remove the server from this appliance without removing any of the HPE OneView applied configuration.
+Use to force-remove the server.  For example, if the server is gone or managed by a different appliance, force-remove will remove the server from this appliance without removing any of the HPE OneView applied configuration.
 
 When the request is accepted by the appliance, it does not return an Async Task Resource.
 

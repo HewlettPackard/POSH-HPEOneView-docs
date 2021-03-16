@@ -58,7 +58,7 @@ Add "MyRack" to "Houston_DC1" datacenter object, located at 10",12".
 
 ### -InputObject &lt;Object&gt;
 
-The Rack object from `Get-OVRack`.
+The Rack object from Get-OVRack.
 
 | Aliases | None |
 | :--- | :--- |
@@ -70,7 +70,7 @@ The Rack object from `Get-OVRack`.
 
 ### -DataCenter &lt;Object&gt;
 
-The DataCenter object from `Get-OVDataCenter`.
+The DataCenter object from Get-OVDataCenter.
 
 | Aliases | None |
 | :--- | :--- |
@@ -149,7 +149,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Facilities.Rack [System.Management.Automation.PSCustomObject]**_
 
-Rack resource object from [`Get-OVRack`](get-ovrack.md).
+Rack resource object from Get-OVRack.
 
 ## Return Values
 

@@ -65,7 +65,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -InputObject &lt;Object&gt;
 
-The Interconnect from `Get-OVInterconnect` Cmdlet.
+The Interconnect from Get-OVInterconnect Cmdlet.
 
 | Aliases | Interconnect |
 | :--- | :--- |
@@ -95,7 +95,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Networking.Interconnect [System.Management.Automation.PSCustomObject]**_
 
-Interconnect resource from [`Get-OVInterconnect`](get-ovinterconnect.md).
+Interconnect resource from Get-OVInterconnect.
 
 ## Return Values
 

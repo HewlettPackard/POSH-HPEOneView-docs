@@ -55,7 +55,7 @@ $myLigs = Get-HPOVLogicalInterconnectGroup
 
 ```
 
-Returns the `Get-HPOVLogicalInterconnectGroup` query and stores it in the object $myLigs
+Returns the Get-HPOVLogicalInterconnectGroup query and stores it in the object $myLigs
 
 ###  Example 4 
 
@@ -78,13 +78,13 @@ Get-HPOVLogicalInterconnectGroup -exportFile "c:\myApplianceConfig\LogicaICGs.js
 
 ```
 
-Returns the `Get-HPOVLogicalInterconnectGroup` query results to the file c:\myApplianceConfig\LogicaICGs.json
+Returns the Get-HPOVLogicalInterconnectGroup query results to the file c:\myApplianceConfig\LogicaICGs.json
 
 ## Parameters
 
 ### -InputObject &lt;Object&gt;
 
-Pipeline input resource generated from `Wait-HPOVTaskComplete`, or successfully completed Async Task resource object.
+Pipeline input resource generated from Wait-HPOVTaskComplete, or successfully completed Async Task resource object.
 
 | Aliases | Resource |
 | :--- | :--- |
@@ -161,7 +161,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 
 ### -exportFile &lt;String&gt;
 
-The full path and file name to export the contents retrieved from the call to `Get-HPOVLogicalInterconnectGroup`.
+The full path and file name to export the contents retrieved from the call to Get-HPOVLogicalInterconnectGroup.
 
 | Aliases | x, export |
 | :--- | :--- |
@@ -179,7 +179,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
-Successfully Completed Async task resource from [`Wait-HPOVTaskComplete`](../appliance/wait-hpovtaskcomplete.md) or other supported method
+Successfully Completed Async task resource from Wait-HPOVTaskComplete or other supported method
 
 ## Return Values
 

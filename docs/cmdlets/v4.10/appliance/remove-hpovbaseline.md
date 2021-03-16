@@ -86,7 +86,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Appliance.Baseline [System.Management.Automation.PSCustomObject]**_
 
-Source HPE OneView Baseline from [`Get-HPOVBaseline`](get-hpovbaseline.md)
+Source HPE OneView Baseline from Get-HPOVBaseline
 
 
 ## Return Values

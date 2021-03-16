@@ -111,7 +111,7 @@ Force delete the resource.
 
 ### -InputObject &lt;HPEOneView.Storage.LogicalJBOD[]&gt;
 
-The logical JBOD resource from `Get-OVLogialJBOD` Cmdlet.  If the logical JBOD is associated with a server profile, it must first be unassociated from the server profile, then you can remove it.  If the erase on delete option is enabled (or set to true), then data will be deleted from the drive.
+The logical JBOD resource from Get-OVLogialJBOD Cmdlet.  If the logical JBOD is associated with a server profile, it must first be unassociated from the server profile, then you can remove it.  If the erase on delete option is enabled (or set to true), then data will be deleted from the drive.
 
 | Aliases | None |
 | :--- | :--- |
@@ -141,7 +141,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Storage.LogicalJBOD[]**_
 
-One or more logical JBOD resources from [`Get-OVLogicalJBOD`](get-ovlogicaljbod.md).
+One or more logical JBOD resources from Get-OVLogicalJBOD.
 
 ## Return Values
 

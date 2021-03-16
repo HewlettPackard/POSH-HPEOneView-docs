@@ -318,7 +318,7 @@ Array of DNS servers: "fe80::200:f8ff:fe21:67cf", "fe80::200:f8ff:fe21:89cb"
 
 ### -NtpServers &lt;Object&gt;
 
-Deprecated parameter.  NTP Server configuration is now controlled in the `Set-HPOVApplianceDateTime` Cmdlet.  Please update your scripts accordingly.
+Deprecated parameter.  NTP Server configuration is now controlled in the Set-HPOVApplianceDateTime Cmdlet.  Please update your scripts accordingly.
 
 | Aliases | None |
 | :--- | :--- |

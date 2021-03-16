@@ -32,7 +32,7 @@ Display the Nimble storage system performance policies configured.
 
 ### -InputObject &lt;Object&gt;
 
-One or more storage systems from `Get-HPOVStorageSystem`.
+One or more storage systems from Get-HPOVStorageSystem.
 
 | Aliases | None |
 | :--- | :--- |
@@ -62,7 +62,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Storage.System [System.Management.Automation.PSCustomObject]**_
 
-The Nimble storage system object from [`Get-HPOVStorageSystem`](get-hpovstoragesystem.md).
+The Nimble storage system object from Get-HPOVStorageSystem.
 
 ## Return Values
 

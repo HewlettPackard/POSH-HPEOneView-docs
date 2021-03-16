@@ -174,7 +174,7 @@ Use to create the HPE OneView Remote Support email filter for service events.
 
 ### -SenderEmail &lt;mailaddress&gt;
 
-Sending email address option to set `filters-specific` email sender address.
+Sending email address option to set filters-specific email sender address.
 
 | Aliases | None |
 | :--- | :--- |

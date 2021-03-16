@@ -140,7 +140,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Servers.RackManager**_
 
-The rack manager resource from [`Get-HPOVRackManager`](get-hpovrackmanager.md).
+The rack manager resource from Get-HPOVRackManager.
 
 ## Return Values
 

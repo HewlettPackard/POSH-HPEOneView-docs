@@ -109,7 +109,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Appliance.ScopeCollection**_
 
-Scope resource object from [`Get-HPOVScope`](get-hpovscope.md).
+Scope resource object from Get-HPOVScope.
 
 ## Return Values
 

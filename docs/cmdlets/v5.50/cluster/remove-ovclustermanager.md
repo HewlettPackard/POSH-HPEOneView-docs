@@ -72,7 +72,7 @@ Force delete the resource.
 
 ### -InputObject &lt;HPEOneView.ClusterProfile.HypervisorManager&gt;
 
-The `[HPEOneView.ClusterProfile.HypervisorManager]` resource to remove from `Get-OVClusterManager`.
+The `[HPEOneView.ClusterProfile.HypervisorManager]` resource to remove from Get-OVClusterManager.
 
 | Aliases | None |
 | :--- | :--- |
@@ -102,7 +102,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.ClusterProfile.HypervisorManager**_
 
-The hypervisor manager object from [`Get-OVClusterManager`](get-ovclustermanager.md).
+The hypervisor manager object from Get-OVClusterManager.
 
 ## Return Values
 

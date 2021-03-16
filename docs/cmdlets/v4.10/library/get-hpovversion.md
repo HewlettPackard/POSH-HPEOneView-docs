@@ -49,7 +49,7 @@ Appliance X-API Version    : 120
 
 ```
 
-Get the HPE OneView PowerShell library, Appliance and `X-API` version information
+Get the HPE OneView PowerShell library, Appliance and X-API version information
 
 ###  Example 3 
 

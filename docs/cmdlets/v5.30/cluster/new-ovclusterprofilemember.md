@@ -31,7 +31,7 @@ $Server = Get-OVServer -Name "Encl1, Bay 1"
 New-OVClusterProfileMember -InputObject $Server
 ```
 
-Create a basic add host object for `New-OVClusterProfile`.
+Create a basic add host object for New-OVClusterProfile.
 
 ###  Example 2 
 
@@ -40,7 +40,7 @@ $Server = Get-OVServer -Name "Encl1, Bay 1"
 New-OVClusterProfileMember -InputObject $Server -IPAddress 192.168.10.1
 ```
 
-Create anadd host object for `New-OVClusterProfile` and specify its managmenet IP Address if the associated Server Profile Template management network is not associated with an IP address pool.
+Create anadd host object for New-OVClusterProfile and specify its managmenet IP Address if the associated Server Profile Template management network is not associated with an IP address pool.
 
 ###  Example 3 
 
@@ -52,7 +52,7 @@ $Server = Get-OVServer -Name "Encl1, Bay 1"
 New-OVClusterProfileMember -InputObject $Server -IPAddress 192.168.10.1 -OSDeploymentParameter $OSDeploymentAttributes
 ```
 
-Create a basic add host object for `New-OVClusterProfile`.
+Create a basic add host object for New-OVClusterProfile.
 
 ## Parameters
 
@@ -82,7 +82,7 @@ A server hardware resource
 
 ### -OSDeploymentAttributes &lt;OSDeploymentParameter[]&gt;
 
-Configured OS Deployment Plan parameters from `Get-OVOSDeploymentPlanAttribute`.  Only applicable for HPE Synergy Image Streamer deployment.
+Configured OS Deployment Plan parameters from Get-OVOSDeploymentPlanAttribute.  Only applicable for HPE Synergy Image Streamer deployment.
 
 | Aliases | None |
 | :--- | :--- |
@@ -106,7 +106,7 @@ An available server hardware resource.
 
 _**HPEOneView.Cluster.AddHostRequest**_
 
-Properly formatted object for [`New-OVClusterProfile`](new-ovclusterprofile.md).
+Properly formatted object for New-OVClusterProfile.
 
 ## Related Links
 

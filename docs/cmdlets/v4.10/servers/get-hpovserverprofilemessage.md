@@ -66,7 +66,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.ServerProfile [System.Management.Automation.PSCustomObject]**_
 
-Server Profile resource object from [`Get-HPOVServerProfile`](get-hpovserverprofile.md)
+Server Profile resource object from Get-HPOVServerProfile
 
 ## Return Values
 

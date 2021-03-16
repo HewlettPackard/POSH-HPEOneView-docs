@@ -302,7 +302,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 
 ### -Scope &lt;HPOneView.Appliance.ScopeCollection&gt;
 
-Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the `Add-HPOVResourceToScope` Cmdlet.
+Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the Add-HPOVResourceToScope Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -326,7 +326,7 @@ Enable compression for StoreServe (3PAR) supported resources. Please verify the 
 
 ### -EnableDeduplication &lt;Boolean&gt;
 
-Enable deduplication for `SSD-based` Storage Pools (CPG).
+Enable deduplication for SSD-based Storage Pools (CPG).
 
 | Aliases | None |
 | :--- | :--- |

@@ -115,7 +115,7 @@ Group has the permission to use the Virtual Media features on the host system.
 
 ### -VirtualPowerAndReset &lt;Bool&gt;
 
-Group has the permission to `power-cycle` or reset the host system.
+Group has the permission to power-cycle or reset the host system.
 
 | Aliases | None |
 | :--- | :--- |

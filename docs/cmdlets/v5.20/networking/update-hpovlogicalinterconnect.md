@@ -43,7 +43,7 @@ Wait-HPOVTaskComplete $task
                     
 ```
 
-Perform an update of the `Encl1-LI` Logical Interconnect.  Will be prompted for confirmation.
+Perform an update of the Encl1-LI Logical Interconnect.  Will be prompted for confirmation.
 
 ###  Example 2 
 
@@ -51,7 +51,7 @@ Perform an update of the `Encl1-LI` Logical Interconnect.  Will be prompted for 
 $task = Update-HPOVLogicalInterconnect -name Encl1-LI -confirm:$false | Wait-HPOVTaskComplete
 ```
 
-Perform an update of the `Encl1-LI` Logical Interconnect.  Disable confirmation prompt.
+Perform an update of the Encl1-LI Logical Interconnect.  Disable confirmation prompt.
 
 ###  Example 3 
 
@@ -148,7 +148,7 @@ Use this parameter to identify what is different or changed from the parent grou
 
 ### -FactoryReset &lt;SwitchParameter&gt;
 
-Use to factory reset the HPE Synergy Fabric module.  Do know that an outage will happen while the fabric modules are reset.  Their configuration will need to be `re-applied` or deployed after task has completed.
+Use to factory reset the HPE Synergy Fabric module.  Do know that an outage will happen while the fabric modules are reset.  Their configuration will need to be re-applied or deployed after task has completed.
 
 | Aliases | None |
 | :--- | :--- |

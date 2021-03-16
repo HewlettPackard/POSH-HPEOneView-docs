@@ -39,7 +39,7 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 _**System.IO.File**_
 
-{filename}.trace file is generated in the location specified in the [`Start-OVLibraryTrace`](start-ovlibrarytrace.md) Cmdlet
+{filename}.trace file is generated in the location specified in the Start-OVLibraryTrace Cmdlet
 
 ## Related Links
 

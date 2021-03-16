@@ -61,7 +61,7 @@ Set a new description.
 
 ### -InputObject &lt;Object&gt;
 
-HPOneView.ServerHardwareType resource from `Get-HPOVServerHardwareType`.
+HPOneView.ServerHardwareType resource from Get-HPOVServerHardwareType.
 
 | Aliases | Resource |
 | :--- | :--- |
@@ -91,7 +91,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.ServerHardwareType**_
 
-Resource from [`Get-HPOVServerHardwareType`](get-hpovserverhardwaretype.md).
+Resource from Get-HPOVServerHardwareType.
 
 ## Return Values
 

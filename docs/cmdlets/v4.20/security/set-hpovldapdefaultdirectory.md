@@ -77,7 +77,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Appliance.AuthDirectory [System.Management.Automation.PSCustomObject]**_
 
-Authentication Directory retrieved using [`Get-HPOVLdapDirectory`](get-hpovldapdirectory.md)
+Authentication Directory retrieved using Get-HPOVLdapDirectory
 
 ## Return Values
 

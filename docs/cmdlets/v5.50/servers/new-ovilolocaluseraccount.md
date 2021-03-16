@@ -118,7 +118,7 @@ Optional display name of the user account.
 
 ### -HostBIOS &lt;Bool&gt;
 
-User has the permission to change host system BIOS configuration.  This permission is specific to `iLO5-based` systems.
+User has the permission to change host system BIOS configuration.  This permission is specific to iLO5-based systems.
 
 | Aliases | None |
 | :--- | :--- |
@@ -130,7 +130,7 @@ User has the permission to change host system BIOS configuration.  This permissi
 
 ### -HostNIC &lt;Bool&gt;
 
-User has the permission to change host system NIC configuration.  This permission is specific to `iLO5-based` systems.
+User has the permission to change host system NIC configuration.  This permission is specific to iLO5-based systems.
 
 | Aliases | None |
 | :--- | :--- |
@@ -142,7 +142,7 @@ User has the permission to change host system NIC configuration.  This permissio
 
 ### -HostStorage &lt;Bool&gt;
 
-User has the permission to change host system storage configuration.  This permission is specific to `iLO5-based` systems.
+User has the permission to change host system storage configuration.  This permission is specific to iLO5-based systems.
 
 | Aliases | None |
 | :--- | :--- |
@@ -154,7 +154,7 @@ User has the permission to change host system storage configuration.  This permi
 
 ### -Login &lt;Bool&gt;
 
-User has the permission to log into the iLO.  This permission is specific to `iLO5-based` systems.
+User has the permission to log into the iLO.  This permission is specific to iLO5-based systems.
 
 | Aliases | None |
 | :--- | :--- |
@@ -214,7 +214,7 @@ User has the permission to use the Virtual Media features on the host system.
 
 ### -VirtualPowerAndReset &lt;Bool&gt;
 
-User has the permission to `power-cycle` or reset the host system.
+User has the permission to power-cycle or reset the host system.
 
 | Aliases | None |
 | :--- | :--- |

@@ -48,7 +48,7 @@ IPv6Gateway :
 IPv6DNS     : {}
 ```
 
-Outputs the configuration of the primary network interface and pipe to `Format-List` for more information about the network configuration.
+Outputs the configuration of the primary network interface and pipe to Format-List for more information about the network configuration.
 
 ###  Example 3 
 

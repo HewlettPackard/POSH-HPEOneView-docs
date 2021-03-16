@@ -56,7 +56,7 @@ Get-HPOVServerProfile -Name "Profile 1" | Copy-HPOVServerProfile
 
 ```
 
-Use the `Get-HPOVServerProfile` CMDLET and pipe to `Copy-HPOVServerProfile`, where the copied profile name will be "Copy of Profile 1" and unassigned.
+Use the Get-HPOVServerProfile CMDLET and pipe to Copy-HPOVServerProfile, where the copied profile name will be "Copy of Profile 1" and unassigned.
 
 ###  Example 5 
 

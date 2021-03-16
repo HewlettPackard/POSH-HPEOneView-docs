@@ -100,7 +100,7 @@ New-OVServerProfileConnection
 
 ## Description
 
-A helper function to assist with connections when creating (New-OVServerProfile) or editing (Set-OVProfile) a server profile.
+A helper function to assist with connections when creating (New-OVServerProfile) or editing (Set-OVServerProfile) a server profile.
 
 ## Examples
 
@@ -216,7 +216,7 @@ Deprecated parameter.  Connection type is now derived from the provided Network 
 
 ### -Network &lt;Object&gt;
 
-The Network (Ethernet or Fibre Channel) or Network Set resource object to be used with this connection.  Can either be the Name, URI, or object obtained with `Get-OVNetwork` or `Get-OVNetworkSet`.
+The Network (Ethernet or Fibre Channel) or Network Set resource object to be used with this connection.  Can either be the Name, URI, or object obtained with Get-OVNetwork or Get-OVNetworkSet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -574,7 +574,7 @@ The CHAP challange name.
 
 ### -ChapSecret &lt;System.Security.SecureString&gt;
 
-The CHAP challange secret.  Accepts ASCII or HEX values.  If providing an ASCII secret value, the length must be bewteen 12 and 16 characters.  If HEX, it must start with 0x and with `24-32` characters.  Value is ignored when creating a Connection for a Server Profile Template.
+The CHAP challange secret.  Accepts ASCII or HEX values.  If providing an ASCII secret value, the length must be bewteen 12 and 16 characters.  If HEX, it must start with 0x and with 24-32 characters.  Value is ignored when creating a Connection for a Server Profile Template.
 
 | Aliases | None |
 | :--- | :--- |
@@ -598,7 +598,7 @@ The Mutual CHAP challange.
 
 ### -MutualChapSecret &lt;System.Security.SecureString&gt;
 
-The Mutual CHAP challange secret.  Accepts ASCII or HEX values.  If providing an ASCII secret value, the length must be bewteen 12 and 16 characters.  If HEX, it must start with 0x and with `24-32` characters.  Value is ignored when creating a Connection for a Server Profile Template.
+The Mutual CHAP challange secret.  Accepts ASCII or HEX values.  If providing an ASCII secret value, the length must be bewteen 12 and 16 characters.  If HEX, it must start with 0x and with 24-32 characters.  Value is ignored when creating a Connection for a Server Profile Template.
 
 | Aliases | None |
 | :--- | :--- |
@@ -644,7 +644,7 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 _**System.Management.Automation.PSCustomObject**_
 
-Returns a connection object which may be used during profile creation with the [`New-OVServerProfile`](new-ovserverprofile.md) Cmdlet
+Returns a connection object which may be used during profile creation with the New-OVServerProfile Cmdlet
 
 ## Related Links
 

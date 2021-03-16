@@ -65,7 +65,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Appliance.ScopeCollection**_
 
-Scope resource object from [`Get-OVScope`](get-ovscope.md).
+Scope resource object from Get-OVScope.
 
 ## Return Values
 

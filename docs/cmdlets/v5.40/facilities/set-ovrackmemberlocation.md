@@ -40,7 +40,7 @@ Update the "DL380 1" rack member raising its current rack unit location by 5.
 
 ### -InputObject &lt;HPEOneView.Facilities.RackMember&gt;
 
-The rack member to modify from `Get-OVRackMember`.
+The rack member to modify from Get-OVRackMember.
 
 | Aliases | None |
 | :--- | :--- |
@@ -82,7 +82,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Facilities.RackMember**_
 
-DataCenter facility object from [`Get-OVDataCenter`](get-ovdatacenter.md).
+DataCenter facility object from Get-OVDataCenter.
 
 ## Return Values
 

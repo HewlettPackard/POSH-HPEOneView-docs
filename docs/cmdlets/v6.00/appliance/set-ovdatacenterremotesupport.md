@@ -59,7 +59,7 @@ The DataCenter to modify.
 
 ### -PrimaryContact &lt;Object&gt;
 
-Primary Remote Support Contact object from `Get-OVRemoteSupportContact` defined on the appliance.
+Primary Remote Support Contact object from Get-OVRemoteSupportContact defined on the appliance.
 
 | Aliases | None |
 | :--- | :--- |
@@ -71,7 +71,7 @@ Primary Remote Support Contact object from `Get-OVRemoteSupportContact` defined 
 
 ### -SecondaryContact &lt;Object&gt;
 
-Secondary Remote Support Contact object from `Get-OVRemoteSupportContact` defined on the appliance.  Must not be the same value as the Primary Contact.
+Secondary Remote Support Contact object from Get-OVRemoteSupportContact defined on the appliance.  Must not be the same value as the Primary Contact.
 
 | Aliases | None |
 | :--- | :--- |
@@ -197,7 +197,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Facilities.DataCenter**_
 
-DataCenter facility object from [`Get-OVDataCenter`](../facilities/get-ovdatacenter.md).
+DataCenter facility object from Get-OVDataCenter.
 
 ## Return Values
 

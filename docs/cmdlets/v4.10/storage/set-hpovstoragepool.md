@@ -59,7 +59,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 
 ### -InputObject &lt;HPOneView.Storage.StoragePool[]&gt;
 
-One or more `[HPOneView.Storage.StoragePool]` resources from `Get-HPOVStoragePool`.
+One or more `[HPOneView.Storage.StoragePool]` resources from Get-HPOVStoragePool.
 
 | Aliases | Pool |
 | :--- | :--- |
@@ -89,7 +89,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Storage.StoragePool**_
 
-Storage pool resource(s) from [`Get-HPOVStoragePool`](get-hpovstoragepool.md).
+Storage pool resource(s) from Get-HPOVStoragePool.
 
 ## Return Values
 

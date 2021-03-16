@@ -267,7 +267,7 @@ Use to specify a the iLO subsystem hostname.  If omitted, a randomly generated n
 
 ### -InputObject &lt;Object&gt;
 
-The object from `Get-OVComposerIloStatus`.
+The object from Get-OVComposerIloStatus.
 
 | Aliases | None |
 | :--- | :--- |
@@ -291,7 +291,7 @@ The SecureString of a password to set for the user account.
 
 ### -Username &lt;String&gt;
 
-The iLO account to be created.  The account name must not begin with an '_' (underscore), or be the `built-in` Administrator account.
+The iLO account to be created.  The account name must not begin with an '_' (underscore), or be the built-in Administrator account.
 
 | Aliases | None |
 | :--- | :--- |
@@ -321,7 +321,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Appliance.HardwareConfig [System.Management.Automation.PSCustomObject]**_
 
-The appliance hardware configuration object from [`Get-OVComposerIloStatus`](get-ovcomposerilostatus.md).
+The appliance hardware configuration object from Get-OVComposerIloStatus.
 
 ## Return Values
 

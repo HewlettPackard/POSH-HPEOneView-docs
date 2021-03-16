@@ -74,7 +74,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Networking.FabricManager**_
 
-The fabric manager resource from [`Get-OVFabricManager`](get-ovfabricmanager.md).
+The fabric manager resource from Get-OVFabricManager.
 
 ## Return Values
 

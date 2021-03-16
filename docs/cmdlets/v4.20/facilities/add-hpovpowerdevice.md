@@ -96,7 +96,7 @@ Use this parameter if you want to provide a PSCredential object instead.
 
 ### -TrustLeaCertificate &lt;SwitchParameter&gt;
 
-When adding an iPDU resource, the SSL certificate may be `self-signed` and untrusted.  Use this switch to add the iPDU SSL certificate to the appliance trust store, if Certificate Verification has not been disabled on the appliance.
+When adding an iPDU resource, the SSL certificate may be self-signed and untrusted.  Use this switch to add the iPDU SSL certificate to the appliance trust store, if Certificate Verification has not been disabled on the appliance.
 
 | Aliases |  |
 | :--- | :--- |

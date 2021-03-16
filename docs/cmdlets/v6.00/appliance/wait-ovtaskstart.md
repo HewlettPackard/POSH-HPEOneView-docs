@@ -49,7 +49,7 @@ The object of the task resource to wait for.
 
 ### -ResourceName &lt;String&gt;
 
-Specify the associated ResourceName to the task in order to display in the `Write-Progress` `-activity` parameter.
+Specify the associated ResourceName to the task in order to display in the Write-Progress `-activity` parameter.
 
 | Aliases | None |
 | :--- | :--- |

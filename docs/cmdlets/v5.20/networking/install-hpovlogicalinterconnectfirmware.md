@@ -73,7 +73,7 @@ $task = Install-HPOVLogicalInterconnectFirmware Activate $li
 Wait-HPOVTaskComplete $task
 ```
 
-Perform a firmware update of the `Encl1-LI` Logical Interconnect by first staging the firmware. Then Acitate the firmware using the default OddEven Interconnect Bay order.
+Perform a firmware update of the Encl1-LI Logical Interconnect by first staging the firmware. Then Acitate the firmware using the default OddEven Interconnect Bay order.
 
 ###  Example 2 
 
@@ -81,7 +81,7 @@ Perform a firmware update of the `Encl1-LI` Logical Interconnect by first stagin
 Get-HPOVLogicalInterconnect Encl1-LI  | Install-HPOVLogicalInterconnectFirmware -method Update -Baseline "HP Service Pack for ProLiant" -confirm:$false | Wait-HPOVTaskComplete
 ```
 
-Perform a firmware update of the `Encl1-LI` Logical Interconnect, do not prompt for confirmation, then wait for the task to complete.
+Perform a firmware update of the Encl1-LI Logical Interconnect, do not prompt for confirmation, then wait for the task to complete.
 
 ## Parameters
 

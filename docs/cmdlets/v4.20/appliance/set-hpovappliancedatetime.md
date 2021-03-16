@@ -65,7 +65,7 @@ Specify to configure the embedded hypervisor integration agent to sync time with
 
 ### -NTPServers &lt;Array&gt;
 
-Parameter is deprecated.  Please use the `Set-HPOVApplianceDateTime` Cmdlet.
+Parameter is deprecated.  Please use the Set-HPOVApplianceDateTime Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |

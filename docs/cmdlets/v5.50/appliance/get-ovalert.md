@@ -103,7 +103,7 @@ Return "critical" severity alerts for the past 8 days.
 Get-OVAlert -severity Critical -Start "2016-12-01"
 ```
 
-Return "critical" severity alerts Starting at `2016-12`-01 to now.
+Return "critical" severity alerts Starting at 2016-12-01 to now.
 
 ###  Example 9 
 
@@ -111,7 +111,7 @@ Return "critical" severity alerts Starting at `2016-12`-01 to now.
 Get-OVAlert -Start "2016-12-01" -End "2016-12-09
 ```
 
-Return all alerts Starting at `2016-12`-01 to `2016-12`-09.
+Return all alerts Starting at 2016-12-01 to 2016-12-09.
 
 ## Parameters
 
@@ -270,7 +270,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**System.Management.Automation.PSCustomObject**_
 
-Resource object (i.e. [`Get-OVServer`](../servers/get-ovserver.md)).
+Resource object (i.e. Get-OVServer).
 
 ## Return Values
 

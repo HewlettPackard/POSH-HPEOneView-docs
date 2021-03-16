@@ -59,21 +59,21 @@ The resource category to be matched, if specified.  Valid resource categories ar
     * domains
     * users
     * racks
-    * `enclosure-groups`
+    * enclosure-groups
     * enclosures
-    * `uplink-sets`
-    * `logical-interconnect`-groups
-    * `logical-interconnects`
-    * `interconnect-types`
+    * uplink-sets
+    * logical-interconnect-groups
+    * logical-interconnects
+    * interconnect-types
     * interconnects
     * networks
-    * `firmware-drivers`
-    * `server-hardware`-types
-    * `server-hardware`
-    * `server-profiles`
+    * firmware-drivers
+    * server-hardware-types
+    * server-hardware
+    * server-profiles
     * alerts
-    * `storage-volumes`
-    * `storage-systems`
+    * storage-volumes
+    * storage-systems
 
 | Aliases | None |
 | :--- | :--- |

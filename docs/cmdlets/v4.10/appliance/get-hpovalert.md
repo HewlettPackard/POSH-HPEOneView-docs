@@ -97,7 +97,7 @@ Get-HPOVAlert -severity Critical -Start "2016-12-01"
 
 ```
 
-Return "critical" severity alerts Starting at `2016-12`-01 to now.
+Return "critical" severity alerts Starting at 2016-12-01 to now.
 
 ###  Example 9 
 
@@ -106,7 +106,7 @@ Get-HPOVAlert -Start "2016-12-01" -End "2016-12-09
 
 ```
 
-Return all alerts Starting at `2016-12`-01 to `2016-12`-09.
+Return all alerts Starting at 2016-12-01 to 2016-12-09.
 
 ## Parameters
 
@@ -275,7 +275,7 @@ Resource URI.
 
 _**System.Management.Automation.PSCustomObject**_
 
-Resource object (i.e. [`Get-HPOVServer`](../servers/get-hpovserver.md)).
+Resource object (i.e. Get-HPOVServer).
 
 
 ## Return Values

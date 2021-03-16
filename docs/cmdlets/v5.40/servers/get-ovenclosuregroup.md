@@ -82,7 +82,7 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 
 ### -exportFile &lt;String&gt;
 
-Full path and file name to save the output of `Get-OVEnclosureGroup`
+Full path and file name to save the output of Get-OVEnclosureGroup
 
 | Aliases | x, export |
 | :--- | :--- |

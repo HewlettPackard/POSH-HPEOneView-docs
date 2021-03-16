@@ -113,7 +113,7 @@ $LIGProd = Get-OVLogicalInterconnectGroup -Name "LIG Prod"
 New-OVUplinkSet -Resource $LIGProd -Name "Fabric A" -Type FibreChannel -Networks "FABRIC_A" -UplinkPorts "BAY1:X1","BAY1:X2"
 ```
 
-To Create a Fibre Channel Uplink Template for `c-Class` or HPE Synergy VC FlexFabric modules.
+To Create a Fibre Channel Uplink Template for c-Class or HPE Synergy VC FlexFabric modules.
 
 ###  Example 4 
 
@@ -154,7 +154,7 @@ Create a Synergy ImageStreamer Uplink Set.
 
 ### -InputObject &lt;Object&gt;
 
-Either a Logical Interconnect Group (Get-OVLogicalInterconnectGroup) or Logical Interconnect (Get-OVLogicalInterconnect) resource object.
+Either a Logical Interconnect Group (`Get-OVLogicalInterconnectGroup`) or Logical Interconnect (`Get-OVLogicalInterconnect`) resource object.
 
 | Aliases | li, lig, ligName, Resource |
 | :--- | :--- |
@@ -227,9 +227,9 @@ Array of uplink ports with "BAYID:FacePlatePortID".  When configuring a Synergy 
 FlexFabric `[e.g]`. @("BAY1:X1","BAY1:X2") or "BAY1:X5","BAY2:X5"
 VC Fibre Channel `[e.g]`. @("BAY3:1","BAY3:2") or "BAY3:1","BAY3:2"
 Synergy VC Ethernet `[e.g]`. "Enclosure1:Bay3:Q1","Enclosure1:Bay3:Q2","Enclosure2:Bay6:Q1","Enclosure2:Bay6:Q2"
-Synergy VC `Sub-Interface` `[e.g]`. "Enclosure1:Bay3:Q1.1","Enclosure1:Bay3:Q2.1","Enclosure2:Bay6:Q1.2","Enclosure2:Bay6:Q2.2"
+Synergy VC Sub-Interface `[e.g]`. "Enclosure1:Bay3:Q1.1","Enclosure1:Bay3:Q2.1","Enclosure2:Bay6:Q1.2","Enclosure2:Bay6:Q2.2"
 Synergy VC FC Primary Port `[e.g]`. "Bay2:Q1","Bay2:Q2" or "Bay5:Q1","Bay5:Q2"
-Synergy VC FC `Sub-Interface` `[e.g]`. "Bay2:Q1.1","Bay2:Q2.1" or "Bay5:Q1.2","Bay5:Q2.2"
+Synergy VC FC Sub-Interface `[e.g]`. "Bay2:Q1.1","Bay2:Q2.1" or "Bay5:Q1.2","Bay5:Q2.2"
 
 | Aliases | usUplinkPorts |
 | :--- | :--- |
@@ -391,7 +391,7 @@ When configuring Synergy Virtual Connect uplink sets, the LACP load balancing al
 
 ### -Passthru &lt;SwitchParameter&gt;
 
-Use this parameter to return a helper object with the `New-OVLogicalInterconnectGroup` `-UplinkSet` parameter.
+Use this parameter to return a helper object with the New-OVLogicalInterconnectGroup `-UplinkSet` parameter.
 
 | Aliases | None |
 | :--- | :--- |
@@ -458,7 +458,7 @@ Failover from active to standby uplinks will cause a brief interruption in the n
 
 ### -LacpFailoverTrigger &lt;String&gt;
 
-LACP failover trigger is only applicable to the Ethernet uplink sets in the `active-standby` configuration when there is no link aggregation configured on the `top-of`-rack (ToR) switches or an uplink set is configured without MLAG. In this case, all traffic to the compute modules will pass through the active set of uplink ports. Link failover trigger defines failover policy for when traffic will be redirected to the standby uplink ports. In case of failover trigger based on bandwidth/uplink count, link failover can be triggered either by reduction in active uplink bandwidth or increase in standby uplink bandwidth.
+LACP failover trigger is only applicable to the Ethernet uplink sets in the active-standby configuration when there is no link aggregation configured on the top-of-rack (ToR) switches or an uplink set is configured without MLAG. In this case, all traffic to the compute modules will pass through the active set of uplink ports. Link failover trigger defines failover policy for when traffic will be redirected to the standby uplink ports. In case of failover trigger based on bandwidth/uplink count, link failover can be triggered either by reduction in active uplink bandwidth or increase in standby uplink bandwidth.
 
 Allowed values:
 
@@ -483,7 +483,7 @@ Specify the forward error correction mode.  This paraemter is only supported wit
 	* Cl108
 	* None
 
-The following values are supported with `sub-ports`:
+The following values are supported with sub-ports:
 
 	* Auto
 	* Cl74
@@ -525,11 +525,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Networking.LogicalInterconnect [System.Management.Automation.PSCustomObject]**_
 
-Logical Interconnect Resource from [`Get-OVLogicalInterconnect`](get-ovlogicalinterconnect.md)
+Logical Interconnect Resource from Get-OVLogicalInterconnect
 
 _**HPEOneView.Networking.LogicalInterconnectGroup [System.Management.Automation.PSCustomObject]**_
 
-Logical Interconnect Group Resource from [`Get-OVLogicalInterconnectGroup`](get-ovlogicalinterconnectgroup.md)
+Logical Interconnect Group Resource from Get-OVLogicalInterconnectGroup
 
 ## Return Values
 

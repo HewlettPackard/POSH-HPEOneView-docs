@@ -116,7 +116,7 @@ When specifying HBA, you cannot attach a RAID Logical Disk to this policy.
 
 ### -Initialize &lt;SwitchParameter&gt;
 
-Use this parameter to `re-initialize` the controller.  This will wipe any existing logical disk configured for the controller and deploy the new policy defined.  Not supported when ControllerID is "Mezz 1", "Mezz 2", or "Mezz 3".
+Use this parameter to re-initialize the controller.  This will wipe any existing logical disk configured for the controller and deploy the new policy defined.  Not supported when ControllerID is "Mezz 1", "Mezz 2", or "Mezz 3".
 
 | Aliases | None |
 | :--- | :--- |
@@ -140,7 +140,7 @@ Specify to import any found Logical Disk configuration and add to the Server Pro
 
 ### -LogicalDisk &lt;Object&gt;
 
-A collection of Logical Disk objects from the `New-HPOVServerProfileLogicalDisk` Cmdlet.
+A collection of Logical Disk objects from the New-HPOVServerProfileLogicalDisk Cmdlet.
 
 | Aliases | None |
 | :--- | :--- |
@@ -176,11 +176,11 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.ServerProfile.LogicalDisk [System.Management.Automation.PSCustomObject]**_
 
-Logical Disk configuration policy from [`New-HPOVServerProfileLogicalDisk`](new-hpovserverprofilelogicaldisk.md)
+Logical Disk configuration policy from New-HPOVServerProfileLogicalDisk
 
 _**System.Collections.ArrayList <HPOneView.ServerProfile.LogicalDisk>**_
 
-Collection of Logical Disk configuration policy from [`New-HPOVServerProfileLogicalDisk`](new-hpovserverprofilelogicaldisk.md)
+Collection of Logical Disk configuration policy from New-HPOVServerProfileLogicalDisk
 
 ## Return Values
 

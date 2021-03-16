@@ -105,7 +105,7 @@ Secondary Remote Support Contact user object.
 
 ### -ServicePartner &lt;Object&gt;
 
-Authorized HPE service partner object from `Get-OVRemoteSupportPartner`.
+Authorized HPE service partner object from Get-OVRemoteSupportPartner.
 
 | Aliases | None |
 | :--- | :--- |
@@ -117,7 +117,7 @@ Authorized HPE service partner object from `Get-OVRemoteSupportPartner`.
 
 ### -Reseller &lt;Object&gt;
 
-Authorized HPE reseller partner object from `Get-OVRemoteSupportPartner`.
+Authorized HPE reseller partner object from Get-OVRemoteSupportPartner.
 
 | Aliases | None |
 | :--- | :--- |

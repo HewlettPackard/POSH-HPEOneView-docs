@@ -35,7 +35,7 @@ Remove OS Deployment Servers from the appliance.
 
 ### -InputObject &lt;HPOneView.Appliance.OSDeploymentServer&gt;
 
-OS Deployment Server object, from `Get-HPOVOSDeploymentServer`.
+OS Deployment Server object, from Get-HPOVOSDeploymentServer.
 
 | Aliases | None |
 | :--- | :--- |
@@ -89,7 +89,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Appliance.OSDeploymentServer**_
 
-HPE Synergy Image Streamer OS Deployment Server from [`Get-HPOVOSDeploymentServer`](get-hpovosdeploymentserver.md)
+HPE Synergy Image Streamer OS Deployment Server from Get-HPOVOSDeploymentServer
 
 ## Return Values
 

@@ -65,7 +65,7 @@ Volumes          : 0
 Volume Templates : 0
 ```
 
-Get all available storage pools, display using `Format-List` to see extended information.
+Get all available storage pools, display using Format-List to see extended information.
 
 ###  Example 3 
 
@@ -198,7 +198,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Storage.System**_
 
-Managed Storage System from [`Get-OVStorageSystem`](get-ovstoragesystem.md).
+Managed Storage System from Get-OVStorageSystem.
 
 ## Return Values
 

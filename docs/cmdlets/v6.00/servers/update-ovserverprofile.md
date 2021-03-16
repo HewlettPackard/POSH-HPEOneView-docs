@@ -145,7 +145,7 @@ Re-apply Baseline.  If setting is Firmware only, the associated server hardware 
 
 ### -Connections &lt;SwitchParameter&gt;
 
-Re-apply Vitual Connect connections.  Will `re-provision` downlink ports and connection templates for the provided server profile.
+Re-apply Vitual Connect connections.  Will re-provision downlink ports and connection templates for the provided server profile.
 
 | Aliases | None |
 | :--- | :--- |
@@ -229,7 +229,7 @@ If a setting requires the server tobe powered off, certain updates can be staged
 
 ### -Refresh &lt;SwitchParameter&gt;
 
-Choose to refresh the server profile state.  This does not perform `re-apply` or update from template operation.
+Choose to refresh the server profile state.  This does not perform re-apply or update from template operation.
 
 | Aliases |  |
 | :--- | :--- |
@@ -247,7 +247,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.ServerProfile [System.Management.Automation.PSCustomObject]**_
 
-One or more Server Profile resources from [`Get-OVServerProfile`](get-ovserverprofile.md).
+One or more Server Profile resources from Get-OVServerProfile.
 
 ## Return Values
 

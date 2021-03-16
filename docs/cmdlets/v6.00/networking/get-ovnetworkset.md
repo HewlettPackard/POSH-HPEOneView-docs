@@ -80,7 +80,7 @@ Returns just the Production Network Set object to standard output.
 $myNetSets = Get-OVNetworkSet
 ```
 
-Returns the `Get-OVNetworkSet` query and stores it in the object $myNetSets
+Returns the Get-OVNetworkSet query and stores it in the object $myNetSets
 
 ###  Example 4 
 
@@ -88,7 +88,7 @@ Returns the `Get-OVNetworkSet` query and stores it in the object $myNetSets
 Get-OVNetworkSet -exportFile "c:\myApplianceConfig\Network-Sets.json"
 ```
 
-Returns the `Get-OVNetworkSet` query results to the file c:\myApplianceConfig\Network-Sets.json
+Returns the Get-OVNetworkSet query results to the file c:\myApplianceConfig\Network-Sets.json
 
 ## Parameters
 
@@ -147,7 +147,7 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 
 ### -ExportFile &lt;String&gt;
 
-The full path and file name to export the contents retrieved from the call to `Get-OVNetworkSet`.
+The full path and file name to export the contents retrieved from the call to Get-OVNetworkSet.
 
 | Aliases | x, export |
 | :--- | :--- |

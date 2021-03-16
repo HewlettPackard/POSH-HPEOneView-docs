@@ -51,7 +51,7 @@ Retrieve rack members that begin with "ProdDL380" within the "Rack-221" rack res
 
 ### -InputObject &lt;String&gt;
 
-Rack resource from `Get-OVRack`.
+Rack resource from Get-OVRack.
 
 | Aliases | None |
 | :--- | :--- |
@@ -93,7 +93,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPEOneView.Facilities.Rack**_
 
-Rack resource object from [`Get-OVRack`](get-ovrack.md).
+Rack resource object from Get-OVRack.
 
 ## Return Values
 

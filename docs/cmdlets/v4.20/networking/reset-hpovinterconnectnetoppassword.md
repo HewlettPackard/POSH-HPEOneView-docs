@@ -66,7 +66,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 
 ### -InputObject &lt;Object&gt;
 
-The Logical Interconnect from `Get-HPOVLogicalInterconnect` Cmdlet.
+The Logical Interconnect from Get-HPOVLogicalInterconnect Cmdlet.
 
 | Aliases | Interconnect |
 | :--- | :--- |
@@ -96,7 +96,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Networking.LogicalInterconnect [System.Management.Automation.PSCustomObject]**_
 
-Logical interconnect resource from [`Get-HPOVLogicalInterconnect`](get-hpovlogicalinterconnect.md).
+Logical interconnect resource from Get-HPOVLogicalInterconnect.
 
 ## Return Values
 

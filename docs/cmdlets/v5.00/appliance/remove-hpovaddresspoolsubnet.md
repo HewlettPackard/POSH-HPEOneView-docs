@@ -70,7 +70,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**HPOneView.Appliance.IPAddressSubnet [System.Management.Automation.PSCustomObject]**_
 
-IPv4 or IPv6 Subnet Pool from [`Get-HPOVAddressPoolSubnet`](get-hpovaddresspoolsubnet.md)
+IPv4 or IPv6 Subnet Pool from Get-HPOVAddressPoolSubnet
 
 ## Return Values
 

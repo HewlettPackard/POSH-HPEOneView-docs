@@ -46,7 +46,7 @@ read-host "Password" -AsSecureString | Get-HPOVScmbCertificates -Location C:\scm
 
 ```
 
-Prompt for secure password input and pipe the value to `Get-HPOVScmbCertificates` to convert the `[cert.pem]` to PFX format with the pipeline secure password.
+Prompt for secure password input and pipe the value to Get-HPOVScmbCertificates to convert the `[cert.pem]` to PFX format with the pipeline secure password.
 
 ## Parameters
 

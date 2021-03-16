@@ -32,7 +32,7 @@ Minimum required privileges: Read only
 Get-HPOVApplianceTwoFactorAuthentication
 ```
 
-Get the appliance `two-factor` authentication configuration.
+Get the appliance two-factor authentication configuration.
 
 ## Parameters
 
