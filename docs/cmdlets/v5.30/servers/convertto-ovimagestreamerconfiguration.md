@@ -103,7 +103,7 @@ Use to override the convertion if SAS Logical Interconnects are detected.  WARNI
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? |  |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;

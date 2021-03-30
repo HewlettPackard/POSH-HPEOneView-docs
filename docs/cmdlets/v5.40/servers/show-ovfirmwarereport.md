@@ -73,7 +73,7 @@ Resource Object or Name of the Firmware Baseline to report against what is insta
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Export &lt;SwitchParameter&gt;
@@ -85,7 +85,7 @@ Indicate to export the report to a CSV file.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Location &lt;String&gt;
@@ -99,7 +99,7 @@ Default: Current Working Directory
 | Required? | True |
 | Position? | Named |
 | Default value | (get-location).Path |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;

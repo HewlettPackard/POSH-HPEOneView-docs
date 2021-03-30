@@ -9,12 +9,11 @@ description: Retrieve Server Hardware resource(s).
 ```text
 Get-OVServer
     [-Name <String>]
-    [-SerialNumber <String>]
     [-ServerName <String>]
+    [-SerialNumber <String>]
     [-Status <String[]>]
     [-NoProfile]
     [-InputObject <Object>]
-    [-MaintenanceMode <Boolean>]
     [-Label <String>]
     [-Count <Int>]
     [-Scope <Object>]
@@ -160,11 +159,23 @@ The name of the server hardware resource to be returned.  All server hardware re
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
-| Accept wildcard characters? | False |
+| Accept wildcard characters? | True |
 
 ### -ServerName &lt;String&gt;
 
 Specify the Server OS Name that is reported by the iLO.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | True |
+
+### -SerialNumber &lt;String&gt;
+
+Specify the server hardware serial number to locate.  This parameter does not support wildcard chatacters.
 
 | Aliases | None |
 | :--- | :--- |
@@ -273,18 +284,6 @@ Filter resources based on their current status.  Allowed values:
     * Critical
     * Unknown
     * Disabled
-
-| Aliases | None |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
-### -SerialNumber &lt;String&gt;
-
-Specify the server hardware serial number to locate.  This parameter does not support wildcard chatacters.
 
 | Aliases | None |
 | :--- | :--- |

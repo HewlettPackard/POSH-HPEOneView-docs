@@ -9,13 +9,14 @@ description: Retrieve address pool range information.
 ```text
 Get-HPOVAddressPoolRange
     [-Type <String[]>]
+    [-Name <string>]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 Get-HPOVAddressPoolRange
-    [-InputObject] <Object>
+    [-InputObject <Object>]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
@@ -99,7 +100,7 @@ Get a specific address pool range type (VMAC) from all connected appliances.
 | Required? | False |
 | Position? | Named |
 | Default value | all |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -112,6 +113,18 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
+
+### -Name &lt;string&gt;
+
+Filter address ranges based on the name.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

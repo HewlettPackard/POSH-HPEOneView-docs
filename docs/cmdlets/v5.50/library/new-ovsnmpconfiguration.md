@@ -54,7 +54,7 @@ The SNMP Read Community String to set.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Contact &lt;String&gt;
@@ -66,7 +66,7 @@ SNMP Contact Name.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -AccessList &lt;Array&gt;
@@ -78,7 +78,7 @@ A collection `[System.Collections.ArrayList` ] of IP Addresses or Subnets.  You 
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -TrapDestinations &lt;Array&gt;
@@ -90,7 +90,7 @@ A collection `[System.Collections.ArrayList` ] of SNMMP Trap Destinations.  Use 
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -SnmpV1 &lt;Bool&gt;
@@ -102,7 +102,7 @@ Specify if SNMPv1 should be enabled.  Can be disabled when SNMPv3 is enabled.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -SnmpV3 &lt;Bool&gt;
@@ -114,7 +114,7 @@ Specify if SNMPv3 should be enabled.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -SnmpV3Users &lt;SnmpV3User[]&gt;
@@ -126,7 +126,7 @@ Collection of SNMPv3 users to configure within the SNMP configuration object.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

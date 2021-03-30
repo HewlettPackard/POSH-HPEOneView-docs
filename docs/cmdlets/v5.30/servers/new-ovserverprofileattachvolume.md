@@ -113,7 +113,7 @@ Get the "Volume1" and "SharedVolume1" Storage Volumes via the Get-OVStorageVolum
 
 ```text
 $storagepool = Get-OVStoragePool R1_FC
-$sp = Get-OVServerProfile "chef-web01"
+$sp = Get-OVServerProfile -Name "chef-web01"
 New-OVServerProfileAttachVolume -ServerProfile $sp -Name "Chef Web01 Vol 2" -StoragePool $storagepool  | Wait-OVTaskComplete
 ```
 
@@ -122,8 +122,8 @@ Attach a new 10Gb Ephemeral Volume to an existing Server Profile.
 ###  Example 6 
 
 ```text
-$sp = Get-OVServerProfile "chef-web01"
-Get-OVStorageVolume "My New Volume 3" | New-OVServerProfileAttachVolume -ServerProfile $sp  | Wait-OVTaskComplete
+$sp = Get-OVServerProfile -Name "chef-web01"
+Get-OVStorageVolume -Name "My New Volume 3" | New-OVServerProfileAttachVolume -ServerProfile $sp  | Wait-OVTaskComplete
 ```
 
 Attach an existing Storage Volume to a Server Profile.
@@ -132,7 +132,7 @@ Attach an existing Storage Volume to a Server Profile.
 
 ```text
 $storagepool = Get-OVStoragePool R1_FC
-$sp = Get-OVServerProfile "My Server Profile"
+$sp = Get-OVServerProfile -Name "My Server Profile"
 New-OVServerProfileAttachVolume -Name "My Server Profile Boot Vol" -ServerProfile $sp -StoragePool $storagepool -Bootable  | Wait-OVTaskComplete
 ```
 
@@ -377,7 +377,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? |  |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Scope &lt;HPEOneView.Appliance.ScopeCollection[]&gt;
@@ -389,7 +389,7 @@ Provide an `[HPEOneView.Appliance.ScopeCollection]` resource object to initially
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? |  |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -TargetPortAssignment &lt;SwitchParameter&gt;

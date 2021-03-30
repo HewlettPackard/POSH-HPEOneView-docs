@@ -21,6 +21,14 @@ FOR HPE Support USE ONLY.  This Cmdlet will enable appliance level component deb
 
 ## Examples
 
+###  Example 1 
+
+```text
+This Cmdlets does not have a public example.
+```
+
+This Cmdlet does not have a public example.
+
 ## Parameters
 
 ### -Scope &lt;String&gt;
@@ -32,7 +40,7 @@ The Scope of the LoggerName.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -LoggerName &lt;String&gt;
@@ -44,29 +52,31 @@ The internal component name.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Level &lt;String&gt;
 
 The verbose level to enable.  Allowed values are:
 
-    * ERROR
-    * WARN
-    * DEBUG
-    * TRACE
+	* ERROR
+	* WARN
+	* DEBUG
+	* TRACE
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
 
 Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
+
+Default Value: ${Global:ConnectedSessions} | ? Default
 
 | Aliases | Appliance |
 | :--- | :--- |
@@ -90,7 +100,7 @@ HPE OneView Appliance Connection object.
 
 _**System.Management.Automation.PSCustomObject**_
 
-
+The returned object global setting.
 
 ## Related Links
 

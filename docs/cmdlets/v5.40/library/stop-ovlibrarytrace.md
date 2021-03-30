@@ -6,6 +6,11 @@ description: Stop HPOV Library Verbose Trace.
 
 ## Syntax
 
+```text
+Stop-OVLibraryTrace
+    [<CommonParameters>]
+```
+
 ## Description
 
 This Cmdlet is deprecated.  Please use Get-OVCommandTrace.

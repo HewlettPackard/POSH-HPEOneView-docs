@@ -9,12 +9,12 @@ description: Install Logical Interconnect Firmware.
 ```text
 Install-OVLogicalInterconnectFirmware
     [-InputObject] <Object>
+    [-Baseline] <Object>
     [-Method <String>]
     [-EthernetActivateOrder <String>]
     [-EthernetActivateDelay <Int32>]
     [-FCActivateOrder <String>]
     [-FCActivateDelay <Int32>]
-    [-Baseline <Object>]
     [-NoPreview]
     [-Async]
     [-Force]
@@ -100,7 +100,7 @@ Minimum required privileges: Network administrator, Server administrator
 
 ```text
 $li = Get-OVLogicalInterconnect Encl1-LI
-$spp = Get-OVBaseline "HPE Service Pack for ProLiant" 
+$spp = Get-OVBaseline -Name "HPE Service Pack for ProLiant" 
 $task = Install-OVLogicalInterconnectFirmware -Method Stage -InputObject $li -Baseline $spp 
 Wait-OVTaskComplete $task
 $task = Install-OVLogicalInterconnectFirmware -Method Activate -InputObject $li 
@@ -171,9 +171,8 @@ Specify the Ethernet module firmware activation order.  Accepted values are:
     * Parallel
     * Serial
     * Orchetrated
-    * Manual
 
-  Orchestrated and Manual are only supported with HPE Synergy logical interconnect resources.
+  Orchestrated is only supported with HPE Synergy logical interconnect resources.
 
 | Aliases | Order, ActivateOrder |
 | :--- | :--- |

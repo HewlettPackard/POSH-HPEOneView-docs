@@ -70,7 +70,7 @@ Primary Remote Support Contact user object.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -SecondaryContact &lt;Object&gt;
@@ -82,7 +82,7 @@ Secondary Remote Support Contact user object.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ServicePartner &lt;Object&gt;
@@ -94,7 +94,7 @@ Authorized HPE service partner object from Get-HPOVRemoteSupportPartner.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Reseller &lt;Object&gt;
@@ -106,7 +106,7 @@ Authorized HPE reseller partner object from Get-HPOVRemoteSupportPartner.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ContractType &lt;String&gt;
@@ -121,7 +121,7 @@ Use to override the contract type.  If specifying a different contract type, you
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -SupportID &lt;String&gt;
@@ -133,7 +133,7 @@ The support Contract ID.  You must specify the type of contract by using the `-C
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -NewSerialNumber &lt;String&gt;
@@ -145,7 +145,7 @@ Use to update the HPE support backend with an updated serial number.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -NewProductNumber &lt;String&gt;
@@ -157,7 +157,7 @@ Use to update the HPE support backend with an updated product number
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
@@ -169,7 +169,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;

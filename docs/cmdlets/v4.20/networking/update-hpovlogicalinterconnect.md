@@ -123,7 +123,7 @@ Switch to reapply the Logical Interconnect configuration.  This does NOT update 
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -FactoryReset &lt;SwitchParameter&gt;
@@ -135,7 +135,7 @@ Use to factory reset the HPE Synergy Fabric module.  Do know that an outage will
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

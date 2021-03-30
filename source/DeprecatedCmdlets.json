@@ -3,5 +3,6 @@
     "Set-HPOVServerPower",
     "Get-HPOVRole",
     "Show-HPOVUserSession",
-    "Start-HPOVLibraryTrace"
+    "Start-HPOVLibraryTrace",
+    "Invoke-OVVcmMigration"
 ]

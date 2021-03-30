@@ -65,7 +65,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Credential &lt;PSCredential&gt;
@@ -77,7 +77,7 @@ Use this parameter if you want to provide a PSCredential object.  Using this par
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -DRSEnabled &lt;Bool&gt;
@@ -89,7 +89,7 @@ Use to enable or disable VMware DRS default settings for clusters.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -DisplayName &lt;String&gt;
@@ -101,7 +101,7 @@ Change the display name of the cluster manager.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -DistributedSwitchUsage &lt;String&gt;
@@ -116,7 +116,7 @@ Applicable only when vSwitch type is Distributed. This specifies which networks 
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -DistributedSwitchVersion &lt;String&gt;
@@ -128,7 +128,7 @@ Applicable only when vSwitch type is of type distributed. Configures distributed
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -HAEnabled &lt;Bool&gt;
@@ -140,7 +140,7 @@ Use to enable or disable VMware HA.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Hostname &lt;String&gt;
@@ -152,7 +152,7 @@ Use to update the IP or FQDN address of the target cluster manager.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -InputObject &lt;HypervisorManager&gt;
@@ -176,7 +176,7 @@ Use to enable or disable VMware VMotion multi-NIC vmotion.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Port &lt;Int&gt;
@@ -188,7 +188,7 @@ Use to update the TCP port of the cluster manager.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -VirtualSwitchType &lt;String&gt;
@@ -203,7 +203,7 @@ Use to adjust the virtual switch for hypervisor clsuters with the specified type
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

@@ -35,7 +35,7 @@ Start a new library trace, which will create a file in the `C:\Temp` directory.
 
 ### -ScriptBlock &lt;ScriptBlock&gt;
 
-One or more HPOneView library Cmdlets.  The Cmdlet will execute the contents of the ScriptBlock, ensuring that the commands will generate verbose output and be captured to a log file.
+One or more HPEOneView library Cmdlets.  The Cmdlet will execute the contents of the ScriptBlock, ensuring that the commands will generate verbose output and be captured to a log file.
 
 | Aliases | Command |
 | :--- | :--- |

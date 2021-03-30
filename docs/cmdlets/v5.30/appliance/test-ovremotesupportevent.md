@@ -102,7 +102,7 @@ Supported server hardware from Get-OVServer Cmdlet.
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task resource to monitor.
 

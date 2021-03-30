@@ -8,7 +8,7 @@ description: Retrieve SMTP email alert filter(s) configured on the appliance.
 
 ```text
 Get-OVSmtpAlertEmailFilter
-    [-Name] <String>
+    [-Name <String>]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
@@ -57,7 +57,7 @@ Name of the Filter to return.  Supports wildcard.  To return the remote support 
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | True |
+| Required? | False |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |

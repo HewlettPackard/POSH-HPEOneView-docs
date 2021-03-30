@@ -105,7 +105,7 @@ IP Address, Hostname or FQDN of the Primary C7000 Onboard Administrator (OA).
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -EnclosureGroup &lt;Object&gt;
@@ -129,7 +129,7 @@ Administrator account of the target OA.  Can be either an OA Local Administrator
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Password &lt;Object&gt;
@@ -141,7 +141,7 @@ Administrator Account password of the OA specified.  Value can be [String] or [S
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Credential &lt;PSCredential&gt;
@@ -153,7 +153,7 @@ Use this parameter if you want to provide a PSCredential object instead.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -LicensingIntent &lt;String&gt;
@@ -170,7 +170,7 @@ Accepted values are
 | Required? | True |
 | Position? | Named |
 | Default value | OneView |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Baseline &lt;Object&gt;
@@ -187,7 +187,7 @@ $Name = "HP Service Pack For ProLiant  OneView 2014 11 13"
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ForceInstallFirmware &lt;SwitchParameter&gt;
@@ -199,7 +199,7 @@ $Name = "HP Service Pack For ProLiant  OneView 2014 11 13"
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Monitored &lt;SwitchParameter&gt;
@@ -211,7 +211,7 @@ Add the specified enclosure for monitor only management.  You can view hardware 
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
@@ -223,7 +223,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -235,7 +235,7 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Scope &lt;Array&gt;
@@ -247,7 +247,7 @@ Provide an array of <HPOneView.Appliance.ScopeResource> Scope resource(s) to ini
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

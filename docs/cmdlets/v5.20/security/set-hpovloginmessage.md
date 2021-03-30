@@ -9,15 +9,15 @@ description: Set appliance Login Message.
 ```text
 Set-HPOVLoginMessage
     [-Message] <String>
-    [-Acknowledgment] <Boolean>
-    [-ApplianceConnection] <Object>
+    [-Acknowledgment <Boolean>]
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 Set-HPOVLoginMessage
     [-Acknowledgment] <Boolean>
-    [-ApplianceConnection] <Object>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -58,14 +58,14 @@ Set the Login Message from the specified appliance connection.
 
 ### -Message &lt;String&gt;
 
-The login message to set.
+The login message to set.  The value can be null to clear the login message.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Acknowledgment &lt;Boolean&gt;
@@ -74,10 +74,10 @@ Set to True if the login message should be acknowledged before authentication co
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | True |
+| Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -86,10 +86,10 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | True |
+| Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
@@ -104,7 +104,8 @@ _**None. You cannot pipe objects to this Cmdlet.**_
 
 _**HPOneView.Appliance.LoginMessage**_
 
- If successful, returns a resource
+Returns the login message configured on the appliance.
+
 
 ## Related Links
 

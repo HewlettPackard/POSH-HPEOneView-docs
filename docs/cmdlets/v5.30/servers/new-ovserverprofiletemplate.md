@@ -593,7 +593,7 @@ Deprecated.  Please refer to the New-OVServerProfileLogicalDisk and New-OVServer
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? |  |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ControllerMode &lt;String&gt;
@@ -605,7 +605,7 @@ Deprecated.  Please refer to the New-OVServerProfileLogicalDisk and New-OVServer
 | Required? | False |
 | Position? | Named |
 | Default value | RAID |
-| Accept pipeline input? |  |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -StorageController &lt;Object&gt;
@@ -808,7 +808,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | false |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

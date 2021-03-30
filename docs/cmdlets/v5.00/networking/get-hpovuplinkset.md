@@ -75,7 +75,7 @@ Name of Uplink Set
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -LogicalInterconnect &lt;Object&gt;
@@ -87,7 +87,7 @@ Name of the Logical Interconnect to show associated Uplink Set.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### -type &lt;String&gt;
@@ -102,7 +102,7 @@ Specify the Uplink Set Type to display.  Will display all Uplink Sets of the typ
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -report &lt;SwitchParameter&gt;
@@ -114,7 +114,7 @@ Generate a report of the defined Uplink Sets.  Includes Uplink Set type, network
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -126,7 +126,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -exportFile &lt;String&gt;
@@ -138,7 +138,7 @@ Export the found Uplink Set resource objects to JSON files in the specified dire
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

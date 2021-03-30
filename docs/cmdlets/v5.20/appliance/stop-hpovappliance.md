@@ -62,7 +62,7 @@ Default Value: ${Global:ConnectSessions} | ? Default
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
@@ -74,7 +74,7 @@ Default Value: ${Global:ConnectSessions} | ? Default
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
@@ -150,3 +150,4 @@ Generated error message
 * [Test-HPOVApplianceAuditLogForwarding](test-hpovapplianceauditlogforwarding.md)
 * [Update-HPOVApplianceTrustedAuthorityCrl](update-hpovappliancetrustedauthoritycrl.md)
 * [Wait-HPOVApplianceStart](../library/wait-hpovappliancestart.md)
+* [Start-HPOVEnclosureAppliance](../servers/start-hpovenclosureappliance.md)

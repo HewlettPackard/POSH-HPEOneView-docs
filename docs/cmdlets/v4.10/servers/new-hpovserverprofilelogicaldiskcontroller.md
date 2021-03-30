@@ -99,7 +99,7 @@ Please note that Mezz 1, Mezz 2 and Mezz 3 are only supported with HPE Synergy C
 | Required? | True |
 | Position? | Named |
 | Default value | Embedded |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Mode &lt;String&gt;
@@ -116,7 +116,7 @@ When specifying HBA, you cannot attach a RAID Logical Disk to this policy.
 | Required? | True |
 | Position? | Named |
 | Default value | RAID |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Initialize &lt;SwitchParameter&gt;
@@ -128,7 +128,7 @@ Use this parameter to re-initialize the controller.  This will wipe any existing
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ImportExistingConfiguration &lt;SwitchParameter&gt;
@@ -140,7 +140,7 @@ Specify to import any found Logical Disk configuration and add to the Server Pro
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -LogicalDisk &lt;Object&gt;
@@ -170,7 +170,7 @@ Default value: Unmanaged
 | Required? | False |
 | Position? | Named |
 | Default value | Unmanaged |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

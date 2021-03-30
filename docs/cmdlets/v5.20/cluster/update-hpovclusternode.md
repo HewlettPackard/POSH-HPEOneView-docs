@@ -51,7 +51,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
@@ -63,7 +63,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -InputObject &lt;Object&gt;
@@ -87,7 +87,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
@@ -97,6 +97,10 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 ## Return Values
+
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+
+Async task resource to monitor.
 
 ## Related Links
 

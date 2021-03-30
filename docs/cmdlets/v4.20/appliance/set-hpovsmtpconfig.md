@@ -73,7 +73,7 @@ Specify the Sender Email Address for the appliance.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Server &lt;String&gt;
@@ -85,7 +85,7 @@ Specify the SMTP Relay Server if DNS does not contain a valid DNS MX record for 
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Port &lt;Int32&gt;
@@ -97,7 +97,7 @@ Provide an alternate TCP port number than the default SMTP port value 25/TCP.
 | Required? | False |
 | Position? | Named |
 | Default value | 25 |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Password &lt;String&gt;
@@ -109,7 +109,7 @@ Provide an SMTP Password to authenticate to the SMTP Server.  This password will
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -AlertEmailDisabled &lt;SwitchParameter&gt;
@@ -121,7 +121,7 @@ Disable SMTP Email Alerting.
 | Required? | True |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -AlertEmailEnabled &lt;SwitchParameter&gt;
@@ -133,7 +133,7 @@ Enable SMTP Email Alerting
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
@@ -145,7 +145,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -157,7 +157,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ConnectionSecurity &lt;&gt;
@@ -173,7 +173,7 @@ Use to specify if the target SMTP server requires TLS security/authentication.  
 | Required? | False |
 | Position? | Named |
 | Default value | None |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

@@ -91,7 +91,7 @@ prefixed to the source name.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Assign &lt;Object&gt;
@@ -103,7 +103,7 @@ The name, URI, or object of the target server to assign the new profile to.  If 
 | Required? | False |
 | Position? | Named |
 | Default value | unassigned |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;

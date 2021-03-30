@@ -72,7 +72,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -CommunityString &lt;String&gt;
@@ -84,7 +84,7 @@ SNMPv1 trap community string.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Destination &lt;String&gt;
@@ -96,7 +96,7 @@ IP Address or Hostname of the target SNMP trap reciever.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Port &lt;int&gt;
@@ -108,7 +108,7 @@ Specify the alternate SNMP destination port.
 | Required? | False |
 | Position? | Named |
 | Default value | 161 |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -SnmpV3User &lt;HPOneView.Appliance.SnmpV3User&gt;
@@ -120,7 +120,7 @@ The defined SNMPv3 user created on the appliance with Get-HPOVSnmpV3User.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Type &lt;String&gt;
@@ -135,7 +135,7 @@ SNMP version type.  Allowed values:
 | Required? | False |
 | Position? | Named |
 | Default value | SNMPv1 |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

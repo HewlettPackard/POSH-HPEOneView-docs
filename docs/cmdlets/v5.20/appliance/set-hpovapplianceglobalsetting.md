@@ -10,7 +10,7 @@ description: (Reserved for future use) Update appliance global settings.
 Set-HPOVApplianceGlobalSetting
     [-Name] <String>
     [-Value] <String>
-    [-ApplianceConnection] <Object>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -18,7 +18,7 @@ Set-HPOVApplianceGlobalSetting
 Set-HPOVApplianceGlobalSetting
     [-InputObject] <HPOneView.Appliance.GlobalSetting>
     [-Value] <String>
-    [-ApplianceConnection] <Object>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -31,7 +31,7 @@ Set-HPOVApplianceGlobalSetting
 ###  Example 1 
 
 ```text
-Set-HPOVApplianceGlobalSetting alertMax 75000
+Set-HPOVApplianceGlobalSetting -Name alertMax -Value 75000
 ```
 
 Returns the "alertMax" setting object with the updated value of 75000
@@ -61,7 +61,7 @@ The name of the global parameter.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Value &lt;String&gt;
@@ -73,7 +73,7 @@ The updated value for the global parameter.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -100,9 +100,9 @@ Appliance global setting from Get-HPOVApplianceGlobalSetting.
 
 ## Return Values
 
-_**The setting object with updated parameters.**_
+_**HPOneView.Appliance.GlobalSetting**_
 
-
+The udpated appliance global setting.
 
 ## Related Links
 

@@ -63,7 +63,7 @@ Override confirmation prompt when using `-SmartCardLoginOnly` parameter.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -DirectoryDomain &lt;String&gt;
@@ -85,7 +85,7 @@ Configure HPE OneView to look in multiple certificate locations for domain infor
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -DirectoryDomainType &lt;String&gt;
@@ -106,7 +106,7 @@ If you select Manually specify, you can enter a specific domain using dot notati
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -EmergencyLoginAllowType &lt;String&gt;
@@ -120,7 +120,7 @@ Allow emergency login access if the configured authentication directory(ies) are
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -EnableEmergencyLocalLogin &lt;Bool&gt;
@@ -134,7 +134,7 @@ Boolean value to enable ($true) or disable ($false) emergency local login.  Must
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -SmartCardLoginOnly &lt;Bool&gt;
@@ -146,7 +146,7 @@ Use to enforce smart card authentication only.  Enabling Smart card only login d
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -SubjectAlternativeNamePatterns &lt;Array&gt;
@@ -193,7 +193,7 @@ Subject Alternative Name multiple attribute entry example
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -SubjectPatterns &lt;String&gt;
@@ -232,7 +232,7 @@ This is applicable when there are multiple CN attributes configured in a certifi
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ValidationOids &lt;Array&gt;
@@ -251,7 +251,7 @@ If you specify multiple OID combinations and one is a super-set of another, conf
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -WhatIf &lt;SwitchParameter&gt;
@@ -263,7 +263,7 @@ If you specify multiple OID combinations and one is a super-set of another, conf
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

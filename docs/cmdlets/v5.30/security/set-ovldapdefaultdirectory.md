@@ -26,7 +26,7 @@ Set-OVLdapDefaultDirectory
 
 ## Description
 
-Use this Cmdlet to set the default Authentication Directory on the appliance.  Use Get-OVLdapDirectory to pass in the directory to configure as the default.  Once the Default Directory is set, the Cmdlet will configure a Registry Key (HKCU:\Software\Hewlett-Packard\HPOneView) called "AuthProvider#{ApplianceConnectionName}".  The Library will read this value upon load and use it as the default value for the -AuthDirectory parameter in Connect-OVMgmt.
+Use this Cmdlet to set the default Authentication Directory on the appliance.  Use Get-OVLdapDirectory to pass in the directory to configure as the default.  Once the Default Directory is set, the Cmdlet will configure a Registry Key (HKCU:\Software\Hewlett-Packard\HPEOneView) called "AuthProvider#{ApplianceConnectionName}".  The Library will read this value upon load and use it as the default value for the -AuthDirectory parameter in Connect-OVMgmt.
 
 ## Examples
 
@@ -35,7 +35,7 @@ Use this Cmdlet to set the default Authentication Directory on the appliance.  U
 ```text
 Set-OVLdapDefaultDirectory -InputObject "Domain1"
 # Cmdlet will create:
-# HKCU:\Software\Hewlett-Packard\HPOneView\AuthProvider#MyAppliance.domain.com REG_SZ, value = "Domain1"
+# HKCU:\Software\Hewlett-Packard\HPEOneView\AuthProvider#MyAppliance.domain.com REG_SZ, value = "Domain1"
 ```
 
 Set "Domain1" as the default authentication directory for the appliance.  Then, the Cmdlet will create the REG_SZ "AuthProvider#MyAppliance.domain.com" with a value of "Domain1".

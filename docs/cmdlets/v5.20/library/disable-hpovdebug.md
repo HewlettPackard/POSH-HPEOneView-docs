@@ -20,6 +20,14 @@ FOR HPE Support USE ONLY.  This Cmdlet will disable appliance level component de
 
 ## Examples
 
+###  Example 1 
+
+```text
+This Cmdlets does not have a public example.
+```
+
+This Cmdlet does not have a public example.
+
 ## Parameters
 
 ### -Scope &lt;String&gt;
@@ -31,7 +39,7 @@ The Scope of the LoggerName.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -LoggerName &lt;String&gt;
@@ -43,7 +51,7 @@ The internal component name.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -52,10 +60,10 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | True |
+| Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | true (ByPropertyName) |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
@@ -72,7 +80,7 @@ HPE OneView Appliance Connection object.
 
 _**System.Management.Automation.PSCustomObject**_
 
-
+The returned object global setting.
 
 ## Related Links
 

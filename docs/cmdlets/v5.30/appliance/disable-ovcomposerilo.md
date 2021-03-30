@@ -68,7 +68,7 @@ Disable only the configured IPv6 address on the HPE Synergy Composer 2 iLO's tha
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 Default Value: ${Global:ConnectedSessions} | ? Default
 
@@ -158,13 +158,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Appliance.HardwareConfig [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.HardwareConfig [System.Management.Automation.PSCustomObject]**_
 
 The appliance hardware configuration object from Get-OVComposerIloStatus.
 
 ## Return Values
 
-_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task resource to monitor.
 

@@ -57,7 +57,7 @@ The uri that identifies the required resource on the appliance.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Method &lt;String&gt;
@@ -75,7 +75,7 @@ The request HTTP Method.
 | Required? | False |
 | Position? | Named |
 | Default value | GET |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Body &lt;Object&gt;
@@ -87,7 +87,7 @@ Body for the request.  Required if the method is POST or PUT.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Start &lt;Int32&gt;
@@ -100,7 +100,7 @@ If not specified, collection members starting from the beginning are returned.
 | Required? | False |
 | Position? | Named |
 | Default value | 0 |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Count &lt;Int32&gt;
@@ -113,7 +113,7 @@ If not specified, all members of the collection are returned from this function.
 | Required? | False |
 | Position? | Named |
 | Default value | 0 |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -AddHeader &lt;Hashtable&gt;
@@ -125,7 +125,7 @@ If additional headers are needed/required than the defaults, include header name
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -OverrideContentType &lt;String&gt;
@@ -137,7 +137,7 @@ Workaround to override ContentType where needed (e.g. PATCH /rest/scopes/{GUID}.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -OverrideTimeout &lt;Int&gt;
@@ -149,7 +149,7 @@ Specify to override the HttpWebRequest syncronous timeout being made.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Hostname &lt;Object&gt;
@@ -163,7 +163,7 @@ Default Value: All valid Appliance Connections within $Global:ConnectedSessions
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

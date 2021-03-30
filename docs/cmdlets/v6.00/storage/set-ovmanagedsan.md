@@ -148,7 +148,7 @@ Disable aliases to be created for initiators, targets and target groups based on
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | false |
+| Default value | False |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

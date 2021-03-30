@@ -86,7 +86,7 @@ The hostname or IP address of the appliance.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -AuthLoginDomain &lt;String&gt;
@@ -100,7 +100,7 @@ Default is determined by connecting to the requested appliance and retrieving th
 | Required? | True |
 | Position? | Named |
 | Default value | LOCAL |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -UserName &lt;String&gt;
@@ -117,7 +117,7 @@ User name to authenticate.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Password &lt;Object&gt;
@@ -134,19 +134,19 @@ Password to log into the appliance.  Can be either `[System.String]` or SecureSt
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Credential &lt;PSCredential&gt;
 
-Use this parameter if you want to provide a PSCredential object instead.
+Use this parameter to provide a secure crednetial object.  The Username format can support either just a string username value (i.e. JSmith), or include either NTDomainName (i.e. MyDomain\JSmith) or Universal Principle Name (i.e. jsmith@domain.com).  If providing either NYDomainname or Universal Principal Name, ensure the Authentication Directory name is spelled exactly the same, and the `-AuthLoginDomain` is not required.
 
 | Aliases | PSCredential |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -LoginAcknowledge &lt;SwitchParameter&gt;
@@ -158,7 +158,7 @@ When a Login Message has been configured and acknowledgement is Required, use th
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Certificate &lt;Object&gt;
@@ -170,7 +170,7 @@ Provide the X.509 certificate/SmartCard digital badge in order to authenticate t
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

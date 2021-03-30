@@ -106,7 +106,7 @@ A name to identify the data center. Must not exceed 255 characters; no leading s
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Width &lt;Float&gt;
@@ -118,7 +118,7 @@ Width of the datacenter, in (US) Feet.  Maximum of 50 meters (164.042 feet).  Mi
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Depth &lt;Float&gt;
@@ -130,7 +130,7 @@ Depth of the datacenter, in (US) Feet.  Maximum of 50 meters (164.042 feet).  Mi
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Millimeters &lt;SwitchParameter&gt;
@@ -142,7 +142,7 @@ If specifying millimeter value for Width and Depth, this parameter is required.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ElectricalDerating &lt;Int&gt;
@@ -156,7 +156,7 @@ Default: 20%
 | Required? | False |
 | Position? | Named |
 | Default value | 20 |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ElectricalDeratingType &lt;String&gt;
@@ -172,7 +172,7 @@ Default: NA/Jp
 | Required? | False |
 | Position? | Named |
 | Default value | NA/Jp |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -DefaultVoltage &lt;Int&gt;
@@ -186,7 +186,7 @@ Default: 220
 | Required? | False |
 | Position? | Named |
 | Default value | 220 |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Currency &lt;String&gt;
@@ -198,7 +198,7 @@ The currency unit for energy costs.
 | Required? | False |
 | Position? | Named |
 | Default value | USD |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -PowerCosts &lt;Float&gt;
@@ -210,7 +210,7 @@ The energy cost per kWh, specified by the Currency.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -CoolingCapacity &lt;Int&gt;
@@ -222,7 +222,7 @@ The maximum cooling capacity for the data center, in KW. The appliance analyzes 
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -CoolingMultiplier &lt;Float&gt;
@@ -238,7 +238,7 @@ Default:  1.5
 | Required? | False |
 | Position? | Named |
 | Default value | 1.5 |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -PrimaryContact &lt;Object&gt;
@@ -250,7 +250,7 @@ Primary Remote Support Contact object from Get-HPOVRemoteSupportContact defined 
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? |  |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -SecondaryContact &lt;Object&gt;
@@ -262,7 +262,7 @@ Secondary Remote Support Contact object from Get-HPOVRemoteSupportContact define
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? |  |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Address1 &lt;String&gt;
@@ -274,7 +274,7 @@ Address of datacenter.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? |  |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Address2 &lt;String&gt;
@@ -286,7 +286,7 @@ Optional address line.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? |  |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -City &lt;String&gt;
@@ -298,7 +298,7 @@ City of residence for the datacenter.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? |  |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -State &lt;String&gt;
@@ -310,7 +310,7 @@ State/province of residence for the datacenter.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? |  |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -PostCode &lt;String&gt;
@@ -322,7 +322,7 @@ Postal code for the datacenter.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? |  |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Country &lt;String&gt;
@@ -334,7 +334,7 @@ Country of residence for the datacenter.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? |  |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -TimeZone &lt;String&gt;
@@ -346,7 +346,7 @@ Time Zone of residence for the datacenter.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? |  |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -358,7 +358,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

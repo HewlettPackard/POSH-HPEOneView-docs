@@ -82,7 +82,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Servers.ServerHardware [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.ServerHardware [System.Management.Automation.PSCustomObject]**_
 
 Server hardware resource object from Get-HPOVServer.
 
@@ -92,7 +92,7 @@ Server profile resource object from Get-HPOVServerProfile.
 
 ## Return Values
 
-_**HPOneView.Servers.ServerHardware+OneTimeBoot**_
+_**HPOneView.ServerHardware+OneTimeBoot**_
 
 The current One Time Boot setting of the server hardware resource.
 

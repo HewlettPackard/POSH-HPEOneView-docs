@@ -218,6 +218,8 @@ Deprecated parameter.  Connection type is now derived from the provided Network 
 
 The Network (Ethernet or Fibre Channel) or Network Set resource object to be used with this connection.  Can either be the Name, URI, or object obtained with Get-OVNetwork or Get-OVNetworkSet.
 
+To create an unassigned connection, use the Unassigned keyword as the value.
+
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
@@ -616,8 +618,8 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | false |
-| Accept pipeline input? |  |
+| Default value | False |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;

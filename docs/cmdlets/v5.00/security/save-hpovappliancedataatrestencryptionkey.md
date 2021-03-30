@@ -50,7 +50,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Location &lt;string&gt;
@@ -62,7 +62,7 @@ Specify the directory where to save the appliance encryption key (AEK).  If no l
 | Required? | False |
 | Position? | Named |
 | Default value | (Get-Location).Path |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

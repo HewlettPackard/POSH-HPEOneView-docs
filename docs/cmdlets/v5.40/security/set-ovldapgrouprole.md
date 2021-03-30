@@ -10,10 +10,11 @@ description: Assign or change roles for LDAP Groups.
 Set-OVLdapGroupRole
     [-InputObject] <Object>
     [-Roles] <Array>
-    [-UserName] <String>
-    [-Password] <System.Security.SecureString>
+    [-Append]
+    [-UserName <String>]
+    [-Password <System.Security.SecureString>]
     [-Credential <PSCredential>]
-    [-ApplianceConnection] <Object>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -21,22 +22,24 @@ Set-OVLdapGroupRole
 Set-OVLdapGroupRole
     [-InputObject] <Object>
     [-Roles] <Array>
-    [-ScopePermissions <Array>]
-    [-UserName] <String>
-    [-Password] <System.Security.SecureString>
+    [-ScopePermissions] <Array>
+    [-Append]
+    [-UserName <String>]
+    [-Password <System.Security.SecureString>]
     [-Credential <PSCredential>]
-    [-ApplianceConnection] <Object>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 Set-OVLdapGroupRole
     [-InputObject] <Object>
-    [-ScopePermissions <Array>]
-    [-UserName] <String>
-    [-Password] <System.Security.SecureString>
+    [-ScopePermissions] <Array>
+    [-Append]
+    [-UserName <String>]
+    [-Password <System.Security.SecureString>]
     [-Credential <PSCredential>]
-    [-ApplianceConnection] <Object>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -96,7 +99,7 @@ LDAP/Active Directory Domain Name
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? |  |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -InputObject &lt;Object&gt;
@@ -122,7 +125,7 @@ Example: $roles = "Server administrator","Network administrator"
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -UserName &lt;String&gt;
@@ -134,7 +137,7 @@ Directory Username to authenticate with
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Password &lt;System.Security.SecureString&gt;
@@ -146,7 +149,7 @@ Directory User account password
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -170,7 +173,7 @@ Use this parameter if you want to provide a PSCredential object instead.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ScopePermissions &lt;Array&gt;
@@ -184,7 +187,19 @@ Example: `-ScopePermissions` @{Role = "Network administrator"; Scope = (`Get-OVS
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
+| Accept wildcard characters? | False |
+
+### -Append &lt;SwitchParameter&gt;
+
+Use to append roles and/or scope permissions update.  If omitted, roles or scope permissions will be replaced.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

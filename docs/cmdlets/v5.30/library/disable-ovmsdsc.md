@@ -6,14 +6,9 @@ description: Disable Microsoft DSC Support
 
 ## Syntax
 
-```text
-Disable-OVMSDSC
-    [<CommonParameters>]
-```
-
 ## Description
 
-Using this Cmdlet will create and/or modify UseMSDSC (REG_DWORD) located at HKCU:\Software\Hewlett-Packard\HPOneView, to 0 (False).  By disabling support, the module will no longer overload Write-Host.
+Using this Cmdlet will create and/or modify UseMSDSC (REG_DWORD) located at HKCU:\Software\Hewlett-Packard\HPEOneView, to 0 (False).  By disabling support, the module will no longer overload Write-Host.
 
 Use Enable-OVMsDSC to enable support.
 

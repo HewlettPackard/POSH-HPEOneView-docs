@@ -51,6 +51,18 @@ The Logical Switch resource Name or Object to update.
 | Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
+### -Confirm &lt;SwitchParameter&gt;
+
+Bypass the confirmation prompt, and process all of the objects.
+
+| Aliases | cf |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | False |
+| Accept wildcard characters? | False |
+
 ### -Async &lt;SwitchParameter&gt;
 
 Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.
@@ -60,7 +72,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Force &lt;SwitchParameter&gt;
@@ -72,7 +84,7 @@ Force remove resource, even if there are communication problems.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;

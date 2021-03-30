@@ -52,7 +52,7 @@ Set to $true to force-update the resource.  Not all resources support force-upda
 | Required? | True |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;

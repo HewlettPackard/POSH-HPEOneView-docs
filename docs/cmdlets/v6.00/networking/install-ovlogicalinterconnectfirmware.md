@@ -130,7 +130,7 @@ Minimum required privileges: Network administrator, Server administrator
 
 ```text
 $li = Get-OVLogicalInterconnect Encl1-LI
-$spp = Get-OVBaseline "HPE Service Pack for ProLiant" 
+$spp = Get-OVBaseline -Name "HPE Service Pack for ProLiant" 
 $task = Install-OVLogicalInterconnectFirmware -Method Stage -InputObject $li -Baseline $spp 
 Wait-OVTaskComplete $task
 $task = Install-OVLogicalInterconnectFirmware -Method Activate -InputObject $li 

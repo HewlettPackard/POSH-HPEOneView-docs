@@ -51,7 +51,7 @@ Name of the QoS Classifier.  Value cannot be "FCoE lossless".  If value is "Best
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -MaxBandwidth &lt;Int32&gt;
@@ -65,7 +65,7 @@ Value between 1 and 100
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -BandwidthShare &lt;String&gt;
@@ -79,7 +79,7 @@ Value between 1 and 100
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -EgressDot1pValue &lt;Int32&gt;
@@ -91,7 +91,7 @@ Specifies the dot1p priority value to remark for the egressing packets. This pro
 | Required? | True |
 | Position? | Named |
 | Default value | 0 |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -IngressDot1pClassMapping &lt;Array&gt;
@@ -113,7 +113,7 @@ Specify an array of ingress Dot1p values, and to which traffic class it is curre
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -IngressDscpClassMapping &lt;Array&gt;
@@ -147,7 +147,7 @@ Specify an array of DSCP class mappings, per RFC 2475.  Allowed values:
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -RealTime &lt;SwitchParameter&gt;
@@ -159,7 +159,7 @@ Specifies whether the traffic class is real time. Only 1 traffic class can be re
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Enabled &lt;SwitchParameter&gt;
@@ -171,7 +171,7 @@ Specify to Enable the traffic class. By default, the class is disabled, even tho
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

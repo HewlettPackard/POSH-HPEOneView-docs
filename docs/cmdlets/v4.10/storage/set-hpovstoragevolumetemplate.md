@@ -86,7 +86,7 @@ Updated Storage Volume Template Name.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Description &lt;String&gt;
@@ -98,7 +98,7 @@ Updated description for the volume.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Capacity &lt;Int64&gt;
@@ -115,7 +115,7 @@ Before increasing the capacity of fully provisioned volumes, ensure that the sto
 | Required? | False |
 | Position? | Named |
 | Default value | 0 |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -StoragePool &lt;Object&gt;
@@ -127,7 +127,7 @@ The Storage Pool Name, URI or Object to be used for Volumes
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -StorageSystem &lt;Object&gt;
@@ -139,7 +139,7 @@ When the Storage Pool name is not unique, specify the Storage System name the po
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -SnapShotStoragePool &lt;Object&gt;
@@ -151,7 +151,7 @@ The Storage Pool Name, URI or Object to be used for Volume Snapshots.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Shared &lt;Boolean&gt;
@@ -164,7 +164,7 @@ Default: Private
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Thin &lt;SwitchParameter&gt;
@@ -181,7 +181,7 @@ Include to change the provisioned type to Thin.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Full &lt;SwitchParameter&gt;
@@ -198,7 +198,7 @@ Include to change the provisioned type to Full.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -DataProtectionLevel &lt;String&gt;
@@ -218,7 +218,7 @@ Specify the StoreVirtual protection level (aka Network RAID) for the volume.  Al
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -LockProtectionLevel &lt;SwitchParameter&gt;
@@ -230,7 +230,7 @@ Specify to lock the DataProtectionLevel value in the template.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -EnableAdaptiveOptimization &lt;SwitchParameter&gt;
@@ -242,7 +242,7 @@ Whether or not Adaptive Optimization is enabled on the storage volume.  Only sup
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -LockAdaptiveOptimization &lt;SwitchParameter&gt;
@@ -254,7 +254,7 @@ Specify to lock the EnableAdaptiveOptimization value in the template.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ProvisionType &lt;String&gt;
@@ -270,7 +270,7 @@ Specify the type of volume to provision.  Allowed values are:
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -LockProvisionType &lt;SwitchParameter&gt;
@@ -282,7 +282,7 @@ Specify to lock the ProvisionType value in the template.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -LockStoragePool &lt;SwitchParameter&gt;
@@ -294,7 +294,7 @@ Specify to lock the StoragePool value in the template.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -LockSnapShotStoragePool &lt;SwitchParameter&gt;
@@ -306,7 +306,7 @@ Specify to lock the SnapshotStoragePool value in the template.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -LockCapacity &lt;SwitchParameter&gt;
@@ -318,7 +318,7 @@ Specify to lock the Capacity value in the template.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -LockProvisionMode &lt;SwitchParameter&gt;
@@ -330,7 +330,7 @@ Specify to lock the Provision Mode (Shared or Private) value in the template.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
