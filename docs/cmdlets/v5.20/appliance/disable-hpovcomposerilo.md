@@ -77,7 +77,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
@@ -89,7 +89,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
@@ -101,7 +101,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -DisableIPv4Address &lt;SwitchParameter&gt;
@@ -113,7 +113,7 @@ Use to unconfigure the user specified IPv4 address of the iLO.  The iLO will no 
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -DisableIPv6Address &lt;SwitchParameter&gt;
@@ -125,7 +125,7 @@ Use to unconfigure the user specified IPv6 address of the iLO.  The iLO will no 
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -InputObject &lt;Object&gt;
@@ -137,7 +137,7 @@ The object from Get-HPOVComposerIloStatus.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -WhatIf &lt;SwitchParameter&gt;
@@ -149,7 +149,7 @@ The object from Get-HPOVComposerIloStatus.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

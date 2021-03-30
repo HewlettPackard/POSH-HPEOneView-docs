@@ -130,7 +130,7 @@ Logical Uplink set Name
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Type &lt;String&gt;
@@ -150,7 +150,7 @@ ImageStreamer is only supported with Synergy infrastructure.  When assigning an 
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Networks &lt;Array&gt;
@@ -162,7 +162,7 @@ Array of Ethernet Network Names
 | Required? | True |
 | Position? | Named |
 | Default value | @() |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -NativeEthNetwork &lt;Object&gt;
@@ -174,7 +174,7 @@ The valid name of the Native Ethernet Network that is a member of the usNetworks
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -UplinkPorts &lt;Array&gt;
@@ -193,7 +193,7 @@ Synergy VC FC Sub-Interface `[e.g]`. "Bay2:Q1.1","Bay2:Q2.1" or "Bay5:Q1.2","Bay
 | Required? | True |
 | Position? | Named |
 | Default value | @() |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -EthMode &lt;String&gt;
@@ -208,7 +208,7 @@ Sets the LACP mode on the uplink ports. Valid for ETHERNET Uplinks only. Accepte
 | Required? | False |
 | Position? | Named |
 | Default value | Auto |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -LacpTimer &lt;String&gt;
@@ -223,7 +223,7 @@ Set the LACP Timer value, which sets the lacpdu frequecy to the LACP peer.  Acce
 | Required? | False |
 | Position? | Named |
 | Default value | Short |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -PrimaryPort &lt;String&gt;
@@ -237,7 +237,7 @@ Example: "Bay1:X1"
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -fcUplinkSpeed &lt;String&gt;
@@ -254,7 +254,7 @@ Specify the Fibre Channel Uplink Port speed.  Accepted values:
 | Required? | False |
 | Position? | Named |
 | Default value | Auto |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -EnableTrunking &lt;Boolean&gt;
@@ -265,8 +265,8 @@ Use this parameter to enable FC port trunking.  This parameter is only supported
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | false |
-| Accept pipeline input? | false |
+| Default value | False |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
@@ -277,7 +277,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | false |
+| Default value | False |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 

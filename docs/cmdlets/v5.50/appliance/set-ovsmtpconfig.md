@@ -14,6 +14,7 @@ Set-OVSMTPConfig
     [-ConnectionSecurity <>]
     [-Password <String>]
     [-AlertEmailEnabled]
+    [-UseMXRecordLookup]
     [-Async]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -170,6 +171,20 @@ Use to specify if the target SMTP server requires TLS security/authentication.  
 | Required? | False |
 | Position? | Named |
 | Default value | None |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -UseMXRecordLookup &lt;SwitchParameter&gt;
+
+Using this parameter will inform the appliance to discover the SMTP server address details from the mx records from the appliance's configured DNS server(s). The port number is assumed to be the standard SMTP port, 25/TCP.  You can confirm if the mx records are configured on DNS by running the command "set q=mx" followed by domain name on the nslookup utility within your client operating system.
+
+If the SMTP server is using a nonstandard port, you must specify the `-Server` and `-Port` parameters.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

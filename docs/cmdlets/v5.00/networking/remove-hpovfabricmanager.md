@@ -51,7 +51,7 @@ Force delete the resource.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -InputObject &lt;HPOneView.Networking.FabricManager[]&gt;

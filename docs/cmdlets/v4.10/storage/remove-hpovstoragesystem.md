@@ -52,7 +52,7 @@ Switch to force removal of a storage system the appliance can no longer communic
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;

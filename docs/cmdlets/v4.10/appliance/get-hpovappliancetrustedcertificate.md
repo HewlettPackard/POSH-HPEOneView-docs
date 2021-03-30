@@ -56,7 +56,7 @@ The Alias Name of the certificate.  Please know that wildcard is not supported.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -84,7 +84,7 @@ This parameter will filter for trusted certificate authorities only.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -InputObject &lt;Object&gt;

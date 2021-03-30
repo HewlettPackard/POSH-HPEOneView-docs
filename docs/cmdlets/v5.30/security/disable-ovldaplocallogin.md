@@ -41,7 +41,7 @@ Minimum required privileges: Infrastructure administrator.
 Disable-OVLdapLocalLogin
 ```
 
-Disable local logins on the appliance.
+Disable local logins on the appliance, and does not allow emergency local login by default.
 
 ###  Example 2 
 

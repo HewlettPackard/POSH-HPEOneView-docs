@@ -181,7 +181,7 @@ Disable the selected email alert filter.
 
 ### -EnableSenderEmailAddress &lt;bool&gt;
 
-Specify a boolean value to enable or disable the alert filter sender email address.  When enabling (True), you must provide the sender email parameter.
+
 
 | Aliases | None |
 | :--- | :--- |
@@ -193,7 +193,7 @@ Specify a boolean value to enable or disable the alert filter sender email addre
 
 ### -SenderEmail &lt;mailaddress&gt;
 
-Sending email address option to set filters-specific email sender address.
+
 
 | Aliases | None |
 | :--- | :--- |
@@ -205,7 +205,7 @@ Sending email address option to set filters-specific email sender address.
 
 ### -SenderEmailPassword &lt;securestring&gt;
 
-Sending email address option is provided, you can optionally specify an email address password to authenticate with.
+
 
 | Aliases | None |
 | :--- | :--- |

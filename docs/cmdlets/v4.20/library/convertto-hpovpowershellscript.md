@@ -80,7 +80,7 @@ Location where to write UTF-8 file.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Append &lt;SwitchParameter&gt;
@@ -92,7 +92,7 @@ Indicte if the export file should be appended.  By default, a new file will be c
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

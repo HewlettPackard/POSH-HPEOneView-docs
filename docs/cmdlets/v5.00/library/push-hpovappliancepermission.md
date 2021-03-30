@@ -63,7 +63,7 @@ One or more `[HPOneView.Appliance.ConnectionPermission]` objects from an `[HPOne
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Array&gt;
@@ -75,7 +75,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | false |
+| Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

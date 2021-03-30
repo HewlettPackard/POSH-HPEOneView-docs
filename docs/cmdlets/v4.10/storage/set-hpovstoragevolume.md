@@ -61,7 +61,7 @@ Updated Storage Volume Name.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Description &lt;String&gt;
@@ -73,7 +73,7 @@ Updated description for the volume.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Capacity &lt;Int64&gt;
@@ -90,7 +90,7 @@ Before increasing the capacity of fully provisioned volumes, ensure that the sto
 | Required? | True |
 | Position? | Named |
 | Default value | 0 |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -SnapShotStoragePool &lt;Object&gt;
@@ -102,7 +102,7 @@ The Storage Pool Name, URI or Object to be used for Volume Snapshots.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Shared &lt;Boolean&gt;
@@ -115,7 +115,7 @@ Default: Private
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -DataProtectionLevel &lt;String&gt;
@@ -134,7 +134,7 @@ Specify the new StoreVirtual data protection level (aka Network RAID).  Allowed 
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -PermitAdaptiveOptimization &lt;Boolean&gt;
@@ -147,7 +147,7 @@ Default: Private
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;

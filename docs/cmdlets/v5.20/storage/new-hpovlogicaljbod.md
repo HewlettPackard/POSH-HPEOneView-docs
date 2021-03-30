@@ -44,12 +44,6 @@ New-HPOVLogicalJBOD
     [<CommonParameters>]
 ```
 
-```text
-New-HPOVLogicalJBOD
-    [-ApplianceConnection <Object>]
-    [<CommonParameters>]
-```
-
 ## Description
 
 A logical JBOD is a group of physical drives that are dynamically defined as virtual drives. Logical JBOD uses the drives from the drive enclosures that are installed in the device bays of the enclosure and are associated with a SAS logical interconnect. You can assign or unassign a logical JBOD to a server hardware through the server profile.
@@ -163,7 +157,7 @@ Provide a description for the resource.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -DriveType &lt;string&gt;
@@ -186,7 +180,7 @@ Auto is not supported when attempting to create an HPE Synergy D3940 Logical or 
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Drives &lt;HPOneView.Storage.Drive[]&gt;
@@ -198,7 +192,7 @@ Provide the specific drives to assign to the logical JBOD.  Use the Get-HPOVDriv
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -EraseDataOnDelete &lt;bool&gt;
@@ -210,7 +204,7 @@ If set to True, and drives support erase on delete option, the drive enclosure w
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -InputObject &lt;Object&gt;
@@ -222,7 +216,7 @@ When attempting to create a logical JBOD, and not specifying the exact drives, y
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -MaxDriveSize &lt;int&gt;
@@ -234,7 +228,7 @@ When attempting to create a logical JBOD, you can specify the min and max drive 
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -MinDriveSize &lt;int&gt;
@@ -246,7 +240,7 @@ When attempting to create a logical JBOD, you can specify the min and max drive 
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Name &lt;string&gt;
@@ -258,7 +252,7 @@ Provide a globally unique name for the logical JBOD resource.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -NumberofDrives &lt;int&gt;
@@ -270,7 +264,7 @@ When attempting to create a logical JBOD, you can specify the min and max drive 
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Scope &lt;Object&gt;
@@ -282,7 +276,7 @@ Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially 
 | Required? | False |
 | Position? | Named |
 | Default value | AllResourcesInScope |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

@@ -45,7 +45,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -WhatIf &lt;SwitchParameter&gt;
@@ -57,7 +57,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
@@ -69,7 +69,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
@@ -84,7 +84,7 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 _**None.**_
 
- None
+
 
 ## Related Links
 

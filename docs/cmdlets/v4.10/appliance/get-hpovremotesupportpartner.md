@@ -39,7 +39,7 @@ Name of the HPE Partner.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -55,7 +55,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

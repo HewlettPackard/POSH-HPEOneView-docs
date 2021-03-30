@@ -130,7 +130,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
@@ -142,7 +142,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
@@ -154,7 +154,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -IPv4Address &lt;IPAddress&gt;
@@ -166,7 +166,7 @@ Use to configure a specific static IPv4 address to the iLO of the Composer appli
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -IPv4DnsServer &lt;IPAddress[]&gt;
@@ -178,7 +178,7 @@ Optionally configure the Primary and Secondary DNS server address(es).
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -IPv4Gateway &lt;IPAddress&gt;
@@ -190,7 +190,7 @@ Use to configure what the default gateway is for the subnet.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -IPv4SubnetMask &lt;String&gt;
@@ -202,7 +202,7 @@ Use to set the subnet mask, either in decimal noted or CIDR format.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -IPv6Address &lt;IPAddress&gt;
@@ -214,7 +214,7 @@ Use to configure the static IPv6 address to the iLO of the Compose appliance.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -IPv6DnsServer &lt;IPAddress[]&gt;
@@ -226,7 +226,7 @@ Optionally configure the Primary and Secondary DNS server address(es).
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -IPv6Gateway &lt;IPAddress&gt;
@@ -238,7 +238,7 @@ Use to set the subnet mask, either in decimal noted or CIDR format.
 | Required? | False |
 | Position? | Named |
 | Default value | Use to configure what the default gateway is for the subnet. |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -IPv6SubnetMask &lt;String&gt;
@@ -250,7 +250,7 @@ Use to set the subnet mask, either in decimal noted or CIDR format.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -IloHostname &lt;String&gt;
@@ -262,7 +262,7 @@ Use to specify a the iLO subsystem hostname.  If omitted, a randomly generated n
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -InputObject &lt;Object&gt;
@@ -274,7 +274,7 @@ The object from Get-OVComposerIloStatus.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Password &lt;SecureString&gt;
@@ -286,7 +286,7 @@ The SecureString of a password to set for the user account.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Username &lt;String&gt;
@@ -298,7 +298,7 @@ The iLO account to be created.  The account name must not begin with an '_' (und
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -WhatIf &lt;SwitchParameter&gt;
@@ -310,7 +310,7 @@ The iLO account to be created.  The account name must not begin with an '_' (und
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

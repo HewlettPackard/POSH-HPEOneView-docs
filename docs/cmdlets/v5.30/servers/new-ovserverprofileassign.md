@@ -35,7 +35,7 @@ This Cmdlet is used to unassign or reassign an existing HPE OneView Server Profi
 ###  Example 1 
 
 ```text
-Get-OVServerProfile "Profile 1" | New-OVServerProfileAssign -Server "Encl1, Bay 10" | Wait-OVTaskComplete
+Get-OVServerProfile -Name "Profile 1" | New-OVServerProfileAssign -Server "Encl1, Bay 10" | Wait-OVTaskComplete
 ```
 
 Get "Profile 1" Server Profile and assign it to "Encl1, Bay 10", then wait for the async task to complete.
@@ -43,7 +43,7 @@ Get "Profile 1" Server Profile and assign it to "Encl1, Bay 10", then wait for t
 ###  Example 2 
 
 ```text
-Get-OVServerProfile "Profile 1" | New-OVServerProfileAssign -unassign | Wait-OVTaskComplete
+Get-OVServerProfile -Name "Profile 1" | New-OVServerProfileAssign -unassign | Wait-OVTaskComplete
 ```
 
 Get "Profile 1" Server Profile and unassign it, then wait for the async task to complete.
@@ -107,7 +107,7 @@ Provide an `[HPEOneView.Appliance.ScopeCollection]` resource object to initially
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? |  |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;

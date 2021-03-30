@@ -44,7 +44,7 @@ The Logical Switch Group resource Name.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -SwitchType &lt;HPOneView.Networking.SwitchType&gt;
@@ -68,7 +68,7 @@ The maximum number of switches supported in the Logical Switch Group.  Only 1 or
 | Required? | False |
 | Position? | Named |
 | Default value | 1 |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
@@ -80,7 +80,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;

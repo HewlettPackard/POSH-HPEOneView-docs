@@ -100,7 +100,7 @@ Managed SAN Name or Object.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -DisableAutomatedZoning &lt;SwitchParameter&gt;
@@ -112,7 +112,7 @@ Managed SAN Name or Object.
 | Required? | True |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ZoningPolicy &lt;String&gt;
@@ -128,7 +128,7 @@ Policy setting that affects the way that zones are created. Allowed values:
 | Required? | True |
 | Position? | Named |
 | Default value | SingleInitiatorAllTargets |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -EnableAliasing &lt;SwitchParameter&gt;
@@ -140,7 +140,7 @@ Enable aliases to be created for initiators, targets and target groups based on 
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -DisableAliasing &lt;SwitchParameter&gt;
@@ -151,8 +151,8 @@ Disable aliases to be created for initiators, targets and target groups based on
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | false |
-| Accept pipeline input? | false |
+| Default value | False |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -InitiatorNameFormat &lt;String&gt;
@@ -166,7 +166,7 @@ Example: "initiator_{hostname}_{initiatorName}"
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -TargetGroupNameFormat &lt;String&gt;
@@ -180,7 +180,7 @@ Example: "TargetGroup_{storageSystemName}_{targetGroupName}"
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -TargetNameFormat &lt;String&gt;
@@ -194,7 +194,7 @@ Example: "Target_{storageSystemName}_{targetName}"
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ZoneNameFormat &lt;String&gt;
@@ -208,7 +208,7 @@ Example: "{initiatorWwn}_{initiatorName}"
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -UpdateZoneNames &lt;Boolean&gt;
@@ -222,7 +222,7 @@ Example: "{initiatorWwn}_{initiatorName}"
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -UpdateInitiatorAliases &lt;Boolean&gt;
@@ -236,7 +236,7 @@ Example: "{initiatorWwn}_{initiatorName}"
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -UpdateTargetAliases &lt;Boolean&gt;
@@ -250,7 +250,7 @@ Example: "{initiatorWwn}_{initiatorName}"
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;

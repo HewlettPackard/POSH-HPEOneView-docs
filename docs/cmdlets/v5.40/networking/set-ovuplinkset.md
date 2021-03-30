@@ -9,7 +9,7 @@ description: Update an uplink set resource
 ```text
 Set-OVUplinkSet
     [-InputObject] <Object>
-    [-UplinkSetName] <String>
+    [-UplinkSetName <String>]
     [-Name <String>]
     [-AddNetwork <Object[]>]
     [-RemoveNetwork <Object[]>]
@@ -19,6 +19,8 @@ Set-OVUplinkSet
     [-RemovePorts <Object[]>]
     [-UntaggedNetwork <Object>]
     [-LacpTimer <String>]
+    [-PortSpeed <string>]
+    [-FecMode <string>]
     [-ConsistencyChecking <String>]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -27,7 +29,7 @@ Set-OVUplinkSet
 ```text
 Set-OVUplinkSet
     [-InputObject] <Object>
-    [-UplinkSetName] <String>
+    [-UplinkSetName <String>]
     [-Name <String>]
     [-AddPorts <Object[]>]
     [-RemovePorts <Object[]>]
@@ -89,7 +91,7 @@ Specify the networks to add to the specified uplink set.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -AddPorts &lt;Object[]&gt;
@@ -108,7 +110,7 @@ Synergy VC FC Sub-Interface `[e.g]`. "Bay2:Q1.1","Bay2:Q2.1" or "Bay5:Q1.2","Bay
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -141,7 +143,7 @@ Default: Exact
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -EnableTrunking &lt;Bool&gt;
@@ -153,7 +155,7 @@ Use this parameter to enable or disable FC port trunking.  This parameter is onl
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -InputObject &lt;Object&gt;
@@ -180,7 +182,7 @@ Set the LACP Timer value, which sets the lacpdu frequecy to the LACP peer.  Acce
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Name &lt;String&gt;
@@ -192,7 +194,7 @@ Specify the new name of the resource.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -RemoveNetwork &lt;Object[]&gt;
@@ -204,7 +206,7 @@ An array of networks to remove from the uplink set.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -RemovePorts &lt;Object[]&gt;
@@ -223,7 +225,7 @@ Synergy VC FC Sub-Interface `[e.g]`. "Bay2:Q1.1","Bay2:Q2.1" or "Bay5:Q1.2","Bay
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -UntaggedNetwork &lt;Object&gt;
@@ -235,7 +237,7 @@ Specify the network object that will be set as the untagged network.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -UplinkSetName &lt;String&gt;
@@ -259,7 +261,7 @@ Specify one or more network set objects to add to an uplink set.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -RemoveNetworkSet &lt;Object[]&gt;
@@ -271,7 +273,50 @@ Specify one or more network set objects to remove from an uplink set.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
+| Accept wildcard characters? | False |
+
+### -FecMode &lt;string&gt;
+
+Specify the forward error correction mode.  This paraemter is only supported with Virtual Connect SE 100Gb F32 Module for Synergy modules.  When configuring, the following values are supported with parent ports:
+
+	* Auto
+	* Cl74
+	* Cl108
+	* None
+
+The following values are supported with sub-ports:
+
+	* Auto
+	* Cl74
+	* Cl91
+	* None
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | False |
+| Accept wildcard characters? | False |
+
+### -PortSpeed &lt;string&gt;
+
+The allowed uplink port speed vy the fabric module and traceiver type.  When specifying a port speed, this value will be set for all ports.  This parameter applies to Ethernet or FCoE uplink ports only.  Allowed values:
+
+	* Auto
+	* 100M
+	* 1G
+	* 10G
+	* 40G
+	* 100G
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

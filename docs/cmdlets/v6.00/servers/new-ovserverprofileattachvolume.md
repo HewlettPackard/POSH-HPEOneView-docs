@@ -123,7 +123,7 @@ Attach a new 10Gb Ephemeral Volume to an existing Server Profile.
 
 ```text
 $sp = Get-OVServerProfile -Name "chef-web01"
-Get-OVStorageVolume "My New Volume 3" | New-OVServerProfileAttachVolume -ServerProfile $sp  | Wait-OVTaskComplete
+Get-OVStorageVolume -Name "My New Volume 3" | New-OVServerProfileAttachVolume -ServerProfile $sp  | Wait-OVTaskComplete
 ```
 
 Attach an existing Storage Volume to a Server Profile.
@@ -377,7 +377,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? |  |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Scope &lt;HPEOneView.Appliance.ScopeCollection[]&gt;
@@ -389,7 +389,7 @@ Provide an `[HPEOneView.Appliance.ScopeCollection]` resource object to initially
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? |  |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -TargetPortAssignment &lt;SwitchParameter&gt;

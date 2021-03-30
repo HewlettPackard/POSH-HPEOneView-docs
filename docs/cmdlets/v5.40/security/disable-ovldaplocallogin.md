@@ -62,7 +62,7 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -WhatIf &lt;SwitchParameter&gt;
@@ -74,7 +74,7 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
@@ -86,7 +86,7 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -EmergencyLoginAllowType &lt;String&gt;
@@ -98,7 +98,7 @@ Allow emergency login access if the configured authentication directory(ies) are
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -EnableEmergencyLocalLogin &lt;Bool&gt;
@@ -110,7 +110,7 @@ Boolean value to enable ($true) or disable ($false) emergency local login.  Must
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

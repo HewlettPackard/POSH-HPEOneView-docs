@@ -28,7 +28,7 @@ Update-OVLogicalEnclosure
 
 This Cmdlet will update or refresh a Logical Enclosure.  A Refresh will instruct HPE OneView to go inventory the enclosure and update any missing management configurations. An Update will perform Logical Enclosure compliance remediation with the parent Enclosure Group.
 
-Use the -Refresh switch for scenarios where adding an enclosure results in a warning or critical error when a BL server cannot be managed due to an existing _HPOneViewAdmin account that cannot be reset or too many HP SSO Certificates are configured (iLO supports no more than 5) and you have manually cleared the HP SSO list and/or removed the _HPOneViewAdmin account.
+Use the -Refresh switch for scenarios where adding an enclosure results in a warning or critical error when a BL server cannot be managed due to an existing _HPEOneViewAdmin account that cannot be reset or too many HP SSO Certificates are configured (iLO supports no more than 5) and you have manually cleared the HP SSO list and/or removed the _HPEOneViewAdmin account.
 
 ## Examples
 

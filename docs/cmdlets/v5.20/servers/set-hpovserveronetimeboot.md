@@ -84,7 +84,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -InputObject &lt;Object&gt;
@@ -108,7 +108,7 @@ If the server is already powered off, instruct OneView to power on the server on
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Setting &lt;string&gt;
@@ -126,7 +126,7 @@ The intended one time boot setting.  Allowed values:
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -WhatIf &lt;SwitchParameter&gt;
@@ -138,7 +138,7 @@ The intended one time boot setting.  Allowed values:
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
@@ -147,7 +147,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Servers.ServerHardware [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.ServerHardware [System.Management.Automation.PSCustomObject]**_
 
 Server hardware resource object from Get-HPOVServer.
 

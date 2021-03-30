@@ -50,7 +50,7 @@ Group has the permission to add, edit, and delete local iLO user accounts.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ConfigureIloSettings &lt;Bool&gt;
@@ -62,7 +62,7 @@ Group has the permission to configure most iLO settings, including security sett
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -GroupDN &lt;String&gt;
@@ -74,7 +74,7 @@ The Distinguished Name (DN) of the group from the directory to be authorized for
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -GroupSID &lt;String&gt;
@@ -86,7 +86,7 @@ The SID of the directory group to be authorized for iLO access.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -RemoteConsole &lt;Bool&gt;
@@ -98,7 +98,7 @@ Group has the permission to access the iLO remote console.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -VirtualMedia &lt;Bool&gt;
@@ -110,7 +110,7 @@ Group has the permission to use the Virtual Media features on the host system.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -VirtualPowerAndReset &lt;Bool&gt;
@@ -122,7 +122,7 @@ Group has the permission to power-cycle or reset the host system.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

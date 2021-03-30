@@ -78,7 +78,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -106,7 +106,7 @@ When a server hardware resource is in an Error state where the iLO IP Address or
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Credential &lt;String&gt;
@@ -118,7 +118,7 @@ Provide a PSCredential object instead of the Username and Password.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Force &lt;SwitchParameter&gt;
@@ -130,7 +130,7 @@ Force delete the resource.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

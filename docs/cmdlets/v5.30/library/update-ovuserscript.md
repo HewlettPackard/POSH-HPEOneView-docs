@@ -15,7 +15,7 @@ Update-OVUserScript
 
 ## Description
 
-The HPE OneVIew 5.30 PowerShell library has gone through a major change, in that all Cmdlet and the C# base class name have changed.  PowerShell Cmdlet nouns used the HPOV vendor prefix.  This is now OV.  The C# based class namespace was HPOneView, and is now HPEOneView.
+The HPE OneVIew 5.30 PowerShell library has gone through a major change, in that all Cmdlet and the C# base class name have changed.  PowerShell Cmdlet nouns used the HPOV vendor prefix.  This is now OV.  The C# based class namespace was HPEOneView, and is now HPEOneView.
 
 This script will process a user created script to find references to the original Cmdlet and Class names, and update them acordingly.  By default, this Cmdlet will only output to the console the changes it would make.  Use the -Replace parameter to commit those changes to the orignal file.
 

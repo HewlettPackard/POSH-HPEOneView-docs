@@ -39,7 +39,7 @@ The FQDN or IP Address of an HPE OneView appliance or `[HPOneView.Applinace.Conn
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -SupportAccess &lt;String&gt;
@@ -51,7 +51,7 @@ Set to "yes" to allow HP suport access to the appliance, otherwise set to "no".
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

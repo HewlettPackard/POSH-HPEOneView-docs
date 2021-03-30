@@ -32,7 +32,7 @@ Stop the power state of the server using the virtual power button.  By default, 
 ###  Example 1 
 
 ```text
-Get-HPOVServer "Encl1, Bay 1" | Stop-HPOVServer | Wait-HPOVTaskComplete
+Get-HPOVServer -Name "Encl1, Bay 1" | Stop-HPOVServer | Wait-HPOVTaskComplete
 ```
 
 Power off the specific server device by passing the Server Object via pipeline.
@@ -40,7 +40,7 @@ Power off the specific server device by passing the Server Object via pipeline.
 ###  Example 2 
 
 ```text
-Get-HPOVServerProfile "MyWebServer 1" | Stop-HPOVServer | Wait-HPOVTaskComplete
+Get-HPOVServerProfile -Name "MyWebServer 1" | Stop-HPOVServer | Wait-HPOVTaskComplete
 ```
 
 Power off the specific server device by passing the Server Profile Object via pipeline.
@@ -48,7 +48,7 @@ Power off the specific server device by passing the Server Profile Object via pi
 ###  Example 3 
 
 ```text
-Get-HPOVServer "Encl1, Bay 1" | Stop-HPOVServer -Force | Wait-HPOVTaskComplete
+Get-HPOVServer -Name "Encl1, Bay 1" | Stop-HPOVServer -Force | Wait-HPOVTaskComplete
 ```
 
 Power off the specific server device by passing the Server Object via pipeline, and forcably power off.
@@ -76,7 +76,7 @@ Use this parameter to request the "Press and Hold" virtual power button method, 
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
@@ -88,7 +88,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -112,7 +112,7 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
@@ -124,7 +124,7 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

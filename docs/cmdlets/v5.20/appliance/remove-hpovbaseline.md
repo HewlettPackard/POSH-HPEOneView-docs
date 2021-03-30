@@ -83,7 +83,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
@@ -95,7 +95,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

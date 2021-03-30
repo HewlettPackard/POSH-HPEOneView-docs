@@ -27,7 +27,7 @@ New-OVServerProfileLogicalDisk
     [-DriveSelectionBy <String>]
     [-AvailableDriveType <HPEOneView.Storage.AvailableDriveType>]
     [-StorageLocation <String>]
-    [-MinDriveSize] <Int32>
+    [-MinDriveSize <Int32>]
     [-MaxDriveSize <Int32>]
     [-EraseDataOnDelete]
     [-Permanent <String>]

@@ -40,7 +40,7 @@ Current default password for this account.  Will prompt for password if not supp
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -NewPassword &lt;String&gt;
@@ -52,7 +52,7 @@ New password for this account.  Will prompt for password if not supplied.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Appliance &lt;Object&gt;
@@ -64,7 +64,7 @@ Specify Appliance FQDN, Name or IP Address.  If no valid Appliance Connection is
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

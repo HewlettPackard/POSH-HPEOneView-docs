@@ -6,6 +6,13 @@ description: Report server and enclosure supported utilization metrics.
 
 ## Syntax
 
+```text
+Show-OVUtilization
+    [-InputObject] <Object>
+    [-ApplianceConnection <Object>]
+    [<CommonParameters>]
+```
+
 ## Description
 
 For resources such as Enclosures and Server Hardware, the appliance collects CPU, power, and temperature utilization statistics from the management processors (iLO, OA, FLM). Utilization statistics are not instantaneous-data is gathered and reported every five minutes.
@@ -62,29 +69,29 @@ Get all available server resources, and collect utilization data to report.
 
 ## Parameters
 
-### -ApplianceConnection &lt;Array&gt;
-
-Specify one or more `[HPEOneView.Appliansce.Connection]` object(s) or Name property value(s).
-
-| Aliases |  |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? |  |
-| Accept wildcard characters? |  |
-
 ### -InputObject &lt;Object&gt;
 
-A server hardware, server profile or enclosure resource.  IF a server profile is unassigned, it will be skipped.
+A server hardware, server profile or enclosure resource.  If a server profile is unassigned, it will be skipped.
 
-| Aliases |  |
+| Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? |  |
-| Accept wildcard characters? |  |
+| Accept pipeline input? | true (ByValue) |
+| Accept wildcard characters? | False |
+
+### -ApplianceConnection &lt;Object&gt;
+
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
+
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | (${Global:ConnectedSessions} &vert; ? Default) |
+| Accept pipeline input? | False |
+| Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
 

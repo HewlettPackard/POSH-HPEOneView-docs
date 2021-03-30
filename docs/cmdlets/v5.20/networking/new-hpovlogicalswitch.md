@@ -151,7 +151,7 @@ Name of the Logical Switch resource.  Supports wildcard * character.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -LogicalSwitchGroup &lt;Object&gt;
@@ -175,7 +175,7 @@ Specify if the Logical Switch will be a Managed resource.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Monitored &lt;SwitchParameter&gt;
@@ -187,7 +187,7 @@ Specify if the Logical Switch will be a Monintored resource.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Switch1Address &lt;String&gt;
@@ -199,7 +199,7 @@ IP Address or FQDN of first Switch resource.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Switch2Address &lt;String&gt;
@@ -211,7 +211,7 @@ IP Address or FQDN of first Switch resource.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -SshUserName &lt;String&gt;
@@ -223,7 +223,7 @@ The SSH account name.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -SshPassword &lt;Object&gt;
@@ -235,7 +235,7 @@ Password of the SSH User.  Either `[System.String]` or `[System.Security.SecureS
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -SnmpPort &lt;int&gt;
@@ -247,7 +247,7 @@ The UDP port SNMP is configured to listen on the target Switch resource.
 | Required? | False |
 | Position? | Named |
 | Default value | 161 |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -SnmpV1 &lt;SwitchParameter&gt;
@@ -259,7 +259,7 @@ Specify if SNMPv1 is available.  Otherwise, use the `-SNMPv3` switch parameter.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -SnmpCommunity &lt;String&gt;
@@ -271,7 +271,7 @@ Specify the SNMPv1 Community name.  This parameter is not used if needing to con
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -SnmpV3 &lt;SwitchParameter&gt;
@@ -283,7 +283,7 @@ Specify if SNMPv3 is available.  Otherwise, use the `-SNMPv1` switch parameter.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -SnmpUserName &lt;String&gt;
@@ -295,7 +295,7 @@ Specify the SNMPv3 Username.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -SnmpAuthLevel &lt;String&gt;
@@ -307,7 +307,7 @@ Defines the security levels supported by SNMPv3:  * Auth         - Communication
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -SnmpAuthProtocol &lt;String&gt;
@@ -319,7 +319,7 @@ The protocol used for Authentication are either MD5 (Message Digest 5) or SHA (S
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -SnmpAuthPassword &lt;Object&gt;
@@ -331,7 +331,7 @@ SNMPv3 Authorization Password.  Either `[System.String]` or `[System.Security.Se
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -SnmpPrivProtocol &lt;String&gt;
@@ -343,7 +343,7 @@ The protocols used to encrypt the messages are Data Encryption Standard (DES56) 
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -SnmpPrivPassword &lt;Object&gt;
@@ -355,7 +355,7 @@ SNMPv3 Privacy Password.  Either `[System.String]` or `[System.Security.SecureSt
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
@@ -367,7 +367,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;

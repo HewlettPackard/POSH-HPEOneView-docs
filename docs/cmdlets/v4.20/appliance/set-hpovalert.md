@@ -80,7 +80,7 @@ The users name in String value to assign the alert to.  The user name does not r
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Notes &lt;String&gt;
@@ -92,7 +92,7 @@ Notes of the action for the alert.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Cleared &lt;SwitchParameter&gt;
@@ -104,7 +104,7 @@ Change the alert to "Cleared" status.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Active &lt;SwitchParameter&gt;
@@ -116,7 +116,7 @@ Change the alert to "Active" status.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;

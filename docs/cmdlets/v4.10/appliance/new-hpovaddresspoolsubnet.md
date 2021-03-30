@@ -45,7 +45,7 @@ The IPv4 Network ID value of the subnet.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -SubnetMask &lt;String&gt;
@@ -57,7 +57,7 @@ CIDR `[e.g`. 24] or IPv4 Address Value `[e.g`. 255.255.255.0]
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Gateway &lt;IPAddress&gt;
@@ -69,7 +69,7 @@ IPv4 Address of the default gateway for the subnet.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Domain &lt;String&gt;
@@ -81,7 +81,7 @@ DNS Domain Name of the subnet.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -DNSServers &lt;Array&gt;
@@ -93,7 +93,7 @@ An array of DNS Server IPv4 Addresses.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -109,7 +109,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 | Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

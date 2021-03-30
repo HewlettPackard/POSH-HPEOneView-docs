@@ -87,7 +87,19 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
+| Accept wildcard characters? | False |
+
+### -Confirm &lt;SwitchParameter&gt;
+
+Override confirmation prompt.
+
+| Aliases | cf |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -EnclosureGroup &lt;Object&gt;
@@ -99,7 +111,7 @@ Specify the target `[HPOneView.EnclosureGroup]` resource object.  By changing th
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -InputObject &lt;Object&gt;
@@ -123,7 +135,19 @@ Specify the `[HPOneView.ServerHardwareType]` object to transform to.  BIOS Setti
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
+| Accept wildcard characters? | False |
+
+### -WhatIf &lt;SwitchParameter&gt;
+
+default content
+
+| Aliases | wi |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

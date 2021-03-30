@@ -130,7 +130,7 @@ Minimum required privileges: Network administrator, Server administrator
 
 ```text
 $li = Get-OVLogicalInterconnect Encl1-LI
-$spp = Get-OVBaseline "HPE Service Pack for ProLiant" 
+$spp = Get-OVBaseline -Name "HPE Service Pack for ProLiant" 
 $task = Install-OVLogicalInterconnectFirmware -Method Stage -InputObject $li -Baseline $spp 
 Wait-OVTaskComplete $task
 $task = Install-OVLogicalInterconnectFirmware -Method Activate -InputObject $li 
@@ -190,7 +190,7 @@ Upgrade method to perform.  Accepted values are:
 | Required? | True |
 | Position? | Named |
 | Default value | Update |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -EthernetActivateOrder &lt;String&gt;
@@ -210,7 +210,7 @@ Specify the Ethernet module firmware activation order.  Accepted values are:
 | Required? | True |
 | Position? | Named |
 | Default value | OddEven |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -EthernetActivateDelay &lt;Int32&gt;
@@ -224,7 +224,7 @@ Default is 5 seconds.
 | Required? | True |
 | Position? | Named |
 | Default value | 5 |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -FCActivateOrder &lt;String&gt;
@@ -243,7 +243,7 @@ Specify the Fibre Channel module firmware activation order.  Accepted values are
 | Required? | True |
 | Position? | Named |
 | Default value | Serial |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -FCActivateDelay &lt;Int32&gt;
@@ -257,7 +257,7 @@ Default is 5 seconds.
 | Required? | True |
 | Position? | Named |
 | Default value | 5 |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Baseline &lt;Object&gt;
@@ -269,7 +269,7 @@ Firmware Baseline Name, URI or Object.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
@@ -281,7 +281,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Force &lt;SwitchParameter&gt;
@@ -293,7 +293,7 @@ Force the firmware update if the update version matches what is already installe
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -317,7 +317,7 @@ Specify one `[HPEOneView.Appliance.Connection]` object or Name property value. I
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
@@ -329,7 +329,7 @@ Specify one `[HPEOneView.Appliance.Connection]` object or Name property value. I
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ManualOrder &lt;string&gt;
@@ -348,7 +348,7 @@ Use this parameter when the EthActivationOrder is set to Manual.  The allowed va
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -NoPreview &lt;SwitchParameter&gt;
@@ -360,7 +360,7 @@ By default, the Cmdlet will display a report if the interconnects can be updated
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -SasActivationMethod &lt;string&gt;
@@ -375,7 +375,7 @@ Specify the HPE Synergy SAS module firmware activation order.  Accepted values a
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

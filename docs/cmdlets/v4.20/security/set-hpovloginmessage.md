@@ -65,7 +65,7 @@ The login message to set.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Acknowledgment &lt;Boolean&gt;
@@ -77,7 +77,7 @@ Set to True if the login message should be acknowledged before authentication co
 | Required? | True |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -89,7 +89,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

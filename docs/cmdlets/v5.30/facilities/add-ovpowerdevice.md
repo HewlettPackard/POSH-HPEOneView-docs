@@ -117,7 +117,7 @@ When adding an iPDU resource, the SSL certificate may be self signed and untrust
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? |  |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Force &lt;SwitchParameter&gt;

@@ -158,7 +158,7 @@ A name for the new enclosure group.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -EnclosureCount &lt;Int32&gt;
@@ -170,7 +170,7 @@ Specify the number of Synergy Frames will participate within the Enclosure Group
 | Required? | True |
 | Position? | Named |
 | Default value | 1 |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -LogicalInterconnectGroupMapping &lt;Object&gt;
@@ -225,7 +225,7 @@ Allowed Values:
 | Required? | False |
 | Position? | Named |
 | Default value | RedundantPowerFeed |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ConfigurationScript &lt;String&gt;
@@ -237,7 +237,7 @@ An Onboard Administrator CLI Script. Only applicable for HPE BladeSystem C-Class
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -IPv4AddressType &lt;String&gt;
@@ -255,7 +255,7 @@ Default: DHCP
 | Required? | False |
 | Position? | Named |
 | Default value | DHCP |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -IPv4AddressRange &lt;Object&gt;
@@ -269,7 +269,7 @@ The IPv4 address pool object from Get-OVAddressPoolRange.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -IPv6AddressRange &lt;Object&gt;
@@ -281,7 +281,7 @@ The IPv6 address pool object from Get-OVAddressPoolRange.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -IPv6AddressType &lt;String&gt;
@@ -299,7 +299,7 @@ Default: None
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -DeploymentNetworkType &lt;String&gt;
@@ -317,7 +317,7 @@ Default: None
 | Required? | False |
 | Position? | Named |
 | Default value | None |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -DeploymentNetwork &lt;Object&gt;
@@ -329,7 +329,7 @@ The Ethernet Network with the purpose property set to Management.  Must also inc
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -DiscoverFromEnclosure &lt;SwitchParameter&gt;
@@ -343,7 +343,7 @@ No Uplink Sets will be created. They will need to be added using the New-OVUplin
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -OAAddress &lt;String&gt;
@@ -355,7 +355,7 @@ Provide the Onboard Administrator IP Address or FQDN.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Username &lt;String&gt;
@@ -367,7 +367,7 @@ Provide an Onboard Administrator administrator account.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Password &lt;String&gt;
@@ -379,7 +379,7 @@ Provide an Onboard Administrator administrator password.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -LigPrefix &lt;String&gt;
@@ -391,7 +391,7 @@ If specified, the Logical Interconnect Group that is created will be used in the
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -417,7 +417,7 @@ Provide the full path and file name of the JSON file.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Scope &lt;HPEOneView.Appliance.ScopeCollection[]&gt;

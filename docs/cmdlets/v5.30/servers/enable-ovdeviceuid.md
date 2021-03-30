@@ -35,7 +35,7 @@ Minimum required privileges: Infrastructure administrator, Server administrator
 ###  Example 1 
 
 ```text
-Get-OVServer "MyEncl, Bay 1" | Enable-OVDeviceUid | Wait-OVTaskComplete
+Get-OVServer -Name "MyEncl, Bay 1" | Enable-OVDeviceUid | Wait-OVTaskComplete
 ```
 
 Enable the UID for "MyEncl, Bay 1" server.

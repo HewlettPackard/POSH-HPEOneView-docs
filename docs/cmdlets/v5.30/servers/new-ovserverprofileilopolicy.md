@@ -476,7 +476,7 @@ The iLO Key Manager (e.g. ESKM) configuration will be managed via the profile.
 
 ### -ManageLocalAccounts &lt;SwitchParameter&gt;
 
-Replace all local iLO accounts beyond Administrator.  If you omit the LocalAccount parameter, all existing local accounts will be removed, except the build-in local Administrator and the configured _HPOneViewAdmin privileged accounts.  The local Administrator account can be removed using the RemoveLocalAdministratorAccount, but you then risk locking everyone from accessing the iLO.
+Replace all local iLO accounts beyond Administrator.  If you omit the LocalAccount parameter, all existing local accounts will be removed, except the build-in local Administrator and the configured _HPEOneViewAdmin privileged accounts.  The local Administrator account can be removed using the RemoveLocalAdministratorAccount, but you then risk locking everyone from accessing the iLO.
 
 | Aliases | None |
 | :--- | :--- |

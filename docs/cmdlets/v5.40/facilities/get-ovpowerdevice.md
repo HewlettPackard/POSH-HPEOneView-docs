@@ -69,7 +69,7 @@ The name of the power device resource to be returned.  All power device resource
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Type &lt;String&gt;
@@ -87,7 +87,7 @@ Filter the Power Delivery Device type.  Allowed values:
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -99,7 +99,7 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

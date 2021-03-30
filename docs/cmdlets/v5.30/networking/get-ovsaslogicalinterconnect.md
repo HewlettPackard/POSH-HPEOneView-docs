@@ -75,7 +75,7 @@ Filter resources based on provided Scope membership.  By default, all resources 
 | Required? | False |
 | Position? | Named |
 | Default value | AllResourcesInScope |
-| Accept pipeline input? |  |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Label &lt;String&gt;
@@ -138,3 +138,4 @@ _**A SAS Logical Interconnect or collection of SAS Logical Interconnects**_
 
 ## Related Links
 
+* [Install-OVLogicalInterconnectFirmware](install-ovlogicalinterconnectfirmware.md)

@@ -75,7 +75,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` objects or Name property 
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
@@ -87,7 +87,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -CertObject &lt;Object&gt;
@@ -111,7 +111,7 @@ The remote endpoint Computer Name or IP Address.  This should match either the X
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Port &lt;Int&gt;
@@ -123,7 +123,7 @@ Specify the TCP port where the TLS/SSL service is bound and listening on.  Use w
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -AliasName &lt;String&gt;
@@ -135,7 +135,7 @@ Specify an alias name of the certificate stored on the appliance.  By default, t
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Force &lt;SwitchParameter&gt;
@@ -147,7 +147,7 @@ Use to force add an untrusted (`self-signed` or a certificate authority certific
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

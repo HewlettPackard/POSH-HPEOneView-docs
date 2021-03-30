@@ -9,32 +9,34 @@ description: Modify an existing user account.
 ```text
 Set-OVUser
     [-UserName] <String>
-    [-Password] <String>
-    [-FullName] <String>
-    [-Roles] <Array>
+    [-Password <String>]
+    [-FullName <String>]
+    [-Roles <Array>]
+    [-Append]
     [-ScopePermissions <Array>]
-    [-EmailAddress] <String>
-    [-OfficePhone] <String>
-    [-MobilePhone] <String>
+    [-EmailAddress <String>]
+    [-OfficePhone <String>]
+    [-MobilePhone <String>]
     [-Enabled]
     [-Disabled]
-    [-ApplianceConnection] <Object>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 Set-OVUser
     [-UserObject] <Object>
-    [-Password] <String>
-    [-FullName] <String>
-    [-Roles] <Array>
+    [-Password <String>]
+    [-FullName <String>]
+    [-Roles <Array>]
+    [-Append]
     [-ScopePermissions <Array>]
-    [-EmailAddress] <String>
-    [-OfficePhone] <String>
-    [-MobilePhone] <String>
+    [-EmailAddress <String>]
+    [-OfficePhone <String>]
+    [-MobilePhone <String>]
     [-Enabled]
     [-Disabled]
-    [-ApplianceConnection] <Object>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -92,7 +94,7 @@ The name or object of the user account to be updated.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Password &lt;String&gt;
@@ -104,7 +106,7 @@ New password for the user account.  Passwords must be at least 8 characters.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -FullName &lt;String&gt;
@@ -116,7 +118,7 @@ Updated Full Name of the User Account.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Roles &lt;Array&gt;
@@ -130,7 +132,7 @@ Example: $roles = "Server administrator","Network administrator"
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -EmailAddress &lt;String&gt;
@@ -142,7 +144,7 @@ Updated Email Address of the User Account.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -OfficePhone &lt;String&gt;
@@ -154,7 +156,7 @@ Updated office phone of the User Account.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -MobilePhone &lt;String&gt;
@@ -166,7 +168,7 @@ Updated mobile phone number
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Enabled &lt;SwitchParameter&gt;
@@ -178,7 +180,7 @@ Enable the local user account.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Disabled &lt;SwitchParameter&gt;
@@ -190,7 +192,7 @@ Disable the local user account.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -216,7 +218,19 @@ Example: `-ScopePermissions` @{Role = "Network administrator"; Scope = (`Get-OVS
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
+| Accept wildcard characters? | False |
+
+### -Append &lt;SwitchParameter&gt;
+
+Use to append roles and/or scope permissions update.  If omitted, roles or scope permissions will be replaced.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

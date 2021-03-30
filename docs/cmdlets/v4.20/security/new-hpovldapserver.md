@@ -68,7 +68,7 @@ Directory Server"s LDAP SSL Port.
 | Required? | True |
 | Position? | Named |
 | Default value | 636 |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Certificate &lt;Object&gt;
@@ -80,7 +80,7 @@ Directory Server SSL Certificate, either location to Base64 Cert or multi-line s
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Credential &lt;PSCredential&gt;
@@ -92,7 +92,7 @@ Use this parameter if you want to provide a PSCredential object instead.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Array&gt;
@@ -104,7 +104,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -TrustLeafCertificate &lt;SwitchParameter&gt;
@@ -116,7 +116,7 @@ Use to specify if the certificate should be explicitly trusted, like a self-sign
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

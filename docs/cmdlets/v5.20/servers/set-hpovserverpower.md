@@ -44,7 +44,7 @@ Optional power state.  Default is On, other option is Off
 | Required? | True |
 | Position? | Named |
 | Default value | On |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -PowerControl &lt;String&gt;
@@ -56,7 +56,7 @@ Optional setting to control the virtual power button.
 | Required? | True |
 | Position? | Named |
 | Default value | MomentaryPress |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -80,7 +80,7 @@ The name of the appliance or list of appliances to execute the command against.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
@@ -92,7 +92,7 @@ The name of the appliance or list of appliances to execute the command against.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
@@ -103,13 +103,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None**_
 
- None 
+
 
 ## Return Values
 
 _**None**_
 
- None
+
 
 ## Related Links
 

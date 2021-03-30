@@ -10,10 +10,11 @@ description: Assign or change roles for LDAP Groups.
 Set-OVLdapGroupRole
     [-InputObject] <Object>
     [-Roles] <Array>
-    [-UserName] <String>
-    [-Password] <System.Security.SecureString>
+    [-Append]
+    [-UserName <String>]
+    [-Password <System.Security.SecureString>]
     [-Credential <PSCredential>]
-    [-ApplianceConnection] <Object>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -21,22 +22,24 @@ Set-OVLdapGroupRole
 Set-OVLdapGroupRole
     [-InputObject] <Object>
     [-Roles] <Array>
-    [-ScopePermissions <Array>]
-    [-UserName] <String>
-    [-Password] <System.Security.SecureString>
+    [-ScopePermissions] <Array>
+    [-Append]
+    [-UserName <String>]
+    [-Password <System.Security.SecureString>]
     [-Credential <PSCredential>]
-    [-ApplianceConnection] <Object>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 Set-OVLdapGroupRole
     [-InputObject] <Object>
-    [-ScopePermissions <Array>]
-    [-UserName] <String>
-    [-Password] <System.Security.SecureString>
+    [-ScopePermissions] <Array>
+    [-Append]
+    [-UserName <String>]
+    [-Password <System.Security.SecureString>]
     [-Credential <PSCredential>]
-    [-ApplianceConnection] <Object>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -96,7 +99,7 @@ LDAP/Active Directory Domain Name
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? |  |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -InputObject &lt;Object&gt;
@@ -178,6 +181,18 @@ Use this parameter if you want to provide a PSCredential object instead.
 Array collection of Hashtable<Role; Scope>.  Will overwrite existing scope to role mappings.  To indiate all resouroures, use 'All' as the value.
 
 Example: `-ScopePermissions` @{Role = "Network administrator"; Scope = (`Get-OVScope` `-Name` CorpNetAdmins `-ErrorAction` Stop) }
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -Append &lt;SwitchParameter&gt;
+
+Use to append roles and/or scope permissions update.  If omitted, roles or scope permissions will be replaced.
 
 | Aliases | None |
 | :--- | :--- |

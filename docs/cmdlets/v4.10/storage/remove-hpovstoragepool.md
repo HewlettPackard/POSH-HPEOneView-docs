@@ -83,7 +83,7 @@ Provide the Storage System Name, URI or Object when the StoragePool name is not 
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Force &lt;SwitchParameter&gt;
@@ -95,7 +95,7 @@ If specified, the Storage Pool resource will forceablly removed despite any prob
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;

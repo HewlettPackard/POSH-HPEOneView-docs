@@ -95,7 +95,7 @@ Generate an SSO URL Token for accessing the Remote Console.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -IloRestSession &lt;SwitchParameter&gt;
@@ -107,7 +107,7 @@ Generate an HPRESTCmdlets compliant IloSession object.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Array&gt;

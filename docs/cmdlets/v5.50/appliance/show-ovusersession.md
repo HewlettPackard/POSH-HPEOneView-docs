@@ -6,6 +6,11 @@ description: Display user logon sessions.
 
 ## Syntax
 
+```text
+Show-OVUserSession
+    [<CommonParameters>]
+```
+
 ## Description
 
 This Cmdlet is decprecated as of v2.0.  Please use the $ConnectedSessions Global variable for appliance session information.

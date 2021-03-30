@@ -1,5 +1,5 @@
 ﻿---
-description: Migrate Virtual Connect Manager to HPE OneView.
+description: (DEPRECATED) Migrate Virtual Connect Manager to HPE OneView.
 ---
 
 # Invoke-OVVcmMigration
@@ -62,6 +62,11 @@ Invoke-OVVcmMigration
 ```
 
 ## Description
+
+{% hint style="warning" %}
+ This Cmdlet is now deprecated.  The VCM migration functionality was removed from HPE OneView starting with the 5.50 release.
+{% endhint %}
+
 
 This function is used to migrate an existing Virtual Connect Manager configuration to HPE OneView.  If an enclosure was added to an HPE OneView appliance as Monitor-Only, then you must first remove the enclosure from the appliance, and then use this Cmdlet to migrate the enclosure.
     

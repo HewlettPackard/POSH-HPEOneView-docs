@@ -83,7 +83,7 @@ Directroy Group to add.  Can either be a string value of a Cononical Name of dir
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Roles &lt;Array&gt;
@@ -97,7 +97,7 @@ Example: $roles = "Server administrator","Network administrator"
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Username &lt;String&gt;
@@ -114,7 +114,7 @@ Directory Username to authenticate with
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Password &lt;Object&gt;
@@ -131,7 +131,7 @@ Directory User account password.  Can be `[System.String]` or `[System.Security.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -143,7 +143,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Credential &lt;PSCredential&gt;
@@ -155,7 +155,7 @@ Use this parameter if you want to provide a PSCredential object instead.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ScopePermissions &lt;Array&gt;
@@ -169,7 +169,7 @@ Example: `-ScopePermissions` @{Role = "Network administrator"; Scope = (`Get-HPO
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

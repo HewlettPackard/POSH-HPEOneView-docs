@@ -76,7 +76,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ComputerName &lt;string[]&gt;
@@ -88,7 +88,7 @@ The target remote Syslog server IP Address or FQDN.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Port &lt;int&gt;
@@ -100,7 +100,7 @@ The target remote Syslog server port if not using the default 514/UDP port.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -RemoveComputerName &lt;string[]&gt;
@@ -112,7 +112,7 @@ Specify one or more remote Syslog server IP Address or FQDN to remove from the c
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Disable &lt;SwitchParameter&gt;
@@ -124,7 +124,7 @@ Using this parameter will disable remote Syslog audit log forwarding on the spec
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Enable &lt;SwitchParameter&gt;
@@ -136,7 +136,7 @@ Using this parameter will enable remote Syslog audit log forwarding on the speci
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
