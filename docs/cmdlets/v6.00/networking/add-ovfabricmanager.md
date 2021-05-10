@@ -125,7 +125,7 @@ Provide an `[HPEOneView.Appliance.ScopeCollection]` resource object to initially
 | Required? | False |
 | Position? | Named |
 | Default value | AllResourcesInScope |
-| Accept pipeline input? | False |
+| Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
 ### -SecondaryManagementAddress &lt;String&gt;

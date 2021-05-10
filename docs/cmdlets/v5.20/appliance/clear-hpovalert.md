@@ -6,6 +6,11 @@ description: [DEPRECATED] Clear an Alert status.
 
 ## Syntax
 
+```text
+Clear-HPOVAlert
+    [<CommonParameters>]
+```
+
 ## Description
 
 DEPRECATED as of 2.0.  Please use Set-HPOVAlert

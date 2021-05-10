@@ -60,7 +60,7 @@ The address pool type.  Accepted values are VMAC, VWWN, VSN, IPv4, IPv6, or All.
 | Required? | False |
 | Position? | Named |
 | Default value | all |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -72,7 +72,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

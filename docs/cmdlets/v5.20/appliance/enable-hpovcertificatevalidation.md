@@ -81,7 +81,7 @@ Enable ($true) or Disable ($false) the option to check for expiration of self si
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
@@ -93,7 +93,7 @@ Override the confirmation prompt.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -WhatIf &lt;SwitchParameter&gt;
@@ -105,7 +105,7 @@ Override the confirmation prompt.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

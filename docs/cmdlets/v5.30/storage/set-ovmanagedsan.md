@@ -9,18 +9,16 @@ description: Enable or Disable Automated SAN Zoning.
 ```text
 Set-OVManagedSan
     [-InputObject] <Object>
-    [-ZoningPolicy] <String>
     [-EnableAutomatedZoning]
+    [-ZoningPolicy] <String>
     [-EnableAliasing]
     [-InitiatorNameFormat <String>]
     [-TargetGroupNameFormat <String>]
-    [-DisableTargetGroupAliasing <Bool>]
     [-TargetNameFormat <String>]
     [-ZoneNameFormat <String>]
     [-UpdateZoneNames <Boolean>]
     [-UpdateInitiatorAliases <Boolean>]
     [-UpdateTargetAliases <Boolean>]
-    [-UpdateTargetGroupAliases <Bool>]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
@@ -29,7 +27,7 @@ Set-OVManagedSan
 Set-OVManagedSan
     [-InputObject] <Object>
     [-EnableAutomatedZoning]
-    [-ZoningPolicy <String>]
+    [-ZoningPolicy] <String>
     [-DisableAliasing]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -38,8 +36,8 @@ Set-OVManagedSan
 ```text
 Set-OVManagedSan
     [-InputObject] <Object>
-    [-ZoningPolicy] <String>
     [-DisableAutomatedZoning]
+    [-ZoningPolicy] <String>
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
@@ -148,7 +146,7 @@ Disable aliases to be created for initiators, targets and target groups based on
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
+| Default value | false |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

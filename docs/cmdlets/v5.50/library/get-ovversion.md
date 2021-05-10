@@ -76,7 +76,7 @@ Include the appliance version.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -CheckOnline &lt;SwitchParameter&gt;
@@ -88,7 +88,7 @@ Check the GitHub repository for an updated version of the library.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Array&gt;
@@ -100,7 +100,7 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 | Required? | True |
 | Position? | Named |
 | Default value | ${Global:ConnectedSessions} |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

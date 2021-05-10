@@ -121,7 +121,7 @@ Enable HPE Synergy Composer 2 iLO remote connectivity, by setting the specified 
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 Default Value: ${Global:ConnectedSessions} | ? Default
 
@@ -319,13 +319,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPEOneView.Appliance.HardwareConfig [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.HardwareConfig [System.Management.Automation.PSCustomObject]**_
 
 The appliance hardware configuration object from Get-OVComposerIloStatus.
 
 ## Return Values
 
-_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
 
 Async task resource to monitor.
 

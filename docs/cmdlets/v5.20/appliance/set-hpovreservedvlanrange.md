@@ -60,7 +60,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Length &lt;int&gt;
@@ -72,7 +72,7 @@ Must not exceed 128.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Start &lt;int&gt;
@@ -84,7 +84,7 @@ The starting VLAN ID.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

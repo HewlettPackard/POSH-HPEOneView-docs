@@ -72,7 +72,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -CheckForSelfSignedExpiry &lt;Bool&gt;
@@ -84,7 +84,7 @@ Enable ($true) or Disable ($false) the option to check for expiration of self-si
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

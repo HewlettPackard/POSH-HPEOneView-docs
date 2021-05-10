@@ -39,7 +39,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Location &lt;System.IO.DirectoryInfo&gt;
@@ -51,7 +51,7 @@ The directory location where to save the generated file to.  If omitted, will us
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

@@ -9,7 +9,7 @@ description: Create a new Network Set.
 ```text
 New-OVNetworkSet
     [-Name] <String>
-    [-Networks <Object>]
+    [-Networks] <Object>
     [-UntaggedNetwork <Object>]
     [-TypicalBandwidth <Int32>]
     [-MaximumBandwidth <Int32>]
@@ -77,7 +77,7 @@ Ethernet Network Name(s), URI(")s or Resource Object(s).
 
 | Aliases | networkUris |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |

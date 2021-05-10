@@ -49,7 +49,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
+| Default value | false |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

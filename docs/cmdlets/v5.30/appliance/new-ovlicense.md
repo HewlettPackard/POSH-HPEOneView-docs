@@ -130,7 +130,7 @@ License key in String Format, from Get-Content or an Array of String
 
 ## Return Values
 
-_**HPEOneView.Appliance.License**_
+_**HPOneView.Appliance.License**_
 
 The License resource just added to the apliance
 

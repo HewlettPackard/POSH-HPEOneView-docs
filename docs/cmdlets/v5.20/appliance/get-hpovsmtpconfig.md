@@ -37,7 +37,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
@@ -57,7 +57,3 @@ Returns SMTP Email Configurtion object from the specified appliance(s).
 ## Related Links
 
 * [Set-HPOVSMTPConfig](set-hpovsmtpconfig.md)
-* [Add-HPOVSmtpAlertEmailFilter](add-hpovsmtpalertemailfilter.md)
-* [Get-HPOVSmtpAlertEmailFilter](get-hpovsmtpalertemailfilter.md)
-* [Set-HPOVSmtpAlertEmailFilter](set-hpovsmtpalertemailfilter.md)
-* [Remove-HPOVSmtpAlertEmailFilter](remove-hpovsmtpalertemailfilter.md)

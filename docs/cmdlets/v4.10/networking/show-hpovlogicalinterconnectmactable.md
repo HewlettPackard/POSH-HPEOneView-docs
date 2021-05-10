@@ -100,7 +100,7 @@ Provide the Network Name to filter the MAC Table results for.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -MacAddress &lt;String&gt;
@@ -112,7 +112,7 @@ Provide a MAC Address to locate in the MAC Table.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Export &lt;String&gt;
@@ -125,7 +125,7 @@ Export to a CSV, provide the full path and filename.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;

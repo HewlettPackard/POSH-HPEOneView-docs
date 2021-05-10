@@ -65,8 +65,8 @@ Minimum required privileges: Network administrator, Server administrator
 ###  Example 1 
 
 ```text
-$li = Get-HPOVLogicalInterconnect -Name Encl1-LI
-$spp = Get-HPOVBaseline -Name "HP Service Pack for ProLiant" 
+$li = Get-HPOVLogicalInterconnect Encl1-LI
+$spp = Get-HPOVSppFile "HP Service Pack for ProLiant" 
 $task = Install-HPOVLogicalInterconnectFirmware -Method Stage -InputObject $li -Baseline $spp 
 Wait-HPOVTaskComplete $task
 $task = Install-HPOVLogicalInterconnectFirmware Activate $li 
@@ -78,7 +78,7 @@ Perform a firmware update of the Encl1-LI Logical Interconnect by first staging 
 ###  Example 2 
 
 ```text
-Get-HPOVLogicalInterconnect -Name Encl1-LI  | Install-HPOVLogicalInterconnectFirmware -method Update -Baseline "HP Service Pack for ProLiant" -confirm:$false | Wait-HPOVTaskComplete
+Get-HPOVLogicalInterconnect Encl1-LI  | Install-HPOVLogicalInterconnectFirmware -method Update -Baseline "HP Service Pack for ProLiant" -confirm:$false | Wait-HPOVTaskComplete
 ```
 
 Perform a firmware update of the Encl1-LI Logical Interconnect, do not prompt for confirmation, then wait for the task to complete.
@@ -110,7 +110,7 @@ Upgrade method to perform.  Accepted values are:
 | Required? | True |
 | Position? | Named |
 | Default value | Update |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -EthernetActivateOrder &lt;String&gt;
@@ -127,7 +127,7 @@ Specify the Ethernet module firmware activation order.  Accepted values are:
 | Required? | True |
 | Position? | Named |
 | Default value | OddEven |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -EthernetActivateDelay &lt;Int32&gt;
@@ -141,7 +141,7 @@ Default is 5 seconds.
 | Required? | True |
 | Position? | Named |
 | Default value | 5 |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -FCActivateOrder &lt;String&gt;
@@ -157,7 +157,7 @@ Specify the Fibre Channel module firmware activation order.  Accepted values are
 | Required? | True |
 | Position? | Named |
 | Default value | Serial |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -FCActivateDelay &lt;Int32&gt;
@@ -171,7 +171,7 @@ Default is 5 seconds.
 | Required? | True |
 | Position? | Named |
 | Default value | 5 |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Baseline &lt;Object&gt;
@@ -183,7 +183,7 @@ Firmware Baseline Name, URI or Object.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
@@ -195,7 +195,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Force &lt;SwitchParameter&gt;
@@ -207,7 +207,7 @@ Force the firmware update if the update version matches what is already installe
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -231,7 +231,7 @@ Before applying the update, the firmware update can be validated if the update i
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SasActivationMethod &lt;string&gt;
@@ -246,7 +246,7 @@ Specify the Ethernet module firmware activation order.  Accepted values are:
 | Required? | False |
 | Position? | Named |
 | Default value | Orchestrated |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
@@ -267,5 +267,3 @@ Returns an async task resource to monitor.
 
 ## Related Links
 
-* [Get-HPOVLogicalInterconnect](get-hpovlogicalinterconnect.md)
-* [Get-HPOVSasLogicalInterconnect](get-hpovsaslogicalinterconnect.md)

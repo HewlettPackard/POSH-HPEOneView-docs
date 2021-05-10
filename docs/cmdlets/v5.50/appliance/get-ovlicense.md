@@ -85,7 +85,7 @@ Specify the type of License to retrieve.  Valid options are "HP_ONE_VIEW" or "HP
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -State &lt;String&gt;
@@ -97,7 +97,7 @@ Specify the license state to retrieve.  Valid options are "Unlicensed" or "Perma
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Summary &lt;SwitchParameter&gt;
@@ -109,7 +109,7 @@ Display a condensed summary view of the installed or required licenses.  This do
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Report &lt;SwitchParameter&gt;
@@ -123,7 +123,7 @@ Generate a report of installed or required licenses, their type and assigned Nod
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -135,7 +135,7 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

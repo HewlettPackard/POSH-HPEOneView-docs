@@ -131,7 +131,7 @@ The full path to where the Support Dump will be saved to.  The downloaded file n
 | Required? | True |
 | Position? | Named |
 | Default value | (get-location).Path |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Type &lt;String&gt;
@@ -146,7 +146,7 @@ The type of Support Dump to collect.  Possible values are:
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Encrypted &lt;SwitchParameter&gt;
@@ -158,7 +158,7 @@ Use this parameter for the appliance to encrypt the Support Dump.  Only HPE Supp
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -InputObject &lt;Object&gt;
@@ -179,7 +179,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
@@ -194,7 +194,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -AdvancedSupportDump &lt;SwitchParameter&gt;
@@ -206,7 +206,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -AlertLogs &lt;SwitchParameter&gt;
@@ -218,7 +218,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApacheLogs &lt;SwitchParameter&gt;
@@ -230,7 +230,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -CiDbLogs &lt;SwitchParameter&gt;
@@ -242,7 +242,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -CiDebugLogs &lt;SwitchParameter&gt;
@@ -254,7 +254,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -CiRequestLogs &lt;SwitchParameter&gt;
@@ -266,7 +266,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ExcludeApplianceSupportDump &lt;SwitchParameter&gt;
@@ -278,7 +278,7 @@ Use this parameter to exclude the appliance support dump when creating a logical
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -FLMLogs &lt;SwitchParameter&gt;
@@ -290,7 +290,7 @@ Use this parameter to exclude the appliance support dump when creating a logical
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -JettyLogs &lt;SwitchParameter&gt;
@@ -302,7 +302,7 @@ Use this parameter to exclude the appliance support dump when creating a logical
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -LicenseManagerLogs &lt;SwitchParameter&gt;
@@ -314,7 +314,7 @@ Use this parameter to exclude the appliance support dump when creating a logical
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
@@ -329,9 +329,9 @@ _**Accepts pipeline input from Get-HPOVLogicalEnclosure only.**_
 
 ## Return Values
 
-_**System.IO.FileInfo**_
+_**The generated Support Dump File**_
 
-The location of the saved support dump.
+
 
 ## Related Links
 

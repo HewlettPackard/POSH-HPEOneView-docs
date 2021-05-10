@@ -48,7 +48,7 @@ The IPv4 Subnet Pool resource Object.  Can be accepted via pipeline input.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;

@@ -100,7 +100,7 @@ New-OVServerProfileConnection
 
 ## Description
 
-A helper function to assist with connections when creating (New-OVServerProfile) or editing (Set-OVServerProfile) a server profile.
+A helper function to assist with connections when creating (New-OVServerProfile) or editing (Set-OVProfile) a server profile.
 
 ## Examples
 
@@ -217,8 +217,6 @@ Deprecated parameter.  Connection type is now derived from the provided Network 
 ### -Network &lt;Object&gt;
 
 The Network (Ethernet or Fibre Channel) or Network Set resource object to be used with this connection.  Can either be the Name, URI, or object obtained with Get-OVNetwork or Get-OVNetworkSet.
-
-To create an unassigned connection, use the Unassigned keyword as the value.
 
 | Aliases | None |
 | :--- | :--- |
@@ -618,8 +616,8 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
-| Accept pipeline input? | False |
+| Default value | false |
+| Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;

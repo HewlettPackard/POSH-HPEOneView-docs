@@ -41,7 +41,7 @@ _**None. You cannot pipe objects to this Cmdlet.**_
 
 _**None.**_
 
-This Cmdlet does not return any response.
+
 
 ## Related Links
 

@@ -89,7 +89,7 @@ IP Address or FQDN of the storage systems.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Family &lt;String&gt;
@@ -101,7 +101,7 @@ Specify the type of Storage System to add: Nimble, StorageVirtual, StoreServ or 
 | Required? | False |
 | Position? | Named |
 | Default value | StoreServ |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Credential &lt;PSCredential&gt;
@@ -113,7 +113,7 @@ Provide the credentials to authenticate to the storage system.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Username &lt;String&gt;
@@ -130,7 +130,7 @@ Administrator account of the target storage system.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Password &lt;Object&gt;
@@ -147,7 +147,7 @@ Password of administrator account password.  Can either be String or `[System.Se
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Domain &lt;String&gt;
@@ -159,7 +159,7 @@ Specify the HPE 3PAR Virtual Domain name.  Default is "NO DOMAIN". The value pro
 | Required? | False |
 | Position? | Named |
 | Default value | NO DOMAIN |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Ports &lt;Object&gt;
@@ -173,7 +173,7 @@ Example: @{"1:1:1"="Fabric A";"2:2:2"="Fabric B"}
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -PortGroups &lt;Hashtable&gt;
@@ -187,7 +187,7 @@ Example: @{"1:1:1" = "PG1"; "2:2:2" = "PG2"}
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -VIPS &lt;Hashtable&gt;
@@ -207,7 +207,7 @@ or
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Array&gt;
@@ -219,7 +219,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ShowSystemDetails &lt;SwitchParameter&gt;
@@ -231,7 +231,7 @@ By default, the Cmdlet will no longer display the details about the Storage Syst
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

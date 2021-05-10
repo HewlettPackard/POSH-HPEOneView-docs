@@ -35,7 +35,7 @@ Start a new library trace, which will create a file in the `C:\Temp` directory.
 
 ### -ScriptBlock &lt;ScriptBlock&gt;
 
-One or more HPOneView library Cmdlets.  The Cmdlet will execute the contents of the ScriptBlock, ensuring that the commands will generate verbose output and be captured to a log file.
+The command within a ScriptBlock to execute.  The Cmdlet will add the `-Verbose` switch end of the command.
 
 | Aliases | Command |
 | :--- | :--- |
@@ -58,7 +58,7 @@ Default Value: (PWD).Path
 | Required? | False |
 | Position? | Named |
 | Default value | (pwd).path |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

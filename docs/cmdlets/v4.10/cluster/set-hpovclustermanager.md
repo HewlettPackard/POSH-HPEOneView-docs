@@ -94,7 +94,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Credential &lt;PSCredential&gt;
@@ -106,7 +106,7 @@ Use this parameter if you want to provide a PSCredential object instead.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -DRSEnabled &lt;bool&gt;
@@ -118,7 +118,7 @@ Choose to enable or disable VMware DRS. Additional DRS policy settings must be m
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -DisplayName &lt;String&gt;
@@ -130,7 +130,7 @@ Change the hypervisor managers display name. Used for resource lookup.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -DistributedSwitchUsage &lt;String&gt;
@@ -145,7 +145,7 @@ Applicable only when vSwitch type is Distributed. This specifies which networks 
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -DistributedSwitchVersion &lt;String&gt;
@@ -157,7 +157,7 @@ Applicable only when vSwitch type is of type distributed. Configures distributed
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -HAEnabled &lt;bool&gt;
@@ -169,7 +169,7 @@ Enable VMware High Availability on a hypervisor cluster to ensure decreased down
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Hostname &lt;String&gt;
@@ -181,7 +181,7 @@ Update the vCenter hostname or IP Address.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -InputObject &lt;HPOneView.Cluster.HypervisorManager&gt;
@@ -205,7 +205,7 @@ Configures VMware Multi-NIC vMotion on hypervisors when there are multiple NICs 
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Port &lt;int&gt;
@@ -217,7 +217,7 @@ Modify the vCenter API SSL port.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -VirtualSwitchType &lt;String&gt;
@@ -232,7 +232,7 @@ Configures virtual switch on a hypervisor with a specified type. Allowed values:
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

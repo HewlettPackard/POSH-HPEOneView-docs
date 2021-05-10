@@ -130,7 +130,7 @@ SAN Manager type to add.  Accepted values are:
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Hostname &lt;String&gt;
@@ -142,7 +142,7 @@ FQDN or IP Address of the SAN Manager
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Port &lt;Int32&gt;
@@ -154,7 +154,7 @@ TCP Port of the SAN Manager.  The default port for Brocade Network Advisor is "5
 | Required? | False |
 | Position? | Named |
 | Default value | 0 |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Username &lt;String&gt;
@@ -166,7 +166,7 @@ Username used to authenticate and manage the SAN Manager.  This is only applicab
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Password &lt;Object&gt;
@@ -178,7 +178,7 @@ Password used to authenticate and manage the SAN Manager.  This is only applicab
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SnmpUserName &lt;String&gt;
@@ -190,7 +190,7 @@ The SNMPv3 Community User Name.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SnmpAuthLevel &lt;String&gt;
@@ -206,7 +206,7 @@ The SNMPv3 Authentication Level.  Allowed values are:
 | Required? | True |
 | Position? | Named |
 | Default value | None |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SnmpAuthProtocol &lt;String&gt;
@@ -221,7 +221,7 @@ SNMPv3 Password Encryption Protocol. Allowed values are:
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SnmpAuthPassword &lt;Object&gt;
@@ -233,7 +233,7 @@ SNMPv3 UserName Password.  Can be either `[System.String]` or `[System.Security.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SnmpPrivProtocol &lt;String&gt;
@@ -248,7 +248,7 @@ SNMPv3 Privacy Protocol.  Allowed values are:
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SnmpPrivPassword &lt;Object&gt;
@@ -260,7 +260,7 @@ SNMPv3 Privacy Encryption Password.  Can be either String or `[System.Security.S
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -UseSsl &lt;SwitchParameter&gt;
@@ -272,7 +272,7 @@ Use to enable SSL communication with the SAN Manager (specifically for the Broca
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
@@ -284,7 +284,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Array&gt;
@@ -296,7 +296,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Credential &lt;PSCredential&gt;
@@ -308,7 +308,7 @@ Use this parameter if you want to provide a PSCredential object.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

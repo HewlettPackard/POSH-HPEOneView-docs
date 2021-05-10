@@ -99,7 +99,7 @@ LDAP/Active Directory Domain Name
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
 ### -InputObject &lt;Object&gt;

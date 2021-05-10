@@ -37,7 +37,7 @@ Location where to store the log file.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
@@ -49,10 +49,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
-
-_**None**_
-
-
 
 ## Related Links
 

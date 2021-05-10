@@ -31,7 +31,7 @@ Attaches the server profile template named MyTemplate to the server profile name
 ###  Example 2 
 
 ```text
-$p = Get-OVServerProfile -Name "myProfile"
+$p = Get-OVServerProfile "myProfile"
 Get-OVServerProfileTemplate "myTemplate" | Join-OVServerProfileToTemplate -profile $p -appliance HPEOneView.contoso.com
 ```
 
@@ -84,7 +84,7 @@ Specify one `[HPEOneView.Appliance.Connection]` object or Name property value. I
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
@@ -96,7 +96,7 @@ Specify one `[HPEOneView.Appliance.Connection]` object or Name property value. I
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

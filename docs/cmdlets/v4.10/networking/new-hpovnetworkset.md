@@ -57,7 +57,7 @@ The name of the new Network Set resource to be created.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Networks &lt;Object&gt;
@@ -70,7 +70,7 @@ Ethernet Network Name(s), URI(")s or Resource Object(s).
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -UntaggedNetwork &lt;Object&gt;
@@ -83,7 +83,7 @@ Network (from the above list) to be considered the "native" network in this set.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -TypicalBandwidth &lt;Int32&gt;
@@ -95,7 +95,7 @@ Optional preferred amount of bandwidth to assign, specified in Mbps.  Default va
 | Required? | True |
 | Position? | Named |
 | Default value | 2500 |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -MaximumBandwidth &lt;Int32&gt;
@@ -107,7 +107,7 @@ Optional maximum amount of bandwidth to assign, specified in Mbps.  Default valu
 | Required? | True |
 | Position? | Named |
 | Default value | 10000 |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -123,7 +123,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 | Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

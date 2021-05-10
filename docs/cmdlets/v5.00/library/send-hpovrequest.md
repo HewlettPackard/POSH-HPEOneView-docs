@@ -9,14 +9,14 @@ description: Sends a request to the management appliance
 ```text
 Send-HPOVRequest
     [-uri] <String>
-    [-method <String>]
-    [-body <Object>]
-    [-start <Int32>]
-    [-count <Int32>]
-    [-AddHeader <Hashtable>]
+    [-method] <String>
+    [-body] <Object>
+    [-start] <Int32>
+    [-count] <Int32>
+    [-AddHeader] <Hashtable>
     [-OverrideContentType <String>]
     [-OverrideTimeout <Int>]
-    [-Hostname <Object>]
+    [-Hostname] <Object>
     [<CommonParameters>]
 ```
 
@@ -57,7 +57,7 @@ The uri that identifies the required resource on the appliance.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Method &lt;String&gt;
@@ -72,10 +72,10 @@ The request HTTP Method.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | GET |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Body &lt;Object&gt;
@@ -84,10 +84,10 @@ Body for the request.  Required if the method is POST or PUT.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Start &lt;Int32&gt;
@@ -97,10 +97,10 @@ If not specified, collection members starting from the beginning are returned.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | 0 |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Count &lt;Int32&gt;
@@ -110,10 +110,10 @@ If not specified, all members of the collection are returned from this function.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | 0 |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -AddHeader &lt;Hashtable&gt;
@@ -122,10 +122,10 @@ If additional headers are needed/required than the defaults, include header name
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -OverrideContentType &lt;String&gt;
@@ -137,7 +137,7 @@ Workaround to override ContentType where needed (e.g. PATCH /rest/scopes/{GUID}.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -OverrideTimeout &lt;Int&gt;
@@ -149,7 +149,7 @@ Specify to override the HttpWebRequest syncronous timeout being made.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Hostname &lt;Object&gt;
@@ -160,10 +160,10 @@ Default Value: All valid Appliance Connections within $Global:ConnectedSessions
 
 | Aliases | Appliance, ApplianceConnection |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

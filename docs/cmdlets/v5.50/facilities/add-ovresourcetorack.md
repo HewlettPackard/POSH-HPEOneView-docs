@@ -97,7 +97,7 @@ The Rack object from Get-OVRack.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ULocation &lt;Int32&gt;
@@ -109,7 +109,7 @@ The rack unit location where the resource is located.
 | Required? | True |
 | Position? | Named |
 | Default value | 0 |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;

@@ -8,12 +8,12 @@ description: Search the association index.
 
 ```text
 Search-HPOVAssociations
-    [-AssociationName <String>]
-    [-Parent <Object>]
-    [-Child <Object>]
-    [-Count <Int32>]
-    [-Start <Int32>]
-    [-ApplianceConnection <Object>]
+    [-AssociationName] <String>
+    [-Parent] <Object>
+    [-Child] <Object>
+    [-Count] <Int32>
+    [-Start] <Int32>
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -59,12 +59,12 @@ The association name to be matched, if specified.  Valid association names are
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Parent &lt;Object&gt;
 
-The object which is the parent resource of an association.
+The uri of an object which is the start of an association
 
 | Aliases | None |
 | :--- | :--- |
@@ -76,14 +76,14 @@ The object which is the parent resource of an association.
 
 ### -Child &lt;Object&gt;
 
-The object which is the child resource of an association.
+The uri of an object which is the end of an association
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Count &lt;Int32&gt;
@@ -95,7 +95,7 @@ The maximum number of association index entries to be returned.  Defaults to 50.
 | Required? | True |
 | Position? | Named |
 | Default value | 50 |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Start &lt;Int32&gt;
@@ -107,7 +107,7 @@ The index of the first association index to be returned, defaults to 0.
 | Required? | True |
 | Position? | Named |
 | Default value | 0 |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;

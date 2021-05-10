@@ -95,7 +95,7 @@ Filter resources based on provided Scope membership.  By default, all resources 
 | Required? | False |
 | Position? | Named |
 | Default value | AllResourcesInScope |
-| Accept pipeline input? | False |
+| Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

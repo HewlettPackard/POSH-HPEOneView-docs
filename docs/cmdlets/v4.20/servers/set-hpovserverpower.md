@@ -44,7 +44,7 @@ Optional power state.  Default is On, other option is Off
 | Required? | True |
 | Position? | Named |
 | Default value | On |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -PowerControl &lt;String&gt;
@@ -56,7 +56,7 @@ Optional setting to control the virtual power button.
 | Required? | True |
 | Position? | Named |
 | Default value | MomentaryPress |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;

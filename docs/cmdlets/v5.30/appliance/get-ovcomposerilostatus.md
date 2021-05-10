@@ -77,7 +77,7 @@ Get the avialable HPE Synergy Composers and their iLO configuration.
 
 ### -ApplianceConnection &lt;Object&gt;
 
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s).
 
 Default Value: ${Global:ConnectedSessions} | ? Default
 
@@ -99,7 +99,7 @@ _**None.  You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 
-_**HPEOneView.Appliance.HardwareConfig [System.Management.Automation.PSCustomObject]**_
+_**HPOneView.Appliance.HardwareConfig [System.Management.Automation.PSCustomObject]**_
 
 The existing iLO configuration of an HPE Synergy Composer.
 

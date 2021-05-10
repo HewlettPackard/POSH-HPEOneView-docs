@@ -67,7 +67,7 @@ The name of the task resource to be returned.  All names will match if omitted.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -InputObject &lt;Object&gt;
@@ -107,7 +107,7 @@ Some examples are:
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -State &lt;String&gt;
@@ -131,7 +131,7 @@ All states will match if omitted.  All tasks will be returned if both names and 
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Count &lt;Int32&gt;
@@ -143,7 +143,7 @@ Specify the maximum amount of task objects to return.  0 will return all found t
 | Required? | False |
 | Position? | Named |
 | Default value | 0 |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;

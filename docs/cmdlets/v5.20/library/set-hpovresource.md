@@ -23,7 +23,7 @@ This Cmdlet will assist the user to update an existing resource.  The resource s
 ###  Example 1 
 
 ```text
-$profile = Get-HPOVServerProfile -Name "Profile 1"
+$profile = Get-HPOVServerProfile "Profile 1"
 $profile.name = "New Name"
 Set-HPOVResource $profile
 ```
@@ -53,7 +53,7 @@ Set to $true to force-update the resource.  Not all resources support force-upda
 | Required? | True |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;

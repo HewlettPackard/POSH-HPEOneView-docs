@@ -23,7 +23,7 @@ Start the power state of the server using the virtual power button.
 ###  Example 1 
 
 ```text
-Get-HPOVServer -Name "Encl1, Bay 1" | Start-HPOVServer
+Get-HPOVServer "Encl1, Bay 1" | Start-HPOVServer
 ```
 
 Power on the specific server device by passing the Server Object via pipeline.
@@ -31,7 +31,7 @@ Power on the specific server device by passing the Server Object via pipeline.
 ###  Example 2 
 
 ```text
-Get-HPOVServer -Name "Encl1, *" | Start-HPOVServer -Async
+Get-HPOVServer "Encl1, *" | Start-HPOVServer -Async
 ```
 
 Power on the server devices found by passing the Server Object via pipeline, and return the async task immediately.
@@ -39,7 +39,7 @@ Power on the server devices found by passing the Server Object via pipeline, and
 ###  Example 3 
 
 ```text
-Get-HPOVServerProfile -Name "MyWebServer 1" | Start-HPOVServer
+Get-HPOVServerProfile "MyWebServer 1" | Start-HPOVServer
 ```
 
 Power on the specific server device by passing the Server Profile Object via pipeline.
@@ -67,7 +67,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;

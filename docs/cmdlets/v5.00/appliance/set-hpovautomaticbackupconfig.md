@@ -11,9 +11,9 @@ Set-HPOVAutomaticBackupConfig
     [-Hostname] <String>
     [-Username] <String>
     [-Password] <System.Security.SecureString>
+    [-HostSSHKey] <String>
     [-Port <int>]
     [-Directory <String>]
-    [-HostSSHKey <String>]
     [-Protocol <String>]
     [-Interval <String>]
     [-Days <Array>]
@@ -69,7 +69,7 @@ The IP Address or FQDN of the target SCP or SFTP host.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Directory &lt;String&gt;
@@ -81,7 +81,7 @@ The remote directory on the host where the file will be saved to.  Omit to sepci
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Username &lt;String&gt;
@@ -93,7 +93,7 @@ The username to authenticate to the SCP/SFTP host with.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Password &lt;System.Security.SecureString&gt;
@@ -107,7 +107,7 @@ Specify the Logical Interconnect URI or Object the Support Dump will be generate
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -HostSSHKey &lt;String&gt;
@@ -119,7 +119,7 @@ The SCP/SFTP hosts public key, in OpenSSH String format.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Protocol &lt;String&gt;
@@ -136,7 +136,7 @@ Default: SCP
 | Required? | True |
 | Position? | Named |
 | Default value | SCP |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Interval &lt;String&gt;
@@ -151,7 +151,7 @@ The frequency the backup will be generated.  Supported values are:
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Days &lt;Array&gt;
@@ -171,7 +171,7 @@ If specifying a Weekly backup, provide the days in an Array.  Accepted values ar
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Time &lt;String&gt;
@@ -183,7 +183,7 @@ The time to execute, in 24hr clock.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Disabled &lt;SwitchParameter&gt;
@@ -195,7 +195,7 @@ Disable the automatic backup schedule.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
@@ -207,7 +207,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Array&gt;
@@ -219,31 +219,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | False |
-| Accept wildcard characters? | False |
-
-### -WhatIf &lt;SwitchParameter&gt;
-
-
-
-| Aliases | wi |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | False |
-| Accept wildcard characters? | False |
-
-### -Confirm &lt;SwitchParameter&gt;
-
-
-
-| Aliases | cf |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Port &lt;int&gt;
@@ -255,7 +231,7 @@ The target port of the destination service.  By default, this is 22/TCP.  Only T
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

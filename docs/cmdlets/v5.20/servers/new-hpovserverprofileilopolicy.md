@@ -165,7 +165,7 @@ A collection of 1 or more directory groups created from New-HPOVIloDirectoryGrou
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -DirectoryServerAddress &lt;String&gt;
@@ -177,7 +177,7 @@ Specifies the network DNS name or IP address of the directory server. The direct
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -DirectoryServerCertificate &lt;FileInfo&gt;
@@ -189,7 +189,7 @@ Specifies a CA certificate to authenticate the directory server.  The relative p
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -DirectoryServerCertificateBase64 &lt;String[]&gt;
@@ -201,7 +201,7 @@ Specifies a CA certificate to authenticate the directory server.  The PEM Base64
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -DirectoryServerPort &lt;Int&gt;
@@ -213,7 +213,7 @@ Specifies the port number for the secure LDAP service on the server. The default
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -DirectoryUserContext &lt;String[]&gt;
@@ -225,7 +225,7 @@ A common directory sub-context to be searched such that users do not need to ent
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -EnableKerberosAuthentication &lt;Bool&gt;
@@ -237,7 +237,7 @@ Enables Kerberos login. When Kerberos login is enabled and configured correctly,
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -GenericLDAP &lt;Bool&gt;
@@ -249,7 +249,7 @@ Use the OpenLDAP supported BIND method.  Only supported when LdapSchema is Direc
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -IloHostname &lt;String&gt;
@@ -261,7 +261,7 @@ The iLO subsystem name (hostname). This cannot include the domain name. Used as 
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -IloObjectPassword &lt;SecureString&gt;
@@ -273,7 +273,7 @@ Specifies the password for the CAC LDAP service account when CAC/Smartcard authe
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -KerberosKDCServerAddress &lt;String&gt;
@@ -285,7 +285,7 @@ The IP address or DNS name of the KDC server. This value can be up to 128 charac
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -KerberosKDCServerPort &lt;Int&gt;
@@ -297,7 +297,7 @@ The TCP or UDP port number on which the KDC is listening. The default value is 8
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -KerberosRealm &lt;String&gt;
@@ -309,7 +309,7 @@ The name of the Kerberos realm in which the iLO processor operates. This value c
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -KerbersKeyTabFile &lt;FileInfo&gt;
@@ -321,7 +321,7 @@ An encoded binary file that contains pairs of service principal names and encryp
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -KeymanagerGroupName &lt;String&gt;
@@ -333,7 +333,7 @@ The Local Group created on the key manager for use with iLO user accounts and th
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -KeymanagerLocalCertificateName &lt;String&gt;
@@ -345,7 +345,7 @@ The optional name of the local certificate authority certificate on the key mana
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -KeymanagerLoginName &lt;String&gt;
@@ -357,7 +357,7 @@ The Local User name with administrator permissions that is configured on the key
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -KeymanagerPassword &lt;SecureString&gt;
@@ -369,7 +369,7 @@ The password for the Local User name with administrator permissions that is conf
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -LOMObjectDistinguishedName &lt;String&gt;
@@ -381,7 +381,7 @@ Specifies the CAC LDAP service account when CAC/Smartcard authentication is conf
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -LdapSchema &lt;String&gt;
@@ -399,7 +399,7 @@ Allowed values:
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -LocalAccounts &lt;Object&gt;
@@ -411,7 +411,7 @@ A collection of 1 or more local accounts created from New-HPOVIloLocalUserAccoun
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -LocalAdministratorPassword &lt;SecureString&gt;
@@ -423,7 +423,7 @@ The password to set for the local administrator account.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ManageDirectoryConfiguration &lt;SwitchParameter&gt;
@@ -435,7 +435,7 @@ The iLO directory configuration (Active Directory, LDAP, or Kerberos) is managed
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ManageDirectoryGroups &lt;SwitchParameter&gt;
@@ -447,7 +447,7 @@ Replace all directory groups providing iLO management permissions.  If you omit 
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ManageIloHostname &lt;SwitchParameter&gt;
@@ -459,7 +459,7 @@ The iLO hostname will be managed via the profile.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ManageKeyManager &lt;SwitchParameter&gt;
@@ -471,7 +471,7 @@ The iLO Key Manager (e.g. ESKM) configuration will be managed via the profile.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ManageLocalAccounts &lt;SwitchParameter&gt;
@@ -483,7 +483,7 @@ Replace all local iLO accounts beyond Administrator.  If you omit the LocalAccou
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ManageLocalAdministratorAccount &lt;SwitchParameter&gt;
@@ -495,7 +495,7 @@ The iLO Administrator account will be managed via the profile.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -PrimaryKeyServerAddress &lt;String&gt;
@@ -507,7 +507,7 @@ The primary key server hostname, IP address, or FQDN. This string can be up to 7
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -PrimaryKeyServerPort &lt;Int&gt;
@@ -519,7 +519,7 @@ The primary key server port.  The default is 9000.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -RedundancyRequired &lt;Bool&gt;
@@ -531,7 +531,7 @@ If enabled, both a primary and secondary key server must be specified and will b
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -RemoveLocalAdministratorAccount &lt;Bool&gt;
@@ -543,7 +543,7 @@ Delete the account named Administrator from the iLO.  WARNING: The iLO account
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SecondaryKeyServerAddress &lt;String&gt;
@@ -555,7 +555,7 @@ The secondary key server hostname, IP address, or FQDN. This string can be up to
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SecondaryKeyServerPort &lt;Int&gt;
@@ -567,7 +567,7 @@ The secondary key server port.  The default is 9000.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

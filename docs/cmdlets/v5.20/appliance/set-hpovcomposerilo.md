@@ -121,7 +121,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
@@ -133,7 +133,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
@@ -145,7 +145,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -IPv4Address &lt;IPAddress&gt;
@@ -157,7 +157,7 @@ Use to specify a new IPv4 Address for the HPE Synergy Composer2 iLO.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -IPv4DnsServer &lt;IPAddress[]&gt;
@@ -169,7 +169,7 @@ Use to optionally set 1 or 2 IPv4 DNS Servers.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -IPv4Gateway &lt;IPAddress&gt;
@@ -181,7 +181,7 @@ Use to optionally specify the default gateway for the new IPv4 address.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -IPv4SubnetMask &lt;String&gt;
@@ -193,7 +193,7 @@ Use to optionally update the IPv4 subnet mask for the new IPv4 address.  Can eit
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -IPv6Address &lt;IPAddress&gt;
@@ -205,7 +205,7 @@ Use to specify a new IPv6 Address for the HPE Synergy Composer2 iLO.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -IPv6DnsServer &lt;IPAddress[]&gt;
@@ -217,7 +217,7 @@ Use to optionally set 1 or 2 IPv6 DNS Servers.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -IPv6Gateway &lt;String&gt;
@@ -229,7 +229,7 @@ Use to optionally specify the default gateway for the new IPv6 address.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -IPv6SubnetMask &lt;string&gt;
@@ -241,7 +241,7 @@ Use to optionally specify the default gateway for the new IPv6 address.  Can eit
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -IloHostname &lt;String&gt;
@@ -253,7 +253,7 @@ Use to optionally specify a new iLO subsystem hostname.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -InputObject &lt;Object&gt;
@@ -265,7 +265,7 @@ The object from Get-HPOVComposerIloStatus.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Password &lt;securestring&gt;
@@ -277,7 +277,7 @@ Use to specify a new password for the configured iLO user account.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Username &lt;string&gt;
@@ -289,7 +289,7 @@ Use to specify a new account name to configure.  The original account will be re
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -WhatIf &lt;SwitchParameter&gt;
@@ -301,7 +301,7 @@ Use to specify a new account name to configure.  The original account will be re
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

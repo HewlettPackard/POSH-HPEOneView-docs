@@ -158,7 +158,7 @@ The name of the server hardware resource to be returned.  All server hardware re
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | True |
 
 ### -ServerName &lt;String&gt;
@@ -170,7 +170,7 @@ Specify the Server OS Name that is reported by the iLO.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | True |
 
 ### -SerialNumber &lt;String&gt;
@@ -182,7 +182,7 @@ Specify the server hardware serial number to locate.  This parameter does not su
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Scope &lt;Object&gt;
@@ -199,7 +199,7 @@ Filter resources based on provided Scope membership.  By default, all resources 
 | Required? | False |
 | Position? | Named |
 | Default value | AllResourcesInScope |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Label &lt;String&gt;
@@ -211,7 +211,7 @@ Specify the label associated with resources.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -NoProfile &lt;SwitchParameter&gt;
@@ -223,7 +223,7 @@ Optional parameter that can be used with the report parameter to display Servers
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -MaintenanceMode &lt;Boolean&gt;
@@ -235,7 +235,7 @@ Optional parameter that can be used to filter for specific servers that are in m
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -InputObject &lt;Object&gt;
@@ -260,7 +260,7 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Count &lt;Int&gt;
@@ -272,7 +272,7 @@ Return no more than the provided value.  Combining other parameters to filter ma
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Status &lt;String[]&gt;
@@ -290,7 +290,7 @@ Filter resources based on their current status.  Allowed values:
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

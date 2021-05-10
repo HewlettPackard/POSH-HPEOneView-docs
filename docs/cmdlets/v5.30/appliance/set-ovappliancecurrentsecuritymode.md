@@ -65,9 +65,9 @@ The specified appliance security mode from Get-OVApplianceAvailableSecurityMode.
 
 ## Return Values
 
-_**HPEOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]**_
+_**HPEOneView.Appliance.SecurityMode**_
 
-Async task resource to monitor.
+After appliance reboots, the appliance current security mode is returned.
 
 ## Related Links
 

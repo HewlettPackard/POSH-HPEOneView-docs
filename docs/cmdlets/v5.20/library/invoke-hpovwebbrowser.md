@@ -15,7 +15,7 @@ Invoke-HPOVWebBrowser
 
 ## Description
 
-This Cmdlet will open the default web browser to the specified appliance, logged in with the same credentials as the PowerShell library connection is authenticated with.  To open multiple browser windows to each appliance connection, use the global $ConnectedSessions variable to override the -ApplianceConnection parameter.
+This Cmdlet will open the default web browser to the specified appliance, logged in with the same credentials as the PowerShell library connection is authenticated with.  To open multiple browser windows to each appliance connection, use the global $ConnectedSessions variable to override the -ApplianceConnection parameter. 
 
 ## Examples
 
@@ -24,15 +24,6 @@ This Cmdlet will open the default web browser to the specified appliance, logged
 ```text
 Connect-HPOVMgmt -Hostname MyAppliance.domain.com -Username MyAccount -Password $MySecurePassword
 Invoke-HPOVWebBrowser
-```
-
-Connect to the appliance, then launch default web browser to the appliance dashboard.
-
-###  Example 2 
-
-```text
-Connect-HPOVMgmt -Hostname MyAppliance.domain.com -Username MyAccount -Password $MySecurePassword
-Invoke-HPOVWebBrowser -Resource ServerProfiles
 ```
 
 Connect to the appliance, then launch default web browser to the appliance dashboard.
@@ -65,7 +56,7 @@ By default, the Cmdlet will open your default web browser to the appliance dashb
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -77,7 +68,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
@@ -90,9 +81,8 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**System.Diagnostics.Process**_
+_**None.**_
 
-This Cmdlet will initiate a new default web browser instance to the default or specified appliance.
 
 
 ## Related Links

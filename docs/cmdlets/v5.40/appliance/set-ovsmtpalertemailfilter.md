@@ -87,7 +87,7 @@ Name of the Filter you want to change to.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Filter &lt;String&gt;
@@ -101,7 +101,7 @@ Example:  CPU status:"warning" or status:"critical"
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Scope &lt;HPEOneView.Appliance.ScopeCollection[]&gt;
@@ -113,7 +113,7 @@ Scope(s) the Filter should apply to.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ScopeMatchPreference &lt;String&gt;
@@ -125,7 +125,7 @@ If providing multiple Scope resources, specify AND or OR to indicate match prefe
 | Required? | False |
 | Position? | Named |
 | Default value | OR |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Emails &lt;Net.Mail.MailAddress[]&gt;
@@ -149,7 +149,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -161,7 +161,7 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Disable &lt;bool&gt;
@@ -173,7 +173,7 @@ Disable the selected email alert filter.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

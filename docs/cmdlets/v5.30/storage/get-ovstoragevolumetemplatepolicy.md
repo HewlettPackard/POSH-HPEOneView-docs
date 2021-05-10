@@ -54,7 +54,7 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPEOneView.Appliance.GlobalSetting**_
+_**HPEOneView.Appliance.GlobalSetting [System.Management.Automation.PSCustomObject]**_
 
 Object resource with the global setting value
 

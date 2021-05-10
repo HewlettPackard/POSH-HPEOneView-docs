@@ -49,7 +49,7 @@ A name for the new Logical Enclosure.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Enclosure &lt;Object&gt;
@@ -73,7 +73,7 @@ The Enclosure Group resource to deploy the policy from.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -FirmwareBaseline &lt;String&gt;
@@ -85,7 +85,7 @@ Provide the Firmware Baseline object to use with the Logical Enclosure is being 
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ForceFirmwareBaseline &lt;Boolean&gt;
@@ -97,7 +97,7 @@ Specify to force the installation of firmware if the same version is found or if
 | Required? | True |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
@@ -109,7 +109,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -133,7 +133,7 @@ Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially 
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

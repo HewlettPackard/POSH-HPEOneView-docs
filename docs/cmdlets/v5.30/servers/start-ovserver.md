@@ -23,7 +23,7 @@ Start the power state of the server using the virtual power button.
 ###  Example 1 
 
 ```text
-Get-OVServer -Name "Encl1, Bay 1" | Start-OVServer
+Get-OVServer "Encl1, Bay 1" | Start-OVServer
 ```
 
 Power on the specific server device by passing the Server Object via pipeline.
@@ -31,7 +31,7 @@ Power on the specific server device by passing the Server Object via pipeline.
 ###  Example 2 
 
 ```text
-Get-OVServer -Name "Encl1, *" | Start-OVServer -Async
+Get-OVServer "Encl1, *" | Start-OVServer -Async
 ```
 
 Power on the server devices found by passing the Server Object via pipeline, and return the async task immediately.
@@ -39,7 +39,7 @@ Power on the server devices found by passing the Server Object via pipeline, and
 ###  Example 3 
 
 ```text
-Get-OVServerProfile -Name "MyWebServer 1" | Start-OVServer
+Get-OVServerProfile "MyWebServer 1" | Start-OVServer
 ```
 
 Power on the specific server device by passing the Server Profile Object via pipeline.

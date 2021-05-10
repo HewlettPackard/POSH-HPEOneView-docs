@@ -88,7 +88,7 @@ Specify the number of service alerts to return.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -End &lt;DateTime&gt;
@@ -100,7 +100,7 @@ DateTime object of the end date and time accompanied with the `-Start` parameter
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -InputObject &lt;Object&gt;
@@ -124,7 +124,7 @@ DateTime object of the start date and time to being query.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -State &lt;String&gt;
@@ -143,7 +143,7 @@ Specify the state of the Service Alert.  The state is not correlated to the asso
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -TimeSpan &lt;TimeSpan&gt;
@@ -155,7 +155,7 @@ Specify a TimeSpan object in number of days.  Cannot be combined with `-Start` a
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

@@ -40,7 +40,7 @@ The following resources are supported by this Cmdlet:
     * Storage Volume Template (Get-OVStorageVolumeTemplate)
     * Storage Volume (Get-OVStorageVolume)
     * Logical Interconnect Group (Get-OVLogicalInterconnectGroup)
-    * Enclosure Group (Get-OVEnclosureGroup)
+    * Logical Enclosure Group (Get-OVEnclosureGroup)
     * Logical Enclosure (Get-OVLogicalEnclosure)
     * Server Profile Template (Get-OVServerProfileTemplate)
     * Server Profile (Get-OVServerProfile)

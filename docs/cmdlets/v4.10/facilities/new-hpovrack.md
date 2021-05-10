@@ -66,7 +66,7 @@ Name of resource.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ThermalLimit &lt;Int&gt;
@@ -78,7 +78,7 @@ Thermal limit supported by the rack, in BTU"s.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SerialNumber &lt;String&gt;
@@ -90,7 +90,7 @@ Serial number of the rack resource.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -PartNumber &lt;String&gt;
@@ -102,7 +102,7 @@ Part number of the rack resource.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Depth &lt;Int&gt;
@@ -116,7 +116,7 @@ Default: 1000
 | Required? | False |
 | Position? | Named |
 | Default value | 1000 |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Height &lt;Int&gt;
@@ -130,7 +130,7 @@ Default: 2004
 | Required? | False |
 | Position? | Named |
 | Default value | 2004 |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -UHeight &lt;Int&gt;
@@ -144,7 +144,7 @@ Default: 40
 | Required? | False |
 | Position? | Named |
 | Default value | 220 |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Width &lt;Int&gt;
@@ -158,7 +158,7 @@ Default: 600
 | Required? | False |
 | Position? | Named |
 | Default value | 600 |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -174,7 +174,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Model &lt;&gt;
@@ -186,7 +186,7 @@ Provide the model of the rack to add.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

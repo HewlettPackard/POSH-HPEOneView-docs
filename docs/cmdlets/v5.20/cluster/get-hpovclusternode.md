@@ -8,7 +8,7 @@ description: Default content
 
 ```text
 Get-HPOVClusterNode
-    [-Name <string>]
+    [-Name] <string>
     [-Label <String>]
     [-Scope <Object>]
     [-ApplianceConnection <Object>]
@@ -40,7 +40,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Label &lt;String&gt;
@@ -52,7 +52,7 @@ Specify the label associated with resources.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Name &lt;string&gt;
@@ -61,10 +61,10 @@ Specify the label associated with resources.
 
 | Aliases | None |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Scope &lt;Object&gt;
@@ -81,7 +81,7 @@ Filter resources based on provided Scope membership.  By default, all resources 
 | Required? | False |
 | Position? | Named |
 | Default value | AllResourcesInScope |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
@@ -90,13 +90,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this cmdlet.**_
-
 ## Return Values
-
-_**HPOneView.Cluster.ClusterNode**_
-
-A cluster node that is a member of a cluster profile.
 
 ## Related Links
 

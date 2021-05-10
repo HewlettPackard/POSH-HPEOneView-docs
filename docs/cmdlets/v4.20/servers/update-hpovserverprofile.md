@@ -89,7 +89,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Reapply &lt;SwitchParameter&gt;
@@ -101,7 +101,7 @@ Use to perform the Reapply Server Profile operation.  Server should be powered o
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -AdapterAndBoot &lt;SwitchParameter&gt;
@@ -113,7 +113,7 @@ Re-apply Boot settings, including adapter boot preference.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Baseline &lt;SwitchParameter&gt;
@@ -125,7 +125,7 @@ Re-apply Baseline.  If setting is Firmware only, the associated server hardware 
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Connections &lt;SwitchParameter&gt;
@@ -137,7 +137,7 @@ Re-apply Vitual Connect connections.  Will re-provision downlink ports and conne
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -LocalStorage &lt;SwitchParameter&gt;
@@ -149,7 +149,7 @@ Re-apply Local Storage settings.  This will cause the SmartArray to rescan for d
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SANStorage &lt;SwitchParameter&gt;
@@ -161,7 +161,7 @@ Re-apply SAN storage settings.  Only applies to SAN zoning and volume presentati
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -BIOS &lt;SwitchParameter&gt;
@@ -173,7 +173,7 @@ Re-apply BIOS settings.  Gen8 server hardware must be powered off for this opera
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -OSDeployment &lt;SwitchParameter&gt;
@@ -185,7 +185,7 @@ Re-apply OS Deployment Plan settings.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

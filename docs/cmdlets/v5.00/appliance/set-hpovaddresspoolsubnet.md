@@ -56,7 +56,7 @@ IPv4 Address of the default gateway for the subnet.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SubnetMask &lt;IPAddress&gt;
@@ -68,7 +68,7 @@ IPv4 Subnet Mask of the subnet.  Please know that if the Subnet is associated wi
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Domain &lt;String&gt;
@@ -80,7 +80,7 @@ DNS Domain Name of the subnet.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -DNSServers &lt;Array&gt;
@@ -92,7 +92,7 @@ An array of DNS Server IPv4 Addresses.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;

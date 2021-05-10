@@ -31,8 +31,8 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | False |
-| Accept wildcard characters? | False |
+| Accept pipeline input? |  |
+| Accept wildcard characters? |  |
 
 ### &lt;CommonParameters&gt;
 

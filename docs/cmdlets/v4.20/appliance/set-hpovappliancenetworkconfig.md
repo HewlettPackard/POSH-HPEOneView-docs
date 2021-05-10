@@ -95,7 +95,7 @@ Fully-qualified hostname for the appliance
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -IPv4Type &lt;String&gt;
@@ -107,7 +107,7 @@ Fully-qualified hostname for the appliance
 | Required? | True |
 | Position? | Named |
 | Default value | STATIC |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -IPv4Addr &lt;IPAddress&gt;
@@ -119,7 +119,7 @@ Fully-qualified hostname for the appliance
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -IPv4Subnet &lt;String&gt;
@@ -131,7 +131,7 @@ Fully-qualified hostname for the appliance
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -IPv4Gateway &lt;IPAddress&gt;
@@ -143,7 +143,7 @@ Fully-qualified hostname for the appliance
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -IPv6Type &lt;String&gt;
@@ -155,7 +155,7 @@ Fully-qualified hostname for the appliance
 | Required? | True |
 | Position? | Named |
 | Default value | UNCONFIGURE |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -IPv6Addr &lt;IPAddress&gt;
@@ -167,7 +167,7 @@ Fully-qualified hostname for the appliance
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -IPv6Subnet &lt;String&gt;
@@ -179,7 +179,7 @@ Fully-qualified hostname for the appliance
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -IPv6Gateway &lt;String&gt;
@@ -191,7 +191,7 @@ Fully-qualified hostname for the appliance
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ServiceIPv4Node1 &lt;IPAddress&gt;
@@ -203,7 +203,7 @@ Reserved for Synergy.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ServiceIPv4Node2 &lt;IPAddress&gt;
@@ -215,7 +215,7 @@ Reserved for Synergy.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ServiceIPv6Node1 &lt;IPAddress&gt;
@@ -227,7 +227,7 @@ Reserved for Synergy.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ServiceIPv6Node2 &lt;IPAddress&gt;
@@ -239,7 +239,7 @@ Reserved for Synergy.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -OverrideIPv4DhcpDns &lt;SwitchParameter&gt;
@@ -251,7 +251,7 @@ Switch to override DHCP provided DNS Servers
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -OverrideIPv6DhcpDns &lt;SwitchParameter&gt;
@@ -263,7 +263,7 @@ Switch to override DHCPv6 provided DNS Servers
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -DomainName &lt;String&gt;
@@ -275,7 +275,7 @@ DNS domain name for the appliance: "my.com"
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SearchDomains &lt;Array&gt;
@@ -287,7 +287,7 @@ Array of DNS search domains: "my.com", "other.com"
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -IPv4NameServers &lt;Array&gt;
@@ -299,7 +299,7 @@ Array of DNS servers: "www.xxx.yyy.zzz", "sss.ttt.uuu.vvv"
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -IPv6NameServers &lt;Array&gt;
@@ -311,7 +311,7 @@ Array of DNS servers: "fe80::200:f8ff:fe21:67cf", "fe80::200:f8ff:fe21:89cb"
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -NtpServers &lt;Object&gt;
@@ -323,7 +323,7 @@ Deprecated parameter.  NTP Server configuration is now controlled in the Set-HPO
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -importFile &lt;Object&gt;
@@ -335,7 +335,7 @@ Deprecated parameter.  NTP Server configuration is now controlled in the Set-HPO
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -347,7 +347,7 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value.
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

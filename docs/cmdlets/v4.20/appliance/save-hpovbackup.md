@@ -59,7 +59,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Location &lt;String&gt;
@@ -71,7 +71,7 @@ Specify the directory or UNC path where to save the backup file(s) to.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SaveRemoteOnly &lt;SwitchParameter&gt;
@@ -83,7 +83,7 @@ When appliance automatic backup is configured, use this parameter to specify the
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ErrorAction &lt;String&gt;
@@ -95,7 +95,7 @@ If no backup file exist on the appliance, override the non-terminating error gen
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

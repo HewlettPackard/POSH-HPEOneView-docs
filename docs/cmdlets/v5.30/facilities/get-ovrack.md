@@ -9,7 +9,6 @@ description: Retrieve a defined Rack.
 ```text
 Get-OVRack
     [-Name <String>]
-    [-Datacenter <Object>]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```

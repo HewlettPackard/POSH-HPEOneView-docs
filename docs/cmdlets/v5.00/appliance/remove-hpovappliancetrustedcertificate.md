@@ -23,7 +23,7 @@ This Cmdlet will allow the Infrastructure Administrator to remove X.509 complian
 ###  Example 1 
 
 ```text
-Get-HPOVApplianceTrustedCertificate -Name myhost1.domain.com | Remove-HPOVApplianceTrustedCertificate
+Get-HPOVApplianceTrustedCertificate -AliasName myhost1.domain.com | Remove-HPOVApplianceTrustedCertificate
 ```
 
 Remove the specific trusted certificate from the appliances trusted certificate store.
@@ -65,7 +65,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

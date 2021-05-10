@@ -82,7 +82,7 @@ The hostname or IP address of the appliance.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -AuthLoginDomain &lt;String&gt;
@@ -96,7 +96,7 @@ Default is determined by connecting to the requested appliance and retrieving th
 | Required? | True |
 | Position? | Named |
 | Default value | LOCAL |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -UserName &lt;String&gt;
@@ -108,7 +108,7 @@ User name to authenticate.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Password &lt;Object&gt;
@@ -120,7 +120,7 @@ Password to log into the appliance.  Can be either `[System.String]` or SecureSt
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Credential &lt;PSCredential&gt;
@@ -132,7 +132,7 @@ Use this parameter if you want to provide a PSCredential object instead.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -LoginAcknowledge &lt;SwitchParameter&gt;
@@ -144,7 +144,7 @@ When a Login Message has been configured and acknowledgement is Required, use th
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Certificate &lt;Object&gt;
@@ -156,7 +156,7 @@ Provide the X.509 certificate/SmartCard digital badge in order to authenticate t
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

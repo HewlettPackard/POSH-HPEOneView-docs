@@ -144,7 +144,7 @@ The Logical Interconnect Group Name
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -FrameCount &lt;Int32&gt;
@@ -156,7 +156,7 @@ The number of Synergy Frames to participate in the Logical Stack.
 | Required? | True |
 | Position? | Named |
 | Default value | 0 |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -InterconnectBaySet &lt;Int32&gt;
@@ -172,7 +172,7 @@ Which Synergy Interconnect Bay Set ID will the interconnects be populated in.  A
 | Required? | True |
 | Position? | Named |
 | Default value | 0 |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -FabricModuleType &lt;String&gt;
@@ -188,7 +188,7 @@ Specify the Synergy Fabric Module type the Logical Interconnect Group will be mo
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Bays &lt;Hashtable&gt;
@@ -242,7 +242,7 @@ Define the expected Synergy Fabric Interconnect Redundancy type.  Allowed value:
 | Required? | True |
 | Position? | Named |
 | Default value | Redundant |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -EnableIgmpSnooping &lt;Boolean&gt;
@@ -256,7 +256,7 @@ Default value: Disabled
 | Required? | True |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -IgmpIdleTimeoutInterval &lt;Int32&gt;
@@ -273,7 +273,7 @@ Required: Yes, if IGMP snooping is enabled
 | Required? | True |
 | Position? | Named |
 | Default value | 260 |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -EnableFastMacCacheFailover &lt;Boolean&gt;
@@ -287,7 +287,7 @@ Default value:  Enabled
 | Required? | True |
 | Position? | Named |
 | Default value | True |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -MacRefreshInterval &lt;Int32&gt;
@@ -302,7 +302,7 @@ Default value: 5
 | Required? | True |
 | Position? | Named |
 | Default value | 5 |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -EnableNetworkLoopProtection &lt;Boolean&gt;
@@ -331,7 +331,7 @@ Default value: Enabled
 | Required? | True |
 | Position? | Named |
 | Default value | True |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -EnablePauseFloodProtection &lt;Boolean&gt;
@@ -360,7 +360,7 @@ Default value: Enabled
 | Required? | True |
 | Position? | Named |
 | Default value | True |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -EnableLLDPTagging &lt;Boolean&gt;
@@ -374,7 +374,7 @@ This parameter is only available for 2.00.07 or newer appliances.
 | Required? | True |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -EnableEnhancedLLDPTLV &lt;Boolean&gt;
@@ -388,7 +388,7 @@ This parameter is only available for 2.00.07 or newer appliances.
 | Required? | True |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -LldpAddressingMode &lt;Boolean&gt;
@@ -404,7 +404,7 @@ Specify the IP address format type to support.  Allowed values:
 | Required? | True |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SNMP &lt;Object&gt;
@@ -416,7 +416,7 @@ SNMP Settings to define SNMP configruation.  Use New-HPOVSnmpConfiguration and N
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -InternalNetworks &lt;Array&gt;
@@ -428,7 +428,7 @@ An Array collection of Networks that will be marked as Internal only.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -QosConfiguration &lt;Object&gt;
@@ -441,7 +441,7 @@ A collection of QOS configurations that are created using the New-HPOVQosConfig 
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -457,7 +457,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 | Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
@@ -469,7 +469,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Import &lt;Object&gt;
@@ -481,7 +481,7 @@ Specify JSON source file to create Logical Interconnect Group.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Scope &lt;HPOneView.Appliance.ScopeCollection&gt;
@@ -493,7 +493,7 @@ Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially 
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SnmpV1 &lt;SwitchParameter&gt;
@@ -505,7 +505,7 @@ Specify the SNMP version type is SNMPv1.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SnmpV3 &lt;SwitchParameter&gt;
@@ -517,7 +517,7 @@ Specify the SNMP version type is SNMPv3.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SnmpV3User &lt;HPOneView.Appliance.SnmpV3User&gt;
@@ -529,7 +529,7 @@ Provide the SNMPv3 user object from New-HPOVSnmpV3User.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

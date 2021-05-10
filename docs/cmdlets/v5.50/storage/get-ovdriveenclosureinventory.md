@@ -96,7 +96,7 @@ Return only drives that are assigned to a Logical JBOD.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Available &lt;SwitchParameter&gt;
@@ -108,7 +108,7 @@ Return drives that are available for assignment.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Count &lt;Int&gt;
@@ -120,7 +120,7 @@ Return a specific number of drives.  Will return in order from system inventory.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -DriveEnclosure &lt;Object&gt;
@@ -144,7 +144,7 @@ Specify a drive name, or wild card value.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SasLogicalInterconnect &lt;Object&gt;
@@ -156,7 +156,7 @@ Provide a SAS Logical Interconnect from Get-OVSasLogicalInterconnect to filter f
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

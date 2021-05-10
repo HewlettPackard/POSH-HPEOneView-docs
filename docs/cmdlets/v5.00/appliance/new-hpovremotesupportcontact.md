@@ -46,7 +46,7 @@ The contacts first or given name.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Lastname &lt;String&gt;
@@ -58,7 +58,7 @@ The contacts last or sur name.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Email &lt;String&gt;
@@ -70,7 +70,7 @@ The contacts email address.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -PrimaryPhone &lt;String&gt;
@@ -82,7 +82,7 @@ The contacts primary phone number.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -AlternatePhone &lt;String&gt;
@@ -94,7 +94,7 @@ The contacts alternate phone number.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Language &lt;String&gt;
@@ -106,7 +106,7 @@ The contacts primary spoken language.
 | Required? | False |
 | Position? | Named |
 | Default value | en |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Notes &lt;String&gt;
@@ -118,7 +118,7 @@ The contacts special instructions.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Default &lt;SwitchParameter&gt;
@@ -130,7 +130,7 @@ Use to specify if this contact is the Default.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -142,7 +142,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -DefaultSecondary &lt;SwitchParameter&gt;
@@ -154,7 +154,7 @@ Use to indicate if the specified contact should be the appliance default seconda
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

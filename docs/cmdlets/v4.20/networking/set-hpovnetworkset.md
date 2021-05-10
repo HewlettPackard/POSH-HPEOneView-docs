@@ -89,7 +89,7 @@ The updated name value of the Network Set.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Networks &lt;Object[]&gt;
@@ -101,7 +101,7 @@ An array containing the updated list of networks.  May contain Network objects, 
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -AddNetwork &lt;Object[]&gt;
@@ -113,7 +113,7 @@ Specify 1 or more network resources to add to the specified network set.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -RemoveNetwork &lt;Object&gt;
@@ -125,7 +125,7 @@ Specify 1 or more network resources to remove from the specified network set.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -UntaggedNetwork &lt;Object&gt;
@@ -137,7 +137,7 @@ The Name or URI of the Untaggged, or Native Network for the Network Set.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -TypicalBandwidth &lt;Int32&gt;
@@ -149,7 +149,7 @@ The updated Typical or Preferred bandwidth, in Mbps.
 | Required? | False |
 | Position? | Named |
 | Default value | 0 |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -MaximumBandwidth &lt;Int32&gt;
@@ -161,7 +161,7 @@ The updated MAximum bandwidth, in Mbps.
 | Required? | False |
 | Position? | Named |
 | Default value | 0 |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;

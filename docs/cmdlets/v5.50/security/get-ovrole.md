@@ -6,11 +6,6 @@ description: Get role of user.
 
 ## Syntax
 
-```text
-Get-OVRole
-    [<CommonParameters>]
-```
-
 ## Description
 
 Deprecated Cmdlet as of v2.0.  Please use the Get-OVUser Cmdlet to retrieve User Roles.

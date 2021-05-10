@@ -59,7 +59,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ClearMetadata &lt;SwitchParameter&gt;
@@ -71,7 +71,7 @@ Clear metadata on the associated drives, effectively wiping the data on the driv
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -DisableEraseData &lt;SwitchParameter&gt;
@@ -83,7 +83,7 @@ Can only be used if the logical JBOD was created with EraseDataOnDelete paramete
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -InputObject &lt;HPOneView.Storage.LogicalJBOD[]&gt;

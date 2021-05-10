@@ -63,15 +63,13 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**HPOneView.Library.ApplianceConnection**_
-
-The appliance library connection object from ${Global:ConnectedSessions} global variable.
+_**None. You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
 _**None.**_
 
-This Cmdlet does not return any object.
+
 
 ## Related Links
 

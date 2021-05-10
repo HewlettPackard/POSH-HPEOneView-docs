@@ -1,5 +1,5 @@
 ﻿---
-description: Disable appliance certificate revocation checking.
+description: Default content
 ---
 
 # Disable-HPOVCertificateRevocationChecking
@@ -14,13 +14,7 @@ Disable-HPOVCertificateRevocationChecking
 
 ## Description
 
-Hewlett Packard Enterprise strongly recommends that you enable strict certificate validation checks after completing an update as appropriate for your enterprise security policies. HPE OneView supports devices using self-signed certificates and devices using formal CA-signed certificates. CA-signed certificates offer benefits such as revocation checking and overall simplified management.  HPE OneView enables users to import a CA CRL file and to perform the appropriate revocation checking on existing certificates in the trust store and for certificates received during communication with a managed device or external server.
-
-This Cmdlet will disable certificate revocation validation on the specified appliance.  By disabling this setting, the appliance will not validate the certificate has been revoked by an issuing certificate authority.  This setting has no applicability to self-signed certificates.
-
-{% hint style="info" %}
-Minimum required privileges: Infrastructure administrator
-{% endhint %}
+Default content
 
 ## Examples
 
@@ -58,7 +52,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -WhatIf &lt;SwitchParameter&gt;
@@ -70,7 +64,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
@@ -78,8 +72,6 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer, PipelineVariable, and OutVariable. For more information, see about\_CommonParameters \([http://go.microsoft.com/fwlink/?LinkID=113216](http://go.microsoft.com/fwlink/?LinkID=113216)\)
 
 ## Input Types
-
-_**None.  You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
 

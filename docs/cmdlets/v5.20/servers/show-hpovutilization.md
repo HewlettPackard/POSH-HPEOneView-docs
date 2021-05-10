@@ -9,7 +9,7 @@ description: Report server and enclosure supported utilization metrics.
 ```text
 Show-HPOVUtilization
     [-InputObject] <Object>
-    [-ApplianceConnection <Object>]
+    [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
@@ -48,7 +48,7 @@ Temperature
 
 Temperature utilization graphs display the ambient/inlet air temperature of your data center. The air temperature is detected by sensors embedded on the front of enclosures and other hardware devices.
 
-The operating threshold is 10C to 35C (50F to 95F). When the device reaches a threshold, it generates temperature alerts. The appliance generates these alerts, which can be retreived using Get-HPOVAlert, or in the notification banner and in the Activity sidebar in the appliance UI.
+The operating threshold is 10┬░C to 35┬░C (50┬░F to 95┬░F). When the device reaches a threshold, it generates temperature alerts. The appliance displays these alerts in the notification banner and in the Activity sidebar.
 
 You can see the temperature utilization data for a component within the AmbientTemperature and AmbientTemperatureAverage properties.
 
@@ -69,29 +69,29 @@ Get all available server resources, and collect utilization data to report.
 
 ## Parameters
 
-### -InputObject &lt;Object&gt;
+### -ApplianceConnection &lt;Array&gt;
 
-A server hardware, server profile or enclosure resource.  If a server profile is unassigned, it will be skipped.
+Specify one or more `[HPOneView.Appliansce.Connection]` object(s) or Name property value(s).
 
-| Aliases | None |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | true (ByValue) |
-| Accept wildcard characters? | False |
-
-### -ApplianceConnection &lt;Object&gt;
-
-Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name property value(s). If Resource object is provided via Pipeline, the ApplianceConnection property of the object will be used.
-
-| Aliases | Appliance |
+| Aliases |  |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | False |
-| Accept wildcard characters? | False |
+| Accept pipeline input? |  |
+| Accept wildcard characters? |  |
+
+### -InputObject &lt;Object&gt;
+
+A server hardware, server profile or enclosure resource.  IF a server profile is unassigned, it will be skipped.
+
+| Aliases |  |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? |  |
+| Accept wildcard characters? |  |
 
 ### &lt;CommonParameters&gt;
 

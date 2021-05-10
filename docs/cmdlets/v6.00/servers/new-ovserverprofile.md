@@ -735,7 +735,7 @@ DEPRECATED.  Please use the New-OVServerProfileLogicalDiskController Cmdlet.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
 ### -Initialize &lt;SwitchParameter&gt;
@@ -747,7 +747,7 @@ DEPRECATED.  Please use the New-OVServerProfileLogicalDiskController Cmdlet.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
 ### -ControllerMode &lt;String&gt;
@@ -759,7 +759,7 @@ DEPRECATED.  Please use the New-OVServerProfileLogicalDiskController Cmdlet.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
 ### -StorageController &lt;Object&gt;
@@ -1078,7 +1078,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
+| Default value | false |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
