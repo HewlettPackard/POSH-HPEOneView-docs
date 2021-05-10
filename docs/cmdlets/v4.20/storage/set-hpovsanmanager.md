@@ -94,7 +94,7 @@ Updated Hostname or IP Address of the SAN Manager.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Port &lt;Int32&gt;
@@ -106,7 +106,7 @@ Updated TCP Port of the SAN Manager.
 | Required? | False |
 | Position? | Named |
 | Default value | 0 |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Username &lt;String&gt;
@@ -118,7 +118,7 @@ Updated Username used to authenticate and manage the SAN Manager.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Password &lt;Object&gt;
@@ -130,7 +130,7 @@ Updated Password used to authenticate and manage the SAN Manager.  Can either be
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SnmpUserName &lt;String&gt;
@@ -142,7 +142,7 @@ The SNMPv3 Community User Name.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SnmpAuthLevel &lt;String&gt;
@@ -158,7 +158,7 @@ The SNMPv3 Authentication Level.  Allowed values are:
 | Required? | False |
 | Position? | Named |
 | Default value | None |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SnmpAuthProtocol &lt;String&gt;
@@ -173,7 +173,7 @@ SNMPv3 Password Encryption Protocol. Allowed values are:
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SnmpAuthPassword &lt;Object&gt;
@@ -185,7 +185,7 @@ SNMPv3 UserName Password.  Can either be a String or SecureString value.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SnmpPrivProtocol &lt;String&gt;
@@ -200,7 +200,7 @@ SNMPv3 Privacy Protocol.  Allowed values are:
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SnmpPrivPassword &lt;Object&gt;
@@ -212,7 +212,7 @@ SNMPv3 Privacy Encryption Password.  Can either be a String or SecureString valu
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -EnableSsl &lt;SwitchParameter&gt;
@@ -224,7 +224,7 @@ Enable Secure WBEM communications to Brocade SAN Network Advisor.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -DisableSsl &lt;SwitchParameter&gt;
@@ -236,7 +236,7 @@ Enable Secure WBEM communications to Brocade SAN Network Advisor.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
@@ -248,7 +248,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;

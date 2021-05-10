@@ -111,7 +111,7 @@ Specify the Pool Type the new Range will be assinged to.  Accepted values are:
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -RangeType &lt;String&gt;
@@ -126,7 +126,7 @@ The type of Address Range to create (not applicable for IPv4 Address Pools/Subne
 | Required? | True |
 | Position? | Named |
 | Default value | Generated |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Name &lt;String&gt;
@@ -138,7 +138,7 @@ Provide the IPv4Address Pool Range Name.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Start &lt;String&gt;
@@ -150,7 +150,7 @@ The starting address in the range.  Cannot overlap with other address ranges, an
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -End &lt;String&gt;
@@ -162,7 +162,7 @@ The ending address in the range.  Cannot overlap with other address ranges, and 
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;

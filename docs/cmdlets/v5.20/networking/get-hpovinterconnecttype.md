@@ -67,7 +67,7 @@ The name of the interconnect type model name to retrieve.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -PartNumber &lt;String&gt;
@@ -79,7 +79,7 @@ The Part Number of an Interconnect Type to search for.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -91,7 +91,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
@@ -111,6 +111,10 @@ Single Interconnect Type resource.
 _**System.Collections.ArrayList <HPOneView.Networking.InterconnectType>**_
 
 Multiple Interconnect Type resources or formatted table dispalying basic Interconnect Type information.
+
+_**An Interconnect Type or collection of Interconnect Types.**_
+
+
 
 ## Related Links
 

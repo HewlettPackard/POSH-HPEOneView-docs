@@ -93,7 +93,7 @@ The network resource"s new Name value.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Prefix &lt;String&gt;
@@ -105,7 +105,7 @@ Use this parameter to add a new prefix to the name.  Will not change the origina
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Suffix &lt;String&gt;
@@ -117,7 +117,7 @@ Use this parameter to add a new suffix to the name.  Will not change the origina
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Purpose &lt;String&gt;
@@ -134,7 +134,7 @@ A description of the network"s role within the logical interconnect.  Accepted v
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Smartlink &lt;Boolean&gt;
@@ -146,7 +146,7 @@ Enable or Disable Smartlink within the Ethernet Network.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -PrivateNetwork &lt;Boolean&gt;
@@ -158,7 +158,7 @@ Enable or Disable Private Network within the Ethernet Network.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -TypicalBandwidth &lt;Int32&gt;
@@ -170,7 +170,7 @@ Preferred amount of bandwidth to assign within the Server Profile Connection, sp
 | Required? | False |
 | Position? | Named |
 | Default value | 0 |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -MaximumBandwidth &lt;Int32&gt;
@@ -182,7 +182,7 @@ The maximum bandwidth of a network connection, that will be allowed and reflecte
 | Required? | False |
 | Position? | Named |
 | Default value | 0 |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -LinkStabilityTime &lt;Int32&gt;
@@ -197,7 +197,7 @@ Maximum Value: 1800
 | Required? | False |
 | Position? | Named |
 | Default value | 0 |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -AutoLoginRedistribution &lt;Boolean&gt;
@@ -212,7 +212,7 @@ False: Login redistribution must be initiated manually.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ManagedSan &lt;Object&gt;
@@ -224,7 +224,7 @@ Managed SAN Name or URI.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -IPv4Subnet &lt;Object&gt;
@@ -236,7 +236,7 @@ Use to specify the one IPv4 subnet the network should be associated with from Ge
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -260,7 +260,7 @@ Use to specify the one IPv6 subnet the network should be associated with from Ge
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

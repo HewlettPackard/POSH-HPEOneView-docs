@@ -137,7 +137,7 @@ Alerts with given severity will be returned.  Allowed severity values are:
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -HealthCategory &lt;String&gt;
@@ -170,7 +170,7 @@ Alerts with given health category will be returned.  Allowed health category val
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -AssignedToUser &lt;String&gt;
@@ -182,7 +182,7 @@ Alerts assigned to the given user will be returned.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -AlertState &lt;String&gt;
@@ -194,7 +194,7 @@ Alerts with given alert state will be returned.  State values include Active and
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Count &lt;String&gt;
@@ -206,7 +206,7 @@ Return only the number of alerts from the appliance.  Can be combined with other
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Timespan &lt;Timespan&gt;
@@ -218,7 +218,7 @@ Return the number of alerts created from today to the defined number of days.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Start &lt;DateTime&gt;
@@ -230,7 +230,7 @@ Return alerts that were created starting from the specified date.  Hour, Min and
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -End &lt;DateTime&gt;
@@ -242,7 +242,7 @@ Return alerts that were created on the specified date.  Hour, Min and Seconds wi
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;

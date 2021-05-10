@@ -150,4 +150,3 @@ Generated error message
 * [Test-OVApplianceAuditLogForwarding](test-ovapplianceauditlogforwarding.md)
 * [Update-OVApplianceTrustedAuthorityCrl](update-ovappliancetrustedauthoritycrl.md)
 * [Wait-OVApplianceStart](../library/wait-ovappliancestart.md)
-* [Start-OVEnclosureAppliance](../servers/start-ovenclosureappliance.md)

@@ -40,7 +40,7 @@ The following resources are supported by this Cmdlet:
     * Storage Volume Template (Get-OVStorageVolumeTemplate)
     * Storage Volume (Get-OVStorageVolume)
     * Logical Interconnect Group (Get-OVLogicalInterconnectGroup)
-    * Enclosure Group (Get-OVEnclosureGroup)
+    * Logical Enclosure Group (Get-OVEnclosureGroup)
     * Logical Enclosure (Get-OVLogicalEnclosure)
     * Server Profile Template (Get-OVServerProfileTemplate)
     * Server Profile (Get-OVServerProfile)
@@ -78,7 +78,7 @@ Location where to write UTF-8 file.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Append &lt;SwitchParameter&gt;
@@ -90,7 +90,7 @@ Indicte if the export file should be appended.  By default, a new file will be c
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

@@ -75,7 +75,7 @@ The timespan to wait for the task to complete.  Default is to wait for 20 minute
 | Required? | True |
 | Position? | Named |
 | Default value | $DefaultTimeout |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceWillReboot &lt;SwitchParameter&gt;
@@ -87,7 +87,7 @@ Internal use t indicate if a task will cause appliance to reboot.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;

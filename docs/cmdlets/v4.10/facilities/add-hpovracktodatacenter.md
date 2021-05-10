@@ -58,7 +58,7 @@ The DataCenter object from Get-HPOVDataCenter.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -X &lt;Int32&gt;
@@ -70,7 +70,7 @@ The X coordinate in the DC.  Value can be in US Feet or Millimeters.  If specyin
 | Required? | False |
 | Position? | Named |
 | Default value | 0 |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Y &lt;Int32&gt;
@@ -82,7 +82,7 @@ The Y coordinate in the DC.  Value can be in US Feet or Millimeters.  If specyin
 | Required? | False |
 | Position? | Named |
 | Default value | 0 |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Rotate &lt;Int&gt;
@@ -95,7 +95,7 @@ Allowed range 0 to 360
 | Required? | False |
 | Position? | Named |
 | Default value | 0 |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Millimeters &lt;SwitchParameter&gt;
@@ -107,7 +107,7 @@ If X and/or Y are in Millimeters, you must include this parameter.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;

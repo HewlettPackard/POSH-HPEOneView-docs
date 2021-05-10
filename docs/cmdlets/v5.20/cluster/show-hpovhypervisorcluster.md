@@ -8,7 +8,7 @@ description: Default content
 
 ```text
 Show-HPOVHypervisorCluster
-    [-Name <string>]
+    [-Name] <string>
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
@@ -38,7 +38,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Name &lt;string&gt;
@@ -50,7 +50,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
@@ -60,11 +60,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 ## Input Types
 
 ## Return Values
-
-_**HPOneView.Cluster.UnmanagedCluster**_
-
-Unmanaged cluster resource from the cluster manager.
-
 
 ## Related Links
 

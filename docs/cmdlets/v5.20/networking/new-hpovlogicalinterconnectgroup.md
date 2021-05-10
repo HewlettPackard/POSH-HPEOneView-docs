@@ -157,7 +157,7 @@ The Logical Interconnect Group Name
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -FrameCount &lt;Int32&gt;
@@ -169,7 +169,7 @@ The number of Synergy Frames to participate in the Logical Stack.
 | Required? | True |
 | Position? | Named |
 | Default value | 0 |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -InterconnectBaySet &lt;Int32&gt;
@@ -185,7 +185,7 @@ Which Synergy Interconnect Bay Set ID will the interconnects be populated in.  A
 | Required? | True |
 | Position? | Named |
 | Default value | 0 |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -FabricModuleType &lt;String&gt;
@@ -203,7 +203,7 @@ Specify the Synergy Fabric Module type the Logical Interconnect Group will be mo
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Bays &lt;Hashtable&gt;
@@ -259,7 +259,7 @@ Define the expected Synergy Fabric Interconnect Redundancy type.  Allowed value:
 | Required? | False |
 | Position? | Named |
 | Default value | Redundant |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -EnableIgmpSnooping &lt;Boolean&gt;
@@ -273,7 +273,7 @@ Default value: Disabled
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -IgmpIdleTimeoutInterval &lt;Int32&gt;
@@ -290,7 +290,7 @@ Required: Yes, if IGMP snooping is enabled
 | Required? | False |
 | Position? | Named |
 | Default value | 260 |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -EnableFastMacCacheFailover &lt;Boolean&gt;
@@ -304,7 +304,7 @@ Default value:  Enabled
 | Required? | False |
 | Position? | Named |
 | Default value | True |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -MacRefreshInterval &lt;Int32&gt;
@@ -319,7 +319,7 @@ Default value: 5
 | Required? | False |
 | Position? | Named |
 | Default value | 5 |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -EnableNetworkLoopProtection &lt;Boolean&gt;
@@ -347,7 +347,7 @@ Default value: Enabled
 | Required? | False |
 | Position? | Named |
 | Default value | True |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -EnablePauseFloodProtection &lt;Boolean&gt;
@@ -375,7 +375,7 @@ Default value: Enabled
 | Required? | True |
 | Position? | Named |
 | Default value | True |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -EnableLLDPTagging &lt;Boolean&gt;
@@ -389,7 +389,7 @@ This parameter is only available for 2.00.07 or newer appliances.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -EnableEnhancedLLDPTLV &lt;Boolean&gt;
@@ -403,7 +403,7 @@ This parameter is only available for 2.00.07 or newer appliances.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -LldpAddressingMode &lt;Boolean&gt;
@@ -419,7 +419,7 @@ Specify the IP address format type to support.  Allowed values:
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SNMP &lt;Object&gt;
@@ -431,7 +431,7 @@ SNMP Settings to define SNMP configruation.  Use New-HPOVSnmpConfiguration and N
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -InternalNetworks &lt;Array&gt;
@@ -443,7 +443,7 @@ An Array collection of Networks that will be marked as Internal only.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -QosConfiguration &lt;Object&gt;
@@ -455,7 +455,7 @@ A collection of QOS configurations that are created using the New-HPOVQosConfig 
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -467,7 +467,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
@@ -479,7 +479,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Import &lt;Object&gt;
@@ -491,7 +491,7 @@ Specify JSON source file to create Logical Interconnect Group.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Scope &lt;HPOneView.Appliance.ScopeCollection[]&gt;
@@ -503,7 +503,7 @@ Provide an `[HPOneView.Appliance.ScopeCollection]` resource object to initially 
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SnmpV1 &lt;SwitchParameter&gt;
@@ -515,7 +515,7 @@ Specify the SNMP version type is SNMPv1.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SnmpV3 &lt;SwitchParameter&gt;
@@ -527,7 +527,7 @@ Specify the SNMP version type is SNMPv3.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SnmpV3User &lt;HPOneView.Appliance.SnmpV3User&gt;
@@ -539,7 +539,7 @@ Provide the SNMPv3 user object from New-HPOVSnmpV3User.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -InterconnectConsistencyChecking &lt;string&gt;
@@ -556,7 +556,7 @@ Default: Exact
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -InternalNetworkConsistencyChecking &lt;string&gt;
@@ -573,7 +573,7 @@ Default: Exact
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -QoSConsistencyChecking &lt;string&gt;
@@ -590,7 +590,7 @@ Default: Exact
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SNMPConsistencyChecking &lt;string&gt;
@@ -607,7 +607,7 @@ Default: Exact
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -DdnsDomainNameSuffix &lt;string&gt;
@@ -619,7 +619,7 @@ When enabled, Domain Name System (DNS) server will be updated automatically when
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -DownlinkSpeedMode &lt;string&gt;
@@ -638,7 +638,7 @@ Default: 25
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -EnableCutThroughSwitching &lt;bool&gt;
@@ -657,7 +657,7 @@ This option is available for HPE Virtual Connect SE 100Gb F32 Module for HPE Syn
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -EnableDdns &lt;bool&gt;
@@ -669,7 +669,7 @@ When enabled, Domain Name System (DNS) server will be updated automatically when
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -EnableStormControl &lt;bool&gt;
@@ -683,7 +683,7 @@ Default value:  Disabled
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -IgmpVLANs &lt;string&gt;
@@ -695,7 +695,7 @@ Specify values or range of VLAN IDs, from 1-4094, associated with networks defin
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -StormControlPacketsPerSecondThreshold &lt;int&gt;
@@ -709,7 +709,7 @@ Valid range: 1-262143 packets per second
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -StormControlPollingInterval &lt;Int&gt;
@@ -721,7 +721,7 @@ When enabling Storm Control, Specify a value between 5 and 30 seconds.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -UplinkSet &lt;Hashtable[]&gt;
@@ -733,7 +733,7 @@ A collection of uplink sets from New-HPOVUplinkSet using the `-Passthru` paramet
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -IgmpMulticastFloodPrevention &lt;bool&gt;
@@ -749,7 +749,7 @@ The IGMP multicast flood prevention option is supported only on the following in
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -IgmpProxyReporting &lt;bool&gt;
@@ -769,7 +769,7 @@ You can enable or disable the IGMP proxy reporting configuration on the Logical 
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -IgmpSnoopingConsistencyChecking &lt;string&gt;
@@ -784,7 +784,7 @@ Use to override the consistency checking for the policy.  Allowed values:
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

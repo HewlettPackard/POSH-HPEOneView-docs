@@ -89,7 +89,7 @@ User has the permission to add, edit, and delete local iLO user accounts.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ConfigureIloSettings &lt;Bool&gt;
@@ -101,7 +101,7 @@ User has the permission to configure most iLO settings, including security setti
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -DisplayName &lt;String&gt;
@@ -113,7 +113,7 @@ Optional display name of the user account.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -HostBIOS &lt;Bool&gt;
@@ -125,7 +125,7 @@ User has the permission to change host system BIOS configuration.  This permissi
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -HostNIC &lt;Bool&gt;
@@ -137,7 +137,7 @@ User has the permission to change host system NIC configuration.  This permissio
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -HostStorage &lt;Bool&gt;
@@ -149,7 +149,7 @@ User has the permission to change host system storage configuration.  This permi
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Login &lt;Bool&gt;
@@ -161,7 +161,7 @@ User has the permission to log into the iLO.  This permission is specific to iLO
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Password &lt;SecureString&gt;
@@ -173,7 +173,7 @@ The securestring object of the user account password to set.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -RemoteConsole &lt;Bool&gt;
@@ -185,7 +185,7 @@ User has the permission to access the iLO remote console.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Username &lt;String&gt;
@@ -197,7 +197,7 @@ The username of the account that will be created.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -VirtualMedia &lt;Bool&gt;
@@ -209,7 +209,7 @@ User has the permission to use the Virtual Media features on the host system.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -VirtualPowerAndReset &lt;Bool&gt;
@@ -221,7 +221,7 @@ User has the permission to power-cycle or reset the host system.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

@@ -35,7 +35,7 @@ Minimum required privileges: Infrastructure administrator, Server administrator
 ###  Example 1 
 
 ```text
-Get-HPOVServer -Name "MyEncl, Bay 1" | Enable-HPOVDeviceUid | Wait-HPOVTaskComplete
+Get-HPOVServer "MyEncl, Bay 1" | Enable-HPOVDeviceUid | Wait-HPOVTaskComplete
 ```
 
 Enable the UID for "MyEncl, Bay 1" server.

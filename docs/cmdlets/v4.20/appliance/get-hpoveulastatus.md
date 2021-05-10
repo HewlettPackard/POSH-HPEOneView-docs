@@ -56,7 +56,7 @@ The FQDN, IP Address or `[HPOneView.Appliance.Connection]` of an HPE OneView app
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

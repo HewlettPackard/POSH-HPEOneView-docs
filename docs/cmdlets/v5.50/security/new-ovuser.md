@@ -46,7 +46,7 @@ The name of the new user account to be created.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Password &lt;String&gt;
@@ -59,7 +59,7 @@ Passwords must be at least 8 characters.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -FullName &lt;String&gt;
@@ -71,7 +71,7 @@ Full name for the user.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Roles &lt;Array&gt;
@@ -85,7 +85,7 @@ Example: $roles = "Server administrator","Network administrator"
 | Required? | True |
 | Position? | Named |
 | Default value | @() |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -EmailAddress &lt;String&gt;
@@ -97,7 +97,7 @@ Provide the users email address.  This does not set the Email Notification value
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -OfficePhone &lt;String&gt;
@@ -109,7 +109,7 @@ Office phone number.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -MobilePhone &lt;String&gt;
@@ -121,7 +121,7 @@ Mobile phone number.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Enabled &lt;SwitchParameter&gt;
@@ -133,7 +133,7 @@ Deprecated parameter.  By default, all new user accounts will be enabled.  In or
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -147,7 +147,7 @@ Default Value: ${Global:ConnectSessions}
 | Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ScopePermissions &lt;Array&gt;
@@ -161,7 +161,7 @@ Example: `-ScopePermissions` @{Role = "Network administrator"; Scope = (`Get-OVS
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

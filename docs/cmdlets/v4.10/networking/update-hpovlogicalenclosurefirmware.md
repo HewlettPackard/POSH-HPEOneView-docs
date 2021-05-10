@@ -70,7 +70,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Baseline &lt;HPOneView.Appliance.Baseline&gt;
@@ -82,7 +82,7 @@ The firmware bundle or baseline to install.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -FirmwareUpdateProcess &lt;String&gt;
@@ -98,7 +98,7 @@ Specify the type of firmware update to invoke.  Allowed values:
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ForceInstallation &lt;SwitchParameter&gt;
@@ -110,7 +110,7 @@ Force the re-installation or downgrade of components within the baseline.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -InputObject &lt;Object&gt;
@@ -138,7 +138,7 @@ Specify the logical interconnect activation mode. Choosing "Parallel" is the fas
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

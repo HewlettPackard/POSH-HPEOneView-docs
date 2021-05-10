@@ -39,7 +39,7 @@ By using this Cmdlet, you can manually refresh the connection between the applia
 ###  Example 1 
 
 ```text
-Get-HPOVServer -Name "Encl1, Bay 1" | Update-HPOVServer | Wait-HPOVTaskComplete
+Get-HPOVServer "Encl1, Bay 1" | Update-HPOVServer | Wait-HPOVTaskComplete
 ```
 
 Refresh the state of the provided server hardware device.
@@ -47,7 +47,7 @@ Refresh the state of the provided server hardware device.
 ###  Example 2 
 
 ```text
-$task = Get-HPOVServerProfile -Name "Profile1" | Update-HPOVServer
+$task = Get-HPOVServerProfile "Profile1" | Update-HPOVServer
 ```
 
 Refresh the state of the server hardware device assigned to the Server Profile object.
@@ -75,7 +75,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -99,7 +99,7 @@ When a server hardware resource is in an Error state where the iLO IP Address or
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Credential &lt;String&gt;
@@ -111,7 +111,7 @@ Provide a PSCredential object instead of the Username and Password.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Force &lt;SwitchParameter&gt;
@@ -123,7 +123,7 @@ If the target server resource is repoting to be claimed by another external mana
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

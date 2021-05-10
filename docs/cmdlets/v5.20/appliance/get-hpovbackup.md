@@ -55,7 +55,7 @@ Specify the DateTime object of when to locate backups created before.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -After &lt;DateTime&gt;
@@ -67,7 +67,7 @@ Specify the DateTime object of when to locate backups created after.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Array&gt;
@@ -79,7 +79,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
@@ -92,9 +92,8 @@ _**None.  You cannot pipe objects to this Cmdlet.**_
 
 ## Return Values
 
-_**HPOneView.Appliance.Backup**_
+_**The generated backup File if appliance is not setup for remote storage or the Force parameter is used.**_
 
-Created backup resource from the appliance that was created with New-HPOVBackup.
 
 
 ## Related Links

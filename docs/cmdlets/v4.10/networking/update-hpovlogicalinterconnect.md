@@ -120,7 +120,7 @@ Switch to reapply the Logical Interconnect configuration.  This does NOT update 
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

@@ -10,19 +10,15 @@ description: Create a new Uplink Set.
 New-OVUplinkSet
     [-InputObject] <Object>
     [-Name] <String>
-    [-Type] <String>
-    [-Networks <Array>]
-    [-NativeEthNetwork <Object>]
+    [-Type <String>]
+    [-Networks] <Array>
+    [-NativeEthNetwork] <Object>
     [-NetworkSets <array>]
     [-CopyNetworksFromNetworkSet]
-    [-UplinkPorts <Array>]
+    [-UplinkPorts] <Array>
     [-EthMode <String>]
     [-LacpTimer <String>]
     [-LacpLoadbalancingMode <String>]
-    [-LacpFailoverTrigger <String>]
-    [-LacpDistributeUplinkPorts <Bool>]
-    [-LacpFailoverBandwidthThreshold <Int>]
-    [-LacpFailoverActiveMemberThreshold <Int>]
     [-PrimaryPort <String>]
     [-ConsistencyChecking <String>]
     [-Async]
@@ -33,24 +29,18 @@ New-OVUplinkSet
 ```text
 New-OVUplinkSet
     [-Name] <String>
-    [-Type] <String>
+    [-Type <String>]
     [-Passthru]
-    [-InputObject <Object>]
-    [-Networks <Array>]
-    [-NativeEthNetwork <Object>]
+    [-InputObject] <Object>
+    [-Networks] <Array>
+    [-NativeEthNetwork] <Object>
     [-NetworkSets <array>]
     [-CopyNetworksFromNetworkSet]
-    [-UplinkPorts <Array>]
+    [-UplinkPorts] <Array>
     [-EthMode <String>]
     [-LacpTimer <String>]
     [-LacpLoadbalancingMode <String>]
-    [-LacpFailoverTrigger <String>]
-    [-LacpDistributeUplinkPorts <Bool>]
-    [-LacpFailoverBandwidthThreshold <Int>]
-    [-LacpFailoverActiveMemberThreshold <Int>]
     [-PrimaryPort <String>]
-    [-PortSpeed <string>]
-    [-FecMode <string>]
     [-FcUplinkSpeed <String>]
     [-EnableTrunking <Boolean>]
     [-ConsistencyChecking <String>]
@@ -62,11 +52,9 @@ New-OVUplinkSet
 New-OVUplinkSet
     [-InputObject] <Object>
     [-Name] <String>
-    [-Type] <String>
-    [-Networks <Array>]
-    [-UplinkPorts <Array>]
-    [-PortSpeed <string>]
-    [-FecMode <string>]
+    [-Type <String>]
+    [-Networks] <Array>
+    [-UplinkPorts] <Array>
     [-FcUplinkSpeed <String>]
     [-EnableTrunking <Boolean>]
     [-ConsistencyChecking <String>]
@@ -308,7 +296,7 @@ Use this parameter to enable FC port trunking.  This parameter is only supported
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
+| Default value | false |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -320,7 +308,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
+| Default value | false |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
@@ -465,49 +453,6 @@ Allowed values:
 	* AllActiveUplinksOffline
 	* FailoverActiveMemberThreshold
 	* FailoverBandwidthThreshold
-
-| Aliases | None |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
-### -FecMode &lt;string&gt;
-
-Specify the forward error correction mode.  This paraemter is only supported with Virtual Connect SE 100Gb F32 Module for Synergy modules.  When configuring, the following values are supported with parent ports:
-
-	* Auto
-	* Cl74
-	* Cl108
-	* None
-
-The following values are supported with sub-ports:
-
-	* Auto
-	* Cl74
-	* Cl91
-	* None
-
-| Aliases | None |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
-### -PortSpeed &lt;string&gt;
-
-The allowed uplink port speed vy the fabric module and traceiver type.  When specifying a port speed, this value will be set for all ports.  This parameter applies to Ethernet or FCoE uplink ports only.  Allowed values:
-
-	* Auto
-	* 100M
-	* 1G
-	* 10G
-	* 40G
-	* 100G
 
 | Aliases | None |
 | :--- | :--- |

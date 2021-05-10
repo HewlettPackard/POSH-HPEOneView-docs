@@ -84,7 +84,7 @@ The full path to where the Support Dump will be saved to.  The downloaded file n
 | Required? | False |
 | Position? | Named |
 | Default value | (get-location).Path |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Type &lt;String&gt;
@@ -99,7 +99,7 @@ The type of Support Dump to collect.  Possible values are:
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Encrypted &lt;SwitchParameter&gt;
@@ -111,7 +111,7 @@ Use this parameter for the appliance to encrypt the Support Dump.  Only HPE Supp
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -LogicalInterconnect &lt;Object&gt;

@@ -51,19 +51,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | true (ByPropertyName) |
-| Accept wildcard characters? | False |
-
-### -Confirm &lt;SwitchParameter&gt;
-
-Override confirmation prompt when using `-SmartCardLoginOnly` parameter.
-
-| Aliases | cf |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -DirectoryDomain &lt;String&gt;
@@ -85,7 +73,7 @@ Configure HPE OneView to look in multiple certificate locations for domain infor
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -DirectoryDomainType &lt;String&gt;
@@ -106,26 +94,22 @@ If you select Manually specify, you can enter a specific domain using dot notati
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -EmergencyLoginAllowType &lt;String&gt;
 
-[DEPRECATED]  This parameter is now part of both Disable-HPOVLdapLocalLogin and Set-HPOVLdapDefaultDirectory.
-
-Allow emergency login access if the configured authentication directory(ies) are unavailable.  Highest security is obtained by restricting the local administrator account to "ApplianceConsoleOnly". Choose "NetworkAndApplianceConsole" to allow emergency access via the network.
+Allow emergency login access if the configured authentication directory(ies) for 2-factor are unavailable.  Highest security is obtained by restricting the local administrator account to "ApplianceConsoleOnly". Choose "NetworkAndApplianceConsole" to allow emergency access via the network.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -EnableEmergencyLocalLogin &lt;Bool&gt;
-
-[DEPRECATED]  This parameter is now part of both Disable-HPOVLdapLocalLogin and Set-HPOVLdapDefaultDirectory.
 
 Boolean value to enable ($true) or disable ($false) emergency local login.  Must be set to $false when `-SmartCardLoginOnly` is used.
 
@@ -134,7 +118,7 @@ Boolean value to enable ($true) or disable ($false) emergency local login.  Must
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SmartCardLoginOnly &lt;Bool&gt;
@@ -146,7 +130,7 @@ Use to enforce smart card authentication only.  Enabling Smart card only login d
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SubjectAlternativeNamePatterns &lt;Array&gt;
@@ -193,7 +177,7 @@ Subject Alternative Name multiple attribute entry example
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SubjectPatterns &lt;String&gt;
@@ -232,7 +216,7 @@ This is applicable when there are multiple CN attributes configured in a certifi
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ValidationOids &lt;Array&gt;
@@ -251,19 +235,7 @@ If you specify multiple OID combinations and one is a super-set of another, conf
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
-| Accept wildcard characters? | False |
-
-### -WhatIf &lt;SwitchParameter&gt;
-
-
-
-| Aliases | wi |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

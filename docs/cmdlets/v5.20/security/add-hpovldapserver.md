@@ -103,7 +103,7 @@ Directory server name or IP Address to add.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SSLPort &lt;Int32&gt;
@@ -115,7 +115,7 @@ Directory Servers LDAP SSL Port.
 | Required? | False |
 | Position? | Named |
 | Default value | 636 |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Certificate &lt;Object&gt;
@@ -127,7 +127,7 @@ Directory Server SSL Certificate, either location to Base64 Cert or multi-line s
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Username &lt;String&gt;
@@ -139,7 +139,7 @@ Directory Username to authenticate with in order to validate LDAP configuration.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Password &lt;Object&gt;
@@ -151,7 +151,7 @@ Directory User account password in order to validate LDAP configuration.  Can be
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -175,7 +175,7 @@ Use this parameter if you want to provide a PSCredential object instead.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -TrustLeafCertificate &lt;SwitchParameter&gt;
@@ -187,7 +187,7 @@ When adding a new LDAP directory server, the certificate may not be trusted.  Us
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

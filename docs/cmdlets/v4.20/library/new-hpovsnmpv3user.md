@@ -68,7 +68,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceSnmpUser &lt;SwitchParameter&gt;
@@ -80,7 +80,7 @@ Use this to create an appliance SNMPv3 User.  Default is to create an `[HPOneVie
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -AuthPassword &lt;SecureString&gt;
@@ -92,7 +92,7 @@ SNMpv3 Authentication password in SecureString format.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -AuthProtocol &lt;String&gt;
@@ -113,7 +113,7 @@ SNMPv3 Authentication protocol.  Supported values:
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -PrivPassword &lt;SecureString&gt;
@@ -125,7 +125,7 @@ SNMpv3 Privacy password in SecureString format.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -PrivProtocol &lt;String&gt;
@@ -144,7 +144,7 @@ SNMPv3 Privacy protocol.  Supported values:
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SecurityLevel &lt;String&gt;
@@ -160,7 +160,7 @@ Specify the type of SNMPv3 security policy.  Supported values:
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Username &lt;String&gt;
@@ -172,7 +172,7 @@ SNMPv3 Username
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

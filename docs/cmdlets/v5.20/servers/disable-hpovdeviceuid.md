@@ -33,7 +33,7 @@ Minimum required privileges: Infrastructure administrator, Server administrator
 ###  Example 1 
 
 ```text
-Get-HPOVServer -Name "MyEncl, Bay 1" | Disable-HPOVDeviceUid | Wait-HPOVTaskComplete
+Get-HPOVServer "MyEncl, Bay 1" | Disable-HPOVDeviceUid | Wait-HPOVTaskComplete
 ```
 
 Disable the UID for "MyEncl, Bay 1" server.
@@ -42,12 +42,7 @@ Disable the UID for "MyEncl, Bay 1" server.
 
 ### -InputObject &lt;Object&gt;
 
-Resource object to turn off the UID.  Supported resources are server hardware, enclosures and interconnects. 
-
-{% hint style="info" %}
- HPE BladeSystem C7000 enclosures and interconnects are not supported, but the inserted servers are.
-{% endhint %}
-
+Resource object to turn off the UID.  Supported resources are server hardware, enclosures and interconnects.
 
 | Aliases | Server, Enclosure, Frame, Resource |
 | :--- | :--- |

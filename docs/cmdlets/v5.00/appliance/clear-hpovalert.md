@@ -6,6 +6,11 @@ description: [DEPRECATED] Clear an Alert status.
 
 ## Syntax
 
+```text
+Clear-HPOVAlert
+    [<CommonParameters>]
+```
+
 ## Description
 
 DEPRECATED as of 2.0.  Please use Set-HPOVAlert
@@ -23,10 +28,6 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 _**None.**_
 
 ## Return Values
-
-_**None**_
-
-
 
 ## Related Links
 

@@ -109,7 +109,7 @@ The embedded component to perform the action against.  Allowed value:
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -DeviceID &lt;Int32&gt;
@@ -121,7 +121,7 @@ The corrisponding bay ID.
 | Required? | True |
 | Position? | Named |
 | Default value | 0 |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Reset &lt;SwitchParameter&gt;
@@ -133,7 +133,7 @@ Reset power to the device.  Only supported with certain component types.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Efuse &lt;SwitchParameter&gt;
@@ -145,7 +145,7 @@ EFuse will take away and then present power back to the device.  Supported with 
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
@@ -157,7 +157,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -183,7 +183,7 @@ Default Value: ${Global:ConnectSessions}
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
@@ -195,7 +195,7 @@ Default Value: ${Global:ConnectSessions}
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
@@ -216,5 +216,3 @@ Asynchronous task resource to monitor
 
 ## Related Links
 
-* [Get-HPOVEnclosure](get-hpovenclosure.md)
-* [Start-HPOVEnclosureAppliance](start-hpovenclosureappliance.md)

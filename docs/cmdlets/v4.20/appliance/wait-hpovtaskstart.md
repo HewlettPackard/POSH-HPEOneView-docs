@@ -53,7 +53,7 @@ Specify the associated ResourceName to the task to display in the Write-Progress
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Timeout &lt;TimeSpan&gt;
@@ -65,7 +65,7 @@ The time or object to wait for the task to start.  Default is to wait for 20 min
 | Required? | True |
 | Position? | Named |
 | Default value | $script:defaultTimeout |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;

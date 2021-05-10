@@ -31,7 +31,7 @@ Attaches the server profile template named MyTemplate to the server profile name
 ###  Example 2 
 
 ```text
-$p = Get-HPOVServerProfile -Name "myProfile"
+$p = Get-HPOVServerProfile "myProfile"
 Get-HPOVServerProfileTemplate "myTemplate" | Join-HPOVServerProfileToTemplate -profile $p -appliance HPOneView.contoso.com
 ```
 
@@ -60,7 +60,7 @@ A server profile name, URI, or resource object
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -84,7 +84,7 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
@@ -96,7 +96,7 @@ Specify one `[HPOneView.Appliance.Connection]` object or Name property value. If
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? |  |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

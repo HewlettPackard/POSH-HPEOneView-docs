@@ -90,7 +90,7 @@ Set to force-delete the profile.  For example, force-remove will successfully re
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

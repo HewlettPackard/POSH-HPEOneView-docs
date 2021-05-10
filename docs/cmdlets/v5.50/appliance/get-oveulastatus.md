@@ -60,7 +60,7 @@ The FQDN, IP Address or `[HPEOneView.Appliance.Connection]` of an HPE OneView ap
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

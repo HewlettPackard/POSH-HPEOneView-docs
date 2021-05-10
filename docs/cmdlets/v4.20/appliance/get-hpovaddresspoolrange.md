@@ -93,7 +93,7 @@ Default: All
 | Required? | True |
 | Position? | Named |
 | Default value | all |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;

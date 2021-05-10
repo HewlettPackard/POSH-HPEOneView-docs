@@ -39,7 +39,7 @@ By using this Cmdlet, you can manually refresh the connection between the applia
 ###  Example 1 
 
 ```text
-Get-OVServer -Name "Encl1, Bay 1" | Update-OVServer | Wait-OVTaskComplete
+Get-OVServer "Encl1, Bay 1" | Update-OVServer | Wait-OVTaskComplete
 ```
 
 Refresh the state of the provided server hardware device.
@@ -47,7 +47,7 @@ Refresh the state of the provided server hardware device.
 ###  Example 2 
 
 ```text
-$task = Get-OVServerProfile -Name "Profile1" | Update-OVServer
+$task = Get-OVServerProfile "Profile1" | Update-OVServer
 ```
 
 Refresh the state of the server hardware device assigned to the Server Profile object.

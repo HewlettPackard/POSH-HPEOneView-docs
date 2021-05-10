@@ -65,9 +65,9 @@ HPE OneView Appliance Connection object
 
 ## Return Values
 
-_**None**_
+_**None.**_
 
-This Cmdlet does not return any object.
+
 
 ## Related Links
 

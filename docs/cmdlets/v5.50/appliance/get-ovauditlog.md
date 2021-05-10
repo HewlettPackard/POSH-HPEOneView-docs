@@ -137,7 +137,7 @@ Specify the number of audit log entries to return.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Timespan &lt;Timespan&gt;
@@ -149,7 +149,7 @@ Specify the time span of to filter results on.  Cannot be combined with Start or
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Start &lt;DateTime&gt;
@@ -161,7 +161,7 @@ Specify the Start datetime object to begin the search.  Can be combined with End
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -End &lt;DateTime&gt;
@@ -173,7 +173,7 @@ Specify the End datetime object to begin the search.  Should be combined with St
 | Required? | False |
 | Position? | Named |
 | Default value | [DateTime]::Now |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -185,7 +185,7 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

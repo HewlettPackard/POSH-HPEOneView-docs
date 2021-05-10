@@ -389,7 +389,7 @@ The name of the server profile resource to be created.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -AssignmentType &lt;String&gt;
@@ -403,7 +403,7 @@ Valid values for this parameter are "unassigned", "server", or "bay"
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Enclosure &lt;Object&gt;
@@ -415,7 +415,7 @@ The blade enclosure resource containing the bay where the server profile will be
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -EnclosureBay &lt;Int32&gt;
@@ -427,7 +427,7 @@ The empty enclosure bay to assign the server profile.
 | Required? | False |
 | Position? | Named |
 | Default value | 0 |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Server &lt;Object&gt;
@@ -451,7 +451,7 @@ Optional description for this server profile.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ServerProfileTemplate &lt;Object&gt;
@@ -463,7 +463,7 @@ Provide a Server Profile Template Object or Resource Name.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Connections &lt;Array&gt;
@@ -518,7 +518,7 @@ Default: No connections
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -EnclosureGroup &lt;Object&gt;
@@ -531,7 +531,7 @@ The Enclosure Group resource the Server Profile will be bound to.  Only required
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ServerHardwareType &lt;Object&gt;
@@ -544,7 +544,7 @@ The Server Hardware Type reource the Server Profile will be bound to.  Required 
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Firmware &lt;SwitchParameter&gt;
@@ -556,7 +556,7 @@ Enable Firmware Management.  Cannot be enabled with Server Hardware Type does no
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Baseline &lt;Object&gt;
@@ -568,7 +568,7 @@ Firmware baseline to assign.  Can be either Baseline Name or URI.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -FirmwareInstallMode &lt;String&gt;
@@ -586,7 +586,7 @@ Specify the Firmware Baseline Policy mode.  Avialable options are:
 | Required? | False |
 | Position? | Named |
 | Default value | FirmwareAndSoftware |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ForceInstallFirmware &lt;SwitchParameter&gt;
@@ -598,7 +598,7 @@ Using this parameter will force the bundled firmware components to install when 
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -FirmwareActivationMode &lt;String&gt;
@@ -614,7 +614,7 @@ Specify the firmware activation policy.  Avialable options are:
 | Required? | False |
 | Position? | Named |
 | Default value | Immediate |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -FirmwareActivateDateTime &lt;DateTime&gt;
@@ -626,7 +626,7 @@ Using this parameter will force the bundled firmware components to install when 
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Bios &lt;SwitchParameter&gt;
@@ -638,7 +638,7 @@ Enable BIOS Settings Management.  Cannot be enabled with Server Hardware Type do
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -BiosSettings &lt;Array&gt;
@@ -650,7 +650,7 @@ BIOS Settings that are to be managed.  You can get the BIOS settings available f
 | Required? | True |
 | Position? | Named |
 | Default value | @() |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -BootMode &lt;String&gt;
@@ -679,7 +679,7 @@ Default: BIOS
 | Required? | True |
 | Position? | Named |
 | Default value | BIOS |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -PxeBootPolicy &lt;String&gt;
@@ -703,7 +703,7 @@ Default: Auto
 | Required? | True |
 | Position? | Named |
 | Default value | Auto |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ManageBoot &lt;SwitchParameter&gt;
@@ -719,7 +719,7 @@ Default: $True
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -BootOrder &lt;Array&gt;
@@ -737,7 +737,7 @@ Gen9 UEFI Default Boot Order: "HardDisk"
 | Required? | True |
 | Position? | Named |
 | Default value | @() |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -LocalStorage &lt;SwitchParameter&gt;
@@ -749,7 +749,7 @@ Enable local storage settings to be managed on the server.  Will only enable emb
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ImportLogicalDisk &lt;SwitchParameter&gt;
@@ -761,7 +761,7 @@ DEPRECATED.  Please use the New-HPOVServerProfileLogicalDiskController Cmdlet.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Initialize &lt;SwitchParameter&gt;
@@ -773,7 +773,7 @@ DEPRECATED.  Please use the New-HPOVServerProfileLogicalDiskController Cmdlet.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ControllerMode &lt;String&gt;
@@ -785,7 +785,7 @@ DEPRECATED.  Please use the New-HPOVServerProfileLogicalDiskController Cmdlet.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -StorageController &lt;Object&gt;
@@ -799,7 +799,7 @@ A collection (System.Collections.ArrayList  or `[System.Collections.ArrayList]`)
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SANStorage &lt;SwitchParameter&gt;
@@ -811,7 +811,7 @@ Optional.  Enable SAN Storage Management within the Server Profile.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SecureBoot &lt;String&gt;
@@ -823,7 +823,7 @@ Specify if secure boot should be Unmanaged, Enabled or Disabled for Gen10 and ne
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -HostOStype &lt;String&gt;
@@ -863,7 +863,7 @@ Optional. Specify the Host OS type, which will set the Host OS value when HPE On
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -StorageVolume &lt;Object&gt;
@@ -895,7 +895,7 @@ The format of the Storage Volume resource should be a PsCustomObject PowerShell 
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -EvenPathDisabled &lt;SwitchParameter&gt;
@@ -909,7 +909,7 @@ Enable to disable even paths in the attached storage volume(s).
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -OddPathDisabled &lt;SwitchParameter&gt;
@@ -923,7 +923,7 @@ Enable to disable odd paths in the attached storage volume(s).
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Affinity &lt;String&gt;
@@ -937,7 +937,7 @@ Accepted values are either "Bay" or "BayAndServer".  Default is "Bay".
 | Required? | True |
 | Position? | Named |
 | Default value | Bay |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -MacAssignment &lt;String&gt;
@@ -949,7 +949,7 @@ Optional setting for MAC address assignment.  May be Virtual or Physical.  Use V
 | Required? | True |
 | Position? | Named |
 | Default value | Virtual |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -WwnAssignment &lt;String&gt;
@@ -961,7 +961,7 @@ Optional setting for WWN assignment.  May be Virtual or Physical.  Use Virtual i
 | Required? | True |
 | Position? | Named |
 | Default value | Virtual |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SnAssignment &lt;String&gt;
@@ -975,7 +975,7 @@ Default: Virtual serial number and UUID assignment
 | Required? | True |
 | Position? | Named |
 | Default value | Virtual |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -SerialNumber &lt;String&gt;
@@ -987,7 +987,7 @@ When specifying snAssignment parameter to UserDefined, you can provide a user de
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Uuid &lt;String&gt;
@@ -999,7 +999,7 @@ When specifying snAssignment parameter to UserDefined, you can provide a user de
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -HideUnusedFlexNics &lt;Boolean&gt;
@@ -1021,7 +1021,7 @@ By default, Hide Unused FlexNICs is enabled. This setting can be changed only wh
 | Required? | True |
 | Position? | Named |
 | Default value | True |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -IscsiIPv4Address &lt;Array&gt;
@@ -1035,7 +1035,7 @@ A collection of IPv4 Addresses to allocate for found iSCSI initiators that are B
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ISCSIInitatorName &lt;String&gt;
@@ -1049,7 +1049,7 @@ Value to provide for the iSCSI Initiator.  All iSCSI Connections will share this
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ChapSecret &lt;SecureString&gt;
@@ -1063,7 +1063,7 @@ The CHAP challange secret.  Accepts ASCII or HEX values.  If providing an ASCII 
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -MutualChapSecret &lt;SecureString&gt;
@@ -1077,7 +1077,7 @@ The Mutual CHAP challange secret.  Accepts ASCII or HEX values.  If providing an
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -OSDeploymentPlan &lt;Object&gt;
@@ -1089,7 +1089,7 @@ The HPE Synergy Image Streamer OS deployment plan from Get-HPOVOSDeploymentPlan.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -OSDeploymentAttributes &lt;Array&gt;
@@ -1101,7 +1101,7 @@ Configured OS Deployment Plan parameters from Get-HPOVOSDeploymentPlanAttribute.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
@@ -1112,8 +1112,8 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | False |
-| Accept pipeline input? | False |
+| Default value | false |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -1141,7 +1141,7 @@ Switch to import Server Profile JSON object or file.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ProfileObj &lt;Object&gt;
@@ -1166,7 +1166,7 @@ Use this parameter to return the modified Server Profile object.  In order to sa
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Scope &lt;HPOneView.Appliance.ScopeCollection&gt;

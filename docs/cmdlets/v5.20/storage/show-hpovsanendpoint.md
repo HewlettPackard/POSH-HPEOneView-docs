@@ -9,14 +9,14 @@ description: View Managed SAN FC Endpoints.
 ```text
 Show-HPOVSanEndpoint
     [-SAN] <Object>
-    [-ApplianceConnection <Object>]
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
 ```text
 Show-HPOVSanEndpoint
     [-WWN] <String>
-    [-ApplianceConnection <Object>]
+    [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
@@ -102,7 +102,7 @@ The WWN of the node you are looking for.  Cannot be combined with the SAN parame
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -111,10 +111,10 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 
 | Aliases | Appliance |
 | :--- | :--- |
-| Required? | False |
+| Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

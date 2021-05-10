@@ -39,7 +39,7 @@ The following resources are supported by this Cmdlet:
 	* Storage Volume Template (Get-HPOVStorageVolumeTemplate)
 	* Storage Volume (Get-HPOVStorageVolume)
 	* Logical Interconnect Group (Get-HPOVLogicalInterconnectGroup)
-	* Enclosure Group (Get-HPOVEnclosureGroup)
+	* Logical Enclosure Group (Get-HPOVEnclosureGroup)
 	* Logical Enclosure (Get-HPOVLogicalEnclosure)
 	* Server Profile Template (Get-HPOVServerProfileTemplate)
 	* Server Profile (Get-HPOVServerProfile)
@@ -79,7 +79,7 @@ Location where to write UTF-8 file.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Append &lt;SwitchParameter&gt;
@@ -91,7 +91,7 @@ Indicte if the export file should be appended.  By default, a new file will be c
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

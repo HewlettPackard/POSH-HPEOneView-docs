@@ -40,22 +40,6 @@ Set-HPOVLdapDefaultDirectory -InputObject "Domain1"
 
 Set "Domain1" as the default authentication directory for the appliance.  Then, the Cmdlet will create the REG_SZ "AuthProvider#MyAppliance.domain.com" with a value of "Domain1".
 
-###  Example 2 
-
-```text
-Set-HPOVLdapDefaultDirectory -InputObject (Get-HPOVLdapDirectory -Name MyDirectory) -DisableLocalLogin $true -EnableEmergencyLocalLogin
-```
-
-Set "MyDirectory" as the default authentication directory for the appliance, disabling local logins and allowing emergency local login via appliance console only.
-
-###  Example 3 
-
-```text
-Set-HPOVLdapDefaultDirectory -InputObject "LOCAL"
-```
-
-Set "LOCAL" as the default authentication directory for the appliance.
-
 ## Parameters
 
 ### -InputObject &lt;Object&gt;
@@ -80,7 +64,7 @@ Use to disable appliance local login accounts.  You cannot use this parameter if
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -104,7 +88,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
@@ -116,7 +100,7 @@ Specify one or more `[HPOneView.Appliance.Connection]` object(s) or Name propert
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -EmergencyLoginAllowType &lt;String&gt;
@@ -128,7 +112,7 @@ Allow emergency login access if the configured authentication directory(ies) are
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -EnableEmergencyLocalLogin &lt;Bool&gt;
@@ -140,7 +124,7 @@ Boolean value to enable ($true) or disable ($false) emergency local login.  Must
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

@@ -54,7 +54,7 @@ Force remove resource, in cases where the device manager has been re-addressed a
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | False |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### -InputObject &lt;HPOneView.Servers.RackManager&gt;
