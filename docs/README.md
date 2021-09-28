@@ -12,6 +12,32 @@ This PowerShell module requires the following minimum versions:
 
 {% tabs %}
 
+{% tab title="HPE OneView 6.30" %}
+| Component | Version |
+| :--- | :--- |
+| .NetStandard | 2.0 or newer |
+| PowerShell | 5.1, 7.0 or newer |
+| PowerShellCore | 7.0 or newer |
+| HPE OneView/HPE Synergy | 6.30 or newer |
+
+{% hint style="info" %}
+.NetStandard 2.0 API's are supported by both the [.NetFramework 4.7.2 Windows](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-7-2/) and [DotNetCore 2.0](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-0/) clients.
+{% endhint %}
+{% endtab %}
+
+{% tab title="HPE OneView 6.30" %}
+| Component | Version |
+| :--- | :--- |
+| .NetStandard | 2.0 or newer |
+| PowerShell | 5.1, 7.0 or newer |
+| PowerShellCore | 7.0 or newer |
+| HPE OneView/HPE Synergy | 6.20 or newer |
+
+{% hint style="info" %}
+.NetStandard 2.0 API's are supported by both the [.NetFramework 4.7.2 Windows](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-7-2/) and [DotNetCore 2.0](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-0/) clients.
+{% endhint %}
+{% endtab %}
+
 {% tab title="HPE OneView 6.10" %}
 | Component | Version |
 | :--- | :--- |
@@ -96,6 +122,14 @@ This PowerShell module requires the following minimum versions:
 
 | Library | Components | Version |
 | :--- | :--- | :--- |
+| HPE OneView 5.30 | .NetStandard | 2.0 or newer |
+| HPE OneView 5.30 | PowerShell | 5.1 or 6.0 |
+| HPE OneView 5.30 | PowerShellCore | 7.0 or newer |
+| HPE OneView 5.30 | HPE OneView/HPE Synergy | 5.30 or newer |
+| HPE OneView 5.20 | .NetStandard | 2.0 or newer |
+| HPE OneView 5.20 | PowerShell | 5.1 or 6.0 |
+| HPE OneView 5.20 | PowerShellCore | 7.0 or newer |
+| HPE OneView 5.20 | HPE OneView/HPE Synergy | 5.20 or newer |
 | HPE OneView 5.00 | .NetStandard | 2.0 or newer |
 | HPE OneView 5.00 | PowerShell | 5.1 or 6.0 |
 | HPE OneView 5.00 | PowerShellCore | 7.0 or newer |
