@@ -89,6 +89,13 @@ $SourceJsonFiles              = [System.IO.Directory]::GetFiles($SourceDirectory
 $ApprovedCmdletCategories     = [System.IO.File]::ReadAllLines($ApprovedCmdletCategoriesFile, [System.Text.Encoding]::UTF8) | ConvertFrom-Json
 $DeprecatedCmdlets            = [System.IO.File]::ReadAllLines($DeprecatedCmdletsFile, [System.Text.Encoding]::UTF8) | ConvertFrom-Json
 
+# Filter out Library versions that are no longer supported
+ForEach ($version in $DeprecatedCmdlets.Versions) {
+
+    $SourceJsonFiles
+
+}
+
 if ($null -eq $SourceJsonFiles) {
 
     Throw ("Source JSON files missing or not found in expected path '{0}'" -f ($RepoParentDirectory + "source"))
@@ -156,7 +163,7 @@ ForEach ($File in $SourceJsonFiles) {
 
             ForEach ($script:Cmdlet in $script:SourceCmdletFromJson.Cmdlets) {
 
-                if ($DeprecatedCmdlets -notcontains $script:Cmdlet.Name) {
+                if ($DeprecatedCmdlets.Names -notcontains $script:Cmdlet.Name) {
 
                     $CmdletContents = $script:Cmdlet.Contents
 

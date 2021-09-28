@@ -4565,6 +4565,8 @@
 
 ## About
 
+* [about\_HPEOneView.630](about/about_hpeoneview.630.md)
+* [about\_HPEOneView.620](about/about_hpeoneview.620.md)
 * [about\_HPEOneView.610](about/about_hpeoneview.610.md)
 * [about\_HPEOneView.600](about/about_hpeoneview.600.md)
 * [about\_HPEOneView.550](about/about_hpeoneview.550.md)
