@@ -1,4 +1,4 @@
-{
+﻿{
   "Version": "5.40",
   "LibraryGUID": "11e96b20-75f0-4f0a-85b1-6b360642b0f7",
   "Cmdlets": [
@@ -139,7 +139,7 @@
             "Text": "Remove-OVApplianceTrustedCertificate"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/add-ovappliancetrustedcertificate.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/add-ovappliancetrustedcertificate",
             "Text": "Online: "
           }
         ],
@@ -321,7 +321,7 @@
             "Text": "Show-OVBaselineRepositorySize"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/add-ovbaseline.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/add-ovbaseline",
             "Text": "Online: "
           }
         ],
@@ -472,7 +472,7 @@
             "Text": "Set-OVClusterManager"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/cluster/add-ovclustermanager.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/cluster/add-ovclustermanager",
             "Text": "Online: "
           }
         ],
@@ -603,7 +603,7 @@
             "Text": "Update-OVClusterNode"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/cluster/add-ovclusternode.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/cluster/add-ovclusternode",
             "Text": "Online: "
           }
         ],
@@ -651,7 +651,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/cluster/add-ovclusternodetocluster.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/cluster/add-ovclusternodetocluster",
             "Text": "Online: "
           }
         ]
@@ -870,7 +870,7 @@
             "Text": "Update-OVEnclosure"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/add-ovenclosure.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/add-ovenclosure",
             "Text": "Online: "
           }
         ],
@@ -1151,7 +1151,7 @@
             "Text": "Remove-OVFabricManager"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/add-ovfabricmanager.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/add-ovfabricmanager",
             "Text": "Online: "
           }
         ],
@@ -1324,7 +1324,7 @@
             "Text": "Remove-OVLdapServer"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/add-ovldapserver.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/add-ovldapserver",
             "Text": "Online: "
           }
         ],
@@ -1551,7 +1551,7 @@
             "Text": "Remove-OVPowerDevice"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/add-ovpowerdevice.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/add-ovpowerdevice",
             "Text": "Online: "
           }
         ],
@@ -1611,7 +1611,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/add-ovpowerdeviceconnection.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/add-ovpowerdeviceconnection",
             "Text": "Online: "
           }
         ]
@@ -1721,7 +1721,7 @@
             "Text": "Update-OVRackManager"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/add-ovrackmanager.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/add-ovrackmanager",
             "Text": "Online: "
           }
         ],
@@ -1866,7 +1866,7 @@
             "Text": "Add-OVResourceToRack"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/add-ovracktodatacenter.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/add-ovracktodatacenter",
             "Text": "Online: "
           }
         ],
@@ -1967,7 +1967,7 @@
             "Text": "Get-OVEnclosure"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/add-ovremoteframe.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/add-ovremoteframe",
             "Text": "Online: "
           }
         ],
@@ -2052,7 +2052,7 @@
             "Text": "Get-OVLabel"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/add-ovresourcetolabel.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/add-ovresourcetolabel",
             "Text": "Online: "
           }
         ],
@@ -2160,7 +2160,7 @@
             "Text": "Add-OVRackToDataCenter"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/add-ovresourcetorack.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/add-ovresourcetorack",
             "Text": "Online: "
           }
         ],
@@ -2259,7 +2259,7 @@
             "Text": "Remove-OVResourceFromScope"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/add-ovresourcetoscope.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/add-ovresourcetoscope",
             "Text": "Online: "
           }
         ],
@@ -2485,7 +2485,7 @@
             "Text": "Update-OVSanManager"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/add-ovsanmanager.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/add-ovsanmanager",
             "Text": "Online: "
           }
         ],
@@ -2843,7 +2843,7 @@
             "Text": "Update-OVServerProfile"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/add-ovserver.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/add-ovserver",
             "Text": "Online: "
           }
         ],
@@ -3062,7 +3062,7 @@
             "Text": "Remove-OVSmtpAlertEmailFilter"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/add-ovsmtpalertemailfilter.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/add-ovsmtpalertemailfilter",
             "Text": "Online: "
           }
         ],
@@ -3194,7 +3194,7 @@
             "Text": "Update-OVStoragePool"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/add-ovstoragepool.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/add-ovstoragepool",
             "Text": "Online: "
           }
         ],
@@ -3393,7 +3393,7 @@
             "Text": "Update-OVStorageSystem"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/add-ovstoragesystem.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/add-ovstoragesystem",
             "Text": "Online: "
           }
         ],
@@ -3656,7 +3656,7 @@
             "Text": "Set-OVStorageVolumeTemplatePolicy"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/add-ovstoragevolume.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/add-ovstoragevolume",
             "Text": "Online: "
           }
         ],
@@ -3732,7 +3732,7 @@
             "Text": "Set-OVAlert"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/clear-ovalert.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/clear-ovalert",
             "Text": "Online: "
           }
         ],
@@ -3884,15 +3884,15 @@
             "Text": "Disconnect-OVMgmt"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/connect-ovmgmt.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/connect-ovmgmt",
             "Text": "about_Appliance_Connection_Permissions"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/connect-ovmgmt.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/connect-ovmgmt",
             "Text": "[${Global:ConnectedSessions}]"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/connect-ovmgmt.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/connect-ovmgmt",
             "Text": "Online: "
           }
         ],
@@ -4141,7 +4141,7 @@
             "Text": "Update-OVServerProfile"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/convert-ovserverprofile.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/convert-ovserverprofile",
             "Text": "Online: "
           }
         ],
@@ -4304,7 +4304,7 @@
             "Text": "Set-OVServerProfileTemplate"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/convert-ovserverprofiletemplate.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/convert-ovserverprofiletemplate",
             "Text": "Online: "
           }
         ],
@@ -4427,7 +4427,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/convertto-ovimagestreamerconfiguration.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/convertto-ovimagestreamerconfiguration",
             "Text": "Online: "
           }
         ],
@@ -4516,7 +4516,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/convertto-ovpowershellscript.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/convertto-ovpowershellscript",
             "Text": "Online: "
           }
         ],
@@ -4645,7 +4645,7 @@
             "Text": "Set-OVServerProfileTemplate"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/convertto-ovserverprofiletemplate.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/convertto-ovserverprofiletemplate",
             "Text": "Online: "
           }
         ],
@@ -4833,7 +4833,7 @@
             "Text": "Set-OVStorageVolumeTemplatePolicy"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/convertto-ovstoragevolume.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/convertto-ovstoragevolume",
             "Text": "Online: "
           }
         ],
@@ -5039,7 +5039,7 @@
             "Text": "Update-OVServerProfile"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/copy-ovserverprofile.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/copy-ovserverprofile",
             "Text": "Online: "
           }
         ],
@@ -5128,7 +5128,7 @@
             "Text": "Enable-OVApplianceComplexPasswords"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/disable-ovappliancecomplexpasswords.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/disable-ovappliancecomplexpasswords",
             "Text": "Online: "
           }
         ],
@@ -5217,7 +5217,7 @@
             "Text": "Save-OVApplianceDataAtRestEncryptionKey"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/disable-ovappliancedataatrestencryption.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/disable-ovappliancedataatrestencryption",
             "Text": "Online: "
           }
         ],
@@ -5298,7 +5298,7 @@
             "Text": "Get-OVApplianceServiceConsoleAccess"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/disable-ovapplianceserviceconsoleaccess.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/disable-ovapplianceserviceconsoleaccess",
             "Text": "Online: "
           }
         ],
@@ -5389,7 +5389,7 @@
             "Text": "Get-OVApplianceSshAccess"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/disable-ovappliancesshaccess.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/disable-ovappliancesshaccess",
             "Text": "Online: "
           }
         ],
@@ -5474,7 +5474,7 @@
             "Text": "Set-OVApplianceTwoFactorAuthentication"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/disable-ovappliancetwofactorauthentication.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/disable-ovappliancetwofactorauthentication",
             "Text": "Online: "
           }
         ],
@@ -5551,7 +5551,7 @@
             "Text": "Enable-OVCertificateValidation"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/disable-ovcertificatevalidation.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/disable-ovcertificatevalidation",
             "Text": "Online: "
           }
         ],
@@ -5622,7 +5622,7 @@
             "Text": "Enable-OVDebug"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/disable-ovdebug.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/disable-ovdebug",
             "Text": "Online: "
           }
         ],
@@ -5705,7 +5705,7 @@
             "Text": "Enable-OVDeviceUid"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/disable-ovdeviceuid.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/disable-ovdeviceuid",
             "Text": "Online: "
           }
         ],
@@ -5811,7 +5811,7 @@
             "Text": "Enable-OVLdapLocalLogin"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/disable-ovldaplocallogin.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/disable-ovldaplocallogin",
             "Text": "Online: "
           }
         ],
@@ -5890,7 +5890,7 @@
             "Text": "Get-OVLogicalInterconnectPortMonitoring"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/disable-ovlogicalinterconnectportmonitoring.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/disable-ovlogicalinterconnectportmonitoring",
             "Text": "Online: "
           }
         ],
@@ -5940,7 +5940,7 @@
             "Text": "Enable-OVMSDSC"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/disable-ovmsdsc.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/disable-ovmsdsc",
             "Text": "Online: "
           }
         ],
@@ -6091,7 +6091,7 @@
             "Text": "Update-OVRemoteSupportEntitlement"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/disable-ovremotesupport.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/disable-ovremotesupport",
             "Text": "Online: "
           }
         ],
@@ -6183,7 +6183,7 @@
             "Text": "Set-OVRemoteSyslog"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/disable-ovremotesyslog.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/disable-ovremotesyslog",
             "Text": "Online: "
           }
         ],
@@ -6254,7 +6254,7 @@
             "Text": "Connect-OVMgmt"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/disconnect-ovmgmt.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/disconnect-ovmgmt",
             "Text": "Online: "
           }
         ],
@@ -6311,7 +6311,7 @@
             "Text": "Disable-OVApplianceComplexPasswords"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/enable-ovappliancecomplexpasswords.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/enable-ovappliancecomplexpasswords",
             "Text": "Online: "
           }
         ],
@@ -6410,7 +6410,7 @@
             "Text": "Save-OVApplianceDataAtRestEncryptionKey"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/enable-ovappliancedataatrestencryption.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/enable-ovappliancedataatrestencryption",
             "Text": "Online: "
           }
         ],
@@ -6475,7 +6475,7 @@
             "Text": "Get-OVApplianceServiceConsoleAccess"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/enable-ovapplianceserviceconsoleaccess.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/enable-ovapplianceserviceconsoleaccess",
             "Text": "Online: "
           }
         ],
@@ -6546,7 +6546,7 @@
             "Text": "Get-OVApplianceSshAccess"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/enable-ovappliancesshaccess.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/enable-ovappliancesshaccess",
             "Text": "Online: "
           }
         ],
@@ -6637,7 +6637,7 @@
             "Text": "Disable-OVCertificateValidation"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/enable-ovcertificatevalidation.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/enable-ovcertificatevalidation",
             "Text": "Online: "
           }
         ],
@@ -6724,7 +6724,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/enable-ovcomposerhanode.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/enable-ovcomposerhanode",
             "Text": "Online: "
           }
         ],
@@ -6809,7 +6809,7 @@
             "Text": "Disable-OVDebug"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/enable-ovdebug.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/enable-ovdebug",
             "Text": "Online: "
           }
         ],
@@ -6892,7 +6892,7 @@
             "Text": "Disable-OVDeviceUid"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/enable-ovdeviceuid.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/enable-ovdeviceuid",
             "Text": "Online: "
           }
         ],
@@ -6973,7 +6973,7 @@
             "Text": "Disable-OVLdapLocalLogin"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/enable-ovldaplocallogin.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/enable-ovldaplocallogin",
             "Text": "Online: "
           }
         ],
@@ -7069,7 +7069,7 @@
             "Text": "Get-OVLogicalInterconnectPortMonitoring"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/enable-ovlogicalinterconnectportmonitoring.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/enable-ovlogicalinterconnectportmonitoring",
             "Text": "Online: "
           }
         ],
@@ -7127,7 +7127,7 @@
             "Text": "Disable-OVMSDSC"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/enable-ovmsdsc.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/enable-ovmsdsc",
             "Text": "Online: "
           }
         ],
@@ -7278,7 +7278,7 @@
             "Text": "Update-OVRemoteSupportEntitlement"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/enable-ovremotesupport.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/enable-ovremotesupport",
             "Text": "Online: "
           }
         ],
@@ -7370,7 +7370,7 @@
             "Text": "Set-OVRemoteSyslog"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/enable-ovremotesyslog.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/enable-ovremotesyslog",
             "Text": "Online: "
           }
         ],
@@ -7471,7 +7471,7 @@
             "Text": "Exit-OVClusterNodeMaintenanceMode"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/cluster/enter-ovclusternodemaintenancemode.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/cluster/enter-ovclusternodemaintenancemode",
             "Text": "Online: "
           }
         ],
@@ -7576,7 +7576,7 @@
             "Text": "Enter-OVClusterNodeMaintenanceMode"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/cluster/exit-ovclusternodemaintenancemode.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/cluster/exit-ovclusternodemaintenancemode",
             "Text": "Online: "
           }
         ],
@@ -7684,7 +7684,7 @@
             "Text": "Set-OVAddressPoolSubnet"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovaddresspool.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovaddresspool",
             "Text": "Online: "
           }
         ],
@@ -7774,7 +7774,7 @@
             "Text": "Remove-OVAddressPoolRange"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovaddresspoolrange.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovaddresspoolrange",
             "Text": "Online: "
           }
         ],
@@ -7872,7 +7872,7 @@
             "Text": "Set-OVAddressPoolSubnet"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovaddresspoolsubnet.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovaddresspoolsubnet",
             "Text": "Online: "
           }
         ],
@@ -8071,7 +8071,7 @@
             "Text": "Set-OVAlert"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovalert.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovalert",
             "Text": "Online: "
           }
         ],
@@ -8168,7 +8168,7 @@
             "Text": "Test-OVApplianceAuditLogForwarding"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovapplianceauditlogforwarding.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovapplianceauditlogforwarding",
             "Text": "Online: "
           }
         ],
@@ -8248,7 +8248,7 @@
             "Text": "Show-OVApplianceSecurityModeCompatibilityReport"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovapplianceavailablesecuritymode.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovapplianceavailablesecuritymode",
             "Text": "Online: "
           }
         ],
@@ -8305,7 +8305,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovappliancecertificatestatus.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovappliancecertificatestatus",
             "Text": "Online: "
           }
         ],
@@ -8370,7 +8370,7 @@
             "Text": "Show-OVApplianceSecurityModeCompatibilityReport"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovappliancecurrentsecuritymode.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovappliancecurrentsecuritymode",
             "Text": "Online: "
           }
         ],
@@ -8439,7 +8439,7 @@
             "Text": "Save-OVApplianceDataAtRestEncryptionKey"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/get-ovappliancedataatrestencryption.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/get-ovappliancedataatrestencryption",
             "Text": "Online: "
           }
         ],
@@ -8496,7 +8496,7 @@
             "Text": "Set-OVApplianceDateTime"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovappliancedatetime.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovappliancedatetime",
             "Text": "Online: "
           }
         ],
@@ -8563,7 +8563,7 @@
             "Text": "Set-OVApplianceGlobalSetting"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovapplianceglobalsetting.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovapplianceglobalsetting",
             "Text": "Online: "
           }
         ],
@@ -8657,7 +8657,7 @@
             "Text": "Set-OVApplianceNetworkConfig"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovappliancenetworkconfig.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovappliancenetworkconfig",
             "Text": "Online: "
           }
         ],
@@ -8722,7 +8722,7 @@
             "Text": "Set-OVApplianceProxy"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovapplianceproxy.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovapplianceproxy",
             "Text": "Online: "
           }
         ],
@@ -8804,7 +8804,7 @@
             "Text": "Set-OVApplianceSecurityProtocol"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovappliancesecurityprotocol.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovappliancesecurityprotocol",
             "Text": "Online: "
           }
         ],
@@ -8873,7 +8873,7 @@
             "Text": "Enable-OVApplianceServiceConsoleAccess"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovapplianceserviceconsoleaccess.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovapplianceserviceconsoleaccess",
             "Text": "Online: "
           }
         ],
@@ -8930,7 +8930,7 @@
             "Text": "Set-OVApplianceSnmpV3EngineId"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovappliancesnmpv3engineid.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovappliancesnmpv3engineid",
             "Text": "Online: "
           }
         ],
@@ -8991,7 +8991,7 @@
             "Text": "Enable-OVApplianceSshAccess"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovappliancesshaccess.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovappliancesshaccess",
             "Text": "Online: "
           }
         ],
@@ -9081,7 +9081,7 @@
             "Text": "Remove-OVApplianceTrapDestination"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovappliancetrapdestination.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovappliancetrapdestination",
             "Text": "Online: "
           }
         ],
@@ -9193,7 +9193,7 @@
             "Text": "Remove-OVApplianceTrustedCertificate"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovappliancetrustedcertificate.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovappliancetrustedcertificate",
             "Text": "Online: "
           }
         ],
@@ -9272,7 +9272,7 @@
             "Text": "Set-OVApplianceTwoFactorAuthentication"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovappliancetwofactorauthentication.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovappliancetwofactorauthentication",
             "Text": "Online: "
           }
         ],
@@ -9378,7 +9378,7 @@
             "Text": "Get-OVAuditLogArchive"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovauditlog.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovauditlog",
             "Text": "Online: "
           }
         ],
@@ -9462,7 +9462,7 @@
             "Text": "Get-OVAuditLog"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovauditlogarchive.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovauditlogarchive",
             "Text": "Online: "
           }
         ],
@@ -9527,7 +9527,7 @@
             "Text": "Set-OVAutomaticBackupConfig"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovautomaticbackupconfig.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovautomaticbackupconfig",
             "Text": "Online: "
           }
         ],
@@ -9604,7 +9604,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/get-ovavailabledrivetype.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/get-ovavailabledrivetype",
             "Text": "Online: "
           }
         ],
@@ -9694,7 +9694,7 @@
             "Text": "Save-OVBackup"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovbackup.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovbackup",
             "Text": "Online: "
           }
         ],
@@ -9835,7 +9835,7 @@
             "Text": "Show-OVBaselineRepositorySize"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovbaseline.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovbaseline",
             "Text": "Online: "
           }
         ],
@@ -9957,7 +9957,7 @@
             "Text": "Show-OVBaselineRepositorySize"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovbaselinerepository.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovbaselinerepository",
             "Text": "Online: "
           }
         ],
@@ -10012,7 +10012,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/cluster/get-ovcluster.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/cluster/get-ovcluster",
             "Text": "Online: "
           }
         ]
@@ -10114,7 +10114,7 @@
             "Text": "Set-OVClusterManager"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/cluster/get-ovclustermanager.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/cluster/get-ovclustermanager",
             "Text": "Online: "
           }
         ],
@@ -10223,7 +10223,7 @@
             "Text": "Update-OVClusterNode"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/cluster/get-ovclusternode.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/cluster/get-ovclusternode",
             "Text": "Online: "
           }
         ],
@@ -10329,7 +10329,7 @@
             "Text": "Update-OVClusterProfile"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/cluster/get-ovclusterprofile.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/cluster/get-ovclusterprofile",
             "Text": "Online: "
           }
         ],
@@ -10400,7 +10400,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/get-ovcommandtrace.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/get-ovcommandtrace",
             "Text": "Online: "
           }
         ],
@@ -10465,7 +10465,7 @@
             "Text": "Reset-OVEnclosureDevice"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/get-ovcomposernode.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/get-ovcomposernode",
             "Text": "Online: "
           }
         ],
@@ -10554,7 +10554,7 @@
             "Text": "Set-OVDataCenterRemoteSupport"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/get-ovdatacenter.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/get-ovdatacenter",
             "Text": "Online: "
           }
         ],
@@ -10647,7 +10647,7 @@
             "Text": "Get-OVLogicalJBOD"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/get-ovdriveenclosure.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/get-ovdriveenclosure",
             "Text": "Online: "
           }
         ],
@@ -10799,7 +10799,7 @@
             "Text": "Set-OVLogicalJBOD"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/get-ovdriveenclosureinventory.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/get-ovdriveenclosureinventory",
             "Text": "Online: "
           }
         ],
@@ -11003,7 +11003,7 @@
             "Text": "Update-OVEnclosure"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/get-ovenclosure.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/get-ovenclosure",
             "Text": "Online: "
           }
         ],
@@ -11183,7 +11183,7 @@
             "Text": "Update-OVLogicalEnclosure"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/get-ovenclosuregroup.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/get-ovenclosuregroup",
             "Text": "Online: "
           }
         ],
@@ -11253,7 +11253,7 @@
             "Text": "Set-OVEulaStatus"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-oveulastatus.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-oveulastatus",
             "Text": "Online: "
           }
         ],
@@ -11344,7 +11344,7 @@
             "Text": "Remove-OVFabricManager"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/get-ovfabricmanager.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/get-ovfabricmanager",
             "Text": "Online: "
           }
         ],
@@ -11415,7 +11415,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovfixmeinstallationlog.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovfixmeinstallationlog",
             "Text": "Online: "
           }
         ],
@@ -11472,7 +11472,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovhealthstatus.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovhealthstatus",
             "Text": "Online: "
           }
         ],
@@ -11586,7 +11586,7 @@
             "Text": "Get-OVServerProfile"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/get-ovilosso.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/get-ovilosso",
             "Text": "Online: "
           }
         ],
@@ -11684,7 +11684,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/get-ovimagestreamerappliance.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/get-ovimagestreamerappliance",
             "Text": "Online: "
           }
         ],
@@ -11811,7 +11811,7 @@
             "Text": "Reset-OVInterconnectNetOpPassword"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/get-ovinterconnect.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/get-ovinterconnect",
             "Text": "Online: "
           }
         ],
@@ -11918,7 +11918,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/get-ovinterconnecttype.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/get-ovinterconnecttype",
             "Text": "Online: "
           }
         ],
@@ -11995,7 +11995,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovlabel.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovlabel",
             "Text": "Online: "
           }
         ],
@@ -12133,7 +12133,7 @@
             "Text": "Show-OVLdapGroups"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/get-ovldap.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/get-ovldap",
             "Text": "Online: "
           }
         ],
@@ -12237,7 +12237,7 @@
             "Text": "Remove-OVLdapDirectory"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/get-ovldapdirectory.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/get-ovldapdirectory",
             "Text": "Online: "
           }
         ],
@@ -12354,7 +12354,7 @@
             "Text": "Show-OVLdapGroups"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/get-ovldapgroup.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/get-ovldapgroup",
             "Text": "Online: "
           }
         ],
@@ -12469,7 +12469,7 @@
             "Text": "Remove-OVLicense"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovlicense.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovlicense",
             "Text": "Online: "
           }
         ],
@@ -12607,7 +12607,7 @@
             "Text": "Update-OVLogicalEnclosureFirmware"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/get-ovlogicalenclosure.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/get-ovlogicalenclosure",
             "Text": "Online: "
           }
         ],
@@ -12785,7 +12785,7 @@
             "Text": "Update-OVLogicalInterconnect"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/get-ovlogicalinterconnect.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/get-ovlogicalinterconnect",
             "Text": "Online: "
           }
         ],
@@ -12941,7 +12941,7 @@
             "Text": "Remove-OVLogicalInterconnectGroup"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/get-ovlogicalinterconnectgroup.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/get-ovlogicalinterconnectgroup",
             "Text": "Online: "
           }
         ],
@@ -13042,7 +13042,7 @@
             "Text": "Enable-OVLogicalInterconnectPortMonitoring"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/get-ovlogicalinterconnectportmonitoring.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/get-ovlogicalinterconnectportmonitoring",
             "Text": "Online: "
           }
         ],
@@ -13145,7 +13145,7 @@
             "Text": "Set-OVLogicalJBOD"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/get-ovlogicaljbod.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/get-ovlogicaljbod",
             "Text": "Online: "
           }
         ],
@@ -13289,7 +13289,7 @@
             "Text": "Update-OVLogicalSwitch"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/get-ovlogicalswitch.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/get-ovlogicalswitch",
             "Text": "Online: "
           }
         ],
@@ -13435,7 +13435,7 @@
             "Text": "Remove-OVLogicalSwitchGroup"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/get-ovlogicalswitchgroup.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/get-ovlogicalswitchgroup",
             "Text": "Online: "
           }
         ],
@@ -13518,7 +13518,7 @@
             "Text": "Set-OVLoginMessage"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovloginmessage.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovloginmessage",
             "Text": "Online: "
           }
         ],
@@ -13608,7 +13608,7 @@
             "Text": "Set-OVManagedSan"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/get-ovmanagedsan.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/get-ovmanagedsan",
             "Text": "Online: "
           }
         ],
@@ -13799,7 +13799,7 @@
             "Text": "Set-OVNetworkSet"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/get-ovnetwork.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/get-ovnetwork",
             "Text": "Online: "
           }
         ],
@@ -13947,7 +13947,7 @@
             "Text": "Set-OVNetworkSet"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/get-ovnetworkset.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/get-ovnetworkset",
             "Text": "Online: "
           }
         ],
@@ -14067,7 +14067,7 @@
             "Text": "Get-OVOSDeploymentPlanAttribute"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/get-ovosdeploymentplan.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/get-ovosdeploymentplan",
             "Text": "Online: "
           }
         ],
@@ -14147,7 +14147,7 @@
             "Text": "Get-OVOSDeploymentPlan"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/get-ovosdeploymentplanattribute.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/get-ovosdeploymentplanattribute",
             "Text": "Online: "
           }
         ],
@@ -14236,7 +14236,7 @@
             "Text": "Remove-OVOSDeploymentServer"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/get-ovosdeploymentserver.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/get-ovosdeploymentserver",
             "Text": "Online: "
           }
         ],
@@ -14309,7 +14309,7 @@
             "Text": "Remove-OVPendingUpdate"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovpendingupdate.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovpendingupdate",
             "Text": "Online: "
           }
         ],
@@ -14407,7 +14407,7 @@
             "Text": "Remove-OVPowerDevice"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/get-ovpowerdevice.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/get-ovpowerdevice",
             "Text": "Online: "
           }
         ],
@@ -14487,7 +14487,7 @@
             "Text": "Get-OVPowerDevice"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/get-ovpowerpotentialdeviceconnection.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/get-ovpowerpotentialdeviceconnection",
             "Text": "Online: "
           }
         ],
@@ -14597,7 +14597,7 @@
             "Text": "Set-OVRackMemberLocation"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/get-ovrack.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/get-ovrack",
             "Text": "Online: "
           }
         ],
@@ -14701,7 +14701,7 @@
             "Text": "Update-OVRackManager"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/get-ovrackmanager.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/get-ovrackmanager",
             "Text": "Online: "
           }
         ],
@@ -14803,7 +14803,7 @@
             "Text": "Set-OVRackMemberLocation"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/get-ovrackmember.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/get-ovrackmember",
             "Text": "Online: "
           }
         ],
@@ -14940,7 +14940,7 @@
             "Text": "Update-OVRemoteSupportEntitlement"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovremotesupport.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovremotesupport",
             "Text": "Online: "
           }
         ],
@@ -15028,7 +15028,7 @@
             "Text": "Set-OVRemoteSupportPrimaryContact"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovremotesupportcontact.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovremotesupportcontact",
             "Text": "Online: "
           }
         ],
@@ -15103,7 +15103,7 @@
             "Text": "Set-OVRemoteSupportDataCollectionSchedule"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovremotesupportdatacollectionschedule.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovremotesupportdatacollectionschedule",
             "Text": "Online: "
           }
         ],
@@ -15168,7 +15168,7 @@
             "Text": "Set-OVRemoteSupportDefaultSite"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovremotesupportdefaultsite.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovremotesupportdefaultsite",
             "Text": "Online: "
           }
         ],
@@ -15252,7 +15252,7 @@
             "Text": "Get-OVServer"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovremotesupportentitlementstatus.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovremotesupportentitlementstatus",
             "Text": "Online: "
           }
         ],
@@ -15331,7 +15331,7 @@
             "Text": "Remove-OVRemoteSupportPartner"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovremotesupportpartner.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovremotesupportpartner",
             "Text": "Online: "
           }
         ],
@@ -15429,7 +15429,7 @@
             "Text": "Set-OVRemoteSupportSetting"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovremotesupportsetting.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovremotesupportsetting",
             "Text": "Online: "
           }
         ],
@@ -15507,7 +15507,7 @@
             "Text": "Set-OVRemoteSyslog"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovremotesyslog.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovremotesyslog",
             "Text": "Online: "
           }
         ],
@@ -15564,7 +15564,7 @@
             "Text": "Set-OVReservedVlanRange"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/get-ovreservedvlanrange.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/get-ovreservedvlanrange",
             "Text": "Online: "
           }
         ],
@@ -15600,7 +15600,7 @@
         "Examples": [],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/get-ovrole.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/get-ovrole",
             "Text": "Online: "
           }
         ],
@@ -15686,7 +15686,7 @@
             "Text": "Update-OVSanManager"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/get-ovsanmanager.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/get-ovsanmanager",
             "Text": "Online: "
           }
         ],
@@ -15767,7 +15767,7 @@
             "Text": "Get-OVManagedSan"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/get-ovsanzone.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/get-ovsanzone",
             "Text": "Online: "
           }
         ],
@@ -15861,7 +15861,7 @@
             "Text": "Get-OVInterconnectType"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/get-ovsasinterconnecttype.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/get-ovsasinterconnecttype",
             "Text": "Online: "
           }
         ],
@@ -15981,7 +15981,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/get-ovsaslogicalinterconnect.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/get-ovsaslogicalinterconnect",
             "Text": "Online: "
           },
           {
@@ -16104,7 +16104,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovscmbcertificates.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovscmbcertificates",
             "Text": "Online: "
           }
         ],
@@ -16223,7 +16223,7 @@
             "Text": "Remove-OVScope"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovscope.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovscope",
             "Text": "Online: "
           }
         ],
@@ -16553,7 +16553,7 @@
             "Text": "Set-OVServerOneTimeBoot"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/get-ovserver.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/get-ovserver",
             "Text": "Online: "
           }
         ],
@@ -16685,7 +16685,7 @@
             "Text": "Set-OVServerHardwareType"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/get-ovserverhardwaretype.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/get-ovserverhardwaretype",
             "Text": "Online: "
           }
         ],
@@ -16781,7 +16781,7 @@
             "Text": "Set-OVServerOneTimeBoot"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/get-ovserveronetimeboot.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/get-ovserveronetimeboot",
             "Text": "Online: "
           }
         ],
@@ -17062,7 +17062,7 @@
             "Text": "Set-OVServerOneTimeBoot"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/get-ovserverprofile.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/get-ovserverprofile",
             "Text": "Online: "
           }
         ],
@@ -17205,7 +17205,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/get-ovserverprofileconnectionlist.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/get-ovserverprofileconnectionlist",
             "Text": "Online: "
           }
         ],
@@ -17276,7 +17276,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/get-ovserverprofilemessage.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/get-ovserverprofilemessage",
             "Text": "Online: "
           }
         ],
@@ -17457,7 +17457,7 @@
             "Text": "Set-OVServerProfileTemplate"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/get-ovserverprofiletemplate.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/get-ovserverprofiletemplate",
             "Text": "Online: "
           }
         ],
@@ -17670,7 +17670,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovservicealert.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovservicealert",
             "Text": "Online: "
           }
         ],
@@ -17767,7 +17767,7 @@
             "Text": "Remove-OVSmtpAlertEmailFilter"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovsmtpconfig.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovsmtpconfig",
             "Text": "Online: "
           }
         ],
@@ -17824,7 +17824,7 @@
             "Text": "Set-OVSnmpReadCommunity"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovsnmpreadcommunity.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovsnmpreadcommunity",
             "Text": "Online: "
           }
         ],
@@ -17895,7 +17895,7 @@
             "Text": "Remove-OVSnmpV3User"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovsnmpv3user.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovsnmpv3user",
             "Text": "Online: "
           }
         ],
@@ -18061,7 +18061,7 @@
             "Text": "Update-OVStoragePool"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/get-ovstoragepool.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/get-ovstoragepool",
             "Text": "Online: "
           }
         ],
@@ -18218,7 +18218,7 @@
             "Text": "Update-OVStorageSystem"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/get-ovstoragesystem.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/get-ovstoragesystem",
             "Text": "Online: "
           }
         ],
@@ -18429,7 +18429,7 @@
             "Text": "Set-OVStorageVolumeTemplatePolicy"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/get-ovstoragevolume.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/get-ovstoragevolume",
             "Text": "Online: "
           }
         ],
@@ -18547,7 +18547,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/get-ovstoragevolumeset.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/get-ovstoragevolumeset",
             "Text": "Online: "
           }
         ],
@@ -18639,7 +18639,7 @@
             "Text": "Remove-OVStorageVolumeSnapshot"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/get-ovstoragevolumesnapshot.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/get-ovstoragevolumesnapshot",
             "Text": "Online: "
           }
         ],
@@ -18759,7 +18759,7 @@
             "Text": "Set-OVStorageVolumeTemplatePolicy"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/get-ovstoragevolumetemplate.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/get-ovstoragevolumetemplate",
             "Text": "Online: "
           }
         ],
@@ -18828,7 +18828,7 @@
             "Text": "Set-OVStorageVolumeTemplatePolicy"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/get-ovstoragevolumetemplatepolicy.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/get-ovstoragevolumetemplatepolicy",
             "Text": "Online: "
           }
         ],
@@ -18927,7 +18927,7 @@
             "Text": "Get-OVSwitchType"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/get-ovswitch.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/get-ovswitch",
             "Text": "Online: "
           }
         ],
@@ -19034,7 +19034,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/get-ovswitchtype.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/get-ovswitchtype",
             "Text": "Online: "
           }
         ],
@@ -19177,7 +19177,7 @@
             "Text": "Wait-OVTaskStart"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovtask.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovtask",
             "Text": "Online: "
           }
         ],
@@ -19310,7 +19310,7 @@
             "Text": "Remove-OVUnmanagedDevice"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/get-ovunmanageddevice.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/get-ovunmanageddevice",
             "Text": "Online: "
           }
         ],
@@ -19452,7 +19452,7 @@
             "Text": "New-OVUplinkSet"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/get-ovuplinkset.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/get-ovuplinkset",
             "Text": "Online: "
           }
         ],
@@ -19590,7 +19590,7 @@
             "Text": "Show-OVUserSession"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovuser.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovuser",
             "Text": "Online: "
           }
         ],
@@ -19677,7 +19677,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/get-ovversion.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/get-ovversion",
             "Text": "Online: "
           }
         ],
@@ -19749,7 +19749,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/get-ovxapiversion.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/get-ovxapiversion",
             "Text": "Online: "
           }
         ],
@@ -19807,7 +19807,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/import-ovsslcertificate.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/import-ovsslcertificate",
             "Text": "Online: "
           }
         ],
@@ -19889,7 +19889,7 @@
             "Text": "Get-OVApplianceCertificateStatus"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/install-ovappliancecertificate.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/install-ovappliancecertificate",
             "Text": "Online: "
           }
         ],
@@ -20100,7 +20100,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/install-ovlogicalinterconnectfirmware.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/install-ovlogicalinterconnectfirmware",
             "Text": "Online: "
           },
           {
@@ -20368,7 +20368,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/install-ovupdate.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/install-ovupdate",
             "Text": "Online: "
           }
         ],
@@ -20688,7 +20688,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/invoke-ovvcmmigration.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/invoke-ovvcmmigration",
             "Text": "Online: "
           }
         ],
@@ -20913,7 +20913,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/invoke-ovwebbrowser.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/invoke-ovwebbrowser",
             "Text": "Online: "
           }
         ],
@@ -21019,7 +21019,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/join-ovserverprofiletotemplate.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/join-ovserverprofiletotemplate",
             "Text": "Online: "
           }
         ],
@@ -21158,7 +21158,7 @@
             "Text": "Remove-OVAddressPoolRange"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/new-ovaddresspoolrange.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/new-ovaddresspoolrange",
             "Text": "Online: "
           }
         ],
@@ -21325,7 +21325,7 @@
             "Text": "Set-OVAddressPoolSubnet"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/new-ovaddresspoolsubnet.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/new-ovaddresspoolsubnet",
             "Text": "Online: "
           }
         ],
@@ -21558,7 +21558,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/new-ovappliancecsr.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/new-ovappliancecsr",
             "Text": "Online: "
           }
         ],
@@ -21706,7 +21706,7 @@
             "Text": "Get-OVApplianceDataAtRestEncryption"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/new-ovappliancedataatrestencryptionkey.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/new-ovappliancedataatrestencryptionkey",
             "Text": "Online: "
           }
         ],
@@ -21893,7 +21893,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/new-ovapplianceselfsignedcertificate.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/new-ovapplianceselfsignedcertificate",
             "Text": "Online: "
           }
         ],
@@ -22065,7 +22065,7 @@
             "Text": "Remove-OVApplianceTrapDestination"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/new-ovappliancetrapdestination.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/new-ovappliancetrapdestination",
             "Text": "Online: "
           }
         ],
@@ -22207,7 +22207,7 @@
             "Text": "Save-OVBackup"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/new-ovbackup.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/new-ovbackup",
             "Text": "Online: "
           }
         ],
@@ -22623,7 +22623,7 @@
             "Text": "Update-OVClusterProfile"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/cluster/new-ovclusterprofile.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/cluster/new-ovclusterprofile",
             "Text": "Online: "
           }
         ],
@@ -22958,7 +22958,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/cluster/new-ovclusterprofilemember.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/cluster/new-ovclusterprofilemember",
             "Text": "Online: "
           }
         ],
@@ -23073,7 +23073,7 @@
             "Text": "Restore-OVCustomBaseline"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/new-ovcustombaseline.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/new-ovcustombaseline",
             "Text": "Online: "
           }
         ],
@@ -23369,7 +23369,7 @@
             "Text": "Set-OVDataCenterRemoteSupport"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/new-ovdatacenter.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/new-ovdatacenter",
             "Text": "Online: "
           }
         ],
@@ -23779,7 +23779,7 @@
             "Text": "Set-OVEnclosureGroup"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/new-ovenclosuregroup.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/new-ovenclosuregroup",
             "Text": "Online: "
           }
         ],
@@ -24069,7 +24069,7 @@
             "Text": "Update-OVExternalRepository"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/new-ovexternalrepository.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/new-ovexternalrepository",
             "Text": "Online: "
           }
         ],
@@ -24330,7 +24330,7 @@
             "Text": "Remove-OVLdapDirectory"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/new-ovldapdirectory.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/new-ovldapdirectory",
             "Text": "Online: "
           }
         ],
@@ -24590,7 +24590,7 @@
             "Text": "Show-OVLdapGroups"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/new-ovldapgroup.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/new-ovldapgroup",
             "Text": "Online: "
           }
         ],
@@ -24769,7 +24769,7 @@
             "Text": "Remove-OVLdapServer"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/new-ovldapserver.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/new-ovldapserver",
             "Text": "Online: "
           }
         ],
@@ -24867,7 +24867,7 @@
             "Text": "Remove-OVLicense"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/new-ovlicense.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/new-ovlicense",
             "Text": "Online: "
           }
         ],
@@ -25124,7 +25124,7 @@
             "Text": "Update-OVLogicalEnclosureFirmware"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/new-ovlogicalenclosure.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/new-ovlogicalenclosure",
             "Text": "Online: "
           }
         ],
@@ -25638,7 +25638,7 @@
             "Text": "Remove-OVLogicalInterconnectGroup"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/new-ovlogicalinterconnectgroup.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/new-ovlogicalinterconnectgroup",
             "Text": "Online: "
           }
         ],
@@ -26100,7 +26100,7 @@
             "Text": "Set-OVLogicalJBOD"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/new-ovlogicaljbod.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/new-ovlogicaljbod",
             "Text": "Online: "
           }
         ],
@@ -26481,7 +26481,7 @@
             "Text": "Update-OVLogicalSwitch"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/new-ovlogicalswitch.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/new-ovlogicalswitch",
             "Text": "Online: "
           }
         ],
@@ -26826,7 +26826,7 @@
             "Text": "Remove-OVLogicalSwitchGroup"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/new-ovlogicalswitchgroup.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/new-ovlogicalswitchgroup",
             "Text": "Online: "
           }
         ],
@@ -27160,7 +27160,7 @@
             "Text": "Set-OVNetworkSet"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/new-ovnetwork.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/new-ovnetwork",
             "Text": "Online: "
           }
         ],
@@ -27502,7 +27502,7 @@
             "Text": "Set-OVNetworkSet"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/new-ovnetworkset.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/new-ovnetworkset",
             "Text": "Online: "
           }
         ],
@@ -27639,7 +27639,7 @@
             "Text": "Remove-OVOSDeploymentServer"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/new-ovosdeploymentserver.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/new-ovosdeploymentserver",
             "Text": "Online: "
           }
         ],
@@ -27707,7 +27707,7 @@
             "Text": "Remove-OVPowerDevice"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/new-ovpowerdevice.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/new-ovpowerdevice",
             "Text": "Online: "
           }
         ]
@@ -27782,7 +27782,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/new-ovqosconfig.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/new-ovqosconfig",
             "Text": "Online: "
           }
         ],
@@ -27946,7 +27946,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/new-ovqostrafficclass.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/new-ovqostrafficclass",
             "Text": "Online: "
           }
         ],
@@ -28159,7 +28159,7 @@
             "Text": "Update-OVRackManager"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/new-ovrack.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/new-ovrack",
             "Text": "Online: "
           }
         ],
@@ -28348,7 +28348,7 @@
             "Text": "Remove-OVRemoteSupportContact"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/new-ovremotesupportcontact.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/new-ovremotesupportcontact",
             "Text": "Online: "
           }
         ],
@@ -28492,7 +28492,7 @@
             "Text": "Remove-OVRemoteSupportPartner"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/new-ovremotesupportpartner.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/new-ovremotesupportpartner",
             "Text": "Online: "
           }
         ],
@@ -28609,7 +28609,7 @@
             "Text": "Set-OVResource"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/new-ovresource.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/new-ovresource",
             "Text": "Online: "
           }
         ],
@@ -28723,7 +28723,7 @@
             "Text": "Save-OVApplianceDataAtRestEncryptionKey"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/new-ovrestore.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/new-ovrestore",
             "Text": "Online: "
           }
         ],
@@ -28822,7 +28822,7 @@
             "Text": "Remove-OVScope"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/new-ovscope.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/new-ovscope",
             "Text": "Online: "
           }
         ],
@@ -29575,7 +29575,7 @@
             "Text": "Update-OVServerProfile"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/new-ovserverprofile.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/new-ovserverprofile",
             "Text": "Online: "
           }
         ],
@@ -30195,7 +30195,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/new-ovserverprofileassign.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/new-ovserverprofileassign",
             "Text": "Online: "
           }
         ],
@@ -30645,7 +30645,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/new-ovserverprofileattachvolume.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/new-ovserverprofileattachvolume",
             "Text": "Online: "
           }
         ],
@@ -31264,7 +31264,7 @@
             "Text": "Get-OVServerProfileConnectionList"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/new-ovserverprofileconnection.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/new-ovserverprofileconnection",
             "Text": "Online: "
           }
         ],
@@ -31755,7 +31755,7 @@
             "Text": "New-OVServerProfileLogicalDiskController"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/new-ovserverprofilelogicaldisk.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/new-ovserverprofilelogicaldisk",
             "Text": "Online: "
           }
         ],
@@ -31960,7 +31960,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/new-ovserverprofilelogicaldiskcontroller.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/new-ovserverprofilelogicaldiskcontroller",
             "Text": "Online: "
           }
         ],
@@ -32588,7 +32588,7 @@
             "Text": "Set-OVServerProfileTemplate"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/new-ovserverprofiletemplate.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/new-ovserverprofiletemplate",
             "Text": "Online: "
           }
         ],
@@ -33062,7 +33062,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/new-ovsnmpconfiguration.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/new-ovsnmpconfiguration",
             "Text": "Online: "
           }
         ],
@@ -33302,7 +33302,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/new-ovsnmptrapdestination.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/new-ovsnmptrapdestination",
             "Text": "Online: "
           }
         ],
@@ -33507,7 +33507,7 @@
             "Text": "Remove-OVSnmpV3User"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/new-ovsnmpv3user.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/new-ovsnmpv3user",
             "Text": "Online: "
           }
         ],
@@ -33944,7 +33944,7 @@
             "Text": "Set-OVStorageVolumeTemplatePolicy"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/new-ovstoragevolume.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/new-ovstoragevolume",
             "Text": "Online: "
           }
         ],
@@ -34233,7 +34233,7 @@
             "Text": "Remove-OVStorageVolumeSnapshot"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/new-ovstoragevolumesnapshot.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/new-ovstoragevolumesnapshot",
             "Text": "Online: "
           }
         ],
@@ -34723,7 +34723,7 @@
             "Text": "Set-OVStorageVolumeTemplatePolicy"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/new-ovstoragevolumetemplate.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/new-ovstoragevolumetemplate",
             "Text": "Online: "
           }
         ],
@@ -35205,7 +35205,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/new-ovsupportdump.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/new-ovsupportdump",
             "Text": "Online: "
           }
         ],
@@ -35429,7 +35429,7 @@
             "Text": "Remove-OVUnmanagedDevice"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/new-ovunmanageddevice.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/new-ovunmanageddevice",
             "Text": "Online: "
           }
         ],
@@ -35758,7 +35758,7 @@
             "Text": "Get-OVUplinkSet"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/new-ovuplinkset.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/new-ovuplinkset",
             "Text": "Online: "
           }
         ],
@@ -36125,7 +36125,7 @@
             "Text": "Show-OVUserSession"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/new-ovuser.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/new-ovuser",
             "Text": "Online: "
           }
         ],
@@ -36276,7 +36276,7 @@
             "Text": "Set-OVAddressPoolSubnet"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/ping-ovaddress.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/ping-ovaddress",
             "Text": "Online: "
           }
         ],
@@ -36345,15 +36345,15 @@
             "Text": "Push-OVAppliancePermission"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/pop-ovappliancepermission.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/pop-ovappliancepermission",
             "Text": "about_Appliance_Connection_Permissions"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/pop-ovappliancepermission.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/pop-ovappliancepermission",
             "Text": "[${Global:ConnectedSessions}]"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/pop-ovappliancepermission.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/pop-ovappliancepermission",
             "Text": "Online: "
           }
         ],
@@ -36425,15 +36425,15 @@
             "Text": "Pop-OVAppliancePermission"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/push-ovappliancepermission.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/push-ovappliancepermission",
             "Text": "about_Appliance_Connection_Permissions"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/push-ovappliancepermission.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/push-ovappliancepermission",
             "Text": "[${Global:ConnectedSessions}]"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/push-ovappliancepermission.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/push-ovappliancepermission",
             "Text": "Online: "
           }
         ],
@@ -36533,7 +36533,7 @@
             "Text": "New-OVAddressPoolRange"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/remove-ovaddresspoolrange.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/remove-ovaddresspoolrange",
             "Text": "Online: "
           }
         ],
@@ -36637,7 +36637,7 @@
             "Text": "Set-OVAddressPoolSubnet"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/remove-ovaddresspoolsubnet.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/remove-ovaddresspoolsubnet",
             "Text": "Online: "
           }
         ],
@@ -36726,7 +36726,7 @@
             "Text": "Set-OVAlert"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/remove-ovalert.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/remove-ovalert",
             "Text": "Online: "
           }
         ],
@@ -36815,7 +36815,7 @@
             "Text": "Set-OVApplianceProxy"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/remove-ovapplianceproxy.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/remove-ovapplianceproxy",
             "Text": "Online: "
           }
         ],
@@ -36915,7 +36915,7 @@
             "Text": "New-OVApplianceTrapDestination"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/remove-ovappliancetrapdestination.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/remove-ovappliancetrapdestination",
             "Text": "Online: "
           }
         ],
@@ -37000,7 +37000,7 @@
             "Text": "Get-OVApplianceTrustedCertificate"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/remove-ovappliancetrustedcertificate.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/remove-ovappliancetrustedcertificate",
             "Text": "Online: "
           }
         ],
@@ -37122,7 +37122,7 @@
             "Text": "Show-OVBaselineRepositorySize"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/remove-ovbaseline.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/remove-ovbaseline",
             "Text": "Online: "
           }
         ],
@@ -37235,7 +37235,7 @@
             "Text": "Set-OVClusterManager"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/cluster/remove-ovclustermanager.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/cluster/remove-ovclustermanager",
             "Text": "Online: "
           }
         ],
@@ -37352,7 +37352,7 @@
             "Text": "Update-OVClusterProfile"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/cluster/remove-ovclusterprofile.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/cluster/remove-ovclusterprofile",
             "Text": "Online: "
           }
         ],
@@ -37444,7 +37444,7 @@
             "Text": "Set-OVDataCenterRemoteSupport"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/remove-ovdatacenter.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/remove-ovdatacenter",
             "Text": "Online: "
           }
         ],
@@ -37594,7 +37594,7 @@
             "Text": "Update-OVEnclosure"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/remove-ovenclosure.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/remove-ovenclosure",
             "Text": "Online: "
           }
         ],
@@ -37721,7 +37721,7 @@
             "Text": "Set-OVEnclosureGroup"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/remove-ovenclosuregroup.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/remove-ovenclosuregroup",
             "Text": "Online: "
           }
         ],
@@ -37828,7 +37828,7 @@
             "Text": "Update-OVExternalRepository"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/remove-ovexternalrepository.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/remove-ovexternalrepository",
             "Text": "Online: "
           }
         ],
@@ -37925,7 +37925,7 @@
             "Text": "Get-OVFabricManager"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/remove-ovfabricmanager.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/remove-ovfabricmanager",
             "Text": "Online: "
           }
         ],
@@ -38043,7 +38043,7 @@
             "Text": "New-OVLdapDirectory"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/remove-ovldapdirectory.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/remove-ovldapdirectory",
             "Text": "Online: "
           }
         ],
@@ -38159,7 +38159,7 @@
             "Text": "Show-OVLdapGroups"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/remove-ovldapgroup.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/remove-ovldapgroup",
             "Text": "Online: "
           }
         ],
@@ -38274,7 +38274,7 @@
             "Text": "New-OVLdapServer"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/remove-ovldapserver.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/remove-ovldapserver",
             "Text": "Online: "
           }
         ],
@@ -38408,7 +38408,7 @@
             "Text": "New-OVLicense"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/remove-ovlicense.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/remove-ovlicense",
             "Text": "Online: "
           }
         ],
@@ -38529,7 +38529,7 @@
             "Text": "Update-OVLogicalEnclosureFirmware"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/remove-ovlogicalenclosure.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/remove-ovlogicalenclosure",
             "Text": "Online: "
           }
         ],
@@ -38647,7 +38647,7 @@
             "Text": "New-OVLogicalInterconnectGroup"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/remove-ovlogicalinterconnectgroup.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/remove-ovlogicalinterconnectgroup",
             "Text": "Online: "
           }
         ],
@@ -38783,7 +38783,7 @@
             "Text": "Set-OVLogicalJBOD"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/remove-ovlogicaljbod.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/remove-ovlogicaljbod",
             "Text": "Online: "
           }
         ],
@@ -38924,7 +38924,7 @@
             "Text": "Update-OVLogicalSwitch"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/remove-ovlogicalswitch.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/remove-ovlogicalswitch",
             "Text": "Online: "
           }
         ],
@@ -39039,7 +39039,7 @@
             "Text": "New-OVLogicalSwitchGroup"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/remove-ovlogicalswitchgroup.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/remove-ovlogicalswitchgroup",
             "Text": "Online: "
           }
         ],
@@ -39182,7 +39182,7 @@
             "Text": "Set-OVNetworkSet"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/remove-ovnetwork.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/remove-ovnetwork",
             "Text": "Online: "
           }
         ],
@@ -39295,7 +39295,7 @@
             "Text": "Set-OVNetworkSet"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/remove-ovnetworkset.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/remove-ovnetworkset",
             "Text": "Online: "
           }
         ],
@@ -39390,7 +39390,7 @@
             "Text": "New-OVOSDeploymentServer"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/remove-ovosdeploymentserver.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/remove-ovosdeploymentserver",
             "Text": "Online: "
           }
         ],
@@ -39491,7 +39491,7 @@
             "Text": "Get-OVPendingUpdate"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/remove-ovpendingupdate.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/remove-ovpendingupdate",
             "Text": "Online: "
           }
         ],
@@ -39624,7 +39624,7 @@
             "Text": "New-OVPowerDevice"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/remove-ovpowerdevice.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/remove-ovpowerdevice",
             "Text": "Online: "
           }
         ],
@@ -39744,7 +39744,7 @@
             "Text": "Update-OVRackManager"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/remove-ovrack.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/remove-ovrack",
             "Text": "Online: "
           }
         ],
@@ -39837,7 +39837,7 @@
             "Text": "Update-OVRackManager"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/remove-ovrackmanager.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/remove-ovrackmanager",
             "Text": "Online: "
           }
         ],
@@ -39922,7 +39922,7 @@
             "Text": "Set-OVRackMemberLocation"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/remove-ovrackmember.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/remove-ovrackmember",
             "Text": "Online: "
           }
         ],
@@ -39999,7 +39999,7 @@
             "Text": "New-OVRemoteSupportContact"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/remove-ovremotesupportcontact.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/remove-ovremotesupportcontact",
             "Text": "Online: "
           }
         ],
@@ -40076,7 +40076,7 @@
             "Text": "New-OVRemoteSupportPartner"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/remove-ovremotesupportpartner.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/remove-ovremotesupportpartner",
             "Text": "Online: "
           }
         ],
@@ -40191,7 +40191,7 @@
             "Text": "Set-OVResource"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/remove-ovresource.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/remove-ovresource",
             "Text": "Online: "
           }
         ],
@@ -40289,7 +40289,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/remove-ovresourcefromlabel.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/remove-ovresourcefromlabel",
             "Text": "Online: "
           }
         ],
@@ -40394,7 +40394,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/remove-ovresourcefromscope.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/remove-ovresourcefromscope",
             "Text": "Online: "
           }
         ],
@@ -40510,7 +40510,7 @@
             "Text": "Update-OVSanManager"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/remove-ovsanmanager.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/remove-ovsanmanager",
             "Text": "Online: "
           }
         ],
@@ -40571,7 +40571,7 @@
             "Text": "Get-OVScmbCertificates"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/remove-ovscmbcertificate.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/remove-ovscmbcertificate",
             "Text": "Online: "
           }
         ],
@@ -40643,7 +40643,7 @@
             "Text": "New-OVScope"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/remove-ovscope.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/remove-ovscope",
             "Text": "Online: "
           }
         ],
@@ -40899,7 +40899,7 @@
             "Text": "Get-OVServerOneTimeBoot"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/remove-ovserver.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/remove-ovserver",
             "Text": "Online: "
           }
         ],
@@ -41106,7 +41106,7 @@
             "Text": "Update-OVServerProfile"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/remove-ovserverprofile.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/remove-ovserverprofile",
             "Text": "Online: "
           }
         ],
@@ -41249,7 +41249,7 @@
             "Text": "Set-OVServerProfileTemplate"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/remove-ovserverprofiletemplate.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/remove-ovserverprofiletemplate",
             "Text": "Online: "
           }
         ],
@@ -41348,7 +41348,7 @@
             "Text": "New-OVSnmpV3User"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/remove-ovsnmpv3user.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/remove-ovsnmpv3user",
             "Text": "Online: "
           }
         ],
@@ -41443,7 +41443,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/remove-ovstandbycomposernode.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/remove-ovstandbycomposernode",
             "Text": "Online: "
           }
         ],
@@ -41576,7 +41576,7 @@
             "Text": "Update-OVStoragePool"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/remove-ovstoragepool.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/remove-ovstoragepool",
             "Text": "Online: "
           }
         ],
@@ -41715,7 +41715,7 @@
             "Text": "Update-OVStorageSystem"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/remove-ovstoragesystem.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/remove-ovstoragesystem",
             "Text": "Online: "
           }
         ],
@@ -41891,7 +41891,7 @@
             "Text": "Set-OVStorageVolumeTemplatePolicy"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/remove-ovstoragevolume.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/remove-ovstoragevolume",
             "Text": "Online: "
           }
         ],
@@ -42013,7 +42013,7 @@
             "Text": "New-OVStorageVolumeSnapshot"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/remove-ovstoragevolumesnapshot.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/remove-ovstoragevolumesnapshot",
             "Text": "Online: "
           }
         ],
@@ -42152,7 +42152,7 @@
             "Text": "Set-OVStorageVolumeTemplatePolicy"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/remove-ovstoragevolumetemplate.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/remove-ovstoragevolumetemplate",
             "Text": "Online: "
           }
         ],
@@ -42271,7 +42271,7 @@
             "Text": "New-OVUnmanagedDevice"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/remove-ovunmanageddevice.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/remove-ovunmanageddevice",
             "Text": "Online: "
           }
         ],
@@ -42386,7 +42386,7 @@
             "Text": "Show-OVUserSession"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/remove-ovuser.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/remove-ovuser",
             "Text": "Online: "
           }
         ],
@@ -42538,7 +42538,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/reset-ovenclosuredevice.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/reset-ovenclosuredevice",
             "Text": "Online: "
           },
           {
@@ -42679,7 +42679,7 @@
             "Text": "Get-OVInterconnect"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/reset-ovinterconnectnetoppassword.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/reset-ovinterconnectnetoppassword",
             "Text": "Online: "
           }
         ],
@@ -42965,7 +42965,7 @@
             "Text": "Wait-OVApplianceStart"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/restart-ovappliance.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/restart-ovappliance",
             "Text": "Online: "
           }
         ],
@@ -43222,7 +43222,7 @@
             "Text": "Get-OVServerOneTimeBoot"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/restart-ovserver.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/restart-ovserver",
             "Text": "Online: "
           }
         ],
@@ -43309,7 +43309,7 @@
             "Text": "New-OVCustomBaseline"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/restore-ovcustombaseline.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/restore-ovcustombaseline",
             "Text": "Online: "
           }
         ],
@@ -43388,7 +43388,7 @@
             "Text": "Get-OVApplianceDataAtRestEncryption"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/save-ovappliancedataatrestencryptionkey.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/save-ovappliancedataatrestencryptionkey",
             "Text": "Online: "
           }
         ],
@@ -43492,7 +43492,7 @@
             "Text": "New-OVBackup"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/save-ovbackup.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/save-ovbackup",
             "Text": "Online: "
           }
         ],
@@ -43667,7 +43667,7 @@
             "Text": "Update-OVServerProfile"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/save-ovserverprofile.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/save-ovserverprofile",
             "Text": "Online: "
           }
         ],
@@ -43772,7 +43772,7 @@
             "Text": "Set-OVServerProfileTemplate"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/save-ovserverprofiletemplate.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/save-ovserverprofiletemplate",
             "Text": "Online: "
           }
         ],
@@ -43891,7 +43891,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/search-ovassociations.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/search-ovassociations",
             "Text": "Online: "
           }
         ],
@@ -44009,7 +44009,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/search-ovindex.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/search-ovindex",
             "Text": "Online: "
           }
         ],
@@ -44191,7 +44191,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/send-ovrequest.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/send-ovrequest",
             "Text": "Online: "
           }
         ],
@@ -44338,7 +44338,7 @@
             "Text": "Remove-OVAddressPoolSubnet"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovaddresspoolsubnet.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovaddresspoolsubnet",
             "Text": "Online: "
           }
         ],
@@ -44487,7 +44487,7 @@
             "Text": "Remove-OVAlert"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovalert.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovalert",
             "Text": "Online: "
           }
         ],
@@ -44653,7 +44653,7 @@
             "Text": "Test-OVApplianceAuditLogForwarding"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovapplianceauditlogforwarding.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovapplianceauditlogforwarding",
             "Text": "Online: "
           }
         ],
@@ -44754,7 +44754,7 @@
             "Text": "Show-OVApplianceSecurityModeCompatibilityReport"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovappliancecurrentsecuritymode.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovappliancecurrentsecuritymode",
             "Text": "Online: "
           }
         ],
@@ -44860,7 +44860,7 @@
             "Text": "Get-OVApplianceDateTime"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovappliancedatetime.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovappliancedatetime",
             "Text": "Online: "
           }
         ],
@@ -44952,15 +44952,15 @@
             "Text": "Disconnect-OVMgmt"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/set-ovappliancedefaultconnection.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/set-ovappliancedefaultconnection",
             "Text": "about_Appliance_Connection_Permissions"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/set-ovappliancedefaultconnection.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/set-ovappliancedefaultconnection",
             "Text": "[${Global:ConnectedSessions}]"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/set-ovappliancedefaultconnection.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/set-ovappliancedefaultconnection",
             "Text": "Online: "
           }
         ],
@@ -45047,7 +45047,7 @@
             "Text": "Get-OVApplianceGlobalSetting"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovapplianceglobalsetting.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovapplianceglobalsetting",
             "Text": "Online: "
           }
         ],
@@ -45341,7 +45341,7 @@
             "Text": "Get-OVApplianceNetworkConfig"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovappliancenetworkconfig.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovappliancenetworkconfig",
             "Text": "Online: "
           }
         ],
@@ -45625,7 +45625,7 @@
             "Text": "Remove-OVApplianceProxy"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovapplianceproxy.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovapplianceproxy",
             "Text": "Online: "
           }
         ],
@@ -45747,7 +45747,7 @@
             "Text": "Show-OVApplianceSecurityModeCompatibilityReport"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovappliancesecurityprotocol.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovappliancesecurityprotocol",
             "Text": "Online: "
           }
         ],
@@ -45818,7 +45818,7 @@
             "Text": "Get-OVApplianceSnmpV3EngineId"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovappliancesnmpv3engineid.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovappliancesnmpv3engineid",
             "Text": "Online: "
           }
         ],
@@ -45983,7 +45983,7 @@
             "Text": "Get-OVApplianceTwoFactorAuthentication"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovappliancetwofactorauthentication.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovappliancetwofactorauthentication",
             "Text": "Online: "
           }
         ],
@@ -46221,7 +46221,7 @@
             "Text": "Get-OVAutomaticBackupConfig"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovautomaticbackupconfig.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovautomaticbackupconfig",
             "Text": "Online: "
           }
         ],
@@ -46464,7 +46464,7 @@
             "Text": "Remove-OVClusterManager"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/cluster/set-ovclustermanager.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/cluster/set-ovclustermanager",
             "Text": "Online: "
           }
         ],
@@ -46798,7 +46798,7 @@
             "Text": "Set-OVDataCenterRemoteSupport"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/set-ovdatacenter.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/set-ovdatacenter",
             "Text": "Online: "
           }
         ],
@@ -47011,7 +47011,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovdatacenterremotesupport.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovdatacenterremotesupport",
             "Text": "Online: "
           }
         ],
@@ -47187,7 +47187,7 @@
             "Text": "Update-OVEnclosure"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/set-ovenclosure.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/set-ovenclosure",
             "Text": "Online: "
           }
         ],
@@ -47306,7 +47306,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/set-ovenclosureactiveflm.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/set-ovenclosureactiveflm",
             "Text": "Online: "
           }
         ],
@@ -47430,7 +47430,7 @@
             "Text": "Remove-OVEnclosureGroup"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/set-ovenclosuregroup.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/set-ovenclosuregroup",
             "Text": "Online: "
           }
         ],
@@ -47513,7 +47513,7 @@
             "Text": "Get-OVEulaStatus"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-oveulastatus.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-oveulastatus",
             "Text": "Online: "
           }
         ],
@@ -47666,7 +47666,7 @@
             "Text": "Update-OVExternalRepository"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovexternalrepository.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovexternalrepository",
             "Text": "Online: "
           }
         ],
@@ -47794,7 +47794,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovinitialpassword.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovinitialpassword",
             "Text": "Online: "
           }
         ],
@@ -47925,7 +47925,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/set-ovldapdefaultdirectory.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/set-ovldapdefaultdirectory",
             "Text": "Online: "
           }
         ],
@@ -48093,7 +48093,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/set-ovldapgrouprole.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/set-ovldapgrouprole",
             "Text": "Online: "
           }
         ],
@@ -48317,7 +48317,7 @@
             "Text": "Update-OVLogicalEnclosureFirmware"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/set-ovlogicalenclosure.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/set-ovlogicalenclosure",
             "Text": "Online: "
           }
         ],
@@ -48476,7 +48476,7 @@
             "Text": "Remove-OVLogicalJBOD"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/set-ovlogicaljbod.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/set-ovlogicaljbod",
             "Text": "Online: "
           }
         ],
@@ -48574,7 +48574,7 @@
             "Text": "Get-OVLoginMessage"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/set-ovloginmessage.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/set-ovloginmessage",
             "Text": "Online: "
           }
         ],
@@ -48817,7 +48817,7 @@
             "Text": "Get-OVManagedSan"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/set-ovmanagedsan.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/set-ovmanagedsan",
             "Text": "Online: "
           }
         ],
@@ -49148,7 +49148,7 @@
             "Text": "Set-OVNetworkSet"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/set-ovnetwork.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/set-ovnetwork",
             "Text": "Online: "
           }
         ],
@@ -49403,7 +49403,7 @@
             "Text": "Remove-OVNetworkSet"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/set-ovnetworkset.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/set-ovnetworkset",
             "Text": "Online: "
           }
         ],
@@ -49514,7 +49514,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/set-ovrackmemberlocation.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/facilities/set-ovrackmemberlocation",
             "Text": "Online: "
           }
         ],
@@ -49749,7 +49749,7 @@
             "Text": "Update-OVRemoteSupportEntitlement"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovremotesupport.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovremotesupport",
             "Text": "Online: "
           }
         ],
@@ -49917,7 +49917,7 @@
             "Text": "Get-OVRemoteSupportDataCollectionSchedule"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovremotesupportdatacollectionschedule.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovremotesupportdatacollectionschedule",
             "Text": "Online: "
           }
         ],
@@ -50058,7 +50058,7 @@
             "Text": "Get-OVRemoteSupportDefaultSite"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovremotesupportdefaultsite.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovremotesupportdefaultsite",
             "Text": "Online: "
           }
         ],
@@ -50169,7 +50169,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovremotesupportprimarycontact.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovremotesupportprimarycontact",
             "Text": "Online: "
           },
           {
@@ -50370,7 +50370,7 @@
             "Text": "Get-OVRemoteSupportSetting"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovremotesupportsetting.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovremotesupportsetting",
             "Text": "Online: "
           }
         ],
@@ -50541,7 +50541,7 @@
             "Text": "Get-OVRemoteSyslog"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovremotesyslog.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovremotesyslog",
             "Text": "Online: "
           }
         ],
@@ -50634,7 +50634,7 @@
             "Text": "Get-OVReservedVlanRange"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovreservedvlanrange.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovreservedvlanrange",
             "Text": "Online: "
           }
         ],
@@ -50743,7 +50743,7 @@
             "Text": "Remove-OVResourceFromScope"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/set-ovresource.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/set-ovresource",
             "Text": "Online: "
           }
         ],
@@ -50970,7 +50970,7 @@
             "Text": "Update-OVSanManager"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/set-ovsanmanager.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/set-ovsanmanager",
             "Text": "Online: "
           }
         ],
@@ -51143,7 +51143,7 @@
             "Text": "Get-OVServerHardwareType"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/set-ovserverhardwaretype.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/set-ovserverhardwaretype",
             "Text": "Online: "
           }
         ],
@@ -51284,7 +51284,7 @@
             "Text": "Get-OVServerOneTimeBoot"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/set-ovserveronetimeboot.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/set-ovserveronetimeboot",
             "Text": "Online: "
           }
         ],
@@ -51400,7 +51400,7 @@
         "Examples": [],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/set-ovserverpower.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/set-ovserverpower",
             "Text": "Online: "
           }
         ],
@@ -51532,7 +51532,7 @@
             "Text": "Update-OVServerProfile"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/set-ovserverprofile.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/set-ovserverprofile",
             "Text": "Online: "
           }
         ],
@@ -51583,7 +51583,7 @@
             "Text": "Save-OVServerProfileTemplate"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/set-ovserverprofiletemplate.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/set-ovserverprofiletemplate",
             "Text": "Online: "
           }
         ],
@@ -51741,7 +51741,7 @@
             "Text": "Remove-OVSmtpAlertEmailFilter"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovsmtpconfig.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovsmtpconfig",
             "Text": "Online: "
           }
         ],
@@ -51857,7 +51857,7 @@
             "Text": "Get-OVSnmpReadCommunity"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovsnmpreadcommunity.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovsnmpreadcommunity",
             "Text": "Online: "
           }
         ],
@@ -51960,7 +51960,7 @@
             "Text": "Update-OVStoragePool"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/set-ovstoragepool.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/set-ovstoragepool",
             "Text": "Online: "
           }
         ],
@@ -52161,7 +52161,7 @@
             "Text": "Set-OVStorageVolumeTemplatePolicy"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/set-ovstoragevolume.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/set-ovstoragevolume",
             "Text": "Online: "
           }
         ],
@@ -52626,7 +52626,7 @@
             "Text": "Set-OVStorageVolumeTemplatePolicy"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/set-ovstoragevolumetemplate.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/set-ovstoragevolumetemplate",
             "Text": "Online: "
           }
         ],
@@ -52927,7 +52927,7 @@
             "Text": "Get-OVStorageVolumeTemplatePolicy"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/set-ovstoragevolumetemplatepolicy.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/set-ovstoragevolumetemplatepolicy",
             "Text": "Online: "
           }
         ],
@@ -53138,7 +53138,7 @@
             "Text": "Show-OVUserSession"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/set-ovuser.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/set-ovuser",
             "Text": "Online: "
           }
         ],
@@ -53287,7 +53287,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/set-ovuserpassword.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/set-ovuserpassword",
             "Text": "Online: "
           }
         ],
@@ -53368,7 +53368,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/set-ovuserrole.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/set-ovuserrole",
             "Text": "Online: "
           }
         ],
@@ -53439,7 +53439,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/show-ovactiveuser.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/show-ovactiveuser",
             "Text": "Online: "
           }
         ],
@@ -53528,7 +53528,7 @@
             "Text": "Set-OVApplianceCurrentSecurityMode"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/show-ovappliancesecuritymodecompatibilityreport.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/show-ovappliancesecuritymodecompatibilityreport",
             "Text": "Online: "
           }
         ],
@@ -53586,7 +53586,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/show-ovbaselinerepositorysize.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/show-ovbaselinerepositorysize",
             "Text": "Online: "
           }
         ]
@@ -53676,7 +53676,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/show-ovfirmwarereport.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/show-ovfirmwarereport",
             "Text": "Online: "
           }
         ],
@@ -53745,7 +53745,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/cluster/show-ovhypervisorcluster.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/cluster/show-ovhypervisorcluster",
             "Text": "Online: "
           }
         ],
@@ -53866,7 +53866,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/show-ovldapgroups.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/security/show-ovldapgroups",
             "Text": "Online: "
           }
         ],
@@ -54007,7 +54007,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/show-ovlogicalinterconnectmactable.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/show-ovlogicalinterconnectmactable",
             "Text": "Online: "
           }
         ],
@@ -54156,7 +54156,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/show-ovportstatistics.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/show-ovportstatistics",
             "Text": "Online: "
           }
         ],
@@ -54257,7 +54257,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/show-ovsanendpoint.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/show-ovsanendpoint",
             "Text": "Online: "
           }
         ],
@@ -54334,7 +54334,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/show-ovstoragesystemperformancepolicy.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/show-ovstoragesystemperformancepolicy",
             "Text": "Online: "
           }
         ],
@@ -54381,7 +54381,7 @@
         "Examples": [],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/show-ovusersession.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/show-ovusersession",
             "Text": "Online: "
           }
         ],
@@ -54455,7 +54455,7 @@
             "Text": "Get-OVServerProfile"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/show-ovutilization.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/show-ovutilization",
             "Text": "Online: "
           }
         ],
@@ -54505,7 +54505,7 @@
             "Text": "Stop-OVLibraryTrace"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/start-ovlibrarytrace.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/start-ovlibrarytrace",
             "Text": "Online: "
           }
         ],
@@ -54597,7 +54597,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/start-ovremotesupportcollection.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/start-ovremotesupportcollection",
             "Text": "Online: "
           }
         ],
@@ -54840,7 +54840,7 @@
             "Text": "Set-OVServerOneTimeBoot"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/start-ovserver.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/start-ovserver",
             "Text": "Online: "
           }
         ],
@@ -55126,7 +55126,7 @@
             "Text": "Start-OVEnclosureAppliance"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/stop-ovappliance.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/stop-ovappliance",
             "Text": "Online: "
           }
         ],
@@ -55172,7 +55172,7 @@
             "Text": "Start-OVLibraryTrace"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/stop-ovlibrarytrace.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/stop-ovlibrarytrace",
             "Text": "Online: "
           }
         ],
@@ -55426,7 +55426,7 @@
             "Text": "Set-OVServerOneTimeBoot"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/stop-ovserver.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/stop-ovserver",
             "Text": "Online: "
           }
         ],
@@ -55508,7 +55508,7 @@
             "Text": "Set-OVApplianceAuditLogForwarding"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/test-ovapplianceauditlogforwarding.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/test-ovapplianceauditlogforwarding",
             "Text": "Online: "
           }
         ],
@@ -55600,7 +55600,7 @@
             "Text": "Add-OVSmtpAlertEmailFilter"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/test-ovemailalert.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/test-ovemailalert",
             "Text": "Online: "
           }
         ],
@@ -55700,7 +55700,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/update-ovappliancetrustedauthoritycrl.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/update-ovappliancetrustedauthoritycrl",
             "Text": "Online: "
           }
         ],
@@ -55829,7 +55829,7 @@
             "Text": "Get-OVClusterNode"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/cluster/update-ovclusternode.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/cluster/update-ovclusternode",
             "Text": "Online: "
           }
         ],
@@ -55936,7 +55936,7 @@
             "Text": "Remove-OVClusterProfile"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/cluster/update-ovclusterprofile.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/cluster/update-ovclusterprofile",
             "Text": "Online: "
           }
         ],
@@ -56151,7 +56151,7 @@
             "Text": "Set-OVEnclosureGroup"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/update-ovenclosure.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/update-ovenclosure",
             "Text": "Online: "
           }
         ],
@@ -56286,7 +56286,7 @@
             "Text": "Set-OVExternalRepository"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/update-ovexternalrepository.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/update-ovexternalrepository",
             "Text": "Online: "
           }
         ],
@@ -56452,7 +56452,7 @@
             "Text": "Update-OVLogicalEnclosureFirmware"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/update-ovlogicalenclosure.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/update-ovlogicalenclosure",
             "Text": "Online: "
           }
         ],
@@ -56611,7 +56611,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/update-ovlogicalenclosurefirmware.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/update-ovlogicalenclosurefirmware",
             "Text": "Online: "
           }
         ],
@@ -56801,7 +56801,7 @@
             "Text": "Show-OVLogicalInterconnectMacTable"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/update-ovlogicalinterconnect.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/update-ovlogicalinterconnect",
             "Text": "Online: "
           }
         ],
@@ -56952,7 +56952,7 @@
             "Text": "Remove-OVLogicalSwitchGroup"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/update-ovlogicalswitch.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/update-ovlogicalswitch",
             "Text": "Online: "
           }
         ],
@@ -57096,7 +57096,7 @@
             "Text": "Remove-OVRackManager"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/update-ovrackmanager.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/update-ovrackmanager",
             "Text": "Online: "
           }
         ],
@@ -57222,7 +57222,7 @@
             "Text": "Get-OVRemoteSupportEntitlementStatus"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/update-ovremotesupportentitlement.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/update-ovremotesupportentitlement",
             "Text": "Online: "
           }
         ],
@@ -57322,7 +57322,7 @@
             "Text": "Set-OVSanManager"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/update-ovsanmanager.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/update-ovsanmanager",
             "Text": "Online: "
           }
         ],
@@ -57582,7 +57582,7 @@
             "Text": "Set-OVServerOneTimeBoot"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/update-ovserver.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/update-ovserver",
             "Text": "Online: "
           }
         ],
@@ -57707,7 +57707,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/update-ovserverhardwarelicenseintent.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/update-ovserverhardwarelicenseintent",
             "Text": "Online: "
           }
         ],
@@ -57992,7 +57992,7 @@
             "Text": "Set-OVServerProfileTemplate"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/update-ovserverprofile.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/update-ovserverprofile",
             "Text": "Online: "
           }
         ],
@@ -58151,7 +58151,7 @@
             "Text": "Set-OVStoragePool"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/update-ovstoragepool.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/update-ovstoragepool",
             "Text": "Online: "
           }
         ],
@@ -58247,7 +58247,7 @@
             "Text": "Show-OVStorageSystemPerformancePolicy"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/update-ovstoragesystem.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/storage/update-ovstoragesystem",
             "Text": "Online: "
           }
         ],
@@ -58308,7 +58308,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/wait-ovappliancestart.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/wait-ovappliancestart",
             "Text": "Online: "
           }
         ],
@@ -58408,7 +58408,7 @@
             "Text": "Wait-OVTaskStart"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/wait-ovtaskcomplete.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/wait-ovtaskcomplete",
             "Text": "Online: "
           }
         ],
@@ -58511,7 +58511,7 @@
             "Text": "Wait-OVTaskComplete"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/wait-ovtaskstart.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/wait-ovtaskstart",
             "Text": "Online: "
           }
         ],
@@ -58586,7 +58586,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovremotesupportsecondarycontact.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovremotesupportsecondarycontact",
             "Text": "Online: "
           },
           {
@@ -58881,7 +58881,7 @@
             "Text": "New-OVUplinkSet"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/set-ovuplinkset.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/networking/set-ovuplinkset",
             "Text": "Online: "
           }
         ]
@@ -58981,7 +58981,7 @@
             "Text": "Get-OVServerProfile"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/enable-ovmaintenancemode.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/enable-ovmaintenancemode",
             "Text": "Online: "
           }
         ]
@@ -59086,7 +59086,7 @@
             "Text": "Get-OVServerProfile"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/disable-ovmaintenancemode.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/disable-ovmaintenancemode",
             "Text": "Online: "
           }
         ]
@@ -59158,7 +59158,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/update-ovuserscript.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/update-ovuserscript",
             "Text": "Online: "
           }
         ]
@@ -59332,7 +59332,7 @@
             "Text": "Set-OVComposerIlo"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/disable-ovcomposerilo.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/disable-ovcomposerilo",
             "Text": "Online: "
           }
         ]
@@ -59631,7 +59631,7 @@
             "Text": "Set-OVComposerIlo"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/enable-ovcomposerilo.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/enable-ovcomposerilo",
             "Text": "Online: "
           }
         ]
@@ -59696,7 +59696,7 @@
             "Text": "Set-OVComposerIlo"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovcomposerilostatus.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovcomposerilostatus",
             "Text": "Online: "
           }
         ]
@@ -59973,7 +59973,7 @@
             "Text": "Get-OVComposerIloStatus"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovcomposerilo.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovcomposerilo",
             "Text": "Online: "
           }
         ]
@@ -60126,7 +60126,7 @@
             "Text": "New-OVServerProfileTemplate"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/new-ovilodirectorygroup.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/new-ovilodirectorygroup",
             "Text": "Online: "
           }
         ]
@@ -60388,7 +60388,7 @@
             "Text": "New-OVServerProfileTemplate"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/new-ovilolocaluseraccount.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/new-ovilolocaluseraccount",
             "Text": "Online: "
           }
         ]
@@ -60924,7 +60924,7 @@
             "Text": "New-OVServerProfileTemplate"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/new-ovserverprofileilopolicy.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/new-ovserverprofileilopolicy",
             "Text": "Online: "
           }
         ]
@@ -60996,7 +60996,7 @@
             "Text": "Enable-OVCertificateRevocationChecking"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v5.40//disable-ovcertificaterevocationchecking",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/disable-ovcertificaterevocationchecking",
             "Text": "Online: "
           }
         ]
@@ -61119,7 +61119,7 @@
             "Text": "Disable-OVCertificateRevocationChecking"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v5.40//enable-ovcertificaterevocationchecking",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/enable-ovcertificaterevocationchecking",
             "Text": "Online: "
           }
         ]
@@ -61155,7 +61155,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v5.40//get-ovapplianceipaddress",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/get-ovapplianceipaddress",
             "Text": "Online: "
           }
         ]
@@ -61211,7 +61211,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v5.40//get-ovappliancestaticroute",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/get-ovappliancestaticroute",
             "Text": "Online: "
           }
         ]
@@ -61288,7 +61288,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v5.40//set-ovcertificaterevocationinterval",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/library/set-ovcertificaterevocationinterval",
             "Text": "Online: "
           }
         ]
@@ -61379,7 +61379,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v5.40/appliance/test-ovremotesupportevent",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/test-ovremotesupportevent",
             "Text": "Online: "
           }
         ]
@@ -61474,7 +61474,7 @@
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v5.40/servers/start-ovenclosureappliance",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/servers/start-ovenclosureappliance",
             "Text": "Online: "
           },
           {
@@ -61570,7 +61570,7 @@
             "Text": "Remove-OVSmtpAlertEmailFilter"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovsmtpalertemailfilter.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/get-ovsmtpalertemailfilter",
             "Text": "Online: "
           }
         ],
@@ -61741,7 +61741,7 @@
             "Text": "Remove-OVSmtpAlertEmailFilter"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovsmtpalertemailfilter.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/set-ovsmtpalertemailfilter",
             "Text": "Online: "
           }
         ],
@@ -61860,7 +61860,7 @@
             "Text": "Set-OVSmtpAlertEmailFilter"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/remove-ovsmtpalertemailfilter.md",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v5.40/appliance/remove-ovsmtpalertemailfilter",
             "Text": "Online: "
           }
         ],
