@@ -25,7 +25,7 @@ This PowerShell module requires the following minimum versions:
 {% endhint %}
 {% endtab %}
 
-{% tab title="HPE OneView 6.30" %}
+{% tab title="HPE OneView 6.20" %}
 | Component | Version |
 | :--- | :--- |
 | .NetStandard | 2.0 or newer |

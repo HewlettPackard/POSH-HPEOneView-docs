@@ -10,8 +10,10 @@ Param
 
     [Parameter (Mandatory = $false, HelpMessage = "Provide the root directory path to save the generated help markdown files to.")]
     [ValidateNotNullorEmpty()]
-    [String]$Destination = ((Split-Path $MyInvocation.MyCommand.Path -parent) + '\..\')
+    [String]$Destination = ((Split-Path $MyInvocation.MyCommand.Path -parent) + '\..\'),
 
+    [Parameter (Mandatory = $false, HelpMessage = "Using this parameter will override the default behavior of only building currently supported libraries.  If a library version is added to the DeprecatedCmdlets.json file in \source, by default the source JSON will not be processed.")]
+    [Switch]$BuildAll
 )
 
 $Script:FindParameterRegexPattern                  = [System.Text.RegularExpressions.RegEx]::new('(?<=\s)-\w+', [System.Text.RegularExpressions.RegexOptions]::Multiline)
@@ -308,6 +310,30 @@ function LinkifyString ([String]$String, [String]$CmdletName)
 }
 
 $SourceJsonFiles = [System.IO.Directory]::GetFiles($Path, "HPEOneView.*.json")
+
+
+$RepoParentDirectory          = $PSScriptRoot + ("{0}..{0}" -f [IO.Path]::DirectorySeparatorChar)
+$SourceDirectory              = Join-Path $RepoParentDirectory "source"
+$ApprovedCmdletCategoriesFile = Join-Path $SourceDirectory "ApprovedCategories.json"
+$DeprecatedCmdletsFile        = Join-Path $SourceDirectory "DeprecatedCmdlets.json"
+$SourceJsonFiles              = [System.IO.Directory]::GetFiles($SourceDirectory, "HPEOneView.*.json")
+$ApprovedCmdletCategories     = [System.IO.File]::ReadAllLines($ApprovedCmdletCategoriesFile, [System.Text.Encoding]::UTF8) | ConvertFrom-Json
+$DeprecatedCmdlets            = [System.IO.File]::ReadAllLines($DeprecatedCmdletsFile, [System.Text.Encoding]::UTF8) | ConvertFrom-Json
+
+# Filter out Library versions that are no longer supported and files should not be updated
+if (-not $PSBoundParameters['BuildAll'].Value) {
+
+    ForEach ($version in $DeprecatedCmdlets.Versions) {
+
+        "Removing '{0}' library source documentation file from the collection." -f $version | Write-Verbose -Verbose
+
+        $VerToIgnore = $version.Replace(".", $null)
+
+        $SourceJsonFiles = $SourceJsonFiles | ? { -not $_.Contains($VerToIgnore) }
+
+    }
+
+}
 
 # Throw error here the JSON source is not found.
 if ([String]::IsNullOrEmpty($SourceJsonFiles))
