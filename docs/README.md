@@ -299,20 +299,17 @@ Others have contributed example scripts to further automate management within th
 
 **HPE OneView Documentation on the HPE Enterprise Information Library**
 
-* [HPE OneView Release Notes](http://hpe.com/info/OneView/docs)
-* [HPE OneView Support Matrix](http://hpe.com/info/OneView/docs)
-* [HPE OneView Installation Guide](http://hpe.com/info/OneView/docs)
-* [HPE OneView User Guide](http://hpe.com/info/OneView/docs)
-* [HPE OneView Online Help](http://hpe.com/info/OneView/docs)
-* [HPE OneView REST API Reference](http://hpe.com/info/OneView/docs)
-* [HPE OneView Firmware Management White Paper](http://hpe.com/info/OneView/docs)
-* [HPE OneView Deployment and Management White Paper](http://hpe.com/info/OneView/docs)
-
-**HPE Virtual Connect Documentation**
-
-* [Virtual Connect Command Line User Guide](http://hpe.com/info/VirtualConnect)
-* [Virtual Connect Enterprise Manager User Guide](http://hpe.com/info/VirtualConnect)
-* [Virtual Connect Enterprise Manager Command Line User Guide](http://hpe.com/info/VirtualConnect)
+* [HPE OneView User Guide for HPE Synergy](https://www.hpe.com/support/oneview-guide-synergy)
+* [HPE OneView User Guide for VMs](https://www.hpe.com/support/oneview-guide-vms)
+* [HPE OneView Installation Guide](https://www.hpe.com/support/OneView-IG)
+* [HPE OneView Support Matrix for HPE Synergy](https://www.hpe.com/support/OneView-Synergy-SM)
+* [HPE OneView Support Matrix](https://www.hpe.com/support/OneView-SM)
+* [HPE OneView Release Notes for HPE Synergy](https://www.hpe.com/support/OneView-Synergy-RN)
+* [HPE OneView Release Notes](https://www.hpe.com/support/OneView-RN)
+* [HPE OneView Best Practices Guide for Deployment and Management](https://www.hpe.com/support/OV-deploy-manage-guide)
+* [HPE OneView API Reference Quick Links](https://www.hpe.com/support/OV-API-reference)
+* [HPE OneView Alerts User Guide for HPE Synergy](https://www.hpe.com/support/Alerts-Guide-Synergy)
+* [HPE OneView Alerts User Guide for VMs](https://www.hpe.com/support/Alerts-Guide-VMs)
 
 **HPE OneView Community**
 
