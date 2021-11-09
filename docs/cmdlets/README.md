@@ -10,6 +10,8 @@ This chapter contains sections specific to Cmdlets that are broken down by libra
 
 | Section | Description |
 | :--- | :--- |
+| [v6.30](https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v6.30) | Cmdlet documentation for the HPE OneView PowerShell 6.30 library. |
+| [v6.20](https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v6.20) | Cmdlet documentation for the HPE OneView PowerShell 6.20 library. |
 | [v6.10](https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v6.10) | Cmdlet documentation for the HPE OneView PowerShell 6.10 library. |
 | [v6.00](https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v6.00) | Cmdlet documentation for the HPE OneView PowerShell 6.00 library. |
 | [v5.50](https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v5.50) | Cmdlet documentation for the HPE OneView PowerShell 5.50 library. |

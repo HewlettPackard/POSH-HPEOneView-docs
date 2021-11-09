@@ -1,4 +1,4 @@
-﻿{
+{
   "Version": "5.40",
   "LibraryGUID": "11e96b20-75f0-4f0a-85b1-6b360642b0f7",
   "Cmdlets": [
@@ -7738,6 +7738,16 @@
             "SupportsWildcard": false,
             "DataType": "Object",
             "Required": false
+          },
+          {
+            "Name": "Name",
+            "Description": "",
+            "DataType": "string",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -7785,6 +7795,10 @@
               "Required": false
             },
             {
+              "Name": "Name",
+              "Required": false
+            },
+            {
               "Name": "ApplianceConnection",
               "Required": false
             }
@@ -7792,7 +7806,7 @@
           [
             {
               "Name": "InputObject",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "ApplianceConnection",
@@ -35697,6 +35711,26 @@
             "Aliases": "None",
             "PipelineInput": "false",
             "SupportsWildcard": false
+          },
+          {
+            "Name": "FecMode",
+            "Description": "",
+            "DataType": "string",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "PortSpeed",
+            "Description": "",
+            "DataType": "string",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -35911,6 +35945,14 @@
               "Required": false
             },
             {
+              "Name": "PortSpeed",
+              "Required": false
+            },
+            {
+              "Name": "FecMode",
+              "Required": false
+            },
+            {
               "Name": "FcUplinkSpeed",
               "Required": false
             },
@@ -35946,6 +35988,14 @@
             },
             {
               "Name": "UplinkPorts",
+              "Required": false
+            },
+            {
+              "Name": "PortSpeed",
+              "Required": false
+            },
+            {
+              "Name": "FecMode",
               "Required": false
             },
             {
@@ -48055,6 +48105,16 @@
             "SupportsWildcard": false,
             "DataType": "Array",
             "Required": false
+          },
+          {
+            "Name": "Append",
+            "Description": "",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -48108,12 +48168,16 @@
               "Required": true
             },
             {
+              "Name": "Append",
+              "Required": false
+            },
+            {
               "Name": "UserName",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Password",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Credential",
@@ -48121,7 +48185,7 @@
             },
             {
               "Name": "ApplianceConnection",
-              "Required": true
+              "Required": false
             }
           ],
           [
@@ -48135,15 +48199,19 @@
             },
             {
               "Name": "ScopePermissions",
+              "Required": true
+            },
+            {
+              "Name": "Append",
               "Required": false
             },
             {
               "Name": "UserName",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Password",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Credential",
@@ -48151,7 +48219,7 @@
             },
             {
               "Name": "ApplianceConnection",
-              "Required": true
+              "Required": false
             }
           ],
           [
@@ -48161,15 +48229,19 @@
             },
             {
               "Name": "ScopePermissions",
+              "Required": true
+            },
+            {
+              "Name": "Append",
               "Required": false
             },
             {
               "Name": "UserName",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Password",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Credential",
@@ -48177,7 +48249,7 @@
             },
             {
               "Name": "ApplianceConnection",
-              "Required": true
+              "Required": false
             }
           ]
         ]
@@ -51688,6 +51760,16 @@
             "SupportsWildcard": false,
             "DataType": null,
             "Required": false
+          },
+          {
+            "Name": "UseMXRecordLookup",
+            "Description": "",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -51769,6 +51851,10 @@
             },
             {
               "Name": "AlertEmailEnabled",
+              "Required": false
+            },
+            {
+              "Name": "UseMXRecordLookup",
               "Required": false
             },
             {
@@ -53081,6 +53167,16 @@
             "SupportsWildcard": false,
             "DataType": "Array",
             "Required": false
+          },
+          {
+            "Name": "Append",
+            "Description": "",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -53150,15 +53246,19 @@
             },
             {
               "Name": "Password",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "FullName",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Roles",
-              "Required": true
+              "Required": false
+            },
+            {
+              "Name": "Append",
+              "Required": false
             },
             {
               "Name": "ScopePermissions",
@@ -53166,15 +53266,15 @@
             },
             {
               "Name": "EmailAddress",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "OfficePhone",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "MobilePhone",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Enabled",
@@ -53186,7 +53286,7 @@
             },
             {
               "Name": "ApplianceConnection",
-              "Required": true
+              "Required": false
             }
           ],
           [
@@ -53196,15 +53296,19 @@
             },
             {
               "Name": "Password",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "FullName",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Roles",
-              "Required": true
+              "Required": false
+            },
+            {
+              "Name": "Append",
+              "Required": false
             },
             {
               "Name": "ScopePermissions",
@@ -53212,15 +53316,15 @@
             },
             {
               "Name": "EmailAddress",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "OfficePhone",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "MobilePhone",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Enabled",
@@ -53232,7 +53336,7 @@
             },
             {
               "Name": "ApplianceConnection",
-              "Required": true
+              "Required": false
             }
           ]
         ]
@@ -58622,7 +58726,7 @@
             },
             {
               "Name": "UplinkSetName",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Name",
@@ -58661,6 +58765,14 @@
               "Required": false
             },
             {
+              "Name": "PortSpeed",
+              "Required": false
+            },
+            {
+              "Name": "FecMode",
+              "Required": false
+            },
+            {
               "Name": "ConsistencyChecking",
               "Required": false
             },
@@ -58676,7 +58788,7 @@
             },
             {
               "Name": "UplinkSetName",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Name",
@@ -58827,6 +58939,26 @@
             "Name": "RemoveNetworkSet",
             "Description": "Specify one or more network set objects to remove from an uplink set.",
             "DataType": "Object[]",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "FecMode",
+            "Description": "",
+            "DataType": "string",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "PortSpeed",
+            "Description": "",
+            "DataType": "string",
             "Required": false,
             "DefaultValue": "",
             "Aliases": "None",
