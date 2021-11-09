@@ -1,5 +1,5 @@
 ﻿---
-description: [DEPRECATED] Set the power state of a server.
+description: "[DEPRECATED] Set the power state of a server."
 ---
 
 # Set-HPOVServerPower
@@ -81,7 +81,7 @@ _**None**_
 
 
  None
- 
+
 
 ## Return Values
 
