@@ -9,7 +9,7 @@ description: Update an uplink set resource
 ```text
 Set-OVUplinkSet
     [-InputObject] <Object>
-    [-UplinkSetName] <String>
+    [-UplinkSetName <String>]
     [-Name <String>]
     [-AddNetwork <Object[]>]
     [-RemoveNetwork <Object[]>]
@@ -19,6 +19,8 @@ Set-OVUplinkSet
     [-RemovePorts <Object[]>]
     [-UntaggedNetwork <Object>]
     [-LacpTimer <String>]
+    [-PortSpeed <string>]
+    [-FecMode <string>]
     [-ConsistencyChecking <String>]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -27,7 +29,7 @@ Set-OVUplinkSet
 ```text
 Set-OVUplinkSet
     [-InputObject] <Object>
-    [-UplinkSetName] <String>
+    [-UplinkSetName <String>]
     [-Name <String>]
     [-AddPorts <Object[]>]
     [-RemovePorts <Object[]>]
@@ -265,6 +267,30 @@ Specify one or more network set objects to add to an uplink set.
 ### -RemoveNetworkSet &lt;Object[]&gt;
 
 Specify one or more network set objects to remove from an uplink set.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -FecMode &lt;string&gt;
+
+
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -PortSpeed &lt;string&gt;
+
+
 
 | Aliases | None |
 | :--- | :--- |

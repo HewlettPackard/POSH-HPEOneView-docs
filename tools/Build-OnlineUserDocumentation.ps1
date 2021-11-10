@@ -393,7 +393,7 @@ else
                 #    GitBook.IO Description 'field'
                 [void]$FinalMarkdownOutput.Add('---')
 
-                $GitBookDescriptionHeader = 'description: {0}' -f $Cmdlet.Contents.Synopsis
+                $GitBookDescriptionHeader = 'description: {0}' -f $Cmdlet.Contents.Synopsis.Replace('[', '\[').Replace(']','\]')
                 [void]$FinalMarkdownOutput.Add($GitBookDescriptionHeader)
                 [void]$FinalMarkdownOutput.Add(('---' + [System.Environment]::NewLine))
 
