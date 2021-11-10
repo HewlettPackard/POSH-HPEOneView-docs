@@ -1,5 +1,5 @@
 ﻿---
-description: "[DEPRECATED] Clear an Alert status."
+description: \[DEPRECATED\] Clear an Alert status.
 ---
 
 # Clear-OVAlert

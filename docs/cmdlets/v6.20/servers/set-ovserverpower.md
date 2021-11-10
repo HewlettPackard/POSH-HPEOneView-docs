@@ -1,5 +1,5 @@
 ﻿---
-description:"[DEPRECATED] Set the power state of a server."
+description: \[DEPRECATED\] Set the power state of a server.
 ---
 
 # Set-OVServerPower
@@ -103,7 +103,7 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 _**None**_
 
- None
+ None 
 
 ## Return Values
 

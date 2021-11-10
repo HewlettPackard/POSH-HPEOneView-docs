@@ -49,6 +49,8 @@ New-OVUplinkSet
     [-LacpFailoverBandwidthThreshold <Int>]
     [-LacpFailoverActiveMemberThreshold <Int>]
     [-PrimaryPort <String>]
+    [-PortSpeed <string>]
+    [-FecMode <string>]
     [-FcUplinkSpeed <String>]
     [-EnableTrunking <Boolean>]
     [-ConsistencyChecking <String>]
@@ -63,6 +65,8 @@ New-OVUplinkSet
     [-Type] <String>
     [-Networks <Array>]
     [-UplinkPorts <Array>]
+    [-PortSpeed <string>]
+    [-FecMode <string>]
     [-FcUplinkSpeed <String>]
     [-EnableTrunking <Boolean>]
     [-ConsistencyChecking <String>]
@@ -461,6 +465,30 @@ Allowed values:
 	* AllActiveUplinksOffline
 	* FailoverActiveMemberThreshold
 	* FailoverBandwidthThreshold
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -FecMode &lt;string&gt;
+
+
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -PortSpeed &lt;string&gt;
+
+
 
 | Aliases | None |
 | :--- | :--- |

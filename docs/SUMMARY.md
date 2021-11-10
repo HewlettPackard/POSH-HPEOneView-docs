@@ -13,6 +13,7 @@
       * [Disable-OVApplianceComplexPasswords](cmdlets/v6.30/appliance/disable-ovappliancecomplexpasswords.md)
       * [Disable-OVApplianceServiceConsoleAccess](cmdlets/v6.30/appliance/disable-ovapplianceserviceconsoleaccess.md)
       * [Disable-OVApplianceSshAccess](cmdlets/v6.30/appliance/disable-ovappliancesshaccess.md)
+      * [Disable-OVApplianceStrictSecurityCipherSuite](cmdlets/v6.30/appliance/disable-ovappliancestrictsecurityciphersuite.md)
       * [Disable-OVApplianceTwoFactorAuthentication](cmdlets/v6.30/appliance/disable-ovappliancetwofactorauthentication.md)
       * [Disable-OVCertificateValidation](cmdlets/v6.30/appliance/disable-ovcertificatevalidation.md)
       * [Disable-OVComposerIlo](cmdlets/v6.30/appliance/disable-ovcomposerilo.md)
@@ -21,6 +22,7 @@
       * [Enable-OVApplianceComplexPasswords](cmdlets/v6.30/appliance/enable-ovappliancecomplexpasswords.md)
       * [Enable-OVApplianceServiceConsoleAccess](cmdlets/v6.30/appliance/enable-ovapplianceserviceconsoleaccess.md)
       * [Enable-OVApplianceSshAccess](cmdlets/v6.30/appliance/enable-ovappliancesshaccess.md)
+      * [Enable-OVApplianceStrictSecurityCipherSuite](cmdlets/v6.30/appliance/enable-ovappliancestrictsecurityciphersuite.md)
       * [Enable-OVCertificateValidation](cmdlets/v6.30/appliance/enable-ovcertificatevalidation.md)
       * [Enable-OVComposerHANode](cmdlets/v6.30/appliance/enable-ovcomposerhanode.md)
       * [Enable-OVComposerIlo](cmdlets/v6.30/appliance/enable-ovcomposerilo.md)
@@ -4565,8 +4567,6 @@
 
 ## About
 
-* [about\_HPEOneView.630](about/about_hpeoneview.630.md)
-* [about\_HPEOneView.620](about/about_hpeoneview.620.md)
 * [about\_HPEOneView.610](about/about_hpeoneview.610.md)
 * [about\_HPEOneView.600](about/about_hpeoneview.600.md)
 * [about\_HPEOneView.550](about/about_hpeoneview.550.md)

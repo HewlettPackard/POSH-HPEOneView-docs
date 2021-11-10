@@ -94,6 +94,8 @@ This PowerShell module requires the following minimum versions:
 
 ### **Table 2. Deprecated releases**
 
+The following table documents which versions of the HPE OneView PowerShell libraries are no longer supported.  It is advised administrators update to a supported library release.
+
 | Library | Components | Version |
 | :--- | :--- | :--- |
 | HPE OneView 5.30 | .NetStandard | 2.0 or newer |

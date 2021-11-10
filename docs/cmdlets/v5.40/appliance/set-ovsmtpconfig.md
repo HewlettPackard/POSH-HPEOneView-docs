@@ -14,6 +14,7 @@ Set-OVSMTPConfig
     [-ConnectionSecurity <>]
     [-Password <String>]
     [-AlertEmailEnabled]
+    [-UseMXRecordLookup]
     [-Async]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -170,6 +171,18 @@ Use to specify if the target SMTP server requires TLS security/authentication.  
 | Required? | False |
 | Position? | Named |
 | Default value | None |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -UseMXRecordLookup &lt;SwitchParameter&gt;
+
+
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

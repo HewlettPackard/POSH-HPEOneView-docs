@@ -20,6 +20,7 @@ A reserved VLAN pool is a range of VLANs used for allocation of non-tagged netwo
 
     * Tunnel
     * Untagged
+    * Fibre Channel (FC)
 
 Tagged networks and FCoE networks use VLANs outside of the reserved pool. You cannot use a reserved VLAN for tagged or FCoE networks.
 

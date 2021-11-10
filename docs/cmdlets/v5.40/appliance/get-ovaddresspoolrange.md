@@ -9,13 +9,14 @@ description: Retrieve address pool range information.
 ```text
 Get-OVAddressPoolRange
     [-Type <String[]>]
+    [-Name <string>]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```text
 Get-OVAddressPoolRange
-    [-InputObject] <Object>
+    [-InputObject <Object>]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
@@ -112,6 +113,18 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
+
+### -Name &lt;string&gt;
+
+
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
