@@ -6,7 +6,7 @@ description: Remove an existing LDAP Directory Server.
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVLdapServer
     [-InputObject] <Object>
     [-DirectoryServerName] <String>
@@ -16,7 +16,7 @@ Remove-OVLdapServer
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Remove-OVLdapServer
     [-InputObject] <Object>
     [-DirectoryServerName] <String>
@@ -33,7 +33,7 @@ This Cmdlet will remove an existing LDAP Directory Server resource from an exist
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVLdapDirectory -Name MyDirectory | Remove-OVLdapServer -DirectoryServerName servera.domain.com -Username MyAdminName -Password (ConvertTo-SecureString "MyPAssword" -AsPlanText -Force)
 ```
 

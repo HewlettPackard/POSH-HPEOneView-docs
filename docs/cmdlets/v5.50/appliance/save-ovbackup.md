@@ -6,14 +6,14 @@ description: Save existing backups on an appliance.
 
 ## Syntax
 
-```text
+```powershell
 Save-OVBackup
     [-Location <String>]
     [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Save-OVBackup
     [-SaveRemoteOnly]
     [-ApplianceConnection <Array>]
@@ -32,7 +32,7 @@ Use this Cmdlet to save the created appliance backup files.  Use the -SaveRemote
 
 ###  Example 1 
 
-```text
+```powershell
 Save-OVBackup
 ```
 
@@ -40,7 +40,7 @@ Save the found backup file
 
 ###  Example 2 
 
-```text
+```powershell
 Save-OVBackup -Location \\Server\BackupShare\HPOneView
 ```
 

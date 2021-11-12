@@ -6,7 +6,7 @@ description: Retrieve SAS Logical Interconnect resource(s).
 
 ## Syntax
 
-```text
+```powershell
 Get-OVSasLogicalInterconnect
     [-Name <String>]
     [-Label <String>]
@@ -33,7 +33,7 @@ Minimum required privileges: Read-only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVSasLogicalInterconnect
 ```
 
@@ -41,7 +41,7 @@ Returns all SAS Logical Interconnect defined on the appliance to standard output
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVSasLogicalInterconnect -Name "LE1-SasProduction" -ErrorAction Stop
 ```
 
@@ -65,10 +65,10 @@ The name of the SAS Logical Interconnect to retrieve.
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-    * AllResources
-    * AllResourcesInScope
-    * `[HPEOneView.Appliance.ScopeCollection]`
-    * `[HPEOneView.Appliance.ConnectionPermission]`
+* AllResources
+* AllResourcesInScope
+* `[HPEOneView.Appliance.ScopeCollection]`
+* `[HPEOneView.Appliance.ConnectionPermission]`
 
 | Aliases |  |
 | :--- | :--- |

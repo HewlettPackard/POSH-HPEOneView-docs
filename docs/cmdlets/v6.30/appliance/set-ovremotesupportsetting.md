@@ -6,7 +6,7 @@ description: Configure supported resource Remote Support settings.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVRemoteSupportSetting
     [-InputObject] <Object>
     [-PrimaryContact] <Object>
@@ -23,7 +23,7 @@ Set-OVRemoteSupportSetting
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Set-OVRemoteSupportSetting
     [-InputObject] <Object>
     [-Disabled]
@@ -40,7 +40,7 @@ Use this Cmdlet to configure a supported resources Remote Support collection set
 
 ###  Example 1 
 
-```text
+```powershell
 $NewReseller = Get-OVRemoteSupportContact -Name "New Reseller Name"
 Get-OVEnclosure -Name Encl1 | Set-OVRemoteSupportSetting -Reseller $NewReseller
 ```
@@ -49,7 +49,7 @@ Update "Encl1" with a new reseller contact that was added to the appliance.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVServer -Name Prd-host-* | Set-OVRemoteSupportSetting -ContractType SupportAgreement -SupportID 111199990 
 ```
 
@@ -57,7 +57,7 @@ Update the servers with a new support agreement.
 
 ###  Example 3 
 
-```text
+```powershell
 PrimaryContact = Get-OVRemoteSupportContact -Name "Gladi Chua"
 $SecondaryContact = Get-OVRemoteSupportContact -Name "Luke Smith" 
 Get-OVEnclosure -Name Prod* | Set-OVRemoteSupportSetting -PrimaryContact $PrimaryContact -SecondaryContact $SecondaryContact -Async -OutVariable Tasks
@@ -131,8 +131,8 @@ Authorized HPE reseller partner object from Get-OVRemoteSupportPartner.
 
 Use to override the contract type.  If specifying a different contract type, you must supply the SupportID.  Allowed values are:
 
-    * SupportAgreement
-    * PackagedSupport.
+* SupportAgreement
+* PackagedSupport.
 
 | Aliases | None |
 | :--- | :--- |

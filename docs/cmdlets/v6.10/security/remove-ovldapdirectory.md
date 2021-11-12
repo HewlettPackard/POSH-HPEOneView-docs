@@ -6,7 +6,7 @@ description: Remove authentication Directory.
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVLdapDirectory
     [-InputObject] <Object>
     [-ApplianceConnection] <Object>
@@ -22,7 +22,7 @@ Remove authentication Directory from the appliance. Can provide Directory Name o
 
 ###  Example 1 
 
-```text
+```powershell
 Remove-OVLdapDirectory -Directory "My Directory1"
 ```
 
@@ -30,7 +30,7 @@ Remove "My Directroy Group1" from the appliance.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVLdapDirectory | Remove-OVLdapDirectory
 ```
 

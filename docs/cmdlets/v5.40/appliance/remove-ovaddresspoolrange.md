@@ -6,7 +6,7 @@ description: Delete address pool range from an appliance.
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVAddressPoolRange
     [-InputObject] <Object>
     [-ApplianceConnection] <Object>
@@ -21,7 +21,7 @@ This Cmdlet provides the ability to remove one or more IPv4 Subnet Pools and ass
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVAddressPoolRange | Remove-OVAddressPoolSubnet
 ```
 
@@ -29,7 +29,7 @@ Remove all address pool ranges the default connected appliance.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVAddressPoolSubnet | Where startAddress -eq "11:11:11:11:11:11" | Remove-OVAddressPoolSubnet
 ```
 

@@ -6,7 +6,7 @@ description: Enable local authentication logins.
 
 ## Syntax
 
-```text
+```powershell
 Enable-OVLdapLocalLogin
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -16,8 +16,8 @@ Enable-OVLdapLocalLogin
 
 You can configure HPE OneView to use an external enterprise directory service for user authentication. HPE OneView supports the following enterprise directory services:
 
-    * Active Directory
-    * OpenLDAP
+* Active Directory
+* OpenLDAP
 
 When you use a directory service, directory users are granted HPE OneView permissions using their group membership in the directory. After defining a directory service, use the User and Groups screen to define permissions for directory groups. Directory groups are assigned one or more HPE OneView permissions. A directory user is assigned the HPE OneView permissions that represent the union of the permissions for all the directory groups that the user is a member of. Only after permissions are defined for directory groups, directory users are authenticated into the appliance.
 
@@ -31,7 +31,7 @@ Minimum required privileges: Infrastructure administrator.
 
 ###  Example 1 
 
-```text
+```powershell
 Enable-OVLdapLocalLogin
 ```
 

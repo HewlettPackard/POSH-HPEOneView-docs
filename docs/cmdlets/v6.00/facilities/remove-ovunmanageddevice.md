@@ -6,7 +6,7 @@ description: Remove an Unmanaged Device.
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVUnmanagedDevice
     [-UnmanagedDevice] <Object>
     [-force]
@@ -22,7 +22,7 @@ Use this Cmdlet to remove an Unmanaged Device from the appliance.
 
 ###  Example 1 
 
-```text
+```powershell
 Remove-OVUnmanagedDevice MyDevice
 ```
 
@@ -30,7 +30,7 @@ Remove the Unmanaged Device "MyDevice" from the appliance.
 
 ###  Example 2 
 
-```text
+```powershell
 Remove-OVUnmanagedDevice MyDevice -confirm:$false
 ```
 
@@ -38,7 +38,7 @@ Remove the Unmanaged Device "MyDevice" from the appliance and do not prompt for 
 
 ###  Example 3 
 
-```text
+```powershell
 Get-OVUnmanagedDevice | Remove-OVUnmanagedDevice
 ```
 

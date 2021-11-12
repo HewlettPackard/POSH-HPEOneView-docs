@@ -6,7 +6,7 @@ description: Modify an existing Datacenter resource.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVDataCenter
     [-InputObject] <Object>
     [-Name] <String>
@@ -37,7 +37,7 @@ This Cmdlet will create a new datacenter.  You will need to specify the Name and
 
 ###  Example 1 
 
-```text
+```powershell
 $DataCenter1Name = "LA DC 12"
 
 $DataCenter1Width = 30
@@ -57,7 +57,7 @@ Create new "LA DC 12" datacenter.
 
 ###  Example 2 
 
-```text
+```powershell
 $NewDCParams = @{
 
 Name             = "Houston DC1";

@@ -54,7 +54,7 @@ You can see the temperature utilization data for a component within the AmbientT
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVServer | Show-OVUtilization
 ```
 

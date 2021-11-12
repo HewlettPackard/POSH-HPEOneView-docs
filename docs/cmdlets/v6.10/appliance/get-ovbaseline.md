@@ -6,7 +6,7 @@ description: Retrieve available SPP baseline and hotfix information.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVBaseline
     [-File <String>]
     [-Scope <Object>]
@@ -14,7 +14,7 @@ Get-OVBaseline
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Get-OVBaseline
     [-SppName <String>]
     [-Version <String>]
@@ -23,7 +23,7 @@ Get-OVBaseline
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Get-OVBaseline
     [-HotfixesOnly]
     [-Scope <Object>]
@@ -51,7 +51,7 @@ Minimum required privileges: Read only
 
 ###  Example 1 
 
-```text
+```powershell
 $sppCollection = Get-OVBaseline
 ```
 
@@ -59,7 +59,7 @@ Retrieves all baseline objects from the appliance and stores them in the sppColl
 
 ###  Example 2 
 
-```text
+```powershell
 $sppObject = Get-OVBaseline -Filename SPP2012060B.2012_0525.1.iso
 ```
 
@@ -67,7 +67,7 @@ Retrieves an baseline object with the filename SPP2012060B.2012_0525.1.iso
 
 ###  Example 3 
 
-```text
+```powershell
 $sppObject = Get-OVBaseline -SppName "HP Service Pack for ProLiant"
 ```
 
@@ -139,10 +139,10 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-    * AllResources
-    * AllResourcesInScope
-    * `[HPEOneView.Appliance.ScopeCollection]`
-    * `[HPEOneView.Appliance.ConnectionPermission]`
+* AllResources
+* AllResourcesInScope
+* `[HPEOneView.Appliance.ScopeCollection]`
+* `[HPEOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |

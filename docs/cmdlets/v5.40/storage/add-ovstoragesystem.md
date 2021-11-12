@@ -6,7 +6,7 @@ description: Import a supported Storage System
 
 ## Syntax
 
-```text
+```powershell
 Add-OVStorageSystem
     [-Hostname] <String>
     [-Credential] <PSCredential>
@@ -21,7 +21,7 @@ Add-OVStorageSystem
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Add-OVStorageSystem
     [-Hostname] <String>
     [-VIPS] <Hashtable>
@@ -50,7 +50,7 @@ Minimum required privileges: Infrastructure administrator or Storage administrat
 
 ###  Example 1 
 
-```text
+```powershell
 $task = Add-OVStorageSystem -hostname "3par-array.consoto.com" -Credential (Get-Credential) -Async
 Wait-OVTaskComplete -InputObject $task
 ```
@@ -59,7 +59,7 @@ Add the Storage System using default settings, and let the appliance detect the 
 
 ###  Example 2 
 
-```text
+```powershell
 $StorageSystemPorts = @{"1:1:1" = "Fabric A"; "2:1:1" = "Fabric A"; "1:1:2" = "Fabric B"; "2:1:2" = "Fabric B"}
 $StoragePortGroups = @{"1:1:1"= "PG1";  "2:1:1" = "PG1"; "1:1:2" = "PG2"; "2:1:2" = "PG2"}
 Add-OVStorageSystem -hostname "3par-array.consoto.com" -username 3paradm -password 3pardata -Domain VirtaulDomain1 -Ports $StorageSystemPorts -PortGroups $StoragePortGroups | Wait-OVTaskComplete
@@ -69,7 +69,7 @@ Add the Storage System using default settings, and specify the Storage System Po
 
 ###  Example 3 
 
-```text
+```powershell
 $IscsiNetwork = Get-OVNetwork -Name "IscsiNetwork" -ErrorAction Stop
 $NimbleAddress = "nimble.domain.com"
 $StorageSystemPSCredential = Get-Credential -Username administrator

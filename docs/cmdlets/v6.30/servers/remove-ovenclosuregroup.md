@@ -6,7 +6,7 @@ description: Remove an enclosure group.
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVEnclosureGroup
     [-InputObject] <Object>
     [-ApplianceConnection] <Array>
@@ -23,7 +23,7 @@ An enclosure group cannot be deleted if any enclosures are currently part of tha
 
 ###  Example 1 
 
-```text
+```powershell
 $resp = Remove-OVEnclosureGroup -enclosureGroup "My-EG" -force
 ```
 
@@ -31,7 +31,7 @@ Force-remove the enclosure group specifed by name.
 
 ###  Example 2 
 
-```text
+```powershell
 $eg = Get-OVEnclosureGroup -name "My-EG"
 Remove-OVEnclosureGroup $enclosureGroup -confirm:$false
 ```
@@ -40,7 +40,7 @@ Remove the enclosure group specifed by $eg. Disable confirmation prompt.
 
 ###  Example 3 
 
-```text
+```powershell
 Get-OVEnclosureGroup | Remove-OVEnclosureGroup
 ```
 

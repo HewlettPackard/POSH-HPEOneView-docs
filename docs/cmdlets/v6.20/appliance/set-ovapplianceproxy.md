@@ -6,7 +6,7 @@ description: Configure appliance web proxy.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVApplianceProxy
     [-Hostname] <String>
     [-Port] <Int>
@@ -16,7 +16,7 @@ Set-OVApplianceProxy
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Set-OVApplianceProxy
     [-Hostname] <String>
     [-Port] <Int>
@@ -36,7 +36,7 @@ When configuring Remote Support, a Web Proxy may be required.  This Cmdlet will 
 
 ###  Example 1 
 
-```text
+```powershell
 Set-OVApplianceProxy -Hostname MyProxy.domain.com -Port 8080
 ```
 
@@ -44,7 +44,7 @@ Configure the appliance proxy server by providing the required Hostname and Port
 
 ###  Example 2 
 
-```text
+```powershell
 Set-OVApplianceProxy -Hostname MyProxy.domain.com -Port 8080 -Username MyUserAccount -Password (ConvertTo-SecureString -String MyPassword -AsPlainText -Force)
 ```
 

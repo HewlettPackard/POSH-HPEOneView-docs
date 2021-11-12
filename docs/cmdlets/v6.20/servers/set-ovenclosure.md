@@ -6,7 +6,7 @@ description: Rename Synergy Frame Name or Rack Name.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVEnclosure
     [-InputObject] <Object>
     [-Name <String>]
@@ -23,7 +23,7 @@ This Cmdlet provides the ability to set a Synergy Frame/Enclosure Name and/or th
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVEnclosure -Name "0000A66101" -ErrorAction Stop | Set-OVEnclosure -Name "MyEnclName1" | Wait-OVTaskComplete
 ```
 
@@ -31,7 +31,7 @@ Set the provided Synergy Frame resource Name to a new value.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVEnclosure -Name "0000A66101" -ErrorAction Stop | Set-OVEnclosure -Name "MyEnclName1" -RackName "DC11-Rack4A" | Wait-OVTaskComplete
 ```
 

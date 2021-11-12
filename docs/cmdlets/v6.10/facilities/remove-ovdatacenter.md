@@ -6,7 +6,7 @@ description: Remove a datacenter resource.
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVDataCenter
     [-InputObject] <Object>
     [-ApplianceConnection <Object>]
@@ -26,7 +26,7 @@ This Cmdlet will remove 1 or more datacenter resources from an appliance.  Remov
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVDataCenter -Name DC2 | Remove-OVDataCenter
 ```
 
@@ -34,7 +34,7 @@ Remove "DC2" datacenter resource from the appliance.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVDataCenter | Remove-OVDataCenter
 ```
 

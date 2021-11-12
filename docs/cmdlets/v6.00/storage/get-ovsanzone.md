@@ -6,7 +6,7 @@ description: View Managed SAN Zones.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVSanZone
     [-ManagedSan <Object>]
     [-ApplianceConnection <Array>]
@@ -17,8 +17,8 @@ Get-OVSanZone
 
 SANs are Fibre Channel (FC) or Fibre Channel over Ethernet (FCoE) storage area networks that connect servers to storage systems. The possible states for SANs are:
 
-    * Discovered - A SAN that is not associated with a network. SANs are automatically discovered when a SAN manager is added to HPE OneView.
-    * Managed - A SAN that is associated with one or more networks in HPE OneView. Only managed SANs can be configured to be automatically zoned by HPE OneView.
+* Discovered - A SAN that is not associated with a network. SANs are automatically discovered when a SAN manager is added to HPE OneView.
+* Managed - A SAN that is associated with one or more networks in HPE OneView. Only managed SANs can be configured to be automatically zoned by HPE OneView.
 
 The SAN Endpoints, or SAN zones, contain all device ports actively logged into or configured to log in to a SAN.
 
@@ -32,7 +32,7 @@ Minimum required privileges: Read-only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVSanZone
 Appliance SAN    Name       State   Status Members
 
@@ -47,7 +47,7 @@ Return all SAN Zones from the appliance(s).
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVManagedSan -Name SAN1_0 | Get-OVSanZone
 
 Appliance SAN    Name       State   Status Members
@@ -60,7 +60,7 @@ Return the specific SAN Zone for the specified Managed SAN resource from the app
 
 ###  Example 3 
 
-```text
+```powershell
 $Zones = Get-OVManagedSan -Name SAN1_0 | Get-OVSanZone
 $Zones | ? Name -eq "Node_1_7"
 

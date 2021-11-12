@@ -6,7 +6,7 @@ description: Create a Logical Enclosure.
 
 ## Syntax
 
-```text
+```powershell
 New-OVLogicalEnclosure
     [-Name] <String>
     [-Enclosure] <Object>
@@ -31,7 +31,7 @@ Use this Cmdlet to define a new Logical Enclosure that will include multiple Syn
 
 ###  Example 1 
 
-```text
+```powershell
 $EG = Get-OVEnclosureGroup -Name "Prod Synergy EG 1"
 Get-OVEnclosure -Name 0000A66101 | New-OVLogicalEnclosure "My Synergy LE 1" -EnclosureGroup $EG
 ```

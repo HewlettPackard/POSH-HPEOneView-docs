@@ -6,7 +6,7 @@ description: Retrieve a defined Rack.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVRack
     [-Name <String>]
     [-ApplianceConnection <Object>]
@@ -31,7 +31,7 @@ Minimum required privileges: Read only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVRack
 ```
 
@@ -39,7 +39,7 @@ Retrieve all defined DataCenters on the appliance.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVRack -Name Rack22*
 ```
 

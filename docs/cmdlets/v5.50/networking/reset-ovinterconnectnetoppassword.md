@@ -6,7 +6,7 @@ description: Reset HPE Synergy Virtual Connect NetOp account password.
 
 ## Syntax
 
-```text
+```powershell
 Reset-OVInterconnectNetOpPassword
     [-InputObject] <Object>
     [-Password] <System.Security.SecureString>
@@ -29,7 +29,7 @@ Minimum required privileges: Infrastructure administrator, Network administrator
 
 ###  Example 1 
 
-```text
+```powershell
 $NetOpPassword = Read-Host -Message "New password: " -AsSecureString
 $InterconnectObject = Get-OVInterconnect -Name MyEncl1-Ethernet-LIG1
 Reset-OVInterconnectNetOpPassword -InputObject $InterconnectObject -Password $NetOpPassword

@@ -6,7 +6,7 @@ description: Generate firmware report
 
 ## Syntax
 
-```text
+```powershell
 Show-OVFirmwareReport
     [-InputObject] <Object>
     [-Baseline] <Object>
@@ -28,7 +28,7 @@ Minimum required permissions: Infrastructure administrator, Server administrator
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVEnclosureGroup "Production EG" | Show-OVFirmwareReport
 ```
 
@@ -36,7 +36,7 @@ Display a firmware report of all associated enclosures to "Production EG" Enclos
 
 ###  Example 2 
 
-```text
+```powershell
 $Baseline = Get-OVBaseline -SppName "Production EG"
 Get-OVEnclosureGroup "Production EG" | Show-OVFirmwareReport -Baseline $Baseline
 ```
@@ -49,10 +49,10 @@ Display a firmware report of the "Production EG" resource, and components (serve
 
 The managed resource object to generate the report for.  Allowed resource object types are:
 
-    * EG (Enclosure Group)
-    * Enclosure
-    * Server
-    * Interconnect
+* EG (Enclosure Group)
+* Enclosure
+* Server
+* Interconnect
 
 By specifying an Enclosure Group, all associated Enclosures will be included in the report.
 

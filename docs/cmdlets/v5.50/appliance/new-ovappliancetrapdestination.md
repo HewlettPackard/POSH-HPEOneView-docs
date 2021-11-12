@@ -6,7 +6,7 @@ description: Create a new appliance SNMP trap destiation.
 
 ## Syntax
 
-```text
+```powershell
 New-OVApplianceTrapDestination
     [-Destination] <String>
     [-CommunityString] <String>
@@ -16,7 +16,7 @@ New-OVApplianceTrapDestination
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVApplianceTrapDestination
     [-Destination] <String>
     [-SnmpV3User] <HPEOneView.Appliance.SnmpV3User>
@@ -42,7 +42,7 @@ Minimum required privileges: Infrastructure administrator
 
 ###  Example 1 
 
-```text
+```powershell
 New-OVApplianceTrapDestination -Destination $SnmpV1TrapDestinationAddress -Type SNMPv1 -Port $SnmpV1TrapDestinationPort -CommunityString $SnmpV1Community
 ```
 
@@ -50,7 +50,7 @@ Create a new SNMPv1 trap destination on the appliance.
 
 ###  Example 2 
 
-```text
+```powershell
 $SnmpV3Password = ConvertTo-SecureString -String $CommonPassword -AsPlainText -Force
 $Snmpv3User = New-OVSnmpV3User -ApplianceSnmpUser -Username Tr@pUser -SecurityLevel AuthAndPriv -AuthProtocol SHA512 -AuthPassword $SnmpV3Password -PrivProtocol AES192 -PrivPassword $SnmpV3Password
 New-OVApplianceTrapDestination -Type SnmpV3 -SnmpV3User $CreatedSnmpSnmpv3UserV3User -Destination monitor1.contoso.com
@@ -124,8 +124,8 @@ The defined SNMPv3 user created on the appliance with Get-OVSnmpV3User.
 
 SNMP version type.  Allowed values:
 
-    * SNMPv1
-    * SNMPv3
+* SNMPv1
+* SNMPv3
 
 | Aliases | None |
 | :--- | :--- |

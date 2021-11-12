@@ -6,7 +6,7 @@ description: Updates the configuration parameters for the primary network interf
 
 ## Syntax
 
-```text
+```powershell
 Set-OVApplianceNetworkConfig
     [-Hostname] <String>
     [-IPv4Type] <String>
@@ -28,7 +28,7 @@ Set-OVApplianceNetworkConfig
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Set-OVApplianceNetworkConfig
     [-Hostname] <String>
     [-IPv4Addr] <IPAddress>
@@ -53,7 +53,7 @@ Set-OVApplianceNetworkConfig
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Set-OVApplianceNetworkConfig
     [-importFile] <Object>
     [-ApplianceConnection <Object>]
@@ -68,7 +68,7 @@ Updates any or all configuration parameters for the primary network interface on
 
 ###  Example 1 
 
-```text
+```powershell
 Set-OVApplianceNetworkConfig -hostname "appliance1.my.com" -IPv4Type "DHCP" -IPv6Type "UNCONFIGURE" -domainName "my.com"
 ```
 
@@ -76,7 +76,7 @@ This example passes in updated values to set for the appliance networking config
 
 ###  Example 2 
 
-```text
+```powershell
 Set-OVApplianceNetworkConfig -importFile "c:\myNetworkInput.json"
 ```
 

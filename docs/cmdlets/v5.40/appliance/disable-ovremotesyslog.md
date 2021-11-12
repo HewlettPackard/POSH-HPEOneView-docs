@@ -6,7 +6,7 @@ description: Disable remote syslog.
 
 ## Syntax
 
-```text
+```powershell
 Disable-OVRemoteSyslog
     [-Async]
     [-ApplianceConnection <Object>]
@@ -25,7 +25,7 @@ Minimum required privileges: Infrastructure administrator, Server administrator
 
 ###  Example 1 
 
-```text
+```powershell
 Disable-OVRemoteSyslog
 ```
 
@@ -33,7 +33,7 @@ Disable remote syslog configuration on all connected appliances.
 
 ###  Example 2 
 
-```text
+```powershell
 Disable-OVRemoteSyslog -ApplianceConnection appliance1.domain.com -Async | Wait-OVTaskComplete
 ```
 

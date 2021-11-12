@@ -6,7 +6,7 @@ description: Refresh SAN Manager and it"s configuration.
 
 ## Syntax
 
-```text
+```powershell
 Update-OVSanManager
     [-InputObject] <Object>
     [-ApplianceConnection] <Object>
@@ -21,7 +21,7 @@ This Cmdlet is used to refresh a SAN Managers configuration.  You can provide th
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVSanManager -name bna.contoso.com | Update-OVSanManager | Wait-OVTaskComplete
 ```
 
@@ -29,7 +29,7 @@ Refreshes the SAN Manager.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVSanManager | Update-OVSanManager | Wait-OVTaskComplete
 ```
 

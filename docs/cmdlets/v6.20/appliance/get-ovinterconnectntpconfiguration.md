@@ -6,7 +6,7 @@ description: Get the default time source policy for HPE Synergy interconnects.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVInterconnectNTPConfiguration
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -19,14 +19,14 @@ When HPE OneView manages interconnect resources, it will automatically by defaul
 {% hint style="info" %}
 Minimum required privileges:
 
-    * Read-Only
+* Read-Only
 {% endhint %}
 
 ## Examples
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVInterconnectNTPConfiguration
 
 ```

@@ -6,7 +6,7 @@ description: Remove an existing external baseline repository.
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVExternalRepository
     [-InputObject] <Object>
     [-Force]
@@ -21,8 +21,8 @@ A firmware repository enables you to store firmware bundles and deploy them acro
 
 The recommended types of external web servers to use with the repository follow:
 
-    * Apache
-    * Internet Information Services (IIS)
+* Apache
+* Internet Information Services (IIS)
 
 {% hint style="info" %}
 Only one external repository can be added.
@@ -35,7 +35,7 @@ This Cmdlet supports removing an existing external repository.  Removing an exte
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVBaselineRepository -Name MyRepoName -ErrorAction Stop | Remove-OVExternalRepository
 ```
 

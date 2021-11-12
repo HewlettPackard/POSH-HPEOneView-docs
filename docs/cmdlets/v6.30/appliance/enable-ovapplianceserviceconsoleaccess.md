@@ -6,7 +6,7 @@ description: Enable appliance service console access.
 
 ## Syntax
 
-```text
+```powershell
 Enable-OVApplianceServiceConsoleAccess
     [-ApplianceConnection <Array>]
     [<CommonParameters>]
@@ -26,7 +26,7 @@ Minimum required privileges: Infrastructure administrator
 
 ###  Example 1 
 
-```text
+```powershell
 Enable-OVApplianceServiceConsoleAccess
 ```
 

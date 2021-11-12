@@ -6,7 +6,7 @@ description: Create Custom Baseline from Hotfixes and Source Baseline.
 
 ## Syntax
 
-```text
+```powershell
 New-OVCustomBaseline
     [-SourceBaseline] <Object>
     [-Hotfixes] <Array>
@@ -25,7 +25,7 @@ HPE ProLiant Hotfixes are released out of the main SPP release cycle.  Administr
 
 ###  Example 1 
 
-```text
+```powershell
 cp111111.exe,cp222222.scexe,cp333333.exe,cp444444.scexe | % { Add-OVBaseline $_ }
 Get-OVBaseline -BaselineName "MyBaseline" | New-OVCustomBaseline -Hotfixes cp111111.exe,cp222222.scexe,cp333333.exe,cp444444.scexe -BaselineName "MyNewBaseline_20160222"
 ```

@@ -6,7 +6,7 @@ description: Get a member device from a defined Rack.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVRackMember
     [-InputObject] <String>
     [-Name <String>]
@@ -32,7 +32,7 @@ Minimum required privileges: Read only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVRack -Name Rack-221 | Get-OVRackMember
 ```
 
@@ -40,7 +40,7 @@ Retrieve all rack members from the specified rack.
 
 ###  Example 2 
 
-```text
+```powershell
 $Rack = Get-OVRack -Name Rack-221
 Get-OVRackMember -InputObject $Rack -Name ProdDL380*
 ```

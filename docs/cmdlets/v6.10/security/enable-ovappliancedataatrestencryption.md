@@ -6,7 +6,7 @@ description: Turn on HPE Synergy Composer data at rest encryption.
 
 ## Syntax
 
-```text
+```powershell
 Enable-OVApplianceDataAtRestEncryption
     [-Location <String>]
     [-ApplianceConnection <Object>]
@@ -41,7 +41,7 @@ Minimum required privileges: Infrastructure administrator
 
 ###  Example 1 
 
-```text
+```powershell
 Enable-OVApplianceDataAtRestEncryption
 ```
 

@@ -6,7 +6,7 @@ description: Retrieve SAN Manager resource(s).
 
 ## Syntax
 
-```text
+```powershell
 Get-OVSanManager
     [-Name <String>]
     [-ApplianceConnection <Array>]
@@ -33,7 +33,7 @@ Minimum required privileges: Read-only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVSanManager
 
 Name            Status State   Type                    Version  Managed SANs

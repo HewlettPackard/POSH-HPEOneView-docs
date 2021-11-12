@@ -6,7 +6,7 @@ description: Create new Logical Interconnect Group.
 
 ## Syntax
 
-```text
+```powershell
 New-OVLogicalInterconnectGroup
     [-Name] <String>
     [-Bays] <Hashtable>
@@ -37,7 +37,7 @@ New-OVLogicalInterconnectGroup
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVLogicalInterconnectGroup
     [-Name] <String>
     [-FrameCount] <Int32>
@@ -79,7 +79,7 @@ New-OVLogicalInterconnectGroup
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVLogicalInterconnectGroup
     [-Import] <Object>
     [-Scope <HPEOneView.Appliance.ScopeCollection[]>]
@@ -95,7 +95,7 @@ This Cmdlet provides the ability to create a Logical Interconnect Group.  Bays 1
 
 ###  Example 1 
 
-```text
+```powershell
 $Dest1 = New-OVSnmpTrapDestination -Destination mysnmpserver.domain.local -Community MyR3adcommun1ty -SnmpFormat SNMPv1 -TrapSeverities critical,warning
 $Dest2 = New-OVSnmpTrapDestination 10.44.120.9 MyR3adcommun1ty SNMPv1 critical,warning legacy "Other","PortStatus","PortThresholds" "Other","PortStatus"
 $SnmpConfig = New-OVSnmpConfiguration -ReadCommunity MyR3adC0mmun1ty -AccessList "10.44.120.9/32","172.20.148.0/22" -TrapDestinations $Dest1,$Dest2
@@ -107,7 +107,7 @@ Create a Logical Interconnect Group with VC FlexFabric modules in Bays 1 and 2, 
 
 ###  Example 2 
 
-```text
+```powershell
 $InternalNetworks = Get-OVNetwork -Name "My Internal VLANs*"
 New-OVLogicalInterconnectGroup -Name "Synergy VC Prod" -FrameCount 3 -InterconnectBaySet 3 -FabricModuleType "SEVC40F8" -Bays @{Frame1 = @{Bay3 = "SEVC40f8" ; Bay6 = "SE20ILM"};Frame2 = @{Bay3 = "SE20ILM"; Bay6 = "SEVC40f8" };Frame3 = @{Bay3 = "SE20ILM"; Bay6 = "SE20ILM"}} -FabricRedundancy "HighlyAvailable" -InternalNetworks $InternalNetworks
 ```
@@ -116,7 +116,7 @@ Create a Synergy Virtual Connect multi-Frame Logical Interconnect Group resource
 
 ###  Example 3 
 
-```text
+```powershell
 New-OVLogicalInterconnectGroup -LIGName "Flex10/10D and FlexFabric Production 1" -bays @{1 = "Flex1010D";2 = "Flex1010D";3 = "FlexFabric";4 = "FlexFabric"} -enableIgmpSnooping $True -igmpIdleTimeoutInterval 300 -LoopProtect $True
 ```
 
@@ -124,7 +124,7 @@ Create a Logical Interconnect Group with VC Flex10/10D in Bays 1 and 2, FlexFabr
 
 ###  Example 4 
 
-```text
+```powershell
 New-OVLogicalInterconnectGroup -Name "Synergy SAS Prod" -FrameCount 1 -InterconnectBaySet 1 -FabricModuleType "SAS" -Bays @{Frame1 = @{Bay1 = "SE12SAS" ; Bay4 = "SE12SAS"}}
 ```
 
@@ -132,7 +132,7 @@ Create a Synergy SAS Logical Interconnect Group resource.
 
 ###  Example 5 
 
-```text
+```powershell
 New-OVLogicalInterconnectGroup -Name "Synergy VC FC Prod" -FrameCount 1 -InterconnectBaySet 2 -FabricModuleType "SEVCFC" -Bays @{Frame1 = @{Bay2 = "SEVC16GbFC" ; Bay5 = "SEVC16GbFC"}}
 ```
 
@@ -140,7 +140,7 @@ Create a Synergy Virtual Connect Fibre Channel Logical Interconnect Group resour
 
 ###  Example 6 
 
-```text
+```powershell
 New-OVLogicalInterconnectGroup -import c:\dir\mylig.json
 ```
 
@@ -176,9 +176,9 @@ The number of Synergy Frames to participate in the Logical Stack.
 
 Which Synergy Interconnect Bay Set ID will the interconnects be populated in.  Allowed value:
 
-    * 1 - Interconnect Bay set 1 & 4
-    * 2 - Interconnect Bay set 2 & 5
-    * 3 - Interconnect Bay set 3 & 6
+* 1 - Interconnect Bay set 1 & 4
+* 2 - Interconnect Bay set 2 & 5
+* 3 - Interconnect Bay set 3 & 6
 
 | Aliases | None |
 | :--- | :--- |
@@ -192,11 +192,11 @@ Which Synergy Interconnect Bay Set ID will the interconnects be populated in.  A
 
 Specify the Synergy Fabric Module type the Logical Interconnect Group will be modeled for.  Allowed value:
 
-    *  SEVC100F32 - Virtual Connect SE 100Gb F32 Module for Synergy
-    *  SEVC40F8 - Virtual Connect SE 40Gb F8 Module for Synergy
-    * SEVCFC or SEVC16GbFC - Virtual Connect SE 16Gb FC Module for Synergy
-    * SEVC32FC - Virtual Connect SE 32Gb FC Module for Synergy
-    * SAS - Synergy 12Gb SAS Connection Module
+*  SEVC100F32 - Virtual Connect SE 100Gb F32 Module for Synergy
+*  SEVC40F8 - Virtual Connect SE 40Gb F8 Module for Synergy
+* SEVCFC or SEVC16GbFC - Virtual Connect SE 16Gb FC Module for Synergy
+* SEVC32FC - Virtual Connect SE 32Gb FC Module for Synergy
+* SAS - Synergy 12Gb SAS Connection Module
 
 | Aliases | None |
 | :--- | :--- |
@@ -210,25 +210,25 @@ Specify the Synergy Fabric Module type the Logical Interconnect Group will be mo
 
 HPE BladeSystem C7000 Support - A `[System.Collections.Hashtable]` object of each Interconnect Bay.  Accepted values are:
 
-    * FlexFabric - HP VC FlexFabric 10Gb/24-Port Module
-    * Flex10     - HP VC Flex-10 Enet Module
-    * Flex1010D  - HP VC Flex-10/10D Module
-    * Flex2040f8 - HP VC FlexFabric-20/40 F8 Module
-    * VCFC20     - HP VC 8Gb 20-Port FC Module
-    * VCFC24     - HP VC 8Gb 24-Port FC Module
-    * FEX        - Cisco Fabric Extender for HP BladeSystem
+* FlexFabric - HP VC FlexFabric 10Gb/24-Port Module
+* Flex10     - HP VC Flex-10 Enet Module
+* Flex1010D  - HP VC Flex-10/10D Module
+* Flex2040f8 - HP VC FlexFabric-20/40 F8 Module
+* VCFC20     - HP VC 8Gb 20-Port FC Module
+* VCFC24     - HP VC 8Gb 24-Port FC Module
+* FEX        - Cisco Fabric Extender for HP BladeSystem
         
 `[E.g]`. @{1 = "Flex10";2 = "Flex10";3 = "FlexFabric";4 = "Flexfabric";5 = "";6 = "";7 = "";8 = "";}   
 
 HPE Synergy Support - A `[System.Collection.Hashtable]` object, with Frame and Fabric Bay definitions.  Accepted values are:
 
-    * SEVC100F32   - Virtual Connect SE 40Gb F8 Module for Synergy
+* SEVC100F32   - Virtual Connect SE 40Gb F8 Module for Synergy
 
-    * SEVC40f8   - Virtual Connect SE 40Gb F8 Module for Synergy
-    * SEVCFC or SEVC16GbFC - Virtual Connect SE 16Gb FC Module for Synergy
-    * SE20ILM    - Synergy 20Gb Interconnect Link Module
-    * SE10ILM    - Synergy 10Gb Interconnect Link Module
-    * SE12SAS    - Synergy 12Gb SAS Connection Module
+* SEVC40f8   - Virtual Connect SE 40Gb F8 Module for Synergy
+* SEVCFC or SEVC16GbFC - Virtual Connect SE 16Gb FC Module for Synergy
+* SE20ILM    - Synergy 20Gb Interconnect Link Module
+* SE10ILM    - Synergy 10Gb Interconnect Link Module
+* SE12SAS    - Synergy 12Gb SAS Connection Module
 
 $Bays = @{ Frame1 = @{Bay3 = "SEVC40f8"; Bay6 = "SE20ILM"}; Frame2 = @{Bay3 = "SE20ILM"; Bay6 = "SEVC40f8"} }
 
@@ -249,10 +249,10 @@ When configuring Synergy SAS Connection Module, no other device bays can be spec
 
 Define the expected Synergy Fabric Interconnect Redundancy type.  Allowed value:
 
-    * HighlyAvailable
-    * Redundant
-    * ASide
-    * BSide
+* HighlyAvailable
+* Redundant
+* ASide
+* BSide
 
 | Aliases | None |
 | :--- | :--- |
@@ -410,9 +410,9 @@ This parameter is only available for 2.00.07 or newer appliances.
 
 Specify the IP address format type to support.  Allowed values:
 
-    * IPv4
-    * IPv6
-    * IPv4AndIPv6
+* IPv4
+* IPv6
+* IPv4AndIPv6
 
 | Aliases | None |
 | :--- | :--- |
@@ -546,8 +546,8 @@ Provide the SNMPv3 user object from New-OVSnmpV3User.
 
 Use to indicate if the group policy will be tracked to with the deployed and configured resource. Allowed values:
 
-    * None
-    * Exact
+* None
+* Exact
 
 Default: Exact
 
@@ -563,8 +563,8 @@ Default: Exact
 
 Use to indicate if the group policy will be tracked to with the deployed and configured resource. Allowed values:
 
-    * None
-    * Exact
+* None
+* Exact
 
 Default: Exact
 
@@ -580,8 +580,8 @@ Default: Exact
 
 Use to indicate if the group policy will be tracked to with the deployed and configured resource. Allowed values:
 
-    * None
-    * Exact
+* None
+* Exact
 
 Default: Exact
 
@@ -597,8 +597,8 @@ Default: Exact
 
 Use to indicate if the group policy will be tracked to with the deployed and configured resource. Allowed values:
 
-    * None
-    * Exact
+* None
+* Exact
 
 Default: Exact
 
@@ -628,8 +628,8 @@ Specify the port downlink speed to be configured for HPE Virtual Connect SE 100G
 
 Allowed values:
 
-    * 25
-    * 50
+* 25
+* 50
 
 Default: 25
 
@@ -741,8 +741,8 @@ A collection of uplink sets from New-OVUplinkSet using the `-Passthru` parameter
 By default, unregistered IGMP multicast traffic traversing VC Ethernet modules are flooded on the configured Ethernet network. The IGMP multicast flood prevention option prevents the flooding of unregistered multicast. The IGMP multicast flood prevention setting is effective only when IGMP snooping is enabled for all or a subset of VLANs. When enabled, unregistered multicast traffic from uplinks is dropped and traffic from the server ports is redirected to the active uplink port. IGMP multicast flood prevention is disabled by default.
 
 The IGMP multicast flood prevention option is supported only on the following interconnects:
-    *  HPE Virtual Connect SE 100Gb F32 Module for HPE Synergy
-    *  HPE Virtual Connect SE 40Gb F8 Module for HPE Synergy
+*  HPE Virtual Connect SE 100Gb F32 Module for HPE Synergy
+*  HPE Virtual Connect SE 40Gb F8 Module for HPE Synergy
 
 | Aliases | None |
 | :--- | :--- |
@@ -757,12 +757,12 @@ The IGMP multicast flood prevention option is supported only on the following in
 IGMP snooping with proxy reporting or report suppression actively filters the IGMP packets reducing the load on the multicast router. The IGMP proxy reporting is effective only when IGMP snooping is enabled for all or a subset of VLANs. The IGMP proxy reporting is enabled by default.
 
 The IGMP proxy reporting option is supported only on the following interconnects:
-    *  HPE Virtual Connect SE 100Gb F32 Module for HPE Synergy
-    *  HPE Virtual Connect SE 40Gb F8 Module for HPE Synergy
+*  HPE Virtual Connect SE 100Gb F32 Module for HPE Synergy
+*  HPE Virtual Connect SE 40Gb F8 Module for HPE Synergy
 
 You can enable or disable the IGMP proxy reporting configuration on the Logical Interconnect or Logical Interconnect Groups screen.
-    *  Enabled ($True) ΓÇö The host reports are filtered to minimize traffic to the upstream multicast router.
-    *  Disabled ($False) ΓÇö The host reports are not filtered. All the host reports are forwarded to the upstream multicast router.
+*  Enabled ($True) ΓÇö The host reports are filtered to minimize traffic to the upstream multicast router.
+*  Disabled ($False) ΓÇö The host reports are not filtered. All the host reports are forwarded to the upstream multicast router.
 
 | Aliases | None |
 | :--- | :--- |
@@ -776,8 +776,8 @@ You can enable or disable the IGMP proxy reporting configuration on the Logical 
 
 Use to override the consistency checking for the policy.  Allowed values:
 
-    * Exact
-    * None
+* Exact
+* None
 
 | Aliases | None |
 | :--- | :--- |

@@ -6,7 +6,7 @@ description: Add a supported SAN Manager
 
 ## Syntax
 
-```text
+```powershell
 Add-OVSanManager
     [-Type] <String>
     [-Hostname] <String>
@@ -20,7 +20,7 @@ Add-OVSanManager
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Add-OVSanManager
     [-Type] <String>
     [-Hostname] <String>
@@ -46,12 +46,12 @@ When managing SAN managers, HPE OneView does not permit a SAN to be managed thro
 
 HPE OneView supports SAN managers from different vendors.  Supported SAN Managers are:
 
-    * Brocade SAN Network Advisor
-    * Brocade FOS capable switches. Not all Brocade FC switches support FOS REST API.  Please refer to Brocade/Brocade FC switch documentation for more information.
-    * HPE Networking 5900CP  (FC or FCoE)
-    * HPE Networking 5900AF (FC-only)
-    * Cisco Nexus (FC or FCoE)
-    * Cisco MDS (FC-only)
+* Brocade SAN Network Advisor
+* Brocade FOS capable switches. Not all Brocade FC switches support FOS REST API.  Please refer to Brocade/Brocade FC switch documentation for more information.
+* HPE Networking 5900CP  (FC or FCoE)
+* HPE Networking 5900AF (FC-only)
+* Cisco Nexus (FC or FCoE)
+* Cisco MDS (FC-only)
 
 {% hint style="info" %}
 Minimum required privileges: Infrastructure administrator or Storage administrator.
@@ -61,7 +61,7 @@ Minimum required privileges: Infrastructure administrator or Storage administrat
 
 ###  Example 1 
 
-```text
+```powershell
 $task = Add-OVSanManager -type BNA -hostname BNA.contoso.com -Credential (Get-Credential) -usessl
 Wait-OVTaskComplete -InputObject $task
 ```
@@ -70,7 +70,7 @@ Add a new Brocade Network Advisor SAN Manager.
 
 ###  Example 2 
 
-```text
+```powershell
 # Define the SNMPv3 auth protocol and levels
 $CiscoSanManagerSnmpUserName = "ssh-user-SHA-AES128"
 $CiscoSanManagerSnmpAuthLevel = "AuthAndPriv"
@@ -116,14 +116,14 @@ Add two Cisco FC SAN switches as SAN Managers.
 
 SAN Manager type to add.  Accepted values are:
 
-    * Brocade
-    * BNA
-    * Brocade Network Advisor
-    * BrocadeFOS
-    * FOS
-    * HP
-    * HPE
-    * Cisco
+* Brocade
+* BNA
+* Brocade Network Advisor
+* BrocadeFOS
+* FOS
+* HP
+* HPE
+* Cisco
 
 | Aliases | None |
 | :--- | :--- |
@@ -197,9 +197,9 @@ The SNMPv3 Community User Name.
 
 The SNMPv3 Authentication Level.  Allowed values are:
 
-    * None - No Security is required, only the SNMPv3 UserName is provided.
-    * AuthOnly - SNMPv3 Authentication Encryption Security Level only. Must also provide `-SnmpAuthProtocol` and `-SnmpAuthPassword` parameters.
-    * AuthAndPriv - SNMPv3 Authentication Encryption Security and Privacy Levels. Must also provide `-SnmpAuthProtocol`, `-SnmpAuthPassword`, `-SnmpPrivProtocol` and `-SnmpPrivPassword` parameters.
+* None - No Security is required, only the SNMPv3 UserName is provided.
+* AuthOnly - SNMPv3 Authentication Encryption Security Level only. Must also provide `-SnmpAuthProtocol` and `-SnmpAuthPassword` parameters.
+* AuthAndPriv - SNMPv3 Authentication Encryption Security and Privacy Levels. Must also provide `-SnmpAuthProtocol`, `-SnmpAuthPassword`, `-SnmpPrivProtocol` and `-SnmpPrivPassword` parameters.
 
 | Aliases | None |
 | :--- | :--- |
@@ -213,8 +213,8 @@ The SNMPv3 Authentication Level.  Allowed values are:
 
 SNMPv3 Password Encryption Protocol. Allowed values are:
 
-    * SHA
-    * MD5
+* SHA
+* MD5
 
 | Aliases | None |
 | :--- | :--- |
@@ -240,8 +240,8 @@ SNMPv3 UserName Password.  Can be either `[System.String]` or `[System.Security.
 
 SNMPv3 Privacy Protocol.  Allowed values are:
 
-    * AES
-    * DES
+* AES
+* DES
 
 | Aliases | None |
 | :--- | :--- |

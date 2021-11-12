@@ -6,7 +6,7 @@ description: Create SNMP LIG Configuration Object
 
 ## Syntax
 
-```text
+```powershell
 New-OVSnmpConfiguration
     [-ReadCommunity] <String>
     [-SnmpV1] <Bool>
@@ -17,7 +17,7 @@ New-OVSnmpConfiguration
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVSnmpConfiguration
     [-ReadCommunity] <String>
     [-SnmpV3] <Bool>
@@ -37,7 +37,7 @@ This helper Cmdlet provides the capability to create a new SNMP Configuration ob
 
 ###  Example 1 
 
-```text
+```powershell
 $SnmpConfig = New-OVSnmpConfiguration -ReadCommunity MyR3adC0mmun1ty -AccessList "10.44.120.9/32","172.20.148.0/22 New-OVLogicalInterconnectGroup -LIGName "Flex10/10D and FlexFabric Production 1" -bays @{1 = "Flex1010D";2 = "Flex1010D";3 = "FlexFabric";4 = "FlexFabric"} -enableIgmpSnooping $True -igmpIdleTimeoutInterval 300 -LoopProtect $True -QosConfig $QosConfig
 ```
 

@@ -6,7 +6,7 @@ description: Add remote HPE Synergy Frame to Composer.
 
 ## Syntax
 
-```text
+```powershell
 Add-OVRemoteFrame
     [-Hostname] <String>
     [-Async]
@@ -28,7 +28,7 @@ Minimum required privileges: Infrastructure administrator or Hardware setup.
 
 ###  Example 1 
 
-```text
+```powershell
 Add-OVRemoteFrame -Hostname fe80::c8f:fbcb:aa8a:97c8
 ```
 

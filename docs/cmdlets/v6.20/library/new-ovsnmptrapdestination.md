@@ -6,7 +6,7 @@ description: Create SNMP Trap Destination Object
 
 ## Syntax
 
-```text
+```powershell
 New-OVSnmpTrapDestination
     [-Destination] <String>
     [-Community] <String>
@@ -19,7 +19,7 @@ New-OVSnmpTrapDestination
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVSnmpTrapDestination
     [-Destination] <String>
     [-SnmpV3User] <HPEOneView.Appliance.SnmpV3User>
@@ -42,7 +42,7 @@ This helper Cmdlet provides the capability to create a new SNMP Trap Destination
 
 ###  Example 1 
 
-```text
+```powershell
 $Dest1 = New-OVSnmpTrapDestination -Destination mysnmpserver.domain.local -Community MyR3adcommun1ty -SnmpFormat SNMPv1 -TrapSeverities critical,warning $Dest2 = New-OVSnmpTrapDestination 10.44.120.9 MyR3adcommun1ty SNMPv1 critical,warning legacy "Other","PortStatus","PortThresholds" "Other","PortStatus" $SnmpConfig = New-OVSnmpConfiguration -ReadCommunity MyR3adC0mmun1ty -AccessList "10.44.120.9/32","172.20.148.0/22 -TrapDestinations $Dest1,$Dest2 New-OVLogicalInterconnectGroup -LIGName "Flex10/10D and FlexFabric Production 1" -bays @{1 = "Flex1010D";2 = "Flex1010D";3 = "FlexFabric";4 = "FlexFabric"} -SNMP $SnmpConfig
 ```
 
@@ -50,7 +50,7 @@ Create a new SNMP Configuration object, with the specified Trap Destinations, an
 
 ###  Example 2 
 
-```text
+```powershell
 # Create SNMPv3 user account for appliance. $SNMPv3User = New-OVSnmpv3User -Username snmpv3user -SecurityLevel None -ApplianceSnmpUser $Dest1 = New-OVSnmpTrapDestination -Destination mysnmpserver.domain.local -Community MyR3adcommun1ty -SnmpFormat SNMPv1 -TrapSeverities critical,warning $Dest2 = New-OVSnmpTrapDestination 10.44.120.9 MyR3adcommun1ty SNMPv1 critical,warning legacy "Other","PortStatus","PortThresholds" "Other","PortStatus" $SnmpConfig = New-OVSnmpConfiguration -ReadCommunity MyR3adC0mmun1ty -AccessList "10.44.120.9/32","172.20.148.0/22 -TrapDestinations $Dest1,$Dest2 New-OVLogicalInterconnectGroup -LIGName "Flex10/10D and FlexFabric Production 1" -bays @{1 = "Flex1010D";2 = "Flex1010D";3 = "FlexFabric";4 = "FlexFabric"} -SNMP $SnmpConfig
 ```
 
@@ -86,9 +86,9 @@ The SNMP Trap Community String to set.
 
 SNMP Format type.  Allowed values:
 
-    * SNMPv1
-    * SNMPv2
-    * SNMPv3
+* SNMPv1
+* SNMPv2
+* SNMPv3
 
 | Aliases | None |
 | :--- | :--- |
@@ -102,13 +102,13 @@ SNMP Format type.  Allowed values:
 
 A collection `[System.Collections.ArrayList` ] of SNMP Trap Severities to generate Traps for.  Allowed values:
 
-    * Critical
-    * Info
-    * Major
-    * Minor
-    * Normal
-    * Unknown
-    * Warning
+* Critical
+* Info
+* Major
+* Minor
+* Normal
+* Unknown
+* Warning
 
 | Aliases | None |
 | :--- | :--- |
@@ -122,7 +122,7 @@ A collection `[System.Collections.ArrayList` ] of SNMP Trap Severities to genera
 
 A collection `[System.Collections.ArrayList` ] of VCM Trap Categories.  Allowed values:
 
-    * Legacy
+* Legacy
 
 | Aliases | None |
 | :--- | :--- |
@@ -136,9 +136,9 @@ A collection `[System.Collections.ArrayList` ] of VCM Trap Categories.  Allowed 
 
 A collection `[System.Collections.ArrayList` ] of SNMP Trap Severities to generate Traps for.  Allowed values:
 
-    * Other
-    * PortStatus
-    * PortThresholds
+* Other
+* PortStatus
+* PortThresholds
 
 | Aliases | None |
 | :--- | :--- |
@@ -152,8 +152,8 @@ A collection `[System.Collections.ArrayList` ] of SNMP Trap Severities to genera
 
 A collection `[System.Collections.ArrayList` ] of SNMP Trap Severities to generate Traps for.  Allowed values:
 
-    * Other
-    * PortStatus
+* Other
+* PortStatus
 
 | Aliases | None |
 | :--- | :--- |
@@ -227,8 +227,8 @@ The EngineId of remote SNMPv3 user.  Only applicable when configuring an SNMPv3 
 
 Indicates whether the trap should be inform message or not.  Allowed values:
 
-    * Inform
-    * Trap
+* Inform
+* Trap
 
 | Aliases | None |
 | :--- | :--- |

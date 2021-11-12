@@ -6,7 +6,7 @@ description: Get configured hypervisor managers.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVClusterManager
     [-Name <String>]
     [-Version <String>]
@@ -34,7 +34,7 @@ Minimum required privileges: Read only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVClusterManager -Name vcenter.domain.com
 ```
 
@@ -42,7 +42,7 @@ Get the specified hypervisor manager by resource name.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVClusterManager -Version 5.5.0
 ```
 
@@ -90,10 +90,10 @@ Filter for vCenter name.
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-    * AllResources
+* AllResources
     *AllResourcesInScope
-    * `[HPEOneView.Appliance.ScopeCollection]`
-    * `[HPEOneView.Appliance.ConnectionPermission]`
+* `[HPEOneView.Appliance.ScopeCollection]`
+* `[HPEOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |

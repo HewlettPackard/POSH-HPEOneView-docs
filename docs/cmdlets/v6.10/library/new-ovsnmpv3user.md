@@ -6,7 +6,7 @@ description: Create a new SNMPv3 user from appliance or Logical Interconnect/Swi
 
 ## Syntax
 
-```text
+```powershell
 New-OVSnmpV3User
     [-Username] <String>
     [-SecurityLevel <String>]
@@ -17,7 +17,7 @@ New-OVSnmpV3User
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVSnmpV3User
     [-Username] <String>
     [-ApplianceSnmpUser]
@@ -51,7 +51,7 @@ Minimum required privileges: Infrastructure administrator
 
 ###  Example 1 
 
-```text
+```powershell
 $Snmpv3Password = ConvertTo-SecureString "Myp@ssword" -AsPlainText -Force
 New-OVSnmpV3User -ApplianceSnmpUser -Username MySNMPv3us3r -SecurityLevel AuthAndPriv -AuthProtocol SHA512 -AuthPassword AES192 -PrivProtocol $SnmpV3UserPrivProtocol -PrivPassword $Snmpv3Password
 ```
@@ -100,13 +100,13 @@ SNMpv3 Authentication password in `[System.Security.SecureString]` format.
 
 SNMPv3 Authentication protocol.  Supported values:
 
-    * None
-    * MD5
-    * SHA
-    * SHA1
-    * SHA256
-    * SHA384
-    * SHA512
+* None
+* MD5
+* SHA
+* SHA1
+* SHA256
+* SHA384
+* SHA512
 
 | Aliases | None |
 | :--- | :--- |
@@ -132,12 +132,12 @@ SNMpv3 Privacy password in `[System.Security.SecureString]` format.
 
 SNMPv3 Privacy protocol.  Supported values:
 
-    * none
-    * des56
-    * 3des
-    * aes128
-    * aes192
-    * aes256"
+* none
+* des56
+* 3des
+* aes128
+* aes192
+* aes256"
 
 | Aliases | None |
 | :--- | :--- |
@@ -150,9 +150,9 @@ SNMPv3 Privacy protocol.  Supported values:
 ### -SecurityLevel &lt;String&gt;
 
 Specify the type of SNMPv3 security policy.  Supported values: 
-    * None
-    * AuthOnly
-    * AuthAndPriv
+* None
+* AuthOnly
+* AuthAndPriv
 
 | Aliases | None |
 | :--- | :--- |

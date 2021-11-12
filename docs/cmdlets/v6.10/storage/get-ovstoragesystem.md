@@ -6,7 +6,7 @@ description: Retrieve Storage System resource(s).
 
 ## Syntax
 
-```text
+```powershell
 Get-OVStorageSystem
     [-Name <String>]
     [-Hostname <String>]
@@ -16,7 +16,7 @@ Get-OVStorageSystem
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Get-OVStorageSystem
     [-SerialNumber <String>]
     [-Family <String>]
@@ -33,7 +33,7 @@ This Cmdlet will display all or a specific storage system configured on the HPE 
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVStorageSystem
 ```
 
@@ -41,7 +41,7 @@ Get all storage system resource objects managed by the appliance.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVStorageSystem HP3Par_1
 Status   Name     Serial Number Model        Storage Domain WWN                     Firmware
 ------   ----     ------------- -----        -------------- ---                     --------
@@ -52,7 +52,7 @@ Get "HP3Par_1" storage system resource object managed by the appliance.
 
 ###  Example 3 
 
-```text
+```powershell
 Get-OVStorageSystem HP3Par_1 -report
 Status   Name     Serial Number Model        Storage Domain WWN                     Firmware
 ------   ----     ------------- -----        -------------- ---                     --------

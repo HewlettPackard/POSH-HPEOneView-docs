@@ -6,7 +6,7 @@ description: Add supported resource to rack.
 
 ## Syntax
 
-```text
+```powershell
 Add-OVResourceToRack
     [-InputObject] <Object>
     [-Rack] <Object>
@@ -42,7 +42,7 @@ Minimum required privileges: Edit privileges for the resource.
 
 ###  Example 1 
 
-```text
+```powershell
 $Rack = Get-OVRack -Name MyRack221 -ErrorAction Stop
 $Servers = Get-OVServers -Name Prod221* -ErrorAction Stop
 $_U = 1
@@ -56,7 +56,7 @@ Add "Prod221" (DL) servers to "MyRack221" rack object, starting at Rack U 1, and
 
 ###  Example 2 
 
-```text
+```powershell
 $Rack = Get-OVRack -Name MyRack222 -ErrorAction Stop
 $Enclosures = Get-OVEnclosures -Name Encl-Prod* -ErrorAction Stop | ? rackName -eq $Rack.name
 $_U = 1
@@ -74,11 +74,11 @@ Add Enclosures which the Onboard Administrators report are in "MyRack222", and a
 
 The supported resource object to add.
 Supported resource objects are:
-    * Enclosures
-    * Servers
-    * Rack manager
-    * Power device
-    * Unmanaged device
+* Enclosures
+* Servers
+* Rack manager
+* Power device
+* Unmanaged device
 
 | Aliases | None |
 | :--- | :--- |

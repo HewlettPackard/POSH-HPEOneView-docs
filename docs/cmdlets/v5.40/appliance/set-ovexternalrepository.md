@@ -6,7 +6,7 @@ description: Modify an existing external baseline repository.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVExternalRepository
     [-InputObject] <Object>
     [-Name] <String>
@@ -17,7 +17,7 @@ Set-OVExternalRepository
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Set-OVExternalRepository
     [-InputObject] <Object>
     [-Name] <String>
@@ -27,7 +27,7 @@ Set-OVExternalRepository
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Set-OVExternalRepository
     [-ApplianceConnection <Array>]
     [<CommonParameters>]
@@ -39,8 +39,8 @@ A firmware repository enables you to store firmware bundles and deploy them acro
 
 The recommended types of external web servers to use with the repository follow:
 
-    * Apache
-    * Internet Information Services (IIS)
+* Apache
+* Internet Information Services (IIS)
 
 {% hint style="info" %}
 Only one external repository can be added.
@@ -53,7 +53,7 @@ This Cmdlet supports modifying an existing external repository.  Use this Cmdlet
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVBaselineRepository -Name MyRepoName -ErrorAction Stop | Set-OVExternalRepository -Name UpdatedRepoName
 ```
 
@@ -61,7 +61,7 @@ Modify an existing external repository with a new name.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVBaselineRepository -Name MyRepoName MyRepoName -ErrorAction Stop | Set-OVExternalRepository -Credential (Get-PSCredential -Username "Domain\MyUpdatedAccountName")
 ```
 
@@ -69,7 +69,7 @@ Modify an existing repository with new credentials.
 
 ###  Example 3 
 
-```text
+```powershell
 $UpdatedSslCertificate = Get-Content C:\Dir\UpdatedCert.cer -raw
 Get-OVBaselineRepository -Name MyRepoName -ErrorAction Stop | Set-OVExternalRepository -Certificate $UpdatedSslCertificate
 ```

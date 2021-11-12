@@ -6,7 +6,7 @@ description: Get the appliance remote Syslog audit log forwarding configuration.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVApplianceAuditLogForwarding
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -35,7 +35,7 @@ Minimum required privileges: Infrastructure administrator.
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVApplianceAuditLogForwarding
 ```
 

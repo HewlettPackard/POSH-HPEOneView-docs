@@ -6,7 +6,7 @@ description: Default content
 
 ## Syntax
 
-```text
+```powershell
 Set-OVCertificateRevocationInterval
     [-AutoCRLDownloadInterval] <int>
     [-ApplianceConnection <Object>]
@@ -21,7 +21,7 @@ Default content
 
 ###  Example 1 
 
-```text
+```powershell
 Set-OVCertificateRevocationInterval
 
 ```

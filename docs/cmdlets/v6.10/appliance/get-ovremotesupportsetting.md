@@ -6,7 +6,7 @@ description: Get supported resource Remote Support settings.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVRemoteSupportSetting
     [-InputObject] <Object>
     [-ApplianceConnection <Object>]
@@ -42,7 +42,7 @@ Minimum required privileges: Read-only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVEnclosure -Name Encl1 | Get-OVRemoteSupportSetting
 
 Appliance              ResourceName SalesChannelPartner        SupportChannelPartner      PrimaryContact SecondaryContact
@@ -54,7 +54,7 @@ Get the configured Remote Support collection settings for "Encl1" Enclosure reso
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVServer -Name PROD* | Get-OVRemoteSupportSetting | ? supportEnabled -eq $false
 ```
 

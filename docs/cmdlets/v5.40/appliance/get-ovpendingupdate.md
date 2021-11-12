@@ -6,7 +6,7 @@ description: Verify pending appliance update has been staged.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVPendingUpdate
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -37,7 +37,7 @@ Minimum required privileges: Infrastructure administrator or Software administra
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVPendingUpdate
 ```
 

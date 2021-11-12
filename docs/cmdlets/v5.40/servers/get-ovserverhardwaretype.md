@@ -6,7 +6,7 @@ description: Retrieve Server Hardware Type resource(s).
 
 ## Syntax
 
-```text
+```powershell
 Get-OVServerHardwareType
     [-Name <String>]
     [-Model <String>]
@@ -23,7 +23,7 @@ Obtain a collection of server hardware types.  This includes information about t
 
 ###  Example 1 
 
-```text
+```powershell
 $sht = Get-OVServerHardwareType
 ```
 
@@ -31,7 +31,7 @@ Return all the server hardware types on the appliance.
 
 ###  Example 2 
 
-```text
+```powershell
 $shtBL460Gen81 = Get-OVServerHardwareType -name "BL460 Gen8 1"
 ```
 

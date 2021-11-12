@@ -6,7 +6,7 @@ description: Show available Nimble Performance Policies.
 
 ## Syntax
 
-```text
+```powershell
 Show-OVStorageSystemPerformancePolicy
     [-InputObject] <Object>
     [-Name <String>]
@@ -21,7 +21,7 @@ Use this Cmdlet to show available Nimble Performance Policies in order to set a 
 
 ###  Example 1 
 
-```text
+```powershell
 Show-OVStorageSystemPerformancePolicy
 ```
 

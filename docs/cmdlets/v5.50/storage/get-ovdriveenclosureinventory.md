@@ -6,7 +6,7 @@ description: Get the HPE Synergy D3940 drive enclosure inventory.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVDriveEnclosureInventory
     [-Name <String>]
     [-DriveEnclosure <Object>]
@@ -17,7 +17,7 @@ Get-OVDriveEnclosureInventory
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Get-OVDriveEnclosureInventory
     [-Name <String>]
     [-DriveEnclosure <Object>]
@@ -41,7 +41,7 @@ Minimum required privileges: Infrastructure administrator, server administrator,
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVDriveEnclosureInventory
 ```
 
@@ -49,7 +49,7 @@ Get all drive enclosure inventory.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVDriveEnclosureInventory -Assigned
 ```
 
@@ -57,7 +57,7 @@ Get inventory of drives that are assigned.
 
 ###  Example 3 
 
-```text
+```powershell
 $DriveEnclosure = Get-OVDriveEnclosure -Name "Enclosure1, bay 1"
 Get-OVDriveEnclosureInventory -DriveEnclosure $DriveEnclosure
 ```
@@ -66,7 +66,7 @@ Get the drive enventory from the specified drive enclosure.
 
 ###  Example 4 
 
-```text
+```powershell
 $SasLogicalInterconnect = Get-SasLogicalInterconnect -Name "LE1-SAS Synergy LIG-1"
 Get-OVDriveEnclosureInventory -SasLogicalInterconnect $SasLogicalInterconnect -Available
 ```

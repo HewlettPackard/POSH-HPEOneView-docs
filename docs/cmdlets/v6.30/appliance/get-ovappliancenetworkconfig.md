@@ -6,7 +6,7 @@ description: Retrieves the configuration of the primary NIC of the appliance
 
 ## Syntax
 
-```text
+```powershell
 Get-OVApplianceNetworkConfig
     [-Location <String>]
     [-ApplianceConnection <Object>]
@@ -30,7 +30,7 @@ Minimum required privileges: Read-only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVApplianceNetworkConfig
 Hostname         IPv4Type IPv4Address    IPv4DNS                      IPv6Type    IPv6Address IPv6DNS
 --------         -------- -----------    -------                      --------    ----------- -------
@@ -42,7 +42,7 @@ Outputs the configuration of the primary network interface to standard output.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVApplianceNetworkConfig -Appliance hpov1.domain.com | fl
 Hostname    : hpov1.domain.com 
 IPv4Type    : STATIC
@@ -61,7 +61,7 @@ Outputs the configuration of the primary network interface and pipe to Format-Li
 
 ###  Example 3 
 
-```text
+```powershell
 $myAppNetConfig = Get-OVApplianceNetworkConfig -Appliance hpov1.domain.com
 ```
 
@@ -69,7 +69,7 @@ Outputs the configuration of the primary network interface of the appliance to t
 
 ###  Example 4 
 
-```text
+```powershell
 Get-OVApplianceNetworkConfig -Location .
 ```
 

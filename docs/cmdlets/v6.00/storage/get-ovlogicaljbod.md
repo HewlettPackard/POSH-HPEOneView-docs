@@ -6,7 +6,7 @@ description: Get defined logical JBODs.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVLogicalJBOD
     [-Name] <String>
     [-Scope <Object>]
@@ -27,7 +27,7 @@ Using this Cmdlet will return defined logical JBOD resources from the connected 
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVLogicalJBOD
 ```
 
@@ -75,10 +75,10 @@ Specify to filter resources by the specific name or wildcard search.
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-    * AllResources
+* AllResources
     *AllResourcesInScope
-    * `[HPEOneView.Appliance.ScopeCollection]`
-    * `[HPEOneView.Appliance.ConnectionPermission]`
+* `[HPEOneView.Appliance.ScopeCollection]`
+* `[HPEOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |

@@ -6,14 +6,14 @@ description: Updates a Logical Interconnect.
 
 ## Syntax
 
-```text
+```powershell
 Update-OVLogicalInterconnect
     [-InputObject] <Object>
     [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Update-OVLogicalInterconnect
     [-FactoryReset]
     [-InputObject] <Object>
@@ -21,7 +21,7 @@ Update-OVLogicalInterconnect
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Update-OVLogicalInterconnect
     [-Reapply]
     [-InputObject] <Object>
@@ -37,7 +37,7 @@ When a Logical Interconnect is inconsistent with its parent Logical Interconnect
 
 ###  Example 1 
 
-```text
+```powershell
 $task = Update-OVLogicalInterconnect -name Encl1-LI
 Wait-OVTaskComplete $task
                     
@@ -47,7 +47,7 @@ Perform an update of the Encl1-LI Logical Interconnect.  Will be prompted for co
 
 ###  Example 2 
 
-```text
+```powershell
 $task = Update-OVLogicalInterconnect -name Encl1-LI -confirm:$false | Wait-OVTaskComplete
 ```
 
@@ -55,7 +55,7 @@ Perform an update of the Encl1-LI Logical Interconnect.  Disable confirmation pr
 
 ###  Example 3 
 
-```text
+```powershell
 Get-OVLogicalInterconnect | Update-OVLogicalInterconnect
 ```
 
@@ -63,7 +63,7 @@ Search for all Logical Interconnects and update them.
 
 ###  Example 4 
 
-```text
+```powershell
 Get-OVLogicalInterconnect -Name Encl1-Default VC FF LIG | Update-OVLogicalInterconnect -WhatIf
 What if: Performing the operation "Update Logical Interconnect from Group "Default VC FF LIG". WARNING: Depending on the Update, there might be a brief outage." on target "Encl1-Default VC FF LIG".
 

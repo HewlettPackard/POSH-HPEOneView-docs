@@ -6,7 +6,7 @@ description: Remove a network set.
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVNetworkSet
     [-NetworkSet] <Object>
     [-ApplianceConnection] <Object>
@@ -21,7 +21,7 @@ Delete a network set and its corresponding default connection type.
 
 ###  Example 1 
 
-```text
+```powershell
 $task = Remove-OVNetworkSet -networkSet "MyNetSet"
 Wait-OVTaskComplete $task
 ```
@@ -30,7 +30,7 @@ Remove the network set specifed by name.  Wait for remove to complete.
 
 ###  Example 2 
 
-```text
+```powershell
 $netSet = Get-OVNetworkSet -name "MyNetSet" | Remove-OVNetwork
 ```
 
@@ -38,7 +38,7 @@ Remove the specified network set.
 
 ###  Example 3 
 
-```text
+```powershell
 Get-OVNetworkSet | Remove-OVNetworkSet
 ```
 

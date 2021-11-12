@@ -6,7 +6,7 @@ description: Import a power device.
 
 ## Syntax
 
-```text
+```powershell
 Add-OVPowerDevice
     [-Hostname] <String>
     [-Username <String>]
@@ -25,8 +25,8 @@ Power delivery devices provide power to IT hardware. A typical power topology in
 
 Power Delivery Devices describes the following classes of devices:
 
-    * Intelligent Power Distribution Units (iPDUs), which the appliance can automatically discover and control.
-    * Other power delivery devices that the appliance cannot discover. By manually adding these devices to the appliance, they become available for tracking, inventory, and power management purposes.
+* Intelligent Power Distribution Units (iPDUs), which the appliance can automatically discover and control.
+* Other power delivery devices that the appliance cannot discover. By manually adding these devices to the appliance, they become available for tracking, inventory, and power management purposes.
 
 Regardless of how power delivery devices are added to the appliance, the appliance automatically generates the same types of analysis (capacity, redundancy, and configuration). For iPDUs, the appliance gathers statistical data and reports errors.
 
@@ -42,7 +42,7 @@ Minimum required privilegesMinimum required privileges: Infrastructure administr
 
 ###  Example 1 
 
-```text
+```powershell
 Add-OVPowerDevice -Hostname ipdu24.example.com -Credential (Get-Credential)
 ```
 

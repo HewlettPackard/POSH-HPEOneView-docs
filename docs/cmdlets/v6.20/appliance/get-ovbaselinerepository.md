@@ -6,7 +6,7 @@ description: Retrieve available baseline repository information.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVBaselineRepository
     [-Name <String>]
     [-Type <String>]
@@ -20,11 +20,11 @@ A firmware repository enables you to store firmware file and deploy them across 
 
 Two types of repositories are supported:
 
-    * Internal Repository: The internal embedded firmware repository in an HPE Synergy Composer has a maximum size limit of 12 GB to store and upload firmware files for use by components managed by HPE OneView.
+* Internal Repository: The internal embedded firmware repository in an HPE Synergy Composer has a maximum size limit of 12 GB to store and upload firmware files for use by components managed by HPE OneView.
 
     NOTE: You cannot add, edit, or remove the internal repository.
 
-    * External Repository: An additional externally managed HTTP/HTTPS web server can be added to the appliance as a repository. It is a user-maintained HTTP/HTTPS web server. You can upload firmware file in a specific directory and then register the HTTP/HTTPS server with HPE OneView. This functionality is supported for Linux and Windows systems.
+* External Repository: An additional externally managed HTTP/HTTPS web server can be added to the appliance as a repository. It is a user-maintained HTTP/HTTPS web server. You can upload firmware file in a specific directory and then register the HTTP/HTTPS server with HPE OneView. This functionality is supported for Linux and Windows systems.
 
 The Cmdlet will get the appliance repositories.
 
@@ -36,7 +36,7 @@ Minimum required privileges: Read only
 
 ###  Example 1 
 
-```text
+```powershell
 $Repositories = Get-OVBaselineRepository
 ```
 
@@ -44,7 +44,7 @@ Retrieves all repository objects from the appliance.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVBaselineRepository -Type External
 ```
 

@@ -6,7 +6,7 @@ description: Retrieve Power Device (iPDU) resource(s).
 
 ## Syntax
 
-```text
+```powershell
 Get-OVPowerDevice
     [-Name <String>]
     [-Type <String>]
@@ -20,8 +20,8 @@ Power delivery devices provide power to IT hardware. A typical power topology in
 
 This Cmdlet will retrieve the following classes of devices:
 
-    * Intelligent Power Distribution Units (iPDUs), which the appliance can automatically discover and control.
-    * Other power delivery devices that the appliance cannot discover. By manually adding these devices to the appliance, they become available for tracking, inventory, and power management purposes.
+* Intelligent Power Distribution Units (iPDUs), which the appliance can automatically discover and control.
+* Other power delivery devices that the appliance cannot discover. By manually adding these devices to the appliance, they become available for tracking, inventory, and power management purposes.
 
 Regardless of how power delivery devices are added to the appliance, the appliance automatically generates the same types of analysis (capacity, redundancy, and configuration). For iPDUs, the appliance gathers statistical data and reports errors.
 
@@ -44,7 +44,7 @@ Minimum required privileges: Read-only
 
 ###  Example 1 
 
-```text
+```powershell
 $powerDevices = Get-OVPowerDevice
 ```
 
@@ -52,7 +52,7 @@ Return all the power devices managed by this appliance.
 
 ###  Example 2 
 
-```text
+```powershell
 $powerDeviceA = Get-OVPowerDevice -Name "iPDU_A"
 ```
 
@@ -76,11 +76,11 @@ The name of the power device resource to be returned.  All power device resource
 
 Filter the Power Delivery Device type.  Allowed values:
 
-    * HPIpduCore
-    * HPIpduAcModule
-    * LoadSegment
-    * HPIpduOutletBar
-    * HPIpduOutlet.
+* HPIpduCore
+* HPIpduAcModule
+* LoadSegment
+* HPIpduOutletBar
+* HPIpduOutlet.
 
 | Aliases | None |
 | :--- | :--- |

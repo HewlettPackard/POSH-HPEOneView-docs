@@ -6,7 +6,7 @@ description: Promote Standby Composer node to Active.
 
 ## Syntax
 
-```text
+```powershell
 Enable-OVComposerHANode
     [-ApplianceConnection <Object>]
     [-Async]
@@ -32,7 +32,7 @@ Minimum required privileges: Infrastructure administrator or Software administra
 
 ###  Example 1 
 
-```text
+```powershell
 Enable-OVComposerHANode
 ```
 

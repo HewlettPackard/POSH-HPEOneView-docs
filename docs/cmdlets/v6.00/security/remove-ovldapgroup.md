@@ -6,7 +6,7 @@ description: Remove Directory Group.
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVLdapGroup
     [-InputObject] <Object>
     [-ApplianceConnection] <Object>
@@ -21,7 +21,7 @@ Remove Directory Group(s) from the appliance. Can provide Group Name or Object f
 
 ###  Example 1 
 
-```text
+```powershell
 Remove-OVLdapGroup -Group "My Directory Group1"
 ```
 
@@ -29,7 +29,7 @@ Remove "My Directroy Group1" from the appliance.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVLdapGroup | Remove-OVLdapGroup
 ```
 

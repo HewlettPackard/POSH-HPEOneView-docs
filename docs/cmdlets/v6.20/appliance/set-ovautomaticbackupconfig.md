@@ -6,7 +6,7 @@ description: Configure automatic appliance backup.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVAutomaticBackupConfig
     [-Hostname] <String>
     [-Username] <String>
@@ -23,7 +23,7 @@ Set-OVAutomaticBackupConfig
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Set-OVAutomaticBackupConfig
     [-Disabled]
     [-Async]
@@ -41,7 +41,7 @@ During the configuration process, a test file will be created and stored on the 
 
 ###  Example 1 
 
-```text
+```powershell
 $HostSSHKey = Get-Content C:\host.key
 Set-OVAutomaticBackupConfig -Hostname scphost.domain.com -Username backupadmin -Password (ConvertTo-SecureString password -AsPlainText -Force) -HostSSHKey $HostSSHKey -Protocol SCP -Interval Weekly -Days "MON","WED","FRI" -Time 18:00
 ```
@@ -50,7 +50,7 @@ This command will configure automatic appliance backup, based on a weekly Monday
 
 ###  Example 2 
 
-```text
+```powershell
 $HostSSHKey = Get-Content C:\host.key
 Set-OVAutomaticBackupConfig -Hostname scphost.domain.com -Username backupadmin -Password (ConvertTo-SecureString password -AsPlainText -Force) -HostSSHKey $HostSSHKey -Protocol SCP -Interval Weekly -Days "MON","WED","FRI" -Time 18:00
 New-OVBackup
@@ -126,8 +126,8 @@ The SCP/SFTP hosts public key, in OpenSSH String format.
 
 The protocol to connect to the remote host with.  Supported values are:
 
-    * SCP
-    * SFTP
+* SCP
+* SFTP
 
 Default: SCP
 
@@ -143,8 +143,8 @@ Default: SCP
 
 The frequency the backup will be generated.  Supported values are:
 
-    * Daily
-    * Weekly
+* Daily
+* Weekly
 
 | Aliases | None |
 | :--- | :--- |
@@ -158,13 +158,13 @@ The frequency the backup will be generated.  Supported values are:
 
 If specifying a Weekly backup, provide the days in an Array.  Accepted values are:
 
-    * SU or SUN or Sunday
-    * MO or MON or Monday
-    * TU or TUE or Tuesday
-    * WE or WED or Wednesday
-    * TH or THUR or Thursday
-    * FR or FRI or Friday
-    * SA or SAT or Saturday
+* SU or SUN or Sunday
+* MO or MON or Monday
+* TU or TUE or Tuesday
+* WE or WED or Wednesday
+* TH or THUR or Thursday
+* FR or FRI or Friday
+* SA or SAT or Saturday
 
 | Aliases | None |
 | :--- | :--- |

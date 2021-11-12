@@ -6,7 +6,7 @@ description: Delete an IPv4 Subnet Pool from an appliance.
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVAddressPoolSubnet
     [-InputObject] <Object>
     [-ApplianceConnection] <Object>
@@ -21,7 +21,7 @@ This Cmdlet provides the ability to remove one or more IPv4 Subnet Pools and ass
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVAddressPoolSubnet | Remove-OVAddressPoolSubnet
 ```
 
@@ -29,7 +29,7 @@ Remove all IPv4 Subnet address pools from any connected appliance.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVAddressPoolSubnet 192.168.20.0 | Remove-OVAddressPoolSubnet
 ```
 

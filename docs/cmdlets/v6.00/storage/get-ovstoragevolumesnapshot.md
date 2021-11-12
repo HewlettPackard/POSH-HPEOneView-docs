@@ -6,7 +6,7 @@ description: Retrieve Storage Volume Snapshot resource(s).
 
 ## Syntax
 
-```text
+```powershell
 Get-OVStorageVolumeSnapShot
     [-InputObject] <Object>
     [-ApplianceConnection] <Object>
@@ -21,7 +21,7 @@ This Cmdlet will display all of the avialable snapshots for a given Storage Volu
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVStorageVolume | Get-OVStorageVolumeSnapShot
 Appliance       Name                                       Parent Volume               State             Capacity
 ---------       ----                                       -------------               -----             --------
@@ -37,7 +37,7 @@ Return all storage volume snapshot resource objects from all available storage v
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVStorageVolume "Volume 1" | Get-OVStorageVolumeSnapShot
 ```
 

@@ -6,7 +6,7 @@ description: Remove a Logical Enclosure.
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVLogicalEnclosure
     [-InputObject] <Object>
     [-ApplianceConnection] <Array>
@@ -22,7 +22,7 @@ This Cmdlet willRemove a Logical Enclosure.  Removing a Logical Enclosure is onl
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVLogicalEnclosure LogicalEnclosure1 | Remove-OVLogicalEnclosure
 ```
 

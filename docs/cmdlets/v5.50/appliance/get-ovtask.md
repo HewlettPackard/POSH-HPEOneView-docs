@@ -6,7 +6,7 @@ description: Retrieve Task resource(s).
 
 ## Syntax
 
-```text
+```powershell
 Get-OVTask
     [-Name <String>]
     [-InputObject <Object>]
@@ -16,7 +16,7 @@ Get-OVTask
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Get-OVTask
     [-Name <String>]
     [-ResourceCategory <String>]
@@ -34,7 +34,7 @@ Obtain a collection of task resources which have the specified name and/or state
 
 ###  Example 1 
 
-```text
+```powershell
 $tasks = Get-OVTask -state Error
 ```
 
@@ -42,7 +42,7 @@ Return all the tasks with a taskState="Error"
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVServerProfile -Name "Server 1" | Get-OVTask -State Completed
 ```
 
@@ -50,7 +50,7 @@ Return completed (successful) tasks associated with the "Server 1" Server Profil
 
 ###  Example 3 
 
-```text
+```powershell
 Get-OVTask -count 10
 ```
 
@@ -88,19 +88,19 @@ Specify the Resource Category to filter task results to.  Cannot be combined wit
 
 Some examples are:
 
-    * ethernet-networks
-    * fc-networks
-    * power-devices
-    * unmanaged-devices
-    * server-profiles
-    * server-hardware
-    * enclosures
-    * enclosure-groups
-    * interconnects
-    * logical-interconnects
-    * logical-interconnect-groups
-    * appliance
-    * firmware-drivers
+* ethernet-networks
+* fc-networks
+* power-devices
+* unmanaged-devices
+* server-profiles
+* server-hardware
+* enclosures
+* enclosure-groups
+* interconnects
+* logical-interconnects
+* logical-interconnect-groups
+* appliance
+* firmware-drivers
 
 | Aliases | Category |
 | :--- | :--- |
@@ -114,15 +114,15 @@ Some examples are:
 
 The state of the task resource a to be returned. May be one of the following strings:
             
-    * Unknown
-    * New
-    * Running
-    * Suspended
-    * Terminated
-    * Killed
-    * Completed
-    * Error
-    * Warning
+* Unknown
+* New
+* Running
+* Suspended
+* Terminated
+* Killed
+* Completed
+* Error
+* Warning
     
 All states will match if omitted.  All tasks will be returned if both names and state are omitted.
 

@@ -6,7 +6,7 @@ description: Generate and download Support Dumps.
 
 ## Syntax
 
-```text
+```powershell
 New-OVSupportDump
     [-Type] <String>
     [-Path <String>]
@@ -15,7 +15,7 @@ New-OVSupportDump
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVSupportDump
     [-Type] <String>
     [-InputObject] <Object>
@@ -25,7 +25,7 @@ New-OVSupportDump
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVSupportDump
     [-Type] <String>
     [-Path <String>]
@@ -58,9 +58,9 @@ Use the `-Advanced` parameter to customize the selection of support dump logs wh
 
 Some error messages recommend that you create a support dump of the HPE Synergy Composer and send it to authorized technical support for analysis. The support dump process performs the following functions:
 
-    * Deletes any previous support dump file
-    * Gathers logs and other information required for debugging
-    * Creates a compressed file with a name in the following format:
+* Deletes any previous support dump file
+* Gathers logs and other information required for debugging
+* Creates a compressed file with a name in the following format:
         
         hostname-identifiertimestamp.sdmp
  
@@ -68,13 +68,13 @@ Some error messages recommend that you create a support dump of the HPE Synergy 
 
 IMPORTANT:  If the appliance is in an error state, a special Appliance error screen is displayed. Anyone can create an encrypted support dump file from that screen without the need for logging in or other authentication.
 
-    * Creating the support dump file will remove the backup file that exists on the HPE Synergy Composer. Move the backup file to an external location before proceeding.
+* Creating the support dump file will remove the backup file that exists on the HPE Synergy Composer. Move the backup file to an external location before proceeding.
 
 The support dump file contains the following:
 
-    * Operating system logs
-    * Product logs
-    * The results of certain operating system and product-related commands
+* Operating system logs
+* Product logs
+* The results of certain operating system and product-related commands
 
 Items logged in the support dump file are recorded according to UTC time.
 
@@ -88,7 +88,7 @@ NOTE
 
 ###  Example 1 
 
-```text
+```powershell
 New-OVSupportDump -Path C:\Temp -Type Appliance
 ```
 
@@ -96,7 +96,7 @@ This command will create and save the Appliance support dump to C:\Temp.
 
 ###  Example 2 
 
-```text
+```powershell
 New-OVSupportDump -Path C:\Temp -Type Appliance -Advanced -CiDebugLogs -AlertLogs
 ```
 
@@ -104,7 +104,7 @@ This command will create and save the appliance support dump to C:\Temp, choosin
 
 ###  Example 3 
 
-```text
+```powershell
 $MyLogicalEnclosure = Get-OVLogicalEnclosure -Name MyLogicalEnclosure1
 
 New-OVSupportDump -Path C:\Temp -Type LogicalEnclosure -InputObject $MyLogicalEnclosure
@@ -114,7 +114,7 @@ This command will create and save the logical enclosure support dump to C:\Temp.
 
 ###  Example 4 
 
-```text
+```powershell
 Get-OVLogicalEnclosure -Name MyLogicalEnclosure1 | New-OVSupportDump -Path C:\Temp -Type LogicalEnclosure -ExcludeApplianceSupportDump
 ```
 

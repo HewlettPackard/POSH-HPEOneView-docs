@@ -6,7 +6,7 @@ description: Remove a Remote Support contact.
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVRemoteSupportContact
     [-InputObject] <Object>
     [-ApplianceConnection <Object>]
@@ -21,7 +21,7 @@ Use this Cmdlet to remove an existing Remote Support Contact.  The Default conta
 
 ###  Example 1 
 
-```text
+```powershell
 New-OVRemoteSupportContact -Firstname Rebert -Lastname Jones -Email robert.jones@domain.local -PrimaryPhone 123-111-2222 -AlternatePhone 111-333-4444 -Language en -Default
 ```
 

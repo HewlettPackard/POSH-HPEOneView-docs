@@ -6,7 +6,7 @@ description: Set SNMP Read Community.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVSnmpReadCommunity
     [-Name] <String>
     [-ApplianceConnection] <Object>
@@ -21,7 +21,7 @@ Set a new SNMP Read Community value on the appliance.  Updating this value will 
 
 ###  Example 1 
 
-```text
+```powershell
 Set-OVSnmpReadCommunity -name "MySNMPC0mmunity"
 ```
 

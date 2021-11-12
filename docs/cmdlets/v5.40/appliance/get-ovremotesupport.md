@@ -6,7 +6,7 @@ description: Retrieve appliance Remote Support configuration.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVRemoteSupport
     [-ApplianceConnection <Array>]
     [<CommonParameters>]
@@ -41,7 +41,7 @@ Minimum required privileges: Read-only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVRemoteSupport
 
 Appliance              Enabled Company   AutoEnableDevices MarketingOptIn InsightOnlineEnabled

@@ -6,7 +6,7 @@ description: Create a Server Profile Template from Server Profile.
 
 ## Syntax
 
-```text
+```powershell
 ConvertTo-OVServerProfileTemplate
     [-InputObject] <Object>
     [-Name <String>]
@@ -20,8 +20,8 @@ ConvertTo-OVServerProfileTemplate
 
 This Cmdlet will allow the user to "clone" or create a Server Profile Template from an existing Server Profile object.  Not all Server Profile features will be converted to a Server Profile Template.  For instance, the following features are not supported with a Server Profile Template:
 
-    * Import existing local Smart Array Logical Disk configuration
-    * Attach SAN Storage Volumes must be assigned a unique LUN ID
+* Import existing local Smart Array Logical Disk configuration
+* Attach SAN Storage Volumes must be assigned a unique LUN ID
 
 If the source Server Profile has the "Import existing logical drives" enabled, this setting will be disabled, and the Local Disk Configuration policy will be set to "disabled".
 
@@ -35,7 +35,7 @@ Minimum required privileges: Infrastructure administrator or Server administrato
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVServerProfile -Name MyProfile | ConvertTo-OVServerProfileTemplate -Name "Hypervisor Gold Template 1"
 ```
 

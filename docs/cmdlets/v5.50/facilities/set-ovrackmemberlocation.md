@@ -6,7 +6,7 @@ description: Modify an existing rack member U location.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVRackMemberLocation
     [-InputObject] <HPEOneView.Facilities.RackMember>
     [-ULocation] <Int>
@@ -29,7 +29,7 @@ This Cmdlet will modify an existing rack member U Location within the rack it is
 
 ###  Example 1 
 
-```text
+```powershell
 $RackMember = Get-OVRack -Name "Rack-221" -ErrorAction Stop | Get-OVRackMember -Name "DL380 1" -ErrorAction Stop
 Set-OVRackMemberLocation -InputObject $RackMember -ULocation ($RackMember.ULocation + 5)
 ```

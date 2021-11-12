@@ -6,7 +6,7 @@ description: Retrieve Enclosure resource(s).
 
 ## Syntax
 
-```text
+```powershell
 Get-OVEnclosure
     [-Name <String>]
     [-Scope <Object>]
@@ -15,7 +15,7 @@ Get-OVEnclosure
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Get-OVEnclosure
     [-Name <String>]
     [-Scope <Object>]
@@ -25,7 +25,7 @@ Get-OVEnclosure
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Get-OVEnclosure
     [-Name <String>]
     [-Scope <Object>]
@@ -49,7 +49,7 @@ Minimum required privileges: Read only
 
 ###  Example 1 
 
-```text
+```powershell
 $enclosures = Get-OVEnclosure
 ```
 
@@ -57,7 +57,7 @@ Return all the enclosure hardware managed by this appliance.
 
 ###  Example 2 
 
-```text
+```powershell
 $enclosure = Get-OVEnclosure -Name "A"
 ```
 
@@ -65,7 +65,7 @@ Return the enclosure hardware resource with name "A".
 
 ###  Example 3 
 
-```text
+```powershell
 Get-OVEnclosure
 
 Enclosure Name Serial Number Enclosure Model                Rack Name State      EG          Populated Bays
@@ -78,7 +78,7 @@ Display a brief list of the enclosures managed or monitored by the appliance.
 
 ###  Example 4 
 
-```text
+```powershell
 Get-OVEnclosure -Name Encl1 -report
 
 Enclosure Name Serial Number Enclosure Model                Rack Name FW Managed Baseline Name
@@ -144,10 +144,10 @@ The name of the enclosure hardware resource to be returned.  All enclosure hardw
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-    * AllResources
-    * AllResourcesInScope
-    * `[HPEOneView.Appliance.ScopeCollection]`
-    * `[HPEOneView.Appliance.ConnectionPermission]`
+* AllResources
+* AllResourcesInScope
+* `[HPEOneView.Appliance.ScopeCollection]`
+* `[HPEOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |

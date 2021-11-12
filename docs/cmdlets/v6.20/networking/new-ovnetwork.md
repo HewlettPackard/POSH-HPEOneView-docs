@@ -6,7 +6,7 @@ description: Creates one or more new Ethernet or Fibre-Channel networks on the a
 
 ## Syntax
 
-```text
+```powershell
 New-OVNetwork
     [-Name] <String>
     [-Type] <String>
@@ -25,7 +25,7 @@ New-OVNetwork
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVNetwork
     [-Name] <String>
     [-VlanRange] <String>
@@ -42,7 +42,7 @@ New-OVNetwork
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVNetwork
     [-Name] <String>
     [-Type] <String>
@@ -56,7 +56,7 @@ New-OVNetwork
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVNetwork
     [-Name] <String>
     [-Type] <String>
@@ -72,7 +72,7 @@ New-OVNetwork
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVNetwork
     [-ImportFile] <String>
     [-Scope <HPEOneView.Appliance.ScopeCollection[]>]
@@ -87,16 +87,16 @@ Create a new network resource, including its default connection type.  Network d
 
 To create an Ethernet Network for Image Streamer, use the following paramters:
 
-    * Name
-    * VlanType = Untagged
-    * IPv4Subnet Object
-    * Purpose = Management
+* Name
+* VlanType = Untagged
+* IPv4Subnet Object
+* Purpose = Management
 
 ## Examples
 
 ###  Example 1 
 
-```text
+```powershell
 New-OVNetwork -type Ethernet -name MyNetwork1 -vlanid 100 -typicalbandwidth 5000 -maximumbandwidth 7500
 ```
 
@@ -104,7 +104,7 @@ Creates new Ethernet Network type, with "MyNetwork1" name, VLAN ID 100, and spec
 
 ###  Example 2 
 
-```text
+```powershell
 New-OVNetwork -type Ethernet -name MyNetwork1 -vlanid 100 -typicalbandwidth 5000 -maximumbandwidth 7500 -Appliance MyAppliance
 ```
 
@@ -112,7 +112,7 @@ Creates new Ethernet Network type, with "MyNetwork1" name, VLAN ID 100, an dspec
 
 ###  Example 3 
 
-```text
+```powershell
 $Connection1 = Connect-OVMgmt MyAppliance1.domain.local Administrator MyPassword
 $Connection2 = Connect-OVMgmt MyAppliance2.domain.local Administrator MyPassword
 New-OVNetwork -type Ethernet -name MyNetwork1 -vlanid 100 -typicalbandwidth 5000 -maximumbandwidth 7500 -Appliance $Connection1,$Connection2
@@ -122,7 +122,7 @@ Creates new Ethernet Network type, with "MyNetwork1" name, VLAN ID 100, an dspec
 
 ###  Example 4 
 
-```text
+```powershell
 10,20,30,40,50,60 | % { New-OVNetwork -type Ethernet -name "VLAN $_" -vlanid $_ }
 ```
 
@@ -130,7 +130,7 @@ Create multiple Ethernet Networks.
 
 ###  Example 5 
 
-```text
+```powershell
 10,20,30,40,50,60 | % { New-OVNetwork -type Ethernet -name "VLAN $_-A" -vlanid $_ }
 10,20,30,40,50,60 | % { New-OVNetwork -type Ethernet -name "VLAN $_-B" -vlanid $_ }
 ```
@@ -139,7 +139,7 @@ Create Ethernet Networks for an Active/Active configuration.
 
 ###  Example 6 
 
-```text
+```powershell
 New-OVNetwork -name "VLAN A Side" -vlanRange "10,20,30,40,50,60"
 New-OVNetwork -name "VLAN B Side" -VlanRange "10,20,30,40,50,60"
 ```
@@ -148,7 +148,7 @@ Create Ethernet Networks for an Active/Active configuration using the `-VlanRang
 
 ###  Example 7 
 
-```text
+```powershell
 New-OVNetwork -type FC -name "Fabric A" -typicalBandwidth 2000 -maximumBandwidth 4000
 ```
 
@@ -156,7 +156,7 @@ Creates a new FC network type, called "Fabric A" and preferred bandwidth is 2Gb/
 
 ###  Example 8 
 
-```text
+```powershell
 New-OVNetwork -type FC -name "Fabric A" -typicalBandwidth 2000 -maximumBandwidth 4000 -fabricType FabricAttach -managedSAN Fabric_A
 ```
 
@@ -164,7 +164,7 @@ Creates a new FC network type, called "Fabric A", preferred bandwidth is 2Gb/s a
 
 ###  Example 9 
 
-```text
+```powershell
 New-OVNetwork -importFile "c:\OneViewInput\myNewNets.json"
 ```
 
@@ -189,10 +189,10 @@ If specifying the `-VlanRange` parameter, this will become the Nework Name Prefi
 
 Required value that specifies the type of Network Resource to create.  Allowed values are:
 
-    * Ethernet
-    * FC
-    * FibreChannel
-    * FCoE
+* Ethernet
+* FC
+* FibreChannel
+* FCoE
 
 | Aliases | None |
 | :--- | :--- |
@@ -246,9 +246,9 @@ VLAN Range of networks to create.  Can be consecutive, non-consecutive or a comb
 
 The type of VLAN configuration for the Ethernet Network.  This setting is only applicable for the Uplink Set configuration, and not the Network Set it could be assigned to.  Accepted values are 
             
-    * Tagged
-    * Tunnel
-    * Access
+* Tagged
+* Tunnel
+* Access
 
 Default value is Tagged.
 
@@ -264,11 +264,11 @@ Default value is Tagged.
 
 A description of the network"s role within the logical interconnect.  Accepted values in string format are:
 
-    * General
-    * Management
-    * VMMigration
-    * FaultTolerance
-    * iSCSI
+* General
+* Management
+* VMMigration
+* FaultTolerance
+* iSCSI
 
 | Aliases | None |
 | :--- | :--- |

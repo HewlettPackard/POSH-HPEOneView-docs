@@ -6,7 +6,7 @@ description: Import an existing Storage Volume resource.
 
 ## Syntax
 
-```text
+```powershell
 Add-OVStorageVolume
     [-StorageSystem] <Object>
     [-StorageDeviceName] <String>
@@ -33,9 +33,9 @@ You can increase (grow) the capacity of a volume by editing it. You cannot decre
 
 This Cmdlet will help add an existing storage volume that was provisioned on the Storage System.  In order to import an existing storage volume, the following prerequisites must be met:
 
-    * The storage system that contains the volume you want to add is being managed by the appliance, and the volume must be within the same 3Par virtual domain as the managed storage system.
-    * The storage pool that contains the volume you want to add is being managed by the appliance.
-    * The snapshot storage pool defined for the volume you want to add is being managed by the appliance.
+* The storage system that contains the volume you want to add is being managed by the appliance, and the volume must be within the same 3Par virtual domain as the managed storage system.
+* The storage pool that contains the volume you want to add is being managed by the appliance.
+* The snapshot storage pool defined for the volume you want to add is being managed by the appliance.
 
 The Storage Volume's WWN or device name will be needed, which can be retrieved from the storage system management console.
 
@@ -47,7 +47,7 @@ Minimum required privileges: Infrastructure administrator or Storage administrat
 
 ###  Example 1 
 
-```text
+```powershell
 Add-OVStorageVolume -StorageSystem (Get-OVStorageSystem -Name 3ParSys1) -StorageDeviceName MyStorageVol1 -VolumeName MyStorageVol1
 ```
 
@@ -55,7 +55,7 @@ Import the volume "MyStorageVol1" from the "3ParSys1" Storage System.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVStorageSystem -Name 3ParSys1 | Add-OVStorageVolume -StorageDeviceName MyStorageVol1 -VolumeName MyStorageVol1
 ```
 
@@ -63,7 +63,7 @@ Import the volume "MyStorageVol1" from the "3ParSys1" Storage System using the p
 
 ###  Example 3 
 
-```text
+```powershell
 Get-OVStorageSystem -Name 3ParSys1 | Add-OVStorageVolume -StorageDeviceName ClusterSharedVol1 -VolumeName ClusterSharedVol1 -Shared
 ```
 

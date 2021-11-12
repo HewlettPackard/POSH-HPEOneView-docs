@@ -6,7 +6,7 @@ description: Modify an existing SMTP email alert filter.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVSmtpAlertEmailFilter
     [-InputObject] <Object>
     [-Name <String>]
@@ -27,9 +27,9 @@ Set-OVSmtpAlertEmailFilter
 
 Email alerting feature notifies specified recipients when a certain alert occurs.  When this feature is configured and enabled, the appliance performs these steps in addition to posting the alert:
 
-    * The appliance compares the alert to configured search criteria.
-    * If the alert matches, it creates an email message containing the text of the alert.
-    * The appliance sends the email message to designated recipients in both plain text and HTML MIME types. Sending in both types allows the recipient?s mail application to determine the display.
+* The appliance compares the alert to configured search criteria.
+* If the alert matches, it creates an email message containing the text of the alert.
+* The appliance sends the email message to designated recipients in both plain text and HTML MIME types. Sending in both types allows the recipient?s mail application to determine the display.
 
 You can enable or disable this email notification feature, or you can enable or disable individual filter notifications, as required.
 
@@ -45,7 +45,7 @@ Minimum required privileges: Infrastructure administrator.
 
 ###  Example 1 
 
-```text
+```powershell
 Add-OVSmtpAlertEmailFilter -Name "Monitor CPU Error and Warning conditions" -query "CPU status:warning or status:critical" -emails admin1@domain.com,admin2@domain.com
 ```
 
@@ -53,7 +53,7 @@ Set SMTP Alert to notify when system CPU status is either "warning" or "critical
 
 ###  Example 2 
 
-```text
+```powershell
 Add-OVSmtpAlertEmailFilter -Name "My Test Filter 3" -Filter "status:critical" -Emails "user1@domain.com","user2@domain.com" -Scope "My new Scope","My new Scope2" -Async
 ```
 
@@ -61,7 +61,7 @@ Create a new email critical alert for the two scope names, and return the Async 
 
 ###  Example 3 
 
-```text
+```powershell
 Add-OVSmtpAlertEmailFilter -RemoteSupportFilter
 ```
 

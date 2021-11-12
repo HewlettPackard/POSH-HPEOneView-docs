@@ -6,7 +6,7 @@ description: Add an external fabric manager.
 
 ## Syntax
 
-```text
+```powershell
 Add-OVFabricManager
     [-ManagementAddress] <String>
     [-Name] <String>
@@ -30,15 +30,15 @@ Remediation of networks, network sets, and logical interconnects Remediation is 
 
 The following conditions cause the fabric manager to be unable to synchronize with network policies:
 
-    *  One or more networks connected across uplink sets in a logical interconnect within HPE Synergy have the same VLAN tag
-    *  The two networks are shared across tenants
+*  One or more networks connected across uplink sets in a logical interconnect within HPE Synergy have the same VLAN tag
+*  The two networks are shared across tenants
 
 When a fabric manager is non compliant with APIC network policies, a software remediation enables a fabric manager to synchronize with network policies. A compliance report is generated immediately after adding a fabric manager and is updated again after remediation. The compliance report details actions that you can perform to remediate inconsistencies. There are indicators for compliant, noncompliant, and compliance-check progress for each resource. Every tenant has a list of consistent and inconsistent reports based on the compliance records generated for a tenant. An inconsistency appears in the form of an alert, which contains an action choice: auto-remediate or manual. If you choose to auto-remediate, an automatic update of the selected HPE OneView resource will initiate.
 
 The Cisco APIC administrator provides the user login information to HPE OneView administrator using which fabric manager connects with the Cisco APIC. The Cisco APIC user must have Read all role and Read only access level to allow the fabric manager to retrieve all the required information when connected to the Cisco APIC.
 
-    * Read-all  User role for connectivity and protocol configuration under fabric infrastructure.
-    * Read only  Access level for accessing system configuration with no privileges to modify the system state.
+* Read-all  User role for connectivity and protocol configuration under fabric infrastructure.
+* Read only  Access level for accessing system configuration with no privileges to modify the system state.
 
 {% hint style="info" %}
 Minimum required privileges: Infrastructure administrator or Network administrator.
@@ -48,7 +48,7 @@ Minimum required privileges: Infrastructure administrator or Network administrat
 
 ###  Example 1 
 
-```text
+```powershell
 Add-OVFabricManager -Name ProdFabricManager -ManagementAddress fabricmgr1-vip.domain.local -SecondaryManagementAddress fabricmgr1-vip2.domain.local
 ```
 

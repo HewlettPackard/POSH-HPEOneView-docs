@@ -6,7 +6,7 @@ description: Return created label resources.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVLabel
     [-Name <String>]
     [-ApplianceConnection <Object>]
@@ -23,7 +23,7 @@ This Cmdlet will return all of the created labels on the specifed appliance.
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVLabel
 ```
 

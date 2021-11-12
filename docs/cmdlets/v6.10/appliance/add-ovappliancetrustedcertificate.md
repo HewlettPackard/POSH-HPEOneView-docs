@@ -6,7 +6,7 @@ description: Add X.509 SSL certificates to appliance trusted store.
 
 ## Syntax
 
-```text
+```powershell
 Add-OVApplianceTrustedCertificate
     [-Path <System.IO.FileInfo>]
     [-CertObject <Object>]
@@ -19,7 +19,7 @@ Add-OVApplianceTrustedCertificate
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Add-OVApplianceTrustedCertificate
     [-Path <System.IO.FileInfo>]
     [-CertObject <Object>]
@@ -42,15 +42,15 @@ This Cmdlet will allow an administrator to add X.509 compliant SSL certificates 
 {% hint style="info" %}
 Minimum required privileges:
 
-    * Infrastructure Administrator to add certificate authority certificates and server certificates.
-    * Network administrator, Server administrator, Software administrator, or Storage administrator to add server certificates.
+* Infrastructure Administrator to add certificate authority certificates and server certificates.
+* Network administrator, Server administrator, Software administrator, or Storage administrator to add server certificates.
 {% endhint %}
 
 ## Examples
 
 ###  Example 1 
 
-```text
+```powershell
 Get-ChildItem C:\Path\srv1-pub.cer | Add-OVApplianceTrustedCertificate
 ```
 
@@ -58,7 +58,7 @@ Add the provided offline certificate to the appliance trust store.
 
 ###  Example 2 
 
-```text
+```powershell
 Add-OVApplianceTrustedCertificate -ComputerName $RemoteBackupHostname -Port 443 -AliasName backupserver -Async -Outvariable Task
 ```
 
@@ -66,7 +66,7 @@ Use the Cmdlet to add the remote certificate to the appliance trust store withou
 
 ###  Example 3 
 
-```text
+```powershell
 Add-OVApplianceTrustedCertificate -ComputerName server1-ilo.domain.com -AliasName server1iLo -force
 ```
 

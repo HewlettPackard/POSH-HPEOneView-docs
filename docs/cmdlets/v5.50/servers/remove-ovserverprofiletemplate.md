@@ -6,7 +6,7 @@ description: Delete Server Profile Template Resource(s).
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVServerProfileTemplate
     [-ServerProfileTemplate] <Object>
     [-ApplianceConnection] <Object>
@@ -22,7 +22,7 @@ Delete one or multiple Server Profile Template resource(s).  A Server Profile Te
 
 ###  Example 1 
 
-```text
+```powershell
 $task = Remove-OVServerProfileTemplate -ServerProfileTemplate "My Template Profile"
 Wait-OVTaskComplete $task.uri
                         
@@ -32,7 +32,7 @@ Remove the profile template specifed by name. Wait for remove to complete.
 
 ###  Example 2 
 
-```text
+```powershell
 $spt = Get-OVServerProfileTemplate -name "My Template Profile"
 Remove-OVServerProfileTemplate $spt -confirm:$false
 ```
@@ -41,7 +41,7 @@ Remove the profile template specifed by $spt. Disable confirmation prompt.
 
 ###  Example 3 
 
-```text
+```powershell
 Get-OVServerProfileTemplate | Remove-OVServerProfileTemplate
 ```
 

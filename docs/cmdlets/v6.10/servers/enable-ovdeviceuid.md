@@ -6,7 +6,7 @@ description: Enable unit identification (UID) of a device.
 
 ## Syntax
 
-```text
+```powershell
 Enable-OVDeviceUid
     [-InputObject] <Object>
     [-ApplianceConnection <Object>]
@@ -34,7 +34,7 @@ Minimum required privileges: Infrastructure administrator, Server administrator
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVServer -Name "MyEncl, Bay 1" | Enable-OVDeviceUid | Wait-OVTaskComplete
 ```
 

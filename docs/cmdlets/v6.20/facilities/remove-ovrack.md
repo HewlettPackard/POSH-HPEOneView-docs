@@ -6,7 +6,7 @@ description: Remove a rack resource.
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVRack
     [-InputObject] <Object>
     [-ApplianceConnection <Object>]
@@ -28,7 +28,7 @@ This Cmdlet will remove an existing Rack resource.  Removing a rack resource wil
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVRack -Name Rack-221 | Remove-OVRack
 ```
 
@@ -36,7 +36,7 @@ Remove "Rack-221" rack resource from the appliance.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVRack | Remove-OVRack
 ```
 

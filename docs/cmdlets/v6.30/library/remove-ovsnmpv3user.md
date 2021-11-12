@@ -6,7 +6,7 @@ description: Remove SNMPv3 user from appliance.
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVSnmpV3User
     [-InputObject] <HPEOneView.Appliance.SnmpV3User>
     [-ApplianceConnection <Array>]
@@ -34,7 +34,7 @@ Minimum required privileges: Infrastructure administrator
 
 ###  Example 1 
 
-```text
+```powershell
 $Snmpv3User = Get-OVSnmpV3User -Name Tr@pUser -ErrorAction Stop | Remove-OVSnmpV3User
 ```
 

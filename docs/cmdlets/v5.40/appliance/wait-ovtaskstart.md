@@ -6,7 +6,7 @@ description: Wait for a task to start.
 
 ## Syntax
 
-```text
+```powershell
 Wait-OVTaskStart
     [-InputObject] <Object>
     [-resourceName <String>]
@@ -27,7 +27,7 @@ Once the task enters the running state, the Cmdlet will return the task resource
 
 ###  Example 1 
 
-```text
+```powershell
 $Task = Add-OVServer -Hostname MyiLO.domain.com -Username Administrator -Password password | Wait-OVTaskStart
 ```
 

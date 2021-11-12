@@ -6,7 +6,7 @@ description: Retrieve Logical Interconnect resource(s).
 
 ## Syntax
 
-```text
+```powershell
 Get-OVLogicalInterconnect
     [-Name <String>]
     [-NonCompliant]
@@ -21,12 +21,12 @@ Get-OVLogicalInterconnect
 
 A logical interconnect is a single administrative entity that consists of the configuration for a set of interconnects in a single enclosure or an HPE Synergy frame link topology, and includes:
 
-    * The uplink sets, which connect to data center networks.
-    * The mapping of networks to physical uplink ports, which is defined by the uplink sets for a logical interconnect.
-    * The internal networks, which are used for server-to-server communications without traffic egressing any uplinks.
-    * The downlink ports, which connect through the enclosure midplane to the servers in the enclosure.
-    * The connections between interconnects, which are called stacking links.
-    * Stacking links can be internal cables (through the enclosure) or external cables between the external ports of interconnects.
+* The uplink sets, which connect to data center networks.
+* The mapping of networks to physical uplink ports, which is defined by the uplink sets for a logical interconnect.
+* The internal networks, which are used for server-to-server communications without traffic egressing any uplinks.
+* The downlink ports, which connect through the enclosure midplane to the servers in the enclosure.
+* The connections between interconnects, which are called stacking links.
+* Stacking links can be internal cables (through the enclosure) or external cables between the external ports of interconnects.
 
 See the appropriate support or compatibility matrix on the Hewlett Packard Enterprise Information Library for the maximum number of networks that can be provisioned on a logical interconnect.
 
@@ -44,7 +44,7 @@ Minimum required privileges: Read-only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVLogicalInterconnect
 ```
 
@@ -52,7 +52,7 @@ Returns all Logical Interconnect defined on the appliance to standard output.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVLogicalInterconnect -Name "Production"
 ```
 
@@ -60,7 +60,7 @@ Returns just the Production Logical Interconnect object to standard output.
 
 ###  Example 3 
 
-```text
+```powershell
 $myLogicalICs = Get-OVLogicalInterconnect -NonCompliant
 ```
 
@@ -68,7 +68,7 @@ Returns non-compliant logical interconnect resources.
 
 ###  Example 4 
 
-```text
+```powershell
 Get-OVLogicalInterconnect -Export "c:\myApplianceConfig\LogicalInterconnects.json"
 ```
 
@@ -92,10 +92,10 @@ The name of the Logical Interconnect to retrieve.
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-    * AllResources
-    * AllResourcesInScope
-    * `[HPEOneView.Appliance.ScopeCollection]`
-    * `[HPEOneView.Appliance.ConnectionPermission]`
+* AllResources
+* AllResourcesInScope
+* `[HPEOneView.Appliance.ScopeCollection]`
+* `[HPEOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |

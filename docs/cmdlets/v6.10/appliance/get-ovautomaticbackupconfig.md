@@ -6,7 +6,7 @@ description: Retrieve automatic appliance backup configuration.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVAutomaticBackupConfig
     [-ApplianceConnection <Array>]
     [<CommonParameters>]
@@ -28,7 +28,7 @@ Minimum required privileges: Read only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVAutomaticBackupConfig
 
 Appliance Enabled Server             Protocol Directory Interval Days         Time

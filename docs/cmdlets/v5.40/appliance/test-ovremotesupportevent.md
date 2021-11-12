@@ -6,7 +6,7 @@ description: Initiate remote support test event.
 
 ## Syntax
 
-```text
+```powershell
 Test-OVRemoteSupportEvent
     [-InputObject] <Object>
     [-CreateTestCase]
@@ -32,7 +32,7 @@ Minimum required privileges: Infrastructure administrator, Server administrator,
 
 ###  Example 1 
 
-```text
+```powershell
 Test-OVRemoteSupportEvent
 ```
 

@@ -6,7 +6,7 @@ description: Return a collection of available D3940 disks.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVAvailableDriveType
     [-InputObject] <Object>
     [-ApplianceConnection <Object>]
@@ -25,7 +25,7 @@ Minimum required privileges: Read only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVSasLogicalInterconnect | Get-OVAvailableDriveType
 ```
 
@@ -33,7 +33,7 @@ Return all available disk drives from all SAS Logical Interconnects.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVSasLogicalInterconnect -Name "LE1-Default SAS Synergy LIG-3" -ErrorAction Stop | Get-OVAvailableDriveType
 ```
 
@@ -41,7 +41,7 @@ Return all available disk drives from the specific SAS Logical Interconnect.
 
 ###  Example 3 
 
-```text
+```powershell
 Get-OVDriveEnclosure -Name "EnclosureName, Bay 1" -ErrorAction Stop | Get-OVAvailableDriveType
 ```
 

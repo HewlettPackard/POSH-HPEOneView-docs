@@ -6,7 +6,7 @@ description: Change the appliance current security mode.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVApplianceCurrentSecurityMode
     [-SecurityMode] <HPOVApplianceAvailableSecurityMode>
     [-ApplianceConnection <Array>]
@@ -21,7 +21,7 @@ Use this Cmdlet to change the current security mode (Legacy, FIPS or CNSA) of th
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVApplianceAvailableSecurityMode -ModeName CNSA | Set-OVApplianceCurrentSecurityMode
 ```
 

@@ -6,7 +6,7 @@ description: Display active and connected users.
 
 ## Syntax
 
-```text
+```powershell
 Show-OVActiveUser
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -20,7 +20,7 @@ Use this Cmdlet to display active and connected users to an HPE OneView or Syner
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVActiveUser  UserName              LoginDomain       ClientHost    LoginTime --------              -----------       ----------    --------- BobSmith@domain.local doctors-lab.local 192.168.19.3  11/1/2018 9: 39: 34 PM administrator         Local             192.168.19.20 11/7/2018 1: 58: 48 PM Administrator         Local             192.168.19.3  11/10/2018 5: 36: 39 AM
 ```
 

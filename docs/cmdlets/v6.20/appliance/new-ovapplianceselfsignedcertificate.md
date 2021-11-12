@@ -6,7 +6,7 @@ description: Create a new appliance self signed Certificate.
 
 ## Syntax
 
-```text
+```powershell
 New-OVApplianceSelfSignedCertificate
     [-Country] <String>
     [-State] <String>
@@ -33,7 +33,7 @@ Use thid Cmdlet to create or recreate a self signed Certificate for the applianc
 
 ###  Example 1 
 
-```text
+```powershell
 $CSR = @{
 >>     Country = "US";
 >>  State = "California";

@@ -6,7 +6,7 @@ description: Import an appliance SSL Certificate.
 
 ## Syntax
 
-```text
+```powershell
 Import-OVSslCertificate
     [-ApplianceConnection] <Array>
     [<CommonParameters>]
@@ -22,7 +22,7 @@ Please note that the Subject Alternate Name (SAN) must match that of the Applian
 
 ###  Example 1 
 
-```text
+```powershell
 $Connection = Connect-OVMgmt Myappliance.domain.com Administrator MyP@ssword
 Import-OVSslCertificate
 ```
@@ -31,7 +31,7 @@ Import the SSL certificate from the specific appliance.
 
 ###  Example 2 
 
-```text
+```powershell
 Connect-OVMgmt Myappliance.domain.com Administrator MyP@ssword
 Connect-OVMgmt Myappliance2.domain.com Administrator MyP@ssword
 $ConnectedSessions | Import-OVSslCertificate 

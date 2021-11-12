@@ -6,7 +6,7 @@ description: Remove a configured Fabric Manager and associated tenants.
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVFabricManager
     [-InputObject] <HPEOneView.Networking.FabricManager[]>
     [-Force]
@@ -22,7 +22,7 @@ Fabric Managers is a resource manager in HPE OneView that enables integration of
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVFabricManager -Name fabricmgr.domain.com -ErrorAction Stop | Remove-OVFabricManager
 ```
 

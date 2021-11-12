@@ -6,7 +6,7 @@ description: Create an Enclosure Group.
 
 ## Syntax
 
-```text
+```powershell
 New-OVEnclosureGroup
     [-Name] <String>
     [-LogicalInterconnectGroupMapping] <Object>
@@ -17,7 +17,7 @@ New-OVEnclosureGroup
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVEnclosureGroup
     [-Name] <String>
     [-DiscoverFromEnclosure]
@@ -32,7 +32,7 @@ New-OVEnclosureGroup
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVEnclosureGroup
     [-Name] <String>
     [-LogicalInterconnectGroupMapping] <Object>
@@ -49,7 +49,7 @@ New-OVEnclosureGroup
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVEnclosureGroup
     [-ImportFile] <String>
     [-Scope <HPEOneView.Appliance.ScopeCollection[]>]
@@ -63,17 +63,17 @@ An enclosure group is a logical resource that defines a standard configuration f
 
 Enclosure groups and logical interconnect groups
 
-    * A logical interconnect group that is assigned to a bay within an enclosure group must have that bay populated within the logical interconnect group.
-    * All populated bays in a logical interconnect group must be assigned to the enclosure group. For example, a logical interconnect group that has bays 1 and 2 populated must be assigned to bays 1 and 2 of the enclosure group in order for the enclosure group to be created.
-    * An enclosure group can contain logical interconnect groups that are highly available, redundant, A-side only, or A-side and B-side. See About interconnect bay sets.
-    * Synergy multiple-enclosure logical interconnect groups must have the proper bays populated in all enclosures in the interconnect link topology.
-    * Synergy single-enclosure logical interconnect groups, such as a Serial Attached SCSI (SAS) logical interconnect group, can be applied to individual bays in individual enclosures in the interconnect link topology.
+* A logical interconnect group that is assigned to a bay within an enclosure group must have that bay populated within the logical interconnect group.
+* All populated bays in a logical interconnect group must be assigned to the enclosure group. For example, a logical interconnect group that has bays 1 and 2 populated must be assigned to bays 1 and 2 of the enclosure group in order for the enclosure group to be created.
+* An enclosure group can contain logical interconnect groups that are highly available, redundant, A-side only, or A-side and B-side. See About interconnect bay sets.
+* Synergy multiple-enclosure logical interconnect groups must have the proper bays populated in all enclosures in the interconnect link topology.
+* Synergy single-enclosure logical interconnect groups, such as a Serial Attached SCSI (SAS) logical interconnect group, can be applied to individual bays in individual enclosures in the interconnect link topology.
 
 ## Examples
 
 ###  Example 1 
 
-```text
+```powershell
 $mylig = Get-OVLogicalInterconnectGroup -name "myLogicalInterconnectGroup"
 New-OVEnclosureGroup -name "MyGroup" -logicalInterConnectGroup $mylig
 ```
@@ -82,7 +82,7 @@ Get the "myLogicalInterconnectGroup" object and pass it to create the "MyGroup" 
 
 ###  Example 2 
 
-```text
+```powershell
 $Prodlig = Get-OVLogicalInterconnectGroup -name "Production LIG"
 $DMZlig = Get-OVLogicalInterconnectGroup -name "DMZ LIG"
 $ConfigurationScript = "#Configure Insight Remote Support CentralConnect
@@ -94,7 +94,7 @@ Get two different Logical Interconnect Groups, define an OA Configuration Script
 
 ###  Example 3 
 
-```text
+```powershell
 New-OVEnclosureGroup -name "MyGroup" -DiscoverFromEnclosure -OAAddress MyOAIP.domain.com -Username Administrator -Password MyPassword
 ```
 
@@ -102,7 +102,7 @@ Connect to the provided Onboard Administrator, detect the Interconnect Bay popul
 
 ###  Example 4 
 
-```text
+```powershell
 New-OVEnclosureGroup -name "MyGroup" -DiscoverFromEnclosure -OAAddress MyOAIP.domain.com -Username Administrator -Password MyPassword -LigPrefix "My LIG Policy"
 ```
 
@@ -110,7 +110,7 @@ Connect to the provided Onboard Administrator, detect the Interconnect Bay popul
 
 ###  Example 5 
 
-```text
+```powershell
 $MySynergyLig1 = Get-OVLogicalInterconnectGroup -Name MySynergyLig1
 New-OVEnclosureGroup -name "My Synergy Enclosure Group 1" -LogicalInterconnectGroupMapping $MySynergyLig1 -EnclosureCount 3 -IPv4AddressType DHCP
 ```
@@ -119,7 +119,7 @@ Create a 3-Frame Synergy Enclosure Group using a single Logical Interconnect Gro
 
 ###  Example 6 
 
-```text
+```powershell
 $MySynergyLig1 = Get-OVLogicalInterconnectGroup -Name MySynergyLig1
 New-OVEnclosureGroup -name "My Synergy Enclosure Group 1" -LogicalInterconnectGroupMapping @{Frame1 = $3FrameVCLIG,$SasLIG; Frame2 = $3FrameVCLIG,$SasLIG; Frame3 = $3FrameVCLIG } -EnclosureCount 3 -IPv4AddressType DHCP
 ```
@@ -128,7 +128,7 @@ Create a 3-Frame Synergy Enclosure Group using multiple Logical Interconnect Gro
 
 ###  Example 7 
 
-```text
+```powershell
 $AddressPool = Get-OVAddressPoolSubnet -NetworkId "10.140.51.0" -ErrorAction Stop | Get-OVAddressPoolRange
 $MySynergyLig1 = Get-OVLogicalInterconnectGroup -Name MySynergyLig1
 New-OVEnclosureGroup -name "My Synergy Enclosure Group 1" -LogicalInterconnectGroupMapping @{Frame1 = $3FrameVCLIG,$SasLIG; Frame2 = $3FrameVCLIG,$SasLIG; Frame3 = $3FrameVCLIG } -EnclosureCount 3 -IPv4AddressType AddressPool -AddressPool $AddressPool -DeploymentNetworkType Internal
@@ -138,7 +138,7 @@ Create a 3-Frame Synergy Enclosure Group using multiple Logical Interconnect Gro
 
 ###  Example 8 
 
-```text
+```powershell
 $AddressPool = Get-OVAddressPoolSubnet -NetworkId "10.140.51.0" -ErrorAction Stop | Get-OVAddressPoolRange
 $DeploymentNetwork = Get-OVNetwork -Name "Deployment Network" -ErrorAction Stop
 $MySynergyLig1 = Get-OVLogicalInterconnectGroup -Name MySynergyLig1
@@ -217,8 +217,8 @@ The Power Redundancy Mode to set when an Enclosure is added to the appliance.
 
 Allowed Values:
 
-    * RedundantPowerFeed - Provides N+N Power Redundancy Configuration
-    * RedundantPowerSupply - Provided N+1 Power Redundancy Configuration
+* RedundantPowerFeed - Provides N+N Power Redundancy Configuration
+* RedundantPowerSupply - Provided N+1 Power Redundancy Configuration
 
 | Aliases | None |
 | :--- | :--- |
@@ -244,9 +244,9 @@ An Onboard Administrator CLI Script. Only applicable for HPE BladeSystem C-Class
 
 Use to specify how the IPv4 Addresses will be assigned to Synergy resources management interface(s).  Allowed values:
 
-    * External -  The IPv4 address is managed externally, static assignment. 
-    * DHCP -  The IPv4 address is assigned using DHCP. 
-    * AddressPool - The IPv4 address is assigned from a pool of IP addresses specified by the AddressPool parameter, similar to HPE BladeSystem C-Class "Enclosure Bay IP Addressing" (aka EBIPA). 
+* External -  The IPv4 address is managed externally, static assignment. 
+* DHCP -  The IPv4 address is assigned using DHCP. 
+* AddressPool - The IPv4 address is assigned from a pool of IP addresses specified by the AddressPool parameter, similar to HPE BladeSystem C-Class "Enclosure Bay IP Addressing" (aka EBIPA). 
 
 Default: DHCP
 
@@ -288,9 +288,9 @@ The IPv6 address pool object from Get-OVAddressPoolRange.
 
 Use to specify how the IPv6 Addresses will be assigned to Synergy resources management interface(s).  Allowed values:
 
-    * External -  The IPv4 address is managed externally, static assignment. 
-    * DHCP -  The IPv4 address is assigned using DHCP. 
-    * AddressPool - The IPv4 address is assigned from a pool of IP addresses specified by the AddressPool parameter, similar to HPE BladeSystem C-Class "Enclosure Bay IP Addressing" (aka EBIPA). 
+* External -  The IPv4 address is managed externally, static assignment. 
+* DHCP -  The IPv4 address is assigned using DHCP. 
+* AddressPool - The IPv4 address is assigned from a pool of IP addresses specified by the AddressPool parameter, similar to HPE BladeSystem C-Class "Enclosure Bay IP Addressing" (aka EBIPA). 
 
 Default: None
 
@@ -306,9 +306,9 @@ Default: None
 
 Specify the Synergy Image Stream deployment network type.  Allowed values:
 
-    * Internal - Deployment network is an internal, managed by the Frame links, which Logical Intercoonect Group must have an ImageStreamer Uplink Set.
-    * External - Deployment network is connected to an External management switch.
-    * None - No deployment network will be configured.
+* Internal - Deployment network is an internal, managed by the Frame links, which Logical Intercoonect Group must have an ImageStreamer Uplink Set.
+* External - Deployment network is connected to an External management switch.
+* None - No deployment network will be configured.
 
 Default: None
 

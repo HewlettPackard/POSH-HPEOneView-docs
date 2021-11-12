@@ -6,7 +6,7 @@ description: \[DEPRECATED\] Set the power state of a server.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVServerPower
     [-Server] <Object>
     [-State] <String>

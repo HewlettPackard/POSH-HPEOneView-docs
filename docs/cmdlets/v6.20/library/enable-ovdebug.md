@@ -6,7 +6,7 @@ description: Enable specific appliance-level component debug logging.
 
 ## Syntax
 
-```text
+```powershell
 Enable-OVDebug
     [-Scope] <String>
     [-LoggerName] <String>
@@ -51,10 +51,10 @@ The internal component name.
 
 The verbose level to enable.  Allowed values are:
 
-    * ERROR
-    * WARN
-    * DEBUG
-    * TRACE
+* ERROR
+* WARN
+* DEBUG
+* TRACE
 
 | Aliases | None |
 | :--- | :--- |

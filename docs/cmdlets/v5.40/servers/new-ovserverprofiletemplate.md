@@ -6,7 +6,7 @@ description: Create a Server Profile Template
 
 ## Syntax
 
-```text
+```powershell
 New-OVServerProfileTemplate
     [-Name] <String>
     [-ServerHardwareType] <Object>
@@ -53,7 +53,7 @@ New-OVServerProfileTemplate
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVServerProfileTemplate
     [-Name] <String>
     [-ServerHardwareType] <Object>
@@ -114,14 +114,14 @@ A Server Profile Template is the parent configuration for a Server Profile insta
 
 A Server Profile Template includes:
 
-    * Basic server identification information
-    * Connectivity settings for Ethernet networks, network sets, and Fibre Channel networks
-    * Firmware versions
-    * Local storage settings
-    * SAN storage settings
-    * BIOS settings
-    * Boot order
-    * Physical or virtual UUIDs, MAC addresses, and WWN addresses
+* Basic server identification information
+* Connectivity settings for Ethernet networks, network sets, and Fibre Channel networks
+* Firmware versions
+* Local storage settings
+* SAN storage settings
+* BIOS settings
+* Boot order
+* Physical or virtual UUIDs, MAC addresses, and WWN addresses
 
 When you create a server profile template, it is designated for a server hardware type and enclosure group (for server blades).
     
@@ -139,7 +139,7 @@ The code example above will return all matching BIOS Settings where the name con
 
 ###  Example 1 
 
-```text
+```powershell
 $Name = "HP ProLiant BL460 Gen9 Profile Template"
 $con1 = Get-OVNetwork -Name "Net 41-A"  | New-OVServerProfileConnection -connectionId 1
 $con2 = Get-OVNetwork -Name "Net 41-B"  | New-OVServerProfileConnection -connectionId 2
@@ -162,7 +162,7 @@ Create a BL Gen8 Server Profile template, and pipe to Wait-OVTaskComplete.
 
 ###  Example 2 
 
-```text
+```powershell
 $net41 = Get-OVNetwork -Name "Net-41"
 $con41 = New-OVServerProfileConnection -network $net41 -connectionType Ethernet -connectionId 1
 $net42 = Get-OVNetwork -Name "Net-42"
@@ -175,7 +175,7 @@ Create a server profile template which includes networks "Net-41" and "Net-42".
 
 ###  Example 3 
 
-```text
+```powershell
 $profileName = "Hypervisor Cluster Node Template v1.0"
 $bl460SHT = Get-OVServerHardwareTypes -name "BL460c Gen9 1"
 $enclosuregroup = Get-OVEnclosureGroup "Production EG1"
@@ -193,7 +193,7 @@ Create a new Server Profile template with 6 Connections, 4 Ethernet (including N
 
 ###  Example 4 
 
-```text
+```powershell
 $profileName = "SQL DB Cluster Node Template v1.0"
 $bl660SHT = Get-OVServerHardwareTypes -name "BL660c Gen9 1"
 #display the BL660 Gen9 BIOS Settings
@@ -386,9 +386,9 @@ Firmware baseline to assign.  Can be either Baseline Name or URI.
 
 Specify the Firmware Baseline Policy mode.  Avialable options are:
 
-    * FirmwareOnly - Updates the system firmware without powering down the server hardware using using HP Smart Update Tools. 
-    * FirmwareAndSoftware - Updates the firmware and OS drivers without powering down the server hardware using HP Smart Update Tools.
-    * FirmwareOffline - Manages the firmware through HPE OneView. Selecting this option requires the server hardware to be powered down.
+* FirmwareOnly - Updates the system firmware without powering down the server hardware using using HP Smart Update Tools. 
+* FirmwareAndSoftware - Updates the firmware and OS drivers without powering down the server hardware using HP Smart Update Tools.
+* FirmwareOffline - Manages the firmware through HPE OneView. Selecting this option requires the server hardware to be powered down.
 
 | Aliases | FirmwareMode |
 | :--- | :--- |
@@ -414,9 +414,9 @@ Using this parameter will force the bundled firmware components to install when 
 
 Specify the firmware activation policy.  Avialable options are:
 
-    * Immediate - Immediately activate (aka reboot the host) firmware if needed.  Requires HPSUT to be installed in the Host OS or Proxy VM (for VMware only)
-    * Scheduled - Specify a future time to activate (aka reboot the host) firmware if needed.  You will need to specify the FirmwareActivateDateTime parameter.  Requires HPSUT to be installed in the Host OS or Proxy VM (for VMware only)
-    * NotScheduled - Scheduled firmware update is cancelled when you choose this option.
+* Immediate - Immediately activate (aka reboot the host) firmware if needed.  Requires HPSUT to be installed in the Host OS or Proxy VM (for VMware only)
+* Scheduled - Specify a future time to activate (aka reboot the host) firmware if needed.  You will need to specify the FirmwareActivateDateTime parameter.  Requires HPSUT to be installed in the Host OS or Proxy VM (for VMware only)
+* NotScheduled - Scheduled firmware update is cancelled when you choose this option.
 
 | Aliases | None |
 | :--- | :--- |
@@ -457,18 +457,18 @@ Specify the Gen9 Boot Envrionment.
 
 Sets the boot mode as one of the following:
 
-    * UEFI
-    * UEFIOptimized
-    * BIOS
-    * Unmanaged
+* UEFI
+* UEFIOptimized
+* BIOS
+* Unmanaged
 
 If you select UEFI or UEFI optimized for an HP ProLiant DL Gen9 rack mount server, the remaining boot setting available is the PXE boot policy.
 
 For the UEFI or UEFI optimized boot mode options, the boot mode choice should be based on the expected OS and required boot features for the server hardware. UEFI optimized boot mode reduces the time the system spends in POST (Video driver initialization). In order to select the appropriate boot mode, consider the following:
     
-    * If a secure boot is required, the boot mode must be set to UEFI or UEFI optimized .
-    * For operating systems that do not support UEFI (such as DOS, or older versions of Windows and Linux), the boot mode must be set to BIOS.
-    * When booting in UEFI mode, Windows 7, Server 2008, or 2008 R2 should not be set to UEFIOptimized.
+* If a secure boot is required, the boot mode must be set to UEFI or UEFI optimized .
+* For operating systems that do not support UEFI (such as DOS, or older versions of Windows and Linux), the boot mode must be set to BIOS.
+* When booting in UEFI mode, Windows 7, Server 2008, or 2008 R2 should not be set to UEFIOptimized.
 
 Default: BIOS
 
@@ -498,11 +498,11 @@ Controls the ordering of the network modes available to the Flexible LOM (FLB); 
 
 Select from the following policies:
 
-    * Auto
-    * IPv4 only
-    * IPv6 only
-    * IPv4 then IPv6
-    * IPv6 then IPv4
+* Auto
+* IPv4 only
+* IPv6 only
+* IPv4 then IPv6
+* IPv6 then IPv4
 
 Setting the policy to Auto means the order of the existing network boot targets in the UEFI Boot Order list will not be modified, and any new network boot targets will be added to the end of the list using the System ROM"s default policy.
 
@@ -636,31 +636,31 @@ Optional.  Enable SAN Storage Management within the Server Profile.
 
 Optional. Specify the Host OS type, which will set the Host OS value when HPE OneView created the Host object on the Storage System.  Accepted values:
 
-    * CitrixXen = "Citrix Xen Server 5.x/6.x"
-    * AIX       = "AIX"
-    * IBMVIO    = "IBM VIO Server"
-    * RHEL4     = "RHE Linux (Pre RHEL 5)"
-    * RHEL3     = "RHE Linux (Pre RHEL 5)"
-    * RHEL      = "RHE Linux (5.x, 6.x)"
-    * RHEV      = "RHE Virtualization (5.x, 6.x)"
-    * VMware    = "ESX 4.x/5.x"
-    * Win2k3    = "Windows 2003"
-    * Win2k8    = "Windows 2008/2008 R2"
-    * Win2k12   = "Windows 2012 / WS2012 R2"
-    * OpenVMS   = "OpenVMS"
-    * Egenera   = "Egenera"
-    * Exanet    = "Exanet"
-    * Solaris9  = "Solaris 9/10"
-    * Solaris10 = "Solaris 9/10"
-    * Solaris11 = "Solaris 11"
-    * ONTAP     = "NetApp/ONTAP"
-    * OEL       = "OE Linux UEK (5.x, 6.x)"
-    * HPUX11iv1 = "HP-UX (11i v1, 11i v2)"
-    * HPUX11iv2 = "HP-UX (11i v1, 11i v2)"
-    * HPUX11iv3 = "HP-UX (11i v3)"
-    * SUSE      = "SuSE (10.x, 11.x)"
-    * SUSE9     = "SuSE Linux (Pre SLES 10)"
-    * Inform    = "InForm"
+* CitrixXen = "Citrix Xen Server 5.x/6.x"
+* AIX       = "AIX"
+* IBMVIO    = "IBM VIO Server"
+* RHEL4     = "RHE Linux (Pre RHEL 5)"
+* RHEL3     = "RHE Linux (Pre RHEL 5)"
+* RHEL      = "RHE Linux (5.x, 6.x)"
+* RHEV      = "RHE Virtualization (5.x, 6.x)"
+* VMware    = "ESX 4.x/5.x"
+* Win2k3    = "Windows 2003"
+* Win2k8    = "Windows 2008/2008 R2"
+* Win2k12   = "Windows 2012 / WS2012 R2"
+* OpenVMS   = "OpenVMS"
+* Egenera   = "Egenera"
+* Exanet    = "Exanet"
+* Solaris9  = "Solaris 9/10"
+* Solaris10 = "Solaris 9/10"
+* Solaris11 = "Solaris 11"
+* ONTAP     = "NetApp/ONTAP"
+* OEL       = "OE Linux UEK (5.x, 6.x)"
+* HPUX11iv1 = "HP-UX (11i v1, 11i v2)"
+* HPUX11iv2 = "HP-UX (11i v1, 11i v2)"
+* HPUX11iv3 = "HP-UX (11i v3)"
+* SUSE      = "SuSE (10.x, 11.x)"
+* SUSE9     = "SuSE Linux (Pre SLES 10)"
+* Inform    = "InForm"
 
 | Aliases | OS |
 | :--- | :--- |
@@ -838,7 +838,7 @@ Use this parameter to return the modified Server Profile Template object.  In or
 
 ### -IscsiInitiatorNameAssignmet &lt;String&gt;
 
-Specify if the iSCSI initiator name should be automatically managed and assigned, or a custom value  should be used.  Allowed values:     * Virtual     * UserDefined 
+Specify if the iSCSI initiator name should be automatically managed and assigned, or a custom value  should be used.  Allowed values: * Virtual * UserDefined 
 Default Value: Virtual
 
 | Aliases | None |
@@ -853,8 +853,8 @@ Default Value: Virtual
 
 Use to override the consistency checking for the policy.  Allowed values:
 
-    * Exact
-    * None
+* Exact
+* None
 
 | Aliases | None |
 | :--- | :--- |
@@ -868,8 +868,8 @@ Use to override the consistency checking for the policy.  Allowed values:
 
 Use to override the consistency checking for the policy.  Allowed values:
 
-    * Exact
-    * None
+* Exact
+* None
 
 | Aliases | None |
 | :--- | :--- |
@@ -883,9 +883,9 @@ Use to override the consistency checking for the policy.  Allowed values:
 
 Use to override the consistency checking for the policy.  Allowed values:
 
-    * Exact
-    * Minimum
-    * None
+* Exact
+* Minimum
+* None
 
 | Aliases | None |
 | :--- | :--- |
@@ -899,8 +899,8 @@ Use to override the consistency checking for the policy.  Allowed values:
 
 Use to override the consistency checking for the policy.  Allowed values:
 
-    * Exact
-    * None
+* Exact
+* None
 
 | Aliases | None |
 | :--- | :--- |
@@ -914,8 +914,8 @@ Use to override the consistency checking for the policy.  Allowed values:
 
 Use to override the consistency checking for the policy.  Allowed values:
 
-    * Exact
-    * None
+* Exact
+* None
 
 | Aliases | None |
 | :--- | :--- |
@@ -929,8 +929,8 @@ Use to override the consistency checking for the policy.  Allowed values:
 
 Use to override the consistency checking for the policy.  Allowed values:
 
-    * Exact
-    * None
+* Exact
+* None
 
 | Aliases | None |
 | :--- | :--- |
@@ -944,9 +944,9 @@ Use to override the consistency checking for the policy.  Allowed values:
 
 Use to override the consistency checking for the policy.  Allowed values:
 
-    * Exact
-    * Minimum
-    * None
+* Exact
+* Minimum
+* None
 
 | Aliases | None |
 | :--- | :--- |
@@ -960,8 +960,8 @@ Use to override the consistency checking for the policy.  Allowed values:
 
 Use to override the consistency checking for the policy.  Allowed values:
 
-    * Exact
-    * None
+* Exact
+* None
 
 | Aliases |  |
 | :--- | :--- |
@@ -987,8 +987,8 @@ Provide an iLO settings object from New-OVServerProfileIloPolicy Cmdlet.
 
 Use to override the consistency checking for the policy.  Allowed values:
 
-    * Exact
-    * None
+* Exact
+* None
 
 | Aliases | None |
 | :--- | :--- |

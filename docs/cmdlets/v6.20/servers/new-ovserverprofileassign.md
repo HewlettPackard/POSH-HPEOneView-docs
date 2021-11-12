@@ -6,7 +6,7 @@ description: Unassign or Reassign an existing Server Profile.
 
 ## Syntax
 
-```text
+```powershell
 New-OVServerProfileAssign
     [-ServerProfile] <Object>
     [-Server] <Object>
@@ -16,7 +16,7 @@ New-OVServerProfileAssign
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVServerProfileAssign
     [-ServerProfile] <Object>
     [-Unassigned]
@@ -34,7 +34,7 @@ This Cmdlet is used to unassign or reassign an existing HPE OneView Server Profi
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVServerProfile -Name "Profile 1" | New-OVServerProfileAssign -Server "Encl1, Bay 10" | Wait-OVTaskComplete
 ```
 
@@ -42,7 +42,7 @@ Get "Profile 1" Server Profile and assign it to "Encl1, Bay 10", then wait for t
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVServerProfile -Name "Profile 1" | New-OVServerProfileAssign -unassign | Wait-OVTaskComplete
 ```
 

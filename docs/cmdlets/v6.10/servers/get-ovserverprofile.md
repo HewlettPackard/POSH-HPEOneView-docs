@@ -6,7 +6,7 @@ description: Retrieve Server Profile resource(s).
 
 ## Syntax
 
-```text
+```powershell
 Get-OVServerProfile
     [-Name] <String>
     [-NonCompliant]
@@ -18,7 +18,7 @@ Get-OVServerProfile
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Get-OVServerProfile
     [-export]
     [-location] <String>
@@ -31,7 +31,7 @@ Get-OVServerProfile
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Get-OVServerProfile
     [-Detailed]
     [-Name] <String>
@@ -51,7 +51,7 @@ This will also provide the ability to export Server Profile objects to their own
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVServerProfile 
 Profile Name   Managing BIOS Managing Firmware Assigned      State
 ------------   ------------- ----------------- --------      -----
@@ -71,7 +71,7 @@ Generate a list of all server profiles.
 
 ###  Example 2 
 
-```text
+```powershell
 $profile = Get-OVServerProfile -Name "SA"
 ```
 
@@ -79,7 +79,7 @@ Return the server profile resource with name "SA".
 
 ###  Example 3 
 
-```text
+```powershell
 $profiles = Get-OVServerProfile -Name profile*
 ```
 
@@ -87,7 +87,7 @@ Return server profile resources that match "profile*".
 
 ###  Example 4 
 
-```text
+```powershell
 Get-OVServerProfile -name "test 1" -list
 Profile Name   Managing BIOS Managing Firmware Assigned      State
 ------------   ------------- ----------------- --------      -----
@@ -98,7 +98,7 @@ Generate a report of a specific server profile.
 
 ###  Example 5 
 
-```text
+```powershell
 Get-OVServerProfile -unassigned
 Profile Name   Managing BIOS Managing Firmware Assigned      State
 ------------   ------------- ----------------- --------      -----
@@ -111,7 +111,7 @@ Generate a list of all Unassigned server profiles.
 
 ###  Example 6 
 
-```text
+```powershell
 Get-OVServerProfile -export -location c:\profiles
 ```
 
@@ -119,7 +119,7 @@ Save all Server Profile objects to their own backup file to C:\profiles.
 
 ###  Example 7 
 
-```text
+```powershell
 Get-OVServerProfile -name Profile1 -export -location c:\profiles
 ```
 
@@ -191,10 +191,10 @@ Optional parameter that can be included with the List switch parameter to only d
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-    * AllResources
-    * AllResourcesInScope
-    * `[HPEOneView.Appliance.ScopeCollection]`
-    * `[HPEOneView.Appliance.ConnectionPermission]`
+* AllResources
+* AllResourcesInScope
+* `[HPEOneView.Appliance.ScopeCollection]`
+* `[HPEOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |

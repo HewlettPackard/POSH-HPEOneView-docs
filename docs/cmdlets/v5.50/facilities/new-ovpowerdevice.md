@@ -14,7 +14,7 @@ Default content
 
 ###  Example 1 
 
-```text
+```powershell
 New-OVPowerDevice
 ```
 

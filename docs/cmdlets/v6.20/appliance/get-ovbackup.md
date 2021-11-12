@@ -6,7 +6,7 @@ description: List appliance backups.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVBackup
     [-Before <DateTime>]
     [-After <DateTime>]
@@ -30,7 +30,7 @@ Minimum required privileges: Read only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVBackup
 ```
 
@@ -38,7 +38,7 @@ This command will return any appliance backs present on the appliance.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVBackup -Before [datetime]"2017/01/01"
 ```
 

@@ -6,7 +6,7 @@ description: Start default web browser opened to appliance dashboard.
 
 ## Syntax
 
-```text
+```powershell
 Invoke-OVWebBrowser
     [-Resource <String>]
     [-ApplianceConnection <Object>]
@@ -21,7 +21,7 @@ This Cmdlet will open the default web browser to the specified appliance, logged
 
 ###  Example 1 
 
-```text
+```powershell
 Connect-OVMgmt -Hostname MyAppliance.domain.com -Username MyAccount -Password $MySecurePassword
 Invoke-OVWebBrowser
 ```
@@ -34,20 +34,20 @@ Connect to the appliance, then launch default web browser to the appliance dashb
 
 Use to quickly jump to the specific UI section of the connected appliance.  Allowed values:
 
-    * Dashboard
-    * Enclosures
-    * LogicaInterconnectGroups
-    * LogicalEnclosures
-    * LogicalInterconnects
-    * Networks
-    * RackManagers
-    * ServerHardware
-    * ServerProfiles
-    * ServerProfileTemplates
-    * Settings
-    * StoragePools
-    * StorageSystems
-    * StorageVolumes
+* Dashboard
+* Enclosures
+* LogicaInterconnectGroups
+* LogicalEnclosures
+* LogicalInterconnects
+* Networks
+* RackManagers
+* ServerHardware
+* ServerProfiles
+* ServerProfileTemplates
+* Settings
+* StoragePools
+* StorageSystems
+* StorageVolumes
 
 By default, the Cmdlet will open your default web browser to the appliance dashboard.
 

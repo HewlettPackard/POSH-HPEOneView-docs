@@ -6,7 +6,7 @@ description: Get the appliance service console access configuration.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVApplianceServiceConsoleAccess
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -26,7 +26,7 @@ Minimum required privileges: Read only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVApplianceServiceConsoleAccess
 ```
 

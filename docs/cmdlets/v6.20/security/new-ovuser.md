@@ -6,7 +6,7 @@ description: Create a new user account.
 
 ## Syntax
 
-```text
+```powershell
 New-OVUser
     [-UserName] <String>
     [-Password] <String>
@@ -29,7 +29,7 @@ Create a new local user account on the management appliance
 
 ###  Example 1 
 
-```text
+```powershell
 New-OVUser -username Sally -fullName "Sally Smith" -password SallysPassword -roles "server administrator","network administrator"
 ```
 

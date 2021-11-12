@@ -6,7 +6,7 @@ description: Retrieve Logical Enclosure resource(s).
 
 ## Syntax
 
-```text
+```powershell
 Get-OVLogicalEnclosure
     [-Name <String>]
     [-EnclosureGroup <Object>]
@@ -34,7 +34,7 @@ Minimum required privileges: Read-only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVLogicalEnclosure
 ```
 
@@ -42,7 +42,7 @@ Return all the Logical Enclosure resources managed by all appliances.
 
 ###  Example 2 
 
-```text
+```powershell
 $EnclosureGroup = Get-OVEnclosureGroup -Name CorpEG1
 Get-OVLogicalEnclosure -EnclosureGroup $EnclosureGroup
 ```
@@ -79,10 +79,10 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-    * AllResources
-    * AllResourcesInScope
-    * `[HPEOneView.Appliance.ScopeCollection]`
-    * `[HPEOneView.Appliance.ConnectionPermission]`
+* AllResources
+* AllResourcesInScope
+* `[HPEOneView.Appliance.ScopeCollection]`
+* `[HPEOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |

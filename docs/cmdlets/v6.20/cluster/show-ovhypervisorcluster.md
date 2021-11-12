@@ -6,7 +6,7 @@ description: Default content
 
 ## Syntax
 
-```text
+```powershell
 Show-OVHypervisorCluster
     [-Name] <String>
     [-ApplianceConnection <Object>]
@@ -21,7 +21,7 @@ Default content
 
 ###  Example 1 
 
-```text
+```powershell
 Show-OVHypervisorCluster
 ```
 

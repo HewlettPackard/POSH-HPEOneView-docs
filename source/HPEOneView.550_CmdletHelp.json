@@ -35724,7 +35724,7 @@
           },
           {
             "Name": "PortSpeed",
-            "Description": "The allowed uplink port speed vy the fabric module and traceiver type.  When specifying a port speed, this value will be set for all ports.  This parameter applies to Ethernet or FCoE uplink ports only.  Allowed values:\n\n\t* Auto\n\t* 100M\n\t* 1G\n\t* 10G\n\t* 40G\n\t* 100G",
+            "Description": "The allowed uplink port speed by the fabric module and traceiver type.  When specifying a port speed, this value will be set for all ports.  This parameter applies to Ethernet or FCoE uplink ports only.  Allowed values:\n\n\t* Auto\n\t* 100M\n\t* 1G\n\t* 10G\n\t* 40G\n\t* 100G",
             "DataType": "string",
             "Required": false,
             "DefaultValue": "",
@@ -51760,6 +51760,16 @@
             "SupportsWildcard": false,
             "DataType": null,
             "Required": false
+          },
+          {
+            "Name": "UseMXRecordLookup",
+            "Description": "Specify to use DNS MX record resolution for the domain in the email address provided.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -58943,7 +58953,7 @@
           },
           {
             "Name": "PortSpeed",
-            "Description": "The allowed uplink port speed vy the fabric module and traceiver type.  When specifying a port speed, this value will be set for all ports.  This parameter applies to Ethernet or FCoE uplink ports only.  Allowed values:\n\n\t* Auto\n\t* 100M\n\t* 1G\n\t* 10G\n\t* 40G\n\t* 100G",
+            "Description": "The allowed uplink port speed by the fabric module and traceiver type.  When specifying a port speed, this value will be set for all ports.  This parameter applies to Ethernet or FCoE uplink ports only.  Allowed values:\n\n\t* Auto\n\t* 100M\n\t* 1G\n\t* 10G\n\t* 40G\n\t* 100G",
             "DataType": "string",
             "Required": false,
             "DefaultValue": "",

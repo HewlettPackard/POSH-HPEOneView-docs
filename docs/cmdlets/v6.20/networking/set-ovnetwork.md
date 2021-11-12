@@ -6,7 +6,7 @@ description: Modify an existing network.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVNetwork
     [-InputObject] <Object>
     [-Name <String>]
@@ -23,7 +23,7 @@ Set-OVNetwork
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Set-OVNetwork
     [-InputObject] <Object>
     [-Name <String>]
@@ -46,7 +46,7 @@ Modify a network and it"s attributes information.  Use this Cmdlet to change the
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVNetwork -Name "Net-11" | Set-OVNetwork -name NewNet-11 -Purpose Management -SmartLink $true -PrivateNetwork $false -TypicalBandwidth 500 -MaximumBandwidth 1500 | Wait-OVTaskComplete
 ```
 
@@ -54,7 +54,7 @@ Get the "Net-11" Ethernet Network, pipe it to Set-OVNetwork to update values.
 
 ###  Example 2 
 
-```text
+```powershell
 $fabricAManagedSan = Get-OVManagedSan -Name "Fabric A"
 Get-OVNetwork -Name "Prod Fabric A" | Set-OVNetwork -ManagedSan $fabricAManagedSan  | Wait-OVTaskComplete
 ```
@@ -63,7 +63,7 @@ Update "Prod Fabric A" FC Network with "Fabric a" Managed SAN resource.
 
 ###  Example 3 
 
-```text
+```powershell
 $NewSuffix = "-prod A"
 Get-OVNetwork -type Ethernet | Set-OVNetwork -Suffix $NewSuffix
 ```
@@ -124,10 +124,10 @@ Use this parameter to add a new suffix to the name.  Will not change the origina
 
 A description of the network"s role within the logical interconnect.  Accepted values in string format are:
 
-    * General
-    * Management
-    * VMMigration
-    * FaultTolerance
+* General
+* Management
+* VMMigration
+* FaultTolerance
 
 | Aliases | None |
 | :--- | :--- |

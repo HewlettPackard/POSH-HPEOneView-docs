@@ -6,7 +6,7 @@ description: Add a new Directory Group to appliance.
 
 ## Syntax
 
-```text
+```powershell
 New-OVLdapGroup
     [-Directory] <Object>
     [-Group] <Object>
@@ -18,7 +18,7 @@ New-OVLdapGroup
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVLdapGroup
     [-Directory] <Object>
     [-Group] <Object>
@@ -38,7 +38,7 @@ This Cmdlet provides the ability to add a new Directory Group to the appliance. 
 
 ###  Example 1 
 
-```text
+```powershell
 New-OVLdapGroup -d Domain1 -GroupName "MY Directory Group1" -roles @("Server administrator") -u "Sarah Peterson"
 ```
 
@@ -46,7 +46,7 @@ Add "MY Directory Group1" from Domain1 with Server Administrator role and prompt
 
 ###  Example 2 
 
-```text
+```powershell
 # Get the defined directory group from the appliance. $Directory = Get-OVLdapDirectory -Name "Domain1" -ErrorAction Stop  # Collect the users AD password.  This does not require Domain Admins or an administrator level account.  Only a standard user account that can query the directory. $Password = ConvertTo-SecureString -AsPlainText "password123890" -force  # Get the directory group object. $Group = Show-OVLdapDirectoryGroup -Name "Domain1" -Directory $Directory -Username "Sarah.Peterson@domain1.com" -Password $Password -ErrorAction Stop  # Specify the roles needed to be assigned to the directory group. $Roles = "Server administrator","Backup administrator"  # Create the directory group resource on the appliance, and associate with the SBAC permissions. New-OVLdapGroup -Directory $Directory -GroupName "MY Directory Group1" -Roles $Roles -Username "Sarah.Peterson@domain1.com" -Password $Password
 ```
 
@@ -54,7 +54,7 @@ Add "MY Directory Group1" from Domain1 with Server and Backup administrator role
 
 ###  Example 3 
 
-```text
+```powershell
 # Get the defined directory group from the appliance. $Directory = Get-OVLdapDirectory -Name "Domain1" -ErrorAction Stop  # Collect the scope needed to assign permissions. $VirtAdminsScope = Get-OVScope -Name CorpVirtAdmins -ErrorAction Stop  # Create a hashtable of the roles to scopes (SBAC) which would then be assigned to the directory group. $ScopeRoles = @{Role = "Server administrator"; Scope = $VirtAdminsScope},@{Role = "Storage administrator"; Scope = $VirtAdminsScope}  # Collect the users AD credentials.  This does not require Domain Admins or an administrator level account.  Only a standard user account that can query the directory. $MyAdCreds = Get-Credential  # Get the directory group object. $Group = Show-OVLdapDirectoryGroup -Name "CorpVirtAdmins" -Directory $Directory -Credential $MyAdCreds -ErrorAction Stop  # Create the directory group resource on the appliance, and associate with the SBAC permissions. New-OVLdapGroup -Directory Directory -GroupName CorpVirtAdmins -ScopePermissions $ScopeRoles -Credential $MyAdCreds
 ```
 

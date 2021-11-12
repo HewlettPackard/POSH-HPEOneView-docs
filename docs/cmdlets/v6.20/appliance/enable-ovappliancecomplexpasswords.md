@@ -6,7 +6,7 @@ description: Enable appliance complex password policy.
 
 ## Syntax
 
-```text
+```powershell
 Enable-OVApplianceComplexPasswords
     [-ApplianceConnection <Array>]
     [<CommonParameters>]
@@ -18,12 +18,12 @@ Enables whether users are required to have complex passwords.  This option does 
 
 Complex passwords must contain the following:
 
-    * Minimum of 14 characters
-    * Minimum of one uppercase character
-    * Minimum of one lowercase character
-    * Minimum one number
-    * Minimum of one special character. For example: !@#$^*_-=+,.?
-    * No whitespace
+* Minimum of 14 characters
+* Minimum of one uppercase character
+* Minimum of one lowercase character
+* Minimum one number
+* Minimum of one special character. For example: !@#$^*_-=+,.?
+* No whitespace
 
 {% hint style="info" %}
 Minimum required privileges: Infrastructure administrator
@@ -33,7 +33,7 @@ Minimum required privileges: Infrastructure administrator
 
 ###  Example 1 
 
-```text
+```powershell
 Enable-OVApplianceComplexPasswords
 ```
 

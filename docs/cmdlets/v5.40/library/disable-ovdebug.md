@@ -6,7 +6,7 @@ description: Disable specific appliance-level component debug logging.
 
 ## Syntax
 
-```text
+```powershell
 Disable-OVDebug
     [-Scope] <String>
     [-LoggerName] <String>

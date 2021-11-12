@@ -6,7 +6,7 @@ description: Power off Server Resource.
 
 ## Syntax
 
-```text
+```powershell
 Stop-OVServer
     [-InputObject] <Object>
     [-Async]
@@ -14,7 +14,7 @@ Stop-OVServer
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Stop-OVServer
     [-InputObject] <Object>
     [-Force]
@@ -31,7 +31,7 @@ Stop the power state of the server using the virtual power button.  By default, 
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVServer -Name "Encl1, Bay 1" | Stop-OVServer | Wait-OVTaskComplete
 ```
 
@@ -39,7 +39,7 @@ Power off the specific server device by passing the Server Object via pipeline.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVServerProfile -Name "MyWebServer 1" | Stop-OVServer | Wait-OVTaskComplete
 ```
 
@@ -47,7 +47,7 @@ Power off the specific server device by passing the Server Profile Object via pi
 
 ###  Example 3 
 
-```text
+```powershell
 Get-OVServer -Name "Encl1, Bay 1" | Stop-OVServer -Force | Wait-OVTaskComplete
 ```
 

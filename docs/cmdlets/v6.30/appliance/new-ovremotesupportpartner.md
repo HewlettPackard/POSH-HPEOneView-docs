@@ -6,7 +6,7 @@ description: Retrieve Remote Support Default Site.
 
 ## Syntax
 
-```text
+```powershell
 New-OVRemoteSupportPartner
     [-Name] <String>
     [-Type] <String>
@@ -24,7 +24,7 @@ Use this Cmdlet to retrieve the configured default site.
 
 ###  Example 1 
 
-```text
+```powershell
 New-OVRemoteSupportPartner -Name "My Authorized Partner" -Type Reseller -PartnerId 123456
 ```
 
@@ -32,7 +32,7 @@ Define a new authorized HPE Reseller partner.
 
 ###  Example 2 
 
-```text
+```powershell
 New-OVRemoteSupportPartner -Name "My Authorized Partner" -Type Support -PartnerId 123456 -Default
 ```
 

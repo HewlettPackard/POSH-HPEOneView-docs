@@ -6,7 +6,7 @@ description: Retrieve HPE Synergy OS Deployment Server.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVOSDeploymentServer
     [-Name <String>]
     [-Label <String>]
@@ -32,7 +32,7 @@ Minimum required privileges: Read-only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVOSDeploymentServer
 ```
 

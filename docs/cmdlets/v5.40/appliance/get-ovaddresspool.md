@@ -6,7 +6,7 @@ description: Retrieve address pool information.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVAddressPool
     [-Type <String[]>]
     [-ApplianceConnection <Object>]
@@ -19,11 +19,11 @@ An ID pool is a collection of one or more ranges that you can be randomly genera
 
 This Cmdlet will get the available and configured address pools, and their associated Ranges from the appliance. Currently, the appliance supports the following address pools:
 
-    * VMAC
-    * VWWN
-    * VSN
-    * IPv6
-    * IPv4
+* VMAC
+* VWWN
+* VSN
+* IPv6
+* IPv4
 
 You can specify one, some or all of the Pool types. A Range switch is provided to include the associated Range objects. A report switch is provided to display a report of each address pool type.
 
@@ -35,7 +35,7 @@ Minimum required privileges: Network administrator
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVAddressPool
 ```
 
@@ -43,7 +43,7 @@ Get the address pools.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVAddressPool -type vmac
 ```
 

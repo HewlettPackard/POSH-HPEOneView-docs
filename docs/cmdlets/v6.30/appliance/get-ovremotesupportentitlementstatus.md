@@ -6,7 +6,7 @@ description: Get Remote Support for a supported resource.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVRemoteSupportEntitlementStatus
     [-InputObject] <Object>
     [-ApplianceConnection <Object>]
@@ -45,7 +45,7 @@ Minimum required privileges: Read-only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVServer -Name Prod* | Get-OVRemoteSupportEntitlementStatus
 ```
 
@@ -53,7 +53,7 @@ Get the servers with their name matching "Prod" and get their Remote Support ent
 
 ###  Example 2 
 
-```text
+```powershell
 $Enclosure = Get-OVEnclosure -Name Enclosure-1A
 Get-OVRemoteSupportEntitlementStatus -InputObject $Enclusre
 ```

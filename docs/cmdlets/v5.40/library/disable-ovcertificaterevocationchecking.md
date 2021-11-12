@@ -6,7 +6,7 @@ description: Disable appliance certificate revocation checking.
 
 ## Syntax
 
-```text
+```powershell
 Disable-OVCertificateRevocationChecking
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -26,7 +26,7 @@ Minimum required privileges: Infrastructure administrator
 
 ###  Example 1 
 
-```text
+```powershell
 Disable-OVCertificateRevocationChecking
 
 ```

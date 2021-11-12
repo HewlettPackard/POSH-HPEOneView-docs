@@ -6,7 +6,7 @@ description: Create compliant iLO directory group object for server profile type
 
 ## Syntax
 
-```text
+```powershell
 New-OVIloDirectoryGroup
     [-GroupDN] <String>
     [-GroupSID] <String>
@@ -28,7 +28,7 @@ This Cmdlet will create and grant access to specific directory groups for the iL
 
 ###  Example 1 
 
-```text
+```powershell
 $Group1 = New-OVIloDirectoryGroup -GroupDN "dn=ilogroup1, ou=ou1, dc=domain, dc=com" `
                                   -GroupSID "sid12345" `
                                   -AdministerUserAccounts `

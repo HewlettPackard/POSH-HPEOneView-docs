@@ -6,7 +6,7 @@ description: Remove storage volume snapshot resource(s).
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVStorageVolumeSnapshot
     [-InputObject] <Object>
     [-ApplianceConnection] <Object>
@@ -22,7 +22,7 @@ This Cmdlet will remove a storage volume snapshot from a storage volume resource
 
 ###  Example 1 
 
-```text
+```powershell
 $Snapshots = Get-OVStorageVolume -Name "Volume 1" -ErrorAction Stop | Get-OVStorageVolumeSnapshot
 $Snapshots | ? { ((get-date) - (Get-Date $_.created)).days -ge 5 } | Remove-OVStorageVolumeSnapshot
 ```
@@ -31,7 +31,7 @@ Get all of the available storage volume snapshots for "Volume 1", then remove an
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVStorageVolume | Get-OVStorageVolumeSnapshot | Remove-OVStorageVolumeSnapshot
 ```
 

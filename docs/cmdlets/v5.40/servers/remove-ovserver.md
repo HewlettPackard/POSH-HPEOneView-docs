@@ -6,7 +6,7 @@ description: Remove a rackmount server from the appliance.
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVServer
     [-InputObject] <Object>
     [-ApplianceConnection] <Object>
@@ -26,7 +26,7 @@ Blade servers can only be removed by removing the enclosure (Remove-OVEnclosure)
 
 ###  Example 1 
 
-```text
+```powershell
 $task = Remove-OVServer -name "Server-1234" -force
 Wait-OVTaskComplete $task
                     
@@ -36,7 +36,7 @@ Force-remove the server specifed by name. Wait for remove to complete.
 
 ###  Example 2 
 
-```text
+```powershell
 $server = Get-OVServer -name "Server-1234"
 Remove-OVServer $server -confirm:$false
 ```
@@ -45,7 +45,7 @@ Remove the server specifed by $server. Disable confirmation prompt.
 
 ###  Example 3 
 
-```text
+```powershell
 $server = Get-OVServer -name "Server-1234"
 Remove-OVServer $server -confirm:$false -force
 ```
@@ -54,7 +54,7 @@ Remove the server specifed by $server. Disable confirmation prompt, and force re
 
 ###  Example 4 
 
-```text
+```powershell
 Get-OVServer | Remove-OVServer
 ```
 

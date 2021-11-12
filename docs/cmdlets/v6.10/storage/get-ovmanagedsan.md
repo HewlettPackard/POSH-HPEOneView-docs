@@ -6,7 +6,7 @@ description: Retrieve Managed SAN resource(s).
 
 ## Syntax
 
-```text
+```powershell
 Get-OVManagedSan
     [-Name <String>]
     [-Label <String>]
@@ -18,8 +18,8 @@ Get-OVManagedSan
 
 SANs are Fibre Channel (FC) or Fibre Channel over Ethernet (FCoE) storage area networks that connect servers to storage systems. The possible states for SANs are:
 
-    * Discovered - A SAN that is not associated with a network. SANs are automatically discovered when a SAN manager is added to HPE OneView.
-    * Managed - A SAN that is associated with one or more networks in HPE OneView. Only managed SANs can be configured to be automatically zoned by HPE OneView.
+* Discovered - A SAN that is not associated with a network. SANs are automatically discovered when a SAN manager is added to HPE OneView.
+* Managed - A SAN that is associated with one or more networks in HPE OneView. Only managed SANs can be configured to be automatically zoned by HPE OneView.
 
 Direct attach SANs
 
@@ -43,8 +43,8 @@ Automate zoning
 
 Automated zoning enables HPE OneView to automatically create, edit, and delete zones on a zoned SAN when you attach storage volumes to servers through a volume attachment in a server profile.
 
-    * Yes/True - Zoning is automated. HPE OneView takes full control of the zone naming and contents based on the zoning policy for the SAN. Use automated zoning when you want HPE OneView to configure new zones for volume attachments to server profiles. Existing zones are not modified unless the SAN storage attributes defined in a server profile change.
-    * No/False - Zoning is not modified by HPE OneView. You must manually manage zoning.
+* Yes/True - Zoning is automated. HPE OneView takes full control of the zone naming and contents based on the zoning policy for the SAN. Use automated zoning when you want HPE OneView to configure new zones for volume attachments to server profiles. Existing zones are not modified unless the SAN storage attributes defined in a server profile change.
+* No/False - Zoning is not modified by HPE OneView. You must manually manage zoning.
 
 This Cmdlet is used to display or list the discovered and available Managed SAN resources in the appliance once a supported SAN manager has been added to the appliance.
 
@@ -56,7 +56,7 @@ Minimum required privileges: Read-only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVManagedSan
 
 Name     State Status Network              Zoned Automated Zoning
@@ -68,7 +68,7 @@ Return all managed SAN resources.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVManagedSan -Name "Fabric A"
 ```
 

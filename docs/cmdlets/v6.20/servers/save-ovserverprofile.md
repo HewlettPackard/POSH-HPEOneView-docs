@@ -6,7 +6,7 @@ description: Save the contents of a Server Profile to the appliance.
 
 ## Syntax
 
-```text
+```powershell
 Save-OVServerProfile
     [-InputObject] <Object>
     [-Async]
@@ -22,7 +22,7 @@ This Cmdlet allows administrators to save the modified Server Profile object wit
 
 ###  Example 1 
 
-```text
+```powershell
 $MyProfile = Get-OVServerProfile -Name "My Profile 1" -ErrorAction Stop
 $MyProfile.name = "My Profile NewName 1"
 Save-OVServerProfile -InputObject $MyProfile

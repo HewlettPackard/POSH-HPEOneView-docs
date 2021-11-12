@@ -6,7 +6,7 @@ description: Generate test audit log forward message.
 
 ## Syntax
 
-```text
+```powershell
 Test-OVApplianceAuditLogForwarding
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -24,7 +24,7 @@ Minimum required privileges: Infrastructure administrator
 
 ###  Example 1 
 
-```text
+```powershell
 Test-OVApplianceAuditLogForwarding
 ```
 

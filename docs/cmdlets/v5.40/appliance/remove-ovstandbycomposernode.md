@@ -6,7 +6,7 @@ description: Remove Standby Composer node.
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVStandbyComposerNode
     [-ApplianceConnection] <Object>
     [-Async]
@@ -21,7 +21,7 @@ This Cmdlet will help remove the Standby Composer node from the Synergy manageme
 
 ###  Example 1 
 
-```text
+```powershell
 Remove-OVStandbyComposerNode
 ```
 

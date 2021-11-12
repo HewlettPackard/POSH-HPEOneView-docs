@@ -6,7 +6,7 @@ description: Enable appliance certificate revocation checking.
 
 ## Syntax
 
-```text
+```powershell
 Enable-OVCertificateRevocationChecking
     [-SkipRevocationCheck <bool>]
     [-AllowExpiredCRLs <bool>]
@@ -30,7 +30,7 @@ Minimum required privileges: Infrastructure administrator
 
 ###  Example 1 
 
-```text
+```powershell
 Enable-OVCertificateRevocationChecking
 
 ```

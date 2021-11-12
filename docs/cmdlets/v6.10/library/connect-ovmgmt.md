@@ -6,7 +6,7 @@ description: Initiate a connection to an HPE OneView appliance.
 
 ## Syntax
 
-```text
+```powershell
 Connect-OVMgmt
     [-Hostname] <String>
     [-UserName] <String>
@@ -16,7 +16,7 @@ Connect-OVMgmt
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Connect-OVMgmt
     [-Hostname] <String>
     [-Certificate <Object>]
@@ -24,7 +24,7 @@ Connect-OVMgmt
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Connect-OVMgmt
     [-Hostname] <String>
     [-Credential] <PSCredential>
@@ -49,7 +49,7 @@ Minimum required privileges:  Read-only.
 
 ###  Example 1 
 
-```text
+```powershell
 Connect-OVMgmt -appliance myappliance.domain.com
 ConnectionID Name                   UserName      AuthLoginDomain
 ------------ ----                   --------      ---------------
@@ -60,7 +60,7 @@ Connect to a specific appliance FQDN.  The user will be prompted for authenticat
 
 ###  Example 2 
 
-```text
+```powershell
 Connect-OVMgmt -appliance myappliance.domain.com:11223
 ```
 
@@ -68,7 +68,7 @@ Connect to a specific appliance, where the target TCP port isn't the default.  T
 
 ###  Example 3 
 
-```text
+```powershell
 $MySmartCard = gci Cert:\CurrentUser\my | ? { $_.EnhancedKeyUsageList.FriendlyName -match "Smart Card Logon" }
 Connect-OVMgmt -appliance myappliance.domain.com -Certificate $MySmartCard
 ```

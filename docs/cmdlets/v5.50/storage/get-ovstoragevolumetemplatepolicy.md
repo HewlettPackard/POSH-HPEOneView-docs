@@ -6,7 +6,7 @@ description: Retrieve Storage Volume Template Global Policy.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVStorageVolumeTemplatePolicy
     [-ApplianceConnection <Array>]
     [<CommonParameters>]
@@ -20,7 +20,7 @@ By default, Storage Volumes can be created without reference to a Storage Volume
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVStorageVolumeTemplatePolicy
 Appliance               Name                          Value
 ---------               ----                          -----

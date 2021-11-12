@@ -6,7 +6,7 @@ description: Retrieve Remote Support Default Site.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVRemoteSupportDefaultSite
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -30,7 +30,7 @@ Minimum required privileges: Read-only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVRemoteSupportDefaultSite
 ```
 

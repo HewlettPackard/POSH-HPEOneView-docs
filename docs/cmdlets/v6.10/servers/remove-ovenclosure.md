@@ -6,7 +6,7 @@ description: Removes an enclosure and associated devices.
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVEnclosure
     [-InputObject] <Object>
     [-ApplianceConnection] <Array>
@@ -22,7 +22,7 @@ Removes an enclosure, its servers, and interconnects from appliance management
 
 ###  Example 1 
 
-```text
+```powershell
 $enclosure = Get-OVEnclosure -name "Enclosure1"
 Remove-OVEnclosure $enclosure -confirm:$false
 ```
@@ -31,7 +31,7 @@ Remove the enclosure specifed by $enclosure. Disable confirmation prompt.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVEnclosure | Remove-OVEnclosure
 ```
 

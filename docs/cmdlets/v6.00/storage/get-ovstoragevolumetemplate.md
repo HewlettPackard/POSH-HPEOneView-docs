@@ -6,7 +6,7 @@ description: Retrieve Storage Volume Template (SVT) resource(s).
 
 ## Syntax
 
-```text
+```powershell
 Get-OVStorageVolumeTemplate
     [-Name <String>]
     [-Label <String>]
@@ -23,7 +23,7 @@ Retrieve configured Storage Volume Template(s) from the appliance.
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVStorageVolumeTemplate
 ```
 
@@ -31,7 +31,7 @@ Get all available Storage Volume Templates.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVStorageVolumeTemplate -templateName R5SVT-1
 ```
 
@@ -81,10 +81,10 @@ Default Value: ${Global:ConnectSessions}
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-    * AllResources
-    * AllResourcesInScope
-    * `[HPEOneView.Appliance.ScopeCollection]`
-    * `[HPEOneView.Appliance.ConnectionPermission]`
+* AllResources
+* AllResourcesInScope
+* `[HPEOneView.Appliance.ScopeCollection]`
+* `[HPEOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |

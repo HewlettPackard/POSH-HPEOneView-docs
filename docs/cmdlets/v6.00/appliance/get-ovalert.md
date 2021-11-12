@@ -6,7 +6,7 @@ description: Get an alert.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVAlert
     [-InputObject <Object>]
     [-Severity <String>]
@@ -43,7 +43,7 @@ Minimum required privileges: Network administrator, Server administrator, Infras
 
 ###  Example 1 
 
-```text
+```powershell
 $alerts = Get-OVAlert -severity CRITICAL
 ```
 
@@ -51,7 +51,7 @@ Return all the critical alerts.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVServer -Name "Encl1, Bay 2" | Get-OVAlert -severity CRITICAL
 ```
 
@@ -59,7 +59,7 @@ Return all the critical alerts for server "Encl1, Bay 2".
 
 ###  Example 3 
 
-```text
+```powershell
 Get-OVServerProfile -Name "Profile 1" | Get-OVAlert
 ```
 
@@ -67,7 +67,7 @@ Return all the alerts for server profile "Profile 1".
 
 ###  Example 4 
 
-```text
+```powershell
 Get-OVInterconnect -Name "Encl1, interconnect 2" | Get-OVAlert
 ```
 
@@ -75,7 +75,7 @@ Get all alerts for "Encl1, interconnect 2" interconnect module.
 
 ###  Example 5 
 
-```text
+```powershell
 Get-OVInterconnect -Name "Encl1, interconnect 2" | Get-OVAlert -severity Critical
 ```
 
@@ -83,7 +83,7 @@ Get "critical" severity alerts for "Encl1, interconnect 2" interconnect module.
 
 ###  Example 6 
 
-```text
+```powershell
 Get-OVAlert -severity Critical -Count 5
 ```
 
@@ -91,7 +91,7 @@ Return the first 5 "critical" severity alerts.
 
 ###  Example 7 
 
-```text
+```powershell
 Get-OVAlert -severity Critical -Timespan (New-TimeSpan -Days 8)
 ```
 
@@ -99,7 +99,7 @@ Return "critical" severity alerts for the past 8 days.
 
 ###  Example 8 
 
-```text
+```powershell
 Get-OVAlert -severity Critical -Start "2016-12-01"
 ```
 
@@ -107,7 +107,7 @@ Return "critical" severity alerts Starting at 2016-12-01 to now.
 
 ###  Example 9 
 
-```text
+```powershell
 Get-OVAlert -Start "2016-12-01" -End "2016-12-09
 ```
 
@@ -131,11 +131,11 @@ Alerts for the specified resource will be returned.
 
 Alerts with given severity will be returned.  Allowed severity values are:
 
-    * Unknown
-    * Ok
-    * Disabled
-    * Warning
-    * Critical
+* Unknown
+* Ok
+* Disabled
+* Warning
+* Critical
 
 | Aliases | None |
 | :--- | :--- |
@@ -149,26 +149,26 @@ Alerts with given severity will be returned.  Allowed severity values are:
 
 Alerts with given health category will be returned.  Allowed health category values are: 
 
-    * Appliance
-    * DeviceBay
-    * Enclosure
-    * Fan
-    * Firmware
-    * Host
-    * Instance
-    * InterconnectBay
-    * LogicalSwitch
-    * Logs
-    * ManagementProcessor
-    * Memory
-    * Network
-    * Operational
-    * Power
-    * Processor
-    * RemoteSupport
-    * Storage
-    * Thermal
-    * Unknown
+* Appliance
+* DeviceBay
+* Enclosure
+* Fan
+* Firmware
+* Host
+* Instance
+* InterconnectBay
+* LogicalSwitch
+* Logs
+* ManagementProcessor
+* Memory
+* Network
+* Operational
+* Power
+* Processor
+* RemoteSupport
+* Storage
+* Thermal
+* Unknown
 
 | Aliases | None |
 | :--- | :--- |

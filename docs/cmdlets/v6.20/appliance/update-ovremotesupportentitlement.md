@@ -6,7 +6,7 @@ description: Refresh Remote Support entitlement for a supported resource.
 
 ## Syntax
 
-```text
+```powershell
 Update-OVRemoteSupportEntitlement
     [-InputObject] <Object>
     [-Async]
@@ -22,7 +22,7 @@ This Cmdlet will initiate a refresh of the Remote Support entitlement for a comp
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVServer -Name Prod* | Update-OVRemoteSupportEntitlement
 ```
 
@@ -30,7 +30,7 @@ Get the servers with their name matching "Prod" and refresh their Remote Support
 
 ###  Example 2 
 
-```text
+```powershell
 $Enclosure = Get-OVEnclosure -Name Enclosure-1A
 Update-OVRemoteSupportEntitlement -InputObject $Enclusre
 ```

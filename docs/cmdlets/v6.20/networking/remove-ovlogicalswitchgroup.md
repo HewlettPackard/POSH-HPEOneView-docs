@@ -6,7 +6,7 @@ description: Remove a new Logical Switch Group resource.
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVLogicalSwitchGroup
     [-InputObject] <Object>
     [-ApplianceConnection <Object>]
@@ -22,7 +22,7 @@ This Cmdlet will remove the configured Logical Switch Group from the requested a
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVLogicalSwitchGroup | Remove-OVLogicalSwitchGroup
 ```
 
@@ -30,7 +30,7 @@ Remove all logical switch group resources found on the default appliance connect
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVLogicalSwitchGroup -Name "My Logical Switch Group Policy 1" | Remove-OVLogicalSwitchGroup -confirm:$false
 ```
 

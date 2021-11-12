@@ -6,7 +6,7 @@ description: Wait for Appliance services to start.
 
 ## Syntax
 
-```text
+```powershell
 Wait-OVApplianceStart
     [-Hostname] <String>
     [<CommonParameters>]
@@ -27,7 +27,7 @@ When the appliance successfully starts, this function will return.
 
 ###  Example 1 
 
-```text
+```powershell
 Wait-OVApplianceStart -Appliance appliance.contoso.com
 ```
 

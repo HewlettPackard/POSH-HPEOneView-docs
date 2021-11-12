@@ -6,7 +6,7 @@ description: Power reset Enclosure component.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVEnclosureActiveFLM
     [-Enclosure] <Object>
     [-BayID] <Int32>
@@ -22,7 +22,7 @@ Obtain a collection of enclosure hardware resources which have the specified nam
 
 ###  Example 1 
 
-```text
+```powershell
 EXAMPLE1
 ```
 
@@ -30,7 +30,7 @@ Return all the enclosure hardware managed by this appliance.
 
 ###  Example 2 
 
-```text
+```powershell
 Example2
 ```
 
@@ -38,7 +38,7 @@ Return the enclosure hardware resource with name "A".
 
 ###  Example 3 
 
-```text
+```powershell
 EXAMPLE3
 ```
 

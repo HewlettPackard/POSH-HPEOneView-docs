@@ -6,7 +6,7 @@ description: Create compliant iLO settings object for server profile type resour
 
 ## Syntax
 
-```text
+```powershell
 New-OVServerProfileIloPolicy
     [-ManageLocalAdministratorAccount]
     [-LocalAdministratorPassword <SecureString>]
@@ -81,7 +81,7 @@ For more information, see the HPE iLO User Guide (http://www.hpe.com/support/ilo
 
 ###  Example 1 
 
-```text
+```powershell
 $AdministratorPasswordSecureString = Read-Host "Administrator password" -AsSecureString
 
 # Create iLO settings policy for server profile
@@ -95,7 +95,7 @@ Create a server profile compliant iLO settings policy by setting the local admin
 
 ###  Example 2 
 
-```text
+```powershell
 # Create account1 object
 $Account1 = New-OVIloLocalUserAccount -Username "localuser1" `
                                       -Password (Read-Host "localuser1 password" -AsSecureString) `

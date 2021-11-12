@@ -6,7 +6,7 @@ description: Refresh a new Logical Switch resource.
 
 ## Syntax
 
-```text
+```powershell
 Update-OVLogicalSwitch
     [-InputObject] <Object>
     [-ApplianceConnection <Object>]
@@ -22,7 +22,7 @@ A logical switch is based on a logical switch group configuration. If the logica
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVLogicalSwitch | Update-OVLogicalSwitch
 ```
 
@@ -30,7 +30,7 @@ Update all logical switch resources found on the default appliance connection.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVLogicalSwitch -Name "My Logical Switch 1" | Update-OVLogicalSwitch -confirm:$false
 ```
 

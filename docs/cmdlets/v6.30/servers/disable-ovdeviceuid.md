@@ -6,7 +6,7 @@ description: Disable unit identification (UID) of a device.
 
 ## Syntax
 
-```text
+```powershell
 Disable-OVDeviceUid
     [-InputObject] <Object>
     [-ApplianceConnection] <Object>
@@ -32,7 +32,7 @@ Minimum required privileges: Infrastructure administrator, Server administrator
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVServer -Name "MyEncl, Bay 1" | Disable-OVDeviceUid | Wait-OVTaskComplete
 ```
 

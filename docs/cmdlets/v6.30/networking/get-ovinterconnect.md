@@ -6,7 +6,7 @@ description: Retrieve Interconnect resource(s).
 
 ## Syntax
 
-```text
+```powershell
 Get-OVInterconnect
     [-Name <String>]
     [-Scope <Object>]
@@ -28,7 +28,7 @@ Minimum required privileges: Read-only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVInterconnect
 ```
 
@@ -36,7 +36,7 @@ Returns all Interconnects managed by all connected appliances to standard output
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVInterconnect -Name "Encl1, Interconnect 1"
 ```
 
@@ -44,7 +44,7 @@ Returns just the Encl1, Interconnect 1 Interconnect object to standard output.
 
 ###  Example 3 
 
-```text
+```powershell
 Get-OVInterconnect -exportFile "c:\myApplianceConfig\ICs.json"
 ```
 
@@ -68,10 +68,10 @@ The name of the interconnect to retrieve.
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-    * AllResources
-    * AllResourcesInScope
-    * `[HPEOneView.Appliance.ScopeCollection]`
-    * `[HPEOneView.Appliance.ConnectionPermission]`
+* AllResources
+* AllResourcesInScope
+* `[HPEOneView.Appliance.ScopeCollection]`
+* `[HPEOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |

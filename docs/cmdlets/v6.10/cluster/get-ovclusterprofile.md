@@ -6,7 +6,7 @@ description: Get a deployed cluster profile.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVClusterProfile
     [-Name <String>]
     [-NonCompliant]
@@ -37,7 +37,7 @@ Minimum required privileges: Read only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVClusterProfile
 ```
 
@@ -45,7 +45,7 @@ Get the available and managed cluster profiles.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVClusterProfile -NonCompliant
 ```
 

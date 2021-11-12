@@ -6,7 +6,7 @@ description: Refresh the state of a server resource.
 
 ## Syntax
 
-```text
+```powershell
 Update-OVServer
     [-InputObject] <Object>
     [-Async]
@@ -14,7 +14,7 @@ Update-OVServer
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Update-OVServer
     [-InputObject] <Object>
     [-Credential] <String>
@@ -24,7 +24,7 @@ Update-OVServer
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Update-OVServer
     [-ApplianceConnection] <Object>
     [<CommonParameters>]
@@ -38,7 +38,7 @@ By using this Cmdlet, you can manually refresh the connection between the applia
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVServer -Name "Encl1, Bay 1" | Update-OVServer | Wait-OVTaskComplete
 ```
 
@@ -46,7 +46,7 @@ Refresh the state of the provided server hardware device.
 
 ###  Example 2 
 
-```text
+```powershell
 $task = Get-OVServerProfile -Name "Profile1" | Update-OVServer
 ```
 

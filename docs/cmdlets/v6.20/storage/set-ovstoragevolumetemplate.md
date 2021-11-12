@@ -6,7 +6,7 @@ description: Modify an existing Storage Volume Template resource.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVStorageVolumeTemplate
     [-InputObject] <Object>
     [-Name <String>]
@@ -26,7 +26,7 @@ Set-OVStorageVolumeTemplate
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Set-OVStorageVolumeTemplate
     [-InputObject] <Object>
     [-Name <String>]
@@ -55,7 +55,7 @@ Set-OVStorageVolumeTemplate
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Set-OVStorageVolumeTemplate
     [-InputObject] <Object>
     [-Name <String>]
@@ -85,7 +85,7 @@ This Cmdlet will help modify an existing Storage Volume Template resource.  Only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVStorageVolumeTemplate -Name MyProdVolTemplate | Set-OVStorageVolumeTemplate -Size 160
 ```
 
@@ -232,12 +232,12 @@ Include to change the provisioned type to Full.
 
 Specify the StoreVirtual protection level (aka Network RAID) for the volume.  Allowed values are:
 
-    * NetworkRaid0None
-    * NetworkRaid5SingleParity
-    * NetworkRaid10Mirror2Way
-    * NetworkRaid10Mirror3Way
-    * NetworkRaid10Mirror4Way
-    * NetworkRaid6DualParity
+* NetworkRaid0None
+* NetworkRaid5SingleParity
+* NetworkRaid10Mirror2Way
+* NetworkRaid10Mirror3Way
+* NetworkRaid10Mirror4Way
+* NetworkRaid6DualParity
 
 | Aliases | None |
 | :--- | :--- |
@@ -287,9 +287,9 @@ Specify to lock the EnableAdaptiveOptimization value in the template.
 
 Specify the type of volume to provision.  Allowed values are:
 
-    * Thin
-    * Full
-    * TPDD (Thin Provision Dedup) - Only available for HPE StoreServ storage systems with SSD storage pools (aka CPG"s).
+* Thin
+* Full
+* TPDD (Thin Provision Dedup) - Only available for HPE StoreServ storage systems with SSD storage pools (aka CPG"s).
 
 | Aliases | ProvisionType |
 | :--- | :--- |

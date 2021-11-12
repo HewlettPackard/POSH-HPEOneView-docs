@@ -6,7 +6,7 @@ description: Add new hypervisor manager.
 
 ## Syntax
 
-```text
+```powershell
 Add-OVClusterManager
     [-Hostname] <String>
     [-Credential] <PSCredential>
@@ -39,7 +39,7 @@ Minimum required privileges: Infrastructure administrator
 
 ###  Example 1 
 
-```text
+```powershell
 Add-OVClusterManager -Hostname vcenter.domain.local -Credential (Get-Credential -Username administrator@vsphere.local -Message Password)
 ```
 

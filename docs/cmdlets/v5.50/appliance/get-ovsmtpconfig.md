@@ -6,7 +6,7 @@ description: Configure appliance SMTP Reporting settings.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVSMTPConfig
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -20,7 +20,7 @@ This Cmdlet will retrieve the SMTP settings for the appliance.
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVSMTPConfig
 ```
 

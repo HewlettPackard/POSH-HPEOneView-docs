@@ -6,7 +6,7 @@ description: Migrate Server Profile Template.
 
 ## Syntax
 
-```text
+```powershell
 Convert-OVServerProfileTemplate
     [-InputObject] <Object>
     [-ServerHardwareType <Object>]
@@ -20,12 +20,12 @@ Convert-OVServerProfileTemplate
 
 Use this Cmdlet to change the Server Hardware Type and/or Enclosure Group set within the Server Profile Template. Changing to a different server hardware type may change the capabilities available to the server profile. Changing the enclosure group may change the connections which are available for the profile template.
 
-    * It may also cause incompatibilities with the current configuration.
-    * All defined connections will have their port assignment set to "Auto".
-    * Any incompatibilities will be flagged when the server profile template is committed.
-    * If the new server hardware type does not support the local storage configuration, some storage may not be configurable.
-    * If the enclosure group is changed, mezzanine storage for HPE Synergy is lost and the disk drives are released.
-    * Any change in the server hardware type will lead to the associated volume loss.
+* It may also cause incompatibilities with the current configuration.
+* All defined connections will have their port assignment set to "Auto".
+* Any incompatibilities will be flagged when the server profile template is committed.
+* If the new server hardware type does not support the local storage configuration, some storage may not be configurable.
+* If the enclosure group is changed, mezzanine storage for HPE Synergy is lost and the disk drives are released.
+* Any change in the server hardware type will lead to the associated volume loss.
 
 {% hint style="info" %}
 Minimum required privileges: Infrastructure administrator or Server administrator.
@@ -35,7 +35,7 @@ Minimum required privileges: Infrastructure administrator or Server administrato
 
 ###  Example 1 
 
-```text
+```powershell
 $SPT = Get-OVServerProfileTemplate -Name "My Template Name" -ErrorAction Stop
 $NewServerHardwareType = Get-OVServerHardwareType -Name "SY480 Gen10 2" -ErrorAction Stop
 Convert-OVServerProfileTemplate -InputObject $SPT -ServerHardwareType $NewServerHardwareType
@@ -45,7 +45,7 @@ Transform the specified server profile template object to a different server har
 
 ###  Example 2 
 
-```text
+```powershell
 $SPT = Get-OVServerProfileTemplate -Name "My Template Name" -ErrorAction Stop
 $NewEnclosureGroup = Get-OVEnclosureGroup -Name "Dev EG 1" -ErrorAction Stop
 Convert-OVServerProfileTemplate -InputObject $SPT -EnclosureGroup $NewEnclosureGroup
@@ -55,7 +55,7 @@ Transform the specified server profile template object to a different enclosure 
 
 ###  Example 3 
 
-```text
+```powershell
 $SPT = Get-OVServerProfileTemplate -Name "My Template Name" -ErrorAction Stop
 $NewEnclosureGroup = Get-OVEnclosureGroup -Name "Dev EG 1" -ErrorAction Stop
 $NewServerHardwareType = Get-OVServerHardwareType -Name "BL460 Gen9 3" -ErrorAction Stop

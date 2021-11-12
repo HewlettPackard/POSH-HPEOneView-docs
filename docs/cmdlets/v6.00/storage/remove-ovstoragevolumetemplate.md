@@ -6,7 +6,7 @@ description: Delete storage volume template(s) from appliance configuration.
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVStorageVolumeTemplate
     [-InputObject] <Object>
     [-ApplianceConnection <Object>]
@@ -22,7 +22,7 @@ Delete one or more storage volume templates from the appliance configuration.
 
 ###  Example 1 
 
-```text
+```powershell
 $task = Remove-OVStorageVolumeTemplate -storagePool "yellow" | Wait-OVTaskComplete
 ```
 
@@ -30,7 +30,7 @@ Remove the storage volume template specifed by name.  Wait for remove to complet
 
 ###  Example 2 
 
-```text
+```powershell
 $svt = Get-OVStorageVolumeTemplate -name "yellow"
 Remove-OVStorageVolumeTemplate -name $svt -confirm:$false
 ```
@@ -39,7 +39,7 @@ Remove the network specifed by $svt, and do not prompt for confirmation.
 
 ###  Example 3 
 
-```text
+```powershell
 Get-OVStoragVolumeTemplate | Remove-OVStorageVolumeTemplate
 ```
 

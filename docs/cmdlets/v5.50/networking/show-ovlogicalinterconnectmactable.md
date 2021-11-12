@@ -6,7 +6,7 @@ description: Show the MAC Table for Logical Interconnect resource(s).
 
 ## Syntax
 
-```text
+```powershell
 Show-OVLogicalInterconnectMacTable
     [-InputObject] <Object>
     [-network] <String>
@@ -15,7 +15,7 @@ Show-OVLogicalInterconnectMacTable
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Show-OVLogicalInterconnectMacTable
     [-InputObject] <Object>
     [-network] <String>
@@ -24,7 +24,7 @@ Show-OVLogicalInterconnectMacTable
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Show-OVLogicalInterconnectMacTable
     [-InputObject] <Object>
     [-MacAddress] <String>
@@ -45,7 +45,7 @@ To display the results in a formatted list, use the -List parameter.
 
 ###  Example 1 
 
-```text
+```powershell
 Show-OVLogicalInterconnectMacTable
 ```
 
@@ -53,7 +53,7 @@ Return as many MAC Addresses allowed by the API for all Logical Interconnect res
 
 ###  Example 2 
 
-```text
+```powershell
 Show-OVLogicalInterconnectMacTable -network VLAN100
 Enclosure Interconnect    Interface Address           Type    Network   VLAN
 --------- ------------    --------- -------           ----    -------   ----
@@ -66,7 +66,7 @@ Display all available MAC Addresses learned in "VLAN100" network in all Logical 
 
 ###  Example 3 
 
-```text
+```powershell
 Show-OVLogicalInterconnectMacTable -network VLAN100 -exportfile C:\reports\Encl1-LI_vlan100_mactable.csv
 ```
 

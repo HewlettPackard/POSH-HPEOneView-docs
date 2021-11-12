@@ -6,7 +6,7 @@ description: Create a new Uplink Set.
 
 ## Syntax
 
-```text
+```powershell
 New-OVUplinkSet
     [-InputObject] <Object>
     [-Name] <String>
@@ -30,7 +30,7 @@ New-OVUplinkSet
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVUplinkSet
     [-Name] <String>
     [-Type] <String>
@@ -58,7 +58,7 @@ New-OVUplinkSet
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVUplinkSet
     [-InputObject] <Object>
     [-Name] <String>
@@ -91,7 +91,7 @@ Minimum required privileges: Infrastructure administrator, Network administrator
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVLogicalInterconnectGroup -Name "LIG Prod" | New-OVUplinkSet -Name "Uplink Set 1" -Type Ethernet -Networks "RED","BLUE","GREEN" -NativeEthNetwork "RED" -UplinkPorts "BAY1:X5","BAY1:X6","BAY2:X5","BAY2:X6" -EthMode "Auto"
 ```
 
@@ -99,7 +99,7 @@ To Create an Ethernet Uplink Template
 
 ###  Example 2 
 
-```text
+```powershell
 $ethNets = "Net1","Net2","Net3" | Get-OVNetwork -Type Ethernet
 Get-OVLogicalInterconnectGroup -Name "LIG Prod" | New-OVUplinkSet -Name "Uplink Set 1" -Type Ethernet -Networks $ethNets -NativeEthNetwork $ethNets[0] -UplinkPorts "BAY1:X5","BAY1:X6","BAY2:X5","BAY2:X6" -EthMode "Auto"
 ```
@@ -108,7 +108,7 @@ Get the network resource objects, and define a new Uplink Set template that will
 
 ###  Example 3 
 
-```text
+```powershell
 $LIGProd = Get-OVLogicalInterconnectGroup -Name "LIG Prod"
 New-OVUplinkSet -Resource $LIGProd -Name "Fabric A" -Type FibreChannel -Networks "FABRIC_A" -UplinkPorts "BAY1:X1","BAY1:X2"
 ```
@@ -117,7 +117,7 @@ To Create a Fibre Channel Uplink Template for c-Class or HPE Synergy VC FlexFabr
 
 ###  Example 4 
 
-```text
+```powershell
 Get-OVLogicalInterconnect -Name "Encl1 LIG Prod" | New-OVUplinkSet -Name "New Uplink Set" -Type Ethernet -Networks "RED","BLUE","GREEN" -NativeEthNetwork "RED" -UplinkPorts "BAY1:X5","BAY1:X6","BAY2:X5","BAY2:X6" -EthMode "Auto"
 ```
 
@@ -125,7 +125,7 @@ Add a new Uplink Set to an existing Logical Interconnect resource.
 
 ###  Example 5 
 
-```text
+```powershell
 $MlagNetworks = Get-OVNetwork -Type Ethernet -Name "My MLAG Network*"
 Get-OVLogicalInterconnectGroup -Name "My Synergy Prod LIG" | New-OVUplinkSet -Name "MLAG UplinkSet" -Type Ethernet -Networks $MlagNetworks -NativeEthNetwork ($MlagNetworks | ? vlanid -eq 144) -UplinkPorts "Enclosure1:BAY3:Q1","Enclosure1:BAY3:Q2","Enclosure2:BAY6:Q1","Enclosure2:BAY6:Q2" -EthMode "Auto"
 ```
@@ -134,7 +134,7 @@ Create a Synergy MLAG Uplink Set using 40Gb capable ports.
 
 ###  Example 6 
 
-```text
+```powershell
 $MlagNetworks = Get-OVNetwork -Type Ethernet -Name "My MLAG Network*"
 Get-OVLogicalInterconnectGroup -Name "My Synergy Prod LIG" | New-OVUplinkSet -Name "MLAG UplinkSet" -Type Ethernet -Networks $MlagNetworks -NativeEthNetwork ($MlagNetworks | ? vlanid -eq 144) -UplinkPorts "Enclosure1:BAY3:Q1.1","Enclosure1:BAY3:Q2.1","Enclosure2:BAY6:Q1.1","Enclosure2:BAY6:Q2.1" -EthMode "Auto"
 ```
@@ -143,7 +143,7 @@ Create a Synergy MLAG Uplink Set using 10Gb subports of QSFP transceiver slots.
 
 ###  Example 7 
 
-```text
+```powershell
 $ImageStreamerDeploymentNetworkObject = Get-OVNetwork -Name "Deployment Network" -ErrorAction Stop
 Get-OVLogicalInterconnectGroup -Name "My Synergy VC+ImageStreamer LIG" -ErrorAction Stop | New-OVUplinkSet -Name "Image Streamer Uplink Set" -Type ImageStreamer -Networks $ImageStreamerDeploymentNetworkObject -UplinkPorts "Enclosure1:Bay3:Q3.1","Enclosure1:Bay3:Q4.1","Enclosure2:Bay6:Q3.1","Enclosure2:Bay6:Q4.1"
 ```
@@ -180,11 +180,11 @@ Logical Uplink set Name
 
 Uplink set Type.  Accepted values are 
 
-    * Ethernet (Default)
-    * FibreChannel
-    * Tunnel
-    * Untagged
-    * ImageStreamer
+* Ethernet (Default)
+* FibreChannel
+* Tunnel
+* Untagged
+* ImageStreamer
 
 ImageStreamer is only supported with Synergy infrastructure.  When assigning an Ethernet Network to an ImageStreamer Uplink Set, the network resource must be a Tagged Ethernet Network.
 
@@ -243,8 +243,8 @@ Synergy VC FC Sub-Interface `[e.g]`. "Bay2:Q1.1","Bay2:Q2.1" or "Bay5:Q1.2","Bay
 
 Sets the LACP mode on the uplink ports. Valid for ETHERNET Uplinks only. Accepted Values:
 
-    * Auto (Default)
-    * Failover
+* Auto (Default)
+* Failover
 
 | Aliases | usEthMode |
 | :--- | :--- |
@@ -258,8 +258,8 @@ Sets the LACP mode on the uplink ports. Valid for ETHERNET Uplinks only. Accepte
 
 Set the LACP Timer value, which sets the lacpdu frequecy to the LACP peer.  Accepted values:
 
-    * Long 
-    * Short (Default)
+* Long 
+* Short (Default)
 
 | Aliases | None |
 | :--- | :--- |
@@ -287,10 +287,10 @@ Example: "Bay1:X1"
 
 Specify the Fibre Channel Uplink Port speed.  Accepted values:
 
-    * Auto (Default)
-    * 2
-    * 4
-    * 8
+* Auto (Default)
+* 2
+* 4
+* 8
 
 | Aliases | None |
 | :--- | :--- |
@@ -340,8 +340,8 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 
 Use to indicate if the group policy will be tracked to with the deployed and configured resource. Allowed values:
 
-    * None
-    * Exact
+* None
+* Exact
 
 Default: Exact
 
@@ -476,7 +476,19 @@ Allowed values:
 
 ### -FecMode &lt;string&gt;
 
+Specify the forward error correction mode.  This paraemter is only supported with Virtual Connect SE 100Gb F32 Module for Synergy modules.  When configuring, the following values are supported with parent ports:
 
+	* Auto
+	* Cl74
+	* Cl108
+	* None
+
+The following values are supported with sub-ports:
+
+	* Auto
+	* Cl74
+	* Cl91
+	* None
 
 | Aliases | None |
 | :--- | :--- |
@@ -488,7 +500,14 @@ Allowed values:
 
 ### -PortSpeed &lt;string&gt;
 
+The allowed uplink port speed vy the fabric module and traceiver type.  When specifying a port speed, this value will be set for all ports.  This parameter applies to Ethernet or FCoE uplink ports only.  Allowed values:
 
+	* Auto
+	* 100M
+	* 1G
+	* 10G
+	* 40G
+	* 100G
 
 | Aliases | None |
 | :--- | :--- |

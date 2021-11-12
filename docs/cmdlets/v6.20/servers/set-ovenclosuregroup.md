@@ -6,7 +6,7 @@ description: Modify an existing enclosure group policy.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVEnclosureGroup
     [-InputObject] <Object>
     [-Name] <String>
@@ -28,7 +28,7 @@ Minimum required privileges: Server administrator or Infrastructure administrato
 
 ###  Example 1 
 
-```text
+```powershell
 $EnclosureGroup = Get-OVEnclosureGroup -Name ProdEG1 -ErrorAction Stop Set-OVEnclosureGroup -InputObject $EnclosureGroup -Name VirtProdEG1
 ```
 
@@ -36,7 +36,7 @@ Change the name of the provided enclosure group resource.
 
 ###  Example 2 
 
-```text
+```powershell
 $UpdatedConfigScript = 'REMOVE USER "admin"
 ADD USER "ops" "*********"
 SET USER CONTACT "ops" "MySecretPassword"
@@ -122,8 +122,8 @@ The Power Redundancy Mode to set when an Enclosure is added to the appliance.
 
 Allowed Values:
 
-    * RedundantPowerFeed - Provides N+N Power Redundancy Configuration
-    * RedundantPowerSupply - Provided N+1 Power Redundancy Configuration
+* RedundantPowerFeed - Provides N+N Power Redundancy Configuration
+* RedundantPowerSupply - Provided N+1 Power Redundancy Configuration
 
 | Aliases | None |
 | :--- | :--- |

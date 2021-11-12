@@ -6,7 +6,7 @@ description: Update/Refresh available Storage Systems
 
 ## Syntax
 
-```text
+```powershell
 Update-OVStorageSystem
     [-InputObject] <Object>
     [-ApplianceConnection] <Object>
@@ -21,7 +21,7 @@ This Cmdlet will update or refresh the specific storage system(s) configured on 
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVStorageSystem | Update-OVStorageSystem
 ```
 
@@ -29,7 +29,7 @@ Get all managed Storage Systems and refresh them.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVStorageSystem -Name MyStorageSystem | Update-OVStorageSystem
 ```
 

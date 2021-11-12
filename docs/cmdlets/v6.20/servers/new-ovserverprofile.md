@@ -6,7 +6,7 @@ description: Create or Import a Server Profile
 
 ## Syntax
 
-```text
+```powershell
 New-OVServerProfile
     [-Name] <String>
     [-AssignmentType <String>]
@@ -50,7 +50,7 @@ New-OVServerProfile
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVServerProfile
     [-Name] <String>
     [-ServerProfileTemplate] <Object>
@@ -91,7 +91,7 @@ New-OVServerProfile
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVServerProfile
     [-Name] <String>
     [-SANStorage]
@@ -140,7 +140,7 @@ New-OVServerProfile
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVServerProfile
     [-Import]
     [-ProfileObj] <Object>
@@ -159,14 +159,14 @@ A server profile is the configuration for a server instance. Server profiles cap
             
 A server profile includes:
             
-    * Server identification information
-    * Connectivity settings for Ethernet networks, network sets, and Fibre Channel networks
-    * Firmware policy
-    * Local storage settings
-    * SAN storage settings (for environments that have Virtual Connect)
-    * BIOS settings
-    * Boot order
-    * Physical or virtual UUIDs, MAC addresses, and WWN addresses
+* Server identification information
+* Connectivity settings for Ethernet networks, network sets, and Fibre Channel networks
+* Firmware policy
+* Local storage settings
+* SAN storage settings (for environments that have Virtual Connect)
+* BIOS settings
+* Boot order
+* Physical or virtual UUIDs, MAC addresses, and WWN addresses
             
 You can create an unassigned server profile that serves as a template. Typically, you capture best-practice configurations in a server profile template, and then copy and deploy instances as individual server profiles. Similar to virtual machine (VM) templates, profiles enable you to create a provisioning baseline for server hardware types in an enclosure.
             
@@ -186,7 +186,7 @@ The code example above will return all matching BIOS Settings where the name con
 
 ###  Example 1 
 
-```text
+```powershell
 $svr = Get-OVServer -Name "Encl1, Bay 1"
 New-OVServerProfile -name "My Basic Server Profile" -server $svr   | Wait-OVTaskComplete
 ```
@@ -195,7 +195,7 @@ Create a simple profile for "ServerA", and wait for it to be applied.
 
 ###  Example 2 
 
-```text
+```powershell
 $spt = Get-OVServerProfileTemplate -Name "Hypervisor Cluster Node Template v1"
 Get-OVServer -Name "Encl1, Bay 1" | New-OVServerProfile -name "Hyp-Clus-01" -ServerProfileTemplate $spt | Wait-OVTaskComplete
 ```
@@ -204,7 +204,7 @@ Create a Server Profile from the "Hypervisor Cluster Node Template v1" Server Pr
 
 ###  Example 3 
 
-```text
+```powershell
 $profileName = "Web Server 10"
 $svr         = Get-OVServer -Name "Encl1, Bay 1"
 $con1        = Get-OVNetwork -Name "Net-41-A" | New-OVServerProfileConnection -ConnectionId 1
@@ -224,7 +224,7 @@ Create a BL Gen8 Server Profile template, and pipe to Wait-OVTaskComplete.
 
 ###  Example 4 
 
-```text
+```powershell
 $profileName = "Hypervisor Cluster Node 1"
 $svr = Get-OVServer -Name "Encl1, Bay 1"
 $con1 = Get-OVNetwork -Name "Net-41" | New-OVServerProfileConnection -id 1 -type Ethernet
@@ -239,7 +239,7 @@ Create an unassigned server profile which includes networks "Net-41" and "Net-42
 
 ###  Example 5 
 
-```text
+```powershell
 $profileName = "Hypervisor Cluster Node 1"
 $svr = Get-OVServer -Name "Encl1, Bay 1"
 $con1 = Get-OVNetwork -Name "Net-41" | New-OVServerProfileConnection -id 1 -type Ethernet
@@ -257,7 +257,7 @@ Create an unassigned server profile which includes networks "Net-41" and "Net-42
 
 ###  Example 6 
 
-```text
+```powershell
 $profileName = "Hypervisor Cluster Node 1"
 $bl460SHT = Get-OVServerHardwareTypes -name "BL460c Gen8 1"
 $enclosure = Get-OVEnclosure -Name "Encl1"
@@ -274,7 +274,7 @@ Create a profile which includes networks "Net-41" and "Net-42", adds FC Connecti
 
 ###  Example 7 
 
-```text
+```powershell
 $profileName = "Hypervisor Cluster Node 1"
 $server = Get-OVServer -Name "Encl1, Bay 1"
 #display the BL460 Gen8 BIOS Settings
@@ -291,7 +291,7 @@ Create a profile which includes networks "Net-41" and "Net-42", sets the boot or
 
 ###  Example 8 
 
-```text
+```powershell
 $profileName = "Hypervisor Cluster Node 1"
 $server = Get-OVServer -Name "Encl1, Bay 1" #Gen9 Server
 $con1 = Get-OVNetwork -Name "Net-41-A" | New-OVServerProfileConnection -connectionId 1
@@ -319,7 +319,7 @@ Create a BL Gen9 UEFI Server Profile, and pipe to Wait-OVTaskComplete.
 
 ###  Example 9 
 
-```text
+```powershell
 $profileName = "Synergy Hypervisor Cluster Node 1"
 $sht = Get-OVServerHardwareType -Name "SY480 Gen9 1"
 $server = Get-OVServer -NoProfile -ServerHardwareType $sht | ? { $_.cpuCount -ge 4 -and $_.memoryMb -ge 524288 } | Select -First 1
@@ -349,7 +349,7 @@ Create a Synergy Gen9 Server Profile by looking for the first available SY480 Ge
 
 ###  Example 10 
 
-```text
+```powershell
 $ServerProfileName                    = 'My DL with FC Server Profile 1'
 $FCConnection1FibreChannelNetworkName = 'Fabric A'
 $FCConnection1Wwpn                    = '10:00:00:60:69:00:23:90'
@@ -374,7 +374,7 @@ Create a server profile with unmanaged Fibre Channel connections.
 
 ###  Example 11 
 
-```text
+```powershell
 New-OVServerProfile -import -file C:\profiles\ServerProfile1.json
 ```
 
@@ -382,7 +382,7 @@ Basic Server Profile import.
 
 ###  Example 12 
 
-```text
+```powershell
 (Get-Content C:\profiles\ServerProfile1.json) -join "`n" | New-OVServerProfile -import
 ```
 
@@ -390,7 +390,7 @@ Read the contents from ServerProfile1.json, join each line into a single object,
 
 ###  Example 13 
 
-```text
+```powershell
 $jsonProfiles = Get-ChildItem C:\profiles\*.json
 $jsonProfiles | foreach-object { New-OVServerProfile -import -file $_.fullname }
 ```
@@ -553,9 +553,9 @@ Firmware baseline to assign.  Can be either Baseline Name or URI.
 
 Specify the Firmware Baseline Policy mode.  Avialable options are:
 
-    * FirmwareOnly - Updates the system firmware without powering down the server hardware using using HP Smart Update Tools. 
-    * FirmwareAndSoftware - Updates the firmware and OS drivers without powering down the server hardware using HP Smart Update Tools.
-    * FirmwareOffline - Manages the firmware through HPE OneView. Selecting this option requires the server hardware to be powered down.
+* FirmwareOnly - Updates the system firmware without powering down the server hardware using using HP Smart Update Tools. 
+* FirmwareAndSoftware - Updates the firmware and OS drivers without powering down the server hardware using HP Smart Update Tools.
+* FirmwareOffline - Manages the firmware through HPE OneView. Selecting this option requires the server hardware to be powered down.
 
 | Aliases | FirmwareMode |
 | :--- | :--- |
@@ -581,9 +581,9 @@ Using this parameter will force the bundled firmware components to install when 
 
 Specify the firmware activation policy.  Avialable options are:
 
-    * Immediate - Immediately activate (aka reboot the host) firmware if needed.  Requires HPSUT to be installed in the Host OS or Proxy VM (for VMware only)
-    * Scheduled - Specify a future time to activate (aka reboot the host) firmware if needed.  You will need to specify the FirmwareActivateDateTime parameter.  Requires HPSUT to be installed in the Host OS or Proxy VM (for VMware only)
-    * NotScheduled - Scheduled firmware update is cancelled when you choose this option.
+* Immediate - Immediately activate (aka reboot the host) firmware if needed.  Requires HPSUT to be installed in the Host OS or Proxy VM (for VMware only)
+* Scheduled - Specify a future time to activate (aka reboot the host) firmware if needed.  You will need to specify the FirmwareActivateDateTime parameter.  Requires HPSUT to be installed in the Host OS or Proxy VM (for VMware only)
+* NotScheduled - Scheduled firmware update is cancelled when you choose this option.
 
 | Aliases | None |
 | :--- | :--- |
@@ -635,18 +635,18 @@ Specify the Gen9 Boot Envrionment.
 
 Sets the boot mode as one of the following:
 
-    * UEFI
-    * UEFIOptimized
-    * BIOS
-    * Unmanaged
+* UEFI
+* UEFIOptimized
+* BIOS
+* Unmanaged
 
 If you select UEFI or UEFI optimized for an HP ProLiant DL Gen9 rack mount server, the remaining boot setting available is the PXE boot policy.
 
 For the UEFI or UEFI optimized boot mode options, the boot mode choice should be based on the expected OS and required boot features for the server hardware. UEFI optimized boot mode reduces the time the system spends in POST (Video driver initialization). In order to select the appropriate boot mode, consider the following:
     
-    * If a secure boot is required, the boot mode must be set to UEFI or UEFI optimized .
-    * For operating systems that do not support UEFI (such as DOS, or older versions of Windows and Linux), the boot mode must be set to BIOS.
-    * When booting in UEFI mode, Windows 7, Server 2008, or 2008 R2 should not be set to UEFIOptimized.
+* If a secure boot is required, the boot mode must be set to UEFI or UEFI optimized .
+* For operating systems that do not support UEFI (such as DOS, or older versions of Windows and Linux), the boot mode must be set to BIOS.
+* When booting in UEFI mode, Windows 7, Server 2008, or 2008 R2 should not be set to UEFIOptimized.
 
 Default: BIOS
 
@@ -664,11 +664,11 @@ Controls the ordering of the network modes available to the Flexible LOM (FLB); 
 
 Select from the following policies:
 
-    * Auto
-    * IPv4 only
-    * IPv6 only
-    * IPv4 then IPv6
-    * IPv6 then IPv4
+* Auto
+* IPv4 only
+* IPv6 only
+* IPv4 then IPv6
+* IPv6 then IPv4
 
 Setting the policy to Auto means the order of the existing network boot targets in the UEFI Boot Order list will not be modified, and any new network boot targets will be added to the end of the list using the System ROM"s default policy.
 
@@ -802,31 +802,31 @@ Specify if secure boot should be Unmanaged, Enabled or Disabled for Gen10 and ne
 
 Optional. Specify the Host OS type, which will set the Host OS value when HPE OneView created the Host object on the Storage System.  Accepted values:
 
-    * CitrixXen = "Citrix Xen Server 5.x/6.x"
-    * AIX       = "AIX"
-    * IBMVIO    = "IBM VIO Server"
-    * RHEL4     = "RHE Linux (Pre RHEL 5)"
-    * RHEL3     = "RHE Linux (Pre RHEL 5)"
-    * RHEL      = "RHE Linux (5.x, 6.x)"
-    * RHEV      = "RHE Virtualization (5.x, 6.x)"
-    * VMware    = "ESX 4.x/5.x"
-    * Win2k3    = "Windows 2003"
-    * Win2k8    = "Windows 2008/2008 R2"
-    * Win2k12   = "Windows 2012 / WS2012 R2"
-    * OpenVMS   = "OpenVMS"
-    * Egenera   = "Egenera"
-    * Exanet    = "Exanet"
-    * Solaris9  = "Solaris 9/10"
-    * Solaris10 = "Solaris 9/10"
-    * Solaris11 = "Solaris 11"
-    * ONTAP     = "NetApp/ONTAP"
-    * OEL       = "OE Linux UEK (5.x, 6.x)"
-    * HPUX11iv1 = "HP-UX (11i v1, 11i v2)"
-    * HPUX11iv2 = "HP-UX (11i v1, 11i v2)"
-    * HPUX11iv3 = "HP-UX (11i v3)"
-    * SUSE      = "SuSE (10.x, 11.x)"
-    * SUSE9     = "SuSE Linux (Pre SLES 10)"
-    * Inform    = "InForm"
+* CitrixXen = "Citrix Xen Server 5.x/6.x"
+* AIX       = "AIX"
+* IBMVIO    = "IBM VIO Server"
+* RHEL4     = "RHE Linux (Pre RHEL 5)"
+* RHEL3     = "RHE Linux (Pre RHEL 5)"
+* RHEL      = "RHE Linux (5.x, 6.x)"
+* RHEV      = "RHE Virtualization (5.x, 6.x)"
+* VMware    = "ESX 4.x/5.x"
+* Win2k3    = "Windows 2003"
+* Win2k8    = "Windows 2008/2008 R2"
+* Win2k12   = "Windows 2012 / WS2012 R2"
+* OpenVMS   = "OpenVMS"
+* Egenera   = "Egenera"
+* Exanet    = "Exanet"
+* Solaris9  = "Solaris 9/10"
+* Solaris10 = "Solaris 9/10"
+* Solaris11 = "Solaris 11"
+* ONTAP     = "NetApp/ONTAP"
+* OEL       = "OE Linux UEK (5.x, 6.x)"
+* HPUX11iv1 = "HP-UX (11i v1, 11i v2)"
+* HPUX11iv2 = "HP-UX (11i v1, 11i v2)"
+* HPUX11iv3 = "HP-UX (11i v3)"
+* SUSE      = "SuSE (10.x, 11.x)"
+* SUSE9     = "SuSE Linux (Pre SLES 10)"
+* Inform    = "InForm"
 
 | Aliases | OS |
 | :--- | :--- |

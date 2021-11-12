@@ -6,7 +6,7 @@ description: Update Appliance Date/Time Configuration.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVApplianceDateTime
     [-SyncWithHost]
     [-Locale <String>]
@@ -14,7 +14,7 @@ Set-OVApplianceDateTime
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Set-OVApplianceDateTime
     [-NTPServers] <Array>
     [-PollingInterval <Int32>]
@@ -37,7 +37,7 @@ Minimum required privileges: Infrastructure administrator
 
 ###  Example 1 
 
-```text
+```powershell
 Set-OVApplianceDateTime -NTPServers 10.55.1.1, 10.54.1.1 -PollingInterval 60
 ```
 
@@ -45,7 +45,7 @@ This example passes in updated values to set for the appliance networking config
 
 ###  Example 2 
 
-```text
+```powershell
 Set-OVApplianceDateTime -SyncWithHost
 ```
 
@@ -93,9 +93,9 @@ The polling interval in seconds the NTP client will use to verify time drift.
 
 Specify the language local for the appliance
 
-    * en_US - US English
-    * zh_CN - Simplified Chinese
-    * ja_JP - Japanese
+* en_US - US English
+* zh_CN - Simplified Chinese
+* ja_JP - Japanese
 
 | Aliases | None |
 | :--- | :--- |

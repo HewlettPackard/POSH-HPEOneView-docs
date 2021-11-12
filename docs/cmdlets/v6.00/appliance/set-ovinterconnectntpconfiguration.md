@@ -6,14 +6,14 @@ description: Change the default time source policy for HPE Synergy interconnects
 
 ## Syntax
 
-```text
+```powershell
 Set-OVInterconnectNTPConfiguration
     [-SyncWithAppliance]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Set-OVInterconnectNTPConfiguration
     [-SyncWithNTP]
     [-ApplianceConnection <Object>]
@@ -27,14 +27,14 @@ When HPE OneView manages or monitors server or compute resources, it will automa
 {% hint style="info" %}
 Minimum required privileges:
 
-    * Infrastructure Administrator
+* Infrastructure Administrator
 {% endhint %}
 
 ## Examples
 
 ###  Example 1 
 
-```text
+```powershell
 Set-OVInterconnectNTPConfiguration -SyncWithAppliance
 
 ```

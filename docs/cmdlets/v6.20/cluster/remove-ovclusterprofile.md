@@ -6,7 +6,7 @@ description: Remove a cluster profile resource.
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVClusterProfile
     [-InputObject] <Object>
     [-Force]
@@ -37,7 +37,7 @@ Minimum required privileges: Infrastructure administrator, Server administrator,
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVClusterProfile -Name ProdCluster1 | Remove-OVClusterProfile
 ```
 

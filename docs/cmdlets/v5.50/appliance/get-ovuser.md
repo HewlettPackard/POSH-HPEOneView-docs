@@ -6,7 +6,7 @@ description: Retrieve user account resource(s).
 
 ## Syntax
 
-```text
+```powershell
 Get-OVUser
     [-Name] <String>
     [-ApplianceConnection] <Object>
@@ -21,7 +21,7 @@ Get a local user account on the management appliance, and display it"s propertie
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVUser
 ```
 
@@ -29,7 +29,7 @@ List all user accounts from all connected appliances.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVUser "Sally"
 ```
 

@@ -6,7 +6,7 @@ description: Retrieve Enclosure Group resource(s).
 
 ## Syntax
 
-```text
+```powershell
 Get-OVEnclosureGroup
     [-Name <String>]
     [-ApplianceConnection <Array>]
@@ -28,7 +28,7 @@ Minimum required privileges: Read only
 
 ###  Example 1 
 
-```text
+```powershell
 $enclosures = Get-OVEnclosureGroup
 ```
 
@@ -36,7 +36,7 @@ Return all the enclosure groups managed by this appliance.
 
 ###  Example 2 
 
-```text
+```powershell
 $enclosure = Get-OVEnclosureGroup "A"
 ```
 

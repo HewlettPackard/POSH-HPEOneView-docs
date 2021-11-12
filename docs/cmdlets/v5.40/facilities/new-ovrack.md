@@ -6,7 +6,7 @@ description: Create a new facilities Rack.
 
 ## Syntax
 
-```text
+```powershell
 New-OVRack
     [-Name] <String>
     [-ThermalLimit <Int>]
@@ -37,7 +37,7 @@ This Cmdlet will create a new Rack resource.
 
 ###  Example 1 
 
-```text
+```powershell
 $Params = @{
 
     Name         = "Rack-230";

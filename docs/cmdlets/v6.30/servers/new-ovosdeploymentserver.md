@@ -6,7 +6,7 @@ description: Create a new HPE Synergy OS Deployment Server.
 
 ## Syntax
 
-```text
+```powershell
 New-OVOSDeploymentServer
     [-Name] <String>
     [-InputObject] <Object>
@@ -28,7 +28,7 @@ To create an OS Deployment Server, HPE Synergy Image Streamer appliances must be
 
 ###  Example 1 
 
-```text
+```powershell
 $ManagementNetwork = Get-OVNetwork -Type Ethernet -Name "Deployment Network"
 Get-OVImageStreamerAppliance | Select -First 1 | New-OVOSDeploymentServer -Name "MY OS Deployment Server" -ManagementNetwork $ManagementNetwork
 ```

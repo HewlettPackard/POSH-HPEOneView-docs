@@ -6,7 +6,7 @@ description: Create network connection for a server profile.
 
 ## Syntax
 
-```text
+```powershell
 New-OVServerProfileConnection
     [-ConnectionID] <Int32>
     [-Network] <Object>
@@ -24,7 +24,7 @@ New-OVServerProfileConnection
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVServerProfileConnection
     [-ConnectionID] <Int32>
     [-Network] <Object>
@@ -58,7 +58,7 @@ New-OVServerProfileConnection
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVServerProfileConnection
     [-ConnectionID] <Int32>
     [-Network] <Object>
@@ -80,7 +80,7 @@ New-OVServerProfileConnection
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVServerProfileConnection
     [-ConnectionID] <Int32>
     [-Network] <Object>
@@ -106,7 +106,7 @@ A helper function to assist with connections when creating (New-OVServerProfile)
 
 ###  Example 1 
 
-```text
+```powershell
 $net41 = Get-OVNetwork -Name "Net-41" -ErrorAction Stop
 $con41 = New-OVServerProfileConnection -ConnectionID 1 -ConnectionType Ethernet -Network $net41
 ```
@@ -115,7 +115,7 @@ Create a Network Connection ID 1, that is assigned to Net41 network, with Auto P
 
 ###  Example 2 
 
-```text
+```powershell
 $con41 = Get-OVNetwork -Name "Net-41" -ErrorAction Stop | New-OVServerProfileConnection -ConnectionID 1
 ```
 
@@ -123,7 +123,7 @@ Create a Network Connection ID 1, that is assigned to Net41 network, with Auto P
 
 ###  Example 3 
 
-```text
+```powershell
 $con41 = Get-OVNetwork -Name "FCoE Fabric A" -ErrorAction Stop | New-OVServerProfileConnection -ConnectionID 1 -ConnectionType FibreChannel
 ```
 
@@ -131,7 +131,7 @@ Create a Network Connection ID 1, that is assigned to the FCoE network "FCoE Fab
 
 ###  Example 4 
 
-```text
+```powershell
 $net42 = Get-OVNetwork -Name "Net-42" -ErrorAction Stop
 $con42 = New-OVServerProfileConnection -ConnectionID 2 -ConnectionType Ethernet -network $net42 -bootable -priority Primary
 ```
@@ -140,7 +140,7 @@ Create a Server Profile Connection ID 2, assigned to Net42 that is PXE Primary b
 
 ###  Example 5 
 
-```text
+```powershell
 $conFabricA = Get-OVNetwork -Name "Fabric A" -ErrorAction Stop | New-OVServerProfileConnection -ConnectionID 3 -ConnectionType FibreChannel -bootable -priority Primary -Bootable
 ```
 
@@ -148,7 +148,7 @@ Create a Server Profile Connection ID 3, assigned to Fabric A that is FC BfS Pri
 
 ###  Example 6 
 
-```text
+```powershell
 $con41 =  Get-OVNetwork -Name "Net-41" -ErrorAction Stop | New-OVServerProfileConnection -ConnectionID 1 -ConnectionType Ethernet -userdefined -mac 11:22:33:44:55:66 -name "VLAN41 Prod Net"
 ```
 
@@ -156,7 +156,7 @@ Create a Network Connection ID 1, that is assigned to Net41 network, with Auto P
 
 ###  Example 7 
 
-```text
+```powershell
 $con41 =  Get-OVNetwork -Name "Fabric A" | New-OVServerProfileConnection -ConnectionID 3 -ConnectionType FibreChannel -userdefined -mac 11:22:33:44:55:66 -wwpn 10:00:00:00:a1:55:1b:8f -wwnn 20:00:00:00:a1:55:1b:8f -name "VC FF Fabric A Connection"
 ```
 
@@ -164,7 +164,7 @@ Create a Network Connection ID 3, that is assigned to a FibreChannel network, wi
 
 ###  Example 8 
 
-```text
+```powershell
 $con41 =  Get-OVNetwork -Name "Fabric A" -ErrorAction Stop | New-OVServerProfileConnection -ConnectionID 3 -ConnectionType FibreChannel -userdefined -mac 11:22:33:44:55:66 -wwpn 10:00:00:00:a1:55:1b:8f -wwnn 20:00:00:00:a1:55:1b:8f -name "VC FF Fabric A Connection"
 ```
 
@@ -172,7 +172,7 @@ Create a Network Connection ID 3, that is assigned to a FibreChannel network, wi
 
 ###  Example 9 
 
-```text
+```powershell
 $ISCSINetwork = Get-OVNetwork -Name "ImageStreamer Boot Network" -ErrorAction Stop
 $IscsiParams = @{
     ConnectionID                  = 1;
@@ -362,9 +362,9 @@ Specify to configure bootable settings.  If omitted, then the connection is not 
 
 Specify how the Boot Volume Source will be set.  Allowed values are:
 
-    * AdapterBIOS   - Boot from adapter BIOS volume parameters. 
-    * ManagedVolume - Boot from a managed volume defined in SAN Storage section. 
-    * UserDefined   - Boot from user defined volume parameters.
+* AdapterBIOS   - Boot from adapter BIOS volume parameters. 
+* ManagedVolume - Boot from a managed volume defined in SAN Storage section. 
+* UserDefined   - Boot from user defined volume parameters.
 
 Default: AdapterBIOS
 
@@ -380,13 +380,13 @@ Default: AdapterBIOS
 
 Optional boot option for this connection, but Required if `-bootable` is specified.  Allowed values:
 
-    * NotBootable
-    * UseBIOS
+* NotBootable
+* UseBIOS
 
-    * Primary
-    * Secondary
-    * IscsiPrimary
-    * IscsiSecondary
+* Primary
+* Secondary
+* IscsiPrimary
+* IscsiSecondary
 
 When the Connection Type is Ethernet, this affects PXE boot.  If the Connection Type is FibreChannel, this enables BfS settings. 
 
@@ -442,9 +442,9 @@ If configuring a Connection for a Server Profile Template, the value will be ign
 
 Specify the IPv4 Address Source for the connection.  Allowed values are:
 
-    * DHCP
-    * UserDefined
-    * SubnetPool
+* DHCP
+* UserDefined
+* SubnetPool
 
 | Aliases | None |
 | :--- | :--- |

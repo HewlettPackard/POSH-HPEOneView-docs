@@ -6,7 +6,7 @@ description: Get a Switch resource.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVSwitch
     [-Name <String>]
     [-Scope <Object>]
@@ -15,7 +15,7 @@ Get-OVSwitch
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Get-OVSwitch
     [-Label <String>]
     [-ApplianceConnection <Object>]
@@ -30,7 +30,7 @@ Retrieve a Switch that is managed by HPE OneView.  Currently, HPE OneView can Ma
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVSwitch
 ```
 
@@ -38,7 +38,7 @@ Get all logical switch group resources found on the default appliance connection
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVSwitch -Name "10.1.1.1"
 ```
 
@@ -74,10 +74,10 @@ Specify the label associated with resources.
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-    * AllResources
-    * AllResourcesInScope
-    * `[HPEOneView.Appliance.ScopeCollection]`
-    * `[HPEOneView.Appliance.ConnectionPermission]`
+* AllResources
+* AllResourcesInScope
+* `[HPEOneView.Appliance.ScopeCollection]`
+* `[HPEOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |

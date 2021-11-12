@@ -6,7 +6,7 @@ description: Create a new HPE Synergy Logical JBOD resource.
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVLogicalJBOD
     [-InputObject] <HPEOneView.Storage.LogicalJBOD[]>
     [-Force]
@@ -31,7 +31,7 @@ Minimum required privileges: Infrastructure administrator, server administrator,
 
 ###  Example 1 
 
-```text
+```powershell
 $LogicalJBOD = Get-OVLogicalJBOD -Name MyLJbod1
 Remove-OVLogicalJBOD -InputObject $LogicalJBOD
 ```
@@ -40,7 +40,7 @@ Remove the specified logical JBOD.
 
 ###  Example 2 
 
-```text
+```powershell
 # Get the logical JBOD we intend to remove
 $LogicalJBOD = Get-OVLogicalJBOD -Name MyLJbod1
 

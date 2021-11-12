@@ -6,7 +6,7 @@ description: Define the Remote Support Default Site.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVRemoteSupportDefaultSite
     [-AddressLine1] <String>
     [-City] <String>
@@ -27,7 +27,7 @@ Use this Cmdlet to set the default data center site used for Remote Support.  Al
 
 ###  Example 1 
 
-```text
+```powershell
 Set-OVRemoteSupportDefaultSite -AddressLine1 "3000 Hanover St." -City "Palo Alto" -State CA -PostalCode 94304 -Country US -TimeZone "US/Pacific"
 ```
 

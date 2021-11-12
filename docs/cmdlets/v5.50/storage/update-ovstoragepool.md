@@ -6,7 +6,7 @@ description: Refresh a storage pool.
 
 ## Syntax
 
-```text
+```powershell
 Update-OVStoragePool
     [-InputObject] <HPEOneView.Storage.StoragePool[]>
     [-ApplianceConnection <Object>]
@@ -21,7 +21,7 @@ Use this Cmdlet to refresh a storage pool when it's associated policies have bee
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVStoragePool -Name default | Update-OVStoragePool
 ```
 

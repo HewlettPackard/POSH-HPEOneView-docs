@@ -6,7 +6,7 @@ description: Remove Remote Support support and reseller partners.
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVRemoteSupportPartner
     [-InputObject] <Object>
     [-ApplianceConnection <Object>]
@@ -21,7 +21,7 @@ Use this Cmdlet to remove defined Remote Support partner from a specified or all
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVRemoteSupportPartner -Name "ABC IT Vendor" -ErrorAction Stop | Remove-OVRemoteSupportPartner
 ```
 

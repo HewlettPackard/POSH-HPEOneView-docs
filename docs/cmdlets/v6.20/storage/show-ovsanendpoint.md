@@ -6,14 +6,14 @@ description: View Managed SAN FC Endpoints.
 
 ## Syntax
 
-```text
+```powershell
 Show-OVSanEndpoint
     [-SAN] <Object>
     [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Show-OVSanEndpoint
     [-WWN] <String>
     [-ApplianceConnection] <Object>
@@ -28,7 +28,7 @@ This Cmdlet will dispay the Managed SAN endpoints, or FC addresses, their node i
 
 ###  Example 1 
 
-```text
+```powershell
 Show-OVSanEndpoint
 Appliance WWN                     Port Type Online SAN Name Zone Name
 --------- ---                     --------- ------ -------- ---------
@@ -53,7 +53,7 @@ Return all SAN Endpoints from the appliance.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVManagedSan SAN1_1 | Show-OVSanEndpoint
 Appliance WWN                     Port Type Online SAN Name Zone Name
 --------- ---                     --------- ------ -------- ---------
@@ -70,7 +70,7 @@ Return all SAN Endpoints for the specified Managed SAN resource from the applian
 
 ###  Example 3 
 
-```text
+```powershell
 Show-OVSanEndpoint -WWN 10:00:F6:9F:5F:70:00:02
 Appliance WWN                     Port Type Online SAN Name Zone Name
 --------- ---                     --------- ------ -------- ---------

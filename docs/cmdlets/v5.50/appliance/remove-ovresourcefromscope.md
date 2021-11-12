@@ -6,7 +6,7 @@ description: Remove supported resource(s) from Scope.
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVResourceFromScope
     [-Scope] <HPEOneView.Appliance.ScopeCollection>
     [-InputObject] <Object>
@@ -19,16 +19,16 @@ Remove-OVResourceFromScope
 
 This Cmdlet will add supported resources to a specified Scope.  All the resources in these categories can be added to or removed from a scope:
 
-    * Enclosures
-    * Server Hardware
-    * Networks (Ethernet, FC, and FCoE)
-    * Network Sets
-    * Interconnects, excluding SAS resources
-    * Logical Interconnects, excluding SAS resources
-    * Logical Interconnect Groups, excluding SAS resources
-    * Switches
-    * Logical Switches
-    * Logical Switch Groups
+* Enclosures
+* Server Hardware
+* Networks (Ethernet, FC, and FCoE)
+* Network Sets
+* Interconnects, excluding SAS resources
+* Logical Interconnects, excluding SAS resources
+* Logical Interconnect Groups, excluding SAS resources
+* Switches
+* Logical Switches
+* Logical Switch Groups
 
 {% hint style="info" %}
 Resources in other categories are considered to be included in all scopes, and they cannot be removed.
@@ -43,7 +43,7 @@ Minimum required privileges: Infrastructure administrator
 
 ###  Example 1 
 
-```text
+```powershell
 $Resources += Get-OVNetwork -Name ProdVLan* 
 $Resources += Get-OVServer -Name Encl1* 
 Get-OVScope -Name MyScope | Add-OVResourceToScope -InputObject $Resources

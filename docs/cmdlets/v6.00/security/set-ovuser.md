@@ -6,7 +6,7 @@ description: Modify an existing user account.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVUser
     [-UserName] <String>
     [-Password <String>]
@@ -23,7 +23,7 @@ Set-OVUser
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Set-OVUser
     [-UserObject] <Object>
     [-Password <String>]
@@ -48,7 +48,7 @@ Modify or update an existing local user account on the management appliance.  Th
 
 ###  Example 1 
 
-```text
+```powershell
 Set-OVUser -username Sally -roles @("server administrator","network administrator")
 ```
 
@@ -56,7 +56,7 @@ Update the user account "Sally" with new roles.
 
 ###  Example 2 
 
-```text
+```powershell
 Set-OVUser -username Sally -password NewP@ssw0rd
 ```
 
@@ -64,7 +64,7 @@ Update the user account "Sally" with a new password.
 
 ###  Example 3 
 
-```text
+```powershell
 $Scope = Get-OVScope -Name Scope1 -ErrorAction Stop
 Get-OVUser -Username Sally | Set-OVUser -Roles "Server administrator" -ScopePermissions @{Role = "Network administrator"; Scope = $Scope }
 ```

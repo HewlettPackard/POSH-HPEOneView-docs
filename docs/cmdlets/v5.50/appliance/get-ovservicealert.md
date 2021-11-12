@@ -6,7 +6,7 @@ description: Generate report of HPE OneView Remote Support service events.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVServiceAlert
     [-InputObject <Object>]
     [-State <String>]
@@ -26,7 +26,7 @@ HPE OneView automatically checks if your hardware has a valid entitlement to Hew
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVServiceAlert
 ```
 
@@ -34,7 +34,7 @@ Get all Service Alerts from the connected appliance.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVServiceAlert -Count 10 
 ```
 
@@ -42,7 +42,7 @@ Get the first 10 Service Alerts from the connected appliance.
 
 ###  Example 3 
 
-```text
+```powershell
 $TimeSpan = New-TimeSpan -Days 30
 Get-OVServiceAlert -Count 10 -TimeSpan $TimeSpan
 ```
@@ -51,7 +51,7 @@ Get the first 10 Service Alerts within the last 30 days from the connected appli
 
 ###  Example 4 
 
-```text
+```powershell
 Get-OVServiceAlert -Start ([DateTime]"2018-01-05") -End ([DateTime]"2018-01-30")
 ```
 
@@ -59,7 +59,7 @@ Get the Service Alerts within the specified date range from the connected applia
 
 ###  Example 5 
 
-```text
+```powershell
 Get-OVServer -Name "Encl1, Bay 1" -ErrorAction Stop | Get-OVServiceAlert -Start ([DateTime]"2018-01-05") -End ([DateTime]"2018-01-30")
 ```
 
@@ -131,12 +131,12 @@ DateTime object of the start date and time to being query.
 
 Specify the state of the Service Alert.  The state is not correlated to the associated Alert.
 
-    * Closed - The state of Service event when the service call is closed.
-    * Error - The Service request has some error None This is a default state.
-    * Open - The state of Service event when the service call is open.
-    * Pending - The state of Service event when the service call is pending.
-    * Received - The state of Service event when the service call is received.
-    * Submitted - The state of Service event when the service call is submitted.
+* Closed - The state of Service event when the service call is closed.
+* Error - The Service request has some error None This is a default state.
+* Open - The state of Service event when the service call is open.
+* Pending - The state of Service event when the service call is pending.
+* Received - The state of Service event when the service call is received.
+* Submitted - The state of Service event when the service call is submitted.
 
 | Aliases | None |
 | :--- | :--- |

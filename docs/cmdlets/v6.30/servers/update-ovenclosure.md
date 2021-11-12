@@ -6,7 +6,7 @@ description: Update or Refresh an enclosure.
 
 ## Syntax
 
-```text
+```powershell
 Update-OVEnclosure
     [-Refresh]
     [-InputObject] <Object>
@@ -19,7 +19,7 @@ Update-OVEnclosure
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Update-OVEnclosure
     [-Reapply]
     [-InputObject] <Object>
@@ -38,7 +38,7 @@ Use the -Refresh switch for scenarios where adding an enclosure results in a war
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVEnclosure | Update-OVEnclosure -Refresh
 ```
 
@@ -46,7 +46,7 @@ Refresh all available enclosures, from all connected sessions.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVEnclosure -Name Enclosure1 | Update-OVEnclosure -Refresh
 ```
 
@@ -54,7 +54,7 @@ Refresh "Enclosure1" enclosure.
 
 ###  Example 3 
 
-```text
+```powershell
 $TaskResourceToMonitor = Get-OVEnclosure -Name Enclosure1 | Update-OVEnclosure -Refresh -Hostname UpdatedOAFQDN.domain.local -Username Administrator -Password MyOAPassw0rd -Async
 ```
 

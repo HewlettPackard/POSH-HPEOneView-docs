@@ -6,7 +6,7 @@ description: Update user scripts with updated Cmdlet and class names.
 
 ## Syntax
 
-```text
+```powershell
 Update-OVUserScript
     [-Path] <FileInfo>
     [-Replace]
@@ -23,7 +23,7 @@ This script will process a user created script to find references to the origina
 
 ###  Example 1 
 
-```text
+```powershell
 Update-OVUserScript -Path .\MyScript.ps1
 
 ```
@@ -32,7 +32,7 @@ Process the `[MyScript.ps]`1 script present in the working directory.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-ChildItem -Path C:\MyDir -Include *.ps1 | Update-OVUserScript -Replace
 
 ```

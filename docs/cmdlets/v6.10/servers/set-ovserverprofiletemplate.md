@@ -6,7 +6,7 @@ description: Not implemented.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVServerProfileTemplate
     [<CommonParameters>]
 ```
@@ -19,7 +19,7 @@ Not implemented.
 
 ###  Example 1 
 
-```text
+```powershell
 Set-OVServerProfileTemplate
 ```
 

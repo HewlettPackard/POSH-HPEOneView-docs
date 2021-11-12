@@ -6,7 +6,7 @@ description: Create a new resource.
 
 ## Syntax
 
-```text
+```powershell
 New-OVResource
     [-Uri] <String>
     [-InputObject] <Object>
@@ -22,7 +22,7 @@ Create a new resource by passing the URI and the resource details in the form of
 
 ###  Example 1 
 
-```text
+```powershell
 New-OVResource /rest/ethernet-networks @{vlanId=2000; purpose="General"; name="VLAN 2000"; smartLink=$true; privateNetwork=$false; type="ethernet-networkV2"}
 ```
 

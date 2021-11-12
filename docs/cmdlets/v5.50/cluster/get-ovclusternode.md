@@ -6,7 +6,7 @@ description: Default content
 
 ## Syntax
 
-```text
+```powershell
 Get-OVClusterNode
     [-Name] <String>
     [-Label <String>]
@@ -23,7 +23,7 @@ Default content
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVClusterNode
 ```
 
@@ -71,10 +71,10 @@ Specify the label associated with resources.
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-    * AllResources
+* AllResources
     *AllResourcesInScope
-    * `[HPEOneView.Appliance.ScopeCollection]`
-    * `[HPEOneView.Appliance.ConnectionPermission]`
+* `[HPEOneView.Appliance.ScopeCollection]`
+* `[HPEOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |

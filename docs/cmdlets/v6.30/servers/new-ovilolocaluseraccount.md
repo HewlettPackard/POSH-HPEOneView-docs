@@ -6,7 +6,7 @@ description: Create compliant local iLO account object for server profile type r
 
 ## Syntax
 
-```text
+```powershell
 New-OVIloLocalUserAccount
     [-Username] <String>
     [-Password] <SecureString>
@@ -19,7 +19,7 @@ New-OVIloLocalUserAccount
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVIloLocalUserAccount
     [-Username] <String>
     [-Password] <SecureString>
@@ -46,7 +46,7 @@ This Cmdlet will allow you to create a new local account that can then be passed
 
 ###  Example 1 
 
-```text
+```powershell
 New-OVIloLocalUserAccount -Username "localuser1" `
                           -Password (Read-Host "localuser1 password" -AsSecureString) `
                           -DisplayName "localuser1" `
@@ -61,7 +61,7 @@ Create an iLO user account specific to iLO4, or does not include the additional 
 
 ###  Example 2 
 
-```text
+```powershell
 New-OVIloLocalUserAccount -Username "localuser1" `
                           -Password (Read-Host "localuser1 password" -AsSecureString) `
                           -DisplayName "localuser1" `

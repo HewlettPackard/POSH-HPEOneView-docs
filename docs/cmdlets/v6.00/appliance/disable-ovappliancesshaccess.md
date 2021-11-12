@@ -6,7 +6,7 @@ description: Disable appliance SSH access.
 
 ## Syntax
 
-```text
+```powershell
 Disable-OVApplianceSshAccess
     [-Async]
     [-ApplianceConnection <Array>]
@@ -27,7 +27,7 @@ Minimum required privileges: Infrastructure administrator
 
 ###  Example 1 
 
-```text
+```powershell
 Disable-OVApplianceSshAccess
 ```
 

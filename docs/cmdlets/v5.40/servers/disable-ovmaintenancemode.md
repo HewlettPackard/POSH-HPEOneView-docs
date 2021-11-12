@@ -6,7 +6,7 @@ description: Disable compute resource into maintenance mode.
 
 ## Syntax
 
-```text
+```powershell
 Disable-OVMaintenanceMode
     [-InputObject] <Object>
     [-Async]
@@ -30,7 +30,7 @@ Minimum required privileges: Infrastructure administrator, Network administrator
 
 ###  Example 1 
 
-```text
+```powershell
 $Server = Get-OVServer -Name "Encl1, bay 1"
 Disable-OVMaintenanceMode -InputObject $Server
 ```
@@ -39,7 +39,7 @@ Disable the maintenance mode state of the specific server resource.
 
 ###  Example 2 
 
-```text
+```powershell
 $ServerProfile = Get-OVServerProfile -Name "My Profile 1"
 Disable-OVMaintenanceMode -InputObject $ServerProfile
 ```
@@ -48,7 +48,7 @@ Disable the maintenance mode state of the specific server resource that is assoc
 
 ###  Example 3 
 
-```text
+```powershell
 Get-OVServer -MaintenanceMode $True | Disable-OVMaintenanceMode
 ```
 

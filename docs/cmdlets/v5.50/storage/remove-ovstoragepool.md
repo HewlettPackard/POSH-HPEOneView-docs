@@ -6,7 +6,7 @@ description: Delete storage pool resource(s).
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVStoragePool
     [-InputObject] <Object>
     [-Force]
@@ -14,7 +14,7 @@ Remove-OVStoragePool
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Remove-OVStoragePool
     [-InputObject] <Object>
     [-StorageSystem] <Object>
@@ -31,7 +31,7 @@ Delete one or more storage pools from the appliance configuration.
 
 ###  Example 1 
 
-```text
+```powershell
 $task = Remove-OVStoragePool -storagePool "yellow" | Wait-OVTaskComplete $task
 ```
 
@@ -39,7 +39,7 @@ Remove the storage pool specifed by name.  Wait for remove to complete.
 
 ###  Example 2 
 
-```text
+```powershell
 $pool = Get-OVStoragePool -name "yellow"
 Remove-OVStoragePool -storagePool $pool -confirm:$false
 ```
@@ -48,7 +48,7 @@ Remove the network specifed by $pool, and do not prompt for confirmation.
 
 ###  Example 3 
 
-```text
+```powershell
 Get-OVStoragePool | Remove-OVStoragePool
 ```
 

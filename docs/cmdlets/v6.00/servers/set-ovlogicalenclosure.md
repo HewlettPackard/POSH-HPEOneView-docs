@@ -6,7 +6,7 @@ description: Modify a configured Logical Enclosure resource.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVLogicalEnclosure
     [-InputObject] <Object>
     [-EnclosureGroup <Object>]
@@ -15,7 +15,7 @@ Set-OVLogicalEnclosure
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Set-OVLogicalEnclosure
     [-InputObject] <Object>
     [-Name <String>]
@@ -40,7 +40,7 @@ Use this Cmdlet to modify an existing Logical Enclosure.
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVLogicalEnclosure -Name OriginalName | Set-OVLogicalEnclosure -Name NewName
 ```
 
@@ -48,7 +48,7 @@ Change the Logical Enclosure name.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVLogicalEnclosure -Name OriginalName | Set-OVLogicalEnclosure -AmbientTemperatureSetting ASHRAE_A3
 ```
 
@@ -62,10 +62,10 @@ The ambient temperature mode describing the environment in which the logical enc
 
 Allowed values:
 
-    * ASHRAE_A3 - Extended ambient temperatures up to 40C/104F degrees.
-    * ASHRAE_A4 - Extended ambient temperatures up to 45C/113F degrees.
-    * Standard - Expected ambient temperatures up to 35C/95F degrees.
-    * Telco - Extended ambient temperatures up to 40C/104F degrees and operation extremes up to 55C/131F degrees.
+* ASHRAE_A3 - Extended ambient temperatures up to 40C/104F degrees.
+* ASHRAE_A4 - Extended ambient temperatures up to 45C/113F degrees.
+* Standard - Expected ambient temperatures up to 35C/95F degrees.
+* Telco - Extended ambient temperatures up to 40C/104F degrees and operation extremes up to 55C/131F degrees.
 
 | Aliases | None |
 | :--- | :--- |
@@ -141,8 +141,8 @@ Change the Power Mode of the Logical Enclosure.
 
 Allowed values:
 
-    * RedundantPowerFeed - There are at least twice as many power supplies as are necessary (n + n).
-    * RedundantPowerSupply - There is at least 1 more power supply than is necessary (n + 1).
+* RedundantPowerFeed - There are at least twice as many power supplies as are necessary (n + n).
+* RedundantPowerSupply - There is at least 1 more power supply than is necessary (n + 1).
 
 | Aliases | None |
 | :--- | :--- |

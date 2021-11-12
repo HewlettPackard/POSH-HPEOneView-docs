@@ -6,7 +6,7 @@ description: Configure Remote Support and authorize appliance.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVRemoteSupport
     [-CompanyName] <String>
     [-OptimizeOptIn]
@@ -16,7 +16,7 @@ Set-OVRemoteSupport
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Set-OVRemoteSupport
     [-CompanyName] <String>
     [-InsightOnlineUsername <String>]
@@ -28,7 +28,7 @@ Set-OVRemoteSupport
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Set-OVRemoteSupport
     [-Enable]
     [-Async]
@@ -36,7 +36,7 @@ Set-OVRemoteSupport
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Set-OVRemoteSupport
     [-Disable]
     [-Async]
@@ -61,7 +61,7 @@ Servers must be at iLO 2.1 firmware level or above to be enabled for remote supp
 
 ###  Example 1 
 
-```text
+```powershell
 Set-OVRemoteSupport -CompanyName MyCompany
 ```
 
@@ -69,7 +69,7 @@ Configure and register the appliance for Remote Support.
 
 ###  Example 2 
 
-```text
+```powershell
 Set-OVRemoteSupport -CompanyName MyCompany -InsightOnlineUsername mypassport@domain.local -InsightOnlinePassword (ConvertTo-SecureString -String MyPassword -AsPlainText -Force)
 ```
 
@@ -77,7 +77,7 @@ Configure and register the appliance for Remote Support, and enable Insight Onli
 
 ###  Example 3 
 
-```text
+```powershell
 Set-OVRemoteSupport -Disable
 ```
 
@@ -85,7 +85,7 @@ Disable Remote Support on the appliance.
 
 ###  Example 4 
 
-```text
+```powershell
 Set-OVRemoteSupport -Enable -ApplianceConnection $Appliance2
 ```
 

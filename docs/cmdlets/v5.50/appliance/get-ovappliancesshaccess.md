@@ -6,7 +6,7 @@ description: Get the current SSH console access state.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVApplianceSshAccess
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -26,7 +26,7 @@ Minimum required privileges: Read only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVApplianceSshAccess
 ```
 

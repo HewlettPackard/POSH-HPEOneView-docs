@@ -6,7 +6,7 @@ description: Modify an existing Storage Volume resource.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVStorageVolume
     [-InputObject] <Object>
     [-Name <String>]
@@ -28,7 +28,7 @@ This Cmdlet will help modify an existing Storage Volume resource.  Only the Volu
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVStorageVolume ProdVol1 | Set-OVStorageVolume  -Size 160
 ```
 
@@ -117,12 +117,12 @@ Default: Private
 
 Specify the new StoreVirtual data protection level (aka Network RAID).  Allowed values:
 
-    * NetworkRaid0None
-    * NetworkRaid5SingleParity
-    * NetworkRaid10Mirror2Way
-    * NetworkRaid10Mirror3Way
-    * NetworkRaid10Mirror4Way
-    * NetworkRaid6DualParity
+* NetworkRaid0None
+* NetworkRaid5SingleParity
+* NetworkRaid10Mirror2Way
+* NetworkRaid10Mirror3Way
+* NetworkRaid10Mirror4Way
+* NetworkRaid6DualParity
 
 | Aliases | None |
 | :--- | :--- |
