@@ -6,7 +6,7 @@ description: Stop an HPE OneView appliance.
 
 ## Syntax
 
-```text
+```powershell
 Stop-OVAppliance
     [-ApplianceConnection] <Array>
     [<CommonParameters>]
@@ -22,7 +22,7 @@ Only the Infrastructure (Full) Administrator may restart the appliance.
 
 ###  Example 1 
 
-```text
+```powershell
 Connect-OVMgmt appliance.contoso.com Administrator P@ssw0rd
 Stop-OVAppliance
 ```
@@ -31,7 +31,7 @@ Shutdown the appliance.
 
 ###  Example 2 
 
-```text
+```powershell
 Stop-OVAppliance -confirm:$false
 ```
 

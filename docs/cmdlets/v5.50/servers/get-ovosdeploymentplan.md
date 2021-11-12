@@ -6,7 +6,7 @@ description: Retrieve OS deployment server deployment plan.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVOSDeploymentPlan
     [-Name <String>]
     [-Scope <Object>]
@@ -28,7 +28,7 @@ Minimum required privileges: Read-only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVOSDeploymentPlan
 ```
 
@@ -36,7 +36,7 @@ Retrieve all defined OS Deployment Plans found on the appliance.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVOSDeploymentPlan -Name "My OS Deployment Plan"
 ```
 
@@ -72,10 +72,10 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-    * AllResources
-    * AllResourcesInScope
-    * `[HPEOneView.Appliance.ScopeCollection]`
-    * `[HPEOneView.Appliance.ConnectionPermission]`
+* AllResources
+* AllResourcesInScope
+* `[HPEOneView.Appliance.ScopeCollection]`
+* `[HPEOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |

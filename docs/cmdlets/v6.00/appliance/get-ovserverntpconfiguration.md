@@ -6,7 +6,7 @@ description: Get the default time source policy for servers.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVServerNTPConfiguration
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -19,14 +19,14 @@ When HPE OneView manages or monitors server or compute resources, it will automa
 {% hint style="info" %}
 Minimum required privileges:
 
-    * Read-Only
+* Read-Only
 {% endhint %}
 
 ## Examples
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVServerNTPConfiguration
 
 ```

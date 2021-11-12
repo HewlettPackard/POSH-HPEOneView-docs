@@ -6,7 +6,7 @@ description: Update appliance certificate authority revocation list.
 
 ## Syntax
 
-```text
+```powershell
 Update-OVApplianceTrustedAuthorityCrl
     [-InputObject] <HPEOneView.Appliance.TrustedCertificateAuthority[]>
     [-Async]
@@ -14,7 +14,7 @@ Update-OVApplianceTrustedAuthorityCrl
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Update-OVApplianceTrustedAuthorityCrl
     [-InputObject] <HPEOneView.Appliance.TrustedCertificateAuthority[]>
     [-Path] <FileInfo>
@@ -33,7 +33,7 @@ The Cmdlet will attempt to download the CRL from the HTTP location specified wit
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVApplianceTrustedCertificate -Name "VeriSign Class 3 Public Primary Certification Authority - G5" | Update-OVApplianceTrustedAuthorityCrl
 ```
 
@@ -41,7 +41,7 @@ Update the built-in certificate authority resource.
 
 ###  Example 2 
 
-```text
+```powershell
 # Download CA CRL for offline use
 $CA = Get-OVApplianceTrustedCertificate -CertificateAuthoritiesOnly -Name "DigiCert Global CA G2"
 Invoke-WebRequest -Uri $CA.CRLInfo.EndPointList[0] -OutFile C:\Directory\CA-updated.crl

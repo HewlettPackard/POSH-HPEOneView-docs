@@ -6,7 +6,7 @@ description: Get State Change Message Bus certificates.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVScmbCertificates
     [-Location <String>]
     [-InstallApplianceRootCA]
@@ -14,7 +14,7 @@ Get-OVScmbCertificates
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Get-OVScmbCertificates
     [-Password] <SecureString>
     [-Location <String>]
@@ -42,7 +42,7 @@ Minimum required privileges: Infrastructure Administrator
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVScmbCertificates
 ```
 
@@ -50,7 +50,7 @@ Get the HPE OneView appliance SCMB SSL certificates, and save them in the curren
 
 ###  Example 2 
 
-```text
+```powershell
 Read-hHst "Password" -AsSecureString | Get-OVScmbCertificates -Location C:\scmbcerts -ConvertToPFx
 ```
 

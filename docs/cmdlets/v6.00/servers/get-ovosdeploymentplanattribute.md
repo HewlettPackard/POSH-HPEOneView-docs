@@ -6,7 +6,7 @@ description: Get OS deployment plan parameters and attributes.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVOSDeploymentPlanAttribute
     [-InputObject] <Object>
     [-ApplianceConnection <Object>]
@@ -27,7 +27,7 @@ Minimum required privileges: Read-only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVOSDeploymentPlan -Name "RHEL 7.2 OS" -ErrorAction Stop | Get-OVOSDeploymentPlanAttribute
 ```
 
@@ -35,7 +35,7 @@ Return OS Deployment Plan parameters from the "RHEL 7.2 OS" deployment plan.
 
 ###  Example 2 
 
-```text
+```powershell
 $OSDeploymentAttributes = Get-OVOSDeploymentPlanAttributes -InputObject $MyDeploymentPlan
 $OSDeploymentAttributes = $OSDeploymentAttributes | Where-Object name -NotMatch 'dns|gateway|ipaddress|netmask'
 ($OSDeploymentAttributes | Where-Object name -eq "NIC1.connectionid").value = 3

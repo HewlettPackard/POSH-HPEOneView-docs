@@ -6,7 +6,7 @@ description: Get appliance API version.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVXApiVersion
     [-ApplianceConnection] <Object>
     [<CommonParameters>]
@@ -20,7 +20,7 @@ Returns the API versions supported by the appliance.  You do not need to authent
 
 ###  Example 1 
 
-```text
+```powershell
 (Get-OVXApiVersion myAppliance.domain.com).minimumversion
 ```
 
@@ -28,7 +28,7 @@ This example retrieves the minimum XApi version supported by the appliance.  An 
 
 ###  Example 2 
 
-```text
+```powershell
 (Get-OVXApiVersion).minimumversion
 ```
 

@@ -6,7 +6,7 @@ description: Retrieve Network resource(s).
 
 ## Syntax
 
-```text
+```powershell
 Get-OVNetwork
     [-Name <String>]
     [-Type <String>]
@@ -22,9 +22,9 @@ Get-OVNetwork
 
 A virtual connect interconnect in an enclosure supports the following types of data center networks:
 
-    * Fibre Channel for storage networks, including fabric-attach (SAN) Fibre Channel (FC) connections and direct-attach (Flat SAN) Fibre Channel connections.
-    * Ethernet for data networks, including tagged, untagged, or tunnel networks.
-    * Fibre Channel over Ethernet (FCoE) for storage networks where storage traffic is carried over a dedicated Ethernet VLAN.
+* Fibre Channel for storage networks, including fabric-attach (SAN) Fibre Channel (FC) connections and direct-attach (Flat SAN) Fibre Channel connections.
+* Ethernet for data networks, including tagged, untagged, or tunnel networks.
+* Fibre Channel over Ethernet (FCoE) for storage networks where storage traffic is carried over a dedicated Ethernet VLAN.
 
 {% hint style="info" %}
 The networking features described here apply to enclosures and servers only. The appliance does not monitor or manage the network features and hardware for rack mount servers or networking equipment outside the enclosures without using a supported logical switch or fabric manager.
@@ -62,7 +62,7 @@ Minimum required privileges: Read-only
 
 ###  Example 1 
 
-```text
+```powershell
 $net41 = Get-OVNetwork -name "Net-41"
 ```
 
@@ -70,7 +70,7 @@ Return the network resource with the name "Net-41"
 
 ###  Example 2 
 
-```text
+```powershell
 $ethNets = Get-OVNetwork -type Ethernet
 ```
 
@@ -78,7 +78,7 @@ Return all the Ethernet network resources
 
 ###  Example 3 
 
-```text
+```powershell
 $ethNets = Get-OVNetwork -Name VLAN_19*
 ```
 
@@ -86,7 +86,7 @@ Return all Ethernet Networks that match "VLAN_19*".
 
 ###  Example 4 
 
-```text
+```powershell
 $ethNets = "Net1","Net2","Net3" | Get-OVNetwork -Type Ethernet
 ```
 
@@ -94,7 +94,7 @@ Return Net1, Net2, and Net3 Ethernet Networks from the specified appliance conne
 
 ###  Example 5 
 
-```text
+```powershell
 Get-OVNetwork -exportFile "c:\myApplianceConfig\myNets.json"
 ```
 
@@ -102,7 +102,7 @@ Exports all networks to the file `[myNets.json]` in JSON format.
 
 ###  Example 6 
 
-```text
+```powershell
 Get-OVNetwork -x "c:\myApplianceConfig\myNets.json" -type Ethernet
 ```
 
@@ -110,7 +110,7 @@ Exports only the ethernet networks to the file `[myNets.json]`.
 
 ###  Example 7 
 
-```text
+```powershell
 Get-OVNetwork
 Type: Ethernet
 
@@ -205,11 +205,11 @@ Specify the Ethernet Purpose value to filter on.
 
 Supported Values:
 
-    * General
-    * Management
-    * VMMigration
-    * FaultTolerance
-    * ISCSI
+* General
+* Management
+* VMMigration
+* FaultTolerance
+* ISCSI
 
     Note: When using this parameter, only Ethernet networks will be returned.
 
@@ -225,10 +225,10 @@ Supported Values:
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-    * AllResources
-    * AllResourcesInScope
-    * `[HPEOneView.Appliance.ScopeCollection]`
-    * `[HPEOneView.Appliance.ConnectionPermission]`
+* AllResources
+* AllResourcesInScope
+* `[HPEOneView.Appliance.ScopeCollection]`
+* `[HPEOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |

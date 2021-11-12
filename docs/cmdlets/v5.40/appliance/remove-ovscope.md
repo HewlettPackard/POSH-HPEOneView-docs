@@ -6,7 +6,7 @@ description: Remove Scope from appliance
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVScope
     [-Scope] <HPEOneView.Appliance.ScopeCollection>
     [-ApplianceConnection <Array>]
@@ -25,7 +25,7 @@ Minimum required privileges: Infrastructure administrator
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVScope MyScope | Remove-OVScope
 ```
 

@@ -6,7 +6,7 @@ description: Power on Server Resource.
 
 ## Syntax
 
-```text
+```powershell
 Start-OVServer
     [-InputObject] <Object>
     [-ApplianceConnection] <Object>
@@ -22,7 +22,7 @@ Start the power state of the server using the virtual power button.
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVServer -Name "Encl1, Bay 1" | Start-OVServer
 ```
 
@@ -30,7 +30,7 @@ Power on the specific server device by passing the Server Object via pipeline.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVServer -Name "Encl1, *" | Start-OVServer -Async
 ```
 
@@ -38,7 +38,7 @@ Power on the server devices found by passing the Server Object via pipeline, and
 
 ###  Example 3 
 
-```text
+```powershell
 Get-OVServerProfile -Name "MyWebServer 1" | Start-OVServer
 ```
 

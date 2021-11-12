@@ -6,7 +6,7 @@ description: Remove appliance HTTP/HTTPS proxy.
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVApplianceProxy
     [-ApplianceConnection <Array>]
     [<CommonParameters>]
@@ -24,7 +24,7 @@ Minimum required privileges: Infrastructure administrator
 
 ###  Example 1 
 
-```text
+```powershell
 Remove-OVApplianceProxy
 ```
 

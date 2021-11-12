@@ -6,7 +6,7 @@ description: Generate and download or remote save appliance backup.
 
 ## Syntax
 
-```text
+```powershell
 New-OVBackup
     [-Location] <String>
     [-Force]
@@ -29,7 +29,7 @@ If an automatic backup policy is configured on the appliance, the Cmdlet is inst
 
 ###  Example 1 
 
-```text
+```powershell
 New-OVBackup
 ```
 
@@ -37,7 +37,7 @@ This command will generate a new backup, and if a remote location is configured,
 
 ###  Example 2 
 
-```text
+```powershell
 New-OVBackup -Location C:\Temp -Force
 ```
 

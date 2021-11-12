@@ -6,7 +6,7 @@ description: Start an OV Library Verbose Trace.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVCommandTrace
     [-ScriptBlock] <ScriptBlock>
     [-Location <String>]
@@ -25,7 +25,7 @@ Please know that this Cmdlet is currently not supported in the Windows PowerShel
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVCommandTrace -ScriptBlock { Get-OVNetwork -Name MyNet } -Location C:\Temp
 ```
 

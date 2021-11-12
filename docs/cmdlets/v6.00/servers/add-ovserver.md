@@ -6,7 +6,7 @@ description: Import a physical server.
 
 ## Syntax
 
-```text
+```powershell
 Add-OVServer
     [-Hostname] <String>
     [-Username] <String>
@@ -19,7 +19,7 @@ Add-OVServer
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Add-OVServer
     [-Hostname] <String>
     [-Monitored]
@@ -64,7 +64,7 @@ Minimum required privileges: Infrastructure administrator or Server administrato
 
 ###  Example 1 
 
-```text
+```powershell
 Add-OVServer -Hostname serverilo.contoso.com -Credential (Get-Credential) -LicenseIntent OneView
 ```
 
@@ -72,7 +72,7 @@ Add `[serverilo.contoso.com]` to the appliance, with the OneView license.
 
 ###  Example 2 
 
-```text
+```powershell
 Add-OVServer -Hostname serverilo2.contoso.com -Credential (Get-Credential) -Monitored
 ```
 
@@ -126,8 +126,8 @@ Specifies whether the intent is to apply either OneView or OneView w/o iLO licen
 
 Accepted values are
 
-    * OneView
-    * OneViewNoiLO
+* OneView
+* OneViewNoiLO
 
 | Aliases | None |
 | :--- | :--- |

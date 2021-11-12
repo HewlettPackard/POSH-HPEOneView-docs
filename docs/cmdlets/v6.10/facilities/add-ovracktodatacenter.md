@@ -6,7 +6,7 @@ description: Add rack resource to DataCenter.
 
 ## Syntax
 
-```text
+```powershell
 Add-OVRackToDataCenter
     [-InputObject] <Object>
     [-DataCenter] <Object>
@@ -45,7 +45,7 @@ Minimum required privileges: Infrastructure administrator or Server administrato
 
 ###  Example 1 
 
-```text
+```powershell
 $DC = Get-OVDataCenter -Name Houston_DC1 -ErrorAction Stop
 $X = 10
 $Y = 12

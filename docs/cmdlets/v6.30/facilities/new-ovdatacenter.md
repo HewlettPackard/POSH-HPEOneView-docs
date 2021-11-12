@@ -6,7 +6,7 @@ description: Get a member device from a defined Rack.
 
 ## Syntax
 
-```text
+```powershell
 New-OVDataCenter
     [-Name] <String>
     [-Width] <Float>
@@ -23,7 +23,7 @@ New-OVDataCenter
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVDataCenter
     [-Name] <String>
     [-Width] <Float>
@@ -62,7 +62,7 @@ This Cmdlet will create a new datacenter.  You will need to specify the Name and
 
 ###  Example 1 
 
-```text
+```powershell
 $DataCenter1Name = "LA DC 12"
 
 $DataCenter1Width = 30
@@ -82,7 +82,7 @@ Create new "LA DC 12" datacenter.
 
 ###  Example 2 
 
-```text
+```powershell
 $NewDCParams = @{
 
 Name             = "Houston DC1";

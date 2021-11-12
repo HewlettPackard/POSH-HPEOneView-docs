@@ -6,7 +6,7 @@ description: Retrieve HPE Synergy Image Streamer appliances.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVImageStreamerAppliance
     [-Name <String>]
     [-ApplianceConnection <Object>]
@@ -27,7 +27,7 @@ Minimum required privileges: Read-only.
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVImageStreamerAppliance
 ```
 
@@ -35,7 +35,7 @@ List all HPE Synergy Image Streamer appliances.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVImageStreamerAppliance -Name "0000A66102, appliance 2"
 ```
 

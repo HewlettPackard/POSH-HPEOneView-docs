@@ -6,7 +6,7 @@ description: Set HPE OneView Remote Support default primary contact.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVRemoteSupportPrimaryContact
     [-InputObject] <Object>
     [-ApplianceConnection <Object>]
@@ -27,7 +27,7 @@ Minimum required privileges: Infrastructure administrator
 
 ###  Example 1 
 
-```text
+```powershell
 $PrimaryContact = Get-OVRemoteSupportContact -Name "Bob Smith"
 Set-OVRemoteSupportPrimaryContact -InputObject $PrimaryContact
 ```

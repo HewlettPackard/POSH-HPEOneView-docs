@@ -6,7 +6,7 @@ description: List Directory Groups from the configured LDAP Directory.
 
 ## Syntax
 
-```text
+```powershell
 Show-OVLdapGroups
     [-Directory] <Object>
     [-UserName] <String>
@@ -16,7 +16,7 @@ Show-OVLdapGroups
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Show-OVLdapGroups
     [-Directory] <Object>
     [-Credential <PSCredential>]
@@ -33,7 +33,7 @@ This Cmdlet will display the available Authentication Directory security groups.
 
 ###  Example 1 
 
-```text
+```powershell
 Show-OVLdapGroups -u "Sarah Peterson" -d Domain1
 ```
 
@@ -41,7 +41,7 @@ Get list of Directory Groups from Domain1 and prompt for password.
 
 ###  Example 2 
 
-```text
+```powershell
 $password = ConvertTo-SecureString -asplaintext "password123890" -force
 $Directory = Get-OVLdapDirectory "Domain99"
 Show-OVLdapGroups -u "Sarah Peterson" -p $password -d $Directory
@@ -51,7 +51,7 @@ Automate list of Directory Groups from Domain99 with the provided password.
 
 ###  Example 3 
 
-```text
+```powershell
 $password = ConvertTo-SecureString -asplaintext "password123890" -force
 $Directory = Get-OVLdapDirectory "Domain99"
 Show-OVLdapGroups -u "Sarah Peterson" -p $password -d $Directory -GroupName "Admins"

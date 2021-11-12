@@ -16,6 +16,7 @@ Param
     [Switch]$BuildAll
 )
 
+$Script:FindTabbedItemListRegexPattern             = [System.Text.RegularExpressions.RegEx]::new('\s{4}\*\s', [System.Text.RegularExpressions.RegexOptions]::Multiline)
 $Script:FindParameterRegexPattern                  = [System.Text.RegularExpressions.RegEx]::new('(?<=\s)-\w+', [System.Text.RegularExpressions.RegexOptions]::Multiline)
 $Script:FindCmdletRegexPattern                     = [System.Text.RegularExpressions.RegEx]::new('\b(?<=\s\()\w*-\w*\b(?!`)(?<!-\))', [System.Text.RegularExpressions.RegexOptions]::Multiline)
 $Script:FindFullyQualifiedClassWithoutBracePattern = [System.Text.RegularExpressions.RegEx]::new('(?<=\s)([a-zA-Z]+[.])+[a-zA-Z]+', [System.Text.RegularExpressions.RegexOptions]::Multiline)
@@ -38,7 +39,7 @@ $H2 = "## "
 $H3 = "### "
 $Indent = '    '
 
-$StartSyntax = '```text'
+$StartSyntax = '```powershell'
 $EndSyntax   = '```{0}' -f [System.Environment]::NewLine
 
 $ParameterType = '&lt;{0}&gt;'
@@ -152,11 +153,13 @@ class ReturnValues : Tabs
 class ParameterEntry
 {
 
-    static [string]$Table = '| Aliases | {0} |{5}| :--- | :--- |{5}| Required? | {1} |{5}| Position? | Named |{5}| Default value | {2} |{5}| Accept pipeline input? | {3} |{5}| Accept wildcard characters? | {4} |'
+    static [string]$Table       = '| Aliases | {0} |{5}| :--- | :--- |{5}| Required? | {1} |{5}| Position? | Named |{5}| Default value | {2} |{5}| Accept pipeline input? | {3} |{5}| Accept wildcard characters? | {4} |'
     static [string]$Description = '{0}{1}'
 
     static [string] BuildDescriptionAndTable ([Object]$Parameter)
     {
+
+        $FindTabbedItemListRegexPattern = [System.Text.RegularExpressions.RegEx]::new('\s{4}\*\s', [System.Text.RegularExpressions.RegexOptions]::Multiline)
 
         $FinalString = [System.Text.StringBuilder]::new()
 
@@ -165,6 +168,9 @@ class ParameterEntry
 
         # Look for Cmdlet name reference
         $_Description = $Script:FindCmdletRegexPattern.Replace($_Description, '`$0`')
+
+        # Look for tabbed item lists to fix issue with Gitbook handling
+        $_Description = $FindTabbedItemListRegexPattern.Replace($_Description, "* ")
 
         # Look for fully qualified class names without [] braces
         $_Description = $Script:FindFullyQualifiedClassWithoutBracePattern.Replace($_Description, '[$0]')
@@ -325,7 +331,7 @@ if (-not $PSBoundParameters['BuildAll'].Value) {
 
     ForEach ($version in $DeprecatedCmdlets.Versions) {
 
-        "Removing '{0}' library source documentation file from the collection." -f $version | Write-Verbose -Verbose
+        "Removing '{0}' library source documentation file from the collection." -f $version | Write-Verbose
 
         $VerToIgnore = $version.Replace(".", $null)
 
@@ -493,6 +499,7 @@ else
                 }
 
                 #    Process DESCRIPTION NOTE: messages
+                # Embed Gitbook "info" icon when NOTE: exists in the description
                 if (($NoteMessagePattern.Match($UpdatedDescription)).Success)
                 {
 
@@ -501,6 +508,7 @@ else
 
                 }
 
+                # Embed Gitbook "warning" icon when WARNING: exists in the description
                 if (($WarningMessagePattern.Match($UpdatedDescription)).Success)
                 {
 
@@ -509,6 +517,7 @@ else
 
                 }
 
+                # Embed Gitbook "danger" icon when CRITICAL: exists in the description
                 if (($CriticalMessagePattern.Match($UpdatedDescription)).Success)
                 {
 
@@ -516,6 +525,9 @@ else
                     $UpdatedDescription = $CriticalMessagePattern.Replace($UpdatedDescription, $CriticalMessageReplace)
 
                 }
+
+                # This is to fix the item list issue with Gitbook, where it treats `t* as code instead of an item list
+                $UpdatedDescription = $FindTabbedItemListRegexPattern.Replace($UpdatedDescription, "* ")
 
                 [void]$FinalMarkdownOutput.Add($UpdatedDescription)
 

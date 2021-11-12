@@ -6,7 +6,7 @@ description: Configure Authentication Directory default directory.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVLdapDefaultDirectory
     [-InputObject] <Object>
     [-DisableLocalLogin]
@@ -16,7 +16,7 @@ Set-OVLdapDefaultDirectory
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Set-OVLdapDefaultDirectory
     [-InputObject] <Object>
     [-DisableLocalLogin]
@@ -32,7 +32,7 @@ Use this Cmdlet to set the default Authentication Directory on the appliance.  U
 
 ###  Example 1 
 
-```text
+```powershell
 Set-OVLdapDefaultDirectory -InputObject "Domain1"
 # Cmdlet will create:
 # HKCU:\Software\Hewlett-Packard\HPOneView\AuthProvider#MyAppliance.domain.com REG_SZ, value = "Domain1"
@@ -42,7 +42,7 @@ Set "Domain1" as the default authentication directory for the appliance.  Then, 
 
 ###  Example 2 
 
-```text
+```powershell
 Set-OVLdapDefaultDirectory -InputObject (Get-OVLdapDirectory -Name MyDirectory) -DisableLocalLogin $true -EnableEmergencyLocalLogin
 ```
 
@@ -50,7 +50,7 @@ Set "MyDirectory" as the default authentication directory for the appliance, dis
 
 ###  Example 3 
 
-```text
+```powershell
 Set-OVLdapDefaultDirectory -InputObject "LOCAL"
 ```
 

@@ -6,7 +6,7 @@ description: Retrieve Remote Support Schedule settings on an appliance.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVRemoteSupportDataCollectionSchedule
     [-Type <String>]
     [-ApplianceConnection <Object>]
@@ -45,7 +45,7 @@ Minimum required privileges: Read-only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVRemoteSupportDataCollectionSchedule
 ```
 
@@ -56,7 +56,7 @@ Get the Remote Support data collection schedules.
 ### -Type &lt;String&gt;
 
 Specify the schedule type to modify.  Allowed value is:
-    * AHS
+* AHS
     *Basic
 If no value is provided, both schedules will be returned.
 

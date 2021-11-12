@@ -6,7 +6,7 @@ description: Delete a baseline or hotfix from an appliance repository.
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVBaseline
     [-InputObject] <Object>
     [-ApplianceConnection <Object>]
@@ -22,7 +22,7 @@ This Cmdlet provides the ability to remove one or more SPP Baselines from one or
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVBaseline | Remove-OVBaseline
 ```
 
@@ -30,7 +30,7 @@ Remove all baselines from any connected appliance.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVBaseline -Name "My Custom Baseline" | Remove-OVBaseline
 ```
 

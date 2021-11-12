@@ -6,7 +6,7 @@ description: Get appliance supported security protocols and ciphers.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVApplianceSecurityProtocol
     [-TlsVersion <String[]>]
     [-SecurityMode <String[]>]
@@ -26,7 +26,7 @@ Minimum required privileges: Read only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVApplianceSecurityProtocol
 ```
 
@@ -34,7 +34,7 @@ Get the appliance FIPS security mode and associated security protocols.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVApplianceSecurityProtocol -SecurityMode FIPS, CNSA -TlsVersion TLSv1.1, TLSv1.2
 ```
 
@@ -58,8 +58,8 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 
 Specify the Security Mode to return supported security protocols and encryption ciphers. By default, will return the current appliance security mode. Allowed values:
 
-    * Legacy
-    * FIPS
+* Legacy
+* FIPS
     *CNSA
 
 | Aliases | None |
@@ -74,7 +74,7 @@ Specify the Security Mode to return supported security protocols and encryption 
 
 Filter for specific TLS version(s). By default, will return all TLS Versions. Allowed values:
 
-    * TLSv1
+* TLSv1
      TLSv1.1
     TLSv1.2
 

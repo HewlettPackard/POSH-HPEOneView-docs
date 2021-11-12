@@ -6,7 +6,7 @@ description: Sends a request to the management appliance
 
 ## Syntax
 
-```text
+```powershell
 Send-OVRequest
     [-Uri] <String>
     [-Method <String>]
@@ -30,7 +30,7 @@ The message body can contain valid JSON data, with the correct URI and accepted 
 
 ###  Example 1 
 
-```text
+```powershell
 Send-OVRequest "/rest/enclosures"
 ```
 
@@ -38,7 +38,7 @@ Returns all the enclosure objects managed by the appliance.
 
 ###  Example 2 
 
-```text
+```powershell
 $e = Send-OVRequest "/rest/enclosures/SGH2X6J1" -Appliance MyAppliance.domain.com
 $e.name = "New Name"
 Send-OVRequest $e.uri "PUT" $e -Appliance MyAppliance.domain.com
@@ -64,11 +64,11 @@ The uri that identifies the required resource on the appliance.
 
 The request HTTP Method.
 
-    * "GET" (default) to get a resource from the appliance (read)
-    * "POST" to create a new resource
-    * "PUT" to modify a resource (write)
-    * "PATCH" to modify a resource (write), with specific attributes set to values, other attributes should be set to $null.
-    * "DELETE" to delete a resource
+* "GET" (default) to get a resource from the appliance (read)
+* "POST" to create a new resource
+* "PUT" to modify a resource (write)
+* "PATCH" to modify a resource (write), with specific attributes set to values, other attributes should be set to $null.
+* "DELETE" to delete a resource
 
 | Aliases | None |
 | :--- | :--- |

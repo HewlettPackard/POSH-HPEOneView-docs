@@ -6,7 +6,7 @@ description: Create Server Profile disk controller policy object.
 
 ## Syntax
 
-```text
+```powershell
 New-OVServerProfileLogicalDiskController
     [-ControllerID] <Object>
     [-Mode] <String>
@@ -16,7 +16,7 @@ New-OVServerProfileLogicalDiskController
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVServerProfileLogicalDiskController
     [-ControllerID] <Object>
     [-Mode] <String>
@@ -34,7 +34,7 @@ This helper Cmdlet will create a Logical Disk controller object to then be assig
 
 ###  Example 1 
 
-```text
+```powershell
 $LogicalDisk = New-OVServerProfileLogicalDisk -Name "MyDisk" | New-OVServerProfileLogicalDiskController -Initialize
 ```
 
@@ -42,7 +42,7 @@ Create a default Logical Disk and Controller configuration object policy.
 
 ###  Example 2 
 
-```text
+```powershell
 New-OVServerProfileLogicalDiskController -Mode HBA
 ```
 
@@ -50,7 +50,7 @@ Create an HBA controller policy, which will then set the controller to JBOD mode
 
 ###  Example 3 
 
-```text
+```powershell
 $LogicalDisk1 = New-OVServerProfileLogicalDisk -Name "MyDisk"
 $LogicalDisk2 = New-OVServerProfileLogicalDisk -Name "MyDisk2"
 $Controller = New-OVServerProfileLogicalDiskController -Initialize -LogicalDisk $LogicalDisk1,$LogicalDisk2
@@ -60,7 +60,7 @@ Create a default Logical Disk and Controller configuration object policy.
 
 ###  Example 4 
 
-```text
+```powershell
 $LogicalDisk1 = New-OVServerProfileLogicalDisk -Name Boot -RAID RAID1 -MinDriveSize 300 -MaxDriveSize 300 -DriveType SAS -Bootable $True
 $LogicalDisk2 = New-OVServerProfileLogicalDisk -Name Data -RAID RAID5 -NumberofDrives 5 -MinDriveSize 300 -MaxDriveSize 300 -DriveType SAS
 $Controller = New-OVServerProfileLogicalDiskController -ControllerID "Mezz 1" -Mode RAID -LogicalDisk $LogicalDisk1,$LogicalDisk2
@@ -70,7 +70,7 @@ Create a HPE Synergy D3940 RAID disk policy, with a bootable volume.
 
 ###  Example 5 
 
-```text
+```powershell
 $AvailableDriveType = Get-OVSasLogicalInterconnect -Name "LE1-Default SAS Synergy LIG-3" -ErrorAction Stop | Get-OVAvailableDriveType  | ? { $_.Type -eq "SASHDD" -and $_.capacity -eq 900 }
 $NewLogicalDisk = New-OVServerProfileLogicalDisk -Name "LD1_RAID5_900GB_SASHDD" -DriveSelectionBy DriveType -NumberofDrives 6 -RAID RAID5 -AvailableDriveType $AvailableDriveType
 C:\> $Controller = New-OVServerProfileLogicalDiskController -ControllerID "Mezz 1" -Mode RAID -LogicalDisk $NewLogicalDisk
@@ -83,10 +83,10 @@ Create a RAID5 Logical Disk for a Server Profile using D3940 storage, and a spec
 ### -ControllerID &lt;Object&gt;
 
 Specify the Controller ID location.  Supported options for this parameter are
-     * Embedded
-     * Mezz 1
-     * Mezz 2
-     * Mezz 3
+ * Embedded
+ * Mezz 1
+ * Mezz 2
+ * Mezz 3
 Please note that Mezz 1, Mezz 2 and Mezz 3 are only supported with HPE Synergy Compute nodes connected to the HPE Synergy D3940 disk shelf.
 
 | Aliases | None |
@@ -101,8 +101,8 @@ Please note that Mezz 1, Mezz 2 and Mezz 3 are only supported with HPE Synergy C
 
 The mode to configure the Smart Array Controller as.  Accepted values are:
 
-    * HBA
-    * RAID
+* HBA
+* RAID
 
 When specifying HBA, you cannot attach a RAID Logical Disk to this policy.
 
@@ -154,9 +154,9 @@ A collection of Logical Disk objects from the New-OVServerProfileLogicalDisk Cmd
 
 For Gen10 controllers, to enable, disable or unmanage controller write cache policy.  Allowed values:
 
-    * Enabled
-    * Disabled
-    * Unmanaged
+* Enabled
+* Disabled
+* Unmanaged
 
 Default value: Unmanaged
 

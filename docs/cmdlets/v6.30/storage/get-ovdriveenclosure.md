@@ -6,7 +6,7 @@ description: List Synergy DAS Enclosures.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVDriveEnclosure
     [-Name <String>]
     [-ApplianceConnection <Array>]
@@ -29,7 +29,7 @@ Minimum required privileges: Read only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVDriveEnclosure
 Appliance Name              State Status    Serial Number Drive Bays I/O Adapters
 --------- ----              ----- ------    ------------- ---------- ------------

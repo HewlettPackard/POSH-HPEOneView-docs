@@ -6,7 +6,7 @@ description: Set the Default Appliance Connection.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVApplianceDefaultConnection
     [-ApplianceConnection] <Object>
     [<CommonParameters>]
@@ -20,7 +20,7 @@ When establishing multiple Appliance Connections, this Cmdlet will help set one 
 
 ###  Example 1 
 
-```text
+```powershell
 $ConnectedSessions
 ConnectionID Name                    UserName      AuthLoginDomain Default Connection
 ------------ ----                    --------      --------------- ------------------
@@ -39,7 +39,7 @@ Display the current appliance connections, then set the new default to "Applianc
 
 ###  Example 2 
 
-```text
+```powershell
 $ConnectedSessions
 ConnectionID Name                    UserName      AuthLoginDomain Default Connection
 ------------ ----                    --------      --------------- ------------------

@@ -6,12 +6,12 @@ description: Get appliance audit log entries.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVAuditLog
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Get-OVAuditLog
     [-Count <Int>]
     [-TimeSpan <Timespan>]
@@ -29,50 +29,50 @@ Each user has a unique logging ID per session, enabling you to follow a user?s t
 
 A breakdown of an audit entry follows:
 
-    * Date/time - The date and time of the event
-    * Internal component ID - The unique identifier of an internal component
-    * Reserved - The organization ID. Reserved for internal use
-    * User domain - The login domain name of the user
-    * User name/ID - The user name
-    * Session ID - The user session ID associated with the message
-    * Task ID - The URI of the task resource associated with the message
-    * Client host/IP - The client (browser) IP address identifies the client machine that initiated the request
-    * Result - The result of the action, which can be one of the following values:
-        * SUCCESS
-        * FAILURE
-        * SOME_FAILURES
-        * CANCELED
-        * KILLED
-    * Action - A description of the action, which can be one of the following values:
-        * ADD
-        * MODIFY
-        * DELETE
-        * ACCESS
-        * RUN
-        * LIST
-        * ENABLE
-        * DISABLE
-        * SAVE
-        * SETUP
-        * UNSETUP
-        * DEPLOY
-        * START
-        * DONE
-        * KILLED
-        * CANCELED
-        * LOGIN
-        * LOGOUT
-        * DOWNLOAD_START
-    * Severity - A description of the severity of the event, which can be one of the following values, listed in descending order of importance:
-        * INFO
-        * NOTICE
-        * WARNING
-        * ERROR
-        * ALERT
-        * CRITICAL
-    * Resource category - For REST API category information, see the HPE OneView API Reference.
-    * Resource URI/name - The resource URI/name associated with the task
-    * Message - The output message that appears in the audit log
+* Date/time - The date and time of the event
+* Internal component ID - The unique identifier of an internal component
+* Reserved - The organization ID. Reserved for internal use
+* User domain - The login domain name of the user
+* User name/ID - The user name
+* Session ID - The user session ID associated with the message
+* Task ID - The URI of the task resource associated with the message
+* Client host/IP - The client (browser) IP address identifies the client machine that initiated the request
+* Result - The result of the action, which can be one of the following values:
+    * SUCCESS
+    * FAILURE
+    * SOME_FAILURES
+    * CANCELED
+    * KILLED
+* Action - A description of the action, which can be one of the following values:
+    * ADD
+    * MODIFY
+    * DELETE
+    * ACCESS
+    * RUN
+    * LIST
+    * ENABLE
+    * DISABLE
+    * SAVE
+    * SETUP
+    * UNSETUP
+    * DEPLOY
+    * START
+    * DONE
+    * KILLED
+    * CANCELED
+    * LOGIN
+    * LOGOUT
+    * DOWNLOAD_START
+* Severity - A description of the severity of the event, which can be one of the following values, listed in descending order of importance:
+    * INFO
+    * NOTICE
+    * WARNING
+    * ERROR
+    * ALERT
+    * CRITICAL
+* Resource category - For REST API category information, see the HPE OneView API Reference.
+* Resource URI/name - The resource URI/name associated with the task
+* Message - The output message that appears in the audit log
 
 The audit log includes entries for all Maintenance console events except for viewing.
 
@@ -86,7 +86,7 @@ Minimum required privileges:  Infrastructure administrator
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVAuditLog
 Appliance : hpov.mydomain.com
 Date      : 2015-10-05 18:14:17.679 UTC
@@ -120,7 +120,7 @@ Return the audit logs from the appliance.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVAuditLog -Start ([DateTime]::Now).AddDays("-5")
 ```
 

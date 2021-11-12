@@ -6,7 +6,7 @@ description: Get Scope resource(s)
 
 ## Syntax
 
-```text
+```powershell
 Get-OVScope
     [-Name <String>]
     [-ApplianceConnection <Object>]
@@ -17,28 +17,28 @@ Get-OVScope
 
 A scope is a grouping of resources that can be used to restrict the range of an operation or action. For example, you can create scopes based on:
 
-    * Organizations (Marketing, Research and Development, Finance)
-    * Usage (Production, Development, Testing)
-    * Skills (Linux, Windows)
+* Organizations (Marketing, Research and Development, Finance)
+* Usage (Production, Development, Testing)
+* Skills (Linux, Windows)
 
 The resources are arranged by categories. All the resources in these categories can be added to or removed from a scope:
 
-    * Enclosures
-    * Server Hardware
-    * Networks (Ethernet, FC, and FCoE)
-    * Network Sets
-    * Interconnects, excluding SAS resources
-    * Logical Interconnects, excluding SAS resources
-    * Logical Interconnect Groups, excluding SAS resources
-    * OS Deployment Plans
-    * Switches
-    * Logical Switches
-    * Logical Switch Groups
-    * Rack Managers
-    * Storage Pools
-    * Volumes
-    * Volume Templates
-    * Volume Sets
+* Enclosures
+* Server Hardware
+* Networks (Ethernet, FC, and FCoE)
+* Network Sets
+* Interconnects, excluding SAS resources
+* Logical Interconnects, excluding SAS resources
+* Logical Interconnect Groups, excluding SAS resources
+* OS Deployment Plans
+* Switches
+* Logical Switches
+* Logical Switch Groups
+* Rack Managers
+* Storage Pools
+* Volumes
+* Volume Templates
+* Volume Sets
 
 {% hint style="info" %}
  Resources in other categories are considered to be included in all scopes, and they cannot be removed.
@@ -52,9 +52,9 @@ For email notification of alerts, resources that are not categorized here are in
 
 When scopes are defined and resources assigned to them, you can:
 
-    * Restrict the resources displayed in the user interface (UI) to those assigned to the scope.
-    * Restrict user permissions to grant access only to the resources in a scope.
-    * Configure filtered email notifications for alerts based on previously-defined scopes.
+* Restrict the resources displayed in the user interface (UI) to those assigned to the scope.
+* Restrict user permissions to grant access only to the resources in a scope.
+* Configure filtered email notifications for alerts based on previously-defined scopes.
 
 Returned Scope object(s) will contain a collection of associated resources.
 
@@ -64,7 +64,7 @@ Minimum Minimum required privileges: Read-Only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVScope
 ```
 
@@ -72,7 +72,7 @@ List all available scopes on the connected default appliance.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVScope -Name MyFinanceScope
 ```
 
@@ -80,7 +80,7 @@ Return the "MyFinanceScope" scope resource from the conncted default appliance.
 
 ###  Example 3 
 
-```text
+```powershell
 Get-OVScope -Name My* -ApplianceConnection $ConnectedSessions
 ```
 

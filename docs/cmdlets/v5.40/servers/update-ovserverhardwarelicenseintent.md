@@ -6,7 +6,7 @@ description: Change the license intent of a server.
 
 ## Syntax
 
-```text
+```powershell
 Update-OVServerHardwareLicenseIntent
     [-InputObject] <Object>
     [-Async]
@@ -22,7 +22,7 @@ The licensing intent of a server may be changed to either "OneView" (HPE OneView
 
 ###  Example 1 
 
-```text
+```powershell
 $Server = Get-OVServer -Name iLO123.domain.com -ErrorAction Stop
 Update-OVServerHardwareLicenseIntent -InputObject $Server
 ```
@@ -31,7 +31,7 @@ Get the specific server resource, and attempt upgrading the license to "OneView"
 
 ###  Example 2 
 
-```text
+```powershell
 $Servers = Get-OVServer | ? licensingIntent -eq "OneViewNoIlo"
 $Tasks = $Servers | Update-OVServerHardwareLicenseIntent -async
 ```

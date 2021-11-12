@@ -6,7 +6,7 @@ description: Get Appliance Date/Time Configuration.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVApplianceDateTime
     [-ApplianceConnection] <Object>
     [<CommonParameters>]
@@ -28,7 +28,7 @@ Minimum required privileges: Read-only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVApplianceDateTime
 Appliance        Time                 Time Zone NTP Servers           NTP Polling
 ---------        ----                 --------- -----------           -----------

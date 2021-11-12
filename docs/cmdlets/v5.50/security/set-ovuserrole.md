@@ -6,7 +6,7 @@ description: (Deprecated) Assign or change roles for an existing user.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVUserRole
     [-Name] <Object>
     [-Roles] <Array>
@@ -22,7 +22,7 @@ This Cmdlet is now deprecated. Please use the Set-OVUser Cmdlet to modify user a
 
 ###  Example 1 
 
-```text
+```powershell
 Set-OVUserRole -user Sally -roleName "Server Administrator"
 ```
 

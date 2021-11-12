@@ -6,7 +6,7 @@ description: Retrieve power device (mPDU/Rack PDU) potential connections.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVPowerPotentialDeviceConnection
     [-PowerDevice <Object>]
     [-ApplianceConnection] <Object>
@@ -21,7 +21,7 @@ Obtain a collection of potential managed and unmanaged device power connections 
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVPowerDevice "iPDU_A" | Get-OVPowerPotentialDeviceConnection
 ```
 
@@ -29,7 +29,7 @@ Return the potential power device connections for the "iPDU_A" power delivery de
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVPowerPotentialDeviceConnection "iPDU_A"
 ```
 

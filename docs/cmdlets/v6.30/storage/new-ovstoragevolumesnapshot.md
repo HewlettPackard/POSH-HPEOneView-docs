@@ -6,7 +6,7 @@ description: Create new Storage Volume Snapshot resource.
 
 ## Syntax
 
-```text
+```powershell
 New-OVStorageVolumeSnapshot
     [-InputObject] <Object>
     [-Name] <String>
@@ -23,7 +23,7 @@ This Cmdlet will help create a Storage Volume Snapshot from an existing Storage 
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVStorageVolume "Volume 1" -ApplianceConnection hpov.domain.com | New-OVStorageVolumeSnapshot
 ```
 

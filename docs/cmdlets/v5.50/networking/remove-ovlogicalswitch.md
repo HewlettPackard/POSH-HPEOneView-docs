@@ -6,7 +6,7 @@ description: Remove a new Logical Switch resource.
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVLogicalSwitch
     [-InputObject] <Object>
     [-ApplianceConnection <Object>]
@@ -23,7 +23,7 @@ This Cmdlet will remove the configured Logical Switch from the requested applian
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVLogicalSwitch | Remove-OVLogicalSwitch
 ```
 
@@ -31,7 +31,7 @@ Remove all logical switch resources found on the default appliance connection.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVLogicalSwitch -Name "My Logical Switch 1" | Remove-OVLogicalSwitch -confirm:$false
 ```
 

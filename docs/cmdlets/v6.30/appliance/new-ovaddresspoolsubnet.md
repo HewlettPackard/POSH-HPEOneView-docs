@@ -6,7 +6,7 @@ description: Create an IPv4 Subnet Pool.
 
 ## Syntax
 
-```text
+```powershell
 New-OVAddressPoolSubnet
     [-NetworkId] <IPAddress>
     [-SubnetMask] <String>
@@ -27,7 +27,7 @@ To add IPv4 Address Ranges to a Subnet after creating it, please use the New-OVA
 
 ###  Example 1 
 
-```text
+```powershell
 PS C:> New-OVAddressPoolSubnet -NetworkID 192.168.10.0 -Subnetmask 24 -Gateway 192.168.10.254 -Domain vlan10.domain.com -DNSServers 10.250.33.12,10.250.34.80
 ```
 

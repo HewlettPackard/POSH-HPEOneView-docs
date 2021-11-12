@@ -6,7 +6,7 @@ description: Refresh or reconnect a rack manager resource.
 
 ## Syntax
 
-```text
+```powershell
 Update-OVRackManager
     [-InputObject] <HPEOneView.Servers.RackManager[]>
     [-Force]
@@ -15,7 +15,7 @@ Update-OVRackManager
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Update-OVRackManager
     [-InputObject] <HPEOneView.Servers.RackManager[]>
     [-Hostname] <String>
@@ -25,7 +25,7 @@ Update-OVRackManager
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Update-OVRackManager
     [-ApplianceConnection <Array>]
     [<CommonParameters>]
@@ -39,7 +39,7 @@ A rack manager platform is a multinode system. The nodes are housed within a rac
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVRackManager -Name rackmanager1.domain.com -ErrorAction Stop | Update-OVRackManager
 ```
 
@@ -47,7 +47,7 @@ Refresh the specified rack manager resource.
 
 ###  Example 2 
 
-```text
+```powershell
 $RackManager = Get-OVRackManager -Name rackmanager1.domain.com -ErrorAction Stop $Credential = Get-Credential Administrator -Message "Password"     $RefreshParams = @{ InputObject = $RackManager} 
 # Check the rack manager for its state and refresh state reason if ($RackManager.State -eq 'Unmanaged' -and $RackManager.RefreshState -eq 'RefreshFailed') {     # Add the "Credential" parameter to the Hashtable splat     $RackManager.Add("Credential", $Credential) 
     # Add the Hostname to the Hashtable splat     $RackManager.Add("Hostname", $RackManager.SubResources.Managers[0].Hostname) } Update-OVRackManager @RefreshParams

@@ -6,7 +6,7 @@ description: Create PowerShell script from resource.
 
 ## Syntax
 
-```text
+```powershell
 ConvertTo-OVPowerShellScript
     [-InputObject] <Object>
     [-Export <System.IO.FileInfo>]
@@ -20,36 +20,36 @@ This Cmdlet will assist administrators or scripters to help generate script code
 
 The following resources are supported by this Cmdlet:
 
-    * Baselines (Get-OVBaseline)
-    * Appliance address pool ranges (Get-OVAddressPoolRange)
-    * Appliance address pool Subnets (Get-OVAddressPoolSubnet)
-    * Appliance Date Time and Locale (Get-OVApplianceDateTime)
-    * Appliance LDAP Directory (Get-OVLdapDirectory)
-    * Appliance LDAP Directory Group (Get-OVLdapGroup)
-    * Appliance SNMP configuration (Get-OVSnmpReadCommunity)
-    * Appliance SNMPv3 Users (Get-OVSnmpV3User)
-    * Appliance Email Notifications (Get-OVApplianceProxy)
-    * Appliance Proxy (Get-OVApplianceProxy)
-    * Appliance User (Get-OVUser)
-    * Scopes (Get-OVScope)
-    * Network (Get-OVNetwork)
-    * Network Set (Get-OVNetworkSet)
-    * SAN Manager (Get-OVSanManager)
-    * Storage System (Get-OVStorageSystem)
-    * Storage Pool (Get-OVStoragePool)
-    * Storage Volume Template (Get-OVStorageVolumeTemplate)
-    * Storage Volume (Get-OVStorageVolume)
-    * Logical Interconnect Group (Get-OVLogicalInterconnectGroup)
-    * Logical Enclosure Group (Get-OVEnclosureGroup)
-    * Logical Enclosure (Get-OVLogicalEnclosure)
-    * Server Profile Template (Get-OVServerProfileTemplate)
-    * Server Profile (Get-OVServerProfile)
+* Baselines (Get-OVBaseline)
+* Appliance address pool ranges (Get-OVAddressPoolRange)
+* Appliance address pool Subnets (Get-OVAddressPoolSubnet)
+* Appliance Date Time and Locale (Get-OVApplianceDateTime)
+* Appliance LDAP Directory (Get-OVLdapDirectory)
+* Appliance LDAP Directory Group (Get-OVLdapGroup)
+* Appliance SNMP configuration (Get-OVSnmpReadCommunity)
+* Appliance SNMPv3 Users (Get-OVSnmpV3User)
+* Appliance Email Notifications (Get-OVApplianceProxy)
+* Appliance Proxy (Get-OVApplianceProxy)
+* Appliance User (Get-OVUser)
+* Scopes (Get-OVScope)
+* Network (Get-OVNetwork)
+* Network Set (Get-OVNetworkSet)
+* SAN Manager (Get-OVSanManager)
+* Storage System (Get-OVStorageSystem)
+* Storage Pool (Get-OVStoragePool)
+* Storage Volume Template (Get-OVStorageVolumeTemplate)
+* Storage Volume (Get-OVStorageVolume)
+* Logical Interconnect Group (Get-OVLogicalInterconnectGroup)
+* Logical Enclosure Group (Get-OVEnclosureGroup)
+* Logical Enclosure (Get-OVLogicalEnclosure)
+* Server Profile Template (Get-OVServerProfileTemplate)
+* Server Profile (Get-OVServerProfile)
 
 ## Examples
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVServerProfile | ConvertTo-OVPowerShellScript
 ```
 

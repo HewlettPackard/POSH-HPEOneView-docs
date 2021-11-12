@@ -6,7 +6,7 @@ description: Configure appliance SMTP Reporting settings.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVSMTPConfig
     [-SenderEmailAddress <String>]
     [-Server <String>]
@@ -19,7 +19,7 @@ Set-OVSMTPConfig
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Set-OVSMTPConfig
     [-AlertEmailDisabled]
     [-Async]
@@ -37,7 +37,7 @@ Currently, HPE OneView does not support Secure SMTP, even though the TCP Port ca
 
 ###  Example 1 
 
-```text
+```powershell
 Set-OVSMTPConfig -SenderEmailAddress hpov-alerts@contoso.com -alertEmailEnabled
 ```
 
@@ -45,7 +45,7 @@ Set the appliance"s SMTP Sender Email Address to "hpov-alerts@contoso.com" and e
 
 ###  Example 2 
 
-```text
+```powershell
 Set-OVSMTPConfig -SenderEmailAddress hpov-alerts@contoso.com -alertEmailEnabled
 ```
 
@@ -53,7 +53,7 @@ Set the appliance"s SMTP Sender Email Address to "hpov-alerts@contoso.com" and e
 
 ###  Example 3 
 
-```text
+```powershell
 Set-OVSMTPConfig -SenderEmailAddress hpov-alerts@contoso.com -AlertEmailEnabled -ConnectionSecurity StartTls
 ```
 
@@ -161,15 +161,27 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 
 Use to specify if the target SMTP server requires TLS security/authentication.  Supported values:
 
-    * None
-    * TLS
-    * StartTls
+* None
+* TLS
+* StartTls
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
 | Default value | None |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -UseMXRecordLookup &lt;SwitchParameter&gt;
+
+Specify to use DNS MX record resolution for the domain in the email address provided.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

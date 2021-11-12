@@ -6,7 +6,7 @@ description: Modify an existing hypervisor manager.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVClusterManager
     [-InputObject] <HypervisorManager>
     [-Hostname <String>]
@@ -36,7 +36,7 @@ The user must have an infrastructure administrator privilege to register or upda
 
 ###  Example 1 
 
-```text
+```powershell
 Set-OVClusterManager
 ```
 
@@ -108,8 +108,8 @@ Change the display name of the cluster manager.
 
 Applicable only when vSwitch type is Distributed. This specifies which networks should be configured for distributed switches. Allowed values:
 
-    * AllNetworks - Configures all the networks in the hypervisor cluster profile with distributed virtual switches. All networks include Management, special purpose and general purpose networks. The special purpose networks comprise VM Migration, iSCSI and Fault Tolerance.
-    * GeneralNetworks - Configures the general purpose networks in the hypervisor cluster profile with distributed virtual switches.
+* AllNetworks - Configures all the networks in the hypervisor cluster profile with distributed virtual switches. All networks include Management, special purpose and general purpose networks. The special purpose networks comprise VM Migration, iSCSI and Fault Tolerance.
+* GeneralNetworks - Configures the general purpose networks in the hypervisor cluster profile with distributed virtual switches.
 
 | Aliases | None |
 | :--- | :--- |
@@ -195,8 +195,8 @@ Use to update the TCP port of the cluster manager.
 
 Use to adjust the virtual switch for hypervisor clsuters with the specified type. Allowed values:
 
-    * Standard - A virtual switch configured and managed at the hypervisor level; provides networking to virtual machines and VM kernels.
-    * Distributed - A virtual switch configured and managed at data center level and configured for each hypervisor to provide networking to virtual machines and VM Kernels.
+* Standard - A virtual switch configured and managed at the hypervisor level; provides networking to virtual machines and VM kernels.
+* Distributed - A virtual switch configured and managed at data center level and configured for each hypervisor to provide networking to virtual machines and VM Kernels.
 
 | Aliases | None |
 | :--- | :--- |

@@ -6,7 +6,7 @@ description: Logoff from the appliance.
 
 ## Syntax
 
-```text
+```powershell
 Disconnect-OVMgmt
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -20,7 +20,7 @@ This Cmdlet will logoff the current user, which terminates the user session, on 
 
 ###  Example 1 
 
-```text
+```powershell
 $Connection1 = Connect-OVMgmt MyAppliance.domain.com
 Disconnect-OVMgmt -Hostname $Connection1
 ```
@@ -29,7 +29,7 @@ Disconnect from the specific appliance session.
 
 ###  Example 2 
 
-```text
+```powershell
 Disconnect-OVMgmt -Hostname 1
 ```
 
@@ -37,7 +37,7 @@ Disconnect ConnectionID 1 appliance session.
 
 ###  Example 3 
 
-```text
+```powershell
 $ConnectedSessions | Disconnect-OVMgmt
 ```
 

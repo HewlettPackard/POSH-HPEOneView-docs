@@ -6,7 +6,7 @@ description: Display library component versions.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVVersion
     [-ApplianceVer]
     [-CheckOnline]
@@ -14,7 +14,7 @@ Get-OVVersion
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Get-OVVersion
     [-CheckOnline]
     [<CommonParameters>]
@@ -28,7 +28,7 @@ Display either the HPE OneView PowerShell library or appliance version.  Display
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVVersion
 ```
 
@@ -36,7 +36,7 @@ Get the HPE OneView PowerShell library version
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVVersion -ApplianceVer
 PowerShell Library Version : 1.20.208.0
 Library Path               : C:\Users\user\Documents\WindowsPowerShell\Modules\HPEOneView.120
@@ -50,7 +50,7 @@ Get the HPE OneView PowerShell library, Appliance and X-API version information
 
 ###  Example 3 
 
-```text
+```powershell
 Get-OVVersion -CheckOnline
 PowerShell Library Version : 1.20.166.0
 Library Path               : C:\Users\user\Documents\WindowsPowerShell\Modules\HPEOneView.120

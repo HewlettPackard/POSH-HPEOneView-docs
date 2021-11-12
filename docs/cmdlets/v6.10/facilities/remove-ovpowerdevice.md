@@ -6,7 +6,7 @@ description: Remove power device (iPDU)
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVPowerDevice
     [-InputObject] <Object>
     [-Force]
@@ -23,7 +23,7 @@ Removes a power device (iPDU) from appliance management.
 
 ###  Example 1 
 
-```text
+```powershell
 $task = Remove-OVPowerDevice -PowerDevice "iPDU16" | Wait-OVTaskComplete
 ```
 
@@ -31,7 +31,7 @@ Remove the power device specifed by name. Wait for remove to complete.
 
 ###  Example 2 
 
-```text
+```powershell
 $ipdu = Get-OVPowerDevice -name "iPDU24"
 Remove-OVPowerDevice -PowerDevice $ipdu -force -confirm:$false
 ```
@@ -40,7 +40,7 @@ Force-Remove the profile specifed by $ipdu. Disable confirmation prompt.
 
 ###  Example 3 
 
-```text
+```powershell
 Get-OVPowerDevice | Remove-OVPowerDevice
 ```
 

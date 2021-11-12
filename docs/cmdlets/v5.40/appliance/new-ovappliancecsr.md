@@ -6,7 +6,7 @@ description: Generate appliance CSR
 
 ## Syntax
 
-```text
+```powershell
 New-OVApplianceCsr
     [-Country] <String>
     [-State] <String>
@@ -36,7 +36,7 @@ This Cmdlet will create the CSR for an given appliance, to then be submitted to 
 
 ###  Example 1 
 
-```text
+```powershell
 $CSR = @{
 >>     Country = "US";
 >>  State = "California";

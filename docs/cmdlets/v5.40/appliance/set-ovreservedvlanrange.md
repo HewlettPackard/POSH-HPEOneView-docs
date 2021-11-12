@@ -6,7 +6,7 @@ description: Modify the reserved VLAN range for HPE Synergy.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVReservedVlanRange
     [-Start] <Int>
     [-Length] <Int>
@@ -18,9 +18,9 @@ Set-OVReservedVlanRange
 
 A reserved VLAN pool is a range of VLANs used for allocation of non-tagged networks:
 
-    * Tunnel
-    * Untagged
-    * Fibre Channel (FC)
+* Tunnel
+* Untagged
+* Fibre Channel (FC)
 
 Tagged networks and FCoE networks use VLANs outside of the reserved pool. You cannot use a reserved VLAN for tagged or FCoE networks.
 
@@ -44,7 +44,7 @@ Minimum required privileges:  Infrastructure administrator, Network administrato
 
 ###  Example 1 
 
-```text
+```powershell
 Set-OVReservedVlanRange -Start 2700 -Length 128
 ```
 

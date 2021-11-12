@@ -6,7 +6,7 @@ description: Retrieve Network Set resource(s).
 
 ## Syntax
 
-```text
+```powershell
 Get-OVNetworkSet
     [-Name <String>]
     [-Scope <Object>]
@@ -15,7 +15,7 @@ Get-OVNetworkSet
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Get-OVNetworkSet
     [-Name <String>]
     [-Scope <Object>]
@@ -31,17 +31,17 @@ A network set is a collection of tagged Ethernet networks that form a named grou
 
 Instead of assigning a single network to a connection in a server profile, you can assign a network set to that connection.
 
-    * Using network sets, you can quickly deploy changes to the network environment to multiple servers. For example, you have 16 servers connected to a network set. To add a new network to all 16 servers, you only need to add it to the network set instead of each server individually.
-    * You can create a network set for your production networks and one for your development networks.
-    * You can configure a hypervisor with a vSwitch to access multiple VLANs by creating a network set as a trunk that includes these networks.
+* Using network sets, you can quickly deploy changes to the network environment to multiple servers. For example, you have 16 servers connected to a network set. To add a new network to all 16 servers, you only need to add it to the network set instead of each server individually.
+* You can create a network set for your production networks and one for your development networks.
+* You can configure a hypervisor with a vSwitch to access multiple VLANs by creating a network set as a trunk that includes these networks.
 
 Network set prerequisites
 
-    * All networks in a network set must be Ethernet networks and must have unique external VLAN IDs. Untagged and tunnel networks are single networks and do not use network sets.
-    * All networks in a network set must be configured in the same appliance.
-    * A network can be a member of multiple network sets.
-    * All networks in a network set must be added to uplink sets or internal networks in the logical interconnect group (and its logical interconnects) to be used in server profiles with connections to the logical interconnect.
-    * A network set can be empty (contain no networks) or can contain one or more of the networks configured in the logical interconnect group and logical interconnect. Empty network sets enable you to create network sets in the configuration before you create the member networks, or to remove all the member networks before you add their replacements. However, if a server profile adds a connection to an empty network set, the server cannot connect to any data center networks using that connection.
+* All networks in a network set must be Ethernet networks and must have unique external VLAN IDs. Untagged and tunnel networks are single networks and do not use network sets.
+* All networks in a network set must be configured in the same appliance.
+* A network can be a member of multiple network sets.
+* All networks in a network set must be added to uplink sets or internal networks in the logical interconnect group (and its logical interconnects) to be used in server profiles with connections to the logical interconnect.
+* A network set can be empty (contain no networks) or can contain one or more of the networks configured in the logical interconnect group and logical interconnect. Empty network sets enable you to create network sets in the configuration before you create the member networks, or to remove all the member networks before you add their replacements. However, if a server profile adds a connection to an empty network set, the server cannot connect to any data center networks using that connection.
 
 Network set types
 
@@ -60,7 +60,7 @@ Minimum required privileges: Read-only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVNetworkSet
 ```
 
@@ -68,7 +68,7 @@ Returns all Network Sets defined on the appliance to standard output.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVNetworkSet -Name "Production"
 ```
 
@@ -76,7 +76,7 @@ Returns just the Production Network Set object to standard output.
 
 ###  Example 3 
 
-```text
+```powershell
 $myNetSets = Get-OVNetworkSet
 ```
 
@@ -84,7 +84,7 @@ Returns the Get-OVNetworkSet query and stores it in the object $myNetSets
 
 ###  Example 4 
 
-```text
+```powershell
 Get-OVNetworkSet -exportFile "c:\myApplianceConfig\Network-Sets.json"
 ```
 
@@ -108,10 +108,10 @@ The name of the Network Set to retrieve.
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-    * AllResources
-    * AllResourcesInScope
-    * `[HPEOneView.Appliance.ScopeCollection]`
-    * `[HPEOneView.Appliance.ConnectionPermission]`
+* AllResources
+* AllResourcesInScope
+* `[HPEOneView.Appliance.ScopeCollection]`
+* `[HPEOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |

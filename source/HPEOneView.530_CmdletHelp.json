@@ -1,4 +1,4 @@
-﻿{
+{
   "Version": "5.30",
   "LibraryGUID": "7a28b926-da5e-4954-9966-762fa1f64817",
   "Cmdlets": [
@@ -7744,6 +7744,16 @@
             "SupportsWildcard": false,
             "DataType": "Object",
             "Required": false
+          },
+          {
+            "Name": "Name",
+            "Description": "Filter address ranges based on the name.",
+            "DataType": "string",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -7791,6 +7801,10 @@
               "Required": false
             },
             {
+              "Name": "Name",
+              "Required": false
+            },
+            {
               "Name": "ApplianceConnection",
               "Required": false
             }
@@ -7798,7 +7812,7 @@
           [
             {
               "Name": "InputObject",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "ApplianceConnection",
@@ -35667,6 +35681,26 @@
             "Aliases": "None",
             "PipelineInput": "false",
             "SupportsWildcard": false
+          },
+          {
+            "Name": "FecMode",
+            "Description": "Specify the forward error correction mode.  This paraemter is only supported with Virtual Connect SE 100Gb F32 Module for Synergy modules.  When configuring, the following values are supported with parent ports:\n\n\t* Auto\n\t* Cl74\n\t* Cl108\n\t* None\n\nThe following values are supported with sub-ports:\n\n\t* Auto\n\t* Cl74\n\t* Cl91\n\t* None",
+            "DataType": "string",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "PortSpeed",
+            "Description": "The allowed uplink port speed by the fabric module and traceiver type.  When specifying a port speed, this value will be set for all ports.  This parameter applies to Ethernet or FCoE uplink ports only.  Allowed values:\n\n\t* Auto\n\t* 100M\n\t* 1G\n\t* 10G\n\t* 40G\n\t* 100G",
+            "DataType": "string",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -35744,15 +35778,15 @@
             },
             {
               "Name": "Type",
-              "Required": false
+              "Required": true
             },
             {
               "Name": "Networks",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "NativeEthNetwork",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "NetworkSets",
@@ -35764,7 +35798,7 @@
             },
             {
               "Name": "UplinkPorts",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "EthMode",
@@ -35776,6 +35810,22 @@
             },
             {
               "Name": "LacpLoadbalancingMode",
+              "Required": false
+            },
+            {
+              "Name": "LacpFailoverTrigger",
+              "Required": false
+            },
+            {
+              "Name": "LacpDistributeUplinkPorts",
+              "Required": false
+            },
+            {
+              "Name": "LacpFailoverBandwidthThreshold",
+              "Required": false
+            },
+            {
+              "Name": "LacpFailoverActiveMemberThreshold",
               "Required": false
             },
             {
@@ -35802,7 +35852,7 @@
             },
             {
               "Name": "Type",
-              "Required": false
+              "Required": true
             },
             {
               "Name": "Passthru",
@@ -35810,15 +35860,15 @@
             },
             {
               "Name": "InputObject",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Networks",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "NativeEthNetwork",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "NetworkSets",
@@ -35830,7 +35880,7 @@
             },
             {
               "Name": "UplinkPorts",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "EthMode",
@@ -35845,7 +35895,31 @@
               "Required": false
             },
             {
+              "Name": "LacpFailoverTrigger",
+              "Required": false
+            },
+            {
+              "Name": "LacpDistributeUplinkPorts",
+              "Required": false
+            },
+            {
+              "Name": "LacpFailoverBandwidthThreshold",
+              "Required": false
+            },
+            {
+              "Name": "LacpFailoverActiveMemberThreshold",
+              "Required": false
+            },
+            {
               "Name": "PrimaryPort",
+              "Required": false
+            },
+            {
+              "Name": "PortSpeed",
+              "Required": false
+            },
+            {
+              "Name": "FecMode",
               "Required": false
             },
             {
@@ -35876,15 +35950,23 @@
             },
             {
               "Name": "Type",
-              "Required": false
+              "Required": true
             },
             {
               "Name": "Networks",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "UplinkPorts",
-              "Required": true
+              "Required": false
+            },
+            {
+              "Name": "PortSpeed",
+              "Required": false
+            },
+            {
+              "Name": "FecMode",
+              "Required": false
             },
             {
               "Name": "FcUplinkSpeed",
@@ -47985,6 +48067,16 @@
             "SupportsWildcard": false,
             "DataType": "Array",
             "Required": false
+          },
+          {
+            "Name": "Append",
+            "Description": "Use to append roles and/or scope permissions update.  If omitted, roles or scope permissions will be replaced.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -48038,12 +48130,16 @@
               "Required": true
             },
             {
+              "Name": "Append",
+              "Required": false
+            },
+            {
               "Name": "UserName",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Password",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Credential",
@@ -48051,7 +48147,7 @@
             },
             {
               "Name": "ApplianceConnection",
-              "Required": true
+              "Required": false
             }
           ],
           [
@@ -48065,15 +48161,19 @@
             },
             {
               "Name": "ScopePermissions",
+              "Required": true
+            },
+            {
+              "Name": "Append",
               "Required": false
             },
             {
               "Name": "UserName",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Password",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Credential",
@@ -48081,7 +48181,7 @@
             },
             {
               "Name": "ApplianceConnection",
-              "Required": true
+              "Required": false
             }
           ],
           [
@@ -48091,15 +48191,19 @@
             },
             {
               "Name": "ScopePermissions",
+              "Required": true
+            },
+            {
+              "Name": "Append",
               "Required": false
             },
             {
               "Name": "UserName",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Password",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Credential",
@@ -48107,7 +48211,7 @@
             },
             {
               "Name": "ApplianceConnection",
-              "Required": true
+              "Required": false
             }
           ]
         ]
@@ -51610,6 +51714,16 @@
             "SupportsWildcard": false,
             "DataType": null,
             "Required": false
+          },
+          {
+            "Name": "UseMXRecordLookup",
+            "Description": "Specify to use DNS MX record resolution for the domain in the email address provided.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -51691,6 +51805,10 @@
             },
             {
               "Name": "AlertEmailEnabled",
+              "Required": false
+            },
+            {
+              "Name": "UseMXRecordLookup",
               "Required": false
             },
             {
@@ -53003,6 +53121,16 @@
             "SupportsWildcard": false,
             "DataType": "Array",
             "Required": false
+          },
+          {
+            "Name": "Append",
+            "Description": "Use to append roles and/or scope permissions update.  If omitted, roles or scope permissions will be replaced.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -53072,15 +53200,19 @@
             },
             {
               "Name": "Password",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "FullName",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Roles",
-              "Required": true
+              "Required": false
+            },
+            {
+              "Name": "Append",
+              "Required": false
             },
             {
               "Name": "ScopePermissions",
@@ -53088,15 +53220,15 @@
             },
             {
               "Name": "EmailAddress",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "OfficePhone",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "MobilePhone",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Enabled",
@@ -53108,7 +53240,7 @@
             },
             {
               "Name": "ApplianceConnection",
-              "Required": true
+              "Required": false
             }
           ],
           [
@@ -53118,15 +53250,19 @@
             },
             {
               "Name": "Password",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "FullName",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Roles",
-              "Required": true
+              "Required": false
+            },
+            {
+              "Name": "Append",
+              "Required": false
             },
             {
               "Name": "ScopePermissions",
@@ -53134,15 +53270,15 @@
             },
             {
               "Name": "EmailAddress",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "OfficePhone",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "MobilePhone",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Enabled",
@@ -53154,7 +53290,7 @@
             },
             {
               "Name": "ApplianceConnection",
-              "Required": true
+              "Required": false
             }
           ]
         ]
@@ -58555,7 +58691,7 @@
             },
             {
               "Name": "UplinkSetName",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Name",
@@ -58594,6 +58730,14 @@
               "Required": false
             },
             {
+              "Name": "PortSpeed",
+              "Required": false
+            },
+            {
+              "Name": "FecMode",
+              "Required": false
+            },
+            {
               "Name": "ConsistencyChecking",
               "Required": false
             },
@@ -58609,7 +58753,7 @@
             },
             {
               "Name": "UplinkSetName",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Name",
@@ -58760,6 +58904,26 @@
             "Name": "RemoveNetworkSet",
             "Description": "Specify one or more network set objects to remove from an uplink set.",
             "DataType": "Object[]",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "FecMode",
+            "Description": "Specify the forward error correction mode.  This paraemter is only supported with Virtual Connect SE 100Gb F32 Module for Synergy modules.  When configuring, the following values are supported with parent ports:\n\n\t* Auto\n\t* Cl74\n\t* Cl108\n\t* None\n\nThe following values are supported with sub-ports:\n\n\t* Auto\n\t* Cl74\n\t* Cl91\n\t* None",
+            "DataType": "string",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "PortSpeed",
+            "Description": "The allowed uplink port speed by the fabric module and traceiver type.  When specifying a port speed, this value will be set for all ports.  This parameter applies to Ethernet or FCoE uplink ports only.  Allowed values:\n\n\t* Auto\n\t* 100M\n\t* 1G\n\t* 10G\n\t* 40G\n\t* 100G",
+            "DataType": "string",
             "Required": false,
             "DefaultValue": "",
             "Aliases": "None",

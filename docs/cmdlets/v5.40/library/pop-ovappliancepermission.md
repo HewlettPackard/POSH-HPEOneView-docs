@@ -6,7 +6,7 @@ description: Reset appliance connection active permissions back to login default
 
 ## Syntax
 
-```text
+```powershell
 Pop-OVAppliancePermission
     [-ApplianceConnection <Array>]
     [<CommonParameters>]
@@ -20,7 +20,7 @@ Upon successful login, the caller can change their active permissions, and opera
 
 ###  Example 1 
 
-```text
+```powershell
 Pop-OVAppliancePermission
 ```
 

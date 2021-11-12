@@ -6,7 +6,7 @@ description: Power on HPE Synergy appliance device.
 
 ## Syntax
 
-```text
+```powershell
 Start-OVEnclosureAppliance
     [-InputObject] <Object>
     [-BayID] <int>
@@ -27,7 +27,7 @@ Minimum required privileges: Infrastructure administrator, Server administrator
 
 ###  Example 1 
 
-```text
+```powershell
 Start-OVEnclosureAppliance -InputObject (Get-OVEnclosure -Name Enclosure-2) -BayID 1
 ```
 

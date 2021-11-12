@@ -6,7 +6,7 @@ description: Associate resource with new or existing Label.
 
 ## Syntax
 
-```text
+```powershell
 Add-OVResourceToLabel
     [-Name] <String>
     [-InputObject] <Object>
@@ -30,7 +30,7 @@ Minimum required privileges: Edit privileges for the resource.
 
 ###  Example 1 
 
-```text
+```powershell
 $Resources = Get-OVNetwork -Name Finance* -ErrorAction Stop
 $Resources += Get-OVServerHardware -Name Finance*
 Add-OVResourceToLabel -Name Finance -InputObject $Resources

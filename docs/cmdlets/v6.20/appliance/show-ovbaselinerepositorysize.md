@@ -14,7 +14,7 @@ This Cmdlet will display the appliance baseline repository size
 
 ###  Example 1 
 
-```text
+```powershell
 Show-OVBaselineRepositorySize
 ```
 

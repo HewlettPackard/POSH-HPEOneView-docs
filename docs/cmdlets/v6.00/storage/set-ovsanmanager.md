@@ -6,7 +6,7 @@ description: Update SAN Manager configuration
 
 ## Syntax
 
-```text
+```powershell
 Set-OVSanManager
     [-InputObject] <Object>
     [-Username] <String>
@@ -20,7 +20,7 @@ Set-OVSanManager
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Set-OVSanManager
     [-InputObject] <Object>
     [-Username] <String>
@@ -46,7 +46,7 @@ Updates an existing SAN Manager configuration.  Can update the hostname/IP Addre
 
 ###  Example 1 
 
-```text
+```powershell
 $task = Get-OVSanManager bna.domain.com -ApplianceConnection hpov.domain.com | Set-OVSanManager -hostname bna.newdomain.com | Wait-OVTaskComplete
 ```
 
@@ -54,7 +54,7 @@ Get the SAN Manager using Get-OVSanManager, and pipling the resource in order to
 
 ###  Example 2 
 
-```text
+```powershell
 $task = Set-OVSanManager -name BNA.contoso.com -hostname bna.newdomain.com -ApplianceConnection hpov.domain.com | Wait-OVTaskComplete
 ```
 
@@ -62,7 +62,7 @@ Update the existing Brocade Network Advisor SAN Manager"s hostname with the new 
 
 ###  Example 3 
 
-```text
+```powershell
 $task = Set-OVSanManager -name BNA.contoso.com -username newadmin -password updatedpassword -ApplianceConnection hpov.domain.com | Wait-OVTaskComplete
 ```
 
@@ -146,9 +146,9 @@ The SNMPv3 Community User Name.
 
 The SNMPv3 Authentication Level.  Allowed values are:
 
-    * None - No Security is required, only the SNMPv3 UserName is provided.
-    * AuthOnly - SNMPv3 Authentication Encryption Security Level only. Must also provide `-SnmpAuthProtocol` and `-SnmpAuthPassword` parameters.
-    * AuthAndPriv - SNMPv3 Authentication Encryption Security and Privacy Levels. Must also provide `-SnmpAuthProtocol`, `-SnmpAuthPassword`, `-SnmpPrivProtocol` and `-SnmpPrivPassword` parameters.
+* None - No Security is required, only the SNMPv3 UserName is provided.
+* AuthOnly - SNMPv3 Authentication Encryption Security Level only. Must also provide `-SnmpAuthProtocol` and `-SnmpAuthPassword` parameters.
+* AuthAndPriv - SNMPv3 Authentication Encryption Security and Privacy Levels. Must also provide `-SnmpAuthProtocol`, `-SnmpAuthPassword`, `-SnmpPrivProtocol` and `-SnmpPrivPassword` parameters.
 
 | Aliases | None |
 | :--- | :--- |
@@ -162,8 +162,8 @@ The SNMPv3 Authentication Level.  Allowed values are:
 
 SNMPv3 Password Encryption Protocol. Allowed values are:
 
-    * SHA
-    * MD5
+* SHA
+* MD5
 
 | Aliases | None |
 | :--- | :--- |
@@ -189,8 +189,8 @@ SNMPv3 UserName Password.  Can either be a `[System.String]` or `[System.Securit
 
 SNMPv3 Privacy Protocol.  Allowed values are:
 
-    * AES
-    * DES
+* AES
+* DES
 
 | Aliases | None |
 | :--- | :--- |

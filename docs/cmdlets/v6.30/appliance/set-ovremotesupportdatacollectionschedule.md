@@ -6,7 +6,7 @@ description: Modify Remote Support Schedule settings on an appliance.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVRemoteSupportDataCollectionSchedule
     [-DateTime] <DateTime>
     [-Type <String>]
@@ -25,7 +25,7 @@ To schedule different Day of the Month and Day of the Week, use the -Type paramt
 
 ###  Example 1 
 
-```text
+```powershell
 Set-OVRemoteSupportDataCollectionSchedule -DateTime "11/01/2016 20:00"
 ```
 
@@ -33,7 +33,7 @@ Set a new Remote Support schedule for November 11, 2016, which is a Monday, at 2
 
 ###  Example 2 
 
-```text
+```powershell
 Set-OVRemoteSupportDataCollectionSchedule -Type AHS -DateTime "11/01/2016 20:00"
 ```
 
@@ -44,7 +44,7 @@ Set a new schedule to collect AHS logs every Monday of every week, at 20:00 (8:0
 ### -Type &lt;String&gt;
 
 Specify the schedule type to modify.  Allowed value is:
-    * AHS
+* AHS
     *Basic
 If no value is provided, both schedules will be modified.
 

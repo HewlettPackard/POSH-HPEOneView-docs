@@ -6,14 +6,14 @@ description: Retrieve Interconnect Type resource(s).
 
 ## Syntax
 
-```text
+```powershell
 Get-OVInterconnectType
     [-Name <String>]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Get-OVInterconnectType
     [-PartNumber <String>]
     [-ApplianceConnection <Object>]
@@ -34,7 +34,7 @@ Minimum required privileges: Read-only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVInterconnectType
 ```
 
@@ -42,7 +42,7 @@ Returns all Interconnect Types available from all connected appliances to standa
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVInterconnect -Name "HP VC FlexFabric 10Gb/24-Port Module"
 ```
 
@@ -50,7 +50,7 @@ Returns just the "HP VC FlexFabric 10Gb/24-Port Module" Interconnect Type object
 
 ###  Example 3 
 
-```text
+```powershell
 Get-OVInterconnect -Partnumber "571956-B21"
 ```
 

@@ -6,7 +6,7 @@ description: Enforce strict use of strong GCM (Galois/Counter Mode) ciphers for 
 
 ## Syntax
 
-```text
+```powershell
 Enable-OVApplianceStrictSecurityCipherSuite
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -20,28 +20,28 @@ When using this Cmdlet, strong GCM cipher suites are enforced for client connect
 
 HTTPS(port 443) cipher suites
 * LEGACY cryptography mode:
-    * TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
-    * TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
-    * TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
-    * TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
+* TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+* TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+* TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+* TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
 * FIPS cryptography mode:
-    * TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
-    * TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
-    * TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+* TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+* TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+* TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
 * CNSA cryptography mode:
-    * TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+* TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
 
 State Change Message Bus/AMQPS(port 5671) cipher suites
 * LEGACY cryptography mode:
-    * TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
-    * TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
-    * TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
-    * TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
+* TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+* TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+* TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+* TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
 * FIPS cryptography mode:
-    * TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
-    * TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+* TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+* TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
 * CNSA cryptography mode:
-    * TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+* TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
 
 IMPORTANT: Changing this setting will cause the appliance to reboot. Further, OneView will NOT be able to manage servers or enclosures with the setting enabled if they are not at a minimum version of iLO or Onboard Administrator firmware. Refer to the following advisory for required minimum firmware versions and configuration settings before enabling this security setting: https://support.hpe.com/hpsc/doc/public/display?docId=emr_na-a00117772en_us
 
@@ -49,7 +49,7 @@ IMPORTANT: Changing this setting will cause the appliance to reboot. Further, On
 
 ###  Example 1 
 
-```text
+```powershell
 Enable-OVApplianceStrictSecurityCipherSuite
 
 ```

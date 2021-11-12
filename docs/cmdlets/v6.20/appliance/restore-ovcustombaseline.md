@@ -6,7 +6,7 @@ description: Restore a Custom Baseline after Restore of a Backup File.
 
 ## Syntax
 
-```text
+```powershell
 Restore-OVCustomBaseline
     [-ApplianceConnection] <Object>
     [<CommonParameters>]
@@ -22,7 +22,7 @@ The source baseline and associated hotfixes must be present within the Baseline 
 
 ###  Example 1 
 
-```text
+```powershell
 Restore-OVCustomBaseline
 ```
 

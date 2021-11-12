@@ -6,7 +6,7 @@ description: Get fixme installation log file.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVFixMeInstallationLog
     [-Location <System.IO.DirectoryInfo>]
     [-ApplianceConnection <Object>]
@@ -25,7 +25,7 @@ Minimum required privileges: Infrastructure Administrator
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVFixMeInstallationLog
 ```
 

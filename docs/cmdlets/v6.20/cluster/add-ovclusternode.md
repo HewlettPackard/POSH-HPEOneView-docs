@@ -6,7 +6,7 @@ description: Add a new cluster member to an existing cluster.
 
 ## Syntax
 
-```text
+```powershell
 Add-OVClusterNode
     [-ComputerName] <String>
     [-Credential] <PSCredential>
@@ -32,7 +32,7 @@ Minimum required privilegesMinimum required privileges: Infrastructure administr
 
 ###  Example 1 
 
-```text
+```powershell
 Add-OVClusterNode
 ```
 

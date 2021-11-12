@@ -6,7 +6,7 @@ description: Install or stage an appliance update.
 
 ## Syntax
 
-```text
+```powershell
 Install-OVUpdate
     [-File] <String>
     [-Eula] <String>
@@ -15,7 +15,7 @@ Install-OVUpdate
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Install-OVUpdate
     [-File] <String>
     [-Stage]
@@ -24,7 +24,7 @@ Install-OVUpdate
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Install-OVUpdate
     [-InstallNow]
     [-Eula] <String>
@@ -32,7 +32,7 @@ Install-OVUpdate
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Install-OVUpdate
     [-ListPending]
     [-DisplayReleaseNotes]
@@ -48,7 +48,7 @@ The Install-OVUpdate installs an appliance update package to upgrade the platfor
 
 ###  Example 1 
 
-```text
+```powershell
 Install-OVUpdate -file C:\Path\update.bin
 ```
 
@@ -56,7 +56,7 @@ Install the `[Update.bin]` package to the appliance.  User will be prompted to a
 
 ###  Example 2 
 
-```text
+```powershell
 Install-OVUpdate -file C:\Path\update.bin -Stage -DisplayReleaseNotes
 ```
 
@@ -64,7 +64,7 @@ Stage the update on the appliance, and display the Release Notes to the PowerShe
 
 ###  Example 3 
 
-```text
+```powershell
 Install-OVUpdate -file C:\Path\update.bin -Stage
 Install-OVUpdate -EULA Accept -InstallNow
 ```
@@ -73,7 +73,7 @@ Stage the `[Update.bin]` package to the appliance. After update has been staged,
 
 ###  Example 4 
 
-```text
+```powershell
 Install-OVUpdate -ListPending -DisplayReleaseNotes
 ```
 

@@ -6,7 +6,7 @@ description: (Reserved for future use) Update appliance global settings.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVApplianceGlobalSetting
     [-Name] <String>
     [-Value] <String>
@@ -14,7 +14,7 @@ Set-OVApplianceGlobalSetting
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Set-OVApplianceGlobalSetting
     [-InputObject] <HPEOneView.Appliance.GlobalSetting>
     [-Value] <String>
@@ -30,7 +30,7 @@ Set-OVApplianceGlobalSetting
 
 ###  Example 1 
 
-```text
+```powershell
 Set-OVApplianceGlobalSetting alertMax 75000
 ```
 

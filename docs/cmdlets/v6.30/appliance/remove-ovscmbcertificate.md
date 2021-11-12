@@ -6,12 +6,12 @@ description: Remove State Change Message Bus certificate from appliance.
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVScmbCertificate
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Remove-OVScmbCertificate
     [-ApplianceConnection <Array>]
     [<CommonParameters>]
@@ -25,7 +25,7 @@ Remove the State Change Message Bus (SCMB) and Metric Streaming Message Bug (MSM
 
 ###  Example 1 
 
-```text
+```powershell
 Remove-OVScmbCertificates
 ```
 

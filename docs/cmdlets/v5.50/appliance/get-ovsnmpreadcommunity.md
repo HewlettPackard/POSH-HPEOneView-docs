@@ -6,7 +6,7 @@ description: GRetrieve Appliance SNMP Read Community.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVSnmpReadCommunity
     [-ApplianceConnection] <Object>
     [<CommonParameters>]
@@ -20,7 +20,7 @@ Get the configured appliance SNMP Read Community string.
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVSnmpReadCommunity
 ```
 

@@ -6,7 +6,7 @@ description: Get the appliance end user license agreement (EULA) status.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVEulaStatus
     [-Appliance] <Object>
     [<CommonParameters>]
@@ -26,7 +26,7 @@ Minimum required privileges: None
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVEulaStatus -Appliance myappliance.domain.com
 
 Appliance              Accepted
@@ -38,7 +38,7 @@ Get the EULA status from `[myappliance.domain.com]`
 
 ###  Example 2 
 
-```text
+```powershell
 $Connection = Connect-OVMgmt -Appliance myappliance.domain.com -Username Administrator -Password MyPassw0rd
 Get-OVEulaStatus -Appliance $Connection
 

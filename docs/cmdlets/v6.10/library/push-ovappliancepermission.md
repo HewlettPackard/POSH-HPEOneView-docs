@@ -6,7 +6,7 @@ description: Change appliance connection active permissions.
 
 ## Syntax
 
-```text
+```powershell
 Push-OVAppliancePermission
     [-SetActivePermissions] <Object>
     [-ApplianceConnection <Array>]
@@ -21,7 +21,7 @@ Upon successful login, the caller can change their active permissions, and opera
 
 ###  Example 1 
 
-```text
+```powershell
 $ConnectedSessions[0].ActivePermissions
 
 RoleName              ScopeName     Active
@@ -37,7 +37,7 @@ Change active permissions by filtering for a specific Role.
 
 ###  Example 2 
 
-```text
+```powershell
 $ConnectedSessions[0].ActivePermissions
 
 RoleName              ScopeName     Active

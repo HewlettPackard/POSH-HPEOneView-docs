@@ -6,7 +6,7 @@ description: Add a new Directory for Authentication
 
 ## Syntax
 
-```text
+```powershell
 New-OVLdapDirectory
     [-Name] <String>
     [-AD]
@@ -20,7 +20,7 @@ New-OVLdapDirectory
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVLdapDirectory
     [-Name] <String>
     [-OpenLDAP]
@@ -44,7 +44,7 @@ This Cmdlet will create a new Directory for appliance authentication.  HPE OneVi
 
 ###  Example 1 
 
-```text
+```powershell
 $ServerA,$ServerB = servera.domain.com,serverb.domain.com | New-OVLdapServer
 New-OVLdapDirectory -name Domain1 -AD -basedn "dc=domain,dc=com" -servers $ServerA,$ServerB -Username MyAdminAccount@domain.com
 ```
@@ -53,7 +53,7 @@ Add a new directory with two directory servers, and be prompted for your directo
 
 ###  Example 2 
 
-```text
+```powershell
 $ServerA = New-OVLdapServer -Name contoso.com
 New-OVLdapDirectory -name Domain1 -AD -basedn "dc=domain,dc=com" -servers $ServerA -Username MyAdminAccount@domain.com -ServiceAccount
 ```
@@ -139,9 +139,9 @@ OpenLDAP OU"s to begin search for Directory Group and User Account authenticatio
 
 Array of Directory Servers and their settings.  Must include the following:
 
-    * Server Name (FQDN or IP)
-    * Public SSL Certificate
-    * SSL Port, if not default 636
+* Server Name (FQDN or IP)
+* Public SSL Certificate
+* SSL Port, if not default 636
 
 | Aliases | None |
 | :--- | :--- |
@@ -213,7 +213,7 @@ Use to indicate the provided credential is a Service Account.  Required for when
 
 ### -UserNamingAttribute &lt;String&gt;
 
-Specify the naming attribute for OpenLDAP directories.  Allowed values:     * CN     * UID 
+Specify the naming attribute for OpenLDAP directories.  Allowed values: * CN * UID 
 Default Value: CN
 
 | Aliases | None |

@@ -6,7 +6,7 @@ description: Upload appliance backup file to restore its configuration.
 
 ## Syntax
 
-```text
+```powershell
 New-OVRestore
     [-FileName] <System.IO.FileInfo>
     [-EncryptionKey <Object>]
@@ -20,15 +20,15 @@ Using this Cmdlet will initiate a restore of the appliance to the backup file sp
 
 Restoring from a backup is a disruptive action:
 
-    * The appliance restarts and users cannot log in to the appliance during the restore process. All users are
+* The appliance restarts and users cannot log in to the appliance during the restore process. All users are
   logged out and their work is lost.
-    * To prevent duplicate identifiers on the network, server hardware configurations are cleared if an associated
+* To prevent duplicate identifiers on the network, server hardware configurations are cleared if an associated
   server profile is not in the backup.
-    * Server profiles that have been modified since the backup was taken are flagged with this message: "Server
+* Server profiles that have been modified since the backup was taken are flagged with this message: "Server
   profile settings conflict with the server hardware configuration". To reapply the server profile
   configuration and restore network connectivity, you must unassign all flagged server profiles and then
   individually reassign the server profiles to the server hardware.
-    * To prevent unintentional assignment of duplicate addresses or identifiers, all address and identifier ranges
+* To prevent unintentional assignment of duplicate addresses or identifiers, all address and identifier ranges
   are disabled after the post-restore process completes. The appliance automatically re-creates replacement
   address and identifier ranges.
 
@@ -40,7 +40,7 @@ Minimum required privileges: Infrastructure administrator, Software administrato
 
 ###  Example 1 
 
-```text
+```powershell
 New-OVRestore -FileName "C:\Users\me\Documents\appliance_backup_2013-11-01_110203.bkp"
 ```
 
@@ -48,7 +48,7 @@ Upload a backup file to restore in the appliance.
 
 ###  Example 2 
 
-```text
+```powershell
 New-OVRestore -FileName "C:\Users\me\Documents\appliance_backup_2013-11-01_110203.bkp -EncryptionKey "C:\Path\To\encryptionkey.aek""
 ```
 

@@ -6,7 +6,7 @@ description: Remove a Logical Interconnect Group.
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVLogicalInterconnectGroup
     [-InputObject] <Object>
     [-ApplianceConnection] <Object>
@@ -22,7 +22,7 @@ Removes a Logical Interconnect Group from appliance management
 
 ###  Example 1 
 
-```text
+```powershell
 $lig = Get-OVLogicalInterconnectGroup -Name "My-LIG"
 Remove-OVLogicalInterconnectGroup $lig -confirm:$false
 ```
@@ -31,7 +31,7 @@ Remove the logical interconnect group specifed by $lig. Disable confirmation pro
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVLogicalInterconnectGroup | Remove-OVLogicalInterconnectGroup
 ```
 

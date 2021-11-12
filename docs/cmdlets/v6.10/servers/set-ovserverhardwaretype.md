@@ -6,7 +6,7 @@ description: Rename or set a description to a Server Hardware Type resource.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVServerHardwareType
     [-InputObject] <Object>
     [-Name] <String>
@@ -27,7 +27,7 @@ Minimum required privileges: Server administrator
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVServerHardwareType -Name "BL460c Gen9 1" -ErrorAction Stop | Set-OVServerHardwareType -Name "Corp Hypervisor Host Type"
 ```
 

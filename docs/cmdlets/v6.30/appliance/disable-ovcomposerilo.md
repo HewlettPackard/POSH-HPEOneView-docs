@@ -6,7 +6,7 @@ description: Disable HPE Synergy Composer2 iLO remote connectivity.
 
 ## Syntax
 
-```text
+```powershell
 Disable-OVComposerIlo
     [-InputObject] <Object>
     [-Async]
@@ -14,7 +14,7 @@ Disable-OVComposerIlo
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Disable-OVComposerIlo
     [-InputObject] <Object>
     [-DisableIPv4Address]
@@ -23,7 +23,7 @@ Disable-OVComposerIlo
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Disable-OVComposerIlo
     [-InputObject] <Object>
     [-DisableIPv6Address]
@@ -46,7 +46,7 @@ Minimum required privileges: Infrastructure administrator
 
 ###  Example 1 
 
-```text
+```powershell
 $ComposerAppliance = Get-OVComposerIloStatus | Where-Object IsExternallyAccessible
 Disable-OVComposerIlo
 
@@ -56,7 +56,7 @@ Disable HPE Synergy Composer 2 iLO's that are configured for remote connectivity
 
 ###  Example 2 
 
-```text
+```powershell
 $ComposerAppliance = Get-OVComposerIloStatus | Where-Object IsExternallyAccessible
 Disable-OVComposerIlo -DisableIPv6Address
 

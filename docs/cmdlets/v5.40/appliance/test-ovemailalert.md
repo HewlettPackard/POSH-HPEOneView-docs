@@ -6,7 +6,7 @@ description: Test appliance Email Alerting configuration.
 
 ## Syntax
 
-```text
+```powershell
 Test-OVEmailAlert
     [-Recipients] <Array>
     [-Subject <String>]
@@ -23,7 +23,7 @@ This Cmdlet will generate a test email message.
 
 ###  Example 1 
 
-```text
+```powershell
 Test-OVEmailAlert -Recipients user1@contoso.com
 ```
 
@@ -31,7 +31,7 @@ Generate a test email message to "user1@contoso.com".
 
 ###  Example 2 
 
-```text
+```powershell
 Test-OVEmailAlert -Recipients user1@contoso.com.,user2@contoso.com -Subject "This is a test email message." 
 ```
 

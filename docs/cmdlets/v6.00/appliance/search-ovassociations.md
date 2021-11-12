@@ -6,7 +6,7 @@ description: Search the association index.
 
 ## Syntax
 
-```text
+```powershell
 Search-OVAssociations
     [-AssociationName <String>]
     [-Parent <Object>]
@@ -25,7 +25,7 @@ Search the association index for any associations that match the specified name 
 
 ###  Example 1 
 
-```text
+```powershell
 Search-OVAssociations -AssociationName server_profiles_to_server_hardware -Parent (Get-OVServerProfile -Name "My Profile1")
 ```
 
@@ -37,22 +37,22 @@ Return server_profiles_to_server_hardware that have an association with the spec
 
 The association name to be matched, if specified.  Valid association names are 
 
-    * server_profiles_to_server_hardware
-    * PROFILE_TO_SERVER_HARDWARE_TYPE
-    * RACK_TO_PHYSICAL_DEVICE
-    * BLADE_TO_INTERCONNECT
-    * ENCLOSURE_GROUP_TO_ENCLOSURE
-    * ENCLOSURE_GROUP_TO_LOGICAL_INTERCONNECT_GROUP
-    * ENCLOSURE_TO_BLADE
-    * ENCLOSURE_TO_SWITCH
-    * LOGICAL_SWITCH_TO_LOGICAL_UPLINK
-    * SWITCH_TO_LOGICAL_SWITCH
-    * SERVER_PROFILES_TO_FC_NETWORKS
-    * SERVER_PROFILES_TO_NETWORKS
-    * STORAGE_SYSTEM_TO_STORAGE_POOL
-    * FC_NETWORK_TO_STORAGE_SYSTEM
-    * STORAGE_POOL_TO_VOLUME
-    * STORAGE_POOL_TO_VOLUME_TEMPLATE
+* server_profiles_to_server_hardware
+* PROFILE_TO_SERVER_HARDWARE_TYPE
+* RACK_TO_PHYSICAL_DEVICE
+* BLADE_TO_INTERCONNECT
+* ENCLOSURE_GROUP_TO_ENCLOSURE
+* ENCLOSURE_GROUP_TO_LOGICAL_INTERCONNECT_GROUP
+* ENCLOSURE_TO_BLADE
+* ENCLOSURE_TO_SWITCH
+* LOGICAL_SWITCH_TO_LOGICAL_UPLINK
+* SWITCH_TO_LOGICAL_SWITCH
+* SERVER_PROFILES_TO_FC_NETWORKS
+* SERVER_PROFILES_TO_NETWORKS
+* STORAGE_SYSTEM_TO_STORAGE_POOL
+* FC_NETWORK_TO_STORAGE_SYSTEM
+* STORAGE_POOL_TO_VOLUME
+* STORAGE_POOL_TO_VOLUME_TEMPLATE
 
 | Aliases | None |
 | :--- | :--- |

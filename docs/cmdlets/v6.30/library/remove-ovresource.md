@@ -6,7 +6,7 @@ description: Remove existing resource(s).
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVResource
     [-InputObject] <Object>
     [-ApplianceConnection] <Object>
@@ -24,7 +24,7 @@ Removes a resource identified by either the resource uri or a resource object.  
 
 ###  Example 1 
 
-```text
+```powershell
 Remove-OVResource -Resource "/rest/resource/1234-5678-9123"
 ```
 
@@ -32,7 +32,7 @@ Removes the resource specified by the URI.
 
 ###  Example 2 
 
-```text
+```powershell
 Remove-OVResource -nameOrUri "ServerProfile-A"
 ```
 
@@ -40,7 +40,7 @@ Removes the resource named "ServerProfile-A".  If multiple resources exist with 
 
 ###  Example 3 
 
-```text
+```powershell
 $MyResourceObject = send-OVrequest "/rest/resource/1234-5678-9123"
 Remove-OVResource -Resource $MyResourceObject
 ```

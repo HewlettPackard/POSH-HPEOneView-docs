@@ -6,7 +6,7 @@ description: Wait for a task to complete.
 
 ## Syntax
 
-```text
+```powershell
 Wait-OVTaskComplete
     [-InputObject] <Object>
     [-Timeout <TimeSpan>]
@@ -27,7 +27,7 @@ Once the task is no longer in a running state, the cmlet will return the task re
 
 ###  Example 1 
 
-```text
+```powershell
 Wait-OVTaskComplete -InputObject $task -timeout (New-TimeSpan -minute 10)
 Waiting for task to complete..Task completed successfully!
 ```
@@ -36,7 +36,7 @@ Wait for task to complete, modifying the default timeout to 10 minutes.
 
 ###  Example 2 
 
-```text
+```powershell
 $svr = Get-OVServer -Name "ServerA"
 $taskResults = New-OVServerProfile -name "Profile 1" -server $svr | Wait-OVTaskComplete
 ```

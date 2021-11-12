@@ -6,7 +6,7 @@ description: Remove configured hypervisor managers.
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVClusterManager
     [-InputObject] <HPEOneView.ClusterProfile.HypervisorManager>
     [-Force]
@@ -26,7 +26,7 @@ The user must have an infrastructure administrator privilege to register or upda
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVClusterManager -Name vcenter1.domain.com -ErrorAction Stop | Remove-OVClusterManager
 ```
 

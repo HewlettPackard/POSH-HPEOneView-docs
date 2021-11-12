@@ -6,7 +6,7 @@ description: Create a Storage Volume resource.
 
 ## Syntax
 
-```text
+```powershell
 New-OVStorageVolume
     [-Name] <String>
     [-StoragePool] <Object>
@@ -36,7 +36,7 @@ New-OVStorageVolume
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVStorageVolume
     [-Name] <String>
     [-VolumeTemplate <Object>]
@@ -75,7 +75,7 @@ If the Storage Volume Template Global Policy is enabled, a valid Storage Volume 
 
 ###  Example 1 
 
-```text
+```powershell
 New-OVStorageVolume -name TestVol1 -PoolName PoolR1 -Size 60
 ```
 
@@ -83,7 +83,7 @@ Create a 60GB private, thin provisioned volume named "TestVol1" from the "PoolR1
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVStoragePool PoolR1 | New-OVStorageVolume -name TestVol1 PoolR1 -Size 60
 ```
 
@@ -91,7 +91,7 @@ Get the "PoolR1" Storage Pool resource and pipe it to create a 60GB private, thi
 
 ###  Example 3 
 
-```text
+```powershell
 Get-OVStoragePool PoolR1 -StorageSystem 3ParSys1 | New-OVStorageVolume -name TestVol1 -Size 60
 ```
 
@@ -99,7 +99,7 @@ Get the "PoolR1" Storage Pool resource and pipe it to create a 60GB private, thi
 
 ###  Example 4 
 
-```text
+```powershell
 New-OVStorageVolume -name TestVol1 -StoragePool PoolR1 -StorageSystem 3ParSys1 -Size 60
 ```
 
@@ -107,7 +107,7 @@ Create a 60GB private, thin provisioned volume named "TestVol1" from the "PoolR1
 
 ###  Example 5 
 
-```text
+```powershell
 $svt = Get-OVStorageVolumeTemplate SVT_120GB_R5
 $New-OVStorageVolume testvol3 -volumetemplate $svt -capacity 90 | Wait-OVTaskComplete
 ```
@@ -222,12 +222,12 @@ Default: Thin
 
 Specify the StoreVirtual protection level (aka Network RAID) for the volume.  Allowed values are:
 
-    * NetworkRaid0None
-    * NetworkRaid5SingleParity
-    * NetworkRaid10Mirror2Way
-    * NetworkRaid10Mirror3Way
-    * NetworkRaid10Mirror4Way
-    * NetworkRaid6DualParity
+* NetworkRaid0None
+* NetworkRaid5SingleParity
+* NetworkRaid10Mirror2Way
+* NetworkRaid10Mirror3Way
+* NetworkRaid10Mirror4Way
+* NetworkRaid6DualParity
 
 | Aliases | None |
 | :--- | :--- |
@@ -253,9 +253,9 @@ Whether or not Adaptive Optimization is enabled on the storage volume.  Only sup
 
 Specify the type of volume to provision.  Allowed values are:
 
-    * Thin
-    * Full
-    * TPDD (Thin Provision Dedup) - Only available for HPE StoreServ storage systems with SSD storage pools (aka CPG"s).
+* Thin
+* Full
+* TPDD (Thin Provision Dedup) - Only available for HPE StoreServ storage systems with SSD storage pools (aka CPG"s).
 
 | Aliases | ProvisionType |
 | :--- | :--- |

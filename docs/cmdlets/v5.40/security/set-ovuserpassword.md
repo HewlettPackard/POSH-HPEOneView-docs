@@ -6,7 +6,7 @@ description: Update current user account password.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVUserPassword
     [-Current] <String>
     [-New] <String>
@@ -22,7 +22,7 @@ This Cmdlet provides the ability to update the current user account password.  O
 
 ###  Example 1 
 
-```text
+```powershell
 Set-OVUserPassword MyCurrentPass NewP@ssw0rd
 ```
 

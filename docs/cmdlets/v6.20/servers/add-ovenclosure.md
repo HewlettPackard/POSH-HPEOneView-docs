@@ -6,7 +6,7 @@ description: Import a support HPE BladeSystem c-Class enclosure.
 
 ## Syntax
 
-```text
+```powershell
 Add-OVEnclosure
     [-Hostname] <String>
     [-EnclosureGroup] <Object>
@@ -21,7 +21,7 @@ Add-OVEnclosure
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Add-OVEnclosure
     [-Hostname] <String>
     [-EnclosureGroup] <Object>
@@ -35,7 +35,7 @@ Add-OVEnclosure
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Add-OVEnclosure
     [-Hostname] <String>
     [-Credential <PSCredential>]
@@ -46,7 +46,7 @@ Add-OVEnclosure
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Add-OVEnclosure
     [-Hostname] <String>
     [-Username] <String>
@@ -86,7 +86,7 @@ Minimum required privileges: Infrastructure administrator or Server administrato
 
 ###  Example 1 
 
-```text
+```powershell
 Add-OVEnclosure -oa "192.168.1.1" -enclGroupName EG1 -user admin -pass hpinvent -license OneView
 ```
 
@@ -94,7 +94,7 @@ Add a new enclosure to the appliance, using the EG1 Enclosure Group.
 
 ###  Example 2 
 
-```text
+```powershell
 Add-OVEnclosure -oa "192.168.1.1" -enclGroupName EG1 -user admin -pass hpinvent -license OneView -confirm:$false
 ```
 
@@ -104,7 +104,7 @@ THIS IS A DESTRUCTIVE  PROCESS IF AN EXISTING VC DOMAIN EXISTS.
 
 ###  Example 3 
 
-```text
+```powershell
 Add-OVEnclosure -oa "192.168.1.1" -user admin -pass hpinvent -monitored
 ```
 
@@ -178,8 +178,8 @@ Specifies whether the intent is to apply either OneView or OneView w/o iLO licen
 
 Accepted values are
 
-    * OneView
-    * OneViewNoiLO
+* OneView
+* OneViewNoiLO
 
 | Aliases | license, l |
 | :--- | :--- |

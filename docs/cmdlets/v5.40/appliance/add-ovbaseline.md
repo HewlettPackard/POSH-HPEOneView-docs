@@ -6,7 +6,7 @@ description: Upload new SPP Baseline or hotfix to appliance firmware repository.
 
 ## Syntax
 
-```text
+```powershell
 Add-OVBaseline
     [-File] <System.IO.File>
     [-CompSigFile <System.IO.File[]>]
@@ -41,7 +41,7 @@ Minimum required privileges: Infrastructure administrator, Network administrator
 
 ###  Example 1 
 
-```text
+```powershell
 Add-OVBaseline -File "C:\Users\me\Documents\SPP2012060B.2012.0525.1.iso"
 ```
 
@@ -49,7 +49,7 @@ Upload SPP ISO to all connected appliances.
 
 ###  Example 2 
 
-```text
+```powershell
 Add-OVBaseline -File (Get-ChildItem .\CP672214.exe)
 ```
 
@@ -57,7 +57,7 @@ Upload the specified hotfix to all connected appliances.
 
 ###  Example 3 
 
-```text
+```powershell
 $HotFixFile = dir .\CP672214.exe
 $CompSigFile = dir .\CP672214.compsig
 Add-OVBaseline -File $HotFixFile -CompSigFile $CompSigFile
@@ -67,7 +67,7 @@ Upload the specified Gen10 hotfix and its associated compsig file to the connect
 
 ###  Example 4 
 
-```text
+```powershell
 $HotFixFile = dir .\cp044597.exe
 $CompSigFiles = dir .\cp044597_part*.compsig
 Add-OVBaseline -File $HotFixFile -CompSigFile $CompSigFiles

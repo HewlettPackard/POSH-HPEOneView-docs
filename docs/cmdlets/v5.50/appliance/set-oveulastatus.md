@@ -6,7 +6,7 @@ description: Accept the EULA and set support access for the specified appliance.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVEulaStatus
     [-Appliance] <Object>
     [-SupportAccess] <String>
@@ -21,7 +21,7 @@ Accept the EULA and set support access for the specified appliance.
 
 ###  Example 1 
 
-```text
+```powershell
 Set-OVEulaStatus -Appliance appliance.contoso.com -supportAccess "yes"
 ```
 

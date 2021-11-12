@@ -6,7 +6,7 @@ description: Remove pending or staged appliance update.
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVPendingUpdate
     [-ApplianceConnection] <Object>
     [<CommonParameters>]
@@ -20,7 +20,7 @@ Remove a pending or staged appliance update that prevents the appliance from ope
 
 ###  Example 1 
 
-```text
+```powershell
 Remove-OVPendingUpdate
 ```
 
@@ -28,7 +28,7 @@ Remove any found pending update any connectioned appliances.
 
 ###  Example 2 
 
-```text
+```powershell
 Remove-OVPendingUpdate
 ```
 

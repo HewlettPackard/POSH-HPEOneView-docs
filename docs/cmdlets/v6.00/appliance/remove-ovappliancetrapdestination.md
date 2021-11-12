@@ -6,7 +6,7 @@ description: Remove configured appliance SNMP trap destinations.
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVApplianceTrapDestination
     [-InputObject] <Object>
     [-ApplianceConnection <Array>]
@@ -25,7 +25,7 @@ Minimum required privileges: Infrastructure administrator
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVApplianceTrapDestination -Destination 10.45.110.76 -ErrorAction Stop | Remove-OVApplianceTrapDestination
 ```
 
@@ -33,7 +33,7 @@ Remove the specified trap destination.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVApplianceTrapDestination -Type SNMPv3 | Remove-OVApplianceTrapDestination
 ```
 

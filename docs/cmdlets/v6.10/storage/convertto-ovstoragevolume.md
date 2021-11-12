@@ -6,7 +6,7 @@ description: Convert an existing Storage Volume Snapshot to a Storage Volume.
 
 ## Syntax
 
-```text
+```powershell
 ConvertTo-OVStorageVolume
     [-InputObject] <Object>
     [-Name] <String>
@@ -41,7 +41,7 @@ Minimum required privileges: Infrastructure administrator, Server administrator,
 
 ###  Example 1 
 
-```text
+```powershell
 $Volume = Get-OVStorageVolume -Name PrivVolume1 | Get-OVStorageVolumeSnapshot | Select-Object -Last 1
 ConvertTo-OVStorageVolume -Name "Copy of PrivVolume1"
 ```
@@ -50,7 +50,7 @@ Get the most recent snapshot of PrivVolume1 and convert it to a volume.
 
 ###  Example 2 
 
-```text
+```powershell
 $Snapshots = Get-OVStorageVolume "Volume 1" | Get-OVStorageVolumeSnapshot
 $Snapshots | ? { ((Get-Date $_.created -Format d) -eq (Get-Date 02/23/2016 -format d)} | ConvertTo-OVStorageVolume -Name "Copy of Volume 1" | Wait-OVTaskComplete
 ```

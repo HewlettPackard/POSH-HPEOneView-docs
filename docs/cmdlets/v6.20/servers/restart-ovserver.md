@@ -6,7 +6,7 @@ description: Restart Server Resource.
 
 ## Syntax
 
-```text
+```powershell
 Restart-OVServer
     [-Server] <Object>
     [-Async]
@@ -14,7 +14,7 @@ Restart-OVServer
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Restart-OVServer
     [-Server] <Object>
     [-ColdBoot]
@@ -31,7 +31,7 @@ Restart the power state of the server using the virtual power button.  By defaul
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVServer -Name "Encl1, Bay 1" | Restart-OVServer | Wait-OVTaskComplete
 ```
 
@@ -39,7 +39,7 @@ Restart the specific server device by passing the Server Object via pipeline.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVServerProfile -Name "MyWebServer 1" | Restart-OVServer | Wait-OVTaskComplete
 ```
 
@@ -47,7 +47,7 @@ Restart the specific server device by passing the Server Profile Object via pipe
 
 ###  Example 3 
 
-```text
+```powershell
 Get-OVServer -Name "Encl1, Bay 1" | Restart-OVServer -ColdBoot | Wait-OVTaskComplete
 ```
 

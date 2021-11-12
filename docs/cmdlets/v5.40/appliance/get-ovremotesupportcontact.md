@@ -6,7 +6,7 @@ description: Retrieve configured Remote Support contacts.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVRemoteSupportContact
     [-Name <String>]
     [-ApplianceConnection <Object>]
@@ -44,7 +44,7 @@ Minimum required privileges: Read-only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVRemoteSupportContact
 ```
 
@@ -52,7 +52,7 @@ List all configured Remote Support Contacts.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVRemoteSupportContact -Name "Bob*"
 ```
 

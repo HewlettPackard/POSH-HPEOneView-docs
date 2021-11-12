@@ -6,7 +6,7 @@ description: Disable strict use of strong GCM (Galois/Counter Mode) ciphers for 
 
 ## Syntax
 
-```text
+```powershell
 Disable-OVApplianceStrictSecurityCipherSuite
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -24,7 +24,7 @@ IMPORTANT: Changing this setting will cause the appliance to reboot. Further, On
 
 ###  Example 1 
 
-```text
+```powershell
 Disable-OVApplianceStrictSecurityCipherSuite
 
 ```

@@ -6,7 +6,7 @@ description: Define LDAP Directory Server object.
 
 ## Syntax
 
-```text
+```powershell
 New-OVLdapServer
     [-Hostname] <String>
     [-SSLPort] <Int32>
@@ -23,7 +23,7 @@ A helper Cmdlet that will define an LDAP Directory Server object to be used with
 
 ###  Example 1 
 
-```text
+```powershell
 $ServerA = New-OVLdapServer -Name servera.domain.com -Certificate C:\dir\servera.cer
 ```
 
@@ -31,7 +31,7 @@ Define a new Directory Server, ServerA, specifying the Base64 Public Certificate
 
 ###  Example 2 
 
-```text
+```powershell
 $ServerA = New-OVLdapServer -Name servera.domain.com -Port 2636 -Certificate C:\dir\servera.cer
 ```
 
@@ -39,7 +39,7 @@ Define a new Directory Server, ServerA, specifying the Base64 Public Certificate
 
 ###  Example 3 
 
-```text
+```powershell
 $dc1,$dc2 = "dc1.mydomain.com","dc2.mydomain.com" | New-OVLdapServer
 ```
 

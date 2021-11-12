@@ -6,7 +6,7 @@ description: Get available storage volume sets.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVStorageVolumeSet
     [-Name <String>]
     [-Label <String>]
@@ -25,7 +25,7 @@ This Cmdlet will return the available volume sets from the available storage sys
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVStorageVolumeSet
 ```
 
@@ -33,7 +33,7 @@ Get all available storage sets.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVStorageVolumeSet -Name VolumeSets
 ```
 
@@ -80,10 +80,10 @@ Filter for the resource name.
 ### -Scope &lt;Object&gt;
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:nr
-    * AllResources
+* AllResources
     *AllResourcesInScope
-    * `[HPEOneView.Appliance.ScopeCollection]`
-    * `[HPEOneView.Appliance.ConnectionPermission]`
+* `[HPEOneView.Appliance.ScopeCollection]`
+* `[HPEOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |

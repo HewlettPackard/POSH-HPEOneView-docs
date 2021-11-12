@@ -6,7 +6,7 @@ description: Create Server Profile Logical Disk object.
 
 ## Syntax
 
-```text
+```powershell
 New-OVServerProfileLogicalDisk
     [-Name] <String>
     [-RAID <String>]
@@ -18,7 +18,7 @@ New-OVServerProfileLogicalDisk
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVServerProfileLogicalDisk
     [-Name] <String>
     [-RAID <String>]
@@ -43,7 +43,7 @@ This helper Cmdlet will create a Logical Disk object to then be assigned to a Se
 
 ###  Example 1 
 
-```text
+```powershell
 $LogicalDisk = New-OVServerProfileLogicalDisk -Name "MyDisk"
 ```
 
@@ -51,7 +51,7 @@ Create a default Logical Disk configuration object.
 
 ###  Example 2 
 
-```text
+```powershell
 $ld1 = New-OVServerProfileLogicalDisk -Name "Boot Disk" -RAID RAID1 -NumberofDrives 2 -Bootable $True
 ```
 
@@ -59,7 +59,7 @@ Create a custom Logical Disk with the provided parameter values.
 
 ###  Example 3 
 
-```text
+```powershell
 $ld1 = New-OVServerProfileLogicalDisk -Name "Boot Disk" -RAID RAID1 -NumberofDrives 2 -DriveType SAS -MinDriveSize 300 -Bootable $True
 ```
 
@@ -67,7 +67,7 @@ Create a custom HPE Synergy D3940 bootable RAID Logical Disk with the provided p
 
 ###  Example 4 
 
-```text
+```powershell
 $AvailableDriveType = Get-OVSasLogicalInterconnect -Name "LE1-Default SAS Synergy LIG-3" -ErrorAction Stop | Get-OVAvailableDriveType  | ? { $_.Type -eq "SASHDD" -and $_.capacity -eq 900 }
 $NewLogicalDisk = New-OVServerProfileLogicalDisk -Name "LD1_RAID5_900GB_SASHDD" -DriveSelectionBy DriveType -NumberofDrives 6 -RAID RAID5 -AvailableDriveType $AvailableDriveType
 ```
@@ -76,7 +76,7 @@ Create a RAID5 Logical Disk for a Server Profile using D3940 storage, and a spec
 
 ###  Example 5 
 
-```text
+```powershell
 $JBODLogicalDisk = New-OVServerProfileLogicalDisk -Name "JBOD1_900GB_SASHDD" -NumberofDrives 6 -MinDriveSize 900 -DriveType SAS
 ```
 
@@ -126,7 +126,7 @@ The number of physical drives to be used to build the logical drive. The provide
 
 Defines the interface type for drives that will be used to build the logical drive. Supported values depend on the local storage capabilities of the selected server hardware type.  Allowed value:
 
-    * SAS
+* SAS
     *SATA
     *SASSSD
     *SATASSD
@@ -134,15 +134,15 @@ Defines the interface type for drives that will be used to build the logical dri
 {% hint style="info" %}
 Auto is not supported when attempting to create an HPE Synergy D3940 Logical or JBOD disk.  You must specify a disk technology type unless `-DriveSelectionBy` is changed to DriveType and `-AvailableDriveType` is used.  Allowed values are:
 
-    * SAS
-    * SATA
-    * SASSSD
-    * SATASSD
-    * NVMeSas
-    * NVMeSata
+* SAS
 
 {% endhint %}
-    * Auto
+* SATA
+* SASSSD
+* SATASSD
+* NVMeSas
+* NVMeSata
+* Auto
 
 | Aliases | None |
 | :--- | :--- |
@@ -156,8 +156,8 @@ Auto is not supported when attempting to create an HPE Synergy D3940 Logical or 
 
 Use to specify how the drive selection will be used.  Allowed values:
 
-    * DriveType - Use Get-OVAvailableDriveType to locate available drive types, quantity to which SAS Logical Interconnect or Drive Enclosure.
-    * SizeAndTechnology - Use to define the attributes of the drive based on technology and min/max drive size.  The `-DriveType` and `-MinDriveSize` parameters are required.
+* DriveType - Use Get-OVAvailableDriveType to locate available drive types, quantity to which SAS Logical Interconnect or Drive Enclosure.
+* SizeAndTechnology - Use to define the attributes of the drive based on technology and min/max drive size.  The `-DriveType` and `-MinDriveSize` parameters are required.
 
 Default: SizeAndTechnology
 

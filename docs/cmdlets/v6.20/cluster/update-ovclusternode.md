@@ -6,7 +6,7 @@ description: Default content
 
 ## Syntax
 
-```text
+```powershell
 Update-OVClusterNode
     [-InputObject] <Object>
     [-Async]
@@ -22,7 +22,7 @@ Default content
 
 ###  Example 1 
 
-```text
+```powershell
 Update-OVClusterNode
 ```
 

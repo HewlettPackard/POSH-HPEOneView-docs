@@ -6,7 +6,7 @@ description: Create a new cluster profile resource.
 
 ## Syntax
 
-```text
+```powershell
 New-OVClusterProfile
     [-Name] <String>
     [-ClusterManager] <HPEOneView.Cluster.ClusterManager>
@@ -26,7 +26,7 @@ New-OVClusterProfile
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVClusterProfile
     [-Name] <String>
     [-ClusterManager] <HPEOneView.Cluster.ClusterManager>
@@ -46,7 +46,7 @@ New-OVClusterProfile
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVClusterProfile
     [-Name] <String>
     [-ClusterManager] <HPEOneView.Cluster.ClusterManager>
@@ -107,7 +107,7 @@ Minimum required privileges: Infrastructure administrator, Server administrator,
 
 ###  Example 1 
 
-```text
+```powershell
 # Get the specific Cluster Manager
 $ClusterManager = Get-OVHypervisorManager -Name ClusterManager1
 
@@ -135,7 +135,7 @@ Create a new cluster profile.
 
 ###  Example 2 
 
-```text
+```powershell
 # Get the specific Cluster Manager
 $ClusterManager = Get-OVHypervisorManager -Name ClusterManager1
 
@@ -254,8 +254,8 @@ Provide a description of the cluster.
 
 If overriding the distributed virtual switch configuring set by the cluster manager, specify the switch usage.  Allowed values:
 
-    * Standard
-    * Distributed
+* Standard
+* Distributed
 
 | Aliases | None |
 | :--- | :--- |
@@ -365,8 +365,8 @@ Use to configure the cluster profile to not manage host networking.
 
 Use to indicate which vSiwtch type to configure when overriding cluster manager networking settings.  Allowed values are:
 
-    * Standard
-    * Distributed
+* Standard
+* Distributed
 
 | Aliases | None |
 | :--- | :--- |
@@ -528,8 +528,8 @@ One or more server resource objects from New-OVClusterProfileMember.  Value can 
 
 Specify if the storage volume(s) in the StorageVolume parameter should be formatted with a specific filesystem.  Allowed values:
 
-    * VMFS
-    * Unmanaged
+* VMFS
+* Unmanaged
 
 | Aliases | None |
 | :--- | :--- |

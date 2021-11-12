@@ -6,7 +6,7 @@ description: Get appliance SNMPv3 Engine ID.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVApplianceSnmpV3EngineId
     [-ApplianceConnection <Array>]
     [<CommonParameters>]
@@ -26,7 +26,7 @@ Minimum required privileges: Read only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVApplianceSnmpV3EngineId
 ```
 

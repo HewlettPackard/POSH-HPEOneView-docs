@@ -6,7 +6,7 @@ description: Disable Remote Support for a supported resource.
 
 ## Syntax
 
-```text
+```powershell
 Disable-OVRemoteSupport
     [-InputObject] <Object>
     [-Async]
@@ -32,7 +32,7 @@ Minimum required privileges: Infrastructure administrator, Server administrator,
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVServer -Name Prod* | Disable-OVRemoteSupport
 ```
 
@@ -40,7 +40,7 @@ Get the servers with their name matching "Prod" and disable Remote Support for t
 
 ###  Example 2 
 
-```text
+```powershell
 $Enclosure = Get-OVEnclosure -Name Enclosure-1A
 Disable-OVRemoteSupport -InputObject $Enclosure
 ```

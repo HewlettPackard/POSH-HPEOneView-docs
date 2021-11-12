@@ -6,7 +6,7 @@ description: Modify an existing network set.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVNetworkSet
     [-InputObject] <Object>
     [-Name <String>]
@@ -37,7 +37,7 @@ Minimum required permissions: Infrastructure administrator, Network administrato
 
 ###  Example 1 
 
-```text
+```powershell
 $netset = Get-OVNetworkSet -Name "Set-1"
 $netset.maximumBandwidth = 5000
 $netset.typicalBandwidth = 3000
@@ -48,7 +48,7 @@ Modify "Set-1" to be maximum bandwidth of 5000.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVNetworkSet -Name NetSet-1 | Set-OVNetworkSet -name NewNetSet-1 -networks @(bluenet,rednet,greennet) -untagged bluenet
 ```
 
@@ -56,7 +56,7 @@ Update "NetSet-1" with a new name, adjust the networks, and set "bluenet" as the
 
 ###  Example 3 
 
-```text
+```powershell
 $NetworkToAdd = Get-OVNetwork -Name "Prod 442 VLAN"
 Get-OVNetworkSet -Name NetSet-1 | Set-OVNetworkSet -AddNetwork $NetworkToAdd
 ```
@@ -65,7 +65,7 @@ Add the specified network to the existing network set.
 
 ###  Example 4 
 
-```text
+```powershell
 $NetworksToRemove = Get-OVNetwork -Name "Dev 45*"
 Get-OVNetworkSet -Name NetSet-2 | Set-OVNetworkSet -RemoveNetwork $NetworksToRemove
 ```

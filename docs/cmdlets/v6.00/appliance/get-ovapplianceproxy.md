@@ -6,7 +6,7 @@ description: Get appliance configured HTTP proxy.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVApplianceProxy
     [-ApplianceConnection <Array>]
     [<CommonParameters>]
@@ -26,7 +26,7 @@ Minimum required privileges: Read only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVApplianceProxy
 ```
 

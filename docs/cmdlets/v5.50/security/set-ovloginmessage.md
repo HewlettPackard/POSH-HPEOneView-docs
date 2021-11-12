@@ -6,7 +6,7 @@ description: Set appliance Login Message.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVLoginMessage
     [-Message] <String>
     [-Acknowledgment <Boolean>]
@@ -14,7 +14,7 @@ Set-OVLoginMessage
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Set-OVLoginMessage
     [-Acknowledgment] <Boolean>
     [-ApplianceConnection <Object>]
@@ -29,7 +29,7 @@ Configure the Login Message for the connected appliance(s).  You can also set th
 
 ###  Example 1 
 
-```text
+```powershell
 Set-OVLoginMessage -Message "************************************
 >> *****        WARNING        ********
 >> ************************************
@@ -42,7 +42,7 @@ Set the Login Message from all connected appliances.
 
 ###  Example 2 
 
-```text
+```powershell
 $Message = "************************************
 >> *****        WARNING        ********
 >> ************************************

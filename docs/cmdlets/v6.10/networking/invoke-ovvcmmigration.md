@@ -6,7 +6,7 @@ description: Migrate Virtual Connect Manager to HPE OneView.
 
 ## Syntax
 
-```text
+```powershell
 Invoke-OVVcmMigration
     [-OAIPAddress] <String>
     [-LicensingIntent] <String>
@@ -23,7 +23,7 @@ Invoke-OVVcmMigration
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Invoke-OVVcmMigration
     [-OAIPAddress] <String>
     [-LicensingIntent] <String>
@@ -43,7 +43,7 @@ Invoke-OVVcmMigration
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Invoke-OVVcmMigration
     [-OAIPAddress] <String>
     [-LicensingIntent] <String>
@@ -79,7 +79,7 @@ Please read "Chapter 9 Planning for enclosure migration from VCM into HPE OneVie
 
 ###  Example 1 
 
-```text
+```powershell
 $OACreds = Get-Credential -Username Administrator -Message "Password" $VCMCreds = Get-Credential -Username Administrator -Message "Password" Invoke-OVVcmMigration -OAIPAddress 192.168.19.40 -OACredential $OACreds -VCMCredential $VCMCreds -LicensingIntent OneView -Report
 ```
 
@@ -87,7 +87,7 @@ Generate Virtual Connect Manager configuration migration report for the specifie
 
 ###  Example 2 
 
-```text
+```powershell
 $OACreds = Get-Credential -Username Administrator -Message "Password" $VCMCreds = Get-Credential -Username Administrator -Message "Password" Invoke-OVVcmMigration -OAIPAddress 192.168.19.40 -OACredential $OACreds -VCMCredential $VCMCreds -LicensingIntent OneView
 ```
 
@@ -95,7 +95,7 @@ Migration will occur and create a new Enclosure Group and new Logical Interconne
 
 ###  Example 3 
 
-```text
+```powershell
 $OACreds = Get-Credential -Username Administrator -Message "Password" $VCMCreds = Get-Credential -Username Administrator -Message "Password" $EnclosureGroup = Get-OVEnclosureGroup -Name EnclosureGroup1 -ErrorAction Stop Invoke-OVVcmMigration -OAIPAddress 192.168.19.40 -OACredential $OACreds -VCMCredential $VCMCreds -LicensingIntent OneView -EnclosureGroup $EnclosureGroup
 ```
 
@@ -103,7 +103,7 @@ Migration will occur and import the target enclosure into an existing Enclosure 
 
 ###  Example 4 
 
-```text
+```powershell
 Invoke-OVVcmMigration -OAIPAddress 192.168.19.40 -OAUserName Administrator -OAPassword hpinvent -VCMUserName Administrator -VCMPassword hpinvent -licensingIntent OneView -Report -Path "c:\VCM-MigrationReports"
 ". 
 ```
@@ -112,7 +112,7 @@ Migration will not be attempted.  The migration report will be executed and the 
 
 ###  Example 5 
 
-```text
+```powershell
 $OACreds = Get-Credential -Username Administrator -Message "Password" $VCMCreds = Get-Credential -Username Administrator -Message "Password" $VCEMCreds = Get-Credential -Username Domain\Adminisrator -Message "Password" $EnclosureGroup = Get-OVEnclosureGroup -Name EnclosureGroup1 -ErrorAction Stop Invoke-OVVcmMigration -OAIPAddress 192.168.19.40 -OACredential $OACreds -VCMCredential $VCMCreds -VCEMCMS vcemcms.domain.com -VCEMCredential $VCEMCreds -LicensingIntent OneView
 ```
 
@@ -211,8 +211,8 @@ REQUIRED. Specifies whether the intent is to apply either OneView or OneView w/o
 
 Accepted values are
                     
-    * OneView
-    * OneViewNoiLO
+* OneView
+* OneViewNoiLO
 
 | Aliases | license, l |
 | :--- | :--- |
@@ -290,7 +290,7 @@ OPTIONAL. Execute the migration report only. Do not execute the migration proces
 
 The directory path in which to save the report output to a file.
 
-    * Filename will be created in the format: [path]\{enclsoureName}_{date}.report
+* Filename will be created in the format: [path]\{enclsoureName}_{date}.report
 
 | Aliases | Export |
 | :--- | :--- |

@@ -6,7 +6,7 @@ description: (Reserved for future use) Retrieve appliance global settings.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVApplianceGlobalSetting
     [-name <String>]
     [-ApplianceConnection <Object>]
@@ -23,7 +23,7 @@ Retrieves the list of global settings or a specific global setting by name.
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVApplianceGlobalSetting
 ```
 

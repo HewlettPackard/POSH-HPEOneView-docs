@@ -6,7 +6,7 @@ description: Display Interconnect Port Statistics.
 
 ## Syntax
 
-```text
+```powershell
 Show-OVPortStatistics
     [-Interconnect] <Object>
     [-Port] <Object>
@@ -14,7 +14,7 @@ Show-OVPortStatistics
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Show-OVPortStatistics
     [-Port] <Object>
     [-ApplianceConnection] <Object>
@@ -29,7 +29,7 @@ This Cmdlet will display the utilization (Format-Table view) or error (Format-Li
 
 ###  Example 1 
 
-```text
+```powershell
 Show-OVPortStatistics -interconnect "Encl1, Interconnect 1" -port X1
 Port Type: Ethernet
 
@@ -42,7 +42,7 @@ Displays the interface throughput statistics for X1 in a Format-Table display.
 
 ###  Example 2 
 
-```text
+```powershell
 Show-OVPortStatistics -interconnect "Encl1, Interconnect 1" -port X1 | FL
 Port Type: Ethernet
 
@@ -63,7 +63,7 @@ Displays the interface error statistics for X1 in a Format-List display.
 
 ###  Example 3 
 
-```text
+```powershell
 (Get-OVInterconnect "Encl1, Interconnect 1").ports | ? name -eq X1 | Show-OVPortStatistics
 ```
 
@@ -71,7 +71,7 @@ Pipe an Interconnect Port object to Show-OVPortStatistics and show the interface
 
 ###  Example 4 
 
-```text
+```powershell
 Show-OVPortStatistics -interconnect "Encl1, Interconnect 1"
 Port Type: Ethernet
 
@@ -115,7 +115,7 @@ Display all available ports of the provided Interconnect, using the Interconnect
 
 ###  Example 5 
 
-```text
+```powershell
 $Interconnect = Get-OVInterconnect "Encl1, Interconnect 1"
 Show-OVPortStatistics $Interconnect
 ```

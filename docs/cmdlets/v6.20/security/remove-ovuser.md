@@ -6,7 +6,7 @@ description: Remove a user account.
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVUser
     [-InputObject] <Object>
     [-ApplianceConnection] <Object>
@@ -21,7 +21,7 @@ Remove a specific local user account from the management appliance
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVUser Sally | Remove-OVUser
 ```
 

@@ -6,7 +6,7 @@ description: Retrieve a defined DataCenter.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVDataCenter
     [-Name <String>]
     [-ApplianceConnection <Object>]
@@ -27,7 +27,7 @@ Minimum required privileges: Read only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVDataCenter
 ```
 
@@ -35,7 +35,7 @@ Retrieve all defined DataCenters on the appliance.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVDataCenter -Name DC*
 ```
 
@@ -43,7 +43,7 @@ Locate all DataCenter objects that begin with "DC".
 
 ###  Example 3 
 
-```text
+```powershell
 Get-OVDataCenter | Select -ExpandProperty RemoteSupportLocation
 ```
 

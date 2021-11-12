@@ -6,7 +6,7 @@ description: Create a new Network Set.
 
 ## Syntax
 
-```text
+```powershell
 New-OVNetworkSet
     [-Name] <String>
     [-Networks <Object>]
@@ -34,7 +34,7 @@ Minimum required permissions: Infrastructure administrator, Network administrato
 
 ###  Example 1 
 
-```text
+```powershell
 New-OVNetworkSet -Name "Production Networks" -untaggedNetwork yellow -networks blue, green, yellow
 ```
 
@@ -42,7 +42,7 @@ Create a new Network Set called "Production Networks", adding Ethernet Networks 
 
 ###  Example 2 
 
-```text
+```powershell
 $networks = "blue","green","yellow" | % { Get-OVNetwork $_ -type Ethernet }
 New-OVNetworkSet -name "Production Networks" -Networks $networks -UntaggedNetwork $networks[1]
 ```
@@ -51,7 +51,7 @@ Get Ethernet Networks "blue", "green", and "yellow", then create a new Network S
 
 ###  Example 3 
 
-```text
+```powershell
 New-OVNetworkSet -Name "Production Networks" -untaggedNetwork yellow -networks blue, green, yellow -TypicalBandwidth 1000 -MaximumBandwidth 5000
 ```
 

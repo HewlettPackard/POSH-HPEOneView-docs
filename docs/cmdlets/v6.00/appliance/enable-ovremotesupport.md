@@ -6,7 +6,7 @@ description: Enable Remote Support for a supported resource.
 
 ## Syntax
 
-```text
+```powershell
 Enable-OVRemoteSupport
     [-InputObject] <Object>
     [-Async]
@@ -32,7 +32,7 @@ Minimum required privileges: Infrastructure administrator, Server administrator,
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVServer -Name Prod* | Enable-OVRemoteSupport
 ```
 
@@ -40,7 +40,7 @@ Get the servers with their name matching "Prod" and enable Remote Support for th
 
 ###  Example 2 
 
-```text
+```powershell
 $Enclosure = Get-OVEnclosure -Name Enclosure-1A
 Enable-OVRemoteSupport -InputObject $Enclusre
 ```

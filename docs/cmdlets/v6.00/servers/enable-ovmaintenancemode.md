@@ -6,7 +6,7 @@ description: Enable compute resource into maintenance mode.
 
 ## Syntax
 
-```text
+```powershell
 Enable-OVMaintenanceMode
     [-InputObject] <Object>
     [-Async]
@@ -30,7 +30,7 @@ Minimum required privileges: Infrastructure administrator, Network administrator
 
 ###  Example 1 
 
-```text
+```powershell
 $Server = Get-OVServer -Name "Encl1, bay 1"
 Enable-OVMaintenanceMode -InputObject $Server
 ```
@@ -39,7 +39,7 @@ nEnable the maintenance mode state of the specific server resource.
 
 ###  Example 2 
 
-```text
+```powershell
 $ServerProfile = Get-OVServerProfile -Name "My Profile 1"
 Enable-OVMaintenanceMode -InputObject $ServerProfile
 ```

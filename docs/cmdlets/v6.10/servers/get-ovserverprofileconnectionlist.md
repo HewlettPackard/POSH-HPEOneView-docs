@@ -6,7 +6,7 @@ description: Retrieve Server Profile Connections
 
 ## Syntax
 
-```text
+```powershell
 Get-OVServerProfileConnectionList
     [-Name] <String>
     [-ApplianceConnection] <Object>
@@ -21,7 +21,7 @@ Obtain a formatted list of server profile connection IDs, include hardware addre
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVServerProfileConnectionList "test"
 serverProfile   portId    cid networkType macAddress        wwpn             boot      arrayTarget lun
 -------------   --------  --- ----------- ----------        ----             ----      ----------- ---                     

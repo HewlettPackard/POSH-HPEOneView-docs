@@ -6,7 +6,7 @@ description: Assign or change roles for LDAP Groups.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVLdapGroupRole
     [-InputObject] <Object>
     [-Roles] <Array>
@@ -18,7 +18,7 @@ Set-OVLdapGroupRole
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Set-OVLdapGroupRole
     [-InputObject] <Object>
     [-Roles] <Array>
@@ -31,7 +31,7 @@ Set-OVLdapGroupRole
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Set-OVLdapGroupRole
     [-InputObject] <Object>
     [-ScopePermissions] <Array>
@@ -51,7 +51,7 @@ Changes current roles of an LDAP Group with a given set of roles.  You must prov
 
 ###  Example 1 
 
-```text
+```powershell
 Set-OVLdapGroupRole -d Domain1 -GroupName "MY Directory Group1" -roles "Server administrator" -u "Sarah Peterson"
 ```
 
@@ -59,7 +59,7 @@ Add "MY Directory Group1" from Domain1 with Server Administrator role and prompt
 
 ###  Example 2 
 
-```text
+```powershell
 $roles = "Server administrator","Backup administrator"
 $password = ConvertTo-SecureString -asplaintext "password123890" -force
 Set-OVLdapGroupRole -d Domain1 -GroupName "MY Directory Group1" -roles $roles -u "Sarah Peterson" -p $password
@@ -69,7 +69,7 @@ Set "MY Directory Group1" from Domain1 with Server and Backup administrator role
 
 ###  Example 3 
 
-```text
+```powershell
 $LdapDirectoryName = "CorpDomain"
 $MyAdCreds = Get-Credential
 Get-OVLdapGroup -Group $CorpNetworkAdmins -ErrorAction Stop | ? loginDomain -eq $LdapDirectoryName | Set-OVLdapGroupRole -ScopePermissions @{Role = "Network administrator"; Scope = $NewSBACScope } -Credential $MyAdCreds
@@ -79,7 +79,7 @@ Change the Scope permissions for the specified authentication directory group.
 
 ###  Example 4 
 
-```text
+```powershell
 $scope = Get-OVScope -Name $scopename
 $ScopePermissions = @{ Role = "Server administrator"; Scope = $scope
 }
@@ -192,7 +192,7 @@ Example: `-ScopePermissions` @{Role = "Network administrator"; Scope = (`Get-OVS
 
 ### -Append &lt;SwitchParameter&gt;
 
-
+Use to append roles and/or scope permissions update.  If omitted, roles or scope permissions will be replaced.
 
 | Aliases | None |
 | :--- | :--- |

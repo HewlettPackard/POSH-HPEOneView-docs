@@ -16,7 +16,7 @@ Use Enable-OVMsDSC to enable support.
 
 ###  Example 1 
 
-```text
+```powershell
 Disable-OVMSDSC
 ```
 

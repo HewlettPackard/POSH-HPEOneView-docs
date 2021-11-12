@@ -6,7 +6,7 @@ description: Retrieve Server Profile Template resource(s).
 
 ## Syntax
 
-```text
+```powershell
 Get-OVServerProfileTemplate
     [-Name <String>]
     [-ServerHardwareType <String>]
@@ -16,7 +16,7 @@ Get-OVServerProfileTemplate
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Get-OVServerProfileTemplate
     [-Export]
     [-Location <String>]
@@ -28,7 +28,7 @@ Get-OVServerProfileTemplate
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Get-OVServerProfileTemplate
     [-Detailed]
     [-Name <String>]
@@ -50,7 +50,7 @@ This will also provide the ability to export Server Profile Template objects to 
 
 ###  Example 1 
 
-```text
+```powershell
 $templates = Get-OVServerProfileTemplate
 ```
 
@@ -58,7 +58,7 @@ Return all the server profile  templates managed by the appliance.
 
 ###  Example 2 
 
-```text
+```powershell
 $template = Get-OVServerProfileTemplate "SA"
 ```
 
@@ -66,7 +66,7 @@ Return the server profile template resource with name "SA".
 
 ###  Example 3 
 
-```text
+```powershell
 $profiletemplates = Get-OVServerProfileTemplate profile*
 ```
 
@@ -74,7 +74,7 @@ Return server profile  template resources that match "profile*".
 
 ###  Example 4 
 
-```text
+```powershell
 Get-OVServerProfileTemplate
 Profile Name   Managing BIOS Managing Firmware Assigned      State
 ------------   ------------- ----------------- --------      -----
@@ -87,7 +87,7 @@ Generate a list of all server profiles.
 
 ###  Example 5 
 
-```text
+```powershell
 Get-OVServerProfileTemplate -name "test 1"
 Profile Name   Managing BIOS Managing Firmware Assigned      State
 ------------   ------------- ----------------- --------      -----
@@ -98,7 +98,7 @@ Show a specific Server Profile Template, "test 1".
 
 ###  Example 6 
 
-```text
+```powershell
 Get-OVServerProfileTemplate -export -location c:\profiles
 ```
 
@@ -106,7 +106,7 @@ Save all Server Profile Template objects to their own backup file to C:\profiles
 
 ###  Example 7 
 
-```text
+```powershell
 Get-OVServerProfileTemplate -name Profile1 -export -location c:\profiles
 ```
 
@@ -142,10 +142,10 @@ Provide the Server Hardware Type resource object or name to return Server Profil
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-    * AllResources
-    * AllResourcesInScope
-    * `[HPEOneView.Appliance.ScopeCollection]`
-    * `[HPEOneView.Appliance.ConnectionPermission]`
+* AllResources
+* AllResourcesInScope
+* `[HPEOneView.Appliance.ScopeCollection]`
+* `[HPEOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |

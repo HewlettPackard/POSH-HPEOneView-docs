@@ -6,7 +6,7 @@ description: Get appliance two-factor configuration.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVApplianceTwoFactorAuthentication
     [-ApplianceConnection <Array>]
     [<CommonParameters>]
@@ -28,7 +28,7 @@ Minimum required privileges: Read only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVApplianceTwoFactorAuthentication
 ```
 

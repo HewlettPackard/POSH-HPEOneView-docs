@@ -6,7 +6,7 @@ description: Configure appliance two-factor authentication settings.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVApplianceTwoFactorAuthentication
     [-SmartCardLoginOnly <Bool>]
     [-EnableEmergencyLocalLogin <Bool>]
@@ -34,7 +34,7 @@ Required: Infrastructure administrator
 
 ###  Example 1 
 
-```text
+```powershell
 Set-OVApplianceTwoFactorAuthentication -ValidationOids @(@{"1.3.6.1.4.1.311.20.2.2" = "Smart Card Logon"; "1.3.6.1.5.5.7.3.2" = "Client Authentication"})
 ```
 
@@ -92,10 +92,10 @@ Configure HPE OneView to look in multiple certificate locations for domain infor
 
 The Directory domain control allows you to specify which domain or directory to use when searching for the user in an enterprise directory. The domain name must match the Base DN of at least one of the directories added to HPE OneView. The options include:
 
-    * Subject
-    * Subject Alternative Name
-    * Issuer
-    * Manually specify
+* Subject
+* Subject Alternative Name
+* Issuer
+* Manually specify
 
 After you select which certificate field HPE OneView must use to extract the domain name, the name is extracted from the DC attributes specified therein. The DC=(.*) configuration extracts the first domain component from the field. The administrator can only specify DC=(.*) here.
 
@@ -154,21 +154,21 @@ Use to enforce smart card authentication only.  Enabling Smart card only login d
 By default, the attribute entry associated with the "Subject Alternative Name" item, within the "Certificate owner" entry, contains `[OtherName.UPN]`=(.*). This tells HPE OneView to extract the user name from the "OtherName.UPN" attribute within the Subject Alternative Name field of the certificate on the smart card. This is the user name that HPE OneView uses to query the enterprise directory.
 
 You can edit the value to enable HPE OneView to search for the user name within other additional attributes within Subject Alternative Name. The options include: 
-    * `[OtherName.UPN]`=(.*) 
+* `[OtherName.UPN]`=(.*) 
     The Microsoft certificate viewer displays "OtherName.UPN" underSubject Alternative Name as: 
         Other Name:
             Principal Name=John.Doe@test.com
 
-    * `[OtherName.RFC]`822Name=(.*) 
+* `[OtherName.RFC]`822Name=(.*) 
     The Microsoft certificate viewer displays `[OtherName.RFC]`822Name as:
          Other Name:
             RFC822 Name=John.Doe@test.com
 
-    * RFC822Name=(.*) 
+* RFC822Name=(.*) 
     The Microsoft certificate viewer displays RFC822Name as: 
         RFC822 Name=John.Doe@test.com
 
-    * DirName=(.*) 
+* DirName=(.*) 
      The Microsoft certificate viewer displays "DirName" under Subject Alternative Name as: 
         Directory Address:
             CN=John Doe
@@ -201,10 +201,10 @@ Subject Alternative Name multiple attribute entry example
 By default, the attribute entry box associated with the "Subject" entry, within the "Certificate owner" field, contains CN=(.*). With this value, HPE OneView extracts the first user name it encounters within a "CN" attribute within the "Subject" field in the smart card certificate. You can edit the regular expression for the "CN" attribute using regular expressions to refine the list of acceptable values.
 You can edit the value if you need HPE OneView to search for the user name within other additional attributes within the certificate "Subject" field. The choices include: 
 
-    * CN=(.*) 
-    * E=(.*) 
-    * UID=(.*) 
-    * DN=(.*) 
+* CN=(.*) 
+* E=(.*) 
+* UID=(.*) 
+* DN=(.*) 
 Microsoft Active Directory users must note that the DN is extracted as an aggregate of the subject attributes from the certificate. This should match the DN value configured for the user in the Active Directory. If this is not an exact match, the login operation fails. 
 
 Use a comma separated list to include multiple values in the entry field, allowing HPE OneView to search multiple Subject attributes for a valid user name. 
@@ -215,7 +215,7 @@ You can instruct HPE OneView to search for the user name within the attributes o
 
 
 Subject multiple attribute entry example
-    * CN=(.*),E=(.*),UID=(.*),DN=(.*) 
+* CN=(.*),E=(.*),UID=(.*),DN=(.*) 
 
 Variations for the CN attribute: examples
     To match only user names starting with "J_" use CN=(^J_.*$) 

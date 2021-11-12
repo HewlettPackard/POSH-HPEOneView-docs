@@ -6,7 +6,7 @@ description: Install signed private key.
 
 ## Syntax
 
-```text
+```powershell
 Install-OVApplianceCertificate
     [-Path] <System.IO.FileInfo>
     [-Async]
@@ -22,7 +22,7 @@ After using New-OVApplianceCSR to generate a Certificate Signing Request (CSR), 
 
 ###  Example 1 
 
-```text
+```powershell
 $Task = C:\dir\hpov.cer | Install-OVApplianceCertificate
 ```
 
@@ -30,7 +30,7 @@ Read the signed SSL certificate private key and install it on the appliance, and
 
 ###  Example 2 
 
-```text
+```powershell
 $cert = Get-ChildItem C:\dir\hpov.cer 
 $TaskToMonitor = Install-OVApplianceCertificate -Path $Cert -Async
 C:\> $TaskToMonitor | Wait-OVTaskComplete

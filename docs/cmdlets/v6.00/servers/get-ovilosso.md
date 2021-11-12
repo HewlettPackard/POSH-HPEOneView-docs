@@ -6,7 +6,7 @@ description: Generate iLO SSO Token.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVIloSso
     [-InputObject] <Object>
     [-RemoteConsoleOnly]
@@ -15,7 +15,7 @@ Get-OVIloSso
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Get-OVIloSso
     [-InputObject] <Object>
     [-IloRestSession]
@@ -42,7 +42,7 @@ Minimum required privileges: Read-only. Know that your user account role within 
 
 ###  Example 1 
 
-```text
+```powershell
 $SSOObjects = Get-OVServer | Get-OVIloSso
 ```
 
@@ -50,7 +50,7 @@ Generate iLO SSO Objects for all managed server resources.
 
 ###  Example 2 
 
-```text
+```powershell
 $SSOObject = Get-OVServer -Name "Enc1, bay 1" | Get-OVIloSso
 ```
 
@@ -58,7 +58,7 @@ Generate iLO SSO Object for the specified managed server resource.
 
 ###  Example 3 
 
-```text
+```powershell
 $SSOObject = Get-OVServerProfile -Name "My Server Profile" | Get-OVIloSso
 ```
 
@@ -66,7 +66,7 @@ Generate iLO SSO Object for the specified managed server resource.
 
 ###  Example 4 
 
-```text
+```powershell
 $IloSession = Get-OVServer -Name "Enc1, bay 1" | Get-OVIloSso -IloRestSession
 ```
 

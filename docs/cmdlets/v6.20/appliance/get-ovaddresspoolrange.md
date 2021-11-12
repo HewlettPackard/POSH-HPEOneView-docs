@@ -6,7 +6,7 @@ description: Retrieve address pool range information.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVAddressPoolRange
     [-Type <String[]>]
     [-Name <string>]
@@ -14,7 +14,7 @@ Get-OVAddressPoolRange
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Get-OVAddressPoolRange
     [-InputObject <Object>]
     [-ApplianceConnection <Object>]
@@ -27,11 +27,11 @@ An ID pool is a collection of one or more ranges that you can be randomly genera
 
 This Cmdlet will display configured address pool ranges defined on an HPE OneView appliance. Currently, the appliance supports the following address pool ranges:
 
-    * VMAC
-    * VWWN
-    * VSN
-    * IPv6
-    * IPv4
+* VMAC
+* VWWN
+* VSN
+* IPv6
+* IPv4
 
 You can specify one, some or all of the pool types.
 
@@ -43,7 +43,7 @@ Minimum required privileges: Network administrator
 
 ###  Example 1 
 
-```text
+```powershell
 [PS] C:\> Get-OVAddressPoolRange
 
 Name Enabled Category  Total   Allocated Available Reserved Start                   End
@@ -60,7 +60,7 @@ Get all configured address pool ranges from all connected appliances.
 
 ###  Example 2 
 
-```text
+```powershell
 [PS] C:\> Get-OVAddressPoolRange -Type vmac
 
 Name Enabled Category  Total   Allocated Available Reserved Start             End
@@ -89,12 +89,12 @@ Get a specific address pool range type (VMAC) from all connected appliances.
 
 Specify the type of address pool.  Allowed values are:
 
-    * IPv4
-    * IPv6
-    * VMAC
-    * VWWN
-    * VSN
-    * All
+* IPv4
+* IPv6
+* VMAC
+* VWWN
+* VSN
+* All
 
 | Aliases | Pool |
 | :--- | :--- |

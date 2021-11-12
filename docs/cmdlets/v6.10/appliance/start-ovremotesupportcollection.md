@@ -6,7 +6,7 @@ description: Begin Remote Support collection from endpoints.
 
 ## Syntax
 
-```text
+```powershell
 Start-OVRemoteSupportCollection
     [-InputObject] <Object>
     [-Type] <Object>
@@ -23,7 +23,7 @@ Use this Cmdlet to initiate colleciton of remote support data.  This will help s
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVServer -Name Prod-Sql-01 | Start-OVRemoteSupportCollection -Type AHS
 ```
 
@@ -31,7 +31,7 @@ Start the collection of AHS logs immediately for the specified server.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVEnclosure | Start-OVRemoteSupportCollection -Type Basic
 ```
 
@@ -55,8 +55,8 @@ A supported Gen8 or newer compute, HPE BladeSystem enclosure, or HPE Synergy fra
 
 Used to specify the type of remote support collection to start.  Allowed values are:
 
-    * AHS - Active Health Service collection
-    * Basic - Basic server configuration collection
+* AHS - Active Health Service collection
+* Basic - Basic server configuration collection
 
 | Aliases | None |
 | :--- | :--- |

@@ -6,7 +6,7 @@ description: Remove an existing SMTP email alert filter.
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVSmtpAlertEmailFilter
     [-InputObject] <Object>
     [-ApplianceConnection <Object>]
@@ -17,9 +17,9 @@ Remove-OVSmtpAlertEmailFilter
 
 Email alerting feature notifies specified recipients when a certain alert occurs.  When this feature is configured and enabled, the appliance performs these steps in addition to posting the alert:
 
-    * The appliance compares the alert to configured search criteria.
-    * If the alert matches, it creates an email message containing the text of the alert.
-    * The appliance sends the email message to designated recipients in both plain text and HTML MIME types. Sending in both types allows the recipient?s mail application to determine the display.
+* The appliance compares the alert to configured search criteria.
+* If the alert matches, it creates an email message containing the text of the alert.
+* The appliance sends the email message to designated recipients in both plain text and HTML MIME types. Sending in both types allows the recipient?s mail application to determine the display.
 
 You can enable or disable this email notification feature, or you can enable or disable individual filter notifications, as required.
 
@@ -35,7 +35,7 @@ Minimum required privileges: Infrastructure administrator.
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVSmtpAlertEmailFilter -Name "Monitor CPU Error and Warning conditions" | Remove-OVSmtpAlertEmailFilter
 ```
 

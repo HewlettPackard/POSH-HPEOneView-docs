@@ -6,7 +6,7 @@ description: Create a new Logical Switch Group resource.
 
 ## Syntax
 
-```text
+```powershell
 New-OVLogicalSwitchGroup
     [-Name] <String>
     [-SwitchType <HPEOneView.Networking.SwitchType>]
@@ -24,7 +24,7 @@ The logical switch group is a template for creating logical switches. Logical sw
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVSwitchType -Name "Cisco Nexus 56xx" | New-OVLogicalSwitchGroup -Name "My Logical Switch Group Policy 1" -NumberOfSwitches 2
 ```
 

@@ -6,7 +6,7 @@ description: Get Unmanaged Devices.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVUnmanagedDevice
     [-Name] <String>
     [-List]
@@ -23,7 +23,7 @@ HPE OneView provides administrators with the capability to define unmanaged devi
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVUnmanagedDevice
 ```
 

@@ -6,7 +6,7 @@ description: Remove a Storage System
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVStorageSystem
     [-InputObject] <Object>
     [-force]
@@ -22,7 +22,7 @@ This Cmdlet will assist with removing a discovered and managed storage system fr
 
 ###  Example 1 
 
-```text
+```powershell
 Remove-OVStorageSystem HP3PAR_2
 ```
 

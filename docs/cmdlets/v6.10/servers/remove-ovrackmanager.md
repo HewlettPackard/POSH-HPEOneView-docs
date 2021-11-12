@@ -6,7 +6,7 @@ description: Remove rack manager from appliance.
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVRackManager
     [-InputObject] <HPEOneView.Servers.RackManager>
     [-ApplianceConnection <Array>]
@@ -22,7 +22,7 @@ A rack manager platform is a multinode system. The nodes are housed within a rac
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVRackManager -Name rackmanager2.domain.com -ErrorAction Stop | Remove-OVRackManager
 ```
 

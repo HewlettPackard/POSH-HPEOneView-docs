@@ -6,7 +6,7 @@ description: Create a new HPE Synergy Logical JBOD resource.
 
 ## Syntax
 
-```text
+```powershell
 New-OVLogicalJBOD
     [-Name] <String>
     [-InputObject] <Object>
@@ -20,7 +20,7 @@ New-OVLogicalJBOD
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVLogicalJBOD
     [-Name] <String>
     [-Description <String>]
@@ -31,7 +31,7 @@ New-OVLogicalJBOD
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVLogicalJBOD
     [-Name] <String>
     [-InputObject] <Object>
@@ -44,7 +44,7 @@ New-OVLogicalJBOD
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVLogicalJBOD
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -80,7 +80,7 @@ Minimum required privileges: Infrastructure administrator, server administrator,
 
 ###  Example 1 
 
-```text
+```powershell
 $CreatedLogicalJbod = New-OVLogicalJbod -Name "MyLogicalJBOD1" `
                                           -InputObject (Get-OVSasLogicalInterconnect -Name "LE1-SAS Synergy LIG-1" -ErrorAction Stop) `
                                           -DriveType "SAS" `
@@ -93,7 +93,7 @@ Create a new logical JBOD specifying a SAS logical interconnect, requesting a sp
 
 ###  Example 2 
 
-```text
+```powershell
 $CreatedLogicalJbod = New-OVLogicalJbod -Name "MyLogicalJBOD1" `
                                           -InputObject (Get-OVDriveEnclosure -Name "Frame1, bay 1" -ErrorAction Stop) `
                                           -DriveType "SAS" `
@@ -106,7 +106,7 @@ Create a new logical JBOD specifying a SAS drive enclosure, requesting a specifi
 
 ###  Example 3 
 
-```text
+```powershell
 $Drives = Get-OVDriveEnclosureInventory -Available `
                                           -SasLogicalInterconnect (Get-OVSasLogicalInterconnect -Name "LE1-SAS Synergy LIG-1" -ErrorAction Stop) | ? Capacity -eq 1200
 $CreatedLogicalJbod = New-OVLogicalJbod -Name "MyLogicalJBOD2" `
@@ -118,7 +118,7 @@ Create a new logical JBOD with specific drive bays from a SAS logical interconne
 
 ###  Example 4 
 
-```text
+```powershell
 $Drives = Get-OVDriveEnclosureInventory -Available `
                                           -DriveEnclosure (Get-OVDriveEnclosure -Name "Frame1, bay 1" -ErrorAction Stop) | ? Capacity -eq 1200
 $CreatedLogicalJbod = New-OVLogicalJbod -Name "MyLogicalJBOD2" `
@@ -170,11 +170,11 @@ Provide a description for the resource.
 
 When attempting to create a logical JBOD, specify the interface type for drives that will be used to build the logical drive. Supported values depend on the local storage capabilities of the selected server hardware type.  Allowed value:
 
-    * SAS
-    * SATA
-    * SASSSD
-    * SATASSD
-    * Auto
+* SAS
+* SATA
+* SASSSD
+* SATASSD
+* Auto
     
 {% hint style="info" %}
 Auto is not supported when attempting to create an HPE Synergy D3940 Logical or JBOD disk.  You must specify a disk technology type with `-DriveType` or `-AvailableDriveType` is used.

@@ -6,7 +6,7 @@ description: Search the resource index.
 
 ## Syntax
 
-```text
+```powershell
 Search-OVIndex
     [-Search] <String>
     [-Category <String>]
@@ -24,7 +24,7 @@ Search the resource index for any objects that match the specified search string
 
 ###  Example 1 
 
-```text
+```powershell
 Search-OVIndex -Search "Profile1"
 ```
 
@@ -32,7 +32,7 @@ Return all the index entries which include this string.
 
 ###  Example 2 
 
-```text
+```powershell
 Search-OVIndex -Categroy uplink-sets
 ```
 
@@ -56,24 +56,24 @@ The search query, text to be found in the index.
 
 The resource category to be matched, if specified.  Valid resource categories are:
 
-    * domains
-    * users
-    * racks
-    * enclosure-groups
-    * enclosures
-    * uplink-sets
-    * logical-interconnect-groups
-    * logical-interconnects
-    * interconnect-types
-    * interconnects
-    * networks
-    * firmware-drivers
-    * server-hardware-types
-    * server-hardware
-    * server-profiles
-    * alerts
-    * storage-volumes
-    * storage-systems
+* domains
+* users
+* racks
+* enclosure-groups
+* enclosures
+* uplink-sets
+* logical-interconnect-groups
+* logical-interconnects
+* interconnect-types
+* interconnects
+* networks
+* firmware-drivers
+* server-hardware-types
+* server-hardware
+* server-profiles
+* alerts
+* storage-volumes
+* storage-systems
 
 | Aliases | None |
 | :--- | :--- |

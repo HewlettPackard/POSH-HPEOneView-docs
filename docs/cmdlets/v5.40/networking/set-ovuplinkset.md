@@ -6,7 +6,7 @@ description: Update an uplink set resource
 
 ## Syntax
 
-```text
+```powershell
 Set-OVUplinkSet
     [-InputObject] <Object>
     [-UplinkSetName <String>]
@@ -26,7 +26,7 @@ Set-OVUplinkSet
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Set-OVUplinkSet
     [-InputObject] <Object>
     [-UplinkSetName <String>]
@@ -57,7 +57,7 @@ Minimum required privileges: Infrastructure administrator, Network administrator
 
 ###  Example 1 
 
-```text
+```powershell
 $NetworkToRemove = Get-OVNetwork -Name NetworkToRemove
 Get-OVLogicalInterconnectGroup -Name "My Production LIG" -ErrorAction Stop | Set-OVUplinkSet -UplinkSetName "Production Uplink Set 1-A" -RemoveNetwork $NetworkToRemove
 ```
@@ -66,7 +66,7 @@ Remove the specific network from the created logical interconnect group's uplink
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVLogicalInterconnectGroup -Name "My Production LIG" -ErrorAction Stop | Set-OVUplinkSet -UplinkSetName "Production Uplink Set" -AddPort "Enclosure1:Bay3:Q1.1", "Enclosure2:Bay6:Q1.1"
 ```
 
@@ -74,7 +74,7 @@ Add the specific ports from the created logical interconnect group's uplink set.
 
 ###  Example 3 
 
-```text
+```powershell
 Get-OVUplinkSet -Name "Uplink Set 1" -ErrorAction Stop | Set-OVUplinkSet -AddPort "Enclosure1:Bay3:Q1.1", "Enclosure2:Bay6:Q1.1" -LacpTimer Short
 ```
 
@@ -133,8 +133,8 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 
 Use to indicate if the group policy will be tracked to with the deployed and configured resource. Allowed values:
 
-    * None
-    * Exact
+* None
+* Exact
 
 Default: Exact
 
@@ -174,8 +174,8 @@ Either a Logical Interconnect Group from Get-OVLogicalInterconnectGroup or Uplin
 
 Set the LACP Timer value, which sets the lacpdu frequecy to the LACP peer.  Accepted values:
 
-    * Long 
-    * Short (Default)
+* Long 
+* Short (Default)
 
 | Aliases |  |
 | :--- | :--- |
@@ -278,7 +278,19 @@ Specify one or more network set objects to remove from an uplink set.
 
 ### -FecMode &lt;string&gt;
 
+Specify the forward error correction mode.  This paraemter is only supported with Virtual Connect SE 100Gb F32 Module for Synergy modules.  When configuring, the following values are supported with parent ports:
 
+	* Auto
+	* Cl74
+	* Cl108
+	* None
+
+The following values are supported with sub-ports:
+
+	* Auto
+	* Cl74
+	* Cl91
+	* None
 
 | Aliases | None |
 | :--- | :--- |
@@ -290,7 +302,14 @@ Specify one or more network set objects to remove from an uplink set.
 
 ### -PortSpeed &lt;string&gt;
 
+The allowed uplink port speed by the fabric module and traceiver type.  When specifying a port speed, this value will be set for all ports.  This parameter applies to Ethernet or FCoE uplink ports only.  Allowed values:
 
+	* Auto
+	* 100M
+	* 1G
+	* 10G
+	* 40G
+	* 100G
 
 | Aliases | None |
 | :--- | :--- |

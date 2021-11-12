@@ -6,7 +6,7 @@ description: Remove a member resource from a rack.
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVRackMember
     [-InputObject] <Object>
     [-ApplianceConnection <Object>]
@@ -21,7 +21,7 @@ A rack is a physical structure that contains IT equipment such as enclosures, se
 
 ###  Example 1 
 
-```text
+```powershell
 $RackMember = Get-OVRack -Name Rack-221 -ErrorAction Stop | Get-OVRackMember -Name DL380-1 -ErrorAction Stop
 Remove-OVRackMember -InputObject $Rack1Member
 ```

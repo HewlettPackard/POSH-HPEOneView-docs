@@ -6,7 +6,7 @@ description: Delete alerts.
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVAlert
     [-InputObject] <Object>
     [-Force]
@@ -24,7 +24,7 @@ In order for an administrator to remove an Alert, the administrator must be assi
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVAlert -State Cleared | Remove-OVAlert
 ```
 

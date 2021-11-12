@@ -6,7 +6,7 @@ description: Generate a new HPE Synergy Composer appliance encryption key.
 
 ## Syntax
 
-```text
+```powershell
 New-OVApplianceDataAtRestEncryptionKey
     [-Location <String>]
     [-ApplianceConnection <Object>]
@@ -33,7 +33,7 @@ This Cmdlet will generate a new encryption key, if the existing encryption key i
 
 ###  Example 1 
 
-```text
+```powershell
 New-OVApplianceDataAtRestEncryptionKey
 ```
 
@@ -41,7 +41,7 @@ Generate a new appliance encryption key, using the current working directory.
 
 ###  Example 2 
 
-```text
+```powershell
 New-OVApplianceDataAtRestEncryptionKey -Location \Fileserver.corp.domain\Share\ApplianceKeys
 ```
 

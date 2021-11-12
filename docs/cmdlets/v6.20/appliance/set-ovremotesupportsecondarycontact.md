@@ -6,7 +6,7 @@ description: Set HPE OneView Remote Support default secondary contact.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVRemoteSupportSecondaryContact
     [-InputObject] <Object>
     [-ApplianceConnection <Object>]
@@ -27,7 +27,7 @@ Minimum required privileges: Infrastructure administrator
 
 ###  Example 1 
 
-```text
+```powershell
 $PrimaryContact = Get-OVRemoteSupportContact -Name "Susan Jones"
 Set-OVRemoteSupportSecondaryContact -InputObject $SecondaryContact
 ```

@@ -6,7 +6,7 @@ description: Get the configured remote syslog settings.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVRemoteSyslog
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -24,7 +24,7 @@ Minimum required privileges: Read-only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVRemoteSyslog
 Appliance             Destination Port Enabled
 
@@ -37,7 +37,7 @@ Get the current configuration from all connected appliances.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVRemoteSyslog -ApplianceConnection appliance1.domain.com
 
 Appliance             Destination Port Enabled

@@ -6,7 +6,7 @@ description: Modify remote Syslog audit log forwarding.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVApplianceAuditLogForwarding
     [-Enable]
     [-ComputerName] <String[]>
@@ -16,7 +16,7 @@ Set-OVApplianceAuditLogForwarding
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Set-OVApplianceAuditLogForwarding
     [-Disable]
     [-ApplianceConnection <Object>]
@@ -35,7 +35,7 @@ Minimum required privileges: Infrastructure administrator
 
 ###  Example 1 
 
-```text
+```powershell
 Set-OVApplianceAuditLogForwarding -Enable -ComputerName MyTargetHost1.domain.com
 ```
 
@@ -43,7 +43,7 @@ Enable appliance remote Syslog audit log forwarding to the specified host.
 
 ###  Example 2 
 
-```text
+```powershell
 Set-OVApplianceAuditLogForwarding -Enable -ComputerName MyTargetHost1.domain.com, MyTargetHost2.domain.com -Port 5514
 ```
 
@@ -51,7 +51,7 @@ Enable appliance remote Syslog audit log forwarding to the specified hosts and c
 
 ###  Example 3 
 
-```text
+```powershell
 Set-OVApplianceAuditLogForwarding -RemoveComputerName MyTargetHost2.domain.com
 ```
 
@@ -59,7 +59,7 @@ Remove the specified host from the existing remote Syslog audit log forwarding c
 
 ###  Example 4 
 
-```text
+```powershell
 Set-OVApplianceAuditLogForwarding -Disable
 ```
 

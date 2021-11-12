@@ -2,13 +2,13 @@
 
 ## Can I get general help?
 
-Are you running into a road block? Have an issue with unexpected behavior? Feel free to open a [new issue](https://github.com/HewlettPackard/POSH-HPOneView/issues/new/choose) on the tracker.
+Are you running into a road block? Have an issue with unexpected behavior? Feel free to open a [new issue](https://github.com/HewlettPackard/POSH-HPEOneView/issues/new/choose) on the tracker.
 
-All Cmdlets support the `-Verbose` common parameter, and will display output relative to the operation of the Cmdlet.  The [`Get-HPOVCommandTrace`]() will help capture one or more Cmdlet call output, including verbose.  If you intend to open a new issue on the project tracker, please use [`Get-HPOVCommandTrace`]() so you can attach it.  Do know that the verbose output may contain personally identifiable information \(PII\) that you may wish to change or omit.
+All Cmdlets support the `-Verbose` common parameter, and will display output relative to the operation of the Cmdlet.  The [`Get-OVCommandTrace`]() will help capture one or more Cmdlet call output, including verbose.  If you intend to open a new issue on the project tracker, please use [`Get-OVCommandTrace`]() so you can attach it.  Do know that the verbose output may contain personally identifiable information \(PII\) that you may wish to change or omit.
 
 For instance, the following output snippet contains information that might be sensitive to your corporate security policies:
 
-```text
+```powershell
 **********************
 Windows PowerShell transcript start
 Start time: 20191028114038
@@ -31,22 +31,22 @@ VERBOSE:
 hpov5.doctors-lab.local             LibraryVersion Path
 -----------------------             -------------- ----
 ApplianceVersion: 5.00.00.398184.00 5.0.2152.1665  C:\Users\Username\Documents\WindowsPowerShell\Modules\HPOneView.500
-VERBOSE: [GET-HPOVNETWORK] Bound PS Parameters:
-VERBOSE: [GET-HPOVNETWORK] Called from: Get-HPOVCommandTrace
-VERBOSE: [GET-HPOVNETWORK] -Type Parameter wasn't provided. Specifying all Network Resource Types.
-VERBOSE: [GET-HPOVNETWORK] Verify auth
-VERBOSE: [TEST-HPOVAUTH] Caller: Get-HPOVNetwork
-VERBOSE: [TEST-HPOVAUTH] Verify Auth for appliance.labdomain.local
-VERBOSE: [TEST-HPOVAUTH] $Appliance is [HPOneView.Appliance.Connection]
-VERBOSE: [TEST-HPOVAUTH] Received HPOneView.Appliance.Connection Object:
+VERBOSE: [GET-OVNETWORK] Bound PS Parameters:
+VERBOSE: [GET-OVNETWORK] Called from: Get-OVCommandTrace
+VERBOSE: [GET-OVNETWORK] -Type Parameter wasn't provided. Specifying all Network Resource Types.
+VERBOSE: [GET-OVNETWORK] Verify auth
+VERBOSE: [TEST-OVAUTH] Caller: Get-OVNetwork
+VERBOSE: [TEST-OVAUTH] Verify Auth for appliance.labdomain.local
+VERBOSE: [TEST-OVAUTH] $Appliance is [HPOneView.Appliance.Connection]
+VERBOSE: [TEST-OVAUTH] Received HPOneView.Appliance.Connection Object:
 ConnectionID Name                      UserName      AuthLoginDomain Default
 ------------ ----                      --------      --------------- -------
 1            appliance.labdomain.local Administrator LOCAL           True
-VERBOSE: [GET-HPOVNETWORK] Processing 'appliance.labdomain.local' Appliance (of 1)
-VERBOSE: [GET-HPOVNETWORK] Processing AllResourcesInScope.
-VERBOSE: [GET-HPOVNETWORK] Scope(s) AllResources is set to 'AllResources'.  Will not add scope to URI query parameter.
+VERBOSE: [GET-OVNETWORK] Processing 'appliance.labdomain.local' Appliance (of 1)
+VERBOSE: [GET-OVNETWORK] Processing AllResourcesInScope.
+VERBOSE: [GET-OVNETWORK] Scope(s) AllResources is set to 'AllResources'.  Will not add scope to URI query parameter.
 {...}
-VERBOSE: [GET-HPOVNETWORK] Done. 30 network resource(s) found.
+VERBOSE: [GET-OVNETWORK] Done. 30 network resource(s) found.
 VERBOSE: --------------------------------------------------------------------------------
 **********************
 Windows PowerShell transcript end

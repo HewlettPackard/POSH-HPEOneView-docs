@@ -6,14 +6,14 @@ description: Change the default time source policy for servers.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVServerNTPConfiguration
     [-SyncWithAppliance]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Set-OVServerNTPConfiguration
     [-SyncWithNTP]
     [-ApplianceConnection <Object>]
@@ -27,14 +27,14 @@ When HPE OneView manages or monitors server or compute resources, it will automa
 {% hint style="info" %}
 Minimum required privileges:
 
-    * Infrastructure Administrator
+* Infrastructure Administrator
 {% endhint %}
 
 ## Examples
 
 ###  Example 1 
 
-```text
+```powershell
 Set-OVServerNTPConfiguration -SyncWithNTP
 
 ```

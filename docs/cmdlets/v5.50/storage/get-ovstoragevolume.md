@@ -6,7 +6,7 @@ description: Retrieve Storage Volume resource(s).
 
 ## Syntax
 
-```text
+```powershell
 Get-OVStorageVolume
     [-Name <String>]
     [-StorageVolumeTemplate <Object>]
@@ -17,7 +17,7 @@ Get-OVStorageVolume
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Get-OVStorageVolume
     [-InputObject <Object>]
     [-ApplianceConnection <Array>]
@@ -32,7 +32,7 @@ This Cmdlet will display all or a specific storage volume(s) created on the HPE 
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVStorageVolume
 ```
 
@@ -104,10 +104,10 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-    * AllResources
-    * AllResourcesInScope
-    * `[HPEOneView.Appliance.ScopeCollection]`
-    * `[HPEOneView.Appliance.ConnectionPermission]`
+* AllResources
+* AllResourcesInScope
+* `[HPEOneView.Appliance.ScopeCollection]`
+* `[HPEOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |

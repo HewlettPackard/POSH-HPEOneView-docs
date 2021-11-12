@@ -6,7 +6,7 @@ description: Change the initial password of the Administrator user account.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVInitialPassword
     [-OldPassword] <String>
     [-NewPassword] <String>
@@ -22,7 +22,7 @@ Changes the initial default password of the Administrator local appliance accoun
 
 ###  Example 1 
 
-```text
+```powershell
 Set-OVInitialPassword -Appliance MyAppliance.domain.com
 ```
 

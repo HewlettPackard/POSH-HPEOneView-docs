@@ -6,7 +6,7 @@ description: Copy or clone a server profile.
 
 ## Syntax
 
-```text
+```powershell
 Copy-OVServerProfile
     [-InputObject] <Object>
     [-DestinationName <String>]
@@ -29,7 +29,7 @@ Minimum required privileges: Infrastructure administrator or Server administrato
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVServerProfile -Name "Profile 1" | Copy-OVServerProfile
 ```
 
@@ -37,7 +37,7 @@ Copy "Profile 1" to a new Server Profile that is unassigned and named "Copy of P
 
 ###  Example 2 
 
-```text
+```powershell
 Copy-OVServerProfile -InputObject (Get-OVServerProfile -Name "Profile 1") -DestinationName "Profile 2"
 ```
 
@@ -45,7 +45,7 @@ Copy "Profile 1" to a new Server Profile that is unassigned and named "Profile 2
 
 ###  Example 3 
 
-```text
+```powershell
 $ServerProfile = Get-OVServerProfile -Name "Profile 1"
 $Server = Get-OVServer -Name "Encl1, Bay 9"
 Copy-OVServerProfile -InputObject $ServerProfile -DestinationName "Profile 2" -assign $Server
@@ -55,7 +55,7 @@ Copy "Profile 1" to a new Server Profile that is assigned to "Encl1, Bay 9" name
 
 ###  Example 4 
 
-```text
+```powershell
 $ServerProfile = Get-OVServerProfile -Name "Profile Template"
 11.16 | % { Copy-OVServerProfile -InputObject $ServerProfile -DestinationName "Profile $_" -Assign "Encl1, bay $_" }
 ```

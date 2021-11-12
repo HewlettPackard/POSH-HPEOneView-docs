@@ -6,7 +6,7 @@ description: Display Server Profile alert messages.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVServerProfileMessage
     [-InputObject <Object>]
     [-ApplianceConnection <Object>]
@@ -21,7 +21,7 @@ Use this Cmdlet to display alert or other activity messages that are not tracked
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVServerProfile MyProfile | Get-OVServerProfileMessage
 ```
 

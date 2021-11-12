@@ -6,7 +6,7 @@ description: Add managed Storage Pools.
 
 ## Syntax
 
-```text
+```powershell
 Add-OVStoragePool
     [-StorageSystem] <Object>
     [-Pool] <String[]>
@@ -45,7 +45,7 @@ Minimum required privileges: Infrastructure administrator or Storage administrat
 
 ###  Example 1 
 
-```text
+```powershell
 Add-OVStoragePool -StorageSystem HP3PAR_1 -Pool HP_CPG1
 ```
 
@@ -53,7 +53,7 @@ Add the "HP_CPG1" Storage Pool that is managed in the HP3PAR_1 Storage System.  
 
 ###  Example 2 
 
-```text
+```powershell
 $myPools = "cpg1","cpg2"
 Add-OVStoragePool -StorageSystem (Get-OVStorageSystem -Name HP3PAR_1) -Pool $myPools
 ```

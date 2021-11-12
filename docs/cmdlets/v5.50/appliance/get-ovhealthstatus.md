@@ -6,7 +6,7 @@ description: Display appliance health.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVHealthStatus
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -24,7 +24,7 @@ Minimum required privileges: Read-only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVHealthStatus
 ```
 

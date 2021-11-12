@@ -6,7 +6,7 @@ description: Request a cluster node member to enter maintenance mode.
 
 ## Syntax
 
-```text
+```powershell
 Enter-OVClusterNodeMaintenanceMode
     [-InputObject] <Object>
     [-Async]
@@ -28,7 +28,7 @@ Minimum required privileges: Infrastructure administrator, Server administrator,
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVClusterNode -Name Cluster1-Node1 | Enter-OVClusterNodeMaintenanceMode
 ```
 

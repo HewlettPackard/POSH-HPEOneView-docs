@@ -6,7 +6,7 @@ description: Restart an HPE OneView appliance.
 
 ## Syntax
 
-```text
+```powershell
 Restart-OVAppliance
     [-ApplianceConnection] <Array>
     [<CommonParameters>]
@@ -22,7 +22,7 @@ Only the Infrastructure (Full) Administrator may restart the appliance.
 
 ###  Example 1 
 
-```text
+```powershell
 Connect-OVMgmt appliance.contoso.com Administrator P@ssw0rd
 Restart-OVAppliance
 ```
@@ -31,7 +31,7 @@ Restart the appliance
 
 ###  Example 2 
 
-```text
+```powershell
 Restart-OVAppliance -confirm:$false
 ```
 

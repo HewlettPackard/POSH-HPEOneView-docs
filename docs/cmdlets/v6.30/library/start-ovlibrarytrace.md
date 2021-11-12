@@ -6,7 +6,7 @@ description: Start HPOV Library Verbose Trace.
 
 ## Syntax
 
-```text
+```powershell
 Start-OVLibraryTrace
     [-Location <String>]
     [<CommonParameters>]
@@ -20,7 +20,7 @@ This Cmdlet is deprecated.  Please use Get-OVCommandTrace.
 
 ###  Example 1 
 
-```text
+```powershell
 Stop-OVLibraryTrace
 ```
 

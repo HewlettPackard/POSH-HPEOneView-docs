@@ -6,7 +6,7 @@ description: Get appliance configured login message.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVLoginMessage
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -20,7 +20,7 @@ Retrieve the current Login Message for the connected appliance(s).
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVLoginMessage
 Appliance   : hpov1.domain.com
 Message     : ************************************

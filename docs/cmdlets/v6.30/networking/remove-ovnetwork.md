@@ -6,7 +6,7 @@ description: Delete network from appliance configuration.
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVNetwork
     [-InputObject] <Object>
     [-ApplianceConnection] <Object>
@@ -22,7 +22,7 @@ Delete a network and its corresponding default connection type.
 
 ###  Example 1 
 
-```text
+```powershell
 $task = Remove-OVNetwork -network "yellow"
 Wait-OVTaskComplete $task
 ```
@@ -31,7 +31,7 @@ Remove the network specifed by name.  Wait for remove to complete.
 
 ###  Example 2 
 
-```text
+```powershell
 $Net = Get-OVNetwork -name "yellow"
 Remove-OVNetwork -network $net -confirm:$false
 ```
@@ -40,7 +40,7 @@ Remove the network specifed by $net, and do not prompt for confirmation.
 
 ###  Example 3 
 
-```text
+```powershell
 Get-OVNetwork | Remove-OVNetwork
 ```
 

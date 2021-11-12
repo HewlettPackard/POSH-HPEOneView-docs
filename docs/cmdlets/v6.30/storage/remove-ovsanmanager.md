@@ -6,7 +6,7 @@ description: Remove a SAN Manager.
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVSanManager
     [-InputObject] <Object>
     [-ApplianceConnection] <Array>
@@ -21,7 +21,7 @@ This Cmdlet is used to remove the specified SAN Manager from the appliance.  Bef
 
 ###  Example 1 
 
-```text
+```powershell
 Remove-OVSanManager bna.contoso.com
 ```
 
@@ -29,7 +29,7 @@ Remove the `[bna.contoso.com]` SAN Manager from the appliance.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVSanManager | Remove-OVSanManager
 ```
 

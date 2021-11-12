@@ -6,7 +6,7 @@ description: Update an IPv4 Subnet Pool configuration.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVAddressPoolSubnet
     [-InputObject] <Object>
     [-SubnetMask <IPAddress>]
@@ -25,7 +25,7 @@ This Cmdlet will assist with updating an existing IPv4 address pool.  When updat
 
 ###  Example 1 
 
-```text
+```powershell
 PS C:> Get-OVAddressPoolSubnet 192.168.20.0 | Set-OVAddressPoolSubnet -Gateway 192.168.20.1
 ```
 

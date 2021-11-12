@@ -6,7 +6,7 @@ description: Modify an existing Datacenter Remote Support setting.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVDataCenterRemoteSupport
     [-InputObject] <Object>
     [-PrimaryContact <Object>]
@@ -36,7 +36,7 @@ This Cmdlet will help modify an existing DataCenters Remote Support location and
 
 ###  Example 1 
 
-```text
+```powershell
 $NewPrimaryConact = Get-OVRemoteSupportContact -Name "Vivian Waters" -ErrorAction Stop
 Get-OVDataCenter -Name "LA DC 12" -ErrorAction Stop | Set-OVDataCenterRemoteSupport -PrimaryContact $NewPrimaryConact
 ```

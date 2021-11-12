@@ -6,7 +6,7 @@ description: Modify a servers current One Time Boot setting.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVServerOneTimeBoot
     [-InputObject] <Object>
     [-Setting] <String>
@@ -19,12 +19,12 @@ Set-OVServerOneTimeBoot
 
 HPE OneView allows you to set a one-time boot option for the server hardware. You can set the one-time boot option to any of the following:
 
-    * Keep current settings—Keeps the previously chosen settings.
-    * No one-time boot—Normal boot is used when this option is selected.
-    * PXE—Boots from the PXE server on the network.
-    * Hard disk—Boots from the first local disk.
-    * CD—Boots from a local or virtual optical drive.
-    * USB—Boots from a physical or virtual USB drive.
+* Keep current settings—Keeps the previously chosen settings.
+* No one-time boot—Normal boot is used when this option is selected.
+* PXE—Boots from the PXE server on the network.
+* Hard disk—Boots from the first local disk.
+* CD—Boots from a local or virtual optical drive.
+* USB—Boots from a physical or virtual USB drive.
 
 Other one-time boot options are available through the HPE iLO interface; however, HPE OneView offers only a common subset of one-time boot options. The one-time boot option requires the server hardware to be powered off and powered back on. If you set the one-time boot option while the server power is on, the one-time boot value is remembered until the server is powered off and then powered back on. HPE OneView does not support setting of the one-time boot option while the server is in power-on self-test (POST).
 
@@ -38,7 +38,7 @@ Minimum required privileges: Server administrator
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVServer -Name MyServer1 | Set-OVServerOneTimeBoot -Setting PXE
 ```
 
@@ -46,7 +46,7 @@ Set the specific server to PXE boot.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVServer -Name MyServer* | ? powerState -eq On | Stop-OVServer -Confirm:$false
 Get-OVServer -Name MyServer* | Set-OVServerOneTimeBoot -Setting PXE -PowerOn
 ```
@@ -55,7 +55,7 @@ Power off the servers that need to be powered off. The set those servers to PXE 
 
 ###  Example 3 
 
-```text
+```powershell
 Get-OVServer -Name MyOtherServer | Set-OVServerOneTimeBoot -Setting Normal
 ```
 
@@ -115,11 +115,11 @@ If the server is already powered off, instruct OneView to power on the server on
 
 The intended one time boot setting.  Allowed values:
 
-    * Normal - Normal boot, or to disable one time boot on a server that has a different value set.
-    * PXE - Network boot from the default PXE adapter device.
-    * HDD - instruct the server to find the first bootable disk drive.
-    * CD - instruct the server to boot from an available CD/DVD drive, including iLO Virtual Media
-    * USB - boot from a USB removal storage device.
+* Normal - Normal boot, or to disable one time boot on a server that has a different value set.
+* PXE - Network boot from the default PXE adapter device.
+* HDD - instruct the server to find the first bootable disk drive.
+* CD - instruct the server to boot from an available CD/DVD drive, including iLO Virtual Media
+* USB - boot from a USB removal storage device.
 
 | Aliases | None |
 | :--- | :--- |

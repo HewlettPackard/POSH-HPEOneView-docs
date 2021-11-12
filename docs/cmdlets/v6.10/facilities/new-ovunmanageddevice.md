@@ -6,7 +6,7 @@ description: Create an Unmanaged Device.
 
 ## Syntax
 
-```text
+```powershell
 New-OVUnmanagedDevice
     [-Name] <String>
     [-Model] <String>
@@ -27,7 +27,7 @@ HPE OneView provides administrators with the capability to define unmanaged devi
 
 ###  Example 1 
 
-```text
+```powershell
 New-OVUnmanagedDevice -name "Unmanaged-SRVR1" -model "ProLiant DL380 G6" -height 2 -maxpower 750 -IPv4Address 10.154.1.10
 ```
 
@@ -35,7 +35,7 @@ Create a new unmanaged server device.
 
 ###  Example 2 
 
-```text
+```powershell
 New-OVUnmanagedDevice -name "HPN5900CP1" -model "HPN 5900CP" -height 1 -maxpower 260 -IPv4Address 172.18.254.99 "MyAppliance.domain.com"
 ```
 

@@ -6,7 +6,7 @@ description: Power reset or EFuse HPE Synergy Frame component.
 
 ## Syntax
 
-```text
+```powershell
 Reset-OVEnclosureDevice
     [-Enclosure] <Object>
     [-Component] <String>
@@ -17,7 +17,7 @@ Reset-OVEnclosureDevice
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Reset-OVEnclosureDevice
     [-Enclosure] <Object>
     [-Component] <String>
@@ -32,10 +32,10 @@ Reset-OVEnclosureDevice
 
 This Cmdlet will assist server administrators in performing various power operations with HPE Synergy enclosure resources.  The following resources are supported with their supported operation:
 
-    * HPE Synergy Appliance Bay - EFuse
-    * HPE Synergy Frame Link Module - EFuse or Reset
-    * Device Bay - EFuse or Reset
-    * HPE Synergy Fabric Module Device - EFuse
+* HPE Synergy Appliance Bay - EFuse
+* HPE Synergy Frame Link Module - EFuse or Reset
+* Device Bay - EFuse or Reset
+* HPE Synergy Fabric Module Device - EFuse
 
 E-Fuse stands for Electronic Fuse. Setting the power state of a device to "E-Fuse" (or "Reset" for an Enclosure Manager) will reset the bay, but it will soon return to a normal running state.  An E-Fuse will turn off power to the bay and then turn it back on. If the bay was powered off before the E-Fuse operation it will be powered on afterwards. A "Reset" will do a hard reset of the bay without affecting the power. E-Fuse on a device bay will power-cycle the whole blade including the iLO. 
 
@@ -49,7 +49,7 @@ Minimum required privileges: Infrastructure administrator, Server administrator
 
 ###  Example 1 
 
-```text
+```powershell
 $Enclosure = Get-OVEnclosure -Name Enclosure1 -ErrorAction Stop
 Reset-OVEnclosureDevice -Enclosure $Enclosure -Component FLM -DeviceID 1 -EFuse
 ```
@@ -58,7 +58,7 @@ Reset the FLM in slot 1 by performing an EFuse.
 
 ###  Example 2 
 
-```text
+```powershell
 $Enclosure = Get-OVEnclosure -Name Enclosure1 -ErrorAction Stop
 Reset-OVEnclosureDevice -Enclosure $Enclosure -Component ICM -DeviceID 3 -EFuse
 ```
@@ -67,7 +67,7 @@ Reset the ICM in interconnect bay 3 by performing an EFuse.
 
 ###  Example 3 
 
-```text
+```powershell
 $Task = Get-OVEnclosure -Name Enclosure1 -ErrorAction Stop | Reset-OVEnclosureDevice -Component Device -DeviceID 4 -Reset
 ```
 
@@ -75,7 +75,7 @@ Reset the device in bay 4 by requesting it to reset itself.
 
 ###  Example 4 
 
-```text
+```powershell
 $Task = Get-OVEnclosure -Name Enclosure1 -ErrorAction Stop | Reset-OVEnclosureDevice -Component Appliance -DeviceID 1 -EFuse
 ```
 

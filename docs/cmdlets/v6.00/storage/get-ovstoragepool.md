@@ -6,7 +6,7 @@ description: Retrieve Storage Pool resource(s).
 
 ## Syntax
 
-```text
+```powershell
 Get-OVStoragePool
     [-Name <String>]
     [-StorageSystem <Object>]
@@ -26,7 +26,7 @@ Obtain a collection of storage pools (i.e. CPG"s) from discovered and managed st
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVStoragePool
 Status Name     Storage System    Storage Domain Drive Type RAID  Total          Allocated   Free           
 ------ ----     --------------    -------------- ---------- ----  --------       ----------- -------        
@@ -38,7 +38,7 @@ Get all available storage pools.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVStoragePool | format-list
 Name             : FC_NO_DN
 Status           : OK
@@ -69,7 +69,7 @@ Get all available storage pools, display using Format-List to see extended infor
 
 ###  Example 3 
 
-```text
+```powershell
 $myPool = Get-OVStoragePool -name "HP_CPG1"
 ```
 
@@ -77,7 +77,7 @@ Return the storage pool resource(s) with the name "HP_CPG1"
 
 ###  Example 4 
 
-```text
+```powershell
 $myPools = Get-OVStoragePool
 ```
 
@@ -85,7 +85,7 @@ Return all the storage pool resources
 
 ###  Example 5 
 
-```text
+```powershell
 Get-OVStoragePool -StorageSystem "HP_3PAR_1"
 ```
 
@@ -93,7 +93,7 @@ Returns all managed storage pool resources on the storage system "HP_3PAR_1"
 
 ###  Example 6 
 
-```text
+```powershell
 Get-OVStoragePool -poolName "HP_CPG1" -systemName "HP_3PAR_1"
 ```
 
@@ -177,10 +177,10 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-    * AllResources
-    * AllResourcesInScope
-    * `[HPEOneView.Appliance.ScopeCollection]`
-    * `[HPEOneView.Appliance.ConnectionPermission]`
+* AllResources
+* AllResourcesInScope
+* `[HPEOneView.Appliance.ScopeCollection]`
+* `[HPEOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |

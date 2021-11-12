@@ -6,7 +6,7 @@ description: Create storage volume template.
 
 ## Syntax
 
-```text
+```powershell
 New-OVStorageVolumeTemplate
     [-Name] <String>
     [-StoragePool <Object>]
@@ -31,7 +31,7 @@ New-OVStorageVolumeTemplate
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVStorageVolumeTemplate
     [-Name] <String>
     [-StoragePool <Object>]
@@ -64,7 +64,7 @@ New-OVStorageVolumeTemplate
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVStorageVolumeTemplate
     [-Name] <String>
     [-StoragePool <Object>]
@@ -95,7 +95,7 @@ This Cmdlet supports creating Storage Volume Templates, which are then used to p
 
 ###  Example 1 
 
-```text
+```powershell
 New-OVStorageVolumeTemplate -templateName yellow-svt -storagePool yellow -capacity 40
 ```
 
@@ -103,7 +103,7 @@ Create a new Storage Volume Template, setting the max size to 40GB, Thin Provisi
 
 ###  Example 2 
 
-```text
+```powershell
 $storageVolTemplate = New-OVStorageVolumeTemplate -templateName vmware-shared-svt -storagePool R5-CPG12 -capacity 250 -shared
 ```
 
@@ -111,7 +111,7 @@ Create a new Storage Volume Template, setting the max size to 250GB, Thin Provis
 
 ###  Example 3 
 
-```text
+```powershell
 $storagePool = Get-OVStoragePool R5-CPG12
 $storageVolTemplate = New-OVStorageVolumeTemplate -templateName vmware-shared-svt -storagePool $storagePool -capacity 250 -shared
 ```
@@ -120,7 +120,7 @@ Use the Get-OVStoragePool Cmdlet to get the "R5-CPG12" pool, and create a new St
 
 ###  Example 4 
 
-```text
+```powershell
 $svt = Get-OVStoragePool R5-CPG12 | New-OVStorageVolumeTemplate -templateName vmware-shared-svt -SnapshotStoragePool "MySnapShotPool" -capacity 250 -shared
 ```
 
@@ -234,12 +234,12 @@ Include this switch to mark the Storage Volume Template as a Shareable resource 
 
 Specify the StoreVirtual protection level (aka Network RAID) for the volume.  Allowed values are:
 
-    * NetworkRaid0None
-    * NetworkRaid5SingleParity
-    * NetworkRaid10Mirror2Way
-    * NetworkRaid10Mirror3Way
-    * NetworkRaid10Mirror4Way
-    * NetworkRaid6DualParity
+* NetworkRaid0None
+* NetworkRaid5SingleParity
+* NetworkRaid10Mirror2Way
+* NetworkRaid10Mirror3Way
+* NetworkRaid10Mirror4Way
+* NetworkRaid6DualParity
 
 | Aliases | None |
 | :--- | :--- |
@@ -289,9 +289,9 @@ Specify to lock the EnableAdaptiveOptimization value in the template.
 
 Specify the type of volume to provision.  Allowed values are:
 
-    * Thin
-    * Full
-    * TPDD (Thin Provision Dedup) - Only available for HPE StoreServ storage systems with SSD storage pools (aka CPG"s).
+* Thin
+* Full
+* TPDD (Thin Provision Dedup) - Only available for HPE StoreServ storage systems with SSD storage pools (aka CPG"s).
 
 | Aliases | ProvisionType |
 | :--- | :--- |

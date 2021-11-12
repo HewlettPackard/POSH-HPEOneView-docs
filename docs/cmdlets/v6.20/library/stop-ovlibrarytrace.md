@@ -14,7 +14,7 @@ This Cmdlet is deprecated.  Please use Get-OVCommandTrace.
 
 ###  Example 1 
 
-```text
+```powershell
 Stop-OVLibraryTrace
 ```
 

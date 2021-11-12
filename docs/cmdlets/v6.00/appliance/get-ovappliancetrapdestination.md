@@ -6,7 +6,7 @@ description: Get configured appliance SNMP trap destinations.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVApplianceTrapDestination
     [-Destination <String>]
     [-Type <String[]>]
@@ -28,7 +28,7 @@ Minimum required privileges: Read only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVApplianceTrapDestination
 ```
 
@@ -36,7 +36,7 @@ Get trap destinations from the appliance.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVApplianceTrapDestination -Destination 172.17.8.8
 ```
 
@@ -72,7 +72,7 @@ Filter trap destinations by the destination value.  Supports wildcard.
 
 Filter based on SNMP version.  Supported values:
 
-    * SNMPv1
+* SNMPv1
     *SNMPv3
 
 | Aliases | None |

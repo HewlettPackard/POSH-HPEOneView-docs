@@ -6,7 +6,7 @@ description: Update Server Profile from Template
 
 ## Syntax
 
-```text
+```powershell
 Update-OVServerProfile
     [-InputObject] <Object>
     [-Stage]
@@ -15,7 +15,7 @@ Update-OVServerProfile
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Update-OVServerProfile
     [-InputObject] <Object>
     [-Refresh]
@@ -24,7 +24,7 @@ Update-OVServerProfile
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Update-OVServerProfile
     [-InputObject] <Object>
     [-Reapply]
@@ -55,7 +55,7 @@ Minimum required permissions: (Update from Template) Infrastructure administrato
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVServerProfile -Name "My Profile 1" | Update-OVServerProfile
 ```
 
@@ -63,7 +63,7 @@ Get all storage system resource objects managed by the appliance.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVServerProfile | Update-OVServerProfile
 ```
 

@@ -6,14 +6,14 @@ description: Retrieve SAS Interconnect Type resource(s).
 
 ## Syntax
 
-```text
+```powershell
 Get-OVSasInterconnectType
     [-Name <String>]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Get-OVSasInterconnectType
     [-PartNumber <String>]
     [-ApplianceConnection <Object>]
@@ -34,7 +34,7 @@ Minimum required privileges: Read-only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVSasInterconnectType
 ```
 
@@ -42,7 +42,7 @@ Returns all SAS Interconnect Types available from all connected appliances to st
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVSasInterconnectType -Name "Synergy 12Gb SAS Connection Module"
 ```
 

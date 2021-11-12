@@ -6,7 +6,7 @@ description: Save the contents of a Server Profile Template to the appliance.
 
 ## Syntax
 
-```text
+```powershell
 Save-OVServerProfileTemplate
     [-InputObject] <Object>
     [-Async]
@@ -22,7 +22,7 @@ This Cmdlet allows administrators to save the modified Server Profile Template o
 
 ###  Example 1 
 
-```text
+```powershell
 $MyProfileTemplate = Get-OVServerProfileTemplate -Name "My Profile Template 1" -ErrorAction Stop
 $MyProfileTemplate.name = "My Profile Template NewName 1"
 Save-OVServerProfileTemplate -InputObject $MyProfileTemplate

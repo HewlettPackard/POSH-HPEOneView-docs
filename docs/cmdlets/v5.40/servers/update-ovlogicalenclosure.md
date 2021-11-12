@@ -6,7 +6,7 @@ description: Update or Refresh a Logical Enclosure.
 
 ## Syntax
 
-```text
+```powershell
 Update-OVLogicalEnclosure
     [-Reapply]
     [-InputObject] <Object>
@@ -15,7 +15,7 @@ Update-OVLogicalEnclosure
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Update-OVLogicalEnclosure
     [-Update]
     [-InputObject] <Object>
@@ -34,7 +34,7 @@ Use the -Refresh switch for scenarios where adding an enclosure results in a war
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVLogicalEnclosure | Update-OVLogicalEnclosure -Refresh
 ```
 
@@ -42,7 +42,7 @@ Refresh all available Logical Enclosures, for the default connected session.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVLogicalEnclosure -ApplianceConnect $ConnectedSessions | Update-OVLogicalEnclosure -Update
 ```
 
@@ -50,7 +50,7 @@ Refresh all available Logical Enclosures, for the all connected sessions.
 
 ###  Example 3 
 
-```text
+```powershell
 Get-OVLogicalEnclosure -Name LogicalEnclosure1 | Update-OVLogicalEnclosure -Refresh
 ```
 
@@ -58,7 +58,7 @@ Refresh "LogicalEnclosure1" Logical Enclosure.
 
 ###  Example 4 
 
-```text
+```powershell
 Get-OVLogicalEnclosure -Name Encl1 | Update-OVLogicalEnclosure -Update -WhatIf
 What if: Performing the operation "Update Logical Enclosure configuration. WARNING: Depending on this action, there might be a brief outage." on target "Encl1".
 

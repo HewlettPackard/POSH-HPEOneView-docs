@@ -6,7 +6,7 @@ description: Delete Server Profile Resource(s).
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVServerProfile
     [-ServerProfile] <Object>
     [-ApplianceConnection] <Object>
@@ -22,7 +22,7 @@ This Cmdlet will remove Server Profile resources from one or more appliance conn
 
 ###  Example 1 
 
-```text
+```powershell
 $task = Remove-OVServerProfile -profile "Profile6"
 Wait-OVTaskComplete $task.uri
                         
@@ -32,7 +32,7 @@ Remove the profile specifed by name. Wait for remove to complete.
 
 ###  Example 2 
 
-```text
+```powershell
 $profile = Get-OVServerProfile -name "Profile2"
 Remove-OVServerProfile $profile -confirm:$false
 ```
@@ -41,7 +41,7 @@ Remove the profile specifed by $profile. Disable confirmation prompt.
 
 ###  Example 3 
 
-```text
+```powershell
 Get-OVServerProfile | Remove-OVServerProfile
 ```
 

@@ -6,7 +6,7 @@ description: Enable or Disable Automated SAN Zoning.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVManagedSan
     [-InputObject] <Object>
     [-ZoningPolicy] <String>
@@ -25,7 +25,7 @@ Set-OVManagedSan
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Set-OVManagedSan
     [-InputObject] <Object>
     [-EnableAutomatedZoning]
@@ -35,7 +35,7 @@ Set-OVManagedSan
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Set-OVManagedSan
     [-InputObject] <Object>
     [-ZoningPolicy] <String>
@@ -52,7 +52,7 @@ This Cmdlet is used to Enable or Disable a Managed SAN resource on the appliance
 
 ###  Example 1 
 
-```text
+```powershell
 Set-OVManagedSan Fabric_A -ZoningPolicy SingleInitiatorAllTargets
 ```
 
@@ -60,7 +60,7 @@ Enable Automated SAN Zoning for "Fabric_A"
 
 ###  Example 2 
 
-```text
+```powershell
 Set-OVManagedSan Fabric_A -ZoningPolicy NoZoning
 ```
 
@@ -68,7 +68,7 @@ Disable Automated SAN Zoning for "Fabric_A"
 
 ###  Example 3 
 
-```text
+```powershell
 Get-OVManagedSan | Set-OVManagedSan -ZoningPolicy SingleInitiatorAllTargets
 ```
 
@@ -116,9 +116,9 @@ Managed SAN Name or Object.
 
 Policy setting that affects the way that zones are created. Allowed values:
 
-    * NoZoning - Disable all automated zoning on the SAN and ignore policy settings related to zoning.
-    * SingleInitiatorAllTargets - Create one zone per initiator containing all targets connected to that initiator.
-    * SingleInitiatorSingleStorageSystem - Similar to SingleInitiatorAllTargets except that separate zones are created for targets that reside on different storage systems.
+* NoZoning - Disable all automated zoning on the SAN and ignore policy settings related to zoning.
+* SingleInitiatorAllTargets - Create one zone per initiator containing all targets connected to that initiator.
+* SingleInitiatorSingleStorageSystem - Similar to SingleInitiatorAllTargets except that separate zones are created for targets that reside on different storage systems.
 
 | Aliases | None |
 | :--- | :--- |

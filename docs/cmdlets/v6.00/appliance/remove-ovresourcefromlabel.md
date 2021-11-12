@@ -6,7 +6,7 @@ description: Remove association of resource with existing Label.
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVResourceFromLabel
     [-Name] <String>
     [-InputObject] <Object>
@@ -14,7 +14,7 @@ Remove-OVResourceFromLabel
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Remove-OVResourceFromLabel
     [-InputObject] <Object>
     [-RemoveAllLabelsFromResource]
@@ -32,7 +32,7 @@ This Cmdlet will remove the specified resource from the requested label.  To rem
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVNetwork -Name Finance* | Remove-OVResourceFromLabel -Name Finance
 ```
 
@@ -40,7 +40,7 @@ Remove the Finance network resources from the "Finance" label.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVNetwork | Remove-OVResourceFromLabel -RemoveAllLabelsFromResource
 ```
 

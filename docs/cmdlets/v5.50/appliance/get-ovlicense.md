@@ -6,7 +6,7 @@ description: Gets the installed licenses on the appliance.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVLicense
     [-Type <String>]
     [-State <String>]
@@ -22,26 +22,26 @@ HPE OneView requires a license for all server hardware that it manages or monito
 
 The following HPE OneView Advanced licenses provide support as listed below, and in addition, enable integration with other products.
 
-    * HPE OneView Advanced
-        * Provides an HPE OneView Advanced license and an iLO Advanced license.
-        * This license is intended for server hardware and enclosures you want to manage with HPE OneView.
+* HPE OneView Advanced
+    * Provides an HPE OneView Advanced license and an iLO Advanced license.
+    * This license is intended for server hardware and enclosures you want to manage with HPE OneView.
 
-    * HPE OneView Advanced w/o iLO
-        * Provides an HPE OneView Advanced license only.
+* HPE OneView Advanced w/o iLO
+    * Provides an HPE OneView Advanced license only.
 
           This license is intended for server hardware you want to manage with HPE OneView. This license is for servers with iLOs that are already licensed, or server hardware for which you do not require an iLO license.
 
           An HPE OneView Advanced w/o iLO license provides support for all server hardware features on the appliance, with the following exceptions:
-            * Server hardware without an iLO Advanced license does not display utilization data.
-            * Rack mount servers without an iLO Advanced license cannot access the remote console.
+        * Server hardware without an iLO Advanced license does not display utilization data.
+        * Rack mount servers without an iLO Advanced license cannot access the remote console.
 
-    * HPE OneView Standard
-        * Provides an HPE OneView Standard license for all monitored server hardware. 
+* HPE OneView Standard
+    * Provides an HPE OneView Standard license for all monitored server hardware. 
 
-        * This license is automatically selected:
-            * for the enclosure when adding a monitored enclosure
-            * for the server when adding a monitored server
-            * for all ProLiant G6 server blades or G7 BL680c server blades when adding a managed enclosure
+    * This license is automatically selected:
+        * for the enclosure when adding a monitored enclosure
+        * for the server when adding a monitored server
+        * for all ProLiant G6 server blades or G7 BL680c server blades when adding a managed enclosure
 
 HPE OneView does not manage the hardware running with an HPE OneView Standard license. 
 
@@ -61,7 +61,7 @@ Minimum required privileges: Read-only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVLicense
 
 Product   : HPE OneView Advanced

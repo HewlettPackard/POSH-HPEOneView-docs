@@ -6,7 +6,7 @@ description: Retrieve address pool subnet information.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVAddressPoolSubnet
     [-NetworkId <String>]
     [-ApplianceConnection <Object>]
@@ -31,7 +31,7 @@ Minimum required privileges: Network administrator, Infrastructure administrator
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVAddressPoolSubnet
 ```
 
@@ -39,7 +39,7 @@ Get the configured IPv4 and IPv6 address pools.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVAddressPoolSubnet -NetworkId 192.168.20.0
 ```
 

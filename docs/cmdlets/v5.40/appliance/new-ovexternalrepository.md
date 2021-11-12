@@ -6,7 +6,7 @@ description: Create a new external baseline repository.
 
 ## Syntax
 
-```text
+```powershell
 New-OVExternalRepository
     [-Name] <String>
     [-Hostname] <String>
@@ -20,7 +20,7 @@ New-OVExternalRepository
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVExternalRepository
     [-Name] <String>
     [-Hostname] <String>
@@ -39,8 +39,8 @@ A firmware repository enables you to store firmware bundles and deploy them acro
 
 The recommended types of external web servers to use with the repository follow:
 
-    * Apache
-    * Internet Information Services (IIS)
+* Apache
+* Internet Information Services (IIS)
 
 {% hint style="info" %}
 Only one external repository can be added.
@@ -51,7 +51,7 @@ Only one external repository can be added.
 
 ###  Example 1 
 
-```text
+```powershell
 $Params = @{
 
     Name        = "MyRepoName";
@@ -68,7 +68,7 @@ Create an external repository using a PSCredential object.
 
 ###  Example 2 
 
-```text
+```powershell
 New-OVExternalRepository -Name MyRepoName -Hostname webserver.domain.local -Directory OneViewRepo -Http
 ```
 

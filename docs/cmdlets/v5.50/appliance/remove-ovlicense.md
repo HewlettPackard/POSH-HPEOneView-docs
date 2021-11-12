@@ -6,7 +6,7 @@ description: REmove installed licenses on the appliance.
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVLicense
     [-InputObject] <HPEOneView.Appliance.License>
     [-ApplianceConnection] <Object>
@@ -21,7 +21,7 @@ This Cmdlet will remove licenses installed on the appliance.  Removing installed
 
 ###  Example 1 
 
-```text
+```powershell
 $LicenseKeys = Get-OVlicense
 Remove-OVLicense -InputObject $LicenseKeys[0]
 ```
@@ -30,7 +30,7 @@ Get all installed licenses saving them to $LicenseKeys, then calling Remove-OVLi
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVlicense | Remove-OVLicense
 ```
 

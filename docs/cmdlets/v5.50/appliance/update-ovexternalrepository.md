@@ -6,14 +6,14 @@ description: Refresh an existing external baseline repository.
 
 ## Syntax
 
-```text
+```powershell
 Update-OVExternalRepository
     [-InputObject] <Object>
     [-Async]
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Update-OVExternalRepository
     [-ApplianceConnection <Array>]
     [<CommonParameters>]
@@ -25,8 +25,8 @@ A firmware repository enables you to store firmware bundles and deploy them acro
 
 The recommended types of external web servers to use with the repository follow:
 
-    * Apache
-    * Internet Information Services (IIS)
+* Apache
+* Internet Information Services (IIS)
 
 {% hint style="info" %}
 Only one external repository can be added.
@@ -39,7 +39,7 @@ This Cmdlet supports refreshing an existing external repository.  Use this Cmdle
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVBaselineRepository -Name MyRepoName -ErrorAction Stop | Update-OVExternalRepository
 ```
 

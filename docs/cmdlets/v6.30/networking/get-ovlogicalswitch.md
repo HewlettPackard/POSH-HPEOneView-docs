@@ -6,7 +6,7 @@ description: Retrieve Logical Switch resources.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVLogicalSwitch
     [-Name <String>]
     [-Scope <Object>]
@@ -16,7 +16,7 @@ Get-OVLogicalSwitch
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Get-OVLogicalSwitch
     [-InputObject] <Object>
     [-ApplianceConnection <Object>]
@@ -49,8 +49,8 @@ You can create a logical switch that pairs two rack connectivity modules. You ca
 
 When rack servers are assigned to the rack connectivity modules that are associated with the logical switch, the following configurations are checked:
 
-    * The rack servers are consistently connected with the two rack connectivity modules.
-    * The rack server is connected to the same port on both rack connectivity modules.
+* The rack servers are consistently connected with the two rack connectivity modules.
+* The rack server is connected to the same port on both rack connectivity modules.
 
 If there are issues during the initial server profile assignment, validation errors are displayed during server profile creation.
 
@@ -66,7 +66,7 @@ Minimum required privileges: Read-only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVLogicalSwitch
 ```
 
@@ -74,7 +74,7 @@ Retrieve all Logical Switch resources from the default appliance connection.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVLogicalSwitch -Name MyLogicalSwitch1
 ```
 
@@ -110,10 +110,10 @@ Provide an `[HPEOneView.Appliance.TaskResource]` object and the Cmdlet will retu
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-    * AllResources
-    * AllResourcesInScope
-    * `[HPEOneView.Appliance.ScopeCollection]`
-    * `[HPEOneView.Appliance.ConnectionPermission]`
+* AllResources
+* AllResourcesInScope
+* `[HPEOneView.Appliance.ScopeCollection]`
+* `[HPEOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |

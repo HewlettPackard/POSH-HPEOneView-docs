@@ -6,7 +6,7 @@ description: Get defined SNMPv3 user from appliance.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVSnmpV3User
     [-Name <String>]
     [-ApplianceConnection <Array>]
@@ -34,7 +34,7 @@ Minimum required privileges: Infrastructure administrator
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVSnmpV3User
 ```
 

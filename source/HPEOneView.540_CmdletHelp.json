@@ -7741,7 +7741,7 @@
           },
           {
             "Name": "Name",
-            "Description": "",
+            "Description": "Filter address ranges based on the name.",
             "DataType": "string",
             "Required": false,
             "DefaultValue": "",
@@ -35714,7 +35714,7 @@
           },
           {
             "Name": "FecMode",
-            "Description": "",
+            "Description": "Specify the forward error correction mode.  This paraemter is only supported with Virtual Connect SE 100Gb F32 Module for Synergy modules.  When configuring, the following values are supported with parent ports:\n\n\t* Auto\n\t* Cl74\n\t* Cl108\n\t* None\n\nThe following values are supported with sub-ports:\n\n\t* Auto\n\t* Cl74\n\t* Cl91\n\t* None",
             "DataType": "string",
             "Required": false,
             "DefaultValue": "",
@@ -35724,7 +35724,7 @@
           },
           {
             "Name": "PortSpeed",
-            "Description": "",
+            "Description": "The allowed uplink port speed vy the fabric module and traceiver type.  When specifying a port speed, this value will be set for all ports.  This parameter applies to Ethernet or FCoE uplink ports only.  Allowed values:\n\n\t* Auto\n\t* 100M\n\t* 1G\n\t* 10G\n\t* 40G\n\t* 100G",
             "DataType": "string",
             "Required": false,
             "DefaultValue": "",
@@ -48108,7 +48108,7 @@
           },
           {
             "Name": "Append",
-            "Description": "",
+            "Description": "Use to append roles and/or scope permissions update.  If omitted, roles or scope permissions will be replaced.",
             "DataType": "SwitchParameter",
             "Required": false,
             "DefaultValue": "",
@@ -51763,7 +51763,7 @@
           },
           {
             "Name": "UseMXRecordLookup",
-            "Description": "",
+            "Description": "Specify to use DNS MX record resolution for the domain in the email address provided.",
             "DataType": "SwitchParameter",
             "Required": false,
             "DefaultValue": "",
@@ -53170,7 +53170,7 @@
           },
           {
             "Name": "Append",
-            "Description": "",
+            "Description": "Use to append roles and/or scope permissions update.  If omitted, roles or scope permissions will be replaced.",
             "DataType": "SwitchParameter",
             "Required": false,
             "DefaultValue": "",
@@ -58947,7 +58947,7 @@
           },
           {
             "Name": "FecMode",
-            "Description": "",
+            "Description": "Specify the forward error correction mode.  This paraemter is only supported with Virtual Connect SE 100Gb F32 Module for Synergy modules.  When configuring, the following values are supported with parent ports:\n\n\t* Auto\n\t* Cl74\n\t* Cl108\n\t* None\n\nThe following values are supported with sub-ports:\n\n\t* Auto\n\t* Cl74\n\t* Cl91\n\t* None",
             "DataType": "string",
             "Required": false,
             "DefaultValue": "",
@@ -58957,7 +58957,7 @@
           },
           {
             "Name": "PortSpeed",
-            "Description": "",
+            "Description": "The allowed uplink port speed by the fabric module and traceiver type.  When specifying a port speed, this value will be set for all ports.  This parameter applies to Ethernet or FCoE uplink ports only.  Allowed values:\n\n\t* Auto\n\t* 100M\n\t* 1G\n\t* 10G\n\t* 40G\n\t* 100G",
             "DataType": "string",
             "Required": false,
             "DefaultValue": "",

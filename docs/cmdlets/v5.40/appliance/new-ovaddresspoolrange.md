@@ -6,7 +6,7 @@ description: Create an Address Range.
 
 ## Syntax
 
-```text
+```powershell
 New-OVAddressPoolRange
     [-PoolType] <String>
     [-RangeType] <String>
@@ -14,7 +14,7 @@ New-OVAddressPoolRange
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVAddressPoolRange
     [-IPSubnet] <Object>
     [-Name] <String>
@@ -24,7 +24,7 @@ New-OVAddressPoolRange
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVAddressPoolRange
     [-PoolType] <String>
     [-RangeType] <String>
@@ -44,15 +44,15 @@ If you specify a Custom Range Type, you must specify a range of addresses no sma
 
 Custom Address Ranges must adhere to the following format rules:
 
-    * The MAC Address must be IEEE Compliant, and the format must be XH:XX:XX:XX:XX:XX, where H must be 0, 2, 4, 6, 8, A, C or E.
+* The MAC Address must be IEEE Compliant, and the format must be XH:XX:XX:XX:XX:XX, where H must be 0, 2, 4, 6, 8, A, C or E.
 
     Example:  12:22:33:44:55:00
 
-    * The WWN Address must be IEEE compliant, and the format must be 10:00:XH:XX:XX:XX:XX:XX, where H must be 0, 2, 4, 6, 8, A, C or E.
+* The WWN Address must be IEEE compliant, and the format must be 10:00:XH:XX:XX:XX:XX:XX, where H must be 0, 2, 4, 6, 8, A, C or E.
 
     Example:  10:00:6C:9F:06:B0:00:00
 
-    * The Serial Number addresses must start with VCU, and cannot contain more than 10 characters total.
+* The Serial Number addresses must start with VCU, and cannot contain more than 10 characters total.
 
     Example:  VCU1234567
 
@@ -62,7 +62,7 @@ IPv4 Address Subnets do not support Auto Generated, as the RangeType parameter i
 
 ###  Example 1 
 
-```text
+```powershell
 PS C:> New-OVAddressPoolRange -PoolType vmac -RangeType Generated
 ```
 
@@ -70,7 +70,7 @@ Create a new Appliance generated VMAC Pool Range.
 
 ###  Example 2 
 
-```text
+```powershell
 PS C:> New-OVAddressPoolRange -PoolType vwwn -RangeType Custom -Start 10:00:6C:9F:06:B0:00:00 -End 10:00:6C:9F:06:BF:FF:FF
 ```
 
@@ -78,7 +78,7 @@ Create a new VWWN address pool range with the custom addresses, for the MyApplia
 
 ###  Example 3 
 
-```text
+```powershell
 PS C:> Get-OVAddressPoolSubnet -NetworkId 192.168.20.0 | New-OVAddressPoolRange -Name "VLAN20 Mgmt" -Start 192.168.20.100 -end 192.168.20.200
 ```
 
@@ -104,9 +104,9 @@ The IPv4 Subnet that the new IPv4 Range will be assigned to.  Start and End valu
 
 Specify the Pool Type the new Range will be assinged to.  Accepted values are:
 
-    * VMAC
-    * VWWN
-    * VSN
+* VMAC
+* VWWN
+* VSN
 
 | Aliases | None |
 | :--- | :--- |
@@ -120,8 +120,8 @@ Specify the Pool Type the new Range will be assinged to.  Accepted values are:
 
 The type of Address Range to create (not applicable for IPv4 address pools/Subnets).  Accepted values are:
 
-    * Generated
-    * Custom
+* Generated
+* Custom
 
 | Aliases | None |
 | :--- | :--- |

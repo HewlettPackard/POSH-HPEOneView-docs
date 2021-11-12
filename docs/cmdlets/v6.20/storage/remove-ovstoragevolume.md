@@ -6,7 +6,7 @@ description: Remove a Storage Volume
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVStorageVolume
     [-InputObject] <Object>
     [-ExportOnly]
@@ -23,7 +23,7 @@ This Cmdlet will remove storage volumes from the HPE OneView appliance.  Volumes
 
 ###  Example 1 
 
-```text
+```powershell
 $VolumeToRemove = Get-OVStorageVolume -Name TestVol1 -ErrorAction Stop
 Remove-OVStorageVolume -InputObject $VolumeToRemove
 ```
@@ -32,7 +32,7 @@ Remove export and delete volume named "TestVol1".
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVStorageVolume -Name TestVol1 -ErrorAction Stop | Remove-OVStorageVolume -exportonly
 ```
 

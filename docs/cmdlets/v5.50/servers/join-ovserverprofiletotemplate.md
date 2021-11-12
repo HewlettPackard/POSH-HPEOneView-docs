@@ -6,7 +6,7 @@ description: Attach an existing server profile to a server profile template
 
 ## Syntax
 
-```text
+```powershell
 Join-OVServerProfileToTemplate
     [-Template] <Object>
     [-ServerProfile] <Object>
@@ -22,7 +22,7 @@ Binds a server profile resource to the provided server profile template
 
 ###  Example 1 
 
-```text
+```powershell
 Join-OVServerProfileToTemplate -template "MyTemplate" -profile "MyProfile" -appliance HPEOneView.contoso.com
 ```
 
@@ -30,7 +30,7 @@ Attaches the server profile template named MyTemplate to the server profile name
 
 ###  Example 2 
 
-```text
+```powershell
 $p = Get-OVServerProfile -Name "myProfile"
 Get-OVServerProfileTemplate "myTemplate" | Join-OVServerProfileToTemplate -profile $p -appliance HPEOneView.contoso.com
 ```

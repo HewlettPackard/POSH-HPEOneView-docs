@@ -6,7 +6,7 @@ description: Disable appliance two-factor authentication settings.
 
 ## Syntax
 
-```text
+```powershell
 Disable-OVApplianceTwoFactorAuthentication
     [-ApplianceConnection <Array>]
     [<CommonParameters>]
@@ -26,7 +26,7 @@ Required: Infrastructure administrator
 
 ###  Example 1 
 
-```text
+```powershell
 Disable-OVApplianceTwoFactorAuthentication
 ```
 

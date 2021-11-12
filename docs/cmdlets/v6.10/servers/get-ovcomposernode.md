@@ -6,7 +6,7 @@ description: Retrieve Synergy Composer node information.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVComposerNode
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -26,7 +26,7 @@ Minimum required privileges: Read only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVComposerNode
 
 Appliance                              Name                       State Status Model            Version         Role

@@ -6,7 +6,7 @@ description: Helper Cmdlet to create proper add host request for New-OVClusterPr
 
 ## Syntax
 
-```text
+```powershell
 New-OVClusterProfileMember
     [-InputObject] <Object>
     [-IPv4Address <IPAaddress>]
@@ -26,7 +26,7 @@ Minimum required privileges: Infrastructure administrator, Server administrator,
 
 ###  Example 1 
 
-```text
+```powershell
 $Server = Get-OVServer -Name "Encl1, Bay 1"
 New-OVClusterProfileMember -InputObject $Server
 ```
@@ -35,7 +35,7 @@ Create a basic add host object for New-OVClusterProfile.
 
 ###  Example 2 
 
-```text
+```powershell
 $Server = Get-OVServer -Name "Encl1, Bay 1"
 New-OVClusterProfileMember -InputObject $Server -IPAddress 192.168.10.1
 ```
@@ -44,7 +44,7 @@ Create anadd host object for New-OVClusterProfile and specify its managmenet IP 
 
 ###  Example 3 
 
-```text
+```powershell
 $MyDeploymentPlan = Get-OVOSDeploymentPlan -Name "vSphere 6.5 U3 Corp Standard" -ErrorAction Stop
 $OSDeploymentAttributes = Get-OVOSDeploymentPlanAttributes -InputObject $MyDeploymentPlan
 ($OSDeploymentAttributes | Where-Object name -eq "CustomAttribute1").value = "MySpecialValue"

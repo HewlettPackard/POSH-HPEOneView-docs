@@ -6,7 +6,7 @@ description: Retrieve Logical Switch Group resources.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVLogicalSwitchGroup
     [-Name <String>]
     [-Scope <Object>]
@@ -16,7 +16,7 @@ Get-OVLogicalSwitchGroup
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Get-OVLogicalSwitchGroup
     [-InputObject] <Object>
     [-ApplianceConnection <Object>]
@@ -53,8 +53,8 @@ You can create a logical switch that pairs two rack connectivity modules. You ca
 
 When rack servers are assigned to the rack connectivity modules that are associated with the logical switch, the following configurations are checked:
     
-    * The rack servers are consistently connected with the two rack connectivity modules.
-    * The rack server is connected to the same port on both rack connectivity modules.
+* The rack servers are consistently connected with the two rack connectivity modules.
+* The rack server is connected to the same port on both rack connectivity modules.
 
 If there are issues during the initial server profile assignment, validation errors are displayed during server profile creation.
 
@@ -72,7 +72,7 @@ Minimum required privileges: Read-only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVLogicalSwitchGroup
 ```
 
@@ -80,7 +80,7 @@ Get all logical switch group resources found on the default appliance connection
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVLogicalSwitchGroup -Name "My Logical Switch Group Policy 1"
 ```
 
@@ -116,10 +116,10 @@ The Logical Switch Group resource Name.  Supports the * wildcard character.
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-    * AllResources
-    * AllResourcesInScope
-    * `[HPEOneView.Appliance.ScopeCollection]`
-    * `[HPEOneView.Appliance.ConnectionPermission]`
+* AllResources
+* AllResourcesInScope
+* `[HPEOneView.Appliance.ScopeCollection]`
+* `[HPEOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |

@@ -6,7 +6,7 @@ description: Convert Logical Enclosure to support HPE Image Streamer.
 
 ## Syntax
 
-```text
+```powershell
 ConvertTo-OVImageStreamerConfiguration
     [-InputObject] <Object>
     [-UplinkSetName] <Name>
@@ -34,7 +34,7 @@ Minimum required privileges: Infrastructure administrator or Server administrato
 
 ###  Example 1 
 
-```text
+```powershell
 $LE = Get-OVLogicalEnclosure -Name MyLE1 -ErrorAction Stop
 $UplinkPorts = @("Enclosure1:Bay3:Q3.1","Enclosure1:Bay3:Q4.1","Enclosure2:Bay6:Q3.1","Enclosure2:Bay6:Q4.1")
 $UplinkSetName = "ImageStreamer UplinkSet"

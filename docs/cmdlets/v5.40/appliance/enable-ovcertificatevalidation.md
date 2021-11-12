@@ -6,7 +6,7 @@ description: Enable appliance TLS/SSL certificate validation.
 
 ## Syntax
 
-```text
+```powershell
 Enable-OVCertificateValidation
     [-CheckForSelfSignedExpiry <Bool>]
     [-ApplianceConnection <Array>]
@@ -28,8 +28,8 @@ When upgrading from earlier releases, the certificates in use by the currently m
 
 Certificate checking is enabled by default, but some of the stricter validation checks are relaxed to maintain communications with all devices, even those with certificate issues. The relaxed checking includes: 
 
-    * Not performing expiration checks for self signed certificates 
-    * For certificate authority (CA) signed certificates, relaxed certificate revocation list (CRL) checking. 
+* Not performing expiration checks for self signed certificates 
+* For certificate authority (CA) signed certificates, relaxed certificate revocation list (CRL) checking. 
 
 The relaxed checking gives the administrator time to address any expired certificates, to upload trusted CA root and intermediate certificates, and upload the appropriate CRLs. 
 
@@ -52,7 +52,7 @@ Minimum required privileges: Infrastructure administrator
 
 ###  Example 1 
 
-```text
+```powershell
 Enable-OVCertificateValidation
 ```
 

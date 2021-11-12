@@ -6,7 +6,7 @@ description: Validate IP Connectivity to resources.
 
 ## Syntax
 
-```text
+```powershell
 Ping-OVAddress
     [-Address] <String>
     [-Packets] <Int32>
@@ -23,7 +23,7 @@ This Cmdlet provides the administrator the capability to PING (ICMP "echo reques
 
 ###  Example 1 
 
-```text
+```powershell
 $results = Ping-OVAddress host.domain.com -Appliance appliance.contoso.com
 $results.progressUpdates.statusUpdate
 PING host.domain.com (192.168.1.100) 56(84) bytes of data.

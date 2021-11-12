@@ -6,7 +6,7 @@ description: Enable port monitoring for a logical interconnect.
 
 ## Syntax
 
-```text
+```powershell
 Enable-OVLogicalInterconnectPortMonitoring
     [-InputObject] <Object>
     [-AnalyzerPort] <Object>
@@ -19,10 +19,10 @@ Enable-OVLogicalInterconnectPortMonitoring
 
 Port monitoring enables you to send a copy of every Ethernet or Fibre Channel frame coming in and going out of a downlink (server-facing) port to another port. To evaluate network traffic between ports, you can connect debugging equipment, such as a network analyzer. This capability is important in a server environment where there is limited physical access to the network interfaces on the servers. 
 
-    *  You cannot use Virtual Connect to forward captured traffic to a server. For more information, see the HPE Virtual Connect for c-Class BladeSystem User Guide in the Hewlett Packard Enterprise Information Library. 
-    *  You can configure one network analyzer port (the uplink port) for up to 16 downlink server ports within a logical interconnect. 
-    *  The HPE Virtual Connect 16Gb 24-Port Fibre Channel Module monitors 1 downlink server port. 
-    *  HPE Virtual Connect 16Gb 24-Port Fibre Channel Module firmware must be 4.00 or later 
+*  You cannot use Virtual Connect to forward captured traffic to a server. For more information, see the HPE Virtual Connect for c-Class BladeSystem User Guide in the Hewlett Packard Enterprise Information Library. 
+*  You can configure one network analyzer port (the uplink port) for up to 16 downlink server ports within a logical interconnect. 
+*  The HPE Virtual Connect 16Gb 24-Port Fibre Channel Module monitors 1 downlink server port. 
+*  HPE Virtual Connect 16Gb 24-Port Fibre Channel Module firmware must be 4.00 or later 
 
 {% hint style="info" %}
 Minimum required privileges: Infrastructure administrator or Network administrator
@@ -32,7 +32,7 @@ Minimum required privileges: Infrastructure administrator or Network administrat
 
 ###  Example 1 
 
-```text
+```powershell
 $LogicalInterconnect = Get-OVLogicalInterconnect -Name "Encl1-Default VC FF LIG"
 Enable-OVLogicalInterconnectPortMonitoring -InputObject $LogicalInterconnect -AnalyzerPort "Bay1:Q1.1" -MonitoredPorts @{Port = "Bay1:d2"; Direction = "toserver"}, @{Port = "Bay1:D3"; Direction = "MonitoredFromServer"}, @{Port = "Bay2:D7"; Direction = "Both"}
 ```
@@ -41,7 +41,7 @@ Enable port monitoring for the specific logical interconnect.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVLogicalInterconnect -Name "LE1-Default VC LIG" | Enable-OVLogicalInterconnectPortMonitoring -AnalyzerPort "Enclosure1:Bay3:Q1.1" -MonitoredPorts @{Port = "Enclosure1:Bay3:d1"; Direction = "Both"}, @{Port = "Enclosure1:Bay6:d1"; Direction = "Both"}
 ```
 
@@ -97,9 +97,9 @@ The "Port" property format must be "BayID:ServerDownlinkPortID".  For HPE Synerg
 
 The "Direction" property value must be one of the following:
 
-    * ToServer
-    * FromServer
-    * Both
+* ToServer
+* FromServer
+* Both
 
 | Aliases | None |
 | :--- | :--- |

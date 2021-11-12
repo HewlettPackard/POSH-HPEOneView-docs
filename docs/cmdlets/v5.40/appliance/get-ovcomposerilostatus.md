@@ -6,7 +6,7 @@ description: Retrieve the HPE Synergy Composer iLO configuration.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVComposerIloStatus
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -18,37 +18,37 @@ You can configure the HPE Synergy Composer2 for remote access through its embedd
 
 After remote access to a Composer2 iLO is configured, you can:
 
-    * Use the iLO Integrated Remote Console (iLO IRC) to access the Composer2 physical console. The physical console provides access to the HPE OneView maintenance console. The Composer2 iLO has an independent IPaddress and is accessible even when the Composer2 is not available.
-    * Mount a virtual USB drive on the Composer2 through iLO and perform critical operations such as reimage,restore, backup, and create support dump without physically accessing the appliance.
-    * Power on or off the appliance.
+* Use the iLO Integrated Remote Console (iLO IRC) to access the Composer2 physical console. The physical console provides access to the HPE OneView maintenance console. The Composer2 iLO has an independent IPaddress and is accessible even when the Composer2 is not available.
+* Mount a virtual USB drive on the Composer2 through iLO and perform critical operations such as reimage,restore, backup, and create support dump without physically accessing the appliance.
+* Power on or off the appliance.
 
 You can configure the iLO of the HPE Synergy Composer2 for remote access using this Cmdlet. All the Composer2 nodes that are present in the enclosures managed by HPE OneView can be configured, including standby or standalone Composer2 nodes.  The following are the settings that you can configure for the Composer2 iLO in HPE OneView:
 
-    * The iLO user account and password that are required to log in to the Composer2 iLO.
-    * Network parameters that allow you to access the Composer2 iLO from an external browser. The network parameters include iLO hostname, iLO IP address, subnet mask, gateway, and DNS server names. Both IPv4 and IPv6 addresses are supported.
+* The iLO user account and password that are required to log in to the Composer2 iLO.
+* Network parameters that allow you to access the Composer2 iLO from an external browser. The network parameters include iLO hostname, iLO IP address, subnet mask, gateway, and DNS server names. Both IPv4 and IPv6 addresses are supported.
 
 Supported operations on the Composer2 through the iLO Integrated Remote Console
 
 You can perform the following operations when using the HPE Synergy Composer2 iLO Integrated Remote Console (iLO IRC):
 
-    * Switch between the graphical console or the Composer2 maintenance console. By default, the Composer2 console displays a graphical browser interface. Use Ctrl+Alt+F1 and Ctrl+Alt+F2 to switch between the graphical interface and the maintenance console.
-    * For the first-time setup, Hewlett Packard Enterprise recommends that you configure the appliance network before the hardware discovery process starts.
-    * Power on and off the appliance using the integrated power control options on the iLO remote console.
-    * Use the Composer2 iLO virtual media feature to have a USB drive on your local workstation mounted as a virtual USB drive on the Composer2.
+* Switch between the graphical console or the Composer2 maintenance console. By default, the Composer2 console displays a graphical browser interface. Use Ctrl+Alt+F1 and Ctrl+Alt+F2 to switch between the graphical interface and the maintenance console.
+* For the first-time setup, Hewlett Packard Enterprise recommends that you configure the appliance network before the hardware discovery process starts.
+* Power on and off the appliance using the integrated power control options on the iLO remote console.
+* Use the Composer2 iLO virtual media feature to have a USB drive on your local workstation mounted as a virtual USB drive on the Composer2.
 
 Virtually mounting the USB drive allows you to:
 
-    * Reimage the Composer2 from a DD image on the virtual USB drive.
-    * Create a support dump file on the virtual USB drive.
+* Reimage the Composer2 from a DD image on the virtual USB drive.
+* Create a support dump file on the virtual USB drive.
 
     NOTE:  If both virtual USB drive and local USB drive are plugged into the Composer2, by default the virtual USB drive is selected. To choose the USB drive that is plugged into the Composer2, unmount the virtual USB drive. In the iLO IRC, select Virtual Drives and clear the virtual drive selection to unmount the virtual USB drive.  You can also unmount the virtual USB drive from the maintenance console of HPE OneView.
 
-    * Restore the Composer2 from a backup image on the virtual USB drive.
+* Restore the Composer2 from a backup image on the virtual USB drive.
 
 Requirements
 
-    * A single iLO user account is supported. Creating a user account replaces any existing user account.
-    * The iLO username cannot be Administrator or start with an _.
+* A single iLO user account is supported. Creating a user account replaces any existing user account.
+* The iLO username cannot be Administrator or start with an _.
 
 {% hint style="info" %}
 The iLO user account is assigned a predefined set of privileges that allows the user to perform a restricted set of iLO operations. Specifically, the iLO account has permissions to control power, use the iLO Integrated Remote Console (iLO IRC), and use the iLO Virtual Media.
@@ -66,7 +66,7 @@ Minimum required privileges: Read-only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVComposerIloStatus
 
 ```

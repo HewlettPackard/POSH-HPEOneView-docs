@@ -6,14 +6,14 @@ description: Retrieve Switch Type resource(s).
 
 ## Syntax
 
-```text
+```powershell
 Get-OVSwitchType
     [-Name <String>]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Get-OVSwitchType
     [-PartNumber <String>]
     [-ApplianceConnection <Object>]
@@ -28,7 +28,7 @@ Retrieves a list of all supported Switch Types or just specific ones via a query
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVSwitchType
 ```
 
@@ -36,7 +36,7 @@ Returns all Switch Types available from all connected appliances to standard out
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVSwitchType -Name "Cisco Nexus 55xx"
 ```
 
@@ -44,7 +44,7 @@ Returns just the "Cisco Nexus 55xx" Switch Type object to standard output.
 
 ###  Example 3 
 
-```text
+```powershell
 Get-OVSwitchType -Partnumber "DCS-7060X-SERIES"
 ```
 

@@ -6,7 +6,7 @@ description: Remove X.509 SSL certificates from the appliace trusted store.
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVApplianceTrustedCertificate
     [-InputObject <String>]
     [-ApplianceConnection <Object>]
@@ -22,7 +22,7 @@ This Cmdlet will allow the Infrastructure Administrator to remove X.509 complian
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVApplianceTrustedCertificate -Name myhost1.domain.com | Remove-OVApplianceTrustedCertificate
 ```
 

@@ -6,7 +6,7 @@ description: Create a new Logical Switch resource.
 
 ## Syntax
 
-```text
+```powershell
 New-OVLogicalSwitch
     [-Name <String>]
     [-LogicalSwitchGroup] <Object>
@@ -23,7 +23,7 @@ New-OVLogicalSwitch
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVLogicalSwitch
     [-Name <String>]
     [-LogicalSwitchGroup] <Object>
@@ -45,7 +45,7 @@ New-OVLogicalSwitch
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVLogicalSwitch
     [-Name <String>]
     [-LogicalSwitchGroup] <Object>
@@ -67,7 +67,7 @@ New-OVLogicalSwitch
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVLogicalSwitch
     [-Name <String>]
     [-LogicalSwitchGroup] <Object>
@@ -92,27 +92,27 @@ You can create a logical switch with a maximum of two Cisco Nexus switches. When
 
 Before you add a logical switch as managed, consider the following for Fabric Extender and Virtual Connect interconnects physically connected to the logical switch:
 
-    * When only IPv4 Ethernet networks are assigned to an uplink set at creation time, the uplink set can be physically connected to any upstream switch in the logical switch.
-    * When an FCoE network is assigned to an uplink set at creation time, the uplink set is limited to single-homed physical connectivity and all uplink ports must connect to the same upstream switch in the logical switch.  If a port is subsequently added to the uplink set with an FCoE network or an existing port in the uplink set is connected to a second upstream switch, that port is not available for configuration and an alert is generated. If a new port added to the uplink set is connected to the same switch as the other ports, that port is available to carry traffic and an alert is not generated.  To change an uplink set from single-homed connectivity to multi-homed connectivity or vice-versa, the uplink set configuration must be deleted and re-created with the appropriate network assignments and physical configuration.
-    * Make sure that LLDP is enabled on the top-of-rack switch internal (downlink) ports where Virtual Connect interconnects under HPE OneView management are connected.
+* When only IPv4 Ethernet networks are assigned to an uplink set at creation time, the uplink set can be physically connected to any upstream switch in the logical switch.
+* When an FCoE network is assigned to an uplink set at creation time, the uplink set is limited to single-homed physical connectivity and all uplink ports must connect to the same upstream switch in the logical switch.  If a port is subsequently added to the uplink set with an FCoE network or an existing port in the uplink set is connected to a second upstream switch, that port is not available for configuration and an alert is generated. If a new port added to the uplink set is connected to the same switch as the other ports, that port is available to carry traffic and an alert is not generated.  To change an uplink set from single-homed connectivity to multi-homed connectivity or vice-versa, the uplink set configuration must be deleted and re-created with the appropriate network assignments and physical configuration.
+* Make sure that LLDP is enabled on the top-of-rack switch internal (downlink) ports where Virtual Connect interconnects under HPE OneView management are connected.
 
 Adding a logical switch as monitored enables HPE OneView to monitor the logical switch for operation status, collect statistics, and alert users to specific conditions and incompatibilities between the switch and Fabric Extender or Virtual Connect interconnect. In the monitored mode, deployment of the server profile connections is supported for HPE Virtual Connect interconnects but not for Fabric Extender (FEX) interconnects.
 
 Logical switch configuration guidelines
 
-    * When Virtual Connect interconnects are connected to a logical switch, an uplink set cannot span multiple interconnects. This limitation is similar to FEX interconnects. However, multiple uplink sets are supported on a single Virtual Connect interconnect.
-    * When you enable or disable a top-of-rack switch internal port, the associated port on a FEX interconnect also displays the updated port status.
-    * When retrieving MAC addresses for FEX interconnects, only the entries that are associated with the managed FEX interconnects are displayed.
-    * If an FCoE network is assigned to an uplink set that is configured as dual-homed, (an invalid configuration), that FCoE network is not provisioned on the switch. Deployment of any server profile connection with this FCoE network will fail.
-    * When a logical switch is defined and configured with only a single physical switch, the uplink set associated with any FEX module connected to this logical switch is considered single-homed. Therefore, you can add an FCoE network to the uplink set even if the uplink set was initially created only with Ethernet networks. Deployment of any server profile connection with this FCoE network will succeed.
-    * For server profiles created for server ports connected to FEX interconnects, Ethernet networks are only supported on physical function a, and FCoE networks are only supported on physical function b at the server port. When both physical functions have connections defined, traffic is split evenly across both ports.
-    * If HPE OneView cannot log in to the switch, a critical alert is generated. Prevent any event on the switch that might trigger switch configuration; otherwise, the switch transitions to ConfigError state and you must reapply the configuration on the associated logical interconnects to recover.
-    * If HPE OneView is unable to claim a member switch of the logical switch when the operational mode of the logical switch is Managed, the operating state of the switch will transition to Added with Error. In this case, the Message of the Day (MOTD) banner on the switch will indicate that the switch is currently claimed by another HPE OneView appliance and the message "This switch is being controlled by OneView Domain, Appliance ID: {}" displays. You should remove the logical switch from that HPE OneView appliance, and then perform a refresh on the logical switch from the current HPE OneView appliance to re-initiate the claim operation.
-    * HPE OneView does not fully automate configuration of FCoE connectivity on the switch specified in the logical switch. For each FCoE network specified in the uplink set, HPE OneView only provisions the VLAN for that network on the switch. Network administrators must provision additional configuration for FCoE connectivity manually on the switch in addition to what HPE OneView provisions.
-        * To deploy server profile connections to a FEX interconnect, HPE OneView provisions the virtual Fibre Channel interface (VFC), VFC binding to FEX downlink port, and VSAN interface assignment on the switch.
-        * For the deployment of server profile connections for a Virtual Connect interconnect, the Network administrator must configure the virtual Fibre Channel interface (vFC), VFC binding to server port, and VSAN interface assignment binding manually.
-    * When a Nexus switch expansion module is removed, a warning alert is generated unless the module is powered off.
-    * HPE OneView can detect configuration changes that occur on the switches specified in the logical switch when it no longer matches the configuration that HPE OneView provisions. Warning alerts are generated. Administrators can correct the configuration manually or reapply the configuration on the associated logical interconnects to recover.
+* When Virtual Connect interconnects are connected to a logical switch, an uplink set cannot span multiple interconnects. This limitation is similar to FEX interconnects. However, multiple uplink sets are supported on a single Virtual Connect interconnect.
+* When you enable or disable a top-of-rack switch internal port, the associated port on a FEX interconnect also displays the updated port status.
+* When retrieving MAC addresses for FEX interconnects, only the entries that are associated with the managed FEX interconnects are displayed.
+* If an FCoE network is assigned to an uplink set that is configured as dual-homed, (an invalid configuration), that FCoE network is not provisioned on the switch. Deployment of any server profile connection with this FCoE network will fail.
+* When a logical switch is defined and configured with only a single physical switch, the uplink set associated with any FEX module connected to this logical switch is considered single-homed. Therefore, you can add an FCoE network to the uplink set even if the uplink set was initially created only with Ethernet networks. Deployment of any server profile connection with this FCoE network will succeed.
+* For server profiles created for server ports connected to FEX interconnects, Ethernet networks are only supported on physical function a, and FCoE networks are only supported on physical function b at the server port. When both physical functions have connections defined, traffic is split evenly across both ports.
+* If HPE OneView cannot log in to the switch, a critical alert is generated. Prevent any event on the switch that might trigger switch configuration; otherwise, the switch transitions to ConfigError state and you must reapply the configuration on the associated logical interconnects to recover.
+* If HPE OneView is unable to claim a member switch of the logical switch when the operational mode of the logical switch is Managed, the operating state of the switch will transition to Added with Error. In this case, the Message of the Day (MOTD) banner on the switch will indicate that the switch is currently claimed by another HPE OneView appliance and the message "This switch is being controlled by OneView Domain, Appliance ID: {}" displays. You should remove the logical switch from that HPE OneView appliance, and then perform a refresh on the logical switch from the current HPE OneView appliance to re-initiate the claim operation.
+* HPE OneView does not fully automate configuration of FCoE connectivity on the switch specified in the logical switch. For each FCoE network specified in the uplink set, HPE OneView only provisions the VLAN for that network on the switch. Network administrators must provision additional configuration for FCoE connectivity manually on the switch in addition to what HPE OneView provisions.
+    * To deploy server profile connections to a FEX interconnect, HPE OneView provisions the virtual Fibre Channel interface (VFC), VFC binding to FEX downlink port, and VSAN interface assignment on the switch.
+    * For the deployment of server profile connections for a Virtual Connect interconnect, the Network administrator must configure the virtual Fibre Channel interface (vFC), VFC binding to server port, and VSAN interface assignment binding manually.
+* When a Nexus switch expansion module is removed, a warning alert is generated unless the module is powered off.
+* HPE OneView can detect configuration changes that occur on the switches specified in the logical switch when it no longer matches the configuration that HPE OneView provisions. Warning alerts are generated. Administrators can correct the configuration manually or reapply the configuration on the associated logical interconnects to recover.
 
 {% hint style="info" %}
 Minimum required privileges: Infrastructure administrator or Network administrator
@@ -122,7 +122,7 @@ Minimum required privileges: Infrastructure administrator or Network administrat
 
 ###  Example 1 
 
-```text
+```powershell
 $LogicalSwitchGroup = Get-OVLogicalSwitchGroup -Name "My Nexus 5500 Switch Group Policy"
 $SshPassword = ConvertTo-SecureString -String "MyPassword" -AsPlainText -Force
 New-OVLogicalSwitch -Name "My Logical Switch 1" -LogicalSwitchGroup $LogicalSwitchGroup -Monitored -Switch1Address 10.1.1.1 -Switch2Address 10.1.1.2 -SshUserName admin -SshPassword $SshPassword -Snmpv1 -SnmpCommunity MyCommunity
@@ -132,7 +132,7 @@ Create the "My Logical Switch 1" as a Monitored Logical Switch resource.
 
 ###  Example 2 
 
-```text
+```powershell
 $LogicalSwitchGroup = Get-OVLogicalSwitchGroup -Name "My Nexus 6001 Switch Group Policy"
 $Password = ConvertTo-SecureString -String "MyPassword" -AsPlainText -Force
 $Results = New-OVLogicalSwitch -Name "My Logical Switch 2" -LogicalSwitchGroup $LogicalSwitchGroup -Managed -Switch1Address 10.1.2.1 -Switch2Address 10.1.2.2 -SshUserName admin-SshPassword $Password -Snmpv3 -SnmpUserName SnmpV3User -SnmpAuthLevel AuthAndPriv -SnmpAuthProtocol SHA -SnmpAuthPassword $Password -SnmpPrivProtocol aes128 -SnmpPrivPassword $Password -Async

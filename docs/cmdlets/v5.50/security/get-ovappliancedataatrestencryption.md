@@ -6,7 +6,7 @@ description: Get the appliance configured data at rest encryption state.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVApplianceDataAtRestEncryption
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -18,9 +18,9 @@ HPE OneView encrypts sensitive data, such as managed device credentials, when it
 
 The secure data-at-rest option, when enabled, stores the AEK off-disk in Composer NVRAM, and does not include the keyin the appliance backup. Enabling this option requires the administrator to save a copy of the AEK (recovery AEK) for use in the following circumstances:
 
-    * When restoring a backup taken when a different AEK was in effect.
-    * To successfully boot the system in the unlikely event that the system copy of the key is corrupted.
-    * A backup is being restored to a different new Composer or to the same Composer that has been factory reset.
+* When restoring a backup taken when a different AEK was in effect.
+* To successfully boot the system in the unlikely event that the system copy of the key is corrupted.
+* A backup is being restored to a different new Composer or to the same Composer that has been factory reset.
 
 The administrator must store the recovery AEK in a secure location, where it can be only accessed by authorized personnel. In the rare circumstance where the key cannot be read from the Composer NVRAM or the key gets corrupted, the administrator must use the appliance maintenance console to upload the AEK recovery copy, based on the error resolution message displayed. In the rare circumstance where the Composer NVRAM itself becomes inaccessible, users can choose to disable secure-data-at-rest option until the hardware issue itself is resolved.
 
@@ -36,7 +36,7 @@ Minimum required privileges: Infrastructure administrator.
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVApplianceDataAtRestEncryption
 ```
 

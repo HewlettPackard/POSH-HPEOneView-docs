@@ -6,7 +6,7 @@ description: Retrieve Server Hardware resource(s).
 
 ## Syntax
 
-```text
+```powershell
 Get-OVServer
     [-Name <String>]
     [-ServerName <String>]
@@ -25,20 +25,20 @@ Get-OVServer
 
 Obtain a collection of server hardware resources, a specific server with the specified name, or server hardware resources without an assigned Server Profile.  Returned resources will display:
 
-    * Device Name
-    * Serial Number
-    * Model
-    * System ROM
-    * iLO and its firmware
-    * Server Profile
-    * Status
-    * Licensing
+* Device Name
+* Serial Number
+* Model
+* System ROM
+* iLO and its firmware
+* Server Profile
+* Status
+* Licensing
 
 ## Examples
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVServer
 Name           Status   Power   Serial Number  Model       ROM            iLO       Server Profile   License
 ----           ------   -----   -------------  -----       ---            ---       --------------   -------
@@ -80,7 +80,7 @@ Return all the server hardware managed by this appliance.
 
 ###  Example 2 
 
-```text
+```powershell
 $bay1 = Get-OVServer -Name "Encl1, bay 1"
 ```
 
@@ -88,7 +88,7 @@ Return the server hardware resource with name "Encl1, bay 1".
 
 ###  Example 3 
 
-```text
+```powershell
 Get-OVServer -NoProfile
 Name           Status   Power   Serial Number  Model       ROM            iLO       Server Profile License
 ----           ------   -----   -------------  -----       ---            ---       -------------- -------
@@ -124,7 +124,7 @@ Display all server hardware resources without an assigned Server Profile.
 
 ###  Example 4 
 
-```text
+```powershell
 $sht = Get-OVServerHardwareType -Name "BL460c Gen9 1"
 $AvailableServer = Get-OVServer -NoProfile -ServerHardwareType $sht | Select -first 1
 ```
@@ -133,7 +133,7 @@ Return the first available server hardware of the Server Hardware Type requested
 
 ###  Example 5 
 
-```text
+```powershell
 $AvailableServer = Get-OVServerProfileTemplate -Name "My Template 1" | Get-OVServer -NoProfile | Select -first 1
 ```
 
@@ -141,7 +141,7 @@ Return the first available server hardware designed for the specific Server Prof
 
 ###  Example 6 
 
-```text
+```powershell
 Get-OVServer -Status Warning, Critical
 ```
 
@@ -189,10 +189,10 @@ Specify the server hardware serial number to locate.  This parameter does not su
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-    * AllResources
-    * AllResourcesInScope
-    * `[HPEOneView.Appliance.ScopeCollection]`
-    * `[HPEOneView.Appliance.ConnectionPermission]`
+* AllResources
+* AllResourcesInScope
+* `[HPEOneView.Appliance.ScopeCollection]`
+* `[HPEOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |
@@ -279,11 +279,11 @@ Return no more than the provided value.  Combining other parameters to filter ma
 
 Filter resources based on their current status.  Allowed values:
 
-    * Ok
-    * Warning
-    * Critical
-    * Unknown
-    * Disabled
+* Ok
+* Warning
+* Critical
+* Unknown
+* Disabled
 
 | Aliases | None |
 | :--- | :--- |

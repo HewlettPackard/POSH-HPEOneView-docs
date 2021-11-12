@@ -6,7 +6,7 @@ description: Change the appliance current security protocols.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVApplianceSecurityProtocol
     [-EnableTlsVersion] <String[]>
     [-ApplianceConnection <Array>]
@@ -17,10 +17,10 @@ Set-OVApplianceSecurityProtocol
 
 Use this Cmdlet to change the enabled security protocol(s) on the appliance. The security protocols that can be changed on an HPE OneView appliance are TLS protocol versions.  Please be aware of the following rules:
 
-    * Enabling or disabling TLS protocols is allowed only for the current cryptography mode. For example, disabling TLSv1.1 in legacy mode of the appliance will not disable TLSv1.1 when the appliance is switched to FIPS mode.
-    * Enabling an unsupported protocol for the current cryptography mode of the appliance is not allowed. For example, enabling TLSv1 is not allowed in the FIPS mode.
-    * TLSv1.2 protocol cannot be disabled
-    * Disabling all the protocols is not allowed.
+* Enabling or disabling TLS protocols is allowed only for the current cryptography mode. For example, disabling TLSv1.1 in legacy mode of the appliance will not disable TLSv1.1 when the appliance is switched to FIPS mode.
+* Enabling an unsupported protocol for the current cryptography mode of the appliance is not allowed. For example, enabling TLSv1 is not allowed in the FIPS mode.
+* TLSv1.2 protocol cannot be disabled
+* Disabling all the protocols is not allowed.
 
 {% hint style="warning" %}
 Changing active security protocol(s) will require an immediate appliance reboot.
@@ -35,7 +35,7 @@ Minimum required privileges: Infrastructure administrator
 
 ###  Example 1 
 
-```text
+```powershell
 Set-OVApplianceSecurityProtocol -EnableTlsVersion Tlsv1.2
 ```
 
@@ -43,7 +43,7 @@ Set the appliance to only enable TLSv1.2. After confirmation prompt, appliance w
 
 ###  Example 2 
 
-```text
+```powershell
 Set-OVApplianceSecurityProtocol -EnableTlsVersion Tlsv1, Tlsv1.1, Tlsv1.2
 ```
 
@@ -67,9 +67,9 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 
 Specify 1 or more security protocols to enable. Allowed values:
 
-    * TLSv1
-    * TLSv1.1
-    * TLSv1.2
+* TLSv1
+* TLSv1.1
+* TLSv1.2
 
 | Aliases | None |
 | :--- | :--- |

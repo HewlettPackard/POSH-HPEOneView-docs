@@ -6,7 +6,7 @@ description: Retrieve Uplink Set resource(s).
 
 ## Syntax
 
-```text
+```powershell
 Get-OVUplinkSet
     [-Name] <String>
     [-LogicalInterconnect] <Object>
@@ -16,7 +16,7 @@ Get-OVUplinkSet
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Get-OVUplinkSet
     [-LogicalInterconnect] <Object>
     [-Type] <String>
@@ -34,7 +34,7 @@ This Cmdlet will retrieve the list of all Uplink Sets or specific by the name.  
 
 ###  Example 1 
 
-```text
+```powershell
 $UplinkSets = Get-OVUplinkSet
 ```
 
@@ -42,7 +42,7 @@ Get list of all Uplink Sets.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVUplinkSet -name "Production Networks"
 ```
 
@@ -50,7 +50,7 @@ Get the "Production Networks" Uplink Set(s).
 
 ###  Example 3 
 
-```text
+```powershell
 Get-OVUplinkSet -name "Production Networks" -report
 ```
 
@@ -58,7 +58,7 @@ Get the "Production Networks" Uplink Set(s), and generate a report.
 
 ###  Example 4 
 
-```text
+```powershell
 Get-OVUplinkSet -name "Production Networks" -liname "Encl1-LI" -report
 ```
 
@@ -94,8 +94,8 @@ Name of the Logical Interconnect to show associated Uplink Set.
 
 Specify the Uplink Set Type to display.  Will display all Uplink Sets of the type provided.  Allowed values:
 
-    * Ethernet
-    * FibreChannel
+* Ethernet
+* FibreChannel
 
 | Aliases | None |
 | :--- | :--- |

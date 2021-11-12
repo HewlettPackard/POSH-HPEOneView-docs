@@ -6,7 +6,7 @@ description: Configure remote syslog.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVRemoteSyslog
     [-Destination] <IPAddress>
     [-Port] <Int32>
@@ -24,7 +24,7 @@ The remoteSyslog API provides the ability to configure remote logging on devices
 
 ###  Example 1 
 
-```text
+```powershell
 Set-OVRemoteSyslog -Destination 10.150.20.1 -SendTestMessage -Async | Wait-OVTaskComplete
 ```
 

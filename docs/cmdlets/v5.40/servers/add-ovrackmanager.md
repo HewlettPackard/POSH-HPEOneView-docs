@@ -6,7 +6,7 @@ description: Add supported Rack Manager (HPE Superdome Flex) resource.
 
 ## Syntax
 
-```text
+```powershell
 Add-OVRackManager
     [-ComputerName] <String>
     [-Credential] <PSCredential>
@@ -23,10 +23,10 @@ A rack manager platform is a multi-node system. The nodes are housed within a ra
 
 A rack manager platform consists of the following:
 
-    * One or more chassis - The chassis are individual nodes that are used to build logical components such as systems or partitions. Each chassis is a physical container for system components like the compute, storage, or network nodes.  In an HPE Superdome Flex Server, the chassis are 5U nodes that represent the compute nodes with CPU, memory, I/O, power supplies, and fans.
-    * One or more systems or partitions - The system is a logical entity that functions as a server, and runs a single instance of an operating system to host services. In HPE OneView, the partition is modeled as a server hardware resource.  In an HPE Superdome Flex Server, the systems are also called partitions. A partition consists of one or more compute chassis that are interconnected through an ultra-fast fabric. Each partition starts with a base chassis and can be extended using expansion chassis to form a large system.
-    * One or more managers - The manager component manages the rack manager platform, and hosts the management controller function. HPE OneView communicates with the rack manager through this management controller enabling system administration, control, and platform management of the rack manager platform. Some platforms have multiple manager components to support redundancy.  In an HPE Superdome Flex Server, the manager component is called the Rack Management Controller (RMC). The RMC hosts the DMTF Redfish APIs.
-    * One or more racks - The racks physically contain all the rack manager platform components.
+* One or more chassis - The chassis are individual nodes that are used to build logical components such as systems or partitions. Each chassis is a physical container for system components like the compute, storage, or network nodes.  In an HPE Superdome Flex Server, the chassis are 5U nodes that represent the compute nodes with CPU, memory, I/O, power supplies, and fans.
+* One or more systems or partitions - The system is a logical entity that functions as a server, and runs a single instance of an operating system to host services. In HPE OneView, the partition is modeled as a server hardware resource.  In an HPE Superdome Flex Server, the systems are also called partitions. A partition consists of one or more compute chassis that are interconnected through an ultra-fast fabric. Each partition starts with a base chassis and can be extended using expansion chassis to form a large system.
+* One or more managers - The manager component manages the rack manager platform, and hosts the management controller function. HPE OneView communicates with the rack manager through this management controller enabling system administration, control, and platform management of the rack manager platform. Some platforms have multiple manager components to support redundancy.  In an HPE Superdome Flex Server, the manager component is called the Rack Management Controller (RMC). The RMC hosts the DMTF Redfish APIs.
+* One or more racks - The racks physically contain all the rack manager platform components.
 
 When you add a rack manager, HPE OneView automatically applies the HPE OneView Standard license to the rack manager. HPE OneView discovers and monitors the hardware subcomponents of the rack manager.
 
@@ -38,7 +38,7 @@ Minimum required privileges: Infrastructure administrator or Server administrato
 
 ###  Example 1 
 
-```text
+```powershell
 $Credential = Get-Credential -Username Administrator -Message "RackManager Password" Add-OVRackManager -ComputerName rackmanger1.domain.com -Credential $Credential
 ```
 

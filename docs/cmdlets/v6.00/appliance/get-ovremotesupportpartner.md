@@ -6,7 +6,7 @@ description: Retrieve defined Support and Reseller partners.
 
 ## Syntax
 
-```text
+```powershell
 Get-OVRemoteSupportPartner
     [-Name <String>]
     [-ApplianceConnection <Object>]
@@ -35,7 +35,7 @@ Minimum required privileges: Read-only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVRemoteSupportPartner
 ```
 

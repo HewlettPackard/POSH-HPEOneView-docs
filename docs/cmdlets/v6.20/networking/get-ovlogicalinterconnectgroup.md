@@ -6,7 +6,7 @@ description: Retrieve Logical Interconnect Group resource(s).
 
 ## Syntax
 
-```text
+```powershell
 Get-OVLogicalInterconnectGroup
     [-Name <String>]
     [-Type <String>]
@@ -17,7 +17,7 @@ Get-OVLogicalInterconnectGroup
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Get-OVLogicalInterconnectGroup
     [-InputObject] <Object>
     [-ApplianceConnection <Object>]
@@ -30,8 +30,8 @@ A logical interconnect group acts as a recipe for creating a logical interconnec
 
 There are different kinds of logical interconnect groups:
 
-    * A multiple-enclosure logical interconnect group must match the interconnect link topology within the set of linked enclosures. All bays must be properly populated in all enclosures in the interconnect link topology. A multiple-enclosure logical interconnect group must include a Virtual Connect SE 40Gb F8 Module for Synergy and/or a HPE Virtual Connect SE 100Gb F32 Module for HPE Synergy and the Interconnect Link Module configuration.
-    * Single-enclosure logical interconnect groups, such as an HPE Synergy Serial Attached SCSI (SAS) or HPE BladeSystem c7000 logical interconnect group, pertain only to the enclosure in which they are applied. A single-enclosure logical interconnect group can be applied to individual fabric module bays in individual enclosures in the HPE Synergy interconnect link topology or HPE BladeSystem c7000 enclosure. Virtual Connect SE Fibre Channel modules support single-enclosure logical interconnect groups.
+* A multiple-enclosure logical interconnect group must match the interconnect link topology within the set of linked enclosures. All bays must be properly populated in all enclosures in the interconnect link topology. A multiple-enclosure logical interconnect group must include a Virtual Connect SE 40Gb F8 Module for Synergy and/or a HPE Virtual Connect SE 100Gb F32 Module for HPE Synergy and the Interconnect Link Module configuration.
+* Single-enclosure logical interconnect groups, such as an HPE Synergy Serial Attached SCSI (SAS) or HPE BladeSystem c7000 logical interconnect group, pertain only to the enclosure in which they are applied. A single-enclosure logical interconnect group can be applied to individual fabric module bays in individual enclosures in the HPE Synergy interconnect link topology or HPE BladeSystem c7000 enclosure. Virtual Connect SE Fibre Channel modules support single-enclosure logical interconnect groups.
 
 All references to a logical interconnect group by an enclosure group or logical interconnect must be removed before you can delete the logical interconnect group.
 
@@ -45,7 +45,7 @@ Minimum required privileges: Read-only
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVLogicalInterconnectGroup
 ```
 
@@ -53,7 +53,7 @@ Returns all Logical Interconnect Groups defined on the appliance to standard out
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVLogicalInterconnectGroup -Name "Production"
 ```
 
@@ -61,7 +61,7 @@ Returns just the Production Logical Interconnect Group object to standard output
 
 ###  Example 3 
 
-```text
+```powershell
 $LigName = "VC FF Virt Prod"
 $CreatedLig = New-OVLogicalInterconnectGroup -Name $LigName -bays @{1 = "FlexFabric";2 = "FlexFabric"} -EnableIgmpSnooping $True -InternalNetworks "VMMigration Network" | Wait-OVTaskComplete | Get-OVLogicalInterconnectGroup
 $CreatedLig
@@ -75,7 +75,7 @@ Create a new Logical Interconnect Group resource, wait for the task to complete,
 
 ###  Example 4 
 
-```text
+```powershell
 Get-OVLogicalInterconnectGroup -exportFile "c:\myApplianceConfig\LogicaICGs.json"
 ```
 
@@ -123,10 +123,10 @@ Provide the type of Logical Interconnect Group to return.  Omit to return all Lo
 
 Filter resources based on provided Scope membership.  By default, all resources for the accounts Active Permissions will be displayed.  Allowed values:
 
-    * AllResources
-    * AllResourcesInScope
-    * `[HPEOneView.Appliance.ScopeCollection]`
-    * `[HPEOneView.Appliance.ConnectionPermission]`
+* AllResources
+* AllResourcesInScope
+* `[HPEOneView.Appliance.ScopeCollection]`
+* `[HPEOneView.Appliance.ConnectionPermission]`
 
 | Aliases | None |
 | :--- | :--- |

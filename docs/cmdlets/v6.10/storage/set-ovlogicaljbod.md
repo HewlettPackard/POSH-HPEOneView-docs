@@ -6,7 +6,7 @@ description: Modify a logical JBOD resource.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVLogicalJBOD
     [-InputObject] <HPEOneView.Storage.LogicalJBOD[]>
     [-DisableEraseData]
@@ -30,7 +30,7 @@ Minimum required privileges: Infrastructure administrator, server administrator,
 
 ###  Example 1 
 
-```text
+```powershell
 Set-OVLogicalJBOD -InputObject $MyLogicalJBOD -DisableEraseData
 ```
 

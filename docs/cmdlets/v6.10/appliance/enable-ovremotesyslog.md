@@ -6,7 +6,7 @@ description: Enable remote syslog.
 
 ## Syntax
 
-```text
+```powershell
 Enable-OVRemoteSyslog
     [-Async]
     [-ApplianceConnection <Object>]
@@ -25,7 +25,7 @@ Minimum required privileges: Infrastructure administrator, Server administrator
 
 ###  Example 1 
 
-```text
+```powershell
 Enable-OVRemoteSyslog
 ```
 
@@ -33,7 +33,7 @@ Enable remote syslog configuration on all connected appliances.
 
 ###  Example 2 
 
-```text
+```powershell
 Enable-OVRemoteSyslog -ApplianceConnection appliance1.domain.com -Async | Wait-OVTaskComplete
 ```
 

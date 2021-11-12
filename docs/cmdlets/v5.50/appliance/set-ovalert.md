@@ -6,7 +6,7 @@ description: Change status of an alert.
 
 ## Syntax
 
-```text
+```powershell
 Set-OVAlert
     [-InputObject] <Object>
     [-AssignToUser <String>]
@@ -15,7 +15,7 @@ Set-OVAlert
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Set-OVAlert
     [-InputObject] <Object>
     [-Active]
@@ -23,7 +23,7 @@ Set-OVAlert
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 Set-OVAlert
     [-InputObject] <Object>
     [-Cleared]
@@ -51,7 +51,7 @@ In order for an Administrator to change the status of an Alert, the Administrato
 
 ###  Example 1 
 
-```text
+```powershell
 Set-OVAlert -InputObject $Alert -Cleared
 ```
 
@@ -59,7 +59,7 @@ Clears the alert.
 
 ###  Example 2 
 
-```text
+```powershell
 Get-OVAlert -AlertState Active | Set-OVAlert -Cleared
 ```
 
@@ -67,7 +67,7 @@ Get all alerts in an "Active" state, and set their state to "Cleared".
 
 ###  Example 3 
 
-```text
+```powershell
 Get-OVServer -name "Encl1, bay 1*" | Get-OVAlert -State active | Set-OVAlert -Cleared
 ```
 

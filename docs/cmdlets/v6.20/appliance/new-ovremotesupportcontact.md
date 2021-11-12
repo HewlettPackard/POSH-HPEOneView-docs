@@ -6,7 +6,7 @@ description: Configure new Remote Support contact.
 
 ## Syntax
 
-```text
+```powershell
 New-OVRemoteSupportContact
     [-Firstname] <String>
     [-Lastname] <String>
@@ -29,7 +29,7 @@ Use this Cmdlet to create a new Remote Support Contact.  The Remote Support Cont
 
 ###  Example 1 
 
-```text
+```powershell
 New-OVRemoteSupportContact -Firstname Rebert -Lastname Jones -Email robert.jones@domain.local -PrimaryPhone 123-111-2222 -AlternatePhone 111-333-4444 -Language en -Default
 ```
 

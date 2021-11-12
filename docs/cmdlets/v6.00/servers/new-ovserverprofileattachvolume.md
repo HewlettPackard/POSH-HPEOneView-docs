@@ -6,7 +6,7 @@ description: Create volume attachment for a server profile.
 
 ## Syntax
 
-```text
+```powershell
 New-OVServerProfileAttachVolume
     [-Volume] <Array>
     [-VolumeID] <Int32>
@@ -18,7 +18,7 @@ New-OVServerProfileAttachVolume
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVServerProfileAttachVolume
     [-Name] <Object>
     [-ServerProfile] <Object>
@@ -53,7 +53,7 @@ New-OVServerProfileAttachVolume
     [<CommonParameters>]
 ```
 
-```text
+```powershell
 New-OVServerProfileAttachVolume
     [-ServerProfile] <Object>
     [-Volume] <Array>
@@ -77,7 +77,7 @@ This Cmdlet will assist with creating a Storage Volume object to then attach to 
 
 ###  Example 1 
 
-```text
+```powershell
 $attachVolume = New-OVServerProfileAttachVolume -volumeid 1 -volume Volume1
 ```
 
@@ -85,7 +85,7 @@ Create a Volume Attach object that maps to the "Volume1" storage volume with an 
 
 ###  Example 2 
 
-```text
+```powershell
 $attachVolume = Get-OVStorageVolume -Name Volume1 | New-OVServerProfileAttachVolume -volumeid 1
 ```
 
@@ -93,7 +93,7 @@ Get the "Volume1" Storage Volume via the Get-OVStorageVolume Cmdlet, and pipe th
 
 ###  Example 3 
 
-```text
+```powershell
 $attachVolume = Get-OVStorageVolume -Name Volume1 | New-OVServerProfileAttachVolume -volumeid 1 -lunidtype manual -lunid 1
 ```
 
@@ -101,7 +101,7 @@ Get the "Volume1" Storage Volume via the Get-OVStorageVolume Cmdlet, and pipe th
 
 ###  Example 4 
 
-```text
+```powershell
 $volume1 = Get-OVStorageVolume -Name Volume1 | New-OVServerProfileAttachVolume -volumeid 1
 $volume2 = Get-OVStorageVolume SharedVolume1 | New-OVServerProfileAttachVolume -volumeid 2
 $attachVolumes = @($volume1,$volume2)
@@ -111,7 +111,7 @@ Get the "Volume1" and "SharedVolume1" Storage Volumes via the Get-OVStorageVolum
 
 ###  Example 5 
 
-```text
+```powershell
 $storagepool = Get-OVStoragePool R1_FC
 $sp = Get-OVServerProfile -Name "chef-web01"
 New-OVServerProfileAttachVolume -ServerProfile $sp -Name "Chef Web01 Vol 2" -StoragePool $storagepool  | Wait-OVTaskComplete
@@ -121,7 +121,7 @@ Attach a new 10Gb Ephemeral Volume to an existing Server Profile.
 
 ###  Example 6 
 
-```text
+```powershell
 $sp = Get-OVServerProfile -Name "chef-web01"
 Get-OVStorageVolume "My New Volume 3" | New-OVServerProfileAttachVolume -ServerProfile $sp  | Wait-OVTaskComplete
 ```
@@ -130,7 +130,7 @@ Attach an existing Storage Volume to a Server Profile.
 
 ###  Example 7 
 
-```text
+```powershell
 $storagepool = Get-OVStoragePool R1_FC
 $sp = Get-OVServerProfile -Name "My Server Profile"
 New-OVServerProfileAttachVolume -Name "My Server Profile Boot Vol" -ServerProfile $sp -StoragePool $storagepool -Bootable  | Wait-OVTaskComplete
@@ -140,7 +140,7 @@ Add a bootable volume to an existing Server Profile.
 
 ###  Example 8 
 
-```text
+```powershell
 $SVT = Get-OVStorageVolumeTemplate -Name StoreServe4-TPDD-SVT -ErrorAction Stop
 $StorageVolumeObject = New-OVServerProfileAttachVolume -Name "Template 3 Private Vol 1" -VolumeTemplate $SVT
 ```
@@ -237,12 +237,12 @@ The requested Ephemeral Volume storage capacity in GB.  `[e.g]`. 20 to specify 2
 
 Specify the StoreVirtual protection level (aka Network RAID) for the volume.  Allowed values are:
 
-    * NetworkRaid0None
-    * NetworkRaid5SingleParity
-    * NetworkRaid10Mirror2Way
-    * NetworkRaid10Mirror3Way
-    * NetworkRaid10Mirror4Way
-    * NetworkRaid6DualParity
+* NetworkRaid0None
+* NetworkRaid5SingleParity
+* NetworkRaid10Mirror2Way
+* NetworkRaid10Mirror3Way
+* NetworkRaid10Mirror4Way
+* NetworkRaid6DualParity
 
 | Aliases | None |
 | :--- | :--- |
@@ -308,31 +308,31 @@ Specify the Host OS type, which will set the Host OS value when HPE OneView crea
     
 Accepted values:
 
-    * CitrixXen = "Citrix Xen Server 5.x/6.x"
-    * AIX       = "AIX"
-    * IBMVIO    = "IBM VIO Server"
-    * RHEL4     = "RHE Linux (Pre RHEL 5)"
-    * RHEL3     = "RHE Linux (Pre RHEL 5)"
-    * RHEL      = "RHE Linux (5.x, 6.x)"
-    * RHEV      = "RHE Virtualization (5.x, 6.x)"
-    * VMware    = "ESX 4.x/5.x"
-    * Win2k3    = "Windows 2003"
-    * Win2k8    = "Windows 2008/2008 R2"
-    * Win2k12   = "Windows 2012 / WS2012 R2"
-    * OpenVMS   = "OpenVMS"
-    * Egenera   = "Egenera"
-    * Exanet    = "Exanet"
-    * Solaris9  = "Solaris 9/10"
-    * Solaris10 = "Solaris 9/10"
-    * Solaris11 = "Solaris 11"
-    * ONTAP     = "NetApp/ONTAP"
-    * OEL       = "OE Linux UEK (5.x, 6.x)"
-    * HPUX11iv1 = "HP-UX (11i v1, 11i v2)"
-    * HPUX11iv2 = "HP-UX (11i v1, 11i v2)"
-    * HPUX11iv3 = "HP-UX (11i v3)"
-    * SUSE      = "SuSE (10.x, 11.x)"
-    * SUSE9     = "SuSE Linux (Pre SLES 10)"
-    * Inform    = "InForm"
+* CitrixXen = "Citrix Xen Server 5.x/6.x"
+* AIX       = "AIX"
+* IBMVIO    = "IBM VIO Server"
+* RHEL4     = "RHE Linux (Pre RHEL 5)"
+* RHEL3     = "RHE Linux (Pre RHEL 5)"
+* RHEL      = "RHE Linux (5.x, 6.x)"
+* RHEV      = "RHE Virtualization (5.x, 6.x)"
+* VMware    = "ESX 4.x/5.x"
+* Win2k3    = "Windows 2003"
+* Win2k8    = "Windows 2008/2008 R2"
+* Win2k12   = "Windows 2012 / WS2012 R2"
+* OpenVMS   = "OpenVMS"
+* Egenera   = "Egenera"
+* Exanet    = "Exanet"
+* Solaris9  = "Solaris 9/10"
+* Solaris10 = "Solaris 9/10"
+* Solaris11 = "Solaris 11"
+* ONTAP     = "NetApp/ONTAP"
+* OEL       = "OE Linux UEK (5.x, 6.x)"
+* HPUX11iv1 = "HP-UX (11i v1, 11i v2)"
+* HPUX11iv2 = "HP-UX (11i v1, 11i v2)"
+* HPUX11iv3 = "HP-UX (11i v3)"
+* SUSE      = "SuSE (10.x, 11.x)"
+* SUSE9     = "SuSE Linux (Pre SLES 10)"
+* Inform    = "InForm"
 
 | Aliases | OS |
 | :--- | :--- |
@@ -432,9 +432,9 @@ For Ephemeral (private) volumes that should be provisioned from Storage Volume T
 
 Specify the volume provisioning type. Supported values:
 
-    * Thin
-    * Full
-    * ThinDeduplication (only supported with HPE StoreServe)
+* Thin
+* Full
+* ThinDeduplication (only supported with HPE StoreServe)
 
 | Aliases | None |
 | :--- | :--- |

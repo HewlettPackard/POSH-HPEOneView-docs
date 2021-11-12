@@ -6,7 +6,7 @@ description: Change the appliance SNMPv3 Engine ID
 
 ## Syntax
 
-```text
+```powershell
 Set-OVApplianceSnmpV3EngineId
     [-EngineID] <String>
     [-ApplianceConnection <Object>]
@@ -25,7 +25,7 @@ Minimum required privileges: Infrastructure administrator
 
 ###  Example 1 
 
-```text
+```powershell
 Set-OVApplianceSnmpV3EngineId -EngineID 0x73cb660f279b9e
 ```
 

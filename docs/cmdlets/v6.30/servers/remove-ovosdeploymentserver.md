@@ -6,7 +6,7 @@ description: Remove an HPE Synergy Image Streamer OS Deployment server.
 
 ## Syntax
 
-```text
+```powershell
 Remove-OVOSDeploymentServer
     [-InputObject] <HPEOneView.Appliance.OSDeploymentServer>
     [-Force]
@@ -25,7 +25,7 @@ In order to successfully remove an OS Deployment Server, all associated Logical 
 
 ###  Example 1 
 
-```text
+```powershell
 Get-OVOSDeploymentServer | Remove-OVOSDeploymentServer
 ```
 
