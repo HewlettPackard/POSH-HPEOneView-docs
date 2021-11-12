@@ -4766,15 +4766,29 @@
     "Getting Help": "getting-help.md"
   },
   "About": {
+    "about\\_HPEOneView.630": "about/about_hpeoneview.630.md",
+    "about\\_HPEOneView.620": "about/about_hpeoneview.620.md",
     "about\\_HPEOneView.610": "about/about_hpeoneview.610.md",
     "about\\_HPEOneView.600": "about/about_hpeoneview.600.md",
     "about\\_HPEOneView.550": "about/about_hpeoneview.550.md",
     "about\\_HPEOneView.540": "about/about_hpeoneview.540.md",
-    "about\\_HPEOneView.530": "about/about_hpeoneview.530.md",
-    "about\\_HPEOneView.520": "about/about_hpeoneview.520.md",
-    "about\\_HPEOneView.500": "about/about_hpeoneview.500.md",
-    "about\\_HPEOneView.420": "about/about_hpeoneview.420.md",
-    "about\\_HPEOneView.410": "about/about_hpeoneview.410.md",
+    "Deprecated": [
+        {
+          "about\\_HPEOneView.530": "about/about_hpeoneview.530.md"
+        },
+        {
+          "about\\_HPEOneView.520": "about/about_hpeoneview.520.md"
+        },
+        {
+          "about\\_HPEOneView.500": "about/about_hpeoneview.500.md"
+        },
+        {
+          "about\\_HPEOneView.420": "about/about_hpeoneview.420.md"
+        },
+        {
+          "about\\_HPEOneView.410": "about/about_hpeoneview.410.md"
+        }
+      ],
     "about\\_Appliance\\_Connections": "about/about_appliance_connections.md",
     "about\\_Appliance\\_Connection\\_Permissions": "about/about_appliance_connection_permissions.md",
     "about\\_Two\\_Factor\\_Authentication": "about/about_two_factor_authentication.md"
