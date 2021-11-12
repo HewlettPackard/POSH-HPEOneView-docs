@@ -54,6 +54,8 @@ function ProcessSubProperty ($Indent = $null, [PSCustomObject]$Property, $Direct
 
 $CurrentPath = Split-Path $MyInvocation.MyCommand.Path -parent
 $MarkdownTableItem = '* [{0}]({1})'
+$MarkdownL1TableItem = '* {0}'
+$MarkdownL2TableItem = '  * [{0}]({1})'
 $IndentPadding = '  '
 
 $StringBuilder = [System.Collections.ArrayList]::new()
@@ -122,9 +124,30 @@ ForEach ($TopLevel in ($SummarySourceJson.About.PSObject.Members | Where-Object 
 
     $FinalString = $Results = $null
 
-    $FinalString = $MarkdownTableItem -f $TopLevel.Name, ($TopLevel.Value.ToLower())
+    if ($TopLevel.Value -is [Array])
+    {
 
-    [void]$StringBuilder.Add($FinalString)
+        $FinalString = $MarkdownL1TableItem -f $TopLevel.Name
+        [void]$StringBuilder.Add($FinalString)
+
+        ForEach ($subItem in $TopLevel.Value)
+        {
+
+            $FinalString = $MarkdownL2TableItem -f $subItem.PSObject.Properties.Name, ($subItem.PSObject.Properties.Value.ToLower())
+            [void]$StringBuilder.Add($FinalString)
+
+        }
+
+    }
+
+    else
+    {
+
+        $FinalString = $MarkdownTableItem -f $TopLevel.Name, ($TopLevel.Value.ToLower())
+
+        [void]$StringBuilder.Add($FinalString)
+
+    }
 
 }
 
