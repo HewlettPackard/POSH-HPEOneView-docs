@@ -94,7 +94,14 @@ IP Address or FQDN of the storage systems.
 
 ### -Family &lt;String&gt;
 
-Specify the type of Storage System to add: Nimble, StorageVirtual, StoreServ or Primera.
+Specify the type of Storage System to add:
+
+	* Alletra6000
+	* Alletra9000
+	* Nimble
+	* StorageVirtual
+	* StoreServ
+	* Primera
 
 | Aliases | None |
 | :--- | :--- |

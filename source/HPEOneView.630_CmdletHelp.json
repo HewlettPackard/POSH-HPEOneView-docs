@@ -3263,7 +3263,7 @@
           },
           {
             "Name": "Family",
-            "Description": "Specify the type of Storage System to add: Nimble, StorageVirtual, StoreServ or Primera.",
+            "Description": "Specify the type of Storage System to add:\n\n\t* Alletra6000\n\t* Alletra9000\n\t* Nimble\n\t* StorageVirtual\n\t* StoreServ\n\t* Primera",
             "DefaultValue": "StoreServ",
             "Aliases": "None",
             "PipelineInput": "false",
@@ -7770,7 +7770,7 @@
           {
             "Name": "Name",
             "Description": "Filter address ranges based on the name.",
-            "DataType": "string",
+            "DataType": "String",
             "Required": false,
             "DefaultValue": "",
             "Aliases": "None",
@@ -20083,7 +20083,7 @@
           {
             "Name": "ManualOrder",
             "Description": "Use this parameter when the EthActivationOrder is set to Manual.  The allowed values are:\n\n\t * Bay3\n\t * Bay6\n\t * Bay1\n\t * Bay5\n\t * Bay2\n\t * Bay4",
-            "DataType": "string",
+            "DataType": "String",
             "Required": true,
             "DefaultValue": "",
             "Aliases": "None",
@@ -20103,7 +20103,7 @@
           {
             "Name": "SasActivationMethod",
             "Description": "Specify the HPE Synergy SAS module firmware activation order.  Accepted values are:\n\n\t* Parallel\n\t* Orchestrated",
-            "DataType": "string",
+            "DataType": "String",
             "Required": false,
             "DefaultValue": "",
             "Aliases": "None",
@@ -35743,7 +35743,7 @@
           {
             "Name": "FecMode",
             "Description": "Specify the forward error correction mode.  This paraemter is only supported with Virtual Connect SE 100Gb F32 Module for Synergy modules.  When configuring, the following values are supported with parent ports:\n\n\t* Auto\n\t* Cl74\n\t* Cl108\n\t* None\n\nThe following values are supported with sub-ports:\n\n\t* Auto\n\t* Cl74\n\t* Cl91\n\t* None",
-            "DataType": "string",
+            "DataType": "String",
             "Required": false,
             "DefaultValue": "",
             "Aliases": "None",
@@ -35753,7 +35753,27 @@
           {
             "Name": "PortSpeed",
             "Description": "The allowed uplink port speed by the fabric module and traceiver type.  When specifying a port speed, this value will be set for all ports.  This parameter applies to Ethernet or FCoE uplink ports only.  Allowed values:\n\n\t* Auto\n\t* 100M\n\t* 1G\n\t* 10G\n\t* 40G\n\t* 100G",
-            "DataType": "string",
+            "DataType": "String",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "DCBXOverride",
+            "Description": "Use to override the DCBx protocol version.  Use the RoCEVersion parameter to specify which RoCE version should be used.",
+            "DataType": "bool",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "RoCEVersion",
+            "Description": "Specify which RoCE version should be used.",
+            "DataType": "String[]",
             "Required": false,
             "DefaultValue": "",
             "Aliases": "None",
@@ -35812,6 +35832,11 @@
             "Title": "-------------------------- EXAMPLE 7 --------------------------",
             "Code": "$ImageStreamerDeploymentNetworkObject = Get-OVNetwork -Name \"Deployment Network\" -ErrorAction Stop\nGet-OVLogicalInterconnectGroup -Name \"My Synergy VC+ImageStreamer LIG\" -ErrorAction Stop | New-OVUplinkSet -Name \"Image Streamer Uplink Set\" -Type ImageStreamer -Networks $ImageStreamerDeploymentNetworkObject -UplinkPorts \"Enclosure1:Bay3:Q3.1\",\"Enclosure1:Bay3:Q4.1\",\"Enclosure2:Bay6:Q3.1\",\"Enclosure2:Bay6:Q4.1\"",
             "Description": "Create a Synergy ImageStreamer Uplink Set."
+          },
+          {
+            "Title": "-------------------------- EXAMPLE 8 --------------------------",
+            "Code": "$ROCENet           = Get-OVNetwork -Name ROCE-Net1\n$lig               = Get-OVLogicalInterconnectGroup -Name \"LE1-Default Ethernet LIG\"\n$ROCEUplinkPorts   = \"Enclosure1:Bay3:Q3\",\"Enclosure2:Bay6:Q3\"\n$ROCEUplinkSetName = \"ROCE_US1\"\n\n$UplinkSetParams = @{\n\n    InputObject  = $lig;\n    Name         = $ROCEUplinkSetName;\n    Type         = \"Ethernet\";\n    Networks     = $ROCENet;\n    UplinkPorts  = $ROCEUplinkPorts\n    DCBxOverride = $true;\n    ROCEVersion  = \"ROCEV2\"\n\n}\n\nNew-OVUplinkSet @UplinkSetParams",
+            "Description": "Create a RoCEv2 uplink set for a logical interconnect group."
           }
         ],
         "RelatedLinks": [
@@ -35888,6 +35913,14 @@
             },
             {
               "Name": "PrimaryPort",
+              "Required": false
+            },
+            {
+              "Name": "DCBXOverride",
+              "Required": false
+            },
+            {
+              "Name": "RoCEVersion",
               "Required": false
             },
             {
@@ -35970,6 +36003,14 @@
             },
             {
               "Name": "PrimaryPort",
+              "Required": false
+            },
+            {
+              "Name": "DCBXOverride",
+              "Required": false
+            },
+            {
+              "Name": "RoCEVersion",
               "Required": false
             },
             {
@@ -58976,7 +59017,7 @@
           {
             "Name": "FecMode",
             "Description": "Specify the forward error correction mode.  This paraemter is only supported with Virtual Connect SE 100Gb F32 Module for Synergy modules.  When configuring, the following values are supported with parent ports:\n\n\t* Auto\n\t* Cl74\n\t* Cl108\n\t* None\n\nThe following values are supported with sub-ports:\n\n\t* Auto\n\t* Cl74\n\t* Cl91\n\t* None",
-            "DataType": "string",
+            "DataType": "String",
             "Required": false,
             "DefaultValue": "",
             "Aliases": "None",
@@ -58986,7 +59027,7 @@
           {
             "Name": "PortSpeed",
             "Description": "The allowed uplink port speed by the fabric module and traceiver type.  When specifying a port speed, this value will be set for all ports.  This parameter applies to Ethernet or FCoE uplink ports only.  Allowed values:\n\n\t* Auto\n\t* 100M\n\t* 1G\n\t* 10G\n\t* 40G\n\t* 100G",
-            "DataType": "string",
+            "DataType": "String",
             "Required": false,
             "DefaultValue": "",
             "Aliases": "None",
@@ -61342,7 +61383,7 @@
           {
             "Name": "Destination",
             "Description": "",
-            "DataType": "string",
+            "DataType": "String",
             "Required": false,
             "DefaultValue": "",
             "Aliases": "None",
@@ -61352,7 +61393,7 @@
           {
             "Name": "Interface",
             "Description": "",
-            "DataType": "string",
+            "DataType": "String",
             "Required": false,
             "DefaultValue": "",
             "Aliases": "None",
@@ -62424,14 +62465,14 @@
         ],
         "InputTypes": [
           {
-              "Value":  "None.  You cannot pipe objects to this cmdlet.",
-              "Text":  null
+            "Value": "None.  You cannot pipe objects to this cmdlet.",
+            "Text": null
           }
         ],
         "ReturnValues": [
           {
-              "Value":  "HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]",
-              "Text":  "Async task resource to monitor."
+            "Value": "HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]",
+            "Text": "Async task resource to monitor."
           }
         ],
         "Examples": [
@@ -62451,7 +62492,7 @@
             "Text": "Wait-OVTaskComplete"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v6.30//disable-ovappliancestrictsecurityciphersuite",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v6.30/appliance/disable-ovappliancestrictsecurityciphersuite",
             "Text": "Online: "
           }
         ]
@@ -62505,14 +62546,14 @@
         ],
         "InputTypes": [
           {
-              "Value":  "None.  You cannot pipe objects to this cmdlet.",
-              "Text":  null
+            "Value": "None.  You cannot pipe objects to this cmdlet.",
+            "Text": null
           }
         ],
         "ReturnValues": [
           {
-              "Value":  "HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]",
-              "Text":  "Async task resource to monitor."
+            "Value": "HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]",
+            "Text": "Async task resource to monitor."
           }
         ],
         "Examples": [
@@ -62532,7 +62573,332 @@
             "Text": "Wait-OVTaskComplete"
           },
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v6.30//enable-ovappliancestrictsecurityciphersuite",
+            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v6.30/appliance/enable-ovappliancestrictsecurityciphersuite",
+            "Text": "Online: "
+          }
+        ]
+      }
+    },
+    {
+      "Name": "Get-OVApplianceUpdate",
+      "Category": "Appliance",
+      "Contents": {
+        "Synopsis": "Get available SPP/SSP updates from connected service.",
+        "Description": "You can enable HPE OneView to automatically check for new service pack updates and notify you when they are available. A connected notification alert is generated when a scheduled or manual check for updates is run and a new service pack update is available from the HPE software depot. Enable the Check for updates setting using Set-OVApplianceUpdateSchedule to receive these connected notifications.\n\nThis Cmdlet will return a list of available updates from the connected service.  In order to download a new available baseline, the supportURL attribute of the update object can be used to open in your browser.\n\nExample:  Get-OVApplianceUpdate | Select -First 1 | % { Start-Process $_.supportURL }",
+        "Syntax": [
+          [
+            {
+              "Name": "GetLatestUpdates",
+              "Required": false
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ]
+        ],
+        "Parameters": [
+          {
+            "Name": "ApplianceConnection",
+            "Description": "Specify one or more HPEOneView.Appliance.Connection object(s) or Name property value(s).\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
+            "DataType": "Object",
+            "Required": false,
+            "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
+            "Aliases": "Appliance",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "GetLatestUpdates",
+            "Description": "Use this switch to request the appliance pull down the latest available updates and return an updated list.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          }
+        ],
+        "InputTypes": [
+          {
+            "Value": "None.  You cannot pipe objects to this cmdlet.",
+            "Text": null
+          }
+        ],
+        "ReturnValues": [
+          {
+            "Value": "HPEOneView.Appliance.ApplianceAvailableUpdates [System.Management.Automation.PSCustomObject]",
+            "Text": "Object that represents the available update.\n"
+          }
+        ],
+        "Examples": [
+          {
+            "Title": "-------------------------- EXAMPLE 1 --------------------------",
+            "Code": "Get-OVApplianceUpdate\r\n",
+            "Description": "Return the list of available updates."
+          }
+        ],
+        "RelatedLinks": [
+          {
+            "Uri": "",
+            "Text": "Get-OVApplianceUpdateSchedule"
+          },
+          {
+            "Uri": "",
+            "Text": "Set-OVApplianceUpdateSchedule"
+          },
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v6.30/appliance/get-ovapplianceupdate",
+            "Text": "Online: "
+          }
+        ]
+      }
+    },
+    {
+      "Name": "Get-OVApplianceUpdateSchedule",
+      "Category": "Appliance",
+      "Contents": {
+        "Synopsis": "Get the appliance update configuration and schedule state.",
+        "Description": "You can enable HPE OneView to automatically check for new service pack updates and notify you when they are available. A connected notification alert is generated when a scheduled or manual check for updates is run and a new service pack update is available from the HPE software depot. Enable the Check for updates setting using Set-OVApplianceUpdateSchedule to receive these connected notifications.\n\nThis Cmdlet will return the current schedule configuration of the appliance.  If set to manual, use the Get-OVApplianceUpdate and the -GetLatestUpdates switch to instruct the appliance to connect to the HPE software depot for available updates.",
+        "Syntax": [
+          [
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ]
+        ],
+        "Parameters": [
+          {
+            "Name": "ApplianceConnection",
+            "Description": "Specify one or more HPEOneView.Appliance.Connection object(s) or Name property value(s).\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
+            "DataType": "Object",
+            "Required": false,
+            "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
+            "Aliases": "Appliance",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          }
+        ],
+        "InputTypes": [
+          {
+            "Value": "None.  You cannot pipe objects to this cmdlet.",
+            "Text": null
+          }
+        ],
+        "ReturnValues": [
+          {
+            "Value": "HPEOneView.Appliance.ApplianceUpdateSchedule",
+            "Text": "Class object with the appliance update schedule configuration and current status.\n"
+          }
+        ],
+        "Examples": [
+          {
+            "Title": "-------------------------- EXAMPLE 1 --------------------------",
+            "Code": "Get-OVApplianceUpdateSchedule\r\n",
+            "Description": "Get the appliance configured update method and applicable schedule."
+          }
+        ],
+        "RelatedLinks": [
+          {
+            "Uri": "",
+            "Text": "Get-OVApplianceUpdate"
+          },
+          {
+            "Uri": "",
+            "Text": "Set-OVApplianceUpdateSchedule"
+          },
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v6.30/appliance/get-ovapplianceupdateschedule",
+            "Text": "Online: "
+          }
+        ]
+      }
+    },
+    {
+      "Name": "Set-OVApplianceUpdateSchedule",
+      "Category": "Appliance",
+      "Contents": {
+        "Synopsis": "Change the appliance update configuration and schedule state.",
+        "Description": "You can enable HPE OneView to automatically check for new service pack updates and notify you when they are available. A connected notification alert is generated when a scheduled or manual check for updates is run and a new service pack update is available from the HPE software depot.\n\nThis Cmdlet will help you enable or disable the appliance update condition.  If enabling, ensure that the appliance has the necessary networking policies to allow it to connect to the HPE Software depot.  For pre-requisites, please visit the online help discussion topic \"Prerequisites for HPE Software depot connectivity\".\n\nTo specify an automatic update schedule, you will need to provide the weekly frequency (1-52), day of the week and time of day (will be converted to UTC time).\n\nMinimum required privileges: Infrastructure administrator, Server administrator, and Network administrator",
+        "Syntax": [
+          [
+            {
+              "Name": "WeeklyInterval",
+              "Required": true
+            },
+            {
+              "Name": "Weeks",
+              "Required": true
+            },
+            {
+              "Name": "Day",
+              "Required": true
+            },
+            {
+              "Name": "Time",
+              "Required": true
+            },
+            {
+              "Name": "Async",
+              "Required": false
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ],
+          [
+            {
+              "Name": "Disabled",
+              "Required": true
+            },
+            {
+              "Name": "Async",
+              "Required": false
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ],
+          [
+            {
+              "Name": "ManualInterval",
+              "Required": true
+            },
+            {
+              "Name": "Async",
+              "Required": false
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ]
+        ],
+        "Parameters": [
+          {
+            "Name": "ApplianceConnection",
+            "Description": "Specify one or more HPEOneView.Appliance.Connection object(s) or Name property value(s).\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
+            "DataType": "Object",
+            "Required": false,
+            "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
+            "Aliases": "Appliance",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Async",
+            "Description": "Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "False",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Day",
+            "Description": "Specify the day of the week the scheduled task will be performed.",
+            "DataType": "String",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Disabled",
+            "Description": "Disable the ability for the appliance to connect to the external service for available updates.  Check for updates cannot be manually invoked when the feature is disabled.",
+            "DataType": "SwitchParameter",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "ManualInterval",
+            "Description": "Switch parameter to indicate update checking will be performed manually.  Use the Get-OVAvailableUpdate -GetLatestUpdates Cmdlet to check for current updates.",
+            "DataType": "SwitchParameter",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Time",
+            "Description": "A timespan object that represents the HOUR and MINUTES of the day.  Time will be converted to UTC.",
+            "DataType": "timespan",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "WeeklyInterval",
+            "Description": "Use to enable and specify automatic update checking for the appliance based on the schedule defined.",
+            "DataType": "SwitchParameter",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Weeks",
+            "Description": "The interval of number of weeks the update check will be performed.  Allowed values are 1 through 52.",
+            "DataType": "int",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          }
+        ],
+        "InputTypes": [
+          {
+            "Value": "None.  You cannot pipe objects to this cmdlet.",
+            "Text": null
+          }
+        ],
+        "ReturnValues": [
+          {
+            "Value": "HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]",
+            "Text": "Async task resource to monitor."
+          }
+        ],
+        "Examples": [
+          {
+            "Title": "-------------------------- EXAMPLE 1 --------------------------",
+            "Code": "Set-OVApplianceUpdateSchedule -WeeklyInterval -Weeks 1 -Day Monday -Time (New-TimeSpan -Hours 15 -Minutes 45)",
+            "Description": "Enable appliance automatic update checks every week, on Monday at 3:45pm local time."
+          },
+          {
+            "Title": "-------------------------- EXAMPLE 2 --------------------------",
+            "Code": "Set-OVApplianceUpdateSchedule -ManualInterval\n\nGet-OVApplianceUpdate -GetLatestUpdates",
+            "Description": "Enable appliance update manual checks, then immediately check for updates."
+          },
+          {
+            "Title": "-------------------------- EXAMPLE 3 --------------------------",
+            "Code": "Set-OVApplianceUpdateSchedule -Disabled",
+            "Description": "Disable appliance update checks."
+          }
+        ],
+        "RelatedLinks": [
+          {
+            "Uri": "",
+            "Text": "Get-OVApplianceUpdate"
+          },
+          {
+            "Uri": "",
+            "Text": "Get-OVApplianceUpdateSchedule"
+          },
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v6.30/appliance/set-ovapplianceupdateschedule",
             "Text": "Online: "
           }
         ]

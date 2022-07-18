@@ -25,7 +25,7 @@ Install-OVLogicalInterconnectFirmware
 ```powershell
 Install-OVLogicalInterconnectFirmware
     [-InputObject] <Object>
-    [-ManualOrder] <string>
+    [-ManualOrder] <String>
     [-Baseline] <Object>
     [-Method <String>]
     [-EthernetActivateOrder <String>]
@@ -41,7 +41,7 @@ Install-OVLogicalInterconnectFirmware
     [-InputObject] <Object>
     [-Baseline] <Object>
     [-Method <String>]
-    [-SasActivationMethod <string>]
+    [-SasActivationMethod <String>]
     [-Async]
     [-Force]
     [-ApplianceConnection <Object>]
@@ -332,7 +332,7 @@ Specify one `[HPEOneView.Appliance.Connection]` object or Name property value. I
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ManualOrder &lt;string&gt;
+### -ManualOrder &lt;String&gt;
 
 Use this parameter when the EthActivationOrder is set to Manual.  The allowed values are:* Bay3
 	 * Bay6
@@ -361,7 +361,7 @@ By default, the Cmdlet will display a report if the interconnects can be updated
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SasActivationMethod &lt;string&gt;
+### -SasActivationMethod &lt;String&gt;
 
 Specify the HPE Synergy SAS module firmware activation order.  Accepted values are:
 
