@@ -24,6 +24,8 @@ New-OVUplinkSet
     [-LacpFailoverBandwidthThreshold <Int>]
     [-LacpFailoverActiveMemberThreshold <Int>]
     [-PrimaryPort <String>]
+    [-DCBXOverride <bool>]
+    [-RoCEVersion <String[]>]
     [-ConsistencyChecking <String>]
     [-Async]
     [-ApplianceConnection <Object>]
@@ -49,8 +51,10 @@ New-OVUplinkSet
     [-LacpFailoverBandwidthThreshold <Int>]
     [-LacpFailoverActiveMemberThreshold <Int>]
     [-PrimaryPort <String>]
-    [-PortSpeed <string>]
-    [-FecMode <string>]
+    [-DCBXOverride <bool>]
+    [-RoCEVersion <String[]>]
+    [-PortSpeed <String>]
+    [-FecMode <String>]
     [-FcUplinkSpeed <String>]
     [-EnableTrunking <Boolean>]
     [-ConsistencyChecking <String>]
@@ -65,8 +69,8 @@ New-OVUplinkSet
     [-Type] <String>
     [-Networks <Array>]
     [-UplinkPorts <Array>]
-    [-PortSpeed <string>]
-    [-FecMode <string>]
+    [-PortSpeed <String>]
+    [-FecMode <String>]
     [-FcUplinkSpeed <String>]
     [-EnableTrunking <Boolean>]
     [-ConsistencyChecking <String>]
@@ -149,6 +153,31 @@ Get-OVLogicalInterconnectGroup -Name "My Synergy VC+ImageStreamer LIG" -ErrorAct
 ```
 
 Create a Synergy ImageStreamer Uplink Set.
+
+###  Example 8 
+
+```powershell
+$ROCENet           = Get-OVNetwork -Name ROCE-Net1
+$lig               = Get-OVLogicalInterconnectGroup -Name "LE1-Default Ethernet LIG"
+$ROCEUplinkPorts   = "Enclosure1:Bay3:Q3","Enclosure2:Bay6:Q3"
+$ROCEUplinkSetName = "ROCE_US1"
+
+$UplinkSetParams = @{
+
+    InputObject  = $lig;
+    Name         = $ROCEUplinkSetName;
+    Type         = "Ethernet";
+    Networks     = $ROCENet;
+    UplinkPorts  = $ROCEUplinkPorts
+    DCBxOverride = $true;
+    ROCEVersion  = "ROCEV2"
+
+}
+
+New-OVUplinkSet @UplinkSetParams
+```
+
+Create a RoCEv2 uplink set for a logical interconnect group.
 
 ## Parameters
 
@@ -474,7 +503,7 @@ Allowed values:
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -FecMode &lt;string&gt;
+### -FecMode &lt;String&gt;
 
 Specify the forward error correction mode.  This paraemter is only supported with Virtual Connect SE 100Gb F32 Module for Synergy modules.  When configuring, the following values are supported with parent ports:
 
@@ -498,7 +527,7 @@ The following values are supported with sub-ports:
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -PortSpeed &lt;string&gt;
+### -PortSpeed &lt;String&gt;
 
 The allowed uplink port speed by the fabric module and traceiver type.  When specifying a port speed, this value will be set for all ports.  This parameter applies to Ethernet or FCoE uplink ports only.  Allowed values:
 
@@ -508,6 +537,30 @@ The allowed uplink port speed by the fabric module and traceiver type.  When spe
 	* 10G
 	* 40G
 	* 100G
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -DCBXOverride &lt;bool&gt;
+
+Use to override the DCBx protocol version.  Use the RoCEVersion parameter to specify which RoCE version should be used.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -RoCEVersion &lt;String[]&gt;
+
+Specify which RoCE version should be used.
 
 | Aliases | None |
 | :--- | :--- |

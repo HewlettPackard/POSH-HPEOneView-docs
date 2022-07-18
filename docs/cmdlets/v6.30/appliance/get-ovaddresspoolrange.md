@@ -9,7 +9,7 @@ description: Retrieve address pool range information.
 ```powershell
 Get-OVAddressPoolRange
     [-Type <String[]>]
-    [-Name <string>]
+    [-Name <String>]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
@@ -116,7 +116,7 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
-### -Name &lt;string&gt;
+### -Name &lt;String&gt;
 
 Filter address ranges based on the name.
 

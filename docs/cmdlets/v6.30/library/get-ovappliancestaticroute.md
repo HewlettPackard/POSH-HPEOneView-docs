@@ -37,7 +37,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Destination &lt;string&gt;
+### -Destination &lt;String&gt;
 
 
 
@@ -49,7 +49,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Interface &lt;string&gt;
+### -Interface &lt;String&gt;
 
 
 

@@ -19,8 +19,8 @@ Set-OVUplinkSet
     [-RemovePorts <Object[]>]
     [-UntaggedNetwork <Object>]
     [-LacpTimer <String>]
-    [-PortSpeed <string>]
-    [-FecMode <string>]
+    [-PortSpeed <String>]
+    [-FecMode <String>]
     [-ConsistencyChecking <String>]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
@@ -276,7 +276,7 @@ Specify one or more network set objects to remove from an uplink set.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -FecMode &lt;string&gt;
+### -FecMode &lt;String&gt;
 
 Specify the forward error correction mode.  This paraemter is only supported with Virtual Connect SE 100Gb F32 Module for Synergy modules.  When configuring, the following values are supported with parent ports:
 
@@ -300,7 +300,7 @@ The following values are supported with sub-ports:
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -PortSpeed &lt;string&gt;
+### -PortSpeed &lt;String&gt;
 
 The allowed uplink port speed by the fabric module and traceiver type.  When specifying a port speed, this value will be set for all ports.  This parameter applies to Ethernet or FCoE uplink ports only.  Allowed values:
 
