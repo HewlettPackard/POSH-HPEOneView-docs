@@ -163,11 +163,15 @@ You may need to include the `-AllowClobber` parameter when using `Install-Module
 
 There are 5 primary CMDLETs to interact with the HPE OneView appliance:
 
-* Connect-HPOVMgmt
-* Send-HPOVRequest
-* New-HPOVResource
-* Set-HPOVResource
-* Remove-HPOVResource
+* Connect-OVMgmt
+* Send-OVRequest
+* New-OVResource
+* Set-OVResource
+* Remove-OVResource
+
+{% hint style="info" %}
+Cmdlet suffix names changed starting with the HPE OneView 5.30 release, and removed the HP part of the suffix which was `HPOV`.
+{% endhint %}
 
 New in the HPE OneView 2.00 library is the ability to connect to multiple appliances, which allows the user to execute various CMDLETs without requiring to disconnect and reconnect to other appliances within your PowerShell session. The `Connect-HPOVMgmt` CMDLET will authenticate you to the requested appliance. From there, a session object \(Type `[HPOneView.Appliance.Connection]`\) is created and added to a global variable `$ConnectedSessions` \(Type `[System.Collections.ArrayList]`\) in your PowerShell runtime environment that other CMDLETs will use. Within the `[HPOneView.Appliance.Connection]` object contains a number of properties, of which the connected appliance `hostname` value provided by `Connect-HPOVMgmt` is stored, along with the `SessionID` of your user session.
 
