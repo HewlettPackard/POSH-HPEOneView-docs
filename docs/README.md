@@ -187,11 +187,7 @@ Once completed, you can either close out of your PowerShell console, or issue th
 
 ### Sample Scripts
 
-{% hint style="info" %}
-Starting with the HPE OneView 3.00 library, the installation directory \(including where Samples are stored\) are no longer in either the Windows or Users directory. Instead, the 3.00 library is now within`$env:ProgramFiles\WindowsPowerShell\Modules\HPEOneView.{VERSION}`.
-{% endhint %}
-
-To ease the use of the HPE OneView PowerShell library, we have included a number of sample scripts administrators can use to quickly get familiar with the capabilities of the library. The sample scripts are part of the Source Code and installer. Depending on which installation selection you chose \(Just You, or For Everyone\), there is a Samples directory that contain all of the sample scripts. By no means are they exhaustive, but will help you get more familiar with the library.
+To ease the use of the HPE OneView PowerShell library, we have included a number of sample scripts administrators can use to quickly get familiar with the capabilities of the library. The sample scripts are part of the source code and installer. Depending on which installation scope you chose, a Samples directory contains all of the sample scripts. By no means are they exhaustive, but will help you get more familiar with the library.
 
 ```text
 [PS] ...\Samples> dir
