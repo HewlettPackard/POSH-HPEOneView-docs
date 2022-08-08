@@ -191,7 +191,7 @@ To ease the use of the HPE OneView PowerShell library, we have included a number
 
 ```text
 [PS] ...\Samples> dir
-    Directory: \POSH-HPEOneView.660\Samples
+    Directory: \HPEOneView.660\Samples
 
 
 Mode                 LastWriteTime         Length Name
@@ -219,7 +219,7 @@ Mode                 LastWriteTime         Length Name
 
 ### Generating sample code
 
-Introduced in the HPE OneView 4.10 library, the [`ConvertTo-OVPowerShellScript`](https://github.com/HewlettPackard/POSH-HPOneView/wiki/Convertto-OVPowerShellScript) Cmdlet will take supported resources that were created either with the UI or other REST API client or HPE OneView SDK's, and generate PowrShell script code.
+Introduced in the HPE OneView 4.10 library, the [`ConvertTo-OVPowerShellScript`](/cmdlets/v6.60/library/convertto-ovpowershellscript) Cmdlet will take supported resources that were created either with the UI or other REST API client or HPE OneView SDK's, and generate PowrShell script code.
 
 Here is an example of generating PowerShell script code from an HPE Synergy server profile created in the UI:
 
@@ -295,13 +295,12 @@ Others have contributed example scripts to further automate management within th
 * [Import/Export-OVResources](https://github.com/DungKHoang/Import-Export-OneView-Resources)
 * [Automate Appliance Backup](https://github.com/HewlettPackard/oneview-powershell-samples/tree/master/Appliance/Automate-Appliance-Backup)
 * [Configure iLO settings from OneView using iLO RedFish Cmdlets](https://github.com/HewlettPackard/oneview-powershell-samples/tree/master/Server%20Hardware/Creator-iLO)
-* [HPSIM to HPE OneView Tool](https://github.com/HewlettPackard/POSH-HPOneView/releases/tag/HPSIMtoOV)
 
 ### Additional Resources
 
 #### **HPE OneView Python Library**
 
-* [HPE OneView Python library source code, updates and issues tracker](https://github.com/HewlettPackard/python-hpOneView)
+* [HPE OneView Python library source code, updates and issues tracker](https://github.com/HewlettPackard/oneview-python)
 
 **HPE OneView Documentation on the HPE Enterprise Information Library**
 
