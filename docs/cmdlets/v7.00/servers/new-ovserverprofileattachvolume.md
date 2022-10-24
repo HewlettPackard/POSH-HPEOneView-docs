@@ -9,31 +9,29 @@ description: Create volume attachment for a server profile.
 ```powershell
 New-OVServerProfileAttachVolume
     [-Volume] <Array>
-    [-VolumeID] <Int32>
-    [-LunIdType] <String>
+    [-VolumeID <Int32>]
+    [-LunIdType <String>]
     [-BootVolume]
     [-TargetPortAssignment]
     [-TargetAddresses <Array>]
-    [-ApplianceConnection] <Object>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```powershell
 New-OVServerProfileAttachVolume
     [-Name] <Object>
-    [-ServerProfile] <Object>
+    [-ServerProfile <Object>]
     [-PassThru]
-    [-VolumeID] <Int32>
+    [-VolumeID <Int32>]
     [-VolumeTemplate <Object>]
-    [-StoragePool] <Object>
+    [-StoragePool <Object>]
     [-SnapshotStoragePool <Object>]
-    [-StorageSystem] <Object>
-    [-Capacity] <Int64>
+    [-StorageSystem <Object>]
+    [-Capacity <Int64>]
     [-ProvisioningType <String>]
     [-Full]
     [-Permanent]
-    [-DataProtectionLevel <String>]
-    [-EnableAdaptiveOptimization <Bool>]
     [-PerformancePolicy <HPEOneView.Storage.PerformancePolicy>]
     [-EnableEncryption <Bool>]
     [-CachePinning <Bool>]
@@ -43,13 +41,13 @@ New-OVServerProfileAttachVolume
     [-EnableDataTransferLimit <Bool>]
     [-DataTransferLimit <Int>]
     [-Folder <HPEOneView.Storage.NimbleFolder>]
-    [-LunIdType] <String>
-    [-LunID] <Int32>
-    [-HostOStype] <String>
+    [-LunIdType <String>]
+    [-LunID <Int32>]
+    [-HostOStype <String>]
     [-BootVolume]
     [-TargetPortAssignment]
     [-TargetAddresses <Array>]
-    [-ApplianceConnection] <Object>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -58,14 +56,14 @@ New-OVServerProfileAttachVolume
     [-ServerProfile] <Object>
     [-Volume] <Array>
     [-PassThru]
-    [-VolumeID] <Int32>
-    [-LunIdType] <String>
-    [-LunID] <Int32>
-    [-HostOStype] <String>
+    [-VolumeID <Int32>]
+    [-LunIdType <String>]
+    [-LunID <Int32>]
+    [-HostOStype <String>]
     [-BootVolume]
     [-TargetPortAssignment]
     [-TargetAddresses <Array>]
-    [-ApplianceConnection] <Object>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -230,25 +228,6 @@ The requested Ephemeral Volume storage capacity in GB.  `[e.g]`. 20 to specify 2
 | Required? | True |
 | Position? | Named |
 | Default value | 0 |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
-### -DataProtectionLevel &lt;String&gt;
-
-Specify the StoreVirtual protection level (aka Network RAID) for the volume.  Allowed values are:
-
-* NetworkRaid0None
-* NetworkRaid5SingleParity
-* NetworkRaid10Mirror2Way
-* NetworkRaid10Mirror3Way
-* NetworkRaid10Mirror4Way
-* NetworkRaid6DualParity
-
-| Aliases | None |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
@@ -441,18 +420,6 @@ Specify the volume provisioning type. Supported values:
 | Required? | False |
 | Position? | Named |
 | Default value | Thin |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
-### -EnableAdaptiveOptimization &lt;Bool&gt;
-
-Specify if HPE StoreVirtual volume Adaptive Optimization is enabled.
-
-| Aliases | None |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

@@ -10,12 +10,10 @@ description: Create a Storage Volume resource.
 New-OVStorageVolume
     [-Name] <String>
     [-StoragePool] <Object>
-    [-Description] <String>
+    [-Description <String>]
     [-SnapshotStoragePool <Object>]
     [-StorageSystem <Object>]
-    [-DataProtectionLevel <String>]
-    [-EnableAdaptiveOptimization]
-    [-Capacity] <Int64>
+    [-Capacity <Int64>]
     [-ProvisioningType <String>]
     [-EnableCompression <Boolean>]
     [-EnableDeduplication <Boolean>]
@@ -32,19 +30,17 @@ New-OVStorageVolume
     [-Folder <HPEOneView.Storage.NimbleFolder>]
     [-Scope <HPEOneView.Appliance.ScopeCollection[]>]
     [-Async]
-    [-ApplianceConnection] <Object>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```powershell
 New-OVStorageVolume
     [-Name] <String>
-    [-VolumeTemplate <Object>]
-    [-Description] <String>
+    [-VolumeTemplate] <Object>
+    [-Description <String>]
     [-SnapshotStoragePool <Object>]
-    [-DataProtectionLevel <String>]
-    [-EnableAdaptiveOptimization]
-    [-Capacity] <Int64>
+    [-Capacity <Int64>]
     [-ProvisioningType <String>]
     [-EnableCompression <Boolean>]
     [-EnableDeduplication <Boolean>]
@@ -61,7 +57,7 @@ New-OVStorageVolume
     [-Folder <HPEOneView.Storage.NimbleFolder>]
     [-Scope <HPEOneView.Appliance.ScopeCollection[]>]
     [-Async]
-    [-ApplianceConnection] <Object>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -209,37 +205,6 @@ This parameter is being deprecated for the `-ProvisionType` parameter. Please up
 
 Include this switch to enable Thick volume provisioning.  Omit to specify Thin storage provisioning.
 Default: Thin
-
-| Aliases | None |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | False |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
-### -DataProtectionLevel &lt;String&gt;
-
-Specify the StoreVirtual protection level (aka Network RAID) for the volume.  Allowed values are:
-
-* NetworkRaid0None
-* NetworkRaid5SingleParity
-* NetworkRaid10Mirror2Way
-* NetworkRaid10Mirror3Way
-* NetworkRaid10Mirror4Way
-* NetworkRaid6DualParity
-
-| Aliases | None |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
-### -EnableAdaptiveOptimization &lt;SwitchParameter&gt;
-
-Whether or not Adaptive Optimization is enabled on the storage volume.  Only supported with StoreVirtual
 
 | Aliases | None |
 | :--- | :--- |

@@ -10,32 +10,6 @@ description: Create an Enclosure Group.
 New-OVEnclosureGroup
     [-Name] <String>
     [-LogicalInterconnectGroupMapping] <Object>
-    [-PowerRedundantMode <String>]
-    [-ConfigurationScript <String>]
-    [-Scope <HPEOneView.Appliance.ScopeCollection[]>]
-    [-ApplianceConnection <Object>]
-    [<CommonParameters>]
-```
-
-```powershell
-New-OVEnclosureGroup
-    [-Name] <String>
-    [-DiscoverFromEnclosure]
-    [-OAAddress] <String>
-    [-Username] <String>
-    [-Password] <String>
-    [-PowerRedundantMode <String>]
-    [-ConfigurationScript <String>]
-    [-LigPrefix] <String>
-    [-Scope <HPEOneView.Appliance.ScopeCollection[]>]
-    [-ApplianceConnection <Object>]
-    [<CommonParameters>]
-```
-
-```powershell
-New-OVEnclosureGroup
-    [-Name] <String>
-    [-LogicalInterconnectGroupMapping] <Object>
     [-EnclosureCount] <Int32>
     [-PowerRedundantMode <String>]
     [-IPv4AddressType <String>]
@@ -228,18 +202,6 @@ Allowed Values:
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -ConfigurationScript &lt;String&gt;
-
-An Onboard Administrator CLI Script. Only applicable for HPE BladeSystem C-Class.
-
-| Aliases | None |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
 ### -IPv4AddressType &lt;String&gt;
 
 Use to specify how the IPv4 Addresses will be assigned to Synergy resources management interface(s).  Allowed values:
@@ -259,8 +221,6 @@ Default: DHCP
 | Accept wildcard characters? | False |
 
 ### -IPv4AddressRange &lt;Object&gt;
-
-[Alias `-AddressPool`]
 
 The IPv4 address pool object from Get-OVAddressPoolRange.
 
@@ -327,68 +287,6 @@ The Ethernet Network with the purpose property set to Management.  Must also inc
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
-### -DiscoverFromEnclosure &lt;SwitchParameter&gt;
-
-Use this parameter for the appliance to create an Enclosure Group and associated Logical Interconnect Group by "discovering" the Enclosure and support interconnects.  The target Enclosure must not already be claimed by another external manager (i.e. HPE OneView), as the API will reject the request.
-
-No Uplink Sets will be created. They will need to be added using the New-OVUplinkSet Cmdlet once the Logical Interconnect Group resource has been created.
-
-| Aliases | None |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | False |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
-### -OAAddress &lt;String&gt;
-
-Provide the Onboard Administrator IP Address or FQDN.
-
-| Aliases | None |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
-### -Username &lt;String&gt;
-
-Provide an Onboard Administrator administrator account.
-
-| Aliases | None |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
-### -Password &lt;String&gt;
-
-Provide an Onboard Administrator administrator password.
-
-| Aliases | None |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
-### -LigPrefix &lt;String&gt;
-
-If specified, the Logical Interconnect Group that is created will be used in the "{LigPrefix} Logical Interconnect Group".
-
-| Aliases | None |
-| :--- | :--- |
-| Required? | True |
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |

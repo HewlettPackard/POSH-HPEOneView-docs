@@ -8,9 +8,9 @@ description: Delete Server Profile Template Resource(s).
 
 ```powershell
 Remove-OVServerProfileTemplate
-    [-ServerProfileTemplate] <Object>
+    [-InputObject] <Object>
     [-ApplianceConnection] <Object>
-    [-force]
+    [-Force]
     [<CommonParameters>]
 ```
 
@@ -24,7 +24,7 @@ Delete one or multiple Server Profile Template resource(s).  A Server Profile Te
 
 ```powershell
 $task = Remove-OVServerProfileTemplate -ServerProfileTemplate "My Template Profile"
-Wait-OVTaskComplete $task.uri
+Wait-OVTaskComplete -InputObject $task
                         
 ```
 
@@ -33,8 +33,8 @@ Remove the profile template specifed by name. Wait for remove to complete.
 ###  Example 2 
 
 ```powershell
-$spt = Get-OVServerProfileTemplate -name "My Template Profile"
-Remove-OVServerProfileTemplate $spt -confirm:$false
+$spt = Get-OVServerProfileTemplate -name "My Template Profile" -ErrorAction Stop
+Remove-OVServerProfileTemplate $spt -Confirm:$false
 ```
 
 Remove the profile template specifed by $spt. Disable confirmation prompt.
@@ -49,11 +49,11 @@ Search for all profile template resources and remove them from appliance.
 
 ## Parameters
 
-### -ServerProfileTemplate &lt;Object&gt;
+### -InputObject &lt;Object&gt;
 
 The server profile template object(s) or name(s) to be removed.
 
-| Aliases | spt, name |
+| Aliases | spt, name, ServerProfileTemplate |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |

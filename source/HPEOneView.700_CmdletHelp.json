@@ -1,6 +1,6 @@
 {
   "Version": "7.00",
-  "LibraryGUID": "23d6225a-6af0-49e0-b7bf-68135472e1b8",
+  "LibraryGUID": "1c1507cc-089e-412f-b686-7ba9c24c2330",
   "Cmdlets": [
     {
       "Name": "Add-OVApplianceTrustedCertificate",
@@ -2294,7 +2294,7 @@
         "Parameters": [
           {
             "Name": "Type",
-            "Description": "SAN Manager type to add.  Accepted values are:\n\n    * Brocade\n    * BNA\n    * Brocade Network Advisor\n    * BrocadeFOS\n    * FOS\n    * HP\n    * HPE\n    * Cisco",
+            "Description": "SAN Manager type to add.  Accepted values are:\n\n    * BrocadeFOS\n    * FOS\n    * HP\n    * HPE\n    * Cisco\n\n    The following parameter values are no longer supported and have been removed:\n\n    * Brocade\n    * BNA\n    * Brocade Network Advisor",
             "DefaultValue": null,
             "Aliases": "None",
             "PipelineInput": "false",
@@ -11566,6 +11566,16 @@
             "Required": false
           },
           {
+            "Name": "SkipCertificateCheck",
+            "Description": "Skips certificate validation checks that include all validations such as expiration, revocation, trusted root authority, etc.\n\n[WARNING]:  Using this parameter is not secure and is not recommended. This switch is only intended to be used against known hosts using a self-signed certificate for testing purposes. Use at your own risk.",
+            "DefaultValue": "False",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false,
+            "DataType": "SwitchParameter",
+            "Required": false
+          },
+          {
             "Name": "ApplianceConnection",
             "Description": "Specify one or more [HPEOneView.Appliance.Connection] object(s) or Name property value(s).",
             "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
@@ -11658,6 +11668,10 @@
             },
             {
               "Name": "IloRestSession",
+              "Required": false
+            },
+            {
+              "Name": "SkipCertificateCheck",
               "Required": false
             },
             {
@@ -23603,16 +23617,6 @@
             "Required": false
           },
           {
-            "Name": "ConfigurationScript",
-            "Description": "An Onboard Administrator CLI Script. Only applicable for HPE BladeSystem C-Class.",
-            "DefaultValue": null,
-            "Aliases": "None",
-            "PipelineInput": "false",
-            "SupportsWildcard": false,
-            "DataType": "String",
-            "Required": false
-          },
-          {
             "Name": "IPv4AddressType",
             "Description": "Use to specify how the IPv4 Addresses will be assigned to Synergy resources management interface(s).  Allowed values:\n\n    * External -  The IPv4 address is managed externally, static assignment. \n    * DHCP -  The IPv4 address is assigned using DHCP. \n    * AddressPool - The IPv4 address is assigned from a pool of IP addresses specified by the AddressPool parameter, similar to HPE BladeSystem C-Class \"Enclosure Bay IP Addressing\" (aka EBIPA). \n\nDefault: DHCP",
             "DefaultValue": "DHCP",
@@ -23624,7 +23628,7 @@
           },
           {
             "Name": "IPv4AddressRange",
-            "Description": "[Alias -AddressPool]\n\nThe IPv4 address pool object from Get-OVAddressPoolRange.",
+            "Description": "The IPv4 address pool object from Get-OVAddressPoolRange.",
             "DefaultValue": null,
             "Aliases": "AddressPool",
             "PipelineInput": "false",
@@ -23671,56 +23675,6 @@
             "SupportsWildcard": false,
             "DataType": "Object",
             "Required": false
-          },
-          {
-            "Name": "DiscoverFromEnclosure",
-            "Description": "Use this parameter for the appliance to create an Enclosure Group and associated Logical Interconnect Group by \"discovering\" the Enclosure and support interconnects.  The target Enclosure must not already be claimed by another external manager (i.e. HPE OneView), as the API will reject the request.\n\nNo Uplink Sets will be created. They will need to be added using the New-OVUplinkSet Cmdlet once the Logical Interconnect Group resource has been created.",
-            "DefaultValue": "False",
-            "Aliases": "None",
-            "PipelineInput": "false",
-            "SupportsWildcard": false,
-            "DataType": "SwitchParameter",
-            "Required": false
-          },
-          {
-            "Name": "OAAddress",
-            "Description": "Provide the Onboard Administrator IP Address or FQDN.",
-            "DefaultValue": null,
-            "Aliases": "None",
-            "PipelineInput": "false",
-            "SupportsWildcard": false,
-            "DataType": "String",
-            "Required": true
-          },
-          {
-            "Name": "Username",
-            "Description": "Provide an Onboard Administrator administrator account.",
-            "DefaultValue": null,
-            "Aliases": "None",
-            "PipelineInput": "false",
-            "SupportsWildcard": false,
-            "DataType": "String",
-            "Required": true
-          },
-          {
-            "Name": "Password",
-            "Description": "Provide an Onboard Administrator administrator password.",
-            "DefaultValue": null,
-            "Aliases": "None",
-            "PipelineInput": "false",
-            "SupportsWildcard": false,
-            "DataType": "String",
-            "Required": true
-          },
-          {
-            "Name": "LigPrefix",
-            "Description": "If specified, the Logical Interconnect Group that is created will be used in the \"{LigPrefix} Logical Interconnect Group\".",
-            "DefaultValue": null,
-            "Aliases": "None",
-            "PipelineInput": "false",
-            "SupportsWildcard": false,
-            "DataType": "String",
-            "Required": true
           },
           {
             "Name": "ApplianceConnection",
@@ -23826,74 +23780,6 @@
           }
         ],
         "Syntax": [
-          [
-            {
-              "Name": "Name",
-              "Required": true
-            },
-            {
-              "Name": "LogicalInterconnectGroupMapping",
-              "Required": true
-            },
-            {
-              "Name": "PowerRedundantMode",
-              "Required": false
-            },
-            {
-              "Name": "ConfigurationScript",
-              "Required": false
-            },
-            {
-              "Name": "Scope",
-              "Required": false
-            },
-            {
-              "Name": "ApplianceConnection",
-              "Required": false
-            }
-          ],
-          [
-            {
-              "Name": "Name",
-              "Required": true
-            },
-            {
-              "Name": "DiscoverFromEnclosure",
-              "Required": false
-            },
-            {
-              "Name": "OAAddress",
-              "Required": true
-            },
-            {
-              "Name": "Username",
-              "Required": true
-            },
-            {
-              "Name": "Password",
-              "Required": true
-            },
-            {
-              "Name": "PowerRedundantMode",
-              "Required": false
-            },
-            {
-              "Name": "ConfigurationScript",
-              "Required": false
-            },
-            {
-              "Name": "LigPrefix",
-              "Required": true
-            },
-            {
-              "Name": "Scope",
-              "Required": false
-            },
-            {
-              "Name": "ApplianceConnection",
-              "Required": false
-            }
-          ],
           [
             {
               "Name": "Name",
@@ -24067,6 +23953,16 @@
             "SupportsWildcard": false,
             "DataType": "Array",
             "Required": false
+          },
+          {
+            "Name": "NFSPath",
+            "Description": "Specify the NFS path for Superdome Flex RMC firmware updates.",
+            "DataType": "string",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -24130,6 +24026,10 @@
               "Required": true
             },
             {
+              "Name": "NFSPath",
+              "Required": false
+            },
+            {
               "Name": "Username",
               "Required": false
             },
@@ -24170,6 +24070,10 @@
             {
               "Name": "Credential",
               "Required": true
+            },
+            {
+              "Name": "NFSPath",
+              "Required": false
             },
             {
               "Name": "Http",
@@ -29024,16 +28928,6 @@
             "Required": false
           },
           {
-            "Name": "ForceInstallFirmware",
-            "Description": "Using this parameter will force the bundled firmware components to install when the Server Profile is applied to a server.  This will downgrade firmware if the component firmware is newer than what the SPP Baseline contains.",
-            "DefaultValue": "False",
-            "Aliases": "None",
-            "PipelineInput": "false",
-            "SupportsWildcard": false,
-            "DataType": "SwitchParameter",
-            "Required": false
-          },
-          {
             "Name": "FirmwareActivationMode",
             "Description": "Specify the firmware activation policy.  Avialable options are:\n\n    * Immediate - Immediately activate (aka reboot the host) firmware if needed.  Requires HPSUT to be installed in the Host OS or Proxy VM (for VMware only)\n    * Scheduled - Specify a future time to activate (aka reboot the host) firmware if needed.  You will need to specify the FirmwareActivateDateTime parameter.  Requires HPSUT to be installed in the Host OS or Proxy VM (for VMware only)\n    * NotScheduled - Scheduled firmware update is cancelled when you choose this option.",
             "DefaultValue": "Immediate",
@@ -29442,6 +29336,26 @@
             "Aliases": "None",
             "PipelineInput": "false",
             "SupportsWildcard": false
+          },
+          {
+            "Name": "FirmwareInstallationPolicy",
+            "Description": "The Installation policy option is only available for Gen10 and later servers. The option is displayed if you select a Gen10 or later server hardware type. Installation policy enables you to choose if a component needs to be updated or downgraded when its version does not match the baseline. An alert is generated when the installed version on one or more components is inconsistent with the selected installation policy.\n\nYou can choose one of the following two policy options:\n\n    * LowerThanBaseline (Default) ΓÇö Updates only the components that have a version lower than the firmware baseline version.\n    * NotEqualToBaseline ΓÇö Updates or downgrades components whose installed version does not match the firmware baseline version. The components with a version lower than the firmware baseline version are upgraded, and the components with a version higher than the firmware baseline version are downgraded to match the baseline.\n\nNOTE: For Gen9 and earlier servers, if the selected firmware baseline is older than the firmware currently installed, select the Force installation option to downgrade the firmware version.",
+            "DataType": "string",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "ReinstallFirmware",
+            "Description": "Replaces the Force switch parameter.  Use to reinstall components that are the same version as within the specified baseline.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "ForceInstallFirmware",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -29668,6 +29582,10 @@
               "Required": false
             },
             {
+              "Name": "FirmwareInstallationPolicy",
+              "Required": false
+            },
+            {
               "Name": "FirmwareInstallMode",
               "Required": false
             },
@@ -29680,7 +29598,7 @@
               "Required": false
             },
             {
-              "Name": "ForceInstallFirmware",
+              "Name": "ReinstallFirmware",
               "Required": false
             },
             {
@@ -29826,6 +29744,10 @@
               "Required": false
             },
             {
+              "Name": "FirmwareInstallationPolicy",
+              "Required": false
+            },
+            {
               "Name": "FirmwareInstallMode",
               "Required": false
             },
@@ -29838,7 +29760,7 @@
               "Required": false
             },
             {
-              "Name": "ForceInstallFirmware",
+              "Name": "ReinstallFirmware",
               "Required": false
             },
             {
@@ -29984,6 +29906,10 @@
               "Required": false
             },
             {
+              "Name": "FirmwareInstallationPolicy",
+              "Required": false
+            },
+            {
               "Name": "FirmwareInstallMode",
               "Required": false
             },
@@ -29996,7 +29922,7 @@
               "Required": false
             },
             {
-              "Name": "ForceInstallFirmware",
+              "Name": "ReinstallFirmware",
               "Required": false
             },
             {
@@ -30367,16 +30293,6 @@
             "Required": true
           },
           {
-            "Name": "DataProtectionLevel",
-            "Description": "Specify the StoreVirtual protection level (aka Network RAID) for the volume.  Allowed values are:\n\n    * NetworkRaid0None\n    * NetworkRaid5SingleParity\n    * NetworkRaid10Mirror2Way\n    * NetworkRaid10Mirror3Way\n    * NetworkRaid10Mirror4Way\n    * NetworkRaid6DualParity",
-            "DefaultValue": null,
-            "Aliases": "None",
-            "PipelineInput": "false",
-            "SupportsWildcard": false,
-            "DataType": "String",
-            "Required": false
-          },
-          {
             "Name": "Full",
             "Description": "DEPRECATED.  This parameter is replaced by ProvisioningType.\n\nSpecify if the Ephemeral Volume provisioning type should be Thick. Default is Thin Volume.",
             "DefaultValue": "False",
@@ -30504,16 +30420,6 @@
             "PipelineInput": "false",
             "SupportsWildcard": false,
             "DataType": "String",
-            "Required": false
-          },
-          {
-            "Name": "EnableAdaptiveOptimization",
-            "Description": "Specify if HPE StoreVirtual volume Adaptive Optimization is enabled.",
-            "DefaultValue": null,
-            "Aliases": "None",
-            "PipelineInput": "false",
-            "SupportsWildcard": false,
-            "DataType": "Bool",
             "Required": false
           },
           {
@@ -30699,11 +30605,11 @@
             },
             {
               "Name": "VolumeID",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "LunIdType",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "BootVolume",
@@ -30719,7 +30625,7 @@
             },
             {
               "Name": "ApplianceConnection",
-              "Required": true
+              "Required": false
             }
           ],
           [
@@ -30729,7 +30635,7 @@
             },
             {
               "Name": "ServerProfile",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "PassThru",
@@ -30737,7 +30643,7 @@
             },
             {
               "Name": "VolumeID",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "VolumeTemplate",
@@ -30745,7 +30651,7 @@
             },
             {
               "Name": "StoragePool",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "SnapshotStoragePool",
@@ -30753,11 +30659,11 @@
             },
             {
               "Name": "StorageSystem",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Capacity",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "ProvisioningType",
@@ -30769,14 +30675,6 @@
             },
             {
               "Name": "Permanent",
-              "Required": false
-            },
-            {
-              "Name": "DataProtectionLevel",
-              "Required": false
-            },
-            {
-              "Name": "EnableAdaptiveOptimization",
               "Required": false
             },
             {
@@ -30817,15 +30715,15 @@
             },
             {
               "Name": "LunIdType",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "LunID",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "HostOStype",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "BootVolume",
@@ -30841,7 +30739,7 @@
             },
             {
               "Name": "ApplianceConnection",
-              "Required": true
+              "Required": false
             }
           ],
           [
@@ -30859,19 +30757,19 @@
             },
             {
               "Name": "VolumeID",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "LunIdType",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "LunID",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "HostOStype",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "BootVolume",
@@ -30887,7 +30785,7 @@
             },
             {
               "Name": "ApplianceConnection",
-              "Required": true
+              "Required": false
             }
           ]
         ]
@@ -31746,6 +31644,16 @@
             "SupportsWildcard": false,
             "DataType": "String",
             "Required": false
+          },
+          {
+            "Name": "AddSpareDrive",
+            "Description": "When selected, an additional drive will be reserved (beyond what was specified) for use as a replacement drive in the event of a drive failure in the logical drive.  Ensure the -PredictiveSpareActivation parameter is used in New-OVServerProfileLogicalDiskController.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -31878,6 +31786,10 @@
               "Required": false
             },
             {
+              "Name": "AddSpareDrive",
+              "Required": false
+            },
+            {
               "Name": "Bootable",
               "Required": false
             }
@@ -31894,7 +31806,7 @@
         "Parameters": [
           {
             "Name": "ControllerID",
-            "Description": "Specify the Controller ID location.  Supported options for this parameter are\n     * Embedded\n     * Mezz 1\n     * Mezz 2\n     * Mezz 3\nPlease note that Mezz 1, Mezz 2 and Mezz 3 are only supported with HPE Synergy Compute nodes connected to the HPE Synergy D3940 disk shelf.",
+            "Description": "Specify the Controller ID location.  Supported options for this parameter are\n    * Embedded\n    * Mezz1\n    * Mezz2\n    * Mezz3\n    * Slot1\n    * Slot10\n    * Slot11\n    * Slot12\n    * Slot13\n    * Slot14\n    * Slot15\n    * Slot16\n    * Slot2\n    * Slot3\n    * Slot4\n    * Slot5\n    * Slot6\n    * Slot7\n    * Slot8\n    * Slot9\nPlease note that Mezz1, Mezz2 and Mezz3 are only supported with HPE Synergy Compute nodes connected to the HPE Synergy D3940 disk shelf.",
             "DefaultValue": "Embedded",
             "Aliases": "None",
             "PipelineInput": "false",
@@ -31945,6 +31857,16 @@
           {
             "Name": "WriteCache",
             "Description": "For Gen10 controllers, to enable, disable or unmanage controller write cache policy.  Allowed values:\n\n    * Enabled\n    * Disabled\n    * Unmanaged\n\nDefault value: Unmanaged",
+            "DefaultValue": "Unmanaged",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false,
+            "DataType": "String",
+            "Required": false
+          },
+          {
+            "Name": "PredictiveSpareActivation",
+            "Description": "For Gen10 and newer HPE Synergy controllers, to enable, disable or unmanage controller spare drive policy.  Allowed values:\n\n    * Enabled\n    * Disabled\n    * Unmanaged\n\nDefault value: Unmanaged",
             "DefaultValue": "Unmanaged",
             "Aliases": "None",
             "PipelineInput": "false",
@@ -32025,6 +31947,10 @@
               "Required": false
             },
             {
+              "Name": "PredictiveSpareActivation",
+              "Required": false
+            },
+            {
               "Name": "LogicalDisk",
               "Required": true
             }
@@ -32044,6 +31970,10 @@
             },
             {
               "Name": "WriteCache",
+              "Required": false
+            },
+            {
+              "Name": "PredictiveSpareActivation",
               "Required": false
             },
             {
@@ -32559,6 +32489,16 @@
             "Name": "ManageIloSettings",
             "Description": "Use to indicate iLO settings will be managed from the server profile.",
             "DataType": "Bool",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "FirmwareInstallationPolicy",
+            "Description": "The Installation policy option is only available for Gen10 and later servers. The option is displayed if you select a Gen10 or later server hardware type. Installation policy enables you to choose if a component needs to be updated or downgraded when its version does not match the baseline. An alert is generated when the installed version on one or more components is inconsistent with the selected installation policy.\n\nYou can choose one of the following two policy options:\n\n    * LowerThanBaseline (Default) ΓÇö Updates only the components that have a version lower than the firmware baseline version.\n    * NotEqualToBaseline ΓÇö Updates or downgrades components whose installed version does not match the firmware baseline version. The components with a version lower than the firmware baseline version are upgraded, and the components with a version higher than the firmware baseline version are downgraded to match the baseline.\n\nNOTE: For Gen9 and earlier servers, if the selected firmware baseline is older than the firmware currently installed, select the Force installation option to downgrade the firmware version.",
+            "DataType": "string",
             "Required": false,
             "DefaultValue": "",
             "Aliases": "None",
@@ -33705,26 +33645,6 @@
             "Required": false
           },
           {
-            "Name": "DataProtectionLevel",
-            "Description": "Specify the StoreVirtual protection level (aka Network RAID) for the volume.  Allowed values are:\n\n    * NetworkRaid0None\n    * NetworkRaid5SingleParity\n    * NetworkRaid10Mirror2Way\n    * NetworkRaid10Mirror3Way\n    * NetworkRaid10Mirror4Way\n    * NetworkRaid6DualParity",
-            "DefaultValue": null,
-            "Aliases": "None",
-            "PipelineInput": "false",
-            "SupportsWildcard": false,
-            "DataType": "String",
-            "Required": false
-          },
-          {
-            "Name": "EnableAdaptiveOptimization",
-            "Description": "Whether or not Adaptive Optimization is enabled on the storage volume.  Only supported with StoreVirtual",
-            "DefaultValue": "False",
-            "Aliases": "None",
-            "PipelineInput": "false",
-            "SupportsWildcard": false,
-            "DataType": "SwitchParameter",
-            "Required": false
-          },
-          {
             "Name": "ProvisioningType",
             "Description": "Specify the type of volume to provision.  Allowed values are:\n\n    * Thin\n    * Full\n    * TPDD (Thin Provision Dedup) - Only available for HPE StoreServ storage systems with SSD storage pools (aka CPG\"s).",
             "DefaultValue": null,
@@ -34002,7 +33922,7 @@
             },
             {
               "Name": "Description",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "SnapshotStoragePool",
@@ -34013,16 +33933,8 @@
               "Required": false
             },
             {
-              "Name": "DataProtectionLevel",
-              "Required": false
-            },
-            {
-              "Name": "EnableAdaptiveOptimization",
-              "Required": false
-            },
-            {
               "Name": "Capacity",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "ProvisioningType",
@@ -34090,7 +34002,7 @@
             },
             {
               "Name": "ApplianceConnection",
-              "Required": true
+              "Required": false
             }
           ],
           [
@@ -34100,27 +34012,19 @@
             },
             {
               "Name": "VolumeTemplate",
-              "Required": false
+              "Required": true
             },
             {
               "Name": "Description",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "SnapshotStoragePool",
               "Required": false
             },
             {
-              "Name": "DataProtectionLevel",
-              "Required": false
-            },
-            {
-              "Name": "EnableAdaptiveOptimization",
-              "Required": false
-            },
-            {
               "Name": "Capacity",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "ProvisioningType",
@@ -34188,7 +34092,7 @@
             },
             {
               "Name": "ApplianceConnection",
-              "Required": true
+              "Required": false
             }
           ]
         ]
@@ -34382,46 +34286,6 @@
             "Name": "Shared",
             "Description": "Include this switch to mark the Storage Volume Template as a Shareable resource for shared volume access.",
             "DefaultValue": "False",
-            "Aliases": "None",
-            "PipelineInput": "false",
-            "SupportsWildcard": false,
-            "DataType": "SwitchParameter",
-            "Required": false
-          },
-          {
-            "Name": "DataProtectionLevel",
-            "Description": "Specify the StoreVirtual protection level (aka Network RAID) for the volume.  Allowed values are:\n\n    * NetworkRaid0None\n    * NetworkRaid5SingleParity\n    * NetworkRaid10Mirror2Way\n    * NetworkRaid10Mirror3Way\n    * NetworkRaid10Mirror4Way\n    * NetworkRaid6DualParity",
-            "DefaultValue": null,
-            "Aliases": "None",
-            "PipelineInput": "false",
-            "SupportsWildcard": false,
-            "DataType": "String",
-            "Required": false
-          },
-          {
-            "Name": "LockProtectionLevel",
-            "Description": "Specify to lock the DataProtectionLevel value in the template.",
-            "DefaultValue": null,
-            "Aliases": "None",
-            "PipelineInput": "false",
-            "SupportsWildcard": false,
-            "DataType": "SwitchParameter",
-            "Required": false
-          },
-          {
-            "Name": "EnableAdaptiveOptimization",
-            "Description": "Whether or not Adaptive Optimization is enabled on the storage volume.  Only supported with StoreVirtual.",
-            "DefaultValue": "False",
-            "Aliases": "None",
-            "PipelineInput": "false",
-            "SupportsWildcard": false,
-            "DataType": "SwitchParameter",
-            "Required": false
-          },
-          {
-            "Name": "LockAdaptiveOptimization",
-            "Description": "Specify to lock the EnableAdaptiveOptimization value in the template.",
-            "DefaultValue": null,
             "Aliases": "None",
             "PipelineInput": "false",
             "SupportsWildcard": false,
@@ -35013,22 +34877,6 @@
             },
             {
               "Name": "LockProvisionMode",
-              "Required": false
-            },
-            {
-              "Name": "DataProtectionLevel",
-              "Required": false
-            },
-            {
-              "Name": "LockProtectionLevel",
-              "Required": false
-            },
-            {
-              "Name": "EnableAdaptiveOptimization",
-              "Required": false
-            },
-            {
-              "Name": "LockAdaptiveOptimization",
               "Required": false
             },
             {
@@ -41255,10 +41103,10 @@
         "Description": "Delete one or multiple Server Profile Template resource(s).  A Server Profile Template cannot be removed if there are linked Server Profiles.",
         "Parameters": [
           {
-            "Name": "ServerProfileTemplate",
+            "Name": "InputObject",
             "Description": "The server profile template object(s) or name(s) to be removed.",
             "DefaultValue": null,
-            "Aliases": "spt, name",
+            "Aliases": "spt, name, ServerProfileTemplate",
             "PipelineInput": "true (ByValue)",
             "SupportsWildcard": false,
             "DataType": "Object",
@@ -41328,12 +41176,12 @@
         "Examples": [
           {
             "Title": "-------------------------- EXAMPLE 1 --------------------------",
-            "Code": "$task = Remove-OVServerProfileTemplate -ServerProfileTemplate \"My Template Profile\"\nWait-OVTaskComplete $task.uri\n                        ",
+            "Code": "$task = Remove-OVServerProfileTemplate -ServerProfileTemplate \"My Template Profile\"\nWait-OVTaskComplete -InputObject $task\n                        ",
             "Description": "Remove the profile template specifed by name. Wait for remove to complete."
           },
           {
             "Title": "-------------------------- EXAMPLE 2 --------------------------",
-            "Code": "$spt = Get-OVServerProfileTemplate -name \"My Template Profile\"\nRemove-OVServerProfileTemplate $spt -confirm:$false",
+            "Code": "$spt = Get-OVServerProfileTemplate -name \"My Template Profile\" -ErrorAction Stop\nRemove-OVServerProfileTemplate $spt -Confirm:$false",
             "Description": "Remove the profile template specifed by $spt. Disable confirmation prompt."
           },
           {
@@ -41375,7 +41223,7 @@
         "Syntax": [
           [
             {
-              "Name": "ServerProfileTemplate",
+              "Name": "InputObject",
               "Required": true
             },
             {
@@ -41383,7 +41231,7 @@
               "Required": true
             },
             {
-              "Name": "force",
+              "Name": "Force",
               "Required": false
             }
           ]
@@ -47503,6 +47351,76 @@
             "SupportsWildcard": false,
             "DataType": "String",
             "Required": true
+          },
+          {
+            "Name": "DeploymentNetworkType",
+            "Description": "Specify the Synergy Image Stream deployment network type.  Allowed values:\n\n    * Internal - Deployment network is an internal, managed by the Frame links, which Logical Intercoonect Group must have an ImageStreamer Uplink Set.\n    * External - Deployment network is connected to an External management switch.\n    * None - No deployment network will be configured.\n\nDefault: None",
+            "DefaultValue": "None",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false,
+            "DataType": "String",
+            "Required": false
+          },
+          {
+            "Name": "DeploymentNetwork",
+            "Description": "The Ethernet Network with the purpose property set to Management.  Must also include DeploymentNetworkType parameter, value must be \"External\", with the Ethernet Network associated with a non-ImageStreamer Uplink Set.",
+            "DefaultValue": null,
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false,
+            "DataType": "Object",
+            "Required": false
+          },
+          {
+            "Name": "IPv4AddressRange",
+            "Description": "The IPv4 address pool object from Get-OVAddressPoolRange.",
+            "DefaultValue": null,
+            "Aliases": "AddressPool",
+            "PipelineInput": "false",
+            "SupportsWildcard": false,
+            "DataType": "Object",
+            "Required": false
+          },
+          {
+            "Name": "IPv4AddressType",
+            "Description": "Use to specify how the IPv4 Addresses will be assigned to Synergy resources management interface(s).  Allowed values:\n\n    * External -  The IPv4 address is managed externally, static assignment. \n    * DHCP -  The IPv4 address is assigned using DHCP. \n    * AddressPool - The IPv4 address is assigned from a pool of IP addresses specified by the AddressPool parameter, similar to HPE BladeSystem C-Class \"Enclosure Bay IP Addressing\" (aka EBIPA). \n\nDefault: DHCP",
+            "DefaultValue": "DHCP",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false,
+            "DataType": "String",
+            "Required": false
+          },
+          {
+            "Name": "IPv6AddressRange",
+            "Description": "The IPv6 address pool object from Get-OVAddressPoolRange.",
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false,
+            "DataType": "Object",
+            "Required": false
+          },
+          {
+            "Name": "IPv6AddressType",
+            "Description": "Use to specify how the IPv6 Addresses will be assigned to Synergy resources management interface(s).  Allowed values:\n\n    * External -  The IPv4 address is managed externally, static assignment. \n    * DHCP -  The IPv4 address is assigned using DHCP. \n    * AddressPool - The IPv4 address is assigned from a pool of IP addresses specified by the AddressPool parameter, similar to HPE BladeSystem C-Class \"Enclosure Bay IP Addressing\" (aka EBIPA). \n\nDefault: None",
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false,
+            "DataType": "String",
+            "Required": false
+          },
+          {
+            "Name": "LogicalInterconnectGroupMapping",
+            "Description": "An Enclosure Group can reference multiple Logical Interconnect Groups, once per Interconnect Bay.  If a Single Logical Interconnect Group object is provided (either via parameter variable or via Pipeline), the Logical Interconnect Group objects Logical Interconnect Bay configuration will be used.\n\nTo specify a specific C-Class Logical Interconnect Group(s) for one or more Interconnect Bays, use a Hashtable, with the Bay ID as the Key, and Logical Interconnect Group Name, URI or Object as the Value.  Example:\n\n$LogicalInterConnectGroupMapping = @{ 1 = \"MyLIg1\"; 2 = \"MyLig1\"; 5 = \"OtherLIG\"; 6 = \"OtherLIG\"}\n\n$MyLig1 = Get-OVLogicalInterconnectGroup -Name MyLig1\n$OtherLIG = Get-OVLogicalInterconnectGroup OtherLIG\n$LogicalInterConnectGroupMapping = @{ 1 = $MyLig1; 2 = $MyLig1; 5 = $OtherLIG; 6 = $OtherLIG\"\n\nWhen attempting to define a Syenrgy-based Enclosure Group, either an Array or Hashtable is allowed.  If an Array of Logical Interconnect Groups are provided, the Cmdlet will determine the Interconnect placement automatically. Example:\n\n$MySynergyLig1 = Get-OVLogicalInterconnectGroup -Name MySynergyLig1\n$LogicalInterConnectGroupMapping = $MySynergyLig1\n#or\n$MySynergyLig1 = Get-OVLogicalInterconnectGroup -Name MySynergyLig1\n$MySynergyLig2 = Get-OVLogicalInterconnectGroup -Name MySynergyLig2\n$LogicalInterConnectGroupMapping = $MySynergyLig1,$MySynergyLig2\n\n\nDo know that SAS and VC FC LIGs are bound to a single frame, and will not reference other Frames if FrameCount is greater than 1.\n\nUse a Hashtable to bind specific LIGs to specific Frames.  The Interconnect placement will be determined automatically based on either the Hashtable Key name \"Frame#\" (where # is the numerical value of the Frame) or Enclosure Index value (depending if a SAS or Synergy VC FC LIG).  Example:\n\n$3FrameVCLIG = Get-OVLogicalInterconnectGroup -Name \"My MultiFrame Synergy LIG 1\"\n$SasLIG = Get-OVLogicalInterconnectGroup -Name \"My Synergy Sas LIG 1\"\n$LogicalInterconnectGroupMapping = @{Frame1 = $3FrameVCLIG,$SasLIG; Frame2 = $3FrameVCLIG,$SasLIG; Frame3 = $3FrameVCLIG }",
+            "DefaultValue": null,
+            "Aliases": "logicalInterconnectGroupUri, logicalInterconnectGroup",
+            "PipelineInput": "true (ByValue)",
+            "SupportsWildcard": false,
+            "DataType": "Object",
+            "Required": true
           }
         ],
         "InputTypes": [
@@ -47560,16 +47478,40 @@
               "Required": true
             },
             {
-              "Name": "Name",
+              "Name": "LogicalInterconnectGroupMapping",
               "Required": true
             },
             {
-              "Name": "ConfigurationScript",
-              "Required": true
+              "Name": "Name",
+              "Required": false
             },
             {
               "Name": "PowerRedundantMode",
-              "Required": true
+              "Required": false
+            },
+            {
+              "Name": "IPv4AddressType",
+              "Required": false
+            },
+            {
+              "Name": "IPv4AddressRange",
+              "Required": false
+            },
+            {
+              "Name": "IPv6AddressType",
+              "Required": false
+            },
+            {
+              "Name": "IPv6AddressRange",
+              "Required": false
+            },
+            {
+              "Name": "DeploymentNetworkType",
+              "Required": false
+            },
+            {
+              "Name": "DeploymentNetwork",
+              "Required": false
             },
             {
               "Name": "ApplianceConnection",
@@ -47736,6 +47678,16 @@
             "SupportsWildcard": false,
             "DataType": "Array",
             "Required": false
+          },
+          {
+            "Name": "NFSPath",
+            "Description": "Specify the NFS path for Superdome Flex RMC firmware updates.",
+            "DataType": "string",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -47797,7 +47749,7 @@
             },
             {
               "Name": "Name",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Username",
@@ -47812,6 +47764,10 @@
               "Required": false
             },
             {
+              "Name": "NFSPath",
+              "Required": false
+            },
+            {
               "Name": "Async",
               "Required": false
             }
@@ -47823,14 +47779,18 @@
             },
             {
               "Name": "Name",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Credential",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Certificate",
+              "Required": false
+            },
+            {
+              "Name": "NFSPath",
               "Required": false
             },
             {
@@ -52205,16 +52165,6 @@
             "Required": false
           },
           {
-            "Name": "DataProtectionLevel",
-            "Description": "Specify the new StoreVirtual data protection level (aka Network RAID).  Allowed values:\n\n    * NetworkRaid0None\n    * NetworkRaid5SingleParity\n    * NetworkRaid10Mirror2Way\n    * NetworkRaid10Mirror3Way\n    * NetworkRaid10Mirror4Way\n    * NetworkRaid6DualParity",
-            "DefaultValue": "False",
-            "Aliases": "None",
-            "PipelineInput": "false",
-            "SupportsWildcard": false,
-            "DataType": "String",
-            "Required": false
-          },
-          {
             "Name": "PermitAdaptiveOptimization",
             "Description": "Include this switch to mark the Storage Volume as a Shareable resource for shared volume access.\nDefault: Private",
             "DefaultValue": "False",
@@ -52336,14 +52286,10 @@
             },
             {
               "Name": "Capacity",
-              "Required": true
-            },
-            {
-              "Name": "SnapShotStoragePool",
               "Required": false
             },
             {
-              "Name": "DataProtectionLevel",
+              "Name": "SnapShotStoragePool",
               "Required": false
             },
             {
@@ -52356,7 +52302,7 @@
             },
             {
               "Name": "ApplianceConnection",
-              "Required": true
+              "Required": false
             }
           ]
         ]
@@ -52463,46 +52409,6 @@
             "Name": "Full",
             "Description": "NOTE: This parameter is being deprecated for the -ProvisionType parameter. Please update your scripts.\n\nInclude to change the provisioned type to Full.",
             "DefaultValue": "False",
-            "Aliases": "None",
-            "PipelineInput": "false",
-            "SupportsWildcard": false,
-            "DataType": "SwitchParameter",
-            "Required": false
-          },
-          {
-            "Name": "DataProtectionLevel",
-            "Description": "Specify the StoreVirtual protection level (aka Network RAID) for the volume.  Allowed values are:\n\n    * NetworkRaid0None\n    * NetworkRaid5SingleParity\n    * NetworkRaid10Mirror2Way\n    * NetworkRaid10Mirror3Way\n    * NetworkRaid10Mirror4Way\n    * NetworkRaid6DualParity",
-            "DefaultValue": null,
-            "Aliases": "None",
-            "PipelineInput": "false",
-            "SupportsWildcard": false,
-            "DataType": "String",
-            "Required": false
-          },
-          {
-            "Name": "LockProtectionLevel",
-            "Description": "Specify to lock the DataProtectionLevel value in the template.",
-            "DefaultValue": null,
-            "Aliases": "None",
-            "PipelineInput": "false",
-            "SupportsWildcard": false,
-            "DataType": "SwitchParameter",
-            "Required": false
-          },
-          {
-            "Name": "EnableAdaptiveOptimization",
-            "Description": "Whether or not Adaptive Optimization is enabled on the storage volume.  Only supported with StoreVirtual",
-            "DefaultValue": "False",
-            "Aliases": "None",
-            "PipelineInput": "false",
-            "SupportsWildcard": false,
-            "DataType": "SwitchParameter",
-            "Required": false
-          },
-          {
-            "Name": "LockAdaptiveOptimization",
-            "Description": "Specify to lock the EnableAdaptiveOptimization value in the template.",
-            "DefaultValue": null,
             "Aliases": "None",
             "PipelineInput": "false",
             "SupportsWildcard": false,
@@ -52993,22 +52899,6 @@
             },
             {
               "Name": "LockProvisionMode",
-              "Required": false
-            },
-            {
-              "Name": "DataProtectionLevel",
-              "Required": false
-            },
-            {
-              "Name": "LockProtectionLevel",
-              "Required": false
-            },
-            {
-              "Name": "EnableAdaptiveOptimization",
-              "Required": false
-            },
-            {
-              "Name": "LockAdaptiveOptimization",
               "Required": false
             },
             {
@@ -61208,7 +61098,7 @@
       "Category": "Library",
       "Contents": {
         "Synopsis": "Enable appliance certificate revocation checking.",
-        "Description": "Hewlett Packard Enterprise strongly recommends that you enable strict certificate validation checks after completing an update as appropriate for your enterprise security policies. HPE OneView supports devices using self-signed certificates and devices using formal CA-signed certificates. CA-signed certificates offer benefits such as revocation checking and overall simplified management.  HPE OneView enables users to import a CA CRL file and to perform the appropriate revocation checking on existing certificates in the trust store and for certificates received during communication with a managed device or external server.\n\nThis Cmdlet will enables certificate revocation validation on the specified appliance.  When enabled and a certificate revocation list URL is present within a certificate authority's certificate, the appliance will validate if the certificate has been revoked.  A revoked certificate is then no longer valid and must be replaced on the device.  This setting has no applicability to self-signed certificates.\n\nMinimum required privileges: Infrastructure administrator",
+        "Description": "Hewlett Packard Enterprise strongly recommends that you enable strict certificate validation checks after completing an update as appropriate for your enterprise security policies. HPE OneView supports devices using self-signed certificates and devices using formal CA-signed certificates. CA-signed certificates offer benefits such as revocation checking and overall simplified management.  HPE OneView enables users to import a CA CRL file and to perform the appropriate revocation checking on existing certificates in the trust store and for certificates received during communication with a managed device or external server.\n\nThis Cmdlet will enables certificate revocation validation on the specified appliance.  When enabled and a certificate revocation list URL is present within a certificate authority's certificate, the appliance will validate if the certificate has been revoked.  A revoked certificate is then no longer valid and must be replaced on the device.  This setting has no applicability to self-signed certificates.\n\nWARNING:  Appliance will reboot when executing this Cmdlet.\n\nMinimum required privileges: Infrastructure administrator",
         "Syntax": [
           [
             {
@@ -61236,7 +61126,7 @@
         "Parameters": [
           {
             "Name": "AllowExpiredCRLs",
-            "Description": "",
+            "Description": "This setting controls how HPE OneView treats expired CRLs. When enabled, HPE OneView allows CRLs that are expired and continues to perform the revocation checks for that CRL.  Use the -NotifyExpiredMissingCRLs parameter to be notified via an alert when CRL(s) are about to be or have expired.",
             "DataType": "bool",
             "Required": false,
             "DefaultValue": "",
@@ -61266,7 +61156,7 @@
           },
           {
             "Name": "EnableAutoCRLDownload",
-            "Description": "",
+            "Description": "When the setting is enabled, a scheduled automatic CRL downloader on the appliance checks the validity of all the CRLs that are available in the appliance, and updates the CRLs that have expired or are about to expire. The downloader also downloads new CRLs during this process if the CRLs were not previously downloaded. The scheduled time for running the job is set to 12AM UTC. The appliance checks for CRLs every day that are about to expire. If any of the CRLs are about to expire in three days, the appliance downloads the latest available CRL. This prevents the expiration of CRLs on the appliance. You can configure the schedule for downloading the latest available CRLs using Set-OVCertificateRevocationInterval. If there is a failure during the CRL download, the appliance retries the operation three times before raising an alert.",
             "DataType": "bool",
             "Required": false,
             "DefaultValue": "",
@@ -61276,7 +61166,7 @@
           },
           {
             "Name": "NotifyExpiredMissingCRLs",
-            "Description": "",
+            "Description": "When enabled, alerts are displayed when there is no CRL uploaded for a CA, a CRL is about to expire, or a CRL has already expired.",
             "DataType": "bool",
             "Required": false,
             "DefaultValue": "",
@@ -61286,7 +61176,7 @@
           },
           {
             "Name": "SkipRevocationCheck",
-            "Description": "",
+            "Description": "This option controls whether HPE OneView treats a missing CRL as an error during certificate validation. By default, this option is enabled and HPE OneView performs overall certificate validation with the exception of revocation checking.  If you do not have the CRL files issued by the CA certificates, any communication with devices or remote servers that have certificates signed by those CAs will fail until new CRLs are uploaded for all of those CA certificates. Those CA certificates can be identified by navigating to the manage certificate dialog in the settings and filtering by state of \"CRL not found\"",
             "DataType": "bool",
             "Required": false,
             "DefaultValue": "",
@@ -61305,8 +61195,18 @@
             "SupportsWildcard": false
           }
         ],
-        "InputTypes": [],
-        "ReturnValues": [],
+        "InputTypes": [
+          {
+              "Value":  "None.  You cannot pipe objects to this cmdlet.",
+              "Text":  null
+          }
+        ],
+        "ReturnValues": [
+          {
+              "Value":  "None",
+              "Text":  "Appliance will reboot.\n"
+          }
+        ],
         "Examples": [
           {
             "Title": "-------------------------- EXAMPLE 1 --------------------------",
@@ -61328,10 +61228,10 @@
     },
     {
       "Name": "Get-OVApplianceIPAddress",
-      "Category": "Library",
+      "Category": "Appliance",
       "Contents": {
-        "Synopsis": "Default content",
-        "Description": "Default content",
+        "Synopsis": "Display the configured NICs of an appliance, or Synergy Composer cluster.",
+        "Description": "The HPE OneView appliance can be configured with static IPv4 and/or IPv6 addresses.  This address is used for all IP communication between monitored/managed resources, external services (i.e. authentication directory, HPE web services like OneView Remote Support) and for administrator client management operations from the web UI and/or REST API.  This Cmdlet will return the configured IP address(es).",
         "Syntax": [],
         "Parameters": [
           {
@@ -61345,18 +61245,48 @@
             "SupportsWildcard": false
           }
         ],
-        "InputTypes": [],
-        "ReturnValues": [],
+        "InputTypes": [
+          {
+              "Value":  "None.  You cannot pipe objects to this cmdlet.",
+              "Text":  null
+          }
+        ],
+        "ReturnValues": [
+          {
+              "Value":  "HPEOneView.Appliance.NetworkInterface",
+              "Text":  "Network interface configured for virtual machine appliance.\n"
+          },
+          {
+              "Value":  "HPEOneView.Appliance.ComposerNetworkInterface",
+              "Text":  "Network interface(s) configured for HPE Synergy Composer appliance(s).\n"
+          }
+        ],
         "Examples": [
           {
             "Title": "-------------------------- EXAMPLE 1 --------------------------",
             "Code": "Get-OVApplianceIPAddress\r\n",
-            "Description": "Default example"
+            "Description": "Display configured appliance NICs."
           }
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v7.00/library/get-ovapplianceipaddress",
+            "Uri": null,
+            "Text": "New-OVApplianceStaticRoute"
+          },
+          {
+            "Uri": null,
+            "Text": "Get-OVApplianceStaticRoute"
+          },
+          {
+            "Uri": null,
+            "Text": "Set-OVApplianceStaticRoute"
+          },
+          {
+            "Uri": null,
+            "Text": "Remove-OVApplianceStaticRoute"
+          },
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v7.00/appliance/get-ovapplianceipaddress",
             "Text": "Online: "
           }
         ]
@@ -61364,11 +61294,26 @@
     },
     {
       "Name": "Get-OVApplianceStaticRoute",
-      "Category": "Library",
+      "Category": "Appliance",
       "Contents": {
-        "Synopsis": "Default content",
-        "Description": "Default content",
-        "Syntax": [],
+        "Synopsis": "Display configured static routes on the appliance.",
+        "Description": "When configuring a second NIC on a virtual machine appliance, static routes can be configured as only a single appliance NIC can be configured with a default gateway.  Both IPv4 and IPv6 static routes are supported.  Use Get-OVApplianceIPAddress to display the configured NIC interfaces, and supply the interface name with the -Interface parameter.\n\nMinimum required privileges:  Infrastructure administrator",
+        "Syntax": [
+          [
+            {
+              "Name": "Destination",
+              "Required": false
+            },
+            {
+              "Name": "Interface",
+              "Required": false
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ]
+        ],
         "Parameters": [
           {
             "Name": "ApplianceConnection",
@@ -61382,7 +61327,7 @@
           },
           {
             "Name": "Destination",
-            "Description": "",
+            "Description": "The static route defined on the appliance.  IP address format should be {destination_subnet}/{subnetmask_short_bit}.\n\nExample: 10.55.74.0/24",
             "DataType": "String",
             "Required": false,
             "DefaultValue": "",
@@ -61392,7 +61337,7 @@
           },
           {
             "Name": "Interface",
-            "Description": "",
+            "Description": "Interface name to filter.  Use Get-OVApplianceIPAddress to display the configured NIC interfaces.",
             "DataType": "String",
             "Required": false,
             "DefaultValue": "",
@@ -61401,18 +61346,45 @@
             "SupportsWildcard": false
           }
         ],
-        "InputTypes": [],
-        "ReturnValues": [],
+        "InputTypes": [
+          {
+              "Value":  "None.  You cannot pipe objects to this cmdlet.",
+              "Text":  null
+          }
+        ],
+        "ReturnValues": [
+          {
+              "Value":  "HPEOneView.Appliance.StaticRoute",
+              "Text":  "IP static route object.\n"
+          }
+        ],
         "Examples": [
           {
             "Title": "-------------------------- EXAMPLE 1 --------------------------",
             "Code": "Get-OVApplianceStaticRoute\r\n",
-            "Description": "Default example"
+            "Description": "Get all configured static routes."
+          },
+          {
+            "Title": "-------------------------- EXAMPLE 2 --------------------------",
+            "Code": "Get-OVApplianceStaticRoute -Interface Appliance\r\n",
+            "Description": "Get all configured static routes for the default \"Appliance\" NIC."
           }
         ],
         "RelatedLinks": [
           {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v7.00/library/get-ovappliancestaticroute",
+            "Uri": null,
+            "Text": "New-OVApplianceStaticRoute"
+          },
+          {
+            "Uri": null,
+            "Text": "Set-OVApplianceStaticRoute"
+          },
+          {
+            "Uri": null,
+            "Text": "Remove-OVApplianceStaticRoute"
+          },
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v7.00/appliance/get-ovappliancestaticroute",
             "Text": "Online: "
           }
         ]
@@ -61422,8 +61394,8 @@
       "Name": "Set-OVCertificateRevocationInterval",
       "Category": "Library",
       "Contents": {
-        "Synopsis": "Default content",
-        "Description": "Default content",
+        "Synopsis": "Change the interval of Certificate Revocation List download.",
+        "Description": "Certificate Revocation List (CRL) associated with a CA certificate typically gets expired on a weekly or monthly interval. When you receive the CRL expiration alert, manually upload the new CRL to HPE OneView. You can configure HPE OneView 5.2 and later versions and automatically download CRLs. When the Automatic CRL downloading setting is enabled, a scheduled automatic CRL downloader on the appliance checks the validity of all the CRLs that are available in the appliance, and updates the CRLs that have expired or are about to expire. The downloader also downloads new CRLs during this process if the CRLs were not previously downloaded. The scheduled time for running the job is set to 12AM UTC. The appliance checks for CRLs every day that are about to expire. If any of the CRLs are about to expire in three days, the appliance downloads the latest available CRL. This prevents the expiration of CRLs on the appliance. You can configure the schedule for downloading the latest available CRLs using a global setting variable global.daysBeforeToTriggerCRLDownload using the REST API /rest/certificates/validator-configuration. If there is a failure during the CRL download, the appliance retries the operation three times before raising an alert.\n\nNOTE:  Irrespective of the number of days before the download is triggered, the CRL infrastructure has a potential lag. When a CA uploads a new CRL, the CA does not have the capability to inform about the update. Due to this lag in the CRL infrastructure, a new revoked certificate will not be picked up until next refresh. This is not an HPE OneView specific issue rather a limitation with the CRL ecosystem.\n\nIf the scheduled run for a specific day is missed due to reasons such as the appliance is down on the scheduled day, HPE OneView will initiate the CRL downloader post reboot.\n\nSee the online help Certificate Revocation Lists discussion topic for more information.\n\nMinimum required privileges: Infrastructure administrator",
         "Syntax": [
           [
             {
@@ -61449,7 +61421,7 @@
           },
           {
             "Name": "AutoCRLDownloadInterval",
-            "Description": "",
+            "Description": "The number of days to perform CRL download, if CRL is defined within leaf certificate.",
             "DataType": "int",
             "Required": true,
             "DefaultValue": "",
@@ -62899,6 +62871,549 @@
           },
           {
             "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v7.00/appliance/set-ovapplianceupdateschedule",
+            "Text": "Online: "
+          }
+        ]
+      }
+    },
+    {
+      "Name": "Get-OVMigratableServer",
+      "Category": "Servers",
+      "Contents": {
+        "Synopsis": "Establish connection to source appliance and retrieve a list of servers that are available to migrate.",
+        "Description": "Migration transfers the management of rackmount servers along with their associated profiles, and copies dependent resources from one HPE OneView appliance to another appliance. This migration process does not impact the applications or workloads that are running on the server.\n\nYou can consolidate one or more rackmount servers from multiple appliances into a single appliance to increase the server scale support.\n\nSupported migration paths\n\nYou can use the migration utility that is available with the HPE OneView 7.0 appliance to migrate servers from:\n\n    * HPE OneView 6.6, which is a long-term support (LTS) version, and\n    * other HPE OneView 7.0 or newer appliances\n\nPlease see the HPE OneView online help \"Migrating server hardware\" help topic for more information and best practices.\n\nThis Cmdlet will connect to the source appliance, in order to retrieve a list of supported and migratable servers.  Use the returned list to then initiate the server migration process with the Invoke-OVMigrateServer Cmdlet.  If there are no available servers to migrate, a non-trappable error is generated, which can be overridden using the -ErrorAction common switch parameter.\n\nMinimum required privileges: Infrastructure administrator and Server administrator",
+        "Syntax": [
+          [
+            {
+              "Name": "Hostname",
+              "Required": true
+            },
+            {
+              "Name": "Credential",
+              "Required": true
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ]
+        ],
+        "Parameters": [
+          {
+            "Name": "ApplianceConnection",
+            "Description": "Specify one or more HPEOneView.Appliance.Connection object(s) or Name property value(s).\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
+            "DataType": "Object",
+            "Required": false,
+            "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
+            "Aliases": "Appliance",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Credential",
+            "Description": "Parameter to provide credentials in order to authenticate to the source appliance.",
+            "DataType": "PSCredential",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Hostname",
+            "Description": "IP Address or FQDN of the source appliance to migrate servers from.",
+            "DataType": "Object",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          }
+        ],
+        "InputTypes": [
+          {
+            "Value": "None.  You cannot pipe objects to this cmdlet.",
+            "Text": null
+          }
+        ],
+        "ReturnValues": [
+          {
+            "Value": "HPEOneView.Servers.MigratableServer",
+            "Text": "Class object of migratable server resources from Get-OVMigratableServer."
+          }
+        ],
+        "Examples": [
+          {
+            "Title": "-------------------------- EXAMPLE 1 --------------------------",
+            "Code": "$SourceServerMigrationHost = \"appliance1.domain.com\"\n\n$Credential = Get-Credential -Username myadminaccount\n\n# Get the list of migratable servers from the source appliance\n$MigratableServers = Get-OVMigratableServer -Hostname $SourceServerMigrationHost -Credential $Credential\n\n\nName                 Model                 Status ServerProfileName\n----                 -----                 ------ -----------------\nServer-33.domain.com ProLiant XL270d Gen10 OK     NoProfile\nServer-39.domain.com ProLiant DL560 Gen10  OK     NoProfile",
+            "Description": "Connect ot the specified appliance and return a list of migratable servers."
+          }
+        ],
+        "RelatedLinks": [
+          {
+            "Uri": "",
+            "Text": "Invoke-OVMigrateServer"
+          },
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v7.00/servers/get-ovmigratableserver",
+            "Text": "Online: "
+          }
+        ]
+      }
+    },
+    {
+      "Name": "Invoke-OVMigrateServer",
+      "Category": "Servers",
+      "Contents": {
+        "Synopsis": "Transfer the management of one or more servers and associated profiles from another OneView appliance to this appliance.",
+        "Description": "Migration transfers the management of rackmount servers along with their associated profiles, and copies dependent resources from one HPE OneView appliance to another appliance. This migration process does not impact the applications or workloads that are running on the server.\n\nYou can consolidate one or more rackmount servers from multiple appliances into a single appliance to increase the server scale support.\n\nSupported migration paths\n\nYou can use the migration utility that is available with the HPE OneView 7.0 appliance to migrate servers from:\n\n    * HPE OneView 6.6, which is a long-term support (LTS) version, and\n    * other HPE OneView 7.0 or newer appliances\n\nPlease see the HPE OneView online help \"Migrating server hardware\" help topic for more information and best practices.\n\nThis Cmdlet will initiate supported server migration.  Use the Get-OVMigratableServer Cmdlet to connect to the source appliance and return the list of servers that can be migrated.\n\nMinimum required privileges: Infrastructure administrator and Server administrator",
+        "Syntax": [
+          [
+            {
+              "Name": "InputObject",
+              "Required": true
+            },
+            {
+              "Name": "Hostname",
+              "Required": true
+            },
+            {
+              "Name": "Credential",
+              "Required": true
+            },
+            {
+              "Name": "Async",
+              "Required": false
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ]
+        ],
+        "Parameters": [
+          {
+            "Name": "ApplianceConnection",
+            "Description": "Specify one or more HPEOneView.Appliance.Connection object(s) or Name property value(s).\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
+            "DataType": "Object",
+            "Required": false,
+            "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
+            "Aliases": "Appliance",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Async",
+            "Description": "Use this parameter to immediately return the async task.  By default, the Cmdlet will wait for the task to complete.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "False",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Confirm",
+            "Description": "Use to override the confirmation prompt.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "cf",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Credential",
+            "Description": "Parameter to provide credentials in order to authenticate to the source appliance.",
+            "DataType": "PSCredential",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "InputObject",
+            "Description": "Collection of migratable servers from Get-OVMigratableServer.",
+            "DataType": "HPEOneView.Servers.MigratableServer[]",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "true (ByValue)",
+            "SupportsWildcard": false
+          }
+        ],
+        "InputTypes": [
+          {
+            "Value": "HPEOneView.Servers.MigratableServer",
+            "Text": "Class object of migratable server resources from Get-OVMigratableServer."
+          }
+        ],
+        "ReturnValues": [
+          {
+            "Value": "HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]",
+            "Text": "Async task resource to monitor."
+          }
+        ],
+        "Examples": [
+          {
+            "Title": "-------------------------- EXAMPLE 1 --------------------------",
+            "Code": "$Credential = Get-Credential -Username myadminaccount\n\n# Get the list of migratable servers from the source appliance\n$MigratableServers = Get-OVMigratableServer -Hostname $SourceServerMigrationHost -Credential $Credential\n\n# Begin server migration\n$tasks = Invoke-OVMigrateServer -InputObject $MigratableServers -Credential $Credential -Async",
+            "Description": "Connect to the specified source appliance, return the list of migratable servers, then begin migration, returning the created async tasks."
+          }
+        ],
+        "RelatedLinks": [
+          {
+            "Uri": "",
+            "Text": "Get-OVMigratableServer"
+          },
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v7.00/servers/invoke-ovmigrateserver",
+            "Text": "Online: "
+          }
+        ]
+      }
+    },
+    {
+      "Name": "New-OVApplianceStaticRoute",
+      "Category": "Appliance",
+      "Contents": {
+        "Synopsis": "Create new configured static route on an appliance.",
+        "Description": "When configuring a second NIC on a virtual machine appliance, static routes can be configured as only a single appliance NIC can be configured with a default gateway.  Both IPv4 and IPv6 static routes are supported.  Use Get-OVApplianceIPAddress to display the configured NIC interfaces, and supply the interface name with the -Interface parameter.\n\nMinimum required privileges:  Infrastructure administrator",
+        "Syntax": [
+          [
+            {
+              "Name": "Destination",
+              "Required": true
+            },
+            {
+              "Name": "Gateway",
+              "Required": true
+            },
+            {
+              "Name": "Interface",
+              "Required": true
+            },
+            {
+              "Name": "Metric",
+              "Required": false
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ]
+        ],
+        "Parameters": [
+          {
+            "Name": "ApplianceConnection",
+            "Description": "Specify one or more HPEOneView.Appliance.Connection object(s) or Name property value(s).\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
+            "DataType": "Object",
+            "Required": false,
+            "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
+            "Aliases": "Appliance",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Destination",
+            "Description": "IP Address of the destination subnet.  Format must follow {address}/{bits}.  Can either be IPv4 or IPv6 address type.",
+            "DataType": "String",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Gateway",
+            "Description": "The IP address of the router.  Can either be an IPv4 or IPv6 address, but must match the type provided in the -Destination parameter.",
+            "DataType": "IPAddress",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Interface",
+            "Description": "Interface name of the NIC the static route will be configured for.",
+            "DataType": "String",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Metric",
+            "Description": "Route weight value if multiple next hop routes will be configured for the same subnet.  If no value provided, the route weight will be set to 100.",
+            "DataType": "int",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          }
+        ],
+        "InputTypes": [
+          {
+              "Value":  "None.  You cannot pipe objects to this cmdlet.",
+              "Text":  null
+          }
+        ],
+        "ReturnValues": [
+          {
+              "Value":  "HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]",
+              "Text":  "Async task resource to monitor."
+          }
+        ],
+        "Examples": [
+          {
+            "Title": "-------------------------- EXAMPLE 1 --------------------------",
+            "Code": "New-OVApplianceStaticRoute -Destination 192.168.199.9/24 -Gateway 192.168.33.1 -Interface SecondNIC\r\n",
+            "Description": "Add the specific IPv4 static route to an appliance."
+          },
+          {
+            "Title": "-------------------------- EXAMPLE 2 --------------------------",
+            "Code": "New-OVApplianceStaticRoute -Destination 2001:db8:abcd:0012::0/64 -Gateway 2001:db8:85a3:0000:0000:8a2e:0370:7334 -Interface SecondNIC\r\n",
+            "Description": "Add the specific IPv6 static route to an appliance."
+          }
+        ],
+        "RelatedLinks": [
+          {
+            "Uri": "",
+            "Text": "Get-OVApplianceStaticRoute"
+          },
+          {
+            "Uri": "",
+            "Text": "Remove-OVApplianceStaticRoute"
+          },
+          {
+            "Uri": "",
+            "Text": "Set-OVApplianceStaticRoute"
+          },
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v7.00/appliance/new-ovappliancestaticroute",
+            "Text": "Online: "
+          }
+        ]
+      }
+    },
+    {
+      "Name": "Remove-OVApplianceStaticRoute",
+      "Category": "Appliance",
+      "Contents": {
+        "Synopsis": "Remove configured static route on an appliance.",
+        "Description": "When configuring a second NIC on a virtual machine appliance, static routes can be configured as only a single appliance NIC can be configured with a default gateway.  Both IPv4 and IPv6 static routes are supported.  Use this Cmdlet to remove a static route configured on an appliance.\n\nMinimum required privileges:  Infrastructure administrator",
+        "Syntax": [
+          [
+            {
+              "Name": "InputObject",
+              "Required": true
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ]
+        ],
+        "Parameters": [
+          {
+            "Name": "ApplianceConnection",
+            "Description": "Specify one or more HPEOneView.Appliance.Connection object(s) or Name property value(s).\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
+            "DataType": "Object",
+            "Required": false,
+            "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
+            "Aliases": "Appliance",
+            "PipelineInput": "true (ByPropertyName)",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "InputObject",
+            "Description": "Static route object from Get-OVApplianceStaticRoute.",
+            "DataType": "HPEOneView.Appliance.StaticRoute",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "true (ByValue)",
+            "SupportsWildcard": false
+          }
+        ],
+        "InputTypes": [
+          {
+              "Value":  "HPEOneView.Appliance.StaticRoute",
+              "Text":  "Configured static route object from Get-OVApplianceStaticRoute."
+          }
+        ],
+        "ReturnValues": [
+          {
+              "Value":  "HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]",
+              "Text":  "Async task resource to monitor."
+          }
+        ],
+        "Examples": [
+          {
+            "Title": "-------------------------- EXAMPLE 1 --------------------------",
+            "Code": "Get-OVApplianceStaticRoute -Destination 192.168.44.0/24 | Remove-OVApplianceStaticRoute\r\n",
+            "Description": "Remove the specific static route from an appliance."
+          },
+          {
+            "Title": "-------------------------- EXAMPLE 2 --------------------------",
+            "Code": "Get-OVApplianceStaticRoute -Interface SecondNIC | Remove-OVApplianceStaticRoute\r\n",
+            "Description": "Remove all configured static routes configured for the the specific interface from an appliance."
+          }
+        ],
+        "RelatedLinks": [
+          {
+            "Uri": "",
+            "Text": "Get-OVApplianceStaticRoute"
+          },
+          {
+            "Uri": "",
+            "Text": "New-OVApplianceStaticRoute"
+          },
+          {
+            "Uri": "",
+            "Text": "Set-OVApplianceStaticRoute"
+          },
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v7.00/appliance/remove-ovappliancestaticroute",
+            "Text": "Online: "
+          }
+        ]
+      }
+    },
+    {
+      "Name": "Set-OVApplianceStaticRoute",
+      "Category": "Library",
+      "Contents": {
+        "Synopsis": "Update a configured static routes on an appliance.",
+        "Description": "When configuring a second NIC on a virtual machine appliance, static routes can be configured as only a single appliance NIC can be configured with a default gateway.  Both IPv4 and IPv6 static routes are supported.  Use Get-OVApplianceIPAddress to display the configured NIC interfaces, and supply the interface name with the -Interface parameter.\n\nMinimum required privileges:  Infrastructure administrator",
+        "Syntax": [
+          [
+            {
+              "Name": "InputObject",
+              "Required": true
+            },
+            {
+              "Name": "Destination",
+              "Required": false
+            },
+            {
+              "Name": "Gateway",
+              "Required": false
+            },
+            {
+              "Name": "Interface",
+              "Required": false
+            },
+            {
+              "Name": "Metric",
+              "Required": false
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ]
+        ],
+        "Parameters": [
+          {
+            "Name": "ApplianceConnection",
+            "Description": "Specify one or more HPEOneView.Appliance.Connection object(s) or Name property value(s).\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
+            "DataType": "Object",
+            "Required": false,
+            "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
+            "Aliases": "Appliance",
+            "PipelineInput": "true (ByPropertyName)",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Destination",
+            "Description": "IP Address of the destination subnet.  Format must follow {address}/{bits}.  Can either be IPv4 or IPv6 address type.",
+            "DataType": "String",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Gateway",
+            "Description": "The IP address of the router.  Can either be an IPv4 or IPv6 address, but must match the type provided in the -Destination parameter.",
+            "DataType": "IPAddress",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "InputObject",
+            "Description": "Static route object from Get-OVApplianceStaticRoute.",
+            "DataType": "StaticRoute",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "true (ByValue)",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Interface",
+            "Description": "Interface name of the NIC the static route will be configured for.",
+            "DataType": "String",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Metric",
+            "Description": "Route weight value if multiple next hop routes will be configured for the same subnet.  If no value provided, the route weight will be set to 100.",
+            "DataType": "int",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          }
+        ],
+        "InputTypes": [
+          {
+              "Value":  "HPEOneView.Appliance.StaticRoute",
+              "Text":  "Configured static route object from Get-OVApplianceStaticRoute."
+          }
+        ],
+        "ReturnValues": [
+          {
+              "Value":  "HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]",
+              "Text":  "Async task resource to monitor."
+          }
+        ],
+        "Examples": [
+          {
+            "Title": "-------------------------- EXAMPLE 1 --------------------------",
+            "Code": "Get-OVapplianceStaticRoute -Destination 192.168.78.0/24 | Set-OVApplianceStaticRoute -Gateway 192.168.12.254\r\n",
+            "Description": "Update the specific static route with a new gateway address."
+          }
+        ],
+        "RelatedLinks": [
+          {
+            "Uri": "",
+            "Text": "Get-OVApplianceStaticRoute"
+          },
+          {
+            "Uri": "",
+            "Text": "New-OVApplianceStaticRoute"
+          },
+          {
+            "Uri": "",
+            "Text": "Remove-OVApplianceStaticRoute"
+          },
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v7.00/appliance/set-ovappliancestaticroute",
             "Text": "Online: "
           }
         ]

@@ -9,10 +9,11 @@ description: Modify an existing external baseline repository.
 ```powershell
 Set-OVExternalRepository
     [-InputObject] <Object>
-    [-Name] <String>
+    [-Name <String>]
     [-Username <String>]
     [-Password <System.Security.SecureString>]
     [-Certificate <String>]
+    [-NFSPath <string>]
     [-Async]
     [<CommonParameters>]
 ```
@@ -20,9 +21,10 @@ Set-OVExternalRepository
 ```powershell
 Set-OVExternalRepository
     [-InputObject] <Object>
-    [-Name] <String>
-    [-Credential] <String>
+    [-Name <String>]
+    [-Credential <String>]
     [-Certificate <String>]
+    [-NFSPath <string>]
     [-Async]
     [<CommonParameters>]
 ```
@@ -172,6 +174,18 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
 | Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
+
+### -NFSPath &lt;string&gt;
+
+Specify the NFS path for Superdome Flex RMC firmware updates.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
