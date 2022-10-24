@@ -11,12 +11,11 @@ Set-OVStorageVolume
     [-InputObject] <Object>
     [-Name <String>]
     [-Description <String>]
-    [-Capacity] <Int64>
+    [-Capacity <Int64>]
     [-SnapShotStoragePool <Object>]
-    [-DataProtectionLevel <String>]
     [-PermitAdaptiveOptimization <Boolean>]
     [-Shared <Boolean>]
-    [-ApplianceConnection] <Object>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -104,25 +103,6 @@ The Storage Pool Name, URI or Object to be used for Volume Snapshots.
 
 Include this switch to mark the Storage Volume as a Shareable resource for shared volume access.
 Default: Private
-
-| Aliases | None |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | False |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
-### -DataProtectionLevel &lt;String&gt;
-
-Specify the new StoreVirtual data protection level (aka Network RAID).  Allowed values:
-
-* NetworkRaid0None
-* NetworkRaid5SingleParity
-* NetworkRaid10Mirror2Way
-* NetworkRaid10Mirror3Way
-* NetworkRaid10Mirror4Way
-* NetworkRaid6DualParity
 
 | Aliases | None |
 | :--- | :--- |

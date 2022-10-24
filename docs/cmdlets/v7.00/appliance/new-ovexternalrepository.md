@@ -11,6 +11,7 @@ New-OVExternalRepository
     [-Name] <String>
     [-Hostname] <String>
     [-Directory] <String>
+    [-NFSPath <string>]
     [-Username <String>]
     [-Password <SecureString>]
     [-Http]
@@ -26,6 +27,7 @@ New-OVExternalRepository
     [-Hostname] <String>
     [-Directory] <String>
     [-Credential] <String>
+    [-NFSPath <string>]
     [-Http]
     [-Certificate <String>]
     [-Async]
@@ -193,6 +195,18 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -NFSPath &lt;string&gt;
+
+Specify the NFS path for Superdome Flex RMC firmware updates.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

@@ -69,10 +69,6 @@ Set-OVStorageVolumeTemplate
     [-LockProvisionType]
     [-Shared <Boolean>]
     [-LockProvisionMode]
-    [-DataProtectionLevel <String>]
-    [-LockProtectionLevel]
-    [-EnableAdaptiveOptimization]
-    [-LockAdaptiveOptimization]
     [-ApplianceConnection] <Object>
     [<CommonParameters>]
 ```
@@ -225,61 +221,6 @@ Include to change the provisioned type to Full.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
-### -DataProtectionLevel &lt;String&gt;
-
-Specify the StoreVirtual protection level (aka Network RAID) for the volume.  Allowed values are:
-
-* NetworkRaid0None
-* NetworkRaid5SingleParity
-* NetworkRaid10Mirror2Way
-* NetworkRaid10Mirror3Way
-* NetworkRaid10Mirror4Way
-* NetworkRaid6DualParity
-
-| Aliases | None |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
-### -LockProtectionLevel &lt;SwitchParameter&gt;
-
-Specify to lock the DataProtectionLevel value in the template.
-
-| Aliases | None |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
-### -EnableAdaptiveOptimization &lt;SwitchParameter&gt;
-
-Whether or not Adaptive Optimization is enabled on the storage volume.  Only supported with StoreVirtual
-
-| Aliases | None |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | False |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
-### -LockAdaptiveOptimization &lt;SwitchParameter&gt;
-
-Specify to lock the EnableAdaptiveOptimization value in the template.
-
-| Aliases | None |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 

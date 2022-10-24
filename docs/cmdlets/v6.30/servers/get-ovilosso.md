@@ -19,6 +19,7 @@ Get-OVIloSso
 Get-OVIloSso
     [-InputObject] <Object>
     [-IloRestSession]
+    [-SkipCertificateCheck]
     [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
@@ -101,6 +102,20 @@ Generate an SSO URL Token for accessing the Remote Console.
 ### -IloRestSession &lt;SwitchParameter&gt;
 
 Generate an HPRESTCmdlets compliant IloSession object.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | False |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -SkipCertificateCheck &lt;SwitchParameter&gt;
+
+Skips certificate validation checks that include all validations such as expiration, revocation, trusted root authority, etc.
+
+[WARNING]:  Using this parameter is not secure and is not recommended. This switch is only intended to be used against known hosts using a self-signed certificate for testing purposes. Use at your own risk.
 
 | Aliases | None |
 | :--- | :--- |

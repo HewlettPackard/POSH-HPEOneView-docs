@@ -12,6 +12,7 @@ New-OVServerProfileLogicalDiskController
     [-Mode] <String>
     [-Initialize]
     [-WriteCache <String>]
+    [-PredictiveSpareActivation <String>]
     [-LogicalDisk] <Object>
     [<CommonParameters>]
 ```
@@ -22,6 +23,7 @@ New-OVServerProfileLogicalDiskController
     [-Mode] <String>
     [-Initialize]
     [-WriteCache <String>]
+    [-PredictiveSpareActivation <String>]
     [-ImportExistingConfiguration]
     [<CommonParameters>]
 ```
@@ -83,11 +85,27 @@ Create a RAID5 Logical Disk for a Server Profile using D3940 storage, and a spec
 ### -ControllerID &lt;Object&gt;
 
 Specify the Controller ID location.  Supported options for this parameter are
- * Embedded
- * Mezz 1
- * Mezz 2
- * Mezz 3
-Please note that Mezz 1, Mezz 2 and Mezz 3 are only supported with HPE Synergy Compute nodes connected to the HPE Synergy D3940 disk shelf.
+* Embedded
+* Mezz1
+* Mezz2
+* Mezz3
+* Slot1
+* Slot10
+* Slot11
+* Slot12
+* Slot13
+* Slot14
+* Slot15
+* Slot16
+* Slot2
+* Slot3
+* Slot4
+* Slot5
+* Slot6
+* Slot7
+* Slot8
+* Slot9
+Please note that Mezz1, Mezz2 and Mezz3 are only supported with HPE Synergy Compute nodes connected to the HPE Synergy D3940 disk shelf.
 
 | Aliases | None |
 | :--- | :--- |
@@ -153,6 +171,24 @@ A collection of Logical Disk objects from the New-OVServerProfileLogicalDisk Cmd
 ### -WriteCache &lt;String&gt;
 
 For Gen10 controllers, to enable, disable or unmanage controller write cache policy.  Allowed values:
+
+* Enabled
+* Disabled
+* Unmanaged
+
+Default value: Unmanaged
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | Unmanaged |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -PredictiveSpareActivation &lt;String&gt;
+
+For Gen10 and newer HPE Synergy controllers, to enable, disable or unmanage controller spare drive policy.  Allowed values:
 
 * Enabled
 * Disabled

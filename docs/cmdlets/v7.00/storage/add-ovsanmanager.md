@@ -116,14 +116,17 @@ Add two Cisco FC SAN switches as SAN Managers.
 
 SAN Manager type to add.  Accepted values are:
 
-* Brocade
-* BNA
-* Brocade Network Advisor
 * BrocadeFOS
 * FOS
 * HP
 * HPE
 * Cisco
+
+    The following parameter values are no longer supported and have been removed:
+
+* Brocade
+* BNA
+* Brocade Network Advisor
 
 | Aliases | None |
 | :--- | :--- |

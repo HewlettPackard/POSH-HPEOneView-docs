@@ -1010,6 +1010,28 @@ Use to indicate iLO settings will be managed from the server profile.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
+### -FirmwareInstallationPolicy &lt;string&gt;
+
+The Installation policy option is only available for Gen10 and later servers. The option is displayed if you select a Gen10 or later server hardware type. Installation policy enables you to choose if a component needs to be updated or downgraded when its version does not match the baseline. An alert is generated when the installed version on one or more components is inconsistent with the selected installation policy.
+
+You can choose one of the following two policy options:
+
+* LowerThanBaseline (Default) ΓÇö Updates only the components that have a version lower than the firmware baseline version.
+* NotEqualToBaseline ΓÇö Updates or downgrades components whose installed version does not match the firmware baseline version. The components with a version lower than the firmware baseline version are upgraded, and the components with a version higher than the firmware baseline version are downgraded to match the baseline.
+
+{% hint style="info" %}
+For Gen9 and earlier servers, if the selected firmware baseline is older than the firmware currently installed, select the Force installation option to downgrade the firmware version.
+{% endhint %}
+
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
 ### &lt;CommonParameters&gt;
 
 This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer, PipelineVariable, and OutVariable. For more information, see about\_CommonParameters \([http://go.microsoft.com/fwlink/?LinkID=113216](http://go.microsoft.com/fwlink/?LinkID=113216)\)

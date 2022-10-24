@@ -31,6 +31,7 @@ New-OVServerProfileLogicalDisk
     [-MaxDriveSize <Int32>]
     [-EraseDataOnDelete]
     [-Permanent <String>]
+    [-AddSpareDrive]
     [-Bootable <Boolean>]
     [<CommonParameters>]
 ```
@@ -262,6 +263,18 @@ When set to true, the logical JBOD will not be deleted when the associated profi
 | Required? | False |
 | Position? | Named |
 | Default value | Unmanaged |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -AddSpareDrive &lt;SwitchParameter&gt;
+
+When selected, an additional drive will be reserved (beyond what was specified) for use as a replacement drive in the event of a drive failure in the logical drive.  Ensure the `-PredictiveSpareActivation` parameter is used in New-OVServerProfileLogicalDiskController.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
