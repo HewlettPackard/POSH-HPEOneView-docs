@@ -12,6 +12,19 @@ This PowerShell module requires the following minimum versions:
 
 {% tabs %}
 
+{% tab title="HPE OneView 7.10" %}
+| Component | Version |
+| :--- | :--- |
+| .NetStandard | 2.0 or newer |
+| PowerShell | 5.1, 7.0 or newer |
+| PowerShellCore | 7.0 or newer |
+| HPE OneView/HPE Synergy | 7.10 or newer |
+
+{% hint style="info" %}
+.NetStandard 2.0 API's are supported by both the [.NetFramework 4.7.2 Windows](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-7-2/) and [DotNetCore 2.0](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-0/) clients.
+{% endhint %}
+{% endtab %}
+
 {% tab title="HPE OneView 7.00" %}
 | Component | Version |
 | :--- | :--- |
@@ -195,30 +208,30 @@ To ease the use of the HPE OneView PowerShell library, we have included a number
 
 ```text
 [PS] ...\Samples> dir
-    Directory: \HPEOneView.660\Samples
+    Directory: \HPEOneView.710\Samples
 
 
 Mode                 LastWriteTime         Length Name
 ----                 -------------         ------ ----
--a---l         1/24/2019   1:12 PM           3911 AddServers_Monitored_Sample.ps1
--a---l         1/24/2019   1:12 PM           5103 AddStorageSystem_Sample.ps1
--a---l         1/24/2019   1:12 PM           3787 Alerts_Sample.ps1
--a---l         1/24/2019   1:12 PM          18727 ApplianceConfig_Sample.ps1
--a---l         1/24/2019   1:12 PM           3005 Appliance_Backup_Sample.ps1
--a---l         1/24/2019   1:12 PM          13593 ComposerApplianceConfig_Sample.ps1
--a---l         1/24/2019   1:12 PM           8827 ConfigureRemoteSupport_Sample.ps1
--a---l         1/24/2019   1:12 PM          10146 Configure_IIS_WebDav_ExternalRepo_Sample.ps1
--a---l         1/24/2019   1:12 PM           3674 CreateEnclosureGroup_Sample.ps1
--a---l         1/24/2019   1:12 PM           3565 DefineLogicalInterconnectGroup_AA_VC_Sample.ps1
--a---l         1/24/2019   1:12 PM           3456 DefineLogicalInterconnectGroup_Sample.ps1
--a---l         1/24/2019   1:12 PM           4037 DefineNetworks_AA_VC_Sample.ps1
--a---l         1/24/2019   1:12 PM           3701 DefineNetworks_Sample.ps1
--a---l         1/24/2019   1:12 PM           2531 ImportEnclosure_Sample.ps1
--a---l         1/24/2019   1:12 PM           7303 Server_Multiconnection_AA_VC_Sample.ps1
--a---l         1/24/2019   1:12 PM           7437 Server_Multiconnection_Sample.ps1
--a---l         1/24/2019   1:12 PM           7873 Server_Multiconnection_SAN_Storage_Sample.ps1
--a---l         1/24/2019   1:12 PM           5714 Server_Profile_Template_Multiconnection_Sample.ps1
--a---l         1/24/2019   1:12 PM           8299 Wipe_Appliance.ps1
+la---          10/24/2022  2:37 PM           4166 AddServers_Monitored_Sample.ps1
+la---          10/24/2022  2:37 PM           5059 AddStorageSystem_Sample.ps1
+la---          10/24/2022  2:38 PM           3734 Alerts_Sample.ps1
+la---          10/24/2022  2:38 PM           2951 Appliance_Backup_Sample.ps1
+la---          10/24/2022  2:38 PM          18388 ApplianceConfig_Sample.ps1
+la---          10/24/2022  2:34 PM          13380 ComposerApplianceConfig_Sample.ps1
+la---            2/2/2022  9:11 AM          10035 Configure_IIS_WebDav_ExternalRepo_Sample.ps1
+la---          10/24/2022  2:38 PM           8787 ConfigureRemoteSupport_Sample.ps1
+la---          10/24/2022  2:38 PM           3632 CreateEnclosureGroup_Sample.ps1
+la---          10/24/2022  2:38 PM           3510 DefineLogicalInterconnectGroup_AA_VC_Sample.ps1
+la---          10/24/2022  2:38 PM           3404 DefineLogicalInterconnectGroup_Sample.ps1
+la---          10/24/2022  2:38 PM           3371 DefineNetworks_AA_VC_Sample.ps1
+la---          10/24/2022  2:38 PM           3639 DefineNetworks_Sample.ps1
+la---          10/24/2022  2:38 PM           7010 Server_Multiconnection_AA_VC_Sample.ps1
+la---           4/27/2022  2:23 PM           7344 Server_Multiconnection_Sample.ps1
+la---           4/27/2022  2:23 PM           7770 Server_Multiconnection_SAN_Storage_Sample.ps1
+la---          10/24/2022  2:38 PM           5697 Server_Profile_Template_Multiconnection_Sample.ps1
+la---           8/23/2022  7:27 PM           4395 Server_Profile_Template_Rack_Server_Sample.ps1
+la---           4/27/2022  2:23 PM           8014 Wipe_Appliance.ps1
 ```
 
 ### Generating sample code
