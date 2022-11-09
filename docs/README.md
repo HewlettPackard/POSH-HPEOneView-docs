@@ -12,6 +12,19 @@ This PowerShell module requires the following minimum versions:
 
 {% tabs %}
 
+{% tab title="HPE OneView 7.20" %}
+| Component | Version |
+| :--- | :--- |
+| .NetStandard | 2.0 or newer |
+| PowerShell | 5.1, 7.0 or newer |
+| PowerShellCore | 7.0 or newer |
+| HPE OneView/HPE Synergy | 7.20 or newer |
+
+{% hint style="info" %}
+.NetStandard 2.0 API's are supported by both the [.NetFramework 4.7.2 Windows](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-7-2/) and [DotNetCore 2.0](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-0/) clients.
+{% endhint %}
+{% endtab %}
+
 {% tab title="HPE OneView 7.10" %}
 | Component | Version |
 | :--- | :--- |
@@ -169,7 +182,7 @@ The library can be installed in one of two ways:
 The library module name to import is always `HPEOneView.{VERSION}`, where `{VERSION}` is the `Major` and `Minor` version concatenated together. For example, to load the HPE OneView 6.60 library, issue the following command within your PowerShell console:
 
 ```text
-Import-Module HPEOneView.660
+Import-Module HPEOneView.720
 ```
 
 {% hint style="info" %}
@@ -208,7 +221,7 @@ To ease the use of the HPE OneView PowerShell library, we have included a number
 
 ```text
 [PS] ...\Samples> dir
-    Directory: \HPEOneView.710\Samples
+    Directory: \HPEOneView.720\Samples
 
 
 Mode                 LastWriteTime         Length Name
