@@ -49679,7 +49679,7 @@
           },
           {
             "Name": "InsightOnlineUsername",
-            "Description": "The user name of your Insight Online account.",
+            "Description": "OBSOLETE - HPE Insight Online is a deprecated and unavailable service.  It is no longer supports.",
             "DefaultValue": null,
             "Aliases": "None",
             "PipelineInput": "false",
@@ -49689,7 +49689,7 @@
           },
           {
             "Name": "InsightOnlinePassword",
-            "Description": "The Insight Online account password.",
+            "Description": "OBSOLETE - HPE Insight Online is a deprecated and unavailable service.  It is no longer supports.",
             "DefaultValue": null,
             "Aliases": "None",
             "PipelineInput": "false",
@@ -49758,16 +49758,11 @@
           },
           {
             "Title": "-------------------------- EXAMPLE 2 --------------------------",
-            "Code": "Set-OVRemoteSupport -CompanyName MyCompany -InsightOnlineUsername mypassport@domain.local -InsightOnlinePassword (ConvertTo-SecureString -String MyPassword -AsPlainText -Force)",
-            "Description": "Configure and register the appliance for Remote Support, and enable Insight Online portal registration."
-          },
-          {
-            "Title": "-------------------------- EXAMPLE 3 --------------------------",
             "Code": "Set-OVRemoteSupport -Disable",
             "Description": "Disable Remote Support on the appliance."
           },
           {
-            "Title": "-------------------------- EXAMPLE 4 --------------------------",
+            "Title": "-------------------------- EXAMPLE 3 --------------------------",
             "Code": "Set-OVRemoteSupport -Enable -ApplianceConnection $Appliance2",
             "Description": "Enable Remote Support after it was previously disabled for the specific appliance."
           }
