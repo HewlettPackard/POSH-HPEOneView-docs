@@ -70,20 +70,12 @@ Configure and register the appliance for Remote Support.
 ###  Example 2 
 
 ```powershell
-Set-OVRemoteSupport -CompanyName MyCompany -InsightOnlineUsername mypassport@domain.local -InsightOnlinePassword (ConvertTo-SecureString -String MyPassword -AsPlainText -Force)
-```
-
-Configure and register the appliance for Remote Support, and enable Insight Online portal registration.
-
-###  Example 3 
-
-```powershell
 Set-OVRemoteSupport -Disable
 ```
 
 Disable Remote Support on the appliance.
 
-###  Example 4 
+###  Example 3 
 
 ```powershell
 Set-OVRemoteSupport -Enable -ApplianceConnection $Appliance2
@@ -131,7 +123,7 @@ Opt-in to allow HPE marketing to discuss datacenter optimization.
 
 ### -InsightOnlineUsername &lt;String&gt;
 
-The user name of your Insight Online account.
+OBSOLETE - HPE Insight Online is a deprecated and unavailable service.  It is no longer supports.
 
 | Aliases | None |
 | :--- | :--- |
@@ -143,7 +135,7 @@ The user name of your Insight Online account.
 
 ### -InsightOnlinePassword &lt;System.Security.SecureString&gt;
 
-The Insight Online account password.
+OBSOLETE - HPE Insight Online is a deprecated and unavailable service.  It is no longer supports.
 
 | Aliases | None |
 | :--- | :--- |
