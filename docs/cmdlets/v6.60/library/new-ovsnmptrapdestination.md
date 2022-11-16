@@ -67,7 +67,7 @@ The SNMP destination IP Address or FQDN.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Community &lt;String&gt;
@@ -79,7 +79,7 @@ The SNMP Trap Community String to set.
 | Required? | True |
 | Position? | Named |
 | Default value | public |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -SnmpFormat &lt;String&gt;
@@ -95,7 +95,7 @@ SNMP Format type.  Allowed values:
 | Required? | True |
 | Position? | Named |
 | Default value | SNMPv1 |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -TrapSeverities &lt;Array&gt;
@@ -115,7 +115,7 @@ A collection `[System.Collections.ArrayList` ] of SNMP Trap Severities to genera
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -VCMTrapCategories &lt;Array&gt;
@@ -129,7 +129,7 @@ A collection `[System.Collections.ArrayList` ] of VCM Trap Categories.  Allowed 
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -EnetTrapCategories &lt;Array&gt;
@@ -145,7 +145,7 @@ A collection `[System.Collections.ArrayList` ] of SNMP Trap Severities to genera
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -FCTrapCategories &lt;Array&gt;
@@ -160,7 +160,7 @@ A collection `[System.Collections.ArrayList` ] of SNMP Trap Severities to genera
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
@@ -196,7 +196,7 @@ Provide the alternate SNMP trap reciever port.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -SnmpV3User &lt;HPEOneView.Appliance.SnmpV3User&gt;
@@ -208,7 +208,7 @@ A valid SNMPv3 user from New-OVSnmpV3User.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -EngineID &lt;String&gt;
@@ -220,7 +220,7 @@ The EngineId of remote SNMPv3 user.  Only applicable when configuring an SNMPv3 
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -NotificationType &lt;String&gt;
@@ -235,7 +235,7 @@ Indicates whether the trap should be inform message or not.  Allowed values:
 | Required? | False |
 | Position? | Named |
 | Default value | Trap |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

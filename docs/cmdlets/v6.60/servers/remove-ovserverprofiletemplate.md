@@ -8,8 +8,8 @@ description: Delete Server Profile Template Resource(s).
 
 ```powershell
 Remove-OVServerProfileTemplate
-    [-ServerProfileTemplate] <Object>
-    [-ApplianceConnection] <Object>
+    [-InputObject] <Object>
+    [-ApplianceConnection <Object>]
     [-force]
     [<CommonParameters>]
 ```
@@ -49,11 +49,11 @@ Search for all profile template resources and remove them from appliance.
 
 ## Parameters
 
-### -ServerProfileTemplate &lt;Object&gt;
+### -InputObject &lt;Object&gt;
 
 The server profile template object(s) or name(s) to be removed.
 
-| Aliases | spt, name |
+| Aliases | spt, name, ServerProfileTemplate |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
@@ -82,7 +82,7 @@ Set to force-delete the profile.  For example, force-remove will successfully re
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -WhatIf &lt;SwitchParameter&gt;
@@ -94,7 +94,7 @@ Set to force-delete the profile.  For example, force-remove will successfully re
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
@@ -106,7 +106,7 @@ Set to force-delete the profile.  For example, force-remove will successfully re
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

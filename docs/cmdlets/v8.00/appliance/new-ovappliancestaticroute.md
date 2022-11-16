@@ -126,4 +126,4 @@ Async task resource to monitor.
 
 * [Get-OVApplianceStaticRoute](get-ovappliancestaticroute.md)
 * [Remove-OVApplianceStaticRoute](remove-ovappliancestaticroute.md)
-* [Set-OVApplianceStaticRoute](../library/set-ovappliancestaticroute.md)
+* [Set-OVApplianceStaticRoute](set-ovappliancestaticroute.md)

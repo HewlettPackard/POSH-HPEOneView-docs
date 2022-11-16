@@ -61,5 +61,5 @@ Network interface(s) configured for HPE Synergy Composer appliance(s).
 
 * [New-OVApplianceStaticRoute](new-ovappliancestaticroute.md)
 * [Get-OVApplianceStaticRoute](get-ovappliancestaticroute.md)
-* [Set-OVApplianceStaticRoute](../library/set-ovappliancestaticroute.md)
+* [Set-OVApplianceStaticRoute](set-ovappliancestaticroute.md)
 * [Remove-OVApplianceStaticRoute](remove-ovappliancestaticroute.md)

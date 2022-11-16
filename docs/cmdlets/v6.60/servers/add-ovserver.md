@@ -103,7 +103,7 @@ Administrator account of the target iLO.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Password &lt;Object&gt;
@@ -117,7 +117,7 @@ Account password of the iLO specified.  Can be String or SecureString.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -LicensingIntent &lt;String&gt;
@@ -134,7 +134,7 @@ Accepted values are
 | Required? | True |
 | Position? | Named |
 | Default value | OneView |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Monitored &lt;SwitchParameter&gt;
@@ -146,7 +146,7 @@ Add the specified server for monitor only management.  You can view hardware for
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
@@ -158,7 +158,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -170,7 +170,7 @@ Specify one `[HPEOneView.Appliance.Connection]` object or Name property value.
 | Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Confirm &lt;SwitchParameter&gt;
@@ -182,7 +182,7 @@ When attempting to add a Server to the appliance, the appliance will validate th
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Scope &lt;Array&gt;
@@ -194,7 +194,7 @@ Provide an array of <HPEOneView.Appliance.ScopeResource> Scope resource(s) to in
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Credential &lt;PSCredential&gt;
@@ -206,7 +206,7 @@ Use this parameter if you want to provide a PSCredential object instead.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

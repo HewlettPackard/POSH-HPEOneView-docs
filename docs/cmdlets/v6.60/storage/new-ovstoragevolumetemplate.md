@@ -137,7 +137,7 @@ Storage Volume Template name
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Description &lt;String&gt;
@@ -149,7 +149,7 @@ Provide the description for the Storage Volume Template
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -StoragePool &lt;Object&gt;
@@ -161,7 +161,7 @@ Specify the Storage Pool (aka CPG) the Storage Volume Template will be associate
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -SnapshotStoragePool &lt;Object&gt;
@@ -173,7 +173,7 @@ Specify the Storage Pool (aka CPG) the Storage Volume Template will use for volu
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -StorageSystem &lt;Object&gt;
@@ -185,7 +185,7 @@ If there are multiple Storage Pool resources with the same name, use this parame
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Capacity &lt;Int64&gt;
@@ -197,7 +197,7 @@ Max volume capacity in GB.  `[e.g]`. 20 to specify 20GB.
 | Required? | True |
 | Position? | Named |
 | Default value | 0 |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Full &lt;SwitchParameter&gt;
@@ -215,7 +215,7 @@ Default: Thin
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Shared &lt;SwitchParameter&gt;
@@ -227,7 +227,7 @@ Include this switch to mark the Storage Volume Template as a Shareable resource 
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -DataProtectionLevel &lt;String&gt;
@@ -246,7 +246,7 @@ Specify the StoreVirtual protection level (aka Network RAID) for the volume.  Al
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -LockProtectionLevel &lt;SwitchParameter&gt;
@@ -258,7 +258,7 @@ Specify to lock the DataProtectionLevel value in the template.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -EnableAdaptiveOptimization &lt;SwitchParameter&gt;
@@ -270,7 +270,7 @@ Whether or not Adaptive Optimization is enabled on the storage volume.  Only sup
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -LockAdaptiveOptimization &lt;SwitchParameter&gt;
@@ -282,7 +282,7 @@ Specify to lock the EnableAdaptiveOptimization value in the template.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ProvisioningType &lt;String&gt;
@@ -298,7 +298,7 @@ Specify the type of volume to provision.  Allowed values are:
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -LockProvisionType &lt;SwitchParameter&gt;
@@ -310,7 +310,7 @@ Specify to lock the ProvisionType value in the template.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -LockStoragePool &lt;SwitchParameter&gt;
@@ -322,7 +322,7 @@ Specify to lock the StoragePool value in the template.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -LockSnapShotStoragePool &lt;SwitchParameter&gt;
@@ -334,7 +334,7 @@ Specify to lock the SnapshotStoragePool value in the template.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -LockCapacity &lt;SwitchParameter&gt;
@@ -346,7 +346,7 @@ Specify to lock the Capacity value in the template.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -LockProvisionMode &lt;SwitchParameter&gt;
@@ -358,7 +358,7 @@ Specify to lock the Provision Mode (Shared or Private) value in the template.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -382,7 +382,7 @@ Provide an `[HPEOneView.Appliance.ScopeCollection]` resource object to initially
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -EnableCompression &lt;Boolean&gt;
@@ -394,7 +394,7 @@ Enable compression for StoreServe (3PAR) supported resources. Please verify the 
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -EnableDeduplication &lt;Boolean&gt;
@@ -406,7 +406,7 @@ Enable deduplication for SSD-based Storage Pools (CPG).
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -LockEnableDeduplication &lt;SwitchParameter&gt;
@@ -418,7 +418,7 @@ Lock the EnableDeduplication value.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -LockEnableCompression &lt;SwitchParameter&gt;
@@ -430,7 +430,7 @@ Lock the EnableCompression value.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -CachePinning &lt;Bool&gt;
@@ -444,7 +444,7 @@ When defined in the Performance Profile, select to enable Cache Pinnning for the
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -DataTransferLimit &lt;Int&gt;
@@ -456,7 +456,7 @@ Specify the data transfer limit in MiB/S.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -EnableDataTransferLimit &lt;Bool&gt;
@@ -468,7 +468,7 @@ Enable data transfer limit.  If enabled, the `-DataTransferLimit` parameter must
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -EnableEncryption &lt;Bool&gt;
@@ -480,7 +480,7 @@ When the storage system has encryption enabled, the volume can also be encrypted
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -EnableIOPSLimit &lt;Bool&gt;
@@ -492,7 +492,7 @@ Set to enable or disable IOPS limit.  If enabled, the `-IOPSLimit` parameter mus
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Folder &lt;HPEOneView.Storage.NimbleFolder&gt;
@@ -512,7 +512,7 @@ ID                                         Name
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -IOPSLimit &lt;Int&gt;
@@ -524,7 +524,7 @@ When enabling IOPS limit, provide a value that is greater than or equal to 256.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -PerformancePolicy &lt;HPEOneView.Storage.PerformancePolicy&gt;
@@ -540,7 +540,7 @@ Example:
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -VolumeSet &lt;HPEOneView.Storage.VolumeSet&gt;
@@ -552,7 +552,7 @@ Use to specify a Volume Set the volume will be associated with, from Get-OVStora
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -LockCachePinning &lt;SwitchParameter&gt;
@@ -564,7 +564,7 @@ Lock the CachePinning value.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -LockDataTransferLimit &lt;SwitchParameter&gt;
@@ -576,7 +576,7 @@ Lock the DataTransferLimit value.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -LockEnableEncryption &lt;SwitchParameter&gt;
@@ -588,7 +588,7 @@ Lock the EnableEncryption value.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -LockFolder &lt;SwitchParameter&gt;
@@ -600,7 +600,7 @@ Lock the Folder value.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -LockIOPSLimit &lt;SwitchParameter&gt;
@@ -612,7 +612,7 @@ Lock the IOPSLimit value.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -LockPerformancePolicy &lt;SwitchParameter&gt;
@@ -624,7 +624,7 @@ Lock the PerformancePolicy value.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -LockVolumeSet &lt;SwitchParameter&gt;
@@ -636,7 +636,7 @@ Lock the VolumeSet value.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

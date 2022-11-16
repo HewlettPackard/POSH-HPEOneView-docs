@@ -52,7 +52,7 @@ Name of Snapshot.  The parameter defaults to "{volumeName}_{timestamp}" variable
 | Required? | True |
 | Position? | Named |
 | Default value | {volumeName}_{timestamp} |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Description &lt;String&gt;
@@ -64,7 +64,7 @@ The description for the Storage Volume Snapshot.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;

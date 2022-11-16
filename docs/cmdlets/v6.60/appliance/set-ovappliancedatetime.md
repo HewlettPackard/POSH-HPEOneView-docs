@@ -62,7 +62,7 @@ Specify to configure the embedded hypervisor integration agent to sync time with
 | Required? | True |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -NTPServers &lt;Array&gt;
@@ -74,7 +74,7 @@ An array of IPv4 Addresses or Fully Qualified Domain Names.  You must ensure DNS
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -PollingInterval &lt;Int32&gt;
@@ -86,7 +86,7 @@ The polling interval in seconds the NTP client will use to verify time drift.
 | Required? | False |
 | Position? | Named |
 | Default value | 0 |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Locale &lt;String&gt;
@@ -102,7 +102,7 @@ Specify the language local for the appliance
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -116,7 +116,7 @@ Default Value: ${Global:ConnectSessions} | ? Default
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

@@ -18,6 +18,7 @@ New-OVServerProfileTemplate
     [-EnclosureGroup <Object>]
     [-Firmware]
     [-FirmwareConsistencyChecking <String>]
+    [-FirmwareInstallationPolicy <string>]
     [-FirmwareInstallMode <String>]
     [-FirmwareActivationMode <String>]
     [-Baseline <Object>]
@@ -68,6 +69,7 @@ New-OVServerProfileTemplate
     [-EnclosureGroup <Object>]
     [-Firmware]
     [-FirmwareConsistencyChecking <String>]
+    [-FirmwareInstallationPolicy <string>]
     [-FirmwareInstallMode <String>]
     [-FirmwareActivationMode <String>]
     [-Baseline <Object>]
@@ -240,7 +242,7 @@ The name of the server profile resource to be created.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Description &lt;String&gt;
@@ -252,7 +254,7 @@ Optional description for this server profile template.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ServerProfileDescription &lt;String&gt;
@@ -264,7 +266,7 @@ Optional description for created server profiles from this template.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ManageConnections &lt;Boolean&gt;
@@ -276,7 +278,7 @@ Use this parameter to specify if Connections should be tracked from the Server P
 | Required? | False |
 | Position? | Named |
 | Default value | True |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Connections &lt;Array&gt;
@@ -331,7 +333,7 @@ Default: No connections
 | Required? | False |
 | Position? | Named |
 | Default value | @() |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -EnclosureGroup &lt;Object&gt;
@@ -343,7 +345,7 @@ The Enclosure Group resource the Server Profile Template will be bound to.  When
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ServerHardwareType &lt;Object&gt;
@@ -355,7 +357,7 @@ The Server Hardware Type reource the Server Profile Template will be bound to.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Firmware &lt;SwitchParameter&gt;
@@ -367,7 +369,7 @@ Enable Firmware Management.  Cannot be enabled with Server Hardware Type does no
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Baseline &lt;Object&gt;
@@ -379,7 +381,7 @@ Firmware baseline to assign.  Can be either Baseline Name or URI.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -FirmwareInstallMode &lt;String&gt;
@@ -395,7 +397,7 @@ Specify the Firmware Baseline Policy mode.  Avialable options are:
 | Required? | False |
 | Position? | Named |
 | Default value | FirmwareAndSoftware |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ForceInstallFirmware &lt;SwitchParameter&gt;
@@ -407,7 +409,7 @@ Using this parameter will force the bundled firmware components to install when 
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -FirmwareActivationMode &lt;String&gt;
@@ -423,7 +425,7 @@ Specify the firmware activation policy.  Avialable options are:
 | Required? | False |
 | Position? | Named |
 | Default value | Immediate |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Bios &lt;SwitchParameter&gt;
@@ -436,7 +438,7 @@ servers.)
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -BiosSettings &lt;Array&gt;
@@ -448,7 +450,7 @@ BIOS Settings that are to be managed.  You can get the BIOS settings available f
 | Required? | False |
 | Position? | Named |
 | Default value | @() |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -BootMode &lt;String&gt;
@@ -477,7 +479,7 @@ Default: BIOS
 | Required? | False |
 | Position? | Named |
 | Default value | BIOS |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -SecureBoot &lt;String&gt;
@@ -489,7 +491,7 @@ Specify if secure boot should be Unmanaged, Enabled or Disabled for Gen10 and ne
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -PxeBootPolicy &lt;String&gt;
@@ -513,7 +515,7 @@ Default: Auto
 | Required? | False |
 | Position? | Named |
 | Default value | Auto |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ManageBoot &lt;SwitchParameter&gt;
@@ -527,7 +529,7 @@ Default: $True
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -BootOrder &lt;Array&gt;
@@ -545,7 +547,7 @@ Gen9 UEFI Default Boot Order: "HardDisk"
 | Required? | False |
 | Position? | Named |
 | Default value | @() |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -LocalStorage &lt;SwitchParameter&gt;
@@ -557,7 +559,7 @@ Enable local storage settings to be managed on the server.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -OSDeploymentPlan &lt;Object&gt;
@@ -569,7 +571,7 @@ The HPE Synergy Image Streamer OS deployment plan from Get-OVOSDeploymentPlan.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -OSDeploymentPlanAttributes &lt;Array&gt;
@@ -581,7 +583,7 @@ Configured OS Deployment Plan parameters from Get-OVOSDeploymentPlanAttribute.  
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Initialize &lt;SwitchParameter&gt;
@@ -617,7 +619,7 @@ A resource object containing the StorageController, LogicalDisk or SasJbod confi
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -SANStorage &lt;SwitchParameter&gt;
@@ -629,7 +631,7 @@ Optional.  Enable SAN Storage Management within the Server Profile.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -HostOStype &lt;String&gt;
@@ -667,7 +669,7 @@ Optional. Specify the Host OS type, which will set the Host OS value when HPE On
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -StorageVolume &lt;Object&gt;
@@ -699,7 +701,7 @@ The format of the Storage Volume resource should be a PsCustomObject PowerShell 
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -EvenPathDisabled &lt;SwitchParameter&gt;
@@ -711,7 +713,7 @@ Enable to disable even paths in the attached storage volume(s).
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -OddPathDisabled &lt;SwitchParameter&gt;
@@ -723,7 +725,7 @@ Enable to disable odd paths in the attached storage volume(s).
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Affinity &lt;String&gt;
@@ -737,7 +739,7 @@ Accepted values are either "Bay" or "BayAndServer".  Default is "Bay".
 | Required? | False |
 | Position? | Named |
 | Default value | Bay |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -MacAssignment &lt;String&gt;
@@ -749,7 +751,7 @@ Optional setting for MAC address assignment.  May be Virtual or Physical.  Use V
 | Required? | False |
 | Position? | Named |
 | Default value | Virtual |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -WwnAssignment &lt;String&gt;
@@ -761,7 +763,7 @@ Optional setting for WWN assignment.  May be Virtual or Physical.  Use Virtual i
 | Required? | False |
 | Position? | Named |
 | Default value | Virtual |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -SnAssignment &lt;String&gt;
@@ -775,7 +777,7 @@ Default: Virtual serial number and UUID assignment
 | Required? | False |
 | Position? | Named |
 | Default value | Virtual |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -HideUnusedFlexNics &lt;Boolean&gt;
@@ -797,7 +799,7 @@ By default, Hide Unused FlexNICs is enabled. This setting can be changed only wh
 | Required? | False |
 | Position? | Named |
 | Default value | True |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
@@ -808,8 +810,8 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | false |
-| Accept pipeline input? | false |
+| Default value | False |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -821,7 +823,7 @@ The name of the appliance or list of appliances to execute the command against.
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -PassThru &lt;SwitchParameter&gt;
@@ -833,7 +835,7 @@ Use this parameter to return the modified Server Profile Template object.  In or
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -IscsiInitiatorNameAssignmet &lt;String&gt;
@@ -846,7 +848,7 @@ Default Value: Virtual
 | Required? | False |
 | Position? | Named |
 | Default value | Virtual |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -BiosConsistencyChecking &lt;String&gt;
@@ -861,7 +863,7 @@ Use to override the consistency checking for the policy.  Allowed values:
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -BootModeConsistencyChecking &lt;String&gt;
@@ -876,7 +878,7 @@ Use to override the consistency checking for the policy.  Allowed values:
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ConnectionsConsistencyChecking &lt;String&gt;
@@ -892,7 +894,7 @@ Use to override the consistency checking for the policy.  Allowed values:
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -FirmwareConsistencyChecking &lt;String&gt;
@@ -907,7 +909,7 @@ Use to override the consistency checking for the policy.  Allowed values:
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -LocalStorageConsistencyChecking &lt;String&gt;
@@ -922,7 +924,7 @@ Use to override the consistency checking for the policy.  Allowed values:
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -OSDeploymentConsistencyChecking &lt;String&gt;
@@ -937,7 +939,7 @@ Use to override the consistency checking for the policy.  Allowed values:
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -SANStorageConsistencyChecking &lt;String&gt;
@@ -953,7 +955,7 @@ Use to override the consistency checking for the policy.  Allowed values:
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -BootOrderConsistencyChecking &lt;String&gt;
@@ -968,7 +970,7 @@ Use to override the consistency checking for the policy.  Allowed values:
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -IloSettings &lt;PSObject&gt;
@@ -980,7 +982,7 @@ Provide an iLO settings object from New-OVServerProfileIloPolicy Cmdlet.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -IloSettingsConsistencyChecking &lt;String&gt;
@@ -995,7 +997,7 @@ Use to override the consistency checking for the policy.  Allowed values:
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ManageIloSettings &lt;Bool&gt;
@@ -1007,7 +1009,29 @@ Use to indicate iLO settings will be managed from the server profile.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
+| Accept wildcard characters? | False |
+
+### -FirmwareInstallationPolicy &lt;string&gt;
+
+The Installation policy option is only available for Gen10 and later servers. The option is displayed if you select a Gen10 or later server hardware type. Installation policy enables you to choose if a component needs to be updated or downgraded when its version does not match the baseline. An alert is generated when the installed version on one or more components is inconsistent with the selected installation policy.
+
+You can choose one of the following two policy options:
+
+* LowerThanBaseline (Default) ΓÇö Updates only the components that have a version lower than the firmware baseline version.
+* NotEqualToBaseline ΓÇö Updates or downgrades components whose installed version does not match the firmware baseline version. The components with a version lower than the firmware baseline version are upgraded, and the components with a version higher than the firmware baseline version are downgraded to match the baseline.
+
+{% hint style="info" %}
+For Gen9 and earlier servers, if the selected firmware baseline is older than the firmware currently installed, select the Force installation option to downgrade the firmware version.
+{% endhint %}
+
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
