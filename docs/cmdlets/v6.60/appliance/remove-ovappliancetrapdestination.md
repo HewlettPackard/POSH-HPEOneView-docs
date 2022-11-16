@@ -62,7 +62,7 @@ Override confirmation prompt.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -InputObject &lt;Object&gt;
@@ -86,7 +86,7 @@ The `[HPEOneView.Appliance.SnmpV]`1TrapDestination or `[HPEOneView.Appliance.Snm
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

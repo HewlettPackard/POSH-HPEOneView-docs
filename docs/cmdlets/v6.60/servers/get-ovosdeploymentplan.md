@@ -53,7 +53,7 @@ OS Deployment Plan name.  Supports wildcard (*) character.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -65,7 +65,7 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Scope &lt;Object&gt;
@@ -82,7 +82,7 @@ Filter resources based on provided Scope membership.  By default, all resources 
 | Required? | False |
 | Position? | Named |
 | Default value | AllResourcesInScope |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

@@ -27450,7 +27450,7 @@
             "PipelineInput": "false",
             "SupportsWildcard": false,
             "DataType": "SwitchParameter",
-            "Required": "False"
+            "Required": false
           }
         ],
         "InputTypes": [
@@ -32515,7 +32515,7 @@
             "PipelineInput": "false",
             "SupportsWildcard": false,
             "DataType": "String",
-            "Required": "False"
+            "Required": false
           },
           {
             "Name": "IloSettings",
@@ -49519,7 +49519,7 @@
             "PipelineInput": "false",
             "SupportsWildcard": false,
             "DataType": "SwitchParameter",
-            "Required": "False"
+            "Required": false
           }
         ],
         "InputTypes": [
@@ -57977,7 +57977,7 @@
             "PipelineInput": "false",
             "SupportsWildcard": false,
             "DataType": "SwitchParameter",
-            "Required": "False"
+            "Required": false
           },
           {
             "Name": "Stage",
@@ -57986,7 +57986,7 @@
             "PipelineInput": "false",
             "SupportsWildcard": false,
             "DataType": "SwitchParameter",
-            "Required": "False"
+            "Required": false
           },
           {
             "Name": "Refresh",
@@ -57995,7 +57995,7 @@
             "PipelineInput": "false",
             "SupportsWildcard": false,
             "DataType": "SwitchParameter",
-            "Required": "True"
+            "Required": true
           }
         ],
         "InputTypes": [
@@ -58844,7 +58844,7 @@
             "PipelineInput": "false",
             "SupportsWildcard": false,
             "DataType": "Object[]",
-            "Required": "False"
+            "Required": false
           },
           {
             "Name": "AddPorts",
@@ -58853,7 +58853,7 @@
             "PipelineInput": "false",
             "SupportsWildcard": false,
             "DataType": "Object[]",
-            "Required": "False"
+            "Required": false
           },
           {
             "Name": "ApplianceConnection",
@@ -58862,7 +58862,7 @@
             "PipelineInput": "true (ByPropertyName)",
             "SupportsWildcard": false,
             "DataType": "Object",
-            "Required": "False"
+            "Required": false
           },
           {
             "Name": "ConsistencyChecking",
@@ -58871,7 +58871,7 @@
             "PipelineInput": "false",
             "SupportsWildcard": false,
             "DataType": "String",
-            "Required": "False"
+            "Required": false
           },
           {
             "Name": "EnableTrunking",
@@ -58880,7 +58880,7 @@
             "PipelineInput": "false",
             "SupportsWildcard": false,
             "DataType": "Bool",
-            "Required": "False"
+            "Required": false
           },
           {
             "Name": "InputObject",
@@ -58889,7 +58889,7 @@
             "PipelineInput": "true (ByValue)",
             "SupportsWildcard": false,
             "DataType": "Object",
-            "Required": "True"
+            "Required": true
           },
           {
             "Name": "LacpTimer",
@@ -58898,7 +58898,7 @@
             "PipelineInput": "false",
             "SupportsWildcard": false,
             "DataType": "String",
-            "Required": "False"
+            "Required": false
           },
           {
             "Name": "Name",
@@ -58907,7 +58907,7 @@
             "PipelineInput": "false",
             "SupportsWildcard": false,
             "DataType": "String",
-            "Required": "False"
+            "Required": false
           },
           {
             "Name": "RemoveNetwork",
@@ -58916,7 +58916,7 @@
             "PipelineInput": "false",
             "SupportsWildcard": false,
             "DataType": "Object[]",
-            "Required": "False"
+            "Required": false
           },
           {
             "Name": "RemovePorts",
@@ -58925,7 +58925,7 @@
             "PipelineInput": "false",
             "SupportsWildcard": false,
             "DataType": "Object[]",
-            "Required": "False"
+            "Required": false
           },
           {
             "Name": "UntaggedNetwork",
@@ -58934,7 +58934,7 @@
             "PipelineInput": "false",
             "SupportsWildcard": false,
             "DataType": "Object",
-            "Required": "False"
+            "Required": false
           },
           {
             "Name": "UplinkSetName",
@@ -58943,7 +58943,7 @@
             "PipelineInput": "true (ByValue)",
             "SupportsWildcard": false,
             "DataType": "String",
-            "Required": "True"
+            "Required": true
           },
           {
             "Name": "AddNetworkSet",
@@ -59069,7 +59069,7 @@
             "PipelineInput": "true (ByPropertyName)",
             "SupportsWildcard": false,
             "DataType": "Object",
-            "Required": "False"
+            "Required": false
           },
           {
             "Name": "InputObject",
@@ -59078,7 +59078,7 @@
             "PipelineInput": "true (ByValue)",
             "SupportsWildcard": false,
             "DataType": "Object",
-            "Required": "True"
+            "Required": true
           },
           {
             "Name": "Async",
@@ -59169,7 +59169,7 @@
             "PipelineInput": "true (ByPropertyName)",
             "SupportsWildcard": false,
             "DataType": "Object",
-            "Required": "False"
+            "Required": false
           },
           {
             "Name": "InputObject",
@@ -59178,7 +59178,7 @@
             "PipelineInput": "true (ByValue)",
             "SupportsWildcard": false,
             "DataType": "Object",
-            "Required": "True"
+            "Required": true
           },
           {
             "Name": "Async",
@@ -63347,7 +63347,7 @@
     },
     {
       "Name": "Set-OVApplianceStaticRoute",
-      "Category": "Library",
+      "Category": "Appliance",
       "Contents": {
         "Synopsis": "Update a configured static routes on an appliance.",
         "Description": "When configuring a second NIC on a virtual machine appliance, static routes can be configured as only a single appliance NIC can be configured with a default gateway.  Both IPv4 and IPv6 static routes are supported.  Use Get-OVApplianceIPAddress to display the configured NIC interfaces, and supply the interface name with the -Interface parameter.\n\nMinimum required privileges:  Infrastructure administrator",

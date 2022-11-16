@@ -102,5 +102,5 @@ IP static route object.
 ## Related Links
 
 * [New-OVApplianceStaticRoute](new-ovappliancestaticroute.md)
-* [Set-OVApplianceStaticRoute](../library/set-ovappliancestaticroute.md)
+* [Set-OVApplianceStaticRoute](set-ovappliancestaticroute.md)
 * [Remove-OVApplianceStaticRoute](remove-ovappliancestaticroute.md)

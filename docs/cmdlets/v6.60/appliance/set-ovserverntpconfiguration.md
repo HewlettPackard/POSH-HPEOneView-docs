@@ -54,7 +54,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -SyncWithAppliance &lt;SwitchParameter&gt;
@@ -66,7 +66,7 @@ Configures managed and monitored server hardware devices to use the HPE OneView 
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -SyncWithNTP &lt;SwitchParameter&gt;
@@ -78,7 +78,7 @@ Configures managed and monitored server hardware devices to use the same NTP ser
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

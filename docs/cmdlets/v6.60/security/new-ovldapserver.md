@@ -68,7 +68,7 @@ Directory Server"s LDAP SSL Port.
 | Required? | True |
 | Position? | Named |
 | Default value | 636 |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Certificate &lt;Object&gt;
@@ -80,7 +80,7 @@ Directory Server SSL Certificate, either location to Base64 Cert or multiline st
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Credential &lt;PSCredential&gt;
@@ -116,7 +116,7 @@ Use to specify if the certificate should be explicitly trusted, like a self sign
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

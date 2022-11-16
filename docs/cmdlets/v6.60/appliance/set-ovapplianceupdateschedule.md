@@ -86,7 +86,7 @@ Default Value: ${Global:ConnectedSessions} | ? Default
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
@@ -98,7 +98,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Day &lt;String&gt;
@@ -110,7 +110,7 @@ Specify the day of the week the scheduled task will be performed.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Disabled &lt;SwitchParameter&gt;
@@ -122,7 +122,7 @@ Disable the ability for the appliance to connect to the external service for ava
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ManualInterval &lt;SwitchParameter&gt;
@@ -134,7 +134,7 @@ Switch parameter to indicate update checking will be performed manually.  Use th
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Time &lt;timespan&gt;
@@ -146,7 +146,7 @@ A timespan object that represents the HOUR and MINUTES of the day.  Time will be
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -WeeklyInterval &lt;SwitchParameter&gt;
@@ -158,7 +158,7 @@ Use to enable and specify automatic update checking for the appliance based on t
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Weeks &lt;int&gt;
@@ -170,7 +170,7 @@ The interval of number of weeks the update check will be performed.  Allowed val
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

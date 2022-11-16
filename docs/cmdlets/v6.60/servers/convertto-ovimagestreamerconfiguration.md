@@ -67,7 +67,7 @@ The Uplink Set Name to be added.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -UplinkPorts &lt;Array&gt;
@@ -79,7 +79,7 @@ Specify 4 redundant Uplink Ports.
 | Required? | False |
 | Position? | Named |
 | Default value | @("Enclosure1:Bay3:Q1.1","Enclosure1:Bay3:Q2.1","Enclosure2:Bay6:Q1.1","Enclosure2:Bay6:Q2.1") |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -DeploymentNetwork &lt;Object&gt;
@@ -91,7 +91,7 @@ Provide the Deployment Network object.  Must be associated with a valid IPv4 Sub
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -IgnoreSasLogicalInterconnects &lt;Object&gt;

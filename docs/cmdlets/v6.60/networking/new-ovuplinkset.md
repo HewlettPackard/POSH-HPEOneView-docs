@@ -190,7 +190,7 @@ Either a Logical Interconnect Group (`Get-OVLogicalInterconnectGroup`) or Logica
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Name &lt;String&gt;
@@ -202,7 +202,7 @@ Logical Uplink set Name
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Type &lt;String&gt;
@@ -222,7 +222,7 @@ ImageStreamer is only supported with Synergy infrastructure.  When assigning an 
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Networks &lt;Array&gt;
@@ -234,7 +234,7 @@ Array of Ethernet Network Names
 | Required? | True |
 | Position? | Named |
 | Default value | @() |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -NativeEthNetwork &lt;Object&gt;
@@ -246,7 +246,7 @@ The valid name of the Native Ethernet Network that is a member of the usNetworks
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -UplinkPorts &lt;Array&gt;
@@ -265,7 +265,7 @@ Synergy VC FC Sub-Interface `[e.g]`. "Bay2:Q1.1","Bay2:Q2.1" or "Bay5:Q1.2","Bay
 | Required? | True |
 | Position? | Named |
 | Default value | @() |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -EthMode &lt;String&gt;
@@ -280,7 +280,7 @@ Sets the LACP mode on the uplink ports. Valid for ETHERNET Uplinks only. Accepte
 | Required? | False |
 | Position? | Named |
 | Default value | Auto |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -LacpTimer &lt;String&gt;
@@ -295,7 +295,7 @@ Set the LACP Timer value, which sets the lacpdu frequecy to the LACP peer.  Acce
 | Required? | False |
 | Position? | Named |
 | Default value | Short |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -PrimaryPort &lt;String&gt;
@@ -309,7 +309,7 @@ Example: "Bay1:X1"
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -fcUplinkSpeed &lt;String&gt;
@@ -326,7 +326,7 @@ Specify the Fibre Channel Uplink Port speed.  Accepted values:
 | Required? | False |
 | Position? | Named |
 | Default value | Auto |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -EnableTrunking &lt;Boolean&gt;
@@ -337,8 +337,8 @@ Use this parameter to enable FC port trunking.  This parameter is only supported
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | false |
-| Accept pipeline input? | false |
+| Default value | False |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
@@ -349,7 +349,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | false |
+| Default value | False |
 | Accept pipeline input? | true (ByPropertyName) |
 | Accept wildcard characters? | False |
 
@@ -391,7 +391,7 @@ When specifying the `-NetworkSets` parameter, you can choose to copy the network
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -NetworkSets &lt;array&gt;
@@ -403,7 +403,7 @@ Use this to specify one or more network sets to track the network configuration.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -LacpLoadbalancingMode &lt;String&gt;
@@ -415,7 +415,7 @@ When configuring Synergy Virtual Connect uplink sets, the LACP load balancing al
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Passthru &lt;SwitchParameter&gt;
@@ -427,7 +427,7 @@ Use this parameter to return a helper object with the New-OVLogicalInterconnectG
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -LacpDistributeUplinkPorts &lt;Bool&gt;
@@ -448,7 +448,7 @@ The port distribution depends on the number of ports added from each interconnec
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -LacpFailoverActiveMemberThreshold &lt;Int&gt;
@@ -465,7 +465,7 @@ Failover from active to standby uplinks will cause a brief interruption in the n
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -LacpFailoverBandwidthThreshold &lt;Int&gt;
@@ -482,7 +482,7 @@ Failover from active to standby uplinks will cause a brief interruption in the n
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -LacpFailoverTrigger &lt;String&gt;
@@ -500,7 +500,7 @@ Allowed values:
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -FecMode &lt;String&gt;
@@ -524,7 +524,7 @@ The following values are supported with sub-ports:
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -PortSpeed &lt;String&gt;
@@ -543,7 +543,7 @@ The allowed uplink port speed by the fabric module and traceiver type.  When spe
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -DCBXOverride &lt;bool&gt;
@@ -555,7 +555,7 @@ Use to override the DCBx protocol version.  Use the RoCEVersion parameter to spe
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -RoCEVersion &lt;String[]&gt;
@@ -567,7 +567,7 @@ Specify which RoCE version should be used.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

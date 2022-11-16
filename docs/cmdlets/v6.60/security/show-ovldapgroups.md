@@ -70,7 +70,7 @@ Username to authenticate with
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Password &lt;System.Security.SecureString&gt;
@@ -82,7 +82,7 @@ User account password
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Directory &lt;Object&gt;
@@ -106,7 +106,7 @@ Provide the name of the Directory Group to search for.  If omitted, all found Di
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -118,7 +118,7 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 | Required? | True |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Credential &lt;PSCredential&gt;
@@ -130,7 +130,7 @@ Use this parameter if you want to provide a PSCredential object instead.
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

@@ -20,13 +20,9 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.**_
+_**None.  You cannot pipe objects to this cmdlet.**_
 
 ## Return Values
-
-_**None.**_
-
- None
 
 ## Related Links
 

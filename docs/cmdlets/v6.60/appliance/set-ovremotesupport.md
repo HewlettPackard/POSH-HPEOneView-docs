@@ -94,7 +94,7 @@ Choose to allow the appliance to auto enable remote support for all and devices 
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -CompanyName &lt;String&gt;
@@ -106,7 +106,7 @@ The company name Remote Support will be authorized for.
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -OptimizeOptIn &lt;SwitchParameter&gt;
@@ -118,7 +118,7 @@ Opt-in to allow HPE marketing to discuss datacenter optimization.
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -InsightOnlineUsername &lt;String&gt;
@@ -130,7 +130,7 @@ OBSOLETE - HPE Insight Online is a deprecated and unavailable service.  It is no
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -InsightOnlinePassword &lt;System.Security.SecureString&gt;
@@ -142,7 +142,7 @@ OBSOLETE - HPE Insight Online is a deprecated and unavailable service.  It is no
 | Required? | False |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Enable &lt;SwitchParameter&gt;
@@ -154,7 +154,7 @@ Use this parameter to enable remote support on an appliance, only if the applian
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Disable &lt;SwitchParameter&gt;
@@ -166,7 +166,7 @@ Use this parameter to disable remote support globally on the appliance.  Use the
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -ApplianceConnection &lt;Object&gt;
@@ -178,7 +178,7 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 | Required? | False |
 | Position? | Named |
 | Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### -Async &lt;SwitchParameter&gt;
@@ -190,7 +190,7 @@ Use this parameter to immediately return the async task.  By default, the Cmdlet
 | Required? | False |
 | Position? | Named |
 | Default value | False |
-| Accept pipeline input? | false |
+| Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
