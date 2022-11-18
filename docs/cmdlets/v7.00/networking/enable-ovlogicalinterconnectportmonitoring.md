@@ -15,6 +15,15 @@ Enable-OVLogicalInterconnectPortMonitoring
     [<CommonParameters>]
 ```
 
+```powershell
+Enable-OVLogicalInterconnectPortMonitoring
+    [-InputObject] <Object>
+    [-MonitoredPorts] <Hashtable>
+    [-UplinkSetName] <string>
+    [-ApplianceConnection <Array>]
+    [<CommonParameters>]
+```
+
 ## Description
 
 Port monitoring enables you to send a copy of every Ethernet or Fibre Channel frame coming in and going out of a downlink (server-facing) port to another port. To evaluate network traffic between ports, you can connect debugging equipment, such as a network analyzer. This capability is important in a server environment where there is limited physical access to the network interfaces on the servers. 
@@ -100,6 +109,23 @@ The "Direction" property value must be one of the following:
 * ToServer
 * FromServer
 * Both
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -UplinkSetName &lt;string&gt;
+
+The name of the uplink set provisioned to the specified logical interconnect resource provided in the InputObject parameter.  The uplink set must:
+
+* Be provisioned to both the logical interconnect and its associated parent logical interconnect group.
+* Contain a singular, tagged Ethernet network.
+* The Ethernet network must not be assigned to any server profile connections, or other uplink sets.
+* The uplink set must only contain a single uplink port.
 
 | Aliases | None |
 | :--- | :--- |
