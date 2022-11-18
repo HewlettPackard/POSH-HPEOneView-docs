@@ -85,10 +85,6 @@ The following table documents which versions of the HPE OneView PowerShell libra
 
 | Library | Components | Version |
 | :--- | :--- | :--- |
-| HPE OneView 6.60 | .NetStandard | 2.0 or newer |
-| HPE OneView 6.60 | PowerShell | 5.1 or 6.0 |
-| HPE OneView 6.60 | PowerShellCore | 7.0 or newer |
-| HPE OneView 6.60 | HPE OneView/HPE Synergy | 5.60 or newer |
 | HPE OneView 6.30 | .NetStandard | 2.0 or newer |
 | HPE OneView 6.30 | PowerShell | 5.1 or 6.0 |
 | HPE OneView 6.30 | PowerShellCore | 7.0 or newer |
