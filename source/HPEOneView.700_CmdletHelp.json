@@ -7061,6 +7061,16 @@
             "SupportsWildcard": false,
             "DataType": "Hashtable",
             "Required": true
+          },
+          {
+            "Name": "UplinkSetName",
+            "Description": "The name of the uplink set provisioned to the specified logical interconnect resource provided in the InputObject parameter.  The uplink set must:\n\n    * Be provisioned to both the logical interconnect and its associated parent logical interconnect group.\n    * Contain a singular, tagged Ethernet network.\n    * The Ethernet network must not be assigned to any server profile connections, or other uplink sets.\n    * The uplink set must only contain a single uplink port.",
+            "DataType": "string",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -7113,6 +7123,24 @@
             },
             {
               "Name": "MonitoredPorts",
+              "Required": true
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ],
+          [
+            {
+              "Name": "InputObject",
+              "Required": true
+            },
+            {
+              "Name": "MonitoredPorts",
+              "Required": true
+            },
+            {
+              "Name": "UplinkSetName",
               "Required": true
             },
             {
@@ -61192,14 +61220,14 @@
         ],
         "InputTypes": [
           {
-              "Value":  "None.  You cannot pipe objects to this cmdlet.",
-              "Text":  null
+            "Value": "None.  You cannot pipe objects to this cmdlet.",
+            "Text": null
           }
         ],
         "ReturnValues": [
           {
-              "Value":  "None",
-              "Text":  "Appliance will reboot.\n"
+            "Value": "None",
+            "Text": "Appliance will reboot.\n"
           }
         ],
         "Examples": [
@@ -61242,18 +61270,18 @@
         ],
         "InputTypes": [
           {
-              "Value":  "None.  You cannot pipe objects to this cmdlet.",
-              "Text":  null
+            "Value": "None.  You cannot pipe objects to this cmdlet.",
+            "Text": null
           }
         ],
         "ReturnValues": [
           {
-              "Value":  "HPEOneView.Appliance.NetworkInterface",
-              "Text":  "Network interface configured for virtual machine appliance.\n"
+            "Value": "HPEOneView.Appliance.NetworkInterface",
+            "Text": "Network interface configured for virtual machine appliance.\n"
           },
           {
-              "Value":  "HPEOneView.Appliance.ComposerNetworkInterface",
-              "Text":  "Network interface(s) configured for HPE Synergy Composer appliance(s).\n"
+            "Value": "HPEOneView.Appliance.ComposerNetworkInterface",
+            "Text": "Network interface(s) configured for HPE Synergy Composer appliance(s).\n"
           }
         ],
         "Examples": [
@@ -61343,14 +61371,14 @@
         ],
         "InputTypes": [
           {
-              "Value":  "None.  You cannot pipe objects to this cmdlet.",
-              "Text":  null
+            "Value": "None.  You cannot pipe objects to this cmdlet.",
+            "Text": null
           }
         ],
         "ReturnValues": [
           {
-              "Value":  "HPEOneView.Appliance.StaticRoute",
-              "Text":  "IP static route object.\n"
+            "Value": "HPEOneView.Appliance.StaticRoute",
+            "Text": "IP static route object.\n"
           }
         ],
         "Examples": [
@@ -63153,14 +63181,14 @@
         ],
         "InputTypes": [
           {
-              "Value":  "None.  You cannot pipe objects to this cmdlet.",
-              "Text":  null
+            "Value": "None.  You cannot pipe objects to this cmdlet.",
+            "Text": null
           }
         ],
         "ReturnValues": [
           {
-              "Value":  "HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]",
-              "Text":  "Async task resource to monitor."
+            "Value": "HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]",
+            "Text": "Async task resource to monitor."
           }
         ],
         "Examples": [
@@ -63237,14 +63265,14 @@
         ],
         "InputTypes": [
           {
-              "Value":  "HPEOneView.Appliance.StaticRoute",
-              "Text":  "Configured static route object from Get-OVApplianceStaticRoute."
+            "Value": "HPEOneView.Appliance.StaticRoute",
+            "Text": "Configured static route object from Get-OVApplianceStaticRoute."
           }
         ],
         "ReturnValues": [
           {
-              "Value":  "HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]",
-              "Text":  "Async task resource to monitor."
+            "Value": "HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]",
+            "Text": "Async task resource to monitor."
           }
         ],
         "Examples": [
@@ -63377,14 +63405,14 @@
         ],
         "InputTypes": [
           {
-              "Value":  "HPEOneView.Appliance.StaticRoute",
-              "Text":  "Configured static route object from Get-OVApplianceStaticRoute."
+            "Value": "HPEOneView.Appliance.StaticRoute",
+            "Text": "Configured static route object from Get-OVApplianceStaticRoute."
           }
         ],
         "ReturnValues": [
           {
-              "Value":  "HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]",
-              "Text":  "Async task resource to monitor."
+            "Value": "HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]",
+            "Text": "Async task resource to monitor."
           }
         ],
         "Examples": [
