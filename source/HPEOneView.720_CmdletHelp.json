@@ -28044,9 +28044,7 @@
       "Category": "Facilities",
       "Contents": {
         "Synopsis": "Create a new facilities Rack.",
-        "Description": [
-          "A rack is a physical structure that contains IT equipment such as enclosures, servers, power delivery devices, and unmanaged devices (an unmanaged device uses slots in the rack and consumes power or exhausts heat, but it is not managed by the appliance). You can manage your racks and the equipment in them by adding them to the appliance. Having your racks managed by the appliance enables you to use the appliance for space and power planning. The appliance also gathers statistical data and monitors the power and temperature of the racks it manages.\n\nWhen you add an enclosure to the appliance, it automatically creates a rack and places the enclosure in it. The appliance places into the rack all enclosures connected by management link cables. When enclosures are added, the appliance places them in the rack from top to bottom. When an enclosure is placed in an Intelligent Series Rack, the enclosure slots are automatically detected. For other racks, to accurately depict the layout of your enclosures within the rack you must edit the rack to place the enclosure in the proper slots.\n\nYou can use the appliance to view and manage your rack configuration and power delivery topology. You can specify the physical dimensions of the rack (width, height, and depth), the number of U slots, and the location of each piece of equipment in the rack. You can specify the rack PDUs that provide power to the rack, and their physical position in the rack or on either side. You can also describe how the devices in the rack are connected to those PDUs.\n\nThe appliance automatically discovers the rack height and rack model for a ProLiant server with Location Discovery Services and updates the physical locations of devices when they are relocated within and between racks for c7000 enclosures.\n\nThis Cmdlet will create a new Rack resource."
-        ],
+        "Description": "A rack is a physical structure that contains IT equipment such as enclosures, servers, power delivery devices, and unmanaged devices (an unmanaged device uses slots in the rack and consumes power or exhausts heat, but it is not managed by the appliance). You can manage your racks and the equipment in them by adding them to the appliance. Having your racks managed by the appliance enables you to use the appliance for space and power planning. The appliance also gathers statistical data and monitors the power and temperature of the racks it manages.\n\nWhen you add an enclosure to the appliance, it automatically creates a rack and places the enclosure in it. The appliance places into the rack all enclosures connected by management link cables. When enclosures are added, the appliance places them in the rack from top to bottom. When an enclosure is placed in an Intelligent Series Rack, the enclosure slots are automatically detected. For other racks, to accurately depict the layout of your enclosures within the rack you must edit the rack to place the enclosure in the proper slots.\n\nYou can use the appliance to view and manage your rack configuration and power delivery topology. You can specify the physical dimensions of the rack (width, height, and depth), the number of U slots, and the location of each piece of equipment in the rack. You can specify the rack PDUs that provide power to the rack, and their physical position in the rack or on either side. You can also describe how the devices in the rack are connected to those PDUs.\n\nThe appliance automatically discovers the rack height and rack model for a ProLiant server with Location Discovery Services and updates the physical locations of devices when they are relocated within and between racks for c7000 enclosures.\n\nThis Cmdlet will create a new rack resource, which brings it under the management of the appliance, and creates a diagram that depicts the rack and its slots. After you add the rack, you can configure the layout of the devices in it by adding, removing, and repositioning the devices.\n\nMinimum required privileges: Infrastructure administrator or Server administrator",
         "Parameters": [
           {
             "Name": "Name",
@@ -63798,6 +63796,243 @@
           },
           {
             "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v7.20/servers/update-ovserverfirmware",
+            "Text": "Online: "
+          }
+        ]
+      }
+    },
+    {
+      "Name": "Set-OVRack",
+      "Category": "Facilities",
+      "Contents": {
+        "Synopsis": "Modify an existing rack resource.",
+        "Description": "A rack is a physical structure that contains IT equipment such as enclosures, servers, power delivery devices, and unmanaged devices (an unmanaged device uses slots in the rack and consumes power or exhausts heat, but it is not managed by the appliance). You can manage your racks and the equipment in them by adding them to the appliance. Having your racks managed by the appliance enables you to use the appliance for space and power planning. The appliance also gathers statistical data and monitors the power and temperature of the racks it manages.\n\nWhen you add an enclosure to the appliance, it automatically creates a rack and places the enclosure in it. The appliance places into the rack all enclosures connected by management link cables. When enclosures are added, the appliance places them in the rack from top to bottom. When an enclosure is placed in an Intelligent Series Rack, the enclosure slots are automatically detected. For other racks, to accurately depict the layout of your enclosures within the rack you must edit the rack to place the enclosure in the proper slots.\n\nYou can use the appliance to view and manage your rack configuration and power delivery topology. You can specify the physical dimensions of the rack (width, height, and depth), the number of U slots, and the location of each piece of equipment in the rack. You can specify the rack PDUs that provide power to the rack, and their physical position in the rack or on either side. You can also describe how the devices in the rack are connected to those PDUs.\n\nThe appliance automatically discovers the rack height and rack model for a ProLiant server with Location Discovery Services and updates the physical locations of devices when they are relocated within and between racks for c7000 enclosures.\n\nThis Cmdlet will update existing rack resources with updated properties.  This includes updating the name, part number, serial number, model, supported thermal capacity, rack dimensions including rack units, height, width and depth.\n\nMinimum required privileges: Infrastructure administrator or Server administrator",
+        "Syntax": [
+          [
+            {
+              "Name": "InputObject",
+              "Required": true
+            },
+            {
+              "Name": "Name",
+              "Required": false
+            },
+            {
+              "Name": "ThermalLimit",
+              "Required": false
+            },
+            {
+              "Name": "SerialNumber",
+              "Required": false
+            },
+            {
+              "Name": "PartNumber",
+              "Required": false
+            },
+            {
+              "Name": "Model",
+              "Required": false
+            },
+            {
+              "Name": "Depth",
+              "Required": false
+            },
+            {
+              "Name": "Height",
+              "Required": false
+            },
+            {
+              "Name": "UHeight",
+              "Required": false
+            },
+            {
+              "Name": "Width",
+              "Required": false
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ]
+        ],
+        "Parameters": [
+          {
+            "Name": "ApplianceConnection",
+            "Description": "Specify one or more HPEOneView.Appliance.Connection object(s) or Name property value(s).\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
+            "DataType": "Object",
+            "Required": false,
+            "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
+            "Aliases": "Appliance",
+            "PipelineInput": "true (ByPropertyName)",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Depth",
+            "Description": "Rack depth, in millimeters.",
+            "DataType": "int",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Height",
+            "Description": "Height of rack, in millimeters.",
+            "DataType": "int",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "InputObject",
+            "Description": "The rack object from Get-OVRack.",
+            "DataType": "Object",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "true (ByValue)",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Model",
+            "Description": "Provide the model of the rack to add.",
+            "DataType": "string",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Name",
+            "Description": "Name of resource.",
+            "DataType": "string",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "PartNumber",
+            "Description": "Part number of the rack resource.",
+            "DataType": "string",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "SerialNumber",
+            "Description": "Serial number of the rack resource.",
+            "DataType": "string",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "ThermalLimit",
+            "Description": "Thermal limit supported by the rack, in BTU\"s.",
+            "DataType": "int",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "UHeight",
+            "Description": "The rack unit height of the rack.",
+            "DataType": "int",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Width",
+            "Description": "Width of rack, in millimeters.",
+            "DataType": "int",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          }
+        ],
+        "InputTypes": [
+          {
+              "Value":  "HPEOneView.Facilities.Rack [System.Management.Automation.PSCustomObject]",
+              "Text":  "Rack resource from Get-OVRack."
+          }
+        ],
+        "ReturnValues": [
+          {
+            "Value":  "HPEOneView.Facilities.Rack [System.Management.Automation.PSCustomObject]",
+            "Text":  "Updated rack resource."
+        }
+        ],
+        "Examples": [
+          {
+            "Title": "-------------------------- EXAMPLE 1 --------------------------",
+            "Code": "Get-OVRack -Name Rack-1 | Set-OVRack -ThermalLimit 15000\r\n",
+            "Description": "Update the specific rack resource thermal limit to 15kW."
+          }
+        ],
+        "RelatedLinks": [
+          {
+            "Uri": "",
+            "Text": "Add-OVRackManager"
+          },
+          {
+            "Uri": "",
+            "Text": "Add-OVRackToDataCenter"
+          },
+          {
+            "Uri": "",
+            "Text": "Get-OVRack"
+          },
+          {
+            "Uri": "",
+            "Text": "Get-OVRackManager"
+          },
+          {
+            "Uri": "",
+            "Text": "Get-OVRackMember"
+          },
+          {
+            "Uri": "",
+            "Text": "New-OVRack"
+          },
+          {
+            "Uri": "",
+            "Text": "Remove-OVRack"
+          },
+          {
+            "Uri": "",
+            "Text": "Remove-OVRackManager"
+          },
+          {
+            "Uri": "",
+            "Text": "Remove-OVRackMember"
+          },
+          {
+            "Uri": "",
+            "Text": "Set-OVRackMemberLocation"
+          },
+          {
+            "Uri": "",
+            "Text": "Update-OVRackManager"
+          },
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v7.20/facilities/set-ovrack",
             "Text": "Online: "
           }
         ]
