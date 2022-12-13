@@ -1,22 +1,23 @@
 ﻿---
-description: Create a new facilities Rack.
+description: Modify an existing rack resource.
 ---
 
-# New-OVRack
+# Set-OVRack
 
 ## Syntax
 
 ```powershell
-New-OVRack
-    [-Name] <String>
-    [-ThermalLimit <Int>]
-    [-SerialNumber <String>]
-    [-PartNumber <String>]
-    [-Model <>]
-    [-Depth <Int>]
-    [-Height <Int>]
-    [-UHeight <Int>]
-    [-Width <Int>]
+Set-OVRack
+    [-InputObject] <Object>
+    [-Name <string>]
+    [-ThermalLimit <int>]
+    [-SerialNumber <string>]
+    [-PartNumber <string>]
+    [-Model <string>]
+    [-Depth <int>]
+    [-Height <int>]
+    [-UHeight <int>]
+    [-Width <int>]
     [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
@@ -31,7 +32,7 @@ You can use the appliance to view and manage your rack configuration and power d
 
 The appliance automatically discovers the rack height and rack model for a ProLiant server with Location Discovery Services and updates the physical locations of devices when they are relocated within and between racks for c7000 enclosures.
 
-This Cmdlet will create a new rack resource, which brings it under the management of the appliance, and creates a diagram that depicts the rack and its slots. After you add the rack, you can configure the layout of the devices in it by adding, removing, and repositioning the devices.
+This Cmdlet will update existing rack resources with updated properties.  This includes updating the name, part number, serial number, model, supported thermal capacity, rack dimensions including rack units, height, width and depth.
 
 {% hint style="info" %}
 Minimum required privileges: Infrastructure administrator or Server administrator
@@ -42,40 +43,67 @@ Minimum required privileges: Infrastructure administrator or Server administrato
 ###  Example 1 
 
 ```powershell
-$Params = @{
+Get-OVRack -Name Rack-1 | Set-OVRack -ThermalLimit 15000
 
-    Name         = "Rack-230";
-    ThermalLimit = 10000;
-    SerialNumber = "AABB1122CCDD";
-    PartNumber   = "AF046A";
-    Depth        = 1075;
-    Height       = 2032;
-    UHeight      = 42;
-    Width        = 600
-
-}
-New-OVRack @Params
 ```
 
-Create new "Rack-230" rack resource.
+Update the specific rack resource thermal limit to 15kW.
 
 ## Parameters
 
-### -Name &lt;String&gt;
+### -ApplianceConnection &lt;Object&gt;
 
-Name of resource.
+Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
+
+Default Value: ${Global:ConnectedSessions} | ? Default
+
+| Aliases | Appliance |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | (${Global:ConnectedSessions} &vert; ? Default) |
+| Accept pipeline input? | true (ByPropertyName) |
+| Accept wildcard characters? | False |
+
+### -Depth &lt;int&gt;
+
+Rack depth, in millimeters.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -Height &lt;int&gt;
+
+Height of rack, in millimeters.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -InputObject &lt;Object&gt;
+
+The rack object from Get-OVRack.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
 | Default value |  |
-| Accept pipeline input? | false |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
-### -ThermalLimit &lt;Int&gt;
+### -Model &lt;string&gt;
 
-Thermal limit supported by the rack, in BTU"s.
+Provide the model of the rack to add.
 
 | Aliases | None |
 | :--- | :--- |
@@ -85,9 +113,9 @@ Thermal limit supported by the rack, in BTU"s.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -SerialNumber &lt;String&gt;
+### -Name &lt;string&gt;
 
-Serial number of the rack resource.
+Name of resource.
 
 | Aliases | None |
 | :--- | :--- |
@@ -97,7 +125,7 @@ Serial number of the rack resource.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -PartNumber &lt;String&gt;
+### -PartNumber &lt;string&gt;
 
 Part number of the rack resource.
 
@@ -109,77 +137,45 @@ Part number of the rack resource.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Depth &lt;Int&gt;
+### -SerialNumber &lt;string&gt;
 
-Rack depth, in millimeters.
-
-Default: 1000
+Serial number of the rack resource.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | 1000 |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Height &lt;Int&gt;
+### -ThermalLimit &lt;int&gt;
 
-Height of rack, in millimeters.
-
-Default: 2004
+Thermal limit supported by the rack, in BTU"s.
 
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | 2004 |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -UHeight &lt;Int&gt;
+### -UHeight &lt;int&gt;
 
 The rack unit height of the rack.
 
-Default: 40
-
 | Aliases | None |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |
-| Default value | 220 |
+| Default value |  |
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Width &lt;Int&gt;
+### -Width &lt;int&gt;
 
 Width of rack, in millimeters.
-
-Default: 600
-
-| Aliases | None |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | 600 |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
-### -ApplianceConnection &lt;Object&gt;
-
-Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name property value(s).
-
-| Aliases | Appliance |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value | (${Global:ConnectedSessions} &vert; ? Default) |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
-### -Model &lt;&gt;
-
-Provide the model of the rack to add.
 
 | Aliases | None |
 | :--- | :--- |
@@ -195,13 +191,15 @@ This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVa
 
 ## Input Types
 
-_**None.  You cannot pipe objects to this Cmdlet.**_
+_**HPEOneView.Facilities.Rack [System.Management.Automation.PSCustomObject]**_
+
+Rack resource from Get-OVRack.
 
 ## Return Values
 
-_**HPEOneView.Facilities.Rack**_
+_**HPEOneView.Facilities.Rack [System.Management.Automation.PSCustomObject]**_
 
-Newly created rack.
+Updated rack resource.
 
 ## Related Links
 
@@ -210,6 +208,7 @@ Newly created rack.
 * [Get-OVRack](get-ovrack.md)
 * [Get-OVRackManager](../servers/get-ovrackmanager.md)
 * [Get-OVRackMember](get-ovrackmember.md)
+* [New-OVRack](new-ovrack.md)
 * [Remove-OVRack](remove-ovrack.md)
 * [Remove-OVRackManager](../servers/remove-ovrackmanager.md)
 * [Remove-OVRackMember](remove-ovrackmember.md)

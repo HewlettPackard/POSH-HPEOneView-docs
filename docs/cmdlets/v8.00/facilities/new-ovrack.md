@@ -31,7 +31,11 @@ You can use the appliance to view and manage your rack configuration and power d
 
 The appliance automatically discovers the rack height and rack model for a ProLiant server with Location Discovery Services and updates the physical locations of devices when they are relocated within and between racks for c7000 enclosures.
 
-This Cmdlet will create a new Rack resource. 
+This Cmdlet will create a new rack resource, which brings it under the management of the appliance, and creates a diagram that depicts the rack and its slots. After you add the rack, you can configure the layout of the devices in it by adding, removing, and repositioning the devices.
+
+{% hint style="info" %}
+Minimum required privileges: Infrastructure administrator or Server administrator
+{% endhint %}
 
 ## Examples
 

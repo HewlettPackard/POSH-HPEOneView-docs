@@ -220,6 +220,7 @@
           "Remove-OVRackMember": "remove-ovrackmember.md",
           "Remove-OVUnmanagedDevice": "remove-ovunmanageddevice.md",
           "Set-OVDataCenter": "set-ovdatacenter.md",
+          "Set-OVRack": "set-ovrack.md",
           "Set-OVRackMemberLocation": "set-ovrackmemberlocation.md"
         },
         "Library": {
@@ -676,6 +677,7 @@
           "Remove-OVRackMember": "remove-ovrackmember.md",
           "Remove-OVUnmanagedDevice": "remove-ovunmanageddevice.md",
           "Set-OVDataCenter": "set-ovdatacenter.md",
+          "Set-OVRack": "set-ovrack.md",
           "Set-OVRackMemberLocation": "set-ovrackmemberlocation.md"
         },
         "Library": {
@@ -1133,6 +1135,7 @@
           "Remove-OVRackMember": "remove-ovrackmember.md",
           "Remove-OVUnmanagedDevice": "remove-ovunmanageddevice.md",
           "Set-OVDataCenter": "set-ovdatacenter.md",
+          "Set-OVRack": "set-ovrack.md",
           "Set-OVRackMemberLocation": "set-ovrackmemberlocation.md"
         },
         "Library": {
@@ -1589,6 +1592,7 @@
           "Remove-OVRackMember": "remove-ovrackmember.md",
           "Remove-OVUnmanagedDevice": "remove-ovunmanageddevice.md",
           "Set-OVDataCenter": "set-ovdatacenter.md",
+          "Set-OVRack": "set-ovrack.md",
           "Set-OVRackMemberLocation": "set-ovrackmemberlocation.md"
         },
         "Library": {
@@ -2045,6 +2049,7 @@
           "Remove-OVRackMember": "remove-ovrackmember.md",
           "Remove-OVUnmanagedDevice": "remove-ovunmanageddevice.md",
           "Set-OVDataCenter": "set-ovdatacenter.md",
+          "Set-OVRack": "set-ovrack.md",
           "Set-OVRackMemberLocation": "set-ovrackmemberlocation.md"
         },
         "Library": {
