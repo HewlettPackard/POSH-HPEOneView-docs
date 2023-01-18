@@ -9108,14 +9108,14 @@
         ],
         "InputTypes": [
           {
-              "Value":  "None.  You cannot pipe objects to this cmdlet.",
-              "Text":  null
+            "Value": "None.  You cannot pipe objects to this cmdlet.",
+            "Text": null
           }
         ],
         "ReturnValues": [
           {
-              "Value":  "HPEOneView.Appliance.ApplianceStatus",
-              "Text":  "Appliance status object, contining appliance memory, CPU, network link details, including any resource error status messages.\n"
+            "Value": "HPEOneView.Appliance.ApplianceStatus",
+            "Text": "Appliance status object, contining appliance memory, CPU, network link details, including any resource error status messages.\n"
           }
         ],
         "Examples": [
@@ -42496,10 +42496,10 @@
         "Description": "This Cmdlet will assist server administrators in performing various power operations with HPE Synergy enclosure resources.  The following resources are supported with their supported operation:\n\n    * HPE Synergy Appliance Bay - EFuse\n    * HPE Synergy Frame Link Module - EFuse or Reset\n    * Device Bay - EFuse or Reset\n    * HPE Synergy Fabric Module Device - EFuse\n\nE-Fuse stands for Electronic Fuse. Setting the power state of a device to \"E-Fuse\" (or \"Reset\" for an Enclosure Manager) will reset the bay, but it will soon return to a normal running state.  An E-Fuse will turn off power to the bay and then turn it back on. If the bay was powered off before the E-Fuse operation it will be powered on afterwards. A \"Reset\" will do a hard reset of the bay without affecting the power. E-Fuse on a device bay will power-cycle the whole blade including the iLO. \n\nA reset on the active Synergy Frame Link Module causes a failover to the standby Synergy Frame Link Module. The reset will fail if the Synergy Frame Link Module's firmware is being updated. An E-Fuse against an active Synergy Frame Link Module is not allowed.\n\nMinimum required privileges: Infrastructure administrator, Server administrator",
         "Parameters": [
           {
-            "Name": "Enclosure",
+            "Name": "InputObject",
             "Description": "The Synergy Frame resource from Get-OVEnclosure.",
             "DefaultValue": "",
-            "Aliases": "None",
+            "Aliases": "Enclosure",
             "PipelineInput": "true (ByValue)",
             "SupportsWildcard": false,
             "DataType": "Object",
@@ -42637,7 +42637,7 @@
         "Syntax": [
           [
             {
-              "Name": "Enclosure",
+              "Name": "InputObject",
               "Required": true
             },
             {
@@ -42658,12 +42658,12 @@
             },
             {
               "Name": "ApplianceConnection",
-              "Required": true
+              "Required": false
             }
           ],
           [
             {
-              "Name": "Enclosure",
+              "Name": "InputObject",
               "Required": true
             },
             {
@@ -42676,7 +42676,7 @@
             },
             {
               "Name": "Reset",
-              "Required": false
+              "Required": true
             },
             {
               "Name": "Async",
@@ -42684,7 +42684,7 @@
             },
             {
               "Name": "ApplianceConnection",
-              "Required": true
+              "Required": false
             }
           ]
         ]
@@ -63764,7 +63764,6 @@
         ],
         "ReturnValues": [
           {
-
             "Value": "HPEOneView.Servers.ServerHardware+FirmwareCompliancePreview",
             "Text": "A collection of server firmware installation report.  Will contain identified installed components and which have available updates from the supplied baseline."
           },
@@ -63969,15 +63968,15 @@
         ],
         "InputTypes": [
           {
-              "Value":  "HPEOneView.Facilities.Rack [System.Management.Automation.PSCustomObject]",
-              "Text":  "Rack resource from Get-OVRack."
+            "Value": "HPEOneView.Facilities.Rack [System.Management.Automation.PSCustomObject]",
+            "Text": "Rack resource from Get-OVRack."
           }
         ],
         "ReturnValues": [
           {
-            "Value":  "HPEOneView.Facilities.Rack [System.Management.Automation.PSCustomObject]",
-            "Text":  "Updated rack resource."
-        }
+            "Value": "HPEOneView.Facilities.Rack [System.Management.Automation.PSCustomObject]",
+            "Text": "Updated rack resource."
+          }
         ],
         "Examples": [
           {
