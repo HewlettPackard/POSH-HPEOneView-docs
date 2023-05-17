@@ -8,23 +8,23 @@ description: Power reset or EFuse HPE Synergy Frame component.
 
 ```powershell
 Reset-OVEnclosureDevice
-    [-Enclosure] <Object>
+    [-InputObject] <Object>
     [-Component] <String>
     [-DeviceID] <Int32>
     [-Efuse]
     [-Async]
-    [-ApplianceConnection] <Object>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
 ```powershell
 Reset-OVEnclosureDevice
-    [-Enclosure] <Object>
+    [-InputObject] <Object>
     [-Component] <String>
     [-DeviceID] <Int32>
     [-Reset]
     [-Async]
-    [-ApplianceConnection] <Object>
+    [-ApplianceConnection <Object>]
     [<CommonParameters>]
 ```
 
@@ -196,6 +196,18 @@ Default Value: ${Global:ConnectSessions}
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -InputObject &lt;Object&gt;
+
+
+
+| Aliases | Enclosure |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;
