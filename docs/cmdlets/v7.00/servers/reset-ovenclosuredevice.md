@@ -8,7 +8,7 @@ description: Power reset or EFuse HPE Synergy Frame component.
 
 ```powershell
 Reset-OVEnclosureDevice
-    [-Enclosure] <Object>
+    [-InputObject] <Object>
     [-Component] <String>
     [-DeviceID] <Int32>
     [-Efuse]
@@ -19,7 +19,7 @@ Reset-OVEnclosureDevice
 
 ```powershell
 Reset-OVEnclosureDevice
-    [-Enclosure] <Object>
+    [-InputObject] <Object>
     [-Component] <String>
     [-DeviceID] <Int32>
     [-Reset]
@@ -83,11 +83,11 @@ Reset the appliance device in bay 1 by performing an EFuse.
 
 ## Parameters
 
-### -Enclosure &lt;Object&gt;
+### -InputObject &lt;Object&gt;
 
 The Synergy Frame resource from Get-OVEnclosure.
 
-| Aliases | None |
+| Aliases | Enclosure |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |

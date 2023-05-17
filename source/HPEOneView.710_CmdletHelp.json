@@ -9108,14 +9108,14 @@
         ],
         "InputTypes": [
           {
-              "Value":  "None.  You cannot pipe objects to this cmdlet.",
-              "Text":  null
+            "Value": "None.  You cannot pipe objects to this cmdlet.",
+            "Text": null
           }
         ],
         "ReturnValues": [
           {
-              "Value":  "HPEOneView.Appliance.ApplianceStatus",
-              "Text":  "Appliance status object, contining appliance memory, CPU, network link details, including any resource error status messages.\n"
+            "Value": "HPEOneView.Appliance.ApplianceStatus",
+            "Text": "Appliance status object, contining appliance memory, CPU, network link details, including any resource error status messages.\n"
           }
         ],
         "Examples": [
@@ -42565,6 +42565,16 @@
             "SupportsWildcard": false,
             "DataType": "SwitchParameter",
             "Required": false
+          },
+          {
+            "Name": "InputObject",
+            "Description": "",
+            "DataType": "Object",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "Enclosure",
+            "PipelineInput": "true (ByValue)",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -42618,7 +42628,7 @@
         "Syntax": [
           [
             {
-              "Name": "Enclosure",
+              "Name": "InputObject",
               "Required": true
             },
             {
@@ -42639,12 +42649,12 @@
             },
             {
               "Name": "ApplianceConnection",
-              "Required": true
+              "Required": false
             }
           ],
           [
             {
-              "Name": "Enclosure",
+              "Name": "InputObject",
               "Required": true
             },
             {
@@ -42657,7 +42667,7 @@
             },
             {
               "Name": "Reset",
-              "Required": false
+              "Required": true
             },
             {
               "Name": "Async",
@@ -42665,7 +42675,7 @@
             },
             {
               "Name": "ApplianceConnection",
-              "Required": true
+              "Required": false
             }
           ]
         ]
@@ -63612,14 +63622,14 @@
         ],
         "InputTypes": [
           {
-              "Value":  "HPEOneView.Networking.Interconnect [System.Management.Automation.PSCustomObject]",
-              "Text":  "HPE Synergy FlexFabric Ethernet module from Get-OVInterconnect."
+            "Value": "HPEOneView.Networking.Interconnect [System.Management.Automation.PSCustomObject]",
+            "Text": "HPE Synergy FlexFabric Ethernet module from Get-OVInterconnect."
           }
         ],
         "ReturnValues": [
           {
-              "Value":  "HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]",
-              "Text":  "Async task resource to monitor."
+            "Value": "HPOneView.Appliance.TaskResource [System.Management.Automation.PSCustomObject]",
+            "Text": "Async task resource to monitor."
           }
         ],
         "Examples": [
@@ -63809,15 +63819,15 @@
         ],
         "InputTypes": [
           {
-              "Value":  "HPEOneView.Facilities.Rack [System.Management.Automation.PSCustomObject]",
-              "Text":  "Rack resource from Get-OVRack."
+            "Value": "HPEOneView.Facilities.Rack [System.Management.Automation.PSCustomObject]",
+            "Text": "Rack resource from Get-OVRack."
           }
         ],
         "ReturnValues": [
           {
-            "Value":  "HPEOneView.Facilities.Rack [System.Management.Automation.PSCustomObject]",
-            "Text":  "Updated rack resource."
-        }
+            "Value": "HPEOneView.Facilities.Rack [System.Management.Automation.PSCustomObject]",
+            "Text": "Updated rack resource."
+          }
         ],
         "Examples": [
           {

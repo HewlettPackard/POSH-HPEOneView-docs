@@ -8,7 +8,7 @@ description: Power reset or EFuse HPE Synergy Frame component.
 
 ```powershell
 Reset-OVEnclosureDevice
-    [-Enclosure] <Object>
+    [-InputObject] <Object>
     [-Component] <String>
     [-DeviceID] <Int32>
     [-Efuse]
@@ -19,7 +19,7 @@ Reset-OVEnclosureDevice
 
 ```powershell
 Reset-OVEnclosureDevice
-    [-Enclosure] <Object>
+    [-InputObject] <Object>
     [-Component] <String>
     [-DeviceID] <Int32>
     [-Reset]
@@ -51,7 +51,7 @@ Minimum required privileges: Infrastructure administrator, Server administrator
 
 ```powershell
 $Enclosure = Get-OVEnclosure -Name Enclosure1 -ErrorAction Stop
-Reset-OVEnclosureDevice -Enclosure $Enclosure -Component FLM -DeviceID 1 -EFuse
+Reset-OVEnclosureDevice -InputObject $Enclosure -Component FLM -DeviceID 1 -EFuse
 ```
 
 Reset the FLM in slot 1 by performing an EFuse.
@@ -60,7 +60,7 @@ Reset the FLM in slot 1 by performing an EFuse.
 
 ```powershell
 $Enclosure = Get-OVEnclosure -Name Enclosure1 -ErrorAction Stop
-Reset-OVEnclosureDevice -Enclosure $Enclosure -Component ICM -DeviceID 3 -EFuse
+Reset-OVEnclosureDevice -InputObject $Enclosure -Component ICM -DeviceID 3 -EFuse
 ```
 
 Reset the ICM in interconnect bay 3 by performing an EFuse.
@@ -83,11 +83,11 @@ Reset the appliance device in bay 1 by performing an EFuse.
 
 ## Parameters
 
-### -Enclosure &lt;Object&gt;
+### -InputObject &lt;Object&gt;
 
 The Synergy Frame resource from Get-OVEnclosure.
 
-| Aliases | None |
+| Aliases | Enclosure |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
