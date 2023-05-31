@@ -16,7 +16,7 @@ This PowerShell module requires the following minimum versions:
 | Component | Version |
 | :--- | :--- |
 | .NetStandard | 2.0 or newer |
-| PowerShell | 5.1, 7.0 or newer |
+| PowerShell | 7.0 or newer |
 | PowerShellCore | 7.0 or newer |
 | HPE OneView/HPE Synergy | 8.30 or newer |
 
@@ -29,7 +29,7 @@ This PowerShell module requires the following minimum versions:
 | Component | Version |
 | :--- | :--- |
 | .NetStandard | 2.0 or newer |
-| PowerShell | 5.1, 7.0 or newer |
+| PowerShell | 7.0 or newer |
 | PowerShellCore | 7.0 or newer |
 | HPE OneView/HPE Synergy | 8.00 or newer |
 

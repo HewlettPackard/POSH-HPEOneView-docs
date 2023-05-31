@@ -156,9 +156,9 @@ New-OVServerProfile
 This Cmdlet is used to create or import an HPE OneView Server Profile.
 
 A server profile is the configuration for a server instance. Server profiles capture the entire server configuration in one place, enabling you to consistently replicate new server profiles and to rapidly modify them to reflect changes in your data center.
-            
+
 A server profile includes:
-            
+
     * Server identification information
     * Connectivity settings for Ethernet networks, network sets, and Fibre Channel networks
     * Firmware policy
@@ -167,24 +167,24 @@ A server profile includes:
     * BIOS settings
     * Boot order
     * Physical or virtual UUIDs, MAC addresses, and WWN addresses
-            
+
 You can create an unassigned server profile that serves as a template. Typically, you capture best-practice configurations in a server profile template, and then copy and deploy instances as individual server profiles. Similar to virtual machine (VM) templates, profiles enable you to create a provisioning baseline for server hardware types in an enclosure.
-            
+
 When you create a server profile, it is designated for a server hardware type and enclosure group (for server blades), whether the profile is assigned or unassigned.
-    
+
 To figure out BIOS Settings to override or set within the Server Profile, you will need to get the Server Hardware Type resource that your are modeling the Server Profile for.  When retrieving the resource:
-    
+
 $bl460cgen9sht = Get-OVServerHardwareType "BL460c Gen9 1"
-    
+
 The "biosSettings" Array property will be available (only with supported Server Hardware Types; i.e. BL460c Gen8 or newer).  To locate potential BIOS Settings, you can use the following code as an example:
-    
+
 $biosSettings = $bl460cgen9sht.biosSettings | ? name -match "power"
-    
+
 The code example above will return all matching BIOS Settings where the name contains "power".  The found BIOS settings object(s) are then saved into $biosSettings.  Update the "value" property accordingly, and you can then pass $biosSettings variable to the -biosSettings parameter.
 
 ## Examples
 
-###  Example 1 
+###  Example 1
 
 ```text
 $svr = Get-OVServer -Name "Encl1, Bay 1"
@@ -193,7 +193,7 @@ New-OVServerProfile -name "My Basic Server Profile" -server $svr   | Wait-OVTask
 
 Create a simple profile for "ServerA", and wait for it to be applied.
 
-###  Example 2 
+###  Example 2
 
 ```text
 $spt = Get-OVServerProfileTemplate -Name "Hypervisor Cluster Node Template v1"
@@ -202,7 +202,7 @@ Get-OVServer -Name "Encl1, Bay 1" | New-OVServerProfile -name "Hyp-Clus-01" -Ser
 
 Create a Server Profile from the "Hypervisor Cluster Node Template v1" Server Profile Template, assigning to "Encl1, Bay 1" server device.
 
-###  Example 3 
+###  Example 3
 
 ```text
 $profileName = "Web Server 10"
@@ -216,13 +216,13 @@ $params = @{
 >>    connections         = ($con1, $con2);
 >>    ApplianceConnection = "MyAppliance.domain.com"
 >>    }
->>    
+>>
 New-OVServerProfile @params | Wait-OVTaskComplete
 ```
 
 Create a BL Gen8 Server Profile template, and pipe to Wait-OVTaskComplete.
 
-###  Example 4 
+###  Example 4
 
 ```text
 $profileName = "Hypervisor Cluster Node 1"
@@ -237,7 +237,7 @@ $task = New-OVServerProfile -name $profileName -assignmentType "unassigned" -con
 
 Create an unassigned server profile which includes networks "Net-41" and "Net-42", adds FC Connections for BfS.
 
-###  Example 5 
+###  Example 5
 
 ```text
 $profileName = "Hypervisor Cluster Node 1"
@@ -255,7 +255,7 @@ $task = New-OVServerProfile -name $profileName -assignmentType "unassigned" -con
 
 Create an unassigned server profile which includes networks "Net-41" and "Net-42", and attaches two storage volumes.
 
-###  Example 6 
+###  Example 6
 
 ```text
 $profileName = "Hypervisor Cluster Node 1"
@@ -272,7 +272,7 @@ $task = New-OVServerProfile -name $profileName -assignmentType bay -connections 
 
 Create a profile which includes networks "Net-41" and "Net-42", adds FC Connections for BfS, and assign to Bay 12 of "Encl1" which is currently empty.
 
-###  Example 7 
+###  Example 7
 
 ```text
 $profileName = "Hypervisor Cluster Node 1"
@@ -289,7 +289,7 @@ $task = New-OVServerProfile -name $profileName -assignmentType "server" -server 
 
 Create a profile which includes networks "Net-41" and "Net-42", sets the boot order, and sets the BIOS. Then pipes to Wait-OVTaskComplete.
 
-###  Example 8 
+###  Example 8
 
 ```text
 $profileName = "Hypervisor Cluster Node 1"
@@ -311,13 +311,13 @@ $params = @{
 >>    Initialize          = $True;
 >>    LogicalDisk         = $LogicalDisk
 >> }
->>    
+>>
 New-OVServerProfile @params | Wait-OVTaskComplete
 ```
 
 Create a BL Gen9 UEFI Server Profile, and pipe to Wait-OVTaskComplete.
 
-###  Example 9 
+###  Example 9
 
 ```text
 $profileName = "Synergy Hypervisor Cluster Node 1"
@@ -341,13 +341,13 @@ $params = @{
 >>    Initialize          = $True;
 >>    LogicalDisk         = $LogicalDisk
 >> }
->>    
+>>
 New-OVServerProfile @params | Wait-OVTaskComplete
 ```
 
 Create a Synergy Gen9 Server Profile by looking for the first available SY480 Gen9 with 4 CPU"s and 512GB of RAM, configuring with D3940 Disk Storage.
 
-###  Example 10 
+###  Example 10
 
 ```text
 $ServerProfileName                    = 'My DL with FC Server Profile 1'
@@ -358,21 +358,21 @@ $FCConnection2Wwpn                    = '10:00:00:60:69:00:23:92'
 $FCConnection1 = Get-OVNetwork -Type FibreChannel -Name $FCConnection1FibreChannelNetworkName | New-OVServerProfileConnection -type FibreChannel -ConnectionID 1 -WWPN $FCConnection1Wwpn -UserDefined
 $FCConnection2 = Get-OVNetwork -Type FibreChannel -Name $FCConnection2FibreChannelNetworkName | New-OVServerProfileConnection -type FibreChannel -ConnectionID 2 -WWPN $FCConnection2Wwpn -UserDefined
 $Params = @{
-    
+
     Name               = $DLServerProfileWithUnManagedFCConnectionsName;
-    Description        = 'Testing Creation';                                 
+    Description        = 'Testing Creation';
     BootMode           = 'UEFI';
     ServerHardwareType = (Get-OVServerHardwareType -Name 'DL360 Gen9 1' -ErrorAction Stop);
     AssignmentType     = 'Unassigned';
     Connections        = $FCConnection1, $FCConnection2
 }
-    
+
 New-OVServerProfile -Confirm:$False @Params | Wait-OVTaskComplete
 ```
 
 Create a server profile with unmanaged Fibre Channel connections.
 
-###  Example 11 
+###  Example 11
 
 ```text
 New-OVServerProfile -import -file C:\profiles\ServerProfile1.json
@@ -380,7 +380,7 @@ New-OVServerProfile -import -file C:\profiles\ServerProfile1.json
 
 Basic Server Profile import.
 
-###  Example 12 
+###  Example 12
 
 ```text
 (Get-Content C:\profiles\ServerProfile1.json) -join "`n" | New-OVServerProfile -import
@@ -388,7 +388,7 @@ Basic Server Profile import.
 
 Read the contents from ServerProfile1.json, join each line into a single object, and pipe to New-OVServerProfile to import.
 
-###  Example 13 
+###  Example 13
 
 ```text
 $jsonProfiles = Get-ChildItem C:\profiles\*.json
@@ -553,7 +553,7 @@ Firmware baseline to assign.  Can be either Baseline Name or URI.
 
 Specify the Firmware Baseline Policy mode.  Avialable options are:
 
-    * FirmwareOnly - Updates the system firmware without powering down the server hardware using using HP Smart Update Tools. 
+    * FirmwareOnly - Updates the system firmware without powering down the server hardware using using HP Smart Update Tools.
     * FirmwareAndSoftware - Updates the firmware and OS drivers without powering down the server hardware using HP Smart Update Tools.
     * FirmwareOffline - Manages the firmware through HPE OneView. Selecting this option requires the server hardware to be powered down.
 
@@ -619,7 +619,7 @@ Enable BIOS Settings Management.  Cannot be enabled with Server Hardware Type do
 
 ### -BiosSettings &lt;Array&gt;
 
-BIOS Settings that are to be managed.  You can get the BIOS settings available from Get-OVServerHarwareType and the returned biosSettings property.
+BIOS Settings that are to be managed.  You can get the BIOS settings available from Get-OVServerHardwareType and the returned biosSettings property.
 
 | Aliases | None |
 | :--- | :--- |
@@ -643,7 +643,7 @@ Sets the boot mode as one of the following:
 If you select UEFI or UEFI optimized for an HP ProLiant DL Gen9 rack mount server, the remaining boot setting available is the PXE boot policy.
 
 For the UEFI or UEFI optimized boot mode options, the boot mode choice should be based on the expected OS and required boot features for the server hardware. UEFI optimized boot mode reduces the time the system spends in POST (Video driver initialization). In order to select the appropriate boot mode, consider the following:
-    
+
     * If a secure boot is required, the boot mode must be set to UEFI or UEFI optimized .
     * For operating systems that do not support UEFI (such as DOS, or older versions of Windows and Linux), the boot mode must be set to BIOS.
     * When booting in UEFI mode, Windows 7, Server 2008, or 2008 R2 should not be set to UEFIOptimized.
@@ -699,7 +699,7 @@ Default: $True
 ### -BootOrder &lt;Array&gt;
 
 Boot Order settings to be managed.
-          
+
 Defines the order in which boot will be attempted on the available devices. For Gen7 and Gen8 server hardware the possible values are "CD", "Floppy", "USB", "HardDisk", and "PXE". For Gen9 BL server hardware in Legacy BIOS boot mode, the possible values are "CD", "USB", "HardDisk", and "PXE". For Gen9 BL server hardware in UEFI or UEFI Optimized boot mode, only one value is allowed and must be either "HardDisk" or "PXE". For Gen9 DL server hardware in Legacy BIOS boot mode, the possible values are "CD", "USB", "HardDisk", and "PXE". For Gen9 DL server hardware in UEFI or UEFI Optimized boot mode, boot order configuration is not supported.
 
 Gen7/8 BIOS Default Boot Order: "CD","Floppy","USB","HardDisk","PXE"
@@ -1035,7 +1035,7 @@ The CHAP challange secret.  Accepts ASCII or HEX values.  If providing an ASCII 
 ### -MutualChapSecret &lt;System.Security.SecureString&gt;
 
 Parameter is required when creating a Server Profile, specifying a ServerProfileTemplate parameter value, and a Connection iSCSI Authentication Protocol is set to MutualChap.
-    
+
 The Mutual CHAP challange secret.  Accepts ASCII or HEX values.  If providing an ASCII secret value, the length must be bewteen 12 and 16 characters.  If HEX, it must start with 0x and with 24-32 characters.
 
 | Aliases | None |

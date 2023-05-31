@@ -443,7 +443,7 @@ servers.)
 
 ### -BiosSettings &lt;Array&gt;
 
-BIOS Settings that are to be managed.  You can get the BIOS settings available from Get-OVServerHarwareType and the returned biosSettings property.
+BIOS Settings that are to be managed.  You can get the BIOS settings available from Get-OVServerHardwareType and the returned biosSettings property.
 
 | Aliases | None |
 | :--- | :--- |
