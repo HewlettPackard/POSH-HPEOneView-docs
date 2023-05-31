@@ -83,11 +83,11 @@ Reset the appliance device in bay 1 by performing an EFuse.
 
 ## Parameters
 
-### -Enclosure &lt;Object&gt;
+### -InputObject &lt;Object&gt;
 
 The Synergy Frame resource from Get-OVEnclosure.
 
-| Aliases | None |
+| Aliases | Enclosure |
 | :--- | :--- |
 | Required? | True |
 | Position? | Named |
@@ -196,18 +196,6 @@ Default Value: ${Global:ConnectSessions}
 | Position? | Named |
 | Default value |  |
 | Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
-### -InputObject &lt;Object&gt;
-
-
-
-| Aliases | Enclosure |
-| :--- | :--- |
-| Required? | True |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | true (ByValue) |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

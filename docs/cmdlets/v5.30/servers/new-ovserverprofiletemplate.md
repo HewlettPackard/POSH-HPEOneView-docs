@@ -124,20 +124,20 @@ A Server Profile Template includes:
     * Physical or virtual UUIDs, MAC addresses, and WWN addresses
 
 When you create a server profile template, it is designated for a server hardware type and enclosure group (for server blades).
-    
+
 To figure out BIOS Settings to override or set within the Server Profile, you will need to get the Server Hardware Type resource that your are modeling the Server Profile for.  When retrieving the resource:
-    
+
 $bl460cgen9sht = Get-OVServerHardwareType "BL460c Gen9 1"
-    
+
 The "biosSettings" Array property will be available (only with supported Server Hardware Types; i.e. BL460c Gen8 or newer).  To locate potential BIOS Settings, you can use the following code as an example:
-    
+
 $biosSettings = $bl460cgen9sht.biosSettings | ? { $_.name -match "power" }
-    
+
 The code example above will return all matching BIOS Settings where the name contains "power".  The found BIOS settings object(s) are then saved into $biosSettings.  Update the "value" property accordingly, and you can then pass $biosSettings variable to the -biosSettings parameter.
 
 ## Examples
 
-###  Example 1 
+###  Example 1
 
 ```text
 $Name = "HP ProLiant BL460 Gen9 Profile Template"
@@ -160,7 +160,7 @@ New-OVServerProfileTemplate @params | Wait-OVTaskComplete
 
 Create a BL Gen8 Server Profile template, and pipe to Wait-OVTaskComplete.
 
-###  Example 2 
+###  Example 2
 
 ```text
 $net41 = Get-OVNetwork -Name "Net-41"
@@ -173,7 +173,7 @@ $task = New-OVServerProfileTemplate -name $Name -serverHardwareType "bl460c Gen8
 
 Create a server profile template which includes networks "Net-41" and "Net-42".
 
-###  Example 3 
+###  Example 3
 
 ```text
 $profileName = "Hypervisor Cluster Node Template v1.0"
@@ -191,7 +191,7 @@ $task = New-OVServerProfileTemplate -name $profileName -connections $conList -sh
 
 Create a new Server Profile template with 6 Connections, 4 Ethernet (including Network Sets) and 2 Fibre Channel (with BfS configured).
 
-###  Example 4 
+###  Example 4
 
 ```text
 $profileName = "SQL DB Cluster Node Template v1.0"
@@ -205,7 +205,7 @@ $con1 = Get-OVNetwork -Name "Net 41-A" | New-OVServerProfileConnection -connecti
 $con2 = Get-OVNetwork -Name "Net 41-B" | New-OVServerProfileConnection -connectionId 2
 $con3 = Get-OVNetwork -Name "fabric a"  | New-OVServerProfileConnection -id 3 -type FibreChannel -bootable -priority Primary -arrayWWPn "21:11:00:02:AC:00:72:03" -LUN 0
 $con4 = Get-OVNetwork -Name "fabric b"  | New-OVServerProfileConnection -id 4 -type FibreChannel -bootable -priority Secondary -arrayWWPn "22:12:00:02:AC:00:72:03" -LUN 0
-$LogicalDisk = New-OVServerProfileLogicalDisk -Name "My Local Disk" -RAID RAID1 -NumberofDrives 2 -DiskType SasSsd 
+$LogicalDisk = New-OVServerProfileLogicalDisk -Name "My Local Disk" -RAID RAID1 -NumberofDrives 2 -DiskType SasSsd
 $volume1 = Get-OVStorageVolume SharedVolume1  | New-OVServerProfileAttachVolume
 $params = @{
 >>    name                = $profileName;
@@ -223,7 +223,7 @@ $params = @{
 >>    Ostype              = "Win2k12";
 >>    StorageVolume       = $volume1;
 }
->>    
+>>
 New-OVServerProfileTemplate @params | Wait-OVTaskComplete
 ```
 
@@ -284,7 +284,7 @@ Use this parameter to specify if Connections should be tracked from the Server P
 The network connections that are to be part of this new server profile.  This an array of profile connection objects which may be created with "New-OVServerProfileConnection".
 
 Expected Connection Format:
-                    
+
 `[System.Collections.ArrayList` ] @(
     [PsCustomObject]@{
         `[System.Int]`id                     - Connection ID. Valid 1-64. A 0 value is allowed,
@@ -307,7 +307,7 @@ Expected Connection Format:
                     @(
                         `[System.String]`arrayWwpn - Target WWPN of storage array.
                         `[System.String]`lun       - Boot LUN ID
-                                        
+
                     )
             }
         `[System.String]`macType - Allowed values:
@@ -386,7 +386,7 @@ Firmware baseline to assign.  Can be either Baseline Name or URI.
 
 Specify the Firmware Baseline Policy mode.  Avialable options are:
 
-    * FirmwareOnly - Updates the system firmware without powering down the server hardware using using HP Smart Update Tools. 
+    * FirmwareOnly - Updates the system firmware without powering down the server hardware using using HP Smart Update Tools.
     * FirmwareAndSoftware - Updates the firmware and OS drivers without powering down the server hardware using HP Smart Update Tools.
     * FirmwareOffline - Manages the firmware through HPE OneView. Selecting this option requires the server hardware to be powered down.
 
@@ -428,7 +428,7 @@ Specify the firmware activation policy.  Avialable options are:
 
 ### -Bios &lt;SwitchParameter&gt;
 
-Enable BIOS Settings Management.  Cannot be enabled with Server Hardware Type does not support BIOS Management (i.e. BL G7 
+Enable BIOS Settings Management.  Cannot be enabled with Server Hardware Type does not support BIOS Management (i.e. BL G7
 servers.)
 
 | Aliases | None |
@@ -441,7 +441,7 @@ servers.)
 
 ### -BiosSettings &lt;Array&gt;
 
-BIOS Settings that are to be managed.  You can get the BIOS settings available from Get-OVServerHarwareType and the returned biosSettings property.
+BIOS Settings that are to be managed.  You can get the BIOS settings available from Get-OVServerHardwareType and the returned biosSettings property.
 
 | Aliases | None |
 | :--- | :--- |
@@ -465,7 +465,7 @@ Sets the boot mode as one of the following:
 If you select UEFI or UEFI optimized for an HP ProLiant DL Gen9 rack mount server, the remaining boot setting available is the PXE boot policy.
 
 For the UEFI or UEFI optimized boot mode options, the boot mode choice should be based on the expected OS and required boot features for the server hardware. UEFI optimized boot mode reduces the time the system spends in POST (Video driver initialization). In order to select the appropriate boot mode, consider the following:
-    
+
     * If a secure boot is required, the boot mode must be set to UEFI or UEFI optimized .
     * For operating systems that do not support UEFI (such as DOS, or older versions of Windows and Linux), the boot mode must be set to BIOS.
     * When booting in UEFI mode, Windows 7, Server 2008, or 2008 R2 should not be set to UEFIOptimized.
@@ -533,7 +533,7 @@ Default: $True
 ### -BootOrder &lt;Array&gt;
 
 Boot Order settings to be managed.
-          
+
 Defines the order in which boot will be attempted on the available devices. For Gen7 and Gen8 server hardware the possible values are "CD", "Floppy", "USB", "HardDisk", and "PXE". For Gen9 BL server hardware in Legacy BIOS boot mode, the possible values are "CD", "USB", "HardDisk", and "PXE". For Gen9 BL server hardware in UEFI or UEFI Optimized boot mode, only one value is allowed and must be either "HardDisk" or "PXE". For Gen9 DL server hardware in Legacy BIOS boot mode, the possible values are "CD", "USB", "HardDisk", and "PXE". For Gen9 DL server hardware in UEFI or UEFI Optimized boot mode, boot order configuration is not supported.
 
 Gen7/8 BIOS Default Boot Order: "CD","Floppy","USB","HardDisk","PXE"
@@ -838,7 +838,7 @@ Use this parameter to return the modified Server Profile Template object.  In or
 
 ### -IscsiInitiatorNameAssignmet &lt;String&gt;
 
-Specify if the iSCSI initiator name should be automatically managed and assigned, or a custom value  should be used.  Allowed values:     * Virtual     * UserDefined 
+Specify if the iSCSI initiator name should be automatically managed and assigned, or a custom value  should be used.  Allowed values:     * Virtual     * UserDefined
 Default Value: Virtual
 
 | Aliases | None |

@@ -14,7 +14,7 @@ New-OVRemoteSupportContact
     [-PrimaryPhone] <String>
     [-AlternatePhone <String>]
     [-Language <String>]
-    [-Notes <String>]
+    [-SpecialInstructions <string>]
     [-Default]
     [-DefaultSecondary]
     [-ApplianceConnection <Object>]
@@ -109,18 +109,6 @@ The contacts primary spoken language.
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
-### -Notes &lt;String&gt;
-
-The contacts special instructions.
-
-| Aliases | None |
-| :--- | :--- |
-| Required? | False |
-| Position? | Named |
-| Default value |  |
-| Accept pipeline input? | false |
-| Accept wildcard characters? | False |
-
 ### -Default &lt;SwitchParameter&gt;
 
 Use to specify if this contact is the Default.
@@ -150,6 +138,18 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 Use to indicate if the specified contact should be the appliance default secondary contact.
 
 | Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -SpecialInstructions &lt;string&gt;
+
+The contacts special instructions.
+
+| Aliases | Notes |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |

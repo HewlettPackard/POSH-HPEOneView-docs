@@ -14,7 +14,7 @@ New-OVRemoteSupportContact
     [-PrimaryPhone] <String>
     [-AlternatePhone <String>]
     [-Language <String>]
-    [-Notes <String>]
+    [-SpecialInstructions <String>]
     [-Default]
     [-DefaultSecondary]
     [-ApplianceConnection <Object>]
@@ -109,11 +109,11 @@ The contacts primary spoken language.
 | Accept pipeline input? | False |
 | Accept wildcard characters? | False |
 
-### -Notes &lt;String&gt;
+### -SpecialInstructions &lt;String&gt;
 
 The contacts special instructions.
 
-| Aliases | None |
+| Aliases | Notes |
 | :--- | :--- |
 | Required? | False |
 | Position? | Named |

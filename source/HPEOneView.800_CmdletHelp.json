@@ -28328,16 +28328,6 @@
             "Required": false
           },
           {
-            "Name": "Notes",
-            "Description": "The contacts special instructions.",
-            "DefaultValue": null,
-            "Aliases": "None",
-            "PipelineInput": "false",
-            "SupportsWildcard": false,
-            "DataType": "String",
-            "Required": false
-          },
-          {
             "Name": "Default",
             "Description": "Use to specify if this contact is the Default.",
             "DefaultValue": null,
@@ -28366,6 +28356,16 @@
             "SupportsWildcard": false,
             "DataType": "SwitchParameter",
             "Required": false
+          },
+          {
+            "Name": "SpecialInstructions",
+            "Description": "The contacts special instructions.",
+            "DataType": "string",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "Notes",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -28428,7 +28428,7 @@
               "Required": false
             },
             {
-              "Name": "Notes",
+              "Name": "SpecialInstructions",
               "Required": false
             },
             {
@@ -29062,7 +29062,7 @@
           },
           {
             "Name": "BiosSettings",
-            "Description": "BIOS Settings that are to be managed.  You can get the BIOS settings available from Get-OVServerHarwareType and the returned biosSettings property.",
+            "Description": "BIOS Settings that are to be managed.  You can get the BIOS settings available from Get-OVServerHardwareType and the returned biosSettings property.",
             "DefaultValue": "@()",
             "Aliases": "None",
             "PipelineInput": "false",
@@ -32226,7 +32226,7 @@
           },
           {
             "Name": "BiosSettings",
-            "Description": "BIOS Settings that are to be managed.  You can get the BIOS settings available from Get-OVServerHarwareType and the returned biosSettings property.",
+            "Description": "BIOS Settings that are to be managed.  You can get the BIOS settings available from Get-OVServerHardwareType and the returned biosSettings property.",
             "DefaultValue": "@()",
             "Aliases": "None",
             "PipelineInput": "false",
@@ -42496,10 +42496,10 @@
         "Description": "This Cmdlet will assist server administrators in performing various power operations with HPE Synergy enclosure resources.  The following resources are supported with their supported operation:\n\n    * HPE Synergy Appliance Bay - EFuse\n    * HPE Synergy Frame Link Module - EFuse or Reset\n    * Device Bay - EFuse or Reset\n    * HPE Synergy Fabric Module Device - EFuse\n\nE-Fuse stands for Electronic Fuse. Setting the power state of a device to \"E-Fuse\" (or \"Reset\" for an Enclosure Manager) will reset the bay, but it will soon return to a normal running state.  An E-Fuse will turn off power to the bay and then turn it back on. If the bay was powered off before the E-Fuse operation it will be powered on afterwards. A \"Reset\" will do a hard reset of the bay without affecting the power. E-Fuse on a device bay will power-cycle the whole blade including the iLO. \n\nA reset on the active Synergy Frame Link Module causes a failover to the standby Synergy Frame Link Module. The reset will fail if the Synergy Frame Link Module's firmware is being updated. An E-Fuse against an active Synergy Frame Link Module is not allowed.\n\nMinimum required privileges: Infrastructure administrator, Server administrator",
         "Parameters": [
           {
-            "Name": "Enclosure",
+            "Name": "InputObject",
             "Description": "The Synergy Frame resource from Get-OVEnclosure.",
             "DefaultValue": "",
-            "Aliases": "None",
+            "Aliases": "Enclosure",
             "PipelineInput": "true (ByValue)",
             "SupportsWildcard": false,
             "DataType": "Object",
@@ -42584,16 +42584,6 @@
             "SupportsWildcard": false,
             "DataType": "SwitchParameter",
             "Required": false
-          },
-          {
-            "Name": "InputObject",
-            "Description": "",
-            "DataType": "Object",
-            "Required": true,
-            "DefaultValue": "",
-            "Aliases": "Enclosure",
-            "PipelineInput": "true (ByValue)",
-            "SupportsWildcard": false
           }
         ],
         "InputTypes": [

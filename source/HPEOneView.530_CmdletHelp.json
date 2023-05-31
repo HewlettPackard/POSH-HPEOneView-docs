@@ -29007,7 +29007,7 @@
           },
           {
             "Name": "BiosSettings",
-            "Description": "BIOS Settings that are to be managed.  You can get the BIOS settings available from Get-OVServerHarwareType and the returned biosSettings property.",
+            "Description": "BIOS Settings that are to be managed.  You can get the BIOS settings available from Get-OVServerHardwareType and the returned biosSettings property.",
             "DefaultValue": "@()",
             "Aliases": "None",
             "PipelineInput": "false",
@@ -32135,7 +32135,7 @@
           },
           {
             "Name": "BiosSettings",
-            "Description": "BIOS Settings that are to be managed.  You can get the BIOS settings available from Get-OVServerHarwareType and the returned biosSettings property.",
+            "Description": "BIOS Settings that are to be managed.  You can get the BIOS settings available from Get-OVServerHardwareType and the returned biosSettings property.",
             "DefaultValue": "@()",
             "Aliases": "None",
             "PipelineInput": "false",
