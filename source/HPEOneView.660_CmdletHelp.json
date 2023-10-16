@@ -10312,14 +10312,14 @@
         ],
         "InputTypes": [
           {
-              "Value":  "None.  You cannot pipe objects to this cmdlet.",
-              "Text":  null
+            "Value": "None.  You cannot pipe objects to this cmdlet.",
+            "Text": null
           }
         ],
         "ReturnValues": [
           {
-              "Value":  "HPEOneView.Appliance.ApplianceStatus",
-              "Text":  "Appliance status object, contining appliance memory, CPU, network link details, including any resource error status messages.\n"
+            "Value": "HPEOneView.Appliance.ApplianceStatus",
+            "Text": "Appliance status object, contining appliance memory, CPU, network link details, including any resource error status messages.\n"
           }
         ],
         "Examples": [
@@ -51163,137 +51163,249 @@
       }
     },
     {
-      "Name": "Set-OVEnclosureGroup",
-      "Category": "Servers",
-      "Contents": {
-        "Synopsis": "Modify an existing enclosure group policy.",
-        "Description": "An enclosure group is a logical resource that defines a standard configuration for member logical enclosures. Use this Cmdlet to update the configuration policy for a specific enclosure group resource.\n\nMinimum required privileges: Server administrator or Infrastructure administrator",
-        "Parameters": [
-          {
-            "Name": "ApplianceConnection",
-            "Description": "Specify one or more [HPEOneView.Appliance.Connection] object(s) or Name property value(s).",
-            "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
-            "Aliases": "Appliance",
-            "PipelineInput": "true (ByPropertyName)",
-            "SupportsWildcard": false,
-            "DataType": "Object",
-            "Required": false
-          },
-          {
-            "Name": "ConfigurationScript",
-            "Description": "An Onboard Administrator CLI Script. Only applicable for HPE BladeSystem C-Class.",
-            "DefaultValue": "",
-            "Aliases": "None",
-            "PipelineInput": false,
-            "SupportsWildcard": false,
-            "DataType": "String",
-            "Required": true
-          },
-          {
-            "Name": "InputObject",
-            "Description": "An enclosure group resource from Get-OVEnclosureGroup.",
-            "DefaultValue": "",
-            "Aliases": "EnclosureGroup",
-            "PipelineInput": "true (ByValue)",
-            "SupportsWildcard": false,
-            "DataType": "Object",
-            "Required": true
-          },
-          {
-            "Name": "Name",
-            "Description": "Specify a new resource name.",
-            "DefaultValue": "",
-            "Aliases": "None",
-            "PipelineInput": false,
-            "SupportsWildcard": false,
-            "DataType": "String",
-            "Required": true
-          },
-          {
-            "Name": "PowerRedundantMode",
-            "Description": "The Power Redundancy Mode to set when an Enclosure is added to the appliance.\n\nAllowed Values:\n\n    * RedundantPowerFeed - Provides N+N Power Redundancy Configuration\n    * RedundantPowerSupply - Provided N+1 Power Redundancy Configuration",
-            "DefaultValue": "",
-            "Aliases": "None",
-            "PipelineInput": false,
-            "SupportsWildcard": false,
-            "DataType": "String",
-            "Required": true
-          }
-        ],
-        "InputTypes": [
-          {
-            "Value": "HPEOneView.Servers.EnclosureGroup [System.Management.Automation.PSCustomObject]",
-            "Text": "Enclosure group resource from Get-OVEnclosureGroup."
-          }
-        ],
-        "ReturnValues": [
-          {
-            "Value": "HPEOneView.Servers.EnclosureGroup [System.Management.Automation.PSCustomObject]",
-            "Text": "The updated enclosure group resource."
-          }
-        ],
-        "Examples": [
-          {
-            "Title": "-------------------------- EXAMPLE 1 --------------------------",
-            "Code": [
-              "$EnclosureGroup = Get-OVEnclosureGroup -Name ProdEG1 -ErrorAction Stop",
-              "Set-OVEnclosureGroup -InputObject $EnclosureGroup -Name VirtProdEG1"
-            ],
-            "Description": "Change the name of the provided enclosure group resource."
-          },
-          {
-            "Title": "-------------------------- EXAMPLE 2 --------------------------",
-            "Code": [
-              "$UpdatedConfigScript = 'REMOVE USER \"admin\"\nADD USER \"ops\" \"*********\"\nSET USER CONTACT \"ops\" \"MySecretPassword\"\nSET USER FULLNAME \"ops\" \"\"\nSET USER ACCESS \"ops\" OPERATOR\nASSIGN SERVER 1-16 \"ops\"\nENABLE USER \"ops\"\nhponcfg all >> end_marker\n<RIBCL VERSION=\"2.0\">\n<LOGIN USER_LOGIN=\"ops\" PASSWORD=\"passthrough\">\n    <USER_INFO MODE=\"write\">\n        <ADD_USER\n        USER_NAME=\"ops\"\n        USER_LOGIN=\"ops\"\n        PASSWORD=\"Supersecretpassword\">\n            <ADMIN_PRIV value =\"N\"/>\n            <REMOTE_CONS_PRIV value =\"Y\"/>\n            <RESET_SERVER_PRIV value =\"N\"/>\n            <VIRTUAL_MEDIA_PRIV value =\"N\"/>    \n            <CONFIG_ILO_PRIV value=\"Yes\"/>\n        </ADD_USER>\n    </USER_INFO>\n</LOGIN>\n</RIBCL>\nend_marker'",
-              "Get-OVEnclosureGroup -Name EG1 -ErrorAction Stop | Set-OVEnclosureGroup -ConfigurationScript $UpdatedConfigScript"
-            ],
-            "Description": "Update the configuration script of the provided enclosure group."
-          }
-        ],
-        "RelatedLinks": [
-          {
-            "Uri": "",
-            "Text": "Get-OVEnclosureGroup"
-          },
-          {
-            "Uri": "",
-            "Text": "New-OVEnclosureGroup"
-          },
-          {
-            "Uri": "",
-            "Text": "Remove-OVEnclosureGroup"
-          },
-          {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v6.60/servers/set-ovenclosuregroup",
-            "Text": "Online: "
-          }
-        ],
-        "Syntax": [
-          [
+        "Name": "Set-OVEnclosureGroup",
+        "Category": "Servers",
+        "Contents": {
+          "Synopsis": "Modify an existing enclosure group policy.",
+          "Description": "An enclosure group is a logical resource that defines a standard configuration for member logical enclosures. Use this Cmdlet to update the configuration policy for a specific enclosure group resource.\n\nMinimum required privileges: Server administrator or Infrastructure administrator",
+          "Parameters": [
+            {
+              "Name": "ApplianceConnection",
+              "Description": "Specify one or more [HPEOneView.Appliance.Connection] object(s) or Name property value(s).",
+              "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
+              "Aliases": "Appliance",
+              "PipelineInput": "true (ByPropertyName)",
+              "SupportsWildcard": false,
+              "DataType": "Object",
+              "Required": false
+            },
+            {
+              "Name": "ConfigurationScript",
+              "Description": "An Onboard Administrator CLI Script. Only applicable for HPE BladeSystem C-Class.",
+              "DefaultValue": "",
+              "Aliases": "None",
+              "PipelineInput": "false",
+              "SupportsWildcard": false,
+              "DataType": "String",
+              "Required": true
+            },
             {
               "Name": "InputObject",
+              "Description": "An enclosure group resource from Get-OVEnclosureGroup.",
+              "DefaultValue": "",
+              "Aliases": "EnclosureGroup",
+              "PipelineInput": "true (ByValue)",
+              "SupportsWildcard": false,
+              "DataType": "Object",
               "Required": true
             },
             {
               "Name": "Name",
-              "Required": true
-            },
-            {
-              "Name": "ConfigurationScript",
+              "Description": "Specify a new resource name.",
+              "DefaultValue": "",
+              "Aliases": "None",
+              "PipelineInput": "false",
+              "SupportsWildcard": false,
+              "DataType": "String",
               "Required": true
             },
             {
               "Name": "PowerRedundantMode",
+              "Description": "The Power Redundancy Mode to set when an Enclosure is added to the appliance.\n\nAllowed Values:\n\n    * RedundantPowerFeed - Provides N+N Power Redundancy Configuration\n    * RedundantPowerSupply - Provided N+1 Power Redundancy Configuration",
+              "DefaultValue": "",
+              "Aliases": "None",
+              "PipelineInput": "false",
+              "SupportsWildcard": false,
+              "DataType": "String",
               "Required": true
             },
             {
-              "Name": "ApplianceConnection",
+              "Name": "DeploymentNetworkType",
+              "Description": "Specify the Synergy Image Stream deployment network type.  Allowed values:\n\n    * Internal - Deployment network is an internal, managed by the Frame links, which Logical Intercoonect Group must have an ImageStreamer Uplink Set.\n    * External - Deployment network is connected to an External management switch.\n    * None - No deployment network will be configured.\n\nDefault: None",
+              "DefaultValue": "None",
+              "Aliases": "None",
+              "PipelineInput": "false",
+              "SupportsWildcard": false,
+              "DataType": "String",
               "Required": false
+            },
+            {
+              "Name": "DeploymentNetwork",
+              "Description": "The Ethernet Network with the purpose property set to Management.  Must also include DeploymentNetworkType parameter, value must be \"External\", with the Ethernet Network associated with a non-ImageStreamer Uplink Set.",
+              "DefaultValue": null,
+              "Aliases": "None",
+              "PipelineInput": "false",
+              "SupportsWildcard": false,
+              "DataType": "Object",
+              "Required": false
+            },
+            {
+              "Name": "IPv4AddressRange",
+              "Description": "The IPv4 address pool object from Get-OVAddressPoolRange.",
+              "DefaultValue": null,
+              "Aliases": "AddressPool",
+              "PipelineInput": "false",
+              "SupportsWildcard": false,
+              "DataType": "Object",
+              "Required": false
+            },
+            {
+              "Name": "IPv4AddressType",
+              "Description": "Use to specify how the IPv4 Addresses will be assigned to Synergy resources management interface(s).  Allowed values:\n\n    * External -  The IPv4 address is managed externally, static assignment. \n    * DHCP -  The IPv4 address is assigned using DHCP. \n    * AddressPool - The IPv4 address is assigned from a pool of IP addresses specified by the AddressPool parameter, similar to HPE BladeSystem C-Class \"Enclosure Bay IP Addressing\" (aka EBIPA). \n\nDefault: DHCP",
+              "DefaultValue": "DHCP",
+              "Aliases": "None",
+              "PipelineInput": "false",
+              "SupportsWildcard": false,
+              "DataType": "String",
+              "Required": false
+            },
+            {
+              "Name": "IPv6AddressRange",
+              "Description": "The IPv6 address pool object from Get-OVAddressPoolRange.",
+              "DefaultValue": "",
+              "Aliases": "None",
+              "PipelineInput": "false",
+              "SupportsWildcard": false,
+              "DataType": "Object",
+              "Required": false
+            },
+            {
+              "Name": "IPv6AddressType",
+              "Description": "Use to specify how the IPv6 Addresses will be assigned to Synergy resources management interface(s).  Allowed values:\n\n    * External -  The IPv4 address is managed externally, static assignment. \n    * DHCP -  The IPv4 address is assigned using DHCP. \n    * AddressPool - The IPv4 address is assigned from a pool of IP addresses specified by the AddressPool parameter, similar to HPE BladeSystem C-Class \"Enclosure Bay IP Addressing\" (aka EBIPA). \n\nDefault: None",
+              "DefaultValue": "",
+              "Aliases": "None",
+              "PipelineInput": "false",
+              "SupportsWildcard": false,
+              "DataType": "String",
+              "Required": false
+            },
+            {
+              "Name": "LogicalInterconnectGroupMapping",
+              "Description": "An Enclosure Group can reference multiple Logical Interconnect Groups, once per Interconnect Bay.  If a Single Logical Interconnect Group object is provided (either via parameter variable or via Pipeline), the Logical Interconnect Group objects Logical Interconnect Bay configuration will be used.\n\nTo specify a specific C-Class Logical Interconnect Group(s) for one or more Interconnect Bays, use a Hashtable, with the Bay ID as the Key, and Logical Interconnect Group Name, URI or Object as the Value.  Example:\n\n$LogicalInterConnectGroupMapping = @{ 1 = \"MyLIg1\"; 2 = \"MyLig1\"; 5 = \"OtherLIG\"; 6 = \"OtherLIG\"}\n\n$MyLig1 = Get-OVLogicalInterconnectGroup -Name MyLig1\n$OtherLIG = Get-OVLogicalInterconnectGroup OtherLIG\n$LogicalInterConnectGroupMapping = @{ 1 = $MyLig1; 2 = $MyLig1; 5 = $OtherLIG; 6 = $OtherLIG\"\n\nWhen attempting to define a Syenrgy-based Enclosure Group, either an Array or Hashtable is allowed.  If an Array of Logical Interconnect Groups are provided, the Cmdlet will determine the Interconnect placement automatically. Example:\n\n$MySynergyLig1 = Get-OVLogicalInterconnectGroup -Name MySynergyLig1\n$LogicalInterConnectGroupMapping = $MySynergyLig1\n#or\n$MySynergyLig1 = Get-OVLogicalInterconnectGroup -Name MySynergyLig1\n$MySynergyLig2 = Get-OVLogicalInterconnectGroup -Name MySynergyLig2\n$LogicalInterConnectGroupMapping = $MySynergyLig1,$MySynergyLig2\n\n\nDo know that SAS and VC FC LIGs are bound to a single frame, and will not reference other Frames if FrameCount is greater than 1.\n\nUse a Hashtable to bind specific LIGs to specific Frames.  The Interconnect placement will be determined automatically based on either the Hashtable Key name \"Frame#\" (where # is the numerical value of the Frame) or Enclosure Index value (depending if a SAS or Synergy VC FC LIG).  Example:\n\n$3FrameVCLIG = Get-OVLogicalInterconnectGroup -Name \"My MultiFrame Synergy LIG 1\"\n$SasLIG = Get-OVLogicalInterconnectGroup -Name \"My Synergy Sas LIG 1\"\n$LogicalInterconnectGroupMapping = @{Frame1 = $3FrameVCLIG,$SasLIG; Frame2 = $3FrameVCLIG,$SasLIG; Frame3 = $3FrameVCLIG }",
+              "DefaultValue": null,
+              "Aliases": "LogicalInterconnectGroupUri, LogicalInterconnectGroup",
+              "PipelineInput": "true (ByValue)",
+              "SupportsWildcard": false,
+              "DataType": "Object",
+              "Required": true
             }
+          ],
+          "InputTypes": [
+            {
+              "Value": "HPEOneView.Servers.EnclosureGroup [System.Management.Automation.PSCustomObject]",
+              "Text": "Enclosure group resource from Get-OVEnclosureGroup."
+            }
+          ],
+          "ReturnValues": [
+            {
+              "Value": "HPEOneView.Servers.EnclosureGroup [System.Management.Automation.PSCustomObject]",
+              "Text": "The updated enclosure group resource."
+            }
+          ],
+          "Examples": [
+            {
+              "Title": "-------------------------- EXAMPLE 1 --------------------------",
+              "Code": [
+                "$EnclosureGroup = Get-OVEnclosureGroup -Name ProdEG1 -ErrorAction Stop",
+                "Set-OVEnclosureGroup -InputObject $EnclosureGroup -Name VirtProdEG1"
+              ],
+              "Description": "Change the name of the provided enclosure group resource."
+            },
+            {
+              "Title": "-------------------------- EXAMPLE 2 --------------------------",
+              "Code": [
+                "$UpdatedConfigScript = 'REMOVE USER \"admin\"\nADD USER \"ops\" \"*********\"\nSET USER CONTACT \"ops\" \"MySecretPassword\"\nSET USER FULLNAME \"ops\" \"\"\nSET USER ACCESS \"ops\" OPERATOR\nASSIGN SERVER 1-16 \"ops\"\nENABLE USER \"ops\"\nhponcfg all >> end_marker\n<RIBCL VERSION=\"2.0\">\n<LOGIN USER_LOGIN=\"ops\" PASSWORD=\"passthrough\">\n    <USER_INFO MODE=\"write\">\n        <ADD_USER\n        USER_NAME=\"ops\"\n        USER_LOGIN=\"ops\"\n        PASSWORD=\"Supersecretpassword\">\n            <ADMIN_PRIV value =\"N\"/>\n            <REMOTE_CONS_PRIV value =\"Y\"/>\n            <RESET_SERVER_PRIV value =\"N\"/>\n            <VIRTUAL_MEDIA_PRIV value =\"N\"/>    \n            <CONFIG_ILO_PRIV value=\"Yes\"/>\n        </ADD_USER>\n    </USER_INFO>\n</LOGIN>\n</RIBCL>\nend_marker'",
+                "Get-OVEnclosureGroup -Name EG1 -ErrorAction Stop | Set-OVEnclosureGroup -ConfigurationScript $UpdatedConfigScript"
+              ],
+              "Description": "Update the configuration script of the provided enclosure group."
+            }
+          ],
+          "RelatedLinks": [
+            {
+              "Uri": "",
+              "Text": "Get-OVEnclosureGroup"
+            },
+            {
+              "Uri": "",
+              "Text": "New-OVEnclosureGroup"
+            },
+            {
+              "Uri": "",
+              "Text": "Remove-OVEnclosureGroup"
+            },
+            {
+              "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v6.60/servers/set-ovenclosuregroup",
+              "Text": "Online: "
+            }
+          ],
+          "Syntax": [
+            [
+              {
+                "Name": "InputObject",
+                "Required": true
+              },
+              {
+                "Name": "Name",
+                "Required": false
+              },
+              {
+                "Name": "ConfigurationScript",
+                "Required": false
+              },
+              {
+                "Name": "LogicalInterconnectGroupMapping",
+                "Required": false
+              },
+              {
+                "Name": "ApplianceConnection",
+                "Required": false
+              }
+            ],
+            [
+              {
+                "Name": "InputObject",
+                "Required": true
+              },
+              {
+                "Name": "LogicalInterconnectGroupMapping",
+                "Required": false
+              },
+              {
+                "Name": "PowerRedundantMode",
+                "Required": false
+              },
+              {
+                "Name": "IPv4AddressType",
+                "Required": false
+              },
+              {
+                "Name": "IPv4AddressRange",
+                "Required": false
+              },
+              {
+                "Name": "IPv6AddressType",
+                "Required": false
+              },
+              {
+                "Name": "IPv6AddressRange",
+                "Required": false
+              },
+              {
+                "Name": "DeploymentNetworkType",
+                "Required": false
+              },
+              {
+                "Name": "DeploymentNetwork",
+                "Required": false
+              },
+              {
+                "Name": "ApplianceConnection",
+                "Required": false
+              }
+            ]
           ]
-        ]
-      }
-    },
+        }
+      },
     {
       "Name": "Set-OVEulaStatus",
       "Category": "Appliance",
@@ -53403,6 +53515,243 @@
               "Required": false
             }
           ]
+        ]
+      }
+    },
+    {
+      "Name": "Set-OVRack",
+      "Category": "Facilities",
+      "Contents": {
+        "Synopsis": "Modify an existing rack resource.",
+        "Description": "A rack is a physical structure that contains IT equipment such as enclosures, servers, power delivery devices, and unmanaged devices (an unmanaged device uses slots in the rack and consumes power or exhausts heat, but it is not managed by the appliance). You can manage your racks and the equipment in them by adding them to the appliance. Having your racks managed by the appliance enables you to use the appliance for space and power planning. The appliance also gathers statistical data and monitors the power and temperature of the racks it manages.\n\nWhen you add an enclosure to the appliance, it automatically creates a rack and places the enclosure in it. The appliance places into the rack all enclosures connected by management link cables. When enclosures are added, the appliance places them in the rack from top to bottom. When an enclosure is placed in an Intelligent Series Rack, the enclosure slots are automatically detected. For other racks, to accurately depict the layout of your enclosures within the rack you must edit the rack to place the enclosure in the proper slots.\n\nYou can use the appliance to view and manage your rack configuration and power delivery topology. You can specify the physical dimensions of the rack (width, height, and depth), the number of U slots, and the location of each piece of equipment in the rack. You can specify the rack PDUs that provide power to the rack, and their physical position in the rack or on either side. You can also describe how the devices in the rack are connected to those PDUs.\n\nThe appliance automatically discovers the rack height and rack model for a ProLiant server with Location Discovery Services and updates the physical locations of devices when they are relocated within and between racks for c7000 enclosures.\n\nThis Cmdlet will update existing rack resources with updated properties.  This includes updating the name, part number, serial number, model, supported thermal capacity, rack dimensions including rack units, height, width and depth.\n\nMinimum required privileges: Infrastructure administrator or Server administrator",
+        "Syntax": [
+          [
+            {
+              "Name": "InputObject",
+              "Required": true
+            },
+            {
+              "Name": "Name",
+              "Required": false
+            },
+            {
+              "Name": "ThermalLimit",
+              "Required": false
+            },
+            {
+              "Name": "SerialNumber",
+              "Required": false
+            },
+            {
+              "Name": "PartNumber",
+              "Required": false
+            },
+            {
+              "Name": "Model",
+              "Required": false
+            },
+            {
+              "Name": "Depth",
+              "Required": false
+            },
+            {
+              "Name": "Height",
+              "Required": false
+            },
+            {
+              "Name": "UHeight",
+              "Required": false
+            },
+            {
+              "Name": "Width",
+              "Required": false
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ]
+        ],
+        "Parameters": [
+          {
+            "Name": "ApplianceConnection",
+            "Description": "Specify one or more HPEOneView.Appliance.Connection object(s) or Name property value(s).\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
+            "DataType": "Object",
+            "Required": false,
+            "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
+            "Aliases": "Appliance",
+            "PipelineInput": "true (ByPropertyName)",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Depth",
+            "Description": "Rack depth, in millimeters.",
+            "DataType": "int",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Height",
+            "Description": "Height of rack, in millimeters.",
+            "DataType": "int",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "InputObject",
+            "Description": "The rack object from Get-OVRack.",
+            "DataType": "Object",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "true (ByValue)",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Model",
+            "Description": "Provide the model of the rack to add.",
+            "DataType": "string",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Name",
+            "Description": "Name of resource.",
+            "DataType": "string",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "PartNumber",
+            "Description": "Part number of the rack resource.",
+            "DataType": "string",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "SerialNumber",
+            "Description": "Serial number of the rack resource.",
+            "DataType": "string",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "ThermalLimit",
+            "Description": "Thermal limit supported by the rack, in BTU\"s.",
+            "DataType": "int",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "UHeight",
+            "Description": "The rack unit height of the rack.",
+            "DataType": "int",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "Width",
+            "Description": "Width of rack, in millimeters.",
+            "DataType": "int",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          }
+        ],
+        "InputTypes": [
+          {
+            "Value": "HPEOneView.Facilities.Rack [System.Management.Automation.PSCustomObject]",
+            "Text": "Rack resource from Get-OVRack."
+          }
+        ],
+        "ReturnValues": [
+          {
+            "Value": "HPEOneView.Facilities.Rack [System.Management.Automation.PSCustomObject]",
+            "Text": "Updated rack resource."
+          }
+        ],
+        "Examples": [
+          {
+            "Title": "-------------------------- EXAMPLE 1 --------------------------",
+            "Code": "Get-OVRack -Name Rack-1 | Set-OVRack -ThermalLimit 15000\r\n",
+            "Description": "Update the specific rack resource thermal limit to 15kW."
+          }
+        ],
+        "RelatedLinks": [
+          {
+            "Uri": "",
+            "Text": "Add-OVRackManager"
+          },
+          {
+            "Uri": "",
+            "Text": "Add-OVRackToDataCenter"
+          },
+          {
+            "Uri": "",
+            "Text": "Get-OVRack"
+          },
+          {
+            "Uri": "",
+            "Text": "Get-OVRackManager"
+          },
+          {
+            "Uri": "",
+            "Text": "Get-OVRackMember"
+          },
+          {
+            "Uri": "",
+            "Text": "New-OVRack"
+          },
+          {
+            "Uri": "",
+            "Text": "Remove-OVRack"
+          },
+          {
+            "Uri": "",
+            "Text": "Remove-OVRackManager"
+          },
+          {
+            "Uri": "",
+            "Text": "Remove-OVRackMember"
+          },
+          {
+            "Uri": "",
+            "Text": "Set-OVRackMemberLocation"
+          },
+          {
+            "Uri": "",
+            "Text": "Update-OVRackManager"
+          },
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v6.60/facilities/set-ovrack",
+            "Text": "Online: "
+          }
         ]
       }
     },
@@ -63459,243 +63808,6 @@
               "Required": false
             }
           ]
-        ]
-      }
-    },
-    {
-      "Name": "Set-OVRack",
-      "Category": "Facilities",
-      "Contents": {
-        "Synopsis": "Modify an existing rack resource.",
-        "Description": "A rack is a physical structure that contains IT equipment such as enclosures, servers, power delivery devices, and unmanaged devices (an unmanaged device uses slots in the rack and consumes power or exhausts heat, but it is not managed by the appliance). You can manage your racks and the equipment in them by adding them to the appliance. Having your racks managed by the appliance enables you to use the appliance for space and power planning. The appliance also gathers statistical data and monitors the power and temperature of the racks it manages.\n\nWhen you add an enclosure to the appliance, it automatically creates a rack and places the enclosure in it. The appliance places into the rack all enclosures connected by management link cables. When enclosures are added, the appliance places them in the rack from top to bottom. When an enclosure is placed in an Intelligent Series Rack, the enclosure slots are automatically detected. For other racks, to accurately depict the layout of your enclosures within the rack you must edit the rack to place the enclosure in the proper slots.\n\nYou can use the appliance to view and manage your rack configuration and power delivery topology. You can specify the physical dimensions of the rack (width, height, and depth), the number of U slots, and the location of each piece of equipment in the rack. You can specify the rack PDUs that provide power to the rack, and their physical position in the rack or on either side. You can also describe how the devices in the rack are connected to those PDUs.\n\nThe appliance automatically discovers the rack height and rack model for a ProLiant server with Location Discovery Services and updates the physical locations of devices when they are relocated within and between racks for c7000 enclosures.\n\nThis Cmdlet will update existing rack resources with updated properties.  This includes updating the name, part number, serial number, model, supported thermal capacity, rack dimensions including rack units, height, width and depth.\n\nMinimum required privileges: Infrastructure administrator or Server administrator",
-        "Syntax": [
-          [
-            {
-              "Name": "InputObject",
-              "Required": true
-            },
-            {
-              "Name": "Name",
-              "Required": false
-            },
-            {
-              "Name": "ThermalLimit",
-              "Required": false
-            },
-            {
-              "Name": "SerialNumber",
-              "Required": false
-            },
-            {
-              "Name": "PartNumber",
-              "Required": false
-            },
-            {
-              "Name": "Model",
-              "Required": false
-            },
-            {
-              "Name": "Depth",
-              "Required": false
-            },
-            {
-              "Name": "Height",
-              "Required": false
-            },
-            {
-              "Name": "UHeight",
-              "Required": false
-            },
-            {
-              "Name": "Width",
-              "Required": false
-            },
-            {
-              "Name": "ApplianceConnection",
-              "Required": false
-            }
-          ]
-        ],
-        "Parameters": [
-          {
-            "Name": "ApplianceConnection",
-            "Description": "Specify one or more HPEOneView.Appliance.Connection object(s) or Name property value(s).\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
-            "DataType": "Object",
-            "Required": false,
-            "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
-            "Aliases": "Appliance",
-            "PipelineInput": "true (ByPropertyName)",
-            "SupportsWildcard": false
-          },
-          {
-            "Name": "Depth",
-            "Description": "Rack depth, in millimeters.",
-            "DataType": "int",
-            "Required": false,
-            "DefaultValue": "",
-            "Aliases": "None",
-            "PipelineInput": "false",
-            "SupportsWildcard": false
-          },
-          {
-            "Name": "Height",
-            "Description": "Height of rack, in millimeters.",
-            "DataType": "int",
-            "Required": false,
-            "DefaultValue": "",
-            "Aliases": "None",
-            "PipelineInput": "false",
-            "SupportsWildcard": false
-          },
-          {
-            "Name": "InputObject",
-            "Description": "The rack object from Get-OVRack.",
-            "DataType": "Object",
-            "Required": true,
-            "DefaultValue": "",
-            "Aliases": "None",
-            "PipelineInput": "true (ByValue)",
-            "SupportsWildcard": false
-          },
-          {
-            "Name": "Model",
-            "Description": "Provide the model of the rack to add.",
-            "DataType": "string",
-            "Required": false,
-            "DefaultValue": "",
-            "Aliases": "None",
-            "PipelineInput": "false",
-            "SupportsWildcard": false
-          },
-          {
-            "Name": "Name",
-            "Description": "Name of resource.",
-            "DataType": "string",
-            "Required": false,
-            "DefaultValue": "",
-            "Aliases": "None",
-            "PipelineInput": "false",
-            "SupportsWildcard": false
-          },
-          {
-            "Name": "PartNumber",
-            "Description": "Part number of the rack resource.",
-            "DataType": "string",
-            "Required": false,
-            "DefaultValue": "",
-            "Aliases": "None",
-            "PipelineInput": "false",
-            "SupportsWildcard": false
-          },
-          {
-            "Name": "SerialNumber",
-            "Description": "Serial number of the rack resource.",
-            "DataType": "string",
-            "Required": false,
-            "DefaultValue": "",
-            "Aliases": "None",
-            "PipelineInput": "false",
-            "SupportsWildcard": false
-          },
-          {
-            "Name": "ThermalLimit",
-            "Description": "Thermal limit supported by the rack, in BTU\"s.",
-            "DataType": "int",
-            "Required": false,
-            "DefaultValue": "",
-            "Aliases": "None",
-            "PipelineInput": "false",
-            "SupportsWildcard": false
-          },
-          {
-            "Name": "UHeight",
-            "Description": "The rack unit height of the rack.",
-            "DataType": "int",
-            "Required": false,
-            "DefaultValue": "",
-            "Aliases": "None",
-            "PipelineInput": "false",
-            "SupportsWildcard": false
-          },
-          {
-            "Name": "Width",
-            "Description": "Width of rack, in millimeters.",
-            "DataType": "int",
-            "Required": false,
-            "DefaultValue": "",
-            "Aliases": "None",
-            "PipelineInput": "false",
-            "SupportsWildcard": false
-          }
-        ],
-        "InputTypes": [
-          {
-              "Value":  "HPEOneView.Facilities.Rack [System.Management.Automation.PSCustomObject]",
-              "Text":  "Rack resource from Get-OVRack."
-          }
-        ],
-        "ReturnValues": [
-          {
-            "Value":  "HPEOneView.Facilities.Rack [System.Management.Automation.PSCustomObject]",
-            "Text":  "Updated rack resource."
-        }
-        ],
-        "Examples": [
-          {
-            "Title": "-------------------------- EXAMPLE 1 --------------------------",
-            "Code": "Get-OVRack -Name Rack-1 | Set-OVRack -ThermalLimit 15000\r\n",
-            "Description": "Update the specific rack resource thermal limit to 15kW."
-          }
-        ],
-        "RelatedLinks": [
-          {
-            "Uri": "",
-            "Text": "Add-OVRackManager"
-          },
-          {
-            "Uri": "",
-            "Text": "Add-OVRackToDataCenter"
-          },
-          {
-            "Uri": "",
-            "Text": "Get-OVRack"
-          },
-          {
-            "Uri": "",
-            "Text": "Get-OVRackManager"
-          },
-          {
-            "Uri": "",
-            "Text": "Get-OVRackMember"
-          },
-          {
-            "Uri": "",
-            "Text": "New-OVRack"
-          },
-          {
-            "Uri": "",
-            "Text": "Remove-OVRack"
-          },
-          {
-            "Uri": "",
-            "Text": "Remove-OVRackManager"
-          },
-          {
-            "Uri": "",
-            "Text": "Remove-OVRackMember"
-          },
-          {
-            "Uri": "",
-            "Text": "Set-OVRackMemberLocation"
-          },
-          {
-            "Uri": "",
-            "Text": "Update-OVRackManager"
-          },
-          {
-            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v6.60/facilities/set-ovrack",
-            "Text": "Online: "
-          }
         ]
       }
     }

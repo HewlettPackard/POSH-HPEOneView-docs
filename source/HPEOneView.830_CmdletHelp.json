@@ -10505,6 +10505,16 @@
             "SupportsWildcard": false,
             "DataType": "String",
             "Required": false
+          },
+          {
+            "Name": "Passthru",
+            "Description": "When you use the PassThru parameter, Get-OVCommandTrace returns the processed output from the provided scriptblock, while still capturing to file.",
+            "DataType": "SwitchParameter",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -10540,6 +10550,10 @@
             },
             {
               "Name": "Location",
+              "Required": false
+            },
+            {
+              "Name": "Passthru",
               "Required": false
             }
           ]
@@ -31616,7 +31630,7 @@
       "Category": "Servers",
       "Contents": {
         "Synopsis": "Create Server Profile Logical Disk object.",
-        "Description": "This helper Cmdlet will create a Logical Disk object to then be assigned to a Server Profile Template or Server Profile using the -LogicalDisk parameter.  The LogicalDisk configuration is supported with the embedded (or Slot 0) HPE SmartArray controller for DL and BL class systems only.",
+        "Description": "Logical drives are capable of being managed by HPE OneView with Server Profile Template and Server Profile resources.  HPE OneView can automatically assign drives based on defined characteristics that must match available drives within the server.  Administrators can also specify specific drives to assign for Server Profiles and Gen10 or newer servers only.\n\nTo identify installed drives, use the Get-OVServerHardwareAvailableController Cmdlet, and provide a server resource with Get-OVServer Cmdlet.  Available controller objects are returned, with a collection of installed drives.\n\nIf you configure new logical drives in your server profile or import the existing logical drives from the server hardware, HPE OneView stores a unique identifier for each logical drive in the server profile configuration when the server profile is applied.\n\nOn subsequent server profile apply operations, HPE OneView checks for the existence of the identifier on the physical drives of the assigned server hardware. If the identifier is missing, the apply operation fails in order to ensure that if the server profile is re-assigned to new server hardware and that the physical drives are inserted correctly.\n\nNOTE:  HPE OneView also uses the logical drive name (label) as a unique identifier.  Do not modify the label of logical drives that are managed by HPE OneView.  Do not create logical drives with non-unique labels.\n\nRAID levels and number of physical drives\n\nThe HPE OneView Support Matrix provides information on the number of drives supported by specific server hardware.\n\n    * RAID 0 - Minimum of 1 drive, increments of 1.\n    * RAID 1 - Requires 2 drives.\n    * RAID 1 ADM - Requires 3 drives.\n    * RAID 10 - Requires 4 drives, increments of 2.\n    * RAID 10 ADM - Minimum of 6 drives, increments of 3.\n    * RAID 5 - Minimum of 3 drives, increments of 1.\n    * RAID 6 - Minimum of 4 drives, increments of 1.\n\nAfter you create a logical drive and apply it to a server hardware, you can no longer modify those logical drives.\n\nNOTE:  For controllers that support mixed mode (Gen10 servers), creating a logical drive uses the physical drives that are currently visible to the operating system. To preserve any data, back up the server drives before creating a logical drive.\n\nOnly for Gen11 servers that contain storage controllers, you can configure logical drives that are related to the following Logical Drive Configurationoptions, using server profiles:\n\n    * IOPerformanceMode\n    * ReadCachePolicy\n    * WriteCachePolicy",
         "Parameters": [
           {
             "Name": "Name",
@@ -31680,7 +31694,7 @@
           },
           {
             "Name": "AvailableDriveType",
-            "Description": "A specific availabe drive type from Get-OVAvailableDriveType.",
+            "Description": "A specific availabe drive type from Get-OVAvailableDriveType.  Parameter applies to HPE Synergy D3940 storage devices.",
             "DefaultValue": null,
             "Aliases": "None",
             "PipelineInput": "true (ByValue)",
@@ -31757,6 +31771,56 @@
             "Aliases": "None",
             "PipelineInput": "false",
             "SupportsWildcard": false
+          },
+          {
+            "Name": "Drives",
+            "Description": "One or more drives to allocate. Use Get-OVServerHardwareAvailableController Cmdlet and examine the Drives attribute within the [HPEOneView.Servers.PhysicalDrive] object.\n\nNOTE: Using this parameter will create a logical drive resource that can only be used with server profile resources.",
+            "DataType": "HPEOneView.Servers.PhysicalDrive[]",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "IOPerformanceMode",
+            "Description": "Controls the logical drive's IO performance mode setting. When enabled, IO operations will bypass the controller cache and read and write cache policy settings will be set to off. A drive technology using SSD is required to enable IO performance mode.\n\nManaged manually: This setting is managed by the user outside OneView.",
+            "DataType": "string",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "ReadCachePolicy",
+            "Description": "Controls the read cache policy.\n\n    * Enabled - Configures Read ahead policy on the controller. A caching technique in which the controller pre-fetches data anticipating future read requests, based on previous cache hits.\n    * Disabled - Disables read caching for this logical drive.\n    * Unmanaged - This setting is not managed by HPE OneView, but can managed by the user outside of the server profile resource.",
+            "DataType": "string",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "SpareDrives",
+            "Description": "One or more drives to allocate. Use Get-OVServerHardwareAvailableController Cmdlet and examine the Drives attribute within the [HPEOneView.Servers.PhysicalDrive] object.",
+            "DataType": "HPEOneView.Servers.PhysicalDrive[]",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "WriteCachePolicy",
+            "Description": "Controls the write cache policy.\n\n    *  Enabled - Configured Protected Write Back poicy on the controller. The completion of a write request is signaled as soon as the data is in cache, and actual writing to non-volatile media is guaranteed to occur at a later time.\n    *  Disabled - Disables write caching for this logical drive.\n    * Unmanaged - This setting is not managed by HPE OneView, but can managed by the user outside of the server profile resource.",
+            "DataType": "string",
+            "Required": false,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -31800,9 +31864,18 @@
             "Title": "-------------------------- EXAMPLE 5 --------------------------",
             "Code": "$JBODLogicalDisk = New-OVServerProfileLogicalDisk -Name \"JBOD1_900GB_SASHDD\" -NumberofDrives 6 -MinDriveSize 900 -DriveType SAS",
             "Description": "Create logical JBOD to then be attached to either a Gen10 Mixed Mode or Gen9 or newer HBA mode controller."
+          },
+          {
+            "Title": "-------------------------- EXAMPLE 6 --------------------------",
+            "Code": "# Get the specific server.  Server must have been powered on at least 1 time to complete POST in order for server inventory to be updated\n$Server = Get-OVServer -Name MyGen11Server\n\n# Get the available controllers and drives from the specific server\n$AvailableControllers = Get-OVServerHardwareAvailableController -InputObject $Server\n\n# Review installed controllers\n$AvailableControllers | ? { -not [String]::IsNullOrEmpty($_.DeviceSlot) }\n\nDeviceSlot           : Slot 1\nFamily               : SmartRAID\nType                 : Standup\nModel                : HPE SR308i-p Gen11\nFirmware             : 5.29-256\nControllerMode       : HPEOneView.Servers.ControllerModes\nRaidModes            : HPEOneView.Servers.RaidModes\nDriveTechnologies    : HPEOneView.Servers.DriveTechnologies\nReadCachePolicy      : HPEOneView.Servers.ReadCachePolicy\nWriteCachePolicy     : HPEOneView.Servers.WriteCachePolicy\nCapabilities         : {RedfishConfig, RedfishDedicatedSpare}\nDrives               : {1I:1:41 147 GB (NvmeSsd), 1I:1:42 147 GB (NvmeSsd), 1I:1:43 147 GB (NvmeSsd), 1I:1:44 147 GB (NvmeSsd)ΓÇª}\nMaximumLogicalDrives : 256\nMaximumDrives        : 256\nApplianceConnection  : MyAppliance\n\n# Review available drives attached to controller in \"Slot 1\"\n($AvailableControllers | ? DeviceSlot -eq \"Slot 1\").Drives\n\nLocation Model       Capacity DriveTechnology IsAllocated FailurePredicted LifeRemaining\n-------- -----       -------- --------------- ----------- ---------------- -------------\n1I:1:41  EH0146FCBVB 147 GB   NvmeSsd         True        False            100%\n1I:1:42  EH0146FCBVB 147 GB   NvmeSsd         True        False            100%\n1I:1:43  EH0146FCBVB 147 GB   NvmeSsd         True        False            100%\n1I:1:44  EH0146FCBVB 147 GB   NvmeSsd         False       False            100%\n1I:1:45  EH0146FCBVB 147 GB   SataHdd         False       False            0%\n1I:1:46  EH0146FCBVB 147 GB   SataHdd         False       False            0%\n1I:1:47  EH0146FCBVB 147 GB   SataHdd         False       False            0%\n1I:1:48  EH0146FCBVB 147 GB   SataHdd         False       False            0%\n1I:1:49  EH0146FCBVB 147 GB   SataHdd         False       False            0%\n1I:1:50  EH0146FCBVB 147 GB   SataSsd         True        False            100%\n1I:1:51  EH0146FCBVB 147 GB   SataSsd         True        False            100%\n1I:1:52  EH0146FCBVB 147 GB   SataSsd         False       False            100%\n\n# Filter out available SataHdd for a 3+1 and spare drive configuration\n$DrivesToAssign = ($AvailableControllers | ? DeviceSlot -eq \"Slot 1\").Drives | ? { $_.DriveTechnology -eq \"SataHdd\" -and -not $_.IsAllocated } | Select -First 5\n\n# Create the logical drive, specifying drives and the spare drive to use (which is the last drive in the collection)\n$LogicalDrive = New-OVServerProfileLogicalDisk -Name RAID5+Spare-DATA -Drives $DrivesToAssign -RAID Raid5 -AddSpareDrive -SpareDrives $DrivesToAssign[-1]",
+            "Description": "Identify available storage controllers and drives, and create a logical disk with specific drives from inventory including spare drive."
           }
         ],
         "RelatedLinks": [
+          {
+            "Uri": "",
+            "Text": "Get-OVServerHardwareAvailableController"
+          },
           {
             "Uri": "",
             "Text": "New-OVServerProfileLogicalDiskController"
@@ -31896,6 +31969,48 @@
               "Name": "Bootable",
               "Required": false
             }
+          ],
+          [
+            {
+              "Name": "Name",
+              "Required": true
+            },
+            {
+              "Name": "Drives",
+              "Required": true
+            },
+            {
+              "Name": "RAID",
+              "Required": false
+            },
+            {
+              "Name": "Accelerator",
+              "Required": false
+            },
+            {
+              "Name": "AddSpareDrive",
+              "Required": false
+            },
+            {
+              "Name": "SpareDrives",
+              "Required": false
+            },
+            {
+              "Name": "Bootable",
+              "Required": false
+            },
+            {
+              "Name": "ReadCachePolicy",
+              "Required": false
+            },
+            {
+              "Name": "WriteCachePolicy",
+              "Required": false
+            },
+            {
+              "Name": "IOPerformanceMode",
+              "Required": false
+            }
           ]
         ]
       }
@@ -31905,11 +32020,11 @@
       "Category": "Servers",
       "Contents": {
         "Synopsis": "Create Server Profile disk controller policy object.",
-        "Description": "This helper Cmdlet will create a Logical Disk controller object to then be assigned to a Server Profile Template or Server Profile using the -LogicalDisk parameter.",
+        "Description": "Storage Controllers can be managed by HPE OneView for various platforms taht are defined within a server profile template or server profile resource.  Administrators can choose to import an existing configuration (to reduce data loss) if local storage controllers already have an existing policy, or to deploy a new policy.  Configuring logical drives, HPE OneView can automatically assign drives based on defined characteristics that must match available drives within the server.  Drives that are already allocated will result in a server profile apply error.  Administrators can also specify specific drives to assign for Server Profiles and Gen10 or newer only.\n\nTo identify installed drives, use the Get-OVServerHardwareAvailableController Cmdlet, and provide a server resource with Get-OVServer Cmdlet.  Available controller objects are returned, with a collection of installed drives.\n\nIf you configure new logical drives in your server profile or import the existing logical drives from the server hardware, HPE OneView stores a unique identifier for each logical drive in the server profile configuration when the server profile is applied.\n\nOn subsequent server profile apply operations, HPE OneView checks for the existence of the identifier on the physical drives of the assigned server hardware. If the identifier is missing, the apply operation fails in order to ensure that if the server profile is re-assigned to new server hardware and that the physical drives are inserted correctly.\n\nNOTE:  HPE OneView also uses the logical drive name (label) as a unique identifier.  Do not modify the label of logical drives that are managed by HPE OneView.  Do not create logical drives with non-unique labels.\n\nRAID levels and number of physical drives\n\nThe HPE OneView Support Matrix provides information on the number of drives supported by specific server hardware.\n\n    * RAID 0 - Minimum of 1 drive, increments of 1.\n    * RAID 1 - Requires 2 drives.\n    * RAID 1 ADM - Requires 3 drives.\n    * RAID 10 - Requires 4 drives, increments of 2.\n    * RAID 10 ADM - Minimum of 6 drives, increments of 3.\n    * RAID 5 - Minimum of 3 drives, increments of 1.\n    * RAID 6 - Minimum of 4 drives, increments of 1.\n\nAfter you create a logical drive and apply it to a server hardware, you can no longer modify those logical drives.\n\nNOTE:  For controllers that support mixed mode (Gen10 servers), creating a logical drive uses the physical drives that are currently visible to the operating system. To preserve any data, back up the server drives before creating a logical drive.\n\nOnly for Gen11 servers that contain storage controllers, you can configure logical drives that are related to the following Logical Drive Configuration options, using server profiles:\n\n    * IOPerformanceMode\n    * ReadCachePolicy\n    * WriteCachePolicy\n",
         "Parameters": [
           {
             "Name": "ControllerID",
-            "Description": "Specify the Controller ID location.  Supported options for this parameter are\n    * Embedded\n    * Mezz1\n    * Mezz2\n    * Mezz3\n    * Slot1\n    * Slot10\n    * Slot11\n    * Slot12\n    * Slot13\n    * Slot14\n    * Slot15\n    * Slot16\n    * Slot2\n    * Slot3\n    * Slot4\n    * Slot5\n    * Slot6\n    * Slot7\n    * Slot8\n    * Slot9\nPlease note that Mezz1, Mezz2 and Mezz3 are only supported with HPE Synergy Compute nodes connected to the HPE Synergy D3940 disk shelf.",
+            "Description": "Specify the Controller ID location.  You can override this using the -InputObject which acceptes an HPEOneView.Servers.StorageController object.  Supported options for this parameter are\n    * Embedded\n    * Mezz1\n    * Mezz2\n    * Mezz3\n    * Slot1\n    * Slot10\n    * Slot11\n    * Slot12\n    * Slot13\n    * Slot14\n    * Slot15\n    * Slot16\n    * Slot2\n    * Slot3\n    * Slot4\n    * Slot5\n    * Slot6\n    * Slot7\n    * Slot8\n    * Slot9\nPlease note that Mezz1, Mezz2 and Mezz3 are only supported with HPE Synergy Compute nodes connected to the HPE Synergy D3940 disk shelf.",
             "DefaultValue": "Embedded",
             "Aliases": "None",
             "PipelineInput": "false",
@@ -31919,7 +32034,7 @@
           },
           {
             "Name": "Mode",
-            "Description": "The mode to configure the Smart Array Controller as.  Accepted values are:\n\n    * HBA\n    * RAID\n\nWhen specifying HBA, you cannot attach a RAID Logical Disk to this policy.",
+            "Description": "The mode to configure the Smart Array Controller as.  Accepted values are:\n\n    * HBA\n    * RAID\n    * Mixed\n\nWhen specifying HBA, you cannot attach a RAID Logical Disk to this policy.\n\nGen11 storage controllers only support Mixed.  Use the Get-OVServerHardwareAvailableController to review the supported modes in the .ControllerMode.Create attribute in the HPEOneView.Servers.StorageController class.",
             "DefaultValue": "RAID",
             "Aliases": "None",
             "PipelineInput": "false",
@@ -31976,6 +32091,26 @@
             "SupportsWildcard": false,
             "DataType": "String",
             "Required": false
+          },
+          {
+            "Name": "InputObject",
+            "Description": "A storage controller object from Get-OVServerHardwareAvailableController.  Use to specify the exact storage controller to configure.",
+            "DataType": "HPEOneView.Servers.StorageController",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "MegaRAIDController",
+            "Description": "By default, SmartRAID (SR) controller objects are created.  Use this parameter to set the controller family to MegaRAID (MR) controller types for when the storage controller object will be attached to a server profile template and you are not using the -InputObject parameter to provide a storage controller.",
+            "DataType": "SwitchParameter",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "false",
+            "SupportsWildcard": false
           }
         ],
         "InputTypes": [
@@ -32023,9 +32158,30 @@
             "Title": "-------------------------- EXAMPLE 5 --------------------------",
             "Code": "$AvailableDriveType = Get-OVSasLogicalInterconnect -Name \"LE1-Default SAS Synergy LIG-3\" -ErrorAction Stop | Get-OVAvailableDriveType  | ? { $_.Type -eq \"SASHDD\" -and $_.capacity -eq 900 }\n$NewLogicalDisk = New-OVServerProfileLogicalDisk -Name \"LD1_RAID5_900GB_SASHDD\" -DriveSelectionBy DriveType -NumberofDrives 6 -RAID RAID5 -AvailableDriveType $AvailableDriveType\nC:\\> $Controller = New-OVServerProfileLogicalDiskController -ControllerID \"Mezz 1\" -Mode RAID -LogicalDisk $NewLogicalDisk",
             "Description": "Create a RAID5 Logical Disk for a Server Profile using D3940 storage, and a specific available drive type, 900GB capacity and SASHDD type, and assign it to a new Controller."
+          },
+          {
+            "Title": "-------------------------- EXAMPLE 6 --------------------------",
+            "Code": "# Get the specific server.  Server must have been powered on at least 1 time to complete POST in order for server inventory to be updated\n$Server = Get-OVServer -Name MyGen11Server\n\n# Get the available controllers and drives from the specific server\n$AvailableControllers = Get-OVServerHardwareAvailableController -InputObject $Server\n\n# Review installed controllers\n$AvailableControllers | ? { -not [String]::IsNullOrEmpty($_.DeviceSlot) }\n\nDeviceSlot           : Slot 1\nFamily               : SmartRAID\nType                 : Standup\nModel                : HPE SR308i-p Gen11\nFirmware             : 5.29-256\nControllerMode       : HPEOneView.Servers.ControllerModes\nRaidModes            : HPEOneView.Servers.RaidModes\nDriveTechnologies    : HPEOneView.Servers.DriveTechnologies\nReadCachePolicy      : HPEOneView.Servers.ReadCachePolicy\nWriteCachePolicy     : HPEOneView.Servers.WriteCachePolicy\nCapabilities         : {RedfishConfig, RedfishDedicatedSpare}\nDrives               : {1I:1:41 147 GB (NvmeSsd), 1I:1:42 147 GB (NvmeSsd), 1I:1:43 147 GB (NvmeSsd), 1I:1:44 147 GB (NvmeSsd)ΓÇª}\nMaximumLogicalDrives : 256\nMaximumDrives        : 256\nApplianceConnection  : MyAppliance\n\n# Review available drives attached to controller in \"Slot 1\"\n($AvailableControllers | ? DeviceSlot -eq \"Slot 1\").Drives\n\nLocation Model       Capacity DriveTechnology IsAllocated FailurePredicted LifeRemaining\n-------- -----       -------- --------------- ----------- ---------------- -------------\n1I:1:41  EH0146FCBVB 147 GB   NvmeSsd         True        False            100%\n1I:1:42  EH0146FCBVB 147 GB   NvmeSsd         True        False            100%\n1I:1:43  EH0146FCBVB 147 GB   NvmeSsd         True        False            100%\n1I:1:44  EH0146FCBVB 147 GB   NvmeSsd         False       False            100%\n1I:1:45  EH0146FCBVB 147 GB   SataHdd         False       False            0%\n1I:1:46  EH0146FCBVB 147 GB   SataHdd         False       False            0%\n1I:1:47  EH0146FCBVB 147 GB   SataHdd         False       False            0%\n1I:1:48  EH0146FCBVB 147 GB   SataHdd         False       False            0%\n1I:1:49  EH0146FCBVB 147 GB   SataHdd         False       False            0%\n1I:1:50  EH0146FCBVB 147 GB   SataSsd         True        False            100%\n1I:1:51  EH0146FCBVB 147 GB   SataSsd         True        False            100%\n1I:1:52  EH0146FCBVB 147 GB   SataSsd         False       False            100%\n\n# Filter out available SataHdd for a 3+1 and spare drive configuration\n$DrivesToAssign = ($AvailableControllers | ? DeviceSlot -eq \"Slot 1\").Drives | ? { $_.DriveTechnology -eq \"SataHdd\" -and -not $_.IsAllocated } | Select -First 5\n\n# Create the logical drive, specifying drives and the spare drive to use (which is the last drive in the collection)\n$LogicalDrive = New-OVServerProfileLogicalDisk -Name RAID5+Spare-DATA -Drives $DrivesToAssign -RAID Raid5 -AddSpareDrive -SpareDrives $DrivesToAssign[-1]",
+            "Description": "Identify available storage controllers and drives, and create a logical disk with specific drives from inventory including spare drive."
           }
         ],
         "RelatedLinks": [
+          {
+            "Uri":  null,
+            "Text":  "Get-OVServerHardwareAvailableController"
+          },
+          {
+              "Uri":  null,
+              "Text":  "New-OVServerProfile"
+          },
+          {
+              "Uri":  null,
+              "Text":  "New-OVServerProfileLogicalDisk"
+          },
+          {
+              "Uri":  null,
+              "Text":  "New-OVServerProfileTemplate"
+          },
           {
             "Uri": "https://hpe-docs.gitbook.io/posh-hponeview/cmdlets/v8.30/servers/new-ovserverprofilelogicaldiskcontroller",
             "Text": "Online: "
@@ -32035,11 +32191,11 @@
           [
             {
               "Name": "ControllerID",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Mode",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Initialize",
@@ -32055,20 +32211,76 @@
             },
             {
               "Name": "LogicalDisk",
+              "Required": false
+            }
+          ],
+          [
+            {
+              "Name": "InputObject",
               "Required": true
+            },
+            {
+              "Name": "Mode",
+              "Required": false
+            },
+            {
+              "Name": "Initialize",
+              "Required": false
+            },
+            {
+              "Name": "WriteCache",
+              "Required": false
+            },
+            {
+              "Name": "PredictiveSpareActivation",
+              "Required": false
+            },
+            {
+              "Name": "ImportExistingConfiguration",
+              "Required": false
+            },
+            {
+              "Name": "LogicalDisk",
+              "Required": false
+            }
+          ],
+          [
+            {
+              "Name": "MegaRAIDController",
+              "Required": true
+            },
+            {
+              "Name": "ControllerID",
+              "Required": false
+            },
+            {
+              "Name": "Mode",
+              "Required": false
+            },
+            {
+              "Name": "Initialize",
+              "Required": false
+            },
+            {
+              "Name": "WriteCache",
+              "Required": false
+            },
+            {
+              "Name": "ImportExistingConfiguration",
+              "Required": false
+            },
+            {
+              "Name": "LogicalDisk",
+              "Required": false
             }
           ],
           [
             {
               "Name": "ControllerID",
-              "Required": true
+              "Required": false
             },
             {
               "Name": "Mode",
-              "Required": true
-            },
-            {
-              "Name": "Initialize",
               "Required": false
             },
             {
@@ -64046,6 +64258,86 @@
           },
           {
             "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v8.30/facilities/set-ovrack",
+            "Text": "Online: "
+          }
+        ]
+      }
+    },
+    {
+      "Name": "Get-OVServerHardwareAvailableController",
+      "Category": "Servers",
+      "Contents": {
+        "Synopsis": "Get a collection of inventoried storage controllers.",
+        "Description": "Storage Controllers can be managed by HPE OneView for various platforms taht are defined within a server profile template or server profile resource.  Administrators can choose to import an existing configuration (to reduce data loss) if local storage controllers already have an existing policy, or to deploy a new policy.  Configuring logical drives, HPE OneView can automatically assign drives based on defined characteristics that must match available drives within the server.  Drives that are already allocated will result in a server profile apply error.  Administrators can also specify specific drives to assign for Server Profiles and Gen10 or newer only.\n\nTo identify installed drives, use this help Cmdlet, and provide a server resource with Get-OVServer Cmdlet.  Available controller objects are returned, with a collection of installed drives.  Additionally, supported \"default\" controller families will be returned, which will provide supported modes, drive technologies, and controller cache policies.\n\nIf you configure new logical drives in your server profile or import the existing logical drives from the server hardware, HPE OneView stores a unique identifier for each logical drive in the server profile configuration when the server profile is applied.\n\nOn subsequent server profile apply operations, HPE OneView checks for the existence of the identifier on the physical drives of the assigned server hardware. If the identifier is missing, the apply operation fails in order to ensure that if the server profile is re-assigned to new server hardware and that the physical drives are inserted correctly.\n\nNOTE:  HPE OneView also uses the logical drive name (label) as a unique identifier.  Do not modify the label of logical drives that are managed by HPE OneView.  Do not create logical drives with non-unique labels.\n\nRAID levels and number of physical drives\n\nThe HPE OneView Support Matrix provides information on the number of drives supported by specific server hardware.\n\n    * RAID 0 - Minimum of 1 drive, increments of 1.\n    * RAID 1 - Requires 2 drives.\n    * RAID 1 ADM - Requires 3 drives.\n    * RAID 10 - Requires 4 drives, increments of 2.\n    * RAID 10 ADM - Minimum of 6 drives, increments of 3.\n    * RAID 5 - Minimum of 3 drives, increments of 1.\n    * RAID 6 - Minimum of 4 drives, increments of 1.\n\nAfter you create a logical drive and apply it to a server hardware, you can no longer modify those logical drives.\n\nNOTE:  For controllers that support mixed mode (Gen10 servers), creating a logical drive uses the physical drives that are currently visible to the operating system. To preserve any data, back up the server drives before creating a logical drive.\n\nOnly for Gen11 servers that contain storage controllers, you can configure logical drives that are related to the following Logical Drive Configuration options, using server profiles:\n\n    * IOPerformanceMode\n    * ReadCachePolicy\n    * WriteCachePolicy\n",
+        "Syntax": [
+          [
+            {
+              "Name": "InputObject",
+              "Required": true
+            },
+            {
+              "Name": "ApplianceConnection",
+              "Required": false
+            }
+          ]
+        ],
+        "Parameters": [
+          {
+            "Name": "ApplianceConnection",
+            "Description": "Specify one or more HPEOneView.Appliance.Connection object(s) or Name property value(s).\n\nDefault Value: ${Global:ConnectedSessions} | ? Default",
+            "DataType": "Object",
+            "Required": false,
+            "DefaultValue": "(${Global:ConnectedSessions} | ? Default)",
+            "Aliases": "Appliance",
+            "PipelineInput": "true (ByPropertyName)",
+            "SupportsWildcard": false
+          },
+          {
+            "Name": "InputObject",
+            "Description": "Server hardware resource from Get-OVServer.",
+            "DataType": "Object",
+            "Required": true,
+            "DefaultValue": "",
+            "Aliases": "None",
+            "PipelineInput": "true (ByValue)",
+            "SupportsWildcard": false
+          }
+        ],
+        "InputTypes": [
+          {
+              "Value":  "HPEOneView.ServerHardware [System.Management.Automation.PSCustomObject]",
+              "Text":  "Server hardware resource from Get-OVServer."
+          }
+        ],
+        "ReturnValues": [
+          {
+              "Value":  "HPEOneView.Servers.StorageController",
+              "Text":  "Storage controller object that provide specific information about available controllers available from a server resources inventory.  Will include Controller Mode capabilities, and drives attached to each controller.  The \"Default\" Type can be used to identify what controller families and base capabilities supplied by either SmartRAID (SR) or MegaRAID (MR) controller models.\n\nIf the server generation is Gen10 or newer and no controllers in specific DeviceSlot have been identified, ensure the server has powered on at least once and successfully completed POST.\n"
+          }
+        ],
+        "Examples": [
+          {
+            "Title": "-------------------------- EXAMPLE 1 --------------------------",
+            "Code": "# Get the specific server.  Server must have been powered on at least 1 time to complete POST in order for server inventory to be updated\n$Server = Get-OVServer -Name MyGen11Server\n\n# Get the available controllers and drives from the specific server\n$AvailableControllers = Get-OVServerHardwareAvailableController -InputObject $Server\n\n# Review installed controllers\n$AvailableControllers | ? { -not [String]::IsNullOrEmpty($_.DeviceSlot) }\n\nDeviceSlot           : Slot 1\nFamily               : SmartRAID\nType                 : Standup\nModel                : HPE SR308i-p Gen11\nFirmware             : 5.29-256\nControllerMode       : HPEOneView.Servers.ControllerModes\nRaidModes            : HPEOneView.Servers.RaidModes\nDriveTechnologies    : HPEOneView.Servers.DriveTechnologies\nReadCachePolicy      : HPEOneView.Servers.ReadCachePolicy\nWriteCachePolicy     : HPEOneView.Servers.WriteCachePolicy\nCapabilities         : {RedfishConfig, RedfishDedicatedSpare}\nDrives               : {1I:1:41 147 GB (NvmeSsd), 1I:1:42 147 GB (NvmeSsd), 1I:1:43 147 GB (NvmeSsd), 1I:1:44 147 GB (NvmeSsd)ΓÇª}\nMaximumLogicalDrives : 256\nMaximumDrives        : 256\nApplianceConnection  : MyAppliance",
+            "Description": "View Slot 1 controller from the specified volume server."
+          },
+          {
+            "Title": "-------------------------- EXAMPLE 2 --------------------------",
+            "Code": "# View the available storage controllers and supported controller type for the follow HPE Synergy Compute Node\nGet-OVServer | Select -first 1 | Get-OVServerHardwareAvailableController\n\nDeviceSlot           : Slot 0\nFamily               : SmartRAID\nType                 : Embedded\nModel                : Embedded Controller\nFirmware             :\nControllerMode       : HPEOneView.Servers.ControllerModes\nRaidModes            : HPEOneView.Servers.RaidModes\nDriveTechnologies    : HPEOneView.Servers.DriveTechnologies\nReadCachePolicy      : HPEOneView.Servers.ReadCachePolicy\nWriteCachePolicy     : HPEOneView.Servers.WriteCachePolicy\nCapabilities         : {RedfishConfig}\nDrives               : {1I:1:1 147 GB (SasHdd), 1I:1:2 147 GB (SasHdd), 1I:1:3 147 GB (SasHdd), 1I:1:4 147 GB (SasHdd)ΓÇª}\nMaximumLogicalDrives : 256\nMaximumDrives        : 256\nApplianceConnection  : MyAppliance\n\nDeviceSlot           : Mezz 1\nFamily               : SmartRAID\nType                 : SAS Adapter\nModel                : HPE Smart Array P416ie-m SR Gen10 Controller\nFirmware             : 2.65\nControllerMode       : HPEOneView.Servers.ControllerModes\nRaidModes            : HPEOneView.Servers.RaidModes\nDriveTechnologies    : HPEOneView.Servers.DriveTechnologies\nReadCachePolicy      : HPEOneView.Servers.ReadCachePolicy\nWriteCachePolicy     : HPEOneView.Servers.WriteCachePolicy\nCapabilities         : {RedfishConfig, RedfishConfig, RedfishConfig}\nDrives               : {}\nMaximumLogicalDrives : 256\nMaximumDrives        : 256\nApplianceConnection  : MyAppliance\n\nDeviceSlot           :\nFamily               : SmartRAID\nType                 : Default\nModel                :\nFirmware             :\nControllerMode       : HPEOneView.Servers.ControllerModes\nRaidModes            : HPEOneView.Servers.RaidModes\nDriveTechnologies    : HPEOneView.Servers.DriveTechnologies\nReadCachePolicy      : HPEOneView.Servers.ReadCachePolicy\nWriteCachePolicy     : HPEOneView.Servers.WriteCachePolicy\nCapabilities         : {RedfishConfig}\nDrives               : {}\nMaximumLogicalDrives : 256\nMaximumDrives        : 256\nApplianceConnection  : MyAppliance",
+            "Description": "View available storage controllers, their location and any available drives for the specific HPE Synergy Compute Node."
+          }
+        ],
+        "RelatedLinks": [
+          {
+              "Uri":  null,
+              "Text":  "New-OVServerProfileLogicalDisk"
+          },
+          {
+              "Uri":  null,
+              "Text":  "New-OVServerProfileLogicalDiskController"
+          },
+          {
+            "Uri": "https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v8.30/servers/get-ovserverhardwareavailablecontroller",
             "Text": "Online: "
           }
         ]
