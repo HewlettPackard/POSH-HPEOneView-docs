@@ -4,7 +4,7 @@
 
 Are you running into a road block? Have an issue with unexpected behavior? Feel free to open a [new issue](https://github.com/HewlettPackard/POSH-HPEOneView/issues/new/choose) on the tracker.
 
-All Cmdlets support the `-Verbose` common parameter, and will display output relative to the operation of the Cmdlet.  The [`Get-OVCommandTrace`]() will help capture one or more Cmdlet call output, including verbose.  If you intend to open a new issue on the project tracker, please use [`Get-OVCommandTrace`]() so you can attach it.  Do know that the verbose output may contain personally identifiable information \(PII\) that you may wish to change or omit.
+All Cmdlets support the `-Verbose` common parameter, and will display output relative to the operation of the Cmdlet.  The [`Get-OVCommandTrace`](https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v6.60/library/get-ovcommandtrace) will help capture one or more Cmdlet call output, including verbose.  If you intend to open a new issue on the project tracker, please use [`Get-OVCommandTrace`](https://hpe-docs.gitbook.io/posh-hpeoneview/cmdlets/v6.60/library/get-ovcommandtrace) so you can attach it.  Do know that the verbose output may contain personally identifiable information \(PII\) that you may wish to change or omit.
 
 For instance, the following output snippet contains information that might be sensitive to your corporate security policies:
 

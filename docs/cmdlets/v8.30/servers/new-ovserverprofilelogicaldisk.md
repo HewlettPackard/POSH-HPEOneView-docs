@@ -36,9 +36,60 @@ New-OVServerProfileLogicalDisk
     [<CommonParameters>]
 ```
 
+```powershell
+New-OVServerProfileLogicalDisk
+    [-Name] <String>
+    [-Drives] <HPEOneView.Servers.PhysicalDrive[]>
+    [-RAID <String>]
+    [-Accelerator <String>]
+    [-AddSpareDrive]
+    [-SpareDrives <HPEOneView.Servers.PhysicalDrive[]>]
+    [-Bootable <Boolean>]
+    [-ReadCachePolicy <string>]
+    [-WriteCachePolicy <string>]
+    [-IOPerformanceMode <string>]
+    [<CommonParameters>]
+```
+
 ## Description
 
-This helper Cmdlet will create a Logical Disk object to then be assigned to a Server Profile Template or Server Profile using the -LogicalDisk parameter.  The LogicalDisk configuration is supported with the embedded (or Slot 0) HPE SmartArray controller for DL and BL class systems only.
+Logical drives are capable of being managed by HPE OneView with Server Profile Template and Server Profile resources.  HPE OneView can automatically assign drives based on defined characteristics that must match available drives within the server.  Administrators can also specify specific drives to assign for Server Profiles and Gen10 or newer servers only.
+
+To identify installed drives, use the Get-OVServerHardwareAvailableController Cmdlet, and provide a server resource with Get-OVServer Cmdlet.  Available controller objects are returned, with a collection of installed drives.
+
+If you configure new logical drives in your server profile or import the existing logical drives from the server hardware, HPE OneView stores a unique identifier for each logical drive in the server profile configuration when the server profile is applied.
+
+On subsequent server profile apply operations, HPE OneView checks for the existence of the identifier on the physical drives of the assigned server hardware. If the identifier is missing, the apply operation fails in order to ensure that if the server profile is re-assigned to new server hardware and that the physical drives are inserted correctly.
+
+{% hint style="info" %}
+ HPE OneView also uses the logical drive name (label) as a unique identifier.  Do not modify the label of logical drives that are managed by HPE OneView.  Do not create logical drives with non-unique labels.
+{% endhint %}
+
+
+RAID levels and number of physical drives
+
+The HPE OneView Support Matrix provides information on the number of drives supported by specific server hardware.
+
+* RAID 0 - Minimum of 1 drive, increments of 1.
+* RAID 1 - Requires 2 drives.
+* RAID 1 ADM - Requires 3 drives.
+* RAID 10 - Requires 4 drives, increments of 2.
+* RAID 10 ADM - Minimum of 6 drives, increments of 3.
+* RAID 5 - Minimum of 3 drives, increments of 1.
+* RAID 6 - Minimum of 4 drives, increments of 1.
+
+After you create a logical drive and apply it to a server hardware, you can no longer modify those logical drives.
+
+{% hint style="info" %}
+ For controllers that support mixed mode (Gen10 servers), creating a logical drive uses the physical drives that are currently visible to the operating system. To preserve any data, back up the server drives before creating a logical drive.
+{% endhint %}
+
+
+Only for Gen11 servers that contain storage controllers, you can configure logical drives that are related to the following Logical Drive Configurationoptions, using server profiles:
+
+* IOPerformanceMode
+* ReadCachePolicy
+* WriteCachePolicy
 
 ## Examples
 
@@ -82,6 +133,61 @@ $JBODLogicalDisk = New-OVServerProfileLogicalDisk -Name "JBOD1_900GB_SASHDD" -Nu
 ```
 
 Create logical JBOD to then be attached to either a Gen10 Mixed Mode or Gen9 or newer HBA mode controller.
+
+###  Example 6 
+
+```powershell
+# Get the specific server.  Server must have been powered on at least 1 time to complete POST in order for server inventory to be updated
+$Server = Get-OVServer -Name MyGen11Server
+
+# Get the available controllers and drives from the specific server
+$AvailableControllers = Get-OVServerHardwareAvailableController -InputObject $Server
+
+# Review installed controllers
+$AvailableControllers | ? { -not [String]::IsNullOrEmpty($_.DeviceSlot) }
+
+DeviceSlot           : Slot 1
+Family               : SmartRAID
+Type                 : Standup
+Model                : HPE SR308i-p Gen11
+Firmware             : 5.29-256
+ControllerMode       : HPEOneView.Servers.ControllerModes
+RaidModes            : HPEOneView.Servers.RaidModes
+DriveTechnologies    : HPEOneView.Servers.DriveTechnologies
+ReadCachePolicy      : HPEOneView.Servers.ReadCachePolicy
+WriteCachePolicy     : HPEOneView.Servers.WriteCachePolicy
+Capabilities         : {RedfishConfig, RedfishDedicatedSpare}
+Drives               : {1I:1:41 147 GB (NvmeSsd), 1I:1:42 147 GB (NvmeSsd), 1I:1:43 147 GB (NvmeSsd), 1I:1:44 147 GB (NvmeSsd)ΓÇª}
+MaximumLogicalDrives : 256
+MaximumDrives        : 256
+ApplianceConnection  : MyAppliance
+
+# Review available drives attached to controller in "Slot 1"
+($AvailableControllers | ? DeviceSlot -eq "Slot 1").Drives
+
+Location Model       Capacity DriveTechnology IsAllocated FailurePredicted LifeRemaining
+-------- -----       -------- --------------- ----------- ---------------- -------------
+1I:1:41  EH0146FCBVB 147 GB   NvmeSsd         True        False            100%
+1I:1:42  EH0146FCBVB 147 GB   NvmeSsd         True        False            100%
+1I:1:43  EH0146FCBVB 147 GB   NvmeSsd         True        False            100%
+1I:1:44  EH0146FCBVB 147 GB   NvmeSsd         False       False            100%
+1I:1:45  EH0146FCBVB 147 GB   SataHdd         False       False            0%
+1I:1:46  EH0146FCBVB 147 GB   SataHdd         False       False            0%
+1I:1:47  EH0146FCBVB 147 GB   SataHdd         False       False            0%
+1I:1:48  EH0146FCBVB 147 GB   SataHdd         False       False            0%
+1I:1:49  EH0146FCBVB 147 GB   SataHdd         False       False            0%
+1I:1:50  EH0146FCBVB 147 GB   SataSsd         True        False            100%
+1I:1:51  EH0146FCBVB 147 GB   SataSsd         True        False            100%
+1I:1:52  EH0146FCBVB 147 GB   SataSsd         False       False            100%
+
+# Filter out available SataHdd for a 3+1 and spare drive configuration
+$DrivesToAssign = ($AvailableControllers | ? DeviceSlot -eq "Slot 1").Drives | ? { $_.DriveTechnology -eq "SataHdd" -and -not $_.IsAllocated } | Select -First 5
+
+# Create the logical drive, specifying drives and the spare drive to use (which is the last drive in the collection)
+$LogicalDrive = New-OVServerProfileLogicalDisk -Name RAID5+Spare-DATA -Drives $DrivesToAssign -RAID Raid5 -AddSpareDrive -SpareDrives $DrivesToAssign[-1]
+```
+
+Identify available storage controllers and drives, and create a logical disk with specific drives from inventory including spare drive.
 
 ## Parameters
 
@@ -184,7 +290,7 @@ Specify Internal for HPE Synergy Compute Nodes that have the Expanded Storage op
 
 ### -AvailableDriveType &lt;HPEOneView.Storage.AvailableDriveType&gt;
 
-A specific availabe drive type from Get-OVAvailableDriveType.
+A specific availabe drive type from Get-OVAvailableDriveType.  Parameter applies to HPE Synergy D3940 storage devices.
 
 | Aliases | None |
 | :--- | :--- |
@@ -278,6 +384,81 @@ When selected, an additional drive will be reserved (beyond what was specified) 
 | Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
+### -Drives &lt;HPEOneView.Servers.PhysicalDrive[]&gt;
+
+One or more drives to allocate. Use Get-OVServerHardwareAvailableController Cmdlet and examine the Drives attribute within the `[HPEOneView.Servers.PhysicalDrive]` object.
+
+{% hint style="info" %}
+Using this parameter will create a logical drive resource that can only be used with server profile resources.
+{% endhint %}
+
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | True |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -IOPerformanceMode &lt;string&gt;
+
+Controls the logical drive's IO performance mode setting. When enabled, IO operations will bypass the controller cache and read and write cache policy settings will be set to off. A drive technology using SSD is required to enable IO performance mode.
+
+Managed manually: This setting is managed by the user outside OneView.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -ReadCachePolicy &lt;string&gt;
+
+Controls the read cache policy.
+
+* Enabled - Configures Read ahead policy on the controller. A caching technique in which the controller pre-fetches data anticipating future read requests, based on previous cache hits.
+* Disabled - Disables read caching for this logical drive.
+* Unmanaged - This setting is not managed by HPE OneView, but can managed by the user outside of the server profile resource.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -SpareDrives &lt;HPEOneView.Servers.PhysicalDrive[]&gt;
+
+One or more drives to allocate. Use Get-OVServerHardwareAvailableController Cmdlet and examine the Drives attribute within the `[HPEOneView.Servers.PhysicalDrive]` object.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
+### -WriteCachePolicy &lt;string&gt;
+
+Controls the write cache policy.
+
+*  Enabled - Configured Protected Write Back poicy on the controller. The completion of a write request is signaled as soon as the data is in cache, and actual writing to non-volatile media is guaranteed to occur at a later time.
+*  Disabled - Disables write caching for this logical drive.
+* Unmanaged - This setting is not managed by HPE OneView, but can managed by the user outside of the server profile resource.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
+| Accept wildcard characters? | False |
+
 ### &lt;CommonParameters&gt;
 
 This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer, PipelineVariable, and OutVariable. For more information, see about\_CommonParameters \([http://go.microsoft.com/fwlink/?LinkID=113216](http://go.microsoft.com/fwlink/?LinkID=113216)\)
@@ -300,4 +481,5 @@ Collection of Logical Disk configuration objects
 
 ## Related Links
 
+* [Get-OVServerHardwareAvailableController](get-ovserverhardwareavailablecontroller.md)
 * [New-OVServerProfileLogicalDiskController](new-ovserverprofilelogicaldiskcontroller.md)
