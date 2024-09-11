@@ -10,6 +10,7 @@ description: Upload appliance backup file to restore its configuration.
 New-OVRestore
     [-FileName] <System.IO.FileInfo>
     [-EncryptionKey <Object>]
+    [-Passphrase <Object>]
     [-ApplianceConnection <Array>]
     [<CommonParameters>]
 ```
@@ -107,6 +108,18 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 ### -EncryptionKey &lt;Object&gt;
 
 Provide the encryption key file path or file object.  When restoring an appliance backup, and after the appliance has been factory reset, the prior encryption key is needed to decrypt the backup file.  This is only supported with HPE Synergy Composer 2 appliances.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | False |
+| Accept wildcard characters? | False |
+
+### -Passphrase &lt;Object&gt;
+
+Introduced in the HPE OneView 6.60.06 patch, a secure Passphrase is required to encrypt the appliance backup and when restoring from the generated backup.  The parameter is only required if the appliance version is 6.60.06 or 6.60.07.  An exception will be generated if this parameter is used and the target appliance doesn't meet the minimum required version.
 
 | Aliases | None |
 | :--- | :--- |

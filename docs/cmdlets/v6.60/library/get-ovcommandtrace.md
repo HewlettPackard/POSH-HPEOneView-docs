@@ -10,6 +10,7 @@ description: Start an OV Library Verbose Trace.
 Get-OVCommandTrace
     [-ScriptBlock] <ScriptBlock>
     [-Location <String>]
+    [-Passthru]
     [<CommonParameters>]
 ```
 
@@ -59,6 +60,18 @@ Default Value: (PWD).Path
 | Position? | Named |
 | Default value | (pwd).path |
 | Accept pipeline input? | False |
+| Accept wildcard characters? | False |
+
+### -Passthru &lt;SwitchParameter&gt;
+
+
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | false |
 | Accept wildcard characters? | False |
 
 ### &lt;CommonParameters&gt;

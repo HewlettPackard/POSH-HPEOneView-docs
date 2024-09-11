@@ -18,6 +18,7 @@ Set-OVAutomaticBackupConfig
     [-Interval <String>]
     [-Days <Array>]
     [-Time <String>]
+    [-Passphrase <Object>]
     [-Async]
     [-ApplianceConnection <Array>]
     [<CommonParameters>]
@@ -57,6 +58,17 @@ New-OVBackup
 ```
 
 This command will configure automatic appliance backup, based on a weekly Monday, Wednesday and Friday schedule to execute at 18:00 (6:00PM).  Then, a call to New-OVBackup will be made, which will generate and copy the backup file to the remote location configured.
+
+###  Example 3 
+
+```powershell
+$HostSSHKey = Get-Content C:\host.key
+$Passphrase = Get-Credential -Message "Enter passphrase for the backup file" -UserName "donotuse"
+Set-OVAutomaticBackupConfig -Hostname scphost.domain.com -Username backupadmin -Password (ConvertTo-SecureString password -AsPlainText -Force) -HostSSHKey $HostSSHKey -Protocol SCP -Interval Weekly -Days "MON","WED","FRI" -Time 18:00 -Passphrase $Passphrase.Password
+New-OVBackup
+```
+
+This command will configure automatic appliance backup, based on a weekly Monday, Wednesday and Friday schedule to execute at 18:00 (6:00PM), and set the required backup Passphrase.  Then, a call to New-OVBackup will be made, which will generate and copy the backup file to the remote location configured.
 
 ## Parameters
 
@@ -249,6 +261,18 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 ### -Port &lt;int&gt;
 
 The target port of the destination service.  By default, this is 22/TCP.  Only TCP ports are supported.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value |  |
+| Accept pipeline input? | False |
+| Accept wildcard characters? | False |
+
+### -Passphrase &lt;Object&gt;
+
+Introduced in the HPE OneView 6.60.06 patch, a secure Passphrase is required to encrypt the appliance backup and when restoring from the generated backup.  The parameter is only required if the appliance version is 6.60.06 or 6.60.07.  An exception will be generated if this parameter is used and the target appliance doesn't meet the minimum required version.
 
 | Aliases | None |
 | :--- | :--- |
