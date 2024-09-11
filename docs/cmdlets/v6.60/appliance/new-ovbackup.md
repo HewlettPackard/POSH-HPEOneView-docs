@@ -8,7 +8,8 @@ description: Generate and download or remote save appliance backup.
 
 ```powershell
 New-OVBackup
-    [-Location] <String>
+    [-Location <String>]
+    [-Passphrase]
     [-Force]
     [-Async]
     [-ApplianceConnection <Array>]
@@ -51,7 +52,7 @@ The full path to where the Support Dump will be saved to.  The downloaded file n
 
 | Aliases | save |
 | :--- | :--- |
-| Required? | True |
+| Required? | False |
 | Position? | Named |
 | Default value | (get-location).Path |
 | Accept pipeline input? | False |
@@ -60,6 +61,18 @@ The full path to where the Support Dump will be saved to.  The downloaded file n
 ### -Force &lt;SwitchParameter&gt;
 
 The Cmdlet will validate if the appliance is configured to save backup files to a remote location.  Use this option to force download the backup file instead of copying to the remote location.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | False |
+| Accept pipeline input? | False |
+| Accept wildcard characters? | False |
+
+### -Passphrase &lt;SwitchParameter&gt;
+
+Introduced in the HPE OneView 6.60.06 patch, a secure Passphrase is required to encrypt the appliance backup.  The parameter is only required if the appliance version is 6.60.06 or 6.60.07.  An exception will be generated if this parameter is used and the target appliance doesn't meet the minimum required version.
 
 | Aliases | None |
 | :--- | :--- |

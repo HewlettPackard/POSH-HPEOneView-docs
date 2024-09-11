@@ -13,6 +13,7 @@ Add-OVBaseline
     [-Scope <HPEOneView.Appliance.ScopeCollection[]>]
     [-ApplianceConnection <Array>]
     [-Async]
+    [-UseInvokeWebRequest]
     [<CommonParameters>]
 ```
 
@@ -128,6 +129,18 @@ Specify one or more `[HPEOneView.Appliance.Connection]` object(s) or Name proper
 ### -Scope &lt;HPEOneView.Appliance.ScopeCollection[]&gt;
 
 Provide an `[HPEOneView.Appliance.ScopeCollection]` resource object to initially associate with.  Resource can also be added to scope using the Add-OVResourceToScope Cmdlet.
+
+| Aliases | None |
+| :--- | :--- |
+| Required? | False |
+| Position? | Named |
+| Default value | False |
+| Accept pipeline input? | False |
+| Accept wildcard characters? | False |
+
+### -UseInvokeWebRequest &lt;SwitchParameter&gt;
+
+Use to override the libraries default use of `[System.Net.WebRequest]` .Net class support for syncronously uploading a file.  This parameter should only be used when uploading baselines larger than 2GB.  Using this parameter will not display any status progress during file transfer.
 
 | Aliases | None |
 | :--- | :--- |
