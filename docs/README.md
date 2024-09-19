@@ -12,6 +12,19 @@ This PowerShell module requires the following minimum versions:
 
 {% tabs %}
 
+{% tab title="HPE OneView 9.10" %}
+| Component | Version |
+| :--- | :--- |
+| .NetStandard | 2.0 or newer |
+| PowerShell | 7.0 or newer |
+| PowerShellCore | 7.0 or newer |
+| HPE OneView/HPE Synergy | 9.10 or newer |
+
+{% hint style="info" %}
+.NetStandard 2.0 API's are supported by both the [.NetFramework 4.7.2 Windows](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-7-2/) and [DotNetCore 2.0](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-0/) clients.
+{% endhint %}
+{% endtab %}
+
 {% tab title="HPE OneView 8.60" %}
 | Component | Version |
 | :--- | :--- |
@@ -190,15 +203,15 @@ Starting with the HPE OneView 5.00 PowerShell library, the provided EXE installe
 
 The library can be installed in one of two ways:
 
+* Starting with the HPE OneView 3.10 library release, it is now published on the PowerShellGallery.  `Install-Module HPEOneView.{VERSION}` or `Save-Module HPEOneView.{VERSION}` can be used for those using PowerShell 5.0 or newer \(with the [PowerShellGet module](https://github.com/powerShell/powershellget)\).
 * Go to the Code then [Releases](https://github.com/HewlettPackard/POSH-HPOneView/releases) tab in this repository, and download the current release for the version you wish to download.
-* Starting with the HPE OneView 3.10 library release, it is now published on the PowerShellGallery.  `Install-Module HPEOneView.{VERSION}` or `Save-Module HPEOneView.{VERSION}` can be used for those using PowerShell 5.0 \(with the [PowerShellGet module](https://github.com/powerShell/powershellget)\) or newer.
 
 ### Importing the library into your PowerShell console
 
-The library module name to import is always `HPEOneView.{VERSION}`, where `{VERSION}` is the `Major` and `Minor` version concatenated together. For example, to load the HPE OneView 6.60 library, issue the following command within your PowerShell console:
+The library module name to import is always `HPEOneView.{VERSION}`, where `{VERSION}` is the `Major` and `Minor` version concatenated together. For example, to load the HPE OneView 9.10 library, issue the following command within your PowerShell console:
 
 ```text
-Import-Module HPEOneView.800
+Import-Module HPEOneView.910
 ```
 
 {% hint style="info" %}

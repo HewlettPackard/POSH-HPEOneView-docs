@@ -64,7 +64,7 @@ Default Value: (PWD).Path
 
 ### -Passthru &lt;SwitchParameter&gt;
 
-
+Use this parameter to return a the generated output that will also be captured in the generated log file.
 
 | Aliases | None |
 | :--- | :--- |
