@@ -1,4 +1,6 @@
 ---
+hide:
+  - navigation
 description: The HPE OneView PowerShell library verb mapping to OneView Actions verbs.
 ---
 
