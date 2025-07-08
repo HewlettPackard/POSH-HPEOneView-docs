@@ -50,5 +50,10 @@
     "version": "8.30",
     "title": "8.30",
     "aliases": []
+  },
+  {
+    "version": "8.00",
+    "title": "8.00",
+    "aliases": []
   }
 ]
