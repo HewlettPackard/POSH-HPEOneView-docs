@@ -481,11 +481,11 @@ if (-not (Test-Path $JsonFullPath))
 }
 
 # Clear the ..\docs\cmdlets directory before processing the JSON source file
-if (Test-Path (Join-Path $Destination "docs\cmdlets"))
+if (Test-Path (Join-Path $Path "docs\cmdlets"))
 {
 
-    Write-Verbose ("Removing existing documentation files from '{0}' directory." -f $Destination)
-    Remove-Item -Path (Join-Path $Destination "docs\cmdlets") -Recurse -Force -Confirm:$false
+    Write-Verbose ("Removing existing documentation files from '{0}' directory." -f $Path)
+    Remove-Item -Path (Join-Path $Path "docs\cmdlets") -Recurse -Force -Confirm:$false
 
 }
 
