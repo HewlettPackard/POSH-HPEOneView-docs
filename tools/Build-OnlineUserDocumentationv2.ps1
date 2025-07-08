@@ -414,8 +414,25 @@ if (-not (Test-Path (Join-Path $Path ".git")))
 
 }
 
+# Check if the command mike exists.  If not, throw an error.
+if (-not (Get-Command mike -ErrorAction SilentlyContinue))
+{
+
+    $Message = "The command 'mike' (used for mkdocs versioning) is not installed.  Please install 'mike' to build the online user documentation."
+    throw [Management.Automation.ErrorRecord]::new(([System.InvalidOperationException]::new($Message)), 'MikeNotFound', 'ResourceUnavailable', 'HelpJSONSource')
+
+}
+
 # Push into the path provided
 Push-Location $Path
+
+# Use mike list to get the list of versions in the repository
+$MikeListOutput = mike list --json | ConvertFrom-Json
+
+# Check if the requested version exists in the mike list output
+$MikeVersionExists = $MikeListOutput | Where-Object version -eq $Version 
+
+$Branch = $MikeVersionExists.aliases -contains "latest" ? "main" : $Version
 
 # Check for any pending changes in the git repository
 if (git status --porcelain | Where-Object { $_ -ne '' })
@@ -427,33 +444,26 @@ if (git status --porcelain | Where-Object { $_ -ne '' })
 }
 
 # Check if the requested branch exists in the git repository.  If not, throw an error.
-$BranchExists = git branch --list $Version
+$BranchExists = git branch --list $Branch
 
 if (-not $BranchExists)
 {
 
-    $Message = "The branch '{0}' does not exist in the git repository at '{1}'.  Please check the branch name and try again." -f $Version, $Path
+    $Message = "The branch '{0}' does not exist in the git repository at '{1}'.  Please check the branch name and try again." -f $Branch, $Path
     throw [Management.Automation.ErrorRecord]::new(([System.InvalidOperationException]::new($Message)), 'BranchNotFound', 'ResourceUnavailable', 'HelpJSONSource')
 
 }
 
-# Check if the command mike exists.  If not, throw an error.
-if (-not (Get-Command mike -ErrorAction SilentlyContinue))
-{
 
-    $Message = "The command 'mike' (used for mkdocs versioning) is not installed.  Please install 'mike' to build the online user documentation."
-    throw [Management.Automation.ErrorRecord]::new(([System.InvalidOperationException]::new($Message)), 'MikeNotFound', 'ResourceUnavailable', 'HelpJSONSource')
-
-}
 
 # Use git checkout to switch to the requested branch
-git -C $Path checkout $Version | Out-Null
+git -C $Path checkout $Branch | Out-Null
 
 # Check if the checkout was successful
 if ($LASTEXITCODE -ne 0)
 {
 
-    $Message = "Failed to checkout branch '{0}' in the git repository at '{1}'.  Please check the branch name and try again." -f $Version, $Path
+    $Message = "Failed to checkout branch '{0}' in the git repository at '{1}'.  Please check the branch name and try again." -f $Branch, $Path
     throw [Management.Automation.ErrorRecord]::new(([System.InvalidOperationException]::new($Message)), 'CheckoutFailed', 'ResourceUnavailable', 'HelpJSONSource')
 
 }
@@ -834,12 +844,9 @@ ForEach ($Cmdlet in $script:LibraryJsonContents.Cmdlets)
 
 Write-Progress -Activity $Activity -Completed
 
-# Use mike list to get the list of versions in the repository
-$MikeListOutput = mike list --json | ConvertFrom-Json
-
 # Execute the mike command to build the online user documentation
 $MikeCommand = "mike deploy --update {0} --allow-empty" -f $Version
-$MikeVersionExists = $MikeListOutput | Where-Object version -eq $Version 
+
 
 if ($MikeVersionExists.aliases -contains "latest")
 {
