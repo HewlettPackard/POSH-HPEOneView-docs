@@ -858,3 +858,13 @@ if ($LASTEXITCODE -ne 0)
 
 }
 
+# Use git add to save the changes to the current branch and verify the command was successful
+git add -A #| Out-Null
+if ($LASTEXITCODE -ne 0)
+{
+
+    $Message = "Failed to add changes to the git repository at '{0}'. Please check the command output for more details." -f $Path
+    throw [Management.Automation.ErrorRecord]::new(([System.InvalidOperationException]::new($Message), 'GitAddFailed', 'ResourceUnavailable', 'HelpJSONSource'))
+
+}
+
