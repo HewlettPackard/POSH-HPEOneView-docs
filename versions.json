@@ -30,5 +30,10 @@
     "version": "8.70",
     "title": "8.70",
     "aliases": []
+  },
+  {
+    "version": "8.60",
+    "title": "8.60",
+    "aliases": []
   }
 ]
