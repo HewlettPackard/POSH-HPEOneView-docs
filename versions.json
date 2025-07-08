@@ -105,5 +105,10 @@
     "version": "5.40",
     "title": "5.40",
     "aliases": []
+  },
+  {
+    "version": "5.30",
+    "title": "5.30",
+    "aliases": []
   }
 ]
