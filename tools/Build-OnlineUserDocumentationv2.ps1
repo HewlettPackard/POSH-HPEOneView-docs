@@ -786,7 +786,7 @@ ForEach ($Cmdlet in $script:LibraryJsonContents.Cmdlets)
                 {
 
                     $Message = "Unable to find associated link '{0}' to '{1}' Cmdlet." -f $Link.Text, $Cmdlet.Name
-                    $PSCmdlet.WriteError([Management.Automation.ErrorRecord]::new(([System.InvalidOperationException]::new( $Message), 'RelatedLinkNotFound', 'ResourceUnavailable', 'HelpJSONSource'))
+                    $PSCmdlet.WriteError([Management.Automation.ErrorRecord]::new(([System.InvalidOperationException]::new($Message), 'RelatedLinkNotFound', 'ResourceUnavailable', 'HelpJSONSource')))
 
                 }
 
@@ -854,7 +854,7 @@ if ($LASTEXITCODE -ne 0)
 {
 
     $Message = "Failed to deploy the online user documentation. Please check the command output for more details."
-    throw [Management.Automation.ErrorRecord]::new(([System.InvalidOperationException]::new( $Message), 'MikeDeployFailed', 'ResourceUnavailable', 'HelpJSONSource')
+    throw [Management.Automation.ErrorRecord]::new(([System.InvalidOperationException]::new($Message), 'MikeDeployFailed', 'ResourceUnavailable', 'HelpJSONSource'))
 
 }
 
