@@ -1,0 +1,2505 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="ChrisLynchHPE">
+      
+      
+        <link rel="canonical" href="https://hewlettpackard.github.io/7.20/">
+      
+      
+      
+        <link rel="next" href="getting-help/">
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>HPE OneView PowerShell Module Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="HPE OneView PowerShell Module Documentation" class="md-header__button md-logo" aria-label="HPE OneView PowerShell Module Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HPE OneView PowerShell Module Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introduction
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://hewlettpackard.github.io/posh-hpeoneview-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HewlettPackard/POSH-HPEOneView-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Introduction
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="getting-help/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Getting Help
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="verb-mapping/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Verb Mapping
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="about/about_appliance_connection_permissions/" class="md-tabs__link">
+          
+  
+  
+  About
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="HPE OneView PowerShell Module Documentation" class="md-nav__button md-logo" aria-label="HPE OneView PowerShell Module Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    HPE OneView PowerShell Module Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://hewlettpackard.github.io/posh-hpeoneview-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HewlettPackard/POSH-HPEOneView-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#table-1-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table 1. Requirements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table-2-deprecated-releases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table 2. Deprecated releases
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installer-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installer changes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installer changes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-obtain-and-install-the-420-or-older-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to obtain and install the 4.20 or older library
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#importing-the-library-into-your-powershell-console" class="md-nav__link">
+    <span class="md-ellipsis">
+      Importing the library into your PowerShell console
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-start-using-the-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to start using the library
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication-with-hpe-oneview-appliance-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication with HPE OneView appliance flow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-getting-a-resource-from-an-hpe-oneview-appliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example getting a resource from an HPE OneView appliance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-settingupdating-a-resource-with-an-hpe-oneview-appliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example setting/updating a resource with an HPE OneView appliance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#base-hpeoneviewutilitiesnetrestclient-class-contructor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Base HPEOneView.Utilities.Net.RestClient class contructor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample Scripts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generating-sample-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generating sample code
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Generating sample code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hpe-oneview-automation-sample-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      HPE OneView automation sample repository
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Resources
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hpe-oneview-python-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      HPE OneView Python Library
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="getting-help/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting Help
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="verb-mapping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verb Mapping
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="about/about_appliance_connection_permissions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    about_Appliance_Connection_Permissions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="about/about_appliance_connections/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    about_Appliance_Connections
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="about/about_hpeoneview.1000/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About hpeoneview.1000
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="about/about_hpeoneview.410/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    about_HPEOneView.410
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="about/about_hpeoneview.420/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    about_HPEOneView.420
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="about/about_hpeoneview.500/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    about_HPEOneView.500
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="about/about_hpeoneview.520/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    about_HPEOneView.520
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="about/about_hpeoneview.530/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    about_HPEOneView.530
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="about/about_hpeoneview.540/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    about_HPEOneView.540
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="about/about_hpeoneview.550/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    about_HPEOneView.550
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="about/about_hpeoneview.600/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About hpeoneview.600
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="about/about_hpeoneview.610/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About hpeoneview.610
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="about/about_hpeoneview.620/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About hpeoneview.620
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="about/about_hpeoneview.630/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About hpeoneview.630
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="about/about_hpeoneview.640/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About hpeoneview.640
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="about/about_hpeoneview.700/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About hpeoneview.700
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="about/about_hpeoneview.710/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About hpeoneview.710
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="about/about_hpeoneview.720/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About hpeoneview.720
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="about/about_hpeoneview.800/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About hpeoneview.800
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="about/about_hpeoneview.830/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About hpeoneview.830
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="about/about_hpeoneview.840/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About hpeoneview.840
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="about/about_hpeoneview.860/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About hpeoneview.860
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="about/about_hpeoneview.900/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About hpeoneview.900
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="about/about_hpeoneview.910/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About hpeoneview.910
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="about/about_two_factor_authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    about_Two_Factor_Authentication
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#table-1-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table 1. Requirements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table-2-deprecated-releases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table 2. Deprecated releases
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installer-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installer changes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installer changes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-obtain-and-install-the-420-or-older-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to obtain and install the 4.20 or older library
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#importing-the-library-into-your-powershell-console" class="md-nav__link">
+    <span class="md-ellipsis">
+      Importing the library into your PowerShell console
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-start-using-the-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to start using the library
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication-with-hpe-oneview-appliance-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication with HPE OneView appliance flow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-getting-a-resource-from-an-hpe-oneview-appliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example getting a resource from an HPE OneView appliance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-settingupdating-a-resource-with-an-hpe-oneview-appliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example setting/updating a resource with an HPE OneView appliance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#base-hpeoneviewutilitiesnetrestclient-class-contructor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Base HPEOneView.Utilities.Net.RestClient class contructor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample Scripts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generating-sample-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generating sample code
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Generating sample code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hpe-oneview-automation-sample-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      HPE OneView automation sample repository
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Resources
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hpe-oneview-python-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      HPE OneView Python Library
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+  
+    <a href="https://hewlettpackard.github.io/posh-hpeoneview-docs/edit/main/docs/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://hewlettpackard.github.io/posh-hpeoneview-docs/raw/main/docs/index.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="introduction">Introduction</h1>
+<h2 id="introduction_1">Introduction</h2>
+<p>HPE OneView makes it simple to deploy and manage today’s complex hybrid cloud infrastructure. HPE OneView can help you transform your data center to software-defined, and it supports HPE’s broad portfolio of servers, storage, and networking solutions, ensuring the simple and automated management of your hybrid infrastructure. Software-defined intelligence enables a template-driven approach for deploying, provisioning, updating, and integrating compute, storage, and networking infrastructure.</p>
+<p>This library enables PowerShell developers, IT automation engineers, or devops teams the ability to utilize HPE OneView's open REST API to automate infrastructure policies and operations. Starting with the HPE OneView 5.00 PowerShell library, PowerShell Core is now supported.</p>
+<p>This PowerShell module requires the following minimum versions:</p>
+<h3 id="table-1-requirements"><strong>Table 1. Requirements</strong></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:10"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><input id="__tabbed_1_7" name="__tabbed_1" type="radio" /><input id="__tabbed_1_8" name="__tabbed_1" type="radio" /><input id="__tabbed_1_9" name="__tabbed_1" type="radio" /><input id="__tabbed_1_10" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">HPE OneView 10.00</label><label for="__tabbed_1_2">HPE OneView 9.10</label><label for="__tabbed_1_3">HPE OneView 8.60</label><label for="__tabbed_1_4">HPE OneView 8.40</label><label for="__tabbed_1_5">HPE OneView 8.30</label><label for="__tabbed_1_6">HPE OneView 8.00</label><label for="__tabbed_1_7">HPE OneView 7.20</label><label for="__tabbed_1_8">HPE OneView 7.10</label><label for="__tabbed_1_9">HPE OneView 7.00</label><label for="__tabbed_1_10">HPE OneView 6.60</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Component</th>
+<th style="text-align: left;">Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">.NetStandard</td>
+<td style="text-align: left;">2.1 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">PowerShell</td>
+<td style="text-align: left;">7.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">PowerShellCore</td>
+<td style="text-align: left;">7.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView/HPE Synergy</td>
+<td style="text-align: left;">10.00 or newer</td>
+</tr>
+</tbody>
+</table>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>.NetStandard 2.0 API's are supported by both the <a href="https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-7-2/">.NetFramework 4.7.2 Windows</a> and <a href="https://devblogs.microsoft.com/dotnet/announcing-net-core-2-1/">DotNetCore 2.1</a> clients.</p>
+</details>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Component</th>
+<th style="text-align: left;">Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">.NetStandard</td>
+<td style="text-align: left;">2.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">PowerShell</td>
+<td style="text-align: left;">7.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">PowerShellCore</td>
+<td style="text-align: left;">7.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView/HPE Synergy</td>
+<td style="text-align: left;">9.10 or newer</td>
+</tr>
+</tbody>
+</table>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>.NetStandard 2.0 API's are supported by both the <a href="https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-7-2/">.NetFramework 4.7.2 Windows</a> and <a href="https://devblogs.microsoft.com/dotnet/announcing-net-core-2-0/">DotNetCore 2.0</a> clients.</p>
+</details>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Component</th>
+<th style="text-align: left;">Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">.NetStandard</td>
+<td style="text-align: left;">2.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">PowerShell</td>
+<td style="text-align: left;">7.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">PowerShellCore</td>
+<td style="text-align: left;">7.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView/HPE Synergy</td>
+<td style="text-align: left;">8.60 or newer</td>
+</tr>
+</tbody>
+</table>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>.NetStandard 2.0 API's are supported by both the <a href="https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-7-2/">.NetFramework 4.7.2 Windows</a> and <a href="https://devblogs.microsoft.com/dotnet/announcing-net-core-2-0/">DotNetCore 2.0</a> clients.</p>
+</details>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Component</th>
+<th style="text-align: left;">Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">.NetStandard</td>
+<td style="text-align: left;">2.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">PowerShell</td>
+<td style="text-align: left;">7.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">PowerShellCore</td>
+<td style="text-align: left;">7.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView/HPE Synergy</td>
+<td style="text-align: left;">8.40 or newer</td>
+</tr>
+</tbody>
+</table>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>.NetStandard 2.0 API's are supported by both the <a href="https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-7-2/">.NetFramework 4.7.2 Windows</a> and <a href="https://devblogs.microsoft.com/dotnet/announcing-net-core-2-0/">DotNetCore 2.0</a> clients.</p>
+</details>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Component</th>
+<th style="text-align: left;">Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">.NetStandard</td>
+<td style="text-align: left;">2.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">PowerShell</td>
+<td style="text-align: left;">7.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">PowerShellCore</td>
+<td style="text-align: left;">7.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView/HPE Synergy</td>
+<td style="text-align: left;">8.30 or newer</td>
+</tr>
+</tbody>
+</table>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>.NetStandard 2.0 API's are supported by both the <a href="https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-7-2/">.NetFramework 4.7.2 Windows</a> and <a href="https://devblogs.microsoft.com/dotnet/announcing-net-core-2-0/">DotNetCore 2.0</a> clients.</p>
+</details>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Component</th>
+<th style="text-align: left;">Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">.NetStandard</td>
+<td style="text-align: left;">2.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">PowerShell</td>
+<td style="text-align: left;">7.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">PowerShellCore</td>
+<td style="text-align: left;">7.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView/HPE Synergy</td>
+<td style="text-align: left;">8.00 or newer</td>
+</tr>
+</tbody>
+</table>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>.NetStandard 2.0 API's are supported by both the <a href="https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-7-2/">.NetFramework 4.7.2 Windows</a> and <a href="https://devblogs.microsoft.com/dotnet/announcing-net-core-2-0/">DotNetCore 2.0</a> clients.</p>
+</details>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Component</th>
+<th style="text-align: left;">Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">.NetStandard</td>
+<td style="text-align: left;">2.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">PowerShell</td>
+<td style="text-align: left;">5.1, 7.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">PowerShellCore</td>
+<td style="text-align: left;">7.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView/HPE Synergy</td>
+<td style="text-align: left;">7.20 or newer</td>
+</tr>
+</tbody>
+</table>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>.NetStandard 2.0 API's are supported by both the <a href="https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-7-2/">.NetFramework 4.7.2 Windows</a> and <a href="https://devblogs.microsoft.com/dotnet/announcing-net-core-2-0/">DotNetCore 2.0</a> clients.</p>
+</details>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Component</th>
+<th style="text-align: left;">Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">.NetStandard</td>
+<td style="text-align: left;">2.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">PowerShell</td>
+<td style="text-align: left;">5.1, 7.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">PowerShellCore</td>
+<td style="text-align: left;">7.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView/HPE Synergy</td>
+<td style="text-align: left;">7.10 or newer</td>
+</tr>
+</tbody>
+</table>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>.NetStandard 2.0 API's are supported by both the <a href="https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-7-2/">.NetFramework 4.7.2 Windows</a> and <a href="https://devblogs.microsoft.com/dotnet/announcing-net-core-2-0/">DotNetCore 2.0</a> clients.</p>
+</details>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Component</th>
+<th style="text-align: left;">Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">.NetStandard</td>
+<td style="text-align: left;">2.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">PowerShell</td>
+<td style="text-align: left;">5.1, 7.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">PowerShellCore</td>
+<td style="text-align: left;">7.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView/HPE Synergy</td>
+<td style="text-align: left;">7.00 or newer</td>
+</tr>
+</tbody>
+</table>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>.NetStandard 2.0 API's are supported by both the <a href="https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-7-2/">.NetFramework 4.7.2 Windows</a> and <a href="https://devblogs.microsoft.com/dotnet/announcing-net-core-2-0/">DotNetCore 2.0</a> clients.</p>
+</details>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Component</th>
+<th style="text-align: left;">Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">.NetStandard</td>
+<td style="text-align: left;">2.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">PowerShell</td>
+<td style="text-align: left;">5.1, 7.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">PowerShellCore</td>
+<td style="text-align: left;">7.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView/HPE Synergy</td>
+<td style="text-align: left;">6.60 or newer</td>
+</tr>
+</tbody>
+</table>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>.NetStandard 2.0 API's are supported by both the <a href="https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-7-2/">.NetFramework 4.7.2 Windows</a> and <a href="https://devblogs.microsoft.com/dotnet/announcing-net-core-2-0/">DotNetCore 2.0</a> clients.</p>
+</details>
+</div>
+</div>
+</div>
+<h3 id="table-2-deprecated-releases"><strong>Table 2. Deprecated releases</strong></h3>
+<p>The following table documents which versions of the HPE OneView PowerShell libraries are no longer supported.  It is advised administrators update to a supported library release.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Library</th>
+<th style="text-align: left;">Components</th>
+<th style="text-align: left;">Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">HPE OneView 6.30</td>
+<td style="text-align: left;">.NetStandard</td>
+<td style="text-align: left;">2.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 6.30</td>
+<td style="text-align: left;">PowerShell</td>
+<td style="text-align: left;">5.1 or 6.0</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 6.30</td>
+<td style="text-align: left;">PowerShellCore</td>
+<td style="text-align: left;">7.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 6.30</td>
+<td style="text-align: left;">HPE OneView/HPE Synergy</td>
+<td style="text-align: left;">5.60 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 6.20</td>
+<td style="text-align: left;">.NetStandard</td>
+<td style="text-align: left;">2.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 6.20</td>
+<td style="text-align: left;">PowerShell</td>
+<td style="text-align: left;">5.1 or 6.0</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 6.20</td>
+<td style="text-align: left;">PowerShellCore</td>
+<td style="text-align: left;">7.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 6.20</td>
+<td style="text-align: left;">HPE OneView/HPE Synergy</td>
+<td style="text-align: left;">5.60 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 6.10</td>
+<td style="text-align: left;">.NetStandard</td>
+<td style="text-align: left;">2.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 6.10</td>
+<td style="text-align: left;">PowerShell</td>
+<td style="text-align: left;">5.1 or 6.0</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 6.10</td>
+<td style="text-align: left;">PowerShellCore</td>
+<td style="text-align: left;">7.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 6.10</td>
+<td style="text-align: left;">HPE OneView/HPE Synergy</td>
+<td style="text-align: left;">5.60 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 6.00</td>
+<td style="text-align: left;">.NetStandard</td>
+<td style="text-align: left;">2.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 6.00</td>
+<td style="text-align: left;">PowerShell</td>
+<td style="text-align: left;">5.1 or 6.0</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 6.00</td>
+<td style="text-align: left;">PowerShellCore</td>
+<td style="text-align: left;">7.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 6.00</td>
+<td style="text-align: left;">HPE OneView/HPE Synergy</td>
+<td style="text-align: left;">5.60 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 5.60</td>
+<td style="text-align: left;">.NetStandard</td>
+<td style="text-align: left;">2.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 5.60</td>
+<td style="text-align: left;">PowerShell</td>
+<td style="text-align: left;">5.1 or 6.0</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 5.60</td>
+<td style="text-align: left;">PowerShellCore</td>
+<td style="text-align: left;">7.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 5.60</td>
+<td style="text-align: left;">HPE OneView/HPE Synergy</td>
+<td style="text-align: left;">5.60 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 5.40</td>
+<td style="text-align: left;">.NetStandard</td>
+<td style="text-align: left;">2.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 5.40</td>
+<td style="text-align: left;">PowerShell</td>
+<td style="text-align: left;">5.1 or 6.0</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 5.40</td>
+<td style="text-align: left;">PowerShellCore</td>
+<td style="text-align: left;">7.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 5.40</td>
+<td style="text-align: left;">HPE OneView/HPE Synergy</td>
+<td style="text-align: left;">5.40 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 5.30</td>
+<td style="text-align: left;">.NetStandard</td>
+<td style="text-align: left;">2.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 5.30</td>
+<td style="text-align: left;">PowerShell</td>
+<td style="text-align: left;">5.1 or 6.0</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 5.30</td>
+<td style="text-align: left;">PowerShellCore</td>
+<td style="text-align: left;">7.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 5.30</td>
+<td style="text-align: left;">HPE OneView/HPE Synergy</td>
+<td style="text-align: left;">5.30 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 5.20</td>
+<td style="text-align: left;">.NetStandard</td>
+<td style="text-align: left;">2.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 5.20</td>
+<td style="text-align: left;">PowerShell</td>
+<td style="text-align: left;">5.1 or 6.0</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 5.20</td>
+<td style="text-align: left;">PowerShellCore</td>
+<td style="text-align: left;">7.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 5.20</td>
+<td style="text-align: left;">HPE OneView/HPE Synergy</td>
+<td style="text-align: left;">5.20 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 5.00</td>
+<td style="text-align: left;">.NetStandard</td>
+<td style="text-align: left;">2.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 5.00</td>
+<td style="text-align: left;">PowerShell</td>
+<td style="text-align: left;">5.1 or 6.0</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 5.00</td>
+<td style="text-align: left;">PowerShellCore</td>
+<td style="text-align: left;">7.0 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 5.00</td>
+<td style="text-align: left;">HPE OneView/HPE Synergy</td>
+<td style="text-align: left;">5.00 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 4.20</td>
+<td style="text-align: left;">Windows Management Framework (WMF)</td>
+<td style="text-align: left;">4.0</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 4.20</td>
+<td style="text-align: left;">.Net Client Framework</td>
+<td style="text-align: left;">4.6</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 4.20</td>
+<td style="text-align: left;">HPE OneView/HPE Synergy</td>
+<td style="text-align: left;">4.20 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 4.10</td>
+<td style="text-align: left;">Windows Management Framework (WMF)</td>
+<td style="text-align: left;">4.0</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 4.10</td>
+<td style="text-align: left;">.Net Client Framework</td>
+<td style="text-align: left;">4.6</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 4.10</td>
+<td style="text-align: left;">HPE OneView/HPE Synergy</td>
+<td style="text-align: left;">4.20 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 4.00</td>
+<td style="text-align: left;">Windows Management Framework (WMF)</td>
+<td style="text-align: left;">4.0</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 4.00</td>
+<td style="text-align: left;">.Net Client Framework</td>
+<td style="text-align: left;">4.6</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 4.00</td>
+<td style="text-align: left;">HPE OneView/HPE Synergy</td>
+<td style="text-align: left;">4.00 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 3.10</td>
+<td style="text-align: left;">Windows Management Framework (WMF)</td>
+<td style="text-align: left;">4.0</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 3.10</td>
+<td style="text-align: left;">.Net Client Framework</td>
+<td style="text-align: left;">4.6</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 3.10</td>
+<td style="text-align: left;">HPE OneView/HPE Synergy</td>
+<td style="text-align: left;">3.10 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 3.00</td>
+<td style="text-align: left;">Windows Management Framework (WMF)</td>
+<td style="text-align: left;">4.0</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 3.00</td>
+<td style="text-align: left;">.Net Client Framework</td>
+<td style="text-align: left;">4.6</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 3.00</td>
+<td style="text-align: left;">HPE OneView/HPE Synergy</td>
+<td style="text-align: left;">3.00 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 2.00</td>
+<td style="text-align: left;">Windows Management Framework (WMF)</td>
+<td style="text-align: left;">4.0</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 2.00</td>
+<td style="text-align: left;">.Net Client Framework</td>
+<td style="text-align: left;">4.6</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 2.00</td>
+<td style="text-align: left;">HPE OneView</td>
+<td style="text-align: left;">2.00 or newer</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 1.20</td>
+<td style="text-align: left;">Windows Management Framework (WMF)</td>
+<td style="text-align: left;">3.0</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 1.20</td>
+<td style="text-align: left;">.Net Client Framework</td>
+<td style="text-align: left;">4.0</td>
+</tr>
+<tr>
+<td style="text-align: left;">HPE OneView 1.20</td>
+<td style="text-align: left;">HPE OneView</td>
+<td style="text-align: left;">1.20 or newer</td>
+</tr>
+</tbody>
+</table>
+<h2 id="installer-changes">Installer changes</h2>
+<p>Starting with the HPE OneView 5.00 PowerShell library, the provided EXE installer is no longer available. The library has been published to the Microsoft PowerShell Gallery since the release of the 3.10 library. To install the library on another system that might not have Internet access, please review the <a href="https://go.microsoft.com/fwlink/?LinkId=531351"><code>Save-Module</code></a> PowerShellGet Cmdlet.</p>
+<h3 id="how-to-obtain-and-install-the-420-or-older-library">How to obtain and install the 4.20 or older library</h3>
+<p>The library can be installed in one of two ways:</p>
+<ul>
+<li>Starting with the HPE OneView 3.10 library release, it is now published on the PowerShellGallery.  <code>Install-Module HPEOneView.{VERSION}</code> or <code>Save-Module HPEOneView.{VERSION}</code> can be used for those using PowerShell 5.0 or newer (with the <a href="https://github.com/powerShell/powershellget">PowerShellGet module</a>).</li>
+<li>Go to the Code then <a href="https://github.com/HewlettPackard/POSH-HPOneView/releases">Releases</a> tab in this repository, and download the current release for the version you wish to download.</li>
+</ul>
+<h3 id="importing-the-library-into-your-powershell-console">Importing the library into your PowerShell console</h3>
+<p>The library module name to import is always <code>HPEOneView.{VERSION}</code>, where <code>{VERSION}</code> is the <code>Major</code> and <code>Minor</code> version concatenated together. For example, to load the HPE OneView 9.10 library, issue the following command within your PowerShell console:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Import-Module HPEOneView.910
+</span></code></pre></div>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>You may need to include the <code>-AllowClobber</code> parameter when using <code>Install-Module</code>, when you intend to install more than 1 module on your system.</p>
+</details>
+<h3 id="how-to-start-using-the-library">How to start using the library</h3>
+<p>There are 5 primary CMDLETs to interact with the HPE OneView appliance:</p>
+<ul>
+<li>Connect-OVMgmt</li>
+<li>Send-OVRequest</li>
+<li>New-OVResource</li>
+<li>Set-OVResource</li>
+<li>Remove-OVResource</li>
+</ul>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>Cmdlet suffix names changed starting with the HPE OneView 5.30 release, and removed the HP part of the suffix which was <code>HPOV</code>.</p>
+</details>
+<p>New in the HPE OneView 2.00 library is the ability to connect to multiple appliances, which allows the user to execute various CMDLETs without requiring to disconnect and reconnect to other appliances within your PowerShell session. The <a href="cmdlets/library/connect-ovmgmt.md"><code>Connect-OVMgmt</code></a> CMDLET will authenticate you to the requested appliance. From there, a session object (Type <code>[HPEOneView.Appliance.Connection]</code>) is created and added to a global variable <code>$ConnectedSessions</code> (Type <code>[System.Collections.ArrayList]</code>) in your PowerShell runtime environment that other CMDLETs will use. Within the <code>[HPEOneView.Appliance.Connection]</code> object contains a number of properties, of which the connected appliance <code>hostname</code> value provided by <code>Connect-OVMgmt</code> is stored, along with the <code>SessionID</code> of your user session.</p>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>For more information about multiple appliance connection support, please review <code>get-help about_Appliance_Connections</code> from your PowerShell console, or read the online wiki page for <a href="about/about_appliance_connections/">about_Appliance_Connections</a>.</p>
+</details>
+<p>The <a href="cmdlets/library/new-ovresource.md"><code>New-OVResource</code></a>, <a href="cmdlets/library/set-ovresource.md"><code>Set-OVRequest</code></a> and <a href="cmdlets/library/remove-ovresource.md"><code>Remove-OVResource</code></a> Cmdlets are mainly for callers to perform Create, Update and Delete operations where a native Cmdlet hasn't been developed. The following diagram is an example of flow, where <a href="cmdlets/library/send-ovrequest.md"><code>Send-OVRequest</code></a> is the main Cmdlet that directly communicates with the HPE OneView REST API.</p>
+<h3 id="authentication-with-hpe-oneview-appliance-flow">Authentication with HPE OneView appliance flow</h3>
+<pre class="mermaid"><code>sequenceDiagram
+    Connect-OVMgmt-&gt;&gt;Send-OVRequest: Appliance Authentication request
+    Send-OVRequest-&gt;&gt;[HPEOneView.Utilities.Net.RestClient] (HTTPS): New-Object
+    [HPEOneView.Utilities.Net.RestClient] (HTTPS)-&gt;&gt;HPE OneView: HTTPS POST /rest/login-sessions
+    Note over [HPEOneView.Utilities.Net.RestClient] (HTTPS),HPE OneView: On failure, HPEOneview.Appliance.AuthSessionException
+    HPE OneView--&gt;&gt;Connect-OVMgmt: Return SessionID
+    Note over HPE OneView,Connect-OVMgmt: When the user is authenticated, session object [HPEOneView.Appliance.Connection] is stored in global variable $ConnectedSessions</code></pre>
+<h3 id="example-getting-a-resource-from-an-hpe-oneview-appliance">Example getting a resource from an HPE OneView appliance</h3>
+<pre class="mermaid"><code>sequenceDiagram
+    Get-OVServerProfile-&gt;&gt;Send-OVRequest: Request for Server Profiles
+    Send-OVRequest-&gt;&gt;[HPEOneView.Utilities.Net.RestClient] (HTTPS): New-Object
+    [HPEOneView.Utilities.Net.RestClient] (HTTPS)-&gt;&gt;HPE OneView: GET /rest/server-profiles
+    HPE OneView--&gt;&gt;Get-OVServerProfile: Return collection of server profile resource objects</code></pre>
+<h3 id="example-settingupdating-a-resource-with-an-hpe-oneview-appliance">Example setting/updating a resource with an HPE OneView appliance</h3>
+<pre class="mermaid"><code>sequenceDiagram
+    Set-OVNetwork-&gt;&gt;Send-OVRequest: Modify an existing network resource
+    Send-OVRequest-&gt;&gt;[HPEOneView.Utilities.Net.RestClient] (HTTPS): New-Object
+    [HPEOneView.Utilities.Net.RestClient] (HTTPS)-&gt;&gt;HPE OneView: HTTPS PUT /rest/ethernet-networks
+    Note over [HPEOneView.Utilities.Net.RestClient] (HTTPS),HPE OneView: HTTP body contains updated resource
+    HPE OneView--&gt;&gt;Set-OVNetwork: Return Async task
+    Note over HPE OneView,Set-OVNetwork: Asyncronous task [HPEOneView.Appliance.TaskResource] is created to be monitored by caller.</code></pre>
+<h3 id="base-hpeoneviewutilitiesnetrestclient-class-contructor">Base HPEOneView.Utilities.Net.RestClient class contructor</h3>
+<pre class="mermaid"><code>classDiagram
+    direction LR
+    namespace HPEOneView.Utilities.Net {
+    class `RestClient : System.Net.HttpWebRequest` {
+
+            +HPEOneView.Utilities.Net+HttpWebRequestMethodsEnum Method
+            +System.Uri URI
+            +int XAPIVersion
+            +new ()
+
+        } 
+        class HttpWebRequestMethodsEnum {
+            &lt;&lt;Enumeration&gt;&gt;
+            GET
+            POST
+            PUT
+            DELETE
+            PATCH
+        }
+
+    }</code></pre>
+<p>Once completed, you can either close out of your PowerShell console, or issue the <a href="cmdlets/library/disconnect-ovmgmt.md"><code>Disconnect-OVMgmt</code></a> CMDLET to terminate your session, and return you back to your PowerShell consoles prior state.</p>
+<h3 id="sample-scripts">Sample Scripts</h3>
+<p>To ease the use of the HPE OneView PowerShell library, we have included a number of sample scripts administrators can use to quickly get familiar with the capabilities of the library. The sample scripts are part of the source code and installer. Depending on which installation scope you chose, a Samples directory contains all of the sample scripts. By no means are they exhaustive, but will help you get more familiar with the library.</p>
+<div class="language-pwsh highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="no">[PS]</span> <span class="p">...\</span><span class="n">Samples</span><span class="p">&gt;</span> <span class="nb">dir</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="n">Directory</span><span class="p">:</span> <span class="n">C</span><span class="p">:\</span><span class="n">Users</span><span class="p">\</span><span class="n">user</span><span class="p">\</span><span class="n">OneDrive</span><span class="p">\</span><span class="n">Documents</span><span class="p">\</span><span class="n">Powershell</span><span class="p">\</span><span class="n">Modules</span><span class="p">\</span><span class="n">POSH-HPEOneView</span><span class="p">.</span><span class="n">1000</span><span class="p">\</span><span class="n">Samples</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">Mode</span>                 <span class="n">LastWriteTime</span>         <span class="n">Length</span> <span class="n">Name</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="p">----</span>                 <span class="p">-------------</span>         <span class="p">------</span> <span class="p">----</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">la</span><span class="p">---</span>            <span class="n">6</span><span class="p">/</span><span class="n">5</span><span class="p">/</span><span class="n">2025</span> <span class="n">12</span><span class="p">:</span><span class="n">19</span> <span class="n">PM</span>           <span class="n">4166</span> <span class="n">AddServers_Monitored_Sample</span><span class="p">.</span><span class="n">ps1</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">la</span><span class="p">---</span>            <span class="n">6</span><span class="p">/</span><span class="n">5</span><span class="p">/</span><span class="n">2025</span> <span class="n">12</span><span class="p">:</span><span class="n">19</span> <span class="n">PM</span>           <span class="n">5059</span> <span class="n">AddStorageSystem_Sample</span><span class="p">.</span><span class="n">ps1</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="n">la</span><span class="p">---</span>            <span class="n">6</span><span class="p">/</span><span class="n">5</span><span class="p">/</span><span class="n">2025</span> <span class="n">12</span><span class="p">:</span><span class="n">19</span> <span class="n">PM</span>           <span class="n">3734</span> <span class="n">Alerts_Sample</span><span class="p">.</span><span class="n">ps1</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="n">la</span><span class="p">---</span>            <span class="n">9</span><span class="p">/</span><span class="n">9</span><span class="p">/</span><span class="n">2024</span>  <span class="n">7</span><span class="p">:</span><span class="n">39</span> <span class="n">PM</span>           <span class="n">2951</span> <span class="n">Appliance_Backup_Sample</span><span class="p">.</span><span class="n">ps1</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">la</span><span class="p">---</span>            <span class="n">6</span><span class="p">/</span><span class="n">5</span><span class="p">/</span><span class="n">2025</span> <span class="n">12</span><span class="p">:</span><span class="n">19</span> <span class="n">PM</span>          <span class="n">18388</span> <span class="n">ApplianceConfig_Sample</span><span class="p">.</span><span class="n">ps1</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="n">la</span><span class="p">---</span>            <span class="n">6</span><span class="p">/</span><span class="n">5</span><span class="p">/</span><span class="n">2025</span> <span class="n">12</span><span class="p">:</span><span class="n">19</span> <span class="n">PM</span>          <span class="n">13380</span> <span class="n">ComposerApplianceConfig_Sample</span><span class="p">.</span><span class="n">ps1</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="n">la</span><span class="p">---</span>            <span class="n">6</span><span class="p">/</span><span class="n">5</span><span class="p">/</span><span class="n">2025</span> <span class="n">12</span><span class="p">:</span><span class="n">19</span> <span class="n">PM</span>          <span class="n">10035</span> <span class="n">Configure_IIS_WebDav_ExternalRepo_Sample</span><span class="p">.</span><span class="n">ps1</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="n">la</span><span class="p">---</span>            <span class="n">6</span><span class="p">/</span><span class="n">5</span><span class="p">/</span><span class="n">2025</span> <span class="n">12</span><span class="p">:</span><span class="n">19</span> <span class="n">PM</span>           <span class="n">8787</span> <span class="n">ConfigureRemoteSupport_Sample</span><span class="p">.</span><span class="n">ps1</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="n">la</span><span class="p">---</span>            <span class="n">6</span><span class="p">/</span><span class="n">5</span><span class="p">/</span><span class="n">2025</span> <span class="n">12</span><span class="p">:</span><span class="n">19</span> <span class="n">PM</span>           <span class="n">3632</span> <span class="n">CreateEnclosureGroup_Sample</span><span class="p">.</span><span class="n">ps1</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="n">la</span><span class="p">---</span>            <span class="n">6</span><span class="p">/</span><span class="n">5</span><span class="p">/</span><span class="n">2025</span> <span class="n">12</span><span class="p">:</span><span class="n">19</span> <span class="n">PM</span>           <span class="n">3510</span> <span class="n">DefineLogicalInterconnectGroup_AA_VC_Sample</span><span class="p">.</span><span class="n">ps1</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="n">la</span><span class="p">---</span>            <span class="n">6</span><span class="p">/</span><span class="n">5</span><span class="p">/</span><span class="n">2025</span> <span class="n">12</span><span class="p">:</span><span class="n">19</span> <span class="n">PM</span>           <span class="n">3404</span> <span class="n">DefineLogicalInterconnectGroup_Sample</span><span class="p">.</span><span class="n">ps1</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="n">la</span><span class="p">---</span>            <span class="n">6</span><span class="p">/</span><span class="n">5</span><span class="p">/</span><span class="n">2025</span> <span class="n">12</span><span class="p">:</span><span class="n">19</span> <span class="n">PM</span>           <span class="n">3371</span> <span class="n">DefineNetworks_AA_VC_Sample</span><span class="p">.</span><span class="n">ps1</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="n">la</span><span class="p">---</span>            <span class="n">6</span><span class="p">/</span><span class="n">5</span><span class="p">/</span><span class="n">2025</span> <span class="n">12</span><span class="p">:</span><span class="n">19</span> <span class="n">PM</span>           <span class="n">3639</span> <span class="n">DefineNetworks_Sample</span><span class="p">.</span><span class="n">ps1</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="n">la</span><span class="p">---</span>            <span class="n">6</span><span class="p">/</span><span class="n">5</span><span class="p">/</span><span class="n">2025</span> <span class="n">12</span><span class="p">:</span><span class="n">19</span> <span class="n">PM</span>           <span class="n">7010</span> <span class="n">Server_Multiconnection_AA_VC_Sample</span><span class="p">.</span><span class="n">ps1</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="n">la</span><span class="p">---</span>            <span class="n">6</span><span class="p">/</span><span class="n">5</span><span class="p">/</span><span class="n">2025</span> <span class="n">12</span><span class="p">:</span><span class="n">19</span> <span class="n">PM</span>           <span class="n">7344</span> <span class="n">Server_Multiconnection_Sample</span><span class="p">.</span><span class="n">ps1</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="n">la</span><span class="p">---</span>            <span class="n">6</span><span class="p">/</span><span class="n">5</span><span class="p">/</span><span class="n">2025</span> <span class="n">12</span><span class="p">:</span><span class="n">19</span> <span class="n">PM</span>           <span class="n">7770</span> <span class="n">Server_Multiconnection_SAN_Storage_Sample</span><span class="p">.</span><span class="n">ps1</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="n">la</span><span class="p">---</span>            <span class="n">6</span><span class="p">/</span><span class="n">5</span><span class="p">/</span><span class="n">2025</span> <span class="n">12</span><span class="p">:</span><span class="n">19</span> <span class="n">PM</span>           <span class="n">5697</span> <span class="n">Server_Profile_Template_Multiconnection_Sample</span><span class="p">.</span><span class="n">ps1</span>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="n">la</span><span class="p">---</span>            <span class="n">6</span><span class="p">/</span><span class="n">5</span><span class="p">/</span><span class="n">2025</span> <span class="n">12</span><span class="p">:</span><span class="n">19</span> <span class="n">PM</span>           <span class="n">4395</span> <span class="n">Server_Profile_Template_Rack_Server_Sample</span><span class="p">.</span><span class="n">ps1</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="n">la</span><span class="p">---</span>            <span class="n">6</span><span class="p">/</span><span class="n">5</span><span class="p">/</span><span class="n">2025</span> <span class="n">12</span><span class="p">:</span><span class="n">19</span> <span class="n">PM</span>           <span class="n">8014</span> <span class="n">Wipe_Appliance</span><span class="p">.</span><span class="n">ps1</span>
+</span></code></pre></div>
+<h3 id="generating-sample-code">Generating sample code</h3>
+<p>Introduced in the HPE OneView 4.10 library, the <a href="cmdlets/library/convertto-ovpowershellscript.md"><code>ConvertTo-OVPowerShellScript</code></a> Cmdlet will take supported resources that were created either with the UI or other REST API client or HPE OneView SDK's, and generate PowrShell script code.</p>
+<p>Here is an example of generating PowerShell script code from an HPE Synergy server profile created in the UI:</p>
+<p><img alt="Server profile resource created by the HPE OneView graphical user interface (GUI)." src="images/8392c5dd-5303-4c61-82f3-f788c40dab26.png" /></p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c"># Get the profile and generate PowerShell script code</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">Get-OVServerProfile</span> <span class="n">-Name</span> <span class="n">prf1</span> <span class="p">|</span> <span class="nb">ConvertTo-OVPowerShellScript</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c"># -------------- Attributes for ServerProfile &quot;prf1&quot;</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nv">$name</span>                       <span class="p">=</span> <span class="s2">&quot;prf1&quot;</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="nv">$description</span>                <span class="p">=</span> <span class="s2">&quot;prf1&quot;</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="nv">$server</span>                     <span class="p">=</span> <span class="nb">Get-OVServer</span> <span class="n">-Name</span> <span class="s2">&quot;Encl-1, bay 11&quot;</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="nv">$affinity</span>                   <span class="p">=</span> <span class="s2">&quot;Bay&quot;</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="c"># -------------- Attributes for connection &quot;1&quot;</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="nv">$connID</span>                     <span class="p">=</span> <span class="n">1</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="nv">$connType</span>                   <span class="p">=</span> <span class="s2">&quot;Ethernet&quot;</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="nv">$netName</span>                    <span class="p">=</span> <span class="s2">&quot;Mgmt&quot;</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="nv">$ThisNetwork</span>                <span class="p">=</span> <span class="nb">Get-OVNetwork</span> <span class="n">-Type</span> <span class="n">Ethernet</span> <span class="n">-Name</span> <span class="nv">$netName</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="nv">$portID</span>                     <span class="p">=</span> <span class="s2">&quot;Mezz 3:1-a&quot;</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="nv">$requestedMbps</span>              <span class="p">=</span> <span class="n">2500</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="nv">$Conn1</span>                      <span class="p">=</span> <span class="nb">New-OVServerProfileConnection</span> <span class="n">-ConnectionID</span> <span class="nv">$connID</span> <span class="n">-ConnectionType</span> <span class="nv">$connType</span> <span class="n">-Network</span> <span class="nv">$ThisNetwork</span> <span class="n">-PortId</span> <span class="nv">$portID</span> <span class="n">-RequestedBW</span> <span class="nv">$requestedMbps</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="c"># -------------- Attributes for connection &quot;2&quot;</span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="nv">$connID</span>                     <span class="p">=</span> <span class="n">2</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="nv">$connType</span>                   <span class="p">=</span> <span class="s2">&quot;Ethernet&quot;</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="nv">$netName</span>                    <span class="p">=</span> <span class="s2">&quot;Mgmt&quot;</span>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="nv">$ThisNetwork</span>                <span class="p">=</span> <span class="nb">Get-OVNetwork</span> <span class="n">-Type</span> <span class="n">Ethernet</span> <span class="n">-Name</span> <span class="nv">$netName</span>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="nv">$portID</span>                     <span class="p">=</span> <span class="s2">&quot;Mezz 3:2-a&quot;</span>
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="nv">$requestedMbps</span>              <span class="p">=</span> <span class="n">2500</span>
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="nv">$Conn2</span>                      <span class="p">=</span> <span class="nb">New-OVServerProfileConnection</span> <span class="n">-ConnectionID</span> <span class="nv">$connID</span> <span class="n">-ConnectionType</span> <span class="nv">$connType</span> <span class="n">-Network</span> <span class="nv">$ThisNetwork</span> <span class="n">-PortId</span> <span class="nv">$portID</span> <span class="n">-RequestedBW</span> <span class="nv">$requestedMbps</span>
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="nv">$connections</span>                <span class="p">=</span> <span class="nv">$Conn1</span><span class="p">,</span> <span class="nv">$Conn2</span>
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="c"># -------------- Attributes for logical disk &quot;Boot(RAID1)&quot;</span>
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="nv">$ldName</span>                     <span class="p">=</span> <span class="s2">&quot;Boot&quot;</span>
+</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="nv">$raidLevel</span>                  <span class="p">=</span> <span class="s2">&quot;RAID1&quot;</span>
+</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="nv">$numPhysDrives</span>              <span class="p">=</span> <span class="n">2</span>
+</span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="nv">$driveTech</span>                  <span class="p">=</span> <span class="s2">&quot;Auto&quot;</span>
+</span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a><span class="nv">$LogicalDisk1</span>               <span class="p">=</span> <span class="nb">New-OVServerProfileLogicalDisk</span> <span class="n">-Name</span> <span class="nv">$ldName</span> <span class="n">-Raid</span> <span class="nv">$raidLevel</span> <span class="n">-NumberofDrives</span> <span class="nv">$numPhysDrives</span> <span class="n">-DriveType</span> <span class="nv">$driveTech</span> <span class="n">-Bootable</span> <span class="nv">$True</span>
+</span><span id="__span-2-32"><a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a><span class="c"># -------------- Attributes for controller &quot;Embedded&quot; (Mixed)</span>
+</span><span id="__span-2-33"><a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a><span class="nv">$deviceSlot</span>                 <span class="p">=</span> <span class="s2">&quot;Embedded&quot;</span>
+</span><span id="__span-2-34"><a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a><span class="nv">$controllerMode</span>             <span class="p">=</span> <span class="s2">&quot;Mixed&quot;</span>
+</span><span id="__span-2-35"><a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a><span class="nv">$LogicalDisks</span>               <span class="p">=</span> <span class="nv">$LogicalDisk1</span>
+</span><span id="__span-2-36"><a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a><span class="nv">$writeCache</span>                 <span class="p">=</span> <span class="s2">&quot;Enabled&quot;</span>
+</span><span id="__span-2-37"><a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a><span class="nv">$controller1</span>                <span class="p">=</span> <span class="nb">New-OVServerProfileLogicalDiskController</span> <span class="n">-ControllerID</span> <span class="nv">$deviceSlot</span> <span class="n">-Mode</span> <span class="nv">$controllerMode</span> <span class="n">-WriteCache</span> <span class="nv">$writeCache</span> <span class="n">-LogicalDisk</span> <span class="nv">$LogicalDisks</span>
+</span><span id="__span-2-38"><a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a><span class="nv">$controllers</span>                <span class="p">=</span> <span class="nv">$controller1</span>
+</span><span id="__span-2-39"><a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a><span class="c"># -------------- Attributes for BIOS Boot Mode settings</span>
+</span><span id="__span-2-40"><a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a><span class="nv">$manageboot</span>                 <span class="p">=</span> <span class="nv">$True</span>
+</span><span id="__span-2-41"><a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a><span class="nv">$biosBootMode</span>               <span class="p">=</span> <span class="s2">&quot;UEFIOptimized&quot;</span>
+</span><span id="__span-2-42"><a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a><span class="c"># -------------- Attributes for BIOS order settings</span>
+</span><span id="__span-2-43"><a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a><span class="nv">$bootOrder</span>                  <span class="p">=</span> <span class="s2">&quot;HardDisk&quot;</span>
+</span><span id="__span-2-44"><a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a><span class="c"># -------------- Attributes for BIOS settings</span>
+</span><span id="__span-2-45"><a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a><span class="nv">$biosSettings</span>               <span class="p">=</span> <span class="p">@(</span>
+</span><span id="__span-2-46"><a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a>        <span class="p">@{</span><span class="n">id</span> <span class="p">=</span> <span class="s1">&#39;WorkloadProfile&#39;</span><span class="p">;</span> <span class="n">value</span> <span class="p">=</span> <span class="s1">&#39;GeneralThroughputCompute&#39;</span><span class="p">},</span>
+</span><span id="__span-2-47"><a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a>        <span class="p">@{</span><span class="n">id</span> <span class="p">=</span> <span class="s1">&#39;PowerRegulator&#39;</span><span class="p">;</span> <span class="n">value</span> <span class="p">=</span> <span class="s1">&#39;StaticHighPerf&#39;</span><span class="p">},</span>
+</span><span id="__span-2-48"><a id="__codelineno-2-48" name="__codelineno-2-48" href="#__codelineno-2-48"></a>        <span class="p">@{</span><span class="n">id</span> <span class="p">=</span> <span class="s1">&#39;EnergyPerfBias&#39;</span><span class="p">;</span> <span class="n">value</span> <span class="p">=</span> <span class="s1">&#39;MaxPerf&#39;</span><span class="p">},</span>
+</span><span id="__span-2-49"><a id="__codelineno-2-49" name="__codelineno-2-49" href="#__codelineno-2-49"></a>        <span class="p">@{</span><span class="n">id</span> <span class="p">=</span> <span class="s1">&#39;CollabPowerControl&#39;</span><span class="p">;</span> <span class="n">value</span> <span class="p">=</span> <span class="s1">&#39;Disabled&#39;</span><span class="p">},</span>
+</span><span id="__span-2-50"><a id="__codelineno-2-50" name="__codelineno-2-50" href="#__codelineno-2-50"></a>        <span class="p">@{</span><span class="n">id</span> <span class="p">=</span> <span class="s1">&#39;NumaGroupSizeOpt&#39;</span><span class="p">;</span> <span class="n">value</span> <span class="p">=</span> <span class="s1">&#39;Clustered&#39;</span><span class="p">},</span>
+</span><span id="__span-2-51"><a id="__codelineno-2-51" name="__codelineno-2-51" href="#__codelineno-2-51"></a>        <span class="p">@{</span><span class="n">id</span> <span class="p">=</span> <span class="s1">&#39;SubNumaClustering&#39;</span><span class="p">;</span> <span class="n">value</span> <span class="p">=</span> <span class="s1">&#39;Enabled&#39;</span><span class="p">},</span>
+</span><span id="__span-2-52"><a id="__codelineno-2-52" name="__codelineno-2-52" href="#__codelineno-2-52"></a>        <span class="p">@{</span><span class="n">id</span> <span class="p">=</span> <span class="s1">&#39;EnergyEfficientTurbo&#39;</span><span class="p">;</span> <span class="n">value</span> <span class="p">=</span> <span class="s1">&#39;Disabled&#39;</span><span class="p">},</span>
+</span><span id="__span-2-53"><a id="__codelineno-2-53" name="__codelineno-2-53" href="#__codelineno-2-53"></a>        <span class="p">@{</span><span class="n">id</span> <span class="p">=</span> <span class="s1">&#39;IntelUpiPowerManagement&#39;</span><span class="p">;</span> <span class="n">value</span> <span class="p">=</span> <span class="s1">&#39;Disabled&#39;</span><span class="p">}</span>
+</span><span id="__span-2-54"><a id="__codelineno-2-54" name="__codelineno-2-54" href="#__codelineno-2-54"></a><span class="p">)</span>
+</span><span id="__span-2-55"><a id="__codelineno-2-55" name="__codelineno-2-55" href="#__codelineno-2-55"></a><span class="c"># -------------- Attributes for advanced settings</span>
+</span><span id="__span-2-56"><a id="__codelineno-2-56" name="__codelineno-2-56" href="#__codelineno-2-56"></a><span class="nb">New-OVServerProfile</span> <span class="n">-Name</span> <span class="nv">$name</span> <span class="n">-Description</span> <span class="nv">$description</span> <span class="n">-AssignmentType</span> <span class="n">Server</span> <span class="n">-Server</span> <span class="nv">$server</span> <span class="n">-Affinity</span> <span class="nv">$affinity</span> <span class="n">-Connections</span> <span class="nv">$connections</span> <span class="n">-LocalStorage</span> <span class="n">-StorageController</span> <span class="nv">$controllers</span> <span class="n">-ManageBoot</span><span class="p">:</span><span class="nv">$manageboot</span> <span class="n">-BootMode</span> <span class="nv">$biosBootMode</span> <span class="n">-BootOrder</span> <span class="nv">$bootOrder</span> <span class="n">-Bios</span> <span class="n">-BiosSettings</span> <span class="nv">$biosSettings</span> <span class="n">-HideUnusedFlexNics</span> <span class="nv">$true</span>
+</span></code></pre></div>
+<h4 id="hpe-oneview-automation-sample-repository">HPE OneView automation sample repository</h4>
+<p>We have created a home for contributors to provide sample scripts or automation toolkits that use various HPE OneView ecosystem providers. You can find those samples on the <a href="https://github.com/hewlettPackard/oneview-samples">HPE OneView Samples GitHub project repository</a>.</p>
+<p>Others have contributed example scripts to further automate management within the infrastructure. Please use the following links to see other examples not included within the library Samples directory.</p>
+<ul>
+<li><a href="https://github.com/HewlettPackard/oneview-powershell-samples/tree/master">HPE OneView PowerShell samples</a></li>
+<li><a href="https://github.com/HewlettPackard/oneview-powershell-samples/tree/master/Networking/Rename-LANNetworks">Rename-LANNetwork</a></li>
+<li><a href="https://github.com/DungKHoang/Import-Export-OneView-Resources">Import/Export-OVResources</a></li>
+<li><a href="https://github.com/HewlettPackard/oneview-powershell-samples/tree/master/Appliance/Automate-Appliance-Backup">Automate Appliance Backup</a></li>
+<li><a href="https://github.com/HewlettPackard/oneview-powershell-samples/tree/master/Server%20Hardware/Creator-iLO">Configure iLO settings from OneView using iLO RedFish Cmdlets</a></li>
+</ul>
+<h3 id="additional-resources">Additional Resources</h3>
+<h4 id="hpe-oneview-python-library"><strong>HPE OneView Python Library</strong></h4>
+<ul>
+<li><a href="https://github.com/HewlettPackard/oneview-python">HPE OneView Python library source code, updates and issues tracker</a></li>
+</ul>
+<p><strong>HPE OneView Documentation on the HPE Enterprise Information Library</strong></p>
+<ul>
+<li><a href="https://www.hpe.com/support/oneview-guide-synergy">HPE OneView User Guide for HPE Synergy</a></li>
+<li><a href="https://www.hpe.com/support/oneview-guide-vms">HPE OneView User Guide for VMs</a></li>
+<li><a href="https://www.hpe.com/support/OneView-IG">HPE OneView Installation Guide</a></li>
+<li><a href="https://www.hpe.com/support/OneView-Synergy-SM">HPE OneView Support Matrix for HPE Synergy</a></li>
+<li><a href="https://www.hpe.com/support/OneView-SM">HPE OneView Support Matrix</a></li>
+<li><a href="https://www.hpe.com/support/OneView-Synergy-RN">HPE OneView Release Notes for HPE Synergy</a></li>
+<li><a href="https://www.hpe.com/support/OneView-RN">HPE OneView Release Notes</a></li>
+<li><a href="https://www.hpe.com/support/OV-deploy-manage-guide">HPE OneView Best Practices Guide for Deployment and Management</a></li>
+<li><a href="https://www.hpe.com/support/OV-API-reference">HPE OneView API Reference Quick Links</a></li>
+<li><a href="https://www.hpe.com/support/Alerts-Guide-Synergy">HPE OneView Alerts User Guide for HPE Synergy</a></li>
+<li><a href="https://www.hpe.com/support/Alerts-Guide-VMs">HPE OneView Alerts User Guide for VMs</a></li>
+</ul>
+<p><strong>HPE OneView Community</strong></p>
+<ul>
+<li><a href="https://hpe.com/info/oneviewcommunity">HPE OneView Community Forums</a></li>
+</ul>
+<p>Learn more about HPE OneView at <a href="https://hpe.com/info/oneview">hpe.com/info/oneview</a></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+  
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Thanks for your feedback! Help us improve this page by using our <a href="https://github.com/HewlettPackard/POSH-HPEOneView/issues/new/?title=[DocsFeedback]+Introduction+-+/" target="_blank" rel="noopener">feedback form</a>.
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2013-2025 Hewlett Packard Enterprise Development LP <a href="#__consent">Change cookie settings</a> <a href="https://www.hpe.com/us/en/legal/privacy.html">Hewlett Packard Enterprise privacy statement.</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+  
+
+
+<h4></h4>
+<p></p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+    
+      
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="analytics" >
+      <span class="task-list-indicator"></span>
+      Google Analytics
+    </label>
+  </li>
+
+      
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.tracking", "navigation.top", "content.code.copy", "content.action.edit", "content.action.view"], "search": "assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
