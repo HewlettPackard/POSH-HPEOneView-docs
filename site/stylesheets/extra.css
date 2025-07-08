@@ -1,0 +1,28 @@
+/* Table header color */
+table thead {
+  background-color: var(--m3c6, #1f2d41);
+}
+
+/* Alternating row colors */
+table tr:nth-child(odd) {
+  background-color: darkgrey;
+}
+
+table tr:nth-child(even) {
+  background-color: whitesmoke;
+}
+
+
+[data-md-color-scheme="slate"] .md-typeset__table tr:nth-child(2n) {
+  background-color: #7C7C7C; /* Example for dark mode */
+}
+
+[data-md-color-scheme="slate"] .md-typeset__table tr:nth-child(2n+1) {
+  background-color: #636363; /* Example for dark mode */
+}
+
+:root  > * {
+  --md-primary-fg-color:        #01A982;
+  --md-primary-fg-color--light: #FFFFFF;
+  --md-primary-fg-color--dark:  #000000;
+}
