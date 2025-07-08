@@ -20,5 +20,10 @@
     "version": "9.10",
     "title": "9.10",
     "aliases": []
+  },
+  {
+    "version": "9.00",
+    "title": "9.00",
+    "aliases": []
   }
 ]
