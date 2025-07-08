@@ -70,5 +70,10 @@
     "version": "7.00",
     "title": "7.00",
     "aliases": []
+  },
+  {
+    "version": "6.60",
+    "title": "6.60",
+    "aliases": []
   }
 ]
