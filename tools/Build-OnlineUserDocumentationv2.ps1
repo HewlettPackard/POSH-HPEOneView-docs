@@ -401,7 +401,7 @@ if (-not (Test-Path $Path))
 {
 
     $Message = "The path '{0}' does not exist.  Please check the path and try again." -f $Path
-    throw [Management.Automation.ErrorRecord]::new((New-Object 'InvalidOperationException' $Message), 'PathNotFound', 'ResourceUnavailable', 'HelpJSONSource')
+    throw [Management.Automation.ErrorRecord]::new(([System.InvalidOperationException]::new($Message)), 'PathNotFound', 'ResourceUnavailable', 'HelpJSONSource')
 
 }
 
@@ -410,27 +410,30 @@ if (-not (Test-Path (Join-Path $Path ".git")))
 {
 
     $Message = "The path '{0}' is not a valid git repository.  Please check the path and try again." -f $Path
-    throw [Management.Automation.ErrorRecord]::new((New-Object 'InvalidOperationException' $Message), 'NotAGitRepository', 'ResourceUnavailable', 'HelpJSONSource')
+    throw [Management.Automation.ErrorRecord]::new(([System.InvalidOperationException]::new($Message)), 'NotAGitRepository', 'ResourceUnavailable', 'HelpJSONSource')
 
 }
 
+# Push into the path provided
+Push-Location $Path
+
 # Check for any pending changes in the git repository
-if (git -C $Path status --porcelain | Where-Object { $_ -ne '' })
+if (git status --porcelain | Where-Object { $_ -ne '' })
 {
 
     $Message = "There are pending changes in the git repository at '{0}'.  Please commit or stash your changes before running this script." -f $Path
-    throw [Management.Automation.ErrorRecord]::new((New-Object 'InvalidOperationException' $Message), 'PendingChanges', 'ResourceUnavailable', 'HelpJSONSource')
+    throw [Management.Automation.ErrorRecord]::new(([System.InvalidOperationException]::new($Message)), 'PendingChanges', 'ResourceUnavailable', 'HelpJSONSource')
 
 }
 
 # Check if the requested branch exists in the git repository.  If not, throw an error.
-$BranchExists = git -C $Path branch --list $Version
+$BranchExists = git branch --list $Version
 
 if (-not $BranchExists)
 {
 
     $Message = "The branch '{0}' does not exist in the git repository at '{1}'.  Please check the branch name and try again." -f $Version, $Path
-    throw [Management.Automation.ErrorRecord]::new((New-Object 'InvalidOperationException' $Message), 'BranchNotFound', 'ResourceUnavailable', 'HelpJSONSource')
+    throw [Management.Automation.ErrorRecord]::new(([System.InvalidOperationException]::new($Message)), 'BranchNotFound', 'ResourceUnavailable', 'HelpJSONSource')
 
 }
 
@@ -439,7 +442,7 @@ if (-not (Get-Command mike -ErrorAction SilentlyContinue))
 {
 
     $Message = "The command 'mike' (used for mkdocs versioning) is not installed.  Please install 'mike' to build the online user documentation."
-    throw [Management.Automation.ErrorRecord]::new((New-Object 'InvalidOperationException' $Message), 'MikeNotFound', 'ResourceUnavailable', 'HelpJSONSource')
+    throw [Management.Automation.ErrorRecord]::new(([System.InvalidOperationException]::new($Message)), 'MikeNotFound', 'ResourceUnavailable', 'HelpJSONSource')
 
 }
 
@@ -451,378 +454,407 @@ if ($LASTEXITCODE -ne 0)
 {
 
     $Message = "Failed to checkout branch '{0}' in the git repository at '{1}'.  Please check the branch name and try again." -f $Version, $Path
-    throw [Management.Automation.ErrorRecord]::new((New-Object 'InvalidOperationException' $Message), 'CheckoutFailed', 'ResourceUnavailable', 'HelpJSONSource')
+    throw [Management.Automation.ErrorRecord]::new(([System.InvalidOperationException]::new($Message)), 'CheckoutFailed', 'ResourceUnavailable', 'HelpJSONSource')
 
 }
 
-# $SourceJsonFile = $Path
+$SourceJsonFile = $Path
 
 
-# $RepoParentDirectory          = $PSScriptRoot + ("{0}..{0}" -f [IO.Path]::DirectorySeparatorChar)
-# $SourceDirectory              = Join-Path $RepoParentDirectory "source"
-# $ApprovedCmdletCategoriesFile = Join-Path $SourceDirectory "ApprovedCategories.json"
-# $DeprecatedCmdletsFile        = Join-Path $SourceDirectory "DeprecatedCmdlets.json"
-# $SourceJsonFileName           = "HPEOneView.{0}_CmdletHelp.json" -f $Version
-# $SourceJsonFile               = Join-Path $SourceDirectory $SourceJsonFileName
-# $ApprovedCmdletCategories     = [System.IO.File]::ReadAllLines($ApprovedCmdletCategoriesFile, [System.Text.Encoding]::UTF8) | ConvertFrom-Json
-# $DeprecatedCmdlets            = [System.IO.File]::ReadAllLines($DeprecatedCmdletsFile, [System.Text.Encoding]::UTF8) | ConvertFrom-Json
+$RepoParentDirectory          = $PSScriptRoot + ("{0}..{0}" -f [IO.Path]::DirectorySeparatorChar)
+$SourceDirectory              = Join-Path $RepoParentDirectory "source"
+$ApprovedCmdletCategoriesFile = Join-Path $SourceDirectory "ApprovedCategories.json"
+$DeprecatedCmdletsFile        = Join-Path $SourceDirectory "DeprecatedCmdlets.json"
+$SourceJsonFileName           = "HPEOneView.{0}_CmdletHelp.json" -f $Version
+$SourceJsonFile               = Join-Path $SourceDirectory $SourceJsonFileName
+$JsonFullPath                 = Resolve-Path $SourceJsonFile
+$ApprovedCmdletCategories     = [System.IO.File]::ReadAllLines($ApprovedCmdletCategoriesFile, [System.Text.Encoding]::UTF8) | ConvertFrom-Json
+$DeprecatedCmdlets            = [System.IO.File]::ReadAllLines($DeprecatedCmdletsFile, [System.Text.Encoding]::UTF8) | ConvertFrom-Json
 
+# Test to ensure the JSON file exists
+if (-not (Test-Path $JsonFullPath))
+{
 
+    $Message = "The JSON file '{0}' does not exist.  Please check the path and try again." -f $JsonFullPath
+    throw [Management.Automation.ErrorRecord]::new(([System.InvalidOperationException]::new($Message)), 'JsonFileNotFound', 'ResourceUnavailable', 'HelpJSONSource')
 
+}
 
-# # Clear the ..\docs\cmdlets directory before processing the JSON source file
-# if (Test-Path (Join-Path $Destination "docs\cmdlets"))
-# {
+# Clear the ..\docs\cmdlets directory before processing the JSON source file
+if (Test-Path (Join-Path $Destination "docs\cmdlets"))
+{
 
-#     Write-Verbose ("Removing existing documentation files from '{0}' directory." -f $Destination)
-#     Remove-Item -Path (Join-Path $Destination "docs\cmdlets") -Recurse -Force -Confirm:$false
+    Write-Verbose ("Removing existing documentation files from '{0}' directory." -f $Destination)
+    Remove-Item -Path (Join-Path $Destination "docs\cmdlets") -Recurse -Force -Confirm:$false
 
-# }
+}
 
-# $JsonFullPath = Resolve-Path $SourceJsonFile
+$script:LibraryJsonContents = [System.IO.File]::ReadAllLines($JsonFullPath) | ConvertFrom-Json
+$Version                    = '{0}.{1:00}' -f ([Version]$LibraryJsonContents.Version).Major, ([Version]$LibraryJsonContents.Version).Minor
 
-# $script:LibraryJsonContents = [System.IO.File]::ReadAllLines($JsonFullPath) | ConvertFrom-Json
-# $Version                    = '{0}.{1:00}' -f ([Version]$LibraryJsonContents.Version).Major, ([Version]$LibraryJsonContents.Version).Minor
+$c                   = 0
 
-# $c                   = 0
+$Activity = 'Processing HPEOneView {0} Cmdlets' -f $Version
 
-# $Activity = 'Processing HPEOneView {0} Cmdlets' -f $Version
+# Need to process through all of the documented Cmdlets, getting the Syntax for parameterSetNames, parameter pipeline and waldcard support
+ForEach ($Cmdlet in $script:LibraryJsonContents.Cmdlets)
+{
 
-# # Need to process through all of the documented Cmdlets, getting the Syntax for parameterSetNames, parameter pipeline and waldcard support
-# ForEach ($Cmdlet in $script:LibraryJsonContents.Cmdlets)
-# # ForEach ($Cmdlet in ($LibraryJsonContents | select -first 1))
-# {
+    if (-not [String]::IsNullOrEmpty($Cmdlet))
+    {
 
-#     if (-not [String]::IsNullOrEmpty($Cmdlet))
-#     {
+        # Document format:
+        #    Description 'field'
+        #    Syntax
+        #    Description
+        #    Examples
+        #    Parameters
+        #    Input Types
+        #    Return Values
 
-#         # Document format:
-#         #    GitBook.IO Description 'field'
-#         #    Syntax
-#         #    Description
-#         #    Examples
-#         #    Parameters
-#         #    Input Types
-#         #    Return Values
+        Write-Progress -Activity $Activity -Status ('[{0}/{1}] {2}' -f $c, $LibraryJsonContents.Cmdlets.Count, $Cmdlet.Name) -PercentComplete (($c / $LibraryJsonContents.Cmdlets.Count) * 100)
 
-#         Write-Progress -Activity $Activity -Status ('[{0}/{1}] {2}' -f $c, $LibraryJsonContents.Cmdlets.Count, $Cmdlet.Name) -PercentComplete (($c / $LibraryJsonContents.Cmdlets.Count) * 100)
+        "Processing: {0}" -f $Cmdlet.Name | Write-Verbose
 
-#         "Processing: {0}" -f $Cmdlet.Name | Write-Verbose
+        $FinalPathDirectory = '{0}\docs\cmdlets\{1}' -f $Destination, $Cmdlet.Category.ToLower()
+        $FinalPathString = '{0}\{1}.md' -f $FinalPathDirectory, $Cmdlet.Name.ToLower()
 
-#         $FinalPathDirectory = '{0}\docs\cmdlets\{1}' -f $Destination, $Cmdlet.Category.ToLower()
-#         $FinalPathString = '{0}\{1}.md' -f $FinalPathDirectory, $Cmdlet.Name.ToLower()
+        if (-not(Test-Path $FinalPathDirectory))
+        {
 
-#         if (-not(Test-Path $FinalPathDirectory))
-#         {
+            New-Item -Path $FinalPathDirectory -ItemType Directory | Out-Null
 
-#             New-Item -Path $FinalPathDirectory -ItemType Directory | Out-Null
+        }
 
-#         }
+        $FinalMarkdownOutput = [System.Collections.ArrayList]::new()
 
-#         $FinalMarkdownOutput = [System.Collections.ArrayList]::new()
+        #    Description 'field'
+        [void]$FinalMarkdownOutput.Add('---')
 
-#         #    GitBook.IO Description 'field'
-#         [void]$FinalMarkdownOutput.Add('---')
+        $GitBookDescriptionHeader = 'description: {0}' -f $Cmdlet.Contents.Synopsis.Replace('[', '\[').Replace(']','\]')
+        [void]$FinalMarkdownOutput.Add($GitBookDescriptionHeader)
+        [void]$FinalMarkdownOutput.Add(('---' + [System.Environment]::NewLine))
 
-#         $GitBookDescriptionHeader = 'description: {0}' -f $Cmdlet.Contents.Synopsis.Replace('[', '\[').Replace(']','\]')
-#         [void]$FinalMarkdownOutput.Add($GitBookDescriptionHeader)
-#         [void]$FinalMarkdownOutput.Add(('---' + [System.Environment]::NewLine))
+        #    Cmdlet title
+        $TitleHeader = '{0}{1}{2}' -f $H1, $Cmdlet.Name, [System.Environment]::NewLine
+        [void]$FinalMarkdownOutput.Add($TitleHeader)
 
-#         #    Cmdlet title
-#         $TitleHeader = '{0}{1}{2}' -f $H1, $Cmdlet.Name, [System.Environment]::NewLine
-#         [void]$FinalMarkdownOutput.Add($TitleHeader)
+        #    Syntax
+        $SyntaxSectionHeader = '{0}Syntax{1}' -f $H2, [System.Environment]::NewLine
+        [void]$FinalMarkdownOutput.Add($SyntaxSectionHeader)
 
-#         #    Syntax
-#         $SyntaxSectionHeader = '{0}Syntax{1}' -f $H2, [System.Environment]::NewLine
-#         [void]$FinalMarkdownOutput.Add($SyntaxSectionHeader)
+        ForEach ($SyntaxCol in $Cmdlet.Contents.Syntax)
+        {
 
-#         ForEach ($SyntaxCol in $Cmdlet.Contents.Syntax)
-#         {
+            [void]$FinalMarkdownOutput.Add($StartSyntax)
 
-#             [void]$FinalMarkdownOutput.Add($StartSyntax)
+            $CmdletSyntax = [System.Text.StringBuilder]::new()
 
-#             $CmdletSyntax = [System.Text.StringBuilder]::new()
+            $CmdletSyntaxHeader = "{0}{1}" -f $Cmdlet.Name, [System.Environment]::NewLine
+            [void]$CmdletSyntax.Append($CmdletSyntaxHeader)
 
-#             $CmdletSyntaxHeader = "{0}{1}" -f $Cmdlet.Name, [System.Environment]::NewLine
-#             [void]$CmdletSyntax.Append($CmdletSyntaxHeader)
+            ForEach ($SyntaxParameter in $SyntaxCol)
+            {
 
-#             ForEach ($SyntaxParameter in $SyntaxCol)
-#             {
+                $ParameterDef = $Cmdlet.Contents.Parameters | Where-Object Name -eq $SyntaxParameter.Name
 
-#                 $ParameterDef = $Cmdlet.Contents.Parameters | Where-Object Name -eq $SyntaxParameter.Name
+                "    --> Processing Cmdlet syntax parameter: {0}" -f $ParameterDef.Name | Write-Verbose
 
-#                 "    --> Processing Cmdlet syntax parameter: {0}" -f $ParameterDef.Name | Write-Verbose
+                $CmdletParameterName = '[-{0}' -f $SyntaxParameter.Name
 
-#                 $CmdletParameterName = '[-{0}' -f $SyntaxParameter.Name
+                if ($ParameterDef.DataType -eq 'SwitchParameter')
+                {
 
-#                 if ($ParameterDef.DataType -eq 'SwitchParameter')
-#                 {
+                    $CmdletParameterType = ''
 
-#                     $CmdletParameterType = ''
+                }
 
-#                 }
+                else
+                {
 
-#                 else
-#                 {
+                    $CmdletParameterType = ' <{0}>' -f $ParameterDef.DataType
 
-#                     $CmdletParameterType = ' <{0}>' -f $ParameterDef.DataType
+                }
 
-#                 }
+                # If parameter is required, the brace needs to be around the parameter name
+                if ([Convert]::ToBoolean($SyntaxParameter.Required))
+                {
 
-#                 # If parameter is required, the brace needs to be around the parameter name
-#                 if ([Convert]::ToBoolean($SyntaxParameter.Required))
-#                 {
+                    $CmdletParameterString = '{0}]{1}' -f $CmdletParameterName, $CmdletParameterType
 
-#                     $CmdletParameterString = '{0}]{1}' -f $CmdletParameterName, $CmdletParameterType
+                }
 
-#                 }
+                # Else, the brace needs to be around the syntax parameter entry
+                else
+                {
 
-#                 # Else, the brace needs to be around the syntax parameter entry
-#                 else
-#                 {
+                    $CmdletParameterString = '{0}{1}]' -f $CmdletParameterName, $CmdletParameterType
 
-#                     $CmdletParameterString = '{0}{1}]' -f $CmdletParameterName, $CmdletParameterType
+                }
 
-#                 }
+                $CmdletParameterString = '{0}{1}{2}' -f $Indent, $CmdletParameterString, [System.Environment]::NewLine
 
-#                 $CmdletParameterString = '{0}{1}{2}' -f $Indent, $CmdletParameterString, [System.Environment]::NewLine
+                [void]$CmdletSyntax.Append($CmdletParameterString)
 
-#                 [void]$CmdletSyntax.Append($CmdletParameterString)
+            }
 
-#             }
+            $CommonParametersParam = '{0}[<CommonParameters>]' -f $Indent
+            [void]$CmdletSyntax.Append($CommonParametersParam)
 
-#             $CommonParametersParam = '{0}[<CommonParameters>]' -f $Indent
-#             [void]$CmdletSyntax.Append($CommonParametersParam)
+            [void]$FinalMarkdownOutput.Add($CmdletSyntax.ToString())
+            [void]$FinalMarkdownOutput.Add($EndSyntax)
 
-#             [void]$FinalMarkdownOutput.Add($CmdletSyntax.ToString())
-#             [void]$FinalMarkdownOutput.Add($EndSyntax)
+        }
 
-#         }
+        #    Description
+        $DescriptionSectionHeader = '{0}Description{1}' -f $H2, [System.Environment]::NewLine
+        [void]$FinalMarkdownOutput.Add($DescriptionSectionHeader)
 
-#         #    Description
-#         $DescriptionSectionHeader = '{0}Description{1}' -f $H2, [System.Environment]::NewLine
-#         [void]$FinalMarkdownOutput.Add($DescriptionSectionHeader)
+        #    Process DESCRIPTION MINIMUM PERMISSIONS
+        $Description = $Cmdlet.Contents.Description
 
-#         #    Process DESCRIPTION MINIMUM PERMISSIONS
-#         $Description = $Cmdlet.Contents.Description
+        $UpdatedDescription = LinkifyString -String $Description -CmdletName $Cmdlet.Name
 
-#         $UpdatedDescription = LinkifyString -String $Description -CmdletName $Cmdlet.Name
+        if (($MinimumPermissionsPattern.Match($UpdatedDescription)).Success)
+        {
 
-#         if (($MinimumPermissionsPattern.Match($UpdatedDescription)).Success)
-#         {
+            $UpdatedText        = [DisplayHint]::Build([HintStyleEnum]::info, $MinimumPermissionsPattern.Match($UpdatedDescription).Value)
+            $UpdatedDescription = $MinimumPermissionsPattern.Replace($UpdatedDescription, $UpdatedText)
 
-#             $UpdatedText        = [DisplayHint]::Build([HintStyleEnum]::info, $MinimumPermissionsPattern.Match($UpdatedDescription).Value)
-#             $UpdatedDescription = $MinimumPermissionsPattern.Replace($UpdatedDescription, $UpdatedText)
+        }
 
-#         }
+        else
+        {
 
-#         else
-#         {
+            $UpdatedDescription = $Description + [System.Environment]::NewLine
 
-#             $UpdatedDescription = $Description + [System.Environment]::NewLine
+        }
 
-#         }
+        #    Process DESCRIPTION NOTE: messages
+        # Embed Gitbook "info" icon when NOTE: exists in the description
+        if (($NoteMessagePattern.Match($UpdatedDescription)).Success)
+        {
 
-#         #    Process DESCRIPTION NOTE: messages
-#         # Embed Gitbook "info" icon when NOTE: exists in the description
-#         if (($NoteMessagePattern.Match($UpdatedDescription)).Success)
-#         {
+            $NoteMessageReplace = [DisplayHint]::Build([HintStyleEnum]::info, '${subtext}${table}')
+            $UpdatedDescription = $NoteMessagePattern.Replace($UpdatedDescription, $NoteMessageReplace)
 
-#             $NoteMessageReplace = [DisplayHint]::Build([HintStyleEnum]::info, '${subtext}${table}')
-#             $UpdatedDescription = $NoteMessagePattern.Replace($UpdatedDescription, $NoteMessageReplace)
+        }
 
-#         }
+        # Embed Gitbook "warning" icon when WARNING: exists in the description
+        if (($WarningMessagePattern.Match($UpdatedDescription)).Success)
+        {
 
-#         # Embed Gitbook "warning" icon when WARNING: exists in the description
-#         if (($WarningMessagePattern.Match($UpdatedDescription)).Success)
-#         {
+            $WarningMessageReplace = [DisplayHint]::Build([HintStyleEnum]::warning, '${subtext}${table}')
+            $UpdatedDescription = $WarningMessagePattern.Replace($UpdatedDescription, $WarningMessageReplace)
 
-#             $WarningMessageReplace = [DisplayHint]::Build([HintStyleEnum]::warning, '${subtext}${table}')
-#             $UpdatedDescription = $WarningMessagePattern.Replace($UpdatedDescription, $WarningMessageReplace)
+        }
 
-#         }
+        # Embed Gitbook "danger" icon when CRITICAL: exists in the description
+        if (($CriticalMessagePattern.Match($UpdatedDescription)).Success)
+        {
 
-#         # Embed Gitbook "danger" icon when CRITICAL: exists in the description
-#         if (($CriticalMessagePattern.Match($UpdatedDescription)).Success)
-#         {
+            $CriticalMessageReplace = [DisplayHint]::Build([HintStyleEnum]::danger, '${subtext}')
+            $UpdatedDescription = $CriticalMessagePattern.Replace($UpdatedDescription, $CriticalMessageReplace)
 
-#             $CriticalMessageReplace = [DisplayHint]::Build([HintStyleEnum]::danger, '${subtext}')
-#             $UpdatedDescription = $CriticalMessagePattern.Replace($UpdatedDescription, $CriticalMessageReplace)
+        }
 
-#         }
+        # This is to fix the item list issue with Gitbook, where it treats `t* as code instead of an item list
+        $UpdatedDescription = $FindTabbedItemListRegexPattern.Replace($UpdatedDescription, "* ")
 
-#         # This is to fix the item list issue with Gitbook, where it treats `t* as code instead of an item list
-#         $UpdatedDescription = $FindTabbedItemListRegexPattern.Replace($UpdatedDescription, "* ")
+        [void]$FinalMarkdownOutput.Add($UpdatedDescription)
 
-#         [void]$FinalMarkdownOutput.Add($UpdatedDescription)
+        $ExamplesSectionHeader = '{0}Examples{1}' -f $H2, [System.Environment]::NewLine
+        [void]$FinalMarkdownOutput.Add($ExamplesSectionHeader)
 
-#         $ExamplesSectionHeader = '{0}Examples{1}' -f $H2, [System.Environment]::NewLine
-#         [void]$FinalMarkdownOutput.Add($ExamplesSectionHeader)
+        #    EXAMPLES
+        ForEach ($Example in $Cmdlet.Contents.Examples)
+        {
 
-#         #    EXAMPLES
-#         ForEach ($Example in $Cmdlet.Contents.Examples)
-#         {
+            $ExampleItemHeader = '{0}{1}{2}' -f $H3, $Example.Title.Replace('-', $null).Replace('EXAMPLE', 'Example'), [System.Environment]::NewLine
+            [void]$FinalMarkdownOutput.Add($ExampleItemHeader)
 
-#             $ExampleItemHeader = '{0}{1}{2}' -f $H3, $Example.Title.Replace('-', $null).Replace('EXAMPLE', 'Example'), [System.Environment]::NewLine
-#             [void]$FinalMarkdownOutput.Add($ExampleItemHeader)
+            [void]$FinalMarkdownOutput.Add($StartSyntax)
+            [void]$FinalMarkdownOutput.Add($Example.Code)
+            [void]$FinalMarkdownOutput.Add($EndSyntax)
 
-#             [void]$FinalMarkdownOutput.Add($StartSyntax)
-#             [void]$FinalMarkdownOutput.Add($Example.Code)
-#             [void]$FinalMarkdownOutput.Add($EndSyntax)
+            # Look for parameter references, which start with hyphen
+            $_Description = $Script:FindParameterRegexPattern.Replace($Example.Description, '`$0`')
 
-#             # Look for parameter references, which start with hyphen
-#             $_Description = $Script:FindParameterRegexPattern.Replace($Example.Description, '`$0`')
+            # Look for Cmdlet name reference
+            $_Description = $Script:FindCmdletRegexPattern.Replace($_Description, '`$0`')
 
-#             # Look for Cmdlet name reference
-#             $_Description = $Script:FindCmdletRegexPattern.Replace($_Description, '`$0`')
+            # Look for fully qualified class names without [] braces
+            $_Description = $Script:FindFullyQualifiedClassWithoutBracePattern.Replace($_Description, '[$0]')
 
-#             # Look for fully qualified class names without [] braces
-#             $_Description = $Script:FindFullyQualifiedClassWithoutBracePattern.Replace($_Description, '[$0]')
+            # Look for fully qualified class names with [] braces
+            $_Description = $Script:FindFullyQualifiedClassPattern.Replace($_Description, '`$0`')
 
-#             # Look for fully qualified class names with [] braces
-#             $_Description = $Script:FindFullyQualifiedClassPattern.Replace($_Description, '`$0`')
+            $FinalDescription = '{0}{1}' -f $_Description, [System.Environment]::NewLine
 
-#             $FinalDescription = '{0}{1}' -f $_Description, [System.Environment]::NewLine
+            [void]$FinalMarkdownOutput.Add($FinalDescription)
 
-#             [void]$FinalMarkdownOutput.Add($FinalDescription)
+        }
 
-#         }
+        #    PARAMETERS
+        $ParametersSectionHeader = '{0}Parameters{1}' -f $H2, [System.Environment]::NewLine
+        [void]$FinalMarkdownOutput.Add($ParametersSectionHeader)
 
-#         #    PARAMETERS
-#         $ParametersSectionHeader = '{0}Parameters{1}' -f $H2, [System.Environment]::NewLine
-#         [void]$FinalMarkdownOutput.Add($ParametersSectionHeader)
+        ForEach ($Parameter in $Cmdlet.Contents.Parameters)
+        {
 
-#         ForEach ($Parameter in $Cmdlet.Contents.Parameters)
-#         {
+            $Type = $ParameterType -f $Parameter.DataType
 
-#             $Type = $ParameterType -f $Parameter.DataType
+            $_Header = '{0}-{1} {2}{3}' -f $H3, $Parameter.Name, $Type, [System.Environment]::NewLine
+            [void]$FinalMarkdownOutput.Add($_Header)
 
-#             $_Header = '{0}-{1} {2}{3}' -f $H3, $Parameter.Name, $Type, [System.Environment]::NewLine
-#             [void]$FinalMarkdownOutput.Add($_Header)
+            $Table = [ParameterEntry]::BuildDescriptionAndTable($Parameter)
+            [void]$FinalMarkdownOutput.Add($Table)
 
-#             $Table = [ParameterEntry]::BuildDescriptionAndTable($Parameter)
-#             [void]$FinalMarkdownOutput.Add($Table)
+        }
 
-#         }
+        # Insert CommonParameters
+        $_Header = '{0}&lt;CommonParameters&gt;{1}' -f $H3, [System.Environment]::NewLine
+        [void]$FinalMarkdownOutput.Add($_Header)
 
-#         # Insert CommonParameters
-#         $_Header = '{0}&lt;CommonParameters&gt;{1}' -f $H3, [System.Environment]::NewLine
-#         [void]$FinalMarkdownOutput.Add($_Header)
+        $CommonParametersDescription = "This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer, PipelineVariable, and OutVariable. For more information, see about\_CommonParameters \([http://go.microsoft.com/fwlink/?LinkID=113216](http://go.microsoft.com/fwlink/?LinkID=113216)\){0}" -f [System.Environment]::NewLine
+        [void]$FinalMarkdownOutput.Add($CommonParametersDescription)
 
-#         $CommonParametersDescription = "This cmdlet supports the common parameters: Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer, PipelineVariable, and OutVariable. For more information, see about\_CommonParameters \([http://go.microsoft.com/fwlink/?LinkID=113216](http://go.microsoft.com/fwlink/?LinkID=113216)\){0}" -f [System.Environment]::NewLine
-#         [void]$FinalMarkdownOutput.Add($CommonParametersDescription)
+        #    INPUT TYPES
+        $InputTypesSectionHeader = '{0}Input Types{1}' -f $H2, [System.Environment]::NewLine
+        [void]$FinalMarkdownOutput.Add($InputTypesSectionHeader)
 
-#         #    INPUT TYPES
-#         $InputTypesSectionHeader = '{0}Input Types{1}' -f $H2, [System.Environment]::NewLine
-#         [void]$FinalMarkdownOutput.Add($InputTypesSectionHeader)
+        ForEach ($Type in $Cmdlet.Contents.InputTypes)
+        {
 
-#         ForEach ($Type in $Cmdlet.Contents.InputTypes)
-#         {
+            # If the type is None, then skip creating a table view
+            if (-not $Type.Value.StartsWith('None.'))
+            {
 
-#             # If the type is None, then skip creating a table view
-#             if (-not $Type.Value.StartsWith('None.'))
-#             {
-
-#                 [Tabs]::BuildTabEntry($Type.Value, $Type.Text, $Cmdlet.Name) | ForEach-Object { 
+                [Tabs]::BuildTabEntry($Type.Value, $Type.Text, $Cmdlet.Name) | ForEach-Object { 
                 
-#                     [void]$FinalMarkdownOutput.Add($_) 
+                    [void]$FinalMarkdownOutput.Add($_) 
                 
-#                 }
+                }
 
-#             }
+            }
 
-#             else
-#             {
+            else
+            {
         
-#                 [void]$FinalMarkdownOutput.Add($Type.Value)
-#                 [void]$FinalMarkdownOutput.Add([System.Environment]::NewLine)
+                [void]$FinalMarkdownOutput.Add($Type.Value)
+                [void]$FinalMarkdownOutput.Add([System.Environment]::NewLine)
             
-#             }
+            }
 
-#         }
+        }
 
-#         #    RETURN VALUES
-#         $ReturnValuesSectionHeader = '{0}Return Values{1}' -f $H2, [System.Environment]::NewLine
-#         [void]$FinalMarkdownOutput.Add($ReturnValuesSectionHeader)
+        #    RETURN VALUES
+        $ReturnValuesSectionHeader = '{0}Return Values{1}' -f $H2, [System.Environment]::NewLine
+        [void]$FinalMarkdownOutput.Add($ReturnValuesSectionHeader)
 
-#         ForEach ($Return in $Cmdlet.Contents.ReturnValues)
-#         {
+        ForEach ($Return in $Cmdlet.Contents.ReturnValues)
+        {
 
-#             # Need to figure out if there are many empty trailing lines in the ReturnValues text, as only a single line is needed
-#             $GeneratedReturnText = [Tabs]::BuildTabEntry($Return.Value, $Return.Text, $Cmdlet.Name)
-#             # $GeneratedReturnText = $GeneratedReturnText -replace '(\n\s*){2,}', [System.Environment]::NewLine
-#             [void]$FinalMarkdownOutput.Add($GeneratedReturnText)                   
+            # Need to figure out if there are many empty trailing lines in the ReturnValues text, as only a single line is needed
+            $GeneratedReturnText = [Tabs]::BuildTabEntry($Return.Value, $Return.Text, $Cmdlet.Name)
+            # $GeneratedReturnText = $GeneratedReturnText -replace '(\n\s*){2,}', [System.Environment]::NewLine
+            [void]$FinalMarkdownOutput.Add($GeneratedReturnText)                   
 
-#         }
+        }
 
-#         #    RELATED LINKS
-#         $RelatedLinksSectionHeader = '{0}Related Links{1}' -f $H2, [System.Environment]::NewLine
-#         [void]$FinalMarkdownOutput.Add($RelatedLinksSectionHeader)
+        #    RELATED LINKS
+        $RelatedLinksSectionHeader = '{0}Related Links{1}' -f $H2, [System.Environment]::NewLine
+        [void]$FinalMarkdownOutput.Add($RelatedLinksSectionHeader)
 
-#         ForEach ($Link in ($Cmdlet.Contents.RelatedLinks | Where-Object Text -notmatch 'Online:'))
-#         {
+        ForEach ($Link in ($Cmdlet.Contents.RelatedLinks | Where-Object Text -notmatch 'Online:'))
+        {
 
-#             "    --> Adding associated link: {0}" -f $Link.Text | Write-Verbose
-#             if ($Script:ParentLinkableAssociatedLinks.GetEnumerator().Name -contains $Link.Text)
-#             {
+            "    --> Adding associated link: {0}" -f $Link.Text | Write-Verbose
+            if ($Script:ParentLinkableAssociatedLinks.GetEnumerator().Name -contains $Link.Text)
+            {
 
-#                 $AssociatedLinkRelativeUri = $Script:ParentLinkableAssociatedLinks[$Link.Text]
+                $AssociatedLinkRelativeUri = $Script:ParentLinkableAssociatedLinks[$Link.Text]
 
-#             }
+            }
 
-#             else
-#             {
+            else
+            {
 
-#                 $AssociatedLinkCmdlet = $script:LibraryJsonContents.Cmdlets | Where-Object Name -eq $Link.Text
+                $AssociatedLinkCmdlet = $script:LibraryJsonContents.Cmdlets | Where-Object Name -eq $Link.Text
 
-#                 if ([String]::IsNullOrEmpty($AssociatedLinkCmdlet))
-#                 {
+                if ([String]::IsNullOrEmpty($AssociatedLinkCmdlet))
+                {
 
-#                     $Message = "Unable to find associated link '{0}' to '{1}' Cmdlet." -f $Link.Text, $Cmdlet.Name
-#                     $PSCmdlet.WriteError([Management.Automation.ErrorRecord]::new((New-Object 'InvalidOperationException' $Message), 'RelatedLinkNotFound', 'ResourceUnavailable', 'HelpJSONSource'))
+                    $Message = "Unable to find associated link '{0}' to '{1}' Cmdlet." -f $Link.Text, $Cmdlet.Name
+                    $PSCmdlet.WriteError([Management.Automation.ErrorRecord]::new(([System.InvalidOperationException]::new( $Message), 'RelatedLinkNotFound', 'ResourceUnavailable', 'HelpJSONSource'))
 
-#                 }
+                }
 
-#                 else
-#                 {
+                else
+                {
 
-#                     if (-not [String]::IsNullOrEmpty($Link.Uri) -and -not $Link.Uri.StartsWith('https://'))
-#                     {
+                    if (-not [String]::IsNullOrEmpty($Link.Uri) -and -not $Link.Uri.StartsWith('https://'))
+                    {
 
-#                         $AssociatedLinkRelativeUri = $Link.Uri
+                        $AssociatedLinkRelativeUri = $Link.Uri
 
-#                     }
+                    }
 
-#                     else
-#                     {
+                    else
+                    {
 
-#                         $AssociatedLinkRelativeUri = "{0}.md" -f $AssociatedLinkCmdlet.Name.ToLower()
+                        $AssociatedLinkRelativeUri = "{0}.md" -f $AssociatedLinkCmdlet.Name.ToLower()
 
-#                         # Check if the Category is the same. If not, then the relative and parent directory needs to be in the URI
-#                         if ($AssociatedLinkCmdlet.Category -ne $Cmdlet.Category)
-#                         {
+                        # Check if the Category is the same. If not, then the relative and parent directory needs to be in the URI
+                        if ($AssociatedLinkCmdlet.Category -ne $Cmdlet.Category)
+                        {
 
-#                             $AssociatedLinkRelativeUri = "../{0}/{1}" -f $AssociatedLinkCmdlet.Category.ToLower(), $AssociatedLinkRelativeUri
+                            $AssociatedLinkRelativeUri = "../{0}/{1}" -f $AssociatedLinkCmdlet.Category.ToLower(), $AssociatedLinkRelativeUri
 
-#                         }
+                        }
 
-#                     }
+                    }
 
-#                 }
+                }
 
-#             }
+            }
 
-#             $RelatedLinkString = '* [{0}]({1})' -f $Link.Text, $AssociatedLinkRelativeUri
-#             [void]$FinalMarkdownOutput.Add($RelatedLinkString)
+            $RelatedLinkString = '* [{0}]({1})' -f $Link.Text, $AssociatedLinkRelativeUri
+            [void]$FinalMarkdownOutput.Add($RelatedLinkString)
 
-#         }
+        }
 
-#         [System.IO.File]::WriteAllLines($FinalPathString, $FinalMarkdownOutput.ToArray(), [System.Text.Encoding]::UTF8)
+        [System.IO.File]::WriteAllLines($FinalPathString, $FinalMarkdownOutput.ToArray(), [System.Text.Encoding]::UTF8)
 
-#     }
+    }
 
-#     $c++
+    $c++
 
-# }
+}
 
-# Write-Progress -Activity $Activity -Completed
+Write-Progress -Activity $Activity -Completed
+
+# Use mike list to get the list of versions in the repository
+$MikeListOutput = mike list --json | ConvertFrom-Json
+
+# Execute the mike command to build the online user documentation
+$MikeCommand = "mike deploy --update {0} --allow-empty" -f $Version
+$MikeVersionExists = $MikeListOutput | Where-Object version -eq $Version 
+
+if ($MikeVersionExists.aliases -contains "latest")
+{
+
+    $MikeCommand += " --update-aliases latest"
+
+}
+
+Invoke-Expression $MikeCommand
+
+if ($LASTEXITCODE -ne 0)
+{
+
+    $Message = "Failed to deploy the online user documentation. Please check the command output for more details."
+    throw [Management.Automation.ErrorRecord]::new(([System.InvalidOperationException]::new( $Message), 'MikeDeployFailed', 'ResourceUnavailable', 'HelpJSONSource')
+
+}
+
