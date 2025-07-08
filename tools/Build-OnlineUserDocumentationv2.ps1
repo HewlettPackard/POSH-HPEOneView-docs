@@ -526,7 +526,7 @@ ForEach ($Cmdlet in $script:LibraryJsonContents.Cmdlets)
 
         "Processing: {0}" -f $Cmdlet.Name | Write-Verbose
 
-        $FinalPathDirectory = '{0}\docs\cmdlets\{1}' -f $Destination, $Cmdlet.Category.ToLower()
+        $FinalPathDirectory = '{0}\docs\cmdlets\{1}' -f $Path, $Cmdlet.Category.ToLower()
         $FinalPathString = '{0}\{1}.md' -f $FinalPathDirectory, $Cmdlet.Name.ToLower()
 
         if (-not(Test-Path $FinalPathDirectory))
