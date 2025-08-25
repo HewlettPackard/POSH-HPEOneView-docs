@@ -1,4 +1,6 @@
 # This script is used to build the online user documentation.
+# Still need to debug this.  Need to ensure New-RepoFork.ps1 can "detect" when a new branch is newer and update the "latest" 
+# to the current and move the previous "latest" to the previous branch as a number.
 
 [CmdLetBinding ()]
 Param
